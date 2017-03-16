@@ -1,13 +1,11 @@
 [Adblock Plus 2.0]
 ! Version: 201703161050
-! Title: Imres Adblock Plus-filtre for Android
-! Last modified: 16 Mar 2017 10:50 UTC
-! Expires: 2 days (update frequency)
-! Homepage: 
-! Licence: 
+! Title: AdBlockPlus-filtre
+! Last modified: 16 Mar 2017 15:56 UTC
+! Expires: 1 days (update frequency)
+! Homepage: https://github.com/DandelionSprout/Seeing-if-I-can-host-pure-.txt-files-here
+! Licence: https://easylist.to/pages/licence.html
 ! 
-! -----------------------Imres Adblock Plus-filtre for Android-----------------------!
-! *** easylist:easylist/easylist_general_block.txt ***
 ||twitter.com/i/trends?*
 twitter.com/##div.trends-inner
 ||facebook.com/plugins/like.php?app_id=&channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FuN4_cXtJDGb.js%3Fversion%3D42%23cb%3Df3fecac6efb954c%26domain%3Dwww.shouldiremoveit.com%26origin%3Dhttp%253A%252F%252Fwww.shouldiremoveit.com%252Ff1db3a8b8f13edc%26relation%3Dparent.parent&container_width=468&font=segoe%20ui&href=http%3A%2F%2Fwww.facebook.com%2Fshouldiremoveit&locale=en_US&sdk=joey&send=true&show_faces=false&width=450
