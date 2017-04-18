@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Version: 201703161050
 ! Title: AdBlockPlus-filtre
-! Last modified: 16 Mar 2017 15:56 UTC
+! Last modified: 18 Apr 2017 18:14 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/DandelionSprout/Seeing-if-I-can-host-pure-.txt-files-here
 ! Licence: https://easylist.to/pages/licence.html
@@ -12,7 +12,6 @@ twitter.com/##div.trends-inner
 ||facebook.com/plugins/like.php?app_id=&channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FuN4_cXtJDGb.js%3Fversion%3D42%23cb%3Df59c2c5795ad18%26domain%3Dwww.shouldiremoveit.com%26origin%3Dhttp%253A%252F%252Fwww.shouldiremoveit.com%252Ff17bc218b7752e%26relation%3Dparent.parent&container_width=468&font=segoe%20ui&href=http%3A%2F%2Fwww.facebook.com%2Fshouldiremoveit&locale=en_US&sdk=joey&send=true&show_faces=false&width=450
 ||p.pfx.ms/sn/PsaSmall/SKYPEActive2.png
 ||ia.media-imdb.com/images/M/MV5BZDc1ODQ0ZDQtNDE0YS00Yjc2LTg2YWItMzI2YjhhZGUxNjgxXkEyXkFqcGdeQXVyMzM4NjcxOTc@._CR281,694,742,556_UX614_UY460._SY230_SX307_AL_.jpg
-*.wikia.com##.recirculation-rail.module.group-FANDOM_TOPIC.recirculation-unit
 ||lh3.googleusercontent.com/-7Qch2aLXB5Q/VxLa8w5hyKI/AAAAAAACjeg/me0oTY_cJBEy8PQ-TbFoIGUkQHaudts1ACCo/s320-Ic42/patreon.png
 ||lh3.googleusercontent.com/-IyFP_xGzK8k/VoVqTofybYI/AAAAAAACerc/1I7h8Xkz01I/s320-Ic42/Game%252520Index.png
 ||lh3.googleusercontent.com/-fOjhWmP-fTs/VoVqSwNXleI/AAAAAAACerw/R-7yHDFVNYA/s320-Ic42/Derp.png
@@ -32,6 +31,7 @@ twitter.com/##div.trends-inner
 ||orig13.deviantart.net/c60f/f/2016/358/b/8/ppg_stamp__by_shelby100-dasoj0c.gif
 ||t10.deviantart.net/3iBXqOoW5Lw5bdWVXQACPhY1yN8=/fit-in/700x350/filters:fixed_height(100,100):origin()/pre03/773d/th/pre/i/2017/068/4/e/oggy_as_a_lalaloopsy_doll_by_sweet_cakie-db1s72o.png
 ||t15.deviantart.net/WfpP1Y-JuAjPv0_e6JdoThmqlmQ=/fit-in/700x350/filters:fixed_height(100,100):origin()/pre07/c02b/th/pre/i/2017/068/2/7/joey_as_a_lalaloopsy_doll_by_sweet_cakie-db1s9a0.png
+||sht.mx/lostmediawiki
 twitter.com##.stream.suggested-tweet-stream.permalink-replies
 twitter.com##.flex-module
 twitter.com##.WhoToFollow.is-visible
@@ -73,7 +73,6 @@ imgur.com##.right.post-unification
 pastebin.com###content_right
 twitter.com###stream-item-who_to_follow_entry-776589082252177407
 twitter.com##.WtfLargeCarouselStreamItem.js-stream-item.stream-item.js-dedupe-wtf-sidebar.js-no-dedup.DismissibleModule.js-has-navigable-stream.stream-item.no-header-background-module.separated-module
-smurfs.wikia.com##.recirculation-rail.module.group-FANDOM_TOPIC.recirculation-unit
 lifehacker.com##.sidebar
 twitter.com###stream-item-recap_entry-780612444498628607
 twitter.com##.js-stream-item.stream-item.has-recap.js-no-dedup.DismissibleModule.js-has-navigable-stream.stream-item.separated-module
@@ -140,11 +139,6 @@ urbandictionary.com##.word-list-panel
 urbandictionary.com##.column
 howtogeek.com##p[style="font-weight:normal;color:#333;"]
 howtogeek.com##div[style="width:130px;float:right;"]
-lalaloopsyland.wikia.com###WikiaBarWrapper
-lalaloopsyland.wikia.com##.WikiaBarWrapper
-lalaloopsyland.wikia.com##.community-page-entry-point-module.module
-lalaloopsyland.wikia.com##.wikia-logo__subtitle
-lalaloopsyland.wikia.com##.cell-link.top-level
 amazon.de##.nav-signin-tt.nav-flyout
 youtube.com##.ytp-videowall-still-info-content
 youtube.com##.ytp-videowall-still-image
@@ -182,10 +176,19 @@ deviantart.com##.watch-suggestions-container.watch-suggestions-home.visible
 twitch.tv##.js-offer-hover
 twitch.tv###ember1623
 twitch.tv##.warp__list.js-offers.ember-view
-lalaloopsyland.wikia.com##.recirculation-impact-footer.recirculation-unit
 en.wikipedia.org###frbanner3
 en.wikipedia.org##.cf
 gab.ai##.content__left
 twitch.tv##.warp__item.js-recommended-channel
 no.wikipedia.org###frbanner3
 no.wikipedia.org##.cf
+howtogeek.com###dbxpmhzroikjlrx
+wikia.com##.cell-link.top-level
+wikia.com##.recirculation-impact-footer.recirculation-unit
+twitch.tv##.card.card--xs.card--row.sc-card.js-recommended-channel
+##.ytp-pause-overlay
+##WikiaBarWrapper
+##.WikiaBarWrapper
+##.community-page-entry-point-module.module
+##.wikia-logo__subtitle
+##.recirculation-rail.module.group-FANDOM_TOPIC.recirculation-unit
