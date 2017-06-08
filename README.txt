@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Version: 201703161050
 ! Title: AdBlockPlus-filtre
-! Last modified: 18 Apr 2017 18:14 UTC
+! Last modified: 08 June 2017 00:42 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/DandelionSprout/Seeing-if-I-can-host-pure-.txt-files-here
 ! Licence: https://easylist.to/pages/licence.html
@@ -37,9 +37,6 @@ twitter.com##.flex-module
 twitter.com##.WhoToFollow.is-visible
 facebook.com###u_0_4k
 facebook.com##._4-u2._5hnd._4-u8
-broadbandtvnews.com###kd6419e39e92a6709f9cafe16d8733d3e680bfc7c-container
-broadbandtvnews.com##.HB-Slider.hb-animated.classic.hb-bottom-right.hb-animateIn
-broadbandtvnews.com##iframe[src="about:blank"]
 youtube.com##.yt-lockup.clearfix.yt-lockup-channel.yt-lockup-mini
 youtube.com##.branded-page-related-channels.branded-page-box.yt-card
 facebook.com##._4-u2._5hni._4-u8
@@ -47,11 +44,6 @@ facebook.com###u_0_3z
 facebook.com##._5hn6
 twitter.com##.Icon.Icon--translator
 stores.office.com###turnOnAutoRenewBanner
-skype.com##.content.contentTable.fullWidth
-skype.com###coverSectionMainContent
-skype.com##.darkenBg
-skype.com###coverSection
-skype.com##.themeDark.themeDarkDesktop
 account.microsoft.com##.alert-band-container
 blu185.mail.live.com###c_hiconm
 blu185.mail.live.com##.c_hiconl.c_ml.c_h_mc.uxfa_ml.c_ml.c_cf
@@ -81,14 +73,6 @@ knowyourmeme.com###popular_galleries
 knowyourmeme.com##.sidebar_box.c
 bbfc.co.uk##.shareit
 visionlaunch.com##.et_social_sidebar_networks.et_social_visible_sidebar.et_social_slideright.et_social_animated.et_social_rectangle.et_social_sidebar_flip.et_social_sidebar_withcounts.et_social_withtotalcount.et_social_mobile_on
-mlp.derpynews.com###rss-4
-mlp.derpynews.com##.widget.widget_rss
-mlp.derpynews.com##div[style="overflow: hidden;"]
-mlp.derpynews.com###pis_posts_in_sidebar-3
-mlp.derpynews.com##.widget.posts-in-sidebar
-mlp.derpynews.com##div[style="text-align: center;"]
-mlp.derpynews.com###text-158
-mlp.derpynews.com##.widget.widget_text
 my-mip.com##.webform.showwebform
 my-mip.com##.webtolead-overlay
 tomsitpro.com###xbczuolzcdixxlswsksyogpfslncfv
@@ -110,8 +94,6 @@ avsforum.com###vspopup-overlay
 avsforum.com##.vsoverlay-item
 pcworld.com###toaster
 lifehacker.com##.networknav.js_networknav
-joshua-wright.tumblr.com##.action
-joshua-wright.tumblr.com##.note.like.tumblelog_coolkid33391.without_commentary
 archdaily.com##.kenneth-modal.kenneth-modal__bg-black.kenneth-modal__center-wrap
 archdaily.com###kenneth-modal
 archdaily.com##.blocking-modal.show-modal
@@ -192,3 +174,19 @@ twitch.tv##.card.card--xs.card--row.sc-card.js-recommended-channel
 ##.community-page-entry-point-module.module
 ##.wikia-logo__subtitle
 ##.recirculation-rail.module.group-FANDOM_TOPIC.recirculation-unit
+twitter.com##.RelatedUsers
+###recirculation-rail
+kotaku.com##.sidebar-content.js_sidebar-container.js_sidebar
+kotaku.com##.sidebar
+mariowiki.com##td[style="padding: 0;"]
+msn.com###utif_rectangle1_data_financecurrencyconverter_container_da2fbcf9-5cfb-44df-8e5f-ddaaf2e321af_271635ce-d662-458b-9e27-9a32eb3d9e8a
+twitch.tv##.tse-scroll-content.js-social-column-list
+twitch.tv##.flex__item.scroll.sc-list-container.js-social-column-list-container
+twitch.tv##.social-column.js-social-column.flex.flex--column
+youtube.com##.style-scope.ytd-watch-next-secondary-results-renderer
+buzzfeed.com##.list-unstyled.js-now-buzzing__list
+buzzfeed.com##.bfa-share-btn.xs-text-center.xs-relative.xs-block.sharing-btn.sharing-btn--c-link.analyt-share--link.js-sharing-btn
+buzzfeed.com##.bfa-share-btn.xs-text-center.xs-relative.xs-block.sharing-btn.sharing-btn--c-email.analyt-share--email.js-sharing-btn
+buzzfeed.com##.bfa-share-btn.xs-text-center.xs-relative.xs-block.sharing-btn.sharing-btn--c-facebook.analyt-share--facebook.js-sharing-btn
+buzzfeed.com##.bfa-share-btn.xs-text-center.xs-relative.xs-block.sharing-btn.sharing-btn--c-pinterest.analyt-share--pinterest.js-sharing-btn
+mobile.twitter.com##._2Ad_SH-7._3f2NsD-H
