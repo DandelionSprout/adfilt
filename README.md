@@ -21,5 +21,6 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg på b
 
 —The tools that I use—
 
-Checker for redundant/duplicate filter entries, made by Famlam: https://arestwo.org/famlam/redundantRuleChecker.html
-To sort filter entries in alphabetic order, and to remove "www." from most entries: https://www.sublimetext.com/
+• Checker for redundant/duplicate filter entries, made by Famlam: https://arestwo.org/famlam/redundantRuleChecker.html
+
+• To sort filter entries in alphabetic order, and to remove "www." from most entries: https://www.sublimetext.com/
