@@ -14,3 +14,11 @@ If you're a user of "Dandelion Sprouts norske filtre for ryddigere nettsider", I
 In any of these cases, create an issue in the "Issues" tab above, at which I'll attempt to resolve the issue, and will afterwards close the issue. Closure does not prevent you from posting further replies in the issue thread, if you find more information about the situation afterwards.
 
 Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere.
+
+————————————————————————————————————
+
+"Dandelion Sprouts norske filtre for ryddigere nettsider" is currently aiming for inclusion in Ublock Origin. If you find that list to be great (For instance that it has no substantial issues), I encourage you to give some kind words or emotes through peaceful means to https://github.com/gorhill/uBlock/pull/3118, to reach the attention of uBᵒ's admittedly busy developers.
+
+—The tools that I use—
+Checker for redundant/duplicate filter entries, made by Famlam: https://arestwo.org/famlam/redundantRuleChecker.html
+To sort filter entries in alphabetic order, and to remove "www." from most entries: https://www.sublimetext.com/
