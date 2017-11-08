@@ -2,7 +2,7 @@ Notes on how to contribute:
 
 • I don't currently intend to acquire extra project members, since this repo is a pretty personal thing for me, all in all.
 
-• Issues can be reported in the Issues tab. Write in deep detail about which site(s) that is affected, and which thing(s) on the site that are being affected by it.
+• Issues and thoughts can be reported in the Issues tab. If you're reporting about a filter issue, you are expected to either explain the issue in deep detail, or to track down the problematic filter entry on your own.
 
 • I'm unsure at the moment how I'd deal with pull requests. If you do make them, explain in deeply meticulous detail what the new filters remove, or why you want to remove certain existing filters. I also reserve the right to deny pull requests without stating any real reasons for it, just in case.
 
