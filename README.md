@@ -17,10 +17,18 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg på b
 
 ————————————————————————————————————
 
-"Dandelion Sprouts norske filtre for ryddigere nettsider" is currently aiming for inclusion in Ublock Origin. If you find that list to be great (For instance that it has no substantial issues), I encourage you to give some kind words or emotes through peaceful means to https://github.com/gorhill/uBlock/pull/3118, to reach the attention of uBᵒ's admittedly busy developers.
+<i>Dandelion Sprouts norske filtre for ryddigere nettsider</i> is currently aiming for inclusion in Ublock Origin. If you find that list to be great (For instance that it has no substantial issues), I encourage you to give some kind words or emotes through peaceful means to https://github.com/gorhill/uBlock/pull/3118, to reach the attention of uBᵒ's admittedly busy developers.
 
 —The tools that I use—
 
 • Checker for redundant/duplicate filter entries, made by Famlam: https://arestwo.org/famlam/redundantRuleChecker.html
 
-• To sort filter entries in alphabetic order, and to remove "www." from most entries: https://www.sublimetext.com/
+Ways one can use Sublime Text to improve his/her filter lists (https://www.sublimetext.com/):
+
+• To sort filter entries in alphabetic order: F9 / Edit → Sort Lines
+
+• To remove "www." from most entries: Ctrl+H / Find → Replace…
+
+• To remove duplicates: Edit → Permute Lines → Unique
+
+• To remove duplicates across files: Paste the content of the file that shall retain its filters on top, and paste the content of the file that shall delete its duplicates on bottom.
