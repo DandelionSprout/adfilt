@@ -1,8 +1,8 @@
 # adfilt
 
-This is the place where I, Imre Kristoffer Eilertsen, host my web filters. Github was by far the easiest way for laymen like me to store pure TXT files, which I thought was a necessity to share my filter lists across multiple units.
+This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. Github was by far the easiest way for laymen like me to store pure TXT files, which I thought was a necessity to share my filter lists across multiple units.
 
-• ExperimentalNorwegianList.txt is a Norwegian-focused list intended for public consumption. If you've been directed here by Adblock Plus or FilterLists, then this is the list you're using.
+• ExperimentalNorwegianList.txt is a Norwegian-focused adblock list intended for public consumption. If you've been directed here by Adblock Plus or FilterLists, then this is the list you're using.
 
 • a.txt is intended as an archive of my personal private filters, stored on Github in such a way that I can share them between my browsers and E-mail clients. It is NOT intended for public consumption, because it includes hundreds of filters that remove everything I don't like online, which includes filters that remove features that are liked by 95% of all other humans.
 
@@ -13,7 +13,7 @@ If you're a user of "Dandelion Sprouts norske filtre for ryddigere nettsider", I
 
 In any of these cases, create an issue in the "Issues" tab above, at which I'll attempt to resolve the issue, and will afterwards close the issue. Closure does not prevent you from posting further replies in the issue thread, if you find more information about the situation afterwards.
 
-Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere.
+Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på norsk bokmål, norsk nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. 
 
 ————————————————————————————————————
 
