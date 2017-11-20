@@ -6,18 +6,18 @@ This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, 
 
 • a.txt is intended as an archive of my personal private filters, stored on Github in such a way that I can share them between my browsers and E-mail clients. It is NOT intended for public consumption, because it includes hundreds of filters that remove everything I don't like online, which includes filters that remove features that are liked by 95% of all other humans.
 
-If you're a user of "Dandelion Sprouts norske filtre for ryddigere nettsider", I request help in various ways to make the list better. After all, it has "Experimental" in its raw name, mostly because I forgot to rename it before I submitted it to various list subscription archives.
+If you're a user of <i>Dandelion Sprouts norske filtre for ryddigere nettsider</i>, I request help in various ways to make the list better. After all, it has "Experimental" in its raw name, mostly because I forgot to rename it before I submitted it to various list subscription archives.
 1) Are there any notable and somewhat-or-more active Norwegian websites that I've forgot to create filters for? Then tell me about them.
 2) Since my list is tested on a 9:16 monitor, various filters with "nth-of-type" in their names need to be tested on wider monitors as well. If important boxes have disappeared on your end, tell me about them.
 3) For that matter, if any of the filters remove things that really shouldn't be removed (Non-sponsored articles, entire pages, etc.), tell me about them. Bonus points if you know which filter entry it was that caused the problem.
 
-In any of these cases, create an issue in the "Issues" tab above, at which I'll attempt to resolve the issue, and will afterwards close the issue. Closure does not prevent you from posting further replies in the issue thread, if you find more information about the situation afterwards.
+In any of these cases, create an issue in the <i>Issues</i> tab above, at which I'll attempt to resolve the issue, and will afterwards close the issue. Closure does not prevent you from posting further replies in the issue thread, if you find more information about the situation afterwards.
+
+I most dearly need some kind of feedback as to how many people that are using <i>Dandelion Sprouts norske filtre for ryddigere nettsider</i>. Therefore I request that active users of it should ★Star or ꙨWatch this repository, or to possibly find other non-obtrusive ways to show "I am using this list." to me in a way where I can see it. 
 
 Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på norsk bokmål, norsk nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. 
 
 ————————————————————————————————————
-
-<i>Dandelion Sprouts norske filtre for ryddigere nettsider</i> is currently aiming for inclusion in Ublock Origin. If you find that list to be great (For instance that it has no substantial issues), I encourage you to give some kind words or emotes through peaceful means to https://github.com/gorhill/uBlock/pull/3118, to reach the attention of uBᵒ's admittedly busy developers.
 
 —The tools that I use—
 
