@@ -6,4 +6,4 @@ To that end, I am introducing <b>Staying On The Phone Browser</b>. The purpose i
 
 The list is designed with Android in mind, and is chiefly tested on uBlock Origin for Firefox Android Beta. However, the list will also have some effect on other browsers (e.g. Adblock Browser) and other portable units (e.g. iOS) as well.
 
-This list was made as a proof-of-concept, hence why it has so few filters (15) at the time of writing (6th of Dec 2017). I am therefore very willing to listen to anyone who'd want to pick up on forking and maintaining this project on his/her/their own.
+This list was made as a proof-of-concept, hence why it has so few filters (≥23) at the time of writing (6th of Dec 2017). I am therefore very willing to listen to anyone who'd want to pick up on forking and maintaining this project on his/her/their own.
