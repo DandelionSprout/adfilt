@@ -13,7 +13,7 @@ If you're a user of <i>Dandelion Sprouts norske filtre for ryddigere nettsider</
 
 In any of these cases, create an issue in the <i>Issues</i> tab above, at which I'll attempt to resolve the issue, and will afterwards close the issue. Closure does not prevent you from posting further replies in the issue thread, if you find more information about the situation afterwards.
 
-I most dearly need some kind of feedback as to how many people that are using <i>Dandelion Sprouts norske filtre for ryddigere nettsider</i>. Therefore I request that active users of it should ★Star or ꙨWatch this repository, or to possibly find other non-obtrusive ways to show "I am using this list." to me in a way where I can see it. 
+I most dearly need some kind of feedback as to how many people that are using <i>Dandelion Sprouts norske filtre for ryddigere nettsider</i>. Therefore I request that active users of it should ★Star or ꙨWatch this repository, or take this ~4-question survey so that I know that you're actually using a filter list or not: https://dandelionsprout.polldaddy.com/s/adfilt-brukerundersøkelse.
 
 Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på norsk bokmål, norsk nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. 
 
