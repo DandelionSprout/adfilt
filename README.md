@@ -1,6 +1,6 @@
 # adfilt
 
-![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Adfilt%20logo.png)
+![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Adfilt%20logo%202.png)
 
 This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. Github was by far the easiest way for laymen like me to store pure TXT files, which I thought was a necessity to share my filter lists across multiple units.
 
