@@ -2,24 +2,31 @@
 
 This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. Github was by far the easiest way for laymen like me to store pure TXT files, which I thought was a necessity to share my filter lists across multiple units.
 
-• ExperimentalNorwegianList.txt is a Norwegian-focused adblock list intended for public consumption. If you've been directed here by Adblock Plus or FilterLists, then this is the list you're using.
+• ExperimentalNorwegianList.txt is a Norwegian-focused adblock list intended for public consumption. If you've been directed here by uBlock Origin or by Adblock Plus, then this is the list you're using.
 
-• a.txt is intended as an archive of my personal private filters, stored on Github in such a way that I can share them between my browsers and E-mail clients. It is NOT intended for public consumption, because it includes hundreds of filters that remove everything I don't like online, which includes filters that remove features that are liked by 95% of all other humans.
+• Staying On The Phone Browser was created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
 
-If you're a user of <i>Dandelion Sprouts norske filtre for ryddigere nettsider</i>, I request help in various ways to make the list better. After all, it has "Experimental" in its raw name, mostly because I forgot to rename it before I submitted it to various list subscription archives.
-1) Are there any notable and somewhat-or-more active Norwegian websites that I've forgot to create filters for? Then tell me about them.
-2) Since my list is tested on a 9:16 monitor, various filters with "nth-of-type" in their names need to be tested on wider monitors as well. If important boxes have disappeared on your end, tell me about them.
-3) For that matter, if any of the filters remove things that really shouldn't be removed (Non-sponsored articles, entire pages, etc.), tell me about them. Bonus points if you know which filter entry it was that caused the problem.
+• NorwegianExtensionsForUBOandNano.txt was created, following a good piece of advice that various adblockers now allow lists to embed other lists into them, for the purpose of preventing uBlock Origin-formatted entries from bothering Adblock Plus users who wouldn't be able to use them. It is not recommended to sub to this list separately, since it already is a part of ExperimentalNorwegianList.txt per se for whom it is concerned.
 
-In any of these cases, create an issue in the <i>Issues</i> tab above, at which I'll attempt to resolve the issue, and will afterwards close the issue. Closure does not prevent you from posting further replies in the issue thread, if you find more information about the situation afterwards.
+• a.txt is intended as an archive of my personal private filters, stored on GitHub in such a way that I can share them between my browsers and E-mail clients. It is __NOT__ intended for public consumption, because it includes hundreds of filters that remove everything I don't like online, which includes filters that remove features that are liked by 95% of all other humans on the planet.
 
-I most dearly need some kind of feedback as to how many people that are using <i>Dandelion Sprouts norske filtre for ryddigere nettsider</i>. Therefore I request that active users of it should ★Star or ꙨWatch this repository, or take this ~4-question survey so that I know that you're actually using a filter list or not: https://dandelionsprout.polldaddy.com/s/adfilt-brukerundersøkelse.
+## I hereby request help with:
 
-Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på norsk bokmål, norsk nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. 
+• Discovering filters that I may have missed, especially on websites that I refuse to visit due to personal tastes (e.g. far-right "newssites", or conspiracist mouthpiece blogs).
 
-————————————————————————————————————
+• Telling me that you're using those lists, through taking a quick ~4-question survey in Norwegian (https://dandelionsprout.polldaddy.com/s/adfilt-brukerundersøkelse), and/or by giving this repository a ꙨWatch and/or ★Star.
 
-—The tools that I use—
+• Generating versions of ExperimentalNorwegianList.txt for the following formats: .tpl (_Tracking Protection List_ format, for Internet Explorer 9-11), WebKit (iOS), hosts files (Routers and local computer tools), and Privoxy (HTTP filtering, from what I can determine).
+
+• Testing box-removal filters on widescreen monitors, since I almost always test my filters on a 9:16 portrait monitor.
+
+• Telling me if ExperimentalNorwegianList.txt remove things that in fact shouldn't be removed (e.g. Non-sponsored articles, entire pages, etc.). Bonus points if you know which filter entry it was that caused the problem.
+
+I allow both _Issues_ and _Pull requests_ reports about any of the above, for the time being. Don't be shy to ask/tell me.
+
+Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på norsk bokmål, norsk nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere.
+
+## The tools that I use:
 
 • Checker for redundant/duplicate filter entries, made by Famlam: https://arestwo.org/famlam/redundantRuleChecker.html
 
