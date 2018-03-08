@@ -4,9 +4,9 @@
 
 This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. Github was by far the easiest way for laymen like me to store pure TXT files, which I thought was a necessity to share my filter lists across multiple units.
 
-• ExperimentalNorwegianList.txt is a Norwegian-focused adblock list intended for public consumption. If you've been directed here by uBlock Origin or by Adblock Plus, then this is the list you're using.
+• ExperimentalNorwegianList.txt is a Norwegian-focused adblock list intended for public consumption. If you've been directed here by uBlock Origin or by Adblock Plus, then this is the list you're using. The list is natively available in uBlock Origin (from v1.15.11 onwards), Adblock Plus' secondary [subscriptions](https://adblockplus.org/subscriptions) list, and from [FilterLists.com](https://filterlists.com/). It can also be added through pasting [its raw address](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ExperimentalNorwegianList.txt) into your adblocker's custom URL section.
 
-• Staying On The Phone Browser was created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
+• Staying On The Phone Browser was created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps. [Raw link](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/stayingonbrowser/Staying%20On%20The%20Phone%20Browser).
 
 • NorwegianExtensionsForUBOandNano.txt was created, following a good piece of advice that various adblockers now allow lists to embed other lists into them, for the purpose of preventing uBlock Origin-formatted entries from bothering Adblock Plus users who wouldn't be able to use them. It is not recommended to sub to this list separately, since it already is a part of ExperimentalNorwegianList.txt per se for whom it is concerned.
 
@@ -14,7 +14,7 @@ This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, 
 
 ## I hereby request help with:
 
-• Discovering filters that I may have missed, especially on websites that I refuse to visit due to personal tastes (e.g. far-right "newssites", or conspiracist mouthpiece blogs).
+• Discovering filters that I may have missed, especially on websites that I refuse to visit due to personal tastes (e.g. far-right "newssites", clothes-"selling" scam shops, conspiracist mouthpiece blogs, and so on).
 
 • Telling me that you're using those lists, through taking a quick ~4-question survey in Norwegian (https://dandelionsprout.polldaddy.com/s/adfilt-brukerundersøkelse), and/or by giving this repository a ꙨWatch and/or ★Star.
 
