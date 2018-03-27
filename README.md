@@ -6,6 +6,8 @@ This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, 
 
 • _ExperimentalNorwegianList.txt_ is a Norwegian-focused adblock list intended for public consumption. If you've been directed here by uBlock Origin or by Adblock Plus, then this is the list you're using. The list is natively available in uBlock Origin (from v1.15.11 onwards), Adblock Plus' secondary [subscriptions](https://adblockplus.org/subscriptions) list, and from [FilterLists.com](https://filterlists.com/). It can also be added through pasting [its raw address](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ExperimentalNorwegianList.txt) into your adblocker's custom URL section.
 
+Alternate but amputated and untested versions now exist for iOS (.json), Internet Explorer (.tpl), and a misformatted hosts file that nonetheless seems to be fully supported by uBlock Origin's hosts-file support. Help with testing their usefulness and installation process would've come in handy, especially if people want to use those versions.
+
 • _Staying On The Phone Browser_ was created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps. [Raw link](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/stayingonbrowser/Staying%20On%20The%20Phone%20Browser).
 
 • _List for Chrome Personal Blocklist_ is designed for users of [Personal Blocklist](https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef), and potentially also for similar search result filter tools as well. Due to its buffet nature, in which it merely suggests which URLs you can paste into the extension's import function, I don't currently accept issue reports about adding URLs to it for the time being, but would be very happy to be told about other search result filter tools for other engines/browsers, so that I can learn about them, as well as bug reports.
@@ -20,7 +22,7 @@ This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, 
 
 • Telling me that you're using those lists, through taking a quick ~4-question survey in Norwegian (https://dandelionsprout.polldaddy.com/s/adfilt-brukerundersøkelse), and/or by giving this repository a ꙨWatch and/or ★Star.
 
-• Generating versions of ExperimentalNorwegianList.txt for the following formats: .tpl (_Tracking Protection List_ format, for Internet Explorer 9-11), WebKit (iOS), hosts files (Routers and local computer tools), and Privoxy (HTTP filtering, from what I can determine).
+• Generating and/or testing versions of ExperimentalNorwegianList.txt for the following formats: .tpl (_Tracking Protection List_ format, for Internet Explorer 9-11), WebKit (iOS), hosts files (Routers and local computer tools), and Privoxy (HTTP filtering, from what I can determine).
 
 • Testing box-removal filters on widescreen monitors, since I almost always test my filters on a 9:16 portrait monitor.
 
@@ -35,6 +37,10 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 ## The tools that I use:
 
 • Checker for redundant/duplicate filter entries, made by Famlam: https://arestwo.org/famlam/redundantRuleChecker.html
+
+• Tool I used to create a JSON file for WebKit, made by the Adblock Plus developers: https://github.com/adblockplus/abp2blocklist
+
+• Recentmost tool I used to test IP server availability, made by Funilrys: https://github.com/funilrys/funceble (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead).
 
 Ways one can use Sublime Text to improve his/her filter lists (https://www.sublimetext.com/):
 
