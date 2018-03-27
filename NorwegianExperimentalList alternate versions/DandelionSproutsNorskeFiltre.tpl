@@ -1,0 +1,191 @@
+# Title: Dandelion Sprouts Norske Filtre
+# Last modified: 27 Mar 2018 05:30 UTC
+# Jeg har knapt noen anelse hva jeg driver med idet jeg lager denne ganske så amputerte TPL-filen. Litt hjelp fra eksperter innenfor TPL-syntakser hadde vært ganske konge.
+: Expires=30
+- -ad-centered
+- -ad-digitalt-bilagH
+- -ad-digitalt-bilagV
+- -ad_native_helseoglivsstil_high
+- -ad_native_high
+- -ad_native_motor_high
+- -ad_native_privatokenomi_high
+- -ad_native_reise_high
+- -ad_superboard
+- -ad_topp
+- -adunit-wrapper
+- -advertisement
+- -am-page-ad
+- -df-left.df-width-100.df-widget
+- -full-width.daily-offers
+- -gb_g.gb_fa
+- -hidden-xs.afubar-top
+- -horseshoe
+- -inline-ad-text
+- -inlineannonse
+- -latterkulainnlegg-annonse
+- -native-advertisement
+- -netboard_1
+- -netboard_2
+- -netboard_3
+- -netboard_4
+- -netboard_5
+- -netboard_6
+- -ntbox-btn
+- -ntbox-tab.bg-primary
+- -ntwidget
+- -polarisMarketing
+- -skille
+- -skyscraperleft_1
+- -skyscraperright_1
+- -sponset-innlegg
+- -sportspill-box-top
+- -sub.menu-primary.default.polarisMenu.widget
+- -topboard
+- -tv2-ad
+- /lotteri/eurojackpot
+- /lotteri/lotto
+- /lotteri/viking-lotto
+-d .no /ad/
+-d .no /ads/
+-d .oasfile
+-d /annonse/*
+-d /Bannere/*$image,domain=tek.no|gamer.no
+-d /prisjaktAd
+-d /reklam/*
+-d /reklame/*
+-d /serier-med-hoy-karakter-pa-imdb/
+-d 102.112.2o7.net
+-d 8m.com/fs_img/bannertype/
+-d aabl-container
+-d abteknikk.no /os/
+-d ad.*.no
+-d ad.no.doubleclick.net
+-d ad1.*.no
+-d adcache.*.no
+-d adext.inkclub.com
+-d adfiles.api.no
+-d ads.*.no
+-d ads.no
+-d adserver.digitoday.com
+-d advert.api.no
+-d aelnj.no
+-d aftenposten.no /*/norwegian/
+-d aftenposten.no /*/rubrikk/
+-d aftenposten.no /bolig/
+-d aftenposten.no /boligannonser/
+-d andeneshornmusikk.no
+-d annonser.*.no
+-d apple-account-locked.losjevegen.no
+-d arendalfotball.no
+-d arvetellefsen.no /curry
+-d aumamandel.no
+-d avisenagder.no /Portals/4/ads/
+-d banner.*.no
+-d bannere.oslonett.no
+-d beitostolen.no /marked/reklameannonser/
+-d bloggannonser.no
+-d bokportalen.no /images/rkbanner.jpg
+-d boligsamvirket.no /promsys/
+-d bolinux3.hit.no
+-d brannloftet.no
+-d butikk.losnaspelet.no
+-d cache.finn.no /gfx/
+-d cdn.pji.nu/g/campaigns/12/no/mainpage_header.png$image
+-d cdn.pji.nu/g/campaigns/4/xx/christmas_2017.png$image
+-d cmt.no
+-d dagbladet.no /an/
+-d dagbladet.no /annonseinfo/
+-d deiligst.no /banners/
+-d digi.no /grafikk/annonse
+-d dinside.no /annonsorer/
+-d easy-ad.no
+-d ekstra.htg.no
+-d emerio.no
+-d eurosko.net
+-d extra-leker.no /skin/frontend/polarcore/default/images/christmas-bg.jpg$image
+-d f-b.no /includes/sidebanner
+-d fanadyreklinikk.no
+-d finn.no /finn/realestate/leisure/plots/
+-d flash.vg.no
+-d flashbanner.no
+-d folk.rbnett.no /widgets/24$subdocument
+-d forum1.no
+-d g2.start.no /img/dominans/
+-d gaysir.no /rek/rekimg/
+-d go.start.no
+-d gulesider.no /bannersys-pics/
+-d handelihalden.no
+-d helios.*.no
+-d holmedalblikk.no
+-d humor911.no /annonseweb/
+-d i1media.no
+-d images.media.xxlsports.com/images/h90/h9d/9339713159198/bg.jpg$image
+-d img8.custompublish.com/publish/getbanner.php/
+-d imp.euroads.no
+-d ish.tumedia.no /ish_tracker.gif$image
+-d itavisen.no /annonsorer/
+-d itavisen.no /graphics/news/barAdvertising.jpg
+-d itpro.no /images/adheaders/
+-d karrierestart.no /Home/TopBannerContent$subdocument
+-d kjolenorge.com
+-d klikk.no /DBGfx/Ads/
+-d komtilmil.no
+-d kundeweb.aggressive.no /users/fotopia.no /bannere/
+-d media2.origo.no /images/
+-d mobilen.no /wip4/oc_scrollbar/
+-d mrtraffic.no /swf/bannere_slideshow.swf
+-d myad.no
+-d nettbillett.no /gfx/nettbillett/freia.swf
+-d nettklikk.no
+-d newbalancenorge.com
+-d no-vg.cdn.videoplaza.tv/creatives/
+-d no.2mdn.net
+-d no.zxxyw.com
+-d norskeplugins.com/UltimateFooterAd/
+-d npadvert.imaker.no
+-d nrj.no /dbimages/
+-d nrk.no /img/424546.gif
+-d oslopuls.aftenposten.no /img/filmweb.swf
+-d oyelege.no
+-d p4.no /mmo/ads/
+-d paypal.limitedremoved.culinae.no
+-d pcworld.no /faste_elementer/macromedia.swf
+-d piwik.onlinemagasinet.no
+-d platekompaniet.no /assets/img/background.png$image
+-d pool.euroads.no
+-d primetime.ad.primetime.net
+-d propaganda.net/img/reklame.
+-d propaganda.net/js/global.js
+-d r.api.no /componada/resources/web/flash/
+-d rig.idg.no
+-d s3.pji.nu$domain=~pricespy.co.uk|~pricespy.ie|~pricespy.no.nz|~hintaopas.fi|~prisjakt.no
+-d scannernytt.net/images/banners/
+-d sdc.dn.no
+-d seher.no /img/egenannonser/
+-d server-no.imrworldwide.com
+-d server-us.imrworldwide.com
+-d services.jatak.
+-d skoonlineshopnorge.com
+-d static.itrack.it
+-d static.tek.no /images/main/bodyBgStretch.png$domain=hardware.no
+-d static.vg.no /css/admark_top.gif
+-d stats.bonzaii.no
+-d streetdance.no
+-d tb.no /polopoly_fs/ledige-jobber-flash-7.13191#/
+-d tipster.no /embed$subdocument
+-d track.adform.net/Banners/
+-d tradedoubler.no
+-d tromselementbygg.no
+-d tu.no /oxb/
+-d tv2.no /s/lab/2.5/p/img/tv2-background.svg$image
+-d tvshop.com/tradedoubler_files/
+-d u8959882.isphuset.no
+-d ukeadvert.imaker.no
+-d vetscan.no
+-d vglista.no /wp-content/themes/vglista/img/partner/
+-d webclick.no
+-d webhotell.enivest.no
+-d webtips.no /banneradmin/
+-d widget.tippebannere.no /v3/iframes/Spillvett/spillvett.aspx$subdocument
+-d win-xp.no /images/banner
+-d yfrog.com/htzywuj:medium
