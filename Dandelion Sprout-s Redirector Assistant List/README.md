@@ -8,4 +8,6 @@ At the moment, the list will:
 
 The list has been successfully tested with http://einaregilsson.com/redirector/ on Chrome. It should on paper also work with various other redirector extensions, but only if they have a file import function.
 
+To "download" the list file in a usable capacity, mark all the text in [the JSON file](https://github.com/DandelionSprout/adfilt/blob/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/DandelionSproutRedirectorList.json), copy it into a local text editor, and save it as a JSON file.
+
 If you have any requests, wishes or problems with this list, or just want to say hi to me, feel free to tell me about it.
