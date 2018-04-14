@@ -1,0 +1,11 @@
+<b>Dandelion Sprout's Redirector Assistant List</b> is a way to redirect less-than-optimal URLs, into optimal URLs, thus making life a little easier for its users.
+
+At the moment, the list will:
+1) Turn 32-bit installation links to major Windows programs to 64-bit ones.
+2) Redirect Adobe's own download links to those of FileHorse's, to prevent your PC from catching the disease known as McAfee.
+3) Allows you to visit Disney's American websites from abroad.
+4) Turn mobile Wikipedia links (e.g. en.m.wikipedia.org) into desktop Wikipedia links.
+
+The list has been successfully tested with http://einaregilsson.com/redirector/ on Chrome. It should on paper also work with various other redirector extensions, but only if they have a file import function.
+
+If you have any requests, wishes or problems with this list, or just want to say hi to me, feel free to tell me about it.
