@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Version: 12Apr2018_18:59
+! Version: 17Apr2018_02:16
 ! Title: Dandelion Sprouts norske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Norwegian Filters for tidier websites
-! Last modified: 12 April 2018 18:59 UTC
+! Last modified: 17 April 2018 02:16 UTC
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/DandelionSprout/adfilt
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -73,8 +73,10 @@
 180.no##.frame-shadow-L
 180.no##.frame-shadow-R
 @@||eurosport.no^$generichide
+!#if !adguard
 @@||s3.pji.nu/js/*/global_foot.c-*.js$domain=hintaopas.fi,pricespy.co.nz,pricespy.co.uk,pricespy.ie,prisjakt.no
 @@||s3.pji.nu/js/*/global_head.c-*.js$domain=hintaopas.fi,pricespy.co.nz,pricespy.co.uk,pricespy.ie,prisjakt.no
+!#endif
 abcnyheter.no###aswift_0
 abcnyheter.no###aswift_0_anchor
 abcnyheter.no###aswift_0_expand
@@ -166,6 +168,7 @@ fuglelyder.net#@##banner_ad
 fvn.no###df-3-r253049b4
 gamer.no,tek.no,digi.no##.annonselenker
 gamer.no,tek.no,digi.no##.products-carousel
+!#if !adguard
 gamereactor.no###ad_video
 gamereactor.no###ad_w300h450
 gamereactor.no###bigVideoAd
@@ -177,14 +180,17 @@ gamereactor.no##.cocacola
 gamereactor.no##a[href*="/adclick.php"]
 gamereactor.no##div[class^="ad300"]
 gamereactor.no##div[style*="width:300px;height:600px;"]
+!#endif
 get.no##.background
 get.no##.selected > .assets
 gjerrigknark.com##.dividerBlock
+#!if !adguard
 google.no###epbar, #cnsh, #pushdown, #consent-bump, #cnsi ~ [jsaction*="dismiss"], santa-notice
 google.no###tads
 google.no###taw
 google.no##.luhb-div
 google.no##.rlfl__tls > div[jstcache="0"]:not([class]):not([id])[-ext-has='span._mB']
+#!endif
 helsebiblioteket.no###advert
 historienet.no##.banner-wrapper.visible-md-lg
 historienet.no##.col-md-12
@@ -213,7 +219,6 @@ klikk.no##.contributor
 klikk.no##.medium-5.small-6
 komputer.no,natgeo.no,historienet.no##.top-banner
 komputer.no,natgeo.no,historienet.no,illvit.no##.wg-banner
-lefdal.com##.partner-links.row
 melhusbanken.no##.card-ingress
 minmote.no,godt.no##.adblock-info
 netonnet.no##.alert
@@ -228,9 +233,9 @@ newsinenglish.no###tmbluemask
 newsinenglish.no##.tmmask
 nickelodeon.no##.ad-container
 no.gsk.com###__cqBannerOverlay
-no.pinterest.com##.FullPageModal__scroller
-no.pinterest.com##div[style="background-color: rgba(0, 0, 0, 0.6); opacity: 1; position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 1000;"]
-no.pinterest.com##div[style="background: rgba(0, 0, 0, 0.85098); transition: height 0.5s cubic-bezier(0.26, 0.87, 0.74, 0.93); backface-visibility: hidden; bottom: 0px; color: rgb(255, 255, 255); height: 100%; position: fixed; width: 100%;"]
+pinterest.com##.FullPageModal__scroller
+pinterest.com##div[style="background-color: rgba(0, 0, 0, 0.6); opacity: 1; position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 1000;"]
+pinterest.com##div[style="background: rgba(0, 0, 0, 0.85098); transition: height 0.5s cubic-bezier(0.26, 0.87, 0.74, 0.93); backface-visibility: hidden; bottom: 0px; color: rgb(255, 255, 255); height: 100%; position: fixed; width: 100%;"]
 no.wikipedia.org,nn.wikipedia.org###frbanner3
 no.wikipedia.org,nn.wikipedia.org##.cfn-blockrk.no
 norskenettsider.no###g_image4
@@ -304,11 +309,13 @@ vg.no##.wid-betting
 vg.no,e24.no,aftenposten.no,filmweb.no##.ad
 vgd.no###prisjaktAd
 vgtv.no###player.pulse-isPauseAdVisible > .jw-overlays
+!#if !adguard
 viafree.se,viafree.no,viafree.dk,viafree.fi##.ad-click-through
 viafree.se,viafree.no,viafree.dk,viafree.fi##.pause-ad
-viaplay.no###serier-med-hoy-karakter-pa-imdb
 viaplay.no##.interaction-block
 viasatsport.se,viasatsport.fi,tv3sport.dk,viasport.no##div.libellus.is-visible
+!#endif
+viaplay.no###serier-med-hoy-karakter-pa-imdb
 volkswagen.no###vwd4_m509
 xxl.no##.aboveheader.c-fader
 zoover.no###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
