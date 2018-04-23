@@ -21,13 +21,13 @@ The list's name | Filename in this repo | Badges     | Beskrivelse (Nors
 ![alt text](https://github.com/DandelionSprout/adfilt/blob/master/Images/Norsk%2030.png): Norske ekstrafiltre for uBlock Origin og Nano<br><br>![alt text](https://github.com/DandelionSprout/adfilt/blob/master/Images/English%2030.png): Norwegian Extensions for uBlock Origin and Nano | NorwegianExtensionsForUBO&Nano.txt | ![alt text](https://img.shields.io/badge/platform-uBlock%20Origin-red.svg?link=https://github.com/gorhill/uBlock) ![alt text](https://img.shields.io/badge/Platform-Adguard-0fd091.svg?https://adguard.com/) ![alt text](https://github.com/DandelionSprout/adfilt/blob/master/Images/Norsk.png) ![alt text](https://img.shields.io/badge/Status-Proper%20version-0fb8b4.svg) | Denne listen ble laget som følge av et godt råd, at diverse reklameblokkere nå tillater lister å bygge inn andre lister inni dem, for det formål å hindre uBlock Origin-fokuserende filtre fra å plage Adblock Plus-brukere som ikke ville kunnet bruke dem. Det er ikke anbefalt å abonnere på denne listen separat, ettersom den allerede teknisk sett er en del av Dandelion Sprouts Norske Filtre for dem som denne listen gjelder for. | This was created, following a good piece of advice that various adblockers now allow lists to embed other lists into them, for the purpose of preventing uBlock Origin-formatted entries from bothering Adblock Plus users who wouldn't be able to use them. It is not recommended to sub to this list separately, since it already is a part of ExperimentalNorwegianList.txt per se for whom it is concerned. | [Raw link](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExtensionsForUBO%26Nano.txt) | 
 (my own personal filters) | a.txt | | Ikke ment for offentlig bruk. | Not meant for public consumption. | [Direct link](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FDandelionSprout%2Fadfilt%2Fmaster%2Fa.txt&title=Imres%20filtre)<br>[Raw link](https://github.com/DandelionSprout/adfilt/blob/master/a.txt)
 
-## I hereby request help with:
+## I hereby request help from other people with:
 
 • Discovering filters that I may have missed, especially on websites that I refuse to visit due to personal tastes (e.g. far-right "newssites", clothes-"selling" scam shops, conspiracist mouthpiece blogs, and so on).
 
-• Telling me that you're using those lists, through taking a quick ~4-question survey in Norwegian (https://dandelionsprout.polldaddy.com/s/adfilt-brukerundersøkelse), and/or by giving this repository a ꙨWatch and/or ★Star.
+• Telling me that you're using those lists, through taking a quick ~4-question survey in Norwegian (https://dandelionsprout.polldaddy.com/s/adfilt-brukerundersøkelse), and/or by giving this repository a ꙨWatch and/or ★Star. Responses are currently checked up on once a week.
 
-• Generating and/or testing versions of ExperimentalNorwegianList.txt for the following formats: .tpl (_Tracking Protection List_ format, for Internet Explorer 9-11), WebKit (iOS), hosts files (Routers and local computer tools), and Privoxy (HTTP filtering, from what I can determine).
+• Testing out lists that are marked as _Beta_, and double-checking the syntaxes of and testing the lists that are marked as _Alpha_.
 
 • Testing box-removal filters on widescreen monitors, since I almost always test my filters on a 9:16 portrait monitor.
 
@@ -35,7 +35,7 @@ The list's name | Filename in this repo | Badges     | Beskrivelse (Nors
 
 I allow both _Issues_ and _Pull requests_ reports about any of the above, for the time being. Don't be shy to ask/tell me.
 
-Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på norsk bokmål, norsk nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere.
+Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere.
 
 ![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Spr%C3%A5kflagg.png)
 
