@@ -1,8 +1,8 @@
 # adfilt
 
 ![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Adfilt%20logo%202.png)
-![licence](https://img.shields.io/badge/Licence-Custom%20open%20source%20licence%20based%20on%20BSD3-green.svg?link=https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md)
-![alt text](https://img.shields.io/badge/Repo%20supports%20Flattr-Yes-1f8b06.svg?link=https://flattr.com/)
+[![licence](https://img.shields.io/badge/Licence-Custom%20open%20source%20licence%20based%20on%20BSD3-green.svg)](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md)
+[![alt text](https://img.shields.io/badge/Repo%20supports%20Flattr-Yes-1f8b06.svg)](https://flattr.com/)
 
 This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. Github was by far the easiest way for laymen like me to store pure TXT files, which I thought was a necessity to share my filter lists across multiple units.
 
