@@ -40,7 +40,7 @@ I allow both _Issues_ and _Pull requests_ reports about any of the above, for th
 
 Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere.
 
-![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Spr%C3%A5kflagg.png)
+![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Spr%C3%A5kflagg2.png)
 
 PS: I have a lot of problems myself with the Edge browser version of uBlock Origin, so I am unfortunately unable to investigate into any problems that anyone out there would have with trying to use my lists with it.
 
