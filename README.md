@@ -38,6 +38,10 @@ The list's name | Filename in this repo | Badges     | Beskrivelse (Nors
 
 • Telling me if ExperimentalNorwegianList.txt remove things that in fact shouldn't be removed (e.g. Non-sponsored articles, entire pages, etc.). Bonus points if you know which filter entry it was that caused the problem.
 
+• While I do somewhat know how to create MD5 hashes, I don't know how I would go about if I wanted to validate them. Do anyone else out there know how to do so?
+
+• I coul need some documentation on the new _!#if_ tag that uBO and Adguard uses, because I currently have almost no idea what the different values for the tag are.
+
 I allow both _Issues_ and _Pull requests_ reports about any of the above, for the time being. Don't be shy to ask/tell me.
 
 Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere.
@@ -54,7 +58,7 @@ PS: I have a lot of problems myself with the Edge browser version of uBlock Orig
 
 • Recentmost tool I used to test IP server availability, made by Funilrys: https://github.com/funilrys/funceble (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead).
 
-Ways one can use Sublime Text to improve his/her filter lists (https://www.sublimetext.com/):
+Ways one can use Sublime Text to improve his/her filter lists (https://www.sublimetext.com/, made by Jon Skinner and Will Bond):
 
 • To sort filter entries in alphabetic order: F9 / Edit → Sort Lines
 
@@ -63,3 +67,5 @@ Ways one can use Sublime Text to improve his/her filter lists (https://www.subli
 • To remove duplicates: Edit → Permute Lines → Unique
 
 • To remove duplicates across files: Paste the content of the file that shall retain its filters on top, and paste the content of the file that shall delete its duplicates on bottom.
+
+• To attempt to add MD5 hashes: The [Hasher](https://github.com/dangelov/hasher) extension, made by [Dino Angelov](https://github.com/dangelov)
