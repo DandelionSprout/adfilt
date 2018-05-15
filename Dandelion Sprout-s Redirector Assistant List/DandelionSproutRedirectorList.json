@@ -1,8 +1,52 @@
 {
     "createdBy": "Redirector v3.1.0",
-    "createdAt": "2018-04-14T00:17:10.484Z",
+    "createdAt": "2018-05-15T11:33:19.267Z",
     "redirects": [
         {
+            "description": "Change some Twitter images to functionally readable images",
+            "exampleUrl": "https://pbs.twimg.com/media/DdO7F3tU0AA1CnQ.jpg:large",
+            "exampleResult": "https://pbs.twimg.com/media/DdO7F3tU0AA1CnQ.jpg",
+            "error": null,
+            "includePattern": "https://pbs.twimg.com*jpg:large",
+            "excludePattern": "",
+            "redirectUrl": "https://pbs.twimg.com$1jpg",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Remove English language tag from Google Play links",
+            "exampleUrl": "https://play.google.com/store/apps/details?id=remote.hid.keyboard.client&hl=en",
+            "exampleResult": "https://play.google.com/store/apps/details?id=remote.hid.keyboard.client",
+            "error": null,
+            "includePattern": "https://play.google.com/store/apps/details*&hl=en",
+            "excludePattern": "",
+            "redirectUrl": "https://play.google.com/store/apps/details$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Remove English language tag from Google Map position shares",
+            "exampleUrl": "https://www.google.com/maps/@12.3456789,12.3456789,15z/data=!4m2!7m1!2e1?hl=en",
+            "exampleResult": "https://www.google.com/maps/@12.3456789,12.3456789,15z/data=!4m2!7m1!2e1",
+            "error": null,
+            "includePattern": "https://www.google.com/maps/*/data=*?hl=en",
+            "excludePattern": "",
+            "redirectUrl": "https://www.google.com/maps/$1/data=$2",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
             "description": "Adobe Flash for Firefox without all the McAfee crap",
             "exampleUrl": "https://get.adobe.com/flashplayer/",
             "exampleResult": "https://www.filehorse.com/download-flashplayer-firefox/download/",
