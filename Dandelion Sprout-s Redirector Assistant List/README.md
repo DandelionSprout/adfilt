@@ -5,6 +5,8 @@ At the moment, the list will:
 2) Redirect Adobe's own download links to those of FileHorse's, to prevent your PC from catching the disease known as McAfee.
 3) Allow you to visit Disney's American websites from abroad.
 4) Turn mobile Wikipedia links (e.g. en.m.wikipedia.org) into desktop Wikipedia links.
+5) Change Google links that have an English language tags to them, into language-neutral links.
+6) Changes Twitter's _jpg:large_-pseudoformatted images to standard JPG ones.
 
 The list has been successfully tested with http://einaregilsson.com/redirector/ on Chrome. It should on paper also work with various other redirector extensions, but only if they have a file import function.
 
