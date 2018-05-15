@@ -60,7 +60,9 @@ PS: I have a lot of problems myself with the Edge browser version of uBlock Orig
 
 • Recentmost tool I used to test IP server availability, made by [Funilrys](https://github.com/funilrys): https://github.com/funilrys/funceble (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead).
 
-Ways one can use Sublime Text to improve his/her filter lists (https://www.sublimetext.com/, made by Jon Skinner and Will Bond):
+• To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed.
+
+#### Ways one can use Sublime Text to improve his/her filter lists (https://www.sublimetext.com/, made by Jon Skinner and Will Bond):
 
 • To sort filter entries in alphabetic order: F9 / Edit → Sort Lines
 
