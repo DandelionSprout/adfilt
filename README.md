@@ -78,7 +78,7 @@ PS: I have a lot of problems myself with the Edge browser version of uBlock Orig
 
 • To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed.
 
-• To make the GitHub websites a lot wider on the user-end, and thus make the tables above display in a better way: https://userstyles.org/styles/108591/github-wide by [cfoellman](https://userstyles.org/users/206217)
+• To make the GitHub websites a lot wider on the user-end, and thus make the tables above display in a better way: https://userstyles.org/styles/108591/github-wide by [cfoellmann](https://userstyles.org/users/206217)
 
 ### Ways one can use Sublime Text to improve his/her filter lists (https://www.sublimetext.com/, made by Jon Skinner and Will Bond):
 
