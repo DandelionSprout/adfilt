@@ -48,7 +48,7 @@ The list's name | Filename in this repo | Badges     | Description (Engl
 
 • Discovering filters that I may have missed, especially on websites that I refuse to visit due to personal tastes (e.g. far-right "newssites", clothes-"selling" scam shops, conspiracist mouthpiece blogs, and so on).
 
-• Telling me that you're using those lists, through taking a quick ~4-question survey in Norwegian (https://dandelionsprout.polldaddy.com/s/adfilt-brukerundersøkelse), and/or by giving this repository a ꙨWatch and/or ★Star. Responses are currently checked up on once a week.
+• Telling me that you're using those lists, through taking [a quick user survey](https://goo.gl/forms/nSzVy6NKXpfWWEqk1) on Google Forms, and/or by giving this repository a ꙨWatch and/or ★Star. Responses on the survey are currently checked up on once a week.
 
 • Testing out lists that are marked as _Beta_, and double-checking the syntaxes of and testing the lists that are marked as _Alpha_.
 
