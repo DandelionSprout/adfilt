@@ -8,14 +8,14 @@ Etter hvert som jeg begynte å sette sammen denne listen, begynte jeg også å n
 
 Så da er egentlig spørsmålet: Hvordan kan ting gjøres bedre? Hvis dere skulle ønske å dra inspirasjon fra mer moderne nettjenester (f.eks. blogger og kreative tjenester), har jeg noen idéer som hadde vært mindre livsfarlig for vanlige internettbrukere:
 
-• En Patreon-lignende abonnementstjeneste, hvor folk kan få mere fordeler på nettstedene avhengig av hvor mye de donerer, og hvor samlede mål kan sørge for at f.eks. ekstra innhold eller artikler blir laget hvis de blir oppnådd.
-• Generelle donasjonssystemer.
-• Det er litt kontroverser omkring krypto-myntgravere, men hvis dere bare bruker noen få prosenter av folks prosessorer (<10%, kanskje sågar <5%), og bruker mye færre prosenter på bærbare/mobiler enn på stasjonære PCer, tror jeg at vanlige folk kunne trivdes med det.
-• Kanskje kan man sågar bruke teknologien omkring krypto-myntgravere, til å bruke folks PCer til å behandle en viss andel av forespørslene som når tjenerne deres, for å kunne kutte ned på tjener-oppetidskostnadene?
-• Tekstbaserte reklamer er vanskeligere å hacke enn bildebaserte reklamer, men bare hvis de skrives som en del av selve artikkelen, og ikke som en ekstern tjeneste. Av sikkerhetsårsaker kan reklamelenker som er mer enn ett år gamle kanskje slettes automatisk, for å hindre at nettadressene de lenker til, utløper og blir snappet opp av hackere.
-• Dra nytte av "En viss prosent av salget går til"-kampanjer, f.eks. gjennom Humble Bundle, eBay, Amazon Smile, Grasrotkampanjen, osv. Da vil folk som liker innholdssidene og som også handler på de handlesidene, kunne bidra litt ekstra til innholdssidene.
-• Halv-automatiske donasjonsfordelingssystemer som Flattr og Brave Payments.
-• Jeg kan leve greit med sporere, men ikke når tilkoblingsprosessen til dem gjør at nettsteder lastes inn synlig tregere, hvilket er tilfellet på nettstedene til bl.a. Canal Digital og Elkjøp.
+• En Patreon-lignende abonnementstjeneste, hvor folk kan få mere fordeler på nettstedene avhengig av hvor mye de donerer, og hvor samlede mål kan sørge for at f.eks. ekstra innhold eller artikler blir laget hvis de blir oppnådd.<br>
+• Generelle donasjonssystemer.<br>
+• Det er litt kontroverser omkring krypto-myntgravere, men hvis dere bare bruker noen få prosenter av folks prosessorer (<10%, kanskje sågar <5%), og bruker mye færre prosenter på bærbare/mobiler enn på stasjonære PCer, tror jeg at vanlige folk kunne trivdes med det.<br>
+• Kanskje kan man sågar bruke teknologien omkring krypto-myntgravere, til å bruke folks PCer til å behandle en viss andel av forespørslene som når tjenerne deres, for å kunne kutte ned på tjener-oppetidskostnadene?<br>
+• Tekstbaserte reklamer er vanskeligere å hacke enn bildebaserte reklamer, men bare hvis de skrives som en del av selve artikkelen, og ikke som en ekstern tjeneste. Av sikkerhetsårsaker kan reklamelenker som er mer enn ett år gamle kanskje slettes automatisk, for å hindre at nettadressene de lenker til, utløper og blir snappet opp av hackere.<br>
+• Dra nytte av "En viss prosent av salget går til"-kampanjer, f.eks. gjennom Humble Bundle, eBay, Amazon Smile, Grasrotkampanjen, osv. Da vil folk som liker innholdssidene og som også handler på de handlesidene, kunne bidra litt ekstra til innholdssidene.<br>
+• Halv-automatiske donasjonsfordelingssystemer som Flattr og Brave Payments.<br>
+• Jeg kan leve greit med sporere, men ikke når tilkoblingsprosessen til dem gjør at nettsteder lastes inn synlig tregere, hvilket er tilfellet på nettstedene til bl.a. Canal Digital og Elkjøp.<br>
 • Reklamer for gambling, inkl. Norsk Tipping og Lyntoto, gjør ikke noe annet enn å gamble med lesernes sinn og tålmodighet. Derfor kjemper jeg ekstra hardt mot dem.
 
 Jeg er ikke ond. Jeg bare liker renslighet, integritet, og mest av alt offentlig sikkerhet.
