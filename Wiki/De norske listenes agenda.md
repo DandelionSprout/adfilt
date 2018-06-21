@@ -1,0 +1,24 @@
+Det er sikkert mange der ute som lurer på hvorfor reklameblokkering har blitt såpass stort de siste årene.
+
+Reklameplakater på nettsider er greit i prinsipp, og noe jeg har likt før, men det er ett absolutt gigantisk sikkerhetsproblem med dem. Det har vist seg at reklametjenere har vært ganske lette å hacke, noe som gjør at selv legitime og populære nettsider kan dytte malware, reklameinnspyttere, og sågar ransomware oppi trynet på folk. Og inntil dette problemet én dag blir eliminert generelt, har jeg erklært krig mot nettreklamer. Vanlige mennesker skal ikke måtte utsette sine harddisker og filer for sådanne skjulte og utbredte trusler der ute på nettet, bare fordi de vil vite hvem som skulet stygt på hverandre i Farmen.
+
+Jeg bruker ganske mange filterlister på uBlock Origin for å oppnå denne sikkerheten, men det var fortsatt en del tomme bokser som oppstod i vakuumet etter de fjernede reklamene. Derfor startet jeg denne norske listen for å fjerne unødige tomme felter som ble igjen etter de fjernede reklamene, sånn at nettsidene kunne bli enklere og mer kompakte å lese (Spesielt når det kom til AdressaNO, som hadde boks-reklamer etter annenhver paragraf).
+
+Etter hvert som jeg begynte å sette sammen denne listen, begynte jeg også å nære et hat mot Norsk Tipping, som hadde kjøpt seg inn på minst 10 norske nettaviser, og på de fleste av dem med sponsede artikler som undergraver absolutt alt som engang ligner vagt på journalistisk integritet. Når nyhetslesere blir presentert for overskrifter som "Lottomillionær elsker Syden-cruiseferien sin", er det klart for meg at man må langt inn i afrikanske militærstyrer for å finne mer dobbeltmoralisme enn hvordan Norsk Tipping prøver å dytte gambling på vanlige mennesker.
+
+Så da er egentlig spørsmålet: Hvordan kan ting gjøres bedre? Hvis dere skulle ønske å dra inspirasjon fra mer moderne nettjenester (f.eks. blogger og kreative tjenester), har jeg noen idéer som hadde vært mindre livsfarlig for vanlige internettbrukere:
+
+• En Patreon-lignende abonnementstjeneste, hvor folk kan få mere fordeler på nettstedene avhengig av hvor mye de donerer, og hvor samlede mål kan sørge for at f.eks. ekstra innhold eller artikler blir laget hvis de blir oppnådd.
+• Generelle donasjonssystemer.
+• Det er litt kontroverser omkring krypto-myntgravere, men hvis dere bare bruker noen få prosenter av folks prosessorer (<10%, kanskje sågar <5%), og bruker mye færre prosenter på bærbare/mobiler enn på stasjonære PCer, tror jeg at vanlige folk kunne trivdes med det.
+• Kanskje kan man sågar bruke teknologien omkring krypto-myntgravere, til å bruke folks PCer til å behandle en viss andel av forespørslene som når tjenerne deres, for å kunne kutte ned på tjener-oppetidskostnadene?
+• Tekstbaserte reklamer er vanskeligere å hacke enn bildebaserte reklamer, men bare hvis de skrives som en del av selve artikkelen, og ikke som en ekstern tjeneste. Av sikkerhetsårsaker kan reklamelenker som er mer enn ett år gamle kanskje slettes automatisk, for å hindre at nettadressene de lenker til, utløper og blir snappet opp av hackere.
+• Dra nytte av "En viss prosent av salget går til"-kampanjer, f.eks. gjennom Humble Bundle, eBay, Amazon Smile, Grasrotkampanjen, osv. Da vil folk som liker innholdssidene og som også handler på de handlesidene, kunne bidra litt ekstra til innholdssidene.
+• Halv-automatiske donasjonsfordelingssystemer som Flattr og Brave Payments.
+• Jeg kan leve greit med sporere, men ikke når tilkoblingsprosessen til dem gjør at nettsteder lastes inn synlig tregere, hvilket er tilfellet på nettstedene til bl.a. Canal Digital og Elkjøp.
+• Reklamer for gambling, inkl. Norsk Tipping og Lyntoto, gjør ikke noe annet enn å gamble med lesernes sinn og tålmodighet. Derfor kjemper jeg ekstra hardt mot dem.
+
+Jeg er ikke ond. Jeg bare liker renslighet, integritet, og mest av alt offentlig sikkerhet.
+
+Hilsen,
+Imre Kristoffer Eilertsen
