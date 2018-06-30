@@ -1,7 +1,37 @@
 {
     "createdBy": "Redirector v3.1.0",
-    "createdAt": "2018-05-15T11:33:19.267Z",
+    "createdAt": "2018-06-30T21:10:48.581Z",
     "redirects": [
+        {
+            "description": "Turn the newest YouTube GUI into the second-newest one",
+            "exampleUrl": "https://www.youtube.com/feed/subscriptions",
+            "exampleResult": "https://www.youtube.com/feed/subscriptions?disable_polymer=1",
+            "error": null,
+            "includePattern": "https://www.youtube.com/*",
+            "excludePattern": "",
+            "redirectUrl": "https://www.youtube.com/$1?disable_polymer=1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Get more search results for Latin image tags on Pixiv",
+            "exampleUrl": "https://www.pixiv.net/search.php?s_mode=s_tag_full&word=lalaloopsy",
+            "exampleResult": "https://www.pixiv.net/search.php?s_mode=s_tag&word=lalaloopsy",
+            "error": null,
+            "includePattern": "https://www.pixiv.net/search.php?s_mode=s_tag_full*",
+            "excludePattern": "",
+            "redirectUrl": "https://www.pixiv.net/search.php?s_mode=s_tag$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
         {
             "description": "Change some Twitter images to functionally readable images",
             "exampleUrl": "https://pbs.twimg.com/media/DdO7F3tU0AA1CnQ.jpg:large",
@@ -40,21 +70,6 @@
             "includePattern": "https://www.google.com/maps/*/data=*?hl=en",
             "excludePattern": "",
             "redirectUrl": "https://www.google.com/maps/$1/data=$2",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Adobe Flash for Firefox without all the McAfee crap",
-            "exampleUrl": "https://get.adobe.com/flashplayer/",
-            "exampleResult": "https://www.filehorse.com/download-flashplayer-firefox/download/",
-            "error": null,
-            "includePattern": "*://get.adobe.com/flashplayer/",
-            "excludePattern": "",
-            "redirectUrl": "https://www.filehorse.com/download-flashplayer-firefox/download/",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -187,9 +202,9 @@
             "exampleUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-18.3.0.0.7z",
             "exampleResult": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-18.3.0.0-x64.7z",
             "error": null,
-            "includePattern": "*.fosshub.com/SMPlayer.html/smplayer-portable-*.*.*.*.7z",
+            "includePattern": "*.fosshub.com/SMPlayer.html/smplayer-portable-*.7z",
             "excludePattern": "",
-            "redirectUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-$2.$3.$4.$5-x64.7z",
+            "redirectUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-$2-x64.7z",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -202,9 +217,9 @@
             "exampleUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-18.3.0-win32.exe",
             "exampleResult": "https://www.fosshub.com/SMPlayer.html/smplayer-18.3.0-x64.exe",
             "error": null,
-            "includePattern": "*.fosshub.com/SMPlayer.html/smplayer-*.*.*-win32.exe",
+            "includePattern": "*.fosshub.com/SMPlayer.html/smplayer-*-win32.exe",
             "excludePattern": "",
-            "redirectUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-$2.$3.$4-x64.exe",
+            "redirectUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-$2-x64.exe",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -232,9 +247,9 @@
             "exampleUrl": "https://www.sumatrapdfreader.org/dl/SumatraPDF-3.1.2-install.exe",
             "exampleResult": "https://www.sumatrapdfreader.org/dl/SumatraPDF-3.1.2-64-install.exe",
             "error": null,
-            "includePattern": "*/SumatraPDF-*.*.*-install.exe",
+            "includePattern": "*/SumatraPDF-*-install.exe",
             "excludePattern": "",
-            "redirectUrl": "https://www.sumatrapdfreader.org/dl/SumatraPDF-$2.$3.$4-64-install.exe",
+            "redirectUrl": "https://www.sumatrapdfreader.org/dl/SumatraPDF-$2-64-install.exe",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -247,9 +262,24 @@
             "exampleUrl": "https://get.videolan.org/vlc/3.0.1/win32/vlc-3.0.1-win32.exe",
             "exampleResult": "https://get.videolan.org/vlc/3.0.1/win64/vlc-3.0.1-win64.exe",
             "error": null,
-            "includePattern": "https://get.videolan.org/vlc/*.*.*/win32/vlc-*.*.*-win32.exe",
+            "includePattern": "https://get.videolan.org/vlc/*/win32/vlc-*-win32.exe",
             "excludePattern": "",
-            "redirectUrl": "https://get.videolan.org/vlc/$1.$2.$3/win64/vlc-$4.$5.$6-win64.exe",
+            "redirectUrl": "https://get.videolan.org/vlc/$1/win64/vlc-$2-win64.exe",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Adobe Flash for Firefox without all the McAfee crap",
+            "exampleUrl": "https://get.adobe.com/flashplayer/",
+            "exampleResult": "https://www.filehorse.com/download-flashplayer-firefox/download/",
+            "error": null,
+            "includePattern": "*://get.adobe.com/flashplayer/",
+            "excludePattern": "",
+            "redirectUrl": "https://www.filehorse.com/download-flashplayer-firefox/download/",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
