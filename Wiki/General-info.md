@@ -39,6 +39,6 @@ Last updated: 3rd of July 2018
 • [Other lists that I've made](https://github.com/DandelionSprout/adfilt/blob/master/README.md#list-of-lists), for numerous different purposes and tools. <br>
 • If you wish to actively contribute to my lists, here's [the list of things I could've needed some help with](https://github.com/DandelionSprout/adfilt#i-hereby-request-help-with). <br>
 • [The agenda of *Dandelion Sprouts Norwegian Filters for Tidier Websites*](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/De%20norske%20listenes%20agenda.md). <br>
-• [How to support Norwegian websites in other ways](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/How%20to%20support%20websites.md), hvis du har lyst til det.  <br>
+• [How to support Norwegian websites in other ways](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/How%20to%20support%20websites.md), if you were to want to do so.  <br>
 
 You can of course also contact me in Norwegian, Nynorsk, Danish, or Swedish. It's not mandatory to use English, after all. :^) <br>
