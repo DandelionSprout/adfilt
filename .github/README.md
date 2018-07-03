@@ -44,15 +44,12 @@ The list's name | Filename in this repo | Badges     | Description (Engl
 
 ## I hereby request help from other people with:
 
-• Discovering filters that I may have missed, especially on websites that I refuse to visit due to personal tastes (e.g. far-right "newssites", clothes-"selling" scam shops, conspiracist mouthpiece blogs, and so on).
-
-• Telling me that you're using those lists, through taking [a quick user survey](https://goo.gl/forms/nSzVy6NKXpfWWEqk1) on Google Forms, and/or by giving this repository a ꙨWatch and/or ★Star. Responses on the survey are currently checked up on once a week, usually on Sundays.
-
-• Testing out lists that are marked as _Beta_, and double-checking the syntaxes of and testing the lists that are marked as _Alpha_.
-
-• Testing box-removal filters on widescreen monitors, since I almost always test my filters on a 9:16 portrait monitor.
-
-• Telling me if ExperimentalNorwegianList.txt remove things that in fact shouldn't be removed (e.g. Non-sponsored articles, entire pages, etc.). Bonus points if you know which filter entry it was that caused the problem.
+• Discovering filters that I may have missed, especially on websites that I refuse to visit due to personal tastes (e.g. far-right "newssites", clothes-"selling" scam shops, conspiracist mouthpiece blogs, and so on). <br>
+• Telling me that you're using those lists, through taking [a quick user survey](https://goo.gl/forms/nSzVy6NKXpfWWEqk1) on Google Forms, and/or by giving this repository a ꙨWatch and/or ★Star. Responses on the survey are currently checked up on once a week, usually on Sundays. <br>
+• Testing out lists that are marked as _Beta_, and double-checking the syntaxes of and testing the lists that are marked as _Alpha_. <br>
+• Testing box-removal filters on widescreen monitors, since I almost always test my filters on a 9:16 portrait monitor. <br>
+• Telling me if the national lists remove things that in fact shouldn't be removed (e.g. Non-sponsored articles, entire pages, etc.). Bonus points if you know which filter entry it was that caused the problem. <br>
+• Asking Adblock Plus to support generic domains in blocking rules, which they currently don't seem to feel bothered to do, judging by [this forum thread](https://adblockplus.org/forum/viewtopic.php?f=23&t=54983&p=174060).
 
 I allow both _Issues_ and _Pull requests_ reports about any of the above, for the time being. Don't be shy to ask/tell me.
 
@@ -64,24 +61,16 @@ PS: I have a lot of problems myself with the Edge browser version of uBlock Orig
 
 ## The tools that I use:
 
-• Checker for redundant/duplicate filter entries, made by Famlam: https://arestwo.org/famlam/redundantRuleChecker.html
-
-• Tool I used to create a JSON file for WebKit, made by the Adblock Plus developers: https://github.com/adblockplus/abp2blocklist
-
-• Recentmost tool I used to test IP server availability, made by [Funilrys](https://github.com/funilrys): https://github.com/funilrys/funceble (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead).
-
-• To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed.
-
+• Checker for redundant/duplicate filter entries, made by Famlam: https://arestwo.org/famlam/redundantRuleChecker.html <br>
+• Tool I used to create a JSON file for WebKit, made by the Adblock Plus developers: https://github.com/adblockplus/abp2blocklist <br>
+• Recentmost tool I used to test IP server availability, made by [Funilrys](https://github.com/funilrys): https://github.com/funilrys/funceble (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead). <br>
+• To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed. <br>
 • To make the GitHub websites a lot wider on the user-end, and thus make the tables above display in a better way: https://userstyles.org/styles/108591/github-wide by [cfoellmann](https://userstyles.org/users/206217)
 
 ### Ways one can use Sublime Text to improve his/her filter lists (https://www.sublimetext.com/, made by Jon Skinner and Will Bond):
 
-• To sort filter entries in alphabetic order: F9 / Edit → Sort Lines
-
-• To remove "www." from most entries: Ctrl+H / Find → Replace…
-
-• To remove duplicates: Edit → Permute Lines → Unique
-
-• To remove duplicates across files: Paste the content of the file that shall retain its filters on top, and paste the content of the file that shall delete its duplicates on bottom.
-
+• To sort filter entries in alphabetic order: F9 / Edit → Sort Lines <br>
+• To remove "www." from most entries: Ctrl+H / Find → Replace… <br>
+• To remove duplicates: Edit → Permute Lines → Unique <br>
+• To remove duplicates across files: Paste the content of the file that shall retain its filters on top, and paste the content of the file that shall delete its duplicates on bottom. <br>
 • To attempt to add MD5 hashes: The [Hasher](https://github.com/dangelov/hasher) extension, made by [Dino Angelov](https://github.com/dangelov)
