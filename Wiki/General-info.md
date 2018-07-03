@@ -13,6 +13,8 @@ Senest oppdatert den: 3. juli 2018
 
 Du kan selvfølgelig også kontakte meg på nynorsk, dansk, svensk, eller engelsk. Det er såklart ikke påkrevd å bruke norsk, tross alt. :^) <br>
 
+Når det gjelder mange av de mer snevre listene mine (dvs. de som ikke er den vanlige norske listen), ville jeg selvsagt blitt ekstra motivert til å stelle med dem hvis jeg visste at folk brukte dem. Hvis du bruker noen av de listene, så svar gjerne på spørsmål 1 i brukerundersøkelsen over, sånn at jeg vet at du bruker dem.
+
 # Norsk nynorsk
 
 Seinast oppdatert den: 3. juli 2018
@@ -28,6 +30,8 @@ Seinast oppdatert den: 3. juli 2018
 
 Du kan sjølvsagt også kontakte meg på bokmål, dansk, svensk, eller engelsk. Det er sjølvklart ikkje påkrevd å bruke nynorsk, tross alt. :^) <br>
 
+Når det gjeld mange av de meir snevre listane mine (dvs. dei som ikkje er den vanlege norske listen), ville eg sjølvklart blitt ekstra motivert til å stelle med dei om eg visste at folk brukte dei. Hvis du bruker nokon av de listane, så svar gjerne på spørsmål 1 i brukerundersøkinga lengre opp, sånn at eg veit at du bruker dei.
+
 # English
 
 Last updated: 3rd of July 2018
@@ -42,3 +46,5 @@ Last updated: 3rd of July 2018
 • [How to support Norwegian websites in other ways](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/How%20to%20support%20websites.md), if you were to want to do so.  <br>
 
 You can of course also contact me in Norwegian, Nynorsk, Danish, or Swedish. It's not mandatory to use English, after all. :^) <br>
+
+When it comes to many of the more niche-filling and narrow lists of mine (i.e. those that aren't \"Dandelion Sprout's Norwegian Filters\"), I'd of course be extra motivated to work on them if I knew that people used them. If you're using any of these lists, then feel free to answer to question 1 in the user survey above, so that I know that you're using them.
