@@ -7,5 +7,5 @@ If you are among those who feel guilt over lowering the incomes of Norwegian web
 • TV2 and VG: Subscribe to their TV channels, or pick them as your choice channels on cable TV or on RiksTV Favoritter.<br>
 • Aftenposten: Make use of the A-kortet for various supported offers.<br>
 • Norsk Tipping: If you do want to bet in football pools and lotteries, there's nothing stopping you from doing that. After all, if you're keen on gambling, a few adticles here and there can't make that much of a difference.<br>
-• Sites that offer direct donations that I know of: [Steigan](https://betaling.steigan.no/)<br>
+• Sites that offer direct donations that I know of: [Steigan](https://betaling.steigan.no/), [NewsInEnglish.no](https://www.paypal.com/donate/?token=RCQise0ARkqp845RCRAyst0e-BwGTaGFpU4fpTJxiRNEEEucDSBpGvoHVh-DgCCNN8vQu0&country.x=US&locale.x=US)<br>
 • Sites that support Flattr: [Saksynt](https://flattr.com/submit/auto?uid=civix&url=https%3A%2F%2Ftjomlid.com%2F2015%2F11%2F15%2Fkortpost-vi-er-alle-mordere%2F)
