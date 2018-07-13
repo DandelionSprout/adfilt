@@ -1,7 +1,8 @@
-# Title: Dandelion Sprouts Norske Filtre
-# Last modified: 15 Apr 2018 01:05 UTC
+msFilterList
+# Title: Dandelion Sprouts norske filtre - TPL
+# Last modified: 13 Jul 2018 02:49 UTC
 # Jeg har knapt noen anelse hva jeg driver med idet jeg lager denne ganske så amputerte TPL-filen. Litt hjelp fra eksperter innenfor TPL-syntakser hadde vært ganske konge.
-# For å legge til denne listen, skal du angivelig lime den følgende URLen inn i Internet Explorers adresselinje:     javascript:window.external.msAddTrackingProtectionList('https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltre.tpl', 'Dandelion Sprouts norske filtre - IE-versjonen')
+# Hvis du ikke finner noen direktelenker til å legge til denne listen, må du følge instruksjonene som står oppført i https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NorskeFiltreTPL-installering.html
 : Expires=30
 - -ad-centered
 - -ad-digitalt-bilagH
