@@ -1,9 +1,10 @@
 msFilterList
 # Title: Dandelion Sprouts norske filtre - TPL
-# Last modified: 13 Jul 2018 22:59 UTC
+# Last modified: 14 Jul 2018 00:46 UTC
 # Jeg har knapt noen anelse hva jeg driver med idet jeg lager denne ganske så amputerte TPL-filen. Litt hjelp fra eksperter innenfor TPL-syntakser hadde vært ganske konge.
 # Hvis du ikke finner noen direktelenker til å legge til denne listen, må du følge instruksjonene som står oppført i https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NorskeFiltreTPL-installering.html
-: Expires=1
+# Hvis du bruker Internet Explorer kun for å kunne bruke gamle tillegg som Silverlight eller Unity Web Player, anbefaler jeg å bytte over til Basilisk Browser i stedet, siden den både har støtte for gamle tillegg og for uBlock Origin.
+: Expires=14
 - .ad-centered
 - .ad-digitalt-bilagH
 - .ad-digitalt-bilagV
@@ -156,8 +157,8 @@ msFilterList
 -d platekompaniet.no /assets/img/background.png$image
 -d pool.euroads.no
 -d primetime.ad.primetime.net
--d propaganda.net/img/reklame.
--d propaganda.net/js/global.js
+-d propaganda.net /img/reklame.
+-d propaganda.net /js/global.js
 -d r.api.no /componada/resources/web/flash/
 -d rig.idg.no
 -d s3.pji.nu$domain=~pricespy.co.uk|~pricespy.ie|~pricespy.no.nz|~hintaopas.fi|~prisjakt.no
@@ -190,4 +191,4 @@ msFilterList
 -d webtips.no /banneradmin/
 -d widget.tippebannere.no /v3/iframes/Spillvett/spillvett.aspx$subdocument
 -d win-xp.no /images/banner
--d yfrog.com/htzywuj:medium
+-d yfrog.com /htzywuj:medium
