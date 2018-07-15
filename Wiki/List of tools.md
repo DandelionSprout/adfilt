@@ -40,12 +40,39 @@ Starting with Internet Explorer 9, and also being present in 10 and 11, is a fea
 
 There have been attempts at making use of the function to block ads, which has gone so-so. The lists have a different syntax than that of typical adblock lists, which makes conversion difficult. Moreover it usually cannot block all elements either, only some of them; and I haven't had much luck with finding substantial documentation on the matter.
 
-Lists are added to the feature by clicking on (or pasting and opening) special Javascript links that only work in Internet Explorer; and once they have been added, they can be managed through https://www.howtogeek.com/73545/avoid-being-tracked-on-the-internet-using-tracking-protection-list-in-ie9/.
+Lists are added to the feature by clicking on (or pasting and opening) special Javascript links that only work in Internet Explorer; and once they have been added, they can be managed through [the settings interface](https://www.howtogeek.com/73545/avoid-being-tracked-on-the-internet-using-tracking-protection-list-in-ie9/).
 
-I do not currently have IE on my PC and therefore can't test it, but the address to add the TPL version of my Norwegian adblock to Internet Explorer should be:
+For info on how to add the Norwegian TPL link to your Internet Explorer, see [here](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NorskeFiltreTPL-installering.html)
 
-<i>javascript:window.external.msAddTrackingProtectionList('https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltre.tpl', 'Dandelion Sprouts norske filtre - IE-versjonen')</i>
+# Little Snitch
 
-### To-write
+Little Snitch is [a paid program](https://www.obdev.at/products/littlesnitch/index.html) for macOS, which specialises in meticulously handling both incoming and outgoing server connections.
 
-Non-blocker tools, Little Snitch, personal recommendations for each platform.
+# Personal Blocklist
+
+This is about two very closely related extensions, for [Chrome](https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef) and [Firefox](https://addons.mozilla.org/firefox/addon/personal-blocklist/) respectively, which takes care of removing websites that you don't like from Google search results.
+
+They can import (through plain pasting) lists of domains, and then it'll remove such search results thereafter. Entries can be removed or turned off individually, and a note will be shown on the bottom of the Google page if any search results on that page were blocked by the extensions. In contrast to adblockers, it doesn't use source files for its entries, and therefore cannot auto-update its entries either.
+
+# Redirector
+
+This is [an extension](http://einaregilsson.com/redirector/) made by the Icelandic developer Einar Egilsson. Although he has unfortunately stopped developing this extension, instead prioritising to make ad-financed card games for phones, it has many functions that would be impossible to replicate on any adblockers, even the advanced ones.
+
+While it can't do any real amounts of adblocking, it can help greatly with [utilising URL tricks](https://github.com/DandelionSprout/adfilt/blob/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/README.md) that'd be overly convoluted or unknown to pull off otherwise.
+
+# Stylish
+
+This is an extension that aims to work with [thousands upon thousands](https://userstyles.org/) of usermade CSS scripts, which can edit background images, page widths, and a few other things.
+
+After I found out how to convert most Userstyles scripts to [an adblocker-supported syntax](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Website%20Stretcher.txt), this extension has been mostly deprecated on Adfilt.
+
+## My personal recommendations for users of each platform
+
+• Chrome desktop, Chromium-based browsers, Edge: Nano Adblocker<br>
+• Firefox, Firefox Android, Thunderbird, Pale Moon, Basilisk Browser, other Australis-based programs, Safari macOS: uBlock Origin<br>
+• Internet Explorer 11, Steam desktop client, Windows Store apps: The paid version of Adguard<br>
+• Android (non-rooted, non-Firefox): DNS66<br>
+• Gaming consoles (e.g. Wii U): Adguard DNS in the console settings<br>
+• Android (rooted): Adguard DNS with [DNSForwarder](https://play.google.com/store/apps/details?id=com.evanhe.dnsforward)<br>
+• Windows Phone (while at home): Adguard DNS on your router<br>
+• SmartTVs and gaming consoles: No supported adblocker tools exist for them. Trust me, I've tried.
