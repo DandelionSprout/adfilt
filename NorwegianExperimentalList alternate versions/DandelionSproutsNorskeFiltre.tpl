@@ -1,10 +1,10 @@
 msFilterList
 # Title: Dandelion Sprouts norske filtre - TPL
-# Last modified: 14 Jul 2018 00:46 UTC
-# Jeg har knapt noen anelse hva jeg driver med idet jeg lager denne ganske så amputerte TPL-filen. Litt hjelp fra eksperter innenfor TPL-syntakser hadde vært ganske konge.
+# Version: 23July2018v1-Beta
+# Etter å ha lett i nesten et år frem til juli 2018, fant jeg til slutt en noenlunde god syntaksoppskrift for TPL-lister.
 # Hvis du ikke finner noen direktelenker til å legge til denne listen, må du følge instruksjonene som står oppført i https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NorskeFiltreTPL-installering.html
 # Hvis du bruker Internet Explorer kun for å kunne bruke gamle tillegg som Silverlight eller Unity Web Player, anbefaler jeg å bytte over til Basilisk Browser i stedet, siden den både har støtte for gamle tillegg og for uBlock Origin.
-: Expires=14
+: Expires=3
 - .ad-centered
 - .ad-digitalt-bilagH
 - .ad-digitalt-bilagV
@@ -52,7 +52,6 @@ msFilterList
 -d .no /ads/
 -d .oasfile
 -d /annonse/*
--d /Bannere/*$image,domain=tek.no|gamer.no
 -d /prisjaktAd
 -d /reklam/*
 -d /reklame/*
@@ -60,6 +59,12 @@ msFilterList
 -d 102.112.2o7.net
 -d 8m.com/fs_img/bannertype/
 -d aabl-container
+-d abcnyheter.no aswift_0
+-d abcnyheter.no aswift_0_anchor
+-d abcnyheter.no aswift_0_expand
+-d abcnyheter.no track.adform.net
+-d abcnyheter.no u-desktop-only.o-grid__col--skyscraper.o-grid__col
+-d abcnyheter.no u-hidden-mobile.o-grid__col
 -d abteknikk.no /os/
 -d ad.*.no
 -d ad.no.doubleclick.net
@@ -72,10 +77,40 @@ msFilterList
 -d adserver.digitoday.com
 -d advert.api.no
 -d aelnj.no
+-d aftenbladet.no df-11-61fa6f08
+-d aftenbladet.no df-11-ca0275e4
+-d aftenbladet.no df-11-kfbf26158
+-d aftenbladet.no df-11-m74c5e7f6
+-d aftenbladet.no df-11-x3de8b045
+-d aftenbladet.no df-11-y62f11063
+-d aftenbladet.no netboard-ad.df-left.df-width-60.df-widget
+-d aftenbladet.no netboard-ad.df-right.df-width-60.df-widget
 -d aftenposten.no /*/norwegian/
 -d aftenposten.no /*/rubrikk/
 -d aftenposten.no /bolig/
 -d aftenposten.no /boligannonser/
+-d aftenposten.no board_1
+-d aftenposten.no board_2
+-d aftenposten.no board_3
+-d aftenposten.no df-3-g4985f358
+-d aftenposten.no df-3-g933654b3
+-d aftenposten.no df-3-jd8fea54b
+-d aftenposten.no df-3-l1c07a8e5
+-d aftenposten.no df-3-l94551f9c
+-d aftenposten.no df-3-w77f7487b
+-d aftenposten.no df-3-xe37168
+-d aftenposten.no IV#pageHeaderAds
+-d aftenposten.no IV.adBottomBoard
+-d aftenposten.no IV.adButton
+-d aftenposten.no IV.adHorisontal
+-d aftenposten.no IV.adHorisontalNoBorder
+-d aftenposten.no IV.campaignDmElement.m-btm-20
+-d aftenposten.no IV.campaignDmElement.twoStories
+-d aftenposten.no mobile-buy-clearfix
+-d aftenposten.no widget-lfa-offer
+-d aftenposten.no widget-salesposter:before
+-d aftenposten.no,tek.no wallpaper
+-d alatest.no identity-noticebar-content
 -d andeneshornmusikk.no
 -d annonser.*.no
 -d apple-account-locked.losjevegen.no
@@ -83,112 +118,348 @@ msFilterList
 -d arvetellefsen.no /curry
 -d aumamandel.no
 -d avisenagder.no /Portals/4/ads/
+-d ba.no x/5-8-
 -d banner.*.no
 -d bannere.oslonett.no
+-d barents.no,oskommune.no container-floating-notifications
 -d beitostolen.no /marked/reklameannonser/
 -d bloggannonser.no
 -d bokportalen.no /images/rkbanner.jpg
 -d boligsamvirket.no /promsys/
 -d bolinux3.hit.no
 -d brannloftet.no
+-d bt.no df-3-faf8630b7
+-d bt.no df-3-i4bf74998
+-d bt.no df-3-k60e8b732
+-d bt.no df-3-p3b22d35e
+-d bt.no df-4-b75119974
+-d bt.no df-4-s6c5e8599
+-d bt.no df-skin-theme-Netboardblock.df-row-4.df-left.df-width-40.df-article.df-auto-article
+-d bt.no df-skin-theme-Netboardblock.df-row-7.df-left
+-d bt.no widget-bleed.widgets
+-d budstikka.no am-embed-container
+-d budstikka.no am-embed-ratio
 -d butikk.losnaspelet.no
+-d byggebolig.no maestro-content-plugins
+-d byggebolig.no maestro-left-sticky-parent
+-d byggmax.no bm-upper-product-right.related-products.bm-product-right
+-d byggmax.no redline
 -d cache.finn.no /gfx/
--d cdn.pji.nu/g/campaigns/12/no/mainpage_header.png$image
--d cdn.pji.nu/g/campaigns/4/xx/christmas_2017.png$image
+-d cdn.pji.nu /g/campaigns/12/no/mainpage_header.png
+-d cdn.pji.nu /g/campaigns/4/xx/christmas_2017.png
+-d chess.no centerspan.span10.subscriptioninfotxt
+-d chilimobil.no row-hr
 -d cmt.no
+-d cw.no ad-fit-body
+-d cw.no desktop-only.l-row > .omega.grid-12.grid-item.col
+-d cw.no EAS_fif_26807_6747
 -d dagbladet.no /an/
 -d dagbladet.no /annonseinfo/
 -d deiligst.no /banners/
 -d digi.no /grafikk/annonse
+-d digi.no ad-label-vertical
+-d digi.no commercial
 -d dinside.no /annonsorer/
+-d dinside.no ad-fullscreen
+-d dinside.no ad-medium-rectangle1
+-d dinside.no ad-medium-rectangle2
+-d dinside.no ad-netboard
+-d diskusjon.no diskusjon_toppbanner
+-d diskusjon.no prisguide-content
+-d dn.no ad-one-to-one
+-d dn.no ad.widget
+-d dn.no default-outer
+-d dn.no df-13-0b2a8633
+-d dn.no df-13-22dd20ea
+-d dn.no df-13-2bce3873
+-d dn.no df-13-637bc27b
+-d dn.no df-13-7e46f82a
+-d dn.no df-13-80741391
+-d dn.no df-13-a77b7032
+-d dn.no df-13-a9b692cc
+-d dn.no df-13-c271081d
+-d dn.no df-33-f41b7cb53
+-d dn.no df-skin-x-ad
+-d dn.no vrs-content-block__native-ad-wrapper
+-d dusken.no ad-col-article
+-d dusken.no ad-in-column
+-d e24.no adPlaceholderFront
+-d e24.no content-marketing-container
+-d e24.no swiper-slide
 -d easy-ad.no
+-d eavisa.com billboard
 -d ekstra.htg.no
+-d elkjop.no row.newsletter-signup
+-d elkjop.no swogo-wrapper.product-inspiration-wrapper.wrapper
 -d emerio.no
 -d eurosko.net
--d extra-leker.no /skin/frontend/polarcore/default/images/christmas-bg.jpg$image
+-d expedia.no extended-below-wizard-ads
+-d extra-leker.no /skin/frontend/polarcore/default/images/christmas-bg.jpg
 -d f-b.no /includes/sidebanner
 -d fanadyreklinikk.no
+-d filmweb.no adId_1523839641051_22
+-d filmweb.no adPosContainerContent
+-d filmweb.no adrow
+-d filmweb.no content-ad > .content_box
+-d filmweb.no content-ad.articleRow_sq_1x2-1_contAd_2016_12.articleRow_Xx2-1.medium-6.small-12.column > .content-ad
+-d filmweb.no insc.mpu.hide-for-small-only
+-d filmweb.no template_v2/adverticement
+-d filmweb.no topad.row
 -d finn.no /finn/realestate/leisure/plots/
+-d finn.no banners
+-d finn.no bg-milk
 -d flash.vg.no
 -d flashbanner.no
--d folk.rbnett.no /widgets/24$subdocument
+-d folk.rbnett.no /widgets/24
+-d forum.kvinneguiden.no ehm-megaboard
 -d forum1.no
+-d foto.no allwrapper > div[style]
+-d framtiden.no nettboardart
+-d fuglelyder.net#@ anner_ad
+-d fvn.no df-3-r253049b4
 -d g2.start.no /img/dominans/
+-d gamer.no display-none.top-poster
+-d gamer.no,tek.no,digi.no annonselenker
+-d gamer.no,tek.no,digi.no products-carousel
+-d gamereactor.no /adclick.php
+-d gamereactor.no ad_video
+-d gamereactor.no ad_w300h450
+-d gamereactor.no bigVideoAd
+-d gamereactor.no cocacola
+-d gamereactor.no eventad
+-d gamereactor.no fbnotification
+-d gamereactor.no sky2_1
 -d gaysir.no /rek/rekimg/
+-d get.no background
+-d gjerrigknark.com dividerBlock
+-d glassmester1.no gform_4 > .top_label.gform_footer
+-d glassmester1.no topbar
 -d go.start.no
+-d google.no luhb-div
+-d google.no szppmdbYutt__middle-slot-promo
+-d google.no tads
 -d gulesider.no /bannersys-pics/
 -d handelihalden.no
 -d helios.*.no
+-d helsebiblioteket.no advert
+-d historienet.no banner-wrapper.visible-md-lg
+-d historienet.no col-md-12
+-d historienet.no responsive-images
 -d holmedalblikk.no
 -d humor911.no /annonseweb/
+-d hvordan.no EAS_wallpaper
 -d i1media.no
--d images.media.xxlsports.com/images/h90/h9d/9339713159198/bg.jpg$image
--d img8.custompublish.com/publish/getbanner.php/
+-d ice.no air-block
+-d ice.no pt-1
+-d ikea.com departmentLinkBlock
+-d illvit.no article-footer
+-d illvit.no hidden-ie.scroll-message
+-d images.media.xxlsports.com /images/h90/h9d/9339713159198/bg.jpg
 -d imp.euroads.no
--d ish.tumedia.no /ish_tracker.gif$image
+-d ish.tumedia.no /ish_tracker.gif
+-d itavisen.no .DB_adBox
 -d itavisen.no /annonsorer/
 -d itavisen.no /graphics/news/barAdvertising.jpg
+-d itavisen.no ad-midtbanner-1-frontpage-tablet-and-above
+-d itavisen.no ad-netboard-frontpage-tablet-and-above
+-d itavisen.no cEMfcKtj-1-
+-d itavisen.no no-adblock
 -d itpro.no /images/adheaders/
--d karrierestart.no /Home/TopBannerContent$subdocument
+-d kabel.canaldigital.no addedChannelsContainerBottom
+-d kabel.canaldigital.no sosialShareContainer
+-d karrierestart.no /Home/TopBannerContent
+-d karrierestart.no p-ovl
+-d karrierestart.no with-custom-boxshadow.with-custom-border.align-center.content-popup
+-d kino.no ad
 -d kjolenorge.com
+-d kk.no billboard_bar_arrows.billboard_bar
+-d kk.no billboard_bar_logo
+-d kk.no placeholder-billboard-105
+-d kk.no placeholder-billboard-27
+-d kk.no placeholder-billboard-85
 -d klikk.no /DBGfx/Ads/
+-d klikk.no contributor
+-d klikk.no medium-5.small-6
+-d komputer.no,natgeo.no,historienet.no top-banner
+-d komputer.no,natgeo.no,historienet.no,illvit.no wg-banner
 -d komtilmil.no
 -d kundeweb.aggressive.no /users/fotopia.no /bannere/
+-d letsdeal.no remodal-is-opened.remodal-is-initialized.signup.remodal
+-d letsdeal.no remodal-is-opened.remodal-overlay
+-d letsdeal.no remodal-is-opened.remodal-wrapper
 -d media2.origo.no /images/
+-d melhusbanken.no card-ingress
+-d minmote.no ad-box
+-d minmote.no advert-container-inline
+-d minmote.no element-content-type-native-ads-placement
+-d minmote.no,godt.no adblock-info
 -d mobilen.no /wip4/oc_scrollbar/
 -d mrtraffic.no /swf/bannere_slideshow.swf
 -d myad.no
+-d netonnet.no alert
+-d nettavisen.no ad_top
+-d nettavisen.no article_services_skin
+-d nettavisen.no defer-iframe
+-d nettavisen.no megaboard
+-d nettavisen.no most-reactions
+-d nettavisen.no skyskraper
+-d nettavisen.no sticked
+-d nettavisen.no stripe-1
+-d nettavisen.no stuck
+-d nettavisen.no superduper
+-d nettavisen.no supernetboard-1
 -d nettbillett.no /gfx/nettbillett/freia.swf
 -d nettklikk.no
 -d newbalancenorge.com
+-d newsinenglish.no tmbluemask
+-d newsinenglish.no tmmask
+-d nickelodeon.no ad-container
 -d no-vg.cdn.videoplaza.tv/creatives/
 -d no.2mdn.net
+-d no.ehandel.com side
+-d no.gsk.com __cqBannerOverlay
+-d no.wikipedia.org cfn-blockrk.no
+-d no.wikipedia.org frbanner3
 -d no.zxxyw.com
+-d norsk-tipping.no no-bg.divider
+-d norskenettsider.no able
+-d norskenettsider.no g_image4
+-d norskenettsider.no tracking.euroads.no
 -d norskeplugins.com/UltimateFooterAd/
 -d npadvert.imaker.no
 -d nrj.no /dbimages/
 -d nrk.no /img/424546.gif
+-d op.no personalia_frontpage.am
 -d oslopuls.aftenposten.no /img/filmweb.swf
 -d oyelege.no
 -d p4.no /mmo/ads/
+-d parcferme.no code-block > p
+-d parcferme.no wpb_raw_html.wpb_content_element.wpb_raw_code
+-d pasientreiser.no banner, #banner
 -d paypal.limitedremoved.culinae.no
 -d pcworld.no /faste_elementer/macromedia.swf
+-d phonero.no btm_footer
+-d pinterest.com FullPageModal__scroller
 -d piwik.onlinemagasinet.no
--d platekompaniet.no /assets/img/background.png$image
+-d platekompaniet.no /assets/img/background.png
 -d pool.euroads.no
+-d portalbank.no java.com/inc/BrowserRedirect1.jsp
+-d portalbank.no media/Files/nettbank/oppdatere-java.pdf
+-d power.no container.sleeky-expanded
+-d power.no row.sleeky-content
+-d power.no subfooter > .container > .row
+-d power.no title-desktop
 -d primetime.ad.primetime.net
+-d prisjakt.no adbox
+-d prisjakt.no footer_header
 -d propaganda.net /img/reklame.
 -d propaganda.net /js/global.js
+-d qxl.no cookies
 -d r.api.no /componada/resources/web/flash/
+-d radioplay.no page-wrapper > div:nth-of-type(2)
+-d ramboll.no infoboxHolder
+-d rbnett.no frame[src="about:blank
+-d resett.no,steigan.no vc_empty_space
 -d rig.idg.no
--d s3.pji.nu$domain=~pricespy.co.uk|~pricespy.ie|~pricespy.no.nz|~hintaopas.fi|~prisjakt.no
--d scannernytt.net/images/banners/
+-d s3.pji.nu
+-d sagamobil.no \31 _1.fusion-animated.fusion-column-last.fusion-column-first.fusion-one-full.fusion_builder_column_1_1.fusion_builder_column.fusion-layout-column > .fusion-column-wrapper > .fusion-sep-clear
+-d sagamobil.no fusion-fullwidth:nth-of-type(8) > .fusion-row.fusion-builder-row > .\31 _1.fusion-column-no-min-height.fusion-column-last.fusion-column-first.fusion-one-full.fusion_builder_column_1_1.fusion_builder_column.fusion-layout-column:nth-of-type(1) > .fusion-column-wrapper
+-d sagamobil.no fusion-fullwidth:nth-of-type(8) > .fusion-row.fusion-builder-row > .\31 _1.fusion-column-no-min-height.fusion-column-last.fusion-column-first.fusion-one-full.fusion_builder_column_1_1.fusion_builder_column.fusion-layout-column:nth-of-type(5) > .fusion-column-wrapper
+-d sagamobil.no fusion_builder_column_1_1.fusion_builder_column.fusion-layout-column:nth-of-type(4) > .fusion-column-wrapper
+-d sagamobil.no fusion_builder_column_1_1.fusion_builder_column.fusion-layout-column:nth-of-type(8) > .fusion-column-wrapper
+-d scannernytt.net /images/banners/
 -d sdc.dn.no
 -d seher.no /img/egenannonser/
 -d server-no.imrworldwide.com
 -d server-us.imrworldwide.com
 -d services.jatak.
+-d sfanytime.com imdb
+-d sfanytime.com ui-notification
+-d sfkids.com r
+-d side2.no df-3-2de94c28
+-d side2.no df-3-x0b58113
+-d side2.no inline-cm-1-1
+-d side2.no inline-cm-1-2
+-d side2.no inline-cm-1-3
+-d side2.no inline-cm-1-4
+-d side2.no inline-cm-1-5
+-d side2.no inline-cm-1-6
+-d side2.no inline-cm-text-container
+-d side2.no netboard-1
+-d side2.no nt-box
+-d side3.no service-carousel
+-d side3.no sidebar_article_annonse
+-d side3.no spklw-dc3gw8216qzadcxr
+-d side3.no spklw-pxtlrkwk2187u8fr
+-d side3.no splitboard-hider:nth-of-type(4)
 -d skoonlineshopnorge.com
+-d sol.no ain > .eMVUSX.FlexContainerSection__Section-gzjdEO.flex-container:nth-of-type(1) > .jeGwxX.DontPushTheAdBoundaries-bscLWB > .gcOcJS.DawnArticle-hZrOXE.small:nth-of-type(2)
+-d sol.no eMVUSX.FlexContainerSection__Section-gzjdEO.flex-container:nth-of-type(4) > .jeGwxX.DontPushTheAdBoundaries-bscLWB > .gcOcJS.DawnArticle-hZrOXE.small
+-d sol.no lp_coopAd17_pos5
+-d sol.no lp_pos11
+-d speed.bredbandsguiden.no admark
+-d speed.bredbandsguiden.no advertisement
+-d startsiden.no bigger-than-small-screens
 -d static.itrack.it
--d static.tek.no /images/main/bodyBgStretch.png$domain=hardware.no
+-d static.tek.no /images/main/bodyBgStretch.png
 -d static.vg.no /css/admark_top.gif
 -d stats.bonzaii.no
+-d storm.no topbanner
 -d streetdance.no
+-d subaru.no kake
+-d svalbardposten.no,nab.no divider
+-d synsam.no message-large
+-d sysla.no agreement-popup
+-d sysla.no in.fade.modal-backdrop
+-d sysla.no iv.in.modal-backdrop
+-d talkmore.no spacer
 -d tb.no /polopoly_fs/ledige-jobber-flash-7.13191#/
--d tipster.no /embed$subdocument
+-d tek.no big-preamble.access-public.commercial
+-d tellows.no.com singlecomments > li.comment:not([id])
+-d tipster.no /embed
+-d tnt-tv.no desktop_element.promo
+-d tnt-tv.no logos
+-d tnt-tv.no tabs_placeholder
 -d track.adform.net/Banners/
 -d tradedoubler.no
+-d trening.no dt-netboard-middle
+-d trening.no dt-top-banner
 -d tromselementbygg.no
 -d tu.no /oxb/
--d tv2.no /s/lab/2.5/p/img/tv2-background.svg$image
--d tvshop.com/tradedoubler_files/
+-d tu.no adunit.ad-placeholder
+-d tv.nrk.no overlay-shadow
+-d tv2.no &utm_source=Blogg
+-d tv2.no /s/lab/2.5/p/img/tv2-background.svg
+-d tv2.no aabl-container
+-d tv2.no adform.net
+-d tv2.no doubleClickAd
+-d tv2.no lab-skin-cm.medium-4.small-12.large-4.boxwrapper.tv2-story
+-d tv2.no spklw-powered-by
+-d tv2.no tv2_8533699
+-d tvshop.com tradedoubler_files
 -d u8959882.isphuset.no
 -d ukeadvert.imaker.no
 -d vetscan.no
+-d vg.no betting-widgets
+-d vg.no block-bannerad
+-d vg.no df-article-content
+-d vg.no otherfaves
+-d vg.no partner-studio
+-d vg.no tipster
+-d vg.no vgfilm
+-d vg.no wid-betting
+-d vgd.no prisjaktAd
 -d vglista.no /wp-content/themes/vglista/img/partner/
+-d vgtv.no player.pulse-isPauseAdVisible > .jw-overlays
+-d viafree.no ad-click-through
+-d viafree.no pause-ad
+-d viaplay.no interaction-block
+-d viasport.no iv.libellus.is-visible
+-d volkswagen.no vwd4_m509
 -d webclick.no
 -d webhotell.enivest.no
 -d webtips.no /banneradmin/
--d widget.tippebannere.no /v3/iframes/Spillvett/spillvett.aspx$subdocument
+-d widget.tippebannere.no /v3/iframes/Spillvett/spillvett.aspx
 -d win-xp.no /images/banner
+-d xxl.no aboveheader.c-fader
 -d yfrog.com /htzywuj:medium
