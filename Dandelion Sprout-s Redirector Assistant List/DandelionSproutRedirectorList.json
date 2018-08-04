@@ -1,9 +1,39 @@
 {
     "createdBy": "Redirector v3.1.0",
-    "createdAt": "2018-06-30T21:10:48.581Z",
+    "createdAt": "2018-08-04T19:33:16.272Z",
     "redirects": [
         {
-            "description": "Turns the 2017 YouTube GUI into the 2012 GUI whenever possible",
+            "description": "Burnaware without PUP offers (\"Mirror Downloads\" only)",
+            "exampleUrl": "http://www.burnaware.com/downloads/burnaware_free_11.4.exe",
+            "exampleResult": "http://www.burnaware.com/downloads/burnaware_cfree_11.4.exe",
+            "error": null,
+            "includePattern": "http://www.burnaware.com/downloads/burnaware_free_*.exe",
+            "excludePattern": "",
+            "redirectUrl": "http://www.burnaware.com/downloads/burnaware_cfree_$1.exe",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "FileZilla 32-bit → 64-bit and without PUP offers",
+            "exampleUrl": "https://download.filezilla-project.org/client/FileZilla_3.35.1_win64-setup_bundled.exe",
+            "exampleResult": "https://dl1.cdn.filezilla-project.org/client/FileZilla_3.35.1_win64-setup.exe",
+            "error": null,
+            "includePattern": "https://download.filezilla-project.org/client/FileZilla_*_win*-setup_bundled.exe",
+            "excludePattern": "",
+            "redirectUrl": "https://dl1.cdn.filezilla-project.org/client/FileZilla_$1_win64-setup.exe",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Turn the newest YouTube GUI into the second-newest one",
             "exampleUrl": "https://www.youtube.com/feed/subscriptions",
             "exampleResult": "https://www.youtube.com/feed/subscriptions?disable_polymer=1",
             "error": null,
@@ -18,7 +48,7 @@
             ]
         },
         {
-            "description": "Get more search results for Latin image tags on Pixiv, by making them case-insensitive",
+            "description": "Case-insensitive and non-confined Latin image tags on Pixiv (Will cause problems with Japanese tags, so turn this on/off when needed)",
             "exampleUrl": "https://www.pixiv.net/search.php?s_mode=s_tag_full&word=lalaloopsy",
             "exampleResult": "https://www.pixiv.net/search.php?s_mode=s_tag&word=lalaloopsy",
             "error": null,
