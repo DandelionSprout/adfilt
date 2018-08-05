@@ -73,3 +73,11 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • To remove duplicates: Edit → Permute Lines → Unique <br>
 • To remove duplicates across files: Paste the content of the file that shall retain its filters on top, and paste the content of the file that shall delete its duplicates on bottom. <br>
 • During trial attempts to add MD5 hashes: The [Hasher](https://github.com/dangelov/hasher) extension, made by [Dino Angelov](https://github.com/dangelov)
+
+## Special thanks to:
+
+• [gorhill](https://github.com/gorhill), [Collin Barrett](https://github.com/collinbarrett), and the [AdGuard team](https://github.com/AdguardTeam), for having included at least one of my lists into uBlock Origin, Filterlists, and AdGuard respectively. <br>
+• [lassekongo83](https://github.com/lassekongo83) for being the best filter writer on planet Earth, for helping heaps of people (Me included) with writing specific filters, and for having made several lists that I often look through to learn more about how to write filters. <br>
+• [THEtomaso](https://github.com/THEtomaso) for waterproofing parts of the Norwegian list, and for several contributions to the same list.
+
+If you've contributed to or helped me and you aren't on the above list, don't feel bad about it. I still give my regular thanks to you.
