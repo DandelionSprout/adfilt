@@ -4,14 +4,14 @@ Note that the list below only features examples of each category, and is not a c
 Adblockers in this category has support for extended syntaxes, that can be used to filter away more things, create tool-dependent entries, or to bind lists to other lists. There's not a 100% harmony between the tools' syntaxes, but a list that is made for one of them will usually also work in the other ones.
 
 • [Nano Adblocker](https://github.com/NanoAdblocker/NanoCore) ([Chrome](https://chrome.google.com/webstore/detail/nano-adblocker/gabbbocakeomblphkmmnoamkioajlkfo) / [MS Edge](https://www.microsoft.com/store/productId/9NSXDX2TDB3V))<br>
-• [uBlock Origin](https://github.com/gorhill/uBlock) ([Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) / [Firefox](https://addons.mozilla.org/addon/ublock-origin/)¹ / [Opera native](https://addons.opera.com/extensions/details/ublock/) / [Thunderbird / Pale Moon](https://github.com/gorhill/uBlock/blob/master/dist/README.md#firefox-legacy))<br>
+• [uBlock Origin](https://github.com/gorhill/uBlock) ([Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) / [Firefox](https://addons.mozilla.org/addon/ublock-origin/)¹ / [Opera native](https://addons.opera.com/extensions/details/ublock/) / [Thunderbird² / Pale Moon²](https://github.com/gorhill/uBlock/blob/master/dist/README.md#firefox-legacy))<br>
 • [Adguard](https://adguard.com/en/welcome.html) ([Chrome](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) / [Firefox](https://addons.mozilla.org/addon/adguard-adblocker/)¹ / [Safari](https://safari-extensions.apple.com/details/?id=com.adguard.safari-N33TQXN8C7) / [Opera native](https://addons.opera.com/en/extensions/details/adguard/) / [MS Edge](https://www.microsoft.com/store/p/adguard-adblocker/9mz607gwkbs7) / [Thunderbird² / Pale Moon](https://github.com/AdguardTeam/AdguardBrowserExtension/releases)² / [iOS](https://itunes.apple.com/app/apple-store/id1047223162) / [Samsung Internet / Yandex.Browser Mobile](https://adguard.com/en/adguard-content-blocker/overview.html) / [Paid pan-Windows version](https://adguard.com/en/adguard-windows/overview.html) / [Paid pan-Mac version](https://adguard.com/en/adguard-mac/overview.html) / [Paid pan-Android version](https://adguard.com/en/adguard-android/overview.html))
 
 ## Simple adblockers
 These adblockers support a core set of functionality, either to have some degree of mercy on ad-dependent websites, or to keep the coding and options easy to use.
 
 • [Adblock Plus](https://adblockplus.org/) ([Chrome](https://chrome.google.com/webstore/detail/cfhdojbkjhnklbpkdaibdccddilifddb) / [Firefox](https://addons.mozilla.org/addon/adblock-plus/)¹ / Safari / [Opera native](https://addons.opera.com/extensions/details/opera-adblock/) / [MS Edge](https://www.microsoft.com/store/p/adblock-plus/9nblggh4r9nz))<br>
-• [AdBlock](https://getadblock.com/) ([Chrome](https://chrome.google.com/webstore/detail/gighmmpiobklfepjocnamgkkbiglidom) / [Firefox](https://addons.mozilla.org/da/firefox/addon/adblock-for-firefox/)¹ / Safari / Opera native / [MS Edge](https://www.microsoft.com/store/productID/9nblggh4rfhk))<br>
+• [AdBlock](https://getadblock.com/) ([Chrome](https://chrome.google.com/webstore/detail/gighmmpiobklfepjocnamgkkbiglidom) / [Firefox](https://addons.mozilla.org/firefox/addon/adblock-for-firefox/)¹ / Safari / Opera native / [MS Edge](https://www.microsoft.com/store/productID/9nblggh4rfhk))<br>
 • [DNS66](https://github.com/julian-klode/dns66) ([Android without root, through the F-Droid store](https://f-droid.org/packages/org.jak_linux.dns66/))
 
 ¹ = Have been confirmed to also work on the Android version of Firefox.<br>
@@ -38,7 +38,7 @@ Web-hosted hosts files can also be used with Nano Adblocker and uBlock Origin, b
 # Internet Explorer's Tracking Protection List feature
 Starting with Internet Explorer 9, and also being present in 10 and 11, is a feature called <i>Tracking Protection List</i>. It was originally targeted towards those who didn't like trackers, and featured such lists as EasyPrivacy (made by the EasyList team).
 
-There have been attempts at making use of the function to block ads, which has gone so-so. The lists have a different syntax than that of typical adblock lists, which makes conversion difficult. Moreover it usually cannot block all elements either, only some of them; and I haven't had much luck with finding substantial documentation on the matter.
+There have been attempts at making use of the function to block ads, which has gone so-so. The lists have a different syntax than that of typical adblock lists, which makes conversion difficult. Moreover it usually cannot block all elements either.
 
 Lists are added to the feature by clicking on (or pasting and opening) special Javascript links that only work in Internet Explorer; and once they have been added, they can be managed through [the settings interface](https://www.howtogeek.com/73545/avoid-being-tracked-on-the-internet-using-tracking-protection-list-in-ie9/).
 
@@ -46,13 +46,17 @@ For info on how to add the Norwegian TPL link to your Internet Explorer, see [he
 
 # Little Snitch
 
-Little Snitch is [a paid program](https://www.obdev.at/products/littlesnitch/index.html) for macOS, which specialises in meticulously handling both incoming and outgoing server connections.
+Little Snitch is [a paid program](https://www.obdev.at/products/littlesnitch/index.html) for macOS, which specialises in meticulously handling both incoming and outgoing server connections. Unfortunately I don't have readily access to Apple products, so I haven't been able to try out this tool myself.
 
-# Personal Blocklist
+# Search result blockers
 
-This is about two very closely related extensions, for [Chrome](https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef) and [Firefox](https://addons.mozilla.org/firefox/addon/personal-blocklist/) respectively, which takes care of removing websites that you don't like from Google search results.
+This section is about search result blockers, which takes care of removing websites that you don't like from Google search results.
 
-They can import (through plain pasting) lists of domains, and then it'll remove such search results thereafter. Entries can be removed or turned off individually, and a note will be shown on the bottom of the Google page if any search results on that page were blocked by the extensions. In contrast to adblockers, it doesn't use source files for its entries, and therefore cannot auto-update its entries either.
+They can import (through plain pasting) lists of domains, and then it'll remove such search results thereafter. Entries can be removed or turned off individually, and in the case of *Personal Blocklist* a note will be shown on the bottom of the Google page if any search results on that page were blocked by the extensions. In contrast to adblockers, these tools don't use source files for its entries, and therefore cannot auto-update its entries either.
+
+• [Personal Blocklist (by Google)](https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef) ([Chrome](https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef))<br>
+• [Personal Blocklist (not by Google)](https://github.com/wildskyf/personal-blocklist) ([Firefox](https://addons.mozilla.org/firefox/addon/personal-blocklist/))<br>
+• [Google Hit Hider for Domains](https://www.jeffersonscher.com/gm/google-hit-hider/) ([Script for all browsers that support Tampermonkey and similar userscript extensions](https://greasyfork.org/scripts/1682-google-hit-hider-by-domain-search-filter-block-sites))
 
 # Redirector
 
@@ -70,9 +74,10 @@ After I found out how to convert most Userstyles scripts to [an adblocker-suppor
 
 • Chrome desktop, Chromium-based browsers, Edge: Nano Adblocker<br>
 • Firefox, Firefox Android, Thunderbird, Pale Moon, Basilisk Browser, other Australis-based programs, Safari macOS: uBlock Origin<br>
-• Internet Explorer 11, Steam desktop client, Windows Store apps: The paid version of Adguard<br>
+• Internet Explorer 11 (with paying), Steam desktop client, Windows Store apps on desktop: The paid version of Adguard<br>
+• Internet Explorer 11 (without paying): Tracking Protection Lists
 • Android (non-rooted, non-Firefox): DNS66<br>
 • Gaming consoles (e.g. Wii U): Adguard DNS in the console settings<br>
 • Android (rooted): Adguard DNS with [DNSForwarder](https://play.google.com/store/apps/details?id=com.evanhe.dnsforward)<br>
-• Windows Phone (while at home): Adguard DNS on your router<br>
-• SmartTVs and gaming consoles: No supported adblocker tools exist for them. Trust me, I've tried.
+• Windows Phone (while at home), web browsers on gaming consoles: Adguard DNS on your router<br>
+• SmartTVs, Windows Phone (on the go): No supported adblocker tools exist for them. Trust me, I've tried.
