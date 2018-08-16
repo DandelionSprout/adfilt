@@ -75,7 +75,7 @@ After I found out how to convert most Userstyles scripts to [an adblocker-suppor
 • Chrome desktop, Chromium-based browsers, Edge: Nano Adblocker<br>
 • Firefox, Firefox Android, Thunderbird, Pale Moon, Basilisk Browser, other Australis-based programs, Safari macOS: uBlock Origin<br>
 • Internet Explorer 11 (with paying), Steam desktop client, Windows Store apps on desktop: The paid version of Adguard<br>
-• Internet Explorer 11 (without paying): Tracking Protection Lists
+• Internet Explorer 11 (without paying): Tracking Protection Lists<br>
 • Android (non-rooted, non-Firefox): DNS66<br>
 • Gaming consoles (e.g. Wii U): Adguard DNS in the console settings<br>
 • Android (rooted): Adguard DNS with [DNSForwarder](https://play.google.com/store/apps/details?id=com.evanhe.dnsforward)<br>
