@@ -79,5 +79,5 @@ After I found out how to convert most Userstyles scripts to [an adblocker-suppor
 • Android (non-rooted, non-Firefox): DNS66<br>
 • Gaming consoles (e.g. Wii U): Adguard DNS in the console settings<br>
 • Android (rooted): Adguard DNS with [DNSForwarder](https://play.google.com/store/apps/details?id=com.evanhe.dnsforward)<br>
-• Windows Phone (while at home), web browsers on gaming consoles: Adguard DNS on your router<br>
+• Windows Phone (while at home): Adguard DNS on your router<br>
 • SmartTVs, Windows Phone (on the go): No supported adblocker tools exist for them. Trust me, I've tried.
