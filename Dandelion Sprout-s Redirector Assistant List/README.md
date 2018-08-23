@@ -7,13 +7,14 @@ At the moment, the list is by default able to:
 4) Turn mobile Wikipedia links (e.g. en.m.wikipedia.org) into desktop Wikipedia links.
 5) Change Google links that have an English language tag to them, into language-neutral links.
 6) Changes Twitter's _jpg:large_-pseudoformatted images to standard JPG ones.
+7) Make R-18 Pixiv images slightly less blurry if you're not logged on.
 
 These things are also included in the list, but must be turned on manually:
 1) Make it so that YouTube's and Reddit's mid-2010's GUI is used whenever possible, instead of their GUIs anno 2018.
 2) Edit Pixiv's search conditions, so that Latin tags are not case-sensitive and thus give more search results.
 3) Redirect Facebook links to facebookcorewwwi.onion, which is Facebook's official Tor address.
 
-The list has been successfully tested with http://einaregilsson.com/redirector/ on Chrome. It has been tried with at least two other 
+The list has been successfully tested with http://einaregilsson.com/redirector/ on Chrome and Basilisk. It has also been tested with at least two other extensions, which it did not work with.
 
 To "download" the list file in a usable capacity, mark all the text in [the JSON file](https://github.com/DandelionSprout/adfilt/blob/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/DandelionSproutRedirectorList.json), copy it into a local text editor, and save it as a JSON file.
 
