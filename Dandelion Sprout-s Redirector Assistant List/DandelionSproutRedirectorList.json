@@ -1,19 +1,35 @@
 {
     "createdBy": "Redirector v3.2",
-    "createdAt": "2018-08-18T23:25:54.467Z",
+    "createdAt": "2018-08-23T16:24:25.718Z",
     "redirects": [
         {
-            "description": "Turn the post-2018 Reddit UI into the pre-2018 Reddit UI",
-            "exampleUrl": "https://www.reddit.com/r/3dshacks/comments/5oqjc9/things_that_are_and_are_not_safe_to_do_with/",
-            "exampleResult": "https://old.reddit.com/r/3dshacks/comments/5oqjc9/things_that_are_and_are_not_safe_to_do_with/",
+            "description": "7-Zip 32-bit → 64-bit",
+            "exampleUrl": "https://www.7-zip.org/a/7z1801.exe",
+            "exampleResult": "https://www.7-zip.org/a/7z1801-x64.exe",
             "error": null,
-            "includePattern": "*://www.reddit.com*",
+            "includePattern": "*.7-zip.org/a/7z*.exe",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "$1://old.reddit.com$2",
+            "redirectUrl": "$1.7-zip.org/a/7z$2-x64.exe",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": true,
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
+            "exampleUrl": "https://get.adobe.com/flashplayer/download/?installer=FP_30_for_Opera_and_Chromium_-_PPAPI&os=Windows%2010&browser_type=KHTML&browser_dist=Chrome&dualoffer=false&mdualoffer=true&stype=7649&d=McAfee_Security_Scan_Plus&d=McAfee_Safe_Connect",
+            "exampleResult": "http://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_ppapi.exe",
+            "error": null,
+            "includePattern": "*://get.adobe.com/flashplayer/download/?installer=FP_*PPAPI*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "http://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_ppapi.exe",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -35,14 +51,14 @@
             ]
         },
         {
-            "description": "Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
-            "exampleUrl": "https://get.adobe.com/flashplayer/download/?installer=FP_30_for_Opera_and_Chromium_-_PPAPI&os=Windows%2010&browser_type=KHTML&browser_dist=Chrome&dualoffer=false&mdualoffer=true&stype=7649&d=McAfee_Security_Scan_Plus&d=McAfee_Safe_Connect",
-            "exampleResult": "http://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_ppapi.exe",
+            "description": "Adobe Reader without the toolbars nor McAfee",
+            "exampleUrl": "https://get.adobe.com/no/reader/",
+            "exampleResult": "https://www.filehorse.com/download-adobe-acrobat-reader-dc/download/",
             "error": null,
-            "includePattern": "*://get.adobe.com/flashplayer/download/?installer=FP_*PPAPI*",
+            "includePattern": "*://get.adobe.com/*/reader/",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "http://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_ppapi.exe",
+            "redirectUrl": "https://www.filehorse.com/download-adobe-acrobat-reader-dc/download/",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -83,33 +99,161 @@
             ]
         },
         {
-            "description": "Turn the 2017 YouTube GUI into the mid-2010's one",
-            "exampleUrl": "https://www.youtube.com/feed/subscriptions",
-            "exampleResult": "https://www.youtube.com/feed/subscriptions?disable_polymer=1",
+            "description": "iTunes 32-bit → 64-bit",
+            "exampleUrl": "https://secure-appldnld.apple.com/itunes12/091-76320-20180329-6D5B23D2-32F7-11E8-993D-9ABAB071F5CF/iTunesSetup.exe",
+            "exampleResult": "https://secure-appldnld.apple.com/itunes12/091-76320-20180329-6D5B23D2-32F7-11E8-993D-9ABAB071F5CF/iTunes64Setup.exe",
             "error": null,
-            "includePattern": "https://www.youtube.com/*",
+            "includePattern": "*://secure-appldnld.apple.com/*/iTunesSetup.exe",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://www.youtube.com/$1?disable_polymer=1",
+            "redirectUrl": "https://secure-appldnld.apple.com/$2/iTunes64Setup.exe",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": true,
+            "disabled": false,
             "appliesTo": [
                 "main_frame"
             ]
         },
         {
-            "description": "Get more search results for Latin image tags on Pixiv (Will cause problems with most Japanese image tags, so turn on/off when needed)",
-            "exampleUrl": "https://www.pixiv.net/search.php?s_mode=s_tag_full&word=lalaloopsy",
-            "exampleResult": "https://www.pixiv.net/search.php?s_mode=s_tag&word=lalaloopsy",
+            "description": "Microsoft Office 365 32-bit → 64-bit",
+            "exampleUrl": "https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365HomePremRetail&platform=X86&language=nb-NO&TaxRegion=db&correlationId=0c664037-8710-4b2e-9ffe-783d4c1c3baa&token=08cfdf54-5f3a-4d96-a036-eb2f50dc3bd2&version=O16GA&source=O15OLSOMEX$StoreId=CFQ7TTC0K5DM",
+            "exampleResult": "https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365HomePremRetail&platform=X64&language=nb-NO&TaxRegion=db&correlationId=0c664037-8710-4b2e-9ffe-783d4c1c3baa&token=08cfdf54-5f3a-4d96-a036-eb2f50dc3bd2&version=O16GA&source=O15OLSOMEX$StoreId=CFQ7TTC0K5DM",
             "error": null,
-            "includePattern": "https://www.pixiv.net/search.php?s_mode=s_tag_full*",
+            "includePattern": "*://c2rsetup.officeapps.live.com/c2r/download.aspx?*&platform=X86&*",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://www.pixiv.net/search.php?s_mode=s_tag$1",
+            "redirectUrl": "$1://c2rsetup.officeapps.live.com/c2r/download.aspx?$2&platform=X64&$3",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": true,
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "PeaZip 32-bit → 64-bit",
+            "exampleUrl": "http://www.peazip.org/download-installer-p-windows.html",
+            "exampleResult": "http://www.peazip.org/peazip-64bit.html",
+            "error": null,
+            "includePattern": "*.peazip.org/download-installer-p-windows.html",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "http://www.peazip.org/peazip-64bit.html",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "SMPlayer 32-bit → 64-bit",
+            "exampleUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-18.3.0-win32.exe",
+            "exampleResult": "https://www.fosshub.com/SMPlayer.html/smplayer-18.3.0-x64.exe",
+            "error": null,
+            "includePattern": "*.fosshub.com/SMPlayer.html/smplayer-*-win32.exe",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-$2-x64.exe",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "SMPlayer Portable 32-bit → 64-bit",
+            "exampleUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-18.3.0.0.7z",
+            "exampleResult": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-18.3.0.0-x64.7z",
+            "error": null,
+            "includePattern": "*.fosshub.com/SMPlayer.html/smplayer-portable-*.7z",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-$2-x64.7z",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "SumatraPDF 32-bit → 64-bit",
+            "exampleUrl": "https://www.sumatrapdfreader.org/dl/SumatraPDF-3.1.2-install.exe",
+            "exampleResult": "https://www.sumatrapdfreader.org/dl/SumatraPDF-3.1.2-64-install.exe",
+            "error": null,
+            "includePattern": "*/SumatraPDF-*-install.exe",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.sumatrapdfreader.org/dl/SumatraPDF-$2-64-install.exe",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "VLC Windows 32-bit → 64-bit",
+            "exampleUrl": "https://get.videolan.org/vlc/3.0.1/win32/vlc-3.0.1-win32.exe",
+            "exampleResult": "https://get.videolan.org/vlc/3.0.1/win64/vlc-3.0.1-win64.exe",
+            "error": null,
+            "includePattern": "https://get.videolan.org/vlc/*/win32/vlc-*-win32.exe",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://get.videolan.org/vlc/$1/win64/vlc-$2-win64.exe",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "WinRAR 32-bit → 64-bit",
+            "exampleUrl": "https://www.win-rar.com/predownload.html?&L=0",
+            "exampleResult": "https://www.win-rar.com/predownload.html?&L=0&Version=64bit",
+            "error": null,
+            "includePattern": "*.win-rar.com/predownload.html?&L=0",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1.win-rar.com/predownload.html?&L=0&Version=64bit",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "WinRAR download list 32-bit → 64-bit",
+            "exampleUrl": "https://win-rar.com/predownload.html?spV=true&f=wrar550no.exe",
+            "exampleResult": "https://win-rar.com/predownload.html?spV=true&f=winrar-x64-550no.exe",
+            "error": null,
+            "includePattern": "*://win-rar.com/predownload.html?spV=true&f=wrar*.exe",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://win-rar.com/predownload.html?spV=true&f=winrar-x64-$2.exe",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Access to Disney USA from abroad",
+            "exampleUrl": "http://www.disney.com/",
+            "exampleResult": "http://www.disney.com/?intoverride=true",
+            "error": null,
+            "includePattern": "*://*.disney.com*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1://$2.disney.com$3?intoverride=true",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -123,6 +267,22 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "https://pbs.twimg.com$1jpg",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Turn WikiHow thumbnail image files into non-article-mentioning, high-res ones (Perfect for WikiHow image compilations)",
+            "exampleUrl": "https://www.wikihow.com/images/thumb/1/12/Say-No-Step-1-Version-3.jpg/aid299614-v4-728px-Say-No-Step-1-Version-3.jpg",
+            "exampleResult": "https://www.wikihow.com/images/1/12/Say-No-Step-1-Version-3.jpg",
+            "error": null,
+            "includePattern": "*://www.wikihow.com/images/thumb/*/aid*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.wikihow.com/images/$2",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -179,193 +339,73 @@
             ]
         },
         {
-            "description": "Access to Disney USA from abroad",
-            "exampleUrl": "http://www.disney.com/",
-            "exampleResult": "http://www.disney.com/?intoverride=true",
+            "description": "Slight resolution upgrade if viewing R-18 images on Pixiv without having logged in (Best used with the \"Browsing websites without logging in\" adblocker filterlist)",
+            "exampleUrl": "https://i.pximg.net/c/64x64/img-master/img/2015/11/06/07/43/31/53406591_p0_square1200.jpg",
+            "exampleResult": "https://i.pximg.net/c/128x128/img-master/img/2015/11/06/07/43/31/53406591_p0_square1200.jpg",
             "error": null,
-            "includePattern": "*://*.disney.com*",
+            "includePattern": "https://i.pximg.net/c/64x64/img-master*",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "$1://$2.disney.com$3?intoverride=true",
+            "redirectUrl": "https://i.pximg.net/c/128x128/img-master$1",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "appliesTo": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "other"
+            ]
+        },
+        {
+            "description": "Get more search results for Latin image tags on Pixiv (Will cause problems with most Japanese image tags, so turn on/off when needed)",
+            "exampleUrl": "https://www.pixiv.net/search.php?s_mode=s_tag_full&word=lalaloopsy",
+            "exampleResult": "https://www.pixiv.net/search.php?s_mode=s_tag&word=lalaloopsy",
+            "error": null,
+            "includePattern": "https://www.pixiv.net/search.php?s_mode=s_tag_full*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.pixiv.net/search.php?s_mode=s_tag$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": true,
             "appliesTo": [
                 "main_frame"
             ]
         },
         {
-            "description": "Adobe Reader without the toolbars nor McAfee",
-            "exampleUrl": "https://get.adobe.com/no/reader/",
-            "exampleResult": "https://www.filehorse.com/download-adobe-acrobat-reader-dc/download/",
+            "description": "Turn the newest YouTube GUI into the second-newest one",
+            "exampleUrl": "https://www.youtube.com/feed/subscriptions",
+            "exampleResult": "https://www.youtube.com/feed/subscriptions?disable_polymer=1",
             "error": null,
-            "includePattern": "*://get.adobe.com/*/reader/",
+            "includePattern": "https://www.youtube.com/*",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://www.filehorse.com/download-adobe-acrobat-reader-dc/download/",
+            "redirectUrl": "https://www.youtube.com/$1?disable_polymer=1",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": false,
+            "disabled": true,
             "appliesTo": [
                 "main_frame"
             ]
         },
         {
-            "description": "iTunes 32-bit → 64-bit",
-            "exampleUrl": "https://secure-appldnld.apple.com/itunes12/091-76320-20180329-6D5B23D2-32F7-11E8-993D-9ABAB071F5CF/iTunesSetup.exe",
-            "exampleResult": "https://secure-appldnld.apple.com/itunes12/091-76320-20180329-6D5B23D2-32F7-11E8-993D-9ABAB071F5CF/iTunes64Setup.exe",
+            "description": "Turn the post-2018 Reddit UI into pre-2018 Reddit",
+            "exampleUrl": "https://www.reddit.com/r/3dshacks/comments/5oqjc9/things_that_are_and_are_not_safe_to_do_with/",
+            "exampleResult": "https://old.reddit.com/r/3dshacks/comments/5oqjc9/things_that_are_and_are_not_safe_to_do_with/",
             "error": null,
-            "includePattern": "*://secure-appldnld.apple.com/*/iTunesSetup.exe",
+            "includePattern": "*://www.reddit.com*",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://secure-appldnld.apple.com/$2/iTunes64Setup.exe",
+            "redirectUrl": "$1://old.reddit.com$2",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "WinRAR download list 32-bit → 64-bit",
-            "exampleUrl": "https://win-rar.com/predownload.html?spV=true&f=wrar550no.exe",
-            "exampleResult": "https://win-rar.com/predownload.html?spV=true&f=winrar-x64-550no.exe",
-            "error": null,
-            "includePattern": "*://win-rar.com/predownload.html?spV=true&f=wrar*.exe",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://win-rar.com/predownload.html?spV=true&f=winrar-x64-$2.exe",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "WinRAR 32-bit → 64-bit",
-            "exampleUrl": "https://www.win-rar.com/predownload.html?&L=0",
-            "exampleResult": "https://www.win-rar.com/predownload.html?&L=0&Version=64bit",
-            "error": null,
-            "includePattern": "*.win-rar.com/predownload.html?&L=0",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "$1.win-rar.com/predownload.html?&L=0&Version=64bit",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "7-Zip 32-bit → 64-bit",
-            "exampleUrl": "https://www.7-zip.org/a/7z1801.exe",
-            "exampleResult": "https://www.7-zip.org/a/7z1801-x64.exe",
-            "error": null,
-            "includePattern": "*.7-zip.org/a/7z*.exe",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "$1.7-zip.org/a/7z$2-x64.exe",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Microsoft Office 365 32-bit → 64-bit",
-            "exampleUrl": "https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365HomePremRetail&platform=X86&language=nb-NO&TaxRegion=db&correlationId=0c664037-8710-4b2e-9ffe-783d4c1c3baa&token=08cfdf54-5f3a-4d96-a036-eb2f50dc3bd2&version=O16GA&source=O15OLSOMEX$StoreId=CFQ7TTC0K5DM",
-            "exampleResult": "https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365HomePremRetail&platform=X64&language=nb-NO&TaxRegion=db&correlationId=0c664037-8710-4b2e-9ffe-783d4c1c3baa&token=08cfdf54-5f3a-4d96-a036-eb2f50dc3bd2&version=O16GA&source=O15OLSOMEX$StoreId=CFQ7TTC0K5DM",
-            "error": null,
-            "includePattern": "*://c2rsetup.officeapps.live.com/c2r/download.aspx?*&platform=X86&*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "$1://c2rsetup.officeapps.live.com/c2r/download.aspx?$2&platform=X64&$3",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "SMPlayer Portable 32-bit → 64-bit",
-            "exampleUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-18.3.0.0.7z",
-            "exampleResult": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-18.3.0.0-x64.7z",
-            "error": null,
-            "includePattern": "*.fosshub.com/SMPlayer.html/smplayer-portable-*.7z",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-portable-$2-x64.7z",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "SMPlayer 32-bit → 64-bit",
-            "exampleUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-18.3.0-win32.exe",
-            "exampleResult": "https://www.fosshub.com/SMPlayer.html/smplayer-18.3.0-x64.exe",
-            "error": null,
-            "includePattern": "*.fosshub.com/SMPlayer.html/smplayer-*-win32.exe",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.fosshub.com/SMPlayer.html/smplayer-$2-x64.exe",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "PeaZip 32-bit → 64-bit",
-            "exampleUrl": "http://www.peazip.org/download-installer-p-windows.html",
-            "exampleResult": "http://www.peazip.org/peazip-64bit.html",
-            "error": null,
-            "includePattern": "*.peazip.org/download-installer-p-windows.html",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "http://www.peazip.org/peazip-64bit.html",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "SumatraPDF 32-bit → 64-bit",
-            "exampleUrl": "https://www.sumatrapdfreader.org/dl/SumatraPDF-3.1.2-install.exe",
-            "exampleResult": "https://www.sumatrapdfreader.org/dl/SumatraPDF-3.1.2-64-install.exe",
-            "error": null,
-            "includePattern": "*/SumatraPDF-*-install.exe",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.sumatrapdfreader.org/dl/SumatraPDF-$2-64-install.exe",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "VLC Windows 32-bit → 64-bit",
-            "exampleUrl": "https://get.videolan.org/vlc/3.0.1/win32/vlc-3.0.1-win32.exe",
-            "exampleResult": "https://get.videolan.org/vlc/3.0.1/win64/vlc-3.0.1-win64.exe",
-            "error": null,
-            "includePattern": "https://get.videolan.org/vlc/*/win32/vlc-*-win32.exe",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://get.videolan.org/vlc/$1/win64/vlc-$2-win64.exe",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
+            "disabled": true,
             "appliesTo": [
                 "main_frame"
             ]
