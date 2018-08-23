@@ -6,7 +6,7 @@ At the moment, the list is by default able to:
 3) Allow you to visit Disney's American websites from abroad.
 4) Turn mobile Wikipedia links (e.g. en.m.wikipedia.org) into desktop Wikipedia links.
 5) Change Google links that have an English language tag to them, into language-neutral links.
-6) Changes Twitter's _jpg:large_-pseudoformatted images to standard JPG ones.
+6) Change Twitter's _jpg:large_-pseudoformatted images to standard JPG ones.
 7) Make R-18 Pixiv images slightly less blurry if you're not logged on.
 
 These things are also included in the list, but must be turned on manually:
