@@ -4,7 +4,7 @@ Note that the list below only features examples of each category, and is not a c
 Adblockers in this category has support for extended syntaxes, that can be used to filter away more things, create tool-dependent entries, or to bind lists to other lists. There's not a 100% harmony between the tools' syntaxes, but a list that is made for one of them will usually also work in the other ones.
 
 • [Nano Adblocker](https://github.com/NanoAdblocker/NanoCore) ([Chrome](https://chrome.google.com/webstore/detail/nano-adblocker/gabbbocakeomblphkmmnoamkioajlkfo) / [MS Edge](https://www.microsoft.com/store/productId/9NSXDX2TDB3V))<br>
-• [uBlock Origin](https://github.com/gorhill/uBlock) ([Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) / [Firefox](https://addons.mozilla.org/addon/ublock-origin/)¹ / [Opera native](https://addons.opera.com/extensions/details/ublock/) / [Thunderbird² / Pale Moon²](https://github.com/gorhill/uBlock/blob/master/dist/README.md#firefox-legacy))<br>
+• [uBlock Origin](https://github.com/gorhill/uBlock) ([Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) / [Firefox](https://addons.mozilla.org/addon/ublock-origin/)¹ / [Opera native](https://addons.opera.com/extensions/details/ublock/) / [Pale Moon²](https://github.com/gorhill/uBlock/blob/master/dist/README.md#firefox-legacy))<br>
 • [Adguard](https://adguard.com/en/welcome.html) ([Chrome](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) / [Firefox](https://addons.mozilla.org/addon/adguard-adblocker/)¹ / [Safari](https://safari-extensions.apple.com/details/?id=com.adguard.safari-N33TQXN8C7) / [Opera native](https://addons.opera.com/en/extensions/details/adguard/) / [MS Edge](https://www.microsoft.com/store/p/adguard-adblocker/9mz607gwkbs7) / [Thunderbird² / Pale Moon](https://github.com/AdguardTeam/AdguardBrowserExtension/releases)² / [iOS](https://itunes.apple.com/app/apple-store/id1047223162) / [Samsung Internet / Yandex.Browser Mobile](https://adguard.com/en/adguard-content-blocker/overview.html) / [Paid pan-Windows version](https://adguard.com/en/adguard-windows/overview.html) / [Paid pan-Mac version](https://adguard.com/en/adguard-mac/overview.html) / [Paid pan-Android version](https://adguard.com/en/adguard-android/overview.html))
 
 ## Simple adblockers
@@ -73,8 +73,8 @@ After I found out how to convert most Userstyles scripts to [an adblocker-suppor
 ## My personal recommendations for users of each platform
 
 • Chrome desktop, Chromium-based browsers, Edge: Nano Adblocker<br>
-• Firefox, Firefox Android, Thunderbird, Pale Moon, Basilisk Browser, other Australis-based programs, Safari macOS: uBlock Origin<br>
-• Internet Explorer 11 (with paying), Steam desktop client, Windows Store apps on desktop: The paid version of Adguard<br>
+• Firefox, Firefox Android, Pale Moon, Basilisk Browser, other Australis-based programs, Safari macOS: uBlock Origin<br>
+• Internet Explorer 11 (with paying), Steam desktop client, Thunderbird ≥60, Windows Store apps on desktop: The paid version of Adguard<br>
 • Internet Explorer 11 (without paying): Tracking Protection Lists<br>
 • Android (non-rooted, non-Firefox): DNS66<br>
 • Gaming consoles (e.g. Wii U): Adguard DNS in the console settings<br>
