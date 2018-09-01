@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.2",
-    "createdAt": "2018-08-23T16:24:25.718Z",
+    "createdAt": "2018-09-01T08:42:34.975Z",
     "redirects": [
         {
             "description": "7-Zip 32-bit → 64-bit",
@@ -123,6 +123,22 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "$1://c2rsetup.officeapps.live.com/c2r/download.aspx?$2&platform=X64&$3",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Mozilla Thunderbird 32-bit → 64-bit (May not work with all language-specific versions)",
+            "exampleUrl": "https://download.mozilla.org/?product=thunderbird-60.0-SSL&os=win&lang=nb-NO",
+            "exampleResult": "https://download-origin.cdn.mozilla.net/pub/thunderbird/releases/60.0/win64/nb-NO/Thunderbird%20Setup%2060.0.exe",
+            "error": null,
+            "includePattern": "https://download.mozilla.org/?product=thunderbird-*-SSL&os=win&lang=*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://download-origin.cdn.mozilla.net/pub/thunderbird/releases/$1/win64/$2/Thunderbird%20Setup%20$1.exe",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -419,6 +435,38 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "$1.facebookcorewwwi.onion/$2",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Redirect DuckDuckGo.com links to DuckDuckGo's .onion Tor server (Only recommended for those who depend on Tor)",
+            "exampleUrl": "https://duckduckgo.com/?q=john+madden&t=h_&ia=news",
+            "exampleResult": "https://3g2upl4pq6kufc4m.onion/?q=john+madden&t=h_&ia=news",
+            "error": null,
+            "includePattern": "*://duckduckgo.com*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://3g2upl4pq6kufc4m.onion$2",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Redirect New York Times links to New York Times's .onion Tor server (Only recommended for those who depend on Tor)",
+            "exampleUrl": "https://www.nytimes.com/2018/08/31/sports/colin-kaepernick.html?action=click&module=Editors%20Picks&pgtype=Homepage",
+            "exampleResult": "https://www.nytimes3xbfgragh.onion/2018/08/31/sports/colin-kaepernick.html?action=click&module=Editors%20Picks&pgtype=Homepage",
+            "error": null,
+            "includePattern": "*://www.nytimes.com*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.nytimes3xbfgragh.onion$2",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": true,
