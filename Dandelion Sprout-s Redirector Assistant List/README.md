@@ -8,6 +8,7 @@ At the moment, the list is by default able to:
 5) Change Google links that have an English language tag to them, into language-neutral links.
 6) Change Twitter's _jpg:large_-pseudoformatted images to standard JPG ones.
 7) Make R-18 Pixiv images slightly less blurry if you're not logged on.
+8) Redirect Google Play's app store's frontpage to its non-game category.
 
 These things are also included in the list, but must be turned on manually:
 1) Make it so that YouTube's and Reddit's mid-2010's GUI is used whenever possible, instead of their GUIs anno 2018.
