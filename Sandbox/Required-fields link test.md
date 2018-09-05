@@ -1,3 +1,3 @@
-[Button test 3](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Username%2520Hider%2520for%2520Compilation%2520Creators.txt&title=Username%20Hider%20for%20Compilation%20Creators&requiresLocation=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt&requiresTitle=JohnMadden)
+[FilterLists link](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FDandelionSprout%2Fadfilt%2Fmaster%2FNorwegianList.txt&amp;title=Dandelion%20Sprout's%20Norwegian%20Filters%20for%20Tidier%20Websites)
 
-[Button test 4](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sandbox/FilterlistsWidthProofOfConcept.txt&title=aeiou)
+[ABP Subscriptions page link](https://subscribe.adblockplus.org/?location=https%3A//raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt&title=Dandelion%20Sprout%27s%20Norwegian%20List&requiresLocation=https%3A//easylist-downloads.adblockplus.org/easylist.txt&requiresTitle=EasyList)
