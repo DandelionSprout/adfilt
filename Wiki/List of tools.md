@@ -29,9 +29,11 @@ These tools specialise in dealing with one specific system file that originated 
 
 They only support pure IP addresses, and does not ordinarily support any syntaxes or element specifications whatsoever. I would therefore rather recommend the use of adblockers and adblock-tailored lists instead, but for those who need to defend specific products under and from specific circumstances, here's a few tools that can make use of hosts files.
 
-• [AdAway](https://adaway.org/) ([Android with root, through the F-Droid store](https://f-droid.org/packages/org.adaway/))<br>
 • [Editing it yourself on Windows, macOS and Linux](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)<br>
-• [Hosts File Editor](https://github.com/scottlerch/HostsFileEditor) (Windows)
+• [Hosts File Editor](https://github.com/scottlerch/HostsFileEditor) (Windows)<br>
+• [Gas Mask](https://github.com/2ndalpha/gasmask) (macOS)<br>
+• [Pi-hole](https://pi-hole.net/) (Linux)<br>
+• [AdAway](https://adaway.org/) ([Android with root, through the F-Droid store](https://f-droid.org/packages/org.adaway/))
 
 Web-hosted hosts files can also be used with Nano Adblocker and uBlock Origin, but in the case of my Norwegian list it's preferable to use the regular, adblock-formatted list instead when using those adblockers.
 
@@ -60,9 +62,9 @@ They can import (through plain pasting) lists of domains, and then it'll remove 
 
 # Redirector
 
-This is [an extension](http://einaregilsson.com/redirector/) made by the Icelandic developer Einar Egilsson. Although he has unfortunately stopped developing this extension, instead prioritising to make ad-financed card games for phones, it has many functions that would be impossible to replicate on any adblockers, even the advanced ones.
+This is [an extension](http://einaregilsson.com/redirector/) made by the Icelandic developer Einar Egilsson. It has many functions that would be impossible to replicate on any adblockers, even the advanced ones.
 
-While it can't do any real amounts of adblocking, it can help greatly with [utilising URL tricks](https://github.com/DandelionSprout/adfilt/blob/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/README.md) that'd be overly convoluted or unknown to pull off otherwise.
+While it can't do any real amounts of adblocking, it can help greatly with [utilising URL tricks](https://github.com/DandelionSprout/adfilt/blob/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/README.md) that'd be overly convoluted or impossible to pull off otherwise.
 
 # Stylish
 
@@ -80,4 +82,4 @@ After I found out how to convert most Userstyles scripts to [an adblocker-suppor
 • Gaming consoles (e.g. Wii U): Adguard DNS in the console settings<br>
 • Android (rooted): Adguard DNS with [DNSForwarder](https://play.google.com/store/apps/details?id=com.evanhe.dnsforward)<br>
 • Windows Phone (while at home): Adguard DNS on your router<br>
-• SmartTVs, Windows Phone (on the go): No supported adblocker tools exist for them. Trust me, I've tried.
+• SmartTVs: Pi-hole with [the only list in existence that targets SmartTVs](https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt), and which even then is largely privacy-focused instead of anti-ad-focused.
