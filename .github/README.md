@@ -62,7 +62,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 ## The tools that I use:
 
-• [Checker for redundant/duplicate filter entries](https://arestwo.org/famlam/redundantRuleChecker.html), made by Famlam. It does however not account for uBO-syntax-specific entries. <br>
+• [Checker for redundant/duplicate filter entries](https://arestwo.org/famlam/redundantRuleChecker.html), made by Famlam. It does however not account for uBO-syntax-specific entries. ([Alternate link](https://web.archive.org/web/20171209102004/https://arestwo.org/famlam/redundantRuleChecker.html)) <br>
 • [Recentmost tool I used to test IP server availability](https://github.com/funilrys/funceble), made by [Funilrys](https://github.com/funilrys).  (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead). <br>
 • To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed. <br>
 • To make the GitHub websites a lot wider on the user-end, and thus make the tables above display in a better way: [Dandelion Sprout's Website Stretcher](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Website%20Stretcher.txt&title=Dandelion%20Sprout's%20Website%20Stretcher), whose GitHub entries are based on [GitHub Wide](https://userstyles.org/styles/108591/github-wide) by [cfoellmann](https://userstyles.org/users/206217)
