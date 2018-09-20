@@ -12,7 +12,6 @@ These adblockers support a core set of functionality, either to have some degree
 
 • [Adblock Plus](https://adblockplus.org/) ([Chrome](https://chrome.google.com/webstore/detail/cfhdojbkjhnklbpkdaibdccddilifddb) / [Firefox](https://addons.mozilla.org/addon/adblock-plus/)¹ / Safari / [Opera native](https://addons.opera.com/extensions/details/opera-adblock/) / [MS Edge](https://www.microsoft.com/store/p/adblock-plus/9nblggh4r9nz))<br>
 • [AdBlock](https://getadblock.com/) ([Chrome](https://chrome.google.com/webstore/detail/gighmmpiobklfepjocnamgkkbiglidom) / [Firefox](https://addons.mozilla.org/firefox/addon/adblock-for-firefox/)¹ / Safari / Opera native / [MS Edge](https://www.microsoft.com/store/productID/9nblggh4rfhk))<br>
-• [DNS66](https://github.com/julian-klode/dns66) ([Android without root, through the F-Droid store](https://f-droid.org/packages/org.jak_linux.dns66/))
 
 ¹ = Have been confirmed to also work on the Android version of Firefox.<br>
 ² = Download the .xpi file that has <i>firefox-legacy(...)</i> in its filename.
@@ -29,11 +28,12 @@ These tools specialise in dealing with one specific system file that originated 
 
 They only support pure IP addresses, and does not ordinarily support any syntaxes or element specifications whatsoever. I would therefore rather recommend the use of adblockers and adblock-tailored lists instead, but for those who need to defend specific products under and from specific circumstances, here's a few tools that can make use of hosts files.
 
-• [Editing it yourself on Windows, macOS and Linux](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)<br>
 • [Hosts File Editor](https://github.com/scottlerch/HostsFileEditor) (Windows)<br>
 • [Gas Mask](https://github.com/2ndalpha/gasmask) (macOS)<br>
 • [Pi-hole](https://pi-hole.net/) (Linux)<br>
-• [AdAway](https://adaway.org/) ([Android with root, through the F-Droid store](https://f-droid.org/packages/org.adaway/))
+• [DNS66](https://github.com/julian-klode/dns66) ([Android without root, through the F-Droid store](https://f-droid.org/packages/org.jak_linux.dns66/))
+• [AdAway](https://adaway.org/) ([Android with root, through the F-Droid store](https://f-droid.org/packages/org.adaway/))<br>
+• [Editing it yourself on Windows, macOS and Linux](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
 
 Web-hosted hosts files can also be used with Nano Adblocker and uBlock Origin, but in the case of my Norwegian list it's preferable to use the regular, adblock-formatted list instead when using those adblockers.
 
