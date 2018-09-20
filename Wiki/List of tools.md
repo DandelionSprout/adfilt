@@ -31,7 +31,7 @@ They only support pure IP addresses, and does not ordinarily support any syntaxe
 • [Hosts File Editor](https://github.com/scottlerch/HostsFileEditor) (Windows)<br>
 • [Gas Mask](https://github.com/2ndalpha/gasmask) (macOS)<br>
 • [Pi-hole](https://pi-hole.net/) (Linux)<br>
-• [DNS66](https://github.com/julian-klode/dns66) ([Android without root, through the F-Droid store](https://f-droid.org/packages/org.jak_linux.dns66/))
+• [DNS66](https://github.com/julian-klode/dns66) ([Android without root, through the F-Droid store](https://f-droid.org/packages/org.jak_linux.dns66/))<br>
 • [AdAway](https://adaway.org/) ([Android with root, through the F-Droid store](https://f-droid.org/packages/org.adaway/))<br>
 • [Editing it yourself on Windows, macOS and Linux](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
 
