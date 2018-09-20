@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Version: 17September2018v1
-! Version: 170920181 (for Adblock Plus' issue report system)
+! Version: 20September2018v1
+! Version: 200920181 (for Adblock Plus' issue report system)
 ! Title: Dandelion Sprouts norske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Norwegian Filters for tidier websites
 ! Expires: 12 hours
@@ -20,6 +20,7 @@
 ###ad_superboard
 ###ad_topp
 ###inlineannonse
+##.annonselenker
 ##.ad-centered
 ##.ad-nexus-ad
 ##.ad_mobil_API
@@ -108,6 +109,8 @@ aftenposten.no##DIV.adHorisontal
 aftenposten.no##DIV.adHorisontalNoBorder
 aftenposten.no##DIV.campaignDmElement.m-btm-20
 aftenposten.no##DIV.campaignDmElement.twoStories
+aftenposten.no##.df-width-60.df-article.df-auto-article
+aftenposten.no###df-3-e80143ee
 alatest.no##.identity-noticebar-content
 autodb.no###toppbanner
 autodb.no##.ng-scope:nth-of-type(5) > .ng-scope > .ng-scope
@@ -136,7 +139,6 @@ cw.no##.ad-fit-body
 cw.no##.desktop-only.l-row > .omega.grid-12.grid-item.col
 dagbladet.no##.as-oil-content-overlay
 seher.no##.css-r3dtrv
-digi.no##.ad-label-vertical
 digi.no##.commercial
 dinside.no###ad-fullscreen
 dinside.no###ad-medium-rectangle1
@@ -246,9 +248,7 @@ power.no##.row.sleeky-content
 dagbladet.no#@#iframe[src*="annonse"]
 power.no##.subfooter > .container > .row
 power.no##.title-desktop
-qxl.no###cookies
 medier24.no##.ad-toppbanner-article
-medier24.no##.ad-label-vertical
 radioplay.no###reactRoot > div > div > div > div[style*="FFF3CC"]
 radioplay.no##.page-wrapper > div:nth-of-type(2)
 ramboll.no##.infoboxHolder
@@ -260,17 +260,8 @@ sagamobil.no##.fusion_builder_column_1_1.fusion_builder_column.fusion-layout-col
 sagamobil.no##.fusion_builder_column_1_1.fusion_builder_column.fusion-layout-column:nth-of-type(8) > .fusion-column-wrapper
 sfanytime.com###ui-notification
 sfkids.com##hr
-side2.no###df-3-2de94c28
-side2.no###df-3-x0b58113
-side2.no###inline-cm-1-1
-side2.no###inline-cm-1-2
-side2.no###inline-cm-1-3
-side2.no###inline-cm-1-4
-side2.no###inline-cm-1-5
-side2.no###inline-cm-1-6
-side2.no###nt-box
-side2.no##.inline-cm-text-container
-side2.no##.netboard-1
+side2.no##[href*="clk.tradedoubler.com/click"]
+side2.no##[href*="track.adtraction.com/t/t"]
 side3.no###service-carousel
 side3.no###sidebar_article_annonse
 side3.no##.spklw-dc3gw8216qzadcxr
@@ -284,7 +275,6 @@ speed.bredbandsguiden.no###advertisement
 speed.bredbandsguiden.no##.admark
 startsiden.no##.bigger-than-small-screens
 storm.no###topbanner
-subaru.no##.kake
 synsam.no##.message-large
 sysla.no###agreement-popup
 sysla.no##.in.fade.modal-backdrop
@@ -317,16 +307,15 @@ xlmoto.no##.overlay-wrapper
 xlmoto.no##.sb-overlay
 xxl.no##.aboveheader.c-fader
 zoover.no###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
-dagsavisen.no##.cookie-acceptance
 ||8m.com/fs_img/bannertype/
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
-||ad.*.no
-||ad1.*.no
-||adcache.*.no
-||ads.*.no
-||annonser.*.no
+||ad.*.no^
+||ad1.*.no^
+||adcache.*.no^
+||ads.*.no^
+||annonser.*.no^
 ||avisenagder.no/Portals/4/ads/
-||banner.*.no
+||banner.*.no^
 ||beitostolen.no/marked/reklameannonser/
 ||boligsamvirket.no/promsys/
 ||client-stream-events.mtg-api.com/client-stream-events/event/viafree/*$xmlhttprequest,domain=viafree.se|viafree.no|viafree.dk|viafree.fi
@@ -359,7 +348,6 @@ dagsavisen.no##.cookie-acceptance
 ||p4.no/mmo/ads/
 ||pepcall.no/wp-content/uploads/2015/04/bakgrunn-forside.jpg$image
 ||platekompaniet.no/assets/img/background.png$image
-||privacy.schibsted.com^
 ||propaganda.net/img/reklame.
 ||propaganda.net/js/global.js
 ||r.api.no/componada/resources/web/flash/
@@ -385,27 +373,21 @@ norsk-tipping.no##.no-bg.divider
 ##.ntbox-tab.bg-primary
 ###sportspill-box-top
 ba.no##a[href*="/x/5-8-"]
-seher.no##.css-vk53wn:has-text(norsk tipping)
+seher.no##.css-vk53wn:-abp-contains(norsk tipping)
+side2.no###nt-box
 
 ! Solcellespesialisten, loading issue
 ||wo.tc
 
 ! Misinformation about needing Java for BankID
-portalbank.no##a[href="http://eika.no/~/media/Files/nettbank/oppdatere-java.pdf"]
-portalbank.no##a[href="http://www.eika.no/~/media/Files/nettbank/oppdatere-java.pdf"]
+portalbank.no##a[href*="nettbank/oppdatere-java.pdf"]
 portalbank.no##a[href^="http://java.com/inc/BrowserRedirect1.jsp"]
 portalbank.no##font:-abp-contains(Java)
 
-! Accessing Pinterest without having to log in (Elevated leftover from no.pinterest.com filters)
-pinterest.com##.FullPageModal__scroller
-pinterest.com##div[style="background-color: rgba(0, 0, 0, 0.6); opacity: 1; position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 1000;"]
-pinterest.com##div[style="background: rgba(0, 0, 0, 0.85098); transition: height 0.5s cubic-bezier(0.26, 0.87, 0.74, 0.93); backface-visibility: hidden; bottom: 0px; color: rgb(255, 255, 255); height: 100%; position: fixed; width: 100%;"]
-
 ! Multi-domain entries
-vg.no,e24.no,aftenposten.no,filmweb.no,itavisen.no,kino.no##.ad
+vg.no,e24.no,aftenposten.no,filmweb.no,itavisen.no,kino.no,aftenposten.no##.ad
 komputer.no,natgeo.no,historienet.no,illvit.no##.wg-banner
 komputer.no,natgeo.no,historienet.no##.top-banner
-gamer.no,tek.no,digi.no##.annonselenker
 gamer.no,tek.no,digi.no##.products-carousel
 tv2.no,abcnyheter.no,medier24.no##a[href*="adform.net"]
 svalbardposten.no,nab.no##.divider
@@ -414,6 +396,7 @@ minmote.no,godt.no##.adblock-info
 aftenposten.no,tek.no###wallpaper
 barents.no,oskommune.no##.container-floating-notifications
 resett.no,steigan.no##.vc_empty_space
+digi.no,medier24.no##.ad-label-vertical
 
 ! VG
 vg.no###block-bannerad
@@ -433,6 +416,14 @@ e24.no###adPlaceholderFront
 e24.no##.content-marketing-container
 e24.no##.swiper-slide
 
+! Cookie notifications
+! This list does only partially target removing cookie banners. For more complete coverage, go to Filterlists.com, type 'cookies' into its tag field, and subscribe to one or more of those lists.
+||privacy.schibsted.com^
+tv2.no###tv2-cookie-alert
+qxl.no###cookies
+dagsavisen.no##.cookie-acceptance
+subaru.no##.kake
+
 ! Gigantic white boxes on Adressa and probably some other newssites, if I recall correctly. I think those were a key motivation behind me making this list in the first place.
 ###netboard_1
 ###netboard_2
@@ -445,51 +436,51 @@ e24.no##.swiper-slide
 ###topboard
 
 ! Rules for entire websites, categorised to make it easier for me to make a \"hosts\" version of this list
-||ad.no.doubleclick.net
-||webclick.no
-||webhotell.enivest.no
-||rig.idg.no
+||ad.no.doubleclick.net^
+||webclick.no^
+||webhotell.enivest.no^
+||rig.idg.no^
 ||adext.inkclub.com^
-||ads.no
-||stats.bonzaii.no
-||pool.euroads.no
+||ads.no^
+||stats.bonzaii.no^
+||pool.euroads.no^
 ||primetime.ad.primetime.net^
-||myad.no
-||nettklikk.no
-||imp.euroads.no
-||i1media.no
+||myad.no^
+||nettklikk.no^
+||imp.euroads.no^
+||i1media.no^
 ||easy-ad.no^
 ||emerio.no^
-||bolinux3.hit.no
-||cmt.no
-||piwik.onlinemagasinet.no
-||flashbanner.no
-||bannere.oslonett.no
+||bolinux3.hit.no^
+||cmt.no^
+||piwik.onlinemagasinet.no^
+||flashbanner.no^
+||bannere.oslonett.no^
 
 ! Scam sites and virus sites (Do not visit them if you value your computers and wallets)
-||skoonlineshopnorge.com
-||apple-account-locked.losjevegen.no
-||arendalfotball.no
+||skoonlineshopnorge.com^
+||apple-account-locked.losjevegen.no^
+||arendalfotball.no^
 ||arvetellefsen.no/curry^
-||aumamandel.no
-||kjolenorge.com
-||newbalancenorge.com
-||andeneshornmusikk.no
-||handelihalden.no
-||holmedalblikk.no
-||paypal.*.no
-||streetdance.no
-||102.112.2o7.net
-||vetscan.no
-||tromselementbygg.no
-||eurosko.net
-||brannloftet.no
-||butikk.losnaspelet.no
-||no.zxxyw.com
-||oyelege.no
-||fanadyreklinikk.no
-||digitoday.com
-||komtilmil.no
+||aumamandel.no^
+||kjolenorge.com^
+||newbalancenorge.com^
+||andeneshornmusikk.no^
+||handelihalden.no^
+||holmedalblikk.no^
+||paypal.*.no^
+||streetdance.no^
+||102.112.2o7.net^
+||vetscan.no^
+||tromselementbygg.no^
+||eurosko.net^
+||brannloftet.no^
+||butikk.losnaspelet.no^
+||no.zxxyw.com^
+||oyelege.no^
+||fanadyreklinikk.no^
+||digitoday.com^
+||komtilmil.no^
 ||vg.no.*
 ||elkjop.no.*
 ||coop.no.*
@@ -498,14 +489,14 @@ e24.no##.swiper-slide
 ||*/finn.no/finno.htm
 ||dnb.no.*
 ||sparebank1.no.*
-||finnrefusjon.com
-||finn-spid.info
+||finnrefusjon.com^
+||finn-spid.info^
 ||nordea.no.*
 ||sbanken.no.*
 ||danskebank.no.*
 ||*/finn-no/
 ||*/?finn.no/login
-||refusjon-finn.com
+||refusjon-finn.com^
 ||komplett.no.*
 ||nordnet.no.*
 ||skatteetaten.no.*
@@ -544,10 +535,8 @@ medier24.no##.faded-article-content:after
 dn.no##.vrs-image-block__image-description-overlay
 
 ! Prisjakt cluttering
-prisjakt.no###footer_header
 ||cdn.pji.nu/g/campaigns/12/no/mainpage_header.png$image
 ||cdn.pji.nu/g/campaigns/4/xx/christmas_2017.png$image
-prisjakt.no##.adbox
 ||s3.pji.nu$domain=~pricespy.co.uk|~pricespy.ie|~pricespy.no.nz|~hintaopas.fi|~prisjakt.no
 
 ! Filmweb
@@ -569,9 +558,8 @@ tv2.no##.lab-skin-cm.medium-4.small-12.large-4.boxwrapper.tv2-story
 tv2.no##.doubleClickAd
 tv2.no##.spklw-powered-by
 tv2.no##a[href*="&utm_source=Blogg"]
-tv2.no###tv2-cookie-alert
 
-! Tracker whitelistings that are necessary for users of Prisjakt, Kickback, and Viatrumf (I request feedback from users about whether this category is desirable, or if it should be a separate and less popular list of itself.)
+! Tracker whitelistings that are necessary for users of Prisjakt, Kickback, and Viatrumf
 @@||track.adtraction.com/t
 @@||clk.tradedoubler.com
 @@||solutions.tradedoubler.com
@@ -600,4 +588,6 @@ google.no###epbar, #cnsh, #pushdown, #consent-bump, #cnsi ~ [jsaction*="dismiss"
 google.no###tads
 google.no##.luhb-div
 google.no##.rlfl__tls > div[jstcache="0"]:not([class]):not([id])[-ext-has='span._mB']
+prisjakt.no##.adbox
+prisjakt.no###footer_header
 !#endif
