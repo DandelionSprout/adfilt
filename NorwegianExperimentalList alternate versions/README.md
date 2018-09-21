@@ -6,6 +6,6 @@ Versjonene er myntet på (Nåværende status):<br>
 1) .tpl for <b>Internet Explorer</b> (Cirka 75% dekning sammenlignet med den vanlige versjonen)<br>
 2) Adaway<b>Hosts</b> for [verktøy som bruker vertsfiler](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/List%20of%20tools.md#hosts-tools) (Cirka 10% dekning)<br>
 3) .lsrules for <b>Little Snitch</b> (Cirka 10% dekning)
-4) Domains.txt for verktøy som bruker domenefiler (Circa 10% dekning vanligvis; 15% for verktøy som støtter jokertegn)
+4) **Domains**.txt for [verktøy som bruker domenefiler](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/List%20of%20tools.md#domains-list-tools) (Circa 10% dekning vanligvis; 15% for verktøy som støtter jokertegn)
 
 Jeg vil trenge assistanse fra andre entusiaster for at jeg skal kunne forbedre disse filene i nevneverdig grad, fordi jeg ikke har tilstrekkelig kjennskap til syntaksene deres, og at jeg for øyeblikket ikke vet om det er noen der ute som engang bruker disse versjonene…
