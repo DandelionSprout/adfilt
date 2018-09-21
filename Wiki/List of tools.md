@@ -50,7 +50,18 @@ For info on how to add the Norwegian TPL link to your Internet Explorer, see [he
 
 Little Snitch is [a paid program](https://www.obdev.at/products/littlesnitch/index.html) for macOS, which specialises in meticulously handling both incoming and outgoing server connections. Unfortunately I don't have readily access to Apple products, so I haven't been able to try out this tool myself.
 
-# Search result blockers
+# Domains-list tools
+
+These are tools that chiefly make use of domains lists. A domains list is a no-nonsense list with no numbers, |'s, ^'s, or anything of the sort.
+
+Regular tools that deal with such lists, include:
+
+• [Pi-hole](https://pi-hole.net/) (Linux)<br>
+• [Samsung Knox](https://www.samsungknox.com) (Android)
+
+Such lists are also supported by Nano Adblocker, uBlock Origin, and AdBlock, but in the case of my Norwegian list it's preferable to use the regular, adblock-formatted list instead when using those adblockers. Domains lists are also supported by several other tools, such as:
+
+## Search result blockers
 
 This section is about search result blockers, which takes care of removing websites that you don't like from Google search results.
 
