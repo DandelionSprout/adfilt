@@ -59,7 +59,7 @@ Regular tools that deal with such lists, include:
 • [Pi-hole](https://pi-hole.net/) (Linux)<br>
 • [Samsung Knox](https://www.samsungknox.com) (Android)
 
-Such lists are also supported by Nano Adblocker, uBlock Origin, and AdBlock, but in the case of my Norwegian list it's preferable to use the regular, adblock-formatted list instead when using those adblockers. Domains lists are also supported by several other tools, such as:
+Such lists are also supported by Nano Adblocker and uBlock Origin, but in the case of my Norwegian list it's preferable to use the regular, adblock-formatted list instead when using those adblockers. Domains lists are also supported by several other tools, such as:
 
 ## Search result blockers
 
