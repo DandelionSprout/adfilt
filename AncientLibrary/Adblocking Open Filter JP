@@ -1,0 +1,2246 @@
+[Adblock Plus]
+! This list is a copy of a previously lost list. It is not actively maintained. I currently believe and hope that this hosting meets the copyright requirements that are listed below.
+! Original source for this list: https://code.google.com/archive/p/adblocking-openfilter-jp/source/default/source
+! Title: Adblocking Open Filter JP
+! —————————————————————————————————————————————
+!
+!Copyright (c) 2012, hako 
+!All rights reserved.
+!
+!Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+!
+!    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+!    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+!
+!THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+!IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+!
+!Copyright (c) 2011, hako 
+!All rights reserved.
+!
+!ソースコード形式かバイナリ形式か、変更するかしないかを問わず、以下の条件を満たす場合に限り、再頒布および使用が許可されます。
+!
+!    1.ソースコードを再頒布する場合、上記の著作権表示、本条件一覧、および下記免責条項を含めること。
+!    2.バイナリ形式で再頒布する場合、頒布物に付属のドキュメント等の資料に、上記の著作権表示、本条件一覧、および下記免責条項を含めること。
+!    3.書面による特別の許可なしに、本ソフトウェアから派生した製品の宣伝または販売促進に、当プロジェクトの名前またはコントリビューターの名前を使用してはならない。 
+!
+!本ソフトウェアは、著作権者およびコントリビューターによって「現状のまま」提供されており、明示黙示を問わず、商業的な使用可能性、および特定の目的に対する適合性に関する暗黙の保証も含め、またそれに限定されない、いかなる保証もありません。
+!著作権者もコントリビューターも、事由のいかんを問わず、 損害発生の原因いかんを問わず、かつ責任の根拠が契約であるか厳格責任であるか（過失その他の）不法行為であるかを問わず、
+!仮にそのような損害が発生する可能性を知らされていたとしても、本ソフトウェアの使用によって発生した（代替品または代用サービスの調達、使用の喪失、データの喪失、利益の喪失、業務の中断も含め、またそれに限定されない）直接損害、間接損害、偶発的な損害、特別損害、懲罰的損害、または結果損害について、一切責任を負わないものとします。 
+
+! [core-0_permit] 
+
+! 1:特殊許可:Firefoxの動作上、許可が必要な対象
+	!!! 1:Mozilla本家
+		!! 内部
+			@@about:addons
+		!! 外部
+			@@||addons.mozilla.jp^$domain=addons.mozilla.jp
+			@@||support.mozilla.com^$domain=support.mozilla.jp,addons.mozilla.jp
+			@@||services.addons.mozilla.org^$domain=services.addons.mozilla.org
+			@@||getpersonas.com^$domain=getpersonas.com
+! 2:抑止回避
+	!!! 汎用
+		@@||login.*
+	!!! <end>
+
+! [core-1_adv] アフィリエイト・アドバタイズ対策
+	!!! 1:キーワード
+		!! 1.汎用
+			! 誤爆が結構ある為、“ad”では極力引っ掛けない方向で。
+				/\/ad\.(com|net|jp)/
+				/(A|a)(D|d)(box|block|Container|ffiliate|s|text|sense|server|Title|vert(ise(|ment))|network)(|_|-)(|0|1|2|3|4|5|6|7|8|9)(|0|1|2|3|4|5|6|7|8|9)\./
+				/\/ad\.(js|css)/
+				||ad.
+				/affiliate*\.(jpg|gif)/
+				/advert*\.(jpg|gif)/
+				/utm.(js|gif|jpg)/
+				*/affiliate.htm*
+				/banner*\.(jpg|gif)/
+			!! 拡張予定
+				*/adv/rakuten/
+			!! 例外処理
+				@@/load\.(js|php)/
+		!! 2.div記述
+			!! id
+				##DIV[id*="adBlock"]
+				##DIV[id*="adbox"]
+				##DIV[id*="AdContainer"]
+				##DIV[id*="adsense"]
+				##DIV[id*="affiliate"]
+				##DIV[id*="autopagerize_insert_before"]
+				##DIV[id*="banner"]
+				##DIV[id*="Banner"]
+				##DIV[id*="banner_eye_catch_bottom"]
+				##DIV[id*="become"]
+				##DIV[id*="become_ads"]
+				##DIV[id*="blogcampaign"]
+				##DIV[id*="bpbox_text"]
+				##DIV[id*="flash_ad"]
+				##DIV[id*="flashad"]
+				##DIV[id*="im-wrapper-re"]
+				##DIV[id*="imAds"]
+				##DIV[id*="interested"]
+				##DIV[id*="interestMatch"]
+				##DIV[id*="mainad"]
+				##DIV[id*="module-adsense module"]
+				##DIV[id*="newsFooter"]
+				##DIV[id*="partner-box"]
+				! ##DIV[id*="pickup"]
+				! ##DIV[id*="promo"]
+				##DIV[id*="showAdv"]
+				##DIV[id*="slidead"]
+				##DIV[id*="squareAd"]
+				##DIV[id*="textAd"]
+				##DIV[id="adTitle"]
+				##DIV[id^="ads"]
+				##DIV[id^="ads-"]
+				##DIV[id^="adtext"]
+				##DIV[id^="advertise"]
+				##DIV[id^="advertising"]
+				
+			!! class記述
+				##DIV[class*="adBlock"]
+				##DIV[class*="adbox"]
+				##DIV[class*="AdContainer"]
+				##DIV[class*="adsense"]
+				##DIV[class*="affiliate"]
+				##DIV[class*="autopagerize_insert_before"]
+				##DIV[class*="Banner"]
+				##DIV[class*="banner"]
+				##DIV[class*="banner"]
+				##DIV[class*="banner_eye_catch_bottom"]
+				##DIV[class*="become"]
+				##DIV[class*="become_ads"]
+				##DIV[class*="blogcampaign"]
+				##DIV[class*="bpbox_text"]
+				##DIV[class*="flash_ad"]
+				##DIV[class*="flashad"]
+				##DIV[class*="im-wrapper-re"]
+				##DIV[class*="imAds"]
+				##DIV[class*="interested"]
+				##DIV[class*="interestMatch"]
+				##DIV[class*="mainad"]
+				##DIV[class*="module-adsense module"]
+				##DIV[class*="newsFooter"]
+				##DIV[class*="partner-box"]
+				! ##DIV[class*="pickup"]
+				! ##DIV[class*="promo"]
+				##DIV[class*="showAdv"]
+				##DIV[class*="slidead"]
+				##DIV[class*="squareAd"]
+				##DIV[class*="textAd"]
+				##DIV[class^="ads"]
+				##DIV[class^="ads-"]
+				##DIV[class^="adtext"]
+				##DIV[class^="adTitle"]
+				##DIV[class^="advertise"]
+				##DIV[class^="advertising"]
+			!! 改修予定
+				##DIV[id*="/AD"]
+				##DIV[id*="/Ad"]
+				##DIV[id*="/ad"]
+				##DIV[id*="/AD"]
+				##DIV[id*="/Ad"]
+				##DIV[id*="/ad"]
+				##DIV[id$="_ad"]
+				##DIV[id$="_ads"]
+				##DIV[id^="ad-"]
+				##DIV[id^="ad_"]
+				##DIV[class*="/AD"]
+				##DIV[class*="/Ad"]
+				##DIV[class*="/ad"]
+				##DIV[class*="/AD"]
+				##DIV[class*="/Ad"]
+				##DIV[class*="/ad"]
+				##DIV[class$="_ad"]
+				##DIV[class$="_ads"]
+				##DIV[class^="ad-"]
+				##DIV[class^="ad_"]
+		!! 3.script記述
+			##SCRIPT[src*="ad_common.js"]
+			##SCRIPT[src*="ad_parts.js"]
+		!! 4.iframe記述
+			##IFRAME[src*="/ad.htm"]
+			##IFRAME[src*="/ad0.htm"]
+			##IFRAME[src*="/ad1.htm"]
+			##IFRAME[src*="/ad2.htm"]
+			##IFRAME[src*="/ad3.htm"]
+			##IFRAME[src*="/ad4.htm"]
+			##IFRAME[src*="/ad5.htm"]
+			##IFRAME[src*="/ad6.htm"]
+			##IFRAME[src*="/ad7.htm"]
+			##IFRAME[src*="/ad8.htm"]
+			##IFRAME[src*="/ad9.htm"]
+			##IFRAME[src*="adserver"]
+			##IFRAME[src*="affiliate"]
+			##IFRAME[src^="http://ad."]
+			##IFRAME[src^="http://ads."]
+			##IFRAME[src^="https://ad."]
+			##IFRAME[src^="https://ads."]
+		!! 5.ハイパーリンク指定
+			##A[href*="/Click/"]
+			##A[href*="/click/"]
+			##A[href*="/link/?"]
+			##A[href*="?AD="]
+			##A[href*="?ad="]
+			##A[href*="ADCLICK"]
+			##A[href*="adclick"]
+			##A[href*="AdID="]
+			##A[href*="ADV="]
+			##A[href*="/ad/"]
+			##A[href*="/ads."]
+			##A[href*="/adv/"]
+			##A[href*="/advert"]
+			##A[href^="http://ad."]
+			##A[href*="http://ads."]
+			##A[href*="affiliate"]
+		!! 6.その他表記
+			##DIV[id*="buyPremium"]
+			##DIV[id*="sponsered_contents"]
+			/ad*.php
+	!!! 2:特定ドメイン直
+		!! amazon
+			||amazon.co.jp/widgets/*
+			||amazon.co.jp/gp/associates/previews/*
+			||assoc-amazon.jp/s/link-enhancer?*
+			||assoc-amazon.jp/*/JP/js/*
+			||rcm-jp.amazon.co.jp/*
+			||ecx.images-amazon.com^
+			||g-ec*.images-amazon.com^
+			||z-ecx.images-amazon.com^
+			! 後日確認の上リリース
+			! /(ecx|g-ec*|z-ecx)\.images-amazon\.com/
+			##IFRAME[src*="/inc/amazon.php"]
+			##IFRAME[src^="http://rcm-jp.amazon.co.jp/e/cm"]
+			##DIV[class^="amazon"]
+			##IFRAME[src$="amazon_rotate.html"]
+			##A[href^="http://www.amazon.co.jp/gp/product/"][href*="-22"]
+			##A[href^="http://www.amazon.co.jp/exec/obidos/ASIN/"][href*="-22"]
+			##A[href^="http://amazon.co.jp/o/ASIN/"][href*="-22"]
+		!! pitta.ne.jp
+			||ad.pitta.ne.jp^
+		!! advertising.com
+			||advertising.com^
+		!! adlantis
+			##DIV[id*="adlantis"]
+			##DIV[class*="adlantis"]
+			##LI[id*="adlantis"]
+			##LI[class*="adlantis"]
+		!! durasite.net
+			||durasite.net^
+		!!impact-ad.jp
+			||impact-ad.jp^
+				##A[href*="impact-ad.jp"]
+				##SCRIPT[src*="impact-ad.jp"]
+				##IFRAME[src*="impact-ad.jp"]
+				##IMG[src*="impact-ad.jp"]
+				##SCRIPT[src*="impact-ad.jp"]
+		!! microad.jp
+			||microad.jp^
+			##IFRAME[src*="microad.jp"]
+		!! overture系
+			*/overtureAd.js
+			##DIV[id*="overtureAds"]
+		!! google系
+			##DIV[id^="google_afc"]
+			||googlesyndication.com^
+				/pagead*\.googlesyndication\.com/
+				##A[href*="googlesyndication.com"]
+		!! doubleclick.net
+			||doubleclick.net^
+				##A[href*="doubleclick.net"]
+		!! livedoor系
+			##A[href^="http://ck.rd.livedoor.com/ck/"]
+		!! xmax系
+			##A[href*="xmax.jp"]
+		!! NLS系
+			##A[href*="e-nls.com"]
+		!! c-team系
+			||c-team.jp^
+		!! j-a-net.jp
+			##A[href*="j-a-net.jp"]
+		!! amiami
+			! 自ドメイン内での処理許可方法が思いつかないので保留。
+			! ##A[href*="amiami.jp"]
+		!! acnt.biz
+			##A[href^="http://acnt.biz/"]
+		!! adlyze.net
+			##A[href^="http://adlyze.net/"]
+		!! xii.jp
+			##A[href*="ad.xii.jp"]
+		!! yahoo系
+			||listing.yahoo.co.jp/*
+		!! xtendmedia.com
+			||ad.xtendmedia.com^
+
+
+	!!! <end>
+
+! [core-2_analyze] 解析対策:解析スクリプトの抑止を行う。
+	!!! 抑止・拒否
+		!! 1.汎用
+			/be(con|acon)/
+			! tracking
+			/(|link)track(|ing)\.(|js)/
+			##*[src*="AccessLog"]
+			##*[class*="tracking"]
+			##div[id*="tracking"]
+			##div[class*="tracking"]
+			##*[class*="accessLog"]
+			##div[id*="accessLog"]
+			##div[class*="accessLog"]
+				!誤検出多発につき、disable。
+					!##div[class*="log"]
+		!! 2.ferret系
+			##script[src^="http://kaiseki.ferret-plus.com"]
+			||read-scope.com^
+		!! 3.kan-net系
+			*/sibulla*.js^
+			||kan-net.com^
+			!! ziyu.net(対応決まって無いのでおざなり)
+			||ziyu.net^
+		!! 4.bluemetrix.com
+			! 生成スクリプトのみ。
+			/bmv[0-9][0-9]f\.js/
+			/bmv[0-9][0-9]\.js/
+			/bm[0-9][0-9]f\.js/
+			/bm[0-9][0-9]\.js/
+		!! geo.yahoo.com^
+			||geo.yahoo.com^
+	!! SEO対策
+		||seo-stats.com^
+		||seoparts.com^
+		||seo.net-tribe.jp^
+		||seoparts.net^
+	!! トラック
+		||trackword.net^
+		||trackword.biz^
+		||webtracker.jp^
+	!! アンチロギング
+		||log*.*.*/*
+		||log*.*.*.*/*
+
+	!!! <end>
+
+! [core-3_rss] 埋め込みRSS対策:埋め込みRSSタグの抑止
+	!!! 1:HTML拒否
+		/rss*\.(htm|html|php|js)/
+	!!! 2:“RSS/rss”で停止可能な要素
+		!! *指定
+			##*[id*="RSS"]
+			##*[class*="RSS"]
+			##*[src*="RSS"]
+			##iframe[title="RSS"]
+			##iframe[src*="RSS"]
+			##div[id*="rss"]
+			##div[class*="rss"]
+			##script[src*="rss"]
+			##IFRAME[title*="rss"]
+			##IFRAME[src*="rss"]
+			##IFRAME[CLASS*="head_rss"]
+			##IFRAME[ID*="head_rss"]
+		!! 行頭一致
+			##DIV[id^="rss"]
+	!!! 3:“RSS”以外の表記
+		!! 1.headrank
+			/headrank\.(html|htm|php|js)
+			##div[id*="headrank"]
+			##div[class*="headrank"]
+			##script[src*="headrank"]
+			##iframe[src*="headrank"]
+		!! 2.headline
+			! divタグに関しては停止。他は様子見。
+			/(H|h)(EADLINE|eadline)\.(html|htm|php|js)
+			!	##div[id*="headline"]
+			!	##div[class*="headline"]
+			##script[src*="headline"]
+			##iframe[src*="headline"]
+			##iframe[src*="Headline"]
+		!! 3.feednews
+			/feednews\.(html|htm|php|js)
+			##div[id*="feednews"]
+			##div[class*="feednews"]
+			##script[src*="feednews"]
+			##iframe[src*="feednews"]
+			##iframe[title="headline"]
+		!! 4.blogroll
+			! livedoor系のサービス。アフィブログに多用されている。
+			! URL等の仕様は調査が必要。
+			/blogroll
+			##div[id^="blogroll"]
+			##div[class^="blogroll"]
+			##script[src*="blogroll"]
+			##iframe[src*="blogroll"]
+		!! 5.ayapon
+			##P[class*="ayapon"]
+			##P[id*="ayapon"]
+		!! 6.rssad
+			##IMG[src^="http://rss.rssad.jp/rss/img/"]
+		!! 7.antena
+			##DIV[class^="antena"]
+
+		
+	!!! <end>
+
+! [core-4_corelevel-NGhost]NGhost:コアレベルで抑止すべきホストを記述する
+	!!! 1:Cookie関連のホスト
+		||omniture.com/
+		||2o7.net/
+		||atdmt.com/
+		||deqwas.net/
+		||imrworldwide.com/
+		||revsci.net/
+		||serving-sys.com/
+		||tracer.jp/
+	!!! 悪質中継（到達点含む）
+		||ad-stir.com^
+		||bypass.jp^
+
+
+	!!! <end>
+
+! [core-5_other]other:現状で未分類な物
+	!!! 1:転送対策
+		!! META記述の拒否
+			##META[HTTP-EQUIV="REFRESH"]
+	!!! 2:アフィリエイト中継
+		!! 中継サーバの拒否
+			cl-sys.info##HTML
+			##a[href*="cl-sys.info"]
+	!!! 3: 動画配信広告
+		!! youtube
+			adap.tv
+
+	!!! <end>
+
+! [ブログパーツ用抑止]
+	!!! ブログパーツ用抑止
+			##DIV[class="widget.HTML"]
+		!! ドメイン別
+			||awasete.com^
+				##A[href*="awasete.com"]
+				##[src*="awasete.com"]
+			||a-pagerank.net^
+			||addclips.org/*/addclips.js
+			||blogchart.jp^
+				##A[href*="blogchart.jp"]
+				##[src*="blogchart.jp"]
+			||blogdeco.jp^
+				##A[href*="blogdeco.jp"]
+				##[src*="blogdeco.jp"]
+			||blogmura.com^
+				##A[href*="blogmura.com"]
+				##[src*="blogmura.com"]
+			||blogpark.jp^
+				##A[href*="blogpark.jp"]
+				##[src*="blogpark.jp"]
+			||c-team.jp^
+				##A[href*="c-team.jp"]
+				##[src*="c-team.jp"]
+			||dlsite.com^$third-party
+				##A[href*="dlsite.com"]
+				##[src*="dlsite.com"]
+			||e-pagerank.net^
+				##A[href*="e-pagerank.net"]
+				##[src*="e-pagerank.net"]
+			||feedmeter.net^
+				##A[href*="feedmeter.net"]
+				##[src*="feedmeter.net"]
+			||rakuword.com^
+				##A[href*="rakuword.com"]
+				##[src*="rakuword.com"]
+			||shard.jp^
+				##A[href*="shard.jp"]
+				##[src*="shard.jp"]
+			||tophatenar.com^
+				##A[href*="tophatenar.com"]
+				##[src*="tophatenar.com"]
+			||trackfeed.com^
+				##A[href*="trackfeed.com"]
+				##[src*="trackfeed.com"]
+			||xii.jp^
+				##A[href*="xii.jp"]
+				##[src*="xii.jp"]
+			||y-nomnom.info^
+				##A[href*="y-nomnom.info"]
+				##[src*="y-nomnom.info"]
+			||nakanohito.jp^
+			||ax.xrea.com/*.gif
+		!!! <end>
+
+	!!! [afpbb.com]
+		afpbb.com###bpnDirectoryBlock
+		afpbb.com###prLinkBlock
+
+	!!! [ameblo]
+		! weblogサービス(ameblo)はameblo.txtを参照の事。
+
+		!! profile
+			profile.ameba.jp##DIV#profile_pBanner
+		
+	!!! [ameblo]
+		! ameba.jpに関しては、ameba.jp.txtを参照の事。
+		! その他ブログパーツに関しては、_blogparts.txtを参照。
+
+		!! 1*1画像検出
+			||act.ameba.jp^
+			||ameblo.jp/accesslog/*
+		!! 表示簡略化
+			||spstatic.ameba.jp^
+			||stat100.ameba.jp^
+			ameblo.jp##DIV[class="readerMainLink"]
+			ameblo.jp##DIV[id="geinoujin_now"]
+			ameblo.jp##DIV[id^="advertising"]
+			ameblo.jp##DIV[id^="dendo"]
+			ameblo.jp##DIV[id="ameblo"][class="mainMenu"]
+			ameblo.jp##DIV[id="amebloInfo"]
+			ameblo.jp##DIV[id="amestamodule"]
+			ameblo.jp##DIV[id="eco_head"]
+			ameblo.jp##DIV[id="footer_ad_official"]
+			ameblo.jp##DIV[id="geinoujin_now"]
+			ameblo.jp##DIV[id="officialGnere"]
+			ameblo.jp##DIV[id="rc_box"][class="rc_box09"]
+			ameblo.jp##DIV[id="readerList"]
+			ameblo.jp##DIV[id="resPointArea"]
+			ameblo.jp##DIV[id="comment_present"]
+			ameblo.jp##P[class^="dendo"]
+			ameblo.jp##P[class^="ad"]
+			ameblo.jp##UL[class="rc_head clearFix"]
+			ameblo.jp##UL[id="amebaBar"]
+			ameblo.jp##UL[id="exLinkBtn"]
+
+	!!! [asahi.com]
+		asahi.com##div[class="BnrPr"]
+		asahi.com##div[class="Box1"] > UL[class="Lnk.FstMod.LstMargin"]
+		asahi.com##div[class="Box1"] > H2
+		asahi.com##div[class="Box1"] > div[class="ThmbSetXw75.FstMod"]
+		asahi.com##div[class="Box2"]
+		asahi.com##div[id="Sub"] > div[class="BnrLnkLct"]
+		asahi.com##ul[class="BnrLnk"] > LI
+		asahi.com##dl[class="PrInfo"]
+
+	!!! [goo.ne.jp]
+		! ブログパーツに関しては、_blogparts.txtを参照。
+
+		blog.goo.ne.jp##DIV[id="global-header"]
+		blog.goo.ne.jp##DIV[id="mod-advertising"]
+		blog.goo.ne.jp##DIV[id="mod-goo-recommends"]
+
+	!!! [blogger.com]
+		! その他ブログパーツに関しては、_blogparts.txtを参照。
+
+		blogspot.com##div[class="widget AdSense"]
+		blogspot.com##IFRAME[src^="http://dcs.yahoo.co.jp/dp/?adid="]
+
+	!!! [blogspot.com]
+		!! 許可対象
+		!! 抑止対象
+
+	!!! [CNET]
+		cnet.com##div[class="block10.clearfix"]
+
+	!!! [cookpad]
+		!! 許可対象
+			! 今ん所無し
+		!! 抑止対象
+			||cookpad.com/ad*
+			||cookpad.com/iframe/*
+
+	!!! [cyzo.com]
+		cyzo.com##img[alt="PR"]
+		cyzo.com##img[src*="/common/img/pr_icon.gif"]
+		cyzo.com##div[id="head-contents"]
+		cyzo.com##div[id="head-ad"]
+		cyzo.com##div[id="gamma-inner"]
+		cyzo.com##A[href*="nikkancyzo-22"]
+		cyzo.com##A[href*="advg.jp"]
+	!!! [cyzowoman.com]
+		cyzowoman.com##A[href*="/cyzowoman-22/"]
+		cyzowoman.com##DIV[id="acsessch"]
+		cyzowoman.com##DIV[class="fb-comments"] + *
+
+	!!! [dtiblog]
+		!! 許可対象
+			||analyzer.dtiblog.com^
+			||analyzer2.dtiblog.com^
+			||dtiserv2.com^
+		!! 抑止対象
+			##A[href^="http://click.dtiserv2.com/"]
+
+	!!! [engadget]
+		engadget.com##div[class="medrect"]
+		engadget.com##IFRAME[src^="http://xml.affiliate.rakuten.co.jp"]
+
+	!!! [exblog.ne.jp*]
+		! excite.co.jpに関しては、excite.txtを参照の事。
+		! その他ブログパーツに関しては、_blogparts.txtを参照。
+
+		!! weblog
+			||logping.exblog.jp^
+
+	!!! [excite.co.jp]
+		! weblogサービス(exblog.jp)に関しては、exblog.jp.txtを参照の事
+
+		||adimp.excite.co.jp/*
+		excite.co.jp##A[href*="adimp"]
+		excite.co.jp##DIV#exFooter
+		excite.co.jp##DIV#footerWall
+		excite.co.jp##DIV#gameRanking
+		excite.co.jp##DIV#popular_keywords_main
+		excite.co.jp##DIV#sideChinaTalk
+		excite.co.jp##DIV.relNewsAd300
+		excite.co.jp##DIV[class="ad728"]
+		excite.co.jp##DIV[class="popularKeywords"]
+		excite.co.jp##DIV[class^="ov_cm"]
+		excite.co.jp##DIV[id$="banner"]
+		excite.co.jp##DIV[id="excite_slidead_wrap"]
+		excite.co.jp##DIV[id="external_flash_ad_embed"]
+		excite.co.jp##DIV[id="footer"]
+		excite.co.jp##DIV[id="HS-2-frame"]
+		excite.co.jp##DIV[id="rakuten-frame"]
+		excite.co.jp##IFRAME[src*="adimp"]
+		excite.co.jp##SCRIPT[src*="adimp"]
+
+	!!! [Facebook]
+		!!! 内部
+			!! 表示簡略化
+				||creative.ak.fbcdn.net/*/flyers/*
+				||facebook.com/ajax/emu/end.php*$domain=facebook.com
+				facebook.com##A[href*="/ajax/emu/end.php"]
+				facebook.com##A[href^="/campaign/landing.php"]
+				facebook.com##A[class="uiIconLink emuEventfad_fan fbEmuLink"]
+				facebook.com##A[ajaxify*="en=fad_fan"]
+				facebook.com##A[class="uiHeaderActions rfloat"][href^="/campaign/landing.php"]
+				facebook.com##DIV[id="pagelet_mutual"]
+				facebook.com##DIV[class="ego_section"]
+				facebook.com##SPAN[class="fbEmuContext"]
+				facebook.com##SPAN[class="muffin_tracking_pixel_start"]
+				facebook.com##DIV[class^="auto_resize_iframe"]
+				facebook.com##DIV[class="home_right_column.tickerOnTop"]
+			!! 解析用フレーム
+				||facebook.com/ai.php*
+				##iframe[src*="/ai.php"]
+				##script[src*="/ai.php"]
+		!!! 外部
+			!! モジュール
+				||connect.facebook.net/*/all.js
+				||facebook.com/iframe/^$third-party
+				||facebook.com/plugins/*$third-party
+				||facebook.com/ajax/pagelet/generic.php/*$subdocument
+				##IFRAME[src*="facebook.com/plugins/"]
+				##SCRIPT[src*="connect.facebook.net"]
+
+	!!! [fc2.com]
+		! その他ブログパーツに関しては、_blogparts.txtを参照。
+
+		!! ブログヘッダ
+			fc2.com##DIV[id$="blogheadbar"]
+		!! エディタ
+			blog.fc2.com##DIV[class="content"][id="content_tab"]
+			blog.fc2.com##DIV[class="content"][id="content_track"]
+			blog.fc2.com##DIV[class="content"][id="recommend_newentry"]
+			blog.fc2.com##DIV[class="main_top_ad"]
+			blog.fc2.com##DIV[id="ad_sidebar"]
+			blog.fc2.com##DIV[id="flashcontent1"]
+			blog.fc2.com##DIV[id="recent_template"][class="recent_tmpl"]
+			blog.fc2.com##DIV[id="tbtheme"]
+			blog.fc2.com##EMBED[src^="http://fc2.com/ad/"]
+			blog.fc2.com##IFRAME[src*="advertising.com"]
+		!! 広告
+			||fc2.com/ad/*
+			||contents.fc2.com^
+			fc2.com##DIV[id^="footer_link"]
+		!! 解析？
+			! そんな長くなる気がしないので、現物ベタ。
+				||fc2.com/ana*
+				||analysis.fc2.com^
+				||analyzer5.fc2.com^
+				||analyzer54.fc2.com^
+				! /analy(sis|zer*)\.fc2\.com/
+
+				! カウンターは解析用の読み込みに使ってるんじゃないかと言う推測の元、ブロック。
+					||counter*.fc2.com^
+		!! ぶろぐらんきんぐ
+			||blogranking.fc2.com/*
+			##A[href^="http://blogranking.fc2.com/"]
+		!! Web拍手
+			##A[href*="clap.fc2.com"]
+
+	!!! [フレッシュアイ]
+		fresheye.com##*[class="pr"]
+		fresheye.com##div[class="pbox"]
+
+	!!! [getnews.jp]
+		gernews.jp##a[href^="http://j.mp"]
+		getnews.jp##div[id="adft_border"]
+		getnews.jp##div[id="cntx_recom"]
+		getnews.jp##img[title^="[images-amazon.com]"]
+
+	!!! [NTTの方のgoo]
+		|log000.goo.ne.jp/VL/*
+		||ad.goo.ne.jp/*
+		||ad.nttnavi.co.jp/*
+		||goo.ne.jp/banner*
+		goo.ne.jp##div[class="pr"]
+		goo.ne.jp##dl[class="txtimgl"]
+		goo.ne.jp##div[id="pr"]
+		goo.ne.jp##div[id="ghTop"]
+		goo.ne.jp##div[id="osusume"]
+
+	!!! [google.com]
+		!!! 許可
+			!!! .com
+				@@||google.com/adsense/*
+				@@||google.com/images?*
+				@@||google.com/recaptcha/api/*
+				@@||google.com/sbd?*
+			!!! .co.jp
+				@@||google.co.jp/extern_js/
+				@@||google.co.jp/images/srpr/*
+				@@||google.co.jp/images?*
+				@@||google.co.jp/imgevent?
+				@@||google.co.jp/sbd?
+			!!! 個別サービス（サブドメインも含む）
+				@@||gstatic.com^
+				@@|mail.google.com/*
+				@@|docs.google.com/*
+				mail.google.com##DIV[class="mq"]
+		!!! 拒否
+			!! 解析
+				||google-analytics.com/ga.js
+			!! 広告データの非表示化
+				||googleadservices.com
+				||google.co.jp/extern_js/
+				||googlesyndication.com/pagead/*
+				google.com,~google.co.jp##table[id="mbEnd"]
+				google.com,~google.co.jp##a[href*="/aclk"]
+				google.com,~google.co.jp##script[src*="show_ads.js"]
+				google.com,~google.co.jp##div[id="pa1"]
+				google.com,~google.co.jp##div[id="tads"]
+				google.com,~google.co.jp##div[id="tbd"]
+				google.com,~google.co.jp##div[id="rhs"]
+				google.com,~google.co.jp##div[class*="g-tools"]
+			!! 検索広告
+				google.com,~google.co.jp##span[id="taw"]
+				google.com,~google.co.jp##div[id="bottomads"]
+				google.com,~google.co.jp##td[class="std"]
+			!! google翻訳
+
+	!!! [hangame.co.jp]
+		hangame.co.jp##div[class="promoBnrWrap"]
+		hangame.co.jp##div[id="cmsBnrArea"]
+		hangame.co.jp##div[id="newlyInfo"]
+		hangame.co.jp##div[id^="rcmnd"]
+		hangame.co.jp##div[id="recruitmentCircle"]
+
+	!!! [hatena.ne.jp]
+		!!! ウィジェットの停止
+			!! はてブウィジェット
+				##a[id^="hatena-bookmark-widget"]
+				##DIV[id^="hatena-bookmark-widget"]
+		!!! b.st-hatena
+			!! 外部
+				||b.st-hatena.com/js/*$third-party
+				||b.st-hatena.com/images/entry-button/*$third-party
+				||b.hatena.ne.jp/entry/*$third-party
+				||b.hatena.ne.jp/css/*$third-party
+				||b.hatena.ne.jp/entrylist/*$third-party
+				||b.hatena.ne.jp/images/widget/*$third-party
+				||b.hatena.ne.jp/js/*$third-party
+
+	! [hootsuite.com]
+		! twitter本家はtwitter.txtを参照の事。
+	
+		!! hootsuite.com
+			! 許可
+				@@||cloudfront.net^$domain=hootsuite.com
+				@@||fbcdn.net^$domain=hootsuite.com
+				@@||google.com/jsapi$domain=hootsuite.com
+				@@||hootsuite.com/ajax/*$domain=hootsuite.com
+				@@||hootsuite.com/dashboard#/tabs*$domain=hootsuite.com
+				@@||maps-api-ssl.google.com^$domain=hootsuite.com
+				@@||profile.img.mixi.jp^$domain=hootsuite.com
+				@@||static.hootsuite.com/*/css/*$domain=hootsuite.com
+				@@||static.hootsuite.com/*/images/*$domain=hootsuite.com
+				@@||static.hootsuite.com/*/js/*$domain=hootsuite.com
+				@@||static.hootsuite.com/*/js/images/*$domain=hootsuite.com
+				@@||static.hootsuite.com/*/swf/*$domain=hootsuite.com
+			! 非許可
+				||hootsuite.com/show-ad
+
+	!!! [infoseek.co.jp]
+		!! 広域
+			||rakuten.co.jp/content/ad/^
+			||ias.rakuten.co.jp/^
+			infoseek.co.jp##*[id^="ichiba"]
+			infoseek.co.jp##*[id="trAshiatoItem"]
+			infoseek.co.jp##*[id="woman"]
+			infoseek.co.jp##DIV[class^="hotspot-font"]
+			infoseek.co.jp##DIV[class*="ads"]
+			infoseek.co.jp##DIV[class="prtxt"]
+			infoseek.co.jp##DIV[class="topic"]
+			infoseek.co.jp##DIV[id*="ad"]
+			infoseek.co.jp##DIV[id="CorpArea"]
+			infoseek.co.jp##DIV[id="grpRakutenLinkArea"]
+			infoseek.co.jp##DIV[id="grpService"]
+			infoseek.co.jp##DIV[id="hotFeature"]
+			infoseek.co.jp##DIV[id="pickup_contents"]
+			infoseek.co.jp##DIV[id="pointget"]
+			infoseek.co.jp##DIV[id="recommend"]
+			infoseek.co.jp##IFRAME[href*="rd.rakuten.co.jp"]
+			infoseek.co.jp##IFRAME[src*="ias.rakuten.co.jp"]
+			infoseek.co.jp##IFRAME[src*="isweb/clip.html"]
+			infoseek.co.jp##img[src*="bunner"]
+			infoseek.co.jp##SCRIPT[src*="/images/ads/"]
+			infoseek.co.jp##SCRIPT[src*="/hotspot/data/"]
+			infoseek.co.jp##SCRIPT[src*=".js"]
+			infoseek.co.jp##SCRIPT[src*="hotspot-loader.js"]
+			infoseek.co.jp##SCRIPT[src*="rd.rakuten.co.jp"]
+			infoseek.co.jp##SCRIPT[src*="ias.rakuten.co.jp"]
+			infoseek.co.jp##span[id*="abg"]
+		!! beacon?
+			! 怪しいので抑止
+			||ashiato.rakuten.co.jp/*
+
+	!!! [ITMedia系列]
+		!!! 共通
+			!! base
+				!! 読み込み拒否
+					!! 内部コンテンツ
+						||dlv.itmedia.jp/adsv/*
+						||cgi.itmedia.co.jp/*
+					!! 外部コンテンツ
+						||g-ecx.images-amazon.com^$domain=itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp
+						||platform.twitter.com/widgets/*$domain=itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp
+						||cdn.api.b.hatena.ne.jp^$domain=itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp
+						||plusone.google.com^$domain=itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp
+						||b.st-hatena.com/images/entry-button/*$domain=itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp
+						||ws.amazon.co.jp^$domain=itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp
+						||widget.zenback.jp^$domain=itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp
+						||otter.topsy.com^$domain=itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp
+				!! 非表示
+					!! 広告
+						!! 自前表示
+							||itmedia.co.jp/js/ad_getMetaContent.js^$domain=itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp
+							##IFRAME[src^="http://dlv.itmedia.jp/adsv/"]
+							itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[id~="ISAL"]
+							itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[id^="ISTL"]
+							itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[id="ISFLR"]
+							itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[id="ISTLR"]
+							itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[id="ISTCPB"]
+						!! amazon
+							itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##embed[src="http://ws.amazon.co.jp/widgets/"]
+						!! base
+							atmarkit.co.jp,~eetimes.jp##DIV[class="ad"]
+							atmarkit.co.jp,~eetimes.jp##DIV[class="jobspace"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="kyujin"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="social"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id="calendarInnerPR"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id="header_ad"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id="job-info"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id="osirase"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id="pr-event"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id="right-rectangle"] DT
+							atmarkit.co.jp,~eetimes.jp##DIV[id="swfAd"]
+							atmarkit.co.jp,~eetimes.jp##SPAN[class="prmark"]
+							atmarkit.co.jp,~eetimes.jp##DIV[class^="ISCHR"][class$="heading"] + div[id*="body"]
+							atmarkit.co.jp,~eetimes.jp##DIV[class^="ISCHR"][class$="heading"] + SPAN
+							atmarkit.co.jp,~eetimes.jp##DIV[class^="ISCHU"][class$="heading"] + SPAN
+							atmarkit.co.jp,~eetimes.jp##DIV[class^="ISLER"][class$="heading"] + SPAN
+							atmarkit.co.jp,~eetimes.jp##DIV[class^="ISLEU"][class$="heading"] + SPAN
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ISALR"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ISCHC"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ISFLC"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ISLEC"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ISLER"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ISTLC"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ITKT"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ITNI"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ITR"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ITTC"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ITTI"]
+							atmarkit.co.jp,~eetimes.jp##DIV[id^="ITTO"]
+				!! footer
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp,~eetimes.jp##DIV[id="globalFooter"]
+				!! news/fl
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##A[href="http://www.itmedia.co.jp/news/fl/"] + BR + div
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##A[href="http://www.itmedia.co.jp/news/fl/"]
+				!! blogparts
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[id="kijijiblogparts"]
+				!! wassr.jp
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[class^="widget"] > A[href^="http://wassr.jp/user/"]
+				!! twitter
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[id^="twtr-widget"]
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[class^="twtr-widget"]
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##DIV[id="twtRank"]
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##script[src$="widget.js"]
+					itmedia.co.jp,~bizmakoto.jp,~atmarkit.co.jp##script[src$="twimgWidget.js"]
+				!! はてブ
+					itmedia.co.jp,~atmarkit.co.jp,~eetimes.jp##DIV[id="hatebu"]
+		!!! ITMedia
+			!! 親止め
+				itmedia.co.jp##DIV[id="amazon-item"]
+				itmedia.co.jp##DIV[id="osusumepc"]
+				itmedia.co.jp##DIV[id="mobileshop"]
+				itmedia.co.jp##DIV[id="newzia_connect_flmobile"]
+			!! www.
+				www.itmedia.co.jp##DIV[class="colBoxAppinfo"]
+				www.itmedia.co.jp##DIV[class="colBoxRanking"]
+				www.itmedia.co.jp##DIV[class="colBoxOnetopi"]
+			!! plusd.
+				plusd.itmedia.co.jp##DIV[class="leftbox"] > div
+				plusd.itmedia.co.jp##DIV[class="kwoutBtn"]
+				plusd.itmedia.co.jp##DIV[class="hb"]
+				plusd.itmedia.co.jp##DIV[class="endlink"] + P[align="CENTER"]
+			!! nlab.
+				nlab.itmedia.co.jp##DIV[class="colBoxUlist"]
+				nlab.itmedia.co.jp##A[href*="itmedia-netlab-22"]
+				nlab.itmedia.co.jp##DIV[id^="masterSocialbutton"]
+				nlab.itmedia.co.jp##DIV[class="inner"] > DIV[class="colBox"]
+			!! gadget.
+				gadget.itmedia.co.jp##DIV[id="ITOP"]
+				gadget.itmedia.co.jp##DIV[class="zenback"]
+			!! blogs.
+				blogs.itmedia.co.jp##A[title$="PR"]
+			!! img.
+				||img.itmedia.jp/so/p/image/tieup/
+		!!! bizmakoto.jp
+			!! base
+				bizmakoto.jp##A[onclick^="designCnt"]"] + BR"] + div[style^="margin"]
+				bizmakoto.jp##DIV[class^="msbTopOut"]
+				bizmakoto.jp##DIV[class="affiliateBox-amazon"]
+				bizmakoto.jp##DIV[class="GtAdsense"]
+				bizmakoto.jp##DIV[class="keyword"]
+				bizmakoto.jp##DIV[class="navi"]
+				bizmakoto.jp##DIV[class="pr-txt"]
+				bizmakoto.jp##DIV[class="prtimes"]
+				bizmakoto.jp##DIV[class="quickpoll"]
+				bizmakoto.jp##DIV[class="randomicon"]
+				bizmakoto.jp##DIV[id="carrier"] > div[class="cbox"]
+				bizmakoto.jp##DIV[id="COIDP"]
+				bizmakoto.jp##DIV[id="feedback"]
+				bizmakoto.jp##DIV[id="ITSB"] + ##DIV[class="colBoxR50"]
+				bizmakoto.jp##DIV[id="lnavSubSub"]
+				bizmakoto.jp##DIV[id="topitmnews"]
+				bizmakoto.jp##IFRAME[src^="//www.facebook.com/plugins/likebox.php"]
+				bizmakoto.jp##IFRAME[src^="http://cgi.itmedia.co.jp/quickpoll/"]
+				bizmakoto.jp##IMG[src^="http://image.itmedia.co.jp/makoto/images/"]
+				bizmakoto.jp##SCRIPT[src="/include/modiphi/inst_prtimes.js"] + ##DIV[class="cbox"]
+			!! makoto*
+				bizmakoto.jp##DIV[class="makotoblog"] > div[style^="text-align"]
+				bizmakoto.jp##DIV[class^="makotofocus"]
+				bizmakoto.jp##DIV[id^="makotofocus"]
+			!! global
+				bizmakoto.jp##DIV[id="globalHeaderMiddle"]
+			!! cbox
+				bizmakoto.jp##DIV[class^="cbox"] + div[class="cbox"]
+				bizmakoto.jp##DIV[class="colBoxIndex"] > div[class="colBoxIcon"]
+				bizmakoto.jp##DIV[id="colBoxSocialButton"]
+				bizmakoto.jp##DIV[class="colBoxSocialButton"]
+				bizmakoto.jp##DIV[id="rank"] + div[class="cbox"]
+				bizmakoto.jp##DIV[id="tfm"] + div[class="cbox"]
+				bizmakoto.jp##SCRIPT[src^="/include/bizid/"] + div[class="cbox"]
+			!! subcol
+				bizmakoto.jp##DIV[class="subcol"] > div[class="rectangle"]
+				bizmakoto.jp##DIV[class="subcol"] > div[id="tfm"]
+		!!! @IT
+			!! www.
+				www.atmarkit.co.jp##DIV[id="btm-ttwpjob"]
+				www.atmarkit.co.jp##DIV[id="sponsor"] > H2
+			!! core.
+				core.atmarkit.co.jp##DIV[id="ad728"]
+			!! jibun.
+				jibun.atmarkit.co.jp##DIV[id="twitter_div"]
+				jibun.atmarkit.co.jp##UL[class="archive"] + DIV
+			!! monoist.
+				monoist.atmarkit.co.jp##DIV[class="colBoxSubhead"] + DIV[class="colBoxInner"] + DIV[class="colBoxClear.h20px"]
+				monoist.atmarkit.co.jp##DIV[id="colBoxRanking"] + SCRIPT[type="text/javascript"] + DIV[class="colBox"] > DIV[class="colBoxOuter"]
+				monoist.atmarkit.co.jp##DIV[id="socialButton"]
+		!! cancom-j.com
+				ednjapan.cancom-j.com##DIV[class="border_h3.border_h3_red"]
+		!! ee-times.jp
+				eetimes.jp##DIV[id="masterFooter"]
+
+	![iza.ne.jp]
+		! 非表示
+			iza.ne.jp##DIV[class^="ad_prFeature"]	
+		! 外部連携
+			||ad.sankei-digital.co.jp^
+
+	!!! [j-cast]
+		||j-cast.com/images/common/all/*
+		||j-cast.com/images/ad_img/*
+		j-cast.com##div[class="amazon-info"]
+		j-cast.com##div[id^="MCAdEntry"]
+		j-cast.com##iframe[title="Advertisement"]
+		j-cast.com##DIV[class$="Banner"]
+		j-cast.com##div[id^="RCBanner"]
+		j-cast.com##div[id^="MCEntryAmazon"]
+		j-cast.com##div[id^="RCTopRectangle"]
+		j-cast.com##DIV[id^="LCOverture"]
+		j-cast.com##DIV[id="LCOtherLanguages"]
+		j-cast.com##DIV[id="LCServices"]
+		j-cast.com##DIV[id="Footer"]
+		j-cast.com##DIV[id="SiteMap"]
+		j-cast.com##DIV[id^="RCOverture"]
+		j-cast.com##DIV[id^="MCAd"]	
+
+	!!! [J's goal]
+		||jsgoal.jp/js/_parts/random_banner/*
+		||jsgoal.jp/js/common/ad_overture.js
+		jsgoal.jp##div[id="searchpopup"]
+		jsgoal.jp##DIV[id="topBanner"]
+		||jsgoal.jp/images/1dot.gif
+		||jsgoal.jp/js/news/skp_banner.js
+	!!! [livedoor]
+		!!! 基本抑止
+				||click.livedoor.com^
+				||image.click.livedoor.com/js/livedoortopFlashAd.js
+				||news.livedoor.com/img/social/*
+
+			!! 正規表現
+				/livedoor\.(com|jp)(|:80|:8000|:8080)\/A-affiliate*/
+			!! .com
+				livedoor.com##A[href*="A-affiliate"]
+				livedoor.com##DIV[class*="ads-by-google"]
+				livedoor.com##DIV[class*="adsense"]
+				livedoor.com##DIV[class*="become"]
+				livedoor.com##DIV[class*="google-body"]
+				livedoor.com##DIV[class*="google-title"]
+				livedoor.com##DIV[class*="large-showcase"]
+				livedoor.com##DIV[class*="LDservice-link"]
+				livedoor.com##DIV[class*="module ad-"]
+				livedoor.com##DIV[class*="prtextBox"]
+				livedoor.com##DIV[class*="SearchResult"][class$="AD"]
+				livedoor.com##DIV[class*="SearchResultTopAD"]
+				livedoor.com##DIV[id$="ad"]
+				livedoor.com##DIV[id*="become"]
+				livedoor.com##DIV[id="amazon-ranking"]
+				livedoor.com##DIV[id="blogcampaign"]
+				livedoor.com##DIV[id="commonFooter"]
+				livedoor.com##DIV[id="headerBanner"]
+				livedoor.com##DIV[id="news-special"]
+				livedoor.com##DIV[id="newsFooter"]
+				livedoor.com##DIV[id="osusume"]
+				livedoor.com##DIV[id="otoku-info"]
+				livedoor.com##DIV[id="partner-box"]
+				livedoor.com##DIV[id="yahoo-shopping"]
+				livedoor.com##DIV[id^="ad-"]
+				livedoor.com##DIV[id^="footer-ad"]
+				livedoor.com##IFRAME[src*="ad.yieldmanager.com"]
+				livedoor.com##IMG[class="tie-up"]
+				livedoor.com##P[id="megaText"]
+				livedoor.com##SCRIPT[src*="FlashAd"]
+			!! TOP
+				livedoor.biz##DIV[id="analyzer_tags"]
+				livedoor.biz##DIV[id^="header"]
+				livedoor.com##DIV[class="LDservice-link"]
+				livedoor.com##DIV[class="sub-smartphone-box"]
+				livedoor.com##DIV[id="article-social-tool"]
+			!! news.
+				news.livedoor.com##DIV[class="large-showcase"]
+				news.livedoor.com##DL[class="image-list.image120-80"]
+		!!! サービス
+			!! 多分解析
+				||lcs.livedoor.net^
+	!!! [blog.livedoor.*]
+		! livedoor管轄以外のブログパーツに関しては、_blogparts.txtを参照。
+		
+		!! blog.
+			/settings/ad.js^$domain=livedoor.com,~livedoor.net,~livedoor.jp,~livedoor.biz
+			/settings/header.js^$domain=livedoor.com,~livedoor.net,~livedoor.jp,~livedoor.biz
+			blog.livedoor.jp##A[href*="ldblog-001-22"]
+			blog.livedoor.jp##DIV[id="analyzer_tags"]
+			blog.livedoor.jp##SCRIPT[src$="/settings/ad.js"]
+			blog.livedoor.jp##SCRIPT[src$="/settings/header.js"]
+			blog.livedoor.jp##SCRIPT[src="http://parts.blog.livedoor.jp/js/c2.js"]
+			blog.livedoor.jp##SCRIPT[src="http://parts.blog.livedoor.jp/js/lcslog.js"]
+			blog.livedoor.jp##SCRIPT[src="http://parts.blog.livedoor.jp/js/smartphone.0.2.js"]
+			blog.livedoor.jp##SPAN[class^="common-header"]
+			blog.livedoor.jp##TD[class="catprbox"]
+			blog.livedoor.jp##TD[class="newstickerbox"]
+			blog.livedoor.jp##TD[class="pickuptheme"]
+			blog.livedoor.jp##TD[class="startblogbox"]
+			||parts.blog.livedoor.jp/js/blog_ads/*
+			||parts.blog.livedoor.jp/js/c2.js
+			||parts.blog.livedoor.jp/js/lcslog.js
+		!! blogeditor
+			||parts.blog.livedoor.jp/img/usr/*/bg.gif
+			||parts.blog.livedoor.jp/img/usr/cmn/*
+			! これに許可を出さないとツールを使えない為、許可。
+			@@||livedoor.blogcms.jp/js/cms2/swfupload/*
+			@@||livedoor.blogcms.jp/swf/analyzer/*$domain=livedoor.blogcms.jp
+			@@||livedoor.blogcms.jp/img/cms2/blog/default/nav/*$domain=livedoor.blogcms.jp
+		!! なぞり検索
+			! livedoor以外にこのスクリプトを提供している可能性があるので指定無し
+			nazorisearch
+			selectionSearch.js
+		!! 外部参照
+			blog.livedoor.jp##A[href^="http://blog.livedoor.com/review/"]
+
+	!!! [lockerz.com]
+		lockerz.com##DIV[class="advert"]
+		lockerz.com##DIV[id^="dclkAdsDivID"]
+		lockerz.com##DIV[id="feed-box"][class="clearfix"]
+		lockerz.com##DIV[id="leaderboard-ad"]
+
+	!!! [毎日]
+		||ad.mainichi.jp/^
+		||yimg.jp/bdv/^$domain=mainichi.jp
+		|ard.yahoo.co.jp/^$domain=mainichi.jp
+		mainichi.jp##div[class^="ArticleAd"]
+		mainichi.jp##div[class="AA"]
+		mainichi.jp##div[class^="Ad"]
+		mainichi.jp##div[class="SR"]
+		mainichi.jp##div[id*="AD"]
+		mainichi.jp##div[id*="Ad"]
+		mainichi.jp##div[id*="ad"]
+		mainichi.jp##divclass="SubContentsB"]
+		mainichi.jp##div[class^="Ad"]
+		mainichi.jp##div[class="ArticleAdKW"]
+		mainichi.jp##div[class="Campaign"]
+		mainichi.jp##div[class$="Ad"]
+		mainichi.jp##div[class="SquareAd"]
+		mainichi.jp##div[id^="AD"]
+		mainichi.jp##div[id*="Banner"]
+		mainichi.jp##iframe[src^="http://rcm-jp.amazon.co.jp/"]
+
+	!!! [mediagene系]
+		!!! 共通
+			!! 広告拒否
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class^="ad_head"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class^="ad_entry"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class^="entry entry_s ad_premiumplan clfx"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class^="amazon"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="date_header date_header_premium"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="entry_comments section"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="entry_tweetrank section"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="entrybox"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="entrybox_title"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="headline"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="recententries"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[id^="amazon"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[id="entryranking"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[id="hateburanking"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[id="headbar"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[id="team"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[id="twtrbox"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##iframe[src*="advg.jp"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##ul[class="recomended"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##ul[class="headline"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##a[href^="http://www.amazon.co.jp/exec/"]
+				||xml.affiliate.rakuten.co.jp^$domain=gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net
+				||images-amazon.com^$domain=gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net
+				||yimg.jp^$domain=gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net
+				||disqus.com^$domain=gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net
+			!! facebook plugin
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="facebook_block"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="fbbox"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##DIV[class="foot_facebook_block"]
+				gizmodo.jp,~lifehacker.jp,~kotaku.jp,~myspiritual.jp,~mylohas.net##iframe[src^="http://www.facebook.com/plugins"]
+		!!! サイト別
+			!! gizmodo.jp
+				gizmodo.jp##DIV[class="entrybox"]
+				gizmodo.jp##DIV[id^="index_amazon"]
+			!! kotaku.jp
+				||kotaku.jp/common/inc/inc_ad_*
+				||kotaku.jp/common/inc/inc_customads_*
+				||kotaku.jp/photo/amzn_remote_buy*
+				kotaku.jp##DIV[class="entry ad_entry_super clfx clr"]
+			!! lifehacker.jp
+				lifehacker.jp##DIV[class="right"]
+				lifehacker.jp##DIV[id^="index_amazon"]
+			!! mylohas.net
+				mylohas.net##DIV[id="adboshubox"]
+				mylohas.net##DIV[id="mainarea_foot"]
+				mylohas.net##DIV[id="searchbnbox"]
+				mylohas.net##IFRAME[src^="http://files.glam.jp/adops/ad_creatives/"]
+			!! myspiritual.jp
+				myspiritual.jp##DIV[class="ad"]
+				myspiritual.jp##DIV[class="bnrBox"]
+				myspiritual.jp##DIV[class="ranking"]
+				myspiritual.jp##DIV[class="topBox"]
+				myspiritual.jp##DIV[id="analyze"]
+				myspiritual.jp##DIV[id="snsBox"]
+				myspiritual.jp##DIV[id="staff"]
+				myspiritual.jp##DIV[id="item"][class="asideleft"]
+				myspiritual.jp##DIV[id="twi"][class="asideright"]
+		!!! 関連性のあるサイト
+				|glam.jp/adops/ad_creatives/$domain=files.glam.jp
+
+	!!! [mixi.jp]
+		!!! 1.開放
+			!! メイン
+				@@|http://mixi.jp/ajax_*$domain=mixi.jp
+				@@/analy(tics|ze|sis)/$domain=mixi.jp
+					!“/analy(tics|ze|sis)/$domain=mixi.jp”に関しては、動作が確定していないので暫定。
+				@@|http://img.mixi.net/static/css/$domain=mixi.jp
+					! Chrome環境でCSSを蹴る現象が起こっていたので、回避の為に追加
+			!! アプリ
+				||ad.adlantis.jp/ad/*
+				@@||happyelements.com
+				@@mixi.jp##script[src^="/static/js//mixi/analysis.production"]
+				@@/analy(tics|ze|sis)/$domain=mixi-plathome.jp
+		!!! 2. 抑止
+			!! 広告（メイン）
+				mixi.jp##iframe[src="ads."]
+				||mreco.jp/^
+				||mreco0.jp/^
+				mixi.jp##div[class^="fm_promsfm_proms_"]
+				mixi.jp##div[class^="sponsorList"]
+				mixi.jp##div[id="adBanner"]
+				mixi.jp##div[id="collaboPr"]
+				mixi.jp##div[id="contentMatch"]
+				mixi.jp##div[id="fm_top_ad"]
+				mixi.jp##div[id="footerAdBanner"]
+				mixi.jp##div[id="keywordRanking"]
+				mixi.jp##div[id="picupCommunity"]
+				mixi.jp##div[id="picupReview"]
+				mixi.jp##div[id="poncan_ad"]
+				mixi.jp##div[id="prContentsArea"]
+				mixi.jp##div[id="mAd"]
+				mixi.jp##iframe[src^="http://a.mreco.jp/adsv/"]
+				mixi.jp##iframe[src*="mreco.jp"]
+				mixi.jp##iframe[src*="mreco0.jp"]
+				mixi.jp##div[id="bodySub"] > DIV[id="adBanner"]
+			!! 広告（アプリ）
+				! 圧倒的に情報不足なので、他のリストが出てくるなら非常にうれしい所。
+				mixi-platform.com##div[id="fm_top_ad"]
+				mixi-platform.com##div[id="poncan_ad"]
+				mixi-platform.com##div[id="fm_new_proms"]
+				mixi-platform.com##ul[class="fm_proms_list"]
+				mixi-platform.com##div[id="fm_top_ad"] > div[id="poncan_ad"]
+			!! シェアの停止
+				##A[href="http://mixi.jp/share.pl"]
+				||static.mixi.jp/js/*$third-party
+			!! ログイン画面
+				mixi.jp##A[href^="http://mixi.jp/loginjack_redirector.pl"]
+
+	!!! [産経]
+		!!! MSN産経
+			|msndata.jp.msn.com/*
+			||sankei.jp.msn.com/js/adlisting/*
+			*ads*.msn.com*$domain=sankei.jp.msn.com
+			*rad.msn.com*$domain=sankei.jp.msn.com
+			sankei.jp.msn.com##*[src*="rad.msn.com"]
+			sankei.jp.msn.com##div[class*="Ad"]
+			sankei.jp.msn.com##div[class*="ad"]
+			sankei.jp.msn.com##div[class*="parent chrome"]
+			sankei.jp.msn.com##div[class="adcenter"]
+			sankei.jp.msn.com##div[class="ECmodule"]
+			sankei.jp.msn.com##div[id*="ad"]
+			sankei.jp.msn.com##div[id^="AD"][id$="line"]
+			! 先頭+末尾でテスト。多分動くはず。
+				!sankei.jp.msn.com##div[id="AD1line"]
+				!sankei.jp.msn.com##div[id="AD2line"]
+			sankei.jp.msn.com##div[id="ADfootlight"]
+			sankei.jp.msn.com##div[id="grokInstantContainer"]
+			sankei.jp.msn.com##div[id="infochumoku"]
+			sankei.jp.msn.com##div[id="infokikaku"]
+			sankei.jp.msn.com##div[id="Tieup"]
+			sankei.jp.msn.com##iframe[id*="more-doc"]
+			sankei.jp.msn.com##DIV[id="SocialModuleBar"]
+			sankei.jp.msn.com##DIV[class="contentDisplayFix"] > DIV[id="ModuleTitle"] > H3[class="blue"]
+		!!! sankeibiz.jp
+			/ad*$domain=sankeibiz.jp
+			sankeibiz.jp##div[id="adSEO"]
+		!!! zakzak.co.jp
+			/ad_images*$domain=zakzak.co.jp
+			/ad.css^$domain=zakzak.co.jp
+			zakzak.co.jp##div[id^="ad"]
+
+	!!! [MSN]
+		||rad.msn.com^
+		##*[href*="http://clk.atdmt.com/"]
+		jp.msn.com##DIV[id="dopad"]
+		jp.msn.com##DIV[id="infopane"]
+		jp.msn.com##DIV[id="subfoot"]
+	! [news-postseven.com]
+		news-postseven.com##DIV[class^="adlantiss_frame"]
+		news-postseven.com##DIV[id="mobile"]
+		news-postseven.com##DIV[id="commonFooter"]
+	!!! [newsweekjapan.jp]
+		newsweekjapan.jp##div[id="sideAdPanel"]
+
+	!!! [nicovideo]ニコニコ動画系統
+		!!! {開放}
+			!!!システム系統
+				!! nicodic系
+					@@||api.nicodic.jp^
+				!! app系
+					@@||app.nicovideo.jp^
+					@@||app-cliapi.nicovideo.jp^
+					@@||app-pay.nicovideo.jp^
+				!! uad系
+					@@||uad.nicovideo.jp/ads/*
+					@@||uad.nicovideo.jp/UadsBannerService/send
+					@@||api.uad.nicovideo.jp^
+				!! flapi系
+					@@||flapi.nicovideo.jp/api/*
+				!! nimg.jp
+					!! res系
+						@@||res.nimg.jp/swf/appli/*
+						||res.nimg.jp/img/base/head/icon/nico/*
+						||res.nimg.jp/img/base/head/logo/*
+						||res.nimg.jp/img/base/foot/*
+						||res.nimg.jp/img/watch/ichiba_2/x.gif
+						||res.nimg.jp/img/bg.png
+						||res.nimg.jp/img/player/poster/*
+						||res.nimg.jp/img/remocon/*
+					!! nicoapp
+						@@||nicoapp.jp^
+					!! 市場用 
+						! 最近、ちゃんと開放できている感じがしないんで確認が必要
+						@@nicovideo.jp##a[href*="ap.valuecommerce.com"]
+						@@nicovideo.jp##a[href^="http://ck.jp.ap.valuecommerce.com/servlet/"]
+						@@nicovideo.jp##DIV[id^="ichiba"]
+						@@||res.nimg.jp/js/ads.js?*$domain=nicovideo.jp
+						@@||res.nimg.jp/css/ads.css?*$domain=nicovideo.jp
+						@@||item.shopping.c.yimg.jp^$domain=nicovideo.jp
+				!! 外部
+						@@||nicoimg.ggood.jp^$domain=nicovideo.jp
+						@@||images-amazon.com^$domain=nicovideo.jp
+						@@||ichiba.nicovideo.jp/embed/*$domain=nicovideo.jp
+		!!! {拒否}*.nicovideo.jp
+			!! /
+				||nicovideo.jp/__utm.gif*
+				||nicovideo.jp/api/getmarquee*
+				||nicovideo.jp/img/remocon/*
+			!! ad.|ads.
+				||ads.nicovideo.jp^
+				||ad.nicovideo.jp^
+			!! uad.
+				||uad.nicovideo.jp/delivery/assets/swf/*
+			!! app-cliapi.
+				|app-cliapi.nicovideo.jp/crossdomain.xml
+				||flapi.nicovideo.jp/api/getmarqueev3
+				||flapi.nicovideo.jp/api/feed/*$domain=nicovideo.jp
+			!! flapi
+				||flapi.nicovideo.jp/api/logger.php^
+			!! info.
+				||info.nicovideo.jp/feed/*
+			!! ichiba
+				||ichiba.nicovideo.jp/img/bnr_*
+			!! live.
+				||live.nicovideo.jp/api/getstreamlist?*
+				||live.nicovideo.jp/bnr_mobile_gate.swf?*
+				||live.nicovideo.jp/inc/live_ad.js?*
+				||live.nicovideo.jp/img/watch/pct_dmy_flashplayer.png
+		!!! {拒否}nimg.jp
+			!! res系
+				||res.nimg.jp/swf/appli/*
+				||res.nimg.jp/swf/player/marqueeplayer.swf?*
+				||res.nimg.jp/img/system/marquee/event*
+				||res.nimg.jp/swf/player/user_sponsor.swf*
+				||res.nimg.jp/swf/player/user_sponsor.swf*
+				||res.nimg.jp/js/uad_embed.js
+			!! icon系
+				||icon.nimg.jp^$domain=live.nicovideo.jp
+		!!! 非表示
+			!! 広告:nicovideo.jp
+				nicovideo.jp##DIV[class="ads_468"]
+				nicovideo.jp##DIV[id^="sideTxtAd"]
+				nicovideo.jp##DIV[id^="header-banner"]
+				nicovideo.jp##DIV[id^="web_pc_premium"]
+				nicovideo.jp##DIV[id^="web_pc_footer"]
+				nicovideo.jp##DIV[id^="footerWrap"]
+				nicovideo.jp##DIV[id^="PAGEFOOTER"]
+				nicovideo.jp##DIV[id^="content_312"]
+				nicovideo.jp##DIV[id="banner-side"]
+				nicovideo.jp##DIV[id="banner-top"]
+				nicovideo.jp##DIV[id="web_pc_watch"]
+				nicovideo.jp##P[id="web_pc_prime"]
+			!! 広告:ニコ生用
+				live.nicovideo.jp##DIV[class="ichiba_frm"]
+				live.nicovideo.jp##DIV[id="carousel"]
+				live.nicovideo.jp##DIV[id="ichiba"]
+				live.nicovideo.jp##DIV[id="body_footer"]
+				live.nicovideo.jp##DIV[id="page_footer"]
+				live.nicovideo.jp##DIV[id="descriptions"]
+				live.nicovideo.jp##DIV[id="player_btm"]
+	!!! [nikkansports]
+		nikkansports.com##div[class="adPRtext"]
+		nikkansports.com##IFRAME[src^="http://ad."]
+		nikkansports.com##DIV[id="sideRecommend"]
+		nikkansports.com##DIV[class="adGIFtext"]
+		nikkansports.com##DIV[class="adBECOME"]
+		||become.co.jp^$domain=nikkansports.com
+		||ad.nikkansports.com^
+		||apis.google.com/js/plusone.js$domain=nikkansports.com
+		||plusone.google.com^$domain=nikkansports.com
+		||api.popin.cc^$domain=nikkansports.com
+		||fresheye.com^$domain=nikkansports.com
+		||static.evernote.com^$domain=nikkansports.com
+		||platform.twitter.com/widgets.js$domain=nikkansports.com
+	!!! [日経系]
+		!!! nikkei.co.jp
+			||adb.nikkei.co.jp*
+			||adpriv.nikkei.com*
+			nikkei.co.jp##div[id="magazine_books"]
+			nikkei.co.jp##div[id="trend"]
+			nikkei.co.jp##div[id="strategic"]
+			nikkei.co.jp##div[id="sub_text_ad"]
+			nikkei.co.jp##div[id="jigyoyochi"]
+			nikkei.co.jp##div[id^="ADVERTISE"]
+			nikkei.co.jp##div[class^="cmn-sub"]
+			nikkei.co.jp##div[class^="cmn-pr"]
+			nikkei.co.jp##p[class="ni"]
+		!!! nikkeibp.co.jp
+			|http://bizad.nikkeibp.co.jp/*
+			/ad_common.js^$domain=nikkeibp.co.jp
+			/ad_parts.js^$domain=nikkeibp.co.jp
+			nikkeibp.co.jp##*[src*="ad_"]
+			nikkeibp.co.jp##*[href^="http://bizad.nikkeibp.co.jp/"]
+			nikkeibp.co.jp##div[id^="ad_"]
+			nikkeibp.co.jp##div[class^="ad_"]
+			nikkeibp.co.jp##div[class="bpbox_text"]
+			nikkeibp.co.jp##div[class="mediaBanner"]
+			nikkeibp.co.jp##div[class="rectangle"]
+			nikkeibp.co.jp##div[class*="tertiary"]
+			nikkeibp.co.jp##div[class="yad_imatch"]
+			nikkeibp.co.jp##iframe[src^="http://travel.nikkeibp.co.jp/iframe/"]
+
+	!!! [npn.co.jp]
+				npn.co.jp##div[id^="ygbad"]
+				npn.co.jp##div[id^="ads_"]
+				npn.co.jp##p[class^="pr-text"]
+
+	!!! [reuters]
+		*/overtureAd.js$domain=reuters.com
+		reuters.com##div[class="ad"][id^="advert_"]
+		reuters.com##img[title*="doubleclick.net"]
+		reuters.com##span[class="marketingPR"]
+		reuters.com##div[class="toolbarTicker"]
+		reuters.com##div[class="bpnModule"]
+
+	!!! [rocketnews24.com]
+		!! 広告
+			rocketnews24.com##DIV[class^="ad ad"]
+			rocketnews24.com##DIV[id^="ad.ad"]
+			rocketnews24.com##DIV[id="textwidget"] > DIV[id="ad300x250"]
+		!! プラグイン
+			rocketnews24.com##DIV[id="linkcat-1728"]
+			rocketnews24.com##DIV[class="widget.widget_links"]
+			rocketnews24.com##DIV[id="pouch-posts"]
+			rocketnews24.com##DIV[class="footer"]
+			rocketnews24.com##LI[class="text-5"]
+			rocketnews24.com##LI[class="text-6"]
+			rocketnews24.com##LI[class="text-7"]
+			rocketnews24.com##LI[class="text-8"]
+
+	!!! [sanspo.com]
+		!! 謚第ｭ｢
+			sanspo.com##A[href="/notice/adsense.htm"]
+			sanspo.com##DIV[class="module.adimg"]
+			sanspo.com##DIV[class$="adimg"] + DIV[class$="graybox"]
+			sanspo.com##DIV[id="cyumoku"]
+			||sanspo.com/module/ad/*
+			||u.sanspo.com/__utm.js
+
+	!!! [searchina]
+		!! 表示簡略化
+			searchina.ne.jp##DIV[id$="adsense"]
+			searchina.ne.jp##DIV[id="nl2ad"]
+			searchina.ne.jp##DIV[id="xlisting_keyword_side"]
+			searchina.ne.jp##DIV[class="nl2ad"]
+			searchina.ne.jp##DIV[id="special_pr"][class$="special_ad"]
+			searchina.ne.jp##IFRAME[src*="yahooshopping"]
+			searchina.ne.jp##DIV[id="tfbTab"]
+			searchina.ne.jp##TD + TD[align="left"]
+			searchina.ne.jp##DIV[class="xlisting_keyword_side"]
+			searchina.ne.jp##DIV[id^="DIV-gpt-ad"]
+			searchina.ne.jp##IFRAME[id="cxkeyword"]
+			searchina.ne.jp##IFRAME[id="disp"]
+			searchina.ne.jp##DIV[id="linkservice"] > TABLE
+			searchina.ne.jp##DIV[id="cxrecommendations"]
+			searchina.ne.jp##DIV[id="cxkeyword"]
+		!! 外部連携
+			searchina.ne.jp##DIV[id*="plusone"]
+			searchina.ne.jp##A[class="mixi-check-button"]
+			searchina.ne.jp##A[class="twitter-share-button"]
+
+	!!! [seesaa]
+		! blog
+			||blog.seesaa.jp/contents/js/ad_plugin.js
+			||blog.seesaa.jp/js/trace_searcher.js
+
+	!!! [すらど.jp]
+				slashdot.jp##div[id="ads-index-text"]
+				slashdot.jp##div[id^="gpt-sd_index"]
+
+	!!! [blog.so-net.ne.jp]
+		! ブログパーツに関しては、_blogparts.txtを参照
+
+			||blog.so-net.ne.jp/_contents/js/*
+			||blog.so-net.ne.jp/_common/js/*
+			||blog.so-net.ne.jp/_common/images/*
+			||so-net.ne.jp/search/javascripts/research/*
+			blog.so-net.ne.jp##div[class="searchFrame"]
+			blog.so-net.ne.jp##div[class="sbHeader"]
+			blog.so-net.ne.jp##div[id="powered"]
+
+	!!! [tabelog.com]
+		tabelog.com##div[class="listing"]
+		tabelog.com##div[class="banner"]
+		tabelog.com##div[class="areamatch-box"]
+		tabelog.com##div[id="overture_ad"]
+		tabelog.com##IFRAME[src^="http://notice.kakaku.com/html.ng/"]
+
+	!!! [twitter]
+		! 外部クライアントに関しては分離予定。Togetterに関しては思案中
+
+		!!! 公式
+			!! 許可対象
+				@@||twimg.com/profile_images/$domain=twitter.com
+				@@|https://api.twitter.com/*/*/*/members.json
+			!! 抑止
+				!! 内部表示簡略化
+					twitter.com##A[class="definition"]
+					twitter.com##A[href="/#!/who_to_follow"]
+					twitter.com##A[href^="http://blog.twitter.jp/"]
+					twitter.com##DIV[class*="promoted-tweet"]
+					twitter.com##DIV[class="component"] > DIV[class="user-rec-inner"]
+					twitter.com##DIV[class="flex-module-header"]
+					twitter.com##DIV[class="trends"]
+					twitter.com##DIV[class="trends-inner"]
+					twitter.com##DIV[class^="js-recommended-followers"]
+					twitter.com##DIV[id="custom_49"][class="eTologyToken"]
+					twitter.com##H2[class="user-rec-component"]
+					twitter.com##IFRAME[id="j_ad"]
+					twitter.com##LI[class^="trend-item"]
+					twitter.com##LI[class^="user-small-list-item"]
+					twitter.com##P[class="promo"]
+				!! share
+					twitter.com##A[href="http://twitter.com/share"]
+					##SCRIPT[src="http://widgets.twimg.com/j/2/widget.js"]
+					##DIV[id^="twtr-widget"]
+					##IFRAME[src^="http://platform.twitter.com/widgets/tweet_button.html"]
+				!! 広告抑止
+					||ad-v.jp^$domain=twitter.com
+					twitter.com##IFRAME[src*="ad-v.jp"]
+				!! 外部モジュール
+					! 後で直す
+					/jquery.twitterTrackback.css
+					/jquery.twitterTrackback.js
+		!!! Twitter関連の他サイト
+			!! twitpic
+				twitpic.com##DIV[id^="view-photo-ad"]
+			!! Togetter
+				togetter.com##DIV[id="amazon_content_box"]
+				togetter.com##DIV[class="advertise_head_box"]
+				togetter.com##A[href*="togetter06-22"]
+				togetter.com##img[src^="http://b.hatena.ne.jp/entry/image/"]
+				togetter.com##DIV[class="side_box"]
+		!!! Webクライアント
+			! 将来的には分離予定。
+			!! twipple
+				twipple.jp##DIV[class="tweetActionMenu"]>DIV[class="exteriorPulldown"]>A[class^="actionButtonExterior"]
+
+		!!! アドオン
+				!! pbtweet+用
+					##DIV[class="component"]>DIV[class$="pb-toggleable"]
+					##DIV[class="twitter-button"]
+
+		!!! 外部アフィリエイト
+			||twpss.jp^
+				twitter.com##A[title*="twpss.jp"][href^="http://t.co/"]
+	!!! [ustream]
+		ustream.tv##div[class="channelTopBannerWrapper"]
+		ustream.tv##div[class="featuredContent.colTitleBoxV4.pageScroller"]
+		ustream.tv##div[class="hideAdMessage.forPageRectangle"]
+		ustream.tv##DIV[class="channelTopBannerWrapper"]
+		ustream.tv##DIV[class^="featuredContent.colTitleBoxV4.pageScroller"]
+		ustream.tv##DIV[class="largeRectBanner"]
+		ustream.tv##div[id="PageRectangle"]
+		ustream.tv##div[id="UstreamSiteNotification"]
+		ustream.tv##DIV[id^="RecommendedLive"]
+		@@||static-cdn2.ustream.tv/static/v3/images/*
+	[wordpress.com]
+		@@||wp.com/_static/*
+		wordpress.com##DIV[id="welcome.updated"]
+		wordpress.com##DIV[id="welcome"]
+	!!! [yahoo.co.jp]
+		!!! 許可対象
+			@@||map.yahoo.co.jp^$document
+			@@||yahooapis.com
+		!!! 抑止対象
+			! 確認に時間がかかるので、カテ分けちゃんとやってません。
+			!! 広告
+				yjaxc.yahoo.co.jp
+			!	/yimg\.jp\/bdv\/*\/*\/*\/*\.(jpg|png|gif|swf)/
+				yahoo.co.jp##div[id^="ADframe"]
+				yahoo.co.jp##div[class^="ad"]
+			!! 非表示
+					yahoo.co.jp##div[id^="pos-"]
+					yahoo.co.jp##a[href^="http://ard.yahoo.co.jp/"]
+					yahoo.co.jp##a[href="http://business.yahoo.co.jp/sponsor/"]
+					yahoo.co.jp##div[class^="yjSt adTyumokumar"]
+					yahoo.co.jp##div[class^="ymuiHeaderBGLG"]
+					yahoo.co.jp##div[class="bx"][id="rightbox"]
+					yahoo.co.jp##div[id="center1"]
+					yahoo.co.jp##div[id="center2"]
+					yahoo.co.jp##div[id="mainpr"]
+					yahoo.co.jp##div[id="pos-lrec"]
+					yahoo.co.jp##div[id="rightbox1"]
+					yahoo.co.jp##div[id="tct"]
+					yahoo.co.jp##div[id="uhdMain"]
+					yahoo.co.jp##DIV[id^="im_main"]
+					yahoo.co.jp##DIV[id="adLREC"]
+				!! hedlines.
+					headlines.yahoo.co.jp##DIV[class*="adTyumoku"]
+					headlines.yahoo.co.jp##DIV[class*="adCt"]
+					headlines.yahoo.co.jp##DIV[class*="adRp"]
+					headlines.yahoo.co.jp##DIV[class="ymui3DContainerLP"]
+					headlines.yahoo.co.jp##DIV[id="pos-lrec"]
+					headlines.yahoo.co.jp##DIV[id="pos-sqb"]
+					headlines.yahoo.co.jp##DIV[id="pos-tn"]
+					headlines.yahoo.co.jp##H2[class^="ymuiTitle.yjS.textCenter"]
+					headlines.yahoo.co.jp##H2[class^="ymuiTitle.fss"]
+				!! beauty
+					beauty.yahoo.co.jp##div[class="all_md02"]
+				!! chiebukuro
+					chiebukuro.yahoo.co.jp##div[id="chie-ams"]
+					chiebukuro.yahoo.co.jp##DIV[id^="im_"]
+				!! finance
+					finance.yahoo.co.jp##div[class="marB10"]
+				!! realestate
+					realestate.yahoo.co.jp##div[id="ranking"]
+				!! sports
+					sports.yahoo.co.jp##div[id^="im"]
+				!! tv
+					tv.yahoo.co.jp##div[class="pr300a"]
+					tv.yahoo.co.jp##div[id="right1"]
+				!! weather
+					weather.yahoo.co.jp##div[class^="yjw_sub_md "]
+				!! r25
+					r25.yahoo.co.jp##DIV[id="article"] > DIV[id="center"] > DIV[style^="display:block;margin"]
+					r25.yahoo.co.jp##DIV[id="center2"] > DIV[style^="display:block;margin:"]
+					r25.yahoo.co.jp##DIV[class="PR_key"]
+					r25.yahoo.co.jp##DIV[id="side"] > DIV[id="right1"]
+					r25.yahoo.co.jp##DIV[class="sd_adSQM"]
+					r25.yahoo.co.jp##DIV[id="adLREC"]
+				!! rikunabi-next
+					rikunabi-next.yahoo.co.jp##DIV[id="footer_logo_message"]
+					rikunabi-next.yahoo.co.jp##DIV[id="hd_wrap_dot"]
+					rikunabi-next.yahoo.co.jp##H1[class="hd_text"]
+		!!! mail用暫定策
+				@@||i.yimg.jp/images/mail/classic/mongo/6_0_19_23/js/*
+				||yui.yahooapis.jp/3.0.0pr2/build/yui/*
+				mail.yahoo.co.jp##DIV[id="jpwelcomeinsideyahootitle"]
+				mail.yahoo.co.jp##DIV[id="lrecad"]
+				mail.yahoo.co.jp##IFRAME[id="LREC"]
+	!!! [blogs.yahoo.co.jp]
+		!! 宣伝
+			||yimg.jp/i/jp/blog/p3/js/*
+			blogs.yahoo.co.jp##div[class^="newblogInfo"]
+		!! 広告
+			blogs.yahoo.co.jp##div[id*="AdBanner"]
+	!!! [yomiuri.co.jp]
+		||yomiuri.co.jp/g/d.gif
+		||yomiuri.co.jp/scripts/tw_widget2.js?*
+		||yomiuri.co.jp/scripts/socialbuttons3.4.js
+		yomiuri.co.jp##DIV[class="yahooAd"]
+		yomiuri.co.jp##DIV[class="sideRecruiteAd.clearfix"]
+		yomiuri.co.jp##DIV[class="ad200-out"]
+		yomiuri.co.jp##DIV[class="sideRegularCONT"]
+		yomiuri.co.jp##DIV[class="sideBlock.mobile"]
+		yomiuri.co.jp##DIV[class="search.clearfix"]
+		yomiuri.co.jp##DIV[class="hPtn1.showUpbr"]
+		yomiuri.co.jp##DIV[class*="txtad"]
+
+	!!! [YouTube]
+		youtube.com##div[id^="google_companion_ad_"]
+		youtube.com##div[id="ticker-inner"]
+		youtube.com##iframe[src*="/pagead"]
+		youtube.com##iframe[src*="ad_block"]
+
+	!!! a8.net
+		!! 抑止対象
+			##a[href^="http://px.a8.net/"]
+
+	!!! [affiliate] アフィリエイトに関する、“ドメイン指定”の余地がある物だけこっちに。
+		!!! アフィリエイト中継
+			||cl-sys.info^
+			##A[href*="cl-sys.info"]
+		!!! ドメイン別
+			!! A
+				||agift-ad.com^
+					##A[href*="agift-ad.com"]
+					##IFRAME[src*="agift-ad.com"]
+					##SCRIPT[src*="agift-ad.com"]
+				||abmr.net^
+					##A[href*="abmr.net"]
+					##IFRAME[src*="abmr.net"]
+				||acnt.biz^
+					##A[href*="acnt.biz"]
+					##IFRAME[src*="acnt.biz"]
+					##SCRIPT[src*="acnt.biz"]
+				||adlyze.net^
+					##A[href*="adlyze.net"]
+					##IFRAME[src*="adlyze.net"]
+					##SCRIPT[src*="adlyze.net"]
+				||advg.jp^
+					##A[href*="advg.jp"]
+					##IFRAME[src*="advg.jp"]
+				||adplan-ds.com^
+					##A[href*="adplan-ds.com"]
+					##iframe[*="adplan-ds.com"]
+				||adserve.com^
+					##A[href*="adserve.com"]
+					##IFRAME[src*="adserve.com"]
+					##SCRIPT[src*="adserve.com"]
+				||adtech.de^
+					##A[href*="adtech.de"]
+					##IFRAME[src*="adtech.de"]
+				||adimg.net^
+					##A[href*="adimg.net"]
+				||adjust-net.jp^
+					##A[href*="adjust-net.jp"]
+					##IFRAME[src*="adjust-net.jp"]
+				||microad.jp^
+					##A[href*="microad.jp"]
+				||adingo.jp^
+					##A[href*="adingo.jp"]
+				||a8.net^
+					##A[href*="a8.net"]
+					##SCRIPT[src*="a8.net"]
+				||adtech.de^
+					##A[href*="adtech.de"]
+					##SCRIPT[src*="adtech.de"]
+				||adxns.com^
+					##A[href*="adxns.com"]
+					##SCRIPT[src*="adxns.com"]
+				||adsta.jp^
+					##A[href*="adsta.jp"]
+					##SCRIPT[src*="adsta.jp"]
+				||adroll.com^
+					##A[href*="adroll.com"]
+					##SCRIPT[src*="adroll.com"]
+			!! B
+			!! C
+			!! D
+				||dtiserv.com^
+					##A[href*="dtiserv.com"]
+					##IFRAME[src*="dtiserv.com"]
+					##SCRIPT[src*="dtiserv.com"]
+				||durasite.net^
+					##A[href*="durasite.net"]
+					##IFRAME[src*="durasite.net"]
+				||click.duga.jp^
+					##A[href*="click.duga.jp"]
+					##SCRIPT[src^="click.duga.jp"]
+			!! E
+				||ebis.ne.jp
+					##A[href*="ebis.ne.jp"]
+					##IFRAME[src*="ebis.ne.jp"]
+				||e-nls.com^
+					##A[href*="e-nls.com"]
+					##IFRAME[src*="e-nls.com"]
+					##SCRIPT[src*="e-nls.com"]
+				||extreme-dm.com^
+					##A[href*="extreme-dm.com"]
+					##IFRAME[src*="extreme-dm.com"]
+			!! F
+				||twpss.jp^
+					##A[href*="twpss.jp"]
+			!! G
+				||gyutto.com^
+					! /gyutto\.(com|net|jp)\/*\/*banner_img/
+					||gyutto.com/data/af_banner_img/*
+					||gyutto.jp/data/banner_img/*
+					##A[href*="gyutto.com"][href*="/af"]
+				||gl-cash.com^
+					##A[href*="gl-cash.com"]
+			!! H
+				||d.href.org.uk^
+					##A[href*="d.href.org.uk"]
+					##IFRAME[src*="d.href.org.uk"]
+			!! I
+				! i2i系は4.NGhostのmfroに書く事。
+				||impact-ad.jp^
+					##A[href*="impact-ad.jp"]
+					##IFRAME[src*="impact-ad.jp"]
+				||i-mobile.co.jp^
+					##A[href*="i-mobile.co.jp"]
+					##[src*="i-mobile.co.jp"]
+					##IFRAME[src*="i-mobile.co.jp"]
+					##SCRIPT[src*="i-mobile.co.jp"]
+				||infotop.jp^
+					##A[href*="infotop.jp"]
+					##SCRIPT[src*="infotop.jp"]
+				||info-restaurant.jp^
+					##A[href*="info-restaurant.jp"]
+					##SCRIPT[src*="info-restaurant.jp"]
+			!! J
+				||j-a-net.jp^
+					##A[href*="j-a-net.jp"]
+					##IFRAME[src*="j-a-net.jp"]
+				||jpn.org^
+					##A[href*="jpn.org"]
+					##IFRAME[src*="jpn.org"]
+			!! K
+				||kau.li^
+					##A[href*="kau.li"]
+					##SCRIPT[src*="kau.li"]
+					##SPAN[id*="kauli"]
+			!! L
+				||liveads.jp^
+					##A[href*="liveads.jp"]
+					##IFRAME[src*="liveads.jp"]
+			!! M
+				||media-b.jp^
+					##A[href*^="media-b.jp"]
+					##IFRAME[src*="media-b.jp"]
+				||microad.jp^
+					##A[href*="microad.jp"]
+					##SCRIPT[src*="microad.jp"]
+					##IFRAME[src*="microad.jp"]
+				||media-b.jp^
+					##A[href*="media-b.jp"]
+					##SCRIPT[src*="media-b.jp"]
+				||movja.info^
+					##A[href*="movja.info"]
+					##SCRIPT[src*="movja.info"]
+				||motionlink.jp
+					##A[href*="motionlink.jp"]
+					##IMG[title*="motionlink.jp"]
+					##SCRIPT[src*="motionlink.jp"]
+			!! N
+			!! O
+			!! P
+			!! Q
+			!! R
+			!! S
+				||smartadserver.com^
+					##A[href*="smartadserver.com"]
+					##IFRAME[src*="smartadserver.com"]
+				||shard.jp^
+					##A[href*="shard.jp"]
+					##IFRAME[src*="shard.jp"]
+					##SCRIPT[src*="shard.jp"]
+			!! T
+			!! U
+			!! V
+				||valuecommerce.com^
+					##A[href*="valuecommerce.com"]
+			!! W
+			!! X
+				||xii.jp
+					##A[href*="xii.jp"]
+					##SCRIPT[src="xii.jp"]
+				||xtendmedia.com^
+					##A[href*="xtendmedia.com"]
+					##IFRAME[src*="xtendmedia.com"]
+					##SCRIPT[src*="xtendmedia.com"]
+			!! Y
+				||yieldmanager.com^
+					##A[href*="yieldmanager.com"]
+					##SCRIPT[src="yieldmanager.com"]
+			!! Z
+			!! 0-9
+				||2mdn.net^
+					##A[href*="2mdn.net"]
+					##IFRAME[src*="2mdn.net"]
+				||9lick.net^
+					##A[href*="9lick.net"]
+					##SCRIPT[src*="9lick.net"]
+					##A[href^="http://9lick.net/click.php"]
+
+		!!! [特殊例外]
+			!! このドメインで商売もやっている為、当面は現物のみのブロックとする。
+				##A[href^="http://gyutto.com/game/af-"]
+				##A[href*="dl.getchu.com/index.php?action=idx&ad"]
+
+	!!! <end>
+
+	!!! [amazon]
+		!!! {許可}
+			!! amazon.co.jp
+				@@||affiliate.amazon.co.jp^$document
+				@@||amazon.co.jp^$document
+			!! amazon.com
+				@@||affiliate.amazon.com^$document
+				@@||amazon.com^$document
+		!!! 拒否
+				||g-ecx.images-amazon.com^
+				##IMG[title*="amazon.com"]
+				##IMG[title*="images-amazon.com"]
+				##div[class*="amazlet"]
+				##div[id*="amazlet"]
+				##div[class*="amazlet-box"]
+				##div[id*="amazlet-box"]
+				##div[class*="azlink-box"]
+				##div[class*="amazon_crcr"]
+
+	!!! <end>
+
+
+	!!! [dmm]
+		!!! affiliate
+			||dmm.co.jp
+				##A[href*="dmm.co.jp"]
+				##IFRAME[src*="dmm.co.jp"]
+				##IMG[title*="dmm.co"]
+			||pics.dmm.com/digital/*
+			||pics.dmm.com/mono/*
+			##A[href^="http://www.dmm.com/digital/pcgame"]
+			##A[href^="http://www.dmm.com/mono/"]
+	!!! <end>
+
+	!!! [MFRO対策用]
+		! MFRO社以外の名義でのドメイン保有・ログ取得用ツールでの使用が濃厚。
+		! 関連するキーワードにてヒットするドメインは、例外なく全面非表示扱い。
+		!
+		! 追加に関しても、例外処理を設けずに以下の処理を行わせる事。
+		! ||domain
+		! 	domain##html
+		! 	##a[hre*="domain"]
+		! 	##SCRIPT[src*="domain"]
+		!!! 本営
+				||mfro.net
+					mfro.net##html
+					##a[href*="mfro.net"]
+					##SCRIPT[src*="mfro.net"]
+			!! 運営中ドメイン
+				||mobalyzer.net
+					mobalyzer.net##html
+					##a[href*="mobalyzer.net"]
+					##SCRIPT[src*="mobalyzer.net"]
+				||quicca.com
+					quicca.com##html
+					##a[href*="quicca.com"]
+					##SCRIPT[src*="quicca.com"]
+				||s-hosting.jp
+					s-hosting.jp##html
+					##a[href*="s-hosting.jp"]
+					##SCRIPT[src*="s-hosting.jp"]
+				||iq-servers.com
+					iq-servers.com##html
+					##a[href*="iq-servers.com"]
+					##SCRIPT[src*="iq-servers.com"]
+			!! i2i
+				!! お試し。誤作動の可能性あり。
+					##A[href*="i2i."]
+					##IFRAME[src*="i2i."]
+					##SCRIPT[src*="i2i."]
+					##IMG[title*="i2i."]
+					##DIV[class*="i2i"]
+					##DIV[id*="i2i"]
+					##A[href*="i2iserv."]
+					##IFRAME[src*="i2iserv."]
+					##SCRIPT[src*="i2iserv."]
+					##IMG[title*="i2iserv."]
+
+					##A[href*="i2idata."]
+					##IFRAME[src*="i2idata."]
+					##SCRIPT[src*="i2idata."]
+					##IMG[title*="i2idata."]
+
+				/i2i\.(com|jp)/
+					||i2i.com
+						i2i.com##html
+!						##A[href*="i2i.com"]
+!						##SCRIPT[src*="i2i.com"]
+					||i2i.jp
+						i2i.jp##html
+!						##A[href*="i2i.jp"]
+!						##IFRAME[src*="i2i.jp"]
+!						##SCRIPT[src*="i2i.jp"]
+!						##IMG[title*="i2i.jp"]
+				/i2iserv\.(com|jp)/
+					||i2iserv.com
+						i2iserv.com##html
+!						##A[href*="i2iserv.com"]
+!						##SCRIPT[src*="i2iserv.com"]l
+					||i2iserv.jp
+						i2iserv.jp##html
+!						##A[href*="i2iserv.jp"]
+!						##SCRIPT[src*="i2iserv.jp"]
+				/i2idata\.(com|jp)/
+					||i2idata.com
+						i2idata.com##html
+!						##A[href*="i2idata.com"]
+!						##SCRIPT[src*="i2idata.com"]
+					||i2idata.jp
+						i2idata.jp##html
+!						##A[href*="i2idata.jp"]
+!						##SCRIPT[src*="i2idata.jp"]
+			!! rentalurl
+				/rentalurl\.(com|net|jp)/
+					##a[href*="rentalurl"]
+					##SCRIPT[src*="rentalurl"]
+		!!! ドメイン確保用
+			||akth.com
+				akth.com##html
+				##a[href*="akth.com"]
+				##SCRIPT[src*="akth.com"]
+		!!! 用途不明ドメイン
+			||321loan.net
+				321loan.net##html
+				##a[href*="321loan.net"]
+				##SCRIPT[src*="321loan.net"]
+			||ailiyo.net
+				ailiyo.net##html
+				##a[href*="ailiyo.net"]
+				##SCRIPT[src*="ailiyo.net"]
+			||aithilla.com
+				aithilla.com##html
+				##a[href*="aithilla.com"]
+				##SCRIPT[src*="aithilla.com"]
+			||c365fx.com
+				c365fx.com##html
+				##a[href*="c365fx.com"]
+				##SCRIPT[src*="c365fx.com"]
+			||cashingz.net
+				cashingz.net##html
+				##a[href*="cashingz.net"]
+				##SCRIPT[src*="cashingz.net"]
+			||ca-z.net
+				ca-z.net##html
+				##a[href*="ca-z.net"]
+				##SCRIPT[src*="ca-z.net"]
+			||cfd110.net
+				cfd110.net##html
+				##a[href*="cfd110.net"]
+				##SCRIPT[src*="cfd110.net"]
+			||cockie-cleam.net
+				cockie-cleam.net ##html
+				##a[href*="cockie-cleam.net "]
+				##SCRIPT[src*="cockie-cleam.net "]
+			||corneliatown.com
+				corneliatown.com##html
+				##a[href*="corneliatown.com"]
+				##SCRIPT[src*="corneliatown.com"]
+			||couponpon.net
+				couponpon.net##html
+				##a[href*="couponpon.net"]
+				##SCRIPT[src*="couponpon.net"]
+			||dokodemocash.com
+				dokodemocash.com##html
+				##a[href*="dokodemocash.com"]
+				##SCRIPT[src*="dokodemocash.com"]
+			||fishingmani.net
+				fishingmani.net##html
+				##a[href*="fishingmani.net"]
+				##SCRIPT[src*="fishingmani.net"]
+			||fxdefx.com
+				fxdefx.com##html
+				##a[href*="fxdefx.com"]
+				##SCRIPT[src*="fxdefx.com"]
+			||gcmania.net
+				gcmania.net##html
+				##a[href*="gcmania.net"]
+				##SCRIPT[src*="gcmania.net"]
+			||how-to-esthe.com
+				how-to-esthe.com##html
+				##a[href*="how-to-esthe.com"]
+				##SCRIPT[src*="how-to-esthe.com"]
+			||ichigan-camera.com
+				ichigan-camera.com##html
+				##a[href*="ichigan-camera.com"]
+				##SCRIPT[src*="ichigan-camera.com"]
+			||i-love-creditcard.net
+				i-love-creditcard.net##html
+				##a[href*="i-love-creditcard.net"]
+				##SCRIPT[src*="i-love-creditcard.net"]
+			||kaigai-doramatai.com
+				kaigai-doramatai.com##html
+				##a[href*="kaigai-doramatai.com"]
+				##SCRIPT[src*="kaigai-doramatai.com"]
+			||korekara-cfd.com
+				korekara-cfd.com##html
+				##a[href*="korekara-cfd.com"]
+				##SCRIPT[src*="korekara-cfd.com"]
+			||kousui-hikaku.com
+				kousui-hikaku.com##html
+				##a[href*="kousui-hikaku.com"]
+				##SCRIPT[src*="kousui-hikaku.com"]
+			||live2tv.com
+				live2tv.com##html
+				##a[href*="live2tv.com"]
+				##SCRIPT[src*="live2tv.com"]
+			||marriage-jyunbi.com
+				marriage-jyunbi.com##html
+				##a[href*="marriage-jyunbi.com"]
+				##SCRIPT[src*="marriage-jyunbi.com"]
+			||mazu-otameshi.com
+				mazu-otameshi.com##html
+				##a[href*="mazu-otameshi.com"]
+				##SCRIPT[src*="mazu-otameshi.com"]
+			||no-aids.com
+				no-aids.com##html
+				##a[href*="no-aids.com"]
+				##SCRIPT[src*="no-aids.com"]
+			||o-negai.com
+				o-negai.com##html
+				##a[href*="o-negai.com"]
+				##SCRIPT[src*="o-negai.com"]
+			||oremo-gold.com
+				oremo-gold.com##html
+				##a[href*="oremo-gold.com"]
+				##SCRIPT[src*="oremo-gold.com"]
+			||oshiete-sakimono.com
+				oshiete-sakimono.com##html
+				##a[href*="oshiete-sakimono.com"]
+				##SCRIPT[src*="oshiete-sakimono.com"]
+			||oshin-soudan.jp
+				oshin-soudan.jp##html
+				##a[href*="oshin-soudan.jp"]
+				##SCRIPT[src*="oshin-soudan.jp"]
+			||otoku-credit.com
+				otoku-credit.com##html
+				##a[href*="otoku-credit.com"]
+				##SCRIPT[src*="otoku-credit.com"]
+			||petsousai.net
+				petsousai.net##html
+				##a[href*="petsousai.net"]
+				##SCRIPT[src*="petsousai.net"]
+			||qmqls.com
+				qmqls.com##html
+				##a[href*="qmqls.com"]
+				##SCRIPT[src*="qmqls.com"]
+			||ryhfs.com
+				ryhfs.com##html
+				##a[href*="ryhfs.com"]
+				##SCRIPT[src*="ryhfs.com"]
+			||sakana-zukan.net
+				sakana-zukan.net##html
+				##a[href*="sakana-zukan.net"]
+				##SCRIPT[src*="sakana-zukan.net"]
+			||taiyo-navi.com
+				taiyo-navi.com##html
+				##a[href*="taiyo-navi.com"]
+				##SCRIPT[src*="taiyo-navi.com"]
+			||want-circus.com
+				want-circus.com##html
+				##a[href*="want-circus.com"]
+				##SCRIPT[src*="want-circus.com"]
+			||takedenebisu.com
+				takedenebisu.com##html
+				##a[href*="takedenebisu.com"]
+				##SCRIPT[src*="takedenebisu.com"]
+			||tickepo.net*
+				tickepo.net##html
+				##a[href*="tickepo.net"]
+				##SCRIPT[src*="tickepo.net"]
+			||yadopon.net*
+				yadopon.net##html
+				##a[href*="yadopon.net"]
+				##SCRIPT[src*="yadopon.net"]
+			||y-nomnom.info*
+				y-nomnom.info##html
+				##a[href*="y-nomnom.info"]
+				##SCRIPT[src*="y-nomnom.info"]
+
+	!!! <end>
+
+	!!! [Ninja tools]
+		!! 正規表現による拒否
+			! タグ表記によるブロックは、誤爆多発の危険があるのでやらない予定。
+				/a(ikotoba\.jp|kazunoma\.com|mearare\.com|me-zaiku\.com|migasa\.jp|ri-jigoku\.com|shigaru\.jp|t-ninja\.jp|tukan\.com)/
+				/b(ake-neko\.net|akufu\.org|iroudo\.jp|okunenjin\.com|ufsiz\.jp|utanishinju\.com|uzama\.com|youbu\.com)/
+				/c(hagasi\.com|hakin\.com|hikouyore\.com|himanako\.net|hitosedori\.com|ho-chin\.com|hoitoippuku\.com|hottu\.net|houmusubi\.com|lient\.jp|yber-ninja\.jp)/
+				/d(arumaotosi\.com|ayuh\.net|okkoisho\.com|onburako\.com|otera\.net|oumeki\.com|ousetsu\.com)/
+				/e(bo-shi\.com|do-jidai\.com|hoh\.net|nokorogusa\.com)/
+				/f(uma-kotaro\.com|utene\.net)/
+				/g(amagaeru\.jp|anriki\.net|aryoutensei\.com|ejigeji\.jp|enin\.jp|ionsyouja\.com|oemonburo\.com|okenin\.com|oraikou\.com|osyuugi\.com|ouketu\.com|ozaru\.jp)/
+				/h(agewasi\.com|ahaue\.com|anabie\.com|anagasumi\.net|anagumori\.com|anamizake\.com|an-be\.com|annnari\.com|ariko\.com|arisen\.jp|atagashira\.com|atiju-hatiya\.com|ebiichigo\.com|ide-yoshi\.net|igoyomi\.com|imegimi\.jp|iroimon\.com|isa-hide\.com|ishaku\.com|isyaku\.com|iyamugi\.com|oremitakotoka\.com|oukou-onchi\.com|o-zuki\.com|ujibakama\.com|uruike\.com|usuma\.com|uuryuu\.com)/
+				/i(aigiri\.com|chiya-boshi\.net|e-yasu\.com|fdef\.jp|inaa\.net|iyudana\.net|kaduchi\.com|kidane\.com|mawamukashi\.com|modurushiki\.com|na-ka\.com|nukubou\.com|s-mine\.net|zakamakura\.com|za-yoi\.net)/
+				/j(akou\.com|orougumo\.com|ougennotuki\.com|ounin\.jp|youkamachi\.com)/
+				/k(acchaokkana\.com|achoufuugetu\.net|agebo-shi\.com|agechiyo\.net|agennotuki\.com|age-tora\.com|age-tsuna\.com|aginawa\.jp|akukaku-sikajika\.com|akurezato\.com|anashibari\.jp|an-be\.com|ane-tsugu\.com|anpaku\.jp|an-suke\.com|arakasa\.com|arakuri-yashiki\.com|aramatu\.com|arou\.jp|asabuta\.net|asajizo\.com|atsu-ie\.com|atsu-yori\.com|emuridama\.com|enkenpa\.net|en-nyo\.com|en-shin\.net|esagiri\.net|ibisuwokaesu\.com|imodameshi\.com|inbyoubu\.com|inugoshi\.net|irisute-gomen\.com|itunebi\.com|iyo-masa\.com|oborezakura\.com|oiwazurai\.com|ojyuro\.com|omusou\.jp|onjiki\.jp|onohashigure\.com|uchinawa\.com|umadori\.com|umogakure\.com|urushiunai\.jp|usakage\.com|usarikatabira\.jp|utinawa\.com|yarame\.com)/
+				/m(aeda-keiji\.com|aiougi\.com|a-jide\.com|akibishi\.jp|akibisi\.net|ameshibori\.net|anjushage\.com|asa-mune\.jp|ichikusa\.jp|ikosi\.com|itarashidango\.com|itsu-hide\.com|itsu-nari\.com|izubasyou\.com|izusasi\.net|omijioroshi\.com|onogoshi\.com|oraimon\.com|oryou\.com|oto-chika\.com|oto-nari\.com|outounai\.com|ukade\.jp|u-sashi\.com)/
+				/n(abebugyou\.com|aga-masa\.com|agesen\.net|amekuji\.jp|amidaame\.com|ao-shige\.com|ekonikoban\.org|emachinotsuki\.com|emiminimizu\.com|engu\.jp|igamushi\.net|inja-mania\.jp|inja-web\.net|inja-x\.jp|inpou\.jp|obody\.jp|obu-naga\.net|omaki\.jp|oppikinaranu\.com|ukarumi\.net|ukenin\.jp|ukimi\.com|usutto\.jp)/
+				/o(bihimo\.com|bijime\.net|boroduki\.com|bunko\.com|daikansama\.com|furegaki\.com|haguro\.com|hitashi\.com|huda\.com|hugi\.com|hyakudo-mairi\.com|iran\.org|jaru\.jp|kitsune\.com|koshi-yasu\.com|koshi-yasu\.net|kunohosomichi\.net|megumi\.com|miki\.com|nasake\.com|ngaeshi\.biz|nmitsu\.jp|nushi\.com|nushimowaruyonou\.com|oban-koban\.com|-oku\.jp|otugomori\.com|sonae\.com|teage\.net|todo\.net|togirisou\.com|toshiana\.com)/
+				/r(akugan\.com|an-maru\.net)/
+				/s(a-kon\.net|ankinkoutai\.com|annasubi\.com|arashi\.com|ara-yashiki\.com|a-suke\.com|engoku-jidai\.com|ensyuuraku\.com|essya\.net|hakunage\.net|hichihuku\.com|hidareyanagi\.com|hikanosuke\.net|hikisokuzekuu\.net|himazu-yoshihiro\.net|hime-saba\.com|himo-yake\.com|hin-gen\.jp|hinobiashi\.com|hiriagari\.com|hirikakusazu\.com|hironuri\.com|hisyou\.com|hiteyattari\.com|iromuku\.com|odenoshita\.com|okowonantoka\.com|okushinbutsu\.com|onnabakana\.com|oragoto\.net|oregashi\.com|oudesune\.net|uichu-ka\.com|uki-ari\.net|ukimakaze\.com|uppa\.jp|yakuhati\.com|yanari\.com|yarasoujyu\.com|yogyoumujou\.com|youtikubai\.com|yuriken\.jp)/
+				/t(abigeinin\.com|ada-katsu\.com|aka-kage\.com|akara-bune\.net|amajiri\.com|anmono\.com|enohiragaeshi\.com|he-ninja\.jp|irirenge\.com|iyogami\.com|obiiro\.jp|onosama\.jp|oshi-ie\.com|oumoku\.com|suchigumo\.com|sunokakushi\.com|ubakurame\.com|udura\.com|umabeni\.com|urigane\.com|urubeotoshi\.com|urukusa\.com|utakazura\.com|uzigiri\.com|uzikaze\.com|yabo\.com|yanoyu\.net|yonmage\.com|urigane\.com)/
+				/u(ijin\.com|ji-masa\.com|kime\.org|ndeinosa\.com|ntokosho\.com|shimairi\.com|sunuri\.com|unyan\.com)/
+				/w(akatono\.jp|arabimochi\.net|arabuki\.net|aremowaremoto\.com|a-sanbon\.com)/
+				/x(xxxxxxxx\.jp)/
+				/y(aekumo\.com|ahansugi\.com|akigote\.com|akiin\.net|akiuchi\.com|amagomori\.com|amanoha\.com|angotonaki\.com|ohamanzokuja\.com|okinihakarae\.com|okochou\.com|omibitoshirazu\.com|oshi-moto\.com|oshi-tsugu\.com|ukigesho\.com|ukihotaru\.com|ukimizake\.net|uki-mura\.net|ukishigure\.com|umenogotoshi\.com|u-nagi\.com|u-yake\.com)/
+				/z(ashiki\.com|atunen\.com|ouri\.jp)/
+		!! サブドメイン
+			||adm.shinobi.jp^
+	!!! <end>
+
+	!!! [楽天]
+			!! 許可対象
+			!! 抑止対象
+				/(static|xml|hbb|anz|)\.(afl|affiliate|rd|pitatto)\.rakuten\.co\.jp/
+				!	||hbb.afl.rakuten.co.jp^
+				!	||static.affiliate.rakuten.co.jp^
+				!	||xml.affiliate.rakuten.co.jp^
+				!	||anz.rd.rakuten.co.jp^
+				!	||pitatto.rakuten.co.jp/image/*
+				||image.infoseek.rakuten.co.jp/common/footer/css/grpRakutenLinkArea.css
+				rakuten.co.jp##dl[class="hotKeywords"]
+				rakuten.co.jp##div[class="partsRanking"]
+				rakuten.co.jp##div[class="partsBnr last"]
+				rakuten.co.jp##script[src*="rakuten.co.jp/js/advertise.js"]
+				rakuten.co.jp##p[class="banner"]
+			!! 外部貼り付け
+				##A[href*="afl.rakuten.co.jp/"]
+				##IFRAME[src$="adv/rakuten/index.html"]
+				##IMG[title^="[rakuten.co.jp]"]
+				##DIV[id="rakuten_top"]
+			!! afl.
+				afl.rakuten.co.jp##HTML
+				##script[src*="afl.rakuten.co.jp"]
+				##iframe[src*="afl.rakuten.co.jp"]
+				##img[src*="afl.rakuten.co.jp"]
+			!! static.
+				affiliate.rakuten.co.jp##HTML
+				##script[src*="affiliate.rakuten.co.jp"]
+				##iframe[src*="affiliate.rakuten.co.jp"]
+				##img[src*="affiliate.rakuten.co.jp"]
+
+	!!! <end>
+
+	!!! [ranktool] ランキングツールの非表示化
+		||apserver.net
+			##A[href*="apserver.net"]
+			##IFRAME[src*="apserver.net"]
+			##SCRIPT[src*="apserver.net"]
+		||ziyu.net^
+			##A[href*="ziyu.net"]
+			##script[src*="ziyu.net"]
+		||link-trade.net^
+			##A[href*="link-trade.net"]
+			##IFRAME[src*="link-trade.net"]
+			##SCRIPT[src*="link-trade.net"]
+		||with2.net^
+			##A[href*="with2.net"]
+			##SCRIPT[src*="with2.net"]
+		||awasete.com^
+			##A[href*="awasete.com"]
+			##SCRIPT[src*="awasete.com"]
+		||blogmura.com^
+			##A[href*="blogmura.com"]
+			##SCRIPT[src*="blogmura.com"]
+		||e-pagerank.net^
+			##A[href*="e-pagerank.net"]
+			##SCRIPT[src*="e-pagerank.net"]
+		||feedmeter.net^
+			##A[href*="feedmeter.net"]
+			##SCRIPT[src*="feedmeter.net"]
+		||accesstrade.net^
+			##A[href*="accesstrade.net/"]
+			##IFRAME[src*="accesstrade.net/"]
+
+
+	!!! <end>
+
+	!!! [YahooAd]
+			!! 抑止対象
+				##div[class="yahooAd"]
+				||ov.yahoo.co.jp
+				||ai.yimg.jp/bdv/*
+			!! yahoo内限定
+				yahoo.co.jp##DIV[id*="pos-lrec"]
+				yahoo.co.jp##DIV[id*="yregtxt"]
+				yahoo.co.jp##TD[class*="prBox"]
+
+
+	!!! <end>
+
