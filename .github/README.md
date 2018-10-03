@@ -8,7 +8,7 @@ This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, 
 
 This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed considerable energy and effort into, for your enjoyment.
 
-Official repo mirror: http://repo.or.cz/FilterMirrorRepo.git/tree/refs/heads/master (An HTTPS version is slated to arrive in October 2018.)
+Official repo mirror: https://repo.or.cz/FilterMirrorRepo.git/tree/refs/heads/master
 
 ## List of lists
 
