@@ -52,7 +52,7 @@ The list's name | Filename in this repo | Badges     | Description (Engl
 • Testing out lists that are marked as _Beta_, and double-checking the syntaxes of and testing the lists that are marked as _Alpha_. <br>
 • Testing box-removal filters on widescreen monitors, since I almost always test my filters on a 9:16 portrait monitor. <br>
 • Telling me if the national lists remove things that in fact shouldn't be removed (e.g. Non-sponsored articles, entire pages, etc.). Bonus points if you know which filter entry it was that caused the problem. <br>
-• Asking Adblock Plus to support generic domains in blocking rules, which they currently don't seem to feel bothered to do, judging by [this forum thread](https://adblockplus.org/forum/viewtopic.php?f=23&t=54983&p=174060).
+• Showing your support for wildcard domains in element rules when using Adblock Plus, such as in [this issue tracker thread](https://issues.adblockplus.org/ticket/6773).
 
 I allow both _Issues_ and _Pull requests_ reports about any of the above, for the time being. Don't be shy to ask/tell me.
 
