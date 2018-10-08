@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: 🏡 Imres filtre
-! Version: 08October2018v2-Personal
+! Version: 08October2018v3-Personal
 ! Expires: 12 hours
 !#include BrowseWebsitesWithoutLoggingIn.txt
 !#include Anti-IMDB%20List.txt
@@ -593,6 +593,8 @@ youtube.com###logo
 ||vault.bitwarden.com/images/boxed-bg.png$image
 ||youtube.com/tv^
 3dsiso.com###ad_global_above_footer
+twitch.tv##.tw-tower--gutter-sm.tw-tower--180.tw-tower.tw-flex-wrap > div:has-text(Battle Royale)
+twitch.tv##.tw-animated-glitch-logo
 
 ! ↓ Below are categories that may or may not get independent lists for public use one day. ↓
 ! And yes, there's a reason why a.txt is for private use only: It shows the seething despisement I have against large chunks of planet Earth.
@@ -659,31 +661,20 @@ canaldigital.no##li.channel:has-text(Kanal 10)
 canaldigital.no##li.channel:has-text(Visjon Norge)
 
 ! Twitch: Pure Viewing Experience
-twitch.tv###ember1623
-twitch.tv###nav_games
-twitch.tv##.card.card--xs.card--row.sc-card.js-recommended-channel
-twitch.tv##.flex__item.scroll.sc-list-container.js-social-column-list-container
-twitch.tv##.js-offer-hover
-twitch.tv##.notification__number-unread.pill--red.pill.flex--verticalCenter.flex--horizontalCenter.flex
-twitch.tv##.prime-crown__new-offer-count.pill--red.pill.flex--verticalCenter.flex--horizontalCenter.flex
-twitch.tv##.prime-offers
+! Removes the "Recommended channels" section when you're logged on
 twitch.tv##.recommended-channels
-twitch.tv##.social-column.js-social-column.flex.flex--column
-twitch.tv##.svg-gp_crown
-twitch.tv##.svg-logo_twitch
-twitch.tv##.top-nav__home-link
-twitch.tv##.tse-scroll-content.js-social-column-list
-twitch.tv##.tw-animation--bounce-in.tw-animation--timing-ease-in
-twitch.tv##.tw-c-text.blue-bar
+
+! Removes the "Recommended channels" section when you're not logged on
+twitch.tv##.tw-full-width > .tw-mg-b-2
+
+! Removes the spacing between the video player and the sidebars
 twitch.tv##.tw-pd-t-2.tw-pd-x-3:style(padding-left: 2px !important; padding-right: 3px !important)
-twitch.tv##.tw-pd-t-3
-twitch.tv##.tw-svg__asset--inherit.tw-svg__asset--crown
-twitch.tv##.tw-svg__asset--inherit.tw-svg__asset--logotwitch.tw-svg__asset
-twitch.tv##.warp__item.js-recommended-channel
-twitch.tv##.warp__list.js-offers.ember-view
-##.tw-pill--notification.tw-pill
-##.tw-relative.prime-offers
-###tw-relative.prime-offers
+
+! Removes suggestions from the "Following" page
+twitch.tv##.tw-pd-3 > div:nth-of-type(5)
+
+! Removes the blue bar on the front page, that I presume is only used to advertise for Twitch Prime
+twitch.tv##.blue-bar
 
 ! Anti-'Doki Doki Literature Club'
 ##a[href="/memes/subcultures/doki-doki-literature-club"]
