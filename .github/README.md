@@ -10,7 +10,7 @@ This is a hobby project of mine, in which I work just as much on these lists and
 
 Official repo mirror: https://repo.or.cz/FilterMirrorRepo.git/tree/refs/heads/master
 
-## List of lists
+## List of lists (Currently outdated to due recent rapid changes)
 
 ### Regional lists:
 
