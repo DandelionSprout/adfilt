@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: 💺 Anti-IMDB List
-! Version: 08October2018v1-Beta
+! Version: 14October2018v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically the hipsters that run around on IMDB? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims solely to support advanced adblockers (e.g. not Adblock Plus), to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -11,8 +11,7 @@ tv.nu,sfanytime.com##.imdb
 ##.interaction-block > .imdb-container
 
 ! Category: Google
-! I give my heartfelt thanks to Frellwit (https://github.com/lassekongo83) for figuring out and creating the immediately-below entry.
-google.*##:xpath(//a[text()[contains(., 'IMDb')]]/parent::h3/parent::div[@class="rc"]/div[@class="s"]/div/div[contains(@class, 'slp') and contains(@class, 'f')])
+google.*##:xpath(//*[text()[contains(., 'IMDb')]]/parent::*/parent::div/parent::div//*[contains(@class, 'slp') and contains(@class, 'f')])
 
 ! Category: Amazon
 amazon.*##.imdb-rating
