@@ -1,6 +1,6 @@
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
 ! Expires: 3 days
-! Version: 03October2018v1-Beta
+! Version: 16October2018v1-Beta
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum! Currently works with 9 sites, incl. MeWe, Pixiv, GitHub, Vidlii, Prisjakt, PayPal, and Google Play. Only recommended for ≥1440px wide monitors.
 ! Special thanks go out to elypter (https://github.com/elypter), who inadvertently taught me that adblockers can be used to edit elements' CSS styles.
@@ -55,55 +55,41 @@ vidlii.com##.ln2:style(width:220px !important)
 vidlii.com##input#em:style(width:340px !important)
 
 ! Category: MeWe
-mewe.com##.c-mw-post:style(width:800px; max-width:none;)
-mewe.com##.postbox-placeholder:style(width:1200px; max-width:none)
-mewe.com##.header_inner:style(width:2100px; max-width:none)
-mewe.com##.main-header:style(width:130%;margin-left:-300px;margin-right:-300px)
-mewe.com##.c-mw-postbox-placeholder:style(width:800px !important; max-width:none !important)
-mewe.com##.postbox-placeholder_textarea:style(width: 800px;max-width:none)
-mewe.com##.postbox:style(width:800px)
-mewe.com##.myworld > .c-mw-postbox-placeholder:style(max-width:none)
-mewe.com##.media-dialog_inner:style(max-height:950px !important;max-width:none !important)
-mewe.com##.media-dialog_post--comment-fixed:style(width:1000px !important)
-mewe.com##.c-mw-postbar:style(width:800px)
-mewe.com##.win-scrollbar > .c-mw-post:style(width:690px)
-mewe.com##.win-scrollbar > .c-mw-postbar:style(width:690px)
-mewe.com##.sidebar-right-group:style(margin-left:190px !important)
-mewe.com##.small-chat:style(min-width:325px !important)
-mewe.com##.c-app-group:style(width:1400px !important; margin-left:0px !important;justify-content: center !important; max-width: none !important)
-mewe.com##.c-app-group-feed:style(justify-content: center !important)
-mewe.com##.c-mw-group-header:style(width:82% !important)
-mewe.com##.chat-window_body:style(width:1130px !important;overflow-x:visible !important;overflow-y:visible !important)
-mewe.com##.c-app-chat-index:style(margin:0 0 !important;overflow-x:visible !important;overflow-y:visible !important;width:1220px)
-mewe.com##.privacymail:style(overflow:visible !important;justify-content: center !important)
-mewe.com##.chat-message_content:style(max-width:1300px !important)
-mewe.com##.chat-window_send-form:style(max-width:1300px !important)
-mewe.com##.c-mw-chat-window:style(width:1125px !important)
-mewe.com##.postbox_header_textarea:style(max-width:none !important)
-mewe.com##.header_nav_list:style(width:700px !important)
-mewe.com##.c-app-route.group:style(justify-content:center !important)
-mewe.com##.c-mw-comments-table:style(width:800px !important)
-mewe.com##.comment.c-mw-comment.not-reply.in-media-dialog.ember-view:style(width:675px)
-mewe.com##.c-mw-emoji-picker.ember-view:style(margin-left:-280px !important)
-mewe.com##.content-all-wrapper:style(max-width:1400px)
-mewe.com##.c-profile-header:style(width:1140px !important)
-	
+mewe.com##.header_inner:style(max-width: none !important; margin: 0px 20px !important)
+mewe.com##.header_nav_list:style(width:40vw)
+mewe.com##.header_logo_wrapper:style(margin: 0px 30px !important)
+mewe.com##.header_notification-btn:style(margin: 0px 60px !important)
+mewe.com##.content-all-wrapper:style(max-width: none; width: 98vw)
+mewe.com##.c-mw-post:style(max-width: none)
+mewe.com##.c-mw-postbox-placeholder:style(max-width: none !important)
+mewe.com##.postbox_header_textarea:style(max-width: none !important)
+
+! Media viewer
+mewe.com##.media-dialog_post--comment-fixed:style(width:40vw !important)
+mewe.com##.media-dialog_inner:style(max-width: none)
+mewe.com##.media-dialog.content-high.c-mw-comment-your:style(width:40vw !important)
+
 ! Emoji picker
-mewe.com##.c-mw-emoji-picker:style(width:670px !important; margin-left: -270px)
+mewe.com##.c-mw-emoji-picker:style(width:670px !important; margin-left: -300px !important)
 mewe.com##ul.like-category li:style(width:45px !important)
 mewe.com##ul.category li:style(width:45px !important)
 mewe.com##.search.active:style(padding-top:6px !important; padding-bottom:3px !important)
-	
+
+! Groups
+mewe.com###content-wrapper:style(max-width: none !important)
+mewe.com##.group-feed-routable_feed:style(flex-basis: 100% !important)
+mewe.com##.c-mw-group-whats-new.ember-view:style(max-width: 15vw !important)
+mewe.com##.sidebar-right-group:style(width: auto !important)
+
+! Fullscreen chat
+mewe.com##.chat-message_content:style(max-width: 100% !important)
+
 ! Search results
-mewe.com##.c-mw-smart-search:style(left:-300px !important;width:1800px !important)
-mewe.com##div.smart-search_results:style(margin-left:240px !important;max-width:none !important;width:1600px !important)
-mewe.com##div.smart-search-group_text:style(max-width:none !important;width:830px !important)
-	
+mewe.com##.dialog_inner:style(max-width: none !important; padding-right: 45px !important)
+mewe.com##.smart-search_results:style(max-width: none !important; width: 77vw !important)
+
 ! Userpages
-mewe.com##.app-profile:style(margin-left:2px !important)
-mewe.com##.app-profile.c-app-profile > .flex-row:style(max-width:none !important)
-mewe.com##.app-profile.c-app-profile > .flex-row .clearfix:style(max-width:none !important)
-mewe.com##.c-app-profile-posts:style(width:1150px !important)
+mewe.com##.profile-posts-routable_feed:style(flex-basis: 100% !important)
 
 ! Category: Pixiv
 ! Bookmarks
