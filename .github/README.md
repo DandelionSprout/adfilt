@@ -47,7 +47,7 @@ The list's name | Filename in this repo | Badges     | Description (Engl
 ## I hereby request help from other people with:
 
 • Discovering filters that I may have missed, especially on websites that I refuse to visit due to personal tastes (e.g. far-right "newssites", clothes-"selling" scam shops, conspiracist mouthpiece blogs, and so on). <br>
-• Telling me that you're using those lists, through taking [a quick user survey](https://goo.gl/forms/nSzVy6NKXpfWWEqk1) on Google Forms, and/or by giving this repository a ꙨWatch and/or ★Star. <br>
+• Telling me that you're using those lists, through taking [a quick user survey](https://docs.google.com/forms/d/e/1FAIpQLSc7DB9MKrUTbF4znDQ7LKdy4EpSciL6ooh5ru-HUZkdGxmpKg/viewform) on Google Forms, and/or by giving this repository a ꙨWatch and/or ★Star. <br>
 • Testing out lists that are marked as _Beta_, and double-checking the syntaxes of and testing the lists that are marked as _Alpha_. <br>
 • Testing box-removal filters on widescreen monitors, since I almost always test my filters on a 9:16 portrait monitor. <br>
 • Telling me if the national lists remove things that in fact shouldn't be removed (e.g. Non-sponsored articles, entire pages, etc.). Bonus points if you know which filter entry it was that caused the problem. <br>
@@ -61,10 +61,11 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 ## The tools that I use:
 
-• [Checker for redundant/duplicate filter entries](https://arestwo.org/famlam/redundantRuleChecker.html), made by Famlam. It does however not account for uBO-syntax-specific entries. ([Alternate link](https://web.archive.org/web/20171209102004/https://arestwo.org/famlam/redundantRuleChecker.html)) <br>
-• [Recentmost tool I used to test IP server availability](https://github.com/funilrys/funceble), made by [Funilrys](https://github.com/funilrys).  (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead). <br>
+• [Checker for redundant filter entries and for ABP syntaxes](https://arestwo.org/famlam/redundantRuleChecker.html), made by Famlam. It does however not account for uBO-syntax-specific entries. ([Alternate link](https://web.archive.org/web/20171209102004/https://arestwo.org/famlam/redundantRuleChecker.html)) <br>
+• [Recentmost tool I used to test IP server availability](https://github.com/funilrys/PyFunceble), made by [Funilrys](https://github.com/funilrys).  (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead). <br>
 • To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed. <br>
-• To make the GitHub websites a lot wider on the user-end, and thus make the tables above display in a better way: [Dandelion Sprout's Website Stretcher](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Website%20Stretcher.txt&title=Dandelion%20Sprout's%20Website%20Stretcher), whose GitHub entries are based on [GitHub Wide](https://userstyles.org/styles/108591/github-wide) by [cfoellmann](https://userstyles.org/users/206217)
+• To make the GitHub websites a lot wider on the user-end, and thus make the tables above display in a better way: [Dandelion Sprout's Website Stretcher](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Website%20Stretcher.txt&title=Dandelion%20Sprout's%20Website%20Stretcher), whose GitHub entries are based on [GitHub Wide](https://userstyles.org/styles/108591/github-wide) by [cfoellmann](https://userstyles.org/users/206217) <br>
+• To easily create GitCDN links to the lists, in case anyone have list connection problems: [GitHub GitCDN Button](https://greasyfork.org/nb/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul)
 
 ### Ways one can use [Sublime Text](https://www.sublimetext.com/) (made by Jon Skinner and Will Bond) to improve his/her filter lists:
 
@@ -78,6 +79,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 • [gorhill](https://github.com/gorhill), [Collin Barrett](https://github.com/collinbarrett), and the [AdGuard team](https://github.com/AdguardTeam), for having included at least one of my lists into uBlock Origin, Filterlists, and AdGuard respectively. <br>
 • [lassekongo83](https://github.com/lassekongo83) for being the best filter writer on planet Earth, for helping heaps of people (Me included) with writing specific filters, and for having made several lists that I often look through to learn more about how to write filters. <br>
-• [THEtomaso](https://github.com/THEtomaso) for waterproofing parts of the Norwegian list, and for several contributions to the same list.
+• [THEtomaso](https://github.com/THEtomaso) for waterproofing parts of the Norwegian list, and for several contributions to the same list. <br>
+• The contributor communities that surround uBlock Origin and Nano Adblocker in general, for generally being helpful, reasonably well debating, and for providing various solutions and advices.
 
 If you've contributed to or helped me and you aren't on the above list, don't feel bad about it. I still give my regular thanks to you.
