@@ -9,16 +9,20 @@ At the moment, the list is by default able to:
 6) Change Twitter's _jpg:large_-pseudoformatted images to standard JPG ones.
 7) Make R-18 Pixiv images slightly less blurry if you're not logged on.
 8) Redirect Google Play's app store's frontpage to its non-game category.
+9) Make it so that Reddit's 2018 GUI is used whenever possible, instead of their mid-2010's GUI.
+10) Shorten Google search result URLs, to make them easier to link to.
 
 These things are also included in the list, but must be turned on manually:
-1) Make it so that YouTube's and Reddit's mid-2010's GUI is used whenever possible, instead of their GUIs anno 2018.
+1) Make it so that YouTube's and Reddit's mid-2010's GUIs are used whenever possible, instead of their GUIs anno 2018.
 2) Edit Pixiv's search conditions, so that Latin tags are not case-sensitive and thus give more search results.
-3) Redirect Facebook links to facebookcorewwwi.onion, which is Facebook's official Tor address.
+3) One showcase of silly YouTube video replacement fun.
 
-The list has been successfully tested with http://einaregilsson.com/redirector/ on Chrome and Basilisk. It has also been tested with at least two other extensions, which it did not work with.
+It's also possible to redirect regular webpage links into .onion pages (e.g. for Facebook and DuckDuckGo), although those entries have now been spun off into a separate list, called <b>Tor Redirector List</b>.
+
+The lists have been successfully tested with http://einaregilsson.com/redirector/ on Chrome and Basilisk. They have also been tested with at least two other extensions, which it did not work with.
 
 To "download" the list file in a usable capacity, mark all the text in [the JSON file](https://github.com/DandelionSprout/adfilt/blob/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/DandelionSproutRedirectorList.json), copy it into a local text editor, and save it as a JSON file.
 
-If you were to not fancy some of the entries in the list, you can of course delete or disable them individually in Redirector's settings.
+If you were to not fancy some of the entries in the lists, you can of course delete or disable them individually in Redirector's settings.
 
-If you have any requests, wishes or problems with this list, or just want to say hi to me, feel free to tell me about it.
+If you have any requests, wishes or problems with this lists, or just want to say hi to me, feel free to tell me about it.
