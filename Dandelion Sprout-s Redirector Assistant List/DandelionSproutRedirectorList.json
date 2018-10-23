@@ -496,51 +496,26 @@
             ]
         },
         {
-            "description": "Redirect Facebook.com links to Facebook's .onion Tor server (Only recommended for those who depend on Facebook Onion)",
-            "exampleUrl": "https://en-gb.facebook.com/Sonic/",
-            "exampleResult": "https://en-gb.facebookcorewwwi.onion/Sonic/",
+            "description": "Having a bit of fun with Telenor Norway's new TV pages",
+            "exampleUrl": "https://www.youtube.com/embed/TPYxbMvgR30?rel=0&amp;hd=1&amp;controls=0&amp;autoplay=1&amp;loop=1&amp;showinfo=0&amp;iv_load_policy=3&amp;mute=1&amp;playlist=TPYxbMvgR30&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telenor.no&amp;widgetid=1",
+            "exampleResult": "https://www.youtube.com/embed/xKm7GVceWQQ?rel=0&amp;hd=1&amp;controls=0&amp;autoplay=1&amp;loop=1&amp;showinfo=0&amp;iv_load_policy=3&amp;mute=1&amp;playlist=TPYxbMvgR30&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telenor.no&amp;widgetid=1",
             "error": null,
-            "includePattern": "*.facebook.com/*",
+            "includePattern": "https://www.youtube.com/embed/TPYxbMvgR30*",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "$1.facebookcorewwwi.onion/$2",
+            "redirectUrl": "https://www.youtube.com/embed/xKm7GVceWQQ$1",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": true,
             "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Redirect DuckDuckGo.com links to DuckDuckGo's .onion Tor server (Only recommended for those who depend on Tor)",
-            "exampleUrl": "https://duckduckgo.com/?q=john+madden&t=h_&ia=news",
-            "exampleResult": "https://3g2upl4pq6kufc4m.onion/?q=john+madden&t=h_&ia=news",
-            "error": null,
-            "includePattern": "*://duckduckgo.com*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://3g2upl4pq6kufc4m.onion$2",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": true,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Redirect New York Times links to New York Times's .onion Tor server (Only recommended for those who depend on Tor)",
-            "exampleUrl": "https://www.nytimes.com/2018/08/31/sports/colin-kaepernick.html?action=click&module=Editors%20Picks&pgtype=Homepage",
-            "exampleResult": "https://www.nytimes3xbfgragh.onion/2018/08/31/sports/colin-kaepernick.html?action=click&module=Editors%20Picks&pgtype=Homepage",
-            "error": null,
-            "includePattern": "*://www.nytimes.com*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.nytimes3xbfgragh.onion$2",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": true,
-            "appliesTo": [
-                "main_frame"
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "other"
             ]
         }
     ]
