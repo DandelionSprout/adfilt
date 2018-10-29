@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: 🏡 Imres filtre
-! Version: 27October2018v1-Personal
+! Version: 29October2018v1-Personal
 ! Expires: 12 hours
 !#include BrowseWebsitesWithoutLoggingIn.txt
 !#include Anti-IMDB%20List.txt
@@ -677,6 +677,8 @@ www.nrk.no##.nrk-xs-12of12:-abp-contains(Kvise)
 pixiv.net##._25taFA4:-abp-contains(Zapor)
 ||i1.wp.com/www.datahjelperne.no/wp-content/uploads/2018/06/Skjermbilde-55.jpg$image
 pixiv.net##._25taFA4:-abp-contains(ノースカロライナパワー+G)
+twitch.tv##.vod-message:has-text(StabZ)
+twitch.tv##.chat-line__message:has-text(StabZ)
 
 ! Anti-'We Bare Bears'
 viaplay.*##.Item-front-3_pms:-abp-has(a[href*="vi-bare-bjorner"])
@@ -718,9 +720,12 @@ reddit.com##ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/all/"])
 reddit.com##ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/popular/"])
 reddit.com##ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
 reddit.com##.s1ljbxcy-3
+reddit.com##div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
 reddit.com##:xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(10)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:-abp-has(head > meta[content*="r/ihadastroke:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:-abp-has(head > meta[content*="r/BoneAppleTea:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:-abp-has(head > meta[content*="r/BestOfReports:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:-abp-has(head > meta[content*="r/europe:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(25)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
+
+! Pre-prompt banners that ask if you want to receive browser notifications from them (which you don't want to do unless it's a forum).
+shoutmeloud.com###pe_confirm
