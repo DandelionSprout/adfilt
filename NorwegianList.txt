@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
-! Version: 18November2018v3
-! Version: 181120183 (for Adblock Plus' issue report system)
+! Version: 22November2018v1
+! Version: 221120181 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts norske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Norwegian Filters for tidier websites
 ! Expires: 12 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
-! For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
-! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+! 🇳🇴: For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
+! 🇬🇧: For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! This list filters away a few EEC cookie notifications. So don't blame the sites if they "fail" to uphold that particular law.
 !#include NorwegianExtensionsForUBO&Nano.txt
 !#include Sámegiella-interneahttalisttu.txt
@@ -25,6 +25,7 @@
 ###inlineannonse
 ###viewItemAdsenseBanner
 ###viewItemEniroBanner
+##.ad
 ##.ad-centered
 ##.ad-nexus-ad
 ##.ad_mobil_API
@@ -56,6 +57,7 @@
 ##a[href*="utm_source=Strossle"]
 ##a[href*="utm_source=strossle"]
 ##a[title="LeoVegas"]
+annonse$subdocument
 .no/ad/
 .no/ads/
 .oasfile
@@ -74,7 +76,7 @@
 1881.no##.ad-sleepy
 1881.no##.feature-promo
 @@||5e529.v.fwmrm.net/ad/$script,domain=dplay.no
-@@||acdn.adnxs.com/ast/ast.js$script,domain=vgtv.no|vg.no
+@@||acdn.adnxs.com/ast/ast.js$script,domain=vgtv.no
 @@||eurosport.no^$generichide
 @@||fwmrm.net/*MTG$script,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
 @@||fwmrm.net/ad/$xmlhttprequest,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
@@ -104,7 +106,6 @@ aftenbladet.no##.brandboard-ad
 ##div[id^="netboard_"][class^="ad "]
 ##div[id^="skyscraper"][class^="ad "]
 ##div[class="ad topBanner"]
-aftenposten.no,bt.no,fvn.no##.ad
 aftenposten.no##div[class*="df-width-60"]:-abp-has(div[class="ad netboard"])
 bt.no##div[class*="df-width-40"]:-abp-has(div[class*="ad "])
 bt.no,fvn.no##div[class*="df-width-60"]:-abp-has(div[class*="ad "])
@@ -134,7 +135,7 @@ dusken.no##.ad-in-column
 dusken.no##em
 dyrevennene.no##.td-footer-wrapper
 eavisa.com###billboard
-eavisa.com##[src="/bilder/erotikk1.jpg"]
+/bilder/erotikk1.jpg$domain=eavisa.com
 elkjop.no##.row.newsletter-signup
 elkjop.no##.swogo-wrapper.product-inspiration-wrapper.wrapper
 expedia.no##.extended-below-wizard-ads
@@ -191,7 +192,6 @@ klikk.no##.medium-5.small-6
 letsdeal.no##.remodal-is-opened.remodal-is-initialized.signup.remodal
 letsdeal.no##.remodal-is-opened.remodal-overlay
 letsdeal.no##.remodal-is-opened.remodal-wrapper
-lokal-avisen.no##.ad
 lokal-avisen.no##.header > .right:-abp-contains(ANNONSE)
 lokal-avisen.no##.title:-abp-contains(ANNONSE)
 lokal-avisen.no##.title:-abp-contains(Annonse)
@@ -272,15 +272,12 @@ trening.no###dt-netboard-middle
 trening.no###dt-top-banner
 tu.no##.adunit.ad-placeholder
 tu.no##.frontpage-top-poster-wrap
-tu.no##.top-poster-wrap
 tungt.no##.columns:-abp-has([src="http://stillingsarena.no/stillingsarena/feeds.wa2?_cmd=feedshoriz&size=980x285"])
 tungt.no##div.large-12.row:-abp-contains(MASCUS)
 tv.nrk.no##.overlay-shadow
 utdanningsnytt.no###Topbanner
 utdanningsnytt.no##.banner-right
 utdanningsnytt.no##fieldset
-veier24.no##.poster-placeholder
-veier24.no##.top-poster-wrap
 viafree.no#$#.cookie-bar + nav > #navBar {top: auto !important}
 viasport.no##div.libellus.is-visible
 viivilla.no##.native-ad-md
@@ -327,7 +324,6 @@ zoover.no###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-messag
 ||itpro.no/images/adheaders/
 ||karrierestart.no/Home/TopBannerContent$subdocument
 ||klikk.no/DBGfx/Ads/
-||kundeweb.aggressive.no/users/fotopia.no/bannere/
 ||media2.origo.no/images/
 ||mobilen.no/wip4/oc_scrollbar/
 ||no-vg.cdn.videoplaza.tv/creatives/
@@ -352,7 +348,8 @@ zoover.no###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-messag
 ||win-xp.no/images/banner
 ||yfrog.com/htzywuj:medium
 
-! Norsk Tipping, incl. poorly motivated lotto ads (A few football pool ads are fine in my book)
+! 🇳🇴: Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen tippereklamer er greit nok i mine øyne)
+! 🇬🇧: Norsk Tipping, incl. poorly motivated lotto ads (A few football pool ads are fine in my book)
 norsk-tipping.no##.no-bg.divider
 ##a[href^="https://www.norsk-tipping.no/lotteri/eurojackpot"]
 ##a[href^="https://www.norsk-tipping.no/lotteri/lotto"]
@@ -365,18 +362,21 @@ ba.no##a[href*="/x/5-8-"]
 seher.no##.css-vk53wn:-abp-contains(norsk tipping)
 side2.no###nt-box
 
-! Solcellespesialisten, loading issue
+! 🇳🇴: Solcellespesialisten, innlastingsproblem
+! 🇬🇧: Solcellespesialisten, loading issue
 ||wo.tc
 
-! Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
+! 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
+! 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
 @@||play2.qbrick.com/framework/modules/analytics/analytics.min.js$script
 
-! Multi-domain entries
-vg.no,e24.no,aftenposten.no,filmweb.no,itavisen.no,kino.no##.ad
+! 🇳🇴: Multidomeneoppføringer
+! 🇬🇧: Multi-domain entries
 komputer.no,natgeo.no,historienet.no,illvit.no##.wg-banner
 komputer.no,natgeo.no,historienet.no##.top-banner
 gamer.no,tek.no,digi.no##.products-carousel
 tv2.no,abcnyheter.no,medier24.no##a[href*="adform.net"]
+gamer.no,tu.no,veier24.no##.poster-placeholder
 svalbardposten.no,nab.no##.divider
 krs247.no,pensjonistferie.no#@##adsense
 minmote.no,godt.no##.adblock-info
@@ -385,9 +385,9 @@ barents.no,oskommune.no##.container-floating-notifications
 resett.no,steigan.no##.vc_empty_space
 digi.no,medier24.no##.ad-label-vertical
 finn.no,demokraten.no##.banners
-gamer.no,tu.no##.poster-placeholder
 side2.no,side3.no##a:not([href*="side3.no"]):not([href*="side2.no"]):not([href*=".blogg.no"]):-abp-has(figure[class*="img-container"])
 side2.no,side3.no##.channel-item:-abp-has(.content > [href*="/annonsebilag/"])
+veier24.no,tu.no##.top-poster-wrap
 
 ! VG
 vg.no###block-bannerad
@@ -409,7 +409,9 @@ e24.no##.swiper-slide
 ! ↓ Attempts to resolve how some frontpage articles are hard to open when using EasyPrivacy. ↓
 @@||schibsted.com/autoTracker$domain=www.vg.no
 
-! Cookie notifications
+! 🇳🇴: Infokapselbeskjeder
+! Denne listen har bare delvis som mål å fjerne infokapselplakater. For mer komplett dekning, gå til Filterlists.com, skriv inn 'cookies' i søkefeltet dens, og abonner på én eller flere av de listene.
+! 🇬🇧: Cookie notifications
 ! This list does only partially target removing cookie banners. For more complete coverage, go to Filterlists.com, type 'cookies' into its tag field, and subscribe to one or more of those lists.
 ||privacy.schibsted.com^
 tv2.no###tv2-cookie-alert
@@ -417,7 +419,8 @@ qxl.no###cookies
 dagsavisen.no##.cookie-acceptance
 subaru.no##.kake
 
-! Rules for entire websites, categorised to make it easier for me to make a \"hosts\" version of this list
+! 🇳🇴: Regler for hele nettsteder, som er kategorisert for å gjøre det enklere for meg å lage en «hosts»-versjon av denne listen
+! 🇬🇧: Rules for entire websites, categorised to make it easier for me to make a \"hosts\" version of this list
 ||ad.no.doubleclick.net^
 ||webclick.no^
 ||webhotell.enivest.no^
@@ -439,7 +442,9 @@ subaru.no##.kake
 ||flashbanner.no^
 ||bannere.oslonett.no^
 
-! Scam sites and virus sites (Do not visit them if you value your computers and wallets)
+! 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
+! Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no/sport
+! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
 ||skoonlineshopnorge.com^
 ||apple-account-locked.losjevegen.no^
@@ -499,7 +504,8 @@ subaru.no##.kake
 ! Admiral
 ||elderlyscissors.com^
 
-! Added on requests from fans and contributors
+! 🇳🇴: Lagt til etter forespørsel fra tilhengere og bidragsytere
+! 🇬🇧: Added on requests from fans and contributors
 nettavisen.no##.skyskraper
 nettavisen.no##.stuck
 nettavisen.no##.sticked
@@ -508,7 +514,6 @@ itavisen.no##.social
 ||sannsyn.com^$third-party
 aftenbladet.no,aftenposten.no,bt.no,e24.no,fvn.no##[style="cursor: pointer;"]
 aftenbladet.no,aftenposten.no,bt.no,e24.no,fvn.no,vg.no#?#span:-abp-contains(annonse)
-##iframe[src*="annonse"]
 alternativ-media.com##.wpa
 ektenyheter.no##.cm-message
 resett.no##.tdm-mobile-full
@@ -516,7 +521,9 @@ resett.no##a[href="https://resett.no/annonseweb/"]
 resett.no###cookie
 norgesavisen.no##.td-fix-index
 
-! De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out)
+! 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
+! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
+! 🇬🇧: De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out)
 ! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
 digi.no,tu.no##.faded-article-content:after
 dagbladet.no##.CTA-body-faded
@@ -527,7 +534,8 @@ medier24.no##.faded-article-content:after
 dn.no##.vrs-image-block__image-description-overlay
 vg.no##.v1Os6
 
-! Prisjakt cluttering
+! 🇳🇴: Rot på Prisjakt
+! 🇬🇧: Prisjakt cluttering
 ||cdn.pji.nu/g/campaigns/12/no/mainpage_header.png$image
 ||cdn.pji.nu/g/campaigns/4/xx/christmas_2017.png$image
 ||s3.pji.nu$domain=~pricespy.co.uk|~pricespy.ie|~pricespy.no.nz|~hintaopas.fi|~prisjakt.no
@@ -542,7 +550,8 @@ filmweb.no##.insc.mpu.hide-for-small-only
 filmweb.no##.topad.row
 filmweb.no###adPosContainerContent
 
-! TV2 Norway
+! 🇳🇴: TV2
+! 🇬🇧: TV2 Norway
 ##.tv2-ad
 ||tv2.no/s/lab/2.5/p/img/tv2-background.svg$image
 tv2.no###aabl-container
@@ -555,11 +564,13 @@ tv2.no##.spklw-post:-abp-contains(Annonsørinnhold)
 ! ↓ Attempting to fix a problem with voting online on Idol Norway. ↓
 @@||tv2.no/*/config/analytics.json$xmlhttprequest,first-party
 
-! Norway-related entries that have been suggested to major international lists, but which haven't been added to them yet or for long
+! 🇳🇴: Norgesrelaterte oppføringer som har blitt foreslått for store internasjonale lister, men som ikke har blitt lagt til dem som det er meg bekjent
+! 🇬🇧: Norway-related entries that have been suggested to major international lists, but which haven't been added to them yet or for long
 ! https://github.com/easylist/easylist/issues/1861
 @@_prebid_$domain=seher.no
 
-! Tracker whitelistings that are necessary for users of Prisjakt, Kickback, and Viatrumf
+! 🇳🇴: Hvitelisting av sporere som er nødvendige for brukere av Prisjakt, Kickback, og Viatrumf
+! 🇬🇧: Tracker whitelistings that are necessary for users of Prisjakt, Kickback, and Viatrumf
 @@||track.adtraction.com/t
 @@||clk.tradedoubler.com
 @@||solutions.tradedoubler.com
@@ -568,7 +579,9 @@ tv2.no##.spklw-post:-abp-contains(Annonsørinnhold)
 @@||redirects.tradedoubler.com/cdon/
 @@||clkuk.tradedoubler.com/*/nb-no
 
-! Norwegian-only versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
+! 🇳🇴: Norgeseksklusive versjoner for enkle reklameblokkerere, av flernasjonsoppføringer som er i utvidelsesfilen for avanserte reklameblokkerere; ettersom Adblock Plus og AdGuard for øyeblikket ikke støtter *-jokertegn i nettadressene til blokkeringsregler.
+! ABP diskuterer å støtte det i https://issues.adblockplus.org/ticket/6773.
+! 🇬🇧: Norwegian-only versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
 ! ABP is currently discussing supporting it in https://issues.adblockplus.org/ticket/6773.
 !#if !ext_ublock
 gamereactor.no###ad_video
