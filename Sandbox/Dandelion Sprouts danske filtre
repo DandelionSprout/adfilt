@@ -1,18 +1,30 @@
 [Adblock Plus 2.0]
 ! Title: 🎢 Dandelion Sprouts danske filtre
-! Version: 23November2018v2-Sandbox
+! Version: 23November2018v3-Sandbox
 ! Expires: 1 day
+##.block-AnnonceBlocksAdform
+alt.dk##.spklw-sponsored
+amino.dk###top-shadow-pad
+amino.dk##.ad624-60
+amino.dk##.ad624x60
+amino.dk##.sideAdRight
+amino.dk##.topAd930x180
+amino.dk##div.AminoBox:-abp-contains(Køb et):-abp-contains(Sponsorlink)
 avisen.dk##.Ad
-avisen.dk,bt.dk,sondagsavisen.dk,lokalavisen.dk,folketidende.dk##div.spklw-post-attr:-abp-has(div[class*="spklw-sponsored"])
+avisen.dk,bt.dk,sondagsavisen.dk,lokalavisen.dk,folketidende.dk,realityportalen.dk##div.spklw-post-attr:-abp-has(div[class*="spklw-sponsored"])
+bilmagasinet.dk##.horseshoe
+bilmagasinet.dk##.inline-block.full-width:-abp-has(div[class="content-label"]:-abp-contains(Annonce))
 bt.dk##.hidden-md-down.col-xl-12
 bt.dk##.sidebar.col-xl-4.col-lg-4.col-md-12.col-sm-12.col-xs-12
 computerworld.dk###computerworldleaderboard
 computerworld.dk##.candis-spot
+computerworld.dk##.columnTopFullWidth
 computerworld.dk##.dfp-ad
 computerworld.dk##.paragraphAd
 dba.dk##.marketing-container
 denstoredanske.dk###banner-zone-1
 denstoredanske.dk##.jubii-adunit
+edbpriser.dk##div.outer-top-vs.detail-block:-abp-has(div[id*="AdSpot"])
 ekstrabladet.dk###manipulate_monster
 ekstrabladet.dk##.advertorials
 ekstrabladet.dk##div:-abp-has(div.p-absolute–fill)
@@ -22,13 +34,20 @@ ekstrabladet.dk##div[class^="df-article-content "]:-abp-has(img[src*="annonce_sn
 ekstrabladet.dk##div[data-spcmngmtype="redaktionelt_betalt"] > .fnPersonalized
 ekstrabladet.dk#@##adtechWallpaper
 euroinvestor.dk,valutakurser.dk###ctl00_BannerContainerTop
+femina.dk##article.col-md-4.teaser--normal.teaser:-abp-has(div[class="annonce"])
 guloggratis.dk###bottomBanner
 guloggratis.dk###topBanner
 guloggratis.dk##.ad_form_header_right
 guloggratis.dk##.adservering-container
 guloggratis.dk##div.item_profa
+hardwareonline.dk##.centerfull
+hardwareonline.dk##.containerlefttop
 jyllands-posten.dk##.gridCol:-abp-has(div[class="annonceHolder"])
 landbrugsavisen.dk##.banner
+lokalavisen.dk##.custom-annoncer-wrapper
+lokalavisen.dk##.vdb_player:-abp-contains(ADVERTISEMENT)
+min-mave.dk##.topAdBannerFixed
+min-mave.dk##.vspacer
 nordjyske.dk##.print-to-web-row
 nordjyske.dk##div[class*="banner"]
 nordjyske.dk##div[class^="jubii-"]
@@ -36,37 +55,31 @@ politiken.dk##.ad
 politiken.dk##.u-clearfix.row--justify-center.row > .js-sticky-container
 tv2.dk##.ad-container
 tv2.dk##.o-deck:-abp-has(div[class^="ad ad-wide"])
-valutakurser.dk##.bottom_banner_div
-woman.dk##.gutter-bottom.article-content > div.wg-banner
-||opinion.peytz.dk$domain=landbrugsavisen.dk
-bilmagasinet.dk##.horseshoe
-bilmagasinet.dk##.inline-block.full-width:-abp-has(div[class="content-label"]:-abp-contains(Annonce))
-computerworld.dk##.columnTopFullWidth
-##.block-AnnonceBlocksAdform
-hardwareonline.dk##.centerfull
-hardwareonline.dk##.containerlefttop
-lokalavisen.dk##.custom-annoncer-wrapper
-lokalavisen.dk##.vdb_player:-abp-contains(ADVERTISEMENT)
 tv3.dk##.channelHeaderLogo
+tvguide.dk##div[id^="ad-"]
 vafo.dk##.adform-flexblock
 vafo.dk##.top_banner_container
+valutakurser.dk##.bottom_banner_div
+woman.dk##.gutter-bottom.article-content > div.wg-banner
 ||ads.xion.dk
 ||adserver.fbg.dk
 ||adserver.karamco.dk
 ||adserver.wagawaga.dk
 ||adservicemedia.dk
+||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
 ||cluster.chart.dk
 ||dk-ekstrabladet.vp.videoplaza.tv
 ||dk.panel.gemius.dk
 ||dotbanner.dk
 ||euroads.dk
 ||openadex.dk
+||opinion.peytz.dk$domain=landbrugsavisen.dk
 ||tns-gallup.dk
 ||userneeds.dk
+
+! Fixer et bannerproblem om man bruger "Fanboy's Social Blocking List"
+@@/images/*youtube.jpg$domain=realityportalen.dk
 
 ! Færøske opføringer
 nordlysid.fo##column[class*="ad-style"]:not([collapse])
 nordlysid.fo###ease_adgroup_3
-
-! Grønlandske opføringer
-! (Kategorien er tom for øjeblikket)
