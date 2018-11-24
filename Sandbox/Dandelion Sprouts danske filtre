@@ -1,14 +1,21 @@
 [Adblock Plus 2.0]
 ! Title: 🎢 Dandelion Sprouts nordiske filtre (Prototype uten norske oppføringer)
 ! Translated title: Dandelion Sprout's Nordic Filters (Prototype without Norwegian entries)
-! Version: 24November2018v1-Sandbox
+! Version: 24November2018v2-Sandbox
 ! Expires: 1 day
 
 ! Multi-national entries
 politiken.dk,frettabladid.is,vf.is##.ad
+eurogamer.*###leaderboard
+eurogamer.*##.advert
+ticketmaster.*##div[id^="ad-slot-"]
 
 ! Danske opføringer (Ikke fuldført)
 ##.block-AnnonceBlocksAdform
+##.clearfix.top_banner_container
+##.container-topbanner.container[ng-controller="bannerController"][ng-init="initBannerController('', false, '')"]
+##div.size-300x160.fixed-placement
+118.dk##.adform-adbox
 alt.dk##.spklw-sponsored
 amino.dk###top-shadow-pad
 amino.dk##.ad624-60
@@ -20,17 +27,33 @@ avisen.dk##.Ad
 avisen.dk,bt.dk,sondagsavisen.dk,lokalavisen.dk,folketidende.dk,realityportalen.dk##div.spklw-post-attr:-abp-has(div[class*="spklw-sponsored"])
 bilmagasinet.dk##.horseshoe
 bilmagasinet.dk##.inline-block.full-width:-abp-has(div[class="content-label"]:-abp-contains(Annonce))
+bold.dk###dstop
+bold.dk##a[class^="topad"]
+bornholm.nu##.bannercontent
+bornholm.nu##div.container:-abp-has(#left_sticky)
+borsen.dk##.native-ads
+borsen.dk##.own-ad:-abp-has([href*="://borsen.dk/sponsoreret"])
+borsen.dk##.side-banner
 bt.dk##.hidden-md-down.col-xl-12
 bt.dk##.sidebar.col-xl-4.col-lg-4.col-md-12.col-sm-12.col-xs-12
 computerworld.dk###computerworldleaderboard
+computerworld.dk##.ad
 computerworld.dk##.candis-spot
 computerworld.dk##.columnTopFullWidth
 computerworld.dk##.dfp-ad
 computerworld.dk##.paragraphAd
+dagens.dk##.banner
+dagens.dk##.col-sticky > div > p
+dagens.dk##.col-sticky > p
+dailyrush.dk##.dr-medium-rectangle
+dailyrush.dk##.dr-top-banner
+dailyrush.dk##.td-header-rec-wrap
 dba.dk##.marketing-container
 denstoredanske.dk###banner-zone-1
 denstoredanske.dk##.jubii-adunit
+dust2.dk##.banner
 edbpriser.dk##div.outer-top-vs.detail-block:-abp-has(div[id*="AdSpot"])
+edc.dk##.ad
 ekstrabladet.dk###manipulate_monster
 ekstrabladet.dk##.advertorials
 ekstrabladet.dk##div:-abp-has(div.p-absolute–fill)
@@ -40,7 +63,15 @@ ekstrabladet.dk##div[class^="df-article-content "]:-abp-has(img[src*="annonce_sn
 ekstrabladet.dk##div[data-spcmngmtype="redaktionelt_betalt"] > .fnPersonalized
 ekstrabladet.dk#@##adtechWallpaper
 euroinvestor.dk,valutakurser.dk###ctl00_BannerContainerTop
+feltet.dk###struct_topBanner
+feltet.dk##.box_300_default
 femina.dk##article.col-md-4.teaser--normal.teaser:-abp-has(div[class="annonce"])
+filmz.dk##.page-top-wrapper
+frisms.nu##.numbered-phones
+frisms.nu##.side-block-products
+fyens.dk##div.spklw-post-attr:-abp-has(div[class*="spklw-sponsored"])
+gaffa.dk##.external-branding
+gratisspil.dk###amLargeLeaderboard
 guloggratis.dk###bottomBanner
 guloggratis.dk###topBanner
 guloggratis.dk##.ad_form_header_right
@@ -48,6 +79,13 @@ guloggratis.dk##.adservering-container
 guloggratis.dk##div.item_profa
 hardwareonline.dk##.centerfull
 hardwareonline.dk##.containerlefttop
+hockeymagasinet.dk##.ads_inside_home
+hockeymagasinet.dk##.cod-links-container
+hwt.dk##.box.text-center:-abp-has(script[src^="//ads."])
+information.dk##.masthead
+journalisten.dk###zone-top
+journalisten.dk##body:style(padding-top: 16px !important)
+jubii.dk##.jubii-adunit
 jyllands-posten.dk##.gridCol:-abp-has(div[class="annonceHolder"])
 landbrugsavisen.dk##.banner
 lokalavisen.dk##.custom-annoncer-wrapper
@@ -66,20 +104,24 @@ vafo.dk##.adform-flexblock
 vafo.dk##.top_banner_container
 valutakurser.dk##.bottom_banner_div
 woman.dk##.gutter-bottom.article-content > div.wg-banner
+||ad1.emediate.dk
 ||ads.xion.dk
 ||adserver.fbg.dk
 ||adserver.karamco.dk
 ||adserver.wagawaga.dk
 ||adservicemedia.dk
 ||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
+||bornholm.nu/nonsec/banner$image
 ||cluster.chart.dk
 ||dk-ekstrabladet.vp.videoplaza.tv
 ||dk.panel.gemius.dk
 ||dotbanner.dk
+||dust2.dk/img/banners/*$image
 ||euroads.dk
 ||openadex.dk
 ||opinion.peytz.dk$domain=landbrugsavisen.dk
 ||tns-gallup.dk
+||track.adform.net$domain=118.dk
 ||userneeds.dk
 
 ! Fixer et bannerproblem om man bruger "Fanboy's Social Blocking List"
@@ -87,6 +129,7 @@ woman.dk##.gutter-bottom.article-content > div.wg-banner
 
 ! Icelandic entries (Complete)
 ##.auglysing_ticker
+##.mvp-feat1-list-ad
 1819.is##.augl
 austurfrett.is##.banneritem
 bb.is##.wpb_content_element
@@ -99,37 +142,36 @@ dv.is##.ticker
 eyjar.net##.col-sm-12.col-md-8:-abp-has(a[href^="/ad/"])
 eyjar.net##.hausad
 fotbolti.net##div[id^="banner"]
-krom.is#@#.share-container
-mbl.is###allt.container:style(margin-top: 0px)
-pressan.dv.is##.ad_grein_botn
-pressan.dv.is##.splitter
-||emediate.eu
-||eyjar.net/skrar/ads
 frettabladid.is##.ad-topspacer:style(height: 45px !important)
 fti.is###mvp-leader-wrap
-##.mvp-feat1-list-ad
 fti.is##.widget_text.relative.left.mvp-widget-home
 hringbraut.is##.strevda
 hun.is##div[id^="EAS_fif_"]
-icelandreview.com##.ir-surprise-list
-icelandreview.com##.grid-12.panel-panel
 icelandreview.com###zone-content:style(margin-top: 0px)
 icelandreview.com###zone-preface
 icelandreview.com##.bookingaff
+icelandreview.com##.grid-12.panel-panel
+icelandreview.com##.ir-surprise-list
 icelandreview.com##.panel-separator
-karfan.is##.td-pb-span6
 karfan.is##.td-header-rec-wrap
 karfan.is##.td-pb-span4:-abp-has(img[height="400"][width="310"])
+karfan.is##.td-pb-span6
+krom.is#@#.share-container
+mbl.is###allt.container:style(margin-top: 0px)
 pjatt.is##.edgtf-logo-area
+pressan.dv.is##.ad_grein_botn
+pressan.dv.is##.splitter
 skessuhorn.is##.kostad-efni
-sporttv.is##div[class^="auglysing-"]
 sporttv.is##.banner-right
 sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
+sporttv.is##div[class^="auglysing-"]
 stundin.is###ad-overlay-container
 visir.is##.df-auto-article
 visir.is##.padded--tight
-visir.is##div.padded--no-bottom.padded--less.padded.limit:style(padding-top: 5px !important)
 visir.is##.padded.limit--tight.limit:style(padding-top: 15px !important)
+visir.is##div.padded--no-bottom.padded--less.padded.limit:style(padding-top: 5px !important)
+||emediate.eu
+||eyjar.net/skrar/ads
 
 ! Færøske opføringer
 nordlysid.fo##column[class*="ad-style"]:not([collapse])
