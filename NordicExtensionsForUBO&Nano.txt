@@ -1,0 +1,58 @@
+! This list includes uBO-specific versions of filters, and are meant to be accessed by uBlock Origin, Nano Adblocker and AdGuard whenever they load the main Norwegian list.
+! Version: 24November2018v1
+tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
+gamereactor.*##script:inject(abort-current-inline-script.js, detectAdblockUser)
+sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
+||gamereactor.*/lay/ad-video-stats.js^$script,important
+||gamereactor.*/lay/js/manageBanners.js^$script,important
+||gamereactor.*/lay/js/adblock_desktop.js^$script,important
+||gamereactor.*/lay/js/banners_co
+||akamai.net^$script,domain=eniro.se|eniro.no|eniro.dk
+gamer.no,tu.no##+js(abort-current-inline-script.js, dfpConfig, loadAds)
+/entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
+vg.no,e24.no,gamer.no,tek.no,digi.no##script:inject(abort-on-property-write.js, __AB__)
+dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
+blogg.no##+js(set-constant.js, showAd, false)
+||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
+eavisa.com##div.kun-desktop:style(height:255px; overflow: hidden; pointer-events: none !important; cursor: default !important)
+vgtv.no##+js(golem.de.js)
+||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=vgtv.no
+telenor.no###megafooter:style(padding-top: 0px)
+frettabladid.is##.ad-topspacer:style(height: 45px !important)
+icelandreview.com###zone-content:style(margin-top: 0px)
+journalisten.dk##body:style(padding-top: 16px !important)
+mbl.is###allt.container:style(margin-top: 0px)
+visir.is##.padded.limit--tight.limit:style(padding-top: 15px !important)
+visir.is##div.padded--no-bottom.padded--less.padded.limit:style(padding-top: 5px !important)
+
+! Wildcard versions of various entries. Because why only block on one national version of a site, when you can nowadays block on all versions of a site without cluttering things up?
+gamereactor.*###ad_video
+gamereactor.*###ad_w300h450
+gamereactor.*###bigVideoAd
+gamereactor.*###eventad
+gamereactor.*###fbnotification
+gamereactor.*###sky2_1
+gamereactor.*##.ad_video
+gamereactor.*##.cocacola
+gamereactor.*##a[href*="/adclick.php"]
+gamereactor.*##div[class^="ad300"]
+gamereactor.*##div[style*="width:300px;height:600px;"]
+google.*###epbar, #cnsh, #pushdown, #consent-bump, #cnsi ~ [jsaction*="dismiss"], santa-notice
+google.*###tads
+google.*##.luhb-div
+google.*##.rlfl__tls > div[jstcache="0"]:not([class]):not([id])[-ext-has='span._mB']
+viafree.*##.ad-click-through
+viafree.*##.pause-ad
+viaplay.*##.interaction-block
+prisjakt.*##.adbox
+prisjakt.*###footer_header
+eurogamer.*###leaderboard
+eurogamer.*##.advert
+ticketmaster.*##div[id^="ad-slot-"]
+qxl.*##div[style*="/banana/images/"]
+qxl.*###CoProSection
+qxl.*###eniroVideoBanner
+qxl.*##.n_ListHeader:style(margin-top: 5px !important)
+qxl.*###listHeader:style(margin-top: 5px !important)
+qxl.*###crosslistingLauritzAdsenseBanner
+qxl.*###GoogleAdsensePanorama
