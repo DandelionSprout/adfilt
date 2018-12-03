@@ -1,5 +1,5 @@
 ! This list includes uBO-specific versions of filters, and are meant to be accessed by uBlock Origin, Nano Adblocker and AdGuard whenever they load the main Norwegian list.
-! Version: 03December2018v1
+! Version: 03December2018v2
 tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
 gamereactor.*##script:inject(abort-current-inline-script.js, detectAdblockUser)
 sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
@@ -61,3 +61,11 @@ qxl.*###eniroVideoBanner
 qxl.*###crosslistingLauritzAdsenseBanner
 qxl.*###GoogleAdsensePanorama
 expedia.*##.extended-below-wizard-ads
+dk,no##div.spklw-post-attr:-abp-has(div[class*="spklw-sponsored"])
+
+! Entries that make use of non-ABP $-values
+||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
+||fwmrm.net/p/MTG_Live/LinkTag2.js$script,important,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
+||fwmrm.net^$image,important,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
+||openx.gamereactor.dk/multi.php?$script,important
+@@||tv2.no/*/config/analytics.json$xmlhttprequest,first-party
