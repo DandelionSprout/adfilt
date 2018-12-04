@@ -1,34 +1,34 @@
 [Adblock Plus 2.0]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 04November2018v1-Beta
+! Version: 04December2018v1-Beta
 ! Expires: 3 days
 ! Description: This list is mostly meant to be used on top of "YouTube: Pure Video Experience" (https://easylist-downloads.adblockplus.org/yt_annoyances_full.txt), and it removes even more distracting or uncomfortable things on YouTube.
 ! If you want to block EVEN MORE things on top of these two lists, feel free to check out the anti-Autoplay (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt) and anti-Elsagate (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt) lists that I've made.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
 ! Removes the YouTube Gaming button in the left-hand menu
-youtube.com##ytd-guide-entry-renderer:-abp-has(a[href*="/gaming"])
+youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="/gaming"])
 
 ! Removes the Trending button in the left-hand menu
-youtube.com##ytd-guide-entry-renderer:-abp-has(a[href*="feed/trending"])
+youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/trending"])
 
 ! Removes the Discover button in the left-hand menu
-youtube.com##ytd-guide-entry-renderer:-abp-has(a[href*="feed/guide_builder"])
+youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/guide_builder"])
 
 ! Removes the pop-out player button in the video player
 youtube.com##.ytp-button.ytp-miniplayer-button
 
 ! Removes the Livestream button in the left-hand menu
-youtube.com##ytd-guide-entry-renderer:-abp-has(a[href*="UC4R8DWoMoI7CAwX8_LjQHig"])
+youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="UC4R8DWoMoI7CAwX8_LjQHig"])
 
 ! Removes the Homepage button in the left-hand menu
-youtube.com##ytd-guide-entry-renderer:-abp-has(a[href="/"])
+youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href="/"])
 
 ! Removes the video store button in the left-hand menu
-youtube.com##ytd-guide-entry-renderer:-abp-has(a[href*="UClgRkhTL3_hImCAmdLfDE4g"])
+youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="UClgRkhTL3_hImCAmdLfDE4g"])
 
 ! Removes the app drawer in the top-right menu
-www.youtube.com###button:-abp-has([aria-label*="app"])
+www.youtube.com#?##button:-abp-has([aria-label*="app"])
 
 ! Removes video suggestions
 youtube.com###related
@@ -54,6 +54,9 @@ youtube.com###trending-guide-item
 
 ! Removes the large grey game buttons below gaming videos
 youtube.com##ytd-rich-metadata-renderer.ytd-rich-metadata-row-renderer
+
+! Attempts to remove YouTube frontpage recommended videos and channels when using "Disable polymer" (and using YouTube in a Germanic language)
+youtube.com#?#.feed-item-container.browse-list-item-container:-abp-has(.shelf-title-annotation:-abp-contains( for ))
 
 !! ↓ Below are entries that are only supported by uBlock Origin and Nano Adblocker ↓
 
