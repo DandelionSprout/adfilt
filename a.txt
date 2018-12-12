@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: 🏡 Imres filtre
-! Version: 05December2018v1-Personal
+! Version: 12December2018v1-Personal
 ! Expires: 12 hours
 !#include BrowseWebsitesWithoutLoggingIn.txt
 !#include Anti-IMDB%20List.txt
@@ -554,9 +554,9 @@ osu.ppy.sh##.beatmapsets__item:has-text(We Bare Bears)
 
 ! Anti-'Christian tele-preacher venues'
 google.*##div.g:-abp-contains(.bible/)
-telenor.no##div.channel-container:-abp-contains(Visjon Norge)
-telenor.no##div.channel-container:-abp-contains(Kanal 10)
-telenor.no##div.channel-container:-abp-contains(Gospel Channel)
+telenor.no#?#div.channel-container:-abp-contains(Visjon Norge)
+telenor.no#?#div.channel-container:-abp-contains(Kanal 10)
+telenor.no#?#div.channel-container:-abp-contains(Gospel Channel)
 
 ! Anti-horoscopes
 ##.horoscopes
@@ -621,11 +621,11 @@ reddit.com##.jJzGSe.jatkem-1
 reddit.com##.XPromoListingClickModal
 reddit.com##.XPromoListingClickModal__content
 reddit.com##div.fePAzF.ii4q9d-0:nth-of-type(3) > .jAyrXr.s1dcinc5-0
-reddit.com##ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/all/"])
-reddit.com##ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/popular/"])
-reddit.com##ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
+reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/all/"])
+reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/popular/"])
+reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
 reddit.com##.s1ljbxcy-3
-reddit.com##div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
+reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
 reddit.com##:xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(10)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:-abp-has(head > meta[content*="r/ihadastroke:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:-abp-has(head > meta[content*="r/BoneAppleTea:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
@@ -658,7 +658,7 @@ variety.com##.c-button--reply.c-button
 variety.com##.c-nav__item.menu-item-1202570278.menu-item-object-vertical.menu-item-type-taxonomy.menu-item
 variety.com##.c-nav__sub-item.menu-item-1202570401.menu-item-object-vertical.menu-item-type-taxonomy.menu-item
 ||disqus.com/embed/comments/$subdocument
-m.youtube.com###koya_elem_1175_0:-abp-contains(Kommentarer)
+m.youtube.com#?##koya_elem_1175_0:-abp-contains(Kommentarer)
 
 ! Ads, judging by their element names
 ###ad_atf_970
@@ -686,7 +686,6 @@ tampermonkey.net##.adventing
 tvtropes.org##.ad-content-bottom
 tvtropes.org##.ad-content-top
 tvtropes.org##.sb-ad-unit
-winaero.com##tr:-abp-has([href="https://winaero.com/special.php?id=2"])
 picktorrent.com##.aBut > .no2ref
 
 ! Know Your Meme (May require a heavy re-do)
@@ -745,6 +744,10 @@ huffingtonpost.com##.js-right-rail.right-rail
 huffingtonpost.com##.recirc__content
 twitter.com##.WhoToFollow.is-visible
 twitter.com##div.trends-inner
+
+! Download links to "optimalisation" tools that no one needs
+windowsreport.com##.code-block
+winaero.com#?#tr:-abp-has([href="https://winaero.com/special.php?id=2"])
 
 ! I need to look through these entries again, to remember why I didn't originally include them in my Nordic list.
 bt.no##.stoltzen
