@@ -1,9 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: 💬 Twitch: Pure Viewing Experience
-! Version: 29October2018v1-Beta
+! Version: 16December2018v1-Beta
 ! Expires: 4 days
 ! Description: This list aims to remove distracting elements, and to maximise the elements inside the chat to make it easier to read.
 ! Note that this list does not remove in-player ads at all. There are several other lists out there that you'll need to keep frequently updated in order to accomplish that.
+!#include TwitchPureViewingExperience-uBOExtension.txt
 
 ! Removes the "Recommended channels" section when you're logged on
 twitch.tv##.recommended-channels
@@ -19,30 +20,3 @@ twitch.tv##.blue-bar
 
 ! Attempts to remove the "Based on your watch log" carousel
 twitch.tv##.tw-pd-y-2 > div:nth-of-type(1)
-
-!! ↓ Below are entries that'll only work with uBlock Origin and Nano Adblocker, because they're the only adblockers that allow CSS edits. ↓
-
-! Removes the spacing between the video player and the sidebars
-twitch.tv##.tw-pd-t-2.tw-pd-x-3:style(padding-left: 2px !important; padding-right: 3px !important)
-
-! Reduces the size of the chat header
-twitch.tv##.video-chat__header:style(height: 20px !important)
-twitch.tv##.tw-pd-r-1.tw-pd-l-2.tw-justify-content-between.tw-full-width:style(height: 2rem)
-
-! Broadens the chat textbox
-twitch.tv##.tw-flex-shrink-0.tw-full-width.tw-pd-b-2.tw-pd-t-1.tw-pd-x-2.video-chat__input:style(padding-left: 1px !important; padding-right: 1px !important; padding-top: 4px !important; padding-bottom: 1px !important)
-twitch.tv##.tw-textarea.tw-textarea--no-resize:style(padding-left: 3px; padding-right: 3px; padding-top: 1px; padding-bottom: 1px; height: 5.3rem)
-twitch.tv##.chat-input.tw-block:style(padding-left: 3px !important; padding-right: 3px !important; padding-bottom: 2px !important)
-
-! Reduces the size of the "Hosting [channel]" header
-twitch.tv##.tw-align-items-center.tw-flex.tw-flex-nowrap.tw-justify-content-between.tw-pd-1:style(padding-top: 0px !important; padding-bottom: 0px !important)
-
-! Narrows the spacing between the chat comments
-twitch.tv##.chat-line__message:style(padding: 2px 4px !important)
-twitch.tv##.tw-full-width.tw-pd-l-05.tw-pd-y-05.vod-message:style(padding: 2px 4px !important)
-
-! Narrows the spacing between the chat comments in mobile browser mode
-twitch.tv##li.chat-message:style(padding: 2px 2px !important)
-
-! Maximises the size of the clip viewer pages
-clips.twitch.tv##.clips-watch.tw-lg-pd-b-5.tw-pd-b-2.tw-sm-pd-b-3:style(max-width: none)
