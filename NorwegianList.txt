@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Version: 22December2018v1
-! Version: 221220181 (for Adblock Plus' issue report system)
+! Version: 23December2018v1
+! Version: 231220181 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -70,6 +70,7 @@
 ##div[data-placeholder*="placeholder_ad"]
 ##div[itemtype*="schema.org/WPAdBlock"]
 ###EAad97
+##.df-skin-annonse
 .no/ad/
 .no/ads/
 .oasfile
@@ -541,7 +542,7 @@ dn.no##[id^="googlead-"]:not(#googlead-toppbanner)
 ||userneeds.dk
 ||viasport-assets.mtg-api.com/*/prod/comScore-*.js$script
 ||webtips.no/banneradmin/
-||widget.tippebannere.no/v3/iframes/Spillvett/spillvett.aspx$subdocument
+||widget.tippebannere.no$subdocument
 ||win-xp.no/images/banner
 ||yfrog.com/htzywuj:medium
 
@@ -551,6 +552,7 @@ norsk-tipping.no##.no-bg.divider
 ##a[href^="https://www.norsk-tipping.no/lotteri/eurojackpot"]
 ##a[href^="https://www.norsk-tipping.no/lotteri/lotto"]
 ##a[href^="https://www.norsk-tipping.no/lotteri/viking-lotto"]
+##a[href^="https://www.norsk-tipping.no/lotteri/vikinglotto"]
 ###ntwidget
 ##.ntbox-btn
 ##.ntbox-tab.bg-primary
@@ -779,6 +781,18 @@ tv2.no##.lab-skin-cm.medium-4.small-12.large-4.boxwrapper.tv2-story
 tv2.no##.doubleClickAd
 tv2.no##a[href*="&utm_source=Blogg"]
 
+! Nettavisen
+! It was difficult to place the line between adticles that had educational values and which ones that didn't, but I feel I did a decent job at it
+nettavisen.no##.df-article-content:-abp-has(a[href*="/portia.no/"])
+nettavisen.no###ad-supernetboard1
+nettavisen.no##.ad_background_aid
+nettavisen.no##.df-article-content:-abp-has(a[href*="/forbruker.nettavisen."])
+nettavisen.no##.df-article-content:-abp-has(a[href*="/shopping.nettavisen."])
+nettavisen.no##.df-article-content:-abp-has(a[href*="/ymag.no/stil/"])
+nettavisen.no##.lp_sidebar_services
+nettavisen.no##.megaboard-1
+/resources/dfp/*$domain=nettavisen.no
+
 ! 🇳🇴: Nordensrelaterte oppføringer som har blitt foreslått for store internasjonale lister, men som ikke har blitt lagt til dem som det er meg bekjent
 ! 🇩🇰: Nordenrelaterede poster, der er blevet foreslået til store internationale lister, men som ikke er blevet tilføjet til dem endnu som det er meg bekendt
 ! 🇬🇧: Nordics-related entries that have been suggested to major international lists, but which haven't been added to them yet or for long
@@ -832,7 +846,7 @@ qxl.no,qxl.dk###eniroVideoBanner
 qxl.no,qxl.dk###crosslistingLauritzAdsenseBanner
 qxl.no,qxl.dk###GoogleAdsensePanorama
 expedia.no,expedia.dk##.extended-below-wizard-ads
-dagligvarehandelen.no,avisen.dk,bt.dk,sondagsavisen.dk,lokalavisen.dk,folketidende.dk,realityportalen.dk,fyens.dk,plbold.dk,tv2.no,seoghoer.dk,telepristjek.dk,abcnyheter.no,dagsavisen.no,bramat.no,hblad.no,gjoviksblad.no#?#div.spklw-post-attr:-abp-has(div[class*="spklw-sponsored"])
+dagligvarehandelen.no,avisen.dk,bt.dk,sondagsavisen.dk,lokalavisen.dk,folketidende.dk,realityportalen.dk,fyens.dk,plbold.dk,tv2.no,seoghoer.dk,telepristjek.dk,abcnyheter.no,dagsavisen.no,nettavisen.no,bramat.no,hblad.no,gjoviksblad.no#?#div.spklw-post-attr:-abp-has(div[class*="spklw-sponsored"])
 !#endif
 
 ! Entries that in the extension file makes use of non-ABP $-values
