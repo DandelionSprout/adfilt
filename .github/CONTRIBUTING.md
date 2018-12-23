@@ -1,12 +1,14 @@
-(Last updated: 17th of June 2018)
+(Last updated: 23rd of December 2018)
 
 Notes on how to contribute:
 
 • I don't currently intend to acquire extra project members, since this repo is a pretty personal thing for me, all in all.
 
-• Issues and thoughts can be reported in the Issues tab. If you're reporting about a filter issue, you are expected to either explain the issue in deep detail, or to track down the problematic filter entry on your own.
+• Issues and thoughts can be reported in the Issues tab. If you're reporting about a filter issue, you are expected to either explain the issue in deep detail, or to track down the problematic filter entry on your own. You're also encouraged to list:
+* Which adblock lists are you using?
+* Which adblock extension are you using?
 
-• I'm unsure at the moment how I'd deal with pull requests. If you do make them, explain in deeply meticulous detail what the new filters remove, or why you want to remove certain existing filters. I also reserve the right to deny pull requests without stating any real reasons for it, just in case.
+• Pull requests can be done, but they should permit me to be able to edit them, just in case there's some excusable formatting errors in your pull request.
 
 • I do encourage forking, both for experimentation, archiving, or for any other reason you may come up with.
 
