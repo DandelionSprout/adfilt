@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Version: 01January2019v1
-! Version: 010120191 (for Adblock Plus' issue report system)
+! Version: 04January2019v1
+! Version: 040120191 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -103,6 +103,10 @@
 @@||videomagasinet.no^$generichide
 abcnyheter.no##article[class*="nativead"]
 abcnyheter.no##div[data-recommendation-type="ad"]
+abcnyheter.no#?#div[class="o-grid__col o-grid__col--nogrow u-size-full u-size-half-small"]:-abp-has([id^="ad_native_"])
+abcnyheter.no#?#div[class="o-grid__col o-grid__col--skyscraper u-desktop-only"]:-abp-has([id^="ad_skyscraper_"])
+abcnyheter.no#?#div[class="o-grid__col u-hidden-mobile"]:-abp-has([id^="ad_skyscraper_"])
+abcnyheter.no#?#div[class="u-size-max-width u-mtm u-pap u-desktop-only"]:-abp-has([id^="ad_annonsebilag"])
 aftenbladet.no##.brandboard-ad
 aftenbladet.no##.netboard-ad
 aftenbladet.no#?#div[class*="df-width-60"]:-abp-has(div[class*="netboard-ad"])
