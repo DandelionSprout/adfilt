@@ -1,32 +1,34 @@
 [Adblock Plus 2.0]
 ! Title: 💺 Anti-IMDB List
-! Version: 16December2018v2-Beta
+! Version: 08January2019v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically the hipsters that run around on IMDB? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
-! Note that this list aims solely to support advanced adblockers (e.g. not Adblock Plus), to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
+! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
 ! For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! 📛 = This category requires using either Nano Adblocker or uBlock Origin.
 
 ! Multi-domain entries
 tv.nu,sfanytime.com##.imdb
 ##.interaction-block > .imdb-container
 
-! Google
+! Google 📛
 google.*##:xpath(//*[text()[contains(., 'IMDb')]]/parent::*/parent::div/parent::div//*[contains(@class, 'slp') and contains(@class, 'f')])
 
-! Amazon
+! Amazon 📛
 amazon.*##.imdb-rating
 amazon.*##span.av-badge-text:has(.av-imdb-logo)
 
-! Viaplay
+! Viaplay 📛
 viaplay.*##div.CarouselHeader-carousel-1rPGh:has-text(IMDB)
 viaplay.*##.Imdb-link-slSbv
 viaplay.*##.ImdbExtended-container-_sA0e
 
-! Blockbuster
+! Blockbuster 📛
 blockbuster.*##div[title*="IMDB page"]
 
 ! T-We
-twe.no##div.content-list:has(a[href*="imdb"])
+twe.no#?#div.content-list:-abp-has(a[href*="imdb"])
 
 ! VG TV-Guide
 tvguide.vg.no##._3_ZF3
