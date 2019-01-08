@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.2",
-    "createdAt": "2018-10-14T18:39:44.809Z",
+    "createdAt": "2019-01-08T01:39:44.809Z",
     "redirects": [
         {
             "description": "7-Zip 32-bit → 64-bit",
@@ -360,7 +360,7 @@
             ]
         },
         {
-            "description": "Makes Google searches easier to link to (Part 1)",
+            "description": "Makes Google searches easier to link to (Part 1) (Currently breaks the \"More image sizes\" button)",
             "exampleUrl": "https://www.google.no/search?num=20&newwindow=1&ei=gonDW9qlJc3ykwXT3bWQDQ&q=john+madden&oq=jo&gs_l=psy-ab.3.0.35i39k1l2j0i131k1l2j0i67k1j0i131k1l2j0i67k1j0i131k1l2.39873.40874.0.42590.4.3.1.0.0.0.170.454.0j3.3.0....0...1c.1.64.psy-ab..0.4.454...0j0i131i67k1.0.mR6HhG_pB30",
             "exampleResult": "https://www.google.no/search?num=20&newwindow=1&q=john+madden",
             "error": null,
@@ -376,7 +376,7 @@
             ]
         },
         {
-            "description": "Makes Google searches easier to link to (Part 2)",
+            "description": "Makes Google searches easier to link to (Part 2) (Currently breaks the \"More image sizes\" button)",
             "exampleUrl": "https://www.google.no/search?q=john+madden&num=20&newwindow=1&source=lnt&tbs=lr:lang_1no&lr=lang_no&sa=X&ved=0ahUKEwiIqYfax4beAhVOCKwKHfvLA5MQpwUIJA&biw=1440&bih=2418",
             "exampleResult": "https://www.google.no/search?q=john+madden&num=20&newwindow=1&lr=lang_no",
             "error": null,
@@ -408,6 +408,22 @@
             ]
         },
         {
+            "description": "Redirects the pages for the paid version of \"HEVC Video Extensions\" for Windows 10 to the free one",
+            "exampleUrl": "https://www.microsoft.com/en-us/p/hevc-video-extensions/9nmzlz57r3t7",
+            "exampleResult": "https://www.microsoft.com/en-us/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq",
+            "error": null,
+            "includePattern": "https://www.microsoft.com/*/p/hevc-video-extensions/9nmzlz57r3t7*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.microsoft.com/$1/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq$2",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
             "description": "Slight resolution upgrade if viewing R-18 images on Pixiv without having logged in (Best used with the \"Browsing websites without logging in\" adblocker filterlist)",
             "exampleUrl": "https://i.pximg.net/c/64x64/img-master/img/2015/11/06/07/43/31/53406591_p0_square1200.jpg",
             "exampleResult": "https://i.pximg.net/c/128x128/img-master/img/2015/11/06/07/43/31/53406591_p0_square1200.jpg",
@@ -416,6 +432,30 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "https://i.pximg.net/c/128x128/img-master$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "other"
+            ]
+        },
+        {
+            "description": "View Nijie images without being logged in (Best used with the \"Browsing websites without logging in\" adblocker filterlist)",
+            "exampleUrl": "https://pic05.nijie.info/__rs_l30x30/nijie_picture/660423_20180905234121_0.jpg",
+            "exampleResult": "https://pic05.nijie.info/__rs_cns3000x3000/nijie_picture/660423_20180905234121_0.jpg",
+            "error": null,
+            "includePattern": "*://*.nijie.info/__rs_*30x30/nijie_picture/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1://$2.nijie.info/__rs_cns3000x3000/nijie_picture/$4",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
