@@ -11,6 +11,7 @@ At the moment, the list is by default able to:
 8) Redirect Google Play's app store's frontpage to its non-game category.
 9) Make it so that Reddit's 2018 GUI is used whenever possible, instead of their mid-2010's GUI.
 10) Shorten Google search result URLs, to make them easier to link to.
+11) Redirect the pages for a paid version of one particular Windows 10 app to its free version.
 
 These things are also included in the list, but must be turned on manually:
 1) Make it so that YouTube's and Reddit's mid-2010's GUIs are used whenever possible, instead of their GUIs anno 2018.
@@ -19,9 +20,9 @@ These things are also included in the list, but must be turned on manually:
 
 It's also possible to redirect regular webpage links into .onion pages (e.g. for Facebook and DuckDuckGo), although those entries have now been spun off into a separate list, called <b>Tor Redirector List</b>.
 
-The lists have been successfully tested with http://einaregilsson.com/redirector/ on Chrome and Basilisk. They have also been tested with at least two other extensions, which it did not work with.
+The lists have been successfully tested with [Redirector](http://einaregilsson.com/redirector/) on Chrome and Basilisk. They have also been tested with at least two other extensions, which it did not work with.
 
-To "download" the list file in a usable capacity, mark all the text in [the JSON file](https://github.com/DandelionSprout/adfilt/blob/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/DandelionSproutRedirectorList.json), copy it into a local text editor, and save it as a JSON file.
+To download the main list file in a usable capacity, right-click [on the link to the JSON file](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/DandelionSproutRedirectorList.json), and save it as a JSON file. ([Link for *Tor Redirector List*](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/TorRedirectorList.json))
 
 If you were to not fancy some of the entries in the lists, you can of course delete or disable them individually in Redirector's settings.
 
