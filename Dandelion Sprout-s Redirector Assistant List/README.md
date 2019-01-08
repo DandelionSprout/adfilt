@@ -11,7 +11,7 @@ At the moment, the list is by default able to:
 8) Redirect Google Play's app store's frontpage to its non-game category.
 9) Make it so that Reddit's 2018 GUI is used whenever possible, instead of their mid-2010's GUI.
 10) Shorten Google search result URLs, to make them easier to link to.
-11) Redirect the pages for a paid version of one particular Windows 10 app to its free version.
+11) Redirect the pages for a paid version of one particular Windows 10 app to its equivalent but free version.
 
 These things are also included in the list, but must be turned on manually:
 1) Make it so that YouTube's and Reddit's mid-2010's GUIs are used whenever possible, instead of their GUIs anno 2018.
