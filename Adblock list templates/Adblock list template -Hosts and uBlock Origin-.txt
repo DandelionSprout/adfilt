@@ -1,0 +1,44 @@
+# In this guide, I'll give a shakedown on how to make a «hosts» file that is optimized for both «hosts»-file tools and uBlock Origin, and how they differ from the formats that I listed in the Beginner and Novice templates.
+# All comments are to be pre-empted with a #, and not !. Hosts files cannot use !.
+# In contrast to lists for mainstream adblockers, "[Adblock Plus 2.0]" shall not be added to the top, as hosts files are incompatible with Adblock Plus.
+# For more information, check out https://sproutsluckycorner.wordpress.com/2018/07/21/how-to-create-your-own-adblock-list-for-dummies/
+
+# "Title" is what the list shall be called by uBlock Origin when it's been added to them.
+# Title: 
+
+# "Expires" is how often the adblock tool shall attempt to look for changes in the source list. Shorter times will keep users more updated, while longer times can help reduce server stress for very popular lists.
+# The minimum that is supported by uBlock Origin, is 1 day. The value can be given in day/days.
+# Expires: 
+
+# (Optional) "Version", or "Last updated", is a way for users and issue trackers to find out if a user uses the newest version of a list. The common convention is to include at least the date of the update. The value should be changed for each time the list is altered.
+# Version:
+
+# (Optional but recommended) "License", or "Licence", is a way to easily tell people how and where your list can be used. It's most common to use an open-source licence, e.g. MIT, GPL, Creative Commons, etc. The convention is to spell out the licence, or to add a link to it.
+# License:
+
+# (Optional) "Homepage" is where the main hub of your adblocking activities are. It can be a link to Git repository (e.g. GitHub, GitLab, etc.), a website, or a blog.
+# Homepage:
+
+# (Optional) "Issues" tells users where they can report any issues they come across with your list. It's most commonly the Issues section in the git repository, but can also be a comment section, a forum thread, or an E-mail address.
+# Issues:
+
+# For the purposes of those who edit their OS' hosts file, a small, separate paragraph of guideline addresses called "localhost" are supposed to be listed, so that the OS can interpret the domain entries correctly.
+# Some hosts files, especially those that are designed to be mixed with other hosts files, omit this; while other hosts files that aim to replace the OS' default hosts file outright, stress the importance of including them.
+
+127.0.0.1	localhost
+127.0.0.1	localhost.localdomain
+255.255.255.255	broadcasthost
+::1		localhost
+127.0.0.1	local
+::1		ip6-localhost ip6-loopback
+fe00::0		ip6-localnet
+ff00::0		ip6-mcastprefix
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
+ff02::3		ip6-allhosts
+#fe80::1%lo0	localhost
+
+# There is some debate on whether it's best to use 127.0.0.1 or 0.0.0.0 to shortcurcuit all connections to a domain. On modern PCs and most phones, the difference is practically zero, as far as I'm aware, so you can use either of them.
+# There is no way whatsoever to block specific page elements on a website, except for those that come from third-party sites. You can only block entire domains.
+# An entry is supposed to look something like "127.0.0.1 obviouslyundesirabledomain.obviousscam.xyz".
+# ↓ Paste your filterlist entries below: ↓
