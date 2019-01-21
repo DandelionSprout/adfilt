@@ -10,7 +10,7 @@ Issues and thoughts can be reported in the Issues tab. If you're reporting about
 
 Pull requests can be done, but they should permit me to be able to edit them, just in case there's some excusable formatting errors in your pull request.
 
-Issues and problems will be tested for in the most recent stable version of Nano Adblocker, and on some occasions against those of uBlock Origin, Adblock Plus, AdGuard (chiefly the paid version), and AdBlock. Note that the Firefox Legacy and Microsoft Edge branches of uBlock Origin will usually be counted as being outdated versions, therefore the lists won't usually accomondate to major differences between them and the more frequently updated adblocker versions.
+Issues and problems will be tested for in the most recent stable version of Nano Adblocker, and on some occasions against those of uBlock Origin, Adblock Plus, AdGuard (chiefly the paid version), and AdBlock. Note that the Firefox Legacy and Microsoft Edge branches of uBlock Origin will usually be counted as being outdated versions, therefore the lists won't usually accommodate to major differences between them and the more frequently updated adblocker versions.
 
 I do encourage forking, both for experimentation, archiving, or for any other reason you may come up with.
 
