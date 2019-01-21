@@ -1,4 +1,4 @@
-(Last updated: 20th of January 2019)
+(Last updated: 21st of January 2019)
 
 Notes on how to contribute:
 
@@ -10,9 +10,7 @@ Issues and thoughts can be reported in the Issues tab. If you're reporting about
 
 Pull requests can be done, but they should permit me to be able to edit them, just in case there's some excusable formatting errors in your pull request.
 
-Beware that I'll be less inclined than usual to assist your worries if you're using one of the following platforms:
-* uBlock Origin on Edge. This is due to various issues that I and at least one other person had with loading various lists in it. I strongly recommend using Nano Adblocker instead.
-* While I will look into general problems that are encountered with the Firefox Legacy branch of uBlock Origin, I will from now on refuse to look into problems that are specific to that branch. This is in protest against how Moonchild Productions (The makers of Pale Moon and Basilisk) is regressing and are refusing to support WebExtensions.
+Issues and problems will be tested for in the most recent stable version of Nano Adblocker, and on some occasions against those of uBlock Origin, Adblock Plus, AdGuard (chiefly the paid version), and AdBlock. Note that the Firefox Legacy branch of uBlock Origin will usually be counted as an outdated version, therefore the lists won't usually accomondate to major differences between it and the more frequently updated adblocker versions.
 
 I do encourage forking, both for experimentation, archiving, or for any other reason you may come up with.
 
