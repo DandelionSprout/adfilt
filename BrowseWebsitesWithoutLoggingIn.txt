@@ -1,5 +1,5 @@
 [Adblock Plus 2.0]
-! Version: 23January2019v2
+! Version: 26January2019v1
 ! Title: 🚪 Browse websites without logging in
 ! Expires: 3 days
 !#include uBO%20list%20extensions/BrowseWebsitesWithoutLoggingIn-uBOExtension.txt
@@ -33,6 +33,7 @@ twitter.com##.rn-1lgpqti.rn-13qz1uu.rn-bnwqim.rn-1gmp1p.rn-1tkzxud
 twitter.com##.rn-1lgpqti.rn-ipm5af.rn-zchlnj.rn-1xcajam
 
 ! Pinterest ↪️📛
+! For very important notes about Pinterest, see https://github.com/DandelionSprout/adfilt/issues/26.
 pinterest.*##.FullPageModal__scroller
 pinterest.*##div[style="background-color: rgba(0, 0, 0, 0.6); opacity: 1; position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 1000;"]
 pinterest.*##div[style="background: rgba(0, 0, 0, 0.85098); transition: height 0.5s cubic-bezier(0.26, 0.87, 0.74, 0.93); backface-visibility: hidden; bottom: 0px; color: rgb(255, 255, 255); height: 100%; position: fixed; width: 100%;"]
@@ -66,7 +67,7 @@ deezer.com##.opened.modal
 
 ! Instagram
 instagram.com##.Fzijm.bR_3v
-instagram.com##.ZUqME:-abp-has(a[href^="/accounts/login/"])
+instagram.com#?#.ZUqME:-abp-has(a[href^="/accounts/login/"])
 ! (Note to self: If these entries cease to work, replace them with "instagram.com#?#div[class*=" "]:-abp-has(> div > div > div > a[class][href^="/accounts/login/?next="][href$="&source=logged_out_half_sheet"])", as per https://github.com/DandelionSprout/adfilt/issues/25.)
 
 ! Ooopic
