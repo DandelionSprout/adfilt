@@ -1,5 +1,5 @@
 ! This list includes uBO-specific versions of filters, and are meant to be accessed by uBlock Origin, Nano Adblocker and AdGuard whenever they load the main Norwegian list.
-! Version: 14January2019v1-Extension
+! Version: 27January2019v1-Extension
 
 ! Entries that make use of features that are mostly exclusive to uBO and Nano
 tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
@@ -12,6 +12,7 @@ sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
 ||akamai.net^$script,domain=eniro.se|eniro.no|eniro.dk
 gamer.no,tu.no##+js(abort-current-inline-script.js, dfpConfig, loadAds)
 /entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
+vg.no##+js(abort-current-inline-script.js, Math.floor, g00)
 vg.no,e24.no,gamer.no,tek.no,digi.no##script:inject(abort-on-property-write.js, __AB__)
 dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
 blogg.no##+js(set-constant.js, showAd, false)
