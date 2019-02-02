@@ -1,5 +1,5 @@
 ! This list includes uBO-specific versions of filters, and are meant to be accessed by uBlock Origin, Nano Adblocker and AdGuard whenever they load the main Norwegian list.
-! Version: 27January2019v1-Extension
+! Version: 02February2019v1-Extension
 
 ! Entries that make use of features that are mostly exclusive to uBO and Nano
 tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
@@ -21,6 +21,7 @@ vgtv.no##+js(golem.de.js)
 ||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=vgtv.no
 gratisspil.dk##+js(abort-on-property-write.js, AdBlockerInfo)
 techstart.dk##+js(set-constant.js, adblock, false)
+dagensbyggeri.dk##+js(setTimeout-defuser.js, (), 2500)
 
 ! CSS-based entries
 telenor.no###megafooter:style(padding-top: 0px)
