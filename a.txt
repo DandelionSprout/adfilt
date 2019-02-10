@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: 🏡 Imres filtre
-! Version: 06February2019v1-Personal
+! Version: 10February2019v1-Personal
 ! Expires: 12 hours
 !#include BrowseWebsitesWithoutLoggingIn.txt
 !#include Anti-IMDB%20List.txt
@@ -646,6 +646,7 @@ transifex.com##.o-scrollable--midHeight:style(max-height: 1300px !important)
 ||cdon.no^
 
 ! Ways to make Reddit marginally less crap
+! Unsalvagably bad subreddits: r/animemes, r/tumblr, r/ublockorigin, anything with "politic" in its name
 reddit.com###focus-All
 reddit.com###focus-OC
 reddit.com###focus-Popular
@@ -662,10 +663,12 @@ reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
 reddit.com##.s1ljbxcy-3
 reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
 reddit.com##:xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(10)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:-abp-has(head > meta[content*="r/ihadastroke:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:-abp-has(head > meta[content*="r/BoneAppleTea:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:-abp-has(head > meta[content*="r/BestOfReports:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:-abp-has(head > meta[content*="r/europe:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(25)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
+reddit.com##html:has(head > meta[content*="r/dontdeadopeninside:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(15)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
+reddit.com##html:has(head > meta[content*="r/ihadastroke:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
+reddit.com##html:has(head > meta[content*="r/BoneAppleTea:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
+reddit.com##html:has(head > meta[content*="r/BestOfReports:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
+reddit.com##html:has(head > meta[content*="r/Showerthoughts:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
+reddit.com##html:has(head > meta[content*="r/europe:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(25)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 
 ! Loosely assorted anti-comment-section entries
 ! I am aware that more comprehensive anti-comment-section lists exist, but I usually don't want to block all of them. Only the most miserable and misanthropic ones among them.
