@@ -34,7 +34,7 @@ While I accept requests for all adblockers, I may in rare cases request that you
 
 Other(s): 
 
-## Which filterlists are you using?
+## Which filterlists did you use?
 <!--
 If you want to save time, you can take a screenshot of your adblocker's list settings.
 -->
