@@ -32,7 +32,9 @@ While I accept requests for all adblockers, I may in rare cases request that you
 - [ ] Blokada
 - [ ] Pi-hole
 
-Other(s): 
+Other(s):
+
+Version(s):
 
 ## Which filterlists did you use?
 <!--
