@@ -31,7 +31,9 @@ Screenshots are convenient but optional.
 - [ ] Blokada
 - [ ] Pi-hole
 
-Other(s): 
+Other(s):
+
+Version(s):
 
 ## Which filterlists did you use?
 <!--
