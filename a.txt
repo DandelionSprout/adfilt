@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🏡 Imres filtre
-! Version: 24February2019v1-Personal
+! Version: 27February2019v1-Personal
 ! Expires: 12 hours
 !#include BrowseWebsitesWithoutLoggingIn.txt
 !#include Anti-IMDB%20List.txt
@@ -662,6 +662,7 @@ reddit.com##html:has(head > meta[content*="r/BoneAppleTea:"]):xpath(//button[@ar
 reddit.com##html:has(head > meta[content*="r/BestOfReports:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:has(head > meta[content*="r/Showerthoughts:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:has(head > meta[content*="r/europe:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(25)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
+reddit.com##.Post:has(div[style="color: rgb(26, 26, 27);"]:has-text(•))
 
 ! Loosely assorted anti-comment-section entries
 ! I am aware that more comprehensive anti-comment-section lists exist, but I usually don't want to block all of them. Only the most miserable and misanthropic ones among them.
@@ -774,6 +775,9 @@ tv2.no##.spklw-post:has-text(farmen)
 tv2.no##.boxwrapper.a-ca:has-text(Farmen)
 tv2.no##.tv2-story:has-text(Farmen)
 tv2.no##.spklw-post:has-text(Farmen)
+tv2.no##.boxwrapper.a-ca:has-text(Venter barn)
+tv2.no##.tv2-story:has-text(Venter barn)
+tv2.no##.spklw-post:has-text(Venter barn)
 www.nrk.no##.kur-room:-abp-contains(«Skam»)
 www.nrk.no##div.relation:-abp-contains(«Skam»)
 
