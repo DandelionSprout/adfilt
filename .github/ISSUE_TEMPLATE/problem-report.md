@@ -54,3 +54,5 @@ If you're in doubt, check your browser's *About* page.
 - [ ] Android
 
 Other(s):
+
+Version:
