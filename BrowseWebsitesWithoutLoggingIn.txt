@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🚪 Browse websites without logging in
-! Version: 28February2019v1
+! Version: 28February2019v2
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 !#include uBO%20list%20extensions/BrowseWebsitesWithoutLoggingIn-uBOExtension.txt
@@ -17,34 +17,37 @@
 ##.onp-sl-overlap-box
 
 ! Facebook
-facebook.com,facebookcorewwwi.onion###u_0_6c
-facebook.com,facebookcorewwwi.onion###u_0_6d
-facebook.com,facebookcorewwwi.onion###u_0_6e
+!! Removes the main login prompt when browsing an account's timeline
+facebook.com##._5hn6
+!! Attempts to remove the "Not logged in" dialog window that shows up further down on the timelinw
+facebook.com##.generic_dialog_modal.pop_dialog
+!! Unsorted
+facebook.com,facebookcorewwwi.onion###pagelet_loggedout_sign_up
 m.facebook.com,m.facebookcorewwwi.onion###mobile_login_bar
 m.facebook.com,m.facebookcorewwwi.onion###u_0_12
-facebook.com,facebookcorewwwi.onion###u_0_25
-facebook.com,facebookcorewwwi.onion###u_0_24
-facebook.com,facebookcorewwwi.onion###pagelet_loggedout_sign_up
 
-! Twitter
+! Twitter Desktop
 twitter.com##.js-signup-call-out
-mobile.twitter.com##.rn-bnwqim.rn-gy4na3.rn-1mdbw0j.rn-9aemit.rn-wk8lta.rn-bcqeeo.rn-ifefl9.rn-11wrixw.rn-p1pxzi.rn-61z16t.rn-1mnahxq.rn-eqz5dr.rn-7vfszb.rn-1pxmb3b.rn-6koalj.rn-deolkf.rn-gxnn5r.rn-ndvcnb.rn-fnigne.rn-13yce4e.rn-mm0ijv.rn-rull8r.rn-14skgim.rn-1efd50x.rn-1oszu61.LqlkGmch > .rn-bnwqim.rn-gy4na3.rn-1mdbw0j.rn-9aemit.rn-wk8lta.rn-bcqeeo.rn-ifefl9.rn-11wrixw.rn-p1pxzi.rn-61z16t.rn-1mnahxq.rn-eqz5dr.rn-7vfszb.rn-1pxmb3b.rn-6koalj.rn-deolkf.rn-gxnn5r.rn-ndvcnb.rn-fnigne.rn-13yce4e.rn-mm0ijv.rn-rull8r.rn-14skgim.rn-1efd50x.rn-1oszu61._3wLZCidQ > .rn-bnwqim.rn-gy4na3.rn-1mdbw0j.rn-9aemit.rn-wk8lta.rn-bcqeeo.rn-ifefl9.rn-11wrixw.rn-p1pxzi.rn-61z16t.rn-1mnahxq.rn-eqz5dr.rn-7vfszb.rn-1pxmb3b.rn-6koalj.rn-deolkf.rn-gxnn5r.rn-ndvcnb.rn-fnigne.rn-13yce4e.rn-mm0ijv.rn-rull8r.rn-14skgim.rn-1efd50x.rn-1oszu61:nth-of-type(2)
-mobile.twitter.com##.toast
-twitter.com##.rn-1lgpqti.rn-13qz1uu.rn-bnwqim.rn-1gmp1p.rn-1tkzxud
-twitter.com##.rn-1lgpqti.rn-ipm5af.rn-zchlnj.rn-1xcajam
+
+! Twitter Mobile
+!! Aims to remove the login overlay prompt when browsing down an account's timeline
+mobile.twitter.com##.rn-13w96dm
+mobile.twitter.com##div[data-focusable="true"] > div > div > div:has(div > div > div > div > div > div > div > div > div > div > div > div[role="button"] > div)
+mobile.twitter.com##.rn-1kihuf0.rn-1awozwy
+!! Making it easier to loose up the swipe-scrolling
+mobile.twitter.com##body:style(overflow-y: visible !important; overscroll-behaviour-y: inherit !important)
 
 ! Pinterest ↪️📛
 ! For very important notes about Pinterest, see https://github.com/DandelionSprout/adfilt/issues/26.
-pinterest.*##.FullPageModal__scroller
-pinterest.*##div[style="background-color: rgba(0, 0, 0, 0.6); opacity: 1; position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 1000;"]
-pinterest.*##div[style="background: rgba(0, 0, 0, 0.85098); transition: height 0.5s cubic-bezier(0.26, 0.87, 0.74, 0.93); backface-visibility: hidden; bottom: 0px; color: rgb(255, 255, 255); height: 100%; position: fixed; width: 100%;"]
-pinterest.*##div:nth-of-type(2) > div > div > div > div > div:nth-of-type(2) > div:has(.gridCentered)
-pinterest.*##footer > div > div:nth-of-type(2)
+!! Removes the login prompt when browsing down on a page
 pinterest.*##div[data-test-id="giftWrap"]
-pinterest.*##.Unauth__GiftWrapper
-pinterest.*##div[class="GrowthUnauthPinImage__imageDim"]
-pinterest.*##div[class^="_4j _4l _4m "]
+!! Removes the login prompts when opening the "Full page modal scroller" (Which was very hard to do without removing the intentional login prompt)
+pinterest.*##div[class="Closeup__wrapper"] > div > div[style^="cursor: default"]
+pinterest.*##.Hsu.iyn.zI7:nth-of-type(2) > div > .FullPageModal__scroller
+pinterest.*##div:nth-of-type(2) > div > div > div > .Hsu.iyn.zI7 > div.Hsu.iyn.zI7:nth-of-type(2) > div
+!! Removes the "Open" overlay on images, so that their raw versions can more easily be opened
 pinterest.*##.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="noButtonStyles "])
+pinterest.*##div[class="GrowthUnauthPinImage__imageDim"]
 
 ! Pixiv ↪️📛
 pixiv.net###register-introduction-modal
