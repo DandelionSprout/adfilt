@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🚪 Browse websites without logging in
-! Version: 28February2019v3
+! Version: 01March2019v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 !#include uBO%20list%20extensions/BrowseWebsitesWithoutLoggingIn-uBOExtension.txt
@@ -36,18 +36,6 @@ mobile.twitter.com##.rn-1kihuf0.rn-1awozwy
 !! Making it easier to loose up the swipe-scrolling
 mobile.twitter.com##body:style(overflow-y: visible !important; overscroll-behaviour-y: inherit !important)
 
-! Pinterest ↪️📛
-! For very important notes about Pinterest, see https://github.com/DandelionSprout/adfilt/issues/26.
-!! Removes the login prompt when browsing down on a page
-pinterest.*##div[data-test-id="giftWrap"]
-!! Removes the login prompts when opening the "Full page modal scroller" (Which was very hard to do without removing the intentional login prompt)
-pinterest.*##div[class="Closeup__wrapper"] > div > div[style^="cursor: default"]
-pinterest.*##.Hsu.iyn.zI7:nth-of-type(2) > div > .FullPageModal__scroller
-pinterest.*##div:nth-of-type(2) > div > div > div > .Hsu.iyn.zI7 > div.Hsu.iyn.zI7:nth-of-type(2) > div
-!! Removes the "Open" overlay on images, so that their raw versions can more easily be opened
-pinterest.*##.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="noButtonStyles "])
-pinterest.*##div[class="GrowthUnauthPinImage__imageDim"]
-
 ! Pixiv ↪️📛
 pixiv.net###register-introduction-modal
 pixiv.net##.introduction-modal
@@ -61,27 +49,11 @@ sysla.no##div.in.modal-backdrop
 ! GitHub
 github.com##.signup-prompt
 
-! Opera Addons
-addons.opera.com###overlay
-
-! Deezer
-deezer.com##.modal-wrapper
-deezer.com##.modal-backdrop
-deezer.com##.opened.modal
-
 ! Instagram
 instagram.com##.Fzijm.bR_3v
-instagram.com#?#.ZUqME:-abp-has(a[href^="/accounts/emailsignup/"])
-! (Note to self: If these entries cease to work, replace them with "instagram.com#?#div[class*=" "]:-abp-has(> div > div > div > a[class][href^="/accounts/emailsignup/"])", as per https://github.com/DandelionSprout/adfilt/issues/25#issuecomment-458347604.)
-
-! Ooopic
-ooopic.com###public-mask-login
 
 ! Reddit
 reddit.com##.listingsignupbar.infobar
-
-! Stack Exchange and related sites
-stackexchange.com,askubuntu.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com#?#.js-dismissable-hero:-abp-contains(Sign up)
 
 ! Mr. Food
 mrfood.com###newsletterSignUpDivAnime
@@ -95,6 +67,9 @@ theclever.com###overlay_search
 nijie.info##.nijie_regist
 nijie.info##.warning_illust
 nijie.info##.twit-button
+
+! Deezer
+deezer.com##.opened.modal
 
 ! thredUP
 thredup.com##.modal-underlay
@@ -127,3 +102,41 @@ beprobeproud.org##.movement-popup
 
 ! PrestaShop
 prestashop.com#?#.cTopicPostArea:-abp-has(> div > .cGuestTeaser)
+
+! ——————————————————————————————————————————————————————————————————————
+
+! Entries below are fixed in other lists that are included in uBO as of the 1st of March 2019, but are also in this list to serve minimal-setup and ABP users.
+
+! Pinterest ↪️📛 (Fixed in "uBlock Filters - Annoyances")
+! For very important notes about Pinterest, see https://github.com/DandelionSprout/adfilt/issues/26.
+!! Removes the login prompt when browsing down on a page
+pinterest.*##div[data-test-id="giftWrap"]
+!! Removes the login prompts when opening the "Full page modal scroller" (Which was very hard to do without removing the intentional login prompt)
+pinterest.*##div[class="Closeup__wrapper"] > div > div[style^="cursor: default"]
+pinterest.*##.Hsu.iyn.zI7:nth-of-type(2) > div > .FullPageModal__scroller
+pinterest.*##div:nth-of-type(2) > div > div > div > .Hsu.iyn.zI7 > div.Hsu.iyn.zI7:nth-of-type(2) > div
+!! Removes the "Open" overlay on images, so that their raw versions can more easily be opened
+pinterest.*##.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="noButtonStyles "])
+pinterest.*##div[class="GrowthUnauthPinImage__imageDim"]
+
+! Opera Add-Ons (Fixed in "uBlock Filters - Annoyances")
+!! Removes fullscreen prompt about installing Opera
+addons.opera.com###overlay
+
+! Deezer (Fixed in "uBlock Filters - Annoyances")
+!! Removes login prompt
+deezer.com##.modal-wrapper
+deezer.com##.modal-backdrop
+
+! Instagram (Fixed in "uBlock Filters - Annoyances")
+!! Removes the bottom login banner
+instagram.com#?#.ZUqME:-abp-has(a[href^="/accounts/emailsignup/"])
+! (Note to self: If this entry ceases to work, replace it with "instagram.com#?#div[class*=" "]:-abp-has(> div > div > div > a[class][href^="/accounts/emailsignup/"])", as per https://github.com/DandelionSprout/adfilt/issues/25#issuecomment-458347604.)
+
+! Ooopic (Fixed in "uBlock Filters - Annoyances")
+!! Removes uncloseable login prompt
+ooopic.com###public-mask-login
+
+! Stack Exchange and related sites (Fixed in "uBlock Filters - Annoyances")
+!! !! Removes the "Here's how it works" banner at the top
+stackexchange.com,askubuntu.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com#?#.js-dismissable-hero:-abp-contains(Sign up)
