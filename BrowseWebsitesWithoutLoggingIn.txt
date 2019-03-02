@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🚪 Browse websites without logging in
-! Version: 01March2019v1
+! Version: 02March2019v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 !#include uBO%20list%20extensions/BrowseWebsitesWithoutLoggingIn-uBOExtension.txt
@@ -17,22 +17,18 @@
 ##.onp-sl-overlap-box
 
 ! Facebook
-!! Removes the main login prompt when browsing an account's timeline
-facebook.com##._5hn6
-!! Attempts to remove the "Not logged in" dialog window that shows up further down on the timelinw
-facebook.com##.generic_dialog_modal.pop_dialog
 !! Unsorted
 facebook.com,facebookcorewwwi.onion###pagelet_loggedout_sign_up
 m.facebook.com,m.facebookcorewwwi.onion###mobile_login_bar
 m.facebook.com,m.facebookcorewwwi.onion###u_0_12
+!! Removes the main login prompt when browsing an account's timeline
+facebookcorewwwi.onion##._5hn6
+!! Attempts to remove the "Not logged in" dialog window that shows up further down on the timelinw
+facebookcorewwwi.onion##.generic_dialog_modal.pop_dialog
 
-! Twitter Desktop
+! Twitter
 !! Removes the login prompt in the upper right upon loading a page
 twitter.com##.js-signup-call-out
-!! Aims to remove the login overlay prompt when browsing down an account's timeline
-mobile.twitter.com##.rn-13w96dm
-mobile.twitter.com##div[data-focusable="true"] > div > div > div:has(div > div > div > div > div > div > div > div > div > div > div > div[role="button"] > div)
-mobile.twitter.com##.rn-1kihuf0.rn-1awozwy
 !! Making it easier to loose up the swipe-scrolling
 mobile.twitter.com##body:style(overflow-y: visible !important; overscroll-behaviour-y: inherit !important)
 
@@ -46,38 +42,20 @@ sysla.no###agreement-popup
 sysla.no##.in.fade.modal-backdrop
 sysla.no##div.in.modal-backdrop
 
-! GitHub
-github.com##.signup-prompt
-
 ! Instagram
 instagram.com##.Fzijm.bR_3v
 
 ! Reddit
 reddit.com##.listingsignupbar.infobar
 
-! Mr. Food
-mrfood.com###newsletterSignUpDivAnime
-mrfood.com###viewportGreyout
-mrfood.com##.in-content-container-coverage
-
-! The Clever
-theclever.com###overlay_search
-
 ! Nijie ↪️📛
+!! Removes the login prompt above the images
 nijie.info##.nijie_regist
 nijie.info##.warning_illust
 nijie.info##.twit-button
 
 ! Deezer
 deezer.com##.opened.modal
-
-! thredUP
-thredup.com##.modal-underlay
-thredup.com##.redux-modal
-
-! Quizlet 📛
-! It appears to me that all flashcards are viewable upon entering their fullscreen mode
-quizlet.com##.SignupWallInline-overlay
 
 ! Parc Fermé
 parcferme.no##.memberships-overlay
@@ -86,28 +64,23 @@ parcferme.no##.memberships-modal
 ! Bēhance
 behance.net#?#body > div[class]:last-child:-abp-has(> div > div > .js-adobeid-signup)
 
-! Feedspot
-feedspot.com##.blackout
-feedspot.com##.regoverlay
-feedspot.com##.mfp-container
-feedspot.com##.fadeIn.animated
-feedspot.com##.fixedBar
-
-! VolunteerMatch
-volunteermatch.org###window_overlay
-volunteermatch.org###req_login_reg_interrupt
-
-! Be Pro Be Proud
-beprobeproud.org##.movement-popup
-
-! PrestaShop
-prestashop.com#?#.cTopicPostArea:-abp-has(> div > .cGuestTeaser)
-
 ! ——————————————————————————————————————————————————————————————————————
 
-! Entries below are fixed in other lists that are included in uBO as of the 1st of March 2019, but are also in this list to serve minimal-setup and ABP users.
+! Entries below are fixed in other lists that are included in uBO as of the 2nd of March 2019, but are also in this list to serve minimal-setup and ABP users.
 
-! Pinterest ↪️📛 (Fixed in "uBlock Filters - Annoyances")
+! Facebook (Fixed in "uBlock Filters - Annoyances")
+!! Removes the main login prompt when browsing an account's timeline
+facebook.com##._5hn6
+!! Attempts to remove the "Not logged in" dialog window that shows up further down on the timelinw
+facebook.com##.generic_dialog_modal.pop_dialog
+
+! Twitter Mobile (Fixed in "uBlock Filters - Annoyances")
+!! Aims to remove the login overlay prompt when browsing down an account's timeline
+mobile.twitter.com##.rn-13w96dm
+mobile.twitter.com#?#div[data-focusable="true"] > div > div > div:-abp-has(div > div > div > div > div > div > div > div > div > div > div > div[role="button"] > div)
+mobile.twitter.com##.rn-1kihuf0.rn-1awozwy
+
+! Pinterest ↪️📛 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
 ! For very important notes about Pinterest, see https://github.com/DandelionSprout/adfilt/issues/26.
 !! Removes the login prompt when browsing down on a page
 pinterest.*##div[data-test-id="giftWrap"]
@@ -118,6 +91,9 @@ pinterest.*##div:nth-of-type(2) > div > div > div > .Hsu.iyn.zI7 > div.Hsu.iyn.z
 !! Removes the "Open" overlay on images, so that their raw versions can more easily be opened
 pinterest.*##.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="noButtonStyles "])
 pinterest.*##div[class="GrowthUnauthPinImage__imageDim"]
+
+! GitHub (Fixed in "AdGuard Annoyances filter" and "Fanboy's Annoyance List")
+github.com##.signup-prompt
 
 ! Opera Add-Ons (Fixed in "uBlock Filters - Annoyances")
 !! Removes fullscreen prompt about installing Opera
@@ -138,5 +114,46 @@ instagram.com#?#.ZUqME:-abp-has(a[href^="/accounts/emailsignup/"])
 ooopic.com###public-mask-login
 
 ! Stack Exchange and related sites (Fixed in "uBlock Filters - Annoyances")
-!! !! Removes the "Here's how it works" banner at the top
+!! Removes the "Here's how it works" banner at the top
 stackexchange.com,askubuntu.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com#?#.js-dismissable-hero:-abp-contains(Sign up)
+
+! Mr. Food (Fixed in "uBlock Filters - Annoyances")
+!! Removes an uncloseable newsletter prompt
+mrfood.com###newsletterSignUpDivAnime
+mrfood.com###viewportGreyout
+mrfood.com##.in-content-container-coverage
+
+! The Clever (Fixed in "uBlock Filters - Annoyances")
+!! Removes a large and invisible banner on very tall monitors that prevents clicking on parts of the page
+theclever.com###overlay_search
+
+! thredUP (Fixed in "uBlock Filters - Annoyances")
+!! Removes uncloseable login prompt that randomly appears after browsing between 2 or 3 pages
+thredup.com##.modal-underlay
+thredup.com##.redux-modal
+
+! Quizlet 📛 (Fixed in "uBlock Filters - Annoyances")
+!! Makes all the flashcards on the vertical list visible
+!! It appears to me that all flashcards are viewable upon entering their fullscreen mode
+quizlet.com##.SignupWallInline-overlay
+
+! Feedspot (Fixed in "uBlock Filters - Annoyances")
+!! Removes an uncloseable login prompt
+feedspot.com##.blackout
+feedspot.com##.regoverlay
+feedspot.com##.mfp-container
+feedspot.com##.fadeIn.animated
+feedspot.com##.fixedBar
+
+! VolunteerMatch (Fixed in "uBlock Filters - Annoyances")
+!! Removes an uncloseable login prompt
+volunteermatch.org###window_overlay
+volunteermatch.org###req_login_reg_interrupt
+
+! Be Pro Be Proud (Fixed in "uBlock Filters - Annoyances")
+!! Removes a login prompt that for some reason takes you back to the top of the page if you try to click on its X button
+beprobeproud.org##.movement-popup
+
+! PrestaShop (Fixed in "uBlock Filters - Annoyances")
+!! Removes the "Create an account (...)" banner at the bottom
+prestashop.com#?#.cTopicPostArea:-abp-has(> div > .cGuestTeaser)
