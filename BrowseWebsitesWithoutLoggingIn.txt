@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🚪 Browse websites without logging in
-! Version: 05March2019v1
+! Version: 05March2019v2
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 !#include uBO%20list%20extensions/BrowseWebsitesWithoutLoggingIn-uBOExtension.txt
@@ -29,12 +29,14 @@ facebookcorewwwi.onion##.generic_dialog_modal.pop_dialog
 ! Twitter
 !! Removes the login prompt in the upper right upon loading a page
 twitter.com##.js-signup-call-out
+! https://github.com/DandelionSprout/adfilt/issues/24
 !! Making it easier to loose up the swipe-scrolling
 mobile.twitter.com##body:style(overflow-y: visible !important; overscroll-behaviour-y: inherit !important)
 
 ! Pixiv ↪️📛
 pixiv.net###register-introduction-modal
 pixiv.net##.introduction-modal
+! Removes the login modal that hides away R-18 images
 pixiv.net##.r18-image.front-centered
 
 ! Sysla
@@ -43,7 +45,7 @@ sysla.no##.in.fade.modal-backdrop
 sysla.no##div.in.modal-backdrop
 
 ! Instagram
-instagram.com##.Fzijm.bR_3v
+!!! instagram.com##.Fzijm.bR_3v
 
 ! Reddit
 reddit.com##.listingsignupbar.infobar
@@ -62,6 +64,8 @@ parcferme.no##.memberships-overlay
 parcferme.no##.memberships-modal
 
 ! Bēhance
+! https://github.com/DandelionSprout/adfilt/issues/30
+! Removes a small login modul in the lower right
 behance.net#?#body > div[class]:last-child:-abp-has(> div > div > .js-adobeid-signup)
 
 ! Zulily
@@ -115,6 +119,7 @@ deezer.com##.modal-wrapper
 deezer.com##.modal-backdrop
 
 ! Instagram (Fixed in "uBlock Filters - Annoyances")
+! https://github.com/DandelionSprout/adfilt/issues/25
 !! Removes the bottom login banner
 instagram.com#?#.ZUqME:-abp-has(a[href^="/accounts/emailsignup/"])
 ! (Note to self: If this entry ceases to work, replace it with "instagram.com#?#div[class*=" "]:-abp-has(> div > div > div > a[class][href^="/accounts/emailsignup/"])", as per https://github.com/DandelionSprout/adfilt/issues/25#issuecomment-458347604.)
