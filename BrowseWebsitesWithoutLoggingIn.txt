@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🚪 Browse websites without logging in
-! Version: 05March2019v3
+! Version: 05March2019v4
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 !#include uBO%20list%20extensions/BrowseWebsitesWithoutLoggingIn-uBOExtension.txt
@@ -17,8 +17,10 @@
 ##.onp-sl-overlap-box
 
 ! Facebook
+! https://m.facebook.com/Sonic/
+!! Removes the login bars
 m.facebook.com,m.facebookcorewwwi.onion###mobile_login_bar
-m.facebook.com,m.facebookcorewwwi.onion###u_0_12
+!!! ("m.facebook.com##div[style^="background: none;"]:has(#mobile_login_bar)" removes the bars further down on the page only. For use in a uAssets pull.)
 !! Removes the main login prompt when browsing an account's timeline
 facebookcorewwwi.onion##._5hn6
 !! Attempts to remove the "Not logged in" dialog window that shows up further down on the timelinw
