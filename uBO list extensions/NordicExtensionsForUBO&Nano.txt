@@ -1,28 +1,20 @@
-! This list includes uBO-specific versions of filters, and are meant to be accessed by uBlock Origin, Nano Adblocker and AdGuard whenever they load the main Nordic list.
-! Version: 13February2019v2-Extension
+! This list includes uBO-specific versions of filters, and are meant to be accessed by Nano Adblocker, uBlock Origin, and AdGuard whenever they load the main Nordic list.
+! Version: 12March2019v1-Extension
 
-! Entries that make use of features that are mostly exclusive to uBO and Nano
-tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
-gamereactor.*##script:inject(abort-current-inline-script.js, detectAdblockUser)
-sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
-||gamereactor.*/lay/ad-video-stats.js^$script,important
-||gamereactor.*/lay/js/manageBanners.js^$script,important
-||gamereactor.*/lay/js/adblock_desktop.js^$script,important
-||gamereactor.*/lay/js/banners_co
-||akamai.net^$script,domain=eniro.se|eniro.no|eniro.dk
-gamer.no,tu.no##+js(abort-current-inline-script.js, dfpConfig, loadAds)
-/entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
-vg.no##+js(abort-current-inline-script.js, Math.floor, g00)
-vg.no,e24.no,gamer.no,tek.no,digi.no##script:inject(abort-on-property-write.js, __AB__)
-dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
-blogg.no##+js(set-constant.js, showAd, false)
-||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
+! JavaScript features baked into Nano Adblocker and uBlock Origin
 vgtv.no##+js(golem.de.js)
 gratisspil.dk##+js(abort-on-property-write.js, AdBlockerInfo)
 techstart.dk##+js(set-constant.js, adblock, false)
 dagensbyggeri.dk##+js(setTimeout-defuser.js, (), 2500)
+vg.no##+js(abort-current-inline-script.js, Math.floor, g00)
+vg.no,e24.no,gamer.no,tek.no,digi.no##script:inject(abort-on-property-write.js, __AB__)
+tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
+gamereactor.*##script:inject(abort-current-inline-script.js, detectAdblockUser)
+gamer.no,tu.no##+js(abort-current-inline-script.js, dfpConfig, loadAds)
+blogg.no##+js(set-constant.js, showAd, false)
 
-! CSS-based entries
+! Style-changing entries
+! I could've theorethically made a Stylish userscript based on this section, but why would I ever want to do that when Nano and uBO support such entries natively?
 telenor.no###megafooter:style(padding-top: 0px)
 eavisa.com##div.kun-desktop:style(height:255px; overflow: hidden; pointer-events: none !important; cursor: default !important)
 frettabladid.is##.ad-topspacer:style(height: 45px !important)
@@ -40,6 +32,10 @@ dagen.no##.paywall-body-description:style(-webkit-text-fill-color: black !import
 dn.no###googlead-toppbanner:style(min-height: 0 !important)
 vgtv.no##.page-container:style(margin-top: 0px !important)
 viafree.no##.cookie-bar + nav > #navBar:style(top: auto !important)
+
+! Other advanced syntaxes
+sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
+dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
 
 ! Wildcard versions of various entries. Because why only block on one national version of a site, when you can nowadays block on all versions of a site without cluttering things up?
 gamereactor.*###ad_video
@@ -73,7 +69,7 @@ qxl.*###GoogleAdsensePanorama
 expedia.*##.extended-below-wizard-ads
 dk,no##div.spklw-post-attr:has(div[class*="spklw-sponsored"])
 
-! Entries that make use of non-ABP $-values
+! Entries that make use of non-ABP $-values, incl. $important and $redirect
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
 ||acdn.adnxs.com/ast/ast.js$script,redirect=noopjs,important,domain=vgtv.no
 ||fwmrm.net/p/MTG_Live/LinkTag2.js$script,important,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
@@ -83,3 +79,8 @@ dk,no##div.spklw-post-attr:has(div[class*="spklw-sponsored"])
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=vg.no
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=vg.no
 ||damoh.vgtv.no/hic_qos$script,redirect=noopjs,domain=vg.no
+||gamereactor.*/lay/ad-video-stats.js^$script,important
+||gamereactor.*/lay/js/manageBanners.js^$script,important
+||gamereactor.*/lay/js/adblock_desktop.js^$script,important
+/entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
+||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
