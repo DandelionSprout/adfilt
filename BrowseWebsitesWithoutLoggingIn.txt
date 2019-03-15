@@ -1,13 +1,14 @@
 [Adblock Plus 3.1]
 ! Title: 🚪 Browse websites without logging in
-! Version: 10March2019v1
+! Version: 15March2019v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
-!#include uBO%20list%20extensions/BrowseWebsitesWithoutLoggingIn-uBOExtension.txt
 ! For more information and details about this list and other lists of mine, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+!#include uBO%20list%20extensions/BrowseWebsitesWithoutLoggingIn-uBOExtension.txt
 
 ! ↪️ = This category requires Redirector (http://einaregilsson.com/redirector/) and a related entry in Dandelion Sprout's Redirector List (https://github.com/DandelionSprout/adfilt/tree/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List) for the best results.
 ! 📛 = This category requires using either Nano Adblocker or uBlock Origin for the best results.
+! 🌇 = One has to begin to browse the sites in this category from a content page, and not from the front page.
 
 ! Multi-domain
 ##.onp-sl-inner-wrap
@@ -16,10 +17,12 @@
 ##.onp-sl-overlap-background
 ##.onp-sl-overlap-box
 
-! Facebook
+! Facebook 🌇
 ! https://m.facebook.com/Sonic/
 !! Removes the login bars
-m.facebook.com,m.facebookcorewwwi.onion###mobile_login_bar
+m.facebook.com,touch.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,m.facebookcorewwwi.com###mobile_login_bar
+! Removes the remnants of a login banner
+m.facebook.com,touch.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,m.facebookcorewwwi.com###u_0_25._4b-b
 !!! ("m.facebook.com##div[style^="background: none;"]:has(#mobile_login_bar)" removes the bars further down on the page only. For use in a uAssets pull.)
 !! Removes the main login prompt when browsing an account's timeline
 facebookcorewwwi.onion##._5hn6
@@ -46,7 +49,7 @@ nijie.info##.nijie_regist
 nijie.info##.warning_illust
 nijie.info##.twit-button
 
-! Deezer
+! Deezer 🌇
 deezer.com##.opened.modal
 
 ! Parc Fermé
@@ -89,7 +92,7 @@ mobile.twitter.com##.rn-13w96dm
 mobile.twitter.com#?#div[data-focusable="true"] > div > div > div:-abp-has(div > div > div > div > div > div > div > div > div > div > div > div[role="button"] > div)
 mobile.twitter.com##.rn-1kihuf0.rn-1awozwy
 
-! Pinterest ↪️📛 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
+! Pinterest ↪️📛🌇 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
 ! For very important notes about Pinterest, see https://github.com/DandelionSprout/adfilt/issues/26.
 !! Removes the login prompt when browsing down on a page
 pinterest.*##div[data-test-id="giftWrap"]
