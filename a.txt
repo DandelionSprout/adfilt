@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🏡 Imres filtre
-! Version: 15March2019v3-Personal
+! Version: 16March2019v1-Personal
 ! Expires: 12 hours
 !#include BrowseWebsitesWithoutLoggingIn.txt
 !#include Anti-IMDB%20List.txt
@@ -214,7 +214,6 @@ msn.com###utif_rectangle1_data_financecurrencyconverter_container_b504d999-39c8-
 msn.com###utif_rectangle1_data_financecurrencyconverter_container_da2fbcf9-5cfb-44df-8e5f-ddaaf2e321af_271635ce-d662-458b-9e27-9a32eb3d9e8a
 msn.com##.finance-footer-column:nth-of-type(2)
 msn.com##.finance-footer-tiles
-msn.com##h1[class="h1"]:style(pointer-events: none !important; cursor: default !important)
 msn.com##a[href="/nb-no/okonomi/aksjescreener"]
 msn.com##a[href="/nb-no/okonomi/portefolje"]
 msn.com##a[href="/nb-no/okonomi/privatokonomi"]
@@ -315,7 +314,6 @@ torebrings.se##.reveal-modal-bg
 totalsportek.com##.widget-area
 tv.nrk.no##.js-programs.nav-link
 tv.nrk.no##.no-rights-label
-twitch.tv##.tw-interactive.tw-align-items-center[data-a-target="home-link"]:style(pointer-events: none !important; cursor: default !important)
 twitter.com###stream-item-recap_entry-780612444498628607
 twitter.com###stream-item-who_to_follow_entry-776589082252177407
 twitter.com##.btn-link.js-translate-tweet.translate-button
@@ -397,17 +395,17 @@ yobi3d.com##a[href^="https://beamler.com/"]
 ||uk.newonnetflix.info/gfx/*_*.png$image
 ||vault.bitwarden.com/images/boxed-bg.png$image
 ||youtube.com/tv^
-rule34.xxx##.thumb:has(img[title*="disney_fairies"]):has(img[title*="larger_male"])
-rule34.xxx##.thumb:has(img[title*="disney_fairies"]):has(img[title*="size_difference"]):has(img[title*=" male "])
-rule34.xxx##.thumb:has(img[title*="disney_fairies"]):has(img[title*="fellatio"])
-rule34.xxx##.thumb:has(img[title*=" pregnant "])
-osu.ppy.sh##.beatmapsets__item:has-text(jubeat )
-osu.ppy.sh##.beatmapsets__item:has-text(beatmania )
-osu.ppy.sh##.beatmapsets__item:has-text(Nightcore)
-osu.ppy.sh##.beatmapsets__item:has-text(Taylor Swift)
-osu.ppy.sh##.beatmapsets__item:has-text(XXXTENTACION)
-osu.ppy.sh##.beatmapsets__item:has-text(Battle Dimension)
-osu.ppy.sh##.beatmapsets__item:has-text(Waifu)
+rule34.xxx#?#.thumb:-abp-has(img[title*="disney_fairies"]):-abp-has(img[title*="larger_male"])
+rule34.xxx#?#.thumb:-abp-has(img[title*="disney_fairies"]):-abp-has(img[title*="size_difference"]):-abp-has(img[title*=" male "])
+rule34.xxx#?#.thumb:-abp-has(img[title*="disney_fairies"]):-abp-has(img[title*="fellatio"])
+rule34.xxx#?#.thumb:-abp-has(img[title*=" pregnant "])
+osu.ppy.sh#?#.beatmapsets__item:-abp-contains(jubeat )
+osu.ppy.sh#?#.beatmapsets__item:-abp-contains(beatmania )
+osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Nightcore)
+osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Taylor Swift)
+osu.ppy.sh#?#.beatmapsets__item:-abp-contains(XXXTENTACION)
+osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Battle Dimension)
+osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Waifu)
 deviantart.com##.deviation-mlt-preview:has(h3[class*="more-from-da-"])
 userstyles.org#?#div.us-stylecard--short:-abp-has(img[src="/ui/images/280x294.png"])
 mewe.com##.emoji-picker-promotion
@@ -421,8 +419,8 @@ netflix.com##.ptrack-content:-abp-has(a[href*="80050008"])
 userstyles.org##.overlay_background
 avisahemnes.no##div.marggalleri:nth-of-type(2)
 mewe.com##.c-mw-sharing-info
-twitch.tv##.vod-message:has(.chat-author__display-name:has-text(InternetKraken))
-twitch.tv##.message:has(.chat-author__display-name:has-text(InternetKraken))
+twitch.tv#?#.vod-message:has(.chat-author__display-name:-abp-contains(InternetKraken))
+twitch.tv#?#.message:has(.chat-author__display-name:-abp-contains(InternetKraken))
 
 ! ↓ Below are categories that may or may not get independent lists for public use one day. ↓
 ! And yes, there's a reason why a.txt is for private use only: It shows the seething despisement I have against large chunks of planet Earth.
@@ -433,21 +431,22 @@ twitch.tv##.message:has(.chat-author__display-name:has-text(InternetKraken))
 
 ! Anti-PPG
 ! PPG 1998 was a violence fest that promoted extrajudicial police brutality against people (and germs) based on their looks, and I hate its present-day fanbase very, very passionately.
-netflix.com##.ptrack-content:-abp-has(a[href*="80130973"])
-viaplay.*##.Item-front-3_pms:-abp-has(a[href*="powerpuff"])
+netflix.com#?#.ptrack-content:-abp-has(a[href*="80130973"])
+viaplay.*##.Item-front-3_pms:has(a[href*="powerpuff"])
 viaplay.*##[href*="powerpuff"]
 ||orig13.deviantart.net/c60f/f/2016/358/b/8/ppg_stamp__by_shelby100-dasoj0c.gif
 ||hulu-matchmaker.s3.us-west-2.amazonaws.com/2018-06/1600-content-grid-2X_Welcome_6.22.18_0.jpg$image
+reddit.com#?#.Post:-abp-contains(/Powerpuff/i)
 
 ! Anti-'Doki Doki Literature Club'
 ! Has a fanbase that gets a bit easily carried away in their partially unwarranted enthusiasm.
 ##a[href="/memes/subcultures/doki-doki-literature-club"]
-reddit.com##.bcykdr:-abp-contains(DDLC)
+reddit.com#?#.bcykdr:-abp-contains(DDLC)
 
 ! Anti-'Steven Universe'
 ! A promising first season, made way for stupid bitchslap contests, irredeemably insane characters, and non-stop pointless and useless drama.
-netflix.com##.ptrack-content:-abp-has(a[href*="80130696"])
-viaplay.*##.Item-front-3_pms:-abp-has(a[href*="steven-universe"])
+netflix.com#?#.ptrack-content:-abp-has(a[href*="80130696"])
+viaplay.*##.Item-front-3_pms:has(a[href*="steven-universe"])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(Peridot)
 pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(Peridot))
 pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(Peridot))
@@ -458,14 +457,14 @@ pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 
 
 ! Anti-'We Bare Bears'
 ! This show is about as funny as getting one's leg sawed off, and it was blatantly made for hipsters in their 20's while leaving Cartoon Network's target audience very confused.
-viaplay.*##.Item-front-3_pms:-abp-has(a[href*="vi-bare-bjorner"])
+viaplay.*##.Item-front-3_pms:has(a[href*="vi-bare-bjorner"])
 viaplay.*##[href*="vi-bare-bjorner"]
 ||cd-static2.telenorcdn.net/zuul/dis-api//6x_difY-T0N-kA6IcFI25_eedM0=/768x432/smart/cdn-cd-production.cloud.xstream.dk/thumbnails/2018/05/30/1527648008057720300.jpg$image
 ||cd-static2.telenorcdn.net/zuul/dis-api//Y5AX2JJmRvrGTBP770sLzDHZn-w=/768x432/smart/cdn-cd-production.cloud.xstream.dk/thumbnails/2018/05/30/1527650800043796400.jpg$image
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(Fruztal)
 pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(Fruztal))
 pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(Fruztal))
-osu.ppy.sh##.beatmapsets__item:has-text(We Bare Bears)
+osu.ppy.sh#?#.beatmapsets__item:has-text(We Bare Bears)
 
 ! Anti-'Teen Titans 2003'
 ! Teen Titans GO deserves the right to exist, and the tens of millions of hipsters out there who believe otherwise are monumentally wrong. Therefore I hate the fans of the 2003 cartoon.
@@ -493,7 +492,7 @@ rule34.xxx##.thumb:has(img[title*="adventure_time"])
 
 ! Anti-'DuckTales 2017'
 ! This show is an utter blasphemy against Don Rosa, Carl Barks, and the 60's-00's Italian comics, turning almost all of the characters they made into bumbling moronic idiots.
-osu.ppy.sh##.beatmapsets__item:has-text(DuckTales)
+osu.ppy.sh#?#.beatmapsets__item:-abp-contains(DuckTales)
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(Fetish Tales)
 pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(Fetish Tales))
 pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(Fetish Tales))
@@ -563,12 +562,12 @@ mightytext.net###toggleHolidayTheme
 ||cdn.pji.nu/g/campaigns/17/no/mainpage_header.png$image
 
 ! Prevention against sudden urges to vomit all over the floor
-www.nrk.no##.nrk-xs-12of12:-abp-contains(Kvise)
+www.nrk.no#?#.nrk-xs-12of12:-abp-contains(Kvise)
 ||i1.wp.com/www.datahjelperne.no/wp-content/uploads/2018/06/Skjermbilde-55.jpg$image
-twitch.tv##.vod-message:-abp-contains(StabZ)
-twitch.tv##.chat-line__message:-abp-contains(StabZ)
-rule34.paheal.net##div.thumb:has(img[id="thumb_1455016"])
-rule34.paheal.net##div.thumb:has(img[id="thumb_1441683"])
+twitch.tv#?#.vod-message:-abp-contains(StabZ)
+twitch.tv#?#.chat-line__message:-abp-contains(StabZ)
+rule34.paheal.net#?#div.thumb:-abp-has(img[id="thumb_1455016"])
+rule34.paheal.net#?#div.thumb:-abp-has(img[id="thumb_1441683"])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(DerGamer)
 pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(DerGamer))
 pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(DerGamer))
@@ -578,15 +577,6 @@ pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(ノースカロライナパワー+G)
 pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(ノースカロライナパワー+G))
 pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(ノースカロライナパワー+G))
-
-! Website Stretcher, vertical version
-github.com##.CodeMirror:style(height:1540px !important)
-github.com##.file.js-code-editor.container-preview.show-code:style(height:1600px !important)
-www.youtube.com###playlist.style-scope.ytd-watch-flexy:style(height: 1100px !important; max-height: none !important)
-www.youtube.com##.ytd-expander:style(max-height: 1100px !important)
-clips.twitch.tv##.clips-sidebar.tw-flex.tw-flex-column:style(min-height:600px)
-transifex.com##.o-scrollable--midHeight:style(max-height: 1300px !important)
-pgl.yoyo.org##select[name="hostformat"]:style(height: 580px !important)
 
 ! Webstores that ignore "Mail-in-store" and who instead delivers to PostNord Norway's generic pick-up points in the middle of bloody nowhere
 ||www.kjell.com^
@@ -610,13 +600,6 @@ reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/popular/"])
 reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
 reddit.com##.s1ljbxcy-3
 reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
-reddit.com##:xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(10)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:has(head > meta[content*="r/dontdeadopeninside:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(15)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:has(head > meta[content*="r/ihadastroke:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:has(head > meta[content*="r/BoneAppleTea:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:has(head > meta[content*="r/BestOfReports:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:has(head > meta[content*="r/Showerthoughts:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
-reddit.com##html:has(head > meta[content*="r/europe:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(25)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##.Post:has(div[style="color: rgb(26, 26, 27);"]:has-text(•))
 ||quantcast.mgr.consensu.org$domain=reddit.com|imgur.com
 
