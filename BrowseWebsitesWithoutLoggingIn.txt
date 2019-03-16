@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🚪 Browse websites without logging in
-! Version: 15March2019v3
+! Version: 16March2019v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! For more information and details about this list and other lists of mine, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -59,12 +59,12 @@ parcferme.no##.memberships-modal
 ! Bēhance
 ! https://github.com/DandelionSprout/adfilt/issues/30
 ! Removes a small login modul in the lower right
-behance.net#?#body > div[class]:last-child:-abp-has(> div > div > .js-adobeid-signup)
+behance.net##.Popup-popup-T3F
 
 ! Zulily
 ! https://www.zulily.com/e/sew-on-and-sew-forth-338868.html
 !! Aims to remove the forced login overlay, without breaking the login button in the upper right
-zulily.com###loginModal[aria-hidden="false"]:not([aria-describedby="subtitle-signin"])
+zulily.com##+js(setTimeout-defuser.js, loginModal, 500)
 
 ! YouTube
 ! https://github.com/DandelionSprout/adfilt/issues/32
