@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 05March2019v1-Beta
+! Version: 16March2019v1-Beta
 ! Expires: 4 days
 !#include uBO%20list%20extensions/YouTubeEvenMorePureVideoExperience-uBOExtension.txt
 ! Description: This list is mostly meant to be used on top of "YouTube: Pure Video Experience" (https://easylist-downloads.adblockplus.org/yt_annoyances_full.txt), and it removes even more distracting or uncomfortable things on YouTube.
@@ -12,6 +12,7 @@ youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="/gaming"])
 
 ! Removes the Trending button in the left-hand menu
 youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/trending"])
+m.youtube.com##.scbrr-tab[href="/feed/trending"]
 
 ! Removes the Discover button in the left-hand menu
 youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/guide_builder"])
@@ -24,6 +25,7 @@ youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="UC4R8DWoMoI7CAwX8_LjQHi
 
 ! Removes the Homepage button in the left-hand menu
 youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href="/"])
+m.youtube.com##.scbrr-tab[href="/"]
 
 ! Removes the video store button in the left-hand menu
 youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="UClgRkhTL3_hImCAmdLfDE4g"])
@@ -33,16 +35,39 @@ www.youtube.com#?##button:-abp-has([aria-label*="app"])
 
 ! Removes video suggestions
 youtube.com###related
+m.youtube.com##ytm-watch ytm-compact-video-renderer
 
 ! Removes the like/dislike counters
 youtube.com##ytd-toggle-button-renderer.style-text[is-icon-button]
 youtube.com###sentiment
+m.youtube.com##c3-material-button:-abp-has(path[d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"])
+m.youtube.com##c3-material-button:-abp-has(path[d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"])
+
+! Removes the large grey game buttons below gaming videos
+youtube.com##ytd-rich-metadata-renderer.ytd-rich-metadata-row-renderer
+
+! Removes the Share arrow button in fullscreen mode and in embeds
+youtube.com##button[class*="share-button"]
+
+! Removes a rarely occuring login nag module with an octopus and a treasure chest when not logged in
+youtube.com#?#paper-dialog:-abp-has(ytd-mealbar-promo-renderer)
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— Comment sections that are not covered by "Pure Viewing Experience" ———
+
+! Removes the comment section on phones
+m.youtube.com##ytm-comment-section-renderer
 
 ! Removes the comment section on livestreams
 youtube.com##ytd-live-chat-frame
 
 ! Removes the comment section on livestream VoDs
 youtube.com###watch-discussion
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— "Disable Polymer" mode ———
 
 ! Removes the Homepage button in the left-hand menu when using "Disable polymer"
 youtube.com###what_to_watch-guide-item
@@ -56,14 +81,5 @@ youtube.com##li.guide-section:nth-of-type(4)
 ! Removes the Trending button in the left-hand menu when using "Disable polymer"
 youtube.com###trending-guide-item
 
-! Removes the large grey game buttons below gaming videos
-youtube.com##ytd-rich-metadata-renderer.ytd-rich-metadata-row-renderer
-
 ! Attempts to remove YouTube frontpage recommended videos and channels when using "Disable polymer" (and using YouTube in a Germanic language)
 youtube.com#?#.feed-item-container.browse-list-item-container:-abp-has(.shelf-title-annotation:-abp-contains( for ))
-
-! Removes the Share arrow button in fullscreen mode and in embeds
-youtube.com##button[class*="share-button"]
-
-! Removes a rarely occuring login nag module with an octopus and a treasure chest when not logged in
-youtube.com#?#paper-dialog:-abp-has(ytd-mealbar-promo-renderer)
