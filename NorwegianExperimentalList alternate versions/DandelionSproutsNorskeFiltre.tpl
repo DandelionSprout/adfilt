@@ -1,9 +1,8 @@
 msFilterList
 # Title: Dandelion Sprouts norske filtre - TPL
-# Version: 23July2018v1-Beta
+# Version: 27March2019v1-Alpha
 # Etter å ha lett i nesten et år frem til juli 2018, fant jeg til slutt en noenlunde god syntaksoppskrift for TPL-lister.
-# Hvis du ikke finner noen direktelenker til å legge til denne listen, må du følge instruksjonene som står oppført i https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NorskeFiltreTPL-installering.html
-# Hvis du bruker Internet Explorer kun for å kunne bruke gamle tillegg som Silverlight eller Unity Web Player, anbefaler jeg å bytte over til Basilisk Browser i stedet, siden den både har støtte for gamle tillegg og for uBlock Origin.
+# Hvis du ikke finner noen direktelenker til å legge til denne listen, må du følge instruksjonene som står oppført i https://raw.githubusercontent.com/DandelionSprout/FilterLists/patch-74/data/TPLSubscriptionAssistant.html
 : Expires=3
 - .ad-centered
 - .ad-digitalt-bilagH
