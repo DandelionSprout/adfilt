@@ -50,7 +50,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • [lassekongo83](https://github.com/lassekongo83) for being the best filter writer on planet Earth, for helping heaps of people (Me included) with writing specific filters, and for having made several lists that I often look through to learn more about how to write filters. <br>
 • [THEtomaso](https://github.com/THEtomaso) for waterproofing parts of the Nordic list, and for several contributions to the same list. <br>
 • The contributor communities that surround uBlock Origin and Nano Adblocker in general (including [okieshsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser)), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
-• [krystian3w](https://github.com/krystian3w) for teaching me that using `:style` entries completely breaks a list *and* its entries in ABP.
-• [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *Browse Websites Without Logging In*) to *uBlock Filters - Annoyances*.
+• [krystian3w](https://github.com/krystian3w) for teaching me that using `:style` entries completely breaks a list *and* its entries in ABP. <br>
+• [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *[Browse Websites Without Logging In](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt)*) to *uBlock Filters - Annoyances*.
 
 If you've contributed to or helped me and you aren't on the above list, don't feel bad about it. I still give my regular thanks to you.
