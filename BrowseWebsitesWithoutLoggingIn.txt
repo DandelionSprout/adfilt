@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🚪 Browse websites without logging in
-! Version: 16March2019v2
+! Version: 27March2019v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! For more information and details about this list and other lists of mine, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -23,11 +23,6 @@
 m.facebook.com,touch.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,m.facebookcorewwwi.onion###mobile_login_bar
 ! Removes the remnants of a login banner
 m.facebook.com,touch.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,m.facebookcorewwwi.onion###u_0_25._4b-b
-!!! ("m.facebook.com##div[style^="background: none;"]:has(#mobile_login_bar)" removes the bars further down on the page only. For use in a uAssets pull.)
-!! Removes the main login prompt when browsing an account's timeline
-facebookcorewwwi.onion##._5hn6
-!! Attempts to remove the "Not logged in" dialog window that shows up further down on the timelinw
-facebookcorewwwi.onion##.generic_dialog_modal.pop_dialog
 
 ! Twitter
 !! Removes the login prompt in the upper right upon loading a page
@@ -56,27 +51,10 @@ deezer.com##.opened.modal
 parcferme.no##.memberships-overlay
 parcferme.no##.memberships-modal
 
-! Bēhance
-! https://github.com/DandelionSprout/adfilt/issues/30
-! Removes a small login modul in the lower right
-behance.net##.Popup-popup-T3F
-
-! Zulily
-! https://www.zulily.com/e/sew-on-and-sew-forth-338868.html
-!! Aims to remove the forced login overlay, without breaking the login button in the upper right
-!#if !ext_ublock
-zulily.com###loginModal[aria-hidden="false"]:not([aria-describedby="subtitle-signin"])
-!#endif
-
 ! YouTube
 ! https://github.com/DandelionSprout/adfilt/issues/32
 ! Removes a rarely occuring login nag module with an octopus and a treasure chest when not logged in
 youtube.com#?#paper-dialog:-abp-has(ytd-mealbar-promo-renderer)
-
-! InvestingCOM
-! https://github.com/DandelionSprout/adfilt/issues/33
-! Removes a login popup that shows up the first time the site is visited
-investing.com###PromoteSignUpPopUp
 
 ! ——————————————————————————————————————————————————————————————————————
 
@@ -84,9 +62,9 @@ investing.com###PromoteSignUpPopUp
 
 ! Facebook (Fixed in "uBlock Filters - Annoyances")
 !! Removes the main login prompt when browsing an account's timeline
-facebook.com##._5hn6
+facebook.com,facebookcorewwwi.onion##._5hn6
 !! Attempts to remove the "Not logged in" dialog window that shows up further down on the timelinw
-facebook.com##.generic_dialog_modal.pop_dialog
+facebook.com,facebookcorewwwi.onion##.generic_dialog_modal.pop_dialog
 
 ! Twitter Mobile (Fixed in "uBlock Filters - Annoyances")
 !! Aims to remove the login overlay prompt when browsing down an account's timeline
@@ -171,3 +149,20 @@ beprobeproud.org##.movement-popup
 ! PrestaShop (Fixed in "uBlock Filters - Annoyances")
 !! Removes the "Create an account (...)" banner at the bottom
 prestashop.com#?#.cTopicPostArea:-abp-has(> div > .cGuestTeaser)
+
+! InvestingCOM (Fixed in "AdGuard Annoyances filter")
+! https://github.com/DandelionSprout/adfilt/issues/33
+! Removes a login popup that shows up the first time the site is visited
+investing.com###PromoteSignUpPopUp
+
+! Bēhance (Fixed in "uBlock Filters - Annoyances")
+! https://github.com/DandelionSprout/adfilt/issues/30
+! Removes a small login modul in the lower right
+behance.net##.Popup-popup-T3F
+
+! Zulily (Fixed in "uBlock Filters - Annoyances")
+! https://www.zulily.com/e/sew-on-and-sew-forth-338868.html
+!! Aims to remove the forced login overlay, without breaking the login button in the upper right
+!#if !ext_ublock
+zulily.com###loginModal[aria-hidden="false"]:not([aria-describedby="subtitle-signin"])
+!#endif
