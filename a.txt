@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🏡 Imres filtre
-! Version: 25March2019v1-Personal
+! Version: 29March2019v1-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include BrowseWebsitesWithoutLoggingIn.txt
@@ -335,6 +335,7 @@ mewe.com##.c-mw-sharing-info
 twitch.tv#?#.vod-message:has(.chat-author__display-name:-abp-contains(InternetKraken))
 twitch.tv#?#.message:has(.chat-author__display-name:-abp-contains(InternetKraken))
 reddit.com##.Comment:has(a[href="/user/MarlboroF1"])
+reddit.com##.Comment:has(a[href="/user/taylormemes"])
 
 ! ↓ Below are categories that may or may not get independent lists for public use one day. ↓
 ! And yes, there's a reason why a.txt is for private use only: It shows the seething despisement I have against large chunks of planet Earth.
@@ -500,7 +501,7 @@ reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/popular/"])
 reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
 reddit.com##.s1ljbxcy-3
 reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
-reddit.com##.Post:has(div[style="color: rgb(26, 26, 27);"]:has-text(•))
+reddit.com##.Post:has(div[style^="color:"]:has-text(•):not(:has-text(/[a-z]/i)))
 ||quantcast.mgr.consensu.org$domain=reddit.com|imgur.com
 
 ! DailyMotion: Pure Viewing Experience
