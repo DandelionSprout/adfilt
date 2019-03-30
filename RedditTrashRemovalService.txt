@@ -1,0 +1,36 @@
+[Adblock Plus 3.1]
+! Title: 🎛 Reddit Trash Removal Service
+! Version: 30March2019v1-Alpha
+! Expires: 3 days
+! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
+! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
+! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+!#include RedditTrashRemovalService-uBOExtension.txt
+
+! Removes sitewide feeds from the dropdown menu, on the assumption that they contain posts from bad subreddits
+! Dropdown menu
+reddit.com###focus-All
+reddit.com###focus-OC
+reddit.com###focus-Home
+! Top navigation bar
+reddit.com###header-quicklinks-oc
+reddit.com###header-quicklinks-popular
+reddit.com###header-quicklinks-all
+! The user feed, if I don't remember completely wrong
+reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/all/"])
+reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/popular/"])
+reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
+
+! Removes hard-to-close cookie banners on Imgur embeds
+||quantcast.mgr.consensu.org$domain=reddit.com|imgur.com
+
+! Subreddits that have extremely messed-up criteria for what is considered to be banworthy
+||reddit.com/r/dankmemes^
+||reddit.com/r/antifurry_irl^
+||reddit.com/r/yiffinhell^
+reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
+
+! Subreddits known to condone mass-murders or the notion of such to varying degrees
+||reddit.com/r/braincels^
+||reddit.com/r/MGTOW^
+||reddit.com/r/The_Donald^
