@@ -33,6 +33,12 @@ dn.no###googlead-toppbanner:style(min-height: 0 !important)
 vgtv.no##.page-container:style(margin-top: 0px !important)
 viafree.no##.cookie-bar + nav > #navBar:style(top: auto !important)
 
+! Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
+! Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
+elkjop.no,elgiganten.dk###A-value:style(fill: #fff12c !important)
+elkjop.no,elgiganten.dk###B-value:style(fill: #edb731 !important)
+elkjop.no,elgiganten.dk###C-value:style(fill: #ed8631 !important)
+
 ! Other advanced syntaxes
 sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
 dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
