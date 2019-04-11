@@ -1,10 +1,11 @@
 ### All up-to-date significant adblockers¹
 
 * `##.` / `##` / `###`: Hides parts of a page.
+* `#@#`: Whitelists parts of a page to make them load.
 * `||`: Blocks resources from domains or parts thereof from being loaded. For non-domain-specific resources, no pre-emption is needed at all.
 * `@@`: Whitelists resources from specific URLs to make them load.
 * `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
-* `$thirdparty`: Ensures that resources from a domain is only blocked if you're not visiting the domain itself.
+* `$third-party` / `$3p`: Ensures that resources from a domain is only blocked if you're not visiting the domain itself.
 * `$domain=`: Ensures that resources from a domain is only blocked if you're visiting a specified website.
 * `$generichide`: Prevents all non-domain-specific hiding entries from working on a website.
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it is a script, e.g. a JavaScript runtime.
@@ -18,12 +19,14 @@
 * `~`: Means that an entry does *not* apply to a specific domain.
 * `/\/\/\/` and similar: Text detections in RegEx format.
 * `[Adblock Plus n.n]`: Used by Adblock Plus, AdBlock, and forks of them to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` is on the rise and can be used to block support for old forks. This has no effect on uBO or its forks.
+* `:not(.element)`: Looks for page elements that doesn't contain a particular element or text string. Can be paired with other syntaxes á la `:not(:-abp-contains(Example text))`.
+* `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
 
 ### Nano Adblocker, uBlock Origin and AdGuard only:
 
 * `:style`: Changes the CSS values of an element, in much the same way as what userstyle extensions like Stylish would've done.
 * `{ }`: Same as above.
-* `$badfilter`: Deactivates a resource-blocking entry, for cases where pre-empting it with `!` doesn't feel interesting enough.
+* `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list.
 * `:has-text`: Same as `:-abp-contains`.
 * `:has`: Same as `:-abp-has`.
 * `!#if`: Specifies that a section of entries only applies to specific platforms or extensions. Closed out by `!#endif`.
@@ -31,17 +34,20 @@
 ### Nano Adblocker and uBlock Origin only:
 
 * `!#include`: Embeds another filterlist that is hosted on the same domain (with numerous restrictions).
-* `##+js`: Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site.
+* `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site.
 * `:xpath`: An entry written with the very advanced Xpath syntax.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `127.0.0.1` / `0.0.0.0` / `::1`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`.
+* `##^`: Blocks resources before they've even been loaded, based on their values in *View source* instead of their F12 ones.
+* `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions.
+* `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
+* `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
+* `$first-party` / `$1p`: Ensures that resources from a domain is only blocked if you're visiting the domain itself.
 
-#### I can't remember what these ones do:
+#### I should figure out and test out what these ones do:
 
 * `:-abp-properties`
-* `##^`
 * `$xmlhttprequest`
-* `$redirect=noopjs`
 
 # Particularly important usage notes
 
