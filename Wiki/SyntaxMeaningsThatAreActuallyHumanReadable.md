@@ -60,5 +60,6 @@
 * The `"` in `[href="text"]` is optional, but *only* if the criteria text is only a single word.
 * In `:-abp-has` and `:has`, it is not needed to pre-empt the criteria elements with `##`.
 * `:style` and `{ }` does not allow to change `background-image` into a URL value.
+* It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
 
 ¹ = Includes Nano Adblocker, uBlock Origin, AdGuard, Adblock Plus version ≥3.1, and AdBlock. It does **not** include Brave Browser, Slimjet, uBlock non-Origin, Adblock Plus for IE, Tracking Protection List, AdAway, or Blokada, whose syntax supports are considerably inferior to the above list.
