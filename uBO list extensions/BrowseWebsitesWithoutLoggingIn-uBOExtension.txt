@@ -1,5 +1,5 @@
 ! This is an extension file, not an independent list.
-! Version: 14April2019v1-Extension
+! Version: 15April2019v1-Extension
 
 ! Pixiv R-18 images ↪️📛
 pixiv.net##.sensored > img:style(-webkit-filter: none)
@@ -13,8 +13,12 @@ experts-exchange.com##.bg3.interceptBackgroundBlocker.interceptContainer
 nijie.info##.ngtag.mozamoza:style(-webkit-filter: none !important)
 
 ! StudyCOM (Text articles only) 📛
+! Makes text lessons fully readable
 study.com###articleMain > div[class=hidden]:style(visibility: visible !important; display: block !important)
 study.com##.faded-content:after
+! Makes the flashcard tables fully visible
+study.com##.paywall:style(display: table !important)
+study.com##.paywall:after
 
 ! Making it easier to loose up the swipe-scrolling on Twitter Mobile 📛
 mobile.twitter.com##body:style(overflow-y: visible !important; overscroll-behaviour-y: inherit !important)
@@ -39,10 +43,10 @@ lydogbillede.dk,lydogbilde.no,ljudochbild.se##.hidefromgp
 futurestud.io##.spoiler:style(filter: none !important; -webkit-filter: none !important)
 futurestud.io##.fs-background.text-center.aside-info
 
-! Zulily (uBO version)
+! Zulily (uBO version) 📛
 zulily.com##+js(setTimeout-defuser.js, loginModal, 500)
 
-! eNotes
+! eNotes 📛
 ! https://www.enotes.com/homework-help/three-enlightenmet-ideas-used-declaration-471209
 enotes.com##.hh-box__answer__text:style(filter: none !important; -webkit-filter: none !important; color: inherit !important; text-shadow: none !important)
 
@@ -73,7 +77,7 @@ seekingalpha.com##.p:style(display: block !important)
 seekingalpha.com##.blured:style(opacity: 1.0 !important)
 seekingalpha.com##body:style(overflow: auto !important;)
 
-! BookBub (Fixed in "uBlock Filters - Annoyances")
+! BookBub (Fixed in "uBlock Filters - Annoyances") 📛
 !! Makes it possible to read all entries in their most popular blog articles
 bookbub.com##.post-section:style(filter: none !important; -webkit-filter: none !important; pointer-events: all !important)
 bookbub.com##.blur.signup-gate
