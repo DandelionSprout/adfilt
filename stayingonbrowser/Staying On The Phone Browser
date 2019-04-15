@@ -1,12 +1,11 @@
 [Adblock Plus 3.1]
-! Version: 29March2019v1
+! Version: 15April2019v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 14 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
+! Many entries in this list were originally taken from Adguard Annoyances filter, but the entries as a whole have now been sufficiently transformed from their original states that I personally believe that only this small creditation line to them is sufficient.
+! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 !#include StayingOnThePhoneBrowser-uBOExtension.txt
-! Homepage: https://github.com/DandelionSprout/adfilt
-! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
-! This particular list's agenda: https://github.com/DandelionSprout/adfilt/blob/master/stayingonbrowser/README.md
 ###AndroidMobileAppBanner
 ###app-modal
 ###appbanner
@@ -86,7 +85,7 @@ imageban.ru##img[alt="Get it on Google Play"]
 instagram.com##._40dde
 instagram.com##._c05qa
 instagram.com##a[href^="https://itunes.apple.com/app/instagram/id389801252?"][role="alert"]
-instagram.com##nav > div > div > section > div:has(div > div > button > div)
+instagram.com#?#nav > div > div > section > div:-abp-has(div > div > button > div)
 intellicast.com###promoAd
 intellicast.com###stormLink
 ipaddressguide.com##img[alt="iptools android app"]
@@ -153,6 +152,7 @@ rambler.ru##.wrap > section.promo.j-promo
 reddit.com##.DualPartInterstitialFooter
 reddit.com##.NavFrame > .DualPartInterstitial
 reddit.com##.TransparentOverlay__overlay
+reddit.com##path[d="M18.5 13.17a1.62 1.62 0 0 1-2.35 0c-.31-.3-.48-.73-.48-1.17 0-.44.17-.87.49-1.17a1.7 1.7 0 0 1 2.35 0c.32.3.49.73.49 1.17 0 .44-.17.87-.5 1.17m-4.86-.85c-.03.1-.05.21-.1.32l-.15.28c-.07.1-.14.19-.22.25a1.62 1.62 0 0 1-2.35 0 1.85 1.85 0 0 1-.36-.53c-.05-.1-.07-.21-.1-.32-.01-.1-.03-.21-.03-.32 0-.44.18-.87.5-1.17a1.7 1.7 0 0 1 2.34 0c.32.3.5.73.5 1.17l-.03.32m-5.33 0c-.03.1-.06.21-.11.32-.04.1-.1.2-.15.28-.06.1-.13.19-.21.27a1.67 1.67 0 0 1-2.35 0c-.08-.08-.14-.18-.21-.27a1.85 1.85 0 0 1-.25-.6 1.62 1.62 0 0 1 .47-1.5 1.7 1.7 0 0 1 2.34 0 1.85 1.85 0 0 1 .47.85l.02.33-.02.32M12 0A12.01 12.01 0 0 0 1.99 18.6L.7 22.46a.67.67 0 0 0 .84.84L5.4 22A12.01 12.01 0 0 0 24 12c0-6.62-5.38-12-12-12"]
 regnum.ru##.footer-apps
 reuters.com##[class^="GetTheAppBanner"]
 roblox.com###app-bumper-main
@@ -207,8 +207,8 @@ zaycev.fm##.soft-promo
 zedge.net##.column.grid_12.leader
 zedge.net##.column.trailer.leader
 zona.mobi###zona-android
-trondelagkraft.no##.editorButton.button__action:-abp-contains(Last ned vår fordelsapp)
-trondelagkraft.no##.article__ingress > p:-abp-contains(Med appen vår )
+trondelagkraft.no#?#.editorButton.button__action:-abp-contains(Last ned vår fordelsapp)
+trondelagkraft.no#?#.article__ingress > p:-abp-contains(Med appen vår )
 ||2app.lk^$third-party
 ||3mdrlz4flj1hjzvp11ni1z71-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/romaniainsider-app.png$image
 ||anistar.ru/templates/*/images/android-app-on-google-play.png
@@ -226,6 +226,30 @@ trondelagkraft.no##.article__ingress > p:-abp-contains(Med appen vår )
 ||superfb.com/_img/banner/sfb*.png
 ||superfb.com/_img/mobil_imaj.png
 ||turkiyecocuk.com.tr/banner/
-||turnkeymobileapps.com/*/smart-app-banner.
+*/smart-app-banner.
 ||unleashedprepaids.com/mobiquo/smartbanner/
 ||vizefinalsorupaylasimi.com/uploads/googleplay.jpg
+
+! Below are entries that I borrowed from "I Don't Want Your App", which is maintained by https://github.com/lassekongo83 at https://github.com/lassekongo83/Frellwits-filter-lists/raw/master/i-dont-want-your-app.txt, and which is licenced as GPLv3
+##.ViewInAppLink
+##a[href*=".app.link/"]
+reddit.com##a[href*=".app.link/"]:not(.PostHeader__post-link)
+reddit.com##a[class="TopButton"][href*=".app.link/"]
+reddit.com##.DualPartInterstitial
+reddit.com##.XPromoAdFeed
+reddit.com##.SnackBar
+reddit.com##.XPromoPill
+reddit.com##.XPromoPopup
+reddit.com##.xpromoMinimal
+imgur.com##.getTheApp
+imgur.com##.get-the-app
+imgur.com##.FloatingOIA-container
+imgur.com##.AppBanner-text
+imgur.com##.PopOverBannerSmall
+imgur.com##.PopOverBannerFull
+/smart-app-banner.$script,stylesheet
+aftonbladet.se##._3aP1_
+soundcloud.com##.footer__appButtonContainer
+soundcloud.com##.upsellBanner__app
+accuweather.com###app-store-links
+.SmartMessage.$script,domain=weather.com
