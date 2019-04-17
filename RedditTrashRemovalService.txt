@@ -1,10 +1,10 @@
 [Adblock Plus 3.1]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 03April2019v1-Alpha
+! Version: 17April2019v1-Alpha
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
-! The list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
+! Some categories in this only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 !#include uBO%20list%20extensions/RedditTrashRemovalService-uBOExtension.txt
 
@@ -39,3 +39,77 @@ reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
 
 ! Posts that are too new to have been given a points score
 reddit.com##.Post:-abp-has(div[style^="color:"]:-abp-contains(•):not(:-abp-contains(/[a-z]/i)))
+
+! ————— ↓ Removes content posted by the top 10 karma hoarders ↓ —————
+
+! Comments on New Reddit
+reddit.com##.Comment:-abp-has(a[href="/user/GallowBoob"])
+reddit.com##.Comment:-abp-has(a[href="/user/pepsi_next"])
+reddit.com##.Comment:-abp-has(a[href="/user/TooShiftyForYou"])
+reddit.com##.Comment:-abp-has(a[href="/user/mvea"])
+reddit.com##.Comment:-abp-has(a[href="/user/SlimJones123"])
+reddit.com##.Comment:-abp-has(a[href="/user/BunyipPouch"])
+reddit.com##.Comment:-abp-has(a[href="/user/iBleeedorange"])
+reddit.com##.Comment:-abp-has(a[href="/user/KevlarYarmulke"])
+reddit.com##.Comment:-abp-has(a[href="/user/maxwellhill"])
+reddit.com##.Comment:-abp-has(a[href="/user/bubblr"])
+
+! Posts on New Reddit
+reddit.com#?#.Post:-abp-has(a[href="/user/GallowBoob"])
+reddit.com#?#.Post:-abp-has(a[href="/user/pepsi_next"])
+reddit.com#?#.Post:-abp-has(a[href="/user/TooShiftyForYou"])
+reddit.com#?#.Post:-abp-has(a[href="/user/mvea"])
+reddit.com#?#.Post:-abp-has(a[href="/user/SlimJones123"])
+reddit.com#?#.Post:-abp-has(a[href="/user/BunyipPouch"])
+reddit.com#?#.Post:-abp-has(a[href="/user/iBleeedorange"])
+reddit.com#?#.Post:-abp-has(a[href="/user/KevlarYarmulke"])
+reddit.com#?#.Post:-abp-has(a[href="/user/maxwellhill"])
+reddit.com#?#.Post:-abp-has(a[href="/user/bubblr"])
+
+! Comments on Old Reddit
+reddit.com#?#.entry:-abp-has(a[href*="/user/GallowBoob"])
+reddit.com#?#.entry:-abp-has(a[href*="/user/pepsi_next"])
+reddit.com#?#.entry:-abp-has(a[href*="/user/TooShiftyForYou"])
+reddit.com#?#.entry:-abp-has(a[href*="/user/mvea"])
+reddit.com#?#.entry:-abp-has(a[href*="/user/SlimJones123"])
+reddit.com#?#.entry:-abp-has(a[href*="/user/BunyipPouch"])
+reddit.com#?#.entry:-abp-has(a[href*="/user/iBleeedorange"])
+reddit.com#?#.entry:-abp-has(a[href*="/user/KevlarYarmulke"])
+reddit.com#?#.entry:-abp-has(a[href*="/user/maxwellhill"])
+reddit.com#?#.entry:-abp-has(a[href*="/user/bubblr"])
+
+! Posts on Old Reddit
+reddit.com#?#.thing[data-author="GallowBoob"]
+reddit.com#?#.thing[data-author="pepsi_next"]
+reddit.com#?#.thing[data-author="TooShiftyForYou"]
+reddit.com#?#.thing[data-author="mvea"]
+reddit.com#?#.thing[data-author="SlimJones123"]
+reddit.com#?#.thing[data-author="BunyipPouch"]
+reddit.com#?#.thing[data-author="iBleeedorange"]
+reddit.com#?#.thing[data-author="KevlarYarmulke"]
+reddit.com#?#.thing[data-author="maxwellhill"]
+reddit.com#?#.thing[data-author="bubblr"]
+
+! Comments on Reddit Mobile
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/GallowBoob"])
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/pepsi_next"])
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/TooShiftyForYou"])
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/mvea"])
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/SlimJones123"])
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/BunyipPouch"])
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/iBleeedorange"])
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/KevlarYarmulke"])
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/maxwellhill"])
+reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/bubblr"])
+
+! Posts on Reddit Mobile
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^GallowBoob$/))
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^pepsi_next$/))
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^TooShiftyForYou$/))
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^mvea$/))
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^SlimJones123$/))
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^BunyipPouch$/))
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^iBleeedorange$/))
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^KevlarYarmulke$/))
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^maxwellhill$/))
+reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^bubblr$/))
