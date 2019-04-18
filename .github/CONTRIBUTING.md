@@ -1,8 +1,6 @@
-(Last updated: 21st of January 2019)
+(Last updated: 18th of April 2019)
 
 Notes on how to contribute:
-
-I don't currently intend to acquire extra project members, since this repo is a pretty personal thing for me, all in all.
 
 Issues and thoughts can be reported in the Issues tab. If you're reporting about a filter issue, you are expected to either explain the issue in deep detail, or to track down the problematic filter entry on your own. You're also encouraged to list:
 * Which adblock lists are you using?
@@ -10,7 +8,7 @@ Issues and thoughts can be reported in the Issues tab. If you're reporting about
 
 Pull requests can be done, but they should permit me to be able to edit them, just in case there's some excusable formatting errors in your pull request.
 
-Issues and problems will be tested for in the most recent stable version of Nano Adblocker, and on some occasions against those of uBlock Origin, Adblock Plus, AdGuard (chiefly the paid version), and AdBlock. Note that the Firefox Legacy and Microsoft Edge branches of uBlock Origin will usually be counted as being outdated versions, therefore the lists won't usually accommodate to major differences between them and the more frequently updated adblocker versions.
+Issues and problems will be tested for in the most recent stable version of Nano Adblocker, and on some occasions against those of uBlock Origin, Adblock Plus, AdGuard (chiefly the paid version), and AdBlock. For a list of supported, unsupported, and recommended adblockers, [read this](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md).
 
 I do encourage forking, both for experimentation, archiving, or for any other reason you may come up with.
 
