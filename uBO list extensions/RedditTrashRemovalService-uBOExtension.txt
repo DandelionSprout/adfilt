@@ -1,5 +1,5 @@
 ! This is an extension file, not an independent list.
-! Version: 30March2019v1-Extension
+! Version: 21April2019v1-Extension
 
 ! Posts whose scores are lower than a certain amount
 ! The default for all subreddits is 10 points, although this can be adjusted for a handful of subreddits whose quality levels are deemed to sharply increase with a higher or lower limit.
@@ -12,3 +12,6 @@ reddit.com##html:has(head > meta[content*="r/BoneAppleTea:"]):xpath(//button[@ar
 reddit.com##html:has(head > meta[content*="r/BestOfReports:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:has(head > meta[content*="r/Showerthoughts:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(20)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 reddit.com##html:has(head > meta[content*="r/europe:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(25)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
+
+! Intends to make the downvote buttons on The_Donald and similarly inclined subreddits visible
+reddit.com##button[aria-label="downvote"][style*="styles.redditmedia.com/"][style*="DownvoteIconInactive"]:style(background-color: #999 !important)
