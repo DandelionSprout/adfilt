@@ -1,26 +1,35 @@
 ### All up-to-date significant adblockers¹
 
+#### Element removal
+
 * `##.` / `##` / `###`: Hides parts of a page.
 * `#@#`: Whitelists parts of a page to make them load.
+* `[href="text"]`: Looks for page elements whose values in the F12 filetree console contains such a value. The value can be either `href`, `id`, `class`, `type`, or several other things.
+* `[href^="text"]`: Same as above, except it looks for anything whose value *begins* with the text.
+* `[href*="text"]`: Same as above, except it looks for anything whose value contains the text anywhere within it.
+* `:not(.element)`: Looks for page elements that doesn't contain a particular element or text string. Can be paired with other syntaxes á la `:not(:-abp-contains(Example text))`.
+* `:-abp-contains(text)`: Looks for page elements who contains such text within it.
+* `:-abp-has(.element)`: Looks for page elements who contains such an element within it.
+* `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
+* `a` / `div` / `iframe` / `img` (among others): Looks for page elements that are specific element types, as seen in the F12 filetree console.
+
+#### File blocking
+
 * `||`: Blocks resources from domains or parts thereof from being loaded. For non-domain-specific resources, no pre-emption is needed at all.
 * `@@`: Whitelists resources from specific URLs to make them load.
-* `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
 * `$third-party` / `$3p`: Ensures that resources from a domain is only blocked if you're not visiting the domain itself.
 * `$domain=`: Ensures that resources from a domain is only blocked if you're visiting a specified website.
 * `$generichide`: Prevents all non-domain-specific hiding entries from working on a website.
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it is a script, e.g. a JavaScript runtime.
-* `[href="text"]`: Looks for page elements whose values in the F12 filetree console contains such a value. The value can be either `href`, `id`, `class`, `type`, or several other things.
-* `[href^="text"]`: Same as above, except it looks for anything whose value *begins* with the text.
-* `[href*="text"]`: Same as above, except it looks for anything whose value contains the text anywhere within it.
-* `:-abp-contains(text)`: Looks for page elements who contains such text within it.
-* `:-abp-has(.element)`: Looks for page elements who contains such an element within it.
-* `a` / `div` / `iframe` / `img` (among others): Looks for page elements that are specific element types, as seen in the F12 filetree console.
+* `$document`: Frequently also used to make it more certain that a page warning shows up when loading such a page.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
+
+#### Universal
+
+* `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
 * `~`: Means that an entry does *not* apply to a specific domain.
 * `/\/\/\/` and similar: Text detections in RegEx format.
-* `[Adblock Plus n.n]`: Used by Adblock Plus, AdBlock, and forks of them to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` is on the rise and can be used to block support for old forks. This has no effect on uBO or its forks.
-* `:not(.element)`: Looks for page elements that doesn't contain a particular element or text string. Can be paired with other syntaxes á la `:not(:-abp-contains(Example text))`.
-* `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
+* `[Adblock Plus n.n]`: Used by Adblock Plus, AdBlock, and forks of them to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. This has no effect on uBO or its forks.
 
 ### Nano Adblocker, uBlock Origin and AdGuard only:
 
@@ -62,4 +71,4 @@
 * `:style` and `{ }` does not allow to change `background-image` into a URL value.
 * It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
 
-¹ = Includes Nano Adblocker, uBlock Origin, AdGuard, Adblock Plus version ≥3.1, and AdBlock. It does **not** include Brave Browser, Slimjet, uBlock non-Origin, Adblock Plus for IE, Tracking Protection List, AdAway, or Blokada, whose syntax supports are considerably inferior to the above list.
+¹ = Includes Nano Adblocker, uBlock Origin ≥1.14.0, AdGuard, Adblock Plus version ≥3.1, and AdBlock. It does **not** include Brave Browser, Slimjet, uBlock non-Origin, Adblock Plus for IE, Tracking Protection List, AdAway, or Blokada, whose syntax supports are considerably inferior to the above list.
