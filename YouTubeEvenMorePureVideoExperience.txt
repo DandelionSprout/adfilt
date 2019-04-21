@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 20March2019v1-Beta
+! Version: 22April2019v1-Beta
 ! Expires: 4 days
 !#include uBO%20list%20extensions/YouTubeEvenMorePureVideoExperience-uBOExtension.txt
 ! Description: This list is mostly meant to be used on top of "YouTube: Pure Video Experience" (https://easylist-downloads.adblockplus.org/yt_annoyances_full.txt), and it removes even more distracting or uncomfortable things on YouTube.
@@ -86,3 +86,17 @@ youtube.com###trending-guide-item
 
 ! Attempts to remove YouTube frontpage recommended videos and channels when using "Disable polymer" (and using YouTube in a Germanic language)
 youtube.com#?#.feed-item-container.browse-list-item-container:-abp-has(.shelf-title-annotation:-abp-contains( for ))
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— "TV" mode ———
+
+! Removes most video suggestions in TV mode
+! Sadly, at least one suggestion had to remain in each row, or else you couldn't browse down to the Home and Search buttons.
+youtube.com##.exp-enable-live-seeking > #leanback > #app-markup > #watch > #bottom-half .pivot-row .watchable-tile:not(:nth-of-type(1))
+
+! Removes the Trending button in the top bar. At least I think it's the Trending button.
+youtube.com##div.top-nav-tab:nth-of-type(2)
+
+! Removes the Gaming button in the top bar
+youtube.com#?#div.top-nav-tab:-abp-contains(/^Gaming$/)
