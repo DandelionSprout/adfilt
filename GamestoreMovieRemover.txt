@@ -1,0 +1,21 @@
+[Adblock Plus 3.2]
+! Title: 🎮 List for removing movies and books from videogame storefronts
+! Version: 21April2019v1-Beta
+! Expires: 14 days
+! Description: While it was admirable that places like GOG, Humble Bundle, and Steam began selling movies and books, their categories for such quickly became a dumping ground for useless indie filler. No one needs three book bundles a month about how to write JavaScript, nor do they need a cashgrab "documentary" about bronies. This list is for those who once again want to reclaim such stores in the name of videogames.
+! Note that Steam's selection of non-game software programs is actually pretty high-end and professional, therefore this list does not remove software listings.
+! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! Steam
+store.steampowered.com##.tag_browse_tag[data-tagid="4700"]
+store.steampowered.com##.tab_filter_control[data-value="4700"]
+store.steampowered.com##.tag_browse_tag[data-tagid="233824"]
+store.steampowered.com##.tab_filter_control[data-value="233824"]
+
+! GOG.com (Sadly doesn't support GOG Galaxy that I'm aware of.)
+gog.com#?#.menu-submenu-link[href^="/movies?"]
+gog.com#?#.search-dropdown-item:-abp-has(input[id="movie_category"])
+
+! Humble Bundle
+humblebundle.com#?#.bundle:-abp-has(a[href^="/books/"])
+humblebundle.com#?#.bundle:-abp-has(a[href^="/software/"])
