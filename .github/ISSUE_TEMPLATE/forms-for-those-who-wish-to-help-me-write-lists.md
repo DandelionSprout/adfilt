@@ -49,7 +49,6 @@ This issue report form is intended for people who wish to contribute to help me 
 - [ ] Adblock Plus to [support wildcard asterisks in element rule domains](https://issues.adblockplus.org/ticket/6773)
 - [ ] AdGuard to support wildcard asterisks in element rule domains
 - [ ] *Dandelion Sprout's Nordic Filters* to be natively included in Adblock Plus (The process is already underway, but it's going very slowly)
-- [ ] Chrome Extensions and/or Firefox Add-Ons to delist very-low-quality adblocker forks that don't have their disclaimers straight
 
 ## Translating section notes and text files to:
 
@@ -57,6 +56,12 @@ This issue report form is intended for people who wish to contribute to help me 
 - [ ] Icelandic
 - [ ] Faroese
 - [ ] Northern Sami
+
+## Things that concern the adblock community at large
+
+- [ ] Finding out who the current secretive owner of [uBlock LLC](https://chrome.google.com/webstore/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn) and [a fake namesake of AdBlock](https://chrome.google.com/webstore/detail/adblock/dgpfeomibahlpbobpnjpcobpechebadh) is
+- [ ] Lobbying for Chrome Extensions and/or Firefox Add-Ons to delist very-low-quality adblocker forks that don't have their disclaimers straight
+- [ ] Figuring out how many of my and other listmakers' lists that can be accessed from internet-censoring trigger-happy countries (e.g. Saudi Arabia, Iran, PR-China)
 
 ## Other things:
 
