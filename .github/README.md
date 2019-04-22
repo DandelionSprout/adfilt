@@ -4,9 +4,9 @@
 [![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Flattr%20button.png)](https://flattr.com/@DandelionSprout)
 [![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/RSS-knapp.png)](https://github.com/DandelionSprout/adfilt/commits/master.atom)
 
-This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. GitHub was by far the easiest way for laymen like me to store pure TXT files, which I thought was a necessity to share my filter lists across multiple units.
+This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. GitHub was in mid-2017 by far the easiest way for laymen like me to store pure text files, which is a necessity to create subscribable lists.
 
-This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed considerable energy and effort into, for your enjoyment.
+This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed considerable energy and effort into, for the enjoyment of all of us.
 
 * [Official repo mirror](https://repo.or.cz/FilterMirrorRepo.git/tree/refs/heads/master)
 * [Secondary official repo mirror](https://gitlab.com/DandelionSprout/adfilt)
@@ -18,7 +18,7 @@ However, if you were led here by uBlock Origin, AdGuard, AdBlock, or [Adblock Pl
 
 If you have any problems, suggestions, or a desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things for the time being. Don't be shy to ask/tell me. In particular, I have a [wishlist of things](https://github.com/DandelionSprout/adfilt/issues/new?assignees=&labels=I+wish+to+help&template=forms-for-those-who-wish-to-help-me-write-lists.md&title=I+wish+to+help) that I wish for assistance from others with.
 
-Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. Man er ikke nødt til å bruke engelsk hele tiden.
+Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listene på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. Man er ikke nødt til å bruke engelsk hele tiden.
 
 ![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Spr%C3%A5kflagg2.png)
 
