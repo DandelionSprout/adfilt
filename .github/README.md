@@ -8,34 +8,26 @@ This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, 
 
 This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed considerable energy and effort into, for your enjoyment.
 
-* [Official repo mirror](https://repo.or.cz/FilterMirrorRepo.git/tree/refs/heads/master) (A GitLab mirror also exists, but it currently has branch sync problems.)
+* [Official repo mirror](https://repo.or.cz/FilterMirrorRepo.git/tree/refs/heads/master)
+* [Secondary official repo mirror](https://gitlab.com/DandelionSprout/adfilt)
 * [Official donation links](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations)
 
 For a basic overview of the lists in this repo, go to [FilterLists.com](https://filterlists.com/), click on the Maintainers button in the bottom right, and choose Imre Kristoffer Eilertsen in the Maintainers dropdown menu. It proved to be too much work for me to maintain a GitHub spreadsheet for my lists, unfortunately.
 
 However, if you were led here by uBlock Origin, AdGuard, AdBlock, or [Adblock Plus' secondary subscription page](https://adblockplus.org/en/subscriptions), it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits.
 
-## I hereby request help from other people with:
+If you have any problems, suggestions, or a desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things for the time being. Don't be shy to ask/tell me. In particular, I have a [wishlist of things](https://github.com/DandelionSprout/adfilt/issues/new?assignees=&labels=I+wish+to+help&template=forms-for-those-who-wish-to-help-me-write-lists.md&title=I+wish+to+help) that I wish for assistance from others with.
 
-• Discovering filters that I may have missed, especially on websites that I refuse to visit due to personal tastes (e.g. far-right "newssites", clothes-"selling" scam shops, conspiracist mouthpiece blogs, and so on). <br>
-• Telling me that you're using those lists, through taking [a quick user survey](https://docs.google.com/forms/d/e/1FAIpQLSc7DB9MKrUTbF4znDQ7LKdy4EpSciL6ooh5ru-HUZkdGxmpKg/viewform) on Google Forms, and/or by giving this repository a ꙨWatch and/or ★Star. <br>
-• Testing out lists that are marked as _Beta_, and double-checking the syntaxes of and testing the lists that are marked as _Alpha_. <br>
-• Testing box-removal filters on widescreen monitors, since I almost always test my filters on a 9:16 portrait monitor. <br>
-• Telling me if the national lists remove things that in fact shouldn't be removed (e.g. Non-sponsored articles, entire pages, etc.). Bonus points if you know which filter entry it was that caused the problem. <br>
-• Showing your support for wildcard domains in element rules when using Adblock Plus, such as in [this issue tracker thread](https://issues.adblockplus.org/ticket/6773).
-
-I allow both _Issues_ and _Pull requests_ reports about any of the above, for the time being. Don't be shy to ask/tell me.
-
-Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere.
+Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listen på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. Man er ikke nødt til å bruke engelsk hele tiden.
 
 ![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Spr%C3%A5kflagg2.png)
 
 ## The tools that I use:
 
-• [Checker for redundant filter entries and for ABP syntaxes](https://arestwo.org/famlam/redundantRuleChecker.html), made by Famlam. It does however not account for uBO-syntax-specific entries. ([Alternate link](https://web.archive.org/web/20171209102004/https://arestwo.org/famlam/redundantRuleChecker.html)) <br>
-• [Recentmost tool I used to test IP server availability](https://github.com/funilrys/PyFunceble), made by [Funilrys](https://github.com/funilrys).  (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead). <br>
+• [Checker for redundant filter entries and for ABP syntaxes](https://arestwo.org/famlam/redundantRuleChecker.html), made by Famlam. It does however not account for uBO-syntax-specific entries, nor for ABP syntaxes newer than 2017. ([Alternate link](https://web.archive.org/web/20171209102004/https://arestwo.org/famlam/redundantRuleChecker.html)) <br>
+• [Recentmost tool I used to test IP server availability](https://github.com/funilrys/PyFunceble), made by [Funilrys](https://github.com/funilrys). (I previously used the _Find dead, redirected and/or parked domains_ tool at https://arestwo.org/famlam/redundantRuleChecker.html to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead). <br>
 • To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed. <br>
-• To easily create GitCDN links to the lists, in case anyone have list connection problems: [GitHub GitCDN Button](https://greasyfork.org/nb/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul)
+• To easily create GitCDN links to the lists, in case anyone have list connection problems: [GitHub GitCDN Button](https://greasyfork.org/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul)
 
 ### Ways one can use [Sublime Text](https://www.sublimetext.com/) (made by Jon Skinner and Will Bond) to improve his/her filter lists:
 
@@ -43,13 +35,14 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • To remove "www." from most entries: Ctrl+H / Find → Replace… <br>
 • To remove duplicates: Edit → Permute Lines → Unique <br>
 • To remove duplicates across files: Paste the content of the file that shall retain its filters on top, and paste the content of the file that shall delete its duplicates on bottom. <br>
+• To remove element-rule targets from adblock files, so that the rules' domains can be run through PyFunceble: Ctrl+H / Find → Replace, turn on RegEx, and then replace `##.*` and `#?#.*` with nothing.
 
 ## Special thanks to:
 
 • [gorhill](https://github.com/gorhill), [Collin Barrett](https://github.com/collinbarrett), the [AdGuard team](https://github.com/AdguardTeam), and the [AdBlock team](https://getadblock.com/contributors/), for having included at least one of my lists into uBlock Origin, Filterlists, AdGuard, and AdBlock respectively. <br>
 • [lassekongo83](https://github.com/lassekongo83) for being the best filter writer on planet Earth, for helping heaps of people (Me included) with writing specific filters, and for having made several lists that I often look through to learn more about how to write filters. <br>
 • [THEtomaso](https://github.com/THEtomaso) for waterproofing parts of the Nordic list, and for several contributions to the same list. <br>
-• The contributor communities that surround uBlock Origin and Nano Adblocker in general (including [okieshsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser)), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
+• The contributor communities that surround uBlock Origin and Nano Adblocker in general (including [okiehsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser) among others), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
 • [krystian3w](https://github.com/krystian3w) for teaching me that using `:style` entries completely breaks a list *and* its entries in ABP. <br>
 • [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *[Browse Websites Without Logging In](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt)*) to *uBlock Filters - Annoyances*.
 
