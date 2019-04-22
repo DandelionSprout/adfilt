@@ -60,7 +60,7 @@ This issue report form is intended for people who wish to contribute to help me 
 ## Things that concern the adblock community at large
 
 - [ ] Finding out who the current secretive owner of [uBlock LLC](https://chrome.google.com/webstore/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn) and [a fake namesake of AdBlock](https://chrome.google.com/webstore/detail/adblock/dgpfeomibahlpbobpnjpcobpechebadh) is
-- [ ] Lobbying for Chrome Extensions and/or Firefox Add-Ons to delist very-low-quality adblocker forks that don't have their disclaimers straight
+- [ ] Lobbying for Chrome Extensions and/or Firefox Add-Ons to delist very-low-quality adblocker forks that don't have their disclaimers or distribution licences straight
 - [ ] Figuring out how many of my and other listmakers' lists that can be accessed from internet-censoring trigger-happy countries (e.g. Saudi Arabia, Iran, PR-China)
 
 ## Other things:
