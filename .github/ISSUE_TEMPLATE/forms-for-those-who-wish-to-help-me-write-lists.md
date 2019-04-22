@@ -10,7 +10,7 @@ assignees: ''
 This issue report form is intended for people who wish to contribute to help me write my lists beyond what I am able to do on my own, including people who have no real experience with GitHub.
 
 ## Tell me a tiny little bit about your tech experience
-<!-- For example any previous experience with coding/adblockers, among other things you personally believe is relevant. Once you've written that, submit the "issue" and proceed to check off your desired buttons below. -->
+<!-- For example any previous experience with coding/adblockers, among other things you personally believe is relevant. Once you've written that, submit the "issue" and proceed to check off your desired buttons below. Once the "issue" thread has been made, it'll become the main place for me and you to discuss and arrange things. -->
 
 ## Testing and waterproofing lists (in / that are):
 
