@@ -17,7 +17,7 @@ This issue report form is intended for people who wish to contribute to help me 
 #### Please only select one of these tools if you are a frequent or regular user of them. For ABP/AdBlock, it's also necessary to know how to look into and resolve list problems.
 
 - [ ] Adblock Plus or AdBlock
-- [ ] Internet Explorer 11 (Tracking Protection List)
+- [ ] Internet Explorer 11 - Tracking Protection List
 - [ ] System-wide hosts file (Many possible interfaces and tools)
 - [ ] Network-wide hosts file tools (Pi-hole, AdGuard Home, or Diversion)
 - [ ] Android faux-VPN hosts file tools (Blokada or DNS66)
@@ -36,7 +36,7 @@ This issue report form is intended for people who wish to contribute to help me 
 
 ## Writing entries for:
 
-- [ ] Internet Explorer 11 (Tracking Protection List)
+- [ ] Internet Explorer 11 - Tracking Protection List
 - [ ] Little Snitch
 - [ ] FireHOL
 - [ ] uMatrix (Rulesets)
