@@ -4,12 +4,14 @@
 
 * `##.` / `##` / `###`: Hides parts of a page.
 * `#@#`: Whitelists parts of a page to make them load.
-* `[href="text"]`: Looks for page elements whose values in the F12 filetree console contains such a value. The value can be either `href`, `id`, `class`, `type`, or several other things.
-* `[href^="text"]`: Same as above, except it looks for anything whose value *begins* with the text.
-* `[href*="text"]`: Same as above, except it looks for anything whose value contains the text anywhere within it.
-* `:not(.element)`: Looks for page elements that doesn't contain a particular element or text string. Can be paired with other syntaxes á la `:not(:-abp-contains(Example text))`.
-* `:-abp-contains(text)`: Looks for page elements who contains such text within it.
-* `:-abp-has(.element)`: Looks for page elements who contains such an element within it.
+* `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or several other things.
+* `[href^="text"]`: Same as above, except it finds anything whose value *begins* with the text.
+* `[href$="text"]`: Same as above, except it finds anything whose value *ends* with the text.
+* `[href*="text"]`: Same as above, except it finds anything whose value contains the text anywhere within it.
+* `:not(.element)`: Finds page elements that doesn't contain a specified element or text string. Can be paired with other syntaxes á la `:not(:-abp-contains(Example text))`.
+* `:-abp-contains(text)`: Finds page elements that contains such text within it.
+* `:-abp-has(.element)`: Finds page elements that contains such an element within it.
+* `:nth-of-type(n)` / `:last-of-type` / `:only-of-type`: Finds page elements that are at a specific numerical position in a set.
 * `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
 * `a` / `div` / `iframe` / `img` (among others): Looks for page elements that are specific element types, as seen in the F12 filetree console.
 
@@ -17,11 +19,11 @@
 
 * `||`: Blocks resources from domains or parts thereof from being loaded. For non-domain-specific resources, no pre-emption is needed at all.
 * `@@`: Whitelists resources from specific URLs to make them load.
-* `$third-party` / `$3p`: Ensures that resources from a domain is only blocked if you're not visiting the domain itself.
-* `$domain=`: Ensures that resources from a domain is only blocked if you're visiting a specified website.
+* `$third-party` / `$3p`: Ensures that resources from a domain are only blocked if you're not visiting the domain itself.
+* `$domain=`: Ensures that resources from a domain are only blocked if you're visiting a specified website.
 * `$generichide`: Prevents all non-domain-specific hiding entries from working on a website.
-* `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it is a script, e.g. a JavaScript runtime.
-* `$document`: Frequently also used to make it more certain that a page warning shows up when loading such a page.
+* `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it's a script, e.g. a JavaScript runtime.
+* `$document`: Shows a danger warning when loading a page.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
 
 #### Universal
@@ -53,7 +55,7 @@
 * `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
 * `$first-party` / `$1p`: Ensures that resources from a domain is only blocked if you're visiting the domain itself.
 
-#### I should figure out and test out what these ones do:
+#### I honestly don't know what these ones do:
 
 * `:-abp-properties`
 * `$xmlhttprequest`
