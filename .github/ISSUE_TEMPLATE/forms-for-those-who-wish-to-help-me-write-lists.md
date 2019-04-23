@@ -14,7 +14,7 @@ This issue report form is intended for people who wish to contribute to help me 
 
 ## Testing and waterproofing lists (in / that are):
 
-#### Please only select one of these tools if you are a frequent or regular user of them. For ABP/AdBlock, it's also necessary to know how to look into and resolve list problems.
+#### Please only select any of these tools if you are a frequent or regular user of them. For ABP/AdBlock, it's also necessary to know how to look into and resolve list problems.
 
 - [ ] Adblock Plus or AdBlock
 - [ ] Internet Explorer 11 - Tracking Protection List
