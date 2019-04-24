@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 21April2019v2-Alpha
+! Version: 24April2019v1-Alpha
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
@@ -40,6 +40,9 @@ reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
 
 ! Posts that are too new to have been given a points score
 reddit.com#?#.Post:-abp-has(div[style^="color:"]:-abp-contains(•):not(:-abp-contains(/[a-z]/i)))
+
+! Attempts to remove the "Mildly similar posts" pop-in banner
+reddit.com##div[data-redditstyle="true"]
 
 ! ————— ↓ Removes content posted by the top 10 karma hoarders ↓ —————
 
