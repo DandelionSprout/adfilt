@@ -60,6 +60,10 @@
 * `! Redirect: `: Tells the adblocker to look for list updates from a new URL from that point on.
 * `:-abp-properties`: Don't take my word for this, but it appears to me to find pop-under elements that possess certain traits, such as text encodings á la Base64.
 
+### AdGuard for [Windows/Mac] only:
+
+* `! Description: `: Shows a description of the list's purpose, when the question mark next to the list in the AdGuard settings is hovered over. That being said, a description is convenient for users of all adblockers, if they're willing to look up a list's raw content.
+
 #### I honestly don't know what these ones do:
 
 * `$xmlhttprequest`
