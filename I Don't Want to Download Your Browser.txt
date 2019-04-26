@@ -1,20 +1,39 @@
-[Adblock Plus 3.1]
+[Adblock Plus 3.2]
 ! Title: 🔮 I Don't Want to Download Your Browser
-! Version: 24February2019v1-Alpha
+! Version: 26April2019v1-Alpha
 ! Expires: 5 days
-! Description: Do you already have a favourite browser? Are you tired of seeing "Try out [some browser] now!" on some websites? Then this is a list is for you!
+! Description: Do you already have a favourite browser or PDF reader? Are you tired of seeing "Try out [some browser] now!" on some websites? Then this is a list for you!
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
-! Chrome
+! ——— Chrome ———
 google.com##.gb_vd[aria-label*="Google Play"][aria-label*="Chrome"]
 google.*##.gb_g.gb_ba:has(.gb_Ad)
 chrome.google.com##.Yb
 
-! Edge
+! ——— Edge ———
 ##.epb-default-color.epb-container.f-information.c-uhfh-alert
 
-! Opera
+! ——— Opera ———
 addons.opera.com###overlay
 
-! Firefox
+! ——— Firefox ———
 addons.mozilla.org##.DownloadFirefoxButton
+
+! ——— Adobe Reader / Adobe Acrobat ———
+! https://www.asrock.com/mb/Intel/Z390%20Phantom%20Gaming%209/index.asp#Manual
+asrock.com###Manual > .Notice
+! https://www.jal.co.jp/en/footer/browser.html
+jal.co.jp#?#.mgt20:-abp-contains(is necessary to view or print PDF)
+! http://www.jal.com/en/press/2004/090801/090801.html
+jal.com#?#body > font:-abp-contains(have Adobe Reader)
+! https://www.yadvashem.org/yv/en/downloads/name_reading_ceremonies.asp
+yadvashem.org#?#.text_and_menu_block > p:-abp-contains(need to download Adobe Acrobat)
+yadvashem.org#?#p:-abp-contains(start your Acrobat Reader)
+! https://www.gigabyte.com/Motherboard/Z390-M-GAMING-rev-10#support-manual
+gigabyte.com#?#div.target-container.desc:-abp-contains(PDF files with Acrobat )
+! https://www.supermicro.com/about/sitemap/
+supermicro.com#?#.boxHome.textA:-abp-has([href*="products/acrobat/"])
+
+! ——— Self-promoting but somewhat annoying links ———
+fileinfo.com##.fv
+fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
