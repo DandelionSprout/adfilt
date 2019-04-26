@@ -55,9 +55,13 @@
 * `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
 * `$first-party` / `$1p`: Ensures that resources from a domain is only blocked if you're visiting the domain itself.
 
+### Adblock Plus and AdBlock only:
+
+* `! Redirect: `: Tells the adblocker to look for list updates from a new URL from that point on.
+* `:-abp-properties`: Don't take my word for this, but it appears to me to find pop-under elements that possess certain traits, such as text encodings á la Base64.
+
 #### I honestly don't know what these ones do:
 
-* `:-abp-properties`
 * `$xmlhttprequest`
 
 # Particularly important usage notes
@@ -72,5 +76,6 @@
 * In `:-abp-has` and `:has`, it is not needed to pre-empt the criteria elements with `##`.
 * `:style` and `{ }` does not allow to change `background-image` into a URL value.
 * It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
+* Domains in `$domain=` are seperated by a vertical line (`|`), instead of the usual comma.
 
 ¹ = Includes Nano Adblocker, uBlock Origin ≥1.14.0, AdGuard, Adblock Plus version ≥3.1, and AdBlock. It does **not** include Brave Browser, Slimjet, uBlock non-Origin, Adblock Plus for IE, Tracking Protection List, AdAway, or Blokada, whose syntax supports are considerably inferior to the above list.
