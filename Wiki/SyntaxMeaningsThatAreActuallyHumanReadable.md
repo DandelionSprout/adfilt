@@ -11,6 +11,7 @@
 * `:not(.element)`: Finds page elements that doesn't contain a specified element or text string. Can be paired with other syntaxes á la `:not(:-abp-contains(Example text))`.
 * `:-abp-contains(text)`: Finds page elements that contains such text within it.
 * `:-abp-has(.element)`: Finds page elements that contains such an element within it.
+* `:scope`: Used alongside `:-abp-has` to make it only find elements whose criteria match their immediate subelements.
 * `:nth-of-type(n)` / `:last-of-type` / `:only-of-type`: Finds page elements that are at a specific numerical position in a set.
 * `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
 * `a` / `div` / `iframe` / `img` (among others): Looks for page elements that are specific element types, as seen in the F12 filetree console.
