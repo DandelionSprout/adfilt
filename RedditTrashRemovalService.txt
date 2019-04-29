@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 29April2019v9-Alpha
+! Version: 29April2019v10-Alpha
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
@@ -40,19 +40,19 @@ reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
 
 ! Posts whose scores are lower than a certain amount
 ! The default for all subreddits is 10 points, although this can be adjusted for a handful of subreddits whose quality levels are deemed to sharply increase with a higher or lower limit.
-reddit.com#?#div:-abp-has(:scope > div > a[href^="/r/"]:not([href="/r/mapswithoutnz"]):not([href="/r/dontdeadopeninside"]):not([href="/r/assholedesign"]):not([href="/r/ihadastroke"]):not([href="/r/boneappletea"]):not([href="/r/BestOfReports"]):not([href="/r/showerthoughts"]):not([href="/r/europe"])) ##.Post:-abp-has(button + div:-abp-contains(/^[0-9]$/))
+reddit.com#?#div:-abp-has(:scope > div > a[href^="/r/"]:not([href="/r/mapswithoutnz"]):not([href="/r/dontdeadopeninside"]):not([href="/r/assholedesign"]):not([href="/r/ihadastroke"]):not([href="/r/boneappletea"]):not([href="/r/BestOfReports"]):not([href="/r/showerthoughts"]):not([href="/r/europe"])) .Post:-abp-has(button + div:-abp-contains(/^[0-9]$/))
 ! 5 points
-reddit.com#?#div:-abp-has(:scope > div > a[href="/r/mapswithoutnz"]) ##.Post:-abp-has(button + div:-abp-contains(/^[0-4]$/))
+reddit.com#?#div:-abp-has(:scope > div > a[href="/r/mapswithoutnz"]) .Post:-abp-has(button + div:-abp-contains(/^[0-4]$/))
 ! 15 points
-reddit.com#?#div:-abp-has(:scope > div > a[href="/r/dontdeadopeninside"]) ##.Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-4]$/))
-reddit.com#?#div:-abp-has(:scope > div > a[href="/r/assholedesign"]) ##.Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-4]$/))
+reddit.com#?#div:-abp-has(:scope > div > a[href="/r/dontdeadopeninside"]) .Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-4]$/))
+reddit.com#?#div:-abp-has(:scope > div > a[href="/r/assholedesign"]) .Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-4]$/))
 ! 20 points
-reddit.com#?#div:-abp-has(:scope > div > a[href="/r/ihadastroke"]) ##.Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$/))
-reddit.com#?#div:-abp-has(:scope > div > a[href="/r/boneappletea"]) ##.Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$/))
-reddit.com#?#div:-abp-has(:scope > div > a[href="/r/BestOfReports"]) ##.Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$/))
-reddit.com#?#div:-abp-has(:scope > div > a[href="/r/showerthoughts"]) ##.Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$/))
+reddit.com#?#div:-abp-has(:scope > div > a[href="/r/ihadastroke"]) .Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$/))
+reddit.com#?#div:-abp-has(:scope > div > a[href="/r/boneappletea"]) .Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$/))
+reddit.com#?#div:-abp-has(:scope > div > a[href="/r/BestOfReports"]) .Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$/))
+reddit.com#?#div:-abp-has(:scope > div > a[href="/r/showerthoughts"]) .Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$/))
 ! 25 points
-reddit.com#?#div:-abp-has(:scope > div > a[href="/r/europe"]) ##.Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$|^2[0-4]$/))
+reddit.com#?#div:-abp-has(:scope > div > a[href="/r/europe"]) .Post:-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-9]$|^2[0-4]$/))
 
 ! Posts that are too new to have been given a points score
 reddit.com#?#.Post:-abp-has(div[style^="color:"]:-abp-contains(•):not(:-abp-contains(/[a-z]/i)))
