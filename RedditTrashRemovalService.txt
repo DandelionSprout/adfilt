@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 29April2019v2-Alpha
+! Version: 29April2019v3-Alpha
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
@@ -40,19 +40,19 @@ reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
 
 ! Posts whose scores are lower than a certain amount
 ! The default for all subreddits is 10 points, although this can be adjusted for a handful of subreddits whose quality levels are deemed to sharply increase with a higher or lower limit.
-reddit.com#?#html:-abp-has(head > meta[name="description"]:not([content^="r/dontdeadopeninside:"]):not([content^="r/ihadastroke:"]):not([content^="r/MapsWithoutNZ:"]):not([content^="r/BoneAppleTea:"]):not([content^="r/BestOfReports:"]):not([content^="r/Showerthoughts:"]):not([content^="r/europe:"]):not([content^="r/assholedesign:"])) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$/))
+reddit.com#?#div[class^="SubredditVars-"]:not([class$="-r-mapswithoutnz"]) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$/))
 ! 5 points
-reddit.com#?#html:-abp-has(head > meta[name="description"][content^="r/MapsWithoutNZ:"]) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-4]$/))
+reddit.com#?#div[class$="-r-mapswithoutnz"] .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-4]$/))
 ! 15 points
-reddit.com#?#html:-abp-has(head > meta[name="description"][content^="r/dontdeadopeninside:"]) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-4]$/))
-reddit.com#?#html:-abp-has(head > meta[name="description"][content^="r/assholedesign:"]) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-4]$/))
+reddit.com#?#div[class$="-r-dontdeadopeninside"] .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-4]$/))
+reddit.com#?#div[class$="-r-assholedesign"] .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-4]$/))
 ! 20 points
-reddit.com#?#html:-abp-has(head > meta[name="description"][content^="r/ihadastroke:"]) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$/))
-reddit.com#?#html:-abp-has(head > meta[name="description"][content^="r/BoneAppleTea:"]) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$/))
-reddit.com#?#html:-abp-has(head > meta[name="description"][content^="r/BestOfReports:"]) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$/))
-reddit.com#?#html:-abp-has(head > meta[name="description"][content^="r/Showerthoughts:"]) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$/))
+reddit.com#?#div[class$="-r-ihadastroke"] .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$/))
+reddit.com#?#div[class$="-r-boneappletea"] .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$/))
+reddit.com#?#div[class$="-r-bestofreports"] .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$/))
+reddit.com#?#div[class$="-r-showerthoughts"] .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$/))
 ! 25 points
-reddit.com#?#html:-abp-has(head > meta[name="description"][content^="r/europe:"]) .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$|^2[0-4]$/))
+reddit.com#?#div[class$="-r-europe"] .Post:-abp-has(div:-abp-has(:scope > button[aria-label="upvote"]) > div:-abp-contains(/^[0-9]$|^1[0-9]$|^2[0-4]$/))
 
 ! Posts that are too new to have been given a points score
 reddit.com#?#.Post:-abp-has(div[style^="color:"]:-abp-contains(•):not(:-abp-contains(/[a-z]/i)))
