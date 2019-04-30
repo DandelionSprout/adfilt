@@ -1,5 +1,5 @@
 ! This list includes uBO-specific versions of filters, and are meant to be accessed by Nano Adblocker, uBlock Origin, and AdGuard whenever they load the main Nordic list.
-! Version: 30April2019v1-Extension
+! Version: 30April2019v2-Extension
 
 !#if !adguard
 ! JavaScript features baked into Nano Adblocker and uBlock Origin
@@ -100,3 +100,213 @@ no##.polarisSpid.widget:before
 ||gamereactor.*/lay/js/adblock_desktop.js^$script,important
 /entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
 ||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
+
+! ——————————————————————————————————————————————————————————————————————————————————————————
+
+!#if !adguard
+! 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
+! Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no/sport
+! 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
+! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
+! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
+||skoonlineshopnorge.com^$document,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||kjolenorge.com^$document,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||newbalancenorge.com^$document,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||paypal.*.no^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av PayPal
+||vg.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av VG
+||elkjop.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Elkjøp
+||coop.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Coop
+||shell.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Shell
+||finn.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
+||posten.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Posten
+||postnord.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Postnord
+||*/finn.no/finno.htm$document,domain=~facebook.com
+||dnb.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av DNB
+||sparebank1.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sparebank1
+||finnrefusjon.com^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
+||finn-spid.info^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
+||nordea.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordea
+||sbanken.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sbanken
+||danskebank.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Danske Bank
+||*/?finn.no/login$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
+||refusjon-finn.com^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
+||komplett.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Komplett
+||nordnet.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordnet
+||skatteetaten.no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Skatteetaten
+||*/begrensede-tilbudet/$document,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
+||norwegian.com.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Norwegian
+||flysas-no.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av SAS
+||tusenfryd-com.$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Tusenfryd
+||*/bli-avbrutt-bor-du-oppdater/$document,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
+||*/Norgesecure/$document,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
+||.gratis-reisebilletter.$document,domain=~ Advarselen vises grunnet: Falsk svindel
+||*/KiwiErbjudanden1/$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Kiwi
+||trackvoluum.com^$document
+||testgruppens.com^$document
+||jagerjack.com^$document
+||*/pakkerlevering/$document,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
+||posten.club^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Posten
+||kundklubb-se.com^$document,domain=~ Advarselen vises grunnet: Falske artikler som fører til pengesvindling
+||norwayexpress24.com^$document,domain=~ Advarselen vises grunnet: Falske artikler som fører til pengesvindling
+||prisjakt.org^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Prisjakt
+
+! 🇳🇴: Som nevnt i https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
+! 🇬🇧: As mentioned in https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
+||breakoutstory24.com^$document,domain=~ Warning displayed due to: Bitcoin scam fraudsters. For more info in Norwegian; see https://www.dagbladet.no/kultur/70487841
+||thefivereport.online^$document,domain=~ Warning displayed due to: Bitcoin scam fraudsters. For more info in Norwegian; see https://www.dagbladet.no/kultur/70487841
+||abafort.us^$document,domain=~ Warning displayed due to: Bitcoin scam fraudsters. For more info in Norwegian; see https://www.dagbladet.no/kultur/70487841
+
+! Som nevnt i https://www.tv2.no/nyheter/10493336/
+||rnbinance.com^$document,domain=~ Warning displayed due to: Bitcoin scam fraudsters. For more info in Norwegian; see https://www.tv2.no/nyheter/10493336/
+||brightertrade.com^$document,domain=~ Warning displayed due to: Bitcoin scam fraudsters. For more info in Norwegian; see https://www.tv2.no/nyheter/10493336/
+
+! Som nevnt i https://www.nrk.no/ytring/1.14496024
+||cost2buy.net^$document,domain=~ Warning displayed due to: Bitcoin scam fraudsters. For more info in Norwegian; see https://www.nrk.no/ytring/1.14496024
+
+! Som nevnt i https://www.nrk.no/norge/1.14511067
+||kongeparken.com-*^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Kongeparken. Les https://www.nrk.no/norge/1.14511067 for mer info.
+||com-fryd.com^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Tusenfryd. Les https://www.nrk.no/norge/1.14511067 for mer info.
+||kiwi.com-*^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Kiwi. Les https://www.nrk.no/norge/1.14511067 for mer info.
+||com-norwegian.com^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Norwegian. Les https://www.nrk.no/norge/1.14511067 for mer info.
+
+! Som nevnt i https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
+||ruter.top^$document,domain=~ Advarselen vises grunnet: Falsk lureversjon av Ruter. Les https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter for mer info.
+
+! Som nevnt i https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
+||101mesh.com^$document,domain=~ Warning displayed due to: Bitcoin scam fraudsters. For more info in Norwegian; see https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
+||gokkw.com^$document,domain=~ Warning displayed due to: Bitcoin scam fraudsters. For more info in Norwegian; see https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
+||earnmoneyglobal.com^$document,domain=~ Warning displayed due to: Bitcoin scam fraudsters. For more info in Norwegian; see https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
+
+! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
+! 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
+! 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
+! Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
+||adamaruiz.org^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||adidasko.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||adidassuperstarnorge.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||adidasoutletnorway.eu^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||airmaxskobillige.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||allergyfl.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||apcleverstore.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||apvoc-ga.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||ashskonorge.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||assassinfitness.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||beblessedbehappy.org^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||benshermanoslo.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||billigesalg.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||billigskos.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||bilstokken.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||birkenstocknorgesalg.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||bncentertainment.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||bostongrnhsflowers.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||cafths.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||caperforaciones.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||careerintegra.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||chaletdeville.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||charpente-ramel.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||coloradobraincampaign.org^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||coralls.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||crossfiterada.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||crownedwithlaurels.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||daradis.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||denningwelldrilling.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||drakternorge.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||drcarolyngroff.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||dunjakke-no.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||easyliving4you.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||eurosko.net^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||fatalfailblog.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||festmusikk.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||fitflopforhandler.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||fotballsko-salg.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||fotballskotilbud.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||gantoslo.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||godeskonettbutikk.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||godsfillingstation.org^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||gsport.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||helseprodukt.co^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||hernoclothing.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||hollisternorge.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||horizonbagel.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||itsthetrendydealstore.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||imprimtacom.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||jakker.co^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||jakkesalgs.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||jakkesnorge.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||joseph-holland.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||klmsteelers.org^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||klmyu.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||jessicaivory.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||legarralazcoz.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||lillebitenas.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||lillevinkelsko.net^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||lindseysopticians.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||linkshe.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||locchalet2alpes.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||lrgst.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||lymaq.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||manasporthorse.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||mayor4london.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||mbtnorge.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||meadtalkofthetown.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||meladermfacts.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||mncprobuild.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||moebel-thiems.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||moslt.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||moteshoes.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||mrarmstrongsclass.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||mudancaslvc.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||museuw.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||mycraftypad.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||nasajones.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||nikebutikks.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||no.moncleritalien.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||noculottes.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||nordartisan.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||norfotball.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||norgefotball.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||norge.parkaoutdoor.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||norgejakke.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||norgejakkerbutikk.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||norgeshoes.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||nyeskonorge2015.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||nywlm.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||oflike.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||omgrm.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||ontariokitcarbuilders.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||orchidtechclub.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||oslomarcjacobsvesker.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumpers-longbear.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumpers-salg.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumpersitoutlet.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumpersit.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumperjakke.net^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumpersnettbutikk.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumpers-norge.site^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumpersnorway.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumperssalg.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||parajumpersoutletnorge.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||pmnft.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||pjs.outlet.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||popeurope.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||pursuenewly.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||quiltstudiolaren.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||reeconindustries.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||retoaudi.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||rsket.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||salomonnettbutikk.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||scottfamilyministries.org^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||skoeccosandaler.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||skonmdnorge.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||solraba.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||sykkeltrøye.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||ssrodeolivestock.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||swellsup.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||theartcardstudio.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||tiranaaquapark-eg.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||tobiascelebritymusicevents.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||um-bs.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||vansnorge.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||wausauorthopedics.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+||zaskal.com^$document,domain=~ Advarselen vises grunnet: En så grovt falsk nettbutikksvindel at de står på Forbrukertilsynets svarteliste.
+!#endif
