@@ -1,6 +1,6 @@
 [Adblock Plus 3.1]
-! Version: 30April2019v2
-! Version: 300420192 (for Adblock Plus' issue report system)
+! Version: 30April2019v3
+! Version: 300420193 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -74,7 +74,6 @@
 ##optimus-element[id^="art-bazaarAd-"][version="default"]
 .oasfile
 /ad-video-log.php$domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
-/Bannere/*$image,domain=tek.no|gamer.no
 /prerolls/*$domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
 1001spill.no###footer
 1001spill.no##.omega.grid_6
@@ -423,6 +422,7 @@ sporttv.is##div[class^="auglysing-"]
 /annonse/*
 /auglysing/*
 /bilder/erotikk1.jpg$domain=eavisa.com
+/Bannere/*$image,domain=tek.no|gamer.no
 
 ! Leftover empty spaces that EasyList have left behind (Section under construction)
 amino.dk##.ad624x60
@@ -1008,6 +1008,7 @@ dagligvarehandelen.no,avisen.dk,bt.dk,sondagsavisen.dk,lokalavisen.dk,folketiden
 folkebladet.no,hitra-froya.no,rbnett.no,smp.no##.polarisSpid.widget:before
 !#endif
 
+!#if !adguard
 ! Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 newz.dk##.top-interstitial
 krs247.no#@##adsense
@@ -1015,7 +1016,8 @@ tu.no,digi.no##.poster-placeholder
 vg.no##.ad
 vgtv.no###player.pulse-isPauseAdVisible > .jw-overlays
 fuglelyder.net#@##banner_ad
-!#if !ext_ublock
+!#endif
+!#if (!ext_ublock && !adguard)
 qxl.no###GoogleAdsensePanorama
 viafree.no,viafree.dk##.pause-ad
 google.no,google.dk,google.is##.luhb-div
