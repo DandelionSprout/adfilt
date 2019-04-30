@@ -1,6 +1,7 @@
 ! This list includes uBO-specific versions of filters, and are meant to be accessed by Nano Adblocker, uBlock Origin, and AdGuard whenever they load the main Nordic list.
-! Version: 20April2019v1-Extension
+! Version: 30April2019v1-Extension
 
+!#if !adguard
 ! JavaScript features baked into Nano Adblocker and uBlock Origin
 vgtv.no##+js(golem.de.js)
 gratisspil.dk##+js(abort-on-property-write.js, AdBlockerInfo)
@@ -14,9 +15,10 @@ gamer.no,tu.no##+js(abort-current-inline-script.js, dfpConfig, loadAds)
 blogg.no##+js(set-constant.js, showAd, false)
 viafree.no,viafree.dk##+js(setTimeout-defuser.js, r, 0)
 viafree.no,viafree.dk##+js(addEventListener-defuser.js, error, (t,n))
+!#endif
 
 ! Style-changing entries
-! I could've theorethically made a Stylish userscript based on this section, but why would I ever want to do that when Nano and uBO support such entries natively?
+! I could've theorethically made a Stylish userscript based on this section, but why would I ever want to do that when Nano, uBO, and AdGuard support such entries natively?
 telenor.no###megafooter:style(padding-top: 0px)
 eavisa.com##div.kun-desktop:style(height:255px; overflow: hidden; pointer-events: none !important; cursor: default !important)
 frettabladid.is##.ad-topspacer:style(height: 45px !important)
@@ -48,6 +50,7 @@ xstra.no##.td_single_image_bg[style*="xstra.no/wp-content"][style*="/facebookico
 sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
 dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
 
+!#if !adguard
 ! Wildcard versions of various entries. Because why only block on one national version of a site, when you can nowadays block on all versions of a site without cluttering things up?
 gamereactor.*###ad_video
 gamereactor.*###ad_w300h450
@@ -80,6 +83,7 @@ qxl.*###GoogleAdsensePanorama
 expedia.*##.extended-below-wizard-ads
 dk,no##div.spklw-post-attr:has(div[class*="spklw-sponsored"])
 no##.polarisSpid.widget:before
+!#endif
 
 ! Entries that make use of non-ABP $-values, incl. $important and $redirect
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
