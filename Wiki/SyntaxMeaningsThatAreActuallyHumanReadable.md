@@ -24,7 +24,6 @@
 * `$domain=`: Ensures that resources from a domain are only blocked if you're visiting a specified website.
 * `$generichide`: Prevents all non-domain-specific hiding entries from working on a website.
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it's a script, e.g. a JavaScript runtime.
-* `$document`: Shows a danger warning when loading a page.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
 
 #### Universal
@@ -42,6 +41,8 @@
 * `:has-text`: Same as `:-abp-contains`.
 * `:has`: Same as `:-abp-has`.
 * `!#if`: Specifies that a section of entries only applies to specific platforms or extensions. Closed out by `!#endif`.
+* `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
+* `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
 
 ### Nano Adblocker and uBlock Origin only:
 
@@ -51,9 +52,8 @@
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `127.0.0.1` / `0.0.0.0` / `::1`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`.
 * `##^`: Blocks resources before they've even been loaded, based on their values in *View source* instead of their F12 ones.
+* `$document`: Shows a danger warning when loading a page.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions.
-* `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
-* `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
 * `$first-party` / `$1p`: Ensures that resources from a domain is only blocked if you're visiting the domain itself.
 
 ### Adblock Plus and AdBlock only:
