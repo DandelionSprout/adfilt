@@ -31,3 +31,5 @@
 | Its maintainers must be able to deal with issue reports to at least a basic degree. | IndianList |
 | The list must have received at least one substantial definition update in 2019. | |
 | A language may have no more than 2 lists for it at any one time. | KoreanList |
+| The list must be accessible with HTTPS from its official homepages | |
+| To show off more potential list maintainers, no maintainers may have more than 2 candidate lists at once. | |
