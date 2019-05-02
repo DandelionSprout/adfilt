@@ -1,7 +1,7 @@
 — Ads (0/1)<br>
 ☐ [Kowabit Bl*cklist](https://blocklist.kowabit.de/list.txt) [🏠](https://www.kowabit.de/blcklst/)<br><br>
 
-— Malware domains (0/1)<br>
+— Malware domains (0/2)<br>
 ☐ [hpHosts EMD](https://hosts-file.net/emd.txt) 🏠<br>
 ☐ [Phishing Domain Database](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt) 🏠<br><br>
 
