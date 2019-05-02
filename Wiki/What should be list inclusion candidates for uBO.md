@@ -1,5 +1,6 @@
 — Ads (0/1)<br>
-☐ [Kowabit Bl*cklist](https://blocklist.kowabit.de/list.txt) [🏠](https://www.kowabit.de/blcklst/)<br><br>
+☐ [Kowabit Bl\*cklist](https://blocklist.kowabit.de/list.txt) [🏠](https://www.kowabit.de/blcklst/)<br><br>
+☐ [Nano Defender Integration](https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt)
 
 — Malware domains (0/2)<br>
 ☐ [hpHosts EMD](https://hosts-file.net/emd.txt) 🏠<br>
@@ -24,12 +25,12 @@
 
 | Criteria for candidate status | Excludes |
 | - | - |
-| At least 250 entries (200 for Raajje-AdList due to its small coverage area). | YouTube: Even More Pure Video Experience |
+| At least 250 entries (200 for Raajje-AdList due to its small coverage area). | Nano Placeholder Buster |
 | Consists of at least 40% original work. | 1hosts, Steven Black Unified Hosts, hBlock Hosts, etc. |
 | Its maintainers must be able to write and read understandable English. | Spyware Filter Block List |
 | Its maintainers must be able to behave professionally as well as consistently sane. | `Fuck Fuckadblock`, `iVoid` |
 | Its maintainers must be able to deal with issue reports to at least a basic degree. | IndianList |
-| The list must have received at least one substantial definition update in 2019. | |
+| The list must have received at least one substantial definition update in 2019. | CAMELEON Hosts |
 | A language may have no more than 2 lists for it at any one time. | KoreanList |
-| The list must be accessible with HTTPS from its official homepages | |
-| To show off more potential list maintainers, no maintainers may have more than 2 candidate lists at once. | |
+| The list must be accessible with HTTPS from its official homepages | CAMELEON Hosts |
+| To show off more potential list maintainers, no maintainers may have more than 2 candidate lists at once. | YouTube: Even More Pure Video Experience |
