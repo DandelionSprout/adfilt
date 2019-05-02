@@ -1,5 +1,5 @@
 ! This list includes uBO-specific versions of filters, and are meant to be accessed by Nano Adblocker, uBlock Origin, and AdGuard whenever they load the main Nordic list.
-! Version: 02May2019v1-Extension
+! Version: 02May2019v2-Extension
 
 !#if !adguard
 ! JavaScript features baked into Nano Adblocker and uBlock Origin
@@ -8,9 +8,9 @@ gratisspil.dk##+js(abort-on-property-write.js, AdBlockerInfo)
 techstart.dk##+js(set-constant.js, adblock, false)
 dagensbyggeri.dk##+js(setTimeout-defuser.js, (), 2500)
 vg.no##+js(abort-current-inline-script.js, Math.floor, g00)
-vg.no,e24.no,gamer.no,tek.no,digi.no##script:inject(abort-on-property-write.js, __AB__)
-tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
-gamereactor.*##script:inject(abort-current-inline-script.js, detectAdblockUser)
+vg.no,e24.no,gamer.no,tek.no,digi.no##+js(abort-on-property-write.js, __AB__)
+tv2.no##+js(abort-current-inline-script.js, adblockDetector)
+gamereactor.*##+js(abort-current-inline-script.js, detectAdblockUser)
 gamer.no,tu.no##+js(abort-current-inline-script.js, dfpConfig, loadAds)
 blogg.no##+js(set-constant.js, showAd, false)
 viafree.no,viafree.dk##+js(setTimeout-defuser.js, r, 0)
