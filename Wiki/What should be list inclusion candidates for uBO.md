@@ -1,6 +1,6 @@
 — Ads (0/1)<br>
-☐ [Kowabit Bl\*cklist](https://blocklist.kowabit.de/list.txt) [🏠](https://www.kowabit.de/blcklst/)<br><br>
-☐ [Nano Defender Integration](https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt)
+☐ [Kowabit Bl\*cklist](https://blocklist.kowabit.de/list.txt) [🏠](https://www.kowabit.de/blcklst/)<br>
+☐ [Nano Defender Integration](https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt)<br><br>
 
 — Malware domains (0/2)<br>
 ☐ [hpHosts EMD](https://hosts-file.net/emd.txt) 🏠<br>
