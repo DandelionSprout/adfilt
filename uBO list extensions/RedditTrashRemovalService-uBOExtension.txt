@@ -1,9 +1,10 @@
 ! This is an extension file, not an independent list.
-! Version: 29April2019v1-Extension
+! Version: 03May2019v1-Extension
 
 ! Old entry formats for posts whose scores are lower than a certain amount
 !!!reddit.com##html:has(head > meta[name="description"]:not([content^="r/dontdeadopeninside:"]):not([content^="r/ihadastroke:"]):not([content^="r/MapsWithoutNZ:"]):not([content^="r/BoneAppleTea:"]):not([content^="r/BestOfReports:"]):not([content^="r/Showerthoughts:"]):not([content^="r/europe:"]):not([content^="r/assholedesign:"])):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(10)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 !!!reddit.com##html:has(head > meta[name="description"][content^="r/MapsWithoutNZ:"]):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(5)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
 
 ! Intends to make the downvote buttons on The_Donald and similarly inclined subreddits visible
-reddit.com##button[aria-label="downvote"][style*="styles.redditmedia.com/"][style*="DownvoteIconInactive"]:style(background-color: #999 !important)
+! The current entry turned out to be too broadly applied. A fix may be found whenever I feel like doing so, which could take a while.
+!!!reddit.com##button[aria-label="downvote"][style*="styles.redditmedia.com/"][style*="DownvoteIconInactive"]:style(background-color: #999 !important)
