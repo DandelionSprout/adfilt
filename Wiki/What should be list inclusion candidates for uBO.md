@@ -1,4 +1,4 @@
-— Ads (0/1)<br>
+— Ads (0/3)<br>
 ☐ [Kowabit Bl\*cklist](https://blocklist.kowabit.de/list.txt) [🏠](https://www.kowabit.de/blcklst/) 0 used out of 20,823 🕘<br>
 ☐ [Nano Defender Integration](https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt) [🏠](https://github.com/NanoAdblocker/NanoFilters) 0 used out of ~2,654 🕘<br>
 ☐ [Energized Core List](https://github.com/AdroitAdorKhan/EnergizedProtection/raw/master/core/hosts) [🏠](https://github.com/EnergizedProtection/block/issues) 0 used out of 20,555 🕘<br><br>
@@ -11,7 +11,7 @@
 ☐ [I Don't Care About Cookies](https://www.kiboke-studio.hr/i-dont-care-about-cookies/abp/) [🏠](https://www.kiboke-studio.hr/i-dont-care-about-cookies/) 0 used out of 16,049 🕘<br>
 ☐ [Staying On The Phone Browser](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/stayingonbrowser/Staying%20On%20The%20Phone%20Browser) [🏠](https://github.com/DandelionSprout/adfilt) 0 used out of 310 🕘<br><br>
 
-— Regional, languages (0/4)<br>
+— Regional, languages (0/3)<br>
 ☐ [ALB: Adblock List for Albania](https://raw.githubusercontent.com/AnXh3L0/blocklist/master/albanian-easylist-addition/Albania.txt) [🏠](https://github.com/AnXh3L0/blocklist) 0 used out of 200 🕘<br>
 ☐ [JPN: Complete Mochi Filter](https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/all.txt) [🏠](https://github.com/eEIi0A5L/adblock_filter) 0 used out of ~2,522 🕘<br>
 ☐ [POR: EasyList Portuguese](https://easylist-downloads.adblockplus.org/easylistportuguese.txt) [🏠](https://easylist.to/) 0 used out of 253 🕘<br><br>
