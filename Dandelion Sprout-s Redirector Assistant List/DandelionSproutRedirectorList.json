@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.2",
-    "createdAt": "2019-05-05T13:27:16.767Z",
+    "createdAt": "2019-05-10T06:26:25.755Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -136,7 +136,7 @@
             ]
         },
         {
-            "description": "{Hidden webpages 4} Change certain Twitter images to functionally readable images, so that they can be easily opened in image applications",
+            "description": "{Hidden webpages 4} Change some Twitter images to functionally readable images, so that they can be easily opened in image applications",
             "exampleUrl": "https://pbs.twimg.com/media/DdO7F3tU0AA1CnQ.jpg:large",
             "exampleResult": "https://pbs.twimg.com/media/DdO7F3tU0AA1CnQ.jpg",
             "error": null,
@@ -188,11 +188,11 @@
             "exampleUrl": "https://i.imgur.com/zlDG14al.jpg",
             "exampleResult": "https://i.imgur.com/zlDG14a.jpg",
             "error": null,
-            "includePattern": "https://i.imgur.com/*l.*",
+            "includePattern": "https://i.imgur.com/([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])l.([j|p])([p|n])g",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://i.imgur.com/$1.$2",
-            "patternType": "W",
+            "redirectUrl": "https://i.imgur.com/$1$2$3$4$5$6$7.$8$9g",
+            "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,
             "appliesTo": [
@@ -208,6 +208,22 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/$2/$3.png",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "{Raw image res upgrade 5} Upgrade the resolution when viewing raw Discord avatars",
+            "exampleUrl": "https://cdn.discordapp.com/avatars/274572787488915456/1e1302013b2ba9ba1dbfc2f84cb12147.png?size=128",
+            "exampleResult": "https://cdn.discordapp.com/avatars/274572787488915456/1e1302013b2ba9ba1dbfc2f84cb12147.png?size=4096",
+            "error": null,
+            "includePattern": "https://cdn.discordapp.com/avatars/*?size=128",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://cdn.discordapp.com/avatars/$1?size=4096",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -626,7 +642,7 @@
             "redirectUrl": "https://www.youtube.com/embed/xKm7GVceWQQ$1",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": true,
+            "disabled": false,
             "appliesTo": [
                 "sub_frame",
                 "stylesheet",
