@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.2",
-    "createdAt": "2019-05-14T19:58:51.786Z",
+    "createdAt": "2019-05-14T20:54:42.551Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -297,13 +297,45 @@
         },
         {
             "description": "{Good link shortening 5} Makes Google image searches easier to link to (Part 2)",
-            "exampleUrl": "https://www.google.no/search?q=milo+murphy%27s+law&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjFtP-r5ZviAhXUAxAIHYiNDjsQ_AUIDigB&biw=1440&bih=2417",
+            "exampleUrl": "https://www.google.no/search*?q=milo+murphy%27s+law&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjFtP-r5ZviAhXUAxAIHYiNDjsQ_AUIDigB&biw=1440&bih=2417",
             "exampleResult": "https://www.google.no/search?q=milo+murphy%27s+law&tbm=isch",
             "error": null,
-            "includePattern": "https://www.google.*/search?q=*&*&tbm=isch&*",
+            "includePattern": "https://www.google.*/search*?q=*&*&tbm=isch&*",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://www.google.$1/search?q=$2&tbm=isch",
+            "redirectUrl": "https://www.google.$1/search?q=$3&tbm=isch",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "{Good link shortening 6} Makes Google image searches with uploaded images slightly easier to link to",
+            "exampleUrl": "https://www.google.no/search?newwindow=1&sa=G&hl=no&q=full+length+latex+dress&tbm=isch&tbs=simg:CAQSkwEJud3EFZdr1dEahwELEKjU2AQaAAwLELCMpwgaYgpgCAMSKMwQiBDJEMsQ2xrZGtQQ_1gTeGucbyTDhMOMw6zvIMMU7gi79I9474TsaMGZpi0uFAeQQvjGVFkmINN_1KUlxbPEpxnidG0tTnC2BpQXQAyUgcz0a-e1IlF4G1SyAEDAsQjq7-CBoKCggIARIEsVK7Vgw&ved=0ahUKEwi3s6fX7pviAhXqoYsKHdCjAO4Q2A4IKygB&biw=1440&bih=2417",
+            "exampleResult": "https://www.google.no/search?q=full+length+latex+dress&tbm=isch&tbs=simg:CAQSkwEJud3EFZdr1dEahwELEKjU2AQaAAwLELCMpwgaYgpgCAMSKMwQiBDJEMsQ2xrZGtQQ_1gTeGucbyTDhMOMw6zvIMMU7gi79I9474TsaMGZpi0uFAeQQvjGVFkmINN_1KUlxbPEpxnidG0tTnC2BpQXQAyUgcz0a-e1IlF4G1SyAEDAsQjq7-CBoKCggIARIEsVK7Vgw",
+            "error": null,
+            "includePattern": "https://www.google.*/search?*&q=*&tbm=isch&tbs=simg:*&*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.google.$1/search?q=$3&tbm=isch&tbs=simg:$4",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "{Good link shortening 7} Makes Google \"More like this\" image searches marginally easier to link to",
+            "exampleUrl": "https://www.google.no/search?newwindow=1&sa=G&hl=no&tbs=simg:CAESnAIJud3EFZdr1dEakAILELCMpwgaYgpgCAMSKMwQiBDJEMsQ2xrZGtQQ_1gTeGucbyTDhMOMw6zvIMMU7gi79I9474TsaMGZpi0uFAeQQvjGVFkmINN_1KUlxbPEpxnidG0tTnC2BpQXQAyUgcz0a-e1IlF4G1SyAEDAsQjq7-CBoKCggIARIEsVK7VgwLEJ3twQkaiAEKFwoEZ2lybNqliPYDCwoJL20vMDVyNjU1Ch8KC3Bob3RvIHNob2902qWI9gMMCgovbS8wMnFibDFtChoKB3NpdHRpbmfapYj2AwsKCS9tLzAxNWM0egoXCgRnb3du2qWI9gMLCgkvbS8wYnBfMnAKFwoEbGFkedqliPYDCwoJL20vMDJwa2I4DA&q=full+length+latex+dress&tbm=isch&ved=2ahUKEwi3s6fX7pviAhXqoYsKHdCjAO4Qsw56BAgGEAE&biw=1440&bih=2417",
+            "exampleResult": "https://www.google.no/search?tbs=simg:CAESnAIJud3EFZdr1dEakAILELCMpwgaYgpgCAMSKMwQiBDJEMsQ2xrZGtQQ_1gTeGucbyTDhMOMw6zvIMMU7gi79I9474TsaMGZpi0uFAeQQvjGVFkmINN_1KUlxbPEpxnidG0tTnC2BpQXQAyUgcz0a-e1IlF4G1SyAEDAsQjq7-CBoKCggIARIEsVK7VgwLEJ3twQkaiAEKFwoEZ2lybNqliPYDCwoJL20vMDVyNjU1Ch8KC3Bob3RvIHNob2902qWI9gMMCgovbS8wMnFibDFtChoKB3NpdHRpbmfapYj2AwsKCS9tLzAxNWM0egoXCgRnb3du2qWI9gMLCgkvbS8wYnBfMnAKFwoEbGFkedqliPYDCwoJL20vMDJwa2I4DA&q=full+length+latex+dress&tbm=isch",
+            "error": null,
+            "includePattern": "https://www.google.*/search?*tbs=simg:*&q=*&tbm=*&*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.google.$1/search?tbs=simg:$3&q=$4&tbm=$5",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -658,6 +690,22 @@
             "redirectUrl": "https://vba-m.com/",
             "patternType": "W",
             "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Redirects links to Google image search results to their actual images",
+            "exampleUrl": "https://www.google.no/imgres?imgurl=https%3A%2F%2Fwww.syfy.com%2Fsites%2Fsyfy%2Ffiles%2Fstyles%2F1200x680%2Fpublic%2Fbh2.jpg&imgrefurl=https%3A%2F%2Fwww.syfy.com%2Fsyfywire%2Fbig-hero-6-the-series-comic-con-panel-unleashes-mini-max-defender-of-justice&docid=KvU7lZied2n_lM&tbnid=AX-5oruKuxu5TM%3A&vet=10ahUKEwj9obzX8JviAhXSlosKHR0nB9gQMwhIKAkwCQ..i&w=1280&h=680&bih=2417&biw=1440&q=big%20hero%206%20the%20series&ved=0ahUKEwj9obzX8JviAhXSlosKHR0nB9gQMwhIKAkwCQ&iact=mrc&uact=8",
+            "exampleResult": "https://www.syfy.com/sites/syfy/files/styles/1200x680/public/bh2.jpg",
+            "error": null,
+            "includePattern": "https://www.google.*/imgres?imgurl=*&imgrefurl=*",
+            "excludePattern": "",
+            "patternDesc": "Have you ever been pissed off when people try to link to an image, but instead they list to the Google search result for that image, whose link is so long that it's usually broken? This entry is for those cases.",
+            "redirectUrl": "$2",
+            "patternType": "W",
+            "processMatches": "urlDecode",
             "disabled": false,
             "appliesTo": [
                 "main_frame"
