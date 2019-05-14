@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.2",
-    "createdAt": "2019-05-10T06:26:25.755Z",
+    "createdAt": "2019-05-14T19:58:51.786Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -232,7 +232,7 @@
             ]
         },
         {
-            "description": "{Good link shortening 1} Makes Google searches easier to link to (Part 1) (Currently breaks the \"More image sizes\" button)",
+            "description": "{Good link shortening 1} Makes Google searches easier to link to (Part 1)",
             "exampleUrl": "https://www.google.no/search?num=20&newwindow=1&ei=gonDW9qlJc3ykwXT3bWQDQ&q=john+madden&oq=jo&gs_l=psy-ab.3.0.35i39k1l2j0i131k1l2j0i67k1j0i131k1l2j0i67k1j0i131k1l2.39873.40874.0.42590.4.3.1.0.0.0.170.454.0j3.3.0....0...1c.1.64.psy-ab..0.4.454...0j0i131i67k1.0.mR6HhG_pB30",
             "exampleResult": "https://www.google.no/search?num=20&newwindow=1&q=john+madden",
             "error": null,
@@ -248,7 +248,7 @@
             ]
         },
         {
-            "description": "{Good link shortening 2} Makes Google searches easier to link to (Part 2) (Currently breaks the \"More image sizes\" button)",
+            "description": "{Good link shortening 2} Makes Google searches easier to link to (Part 2)",
             "exampleUrl": "https://www.google.no/search?q=john+madden&num=20&newwindow=1&source=lnt&tbs=lr:lang_1no&lr=lang_no&sa=X&ved=0ahUKEwiIqYfax4beAhVOCKwKHfvLA5MQpwUIJA&biw=1440&bih=2418",
             "exampleResult": "https://www.google.no/search?q=john+madden&num=20&newwindow=1&lr=lang_no",
             "error": null,
@@ -277,6 +277,38 @@
             "disabled": false,
             "appliesTo": [
                 "xmlhttprequest"
+            ]
+        },
+        {
+            "description": "{Good link shortening 4} Makes Google image searches easier to link to (Part 1)",
+            "exampleUrl": "https://www.google.no/search?newwindow=1&hl=no&biw=1440&bih=2417&tbm=isch&sa=1&ei=rRrbXOfnDMqprgSuh4HQBA&q=milo+murphy%27s+law&oq=milo+murphy&gs_l=img.1.0.0j0i30l9.13337.15142..16317...0.0..0.73.733.11......1....1..gws-wiz-img.......35i39j0i67.H4XuLOBLR-c",
+            "exampleResult": "https://www.google.no/search?tbm=isch&q=milo+murphy%27s+law",
+            "error": null,
+            "includePattern": "https://www.google.*/search?*&tbm=isch*&q=*&*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.google.$1/search?tbm=isch&q=$4",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "{Good link shortening 5} Makes Google image searches easier to link to (Part 2)",
+            "exampleUrl": "https://www.google.no/search?q=milo+murphy%27s+law&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjFtP-r5ZviAhXUAxAIHYiNDjsQ_AUIDigB&biw=1440&bih=2417",
+            "exampleResult": "https://www.google.no/search?q=milo+murphy%27s+law&tbm=isch",
+            "error": null,
+            "includePattern": "https://www.google.*/search?q=*&*&tbm=isch&*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.google.$1/search?q=$2&tbm=isch",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
             ]
         },
         {
@@ -608,6 +640,22 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "$1.wikipedia.org$2",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Redirects the website of the defunct and exploitable 2005 version of VisualBoyAdvance, to the currently updated remake of it",
+            "exampleUrl": "https://sourceforge.net/projects/vba/",
+            "exampleResult": "https://vba-m.com/",
+            "error": null,
+            "includePattern": "http*://sourceforge.net/projects/vba/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://vba-m.com/",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
