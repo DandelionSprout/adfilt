@@ -1,22 +1,20 @@
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt',
-           'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/uBO%20list%20extensions/NordicExtensionsForUBO%26Nano.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt']
 
 UNSUPPORTED_ABP = ['$document', '$important', ',important' '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , ':xpath', ':matches-css']
+    ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##']
 
 OUTPUT = 'filter.txt'
 OUTPUT_AG = 'filter_ag.txt'
-OUTPUT_ABP = 'filter_abp.txt'
+OUTPUT_ABP = 'NordicFiltersABP.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
     text = ''
     for url in SOURCES:
         r = requests.get(url)
-        text += '! ' + url + '\r\n'
         text += r.text
     return text
 
@@ -68,6 +66,35 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)", 
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprout's Nordic filters for tidier websites", 
+           "Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and AdBlock Plus)", 
+           line
+        )
+
+        line = re.sub(
+           r"!#if.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"!#endif", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^no##.*", 
+           "", 
+           line
+        )
 
         if is_supported_abp(line):
             text += line + '\r\n'
