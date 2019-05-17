@@ -4,7 +4,8 @@ import re
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt',
            'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/uBO%20list%20extensions/NordicExtensionsForUBO%26Nano.txt']
 
-UNSUPPORTED_ABP = ['$redirect=', ',redirect=', ':style', '##+js', '.*#' , ':xpath', ':matches-css']
+UNSUPPORTED_ABP = ['$document', '$important', ',important' '$redirect=', ',redirect=',
+    ':style', '##+js', '.*#' , ':xpath', ':matches-css']
 
 OUTPUT = 'filter.txt'
 OUTPUT_AG = 'filter_ag.txt'
@@ -44,37 +45,32 @@ def is_supported_abp(line) -> bool:
 def prepare_abp(lines) -> str:
     text = ''
 
-    # remove entries with unsupported modifiers
+    # remove or modifiy entries with unsupported modifiers
     for line in lines:
-        if is_supported_abp(line):
-            text += line + '\r\n'
 
-    return text
-
-    for line in lines:
-        text += re.sub(
+        # remove $document modifier from the rule
+        line = re.sub(
            r"\$document.*", 
            "", 
            line
-       ) + '\r\n'
+        )
 
-    return text
-
-    for line in lines:
-        text += re.sub(
-           r"\$important.*", 
+        # remove $important modifier from the rule
+        line = re.sub(
+           r",important", 
            "", 
            line
-       ) + '\r\n'
+        )
 
-    return text
-
-    for line in lines:
-        text += re.sub(
-           r"\,important.*", 
+        line = re.sub(
+           r"\$important", 
            "", 
            line
-       ) + '\r\n'
+        )
+
+
+        if is_supported_abp(line):
+            text += line + '\r\n'
 
     return text
 
