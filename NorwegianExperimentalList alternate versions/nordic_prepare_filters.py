@@ -6,9 +6,12 @@ SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Norw
 UNSUPPORTED_ABP = ['$document', '$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##']
 
+UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
+
 OUTPUT = 'filter.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
 OUTPUT_ABP = 'NordicFiltersABP.txt'
+OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -76,7 +79,7 @@ def prepare_abp(lines) -> str:
 
         # remove $document modifier from the rule
         line = re.sub(
-           r"\$document.*", 
+           "\$document.*", 
            "", 
            line
         )
@@ -135,6 +138,191 @@ def prepare_abp(lines) -> str:
 
     return text
 
+# Attempts to achieve Internet Explorer TPL support
+def is_supported_tpl(line) -> bool:
+    for token in UNSUPPORTED_TPL:
+        if token in line:
+            return False
+
+    return True
+
+# function that prepares the filter list for ABP
+def prepare_tpl(lines) -> str:
+    text = ''
+
+    # remove or modifiy entries with unsupported modifiers
+    for line in lines:
+
+        # remove $document modifier from the rule
+        line = re.sub(
+           "! ", 
+           "# ", 
+           line
+        )
+
+        # remove $important modifier from the rule
+        line = re.sub(
+           "\[Adblock Plus 3.2\]", 
+           "msFilterList", 
+           line
+        )
+
+        line = re.sub(
+           r"^([@][@][|][|])", 
+           "+d ", 
+           line
+        )
+
+        line = re.sub(
+           r"^([|][|])", 
+           "-d ", 
+           line
+        )
+
+        line = re.sub(
+           r"^/", 
+           "- ", 
+           line
+        )
+
+    # TO-DO: Figure out how to make this NOT apply to lines that have the character "!" in them.
+        line = re.sub(
+           "/", 
+           " ", 
+           line
+        )
+
+        line = re.sub(
+           "\^", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"\$.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"! Redirect:.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "-d \* ", 
+           "- ", 
+           line
+        )
+
+        line = re.sub(
+           "-d \.", 
+           "- ", 
+           line
+        )
+
+        line = re.sub(
+           "com\* ", 
+           "com ", 
+           line
+        )
+
+        line = re.sub(
+           r"([-][d].*[.][*].*)", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"@@\*\..*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "@@_", 
+           "+d _", 
+           line
+        )
+
+        line = re.sub(
+           r"^([+][d][\s][a-z].*[\s][a-z].*)", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^([-][d].*[o|k|m]\.$)", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"!#if.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "!#endif", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "Expires: ", 
+           "expires = ", 
+           line
+        )
+
+        line = re.sub(
+           r"^\.([d|i|n]).*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "^\.", 
+           "- ", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@ .*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           " 12 hours", 
+           " 1", 
+           line
+        )
+
+        line = re.sub(
+           "# Redirect:.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"\+d\s[a-z0-9].*\s[a-z0-9*].*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "-d.*-\*$", 
+           "", 
+           line
+        )
+
+        if is_supported_tpl(line):
+            text += line + '\r\n'
+
+    return text
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -143,6 +331,7 @@ if __name__ == "__main__":
 
     ag_filter = prepare_ag(lines)
     abp_filter = prepare_abp(lines)
+    tpl_filter = prepare_tpl(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -152,5 +341,8 @@ if __name__ == "__main__":
 
     with open(OUTPUT_ABP, "w") as text_file:
         text_file.write(abp_filter)
+
+    with open(OUTPUT_TPL, "w") as text_file:
+        text_file.write(tpl_filter)
 
     print('The script has finished its work')
