@@ -39,7 +39,6 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 ## Special thanks to:
 
-• [gorhill](https://github.com/gorhill), [Collin Barrett](https://github.com/collinbarrett), the [AdGuard team](https://github.com/AdguardTeam), and the [AdBlock team](https://getadblock.com/contributors/), for having included at least one of my lists into uBlock Origin, Filterlists, AdGuard, and AdBlock respectively. <br>
 • [lassekongo83](https://github.com/lassekongo83) for being the best filter writer on planet Earth, for helping heaps of people (Me included) with writing specific filters, and for having made several lists that I often look through to learn more about how to write filters. <br>
 • [THEtomaso](https://github.com/THEtomaso) for waterproofing parts of the Nordic list, and for several contributions to the same list. <br>
 • The contributor communities that surround uBlock Origin and Nano Adblocker in general (including [okiehsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser) among others), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
