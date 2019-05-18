@@ -9,8 +9,8 @@ UNSUPPORTED_DNSMASQ = ['*', '# ']
 
 OUTPUT = 'xyzzyxdomains.txt'
 OUTPUT_HOSTS = 'AdawayHosts'
-OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.txt'
-OUTPUT_LS = 'LittleSnitchNorwegianRules.lsrules'
+OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
+OUTPUT_LS = 'LittleSnitchNorwegianList.lsrules'
 OUTPUT_DNSMASQ = 'NordicFiltersDnsmasq.conf'
 
 # function that downloads the filter list
