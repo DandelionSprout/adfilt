@@ -44,6 +44,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • [THEtomaso](https://github.com/THEtomaso) for waterproofing parts of the Nordic list, and for several contributions to the same list. <br>
 • The contributor communities that surround uBlock Origin and Nano Adblocker in general (including [okiehsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser) among others), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
 • [krystian3w](https://github.com/krystian3w) for teaching me that using `:style` entries completely breaks a list *and* its entries in ABP. <br>
-• [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *[Browse Websites Without Logging In](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt)*) to *uBlock Filters - Annoyances*.
+• [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *[Browse Websites Without Logging In](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt)*) to *uBlock Filters - Annoyances*.<br>
+• [Andrey Meshkov](https://github.com/ameshkov) for invaluable push-start assistance in creating [the conversion script](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/nordic_prepare_filters.py) for *Dandelion Sprouts nordiske filtre* into AdGuard-, AdBlock-, and TPL-specific list versions.
 
 If you've contributed to or helped me and you aren't on the above list, don't feel bad about it. I still give my regular thanks to you.
