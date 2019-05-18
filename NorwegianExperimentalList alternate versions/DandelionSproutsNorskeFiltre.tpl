@@ -1,6 +1,6 @@
 msFilterList
-# Version: 18May2019v2
-# Version: 180520192 (for Adblock Plus' issue report system)
+# Version: 18May2019v3
+# Version: 180520193 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -189,6 +189,7 @@ msFilterList
 # 🇩🇰: Tilføjet efter anmodninger fra tilhængere og bidragydere
 # 🇬🇧: Added on requests from fans and contributors
 -d sannsyn.com
+# https:  github.com DandelionSprout adfilt issues 7#issuecomment-493478718
 
 # 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
 # Takk til THEtomaso (https:  github.com THEtomaso) for de fleste av disse oppføringene.

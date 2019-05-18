@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
-! Version: 18May2019v2
-! Version: 180520192 (for Adblock Plus' issue report system)
+! Version: 18May2019v3
+! Version: 180520193 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and AdBlock Plus)
 ! Expires: 12 hours
@@ -495,12 +495,6 @@ sognavis.no##.row.hidden-print:not(.vspace)
 win-xp.no#?#tr > td > div:-abp-has(a[href*="clk.tradedoubler."])
 prisjakt.no##.outsider-ads
 prisjakt.no##.desktop-inline-ad
-bilnorge.no###nettboard_art1
-bilnorge.no###nettboardholder1
-bilnorge.no#?#div:-abp-has(:scope > .annonsetekst)
-yrkesbil.no#?#div:-abp-has(:scope > .adsbygoogle)
-bilnorge.no,yrkesbil.no#?#td:-abp-has(:scope > noscript)
-bilnorge.no#?#div:-abp-has(:scope > .adsbygoogle)
 
 ! Empty divider spaces (Section under construction)
 icelandreview.com,bir.no##p:-abp-contains(/^\xA0$/)
@@ -510,7 +504,6 @@ ice.no##.air-block
 tnt-tv.no##.desktop_element.promo
 tnt-tv.no##.logos
 tnt-tv.no##.tabs_placeholder
-bilnorge.no,yrkesbil.no#?#tr > td:not(:-abp-has(*))
 ##.skille
 
 ! Distracting background images (Section under construction)
@@ -686,6 +679,10 @@ resett.no##a[href="https://resett.no/annonseweb/"]
 resett.no###cookie
 resett.no##[class="td_single_image_bg"]
 norgesavisen.no##.td-fix-index
+! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-493478718
+bilnorge.no#?#tr:-abp-has( >td:-abp-contains(Annonse:))
+bilnorge.no###artikkel300x250right
+yrkesbil.no###side > div:nth-of-type(1)
 
 ! 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
