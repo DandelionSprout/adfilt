@@ -43,7 +43,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"^([\s])", 
+           r"127\.0\.0\.1 $", 
            "", 
            line
         )
