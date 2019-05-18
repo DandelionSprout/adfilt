@@ -1,14 +1,14 @@
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt']
+SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.txt']
 
 UNSUPPORTED_ABP = ['$document', '$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##']
 
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 
-OUTPUT = 'filter.txt'
+OUTPUT = 'xyzzyx.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
 OUTPUT_ABP = 'NordicFiltersABP.txt'
 OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
@@ -56,6 +56,12 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            "\[Adblock Plus 3.2\]", 
            "[AdGuard ≥6]", 
+           line
+        )
+
+        line = re.sub(
+           r"! Redirect:.*", 
+           "", 
            line
         )
 
