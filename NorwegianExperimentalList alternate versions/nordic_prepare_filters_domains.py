@@ -4,7 +4,7 @@ import re
 SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt']
 
 UNSUPPORTED_HOSTS = ['*', '# ———']
-UNSUPPORTED_LS = ['*', '# ———', '# Translated title', '# Version', 'Don\'t be worried', 'General-info']
+UNSUPPORTED_LS = ['*', '# ———', '# Translated title', '# Version', 'Don\'t be worried', 'General-info', '# Platform notes:']
 UNSUPPORTED_DNSMASQ = ['*', '# ']
 
 OUTPUT = 'xyzzyxdomains.txt'
@@ -49,13 +49,13 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           "📔 Dandelion Sprouts nordiske filtre (Domenelisteversjonen)", 
+           "📔 Dandelion Sprouts nordiske filtre \(Domenelisteversjonen\)", 
            "Dandelion Sprouts nordiske filtre («hosts»-versjonen)", 
            line
         )
 
         line = re.sub(
-           "Dandelion Sprout's Nordic Filters (The domains list version)", 
+           "Dandelion Sprout's Nordic Filters \(The domains list version\)", 
            "Dandelion Sprout's Nordic Filters (The «hosts» file version)", 
            line
         )
@@ -166,18 +166,6 @@ def prepare_dnsmasq(lines) -> str:
            line
         )
 
-        line = re.sub(
-           "📔 Dandelion Sprouts nordiske filtre (Domenelisteversjonen)", 
-           "Dandelion Sprouts nordiske filtre (for dnsmasq)", 
-           line
-        )
-
-        line = re.sub(
-           "Dandelion Sprout's Nordic Filters (The domains list version)", 
-           "Dandelion Sprout's Nordic Filters (for dnsmasq)", 
-           line
-        )
-
         if is_supported_dnsmasq(line):
             text += line + '\r\n'
 
@@ -204,14 +192,14 @@ def prepare_hostsdeny(lines) -> str:
         )
 
         line = re.sub(
-           "📔 Dandelion Sprouts nordiske filtre (Domenelisteversjonen)", 
-           "Dandelion Sprouts nordiske filtre («hosts.deny»-versjonen)", 
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre («hosts.deny»-versjonen)", 
            line
         )
 
         line = re.sub(
-           "Dandelion Sprout's Nordic Filters (The domains list version)", 
-           "Dandelion Sprout's Nordic Filters (The «hosts.deny» version)", 
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (The «hosts.deny» version)", 
            line
         )
 
