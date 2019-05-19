@@ -191,7 +191,7 @@ def prepare_tpl(lines) -> str:
         )
 
     # TO-DO: Figure out how to make this NOT apply to lines that have the character "!" in them.
-        if text in line: "! " = re.sub(
+        line = re.sub(
            "/", 
            " ", 
            line
@@ -400,14 +400,14 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           "! ", 
-           "# ", 
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Privoxy)", 
            line
         )
 
         line = re.sub(
-           "! ", 
-           "# ", 
+           "Dandelion Sprout's Nordic filters for tidier websites", 
+           "Dandelion Sprout's Nordic filters for tidier websites (for Privoxy)", 
            line
         )
 
