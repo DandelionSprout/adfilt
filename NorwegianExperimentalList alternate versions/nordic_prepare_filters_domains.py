@@ -9,9 +9,9 @@ UNSUPPORTED_DNSMASQ = ['*', '# ']
 
 OUTPUT = 'xyzzyxdomains.txt'
 OUTPUT_HOSTS = 'AdawayHosts'
-OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
 OUTPUT_LS = 'LittleSnitchNorwegianList.lsrules'
 OUTPUT_DNSMASQ = 'NordicFiltersDnsmasq.conf'
+OUTPUT_HOSTSDENY = 'NordicFiltersHostsDeny.deny'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -21,6 +21,8 @@ def download_filters() -> str:
         text += r.text
     return text
 
+# ————— .\hosts version —————
+
 def is_supported_hosts(line) -> bool:
     for token in UNSUPPORTED_HOSTS:
         if token in line:
@@ -28,14 +30,12 @@ def is_supported_hosts(line) -> bool:
 
     return True
 
-# function that prepares the filter list for ABP
 def prepare_hosts(lines) -> str:
     text = ''
 
     # remove or modifiy entries with unsupported modifiers
     for line in lines:
 
-        # remove $document modifier from the rule
         line = re.sub(
            r"^(?!#)", 
            "127.0.0.1 ", 
@@ -48,29 +48,21 @@ def prepare_hosts(lines) -> str:
            line
         )
 
-        if is_supported_hosts(line):
-            text += line + '\r\n'
-
-    return text
-
-# function that prepares the filter list for ABP
-def prepare_privoxy(lines) -> str:
-    text = ''
-
-    # remove or modifiy entries with unsupported modifiers
-    for line in lines:
-
-        # remove $document modifier from the rule
-
         line = re.sub(
-           r"^(?!#)", 
-           ".", 
+           "📔 Dandelion Sprouts nordiske filtre (Domenelisteversjonen)", 
+           "Dandelion Sprouts nordiske filtre («hosts»-versjonen)", 
            line
         )
 
         line = re.sub(
-           r"^\.$", 
-           "", 
+           "Dandelion Sprout's Nordic Filters (The domains list version)", 
+           "Dandelion Sprout's Nordic Filters (The «hosts» file version)", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including Blokada, DNS66, Gas Mask, Diversion, and many others; as well as those who edit their OS' «hosts» system file.", 
            line
         )
 
@@ -78,6 +70,8 @@ def prepare_privoxy(lines) -> str:
             text += line + '\r\n'
 
     return text
+
+# ————— Little Snitch version —————
 
 def is_supported_ls(line) -> bool:
     for token in UNSUPPORTED_LS:
@@ -86,14 +80,11 @@ def is_supported_ls(line) -> bool:
 
     return True
 
-# function that prepares the filter list for ABP
 def prepare_ls(lines) -> str:
     text = ''
 
     # remove or modifiy entries with unsupported modifiers
     for line in lines:
-
-        # remove $document modifier from the rule
 
         line = re.sub(
            r"^(?!#)", 
@@ -136,6 +127,8 @@ def prepare_ls(lines) -> str:
 
     return text
 
+# ————— dnsmasq version —————
+
 def is_supported_dnsmasq(line) -> bool:
     for token in UNSUPPORTED_DNSMASQ:
         if token in line:
@@ -143,15 +136,11 @@ def is_supported_dnsmasq(line) -> bool:
 
     return True
 
-# function that prepares the filter list for ABP
 def prepare_dnsmasq(lines) -> str:
     text = ''
 
-
     # remove or modifiy entries with unsupported modifiers
     for line in lines:
-
-        # remove $document modifier from the rule
 
         line = re.sub(
            r"^(?!#)", 
@@ -177,11 +166,65 @@ def prepare_dnsmasq(lines) -> str:
            line
         )
 
+        line = re.sub(
+           "📔 Dandelion Sprouts nordiske filtre (Domenelisteversjonen)", 
+           "Dandelion Sprouts nordiske filtre (for dnsmasq)", 
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprout's Nordic Filters (The domains list version)", 
+           "Dandelion Sprout's Nordic Filters (for dnsmasq)", 
+           line
+        )
+
         if is_supported_dnsmasq(line):
             text += line + '\r\n'
 
     return text
 
+# ————— hosts.deny version —————
+
+def prepare_hostsdeny(lines) -> str:
+    text = ''
+
+    # remove or modifiy entries with unsupported modifiers
+    for line in lines:
+
+        line = re.sub(
+           r"^(?!#)", 
+           "ALL: ", 
+           line
+        )
+
+        line = re.sub(
+           r"^ALL: $", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "📔 Dandelion Sprouts nordiske filtre (Domenelisteversjonen)", 
+           "Dandelion Sprouts nordiske filtre («hosts.deny»-versjonen)", 
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprout's Nordic Filters (The domains list version)", 
+           "Dandelion Sprout's Nordic Filters (The «hosts.deny» version)", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for those who still use a Linux system function called «hosts.deny».", 
+           line
+        )
+
+        if is_supported_hosts(line):
+            text += line + '\r\n'
+
+    return text
 
 if __name__ == "__main__":
     print('Starting the script')
@@ -190,9 +233,9 @@ if __name__ == "__main__":
     print('Total number of rules: ' + str(len(lines)))
 
     hosts_filter = prepare_hosts(lines)
-    privoxy_filter = prepare_privoxy(lines)
     ls_filter = prepare_ls(lines)
     dnsmasq_filter = prepare_dnsmasq(lines)
+    hostsdeny_filter = prepare_hostsdeny(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -200,13 +243,13 @@ if __name__ == "__main__":
     with open(OUTPUT_HOSTS, "w") as text_file:
         text_file.write(hosts_filter)
 
-    with open(OUTPUT_PRIVOXY, "w") as text_file:
-        text_file.write(privoxy_filter)
-
     with open(OUTPUT_LS, "w") as text_file:
         text_file.write(ls_filter)
 
     with open(OUTPUT_DNSMASQ, "w") as text_file:
         text_file.write(dnsmasq_filter)
+
+    with open(OUTPUT_HOSTSDENY, "w") as text_file:
+        text_file.write(hostsdeny_filter)
 
     print('The script has finished its work')
