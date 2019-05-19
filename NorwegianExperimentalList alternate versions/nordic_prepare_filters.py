@@ -5,13 +5,14 @@ SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.t
 
 UNSUPPORTED_ABP = ['$document', '$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##']
-
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
+UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
 OUTPUT_ABP = 'NordicFiltersABP.txt'
 OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
+OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -159,14 +160,12 @@ def prepare_tpl(lines) -> str:
     # remove or modifiy entries with unsupported modifiers
     for line in lines:
 
-        # remove $document modifier from the rule
         line = re.sub(
            "! ", 
            "# ", 
            line
         )
 
-        # remove $important modifier from the rule
         line = re.sub(
            "\[Adblock Plus 3.2\]", 
            "msFilterList", 
@@ -192,7 +191,7 @@ def prepare_tpl(lines) -> str:
         )
 
     # TO-DO: Figure out how to make this NOT apply to lines that have the character "!" in them.
-        line = re.sub(
+        if text in line: "! " = re.sub(
            "/", 
            " ", 
            line
@@ -329,6 +328,94 @@ def prepare_tpl(lines) -> str:
 
     return text
 
+# ————— Privoxy version —————
+
+# Attempts to achieve Internet Explorer TPL support
+def is_supported_privoxy(line) -> bool:
+    for token in UNSUPPORTED_PRIVOXY:
+        if token in line:
+            return False
+
+    return True
+
+def prepare_privoxy(lines) -> str:
+    text = ''
+
+    # remove or modifiy entries with unsupported modifiers
+    for line in lines:
+
+        line = re.sub(
+           "! ", 
+           "# ", 
+           line
+        )
+
+        line = re.sub(
+           r"\$.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "\|\|", 
+           ".", 
+           line
+        )
+
+        line = re.sub(
+           "\^", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "\[Adblock Plus 3.2\]", 
+           "{+block}", 
+           line
+        )
+
+        line = re.sub(
+           r"^$", 
+           "#", 
+           line
+        )
+
+        line = re.sub(
+           r"^\!.*", 
+           "#", 
+           line
+        )
+
+        line = re.sub(
+           "# 🇬🇧: ", 
+           "{+block{", 
+           line
+        )
+
+      # Note the use of parenthesises and "\1" combined.
+        line = re.sub(
+           r"(\{\+block{.*)", 
+           r"\1}}", 
+           line
+        )
+
+        line = re.sub(
+           "! ", 
+           "# ", 
+           line
+        )
+
+        line = re.sub(
+           "! ", 
+           "# ", 
+           line
+        )
+
+        if is_supported_privoxy(line):
+          text += line + '\r\n'
+
+    return text
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -338,6 +425,7 @@ if __name__ == "__main__":
     ag_filter = prepare_ag(lines)
     abp_filter = prepare_abp(lines)
     tpl_filter = prepare_tpl(lines)
+    privoxy_filter = prepare_privoxy(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -350,5 +438,8 @@ if __name__ == "__main__":
 
     with open(OUTPUT_TPL, "w") as text_file:
         text_file.write(tpl_filter)
+
+    with open(OUTPUT_PRIVOXY, "w") as text_file:
+        text_file.write(privoxy_filter)
 
     print('The script has finished its work')
