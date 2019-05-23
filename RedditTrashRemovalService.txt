@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 24May2019v1-Alpha
+! Version: 24May2019v2-Alpha
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
@@ -58,32 +58,28 @@ reddit.com#?#.Post:-abp-has(a[data-click-id="timestamp"][href*="/europe/"]):-abp
 reddit.com#?#.Post:-abp-has(div[style^="color:"]:-abp-contains(•):not(:-abp-contains(/[a-z]/i)))
 
 ! The chances of someone being a troll if their usernames are named after Pepe the Frog, is 139%
-reddit.com##.Post:-abp-has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
-reddit.com##.Comment:-abp-has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
+reddit.com#?#.Post:-abp-has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
+reddit.com#?#.Comment:-abp-has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
 
 ! Removes the "n new posts for you" banner
-reddit.com#?#div[class^="SubredditVars-"]:-abp-has(:scope > div > div > svg > path[d="M10.536 4c1.83 8 9.65 12 23.464 12H0C5.194 0 8.706-4 10.536 4z"])
-
-! Hoping to speed up the hiding of the "Recommended posts" sidebar
-!!!reddit.com#?#.fePAzF:-abp-has(:scope > div[data-redditstyle="true"])
+reddit.com#?#div:-abp-has(:scope > svg[viewbox="0 0 34 16"])
 
 ! Attempts to remove the "Recommended posts" feed on the bottom of almost all posts
-reddit.com##div[data-redditstyle="true"]:not(:has(p))
-reddit.com#?#button:-abp-has(svg[width="11"][height="11"])
+reddit.com#?#div[data-redditstyle="true"]:not(:-abp-has(p)):not(:-abp-has([aria-label="Close"]))
 
 ! ————— ↓ Removes content posted by the top 10 karma hoarders ↓ —————
 
 ! Comments on New Reddit
-reddit.com##.Comment:-abp-has(a[href="/user/GallowBoob"])
-reddit.com##.Comment:-abp-has(a[href="/user/pepsi_next"])
-reddit.com##.Comment:-abp-has(a[href="/user/TooShiftyForYou"])
-reddit.com##.Comment:-abp-has(a[href="/user/mvea"])
-reddit.com##.Comment:-abp-has(a[href="/user/SlimJones123"])
-reddit.com##.Comment:-abp-has(a[href="/user/BunyipPouch"])
-reddit.com##.Comment:-abp-has(a[href="/user/iBleeedorange"])
-reddit.com##.Comment:-abp-has(a[href="/user/KevlarYarmulke"])
-reddit.com##.Comment:-abp-has(a[href="/user/maxwellhill"])
-reddit.com##.Comment:-abp-has(a[href="/user/bubblr"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/GallowBoob"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/pepsi_next"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/TooShiftyForYou"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/mvea"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/SlimJones123"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/BunyipPouch"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/iBleeedorange"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/KevlarYarmulke"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/maxwellhill"])
+reddit.com#?#.Comment:-abp-has(a[href="/user/bubblr"])
 
 ! Posts on New Reddit
 reddit.com#?#.Post:-abp-has(a[href="/user/GallowBoob"])
