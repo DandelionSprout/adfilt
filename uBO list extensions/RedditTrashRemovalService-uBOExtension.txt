@@ -1,10 +1,11 @@
 ! This is an extension file, not an independent list.
-! Version: 23May2019v1-Extension
+! Version: 23May2019v2-Extension
 
 ! Removing a bunch of whitespace that was left behind by the "n new posts for you" banner
 reddit.com##div[class^="SubredditVars-r-"] > div[aria-hidden="false"]:style(margin-top: 48px !important)
 reddit.com##div.m-commentspage > div[data-redditstyle]:style(top: 48px !important)
 reddit.com##div.m-commentspage:style(top: 48px !important)
+reddit.com###overlayScrollContainer > div[tabindex="-1"]:style(margin-top: 0px !important)
 
 ! Old entry formats for posts whose scores are lower than a certain amount
 !!!reddit.com##html:has(head > meta[name="description"]:not([content^="r/dontdeadopeninside:"]):not([content^="r/ihadastroke:"]):not([content^="r/MapsWithoutNZ:"]):not([content^="r/BoneAppleTea:"]):not([content^="r/BestOfReports:"]):not([content^="r/Showerthoughts:"]):not([content^="r/europe:"]):not([content^="r/assholedesign:"])):xpath(//button[@aria-label="upvote"]/following-sibling::div[number() <= number(10)]/ancestor::div[contains(concat(' ', @class, ' '), ' Post ')])
