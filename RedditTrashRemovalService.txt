@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 23May2019v3-Alpha
+! Version: 23May2019v4-Alpha
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
@@ -67,8 +67,10 @@ reddit.com#?#div[class^="SubredditVars-"]:-abp-has(:scope > div > div > svg > pa
 ! Hoping to speed up the hiding of the "Recommended posts" sidebar
 reddit.com#?#.fePAzF:-abp-has(:scope > div[data-redditstyle="true"])
 
-! Aims to remove the "Recommended posts" feed on the bottom of almost all posts
+! Attempts to remove the "Recommended posts" feed on the bottom of almost all posts
 reddit.com#?##overlayScrollContainer div[data-redditstyle="true"]:-abp-has(button)
+reddit.com#?#div[class^="SubredditVars-r-"] div[data-redditstyle="true"]:not(:-abp-has(p))
+reddit.com#?#button:-abp-has(svg[width="11"][height="11"])
 
 ! ————— ↓ Removes content posted by the top 10 karma hoarders ↓ —————
 
