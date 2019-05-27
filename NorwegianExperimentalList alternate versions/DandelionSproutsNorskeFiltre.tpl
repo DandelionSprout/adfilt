@@ -1,6 +1,6 @@
 msFilterList
-# Version: 23May2019v2
-# Version: 230520192 (for Adblock Plus' issue report system)
+# Version: 25May2019v4
+# Version: 250520194 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -20,6 +20,9 @@ msFilterList
 
 
 +d api.instagram.com
+
+
+
 
 
 
