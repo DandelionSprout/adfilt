@@ -3,7 +3,7 @@ import re
 
 SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.txt']
 
-UNSUPPORTED_ABP = ['$document', '$important', ',important' '$redirect=', ',redirect=',
+UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
@@ -31,7 +31,7 @@ def prepare_ag(lines) -> str:
 
         # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
         line = re.sub(
-           r"\$document.*", 
+           r"\$doc.*", 
            "$empty,important", 
            line
        )
@@ -86,7 +86,7 @@ def prepare_abp(lines) -> str:
 
         # remove $document modifier from the rule
         line = re.sub(
-           "\$document.*", 
+           r"\$doc.*", 
            "", 
            line
         )
@@ -411,6 +411,12 @@ def prepare_privoxy(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(# Version: .*[0-9][A-Z].*)", 
+           r"\1-Alpha", 
+           line
+        )
+
         if is_supported_privoxy(line):
           text += line + '\r\n'
 
@@ -652,6 +658,12 @@ def prepare_hostsdeny(lines) -> str:
         line = re.sub(
            r"# Platform notes:.*", 
            "# Platform notes: This list version is intended for those who still use a Linux system function called «hosts.deny».", 
+           line
+        )
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Beta", 
            line
         )
 

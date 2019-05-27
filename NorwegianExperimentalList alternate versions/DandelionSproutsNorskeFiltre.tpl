@@ -1,6 +1,6 @@
 msFilterList
-# Version: 25May2019v4
-# Version: 250520194 (for Adblock Plus' issue report system)
+# Version: 27May2019v2
+# Version: 270520192 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -107,9 +107,9 @@ msFilterList
 
 # Leftover empty spaces that EasyList have left behind (Section under construction)
 
-# Empty divider spaces (Section under construction)
+# 🇬🇧: Empty divider spaces (Section under construction)
 
-# Distracting background images (Section under construction)
+# 🇬🇧: Distracting background images (Section under construction)
 -d images.media.xxlsports.com images h90 h9d 9339713159198 bg.jpg
 -d platekompaniet.no assets img background.png
 -d pepcall.no wp-content uploads 2015 04 bakgrunn-forside.jpg
@@ -206,7 +206,7 @@ msFilterList
 
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
 
-# A(n incomplete) category for anti-anti-adblocking, in the event that https:  forums.lanik.us viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
+# 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https:  forums.lanik.us viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
 +d bondebladet.screen9.tv
 
 
@@ -249,7 +249,7 @@ msFilterList
 
 
 
-# Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
+# 🇬🇧: Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 
 
 
@@ -272,6 +272,7 @@ msFilterList
 # Wildcard versions of various entries. Because why only block on one national version of a site, when you can nowadays block on all versions of a site without cluttering things up?
 
 
+# 🇬🇧: Unsorted advanced blocking entries that were carried over from a previous uBO-only expansion list.
 -d acdn.adnxs.com ast ast.js
 -d acdn.adnxs.com ast ast.js
 -d fwmrm.net p MTG_Live LinkTag2.js
@@ -361,7 +362,7 @@ msFilterList
 -d thefivereport.online
 -d abafort.us
 
-# Som nevnt i https:  www.tv2.no nyheter 10493336 
+# 🇳🇴: Som nevnt i https:  www.tv2.no nyheter 10493336 
 -d rnbinance.com
 -d brightertrade.com
 
