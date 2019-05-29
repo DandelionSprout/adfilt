@@ -4,9 +4,10 @@
 
 * Nano Adblocker
 * uBlock Origin (for Chrome and Safari)
-* AdGuard
+* AdGuard (for Windows, Chrome, and Firefox)
 * AdBlock
 * Adblock Plus (incl. Adblock Browser)
+* AdNauseam
 
 ### Hardeners for regular adblockers
 
@@ -21,6 +22,7 @@
 * Google Hit Hider by Domain
 * uMatrix
 * Internet Explorer Tracking Protection List (if your workplace doesn't allow you to install and pay for AdGuard for Windows)
+* AdGuard Home
 
 # Limited support
 
@@ -30,6 +32,7 @@ Issue reports will be processed, but issues that are exclusive to these adblocke
 | - | - | - |
 | uBlock Origin's Firefox Legacy branch | Ceased to receive most upstream updates in mid-2018. | |
 | uBlock Origin's Microsoft Edge branch | Seemed to have severe problems with list syncing in mid-2018. | Nano Adblocker for Microsoft Edge |
+| AdGuard for [Mac/Safari/iOS] | I do not have such units to test it with. | |
 | AdAway | Became a complete mess after Dominik Schürmann left the project. | Blokada |
 | Pi-hole | I have no way of setting up or testing a Pi-hole server at the moment. | |
 | 1blocker | I do not have an iOS unit to test it with. | Adblock Browser for iOS | | 
@@ -69,12 +72,13 @@ If you use an adblocker from this section, you will be asked to change to a more
 | uBlock | Ceased to be actively maintained after its main coder jumped ship to uBlock Origin in 2015. | Nano Adblocker |
 | Slimjet | Has not been updated to support ABP 3.1 syntaxes. | Google Chrome with Nano Adblocker |
 | Brave Browser | Did not support adding custom lists as of January 2019. | Google Chrome with Nano Adblocker |
-| Personal Blocklist (Chrome version) | Believed to have ceased functioning in late 2018. | Google Hit Hider by Domain |
-| Stylish | Does not seem to support multi-site userstyles, and has been involved in several privacy scandals. | Nano Adblocker |
+| Personal Blocklist (Chrome version) | Believed to have ceased functioning in late 2018. Firefox version is believed to still work. | Google Hit Hider by Domain |
+| Stylish | Has been involved in several privacy scandals. | Nano Adblocker |
 | Adblocker Professional | Forked from ABP ca. 2016. | Adblock Plus |
+| AdGuard for Pale Moon | Development on it is believed to have ceased. | uBlock Origin (Limited support) |
 
 # Other tools
 
-No adblock-specific browsers for Android are supported, except for the official *Adblock Browser* that is maintained by Eyeo GMHB.
+No adblock-specific browsers for Android are supported, except for the official *Adblock Browser* that is maintained by Eyeo GMBH.
 
 Adblockers and tools that are not listed above, will be judged on a case-by-case basis.
