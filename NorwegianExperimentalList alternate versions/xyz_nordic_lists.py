@@ -324,7 +324,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^-([a-z])", 
+           r"^-([a-z][a-z])", 
            r"- -\1", 
            line
         )

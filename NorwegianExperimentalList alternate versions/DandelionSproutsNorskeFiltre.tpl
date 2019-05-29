@@ -1,5 +1,5 @@
 msFilterList
-# Version: 29May2019v1A-Beta
+# Version: 29May2019v1B-Beta
 # Version: 290520191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
@@ -27,72 +27,72 @@ msFilterList
 
 
 
-- -d 8m.com fs_img bannertype 
-- -d boligsamvirket.no promsys 
-- -d client-stream-events.mtg-api.com client-stream-events event viafree 
-- -d cluster.chart.dk
-- -d dk-ekstrabladet.vp.videoplaza.tv
-- -d dk.panel.gemius.dk
-- -d dotbanner.dk
-- -d dust2.dk img banners *
-- -d emediate.eu
-- -d f-b.no includes sidebanner
-- -d folk.rbnett.no widgets 24
-- -d freewheel-mtgx-tv.akamaized.net
-- -d g2.start.no img dominans 
-- -d gaysir.no rek rekimg 
-- -d gulesider.no bannersys-pics 
-- -d akamai.net
-- -d humor911.no annonseweb 
-- -d img8.custompublish.com publish getbanner.php 
-- -d ish.tumedia.no ish_tracker.gif
-- -d isweb.no
-- -d itavisen.no annonsorer 
-- -d itpro.no images adheaders 
-- -d cdn.ravenjs.com
-- -d karrierestart.no Home TopBannerContent
-- -d media2.origo.no images 
-- -d mobilen.no wip4 oc_scrollbar 
-- -d no-vg.cdn.videoplaza.tv creatives 
-- -d openadex.dk
-- -d opinion.peytz.dk
-- -d klikk.no common js klikk.desktop-thirdparty.min.js
-- -d propaganda.net img reklame.
-- -d propaganda.net js global.js
-- -d r.api.no componada resources web flash 
-- -d static.tek.no images main bodyBgStretch.png
-- -d tb.no polopoly_fs ledige-jobber-flash-7.13191! 
-- -d tns-gallup.dk
-- -d userneeds.dk
-- -d viasport-assets.mtg-api.com * prod comScore-*.js
-- -d webtips.no banneradmin 
-- -d yfrog.com htzywuj:medium
+-d 8m.com fs_img bannertype 
+-d boligsamvirket.no promsys 
+-d client-stream-events.mtg-api.com client-stream-events event viafree 
+-d cluster.chart.dk
+-d dk-ekstrabladet.vp.videoplaza.tv
+-d dk.panel.gemius.dk
+-d dotbanner.dk
+-d dust2.dk img banners *
+-d emediate.eu
+-d f-b.no includes sidebanner
+-d folk.rbnett.no widgets 24
+-d freewheel-mtgx-tv.akamaized.net
+-d g2.start.no img dominans 
+-d gaysir.no rek rekimg 
+-d gulesider.no bannersys-pics 
+-d akamai.net
+-d humor911.no annonseweb 
+-d img8.custompublish.com publish getbanner.php 
+-d ish.tumedia.no ish_tracker.gif
+-d isweb.no
+-d itavisen.no annonsorer 
+-d itpro.no images adheaders 
+-d cdn.ravenjs.com
+-d karrierestart.no Home TopBannerContent
+-d media2.origo.no images 
+-d mobilen.no wip4 oc_scrollbar 
+-d no-vg.cdn.videoplaza.tv creatives 
+-d openadex.dk
+-d opinion.peytz.dk
+-d klikk.no common js klikk.desktop-thirdparty.min.js
+-d propaganda.net img reklame.
+-d propaganda.net js global.js
+-d r.api.no componada resources web flash 
+-d static.tek.no images main bodyBgStretch.png
+-d tb.no polopoly_fs ledige-jobber-flash-7.13191! 
+-d tns-gallup.dk
+-d userneeds.dk
+-d viasport-assets.mtg-api.com * prod comScore-*.js
+-d webtips.no banneradmin 
+-d yfrog.com htzywuj:medium
 
 # Ads (Section under construction)
 
 
-- -d ad1.emediate.dk
+-d ad1.emediate.dk
 
 
 
 
-- -d adservicemedia.dk
+-d adservicemedia.dk
 
 
 
-- -d euroads.dk
-- -d austevollforlag.no wp-content * annonsar 
-- -d austevollforlag.no wp-content * yachtmarine2014.
-- -d norskenettsider.no images remember-banner-2016.jpg
-- -d norskenettsider.no images ageras-banner.jpg
-- -d eyjar.net skrar ads
-- -d amino.dk images partners agera 240x140-forside-hardcoded*.jpg
-- -d nvnytt.no images *annonse-
-- -d track.adform.net
-- -d track.adform.net Banners 
-- -d tvshop.com tradedoubler_files 
-- -d bornholm.nu nonsec banner
-- -d delivered-by-madington.com
+-d euroads.dk
+-d austevollforlag.no wp-content * annonsar 
+-d austevollforlag.no wp-content * yachtmarine2014.
+-d norskenettsider.no images remember-banner-2016.jpg
+-d norskenettsider.no images ageras-banner.jpg
+-d eyjar.net skrar ads
+-d amino.dk images partners agera 240x140-forside-hardcoded*.jpg
+-d nvnytt.no images *annonse-
+-d track.adform.net
+-d track.adform.net Banners 
+-d tvshop.com tradedoubler_files 
+-d bornholm.nu nonsec banner
+-d delivered-by-madington.com
 - -bazaar-
 - bazaar *
 
@@ -113,9 +113,9 @@ msFilterList
 # 🇬🇧: Empty divider spaces (Section under construction)
 
 # 🇬🇧: Distracting background images (Section under construction)
-- -d images.media.xxlsports.com images h90 h9d 9339713159198 bg.jpg
-- -d platekompaniet.no assets img background.png
-- -d pepcall.no wp-content uploads 2015 04 bakgrunn-forside.jpg
+-d images.media.xxlsports.com images h90 h9d 9339713159198 bg.jpg
+-d platekompaniet.no assets img background.png
+-d pepcall.no wp-content uploads 2015 04 bakgrunn-forside.jpg
 
 # 🇬🇧: Unbreakage
 
@@ -129,24 +129,24 @@ msFilterList
 
 # 🇳🇴: Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne)
 # 🇬🇧: Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book)
-- -d widget.norsktippingpartner.no
-- -d widget.tippebannere.no
-- -d tipster.no embed
+-d widget.norsktippingpartner.no
+-d widget.tippebannere.no
+-d tipster.no embed
 
 !———————————————————————————————————————————————————————————————————————————
 
 # 🇬🇧: Category: Website-specific
 
 # VG
-- -d static.vg.no css admark_top.gif
-- -d vglista.no wp-content themes vglista img partner 
+-d static.vg.no css admark_top.gif
+-d vglista.no wp-content themes vglista img partner 
 # ↓ Attempts to resolve how some frontpage articles are hard to open when using EasyPrivacy. ↓
 
 
 # 🇳🇴: TV2
 # 🇩🇰: TV2 Norge
 # 🇬🇧: TV2 Norway
-- -d tv2.no s lab 2.5 p img tv2-background.svg
+-d tv2.no s lab 2.5 p img tv2-background.svg
 
 # ↓ Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy. ↓
 
@@ -156,7 +156,7 @@ msFilterList
 - resources dfp *
 
 # Filmweb
-- -d filmweb.no template_v2 adverticement 
+-d filmweb.no template_v2 adverticement 
 
 # ——————————————————————————————————————————————————————
 
@@ -164,30 +164,30 @@ msFilterList
 
 # 🇳🇴: Regler for hele nettsteder, som er kategorisert for å gjøre det enklere for meg å lage en «hosts»-versjon av denne listen
 # 🇬🇧: Rules for entire websites, categorised to make it easier for me to make a \"hosts\" version of this list
-- -d ad.no.doubleclick.net
-- -d webclick.no
-- -d webhotell.enivest.no
-- -d rig.idg.no
-- -d adext.inkclub.com
-- -d ads.no
-- -d stats.bonzaii.no
-- -d pool.euroads.no
-- -d primetime.ad.primetime.net
-- -d myad.no
-- -d nettklikk.no
-- -d imp.euroads.no
-- -d i1media.no
-- -d easy-ad.no
-- -d emerio.no
-- -d bolinux3.hit.no
-- -d cmt.no
-- -d piwik.onlinemagasinet.no
-- -d flashbanner.no
-- -d bannere.oslonett.no
+-d ad.no.doubleclick.net
+-d webclick.no
+-d webhotell.enivest.no
+-d rig.idg.no
+-d adext.inkclub.com
+-d ads.no
+-d stats.bonzaii.no
+-d pool.euroads.no
+-d primetime.ad.primetime.net
+-d myad.no
+-d nettklikk.no
+-d imp.euroads.no
+-d i1media.no
+-d easy-ad.no
+-d emerio.no
+-d bolinux3.hit.no
+-d cmt.no
+-d piwik.onlinemagasinet.no
+-d flashbanner.no
+-d bannere.oslonett.no
 
 # 🇳🇴: Solcellespesialisten, innlastingsproblem
 # 🇬🇧: Solcellespesialisten, loading issue
-- -d wo.tc
+-d wo.tc
 
 # ——————————————————————————————————————————————————————————————
 
@@ -196,7 +196,7 @@ msFilterList
 # 🇳🇴: Lagt til etter forespørsel fra tilhengere og bidragsytere
 # 🇩🇰: Tilføjet efter anmodninger fra tilhængere og bidragydere
 # 🇬🇧: Added on requests from fans and contributors
-- -d sannsyn.com
+-d sannsyn.com
 # https:  github.com DandelionSprout adfilt issues 7#issuecomment-493478718
 
 # 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
@@ -205,7 +205,7 @@ msFilterList
 # Tak til THEtomaso (https:  github.com THEtomaso) for de fleste av disse opføringer.
 # 🇬🇧: De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out)
 # Thanks to THEtomaso (https:  github.com THEtomaso) for most of these entries.
-- -d dagligvarehandelen.no sites all themes custom ledelseas gfx veil.png
+-d dagligvarehandelen.no sites all themes custom ledelseas gfx veil.png
 
 # ——————————————————————————————————————————————————————————————————————————————————————————————————————
 
@@ -216,7 +216,7 @@ msFilterList
 
 
 +d sixscissors.com
-- -d elderlyscissors.com
+-d elderlyscissors.com
 +d eurosport.no
 
 +d bildeler.name
@@ -278,20 +278,20 @@ msFilterList
 
 
 # 🇬🇧: Unsorted advanced blocking entries that were carried over from a previous uBO-only expansion list.
-- -d acdn.adnxs.com ast ast.js
-- -d acdn.adnxs.com ast ast.js
-- -d fwmrm.net p MTG_Live LinkTag2.js
-- -d fwmrm.net
-- -d openx.gamereactor.dk multi.php?
+-d acdn.adnxs.com ast ast.js
+-d acdn.adnxs.com ast ast.js
+-d fwmrm.net p MTG_Live LinkTag2.js
+-d fwmrm.net
+-d openx.gamereactor.dk multi.php?
 
-- -d ssl.p.jwpcdn.com jwpsrv.js
-- -d ssl.p.jwpcdn.com vast.js
-- -d damoh.vgtv.no hic_qos
+-d ssl.p.jwpcdn.com jwpsrv.js
+-d ssl.p.jwpcdn.com vast.js
+-d damoh.vgtv.no hic_qos
 
 
 
 - entag.js
-- -d akamaihd.net video-assets 
+-d akamaihd.net video-assets 
 
 # ——————————————————————————————————————————————————————————————————————————————————————————
 
@@ -301,9 +301,9 @@ msFilterList
 # 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 # 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 # Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no sport
-- -d skoonlineshopnorge.com
-- -d kjolenorge.com
-- -d newbalancenorge.com
+-d skoonlineshopnorge.com
+-d kjolenorge.com
+-d newbalancenorge.com
 
 
 
@@ -315,13 +315,13 @@ msFilterList
 - finn.no finno.htm
 
 
-- -d finnrefusjon.com
-- -d finn-spid.info
+-d finnrefusjon.com
+-d finn-spid.info
 
 
 
 - ?finn.no login
-- -d refusjon-finn.com
+-d refusjon-finn.com
 
 
 
@@ -333,191 +333,191 @@ msFilterList
 - Norgesecure 
 - gratis-reisebilletter.
 - KiwiErbjudanden1 
-- -d trackvoluum.com
-- -d testgruppens.com
-- -d jagerjack.com
+-d trackvoluum.com
+-d testgruppens.com
+-d jagerjack.com
 - pakkerlevering 
-- -d posten.club
-- -d kundklubb-se.com
-- -d norwayexpress24.com
-- -d prisjakt.org
-- -d postnord-norge.com
-- -d streetdance.no
-- -d 102.112.2o7.net
-- -d vetscan.no
-- -d tromselementbygg.no
-- -d brannloftet.no
-- -d butikk.losnaspelet.no
-- -d no.zxxyw.com
-- -d oyelege.no
-- -d fanadyreklinikk.no
-- -d digitoday.com
-- -d komtilmil.no
-- -d apple-account-locked.losjevegen.no
-- -d arendalfotball.no
-- -d arvetellefsen.no curry
-- -d aumamandel.no
-- -d andeneshornmusikk.no
-- -d handelihalden.no
-- -d holmedalblikk.no
+-d posten.club
+-d kundklubb-se.com
+-d norwayexpress24.com
+-d prisjakt.org
+-d postnord-norge.com
+-d streetdance.no
+-d 102.112.2o7.net
+-d vetscan.no
+-d tromselementbygg.no
+-d brannloftet.no
+-d butikk.losnaspelet.no
+-d no.zxxyw.com
+-d oyelege.no
+-d fanadyreklinikk.no
+-d digitoday.com
+-d komtilmil.no
+-d apple-account-locked.losjevegen.no
+-d arendalfotball.no
+-d arvetellefsen.no curry
+-d aumamandel.no
+-d andeneshornmusikk.no
+-d handelihalden.no
+-d holmedalblikk.no
 
 # 🇳🇴: Som nevnt i https:  www.dagbladet.no kultur jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen 70487841
 # 🇬🇧: As mentioned in https:  www.dagbladet.no kultur jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen 70487841
-- -d breakoutstory24.com
-- -d thefivereport.online
-- -d abafort.us
+-d breakoutstory24.com
+-d thefivereport.online
+-d abafort.us
 
 # 🇳🇴: Som nevnt i https:  www.tv2.no nyheter 10493336 
-- -d rnbinance.com
-- -d brightertrade.com
+-d rnbinance.com
+-d brightertrade.com
 
 # Som nevnt i https:  www.nrk.no ytring 1.14496024
-- -d cost2buy.net
+-d cost2buy.net
 
 # Som nevnt i https:  www.nrk.no norge 1.14511067
 
-- -d com-fryd.com
+-d com-fryd.com
 
-- -d com-norwegian.com
+-d com-norwegian.com
 
 # Som nevnt i https:  www.aftenposten.no osloby i mRK8xq Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
-- -d ruter.top
+-d ruter.top
 
 # Som nevnt i https:  www.faktisk.no faktasjekker YAb nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
-- -d 101mesh.com
-- -d gokkw.com
-- -d earnmoneyglobal.com
+-d 101mesh.com
+-d gokkw.com
+-d earnmoneyglobal.com
 
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 # Source: https:  www.forbrukertilsynet.no netthandel falske-nettbutikker.
-- -d adamaruiz.org
-- -d adidasko.com
-- -d adidassuperstarnorge.com
-- -d adidasoutletnorway.eu
-- -d airmaxskobillige.com
-- -d allergyfl.com
-- -d apcleverstore.com
-- -d apvoc-ga.com
-- -d ashskonorge.com
-- -d assassinfitness.com
-- -d beblessedbehappy.org
-- -d benshermanoslo.com
-- -d billigesalg.com
-- -d billigskos.com
-- -d bilstokken.com
-- -d birkenstocknorgesalg.com
-- -d bncentertainment.com
-- -d bostongrnhsflowers.com
-- -d cafths.com
-- -d caperforaciones.com
-- -d careerintegra.com
-- -d chaletdeville.com
-- -d charpente-ramel.com
-- -d coloradobraincampaign.org
-- -d coralls.com
-- -d crossfiterada.com
-- -d crownedwithlaurels.com
-- -d daradis.com
-- -d denningwelldrilling.com
-- -d drakternorge.com
-- -d drcarolyngroff.com
-- -d dunjakke-no.com
-- -d easyliving4you.com
-- -d eurosko.net
-- -d fatalfailblog.com
-- -d festmusikk.com
-- -d fitflopforhandler.com
-- -d fotballsko-salg.com
-- -d fotballskotilbud.com
-- -d gantoslo.com
-- -d godeskonettbutikk.com
-- -d godsfillingstation.org
-- -d gsport.com
-- -d helseprodukt.co
-- -d hernoclothing.com
-- -d hollisternorge.com
-- -d horizonbagel.com
-- -d itsthetrendydealstore.com
-- -d imprimtacom.com
-- -d jakker.co
-- -d jakkesalgs.com
-- -d jakkesnorge.com
-- -d joseph-holland.com
-- -d klmsteelers.org
-- -d klmyu.com
-- -d jessicaivory.com
-- -d legarralazcoz.com
-- -d lillebitenas.com
-- -d lillevinkelsko.net
-- -d lindseysopticians.com
-- -d linkshe.com
-- -d locchalet2alpes.com
-- -d lrgst.com
-- -d lymaq.com
-- -d manasporthorse.com
-- -d mayor4london.com
-- -d mbtnorge.com
-- -d meadtalkofthetown.com
-- -d meladermfacts.com
-- -d mncprobuild.com
-- -d moebel-thiems.com
-- -d moslt.com
-- -d moteshoes.com
-- -d mrarmstrongsclass.com
-- -d mudancaslvc.com
-- -d museuw.com
-- -d mycraftypad.com
-- -d nasajones.com
-- -d nikebutikks.com
-- -d no.moncleritalien.com
-- -d noculottes.com
-- -d nordartisan.com
-- -d norfotball.com
-- -d norgefotball.com
-- -d norge.parkaoutdoor.com
-- -d norgejakke.com
-- -d norgejakkerbutikk.com
-- -d norgeshoes.com
-- -d nyeskonorge2015.com
-- -d nywlm.com
-- -d oflike.com
-- -d omgrm.com
-- -d ontariokitcarbuilders.com
-- -d orchidtechclub.com
-- -d oslomarcjacobsvesker.com
-- -d parajumpers-longbear.com
-- -d parajumpers-salg.com
-- -d parajumpersitoutlet.com
-- -d parajumpersit.com
-- -d parajumperjakke.net
-- -d parajumpersnettbutikk.com
-- -d parajumpers-norge.site
-- -d parajumpersnorway.com
-- -d parajumperssalg.com
-- -d parajumpersoutletnorge.com
-- -d pmnft.com
-- -d pjs.outlet.com
-- -d popeurope.com
-- -d pursuenewly.com
-- -d quiltstudiolaren.com
-- -d reeconindustries.com
-- -d retoaudi.com
-- -d rsket.com
-- -d salomonnettbutikk.com
-- -d scottfamilyministries.org
-- -d skoeccosandaler.com
-- -d skonmdnorge.com
-- -d solraba.com
-- -d sykkeltrøye.com
-- -d ssrodeolivestock.com
-- -d swellsup.com
-- -d theartcardstudio.com
-- -d tiranaaquapark-eg.com
-- -d tobiascelebritymusicevents.com
-- -d um-bs.com
-- -d vansnorge.com
-- -d wausauorthopedics.com
-- -d zaskal.com
+-d adamaruiz.org
+-d adidasko.com
+-d adidassuperstarnorge.com
+-d adidasoutletnorway.eu
+-d airmaxskobillige.com
+-d allergyfl.com
+-d apcleverstore.com
+-d apvoc-ga.com
+-d ashskonorge.com
+-d assassinfitness.com
+-d beblessedbehappy.org
+-d benshermanoslo.com
+-d billigesalg.com
+-d billigskos.com
+-d bilstokken.com
+-d birkenstocknorgesalg.com
+-d bncentertainment.com
+-d bostongrnhsflowers.com
+-d cafths.com
+-d caperforaciones.com
+-d careerintegra.com
+-d chaletdeville.com
+-d charpente-ramel.com
+-d coloradobraincampaign.org
+-d coralls.com
+-d crossfiterada.com
+-d crownedwithlaurels.com
+-d daradis.com
+-d denningwelldrilling.com
+-d drakternorge.com
+-d drcarolyngroff.com
+-d dunjakke-no.com
+-d easyliving4you.com
+-d eurosko.net
+-d fatalfailblog.com
+-d festmusikk.com
+-d fitflopforhandler.com
+-d fotballsko-salg.com
+-d fotballskotilbud.com
+-d gantoslo.com
+-d godeskonettbutikk.com
+-d godsfillingstation.org
+-d gsport.com
+-d helseprodukt.co
+-d hernoclothing.com
+-d hollisternorge.com
+-d horizonbagel.com
+-d itsthetrendydealstore.com
+-d imprimtacom.com
+-d jakker.co
+-d jakkesalgs.com
+-d jakkesnorge.com
+-d joseph-holland.com
+-d klmsteelers.org
+-d klmyu.com
+-d jessicaivory.com
+-d legarralazcoz.com
+-d lillebitenas.com
+-d lillevinkelsko.net
+-d lindseysopticians.com
+-d linkshe.com
+-d locchalet2alpes.com
+-d lrgst.com
+-d lymaq.com
+-d manasporthorse.com
+-d mayor4london.com
+-d mbtnorge.com
+-d meadtalkofthetown.com
+-d meladermfacts.com
+-d mncprobuild.com
+-d moebel-thiems.com
+-d moslt.com
+-d moteshoes.com
+-d mrarmstrongsclass.com
+-d mudancaslvc.com
+-d museuw.com
+-d mycraftypad.com
+-d nasajones.com
+-d nikebutikks.com
+-d no.moncleritalien.com
+-d noculottes.com
+-d nordartisan.com
+-d norfotball.com
+-d norgefotball.com
+-d norge.parkaoutdoor.com
+-d norgejakke.com
+-d norgejakkerbutikk.com
+-d norgeshoes.com
+-d nyeskonorge2015.com
+-d nywlm.com
+-d oflike.com
+-d omgrm.com
+-d ontariokitcarbuilders.com
+-d orchidtechclub.com
+-d oslomarcjacobsvesker.com
+-d parajumpers-longbear.com
+-d parajumpers-salg.com
+-d parajumpersitoutlet.com
+-d parajumpersit.com
+-d parajumperjakke.net
+-d parajumpersnettbutikk.com
+-d parajumpers-norge.site
+-d parajumpersnorway.com
+-d parajumperssalg.com
+-d parajumpersoutletnorge.com
+-d pmnft.com
+-d pjs.outlet.com
+-d popeurope.com
+-d pursuenewly.com
+-d quiltstudiolaren.com
+-d reeconindustries.com
+-d retoaudi.com
+-d rsket.com
+-d salomonnettbutikk.com
+-d scottfamilyministries.org
+-d skoeccosandaler.com
+-d skonmdnorge.com
+-d solraba.com
+-d sykkeltrøye.com
+-d ssrodeolivestock.com
+-d swellsup.com
+-d theartcardstudio.com
+-d tiranaaquapark-eg.com
+-d tobiascelebritymusicevents.com
+-d um-bs.com
+-d vansnorge.com
+-d wausauorthopedics.com
+-d zaskal.com
 
