@@ -1,6 +1,6 @@
 msFilterList
-# Version: 27May2019v2
-# Version: 270520192 (for Adblock Plus' issue report system)
+# Version: 29May2019v1
+# Version: 290520191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -92,6 +92,9 @@ msFilterList
 -d track.adform.net Banners 
 -d tvshop.com tradedoubler_files 
 -d bornholm.nu nonsec banner
+-d delivered-by-madington.com
+-bazaar-
+- bazaar *
 
 
 
@@ -113,6 +116,8 @@ msFilterList
 -d images.media.xxlsports.com images h90 h9d 9339713159198 bg.jpg
 -d platekompaniet.no assets img background.png
 -d pepcall.no wp-content uploads 2015 04 bakgrunn-forside.jpg
+
+# 🇬🇧: Unbreakage
 
 # 🇳🇴: Multidomeneoppføringer
 # 🇩🇰: Multidomæneposter
