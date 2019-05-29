@@ -323,6 +323,19 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^-([a-z])", 
+           r"- -\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(# Version: .*[0-9][A-Z].*)", 
+           r"\1-Beta", 
+           line
+        )
+
+
         if is_supported_tpl(line):
             text += line + '\r\n'
 
