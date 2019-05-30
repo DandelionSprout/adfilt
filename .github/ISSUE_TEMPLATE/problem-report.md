@@ -19,7 +19,7 @@ PS: If you already have written an entry that'd fix the problem, it's better to 
 
 ## Which adblocker(s) and version did you use when testing this?
 <!--
-While I accept requests for all adblockers, I may in rare cases request that you could try another and more feature-rich adblocker instead.
+For info on supported extensions, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md
 -->
 - [ ] Nano Adblocker
 - [ ] Nano Defender
