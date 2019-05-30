@@ -1,6 +1,6 @@
 msFilterList
-# Version: 29May2019v1B-Beta
-# Version: 290520191 (for Adblock Plus' issue report system)
+# Version: 29May2019v3-Beta
+# Version: 290520193 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -93,6 +93,7 @@ msFilterList
 -d tvshop.com tradedoubler_files 
 -d bornholm.nu nonsec banner
 -d delivered-by-madington.com
+-d media.sonymusic.no marketing *.html
 - -bazaar-
 - bazaar *
 
