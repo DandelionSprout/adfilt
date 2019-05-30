@@ -4,6 +4,12 @@
 [![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Flattr%20button.png)](https://flattr.com/@DandelionSprout)
 [![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/RSS-knapp.png)](https://github.com/DandelionSprout/adfilt/commits/master.atom)
 
+————————————————————————————
+
+<b>IMPORTANT NOTE FOR CHROMIUM-BROWSER USERS:</b> My lists does not, can not, and will never ever support Manifest v3, due to its laughably short rule limit and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions will not be accepted, and if you do submit one, you would be asked to use an alternate web browser or web browser version instead.
+
+————————————————————————————
+
 This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. GitHub was in mid-2017 by far the easiest way for laymen like me to store pure text files, which is a necessity to create subscribable lists.
 
 This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed considerable energy and effort into, for the enjoyment of all of us.
