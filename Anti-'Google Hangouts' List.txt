@@ -1,12 +1,21 @@
 [Adblock Plus 3.2]
 ! Title: 🗨 Anti-'Google Hangouts' List
-! Version: 21May2019v1-Beta
+! Version: 03June2019v1-Beta
 ! Expires: 20 days
 ! Description: Are you a non-user of Hangouts, and are tired of seeing the uncloseable Hangouts section on Gmail, and various Hangouts buttons and pages? Then this is the list for you.
 ! Note that this list is targeted to Nano Adblocker and uBlock Origin users in particular.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+! 📛 = This category requires using either Nano Adblocker or uBlock Origin.
+
+! Removes the Hangouts feed in the lower left of Gmail
 ||hangouts.google.com/webchat/u/0/frame2$domain=mail.google.com
 mail.google.com###talk_roster
-google.*##.gb_h:-abp-has(.gb_c[rel="noreferrer"][target="_blank"][href="https://hangouts.google.com/"])
-||hangouts.google.com$doc,domain=~ Warning displayed due to: It's Google Hangouts' homepage
+
+! Aims to remove Hangouts-related app listings in Google Play Store in browsers
 play.google.com#?#c-wiz > div > div > div:-abp-has(:scope > c-wiz[jsshadow] > div):-abp-contains(/^Hangouts/)
+
+! Removes the Hangouts button from the Google website app drawer 📛
+google.*##.gb_h:-abp-has(.gb_c[rel="noreferrer"][target="_blank"][href="https://hangouts.google.com/"])
+
+! Displays a warning when opening Hangouts' own website 📛
+||hangouts.google.com$doc,domain=~ Warning displayed due to: It's Google Hangouts' homepage
