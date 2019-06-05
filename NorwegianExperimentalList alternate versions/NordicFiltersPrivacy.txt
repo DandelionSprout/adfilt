@@ -1,5 +1,5 @@
 
-! Version: 05June2019v1
+! Version: 05June2019v2
 
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
@@ -85,8 +85,8 @@
 @@||api.instagram.com^$domain=www.samiteahter.org
 @@||fagbladetjournalen.no/*/300x250_
 @@||fwmrm.net/*MTG$script,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-@@||fwmrm.net/ad/$xmlhttprequest,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-@@||playapi.mtgx.tv/*/adinfo?$xmlhttprequest,domain=viafree.no|viafree.dk
+@@||fwmrm.net/ad/$xhr,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
+@@||playapi.mtgx.tv/*/adinfo?$xhr,domain=viafree.no|viafree.dk
 @@||seher.no/reise$generichide
 aftenbladet.no##.brandboard-ad
 aftenbladet.no##.netboard-ad
@@ -299,7 +299,7 @@ xlmoto.no##.sb-overlay
 xxl.no##.aboveheader.c-fader
 ||8m.com/fs_img/bannertype/
 ||boligsamvirket.no/promsys/
-||client-stream-events.mtg-api.com/client-stream-events/event/viafree/$xmlhttprequest,domain=viafree.se|viafree.no|viafree.dk|viafree.fi
+||client-stream-events.mtg-api.com/client-stream-events/event/viafree/$xhr,domain=viafree.se|viafree.no|viafree.dk|viafree.fi
 ||cluster.chart.dk
 ||dk-ekstrabladet.vp.videoplaza.tv
 ||dk.panel.gemius.dk
@@ -384,7 +384,7 @@ xstra.no##.td-fix-index
 ##.sponset-innlegg
 ||ad.*.no^
 ||ad1.*.no^
-||ad1.emediate.dk
+||ad1.*.dk^
 ||adcache.*.no^
 ||ads.*.no^
 ||ads.*.dk^
@@ -405,8 +405,8 @@ xstra.no##.td-fix-index
 ||track.adform.net/Banners/
 ||tvshop.com/tradedoubler_files/
 ||bornholm.nu/nonsec/banner$image
-||delivered-by-madington.com^$third-party
-||media.sonymusic.no/marketing/*.html$subdocument,third-party
+||delivered-by-madington.com^$3p
+||media.sonymusic.no/marketing/*.html$subdocument,3p
 -bazaar-$script,domain=nettavisen.no
 /bazaar/*$script,domain=nettavisen.no
 .dk/ad/
@@ -632,7 +632,7 @@ tv2.no###tv2_8533699
 tv2.no##.lab-skin-cm.medium-4.small-12.large-4.boxwrapper.tv2-story
 tv2.no##.doubleClickAd
 tv2.no##a[href*="&utm_source=Blogg"]
-@@||www.tv2.no/s/js/ads.js$script,~third-party
+@@||www.tv2.no/s/js/ads.js$script,~3p
 ! ↓ Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy. ↓
 
 
@@ -701,7 +701,7 @@ nettavisen.no##.stuck
 nettavisen.no##.sticked
 nettavisen.no###ad_top
 itavisen.no##.social
-||sannsyn.com^$third-party
+||sannsyn.com^$3p
 aftenbladet.no,aftenposten.no,bt.no,e24.no,fvn.no##[style="cursor: pointer;"]
 alternativ-media.com##.wpa
 ektenyheter.no##.cm-message
@@ -746,7 +746,7 @@ fiskeribladet.no##.teaser_overlay
 @@*.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 csp.screen9.com#@#.adsbox
 @@||fwmrm.net/crossdomain.xml$xhr,domain=viafree.dk|viafree.no
-@@||sixscissors.com^$third-party,domain=itavisen.no
+@@||sixscissors.com^$3p,domain=itavisen.no
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
 ||elderlyscissors.com^

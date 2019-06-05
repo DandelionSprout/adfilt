@@ -35,17 +35,11 @@ def prepare_ag(lines) -> str:
            r"\$doc.*", 
            "$empty,important", 
            line
-       )
-
-        line = re.sub(
-           "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
-           "Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)", 
-           line
         )
 
         line = re.sub(
-           "Dandelion Sprout's Nordic filters for tidier websites", 
-           "Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)", 
+           r"(itle:.*Dandelion Sprout.*)", 
+           r"\1 (for AdGuard)", 
            line
         )
 
@@ -64,6 +58,24 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"! Redirect:.*", 
            "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])xhr", 
+           r"\1xmlhttprequest", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])3p", 
+           r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
            line
         )
 
@@ -94,37 +106,19 @@ def prepare_abp(lines) -> str:
 
         # remove $important modifier from the rule
         line = re.sub(
-           r",important", 
+           r"([$,])important", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\$important", 
-           "", 
+           r"(itle:.*Dandelion Sprout.*)", 
+           r"\1 (for AdBlock and Adblock Plus)", 
            line
         )
 
         line = re.sub(
-           "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
-           "Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)", 
-           line
-        )
-
-        line = re.sub(
-           "Dandelion Sprout's Nordic filters for tidier websites", 
-           "Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and AdBlock Plus)", 
-           line
-        )
-
-        line = re.sub(
-           r"!#if.*", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"!#endif", 
+           r"!#.*", 
            "", 
            line
         )
@@ -138,6 +132,24 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"! Redirect:.*", 
            "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])xhr", 
+           r"\1xmlhttprequest", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])3p", 
+           r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
            line
         )
 

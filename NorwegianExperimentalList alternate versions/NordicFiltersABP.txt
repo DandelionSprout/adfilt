@@ -1,8 +1,8 @@
 [Adblock Plus 3.2]
-! Version: 05June2019v1
-! Version: 050620191 (for Adblock Plus' issue report system)
-! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
-! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and AdBlock Plus)
+! Version: 05June2019v2
+! Version: 050620192 (for Adblock Plus' issue report system)
+! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock and Adblock Plus)
+! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
 
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -383,7 +383,7 @@ xstra.no##.td-fix-index
 ##.sponset-innlegg
 ||ad.*.no^
 ||ad1.*.no^
-||ad1.emediate.dk
+||ad1.*.dk^
 ||adcache.*.no^
 ||ads.*.no^
 ||ads.*.dk^
@@ -630,9 +630,9 @@ tv2.no###tv2_8533699
 tv2.no##.lab-skin-cm.medium-4.small-12.large-4.boxwrapper.tv2-story
 tv2.no##.doubleClickAd
 tv2.no##a[href*="&utm_source=Blogg"]
-@@||www.tv2.no/s/js/ads.js$script,~third-party
+@@||www.tv2.no/s/js/ads.js$script,~3p
 ! ↓ Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy. ↓
-@@||tv2.no/*/config/analytics.json$first-party
+@@||tv2.no/*/config/analytics.json$~third-party
 
 ! Nettavisen
 ! It was difficult to place the line between adticles that had educational values and which ones that didn't, but I feel I did a decent job at it
@@ -743,7 +743,7 @@ fiskeribladet.no##.teaser_overlay
 @@||bondebladet.screen9.tv^$generichide
 @@*.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 csp.screen9.com#@#.adsbox
-@@||fwmrm.net/crossdomain.xml$xhr,domain=viafree.dk|viafree.no
+@@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.dk|viafree.no
 @@||sixscissors.com^$third-party,domain=itavisen.no
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
@@ -858,7 +858,7 @@ google.no,google.dk,google.is##.rlfl__tls > div[jstcache="0"]:not([class]):not([
 ||fwmrm.net/p/MTG_Live/LinkTag2.js$script,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
 ||fwmrm.net^$image,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
 ||openx.gamereactor.dk/multi.php?$script
-@@||tv2.no/*/config/analytics.json$xmlhttprequest,first-party
+@@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
 ||ssl.p.jwpcdn.com^*/jwpsrv.js,script,domain=vg.no
 ||ssl.p.jwpcdn.com^*/vast.js,script,domain=vg.no
 ||gamereactor.*/lay/ad-video-stats.js^$script
