@@ -1,6 +1,6 @@
 msFilterList
-# Version: 29May2019v3-Beta
-# Version: 290520193 (for Adblock Plus' issue report system)
+# Version: 01June2019v1-Beta
+# Version: 010620191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
