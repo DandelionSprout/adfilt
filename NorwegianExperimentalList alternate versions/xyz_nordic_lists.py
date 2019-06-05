@@ -68,7 +68,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"([$,])3p", 
+           r"([$,~])3p", 
            r"\1third-party", 
            line
         )
@@ -112,8 +112,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"(itle:.*Dandelion Sprout.*)", 
-           r"\1 (for AdBlock and Adblock Plus)", 
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)",
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprout's Nordic filters for tidier websites", 
+           "Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)",
            line
         )
 
@@ -142,8 +148,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([$,])3p", 
+           r"([$,~])3p", 
            r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
            line
         )
 
