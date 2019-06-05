@@ -1,6 +1,6 @@
 msFilterList
-# Version: 01June2019v1-Beta
-# Version: 010620191 (for Adblock Plus' issue report system)
+# Version: 05June2019v1-Beta
+# Version: 050620191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -243,6 +243,10 @@ msFilterList
 
 
 
+
+
+# 🇳🇴: Lagt til fordi min egen mor (Hun er i 40-årene) trodde jeg hadde rotet til PCen hennes, når den i stedet bare viste en uBO-sideadvarsel på grunn av en oppføring i «AdGuards hovedfilter», også kjent som AdGuard Base.
+# 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
 
 
 # 🇳🇴: Landseksklusive versjoner for enkle reklameblokkerere, av flernasjonsoppføringer som er i utvidelsesfilen for avanserte reklameblokkerere; ettersom Adblock Plus og AdGuard for øyeblikket ikke støtter *-jokertegn i nettadressene til blokkeringsregler.

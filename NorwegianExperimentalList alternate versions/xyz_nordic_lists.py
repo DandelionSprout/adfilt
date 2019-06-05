@@ -13,6 +13,7 @@ OUTPUT_AG = 'NordicFiltersAdGuard.txt'
 OUTPUT_ABP = 'NordicFiltersABP.txt'
 OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
 OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
+OUTPUT_PRIVACY = 'NordicFiltersPrivacy.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -435,6 +436,84 @@ def prepare_privoxy(lines) -> str:
 
     return text
 
+# function that prepares the filter list for a privacy-focused uBO version
+def prepare_privacy(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+
+        # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
+        line = re.sub(
+           r"^@.*tradedoubler\.com.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@.*\.zanox\..*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@.*/analytics\..*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@.*\.adtraction\..*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@.*\.adform\..*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@.*/autoTrack.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)", 
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprout's Nordic filters for tidier websites", 
+           "Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: [0-9][0-9][0-9][0-9].*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "\[Adblock Plus 3.2\]", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"! If you wish to remove cookie banners.*", 
+           "! Warning: This list version does not exchange tracker protection for added browsing convenience, and is for advanced tech users ONLY! Some web stuff that are unbroken by whitelistings in the normal version, are NOT fixed in this version! Additionally, it is only made with uBO and close derivatives in mind.", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -445,6 +524,7 @@ if __name__ == "__main__":
     abp_filter = prepare_abp(lines)
     tpl_filter = prepare_tpl(lines)
     privoxy_filter = prepare_privoxy(lines)
+    privacy_filter = prepare_privacy(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -460,6 +540,9 @@ if __name__ == "__main__":
 
     with open(OUTPUT_PRIVOXY, "w") as text_file:
         text_file.write(privoxy_filter)
+
+    with open(OUTPUT_PRIVACY, "w") as text_file:
+        text_file.write(privacy_filter)
 
     print('The adblocker-based list versions have been generated.')
 
