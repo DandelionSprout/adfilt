@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 07June2019v1-Alpha
+! Version: 07June2019v2-Alpha
 ! Expires: 5 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -38,10 +38,6 @@
 ##.button__twitter
 ##.c-article__byline-social
 ##.dre-share-band
-##.fa-facebook
-##.fa-instagram
-##.fa-linkedin
-##.fa-twitter
 ##.facebook
 ##.facebook-like-box
 ##.facebook_top
@@ -178,9 +174,19 @@
 ||platform.twitter.com/widgets/tweet_button$subdocument
 ||softwareok.com/img/i_like_this.png?$image
 ||www.facebook.com/plugins/like.php$subdocument
+###share-buttons
+##div[class*="sharethisbutton" i]
+##a[class^="socialbutton" i][onclick*="window.open"]
 
 ! For sites that have $generichide
 e24.no##.article-share
 ekstrabladet.dk##label[for*="ShareModal"]
 eurogamer.net##.social
 vg.no##button[aria-label*="Facebook"]
+
+! Disqualified entries due to breakage of regular social links (Example site)
+!!! ##.social (gulesider.no)
+!!! ##.fa-facebook
+!!! ##.fa-instagram
+!!! ##.fa-linkedin
+!!! ##.fa-twitter
