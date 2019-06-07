@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 05June2019v1-Alpha
+! Version: 07June2019v1-Alpha
 ! Expires: 5 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -24,6 +24,7 @@
 ##.addtoany_list
 ##.article-share
 ##.article__share
+##.blog-post-single-share
 ##.btn--facebook
 ##.btn-facebook
 ##.btn-facebook-like
@@ -31,7 +32,6 @@
 ##.btn-messenger
 ##.btn-twitter
 ##.btn[href*="facebook.com/sharer/"]
-##.button[href*=".instagram.com"]
 ##.button__facebook
 ##.button__instagram
 ##.button__linkedin
@@ -49,9 +49,9 @@
 ##.facebookShare
 ##.fb-like-box
 ##.fb-page-plugin
-##.fb_iframe_widget:not(.fb-post)
 ##.fb-share-button
 ##.fb-share-count
+##.fb_iframe_widget:not(.fb-post)
 ##.figure-share
 ##.follow
 ##.follow_like_module
@@ -70,8 +70,6 @@
 ##.news_share
 ##.product-sharing
 ##.sbtn_main
-~tecmint.com,~ostechnix.com##.share
-##.share_area
 ##.share-bar
 ##.share-btns
 ##.share-button
@@ -80,11 +78,13 @@
 ##.share-list
 ##.share-metas
 ##.share-toolbar
+##.share_area
 ##.shareBottom
 ##.ShareButtons
+##.sharetools
 ##.sharing
+##.sharing-item
 ##.soc-list
-~signin.ebay.com##.social
 ##.social-action[test-id*="facebook"]
 ##.social-btns
 ##.social-footer
@@ -108,7 +108,9 @@
 ##.twitter
 ##.twittershare
 ##.twitterShare
-##.blog-post-single-share
+##ksf-sharing
+~signin.ebay.com##.social
+~tecmint.com,~ostechnix.com##.share
 ##[socialshare]
 ##a[class*="-socials__item"]
 ##a[class^="addthis_button"]
@@ -122,6 +124,7 @@
 ##a[id*="share-"][id*="-button"]
 ##a[id^="share_btn"]
 ##a[onclick^="ShowShare"]
+##a[class*="social-share"]
 ##amedia-share
 ##button[class*="share-button"]
 ##button[data-a-target^="share"]
@@ -148,12 +151,10 @@
 ##div[class*="social_sidebar"]
 ##div[class*="social_slide"]
 ##div[class*="share-link"]
-##div[class^="addthis_sharing"]
 ##div[class^="share-options"]
 ##div[class^="shareLinks"]
 ##div[class^="social-like"]
 ##div[class^="social-media-container"]
-##div[class^="social-share"]
 ##div[data-aop^="sharingtoolbar"]
 ##div[class$="-share-single"]
 ##h2[class*="share-links"]
@@ -166,6 +167,9 @@
 ##ul[class^="sociale-ikoner-del"]
 ##ul[class*="social-bar"]
 ##ul[class*="-share-buttons"]
+##a[class*="BtnShare"]
+##a[class*="share__button"]
+##a[href*="share-tools"]
 ||apis.google.com/*/+1/fastbutton$subdocument
 ||facebook.com/*/plugins/like.php$subdocument
 ||facebook.com/plugins/page.php$subdocument
