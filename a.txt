@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🏡 Imres filtre
-! Version: 09June2019v1-Personal
+! Version: 10June2019v1-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include BrowseWebsitesWithoutLoggingIn.txt
@@ -554,7 +554,9 @@ www.nrk.no#?#.kur-room:-abp-contains(«Skam»)
 www.nrk.no#?#div.relation:-abp-contains(«Skam»)
 
 ! Removing empty padding lines on non-Nordic sites (Many more sites to be included when I find them again)
-change.org#?#p:has-text(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
+change.org,indiegogo.com#?#p:has-text(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
+indiegogo.com##h3:has-text(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
+indiegogo.com##h2:has-text(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
 
 ! Anti-'Imperial units'
 google.*##div.widget-ruler-primary-label > span:not(:has-text(m)):not(:has-text(м))
