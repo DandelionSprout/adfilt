@@ -1,6 +1,6 @@
 msFilterList
-# Version: 05June2019v3-Beta
-# Version: 050620193 (for Adblock Plus' issue report system)
+# Version: 11June2019v1-Beta
+# Version: 110620191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -27,46 +27,14 @@ msFilterList
 
 
 
--d 8m.com fs_img bannertype 
--d boligsamvirket.no promsys 
 -d client-stream-events.mtg-api.com client-stream-events event viafree 
--d cluster.chart.dk
--d dk-ekstrabladet.vp.videoplaza.tv
--d dk.panel.gemius.dk
--d dotbanner.dk
--d dust2.dk img banners *
--d emediate.eu
--d f-b.no includes sidebanner
--d folk.rbnett.no widgets 24
 -d freewheel-mtgx-tv.akamaized.net
--d g2.start.no img dominans 
--d gaysir.no rek rekimg 
--d gulesider.no bannersys-pics 
--d akamai.net
--d humor911.no annonseweb 
--d img8.custompublish.com publish getbanner.php 
--d ish.tumedia.no ish_tracker.gif
--d isweb.no
--d itavisen.no annonsorer 
--d itpro.no images adheaders 
 -d cdn.ravenjs.com
--d karrierestart.no Home TopBannerContent
--d media2.origo.no images 
--d mobilen.no wip4 oc_scrollbar 
--d no-vg.cdn.videoplaza.tv creatives 
--d openadex.dk
+-d viasport-assets.mtg-api.com * prod comScore-*.js
+-d isweb.no
 -d opinion.peytz.dk
--d klikk.no common js klikk.desktop-thirdparty.min.js
--d propaganda.net img reklame.
--d propaganda.net js global.js
--d r.api.no componada resources web flash 
--d static.tek.no images main bodyBgStretch.png
--d tb.no polopoly_fs ledige-jobber-flash-7.13191! 
 -d tns-gallup.dk
 -d userneeds.dk
--d viasport-assets.mtg-api.com * prod comScore-*.js
--d webtips.no banneradmin 
--d yfrog.com htzywuj:medium
 
 # Ads (Section under construction)
 
@@ -94,6 +62,11 @@ msFilterList
 -d bornholm.nu nonsec banner
 -d delivered-by-madington.com
 -d media.sonymusic.no marketing *.html
+-d klikk.no common js klikk.desktop-thirdparty.min.js
+-d dust2.dk img banners *
+-d openadex.dk
+-d dotbanner.dk
+-d cluster.chart.dk
 - -bazaar-
 - bazaar *
 
@@ -108,8 +81,10 @@ msFilterList
 - auglysing *
 - bilder erotikk1.jpg
 - Bannere *
+-d akamai.net
 
 # Leftover empty spaces that EasyList have left behind (Section under construction)
+-d gaysir.no rek bb_inline
 
 # 🇬🇧: Empty divider spaces (Section under construction)
 
@@ -392,6 +367,15 @@ msFilterList
 -d 101mesh.com
 -d gokkw.com
 -d earnmoneyglobal.com
+
+# Som nevnt i https:  www.datahjelperne.no stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel 
+-d trendyn.me
+
+# Som nevnt i https:  www.datahjelperne.no verifiser-get-konto-falsk-mail 
+
+
+# Som nevnt i https:  www.datahjelperne.no falske-telenor-undersokelser 
+-d surveryrewards1.com
 
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
