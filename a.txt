@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🏡 Imres filtre
-! Version: 10June2019v1-Personal
+! Version: 12June2019v1-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include BrowseWebsitesWithoutLoggingIn.txt
@@ -17,6 +17,7 @@
 !#include RedditTrashRemovalService.txt
 !#include AntiVomitList.txt
 !#include AntiCelebBirthList
+!#include DailyMotionSimplicity.txt
 ##.community-page-entry-point-module.module
 ##.feedzy-rss
 ##.mod._Wtj
@@ -478,15 +479,6 @@ pokemonpets.com#?#p:-abp-has(a[href*="/allah/"])
 ||www.skousen.no^
 ||cdon.no^
 
-! DailyMotion: Pure Viewing Experience
-dailymotion.com##.np_Darken
-dailymotion.com###np_HeaderVideoInfo-title
-dailymotion.com##.np_icon--np_play
-dailymotion.com##.np_icon--np_pause
-dailymotion.com##.np_HeaderVideoInfo-owner
-dailymotion.com##div[class^="DiscoveryQueueDisplay__"]
-dailymotion.com##div[class^="DailyPulse"]
-
 ! Loosely assorted anti-comment-section entries
 ! I am aware that more comprehensive anti-comment-section lists exist, but I usually don't want to block all of them. Only the most miserable and misanthropic ones among them.
 ###hot-network-questions
@@ -565,6 +557,13 @@ google.*##div.widget-ruler-primary-label > span:not(:has-text(m)):not(:has-text(
 my.nintendo.com##.badge
 
 ! Anti-Skype
-###O365_AppTile_ShellSkype
-onedrive.live.com##.ms-icon-font-size-20.ms-Icon--skypeMessage.owaimg.o365cs-topnavText
-||p.pfx.ms/sn/PsaSmall/SKYPEActive2.png
+||web.skype.com$document
+! Removes the Skype button from the Office Online frontpage
+office.com###ShellSkype_link
+! Removes the Skype button from the Office Online workspace's app drawer
+live.com###sw_Skype
+! Removes the Skype button from the Office Online workspace's top bar
+live.com##.SkypeButton
+! Removes the Skype call-time offer from Office 365's subscription management page
+! https://account.microsoft.com/services/office/overview
+account.microsoft.com##.c-card:has(h6[ng-if="card.title"]:has-text(Skype))
