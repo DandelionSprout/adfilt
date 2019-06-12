@@ -1,6 +1,6 @@
 msFilterList
-# Version: 11June2019v1-Beta
-# Version: 110620191 (for Adblock Plus' issue report system)
+# Version: 12June2019v4-Beta
+# Version: 120620194 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -15,8 +15,6 @@ msFilterList
 # 🇩🇰: Ukategoriserede opføringer
 # 🇬🇧: Uncategorised entries
 - oasfile
-- ad-video-log.php
-- prerolls *
 
 
 +d api.instagram.com
@@ -24,17 +22,45 @@ msFilterList
 
 
 
-
-
-
--d client-stream-events.mtg-api.com client-stream-events event viafree 
--d freewheel-mtgx-tv.akamaized.net
--d cdn.ravenjs.com
 -d viasport-assets.mtg-api.com * prod comScore-*.js
 -d isweb.no
 -d opinion.peytz.dk
 -d tns-gallup.dk
 -d userneeds.dk
+
+
+
+
+-d openx.gamereactor.dk multi.php?
+
+- js smartbanner *
+- liveodds-button_nordicbet
+- nordicbet_logo
+- partners *_ad_icon
+
++d eurosport.*
+
+-d cdn.ravenjs.com
+-d client-stream-events.mtg-api.com
+-d freewheel-mtgx-tv.akamaized.net
+-d getsentry.com
+-d sentry-cdn.com
+
+-d media.gamereactor.dk prerolls *
+
+
+-d ssl.p.jwpcdn.com freewheel.js
+-d ssl.p.jwpcdn.com gapro.js
+-d ssl.p.jwpcdn.com jwpsrv.js
+-d ssl.p.jwpcdn.com sharing.js
+-d ssl.p.jwpcdn.com vast.js
+- _bm abd
+- insert_grtv_stats.
+- prerolls *
+- adblock_mobile.
+- linktag2.js
+- viewability.
+-d avod-fw-config.mtg-api.com
 
 # Ads (Section under construction)
 
@@ -190,7 +216,6 @@ msFilterList
 # 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https:  forums.lanik.us viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
 +d bondebladet.screen9.tv
 
-
 +d sixscissors.com
 -d elderlyscissors.com
 +d eurosport.no
@@ -231,6 +256,8 @@ msFilterList
 # 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
 # ABP was at one point discussing supporting it in https:  issues.adblockplus.org ticket 6773, but it stranded out into nothing.
 
+-d openx.gamereactor.dk multi.php?
++d eurosport.no,eurosport.dk
 
 
 
@@ -260,16 +287,10 @@ msFilterList
 # 🇬🇧: Unsorted advanced blocking entries that were carried over from a previous uBO-only expansion list.
 -d acdn.adnxs.com ast ast.js
 -d acdn.adnxs.com ast ast.js
--d fwmrm.net p MTG_Live LinkTag2.js
--d fwmrm.net
--d openx.gamereactor.dk multi.php?
 
 -d ssl.p.jwpcdn.com jwpsrv.js
 -d ssl.p.jwpcdn.com vast.js
 -d damoh.vgtv.no hic_qos
-
-
-
 - entag.js
 -d akamaihd.net video-assets 
 
