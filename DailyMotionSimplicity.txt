@@ -1,0 +1,22 @@
+[Adblock Plus 3.2]
+! Title: 🎯 DailyMotion Simplicity
+! Version: 12June2019v1-Beta
+! Expires: 7 days
+! Description: Have you ever been watching «Pinkie Cooper and the Jet Set Pets» on DailyMotion, but you keep getting distracted by all the trend-based recommendations below the video player? This list will help focus your attention on the video instead.
+! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! Removes the "Featured channels" feed below the video player
+dailymotion.com#?#div[class^="DiscoveryQueueDisplay__sectionContainer"]:-abp-has(a[class*="channelCard"])
+
+! Removes the "Trending" feed that shows up below the video player if the location is set to the United States
+dailymotion.com#?#div[class^="DiscoveryQueueDisplay__sectionContainer"]:-abp-has(span:-abp-contains(Trend))
+dailymotion.com#?#div[class^="DiscoveryQueueDisplay__sectionContainer"]:-abp-has(a[style^="background-image: linear-gradient(225deg, rgb(255, 221"])
+
+! Makes it easier to take screencaps of the videos
+dailymotion.com##.np_Darken
+dailymotion.com##.np_icon--np_pause
+dailymotion.com##.np_transition.np_HeaderVideoInfo
+
+! Removes leftover ad boxes
+dailymotion.com##div[class^="AdDiscovery"]
+dailymotion.com##div[class*="_adCell_"]
