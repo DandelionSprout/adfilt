@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
-! Version: 11June2019v1
-! Version: 110620191 (for Adblock Plus' issue report system)
+! Version: 12June2019v1
+! Version: 120620191 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -72,8 +72,6 @@
 ##div[itemtype*="schema.org/WPAdBlock"]
 ##optimus-element[id^="art-bazaarAd-"][version="default"]
 .oasfile
-/ad-video-log.php$domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
-/prerolls/*$domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
 1001spill.no###footer
 1001spill.no##.omega.grid_6
 118.dk##.adform-adbox
@@ -84,9 +82,6 @@
 @@||5e529.v.fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
 @@||api.instagram.com^$domain=www.samiteahter.org
 @@||fagbladetjournalen.no/*/300x250_
-@@||fwmrm.net/*MTG$script,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-@@||fwmrm.net/ad/$xhr,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-@@||playapi.mtgx.tv/*/adinfo?$xhr,domain=viafree.no|viafree.dk
 @@||seher.no/reise$generichide
 aftenbladet.no##.brandboard-ad
 aftenbladet.no##.netboard-ad
@@ -294,14 +289,82 @@ xlmoto.no##.overlay-container
 xlmoto.no##.overlay-wrapper
 xlmoto.no##.sb-overlay
 xxl.no##.aboveheader.c-fader
-||client-stream-events.mtg-api.com/client-stream-events/event/viafree/$xhr,domain=viafree.se|viafree.no|viafree.dk|viafree.fi
-||freewheel-mtgx-tv.akamaized.net^$media,image,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-||cdn.ravenjs.com^$script,domain=viafree.no|viafree.dk
 ||viasport-assets.mtg-api.com/*/prod/comScore-*.js$script
 ||isweb.no^$subdocument
 ||opinion.peytz.dk$domain=landbrugsavisen.dk
 ||tns-gallup.dk$3p
 ||userneeds.dk$3p
+/adblock_mobile.$important,script,domain=gamereactor.*
+/linktag2.js$important,script,domain=viafree.*
+/viewability.$important,script,domain=gamereactor.*
+eurosport.*##+js(addEventListener-defuser.js, contextmenu)
+gamereactor.*###pagebackground:style(background-image: none !important)
+gamereactor.*##+js(abort-current-inline-script.js, phpads_deliver)
+gamereactor.*##+js(abort-on-property-write.js, banner_video)
+gamereactor.*##+js(set-constant.js, adblockEnabled, noopFunc)
+gamereactor.*##+js(set-constant.js, trackAdblock, noopFunc)
+tvkampen.com,tvsporten.dk##+js(abort-on-property-write.js, onload)
+tvkampen.com,tvsporten.dk##.custom-background:style(background-image: none !important;)
+viafree.*##+js(addEventListener-defuser.js, /^ad/)
+viafree.*##+js(addEventListener-defuser.js, /^media/)
+viafree.*##+js(setTimeout-defuser.js, r, 0)
+viafree.*##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs-progress-control:style(display: initial !important;)
+||avod-fw-config.mtg-api.com^$important,xhr,domain=viafree.*
+||gamereactor.*/lay/ad-video-stats.$important,script
+||gamereactor.*/lay/js/adblock_desktop.$important,script
+||gamereactor.*/lay/js/background.$important,script
+||gamereactor.*/lay/js/banners_config.$important,script
+||gamereactor.*/lay/js/manageBanners.$important,script
+||openx.gamereactor.dk/multi.php?$important,script
+||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.*
+||ssl.p.jwpcdn.com^*/gapro.js$important,script,domain=gamereactor.*
+||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.*|gamereactor.*
+||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.*|gamereactor.*
+||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.*|gamereactor.*
+||viafree.*/collect$important,xhr
+gamereactor.*##^script[onError="adblockEnabled()"]
+/_bm/abd$script,domain=eurosport.*
+/insert_grtv_stats.$xmlhttprequest,domain=gamereactor.*
+/js/smartbanner/*$domain=tvkampen.com|tvsporten.dk
+/liveodds-button_nordicbet$domain=tvkampen.com|tvsporten.dk
+/nordicbet_logo$domain=tvkampen.com|tvsporten.dk
+/partners/*_ad_icon$image,domain=tvkampen.com|tvsporten.dk
+/prerolls/*$domain=gamereactor.*
+@@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
+@@||eurosport.*^$generichide
+@@||fwmrm.net/ad/$xmlhttprequest,domain=viafree.*
+@@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.*
+gamereactor.*#@#.afs_ads
+eurosport.*###notification__cookie
+eurosport.*##.eso_video__share
+gamereactor.*###ad_mobiletopinsidetext
+gamereactor.*###ad_video
+gamereactor.*###bigVideoAd
+gamereactor.*###eventad
+gamereactor.*###facebooknotification
+gamereactor.*###fbnotification
+gamereactor.*###sky2_1
+gamereactor.*##.ad_smartphbig
+gamereactor.*##.ad_video
+gamereactor.*##.cocacola
+gamereactor.*##.sponsor
+gamereactor.*##a[href*="/adclick.php"]
+gamereactor.*##div[class^="ad300"]
+gamereactor.*##div[style*="width:300px;height:600px;"]
+gamereactor.*##div[style="min-height: 600px; margin-bottom: 20px;"]
+tvkampen.com,tvsporten.dk###before-matches
+tvkampen.com,tvsporten.dk###clickable-bg
+tvkampen.com,tvsporten.dk###triangel_ad
+tvkampen.com,tvsporten.dk##a.p-icon.partner
+tvkampen.com,tvsporten.dk##a[href*="tradedoubler.com"]
+viafree.*##.ad-click-through
+viafree.*##.pause-ad
+||cdn.ravenjs.com^$script,domain=viafree.*
+||client-stream-events.mtg-api.com^$domain=viafree.*
+||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.*
+||gamereactor.*/media/eventad/$image
+||getsentry.com^$third-party,domain=viafree.*
+||sentry-cdn.com^$third-party,domain=viafree.*
 
 ! Ads (Section under construction)
 framtia.no,sovesten.no,arendalstidende.no,bil24.no##.gofollow
@@ -463,7 +526,7 @@ sognavis.no##.row.hidden-print:not(.vspace)
 win-xp.no#?#tr > td > div:-abp-has(a[href*="clk.tradedoubler."])
 prisjakt.no##.outsider-ads
 prisjakt.no##.desktop-inline-ad
-tvkampen.com###panorama
+tvkampen.com,tvsporten.dk###panorama
 sveip.no##.notnews
 sveip.net#?#div:-abp-has(:scope > ins.adsbygoogle)
 sveip.net##.app_ad2
@@ -721,7 +784,6 @@ fiskeribladet.no##.teaser_overlay
 @@||bondebladet.screen9.tv^$generichide
 @@*.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 csp.screen9.com#@#.adsbox
-@@||fwmrm.net/crossdomain.xml$xhr,domain=viafree.dk|viafree.no
 @@||sixscissors.com^$3p,domain=itavisen.no
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
@@ -766,18 +828,6 @@ minmote.no,godt.no##.adblock-info
 ! 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
 ! ABP was at one point discussing supporting it in https://issues.adblockplus.org/ticket/6773, but it stranded out into nothing.
 !#if !ext_ublock
-gamereactor.no,gamereactor.dk###ad_video
-gamereactor.no,gamereactor.dk###ad_w300h450
-gamereactor.no,gamereactor.dk###bigVideoAd
-gamereactor.no,gamereactor.dk###eventad
-gamereactor.no,gamereactor.dk###fbnotification
-gamereactor.no,gamereactor.dk###sky2_1
-gamereactor.no,gamereactor.dk##.ad_video
-gamereactor.no,gamereactor.dk##.cocacola
-gamereactor.no,gamereactor.dk##a[href*="/adclick.php"]
-gamereactor.no,gamereactor.dk##div[class^="ad300"]
-gamereactor.no,gamereactor.dk##div[style*="width:300px;height:600px;"]
-viafree.no,viafree.dk##.ad-click-through
 viaplay.no,viaplay.dk##.interaction-block
 google.no,google.dk,google.is###epbar, #cnsh, #pushdown, #consent-bump, #cnsi ~ [jsaction*="dismiss"], santa-notice
 prisjakt.no##.adbox
@@ -793,6 +843,49 @@ qxl.dk###GoogleAdsensePanorama
 expedia.no,expedia.dk##.extended-below-wizard-ads
 dagligvarehandelen.no,avisen.dk,bt.dk,sondagsavisen.dk,lokalavisen.dk,folketidende.dk,realityportalen.dk,fyens.dk,plbold.dk,tv2.no,seoghoer.dk,telepristjek.dk,abcnyheter.no,dagsavisen.no,nettavisen.no,bramat.no,hblad.no,gjoviksblad.no,h-a.no,kreativeideer.no,vartoslo.no#?#div.spklw-post-attr:-abp-has(div[class*="spklw-sponsored"])
 folkebladet.no,hitra-froya.no,rbnett.no,smp.no##.polarisSpid.widget:before
+/adblock_mobile.$important,script,domain=gamereactor.no|gamereactor.dk
+/linktag2.js$important,script,domain=viafree.no|viafree.dk
+/viewability.$important,script,domain=gamereactor.no|gamereactor.dk
+gamereactor.no,gamereactor.dk###pagebackground:style(background-image: none !important)
+viafree.no,viafree.dk##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs-progress-control:style(display: initial !important)
+||avod-fw-config.mtg-api.com^$important,xhr,domain=viafree.no|viafree.dk
+||openx.gamereactor.dk/multi.php?$important,script
+||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.no|eurosport.dk
+||ssl.p.jwpcdn.com^*/gapro.js$important,script,domain=gamereactor.no|gamereactor.dk
+||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
+||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
+||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
+/_bm/abd$script,domain=eurosport.no|eurosport.dk
+/insert_grtv_stats.$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
+/prerolls/*$domain=gamereactor.no|gamereactor.dk
+@@||eurosport.no,eurosport.dk^$generichide
+@@||fwmrm.net/ad/$xhr,domain=viafree.no|viafree.dk
+@@||fwmrm.net/crossdomain.xml$xhr,domain=viafree.no|viafree.dk
+gamereactor.no,gamereactor.dk#@#.afs_ads
+eurosport.no,eurosport.dk###notification__cookie
+eurosport.no,eurosport.dk##.eso_video__share
+gamereactor.no,gamereactor.dk###ad_mobiletopinsidetext
+gamereactor.no,gamereactor.dk###ad_video
+gamereactor.no,gamereactor.dk###bigVideoAd
+gamereactor.no,gamereactor.dk###eventad
+gamereactor.no,gamereactor.dk###facebooknotification
+gamereactor.no,gamereactor.dk###fbnotification
+gamereactor.no,gamereactor.dk###sky2_1
+gamereactor.no,gamereactor.dk##.ad_smartphbig
+gamereactor.no,gamereactor.dk##.ad_video
+gamereactor.no,gamereactor.dk##.cocacola
+gamereactor.no,gamereactor.dk##.sponsor
+gamereactor.no,gamereactor.dk##a[href*="/adclick.php"]
+gamereactor.no,gamereactor.dk##div[class^="ad300"]
+gamereactor.no,gamereactor.dk##div[style*="width:300px;height:600px;"]
+gamereactor.no,gamereactor.dk##div[style="min-height: 600px; margin-bottom: 20px;"]
+viafree.no,viafree.dk##.ad-click-through
+viafree.no,viafree.dk##.pause-ad
+||cdn.ravenjs.com^$script,domain=viafree.no|viafree.dk
+||client-stream-events.mtg-api.com^$domain=viafree.no|viafree.dk
+||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.no|viafree.dk
+||getsentry.com^$third-party,domain=viafree.no|viafree.dk
+||sentry-cdn.com^$third-party,domain=viafree.no|viafree.dk
 !#endif
 
 !#if !adguard
@@ -806,7 +899,6 @@ fuglelyder.net#@##banner_ad
 !#endif
 !#if (!ext_ublock && !adguard)
 qxl.no###GoogleAdsensePanorama
-viafree.no,viafree.dk##.pause-ad
 google.no,google.dk,google.is##.luhb-div
 google.no,google.dk,google.is###tads
 google.no,google.dk,google.is##.rlfl__tls > div[jstcache="0"]:not([class]):not([id])[-ext-has='span._mB']
@@ -821,11 +913,8 @@ dagensbyggeri.dk##+js(setTimeout-defuser.js, (), 2500)
 vg.no##+js(abort-current-inline-script.js, Math.floor, g00)
 vg.no,e24.no,gamer.no,tek.no,digi.no##+js(abort-on-property-write.js, __AB__)
 tv2.no##+js(abort-current-inline-script.js, adblockDetector)
-gamereactor.*##+js(abort-current-inline-script.js, detectAdblockUser)
 gamer.no,tu.no##+js(abort-current-inline-script.js, dfpConfig, loadAds)
 blogg.no##+js(set-constant.js, showAd, false)
-viafree.no,viafree.dk##+js(setTimeout-defuser.js, r, 0)
-viafree.no,viafree.dk##+js(addEventListener-defuser.js, error, (t,n))
 1200kcalkostplan.dk,1800kcalkostplan.dk##+js(abort-on-property-write.js, KillAdBlock)
 !#endif
 
@@ -847,7 +936,6 @@ lydogbilde.no,lydogbillede.dk##.background-ad:style(min-height: 0px !important)
 dagen.no##.paywall-body-description:style(-webkit-text-fill-color: black !important)
 dn.no###googlead-toppbanner:style(min-height: 0 !important)
 vgtv.no##.page-container:style(margin-top: 0px !important)
-viafree.no##.cookie-bar + nav > #navBar:style(top: auto !important)
 
 ! Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
 ! Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
@@ -864,23 +952,10 @@ dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
 
 !#if !adguard
 ! Wildcard versions of various entries. Because why only block on one national version of a site, when you can nowadays block on all versions of a site without cluttering things up?
-gamereactor.*###ad_video
-gamereactor.*###ad_w300h450
-gamereactor.*###bigVideoAd
-gamereactor.*###eventad
-gamereactor.*###fbnotification
-gamereactor.*###sky2_1
-gamereactor.*##.ad_video
-gamereactor.*##.cocacola
-gamereactor.*##a[href*="/adclick.php"]
-gamereactor.*##div[class^="ad300"]
-gamereactor.*##div[style*="width:300px;height:600px;"]
 google.*###epbar, #cnsh, #pushdown, #consent-bump, #cnsi ~ [jsaction*="dismiss"], santa-notice
 google.*###tads
 google.*##.luhb-div
 google.*##.rlfl__tls > div[jstcache="0"]:not([class]):not([id])[-ext-has='span._mB']
-viafree.*##.ad-click-through
-viafree.*##.pause-ad
 viaplay.*##.interaction-block
 prisjakt.*##.adbox
 prisjakt.*###footer_header
@@ -900,16 +975,10 @@ no##.polarisSpid.widget:before
 ! 🇬🇧: Unsorted advanced blocking entries that were carried over from a previous uBO-only expansion list.
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
 ||acdn.adnxs.com/ast/ast.js$script,redirect=noopjs,important,domain=vgtv.no
-||fwmrm.net/p/MTG_Live/LinkTag2.js$script,important,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-||fwmrm.net^$image,important,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-||openx.gamereactor.dk/multi.php?$script,important
 @@||tv2.no/*/config/analytics.json$xhr,1p
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=vg.no
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=vg.no
 ||damoh.vgtv.no/hic_qos$script,redirect=noopjs,domain=vg.no
-||gamereactor.*/lay/ad-video-stats.js^$script,important
-||gamereactor.*/lay/js/manageBanners.js^$script,important
-||gamereactor.*/lay/js/adblock_desktop.js^$script,important
 /entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
 ||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
 
