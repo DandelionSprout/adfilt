@@ -1,5 +1,5 @@
 [AdGuard ≥6]
-! Version: 12June2019v4
+! Version: 19June2019v3
 
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
@@ -30,7 +30,7 @@
 ###inlineannonse
 ###viewItemAdsenseBanner
 ###viewItemEniroBanner
-~raymond.cc,~inbox.google.com,~win-rar.com##.ad
+~raymond.cc,~win-rar.com##.ad
 ##.ad-centered
 ##.ad-nexus-ad
 ##.ad-paied-cont-front
@@ -53,7 +53,6 @@
 ##.df-skin-annonse
 ##.EAS_fif
 ##.full-width.daily-offers
-##.gb_g.gb_fa
 ~cdon.no,~cdon.dk,~cdon.se,~cdon.fi##.horseshoe
 ##.inline-ad-text
 ##.latterkulainnlegg-annonse
@@ -64,9 +63,7 @@
 ##.rotating-junglebogen
 ##.sub.menu-primary.default.polarisMenu.widget
 ##[id^="art-bazaarAdGrid-"]
-##a[href*="online.adservicemedia.dk"]
 ##a[href*="sting.de17a.com"]
-##a[title="LeoVegas"]
 ##div.size-300x160.fixed-placement
 ##div[data-contenttype="ad"]
 ##div[itemtype*="schema.org/WPAdBlock"]
@@ -313,10 +310,6 @@ viafree.*##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs
 ||openx.gamereactor.dk/multi.php?$important,script
 ||viafree.*/collect$important,xmlhttprequest
 gamereactor.*##^script[onError="adblockEnabled()"]
-/js/smartbanner/*$domain=tvkampen.com|tvsporten.dk
-/liveodds-button_nordicbet$domain=tvkampen.com|tvsporten.dk
-/nordicbet_logo$domain=tvkampen.com|tvsporten.dk
-/partners/*_ad_icon$image,domain=tvkampen.com|tvsporten.dk
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
 @@||eurosport.*^$generichide
 gamereactor.*#@#.afs_ads
@@ -389,7 +382,6 @@ tek.no##.partnerstudio-ad-inline
 opp.no##.classified-ads
 opp.no#?#.l-col-12:-abp-has(.classifieds-content)
 sporttv.is##div[class^="auglysing-"]
-momondo.no,momondo.dk##.type-provider.clearfix.flights
 sveip.no##.fromod_section_2
 sveip.net##.logoads_wrap
 sedenne.no#?#div[class*="articleItem"]:-abp-contains(ANNONSE)
@@ -409,9 +401,13 @@ karfan.is#?#.td-pb-span4:-abp-has(img[height="400"][width="310"])
 lokalavisen.dk##.custom-annoncer-wrapper
 amino.dk###Abox.AminoBox
 xstra.no##.td-fix-index
+digi.no##.commercial
+momondo.*##.type-provider.clearfix.flights
 ##.native-advertisement
 ##.content-adunit
 ##.sponset-innlegg
+##a[href*="online.adservicemedia.dk"]
+##a[title="LeoVegas"]
 ||ad.*.no^
 ||ad1.*.no^
 ||ad1.*.dk^
@@ -442,12 +438,15 @@ xstra.no##.td-fix-index
 ||openadex.dk
 ||dotbanner.dk$third-party
 ||cluster.chart.dk$third-party
+||vikari.is/skjol/frjalsi-lif*.png$image
 -bazaar-$script,domain=nettavisen.no
 /bazaar/*$script,domain=nettavisen.no
 .dk/ad/
 .dk/ads/
 .is/ad/
 .is/ads/
+.is/augl/
+.is/skrar/augl/
 .no/ad/
 .no/ads/
 /reklam/*
@@ -457,6 +456,10 @@ xstra.no##.td-fix-index
 /bilder/erotikk1.jpg$domain=eavisa.com
 /Bannere/*$image,domain=tek.no|gamer.no
 ||akamai.net^$script,domain=eniro.se|eniro.no|eniro.dk
+/js/smartbanner/*$domain=tvkampen.com|tvsporten.dk
+/liveodds-button_nordicbet$domain=tvkampen.com|tvsporten.dk
+/nordicbet_logo$domain=tvkampen.com|tvsporten.dk
+/partners/*_ad_icon$image,domain=tvkampen.com|tvsporten.dk
 
 ! Leftover empty spaces that EasyList have left behind (Section under construction)
 amino.dk##.ad624x60
@@ -492,6 +495,7 @@ nyheder.tv2.dk##.o-article_sidebar > div.g-item
 markedsforing.dk##.banner-annonce
 markedsforing.dk#?#.row-second:-abp-has(div[class*="banner-annonce"])
 markedsforing.dk##.articles-baner-content
+resett.no#?#.code-block:-abp-contains(Reklame):not(:-abp-contains(butikk))
 minmote.no##.ad-box
 minmote.no##.advert-container-inline
 minmote.no#?#article:-abp-has(:scope > div[id^="advert-"])
@@ -562,9 +566,12 @@ gaysir.no##.ad_wrapper_content
 ||gaysir.no/rek/bb_inline$subdocument
 ehandel.com##aside
 forum.kvinneguiden.no##div.ehm-megaboard
+sport.tv2.dk##.ad-container
+visitnorway.no#?##dtnContainer:-abp-has(.dtnad)
+finna.is##.augl
 
 ! 🇬🇧: Empty divider spaces (Section under construction)
-icelandreview.com,bir.no,medier24.no#?#p:-abp-contains(/^\xA0$/)
+icelandreview.com,bir.no,medier24.no,knr.gl#?#p:-abp-contains(/^\xA0$/)
 icelandreview.com##.mk-padding-divider
 talkmore.no##.spacer
 ice.no##.air-block
@@ -869,6 +876,7 @@ gamereactor.no,gamereactor.dk##div[style*="width:300px;height:600px;"]
 gamereactor.no,gamereactor.dk##div[style="min-height: 600px; margin-bottom: 20px;"]
 viafree.no,viafree.dk##.ad-click-through
 viafree.no,viafree.dk##.pause-ad
+momondo.no,momondo.dk##.type-provider.clearfix.flights
 !#endif
 
 !#if !adguard

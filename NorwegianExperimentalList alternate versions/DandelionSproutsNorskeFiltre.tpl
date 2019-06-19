@@ -1,6 +1,6 @@
 msFilterList
-# Version: 12June2019v4-Beta
-# Version: 120620194 (for Adblock Plus' issue report system)
+# Version: 19June2019v3-Beta
+# Version: 190620193 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -33,10 +33,6 @@ msFilterList
 
 -d openx.gamereactor.dk multi.php?
 
-- js smartbanner *
-- liveodds-button_nordicbet
-- nordicbet_logo
-- partners *_ad_icon
 
 +d eurosport.*
 
@@ -93,8 +89,11 @@ msFilterList
 -d openadex.dk
 -d dotbanner.dk
 -d cluster.chart.dk
+-d vikari.is skjol frjalsi-lif*.png
 - -bazaar-
 - bazaar *
+
+
 
 
 
@@ -108,6 +107,10 @@ msFilterList
 - bilder erotikk1.jpg
 - Bannere *
 -d akamai.net
+- js smartbanner *
+- liveodds-button_nordicbet
+- nordicbet_logo
+- partners *_ad_icon
 
 # Leftover empty spaces that EasyList have left behind (Section under construction)
 -d gaysir.no rek bb_inline
