@@ -1,7 +1,7 @@
 [Adblock Plus 3.2]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 13June2019v2-Alpha
-! Expires: 5 days
+! Version: 19June2019v1-Alpha
+! Expires: 4 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
 ###add_like_bar
@@ -45,7 +45,6 @@
 ##.fb-page-plugin
 ##.fb-share-button
 ##.fb-share-count
-##.fb_iframe_widget:not(.fb-post):not(.fb-login-button):not(.fb-comments)
 ##.figure-share
 ##.follow
 ##.follow_like_module
@@ -194,6 +193,8 @@
 ##a[class*="-sharing-popup"]
 ###fb_share
 ##span[class*="ShareButton"]
+##button[ng-click^="shareOn"]
+##div[class*="_share_button"]
 
 ! Exceptionally annoying leftover floating bars
 pixivision.net##._floated-bottom-bar
@@ -216,3 +217,4 @@ vg.no##button[aria-label*="Facebook"]
 !!! ##.btn-facebook (https://scrybs.com/en/auth/)
 !!! ##.facebook (https://www.transifex.com/user/settings/social/)
 !!! ##.twitter (https://www.transifex.com/user/settings/social/)
+!!! ##.fb_iframe_widget:not(.fb-post):not(.fb-login-button):not(.fb-comments) (There were simply too many exemption criteria that I'd have to find and add)
