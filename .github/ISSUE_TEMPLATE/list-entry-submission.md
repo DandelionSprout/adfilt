@@ -24,6 +24,7 @@ Screenshots are convenient but optional.
 - [ ] Nano Defender
 - [ ] uBlock Origin
 - [ ] uBlock Origin Plus
+- [ ] AdNauseam
 - [ ] AdBlock
 - [ ] Adblock Plus
 - [ ] AdGuard (Paid desktop version)
@@ -35,7 +36,7 @@ Other(s):
 
 Version(s):
 
-## Which filterlists did you use?
+## Which filterlists did you use (Obligatory question)?
 <!--
 If you want to save time, you can take a screenshot of your adblocker's list settings.
 -->
