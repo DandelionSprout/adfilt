@@ -13,9 +13,12 @@ PS: If you already have written an entry that'd fix the problem, it's better to 
 
 ## Describe the problem below this line as meticulously and detailed as possible:
 
-
 ## Add screenshots below if needed:
 
+## Add a screenshot of the extension's logger:
+<!--
+If you're using an up-to-date version of Nano Adblocker or uBlock Origin, it's recommended to filter the selection down to Blocked+Allowed, to reduce the amount of irrelevant "white" log entries.
+-->
 
 ## Which adblocker(s) and version did you use when testing this?
 <!--
@@ -25,6 +28,7 @@ For info on supported extensions, visit https://github.com/DandelionSprout/adfil
 - [ ] Nano Defender
 - [ ] uBlock Origin
 - [ ] uBlock Origin Plus
+- [ ] AdNauseam
 - [ ] AdBlock
 - [ ] Adblock Plus
 - [ ] AdGuard (Paid desktop version)
@@ -36,7 +40,7 @@ Other(s):
 
 Version(s):
 
-## Which filterlists did you use?
+## Which filterlists did you use (Obligatory question)?
 <!--
 If you want to save time, you can take a screenshot of your adblocker's list settings.
 -->
