@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 24June2019v1-Alpha
+! Version: 27June2019v1-Alpha
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
@@ -68,6 +68,8 @@ reddit.com#?#div[class^="SubredditVars-r-"] > div:-abp-has(:scope > svg)
 ! Attempts to remove the "Recommended posts" feed on the bottom of almost all posts
 reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):-abp-has(:scope > div[data-redditstyle])
 reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(:scope > div[data-redditstyle])
+reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):-abp-has(div[data-redditstyle])
+reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(:scope > div > div[data-redditstyle])
 
 ! Removes a specific type of comments that offer nothing to a thread apart from vapid far-out-of-place greetings
 reddit.com#?#.Comment:-abp-contains(/Happy Cake Day/i)
