@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🏡 Imres filtre
-! Version: 28June2019v3-Personal
+! Version: 01July2019v1-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include BrowseWebsitesWithoutLoggingIn.txt
@@ -369,3 +369,16 @@ pornhub.com##.clearfix.streamateContent
 pornhub.com##.streamatesModelsContainer
 ! Removes "Recommended for you" videos, as they're also to both the user and to the videos they're watching
 pornhub.com##.recommendedVideos.videoblock.js-pop
+
+! Twitter stuff
+! Removes the "Related users" sections
+twitter.com##.RelatedUsers
+mobile.twitter.com##div[data-testid="sidebarColumn"] > div > div > div > div > div > div > div:nth-of-type(3)
+mobile.twitter.com##div[data-testid="UserCell"]
+mobile.twitter.com##div:has(:scope > div > a[href^="/i/related_users/"])
+mobile.twitter.com##div:has(:scope > aside[role="complementary"])
+! Removes the Trending list
+mobile.twitter.com##div[data-testid="sidebarColumn"] section > div[aria-label]
+! Removes a login nag
+! https://mobile.twitter.com/nasuno_Posi
+mobile.twitter.com##div[data-testid="sidebarColumn"] section[aria-label][role="region"]
