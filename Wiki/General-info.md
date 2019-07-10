@@ -3,7 +3,7 @@
 Senest oppdatert den: 15. juli 2018
 
 • [Listen(e)s hjemmeside på kodelagringssiden GitHub](https://github.com/DandelionSprout/adfilt) <br>
-• [Lisensen til listene mine](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Den legger seg tett opp mot BSD-3-lisensen, men gjør ikke krav på opphavsrett i like stor grad. <br>
+• [Lisensen til listene mine](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Den er spesialtilpasset for å kunne inkludere innhold fra andre folks adblock-lister, mens den forsøker å være ustøtende for listemakerne.
 • [Donasjonsmetoder](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • Tilbakemeldinger fra dere brukere, gjennom en brukerundersøkelse på [Google Skjema](https://goo.gl/forms/nSzVy6NKXpfWWEqk1). I utgangspunktet er alle svarerne anonyme; hvis du ønsker å få tilbakemelding på undersøkelsessvarene dine, må du legge med en E-postadresse i et av Andre-feltene. <br>
 • Listenes samlede systemer for [saksinnmelding](https://github.com/DandelionSprout/adfilt/issues) og [kodeforslag](https://github.com/DandelionSprout/adfilt/pulls). (Krever GitHub-konto.) <br>
@@ -21,7 +21,7 @@ Når det gjelder mange av de mer snevre listene mine (dvs. de som ikke er den va
 Seinast oppdatert den: 15. juli 2018
 
 • [Lista(ne)s heimeside på kodelagringssiden GitHub](https://github.com/DandelionSprout/adfilt) <br>
-• [Lisensen til listane mine](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Den legg seg tett opp mot BSD-3-lisensen, men gjer ikkje krav på opphavsrett i like stor grad. <br>
+• [Lisensen til listane mine](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Han er spesialtilpassa for å kunne inkludere innhald frå andre folks lister, mens han prøver å vere ustøtande for listeskaparane.
 • [Donasjonsmetoder](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • Tilbakemeldinger frå dere brukare, gjennom ei brukarundersøking på [Google Skjema](https://goo.gl/forms/nSzVy6NKXpfWWEqk1). I utgangspunktet er alle svararene anonyme; hvis du ønskjer å få tilbakemelding på undersøkingssvarane dine, må du leggje med ein E-postadresse i eit av Andre-feltane. <br>
 • Listanes samla systemar for [saksinnmelding](https://github.com/DandelionSprout/adfilt/issues) og [kodeframlegg](https://github.com/DandelionSprout/adfilt/pulls). (GitHub-konto krevst.) <br>
@@ -39,7 +39,7 @@ Når det gjeld mange av de meir snevre listane mine (dvs. dei som ikkje er den v
 Last updated: 15th of July 2018
 
 • [The lists' homepage on the code storage site GitHub](https://github.com/DandelionSprout/adfilt) <br>
-• [The licence for my lists](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). It closely follows the BSD-3 licence, but does not make claim to a copyright to quite the same degree. <br>
+• [The licence for my lists](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). It is specifically crafted to be able to include content from others' filterlists, while trying to be as unoffensive to the list maintainers as possible.
 • [Donation methods](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • Feedback from users, through a user survey on [Google Forms](https://goo.gl/forms/nSzVy6NKXpfWWEqk1). All repliers are anonymous by default; if you wish to get direct replies on your survey answers, you'd have to write an E-mail address into one of the "Other" fields. <br>
 • The lists' combined systems for [issue tracking](https://github.com/DandelionSprout/adfilt/issues) and [pull requests](https://github.com/DandelionSprout/adfilt/pulls) (Translations for non-geeks: Situation reports and code addition suggestions). <br>
