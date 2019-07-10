@@ -1,5 +1,4 @@
 ![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Adfilt%20logo%202.png)<br>
-[![licence](https://img.shields.io/badge/Licence-Custom%20open%20source%20licence%20based%20on%20BSD3-green.svg)](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/dandelionsprout/adfilt.svg)
 [![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Flattr%20button.png)](https://flattr.com/@DandelionSprout)
 [![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/RSS-knapp.png)](https://github.com/DandelionSprout/adfilt/commits/master.atom)
