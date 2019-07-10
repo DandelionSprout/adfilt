@@ -1,11 +1,13 @@
 [Adblock Plus 3.2]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 21June2019v1-Beta
+! Version: 10July2019v1-Beta
 ! Expires: 6 days
 !#include uBO%20list%20extensions/YouTubeEvenMorePureVideoExperience-uBOExtension.txt
-! Description: This list is mostly meant to be used on top of "YouTube: Pure Video Experience" (https://easylist-downloads.adblockplus.org/yt_annoyances_full.txt), and it removes even more distracting or uncomfortable things on YouTube.
+! Description: This list removes even more distracting or uncomfortable things on YouTube.
 ! If you want to block even more things on top of these two lists, feel free to check out the anti-Autoplay (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt) and anti-Elsagate (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt) lists that I've made.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! ——— IMPORTANT NOTICE (10th of July 2019): After my lists were relicenced to become more accomodative and easier to swallow for differently licenced projects, I have decided to simply add the entries from "YouTube: Pure Video Experience" to my lists instead of mandating the use of both lists. ———
 
 ! Removes the YouTube Gaming button in the left-hand menu
 youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="/gaming"])
@@ -106,3 +108,36 @@ youtube.com##div.top-nav-tab:nth-of-type(2)
 
 ! Removes the Gaming button in the top bar
 youtube.com#?#div.top-nav-tab:-abp-contains(/^Gaming$/)
+
+! ————————————————————————————————————————————————————————————————
+
+! Below are entries that I borrowed verbatim from «YouTube: Pure Video Experience», which is maintained by anonymous maintainers at https://youtube.adblockplus.me/, and which is currently believed to have no known copyright statements or licences.
+
+! Removes comments on video pages
+||youtube.com/live_chat_fragments_ajax?$xmlhttprequest
+||youtube.com/comment_service_ajax?$domain=youtube.com
+youtube.com###comments
+! Removes all annotations in videos
+||youtube.com/annotations_invideo?$object-subrequest
+! HTML5 version
+youtube.com##.video-annotations
+! Removes video suggestions on video pages
+youtube.com##.watch-sidebar-body > #watch-related > .related-list-item > .related-video
+youtube.com##.watch-sidebar-body > #watch-related > .related-list-item
+! Removes recommended channels on home page, susbcriptions page and feed
+youtube.com##.home .branded-page-v2-secondary-col
+youtube.com##.feed .branded-page-v2-secondary-col
+youtube.com##.guide-builder-v2 .branded-page-v2-secondary-col
+! Removes sharing tab below videos
+||youtube.com/share_ajax?action_get_share_box=1&video_id=$xmlhttprequest
+youtube.com##.action-panel-trigger[role="button"][data-trigger-for="action-panel-share"]
+youtube.com##.yt-uix-button[data-trigger-for="action-panel-share"]
+! Removes recommended and featured videos in the endscreen
+||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com
+youtube.com##.html5-endscreen-content
+youtube.com##.html5-endscreen
+! Removes related/featured/popular channels on channel pages
+youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip
+youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip + .branded-page-related-channels-list
+! "Subscribe to see more videos from this channel" on home page after watching some video of a channel
+youtube.com###channel-subscription-promo-in-feed
