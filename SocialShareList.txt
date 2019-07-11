@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 08July2019v1-Alpha
+! Version: 11July2019v1-Alpha
 ! Expires: 4 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -8,12 +8,17 @@
 ###batchsdk-ui-alert
 ###btn-send-fb
 ###divShare
+###fb_share
 ###likebuttons
 ###mashfbar-header
 ###pinterest
+###share-buttons
 ###share-tool
 ###share-unit
+###share_container
+###sharebar
 ###ShareEntryPoint
+###sharingfooter
 ###social_buttons
 ###sthoverbuttons
 ###sthoverbuttonsMain
@@ -24,6 +29,7 @@
 ##.addtoany_list
 ##.article-share
 ##.article__share
+##.basicsSocialActions-socialIcons
 ##.blog-post-single-share
 ##.btn--facebook
 ##.btn-facebook-like
@@ -38,6 +44,7 @@
 ##.c-article__byline-social
 ##.dre-share-band
 ##.facebook-like-box
+##.facebook[href*="/sharer/"]
 ##.facebook_top
 ##.facebookshare
 ##.facebookShare
@@ -46,6 +53,7 @@
 ##.fb-share-button
 ##.fb-share-count
 ##.figure-share
+##.floating-share-bar
 ##.follow
 ##.follow_like_module
 ##.footerSocial
@@ -61,28 +69,38 @@
 ##.loader-container.shares
 ##.mashsb-box
 ##.news_share
+##.pinterest[href*="/pin/create/"]
 ##.product-sharing
+##.recentsocial
 ##.sbtn_main
 ##.share-bar
 ##.share-btns
 ##.share-button
-##.shareit
 ##.share-it
 ##.share-links
 ##.share-list
 ##.share-metas
+##.share-nw
+##.share-toggle
 ##.share-toolbar
 ##.share_area
+##.share_btn
+##.share_toggle
 ##.shareBottom
 ##.ShareButtons
+##.shareit
 ##.sharetools
 ##.sharing
+##.sharing-btn
+##.sharing-container
 ##.sharing-item
+##.sns
 ##.soc-list
 ##.social-action[test-id*="facebook"]
 ##.social-btns
 ##.social-footer
 ##.social-icon
+##.social-icons.share
 ##.social-links
 ##.social-share
 ##.social-share-sidebar-component
@@ -95,127 +113,117 @@
 ##.socialbuttons
 ##.socialmedia
 ##.socialmedia-btns
+##.socialshare
 ##.ssba
 ##.ssk-group
 ##.twit_share_button
+##.twitter[href*="/share?"]
 ##.twittershare
 ##.twitterShare
-##.sharing-btn
-##.recentsocial
-##.socialshare
-##.social-icons.share
-##ksf-sharing
-~tecmint.com,~ostechnix.com##.share
 ##[socialshare]
+##a[class*="-sharing-popup"]
 ##a[class*="-socials__item"]
+##a[class*="BtnShare"]
+##a[class*="share__button"]
+##a[class*="social-share"]
+##a[class="facebook" i][title="Share this"]
+##a[class="twitter" i][title="Tweet"]
 ##a[class^="addthis_button"]
 ##a[class^="pagetools"][class*="icon--twitter"]
-##a[data-type="sharing-button"]
+##a[class^="socialbutton" i][onclick*="window.open"]
+##a[data-ga-event-action^="share:"]
 ##a[data-share$="Facebook" i]
+##a[data-type="sharing-button"]
+##a[href*="linkedin.com/shareArticle?"]
+##a[href*="facebook.com/sharer.php?u="]
+##a[href*="linkedin.com/shareArticle?"]
+##a[href*="pinterest.com/pin/create/button/?"]
+##a[href*="share-tools"]
+##a[href^="/sharer/sharer.php?"] > button[type="submit"]
 ##a[href^="https://plus.google.com/share?url=http"]
 ##a[href^="https://twitter.com/intent/tweet?"]
+##a[href^="https://twitter.com/share?text="][href*="/&via="]
 ##a[href^="https://www.facebook.com/dialog/feed"]
 ##a[href^="https://www.facebook.com/sharer/sharer.php?u=http"]
 ##a[href^="https://www.reddit.com/submit?url=http"]
 ##a[id*="share-"][id*="-button"]
 ##a[id^="share_btn"]
 ##a[onclick^="ShowShare"]
-##a[class*="social-share"]
+##a[onclick^="window.open('http"][onclick*="/del.icio.us/post?"]
+##a[onclick^="window.open('http"][onclick*="digg.com/submit?"]
+##a[onclick^="window.open('http"][onclick*="facebook.com/sharer"]
+##a[onclick^="window.open('http"][onclick*="myspace.com/Modules/PostTo/"]
+##a[onclick^="window.open('http"][onclick*="stumbleupon.com/submit?url="]
+##a[onclick^="window.open('http"][onclick*="twitter.com/share'"]
+##a[onmouseover^="return addthis_open"]
 ##amedia-share
 ##button[class*="share-button"]
 ##button[data-a-target^="share"]
+##button[ng-click^="shareOn"]
 ##button[title^="Share this "]
 ##div[button="share"]
+##div[class$="-share-single"]
+##div[class*="-share-buttons"]
+##div[class*="_share_button"]
 ##div[class*="addthis"]
 ##div[class*="article-share"]
 ##div[class*="box--share"]
-##div[class*="footershareitem"]
-##div[class*="FooterShare"]
+##div[class*="FooterShare" i]
 ##div[class*="iconShare"]
 ##div[class*="lp_sharing"]
 ##div[class*="post-sharing"]
 ##div[class*="share-box"]
-##div[class*="-share-buttons"]
 ##div[class*="share-content"]
+##div[class*="share-link"]
 ##div[class*="sharebar"]
+##div[class*="sharethisbutton" i]
 ##div[class*="shareToolbar"]
-##div[class^="share-toolbar"]
 ##div[class*="social"][class*="sharing"]
 ##div[class*="social-buttons"]
 ##div[class*="social-panel"]
 ##div[class*="social-share"]
 ##div[class*="social_sidebar"]
 ##div[class*="social_slide"]
-##div[class*="share-link"]
+##div[class*="SocialShareButton" i]
+##div[class^="container_NotificationsBanner_"]
+##div[class^="share-button"]
 ##div[class^="share-options"]
+##div[class^="share-toolbar"]
 ##div[class^="shareLinks"]
 ##div[class^="social-like"]
 ##div[class^="social-media-container"]
-##div[pw\:twitter-via]
 ##div[data-aop^="sharingtoolbar"]
-##div[class$="-share-single"]
+##div[id$="_sharethis"]
+##div[pw\:twitter-via]
 ##h2[class*="share-links"]
 ##h4[class*="social-share-label"]
+##ksf-sharing
 ##label[for*="ShareModal"]
-##li[class*="link_facebook"]
 ##li[aria-label="facebook"]
+##li[class*="link_facebook"]
 ##p[class^="del-artikel"]
-##ul[class*="-soc-list"]
-##ul[class^="sociale-ikoner-del"]
-##ul[class*="social-bar"]
+##share-grid
+##span[class*="ShareButton"]
+##span[data-lnkd-debug]
 ##ul[class*="-share-buttons"]
-##a[class*="BtnShare"]
-##a[class*="share__button"]
-##a[href*="share-tools"]
+##ul[class*="-soc-list"]
+##ul[class*="social-bar"]
+##ul[class^="sociale-ikoner-del"]
+/sharing/facebook.$image
+/sharing/reddit.$image
+/sharing/stumbleupon.$image
+/sharing/twitter.$image
 ||apis.google.com/*/+1/fastbutton$subdocument
 ||facebook.com/*/plugins/like.php$subdocument
+||facebook.com/*/plugins/share_button.php?app_id$subdocument
 ||facebook.com/plugins/page.php$subdocument
 ||facebook.com/plugins/share_button$subdocument
 ||platform.twitter.com/widgets/follow_button$subdocument
 ||platform.twitter.com/widgets/tweet_button$subdocument
 ||softwareok.com/img/i_like_this.png?$image
-||www.facebook.com/plugins/like.php$subdocument
-###share-buttons
-##div[class*="sharethisbutton" i]
-##a[class^="socialbutton" i][onclick*="window.open"]
-##.basicsSocialActions-socialIcons
-##.facebook[href*="/sharer/"]
-##.twitter[href*="/share?"]
-##.pinterest[href*="/pin/create/"]
-##a[data-ga-event-action^="share:"]
-##div[id$="_sharethis"]
-##a[onclick^="window.open('http"][onclick*="facebook.com/sharer"]
-##a[onclick^="window.open('http"][onclick*="twitter.com/share'"]
-##a[onclick^="window.open('http"][onclick*="stumbleupon.com/submit?url="]
-##a[onclick^="window.open('http"][onclick*="myspace.com/Modules/PostTo/"]
-##a[onclick^="window.open('http"][onclick*="digg.com/submit?"]
-##a[onclick^="window.open('http"][onclick*="/del.icio.us/post?"]
-##a[onmouseover^="return addthis_open"]
-##a[class*="-sharing-popup"]
-###fb_share
-##span[class*="ShareButton"]
-##button[ng-click^="shareOn"]
-##div[class*="_share_button"]
-##.share-nw
-##a[href^="/sharer/sharer.php?"] > button[type="submit"]
-##div[class^="container_NotificationsBanner_"]
-##.sharing-container
-##share-grid
-##a[class="facebook" i][title="Share this"]
-##a[class="twitter" i][title="Tweet"]
-##.share-toggle
-##div[class^="share-button"]
-##.sns
 ||widgets.getpocket.com/v1/button?label=pocket$subdocument
-##.share_btn
-###share_container
-##.share_toggle
-##a[href*=".linkedin.com/shareArticle?"]
-##a[href^="https://twitter.com/share?text="][href*="/&via="]
-||facebook.com/*/plugins/share_button.php?app_id$subdocument
-##a[href*="pinterest.com/pin/create/button/?"]
-##.floating-share-bar
-##div[class*="SocialShareButton" i]
+||www.facebook.com/plugins/like.php$subdocument
+~tecmint.com,~ostechnix.com##.share
 
 ! Exceptionally annoying leftover floating bars
 pixivision.net##._floated-bottom-bar
