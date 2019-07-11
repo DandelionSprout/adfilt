@@ -1,6 +1,6 @@
 msFilterList
-# Version: 30June2019v1-Beta
-# Version: 300620191 (for Adblock Plus' issue report system)
+# Version: 11July2019v1-Beta
+# Version: 110720191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -90,6 +90,8 @@ msFilterList
 -d dotbanner.dk
 -d cluster.chart.dk
 -d vikari.is skjol frjalsi-lif*.png
+-d banner.landbrugsavisen.dk reklame.aspx
+- *-annonse-*
 - -bazaar-
 - bazaar *
 
@@ -114,6 +116,15 @@ msFilterList
 
 # Leftover empty spaces that EasyList have left behind (Section under construction)
 -d gaysir.no rek bb_inline
+# — — — — —
+# https:  sol.no 
+# http:  www.qxl.no 
+# https:  www.vtb.no 
+# https:  vafo.dk 
+# https:  reelligestilling.dk 
+# https:  www.rbnett.no 
+# https:  www.op.no 
+# https:  journalisten.dk 
 
 # 🇬🇧: Empty divider spaces (Section under construction)
 
