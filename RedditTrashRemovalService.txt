@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 28June2019v1-Alpha
+! Version: 14July2019v1-Alpha
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
@@ -57,9 +57,11 @@ reddit.com#?#.Post:-abp-has(a[data-click-id="timestamp"][href*="/europe/"]):-abp
 ! Posts that are too new to have been given a points score
 reddit.com#?#.Post:-abp-has(div[style^="color:"]:-abp-contains(•):not(:-abp-contains(/[a-z]/i)))
 
-! The chances of someone being a troll if their usernames are named after Pepe the Frog, is 139%
-reddit.com#?#.Post:-abp-has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
-reddit.com#?#.Comment:-abp-has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
+! Usernames that are 139% guaranteed to be trolls
+reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
+reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
+reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i)
+reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i)
 
 ! Removes the "n new posts for you" banner
 reddit.com#?#div:-abp-has(:scope > svg[viewbox="0 0 34 16"])
