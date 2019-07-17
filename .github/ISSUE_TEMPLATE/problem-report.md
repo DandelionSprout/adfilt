@@ -40,7 +40,8 @@ Other(s):
 
 Version(s):
 
-## Which filterlists did you use (Obligatory question)?
+## Which filterlists did you use? Failing to write this will result in instant report closing.
+
 <!--
 If you want to save time, you can take a screenshot of your adblocker's list settings.
 -->
