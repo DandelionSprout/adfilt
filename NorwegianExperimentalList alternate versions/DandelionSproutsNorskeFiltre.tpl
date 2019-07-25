@@ -1,6 +1,6 @@
 msFilterList
-# Version: 11July2019v1-Beta
-# Version: 110720191 (for Adblock Plus' issue report system)
+# Version: 25July2019v1-Beta
+# Version: 250720191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -234,6 +234,7 @@ msFilterList
 -d elderlyscissors.com
 +d eurosport.no
 
+
 +d bildeler.name
 +d reservedele.name
 
@@ -309,7 +310,6 @@ msFilterList
 -d akamaihd.net video-assets 
 
 # ——————————————————————————————————————————————————————————————————————————————————————————
-
 
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
@@ -545,3 +545,7 @@ msFilterList
 -d wausauorthopedics.com
 -d zaskal.com
 
+# Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
+-d nofotballshop.com
+-d nofotballstore.com
+-d dkfodboldstore.com
