@@ -1,9 +1,8 @@
 [Adblock Plus 3.2]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 28July2019v1-Alpha
+! Version: 04August2019v1-Alpha
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
-! Note that while most of the list is supported by Adblock Plus, AdBlock, and AdGuard, it is strongly recommended to use it with uBlock Origin, as it'll also load a filter subset that hides Reddit posts that have too few points.
 ! Some categories in this only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 !#include uBO%20list%20extensions/RedditTrashRemovalService-uBOExtension.txt
@@ -59,7 +58,7 @@ reddit.com#?#.Post:-abp-has(a[data-click-id="timestamp"][href*="/europe/"]):-abp
 
 ! Posts that are too new to have been given a points score
 reddit.com#?#.Post:-abp-has(div[style^="color:"]:-abp-contains(•):not(:-abp-contains(/[a-z]/i)))
-reddit.com#?#.Post:not(:has(i[class*="icon-save"])):not(:-abp-has(div > span[style^="color:"]:nth-of-type(3)))
+reddit.com#?#.Post:not(:-abp-has(i[class*="icon-save"])):not(:-abp-has(span[role="presentation"])):not(:-abp-has(div > span[style^="color:"]:nth-of-type(3)))
 
 ! Usernames that are 139% guaranteed to be trolls
 reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
@@ -77,9 +76,9 @@ reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(:scope > div[data
 reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):-abp-has(div[data-redditstyle])
 reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(:scope > div > div[data-redditstyle])
 
-! Removes a specific type of comments that offer nothing to a thread apart from vapid far-out-of-place greetings
-reddit.com#?#.Comment:-abp-contains(/Happy Cake Day/i)
-reddit.com#?#.Comment:-abp-contains(/Happy Cakeday/i)
+! Removes two specific types of comments that offer nothing to a thread apart from vapid far-out-of-place greetings
+reddit.com#?#.Comment:-abp-contains(/Happy Cake[ ]?Day/i)
+reddit.com#?#p:-abp-contains(/Edit:/i):-abp-contains(/first gold/i)
 
 ! Attempts to remove the "Recommended posts" feed on the right of most posts
 reddit.com#?#div[data-redditstyle="false"] + div:-abp-has(:scope > div[data-redditstyle="true"])
