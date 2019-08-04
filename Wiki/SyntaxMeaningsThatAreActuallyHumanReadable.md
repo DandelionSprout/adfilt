@@ -1,13 +1,14 @@
 ### All up-to-date significant adblockers¹
 
-#### Element removal
+#### Element removal (a.k.a. cosmetic rules, a.k.a. hiding rules)
 
 * `##.` / `##` / `###`: Hides parts of a page.
 * `#@#`: Whitelists parts of a page to make them load.
-* `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or several other things.
+* `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or numerous other things. Does not support RegEx.
 * `[href^="text"]`: Same as above, except it finds anything whose value *begins* with the text.
 * `[href$="text"]`: Same as above, except it finds anything whose value *ends* with the text.
 * `[href*="text"]`: Same as above, except it finds anything whose value contains the text anywhere within it.
+* `[href="text" i]`: Save as above, except case-insensitive.
 * `:not(.element)`: Finds page elements that doesn't contain a specified element or text string. Can be paired with other syntaxes á la `:not(:-abp-contains(Example text))`.
 * `:-abp-contains(text)`: Finds page elements that contains such text within it.
 * `:-abp-has(.element)`: Finds page elements that contains such an element within it.
@@ -15,14 +16,17 @@
 * `:nth-of-type(n)` / `:last-of-type` / `:only-of-type`: Finds page elements that are at a specific numerical position in a set.
 * `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
 * `a` / `div` / `iframe` / `img` (among others): Looks for page elements that are specific element types, as seen in the F12 filetree console.
+* `+`: Blocks the element that is right below the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
 
-#### File blocking
+#### File blocking (a.k.a. blocking rules)
 
 * `||`: Blocks resources from domains or parts thereof from being loaded. For non-domain-specific resources, no pre-emption is needed at all.
 * `@@`: Whitelists resources from specific URLs to make them load.
-* `$third-party` / `$3p`: Ensures that resources from a domain are only blocked if you're not visiting the domain itself.
+* `^`: Usually ensures that the subdomains are also covered by the entry.
+* `$third-party`: Ensures that resources from a domain are only blocked if you're not visiting the domain itself.
+* `$~third-party`: Ensures that resources from a domain are only blocked if you're visiting the domain itself.
 * `$domain=`: Ensures that resources from a domain are only blocked if you're visiting a specified website.
-* `$generichide`: Prevents all non-domain-specific hiding entries from working on a website.
+* `$generichide`: Prevents all non-domain-specific hiding entries from working on a website. On Nano/uBO it prevents *all* generic entries from working.
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it's a script, e.g. a JavaScript runtime.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
 
@@ -52,22 +56,35 @@
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `127.0.0.1` / `0.0.0.0` / `::1`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`.
 * `##^`: Blocks resources before they've even been loaded, based on their values in *View source* instead of their F12 ones.
-* `$document`: Shows a danger warning when loading a page.
+* `||` + `$document`: Guarantees a danger warning when loading a page (unless a specific setting is changed), which is not 110% guaranteed otherwise.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions.
-* `$first-party` / `$1p`: Ensures that resources from a domain is only blocked if you're visiting the domain itself.
+* `$3p`: Same as `$third-party`.
+* `$first-party` / `$1p`: Same as `$~third-party`.
+
+### Adblock Plus, AdBlock and AdGuard only:
+
+* `:-abp-properties`: Don't take my word for this, but it appears to me to find pop-under elements that possess certain traits, such as text encodings á la Base64.
 
 ### Adblock Plus and AdBlock only:
 
 * `! Redirect: `: Tells the adblocker to look for list updates from a new URL from that point on.
-* `:-abp-properties`: Don't take my word for this, but it appears to me to find pop-under elements that possess certain traits, such as text encodings á la Base64.
+* `@@||` + `$document`: Turns off adblocking entirely while on that domain.
+* `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
+* `#?#`: Required to make entries with `:-abp-has`, `:-abp-contains` and `:-abp-properties` work in those particular extensions.
 
-### AdGuard for [Windows/Mac] only:
+### AdGuard only:
+
+* `#%#var AG_`: Similar to `##+js`, except with a completely different set of scriptlets.
+* `$empty`: Results in a fake empty page being loaded, instead of an error page.
+
+### AdGuard for [Windows/Mac/Android] only:
 
 * `! Description: `: Shows a description of the list's purpose, when the question mark next to the list in the AdGuard settings is hovered over. That being said, a description is convenient for users of all adblockers, if they're willing to look up a list's raw content.
+* `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar.
 
 #### I honestly don't know what these ones do:
 
-* `$xmlhttprequest`
+* `$xmlhttprequest` / `$xhr`
 
 # Particularly important usage notes
 
@@ -84,4 +101,4 @@
 * Domains in `$domain=` are seperated by a vertical line (`|`), instead of the usual comma.
 * Amazingly, using `! Redirect: ` in the intended target link's list, will cause an infinite loop that prevents the list from being loaded.
 
-¹ = Includes Nano Adblocker, uBlock Origin ≥1.14.0, AdGuard, AdNauseum, Adblock Plus version ≥3.1, and AdBlock. It does **not** include Brave Browser, Slimjet, uBlock non-Origin, Adblock Plus for IE, Tracking Protection List, AdAway, or Blokada, whose syntax supports are considerably inferior to the above list.
+¹ = Includes Nano Adblocker, uBlock Origin ≥1.14.0, AdGuard, AdNauseum, Adblock Plus version ≥3.1, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Adblock Plus for IE, Tracking Protection List, AdAway, or Blokada, whose syntax supports are considerably inferior to the above list.
