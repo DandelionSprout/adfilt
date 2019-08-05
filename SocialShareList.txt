@@ -8,6 +8,7 @@
 ###batchsdk-ui-alert
 ###btn-send-fb
 ###divShare
+###fb-share
 ###fb_share
 ###likebuttons
 ###mashfbar-header
@@ -20,8 +21,6 @@
 ###ShareEntryPoint
 ###sharingfooter
 ###social_buttons
-###sthoverbuttons
-###sthoverbuttonsMain
 ###story-socials
 ###tell-a-friend
 ###top_share
@@ -35,6 +34,7 @@
 ##.btn-facebook-like
 ##.btn-google-plus
 ##.btn-messenger
+##.btn-share
 ##.btn-twitter
 ##.btn[href*="facebook.com/sharer/"]
 ##.button--share
@@ -45,6 +45,8 @@
 ##.c-article__byline-social
 ##.dre-share-band
 ##.facebook-like-box
+##.facebook-messenger-share
+##.facebook-share
 ##.facebook[href*="/sharer/"]
 ##.facebook_top
 ##.fb-like-box
@@ -58,7 +60,6 @@
 ##.i-more-share
 ##.icon--facebook
 ##.icon--twitter
-##.instagramShare
 ##.jw-sharing-icon
 ##.like_facebook
 ##.linkedin
@@ -66,18 +67,22 @@
 ##.loader-container.shares
 ##.mashsb-box
 ##.news_share
+##.pinterest-share
 ##.pinterest[href*="/pin/create/"]
 ##.product-sharing
 ##.recentsocial
 ##.sbtn_main
+##.share
 ##.share-bar
 ##.share-btns
-##.share-button
+##.share-facebook
+##.share-icon
 ##.share-it
 ##.share-links
 ##.share-list
 ##.share-metas
 ##.share-nw
+##.share-pinterest
 ##.share-toggle
 ##.share-toolbar
 ##.share_area
@@ -86,6 +91,7 @@
 ##.shareBottom
 ##.ShareButtons
 ##.shareit
+##.sharethis-wrapper
 ##.sharetools
 ##.sharing
 ##.sharing-btn
@@ -115,8 +121,7 @@
 ##.twit_share_button
 ##.twitter-share
 ##.twitter[href*="/share?"]
-##.twittershare
-##.twitterShare
+##[data-flip-widget="shareflip"]
 ##[socialshare]
 ##a[class*="-sharing-popup"]
 ##a[class*="-socials__item"]
@@ -127,6 +132,7 @@
 ##a[class="twitter" i][title="Tweet"]
 ##a[class^="addthis_button"]
 ##a[class^="pagetools"][class*="icon--twitter"]
+##a[class^="share_btn"]
 ##a[class^="socialbutton" i][onclick*="window.open"]
 ##a[data-ga-event-action^="share:"]
 ##a[data-share$="Facebook" i]
@@ -140,11 +146,15 @@
 ##a[href^="https://twitter.com/intent/tweet?"]
 ##a[href^="https://twitter.com/share?text="][href*="/&via="]
 ##a[href^="https://www.facebook.com/dialog/feed"]
+##a[href^="https://www.facebook.com/share.php?u=http"]
 ##a[href^="https://www.facebook.com/sharer/sharer.php?u=http"]
 ##a[href^="https://www.reddit.com/submit?url=http"]
 ##a[id*="share-"][id*="-button"]
 ##a[id^="share_btn"]
+##a[onclick^="var share"]
 ##a[onmouseover^="return addthis_open"]
+##a[title="Share on Twitter" i]
+##a[title="Share on whatsapp" i]
 ##amedia-share
 ##button[class*="share-button"]
 ##button[data-a-target^="share"]
@@ -159,10 +169,12 @@
 ##div[class*="box--share"]
 ##div[class*="facebookShare" i]
 ##div[class*="fb-share"]
+##div[class*="footer__share"]
 ##div[class*="FooterShare" i]
 ##div[class*="iconShare"]
 ##div[class*="lp_sharing"]
 ##div[class*="post-sharing"]
+##div[class*="share-article-button"]
 ##div[class*="share-box"]
 ##div[class*="share-content"]
 ##div[class*="share-link"]
@@ -176,7 +188,13 @@
 ##div[class*="social_sidebar"]
 ##div[class*="social_slide"]
 ##div[class*="SocialShareButton" i]
+##div[class="instagram-Share" i]
+##div[class="instagramShare" i]
+##div[class="socialshare" i]
+##div[class="twitterShare" i]
 ##div[class^="container_NotificationsBanner_"]
+##div[class^="icon-share-"]
+##div[class^="share-button" i]
 ##div[class^="share-button"]
 ##div[class^="share-options"]
 ##div[class^="share-toolbar"]
@@ -185,6 +203,7 @@
 ##div[class^="social-media-container"]
 ##div[data-aop^="sharingtoolbar"]
 ##div[id$="_sharethis"]
+##div[id^="sthoverbuttons"]
 ##div[pw\:twitter-via]
 ##h2[class*="share-links"]
 ##h4[class*="social-share-label"]
@@ -194,16 +213,21 @@
 ##li[class*="link_facebook"]
 ##p[class^="del-artikel"]
 ##share-grid
+##span[class*="share-icon"]
 ##span[class*="ShareButton"]
+##span[class^="share_btn"]
 ##span[data-lnkd-debug]
 ##ul[class*="-share-buttons"]
 ##ul[class*="-soc-list"]
 ##ul[class*="social-bar"]
 ##ul[class^="sociale-ikoner-del"]
+~pinterest.*##a[href^="https://pinterest.com/pin/create/bookmarklet/"]
+~tecmint.com,~ostechnix.com##.share
 /sharing/facebook.$image
 /sharing/reddit.$image
 /sharing/stumbleupon.$image
 /sharing/twitter.$image
+||addthis.com/static/btn/sm-share*.gif
 ||apis.google.com/*/+1/fastbutton$subdocument
 ||facebook.com/*/plugins/like.php$subdocument
 ||facebook.com/*/plugins/share_button.php?app_id$subdocument
@@ -214,36 +238,7 @@
 ||softwareok.com/img/i_like_this.png?$image
 ||widgets.getpocket.com/v1/button?label=pocket$subdocument
 ||www.facebook.com/plugins/like.php$subdocument
-~tecmint.com,~ostechnix.com##.share
-##a[href^="https://www.facebook.com/share.php?u=http"]
-##div[class*="share-article-button"]
-~pinterest.*##a[href^="https://pinterest.com/pin/create/bookmarklet/"]
-##a[title="Share on Twitter" i]
-##a[title="Share on whatsapp" i]
-##.share
-##.share-facebook
-##.share-pinterest
-##.btn-share
-##.sharethis-wrapper
-##.share-buttons
-##.share-buttons-container
-##.share-button-facebook
-##.share-button-twitter
-##.share-button
-##.icon-share-facebook
-##.icon-share-twitter
-##.icon-share-whatsapp
-##.icon-share-messenger
-##[data-flip-widget="shareflip"]
-||addthis.com/static/btn/sm-share*.gif
-##div[class*="footer__share"]
-##a[class^="share_btn"]
-##span[class^="share_btn"]
-##.facebook-messenger-share
-##.facebook-share
-##.pinterest-share
-##.instagram-share
-##.share-icon
+||yastatic.net/share/*-icon.*
 
 ! Exceptionally annoying leftover floating bars
 pixivision.net##._floated-bottom-bar
