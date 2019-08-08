@@ -851,8 +851,14 @@ def prepare_ag(lines) -> str:
 
         # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
         line = re.sub(
-           r"[$,]doc.*", 
+           "\$doc", 
            "$empty,important", 
+           line
+       )
+
+        line = re.sub(
+           ",doc", 
+           ",empty,important", 
            line
        )
 
@@ -887,12 +893,6 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"[$,]domain$", 
-           "", 
-           line
-        )
-
-        line = re.sub(
            r"\|~ Warning.*", 
            "", 
            line
@@ -907,6 +907,12 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"([$,~])3p", 
            r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])domain$", 
+           "", 
            line
         )
 
@@ -928,9 +934,14 @@ def prepare_abp(lines) -> str:
     # remove or modifiy entries with unsupported modifiers
     for line in lines:
 
-        # remove $document modifier from the rule
         line = re.sub(
-           r"[$,]doc.*", 
+           "\$doc", 
+           "", 
+           line
+       )
+
+        line = re.sub(
+           ",doc", 
            "", 
            line
        )
@@ -985,12 +996,6 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"[$,]domain$", 
-           "", 
-           line
-        )
-
-        line = re.sub(
            r"\|~ Warning.*", 
            "", 
            line
@@ -1009,7 +1014,13 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"\$doc.*", 
+           "\^,", 
+           "^$", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])domain$", 
            "", 
            line
         )
