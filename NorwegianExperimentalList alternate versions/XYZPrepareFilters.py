@@ -32,8 +32,8 @@ def prepare_ag(lines) -> str:
 
         # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
         line = re.sub(
-           r"\$doc.*", 
-           "$empty,important", 
+           r"([\$,])doc.*", 
+           "\1empty,important", 
            line
         )
 
@@ -150,18 +150,6 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"([$,~])3p", 
            r"\1third-party", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])1p", 
-           r"\1~third-party", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])1p", 
-           r"\1~third-party", 
            line
         )
 
@@ -359,7 +347,6 @@ def prepare_tpl(lines) -> str:
            r"\1-Beta", 
            line
         )
-
 
         if is_supported_tpl(line):
             text += line + '\r\n'
@@ -832,9 +819,9 @@ SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dand
 
 UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##']
-UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
-UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
-UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.2]', '*']
+UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^']
+UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^']
+UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.2]', '*', '/^']
 UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
     '##', '.*#' , '#?#']
 
@@ -864,7 +851,7 @@ def prepare_ag(lines) -> str:
 
         # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
         line = re.sub(
-           "\$doc", 
+           r"[$,]doc.*", 
            "$empty,important", 
            line
        )
@@ -900,7 +887,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r",domain$", 
+           r"[$,]domain$", 
            "", 
            line
         )
@@ -908,6 +895,18 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"\|~ Warning.*", 
            "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,~])3p", 
+           r"\1third-party", 
            line
         )
 
@@ -931,10 +930,10 @@ def prepare_abp(lines) -> str:
 
         # remove $document modifier from the rule
         line = re.sub(
-           "\$doc,", 
-           "$", 
+           r"[$,]doc.*", 
+           "", 
            line
-        )
+       )
 
         # remove $important modifier from the rule
         line = re.sub(
@@ -986,13 +985,31 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"\$domain$", 
+           r"[$,]domain$", 
            "", 
            line
         )
 
         line = re.sub(
            r"\|~ Warning.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,~])3p", 
+           r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"\$doc.*", 
            "", 
            line
         )
@@ -1216,6 +1233,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^- https\?.*", 
+           "", 
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\r\n'
 
@@ -1391,6 +1414,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^/$", 
+           "", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\r\n'
 
@@ -1455,6 +1484,12 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            "\|\|", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^/$", 
            "", 
            line
         )
@@ -1559,6 +1594,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"! Placeholder line.*", 
            "! Manually updated AdGuard Home version of the whitelisted domains from the other versions of this list.\n@@||coolcmd.tk^$important\n@@||budterence.tk^$important\n@@||intr0.tk^$important\n@@||google.tk^$important\n@@||transportnews.tk^$important\n@@||unicorncardlist.tk^$important\n@@||c0d3c.tk^$important\n@@||google.ga^$important\n@@||filtri-dns.ga^$important\n@@||google.ml^$important\n@@||deimos.gq^$important\n@@||1hos.cf^$important\n@@||intr0.cf^$important\n@@||ivoid.cd^$important\n@@||domainvoider.cf^$important\n@@||google.cf^$important\n@@||rths.cf^$important\n@@||anonytext.tk^$important\n@@||tokelau-info.tk^$important\n@@||fakaofo.tk^$important\n@@||nukunonu.tk^$important\n@@||anpigabon.ga^$important\n@@||dgdi.ga^$important\n@@||voitures.ga^$important\n@@||mobili.ml^$important\n@@||inege.gq^$important\n@@||tvgelive.gq^$important\n@@||comprarcarros.gq^$important\n@@||voitures.cf^$important\n@@||assembleenationale-rca.cf^$important\n@@||cps-rca.cf^$important\n@@||acap.cf^$important",
+           line
+        )
+
+        line = re.sub(
+           r"([$])1.*", 
+           "", 
            line
         )
 

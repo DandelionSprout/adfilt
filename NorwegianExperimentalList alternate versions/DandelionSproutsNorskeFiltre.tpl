@@ -1,6 +1,6 @@
 msFilterList
-# Version: 25July2019v1-Beta
-# Version: 250720191 (for Adblock Plus' issue report system)
+# Version: 08August2019v1-Beta
+# Version: 080820191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -125,6 +125,7 @@ msFilterList
 # https:  www.rbnett.no 
 # https:  www.op.no 
 # https:  journalisten.dk 
+# http:  www.altomfotball.no 
 
 # 🇬🇧: Empty divider spaces (Section under construction)
 
@@ -411,6 +412,9 @@ msFilterList
 
 # Som nevnt i https:  www.datahjelperne.no falske-telenor-undersokelser 
 -d surveryrewards1.com
+
+# Som nevnt i https:  www.nrk.no mr 1.14649436
+-d pprfct.com
 
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
