@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 10July2019v1-Beta
+! Version: 13August2019v1-Beta
 ! Expires: 6 days
 !#include uBO%20list%20extensions/YouTubeEvenMorePureVideoExperience-uBOExtension.txt
 ! Description: This list removes even more distracting or uncomfortable things on YouTube.
@@ -38,12 +38,17 @@ www.youtube.com#?##button:-abp-has([aria-label*="app"])
 ! Removes video suggestions
 youtube.com###related
 m.youtube.com##ytm-watch ytm-compact-video-renderer
+invidio.us##.pure-u-lg-1-5 a[href^="/watch"]
+hooktube.com#?#.col-lg-4:-abp-has(#video-list)
 
 ! Removes the like/dislike counters
 youtube.com##ytd-toggle-button-renderer #text
 youtube.com###sentiment
 m.youtube.com#?#c3-material-button:-abp-has(path[d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"]) span[aria-label]
 m.youtube.com#?#c3-material-button:-abp-has(path[d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"]) span[aria-label]
+invidio.us##.h-box > p:-abp-has(i[class*="ion-ios-thumbs-"])
+hooktube.com###video-stats .text-right
+hooktube.com###progress-bar-likes
 
 ! Removes the large grey game buttons below gaming videos
 youtube.com##ytd-rich-metadata-renderer.ytd-rich-metadata-row-renderer
@@ -70,6 +75,9 @@ youtube.com##ytd-live-chat-frame
 
 ! Removes the comment section on livestream VoDs
 youtube.com###watch-discussion
+
+! Removes the comment section on third-party GUIs
+invidio.us###comments
 
 ! ————————————————————————————————————————————————————————————————
 
