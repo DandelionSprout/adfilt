@@ -1,12 +1,14 @@
 ### All up-to-date significant adblockers¹
 
 #### Element removal (a.k.a. cosmetic rules, a.k.a. hiding rules)
-* `##.` / `##` / `###`: Hides parts of a page.
-* `#@#`: Whitelists parts of a page to make them load.
+* `##.`: Hides parts of a page, based on one or more `class` values in the F12 filetree (separated with full-stops).
+* `##`: Hides parts of a page based on the element type, e.g. `a`, `li`, `button`, `iframe`, etc., usually highlighted in purple in the F12 filetree.
+* `###`: Hides parts of a page based on the `id` value.
+* `#@#.`/`#@#`/`#@##`: Whitelists parts of a page to make them load.
 * `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or numerous other things. Does not support RegEx.
-* `[href^="text"]`: Same as above, except it finds anything whose value *begins* with the text.
-* `[href$="text"]`: Same as above, except it finds anything whose value *ends* with the text.
-* `[href*="text"]`: Same as above, except it finds anything whose value contains the text anywhere within it.
+* `[href^="text"]`: Finds page elements whose value *begins* with the text.
+* `[href$="text"]`: Finds page elements whose value *ends* with the text.
+* `[href*="text"]`: Finds page elements whose value contains the text anywhere within it.
 * `[href="text" i]`: Save as above, except case-insensitive.
 * `:not(.element)`: Finds page elements that doesn't contain a specified element or text string. Can be paired with other syntaxes á la `:not(:-abp-contains(Example text))`.
 * `:-abp-contains(text)`: Finds page elements that contains such text within it.
@@ -14,8 +16,14 @@
 * `:scope`: Used alongside `:-abp-has` to make it only find elements whose criteria match their immediate subelements.
 * `:nth-of-type(n)` / `:last-of-type` / `:only-of-type`: Finds page elements that are at a specific numerical position in a set.
 * `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
-* `a` / `div` / `iframe` / `img` (among others): Looks for page elements that are specific element types, as seen in the F12 filetree console.
+* `>`: Creates chain criteria, in which a selected page element must have a specific element above it in the filetree.
 * `+`: Blocks the element that is right below the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
+
+##### Advanced examples:
+* `##element.element2`: Hide something both based on its element (##element1) and `class` value (.element2). Note the placement/absence of fullstops.
+* `##.element1 > #element2`: When used in chain criteria, three `###` are replaced by a single `#`.
+* While they're based on the same `class` values, `##.element1` will match any `class` (sub-)value, whereas `##div[class="element1"]` and their modifiers are based on the *entire* `class` string in the F12 filetree.
+* `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or domain-specific, where they have one or more domains in front of them, separated by commas. Only Nano and uBO support wildcard asterisks (`*`) in such domains, while other adblockers do not.
 
 #### File blocking (a.k.a. blocking rules)
 * `||`: Blocks resources from domains or parts thereof from being loaded. For non-domain-specific resources, no pre-emption is needed at all.
@@ -87,7 +95,6 @@
 
 # Particularly important usage notes
 
-* `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or domain-specific, where they have one or more domains in front of them, separated by commas. Only Nano and uBO support wildcard asterisks (`*`) in such domains, while other adblockers do not.
 * `||` entries do support asterisk wildcards, but only in the criteria text. Additionally, when using `$domain=`, domains are separated with vertical lines, since commas are instead used to stack multiple `$` values.
 * `$generichide` entries must start with `@@||`.
 * ABP is known to severely struggle with handling `:style` entries, to the point where having ABP try to load a list with such an entry will cause it to invalidate the list *and* all its entries.
@@ -99,5 +106,6 @@
 * It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
 * Domains in `$domain=` are seperated by a vertical line (`|`), instead of the usual comma.
 * Amazingly, using `! Redirect: ` in the intended target link's list, will cause an infinite loop that prevents the list from being loaded.
+* In Opera, the F12 filetree is not actually opened with F12 by default, but instead with Ctrl+Shift+I (Capital İ).
 
 ¹ = Includes Nano Adblocker, uBlock Origin ≥1.14.0, AdGuard, AdNauseum, Adblock Plus version ≥3.1, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Adblock Plus for IE, Tracking Protection List, AdAway, or Blokada, whose syntax supports are considerably inferior to the above list.
