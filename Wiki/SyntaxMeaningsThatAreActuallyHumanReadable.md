@@ -67,6 +67,7 @@
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions.
 * `$3p`: Same as `$third-party`.
 * `$first-party` / `$1p`: Same as `$~third-party`.
+* `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup`.
 
 ### Adblock Plus, AdBlock and AdGuard only:
 
@@ -83,6 +84,7 @@
 
 * `#%#var AG_`: Similar to `##+js`, except with a completely different set of scriptlets.
 * `$empty`: Results in a fake empty page being loaded, instead of an error page.
+* `:properties`: Claims to be similar to `:-abp-properties`.
 
 ### AdGuard for [Windows/Mac/Android] only:
 
