@@ -1,5 +1,5 @@
 
-! Version: 12August2019v1
+! Version: 18August2019v1
 
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
@@ -244,6 +244,31 @@ gamereactor.*##+js(nano-setTimeout-booster.js)
 /linktag2.js$important,script,domain=viafree.no|viafree.dk
 /viewability.$important,script,domain=gamereactor.no|gamereactor.dk
 ||avod-fw-config.mtg-api.com^$important,xhr,domain=viafree.no|viafree.dk
+telenor.no###megafooter:style(padding-top: 0px)
+eavisa.com##div.kun-desktop:style(height:255px; overflow: hidden; pointer-events: none !important; cursor: default !important)
+frettabladid.is##.ad-topspacer:style(height: 45px !important)
+icelandreview.com###zone-content:style(margin-top: 0px)
+mbl.is###allt.container:style(margin-top: 0px)
+visir.is##.padded.limit--tight.limit:style(padding-top: 15px !important)
+visir.is##div.padded--no-bottom.padded--less.padded.limit:style(padding-top: 5px !important)
+qxl.*##.n_ListHeader:style(margin-top: 5px !important)
+qxl.*###listHeader:style(margin-top: 5px !important)
+dagligvarehandelen.no##.pane-mediaconnect-mediaconnect-les-resten-dh:style(background-image: none !important)
+aftenbladet.no##.article-content:style(padding: 0 0 0 0)
+lydogbilde.no,lydogbillede.dk##.background-ad:style(min-height: 0px !important)
+dagen.no##.paywall-body-description:style(-webkit-text-fill-color: black !important)
+dn.no###googlead-toppbanner:style(min-height: 0 !important)
+vgtv.no##.page-container:style(margin-top: 0px !important)
+sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
+dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
+||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
+||acdn.adnxs.com/ast/ast.js$script,redirect=noopjs,important,domain=vgtv.no
+
+||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=vg.no
+||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=vg.no
+||damoh.vgtv.no/hic_qos$script,redirect=noopjs,domain=vg.no
+/entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
+||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
 
 ! Ads (Section under construction)
 framtia.no,sovesten.no,arendalstidende.no,bil24.no##.gofollow
@@ -599,6 +624,28 @@ nettavisen.no##body.no-scroll:style(overflow: auto !important)
 gamer.no#@#iframe[width="300"][height="250"]
 krom.is#@#.share-container
 pensjonistferie.no#@##adsense
+! 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
+! 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
+
+
+! 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
+@@||bondebladet.screen9.tv^$generichide
+@@*.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
+csp.screen9.com#@#.adsbox
+@@||sixscissors.com^$3p,domain=itavisen.no
+langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
+langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
+||elderlyscissors.com^
+@@||eurosport.no^$generichide
+minmote.no,godt.no##.adblock-info
+@@||fwmrm.net/libs/adm/*/AdManager.js$script,domain=viafree.dk|viafree.no
+||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,1p
+vg.no##+js(addEventListener-defuser.js, load, concat)
+!#if !ext_ublock
+@@||bildeler.name$generichide
+@@||reservedele.name$generichide
+1800kcalkostplan.dk,1200kcalkostplan.dk##div[class*="-container"][class$="-hide"]
+!#endif
 
 ! 🇳🇴: Multidomeneoppføringer
 ! 🇩🇰: Multidomæneposter
@@ -644,6 +691,15 @@ seher.no#?#.css-vk53wn:-abp-contains(norsk tipping)
 side2.no###nt-box
 nettavisen.no#?#.df-article-content:-abp-has(a[href*="/sportspill/"])
 vglive.no##.tipster-liveodds-embed
+
+! Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
+! Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
+elkjop.no,elgiganten.dk###A-value:style(fill: #fff12c !important)
+elkjop.no,elgiganten.dk###B-value:style(fill: #edb731 !important)
+elkjop.no,elgiganten.dk###C-value:style(fill: #ed8631 !important)
+
+! Reducing the size of an extremely big Facebook link button
+xstra.no##.td_single_image_bg[style*="xstra.no/wp-content"][style*="/facebookicon"]:style(height: 140px !important)
 
 !———————————————————————————————————————————————————————————————————————————
 
@@ -722,19 +778,15 @@ filmweb.no###adPosContainerContent
 ||rig.idg.no^
 ||adext.inkclub.com^
 ||ads.no^
-||stats.bonzaii.no^
-||pool.euroads.no^
+||euroads.no^
 ||primetime.ad.primetime.net^
 ||myad.no^
 ||nettklikk.no^
-||imp.euroads.no^
 ||i1media.no^
 ||easy-ad.no^
 ||emerio.no^
-||bolinux3.hit.no^
 ||cmt.no^
 ||piwik.onlinemagasinet.no^
-||flashbanner.no^
 ||bannere.oslonett.no^
 
 ! 🇳🇴: Solcellespesialisten, innlastingsproblem
@@ -754,19 +806,23 @@ nettavisen.no##.sticked
 nettavisen.no###ad_top
 ||sannsyn.com^$3p
 aftenbladet.no,aftenposten.no,bt.no,e24.no,fvn.no##[style="cursor: pointer;"]
+! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-493478718
+bilnorge.no#?#tr:-abp-has( >td:-abp-contains(Annonse:))
+bilnorge.no###artikkel300x250right
+yrkesbil.no###side > div:nth-of-type(1)
+
+! 🇳🇴: Nettsteder jeg nekter å besøke selv for å førstehåndsteste oppføringene
+! 🇬🇧: Sites that I refuse to visit on my own to test the entries
 alternativ-media.com##.wpa
 ektenyheter.no##.cm-message
 resett.no##.tdm-mobile-full
 resett.no##a[href="https://resett.no/annonseweb/"]
 resett.no###cookie
 resett.no##[class="td_single_image_bg"]
+resett.no##a[href*="dekristne.no"]
 norgesavisen.no##.td-fix-index
 frihetskamp.net##a[href*="greenpilled.com"]
 frihetskamp.net##a[href*="nordenstil.no"]
-! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-493478718
-bilnorge.no#?#tr:-abp-has( >td:-abp-contains(Annonse:))
-bilnorge.no###artikkel300x250right
-yrkesbil.no###side > div:nth-of-type(1)
 
 ! 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
@@ -794,37 +850,15 @@ fiskeribladet.no##.teaser_overlay
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
 
-! 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
-@@||bondebladet.screen9.tv^$generichide
-@@*.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
-csp.screen9.com#@#.adsbox
-@@||sixscissors.com^$3p,domain=itavisen.no
-langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
-langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
-||elderlyscissors.com^
-@@||eurosport.no^$generichide
-minmote.no,godt.no##.adblock-info
-@@||fwmrm.net/libs/adm/*/AdManager.js$script,domain=viafree.dk|viafree.no
-!#if !ext_ublock
-@@||bildeler.name$generichide
-@@||reservedele.name$generichide
-1800kcalkostplan.dk,1200kcalkostplan.dk##div[class*="-container"][class$="-hide"]
-!#endif
-
 ! 🇳🇴: Nordensrelaterte oppføringer som har blitt foreslått for store internasjonale lister, men som ikke har blitt lagt til dem som det er meg bekjent
 ! 🇩🇰: Nordenrelaterede poster, der er blevet foreslået til store internationale lister, men som ikke er blevet tilføjet til dem endnu som det er meg bekendt
 ! 🇬🇧: Nordics-related entries that have been suggested to major international lists, but which haven't been added to them yet or for long
 ! https://github.com/easylist/easylist/issues/1861
 @@_prebid_$domain=seher.no
 
-! 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
-! 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
-
-
 ! 🇳🇴: Hvitelisting av sporere som er nødvendige for brukere av Prisjakt, Kickback, og Viatrumf
 ! 🇩🇰: Tracker-hvidlistninger, der er nødvendige for brugere af Prisjakt, Kickback og Viatrumf (Norske handletjenester)
 ! 🇬🇧: Tracker whitelistings that are necessary for users of Prisjakt, Kickback, and Viatrumf
-
 
 
 
@@ -915,37 +949,6 @@ blogg.no##+js(set-constant.js, showAd, false)
 1200kcalkostplan.dk,1800kcalkostplan.dk##+js(abort-on-property-write.js, KillAdBlock)
 !#endif
 
-! Style-changing entries
-! I could've theorethically made a Stylish userscript based on this section, but why would I ever want to do that when Nano, uBO, and AdGuard support such entries natively?
-telenor.no###megafooter:style(padding-top: 0px)
-eavisa.com##div.kun-desktop:style(height:255px; overflow: hidden; pointer-events: none !important; cursor: default !important)
-frettabladid.is##.ad-topspacer:style(height: 45px !important)
-icelandreview.com###zone-content:style(margin-top: 0px)
-mbl.is###allt.container:style(margin-top: 0px)
-visir.is##.padded.limit--tight.limit:style(padding-top: 15px !important)
-visir.is##div.padded--no-bottom.padded--less.padded.limit:style(padding-top: 5px !important)
-qxl.*##.n_ListHeader:style(margin-top: 5px !important)
-qxl.*###listHeader:style(margin-top: 5px !important)
-dagligvarehandelen.no##.pane-mediaconnect-mediaconnect-les-resten-dh:style(background-image: none !important)
-aftenbladet.no##.article-content:style(padding: 0 0 0 0)
-lydogbilde.no,lydogbillede.dk##.background-ad:style(min-height: 0px !important)
-dagen.no##.paywall-body-description:style(-webkit-text-fill-color: black !important)
-dn.no###googlead-toppbanner:style(min-height: 0 !important)
-vgtv.no##.page-container:style(margin-top: 0px !important)
-
-! Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
-! Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
-elkjop.no,elgiganten.dk###A-value:style(fill: #fff12c !important)
-elkjop.no,elgiganten.dk###B-value:style(fill: #edb731 !important)
-elkjop.no,elgiganten.dk###C-value:style(fill: #ed8631 !important)
-
-! Reducing the size of an extremely big Facebook link button
-xstra.no##.td_single_image_bg[style*="xstra.no/wp-content"][style*="/facebookicon"]:style(height: 140px !important)
-
-! Other advanced syntaxes
-sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
-dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
-
 !#if !adguard
 ! Wildcard versions of various entries. Because why only block on one national version of a site, when you can nowadays block on all versions of a site without cluttering things up?
 google.*###epbar, #cnsh, #pushdown, #consent-bump, #cnsi ~ [jsaction*="dismiss"], santa-notice
@@ -968,16 +971,6 @@ dk,no##div.spklw-post-attr:has(div[class*="spklw-sponsored"])
 no##.polarisSpid.widget:before
 !#endif
 
-! 🇬🇧: Unsorted advanced blocking entries that were carried over from a previous uBO-only expansion list.
-||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
-||acdn.adnxs.com/ast/ast.js$script,redirect=noopjs,important,domain=vgtv.no
-
-||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=vg.no
-||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=vg.no
-||damoh.vgtv.no/hic_qos$script,redirect=noopjs,domain=vg.no
-/entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
-||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
-
 ! ——————————————————————————————————————————————————————————————————————————————————————————
 
 ! 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
@@ -985,9 +978,7 @@ no##.polarisSpid.widget:before
 ! 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 ! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
-||skoonlineshopnorge.com^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
 ||kjolenorge.com^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
-||newbalancenorge.com^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
 ||paypal.*.no^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av PayPal
 ||vg.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av VG
 ||elkjop.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av nettsidene deres
@@ -999,13 +990,10 @@ no##.polarisSpid.widget:before
 ||*/finn.no/finno.htm$doc,domain=~facebook.com
 ||dnb.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av DNB
 ||sparebank1.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sparebank1
-||finnrefusjon.com^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
-||finn-spid.info^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
 ||nordea.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordea
 ||sbanken.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sbanken
 ||danskebank.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Danske Bank
 ||*/?finn.no/login$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
-||refusjon-finn.com^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
 ||komplett.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Komplett
 ||nordnet.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordnet
 ||skatteetaten.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Skatteetaten
@@ -1040,8 +1028,6 @@ no##.polarisSpid.widget:before
 ||apple-account-locked.losjevegen.no^$doc
 ||arendalfotball.no^
 ||arvetellefsen.no/curry^
-||aumamandel.no^
-||andeneshornmusikk.no^
 ||handelihalden.no^
 ||holmedalblikk.no^
 
@@ -1091,7 +1077,6 @@ no##.polarisSpid.widget:before
 ||adamaruiz.org^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||adidasko.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||adidassuperstarnorge.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||adidasoutletnorway.eu^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||airmaxskobillige.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||allergyfl.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||apcleverstore.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
@@ -1103,15 +1088,10 @@ no##.polarisSpid.widget:before
 ||billigesalg.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||billigskos.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||bilstokken.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||birkenstocknorgesalg.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||bncentertainment.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||bostongrnhsflowers.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||cafths.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||caperforaciones.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||careerintegra.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||chaletdeville.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||charpente-ramel.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||coloradobraincampaign.org^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||coralls.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||crossfiterada.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||crownedwithlaurels.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
@@ -1124,7 +1104,6 @@ no##.polarisSpid.widget:before
 ||eurosko.net^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||fatalfailblog.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||festmusikk.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||fitflopforhandler.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||fotballsko-salg.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||fotballskotilbud.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||gantoslo.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
@@ -1141,11 +1120,9 @@ no##.polarisSpid.widget:before
 ||jakkesalgs.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||jakkesnorge.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||joseph-holland.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||klmsteelers.org^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||klmyu.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||jessicaivory.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||legarralazcoz.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||lillebitenas.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||lillevinkelsko.net^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||lindseysopticians.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||linkshe.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
@@ -1168,7 +1145,6 @@ no##.polarisSpid.widget:before
 ||nasajones.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||nikebutikks.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||no.moncleritalien.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||noculottes.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||nordartisan.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||norfotball.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||norgefotball.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
@@ -1181,8 +1157,6 @@ no##.polarisSpid.widget:before
 ||oflike.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||omgrm.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||ontariokitcarbuilders.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||orchidtechclub.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||oslomarcjacobsvesker.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||parajumpers-longbear.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||parajumpers-salg.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||parajumpersitoutlet.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
@@ -1196,20 +1170,15 @@ no##.polarisSpid.widget:before
 ||pmnft.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||pjs.outlet.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||popeurope.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||pursuenewly.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||quiltstudiolaren.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||reeconindustries.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||retoaudi.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||rsket.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||salomonnettbutikk.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||scottfamilyministries.org^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||skoeccosandaler.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||skonmdnorge.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||solraba.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||sykkeltrøye.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||ssrodeolivestock.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||swellsup.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
-||theartcardstudio.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||tiranaaquapark-eg.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||tobiascelebritymusicevents.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||um-bs.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
@@ -1217,7 +1186,7 @@ no##.polarisSpid.widget:before
 ||wausauorthopedics.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 ||zaskal.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
 
-! Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
+! 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 ||nofotballshop.com^$doc,domain=~ Advarselen vises grunnet: Selgere av falske piratprodukter.
 ||nofotballstore.com^$doc,domain=~ Advarselen vises grunnet: Selgere av falske piratprodukter.
 ||dkfodboldstore.com^$doc,domain=~ Advarslen vises fordi: Falske piratprodukter.

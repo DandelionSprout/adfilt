@@ -1,6 +1,6 @@
 msFilterList
-# Version: 12August2019v1-Beta
-# Version: 120820191 (for Adblock Plus' issue report system)
+# Version: 18August2019v1-Beta
+# Version: 180820191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -57,6 +57,14 @@ msFilterList
 - linktag2.js
 - viewability.
 -d avod-fw-config.mtg-api.com
+-d acdn.adnxs.com ast ast.js
+-d acdn.adnxs.com ast ast.js
+
+-d ssl.p.jwpcdn.com jwpsrv.js
+-d ssl.p.jwpcdn.com vast.js
+-d damoh.vgtv.no hic_qos
+- entag.js
+-d akamaihd.net video-assets 
 
 # Ads (Section under construction)
 
@@ -135,6 +143,22 @@ msFilterList
 -d pepcall.no wp-content uploads 2015 04 bakgrunn-forside.jpg
 
 # 🇬🇧: Unbreakage
+# 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
+# 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
+
+
+# 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https:  forums.lanik.us viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
++d bondebladet.screen9.tv
+
++d sixscissors.com
+-d elderlyscissors.com
++d eurosport.no
+
+-d vg.no cnp-assets src sites vg components AdblockModal
+
++d bildeler.name
++d reservedele.name
+
 
 # 🇳🇴: Multidomeneoppføringer
 # 🇩🇰: Multidomæneposter
@@ -149,6 +173,11 @@ msFilterList
 -d widget.norsktippingpartner.no
 -d widget.tippebannere.no
 -d tipster.no embed
+
+# Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
+# Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
+
+# Reducing the size of an extremely big Facebook link button
 
 !———————————————————————————————————————————————————————————————————————————
 
@@ -187,19 +216,15 @@ msFilterList
 -d rig.idg.no
 -d adext.inkclub.com
 -d ads.no
--d stats.bonzaii.no
--d pool.euroads.no
+-d euroads.no
 -d primetime.ad.primetime.net
 -d myad.no
 -d nettklikk.no
--d imp.euroads.no
 -d i1media.no
 -d easy-ad.no
 -d emerio.no
--d bolinux3.hit.no
 -d cmt.no
 -d piwik.onlinemagasinet.no
--d flashbanner.no
 -d bannere.oslonett.no
 
 # 🇳🇴: Solcellespesialisten, innlastingsproblem
@@ -216,6 +241,9 @@ msFilterList
 -d sannsyn.com
 # https:  github.com DandelionSprout adfilt issues 7#issuecomment-493478718
 
+# 🇳🇴: Nettsteder jeg nekter å besøke selv for å førstehåndsteste oppføringene
+# 🇬🇧: Sites that I refuse to visit on my own to test the entries
+
 # 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
 # Takk til THEtomaso (https:  github.com THEtomaso) for de fleste av disse oppføringene.
 # 🇩🇰: Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud)
@@ -228,27 +256,11 @@ msFilterList
 
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
 
-# 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https:  forums.lanik.us viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
-+d bondebladet.screen9.tv
-
-+d sixscissors.com
--d elderlyscissors.com
-+d eurosport.no
-
-
-+d bildeler.name
-+d reservedele.name
-
-
 # 🇳🇴: Nordensrelaterte oppføringer som har blitt foreslått for store internasjonale lister, men som ikke har blitt lagt til dem som det er meg bekjent
 # 🇩🇰: Nordenrelaterede poster, der er blevet foreslået til store internationale lister, men som ikke er blevet tilføjet til dem endnu som det er meg bekendt
 # 🇬🇧: Nordics-related entries that have been suggested to major international lists, but which haven't been added to them yet or for long
 # https:  github.com easylist easylist issues 1861
 +d _prebid_
-
-# 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
-# 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
-
 
 # 🇳🇴: Hvitelisting av sporere som er nødvendige for brukere av Prisjakt, Kickback, og Viatrumf
 # 🇩🇰: Tracker-hvidlistninger, der er nødvendige for brugere af Prisjakt, Kickback og Viatrumf (Norske handletjenester)
@@ -256,7 +268,6 @@ msFilterList
 
 +d clk.tradedoubler.com
 +d solutions.tradedoubler.com
-
 
 
 
@@ -286,29 +297,9 @@ msFilterList
 # JavaScript features baked into Nano Adblocker and uBlock Origin
 
 
-# Style-changing entries
-# I could've theorethically made a Stylish userscript based on this section, but why would I ever want to do that when Nano, uBO, and AdGuard support such entries natively?
-
-# Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
-# Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
-
-# Reducing the size of an extremely big Facebook link button
-
-# Other advanced syntaxes
-
 
 # Wildcard versions of various entries. Because why only block on one national version of a site, when you can nowadays block on all versions of a site without cluttering things up?
 
-
-# 🇬🇧: Unsorted advanced blocking entries that were carried over from a previous uBO-only expansion list.
--d acdn.adnxs.com ast ast.js
--d acdn.adnxs.com ast ast.js
-
--d ssl.p.jwpcdn.com jwpsrv.js
--d ssl.p.jwpcdn.com vast.js
--d damoh.vgtv.no hic_qos
-- entag.js
--d akamaihd.net video-assets 
 
 # ——————————————————————————————————————————————————————————————————————————————————————————
 
@@ -317,9 +308,7 @@ msFilterList
 # 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 # 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 # Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no sport
--d skoonlineshopnorge.com
 -d kjolenorge.com
--d newbalancenorge.com
 
 
 
@@ -331,13 +320,10 @@ msFilterList
 - finn.no finno.htm
 
 
--d finnrefusjon.com
--d finn-spid.info
 
 
 
 - ?finn.no login
--d refusjon-finn.com
 
 
 
@@ -372,8 +358,6 @@ msFilterList
 -d apple-account-locked.losjevegen.no
 -d arendalfotball.no
 -d arvetellefsen.no curry
--d aumamandel.no
--d andeneshornmusikk.no
 -d handelihalden.no
 -d holmedalblikk.no
 
@@ -423,7 +407,6 @@ msFilterList
 -d adamaruiz.org
 -d adidasko.com
 -d adidassuperstarnorge.com
--d adidasoutletnorway.eu
 -d airmaxskobillige.com
 -d allergyfl.com
 -d apcleverstore.com
@@ -435,15 +418,10 @@ msFilterList
 -d billigesalg.com
 -d billigskos.com
 -d bilstokken.com
--d birkenstocknorgesalg.com
 -d bncentertainment.com
 -d bostongrnhsflowers.com
--d cafths.com
 -d caperforaciones.com
--d careerintegra.com
--d chaletdeville.com
 -d charpente-ramel.com
--d coloradobraincampaign.org
 -d coralls.com
 -d crossfiterada.com
 -d crownedwithlaurels.com
@@ -456,7 +434,6 @@ msFilterList
 -d eurosko.net
 -d fatalfailblog.com
 -d festmusikk.com
--d fitflopforhandler.com
 -d fotballsko-salg.com
 -d fotballskotilbud.com
 -d gantoslo.com
@@ -473,11 +450,9 @@ msFilterList
 -d jakkesalgs.com
 -d jakkesnorge.com
 -d joseph-holland.com
--d klmsteelers.org
 -d klmyu.com
 -d jessicaivory.com
 -d legarralazcoz.com
--d lillebitenas.com
 -d lillevinkelsko.net
 -d lindseysopticians.com
 -d linkshe.com
@@ -500,7 +475,6 @@ msFilterList
 -d nasajones.com
 -d nikebutikks.com
 -d no.moncleritalien.com
--d noculottes.com
 -d nordartisan.com
 -d norfotball.com
 -d norgefotball.com
@@ -513,8 +487,6 @@ msFilterList
 -d oflike.com
 -d omgrm.com
 -d ontariokitcarbuilders.com
--d orchidtechclub.com
--d oslomarcjacobsvesker.com
 -d parajumpers-longbear.com
 -d parajumpers-salg.com
 -d parajumpersitoutlet.com
@@ -528,20 +500,15 @@ msFilterList
 -d pmnft.com
 -d pjs.outlet.com
 -d popeurope.com
--d pursuenewly.com
 -d quiltstudiolaren.com
 -d reeconindustries.com
 -d retoaudi.com
--d rsket.com
--d salomonnettbutikk.com
 -d scottfamilyministries.org
 -d skoeccosandaler.com
 -d skonmdnorge.com
--d solraba.com
 -d sykkeltrøye.com
 -d ssrodeolivestock.com
 -d swellsup.com
--d theartcardstudio.com
 -d tiranaaquapark-eg.com
 -d tobiascelebritymusicevents.com
 -d um-bs.com
@@ -549,7 +516,7 @@ msFilterList
 -d wausauorthopedics.com
 -d zaskal.com
 
-# Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
+# 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
 -d dkfodboldstore.com
