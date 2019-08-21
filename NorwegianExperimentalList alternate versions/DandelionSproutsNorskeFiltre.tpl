@@ -1,6 +1,6 @@
 msFilterList
-# Version: 18August2019v1-Beta
-# Version: 180820191 (for Adblock Plus' issue report system)
+# Version: 21August2019v1-Beta
+# Version: 210820191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -99,6 +99,7 @@ msFilterList
 -d cluster.chart.dk
 -d vikari.is skjol frjalsi-lif*.png
 -d banner.landbrugsavisen.dk reklame.aspx
+-d gratisxxx.no
 - *-annonse-*
 - -bazaar-
 - bazaar *
