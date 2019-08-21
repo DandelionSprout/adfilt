@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 19August2019v1-Beta
+! Version: 21August2019v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
@@ -80,13 +80,16 @@ reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(:scope > div[data
 reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):-abp-has(div[data-redditstyle])
 reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(:scope > div > div[data-redditstyle])
 
-! Removes two specific types of comments that offer nothing to a thread apart from vapid far-out-of-place greetings
+! Removes three specific types of comments that offer nothing to a thread apart from vapid far-out-of-place greetings
 reddit.com#?#.Comment:-abp-contains(/Happy Cake[ ]?Day/i)
 reddit.com#?#.Comment:-abp-contains(/charge your phone/i)
 reddit.com#?#.Comment:-abp-has(a:-abp-contains(/^r/chargeyourphone$/))
 reddit.com#?#p:-abp-contains(/Edit[ ]?:/i):-abp-contains(/first gold/i)
 reddit.com#?#p:-abp-contains(/Edit[ ]?:/i):-abp-contains(/first silver/i)
 reddit.com#?#p:-abp-contains(/Edit[ ]?:/i):-abp-contains(/first award/i)
+reddit.com#?#p:-abp-contains(/Edit[ ]?:/i):-abp-contains(Thank/i):-abp-contains(/gold/i)
+reddit.com#?#p:-abp-contains(/Edit[ ]?:/i):-abp-contains(Thank/i):-abp-contains(/silver/i)
+reddit.com#?#p:-abp-contains(/Edit[ ]?:/i):-abp-contains(Thank/i):-abp-contains(/award/i)
 reddit.com#?#p:-abp-contains(/Edit[ ]?:/i):-abp-contains(/Thanks/i):-abp-contains(/stranger/i)
 
 ! Attempts to remove the "Recommended posts" feed on the right of most posts
