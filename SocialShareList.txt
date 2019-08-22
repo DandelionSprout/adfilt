@@ -1,6 +1,6 @@
 [Adblock Plus 3.2]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 21August2019v1-Alpha
+! Version: 22August2019v1-Alpha
 ! Expires: 4 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -34,6 +34,7 @@
 ##.btn-google-plus
 ##.btn-messenger
 ##.btn-share
+##.btn-tweet
 ##.btn-twitter
 ##.btn[href*="facebook.com/sharer/"]
 ##.button--share
@@ -46,6 +47,7 @@
 ##.facebook-like-box
 ##.facebook-messenger-share
 ##.facebook-share
+##.facebook.share-icon
 ##.facebook[href*="/sharer/"]
 ##.facebook_top
 ##.fb-like-box
@@ -72,6 +74,8 @@
 ##.recentsocial
 ##.sbtn_main
 ##.share
+##.share-article
+##.share-article-vertical
 ##.share-bar
 ##.share-btns
 ##.share-facebook
@@ -117,6 +121,7 @@
 ##.ssk-group
 ##.twit_share_button
 ##.twitter-share
+##.twitter.share-icon
 ##.twitter[href*="/share?"]
 ##[data-flip-widget="shareflip"]
 ##[socialshare]
@@ -134,6 +139,10 @@
 ##a[data-ga-event-action^="share:"]
 ##a[data-share$="Facebook" i]
 ##a[data-type="sharing-button"]
+##a[href*="://plus.google.com/share?url="]
+##a[href*="://share.flipboard.com/bookmarklet/popout?"]
+##a[href*="://twitter.com/home?status="]
+##a[href*="://www.facebook.com/dialog/share?app_id="]
 ##a[href*="facebook.com/sharer.php?u="]
 ##a[href*="linkedin.com/shareArticle?"]
 ##a[href*="pinterest.com/pin/create/button/?"]
@@ -153,7 +162,6 @@
 ##a[title="Share on Twitter" i]
 ##a[title="Share on whatsapp" i]
 ##amedia-share
-##button[class*="share-button"]
 ##button[data-a-target^="share"]
 ##button[ng-click^="shareOn"]
 ##button[title^="Share this "]
@@ -176,6 +184,7 @@
 ##div[class*="share-content"]
 ##div[class*="share-link"]
 ##div[class*="sharebar"]
+##div[class*="sharer-tool"]
 ##div[class*="sharethisbutton" i]
 ##div[class*="shareToolbar"]
 ##div[class*="social"][class*="sharing"]
@@ -184,6 +193,7 @@
 ##div[class*="social-share"]
 ##div[class*="social_sidebar"]
 ##div[class*="social_slide"]
+##div[class*="socials-share"]
 ##div[class*="SocialShareButton" i]
 ##div[class="instagram-Share" i]
 ##div[class="instagramShare" i]
@@ -217,8 +227,10 @@
 ##ul[class*="-soc-list"]
 ##ul[class*="social-bar"]
 ##ul[class^="sociale-ikoner-del"]
-~pinterest.*##a[href^="https://pinterest.com/pin/create/bookmarklet/"]
-~tecmint.com,~ostechnix.com##.share
+/share/facebook-icon.png$image
+/share/reddit-icon.png$image
+/share/share-icon.png$image
+/share/twitter-icon.png$image
 /sharing/facebook.$image
 /sharing/reddit.$image
 /sharing/stumbleupon.$image
@@ -235,21 +247,9 @@
 ||widgets.getpocket.com/v1/button?label=pocket$subdocument
 ||www.facebook.com/plugins/like.php$subdocument
 ||yastatic.net/share/*-icon.*
-##.facebook.share-icon
-##.twitter.share-icon
-##a[href*="://plus.google.com/share?url="]
-##.share-article
-##.share-article-vertical
-##div[class*="socials-share"]
-##a[href*="://www.facebook.com/dialog/share?app_id="]
-##a[href*="://twitter.com/home?status="]
-##div[class*="sharer-tool"]
-##.btn-tweet
-/share/twitter-icon.png$image
-/share/facebook-icon.png$image
-/share/reddit-icon.png$image
-/share/share-icon.png$image
-##a[href*="://share.flipboard.com/bookmarklet/popout?"]
+~mewe.com##button[class*="share-button"]
+~pinterest.*##a[href^="https://pinterest.com/pin/create/bookmarklet/"]
+~tecmint.com,~ostechnix.com##.share
 
 ! Exceptionally annoying leftover floating bars
 pixivision.net##._floated-bottom-bar
