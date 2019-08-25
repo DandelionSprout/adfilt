@@ -1,6 +1,6 @@
 msFilterList
-# Version: 21August2019v1-Beta
-# Version: 210820191 (for Adblock Plus' issue report system)
+# Version: 25August2019v2-Beta
+# Version: 250820192 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -100,6 +100,7 @@ msFilterList
 -d vikari.is skjol frjalsi-lif*.png
 -d banner.landbrugsavisen.dk reklame.aspx
 -d gratisxxx.no
+-d svonm.com hd-main.js
 - *-annonse-*
 - -bazaar-
 - bazaar *
@@ -147,6 +148,9 @@ msFilterList
 # 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
 # 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
 
+# 🇩🇰: Gør det muligt igen at scrolle når "I Don't Care About Cookies" er benyttet
+# 🇬🇧: Re-enables scrolling when using "I Don't Care About Cookies"
+-d scripts.tv2a.dk oil 
 
 # 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https:  forums.lanik.us viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
 +d bondebladet.screen9.tv
