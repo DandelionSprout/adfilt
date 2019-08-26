@@ -25,7 +25,7 @@ If you have any problems, suggestions, or a desire to help, I allow both _Issues
 
 Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listene på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. Man er ikke nødt til å bruke engelsk hele tiden.
 
-![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Spr%C3%A5kflagg2.png)
+![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Spr%C3%A5kflagg3.png)
 
 ## The tools that I use:
 
