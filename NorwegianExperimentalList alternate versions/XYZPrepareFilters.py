@@ -4,7 +4,7 @@ import re
 SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##']
+    ':style', '##+js', '.*#' , ':xpath', 'dk,no##']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
 
@@ -150,6 +150,18 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"([$,~])3p", 
            r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           ":matches-css-before\(", 
+           ":-abp-properties(", 
+           line
+        )
+
+        line = re.sub(
+           ":matches-css\(", 
+           ":-abp-properties(", 
            line
         )
 

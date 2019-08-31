@@ -1,5 +1,5 @@
 
-! Version: 27August2019v1
+! Version: 31August2019v1
 
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
@@ -55,9 +55,7 @@
 ##div[data-contenttype="ad"]
 ##optimus-element[id^="art-bazaarAd-"][version="default"]
 .oasfile
-@@/images/*youtube.jpg$domain=realityportalen.dk
 @@||5e529.v.fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
-@@||api.instagram.com^$domain=www.samiteahter.org
 @@||fagbladetjournalen.no/*/300x250_
 @@||seher.no/reise$generichide
 bt.dk##.hidden-md-down.col-xl-12
@@ -260,7 +258,7 @@ dagen.no##.paywall-body-description:style(-webkit-text-fill-color: black !import
 dn.no###googlead-toppbanner:style(min-height: 0 !important)
 vgtv.no##.page-container:style(margin-top: 0px !important)
 sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
-dagbladet.no##div[class^="css"]:matches-css-before(content: "Annonse")
+dagbladet.no#?#div[class^="css"]:matches-css-before(content: "Annonse")
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
 ||acdn.adnxs.com/ast/ast.js$script,redirect=noopjs,important,domain=vgtv.no
 
@@ -339,6 +337,8 @@ tv2.no##+js(golem.de.js)
 tvkampen.com,tvsporten.dk##a.p-icon.partner
 vartoslo.no#?#.vc_column-inner:-abp-has(.vo-annonse):not(:-abp-has(div[class^="td_module_"])):not(:-abp-has(#sb_instagram))
 xstra.no##.td-fix-index
+jn.fo###the_banners
+byggebolig.no##.maestro-resize
 ##.native-advertisement
 ##.content-adunit
 ##.sponset-innlegg
@@ -378,6 +378,8 @@ xstra.no##.td-fix-index
 ||banner.landbrugsavisen.dk/reklame.aspx$subdocument
 ||gratisxxx.no$image,domain=nakenprat.com
 ||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=tv2.no
+||vevlysingar.fo$subdocument,3p
+||boligkanalen-maestro-new.azurewebsites.net$image
 /*-annonse-*$image,domain=resett.no
 -bazaar-$script,domain=nettavisen.no
 /bazaar/*$script,domain=nettavisen.no
@@ -627,14 +629,17 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 nettavisen.no###topover-loader
 nettavisen.no##body.no-scroll:style(overflow: auto !important)
 gamer.no#@#iframe[width="300"][height="250"]
-krom.is#@#.share-container
 pensjonistferie.no#@##adsense
 ! 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
 ! 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
 
-! 🇩🇰: Gør det muligt igen at scrolle når "I Don't Care About Cookies" er benyttet
+! 🇩🇰: Gør det muligt igen at scrolle når «I Don't Care About Cookies» er benyttet
 ! 🇬🇧: Re-enables scrolling when using "I Don't Care About Cookies"
 ||scripts.tv2a.dk/oil/
+! 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
+krom.is#@#.share-container
+@@/images/*youtube.jpg$domain=realityportalen.dk
+@@||api.instagram.com^$domain=www.samiteahter.org
 
 ! 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
 @@||bondebladet.screen9.tv^$generichide

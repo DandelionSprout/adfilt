@@ -1,6 +1,6 @@
 msFilterList
-# Version: 27August2019v1-Beta
-# Version: 270820191 (for Adblock Plus' issue report system)
+# Version: 31August2019v1-Beta
+# Version: 310820191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -16,8 +16,6 @@ msFilterList
 # 🇬🇧: Uncategorised entries
 - oasfile
 
-
-+d api.instagram.com
 
 
 
@@ -101,6 +99,8 @@ msFilterList
 -d banner.landbrugsavisen.dk reklame.aspx
 -d gratisxxx.no
 -d svonm.com hd-main.js
+-d vevlysingar.fo
+-d boligkanalen-maestro-new.azurewebsites.net
 - *-annonse-*
 - -bazaar-
 - bazaar *
@@ -148,9 +148,12 @@ msFilterList
 # 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
 # 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
 
-# 🇩🇰: Gør det muligt igen at scrolle når "I Don't Care About Cookies" er benyttet
+# 🇩🇰: Gør det muligt igen at scrolle når «I Don't Care About Cookies» er benyttet
 # 🇬🇧: Re-enables scrolling when using "I Don't Care About Cookies"
 -d scripts.tv2a.dk oil 
+# 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
+
++d api.instagram.com
 
 # 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https:  forums.lanik.us viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
 +d bondebladet.screen9.tv
