@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
-! Version: 01September2019v2
-! Version: 010920192 (for Adblock Plus' issue report system)
+! Version: 01September2019v3
+! Version: 010920193 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -194,7 +194,6 @@ viafree.*##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs
 ||viafree.*/collect$important,xhr
 gamereactor.*##^script[onError="adblockEnabled()"]
 @@/js/ads.js$1p,domain=tvkampen.com|tvsporten.dk
-@@||eurosport.*^$generichide
 gamereactor.*#@#.afs_ads
 eurosport.*###notification__cookie
 eurosport.*##.eso_video__share
@@ -681,10 +680,12 @@ tv2.no##+js(abort-current-inline-script.js, adblockDetector)
 gratisspil.dk##+js(abort-on-property-write.js, AdBlockerInfo)
 techstart.dk##+js(set-constant.js, adblock, false)
 dagensbyggeri.dk##+js(setTimeout-defuser.js, (), 2500)
+@@||eurosport.*^$generichide
 !#if !ext_ublock
 @@||bildeler.name$generichide
 @@||reservedele.name$generichide
 1800kcalkostplan.dk,1200kcalkostplan.dk##div[class*="-container"][class$="-hide"]
+@@||eurosport.no,eurosport.dk^$generichide
 !#endif
 
 ! 🇳🇴: Multidomeneoppføringer
