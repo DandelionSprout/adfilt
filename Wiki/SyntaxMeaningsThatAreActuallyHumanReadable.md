@@ -10,7 +10,7 @@
 * `[href$="text"]`: Finds page elements whose value *ends* with the text.
 * `[href*="text"]`: Finds page elements whose value contains the text anywhere within it.
 * `[href="text" i]`: Save as above, except case-insensitive.
-* `:not(.element)`: Finds page elements that doesn't contain a specified element or text string. Can be paired with other syntaxes á la `:not(:-abp-contains(Example text))`.
+* `:not(.element)`: Finds page elements that doesn't contain a specified element or text string. Can be paired with other syntaxes à la `:not(:-abp-contains(Example text))`.
 * `:-abp-contains(text)`: Finds page elements that contains such text within it.
 * `:-abp-has(.element)`: Finds page elements that contains such an element within it.
 * `:scope`: Used alongside `:-abp-has` to make it only find elements whose criteria match their immediate subelements.
