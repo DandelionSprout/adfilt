@@ -69,22 +69,19 @@
 * `$first-party` / `$1p`: Same as `$~third-party`.
 * `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup`.
 
-### Adblock Plus, AdBlock and AdGuard only:
-
-* `:-abp-properties`: Don't take my word for this, but it appears to me to find pop-under elements that possess certain traits, such as text encodings á la Base64.
-
 ### Adblock Plus and AdBlock only:
 
 * `! Redirect: `: Tells the adblocker to look for list updates from a new URL from that point on.
 * `#?#`: Required to make entries with `:-abp-has`, `:-abp-contains` and `:-abp-properties` work in those particular extensions.
 * `@@||` + `$document`: Turns off adblocking entirely while on that domain.
 * `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
+* `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
 
 ### AdGuard only:
 
 * `#%#var AG_`: Similar to `##+js`, except with a completely different set of scriptlets.
 * `$empty`: Results in a fake empty page being loaded, instead of an error page.
-* `:properties`: Claims to be similar to `:-abp-properties`.
+* `:properties`: Claims to be similar to `:-abp-properties`, but is incompatible with it.
 
 ### AdGuard for [Windows/Mac/Android] only:
 
