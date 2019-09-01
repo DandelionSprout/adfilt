@@ -1,6 +1,6 @@
 msFilterList
-# Version: 31August2019v1-Beta
-# Version: 310820191 (for Adblock Plus' issue report system)
+# Version: 01September2019v3-Beta
+# Version: 010920193 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # expires = 1
@@ -32,7 +32,6 @@ msFilterList
 -d openx.gamereactor.dk multi.php?
 
 
-+d eurosport.*
 
 -d cdn.ravenjs.com
 -d client-stream-events.mtg-api.com
@@ -63,8 +62,9 @@ msFilterList
 -d damoh.vgtv.no hic_qos
 - entag.js
 -d akamaihd.net video-assets 
+# dinside.no
 
-# Ads (Section under construction)
+# ——— Ads (Section under construction) ———
 
 
 
@@ -124,7 +124,7 @@ msFilterList
 - nordicbet_logo
 - partners *_ad_icon
 
-# Leftover empty spaces that EasyList have left behind (Section under construction)
+# ——— Leftover empty spaces that EasyList have left behind (Section under construction) ———
 -d gaysir.no rek bb_inline
 # — — — — —
 # https:  sol.no 
@@ -163,9 +163,11 @@ msFilterList
 +d eurosport.no
 
 -d vg.no cnp-assets src sites vg components AdblockModal
++d eurosport.*
 
 +d bildeler.name
 +d reservedele.name
++d eurosport.no,eurosport.dk
 
 
 # 🇳🇴: Multidomeneoppføringer
@@ -291,18 +293,10 @@ msFilterList
 # 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
 # ABP was at one point discussing supporting it in https:  issues.adblockplus.org ticket 6773, but it stranded out into nothing.
 
--d openx.gamereactor.dk multi.php?
-+d eurosport.no,eurosport.dk
 
 
 
 # 🇬🇧: Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
-
-
-
-
-
-# JavaScript features baked into Nano Adblocker and uBlock Origin
 
 
 

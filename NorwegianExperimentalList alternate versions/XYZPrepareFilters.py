@@ -50,7 +50,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.2\]", 
+           "\[Adblock Plus 3.4\]", 
            "[AdGuard ≥6]", 
            line
         )
@@ -76,6 +76,72 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"([$,])1p", 
            r"\1~third-party", 
+           line
+        )
+
+        line = re.sub(
+           "viaplay.\*#", 
+           "viaplay.no,viaplay.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "google.\*#", 
+           "google.no,google.dk,google.is#", 
+           line
+        )
+
+        line = re.sub(
+           "eurogamer.\*#", 
+           "eurogamer.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "ticketmaster.\*#", 
+           "ticketmaster.no,ticketmaster.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "qxl.\*#", 
+           "qxl.no,qxl.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "expedia.\*#", 
+           "expedia.no,expedia.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "gamereactor.\*#", 
+           "gamereactor.no,gamereactor.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "viafree.\*#", 
+           "viafree.no,viafree.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "momondo.\*#", 
+           "momondo.no,monondo.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "eurosport.\*#", 
+           "eurosport.no,eurosport.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "prisjakt.\*,", 
+           "prisjakt.no,", 
            line
         )
 
@@ -154,6 +220,12 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
+           line
+        )
+
+        line = re.sub(
            ":matches-css-before\(", 
            ":-abp-properties(", 
            line
@@ -162,6 +234,84 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            ":matches-css\(", 
            ":-abp-properties(", 
+           line
+        )
+
+        line = re.sub(
+           "viaplay.\*#", 
+           "viaplay.no,viaplay.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "google.\*#", 
+           "google.no,google.dk,google.is#", 
+           line
+        )
+
+        line = re.sub(
+           "eurogamer.\*#", 
+           "eurogamer.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "ticketmaster.\*#", 
+           "ticketmaster.no,ticketmaster.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "qxl.\*#", 
+           "qxl.no,qxl.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "expedia.\*#", 
+           "expedia.no,expedia.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "gamereactor.\*#", 
+           "gamereactor.no,gamereactor.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "viafree.\*#", 
+           "viafree.no,viafree.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "momondo.\*#", 
+           "momondo.no,monondo.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "eurosport.\*#", 
+           "eurosport.no,eurosport.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "prisjakt.\*,", 
+           "prisjakt.no,", 
+           line
+        )
+
+        line = re.sub(
+           "^,", 
+           "^$", 
+           line
+        )
+
+        line = re.sub(
+           ",script,", 
+           "$script,", 
            line
         )
 
@@ -192,7 +342,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.2\]", 
+           "\[Adblock Plus 3.4\]", 
            "msFilterList", 
            line
         )
@@ -406,7 +556,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.2\]", 
+           "\[Adblock Plus 3.4\]", 
            "{+block}", 
            line
         )
@@ -522,7 +672,7 @@ def prepare_privacy(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.2\]", 
+           "\[Adblock Plus 3.4\]", 
            "", 
            line
         )
@@ -833,7 +983,7 @@ UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^']
-UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.2]', '*', '/^']
+UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.4]', '*', '/^']
 UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
     '##', '.*#' , '#?#']
 
@@ -887,7 +1037,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.2\]", 
+           "\[Adblock Plus 3.4\]", 
            "[AdGuard ≥6]", 
            line
         )
@@ -1064,7 +1214,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.2\]", 
+           "\[Adblock Plus 3.4\]", 
            "msFilterList", 
            line
         )
@@ -1308,7 +1458,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.2\]", 
+           "\[Adblock Plus 3.4\]", 
            "{+block}", 
            line
         )
