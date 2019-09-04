@@ -35,6 +35,8 @@
 * `$generichide`: Prevents all non-domain-specific (a.k.a. generic) hiding entries from working on a website. On Nano/uBO it prevents *all* non-domain-specific entries from working.
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it's a script, e.g. a JavaScript runtime.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
+* `$xmlhttprequest`: Prevents such resources from being downloaded through the titular JavaScript API.
+* `$popup` / `$image` / `$object` / `$other`: These ones should hopefully be self-explanatory (Give me a heads-up in an issue report if it isn't).
 
 #### Universal
 * `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
@@ -67,6 +69,7 @@
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions.
 * `$3p`: Same as `$third-party`.
 * `$first-party` / `$1p`: Same as `$~third-party`.
+* `$xhr`: Same as `$xmlhttprequest`.
 * `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup`.
 
 ### Adblock Plus and AdBlock only:
@@ -88,10 +91,6 @@
 * `! Description:`: Shows a description of the list's purpose, when the question mark next to the list in the AdGuard settings is hovered over. That being said, a description is convenient for users of all adblockers, if they're willing to look up a list's raw content.
 * `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar.
 
-#### I honestly don't know what these ones do:
-
-* `$xmlhttprequest` / `$xhr`
-
 # Particularly important usage notes
 
 * `||` entries do support asterisk wildcards, but only in the criteria text. Additionally, when using `$domain=`, domains are separated with vertical lines, since commas are instead used to stack multiple `$` values.
@@ -107,4 +106,4 @@
 * Amazingly, using `! Redirect: ` in the intended target link's list, will cause an infinite loop that prevents the list from being loaded.
 * In Opera, the F12 filetree is not actually opened with F12 by default, but instead with Ctrl+Shift+I (Capital İ).
 
-¹ = Includes Nano Adblocker, uBlock Origin ≥1.14.0, AdGuard, AdNauseum, Adblock Plus version ≥3.1, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Adblock Plus for IE, Tracking Protection List, AdAway, or Blokada, whose syntax supports are considerably inferior to the above list.
+¹ = Includes Nano Adblocker, uBlock Origin ≥1.14.0, AdGuard, AdNauseum, Adblock Plus version ≥3.1, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, AdAway, or Blokada, whose syntax supports are considerably inferior to the above list.
