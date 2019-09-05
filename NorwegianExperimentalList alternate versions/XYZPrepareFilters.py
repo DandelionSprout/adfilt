@@ -814,7 +814,7 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"$(?<=\.com$)|(?<=\.no$)|(?<=\.dk$)|(?<=\.is$)|(?<=\.org$)|(?<=\.net$)|(?<=\.tc$)|(?<=\.it$)|(?<=\.online$)|(?<=\.top$)|(?<=\.tv$)|(?<=\.eu$)|(?<=\.us$)|(?<=\.info$)|(?<=\.club$)", 
+           r"$(?<=\.com$)|(?<=\.no$)|(?<=\.dk$)|(?<=\.is$)|(?<=\.fo$)|(?<=\.gl$)|(?<=\.org$)|(?<=\.net$)|(?<=\.tc$)|(?<=\.it$)|(?<=\.online$)|(?<=\.top$)|(?<=\.tv$)|(?<=\.eu$)|(?<=\.us$)|(?<=\.info$)|(?<=\.club$)", 
            "\" },", 
            line
         )
@@ -870,7 +870,7 @@ def prepare_dnsmasq(lines) -> str:
         )
 
         line = re.sub(
-           r"$(?<=\.com$)|(?<=\.no$)|(?<=\.dk$)|(?<=\.is$)|(?<=\.org$)|(?<=\.net$)|(?<=\.tc$)|(?<=\.it$)|(?<=\.online$)|(?<=\.top$)|(?<=\.tv$)|(?<=\.eu$)|(?<=\.us$)|(?<=\.info$)|(?<=\.club$)", 
+           r"$(?<=\.com$)|(?<=\.no$)|(?<=\.dk$)|(?<=\.is$)|(?<=\.fo$)|(?<=\.gl$)|(?<=\.org$)|(?<=\.net$)|(?<=\.tc$)|(?<=\.it$)|(?<=\.online$)|(?<=\.top$)|(?<=\.tv$)|(?<=\.eu$)|(?<=\.us$)|(?<=\.info$)|(?<=\.club$)", 
            "/127.0.0.1", 
            line
         )
@@ -1401,6 +1401,18 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
+           r"^- gdn$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^- bid$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
            r"^-d .*\*\..*", 
            "", 
            line
@@ -1766,7 +1778,7 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"! Placeholder line.*", 
-           "! Manually updated AdGuard Home version of the whitelisted domains from the other versions of this list.\n@@||coolcmd.tk^$important\n@@||budterence.tk^$important\n@@||intr0.tk^$important\n@@||google.tk^$important\n@@||transportnews.tk^$important\n@@||unicorncardlist.tk^$important\n@@||c0d3c.tk^$important\n@@||loljp-wiki.tk^$important\n@@|| ninetail.tk^$important\n@@|| goshujin.tk^$important\n@@|| graph.tk^$important\n@@||google.ga^$important\n@@||filtri-dns.ga^$important\n@@||google.ml^$important\n@@||deimos.gq^$important\n@@||1hos.cf^$important\n@@||intr0.cf^$important\n@@||ivoid.cd^$important\n@@||domainvoider.cf^$important\n@@||google.cf^$important\n@@||rths.cf^$important\n@@||anonytext.tk^$important\n@@||tokelau-info.tk^$important\n@@||fakaofo.tk^$important\n@@||nukunonu.tk^$important\n@@||anpigabon.ga^$important\n@@||dgdi.ga^$important\n@@||voitures.ga^$important\n@@||mobili.ml^$important\n@@||inege.gq^$important\n@@||tvgelive.gq^$important\n@@||comprarcarros.gq^$important\n@@||voitures.cf^$important\n@@||assembleenationale-rca.cf^$important\n@@||cps-rca.cf^$important\n@@||acap.cf^$important",
+           "! Manually updated AdGuard Home version of the whitelisted domains from the other versions of this list.\n@@||coolcmd.tk^$important\n@@||budterence.tk^$important\n@@||intr0.tk^$important\n@@||google.tk^$important\n@@||transportnews.tk^$important\n@@||unicorncardlist.tk^$important\n@@||c0d3c.tk^$important\n@@||loljp-wiki.tk^$important\n@@||ninetail.tk^$important\n@@||goshujin.tk^$important\n@@||graph.tk^$important\n@@||google.ga^$important\n@@||filtri-dns.ga^$important\n@@||google.ml^$important\n@@||deimos.gq^$important\n@@||1hos.cf^$important\n@@||intr0.cf^$important\n@@||ivoid.cd^$important\n@@||domainvoider.cf^$important\n@@||google.cf^$important\n@@||rths.cf^$important\n@@||anonytext.tk^$important\n@@||tokelau-info.tk^$important\n@@||fakaofo.tk^$important\n@@||nukunonu.tk^$important\n@@||anpigabon.ga^$important\n@@||dgdi.ga^$important\n@@||voitures.ga^$important\n@@||mobili.ml^$important\n@@||inege.gq^$important\n@@||tvgelive.gq^$important\n@@||comprarcarros.gq^$important\n@@||voitures.cf^$important\n@@||assembleenationale-rca.cf^$important\n@@||cps-rca.cf^$important\n@@||acap.cf^$important",
            line
         )
 
