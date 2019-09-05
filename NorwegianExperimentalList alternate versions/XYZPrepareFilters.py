@@ -510,7 +510,7 @@ def prepare_tpl(lines) -> str:
            line
         )
 
-        if is_supported_tpl(line):
+        if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
     return text
@@ -1496,7 +1496,7 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"# Placeholder line.*", 
-           "{-block}\n# Manually updated Privoxy version of the whitelisted domains from the other versions of this list.\n.coolcmd.tk\n.budterence.tk\n.intr0.tk\n.google.tk\n.transportnews.tk\n.unicorncardlist.tk\n.c0d3c.tk\n.google.ga\n.filtri-dns.ga\n.google.ml\n.deimos.gq\n.1hos.cf\n.intr0.cf\n.ivoid.cd\n.domainvoider.cf\n.google.cf\n.rths.cf\n.anonytext.tk\n.tokelau-info.tk\n.fakaofo.tk\n.nukunonu.tk\n.anpigabon.ga\n.dgdi.ga\n.voitures.ga\n.mobili.ml\n.inege.gq\n.tvgelive.gq\n.comprarcarros.gq\n.voitures.cf\n.assembleenationale-rca.cf\n.cps-rca.cf\n.acap.cf", 
+           "{-block}\n# Manually updated Privoxy version of the whitelisted domains from the other versions of this list.\n.coolcmd.tk\n.budterence.tk\n.intr0.tk\n.google.tk\n.transportnews.tk\n.unicorncardlist.tk\n.c0d3c.tk\n.loljp-wiki.tk\n.ninetail.tk\n.goshujin.tk\n.graph.tk\n.google.ga\n.filtri-dns.ga\n.google.ml\n.deimos.gq\n.1hos.cf\n.intr0.cf\n.ivoid.cd\n.domainvoider.cf\n.google.cf\n.rths.cf\n.anonytext.tk\n.tokelau-info.tk\n.fakaofo.tk\n.nukunonu.tk\n.anpigabon.ga\n.dgdi.ga\n.voitures.ga\n.mobili.ml\n.inege.gq\n.tvgelive.gq\n.comprarcarros.gq\n.voitures.cf\n.assembleenationale-rca.cf\n.cps-rca.cf\n.acap.cf", 
            line
         )
 
@@ -1766,7 +1766,7 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"! Placeholder line.*", 
-           "! Manually updated AdGuard Home version of the whitelisted domains from the other versions of this list.\n@@||coolcmd.tk^$important\n@@||budterence.tk^$important\n@@||intr0.tk^$important\n@@||google.tk^$important\n@@||transportnews.tk^$important\n@@||unicorncardlist.tk^$important\n@@||c0d3c.tk^$important\n@@||google.ga^$important\n@@||filtri-dns.ga^$important\n@@||google.ml^$important\n@@||deimos.gq^$important\n@@||1hos.cf^$important\n@@||intr0.cf^$important\n@@||ivoid.cd^$important\n@@||domainvoider.cf^$important\n@@||google.cf^$important\n@@||rths.cf^$important\n@@||anonytext.tk^$important\n@@||tokelau-info.tk^$important\n@@||fakaofo.tk^$important\n@@||nukunonu.tk^$important\n@@||anpigabon.ga^$important\n@@||dgdi.ga^$important\n@@||voitures.ga^$important\n@@||mobili.ml^$important\n@@||inege.gq^$important\n@@||tvgelive.gq^$important\n@@||comprarcarros.gq^$important\n@@||voitures.cf^$important\n@@||assembleenationale-rca.cf^$important\n@@||cps-rca.cf^$important\n@@||acap.cf^$important",
+           "! Manually updated AdGuard Home version of the whitelisted domains from the other versions of this list.\n@@||coolcmd.tk^$important\n@@||budterence.tk^$important\n@@||intr0.tk^$important\n@@||google.tk^$important\n@@||transportnews.tk^$important\n@@||unicorncardlist.tk^$important\n@@||c0d3c.tk^$important\n@@||loljp-wiki.tk^$important\n@@|| ninetail.tk^$important\n@@|| goshujin.tk^$important\n@@|| graph.tk^$important\n@@||google.ga^$important\n@@||filtri-dns.ga^$important\n@@||google.ml^$important\n@@||deimos.gq^$important\n@@||1hos.cf^$important\n@@||intr0.cf^$important\n@@||ivoid.cd^$important\n@@||domainvoider.cf^$important\n@@||google.cf^$important\n@@||rths.cf^$important\n@@||anonytext.tk^$important\n@@||tokelau-info.tk^$important\n@@||fakaofo.tk^$important\n@@||nukunonu.tk^$important\n@@||anpigabon.ga^$important\n@@||dgdi.ga^$important\n@@||voitures.ga^$important\n@@||mobili.ml^$important\n@@||inege.gq^$important\n@@||tvgelive.gq^$important\n@@||comprarcarros.gq^$important\n@@||voitures.cf^$important\n@@||assembleenationale-rca.cf^$important\n@@||cps-rca.cf^$important\n@@||acap.cf^$important",
            line
         )
 
