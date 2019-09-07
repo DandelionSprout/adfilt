@@ -1,31 +1,36 @@
 [Adblock Plus 3.1]
 ! Title: 🎬 Stop Autoplay On YouTube
-! Expires: 14 days
-! Version: 06September2019v3
+! Expires: 7 days
+! Version: 07September2019v1
 ! Description: Are you tired of having to turn off autoplay on YouTube, Vimeo, and other video sites every time you e.g. go to incognito mode? Do you work in classrooms/courserooms and don't want to accidentally show unfitting videos to your students/coursetakers? Are you worried of having to use specific extensions just for that purpose? Then this list is for you.
+! Special thanks to https://github.com/llacb47 for waterproofing large parts of this list.
 ! For more information about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
 ! ——— YouTube ———
 /watch_autoplayrenderer.js$script,domain=youtube.com
-/annotations_module.js$script,domain=youtube.com
-/endscreen.js$script,domain=youtube.com
+!!!/annotations_module.js$script,domain=youtube.com
+!!!/endscreen.js$script,domain=youtube.com
 youtube.com###head.ytd-compact-autoplay-renderer
 youtube.com##.checkbox-on-off
 youtube.com##.watch-sidebar-head
 m.youtube.com##.ytm-autonav-bar
 
 ! ——— Vimeo ———
-autoplay=true$xmlhttprequest,domain=vimeo.com
-vimeo.com#?#._3--Od:-abp-contains(Up next)
+&stream_pos=0&autoplay=true$xmlhttprequest,domain=vimeo.com
+vimeo.com##.iris_progress-container
 vimeo.com##.pagination_holder
-vimeo.com##._1Nl2a
+vimeo.com##._16rrx
 
 ! ——— Rumble ———
 ||rumble.com/embedJS/u3/?request=related$xmlhttprequest
 
 ! ——— TED ———
+!#if !ext_ublock
 ! Note: Once the outro screen is triggered and blocked, the page has to be reloaded to play the same video again. It also remains stuck on an ominously red-tinted frame when it happens.
 ||pb.tedcdn.com/bumpers/hls/video/out/$xmlhttprequest,domain=ted.com
+!#endif
 
 ! ——— DailyMotion ———
 ! WIP (Contingent on me getting help with writing anti-script-or-XHR entries)
+
+!#include https://raw.githubusercontent.com/DandelionSprout/adfilt/master/uBO%20list%20extensions/StopAutoplayOnYouTube-uBOExtension.txt
