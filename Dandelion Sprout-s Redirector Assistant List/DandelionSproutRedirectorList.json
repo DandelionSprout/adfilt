@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.2",
-    "createdAt": "2019-05-15T01:02:39.032Z",
+    "createdAt": "2019-09-08T10:52:37.200Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -152,6 +152,22 @@
             ]
         },
         {
+            "description": "{Hidden webpages 5} Change more Twitter images to functionally readable images, so that they can be easily opened in image applications",
+            "exampleUrl": "https://pbs.twimg.com/media/EA94YMzVUAAbeow.png:large",
+            "exampleResult": "https://pbs.twimg.com/media/EA94YMzVUAAbeow.png",
+            "error": null,
+            "includePattern": "https://pbs.twimg.com*png:large",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://pbs.twimg.com$1png",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
             "description": "{Raw image res upgrade 1} Making Google Play Books image files absolutely gigantic",
             "exampleUrl": "https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_6-jpg&img=1&zoom=6&cds=2&sig=ACfU3U2B7mOgKtLwErV4ilT8LZClbz_j_Q&w=800&h=1142&cp_ksver=2%3DTOmEQCfW7N0.&source=ge-web-app",
             "exampleResult": "https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_6-jpg&img=1&zoom=6&cds=2&sig=ACfU3U2B7mOgKtLwErV4ilT8LZClbz_j_Q&h=8000&cp_ksver=2%3DTOmEQCfW7N0.&source=ge-web-app",
@@ -232,67 +248,37 @@
             ]
         },
         {
-            "description": "{Raw image res upgrade 6} Roughly doubles the raw size of certain (but far from all) DeviantArt images (Part 1)",
-            "exampleUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/004a55bc-9e61-451c-b078-f196d1e33514/dcz3rxb-22c3e7d7-a947-430c-9709-3d88f97d6961.png/v1/fill/w_1024,h_1199,q_80,strp/illustrious__rubber_fun_by_parangsakti_dcz3rxb-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE5OSIsInBhdGgiOiJcL2ZcLzAwNGE1NWJjLTllNjEtNDUxYy1iMDc4LWYxOTZkMWUzMzUxNFwvZGN6M3J4Yi0yMmMzZTdkNy1hOTQ3LTQzMGMtOTcwOS0zZDg4Zjk3ZDY5NjEucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.c3R2PnikiCyzf5X6GA1rZzp-jhQX0QdM_8ugGnqStkw",
-            "exampleResult": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/004a55bc-9e61-451c-b078-f196d1e33514/dcz3rxb-22c3e7d7-a947-430c-9709-3d88f97d6961.png/v1/fill/w_5000,h_5000/illustrious__rubber_fun_by_parangsakti_dcz3rxb-fullview.jpg",
+            "description": "{Good link shortening 1} Makes internal Facebook pages easier to link to",
+            "exampleUrl": "https://www.facebook.com/johnmadden/?__tn__=Mooo",
+            "exampleResult": "https://www.facebook.com/johnmadden/",
             "error": null,
-            "includePattern": "https://images-wixmp-*.wixmp.com/f/*.png/*/w_*,h_*,q_*/*?token=*",
+            "includePattern": "*facebook.com*?__tn__=Mooo*",
             "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://images-wixmp-$1.wixmp.com/intermediary/f/$2.png/$3/w_5000,h_5000/$7",
+            "patternDesc": "Special thanks to https://github.com/FlandreDaisuki/Facebook-Dont-Track-Me for this entry.",
+            "redirectUrl": "$1facebook.com$2",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
             "appliesTo": [
-                "main_frame"
+                "main_frame",
+                "xmlhttprequest"
             ]
         },
         {
-            "description": "{Raw image res upgrade 7) Roughly doubles the raw size of certain (but far from all) DeviantArt images (Part 2)",
-            "exampleUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f3d3d76e-38c9-4d01-91cc-19062b55f8aa/d1hrntc-febbf6f2-c400-46d0-b8d8-5c08d7774cb8.jpg/v1/fill/w_600,h_778,q_75,strp/mermade_2__the_sequel_by_robaato_d1hrntc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzc4IiwicGF0aCI6IlwvZlwvZjNkM2Q3NmUtMzhjOS00ZDAxLTkxY2MtMTkwNjJiNTVmOGFhXC9kMWhybnRjLWZlYmJmNmYyLWM0MDAtNDZkMC1iOGQ4LTVjMDhkNzc3NGNiOC5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.WqbOAXXjYeaiFyAWAu3yzjHwy2rRggd-63wQP8RSXh4",
-            "exampleResult": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/f3d3d76e-38c9-4d01-91cc-19062b55f8aa/d1hrntc-febbf6f2-c400-46d0-b8d8-5c08d7774cb8.jpg/v1/fill/w_5000,h_5000,q_100/mermade_2__the_sequel_by_robaato_d1hrntc-fullview.jpg",
+            "description": "{Good link shortening 2} Makes external links on Facebook pages lead directly to the intended pages",
+            "exampleUrl": "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.nrk.no%2F",
+            "exampleResult": "https://www.nrk.no/",
             "error": null,
-            "includePattern": "https://images-wixmp-*.wixmp.com/f/*.jpg/*/w_*,h_*,q_*/*?token=*",
+            "includePattern": "https://l.facebook.com/l.php?u=htt*%3A%2F%2F*%2F*",
             "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://images-wixmp-$1.wixmp.com/intermediary/f/$2.jpg/$3/w_5000,h_5000,q_100/$7",
+            "patternDesc": "Special thanks to https://github.com/FlandreDaisuki/Facebook-Dont-Track-Me for this entry.",
+            "redirectUrl": "htt$1://$2/",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
             "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "{Good link shortening 1} Makes Google searches easier to link to (Part 1)",
-            "exampleUrl": "https://www.google.no/search?num=20&newwindow=1&ei=gonDW9qlJc3ykwXT3bWQDQ&q=john+madden&oq=jo&gs_l=psy-ab.3.0.35i39k1l2j0i131k1l2j0i67k1j0i131k1l2j0i67k1j0i131k1l2.39873.40874.0.42590.4.3.1.0.0.0.170.454.0j3.3.0....0...1c.1.64.psy-ab..0.4.454...0j0i131i67k1.0.mR6HhG_pB30",
-            "exampleResult": "https://www.google.no/search?num=20&newwindow=1&q=john+madden",
-            "error": null,
-            "includePattern": "https://www.google.*/search?num=*&newwindow=*&*&q=*&*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.google.$1/search?num=$2&newwindow=$3&q=$5",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "{Good link shortening 2} Makes Google searches easier to link to (Part 2)",
-            "exampleUrl": "https://www.google.no/search?q=john+madden&num=20&newwindow=1&source=lnt&tbs=lr:lang_1no&lr=lang_no&sa=X&ved=0ahUKEwiIqYfax4beAhVOCKwKHfvLA5MQpwUIJA&biw=1440&bih=2418",
-            "exampleResult": "https://www.google.no/search?q=john+madden&num=20&newwindow=1&lr=lang_no",
-            "error": null,
-            "includePattern": "https://www.google.*/search?q=*&source=*&lr=lang_*&*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.google.$1/search?q=$2&lr=lang_$4",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
+                "main_frame",
+                "xmlhttprequest"
             ]
         },
         {
