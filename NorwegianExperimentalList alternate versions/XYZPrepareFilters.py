@@ -342,7 +342,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.4\]", 
+           r"\[Adblock Plus .*\]", 
            "msFilterList", 
            line
         )
@@ -451,8 +451,8 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "Expires: ", 
-           "expires = ", 
+           "# Expires: ", 
+           ": expires = ", 
            line
         )
 
@@ -1214,7 +1214,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.4\]", 
+           r"\[Adblock Plus .*\]", 
            "msFilterList", 
            line
         )
@@ -1245,13 +1245,31 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "\^", 
+           r"~([a-z0-9].*?)\|", 
+           r"\n+d \1", 
+           line
+        )
+
+        line = re.sub(
+           r"\$doc,domain=.*", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\$.*", 
+           r"-d (\..*)\^", 
+           r"- *\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^- \^.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"\^", 
            "", 
            line
         )
@@ -1269,20 +1287,8 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "-d \.", 
-           "- ", 
-           line
-        )
-
-        line = re.sub(
            "com\* ", 
            "com ", 
-           line
-        )
-
-        line = re.sub(
-           r"([-][d].*[.][*].*)", 
-           "", 
            line
         )
 
@@ -1295,6 +1301,12 @@ def prepare_tpl(lines) -> str:
         line = re.sub(
            "@@_", 
            "+d _", 
+           line
+        )
+
+        line = re.sub(
+           r"^\.[a-z]", 
+           "", 
            line
         )
 
@@ -1323,8 +1335,8 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "Expires: ", 
-           "expires = ", 
+           "# Expires: ", 
+           ": expires = ", 
            line
         )
 
@@ -1395,24 +1407,6 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^- agency$", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"^- gdn$", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"^- bid$", 
-           "", 
-           line
-        )
-
-        line = re.sub(
            r"^-d .*\*\..*", 
            "", 
            line
@@ -1420,6 +1414,78 @@ def prepare_tpl(lines) -> str:
 
         line = re.sub(
            r"^- https\?.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r":  (.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r":  (.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           "Windows Mac", 
+           "Windows/Mac", 
+           line
+        )
+
+        line = re.sub(
+           r"\$domain.*", 
            "", 
            line
         )

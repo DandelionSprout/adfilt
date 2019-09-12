@@ -1,5 +1,5 @@
 
-! Version: 04September2019v1
+! Version: 08September2019v1
 
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
@@ -532,6 +532,8 @@ win-xp.no#?#tr > td > div:-abp-has(a[href*="clk.tradedoubler."])
 woman.dk##.gutter-bottom.article-content > div.wg-banner
 ||730.no/banner/*/sonymusic/$subdocument
 ||gaysir.no/rek/bb_inline$subdocument
+dmi.dk##.add-container
+dmi.dk#?#.large-6:-abp-has(:scope > .section-1-ad)
 ! — — — — —
 ! https://sol.no/
 ##.advertisement
@@ -620,6 +622,8 @@ techstart.dk##+js(set-constant.js, adblock, false)
 dagensbyggeri.dk##+js(setTimeout-defuser.js, (), 2500)
 @@||eurosport.*^$generichide
 godt.no##.adblock-info-box
+||imasdk.googleapis.com/pal/sdkloader/pal.js$script,redirect=noopjs,domain=dplay.dk|dplay.no
+||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.dk|dplay.no
 !#if !ext_ublock
 @@||bildeler.name$generichide
 @@||reservedele.name$generichide
@@ -974,6 +978,10 @@ fuglelyder.net#@##banner_ad
 ||arvetellefsen.no/curry^
 ||handelihalden.no^
 ||holmedalblikk.no^
+||vipps-sikkerhet.*^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Vipps
+||*/dnb11111/^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av DNB
+||nymelding.com^$doc
+||mrcal365.com^$doc,domain=~ Warning displayed due to: Bitcoin scam fraudsters.
 
 ! 🇳🇴: Som nevnt i https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
 ! 🇬🇧: As mentioned in https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841

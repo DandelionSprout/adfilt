@@ -1,9 +1,9 @@
 msFilterList
-# Version: 04September2019v1-Beta
-# Version: 040920191 (for Adblock Plus' issue report system)
+# Version: 08September2019v1-Beta
+# Version: 080920191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# expires = 1
+: expires = 1
 # Lisens   Licence: https:  github.com DandelionSprout adfilt blob master LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https:  github.com DandelionSprout adfilt blob master Wiki General-info.md#norsk
 # 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information, detaljer, nyttige værktøjer og andre lister, jeg har lavet, besøg https:  github.com DandelionSprout adfilt blob master Wiki General-info.md
@@ -118,6 +118,8 @@ contentMarketing
 +d eurosport.no
 -d vg.no cnp-assets src sites vg components AdblockModal
 +d eurosport.*
+-d imasdk.googleapis.com pal sdkloader pal.js
+-d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com 
 +d bildeler.name
 +d reservedele.name
 +d eurosport.no,eurosport.dk
@@ -261,6 +263,9 @@ contentMarketing
 -d arvetellefsen.no curry
 -d handelihalden.no
 -d holmedalblikk.no
+- dnb11111 
+-d nymelding.com
+-d mrcal365.com
 # 🇳🇴: Som nevnt i https:  www.dagbladet.no kultur jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen 70487841
 # 🇬🇧: As mentioned in https:  www.dagbladet.no kultur jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen 70487841
 -d breakoutstory24.com
