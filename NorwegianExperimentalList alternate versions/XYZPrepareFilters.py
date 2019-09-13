@@ -510,6 +510,78 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
@@ -1485,7 +1557,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"\$domain.*", 
+           r"\$.*", 
            "", 
            line
         )

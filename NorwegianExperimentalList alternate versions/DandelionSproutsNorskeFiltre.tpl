@@ -1,6 +1,6 @@
 msFilterList
-# Version: 08September2019v1-Beta
-# Version: 080920191 (for Adblock Plus' issue report system)
+# Version: 13September2019v1-Beta
+# Version: 130920191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -247,21 +247,12 @@ contentMarketing
 -d norwayexpress24.com
 -d prisjakt.org
 -d postnord-norge.com
--d streetdance.no
 -d 102.112.2o7.net
--d vetscan.no
 -d tromselementbygg.no
--d brannloftet.no
--d butikk.losnaspelet.no
 -d no.zxxyw.com
--d oyelege.no
--d fanadyreklinikk.no
 -d digitoday.com
--d komtilmil.no
 -d apple-account-locked.losjevegen.no
--d arendalfotball.no
 -d arvetellefsen.no curry
--d handelihalden.no
 -d holmedalblikk.no
 - dnb11111 
 -d nymelding.com
