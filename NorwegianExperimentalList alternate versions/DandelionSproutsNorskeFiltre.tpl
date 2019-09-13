@@ -4,11 +4,11 @@ msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
-# Lisens   Licence: https:  github.com DandelionSprout adfilt blob master LICENSE.md
-# 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https:  github.com DandelionSprout adfilt blob master Wiki General-info.md#norsk
-# 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information, detaljer, nyttige værktøjer og andre lister, jeg har lavet, besøg https:  github.com DandelionSprout adfilt blob master Wiki General-info.md
-# Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https:  github.com DandelionSprout adfilt blob master Wiki General-info.md#english
-# If you wish to remove cookie banners from Nordic websites, check out https:  www.i-dont-care-about-cookies.eu 
+# Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
+# 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
+# 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information, detaljer, nyttige værktøjer og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
+# Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+# If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
 # 🇳🇴: Ukategoriserte oppføringer
 # 🇩🇰: Ukategoriserede opføringer
 # 🇬🇧: Uncategorised entries
@@ -87,15 +87,15 @@ contentMarketing
 -d 730.no banner * sonymusic 
 -d gaysir.no rek bb_inline
 # — — — — —
-# https:  sol.no 
-# http:  www.qxl.no 
-# https:  www.vtb.no 
-# https:  vafo.dk 
-# https:  reelligestilling.dk 
-# https:  www.rbnett.no 
-# https:  www.op.no 
-# https:  journalisten.dk 
-# http:  www.altomfotball.no 
+# https://sol.no/
+# http://www.qxl.no/
+# https://www.vtb.no/
+# https://vafo.dk/
+# https://reelligestilling.dk/
+# https://www.rbnett.no/
+# https://www.op.no/
+# https://journalisten.dk/
+# http://www.altomfotball.no/
 # dv.is
 # dinside.no, seher.no
 # 🇬🇧: Empty divider spaces (Section under construction)
@@ -111,7 +111,7 @@ contentMarketing
 -d scripts.tv2a.dk oil 
 # 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
 +d api.instagram.com
-# 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https:  forums.lanik.us viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
+# 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
 +d bondebladet.screen9.tv
 +d sixscissors.com
 -d elderlyscissors.com
@@ -192,22 +192,22 @@ contentMarketing
 # 🇩🇰: Tilføjet efter anmodninger fra tilhængere og bidragydere
 # 🇬🇧: Added on requests from fans and contributors
 -d sannsyn.com
-# https:  github.com DandelionSprout adfilt issues 7#issuecomment-493478718
+# https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-493478718
 # 🇳🇴: Nettsteder jeg nekter å besøke selv for å førstehåndsteste oppføringene
 # 🇬🇧: Sites that I refuse to visit on my own to test the entries
 # 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
-# Takk til THEtomaso (https:  github.com THEtomaso) for de fleste av disse oppføringene.
+# Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud)
-# Tak til THEtomaso (https:  github.com THEtomaso) for de fleste av disse opføringer.
+# Tak til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/opføringer.
 # 🇬🇧: De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out)
-# Thanks to THEtomaso (https:  github.com THEtomaso) for most of these entries.
+# Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
 -d dagligvarehandelen.no sites all themes custom ledelseas gfx veil.png
 # ——————————————————————————————————————————————————————————————————————————————————————————————————————
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
 # 🇳🇴: Nordensrelaterte oppføringer som har blitt foreslått for store internasjonale lister, men som ikke har blitt lagt til dem som det er meg bekjent
 # 🇩🇰: Nordenrelaterede poster, der er blevet foreslået til store internationale lister, men som ikke er blevet tilføjet til dem endnu som det er meg bekendt
 # 🇬🇧: Nordics-related entries that have been suggested to major international lists, but which haven't been added to them yet or for long
-# https:  github.com easylist easylist issues 1861
+# https://github.com/easylist/easylist/issues/1861
 +d _prebid_
 # 🇳🇴: Hvitelisting av sporere som er nødvendige for brukere av Prisjakt, Kickback, og Viatrumf
 # 🇩🇰: Tracker-hvidlistninger, der er nødvendige for brugere af Prisjakt, Kickback og Viatrumf (Norske handletjenester)
@@ -217,11 +217,11 @@ contentMarketing
 # 🇳🇴: Lagt til fordi min egen mor (Hun er i 40-årene) trodde jeg hadde rotet til PCen hennes, når den i stedet bare viste en uBO-sideadvarsel på grunn av en oppføring i «AdGuards hovedfilter», også kjent som AdGuard Base.
 # 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
 # 🇳🇴: Landseksklusive versjoner for enkle reklameblokkerere, av flernasjonsoppføringer som er i utvidelsesfilen for avanserte reklameblokkerere; ettersom Adblock Plus og AdGuard for øyeblikket ikke støtter *-jokertegn i nettadressene til blokkeringsregler.
-# ABP diskuterte på et tidspunkt å støtte det i https:  issues.adblockplus.org ticket 6773, men det bunnet ut i ingenting.
+# ABP diskuterte på et tidspunkt å støtte det i https://issues.adblockplus.org/ticket/6773,/men/det/bunnet/ut/i ingenting.
 # 🇩🇰: Landseksklusive versioner til enkle adblockere, af flerlandsposter, der findes i udvidelsesfilen for avancerede adblockere; eftersom Adblock Plus og AdGuard i øjeblikket ikke understøtter * -jokertegn i blokeringsregel-URL-er.
-# ABP drøftede på et tidspunkt at støtte det i https:  issues.adblockplus.org ticket 6773, men det førede ikke til noget.
+# ABP drøftede på et tidspunkt at støtte det i https://issues.adblockplus.org/ticket/6773,/men/det/førede/ikke/til noget.
 # 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
-# ABP was at one point discussing supporting it in https:  issues.adblockplus.org ticket 6773, but it stranded out into nothing.
+# ABP was at one point discussing supporting it in https://issues.adblockplus.org/ticket/6773,/but/it/stranded/out/into nothing.
 # 🇬🇧: Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 # Wildcard versions of various entries. Because why only block on one national version of a site, when you can nowadays block on all versions of a site without cluttering things up?
 # ——————————————————————————————————————————————————————————————————————————————————————————
@@ -257,36 +257,36 @@ contentMarketing
 - dnb11111 
 -d nymelding.com
 -d mrcal365.com
-# 🇳🇴: Som nevnt i https:  www.dagbladet.no kultur jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen 70487841
-# 🇬🇧: As mentioned in https:  www.dagbladet.no kultur jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen 70487841
+# 🇳🇴: Som nevnt i https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
+# 🇬🇧: As mentioned in https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
 -d breakoutstory24.com
 -d thefivereport.online
 -d abafort.us
-# 🇳🇴: Som nevnt i https:  www.tv2.no nyheter 10493336 
+# 🇳🇴: Som nevnt i https://www.tv2.no/nyheter/10493336/
 -d rnbinance.com
 -d brightertrade.com
-# Som nevnt i https:  www.nrk.no ytring 1.14496024
+# Som nevnt i https://www.nrk.no/ytring/1.14496024
 -d cost2buy.net
-# Som nevnt i https:  www.nrk.no norge 1.14511067
+# Som nevnt i https://www.nrk.no/norge/1.14511067
 -d com-fryd.com
 -d com-norwegian.com
-# Som nevnt i https:  www.aftenposten.no osloby i mRK8xq Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
+# Som nevnt i https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
 -d ruter.top
-# Som nevnt i https:  www.faktisk.no faktasjekker YAb nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
+# Som nevnt i https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
 -d 101mesh.com
 -d gokkw.com
 -d earnmoneyglobal.com
-# Som nevnt i https:  www.datahjelperne.no stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel 
+# Som nevnt i https://www.datahjelperne.no/stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel/
 -d trendyn.me
-# Som nevnt i https:  www.datahjelperne.no verifiser-get-konto-falsk-mail 
-# Som nevnt i https:  www.datahjelperne.no falske-telenor-undersokelser 
+# Som nevnt i https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
+# Som nevnt i https://www.datahjelperne.no/falske-telenor-undersokelser/
 -d surveryrewards1.com
-# Som nevnt i https:  www.nrk.no mr 1.14649436
+# Som nevnt i https://www.nrk.no/mr/1.14649436
 -d pprfct.com
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
-# Source: https:  www.forbrukertilsynet.no netthandel falske-nettbutikker.
+# Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
 -d adamaruiz.org
 -d adidasko.com
 -d adidassuperstarnorge.com

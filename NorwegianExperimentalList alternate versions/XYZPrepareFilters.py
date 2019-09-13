@@ -511,6 +511,12 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
+           r":  (.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
            r"://(.*?) ", 
            r"://\1/", 
            line
