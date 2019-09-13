@@ -33,7 +33,7 @@ def prepare_ag(lines) -> str:
         # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
         line = re.sub(
            r"([\$,])doc.*", 
-           "\1empty,important", 
+           r"\1empty,important", 
            line
         )
 
