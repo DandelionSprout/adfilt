@@ -1166,7 +1166,7 @@ def prepare_shadowsocks(lines) -> str:
         )
 
         line = re.sub(
-           r"^([^DU].*?\.[a-z][a-z][a-z]?[a-z]?)$", 
+           r"^([^DU].*?\.[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?)$", 
            r"DOMAIN-SUFFIX,\1", 
            line
         )
