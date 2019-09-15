@@ -812,6 +812,8 @@ OUTPUT_LS = 'LittleSnitchNorwegianList.lsrules'
 OUTPUT_DNSMASQ = 'NordicFiltersDnsmasq.conf'
 OUTPUT_HOSTSDENY = 'NordicFiltersHostsDeny.deny'
 OUTPUT_PIHOLE = 'NordicFiltersPiHole.txt'
+OUTPUT_AGH = 'NordicFiltersAdGuardHome.txt'
+OUTPUT_SHADOWSOCKS = 'NordicFiltersSocks5.list'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -1085,6 +1087,124 @@ def prepare_pihole(lines) -> str:
 
     return text
 
+# ————— AdGuard Home version —————
+
+def prepare_agh(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for AdGuard Home)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for AdGuard Home)", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for those who use AdGuard Home and its oddly specific subset of adblocker syntaxes.", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9*].*)$", 
+           r"||\1^", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+# ————— Shadowsocks version —————
+
+def prepare_shadowsocks(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for Shadowsocks)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for Shadowsocks)", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for those who use Shadowsocks, Shadowrocket, and other Socks5-based tools that have become popular in PR-China for several reasons.", 
+           line
+        )
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*?\.[a-z0-9].*?\.[a-z].*)$", 
+           r"DOMAIN,\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^([^D].*)\.\*.*\.(.*)", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.*\\.\2", 
+           line
+        )
+
+        line = re.sub(
+           r"^([^DU].*?\.[a-z][a-z][a-z]?[a-z]?)$", 
+           r"DOMAIN-SUFFIX,\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.(.*)\.\*", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.\2\\.*", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.(.*)-\*$", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.\2-*", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.\*\.(.*)", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.*\\.\2", 
+           line
+        )
+
+        line = re.sub(
+           r"^\*\.(.*)\.\*", 
+           r"URL-REGEX,^https?:\\/\\/\*\\.\1\\.*", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.\*$", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.*", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -1096,6 +1216,8 @@ if __name__ == "__main__":
     dnsmasq_filter = prepare_dnsmasq(lines)
     hostsdeny_filter = prepare_hostsdeny(lines)
     pihole_filter = prepare_pihole(lines)
+    agh_filter = prepare_agh(lines)
+    shadowsocks_filter = prepare_shadowsocks(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -1114,6 +1236,12 @@ if __name__ == "__main__":
 
     with open(OUTPUT_PIHOLE, "w") as text_file:
         text_file.write(pihole_filter)
+
+    with open(OUTPUT_AGH, "w") as text_file:
+        text_file.write(agh_filter)
+
+    with open(OUTPUT_SHADOWSOCKS, "w") as text_file:
+        text_file.write(shadowsocks_filter)
 
     print('The domains-based list versions have been generated.')
 
