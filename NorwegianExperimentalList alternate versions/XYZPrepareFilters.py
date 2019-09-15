@@ -811,6 +811,7 @@ OUTPUT_HOSTS = 'AdawayHosts'
 OUTPUT_LS = 'LittleSnitchNorwegianList.lsrules'
 OUTPUT_DNSMASQ = 'NordicFiltersDnsmasq.conf'
 OUTPUT_HOSTSDENY = 'NordicFiltersHostsDeny.deny'
+OUTPUT_PIHOLE = 'NordicFiltersPiHole.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -861,7 +862,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"# Platform notes:.*", 
-           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including Blokada, DNS66, Gas Mask, Diversion, and many others; as well as those who edit their OS' «hosts» system file.", 
+           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.", 
            line
         )
 
@@ -1019,6 +1020,71 @@ def prepare_hostsdeny(lines) -> str:
 
     return text
 
+# ————— Pi-hole version —————
+
+def prepare_pihole(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for Pi-hole)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for Pi-hole)", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for those who make use of the Regex functionality in Pi-Hole.", 
+           line
+        )
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.(.*)\.\*", 
+           r"(^|\.)\1\\.\2\\..*$", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.\*$", 
+           r"(^|\.)\1\\..*$", 
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\.(.*)-\*", 
+           r"(^|\.)\1\\.\2-*$", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.\*\.(.*)", 
+           r"(^|\.)\1\\..*\\.\2$", 
+           line
+        )
+
+        line = re.sub(
+           r"^\*\.(.*)\.\*", 
+           r"(^|\.)*\\.\1\\..*$", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -1029,6 +1095,7 @@ if __name__ == "__main__":
     ls_filter = prepare_ls(lines)
     dnsmasq_filter = prepare_dnsmasq(lines)
     hostsdeny_filter = prepare_hostsdeny(lines)
+    pihole_filter = prepare_pihole(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -1044,6 +1111,9 @@ if __name__ == "__main__":
 
     with open(OUTPUT_HOSTSDENY, "w") as text_file:
         text_file.write(hostsdeny_filter)
+
+    with open(OUTPUT_PIHOLE, "w") as text_file:
+        text_file.write(pihole_filter)
 
     print('The domains-based list versions have been generated.')
 
