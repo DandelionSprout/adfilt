@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 14September2019v1-Alpha
+! Version: 18September2019v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -54,6 +54,7 @@
 ##.fb-page-plugin
 ##.figure-share
 ##.floating-share-bar
+##.floating-share-bar
 ##.follow
 ##.follow_like_module
 ##.footerSocial
@@ -66,6 +67,7 @@
 ##.linkedinShare
 ##.loader-container.shares
 ##.mashsb-box
+##.news-share-link
 ##.news_share
 ##.pinterest-share
 ##.pinterest[href*="/pin/create/"]
@@ -73,6 +75,7 @@
 ##.recentsocial
 ##.sbtn_main
 ##.share
+##.share-actions
 ##.share-article
 ##.share-article-vertical
 ##.share-bar
@@ -80,16 +83,20 @@
 ##.share-facebook
 ##.share-icon
 ##.share-it
+##.share-item-plus
 ##.share-list
 ##.share-metas
 ##.share-nw
 ##.share-pinterest
+##.share-reddit
+##.share-this
 ##.share-toggle
 ##.share-toolbar
 ##.share_area
 ##.share_btn
 ##.share_toggle
 ##.shareBottom
+##.ShareButton
 ##.ShareButtons
 ##.shareit
 ##.sharethis-wrapper
@@ -98,6 +105,7 @@
 ##.sharing-btn
 ##.sharing-container
 ##.sharing-item
+##.sharing.social
 ##.sns
 ##.soc-list
 ##.social-action[test-id*="facebook"]
@@ -122,20 +130,26 @@
 ##.twitter-share
 ##.twitter.share-icon
 ##.twitter[href*="/share?"]
+##[app="addtoany"]
 ##[data-flip-widget="shareflip"]
 ##[socialshare]
+##a[class$="sharebtn"]
 ##a[class*="-sharing-popup"]
 ##a[class*="-socials__item"]
 ##a[class*="BtnShare"]
+##a[class*="BtnShare"]
+##a[class*="google_plus_share"]
 ##a[class*="share__button"]
 ##a[class*="social-share"]
 ##a[class="facebook" i][title="Share this"]
 ##a[class="twitter" i][title="Tweet"]
 ##a[class^="addthis_button"]
 ##a[class^="pagetools"][class*="icon--twitter"]
+##a[class^="pinterest-save"]
 ##a[class^="share_btn"]
 ##a[class^="socialbutton" i][onclick*="window.open"]
 ##a[data-ga-event-action^="share:"]
+##a[data-pin-do="buttonPin"]
 ##a[data-share$="Facebook" i]
 ##a[data-type="sharing-button"]
 ##a[href*="://plus.google.com/share?url="]
@@ -147,6 +161,7 @@
 ##a[href*="pinterest.com/pin/create/button/?"]
 ##a[href*="share-tools"]
 ##a[href^="/sharer/sharer.php?"] > button[type="submit"]
+##a[href^="https://api.whatsapp.com/send?text=http"]
 ##a[href^="https://plus.google.com/share?url=http"]
 ##a[href^="https://twitter.com/intent/tweet?"]
 ##a[href^="https://twitter.com/share?text="][href*="/&via="]
@@ -182,7 +197,6 @@
 ##div[class*="share-box"]
 ##div[class*="share-content"]
 ##div[class*="share-link"]
-##div[class*="sharebar"]
 ##div[class*="sharer-tool"]
 ##div[class*="sharethisbutton" i]
 ##div[class*="shareToolbar"]
@@ -223,6 +237,7 @@
 ##span[data-lnkd-debug]
 ##ul[class*="-share-buttons"]
 ##ul[class*="-soc-list"]
+##ul[class^="share-action"]
 ##ul[class^="sociale-ikoner-del"]
 /share/facebook-icon.png$image
 /share/reddit-icon.png$image
@@ -234,36 +249,24 @@
 /sharing/twitter.$image
 ||addthis.com/static/btn/sm-share*.gif
 ||apis.google.com/*/+1/fastbutton$subdocument
+||assets.pinterest.com/js/pinit*^
 ||facebook.com/*/plugins/like.php$subdocument
 ||facebook.com/*/plugins/share_button.php?app_id$subdocument
 ||facebook.com/plugins/page.php$subdocument
 ||facebook.com/plugins/share_button$subdocument
 ||platform.twitter.com/widgets/follow_button$subdocument
 ||platform.twitter.com/widgets/tweet_button$subdocument
+||social-plugins.line.me/widget/share?url=$subdocument
 ||softwareok.com/img/i_like_this.png?$image
 ||widgets.getpocket.com/v1/button?label=pocket$subdocument
+||ws.sharethis.com^$third-party
 ||www.facebook.com/plugins/like.php$subdocument
 ||yastatic.net/share/*-icon.*
+~allrecipes.com##div[class*="sharebar"]
 ~mewe.com##button[class*="share-button"]
 ~pinterest.*##a[href^="https://pinterest.com/pin/create/bookmarklet/"]
-~tecmint.com,~ostechnix.com##.share
-||ws.sharethis.com^$third-party
-##.ShareButton
-##[app="addtoany"]
-##a[class*="BtnShare"]
-##.news-share-link
-##.share-item-plus
-##a[class$="sharebtn"]
-##.sharing.social
-##.share-reddit
-||social-plugins.line.me/widget/share?url=$subdocument
-##a[class*="google_plus_share"]
-##.floating-share-bar
-||assets.pinterest.com/js/pinit*^
-##a[class^="pinterest-save"]
-##a[data-pin-do="buttonPin"]
 ~reddit.com##a[href*="://www.reddit.com/submit?"]
-##a[href^="https://api.whatsapp.com/send?text=http"]
+~tecmint.com,~ostechnix.com##.share
 
 ! Exceptionally annoying leftover floating bars
 pixivision.net##._floated-bottom-bar
