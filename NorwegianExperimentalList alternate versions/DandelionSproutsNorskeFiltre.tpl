@@ -1,6 +1,6 @@
 msFilterList
-# Version: 14September2019v1-Beta
-# Version: 140920191 (for Adblock Plus' issue report system)
+# Version: 19September2019v1-Beta
+# Version: 190920191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -81,6 +81,8 @@ msFilterList
 - nordicbet_logo
 - partners *_ad_icon
 contentMarketing
++d vgtv.no
+-d adnxs.com
 # — — — — —
 # framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
 # The ':not' exception is needed for opp.no
