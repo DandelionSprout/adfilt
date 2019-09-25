@@ -1,5 +1,5 @@
 
-! Version: 19September2019v1
+! Version: 22September2019v1
 
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
@@ -85,7 +85,6 @@ dn.no##[id^="googlead-"]:not(#googlead-toppbanner)
 dusken.no##.ad-col-article
 dusken.no##.ad-in-column
 dusken.no##em
-dust2.dk##.banner
 dyrevennene.no##.td-footer-wrapper
 parcferme.no##.wpb_raw_html.wpb_content_element.wpb_raw_code
 pjatt.is##.edgtf-logo-area
@@ -135,9 +134,9 @@ viafree.*##.pause-ad
 @@||fwmrm.net/ad/$xhr,domain=viafree.no|viafree.dk
 @@||fwmrm.net/crossdomain.xml$xhr,domain=viafree.no|viafree.dk
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.no|eurosport.dk
-||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
+||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
-||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
+||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
 /_bm/abd$script,domain=eurosport.no|eurosport.dk
 /linktag2.js$important,script,domain=viafree.no|viafree.dk
 ||avod-fw-config.mtg-api.com^$important,xhr,domain=viafree.no|viafree.dk
@@ -160,9 +159,6 @@ sol.no##:xpath(//div[starts-with(@id, "ad-topbanner-only0")]/../..)
 dagbladet.no#?#div[class^="css"]:matches-css-before(content: "Annonse")
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
 ||acdn.adnxs.com/ast/ast.js$script,redirect=noopjs,important,domain=vgtv.no
-
-||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=vg.no
-||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=vg.no
 ||damoh.vgtv.no/hic_qos$script,redirect=noopjs,domain=vg.no
 /entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
 ||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
@@ -171,7 +167,6 @@ google.*###tads
 google.*##.luhb-div
 google.*##.rlfl__tls > div[jstcache="0"]:not([class]):not([id])[-ext-has='span._mB']
 viaplay.*##.interaction-block
-prisjakt.*,prisjagt.dk##.adbox
 prisjakt.*,prisjagt.dk###footer_header
 eurogamer.*###leaderboard
 eurogamer.*##.advert
@@ -377,12 +372,12 @@ byggfakta.no,byggfaktabolig.no,vvsaktuelt.no###bannerContainer
 computerworld.dk###computerworldleaderboard
 computerworld.dk##.paragraphAd
 computerworld.dk#?#.columnLeftContent > div:-abp-has(.dfp-ad)
-dagens.dk##.banner
+dagens.dk,dust2.dk##.banner
 demokraten.no,avisa-hordaland.no,blv.no,bomlo-nytt.no,gat.no,lp.no,osogfusa.no,raumnes.no,setesdolen.no,sunnhordland.no,vaksdalposten.no,vtb.no##.banners
 dinavis.no##.newsAD
 dinside.no##.adunit-wrapper
 dinside.no#?#.columns.small-8:-abp-has(div[id^="ad-netboard"])
-dv.is##.adbox
+prisjakt.*,prisjagt.dk,dv.is##.adbox
 dv.is##.adbox_310x400
 dv.is##.ticker
 e24.no###main > div:nth-of-type(1)
@@ -608,6 +603,8 @@ pensjonistferie.no#@##adsense
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
 @@||api.instagram.com^$domain=www.samiteahter.org
+! Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy
+
 
 ! 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
 @@||bondebladet.screen9.tv^$generichide
@@ -729,8 +726,6 @@ tv2.no##.lab-skin-cm.medium-4.small-12.large-4.boxwrapper.tv2-story
 tv2.no##.doubleClickAd
 tv2.no##a[href*="&utm_source=Blogg"]
 @@||www.tv2.no/s/js/ads.js$script,1p
-! ↓ Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy. ↓
-
 
 ! Nettavisen
 ! It was difficult to place the line between adticles that had educational values and which ones that didn't, but I feel I did a decent job at it
@@ -832,7 +827,7 @@ nettavisen.no##.stuck
 nettavisen.no##.sticked
 nettavisen.no###ad_top
 ||sannsyn.com^$3p
-aftenbladet.no,aftenposten.no,bt.no,e24.no,fvn.no##[style="cursor: pointer;"]
+aftenbladet.no,aftenposten.no,bt.no,e24.no,fvn.no##[style="cursor: pointer;"]:not([class*="jw-display"])
 ! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-493478718
 bilnorge.no#?#tr:-abp-has( >td:-abp-contains(Annonse:))
 bilnorge.no###artikkel300x250right

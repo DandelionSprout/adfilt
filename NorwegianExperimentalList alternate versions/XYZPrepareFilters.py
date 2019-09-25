@@ -814,6 +814,9 @@ OUTPUT_HOSTSDENY = 'NordicFiltersHostsDeny.deny'
 OUTPUT_PIHOLE = 'NordicFiltersPiHole.txt'
 OUTPUT_AGH = 'NordicFiltersAdGuardHome.txt'
 OUTPUT_SHADOWSOCKS = 'NordicFiltersSocks5.list'
+OUTPUT_RPZ = 'NordicFiltersRPZ.txt'
+OUTPUT_UNBOUND = 'NordicFiltersUnbound.conf'
+OUTPUT_MINERBLOCK = 'NordicFiltersForMinerBlock.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -1205,6 +1208,143 @@ def prepare_shadowsocks(lines) -> str:
 
     return text
 
+# ————— RPZ version —————
+
+def prepare_rpz(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)", 
+           r"\1 CNAME .", 
+           line
+        )
+
+        line = re.sub(
+           r"^# ", 
+           "; ", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "; Platform notes: This list version is intended for those who use BIND or other DNS server tools that support RPZ files.", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for BIND/RPZ)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for BIND/RPZ)", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+# ————— Unbound version —————
+
+def prepare_unbound(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)", 
+           r"local-zone: \"\1\" static", 
+           line
+        )
+
+        line = re.sub(
+           r"\\", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for those who use the DNS server tool Unbound.", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for Unbound)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for Unbound)", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+# ————— MinerBlock version —————
+
+def prepare_minerblock(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)", 
+           r"*://*.\1/*", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: So, let's say your company boss is not letting you install any adblocker on your awful work laptop, but (s)he lets you install MinerBlock for some indeterminable reason? In this very unlikely case, I've saved your day.\nNote: This list does not actually block any mining-related stuff.", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for MinerBlock)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for MinerBlock)", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -1218,6 +1358,9 @@ if __name__ == "__main__":
     pihole_filter = prepare_pihole(lines)
     agh_filter = prepare_agh(lines)
     shadowsocks_filter = prepare_shadowsocks(lines)
+    rpz_filter = prepare_rpz(lines)
+    unbound_filter = prepare_unbound(lines)
+    minerblock_filter = prepare_minerblock(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -1242,6 +1385,15 @@ if __name__ == "__main__":
 
     with open(OUTPUT_SHADOWSOCKS, "w") as text_file:
         text_file.write(shadowsocks_filter)
+
+    with open(OUTPUT_RPZ, "w") as text_file:
+        text_file.write(rpz_filter)
+
+    with open(OUTPUT_UNBOUND, "w") as text_file:
+        text_file.write(unbound_filter)
+
+    with open(OUTPUT_MINERBLOCK, "w") as text_file:
+        text_file.write(minerblock_filter)
 
     print('The domains-based list versions have been generated.')
 

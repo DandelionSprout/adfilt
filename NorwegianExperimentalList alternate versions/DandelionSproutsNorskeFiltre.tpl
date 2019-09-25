@@ -1,6 +1,6 @@
 msFilterList
-# Version: 19September2019v1-Beta
-# Version: 190920191 (for Adblock Plus' issue report system)
+# Version: 22September2019v1-Beta
+# Version: 220920191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -32,8 +32,6 @@ msFilterList
 -d avod-fw-config.mtg-api.com
 -d acdn.adnxs.com ast ast.js
 -d acdn.adnxs.com ast ast.js
--d ssl.p.jwpcdn.com jwpsrv.js
--d ssl.p.jwpcdn.com vast.js
 -d damoh.vgtv.no hic_qos
 - entag.js
 -d akamaihd.net video-assets 
@@ -114,6 +112,7 @@ contentMarketing
 -d scripts.tv2a.dk oil 
 # 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
 +d api.instagram.com
+# Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy
 # 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
 +d bondebladet.screen9.tv
 +d sixscissors.com
@@ -151,7 +150,6 @@ contentMarketing
 # 🇩🇰: TV2 Norge
 # 🇬🇧: TV2 Norway
 -d tv2.no s lab 2.5 p img tv2-background.svg
-# ↓ Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy. ↓
 # Nettavisen
 # It was difficult to place the line between adticles that had educational values and which ones that didn't, but I feel I did a decent job at it
 - resources dfp *
