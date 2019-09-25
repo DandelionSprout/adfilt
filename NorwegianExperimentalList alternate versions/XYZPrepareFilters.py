@@ -805,6 +805,12 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
+           r"# For more information and details.*", 
+           "! Experimental use of «$network» to block IP addresses from my IP list version", 
+           line
+        )
+
+        line = re.sub(
            r"^# .*", 
            "", 
            line
