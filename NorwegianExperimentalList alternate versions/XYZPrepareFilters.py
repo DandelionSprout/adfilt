@@ -9,7 +9,6 @@ UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
 
 OUTPUT = 'xyzzyx.txt'
-OUTPUT_AG = 'NordicFiltersAdGuard.txt'
 OUTPUT_ABP = 'NordicFiltersABP.txt'
 OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
 OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
@@ -21,132 +20,6 @@ def download_filters() -> str:
     for url in SOURCES:
         r = requests.get(url)
         text += r.text
-    return text
-
-# function that prepares the filter list for AdGuard
-def prepare_ag(lines) -> str:
-    text = ''
-
-    for line in lines:
-
-
-        # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
-        line = re.sub(
-           r"([\$,])doc.*", 
-           r"\1empty,important", 
-           line
-        )
-
-        line = re.sub(
-           r"(itle:.*Dandelion Sprout.*)", 
-           r"\1 (for AdGuard)", 
-           line
-        )
-
-        line = re.sub(
-           r"! Version: [0-9][0-9][0-9][0-9].*", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           "\[Adblock Plus 3.4\]", 
-           "[AdGuard ≥6]", 
-           line
-        )
-
-        line = re.sub(
-           r"! Redirect:.*", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])xhr", 
-           r"\1xmlhttprequest", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,~])3p", 
-           r"\1third-party", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])1p", 
-           r"\1~third-party", 
-           line
-        )
-
-        line = re.sub(
-           "viaplay.\*#", 
-           "viaplay.no,viaplay.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "google.\*#", 
-           "google.no,google.dk,google.is#", 
-           line
-        )
-
-        line = re.sub(
-           "eurogamer.\*#", 
-           "eurogamer.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "ticketmaster.\*#", 
-           "ticketmaster.no,ticketmaster.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "qxl.\*#", 
-           "qxl.no,qxl.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "expedia.\*#", 
-           "expedia.no,expedia.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "gamereactor.\*#", 
-           "gamereactor.no,gamereactor.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "viafree.\*#", 
-           "viafree.no,viafree.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "momondo.\*#", 
-           "momondo.no,monondo.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "eurosport.\*#", 
-           "eurosport.no,eurosport.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "prisjakt.\*,", 
-           "prisjakt.no,", 
-           line
-        )
-
-        text += line + '\r\n'
-
     return text
 
 def is_supported_abp(line) -> bool:
@@ -771,7 +644,6 @@ if __name__ == "__main__":
     lines = text.splitlines(False)
     print('Total number of rules: ' + str(len(lines)))
 
-    ag_filter = prepare_ag(lines)
     abp_filter = prepare_abp(lines)
     tpl_filter = prepare_tpl(lines)
     privoxy_filter = prepare_privoxy(lines)
@@ -779,9 +651,6 @@ if __name__ == "__main__":
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
-
-    with open(OUTPUT_AG, "w") as text_file:
-        text_file.write(ag_filter)
 
     with open(OUTPUT_ABP, "w") as text_file:
         text_file.write(abp_filter)
@@ -796,6 +665,175 @@ if __name__ == "__main__":
         text_file.write(privacy_filter)
 
     print('The adblocker-based list versions have been generated.')
+
+
+
+import requests
+import re
+
+SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.txt', 'https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersIPs.txt']
+
+OUTPUT_AG = 'NordicFiltersAdGuard.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_ag(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
+        line = re.sub(
+           r"([\$,])doc.*", 
+           r"\1empty,important", 
+           line
+        )
+
+        line = re.sub(
+           r"(itle:.*Dandelion Sprout.*)", 
+           r"\1 (for AdGuard)", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: [0-9][0-9][0-9][0-9].*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "\[Adblock Plus 3.4\]", 
+           "[AdGuard ≥6]", 
+           line
+        )
+
+        line = re.sub(
+           r"! Redirect:.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])xhr", 
+           r"\1xmlhttprequest", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,~])3p", 
+           r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
+           line
+        )
+
+        line = re.sub(
+           "viaplay.\*#", 
+           "viaplay.no,viaplay.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "google.\*#", 
+           "google.no,google.dk,google.is#", 
+           line
+        )
+
+        line = re.sub(
+           "eurogamer.\*#", 
+           "eurogamer.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "ticketmaster.\*#", 
+           "ticketmaster.no,ticketmaster.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "qxl.\*#", 
+           "qxl.no,qxl.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "expedia.\*#", 
+           "expedia.no,expedia.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "gamereactor.\*#", 
+           "gamereactor.no,gamereactor.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "viafree.\*#", 
+           "viafree.no,viafree.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "momondo.\*#", 
+           "momondo.no,monondo.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "eurosport.\*#", 
+           "eurosport.no,eurosport.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "prisjakt.\*,", 
+           "prisjakt.no,", 
+           line
+        )
+
+        line = re.sub(
+           r"^# .*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^([0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?)$", 
+           r"\1$network", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    ag_filter = prepare_ag(lines)
+
+    with open(OUTPUT_AG, "w") as text_file:
+        text_file.write(ag_filter)
+
+    print('The AdGuard list version has been generated.')
+
+
 
 import requests
 import re
