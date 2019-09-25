@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
-! Version: 22September2019v1
-! Version: 220920191 (for Adblock Plus' issue report system)
+! Version: 25September2019v1
+! Version: 250920191 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -331,6 +331,11 @@ contentMarketing$xmlhttprequest,domain=sol.no
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 !#endif
+menn.is##aside[class*="vinsaelt-"]:style(background: none !important)
+menn.is##.custom-html-widget.textwidget
+||soda.is$3p
+vb.is##.spons
+flashscore.dk##div[class^="box_over_content"]
 ! — — — — —
 ! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
 ! The ':not' exception is needed for opp.no
@@ -492,7 +497,7 @@ spillespill.no##.push
 sporttv.is#?#.box:-abp-has(div[class^="auglysing-"])
 sporttv.is,utdanningsnytt.no##.banner-right
 startsiden.no##div[class*="advertisement_"]
-startsiden.no##div[class*="articleContainer_"]:has(:scope > div[data-ga-action$="_ad"])
+startsiden.no##div[class*="articleContainer_"]:-abp-has(:scope > div[data-ga-action$="_ad"])
 steigan.no,allers.no,icelandreview.com,resett.no##.vc_empty_space
 storm.no###topbanner
 sveip.net##.app_ad2
@@ -536,6 +541,15 @@ dmi.dk##.add-container
 dmi.dk#?#.large-6:-abp-has(:scope > .section-1-ad)
 jubii.dk##.mobiletakeover-background
 pulze.dk###topads
+menn.is#?#.vc_column:-abp-has(.mobile-ad):not(:-abp-has(a))
+menn.is#?#.vc_column-inner:-abp-has(.mobile-ad):not(:-abp-has(a))
+nutiminn.is##.custom-html-widget.textwidget
+nutiminn.is##section[id^="wp_is_mobile"]
+kart.1881.no##.panel-ad-skyscraper
+vb.is##.big_spons
+kjarninn.is##.ad-container
+jn.fo##.lysingarspot
+guloggratis.dk##.banner-container
 ! — — — — —
 ! https://sol.no/
 ##.advertisement
