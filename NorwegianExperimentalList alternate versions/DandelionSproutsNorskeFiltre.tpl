@@ -1,6 +1,6 @@
 msFilterList
-# Version: 26September2019v1-Beta
-# Version: 260920191 (for Adblock Plus' issue report system)
+# Version: 26September2019v2-Beta
+# Version: 260920192 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -241,12 +241,10 @@ contentMarketing
 - gratis-reisebilletter.
 - KiwiErbjudanden1 
 -d trackvoluum.com
--d testgruppens.com
 -d jagerjack.com
 - pakkerlevering 
 -d posten.club
 -d kundklubb-se.com
--d norwayexpress24.com
 -d prisjakt.org
 -d postnord-norge.com
 -d 102.112.2o7.net
@@ -263,7 +261,6 @@ contentMarketing
 # 🇬🇧: As mentioned in https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
 -d breakoutstory24.com
 -d thefivereport.online
--d abafort.us
 # 🇳🇴: Som nevnt i https://www.tv2.no/nyheter/10493336/
 -d rnbinance.com
 -d brightertrade.com
@@ -289,16 +286,13 @@ contentMarketing
 # 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 # Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
--d adamaruiz.org
 -d adidasko.com
 -d adidassuperstarnorge.com
 -d airmaxskobillige.com
 -d allergyfl.com
--d apcleverstore.com
 -d apvoc-ga.com
 -d ashskonorge.com
 -d assassinfitness.com
--d beblessedbehappy.org
 -d benshermanoslo.com
 -d billigesalg.com
 -d billigskos.com
@@ -330,15 +324,12 @@ contentMarketing
 -d hollisternorge.com
 -d horizonbagel.com
 -d itsthetrendydealstore.com
--d imprimtacom.com
--d jakker.co
 -d jakkesalgs.com
 -d jakkesnorge.com
 -d joseph-holland.com
 -d klmyu.com
 -d jessicaivory.com
 -d legarralazcoz.com
--d lillevinkelsko.net
 -d lindseysopticians.com
 -d linkshe.com
 -d locchalet2alpes.com
@@ -367,8 +358,6 @@ contentMarketing
 -d norgejakke.com
 -d norgejakkerbutikk.com
 -d norgeshoes.com
--d nyeskonorge2015.com
--d nywlm.com
 -d oflike.com
 -d omgrm.com
 -d ontariokitcarbuilders.com
