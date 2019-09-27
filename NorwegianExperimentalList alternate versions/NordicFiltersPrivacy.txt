@@ -1,5 +1,5 @@
 
-! Version: 26September2019v2
+! Version: 27September2019v1
 
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
@@ -52,7 +52,6 @@
 ##div[data-contenttype="ad"]
 ##optimus-element[id^="art-bazaarAd-"][version="default"]
 .oasfile
-@@||5e529.v.fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
 @@||fagbladetjournalen.no/*/300x250_
 @@||seher.no/reise$generichide
 bt.dk##.hidden-md-down.col-xl-12
@@ -131,8 +130,6 @@ viafree.*##.pause-ad
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.no|viafree.dk
 ||getsentry.com^$3p,domain=viafree.no|viafree.dk
 ||sentry-cdn.com^$3p,domain=viafree.no|viafree.dk
-@@||fwmrm.net/ad/$xhr,domain=viafree.no|viafree.dk
-@@||fwmrm.net/crossdomain.xml$xhr,domain=viafree.no|viafree.dk
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.no|eurosport.dk
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
@@ -636,7 +633,10 @@ langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opac
 ||elderlyscissors.com^
 @@||eurosport.no^$generichide
 minmote.no,godt.no##.adblock-info
-@@||fwmrm.net/libs/adm/*/AdManager.js$script,domain=viafree.dk|viafree.no
+@@||fwmrm.net/ad/*$script,domain=viafree.no|viafree.dk
+@@||fwmrm.net/*/AdManager.js$script,domain=viafree.no|viafree.dk
+@@||fwmrm.net/ad/$xhr,domain=viafree.no|viafree.dk
+@@||fwmrm.net/crossdomain.xml$xhr,domain=viafree.no|viafree.dk
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,1p
 vg.no##+js(addEventListener-defuser.js, load, concat)
 1200kcalkostplan.dk,1800kcalkostplan.dk##+js(abort-on-property-write.js, KillAdBlock)
@@ -648,6 +648,7 @@ dagensbyggeri.dk##+js(setTimeout-defuser.js, (), 2500)
 godt.no##.adblock-info-box
 ||imasdk.googleapis.com/pal/sdkloader/pal.js$script,redirect=noopjs,domain=dplay.dk|dplay.no
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.dk|dplay.no
+@@||5e529.v.fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
 !#if !ext_ublock
 @@||bildeler.name$generichide
 @@||reservedele.name$generichide
