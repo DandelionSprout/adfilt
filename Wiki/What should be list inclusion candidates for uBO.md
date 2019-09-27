@@ -6,20 +6,20 @@
 
 — Malware domains (0/2)<br>
 ☐ [hpHosts EMD](https://hosts-file.net/emd.txt) [🏠](https://hosts-file.net/) 0 used out of ~284,845 🕘<br>
-☐ [Phishing Domain Database](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt) [🏠](https://github.com/mitchellkrogza/Phishing.Database) 0 used out of 116,886 🕘<br><br>
+☐ [Phishing Domain Database](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt) [🏠](https://github.com/mitchellkrogza/Phishing.Database) 0 used out of 116,886 🕘<br>
 
 — Annoyances (0/2)<br>
 ☐ [I Don't Care About Cookies](https://www.kiboke-studio.hr/i-dont-care-about-cookies/abp/) [🏠](https://www.kiboke-studio.hr/i-dont-care-about-cookies/) 0 used out of 16,049 🕘<br>
-☐ [Staying On The Phone Browser](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/stayingonbrowser/Staying%20On%20The%20Phone%20Browser) [🏠](https://github.com/DandelionSprout/adfilt) 0 used out of 310 🕘<br><br>
+☐ [Staying On The Phone Browser](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/stayingonbrowser/Staying%20On%20The%20Phone%20Browser) [🏠](https://github.com/DandelionSprout/adfilt) 0 used out of 310 🕘<br>
 
 — Regional, languages (0/3)<br>
 ☐ [ALB: Adblock List for Albania](https://raw.githubusercontent.com/AnXh3L0/blocklist/master/albanian-easylist-addition/Albania.txt) [🏠](https://github.com/AnXh3L0/blocklist) 0 used out of 200 🕘<br>
 ☐ [JPN: Complete Mochi Filter](https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/all.txt) [🏠](https://github.com/eEIi0A5L/adblock_filter) 0 used out of ~2,522 🕘<br>
-☐ [POR: EasyList Portuguese](https://easylist-downloads.adblockplus.org/easylistportuguese.txt) [🏠](https://easylist.to/) 0 used out of 253 🕘<br><br>
+☐ [POR: EasyList Portuguese](https://easylist-downloads.adblockplus.org/easylistportuguese.txt) [🏠](https://easylist.to/) 0 used out of 253 🕘<br>
 
 — Adult content (Gambling, violence, porn, etc.) (0/2)<br>
 ☐ [Shalla Gamble Domains](https://raw.githubusercontent.com/cbuijs/shallalist/master/gamble/domains) [🏠](https://github.com/cbuijs/shallalist/) 0 used out of 14,562 🕘<br>
-☐ [Chad Mayfield's Porn List Light](https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_top1m.list) [🏠](https://github.com/chadmayfield/my-pihole-blocklists) 0 used out of 26,328 🕘<br><br>
+☐ [Chad Mayfield's Porn List Light](https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_top1m.list) [🏠](https://github.com/chadmayfield/my-pihole-blocklists) 0 used out of 26,328 🕘<br>
 
 — Other (0/1)<br>
 ☐ [Dandelion Sprout's Website Stretcher](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Website%20Stretcher.txt) [🏠](https://github.com/DandelionSprout/adfilt) 0 used out of ~302 🕘<br><br>
