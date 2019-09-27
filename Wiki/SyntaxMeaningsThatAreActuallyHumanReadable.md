@@ -89,7 +89,7 @@
 ### AdGuard for [Windows/Mac/Android] only:
 
 * `! Description:`: Shows a description of the list's purpose, when the question mark next to the list in the AdGuard settings is hovered over. That being said, a description is convenient for users of all adblockers, if they're willing to look up a list's raw content.
-* `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar.
+* `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Can very easily break legitimate sites as collateral damage, and should be used very sparingly.
 
 # Particularly important usage notes
 
