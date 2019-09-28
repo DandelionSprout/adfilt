@@ -1,6 +1,6 @@
 msFilterList
-# Version: 27September2019v1-Beta
-# Version: 270920191 (for Adblock Plus' issue report system)
+# Version: 29September2019v1-Beta
+# Version: 290920191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -36,139 +36,52 @@ msFilterList
 - entag.js
 -d akamaihd.net video-assets 
 # ——— Ads (Section under construction) ———
--d adservicemedia.dk
--d euroads.dk
--d austevollforlag.no wp-content * annonsar 
--d austevollforlag.no wp-content * yachtmarine2014.
--d norskenettsider.no images remember-banner-2016.jpg
--d norskenettsider.no images ageras-banner.jpg
--d eyjar.net skrar ads
--d amino.dk images partners agera 240x140-forside-hardcoded*.jpg
--d nvnytt.no images *annonse-
--d track.adform.net
--d track.adform.net Banners 
--d tvshop.com tradedoubler_files 
--d bornholm.nu nonsec banner
--d delivered-by-madington.com
--d media.sonymusic.no marketing *.html
--d klikk.no common js klikk.desktop-thirdparty.min.js
--d dust2.dk img banners *
--d openadex.dk
--d dotbanner.dk
--d cluster.chart.dk
--d vikari.is skjol frjalsi-lif*.png
--d banner.landbrugsavisen.dk reklame.aspx
--d gratisxxx.no
--d svonm.com hd-main.js
--d vevlysingar.fo
--d boligkanalen-maestro-new.azurewebsites.net
--d tracking-genesisaffiliates.com
--d medialaben.no * a11y*
-- *-annonse-*
 - -bazaar-
-- bazaar *
-- reklam *
-- reklame *
+- *-annonse-*
 - annonse *
 - auglysing *
-- bilder erotikk1.jpg
 - Bannere *
--d akamai.net
+- bazaar *
+- bilder erotikk1.jpg
 - js smartbanner *
 - liveodds-button_nordicbet
 - nordicbet_logo
 - partners *_ad_icon
-contentMarketing
-+d vgtv.no
--d adnxs.com
--d soda.is
-# — — — — —
-# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
-# The ':not' exception is needed for opp.no
-# ——— Leftover empty spaces that EasyList have left behind (Section under construction) ———
--d 730.no banner * sonymusic 
--d gaysir.no rek bb_inline
-# — — — — —
-# https://sol.no/
-# http://www.qxl.no/
-# https://www.vtb.no/
-# https://vafo.dk/
-# https://reelligestilling.dk/
-# https://www.rbnett.no/
-# https://www.op.no/
-# https://journalisten.dk/
-# http://www.altomfotball.no/
-# dv.is
-# dinside.no, seher.no
-# 🇬🇧: Empty divider spaces (Section under construction)
-# 🇬🇧: Distracting background images (Section under construction)
--d images.media.xxlsports.com images h90 h9d 9339713159198 bg.jpg
--d platekompaniet.no assets img background.png
--d pepcall.no wp-content uploads 2015 04 bakgrunn-forside.jpg
-# 🇬🇧: Unbreakage
-# 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
-# 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
-# 🇩🇰: Gør det muligt igen at scrolle når «I Don't Care About Cookies» er benyttet
-# 🇬🇧: Re-enables scrolling when using "I Don't Care About Cookies"
--d scripts.tv2a.dk oil 
-# 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
-+d api.instagram.com
-# Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy
-# 🇬🇧: A(n incomplete) category for anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion, in which case they'd be moved to the extension file
-+d bondebladet.screen9.tv
-+d sixscissors.com
--d elderlyscissors.com
-+d eurosport.no
--d vg.no cnp-assets src sites vg components AdblockModal
-+d eurosport.*
--d imasdk.googleapis.com pal sdkloader pal.js
--d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com 
-+d bildeler.name
-+d reservedele.name
-+d eurosport.no,eurosport.dk
-# 🇳🇴: Multidomeneoppføringer
-# 🇩🇰: Multidomæneposter
-# 🇬🇧: Multi-domain entries
-!!!!# ≥5 nettsteder sites
-!!!# 4 nettsteder sites
-!!# 3 nettsteder sites
-!# 2 nettsteder sites
-# 🇳🇴: Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne)
-# 🇬🇧: Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book)
--d widget.norsktippingpartner.no
--d widget.tippebannere.no
--d tipster.no embed
-# Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
-# Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
-# Reducing the size of an extremely big Facebook link button
-!———————————————————————————————————————————————————————————————————————————
-# 🇬🇧: Category: Website-specific
-# VG
--d static.vg.no css admark_top.gif
--d vglista.no wp-content themes vglista img partner 
-# ↓ Attempts to resolve how some frontpage articles are hard to open when using EasyPrivacy. ↓
-# 🇳🇴: TV2
-# 🇩🇰: TV2 Norge
-# 🇬🇧: TV2 Norway
--d tv2.no s lab 2.5 p img tv2-background.svg
-# Nettavisen
-# It was difficult to place the line between adticles that had educational values and which ones that didn't, but I feel I did a decent job at it
+- reklam *
+- reklame *
 - resources dfp *
-# Filmweb
--d filmweb.no template_v2 adverticement 
-# Gamereactor
-# 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
--d openx.gamereactor.dk multi.php?
--d media.gamereactor.dk prerolls *
--d ssl.p.jwpcdn.com gapro.js
-- insert_grtv_stats.
-- prerolls *
-- adblock_mobile.
-- viewability.
-# ——————————————————————————————————————————————————————
-# 🇬🇧: Category: Entire domains, scams, and phishing
-# 🇳🇴: Regler for hele nettsteder, som er kategorisert for å gjøre det enklere for meg å lage en «hosts»-versjon av denne listen
-# 🇬🇧: Rules for entire websites, categorised to make it easier for me to make a \"hosts\" version of this list
+contentMarketing
+-d adservicemedia.dk
+-d akamai.net
+-d amino.dk images partners agera 240x140-forside-hardcoded*.jpg
+-d austevollforlag.no wp-content * annonsar 
+-d austevollforlag.no wp-content * yachtmarine2014.
+-d banner.landbrugsavisen.dk reklame.aspx
+-d boligkanalen-maestro-new.azurewebsites.net
+-d bornholm.nu nonsec banner
+-d brandstudio.inventory.schibsted.io
+-d cluster.chart.dk
+-d delivered-by-madington.com
+-d dotbanner.dk
+-d dust2.dk img banners *
+-d euroads.dk
+-d eyjar.net skrar ads
+-d gratisxxx.no
+-d klikk.no common js klikk.desktop-thirdparty.min.js
+-d media.sonymusic.no marketing *.html
+-d medialaben.no * a11y*
+-d norskenettsider.no images ageras-banner.jpg
+-d norskenettsider.no images remember-banner-2016.jpg
+-d nvnytt.no images *annonse-
+-d openadex.dk
+-d soda.is
+-d svonm.com hd-main.js
+-d track.adform.net
+-d track.adform.net Banners 
+-d tracking-genesisaffiliates.com
+-d tvshop.com tradedoubler_files 
+-d vevlysingar.fo
+-d vikari.is skjol frjalsi-lif*.png
 -d ad.no.doubleclick.net
 -d webclick.no
 -d webhotell.enivest.no
@@ -185,16 +98,83 @@ contentMarketing
 -d cmt.no
 -d piwik.onlinemagasinet.no
 -d bannere.oslonett.no
+-d sannsyn.com
+# — — — — —
++d vgtv.no
+-d adnxs.com
+# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
+# The ':not' exception is needed for opp.no
+# https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
+# ——— Leftover empty spaces that EasyList have left behind (Section under construction) ———
+-d 730.no banner * sonymusic 
+-d gaysir.no rek bb_inline
+-d static.vg.no css admark_top.gif
+-d bilnorge.no gifs *emty.gif
+# — — — — —
+# https://sol.no/
+# http://www.qxl.no/
+# https://www.vtb.no/
+# https://vafo.dk/
+# https://reelligestilling.dk/
+# https://www.rbnett.no/
+# https://www.op.no/
+# https://journalisten.dk/
+# http://www.altomfotball.no/
+# dv.is
+# dinside.no, seher.no
+# bt.no
+# 🇬🇧: Empty divider spaces (Section under construction)
+# 🇬🇧: Distracting background images (Section under construction)
+-d images.media.xxlsports.com images h90 h9d 9339713159198 bg.jpg
+-d platekompaniet.no assets img background.png
+-d pepcall.no wp-content uploads 2015 04 bakgrunn-forside.jpg
+-d tv2.no s lab 2.5 p img tv2-background.svg
+# 🇬🇧: Unbreakage
+# 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
+# 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
+# 🇩🇰: Gør det muligt igen at scrolle når «I Don't Care About Cookies» er benyttet
+# 🇬🇧: Re-enables scrolling when using "I Don't Care About Cookies"
+-d scripts.tv2a.dk oil 
+# 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
++d api.instagram.com
+# Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy
+# Attempts to resolve how some frontpage articles are hard to open when using EasyPrivacy.
+# https://github.com/easylist/easylist/issues/1861
++d _prebid_
 # 🇳🇴: Solcellespesialisten, innlastingsproblem
 # 🇬🇧: Solcellespesialisten, loading issue
 -d wo.tc
+# 🇬🇧: Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion
++d bondebladet.screen9.tv
++d sixscissors.com
+-d elderlyscissors.com
++d eurosport.no
+-d vg.no cnp-assets src sites vg components AdblockModal
++d eurosport.*
+-d imasdk.googleapis.com pal sdkloader pal.js
+-d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com 
++d bildeler.name
++d reservedele.name
++d eurosport.no,eurosport.dk
+# 🇳🇴: Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne)
+# 🇬🇧: Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book)
+-d widget.norsktippingpartner.no
+-d widget.tippebannere.no
+-d tipster.no embed
+# Gamereactor
+# 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
+-d openx.gamereactor.dk multi.php?
+-d media.gamereactor.dk prerolls *
+-d ssl.p.jwpcdn.com gapro.js
+- insert_grtv_stats.
+- prerolls *
+- adblock_mobile.
+- viewability.
+# Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
+# Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
+# Reducing the size of an extremely big Facebook link button
 # ——————————————————————————————————————————————————————————————
 # 🇬🇧: Category: Particularly appreciated fan contributions
-# 🇳🇴: Lagt til etter forespørsel fra tilhengere og bidragsytere
-# 🇩🇰: Tilføjet efter anmodninger fra tilhængere og bidragydere
-# 🇬🇧: Added on requests from fans and contributors
--d sannsyn.com
-# https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-493478718
 # 🇳🇴: Nettsteder jeg nekter å besøke selv for å førstehåndsteste oppføringene
 # 🇬🇧: Sites that I refuse to visit on my own to test the entries
 # 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
@@ -206,13 +186,8 @@ contentMarketing
 -d dagligvarehandelen.no sites all themes custom ledelseas gfx veil.png
 # ——————————————————————————————————————————————————————————————————————————————————————————————————————
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
-# 🇳🇴: Nordensrelaterte oppføringer som har blitt foreslått for store internasjonale lister, men som ikke har blitt lagt til dem som det er meg bekjent
-# 🇩🇰: Nordenrelaterede poster, der er blevet foreslået til store internationale lister, men som ikke er blevet tilføjet til dem endnu som det er meg bekendt
-# 🇬🇧: Nordics-related entries that have been suggested to major international lists, but which haven't been added to them yet or for long
-# https://github.com/easylist/easylist/issues/1861
-+d _prebid_
 # 🇳🇴: Hvitelisting av sporere som er nødvendige for brukere av Prisjakt, Kickback, og Viatrumf
-# 🇩🇰: Tracker-hvidlistninger, der er nødvendige for brugere af Prisjakt, Kickback og Viatrumf (Norske handletjenester)
+# 🇩🇰: Tracker-hvidlistninger, der er nødvendige for brugere af Prisjagt, såvel som de norske handletjenester Kickback og Viatrumf
 # 🇬🇧: Tracker whitelistings that are necessary for users of Prisjakt, Kickback, and Viatrumf
 +d clk.tradedoubler.com
 +d solutions.tradedoubler.com
@@ -225,7 +200,6 @@ contentMarketing
 # 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
 # ABP was at one point discussing supporting it in https://issues.adblockplus.org/ticket/6773,/but/it/stranded/out/into nothing.
 # 🇬🇧: Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
-# Wildcard versions of various entries. Because why only block on one national version of a site, when you can nowadays block on all versions of a site without cluttering things up?
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
@@ -257,30 +231,32 @@ contentMarketing
 - dnb11111 
 -d nymelding.com
 -d mrcal365.com
-# 🇳🇴: Som nevnt i https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
-# 🇬🇧: As mentioned in https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
+# 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
+# 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
+# 🇬🇧: As mentioned in various news articles about fraud sites
+# https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
 -d breakoutstory24.com
 -d thefivereport.online
-# 🇳🇴: Som nevnt i https://www.tv2.no/nyheter/10493336/
+# https://www.tv2.no/nyheter/10493336/
 -d rnbinance.com
 -d brightertrade.com
-# Som nevnt i https://www.nrk.no/ytring/1.14496024
+# https://www.nrk.no/ytring/1.14496024
 -d cost2buy.net
-# Som nevnt i https://www.nrk.no/norge/1.14511067
+# https://www.nrk.no/norge/1.14511067
 -d com-fryd.com
 -d com-norwegian.com
-# Som nevnt i https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
+# https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
 -d ruter.top
-# Som nevnt i https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
+# https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
 -d 101mesh.com
 -d gokkw.com
 -d earnmoneyglobal.com
-# Som nevnt i https://www.datahjelperne.no/stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel/
+# https://www.datahjelperne.no/stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel/
 -d trendyn.me
-# Som nevnt i https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
-# Som nevnt i https://www.datahjelperne.no/falske-telenor-undersokelser/
+# https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
+# https://www.datahjelperne.no/falske-telenor-undersokelser/
 -d surveryrewards1.com
-# Som nevnt i https://www.nrk.no/mr/1.14649436
+# https://www.nrk.no/mr/1.14649436
 -d pprfct.com
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
