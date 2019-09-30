@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
-! Version: 30September2019v1
-! Version: 300920191 (for Adblock Plus' issue report system)
+! Version: 30September2019v2
+! Version: 300920192 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -16,15 +16,12 @@
 ! 🇬🇧: Uncategorised entries
 ###inlineannonse
 ##.ad-centered
-##.ad-nexus-ad
-##.ad-paied-cont-front
 ##.ad_mobil_API
 ##.ads__grid-item
 ##.am-page-ad
 ##.annonsetag
 ##.midtbanner
 ##.mvp-feat1-list-ad
-##.nf-o-annonse
 ##.rotating-junglebogen
 ##div.size-300x160.fixed-placement
 ~cdon.no,~cdon.dk,~cdon.se,~cdon.fi##.horseshoe
@@ -258,6 +255,7 @@ feltet.dk##a[onclick^="octo_"]
 ||webclick.no^
 ||webhotell.enivest.no^
 ||feltet.dk/octo_cms/files/Feltet.dk//^$image
+||langrenn.com/getbanner.php/*/getfile.php/$image
 ! — — — — —
 !#if !ext_ublock
 @@||vgtv.no$generichide
@@ -270,6 +268,10 @@ feltet.dk##a[onclick^="octo_"]
 ##a[href*="/?utm_source=strossle"]
 ! https://www.op.no/
 ###EAad97
+! https://arendalstidende.no/
+##.ad-paied-cont-front
+! https://www.langrenn.com/cppage.6250314-1743.html
+##.spklw-post-attr[data-recommendation-type="ad"]
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -690,8 +692,31 @@ viafree.*##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs
 @@||eurosport.no,eurosport.dk^$generichide
 !#endif
 
-! 🇳🇴: Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne)
-! 🇬🇧: Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book)
+! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
+! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
+! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
+! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste av disse opføringer.
+! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
+! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
+##.Article-header-body:before
+##.paywall-fade
+digi.no,tu.no,medier24.no,porten.no##.faded-article-content:after
+dagbladet.no##.CTA-body-faded
+aftenbladet.no,fvn.no##.overlay-wrap:before
+nationen.no##.article-container.locked:after
+dinepenger.no##.article-body:after
+dn.no##.vrs-image-block__image-description-overlay
+vg.no##p[data-test-tag="lead-text"] ~ p[class] ~ div[class]:before
+||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
+politiken.dk##.card.stopsign__article.stopsign:before
+morgenbladet.no##.preview-overlay
+dagogtid.no##.dot-shorttext:before
+aftenposten.no##.widget-salesposter:before
+fiskeribladet.no##.teaser_overlay
+
+! 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
+! 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
+! 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
 ||widget.norsktippingpartner.no$subdocument
 ||widget.tippebannere.no$subdocument,domain=~tipster.no
 ||tipster.no/embed$subdocument
@@ -701,7 +726,9 @@ viafree.*##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs
 ###sportspill-box-top
 vglive.no##.tipster-liveodds-embed
 
-! Gamereactor
+! ——— Gamereactor ———
+! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
+! 🇩🇰: Disse opføringer bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
 gamereactor.*###pagebackground:style(background-image: none !important)
 gamereactor.*##+js(abort-current-inline-script.js, phpads_deliver)
@@ -740,15 +767,15 @@ gamereactor.*##+js(nano-setTimeout-booster.js)
 /adblock_mobile.$important,script,domain=gamereactor.no|gamereactor.dk
 /viewability.$important,script,domain=gamereactor.no|gamereactor.dk
 
-! Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
+! 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
+! 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen til mange produkter stadigt benytter før-2016-fargene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
+! 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
 ! Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
 elkjop.no,elgiganten.dk###A-value:style(fill: #fff12c !important)
 elkjop.no,elgiganten.dk###B-value:style(fill: #edb731 !important)
 elkjop.no,elgiganten.dk###C-value:style(fill: #ed8631 !important)
 
-! ——————————————————————————————————————————————————————————————
-
-! 🇬🇧: Category: Particularly appreciated fan contributions
+! ——————————————————————————————————————————————————————————————————————————————————————————————————————
 
 ! 🇳🇴: Nettsteder jeg nekter å besøke selv for å førstehåndsteste oppføringene
 ! 🇬🇧: Sites that I refuse to visit on my own to test the entries
@@ -766,28 +793,6 @@ resett.no##.td-ss-main-sidebar
 norgesavisen.no##.td-fix-index
 frihetskamp.net##a[href*="greenpilled.com"]
 frihetskamp.net##a[href*="nordenstil.no"]
-
-! 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
-! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
-! 🇩🇰: Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud)
-! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste av disse opføringer.
-! 🇬🇧: De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out)
-! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
-##.Article-header-body:before
-##.paywall-fade
-digi.no,tu.no,medier24.no,porten.no##.faded-article-content:after
-dagbladet.no##.CTA-body-faded
-aftenbladet.no,fvn.no##.overlay-wrap:before
-nationen.no##.article-container.locked:after
-dinepenger.no##.article-body:after
-dn.no##.vrs-image-block__image-description-overlay
-vg.no##p[data-test-tag="lead-text"] ~ p[class] ~ div[class]:before
-||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
-politiken.dk##.card.stopsign__article.stopsign:before
-morgenbladet.no##.preview-overlay
-dagogtid.no##.dot-shorttext:before
-aftenposten.no##.widget-salesposter:before
-fiskeribladet.no##.teaser_overlay
 
 ! ——————————————————————————————————————————————————————————————————————————————————————————————————————
 
