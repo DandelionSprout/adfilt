@@ -1,6 +1,6 @@
 msFilterList
-# Version: 29September2019v1-Beta
-# Version: 290920191 (for Adblock Plus' issue report system)
+# Version: 30September2019v4-Beta
+# Version: 300920194 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -12,104 +12,110 @@ msFilterList
 # 🇳🇴: Ukategoriserte oppføringer
 # 🇩🇰: Ukategoriserede opføringer
 # 🇬🇧: Uncategorised entries
-- oasfile
--d viasport-assets.mtg-api.com * prod comScore-*.js
--d isweb.no
--d opinion.peytz.dk
--d tns-gallup.dk
--d userneeds.dk
--d cdn.ravenjs.com
--d client-stream-events.mtg-api.com
--d freewheel-mtgx-tv.akamaized.net
--d getsentry.com
--d sentry-cdn.com
--d ssl.p.jwpcdn.com freewheel.js
--d ssl.p.jwpcdn.com jwpsrv.js
--d ssl.p.jwpcdn.com sharing.js
--d ssl.p.jwpcdn.com vast.js
-- _bm abd
-- linktag2.js
--d avod-fw-config.mtg-api.com
--d acdn.adnxs.com ast ast.js
--d acdn.adnxs.com ast ast.js
--d damoh.vgtv.no hic_qos
-- entag.js
--d akamaihd.net video-assets 
-# ——— Ads (Section under construction) ———
+# 🇳🇴: ——— Reklamer ———
+# 🇩🇰: ——— Reklamer ———
+# 🇬🇧: ——— Ads ———
+contentMarketing
 - -bazaar-
 - *-annonse-*
+- _bm abd
 - annonse *
 - auglysing *
 - Bannere *
 - bazaar *
 - bilder erotikk1.jpg
+- entag.js
 - js smartbanner *
+- linktag2.js
 - liveodds-button_nordicbet
 - nordicbet_logo
 - partners *_ad_icon
 - reklam *
 - reklame *
 - resources dfp *
-contentMarketing
+-d acdn.adnxs.com ast ast.js
+-d acdn.adnxs.com ast ast.js
+-d ad.no.doubleclick.net
+-d adext.inkclub.com
+-d ads.no
 -d adservicemedia.dk
 -d akamai.net
+-d akamaihd.net video-assets 
 -d amino.dk images partners agera 240x140-forside-hardcoded*.jpg
 -d austevollforlag.no wp-content * annonsar 
 -d austevollforlag.no wp-content * yachtmarine2014.
+-d avod-fw-config.mtg-api.com
 -d banner.landbrugsavisen.dk reklame.aspx
+-d bannere.oslonett.no
 -d boligkanalen-maestro-new.azurewebsites.net
 -d bornholm.nu nonsec banner
 -d brandstudio.inventory.schibsted.io
+-d cdn.ravenjs.com
+-d client-stream-events.mtg-api.com
 -d cluster.chart.dk
+-d cmt.no
+-d damoh.vgtv.no hic_qos
 -d delivered-by-madington.com
 -d dotbanner.dk
 -d dust2.dk img banners *
+-d easy-ad.no
+-d emerio.no
 -d euroads.dk
+-d euroads.no
 -d eyjar.net skrar ads
+-d freewheel-mtgx-tv.akamaized.net
+-d getsentry.com
 -d gratisxxx.no
+-d i1media.no
+-d isweb.no
 -d klikk.no common js klikk.desktop-thirdparty.min.js
+-d matriell.dm-storage.no
 -d media.sonymusic.no marketing *.html
--d medialaben.no * a11y*
+-d myad.no
+-d nettklikk.no
 -d norskenettsider.no images ageras-banner.jpg
 -d norskenettsider.no images remember-banner-2016.jpg
 -d nvnytt.no images *annonse-
 -d openadex.dk
+-d piwik.onlinemagasinet.no
+-d primetime.ad.primetime.net
+-d rig.idg.no
+-d sannsyn.com
+-d sentry-cdn.com
 -d soda.is
+-d ssl.p.jwpcdn.com freewheel.js
+-d ssl.p.jwpcdn.com jwpsrv.js
+-d ssl.p.jwpcdn.com sharing.js
+-d ssl.p.jwpcdn.com vast.js
 -d svonm.com hd-main.js
 -d track.adform.net
 -d track.adform.net Banners 
 -d tracking-genesisaffiliates.com
 -d tvshop.com tradedoubler_files 
 -d vevlysingar.fo
+-d viasport-assets.mtg-api.com * prod comScore-*.js
 -d vikari.is skjol frjalsi-lif*.png
--d ad.no.doubleclick.net
 -d webclick.no
 -d webhotell.enivest.no
--d rig.idg.no
--d adext.inkclub.com
--d ads.no
--d euroads.no
--d primetime.ad.primetime.net
--d myad.no
--d nettklikk.no
--d i1media.no
--d easy-ad.no
--d emerio.no
--d cmt.no
--d piwik.onlinemagasinet.no
--d bannere.oslonett.no
--d sannsyn.com
+-d feltet.dk octo_cms files Feltet.dk  
+-d langrenn.com getbanner.php * getfile.php 
+- annonse_
 # — — — — —
 +d vgtv.no
 -d adnxs.com
 # framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
 # The ':not' exception is needed for opp.no
 # https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
-# ——— Leftover empty spaces that EasyList have left behind (Section under construction) ———
+# https://www.op.no/
+# https://arendalstidende.no/
+# https://www.langrenn.com/cppage.6250314-1743.html
+# 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
+# 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
+# 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
 -d 730.no banner * sonymusic 
+-d bilnorge.no gifs *emty.gif
 -d gaysir.no rek bb_inline
 -d static.vg.no css admark_top.gif
--d bilnorge.no gifs *emty.gif
 # — — — — —
 # https://sol.no/
 # http://www.qxl.no/
@@ -123,13 +129,23 @@ contentMarketing
 # dv.is
 # dinside.no, seher.no
 # bt.no
-# 🇬🇧: Empty divider spaces (Section under construction)
-# 🇬🇧: Distracting background images (Section under construction)
+# https://www.latterkula.no/se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live/
+# https://www.latterkula.no/artikler/
+# https://www.mbl.is/frettir/
+# https:  adressa.no
+# 🇳🇴: ——— Tomme skillebokser ———
+# 🇩🇰: ——— Tomme adskillerbokser ———
+# 🇬🇧: ——— Empty divider spaces ———
+# 🇳🇴: ——— Distraherende bakgrunnsbilder ———
+# 🇩🇰: ——— Distraherende baggrundsbilleder ———
+# 🇬🇧: ——— Distracting background images ———
 -d images.media.xxlsports.com images h90 h9d 9339713159198 bg.jpg
 -d platekompaniet.no assets img background.png
 -d pepcall.no wp-content uploads 2015 04 bakgrunn-forside.jpg
 -d tv2.no s lab 2.5 p img tv2-background.svg
-# 🇬🇧: Unbreakage
+# 🇳🇴: ——— Fiksing av knekte sider ———
+# 🇩🇰: ——— Fiksing af knækte websider ———
+# 🇬🇧: ——— Unbreakage ———
 # 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
 # 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
 # 🇩🇰: Gør det muligt igen at scrolle når «I Don't Care About Cookies» er benyttet
@@ -144,24 +160,35 @@ contentMarketing
 # 🇳🇴: Solcellespesialisten, innlastingsproblem
 # 🇬🇧: Solcellespesialisten, loading issue
 -d wo.tc
-# 🇬🇧: Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion
+# 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
+# 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv
-+d sixscissors.com
--d elderlyscissors.com
-+d eurosport.no
--d vg.no cnp-assets src sites vg components AdblockModal
 +d eurosport.*
--d imasdk.googleapis.com pal sdkloader pal.js
++d eurosport.no
++d sixscissors.com
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com 
+-d elderlyscissors.com
+-d imasdk.googleapis.com pal sdkloader pal.js
+-d vg.no cnp-assets src sites vg components AdblockModal
 +d bildeler.name
 +d reservedele.name
 +d eurosport.no,eurosport.dk
-# 🇳🇴: Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne)
-# 🇬🇧: Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book)
+# 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
+# Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
+# 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
+# Tak til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/opføringer.
+# 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
+# Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
+-d dagligvarehandelen.no sites all themes custom ledelseas gfx veil.png
+# 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
+# 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
+# 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
 -d widget.norsktippingpartner.no
 -d widget.tippebannere.no
 -d tipster.no embed
-# Gamereactor
+# ——— Gamereactor ———
+# 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
+# 🇩🇰: Disse opføringer bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 # 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
 -d openx.gamereactor.dk multi.php?
 -d media.gamereactor.dk prerolls *
@@ -170,20 +197,13 @@ contentMarketing
 - prerolls *
 - adblock_mobile.
 - viewability.
-# Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
+# 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
+# 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen til mange produkter stadigt benytter før-2016-fargene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
+# 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
 # Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
-# Reducing the size of an extremely big Facebook link button
-# ——————————————————————————————————————————————————————————————
-# 🇬🇧: Category: Particularly appreciated fan contributions
+# ——————————————————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Nettsteder jeg nekter å besøke selv for å førstehåndsteste oppføringene
 # 🇬🇧: Sites that I refuse to visit on my own to test the entries
-# 🇳🇴: Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut)
-# Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
-# 🇩🇰: Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud)
-# Tak til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/opføringer.
-# 🇬🇧: De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out)
-# Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
--d dagligvarehandelen.no sites all themes custom ledelseas gfx veil.png
 # ——————————————————————————————————————————————————————————————————————————————————————————————————————
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
 # 🇳🇴: Hvitelisting av sporere som er nødvendige for brukere av Prisjakt, Kickback, og Viatrumf
