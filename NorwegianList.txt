@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
-! Version: 29September2019v4
-! Version: 290920194 (for Adblock Plus' issue report system)
+! Version: 30September2019v1
+! Version: 300920191 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -14,11 +14,6 @@
 ! 🇳🇴: Ukategoriserte oppføringer
 ! 🇩🇰: Ukategoriserede opføringer
 ! 🇬🇧: Uncategorised entries
-###ad-digitalt-bilagH
-###ad-digitalt-bilagV
-###ad_superboard
-###ad_topp
-###EAad97
 ###inlineannonse
 ##.ad-centered
 ##.ad-nexus-ad
@@ -27,25 +22,11 @@
 ##.ads__grid-item
 ##.am-page-ad
 ##.annonsetag
-##.container-topbanner.container[ng-controller="bannerController"][ng-init="initBannerController('', false, '')"]
-##.df-skin-annonse
-##.EAS_fif
 ##.midtbanner
 ##.mvp-feat1-list-ad
 ##.nf-o-annonse
 ##.rotating-junglebogen
-##[id^="art-bazaarAdGrid-"]
 ##div.size-300x160.fixed-placement
-##div[data-contenttype="ad"]
-##optimus-element[id^="art-bazaarAd-"][version="default"]
-@@/js/ads.js$1p,domain=tvkampen.com|tvsporten.dk
-@@||www.tv2.no/s/js/ads.js$script,1p
-gamer.no,tek.no,digi.no##.products-carousel
-google.*###epbar, #cnsh, #pushdown, #consent-bump, #cnsi ~ [jsaction*="dismiss"], santa-notice
-google.*###tads
-google.*##.luhb-div
-google.*##.rlfl__tls > div[jstcache="0"]:not([class]):not([id])[-ext-has='span._mB']
-no##.polarisSpid.widget:before
 ~cdon.no,~cdon.dk,~cdon.se,~cdon.fi##.horseshoe
 
 ! 🇳🇴: ——— Reklamer ———
@@ -170,14 +151,12 @@ viafree.*##.ad-click-through
 viafree.*##.pause-ad
 viaplay.*##.interaction-block
 xlmoto.no##.overlay-bg
-xlmoto.no##.overlay-bg
-xlmoto.no##.overlay-container
 xlmoto.no##.overlay-container
 xlmoto.no##.overlay-wrapper
-xlmoto.no##.overlay-wrapper
-xlmoto.no##.sb-overlay
 xlmoto.no##.sb-overlay
 xstra.no##.td-fix-index
+gamer.no,tek.no,digi.no##.products-carousel
+feltet.dk##a[onclick^="octo_"]
 -bazaar-$script,domain=nettavisen.no
 .dk/ad/
 .dk/ads/
@@ -194,7 +173,7 @@ xstra.no##.td-fix-index
 /Bannere/*$image,domain=tek.no|gamer.no
 /bazaar/*$script,domain=nettavisen.no
 /bilder/erotikk1.jpg$domain=eavisa.com
-/entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dknfig.js^$script,important
+/entag.js$script,domain=eniro.se|eniro.no|eniro.dk|proff.se|proff.no|proff.dk
 /js/smartbanner/*$domain=tvkampen.com|tvsporten.dk
 /linktag2.js$important,script,domain=viafree.no|viafree.dk
 /liveodds-button_nordicbet$domain=tvkampen.com|tvsporten.dk
@@ -278,6 +257,7 @@ xstra.no##.td-fix-index
 ||vikari.is/skjol/frjalsi-lif*.png$image
 ||webclick.no^
 ||webhotell.enivest.no^
+||feltet.dk/octo_cms/files/Feltet.dk//^$image
 ! — — — — —
 !#if !ext_ublock
 @@||vgtv.no$generichide
@@ -288,12 +268,18 @@ xstra.no##.td-fix-index
 ##.gofollow:not([href*="radioe6"])
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
+! https://www.op.no/
+###EAad97
 
+! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
+! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 ! 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
 ###no-familieklubben-wde-front_topboard
 ###toppbanner
 ##.jubii-adunit
 ##div[data-placeholder*="placeholder_ad"]
+###ad_superboard
+###ad_topp
 1001spill.no###footer
 1001spill.no##.omega.grid_6
 180.no##td[class^="frame-shadow-"]
@@ -301,6 +287,7 @@ xstra.no##.td-fix-index
 730.no#?#.g-10:-abp-contains(Artikkelen fortsetter )
 abcnyheter.no#?#.o-grid__col:-abp-has(.c-ad)
 abcnyheter.no#?#.o-grid__col:-abp-has(article[id^="ad_native_"])
+aftenbladet.no##.article-content:style(padding: 0 0 0 0)
 aftenposten.no##.standard-ad-container
 aftenposten.no,hockeymagasinet.dk###top-ads-container
 altomfotball.no#?#div[style^="padding: "]:-abp-has([class^="tv2-ad"])
@@ -311,6 +298,9 @@ amino.dk##.topAd930x180
 arendalstidende.no#?#div[style^="font-size"]:-abp-contains(/^Annonse:/)
 avisen.dk##.Ad
 avvir.no##.avvir-block-top.avvir-block-container
+bilnorge.no###artikkel300x250right
+bilnorge.no###nettboard_art1
+bilnorge.no#?#tr:-abp-has(td:-abp-contains(Annonse:))
 bloggomtoppbloggere.com##.eaa.widget_text
 bodonu.no##.sidecol.hidden-xs
 bold.dk###dstop
@@ -319,21 +309,41 @@ borsen.dk##.native-ads
 borsen.dk##.native-ads-item
 borsen.dk##.side-banner
 bramat.no###g-slideshow > .g-container > .g-grid > .size-100.g-block
+bt.dk##.hidden-md-down.col-xl-12
+bt.dk##.sidebar.col-xl-4.col-lg-4.col-md-12.col-sm-12.col-xs-12
 budstikka.no##.bazaar
 byas.no##.section-ad-netboard
+byggebolig.no##.maestro-content-plugins
 byggfakta.no,byggfaktabolig.no,vvsaktuelt.no###bannerContainer
 computerworld.dk###computerworldleaderboard
 computerworld.dk##.paragraphAd
 computerworld.dk#?#.columnLeftContent > div:-abp-has(.dfp-ad)
+cw.no##.ad-fit-body
+cw.no##.desktop-only.l-row > .omega.grid-12.grid-item.col
+dagbladet.no#?#div[class^="css"]:matches-css-before(content: "Annonse")
 dagens.dk,dust2.dk##.banner
+dagensbyggeri.dk##.banner-megaboard-top
+dagensbyggeri.dk##.pushBelow.pushAbove
+dagensbyggeri.dk##div.no-print.hidden-xs.row
+dagensmedisin.no##.mobile-hidden
+dagensmedisin.no##.widget-article-ad.widget
+dailyrush.dk##.dr-medium-rectangle
+dailyrush.dk##.dr-top-banner
+daria.no##.container[style*=" solid "]
+daria.no##div[style*=";width:200px;"]
+dba.dk##.marketing-container
 demokraten.no,avisa-hordaland.no,blv.no,bomlo-nytt.no,gat.no,lp.no,osogfusa.no,raumnes.no,setesdolen.no,sunnhordland.no,vaksdalposten.no,vtb.no##.banners
-gamer.no,veier24.no,at.no,porten.no,insidetelecom.no,elektronikkbransjen.no##.poster-placeholder
-komputer.no,natgeo.no,historienet.no##.wg-banner
-komputer.no,natgeo.no,historienet.no##.top-banner
+denstoredanske.dk###banner-zone-1
+digi.no,medier24.no##.ad-label-vertical
 dinavis.no##.newsAD
 dinside.no##.adunit-wrapper
 dinside.no#?#.columns.small-8:-abp-has(div[id^="ad-netboard"])
-prisjakt.*,prisjagt.dk,dv.is##.adbox
+diskusjon.no###diskusjon_toppbanner
+diskusjon.no##.prisguide-content
+dmi.dk##.add-container
+dmi.dk#?#.large-6:-abp-has(:scope > .section-1-ad)
+dn.no###googlead-toppbanner:style(min-height: 0 !important)
+dn.no##[id^="googlead-"]:not(#googlead-toppbanner)
 dv.is##.adbox_310x400
 dv.is##.ticker
 e24.no###main > div:nth-of-type(1)
@@ -346,6 +356,8 @@ eavisa.com##.post-content > p:-abp-has(a[onclick^="javascript:window.open("])
 ebcontent.dk###ebcontentMegaboard
 ehandel.com##aside
 ekstrabladet.dk###manipulate_monster
+eurogamer.*###leaderboard
+eurogamer.*##.advert
 euroinvestor.dk,valutakurser.dk###ctl00_BannerContainerTop
 eyjar.net##.hausad
 eyjar.net#?#.col-sm-12.col-md-8:-abp-has(a[href^="/ad/"])
@@ -355,14 +367,18 @@ familieklubben.no##div[id*="familieklubben-wde-article_"]
 familieklubben.no##div[id*="familieklubben-wde-front_"]
 filmfront.no##.annonse_forklaring
 filmfront.no##.responsiv_reklame
+filmweb.no##.adrow
+filmweb.no##.topad.row
 filmz.dk##.page-top-wrapper
 finn.no###afshcontainer
 finn.no##.ads__unit--banner
 finna.is##.augl
 fiskeribladet.no##div[id^="banner_billboard1_"]
 forum.kvinneguiden.no##div.ehm-megaboard
+freak.no##.right-column-wrapper
 gaffa.dk##.external-branding
 gamer.no##.pst-placeholder
+gamer.no,veier24.no,at.no,porten.no,insidetelecom.no,elektronikkbransjen.no##.poster-placeholder
 gaysir.no##.ad_wrapper_content
 gjerrigknark.com#?#.dividerBlock:not(:-abp-has(.dividerBlockNewsletterSubscribe))
 godt.no##[class^="advert"]
@@ -373,6 +389,7 @@ guloggratis.dk###bottomBanner
 guloggratis.dk###topBanner
 guloggratis.dk##.ad_form_header_right
 guloggratis.dk##.adservering-container
+guloggratis.dk##.banner-container
 h-a.no##.banners-row
 hammerfestingen.no##.annonsestyle
 hardwareonline.dk##.centerfull
@@ -388,18 +405,30 @@ hringbraut.is##.strevda
 hwt.dk#?#.box.text-center:-abp-has(script[src^="//ads."])
 information.dk##.masthead
 itavisen.no##.fifth-article-ad
+itavisen.no,tvguide.dk##div[id^="ad-"]
+jn.fo##.lysingarspot
+jubii.dk##.mobiletakeover-background
 jyllands-posten.dk###MegaBoard_Top
 jyllands-posten.dk##div[id^="MediumRectangle"]
 jyllands-posten.dk#?#.gridCol:-abp-has(div[class="annonceHolder"])
+kart.1881.no##.panel-ad-skyscraper
+kjarninn.is##.ad-container
 kommunikationsforum.dk##.banner-top
 kommunikationsforum.dk##div[style="padding-top: 20px; padding-bottom: 20px; "]
+komputer.no,natgeo.no,historienet.no##.top-banner
+komputer.no,natgeo.no,historienet.no##.wg-banner
 kreativeideer.no##.strossle-container
 lokal-avisen.no#?#.title:-abp-contains(/ANNONSE/i)
 lp.no,varden.no#?#.outline:-abp-has([class="annonse"])
+lydogbilde.no,lydogbillede.dk##.background-ad:style(min-height: 0px !important)
 markedsforing.dk##.articles-baner-content
 markedsforing.dk##.banner-annonce
 markedsforing.dk#?#.row-second:-abp-has(div[class*="banner-annonce"])
+mbl.is##.container:style(margin-top: 0px !important)
+mbl.is##.main-header:style(margin-top: 0px !important)
 medier24.no##.ad-toppbanner-article
+menn.is#?#.vc_column-inner:-abp-has(.mobile-ad):not(:-abp-has(a))
+menn.is#?#.vc_column:-abp-has(.mobile-ad):not(:-abp-has(a))
 meremobil.dk#?##header > div:-abp-has(div[id*="gpt-ad-"])
 min-mave.dk##.topAdBannerFixed
 min-mave.dk##.vspacer
@@ -407,6 +436,8 @@ minmote.no##.ad-box
 minmote.no##.advert-container-inline
 minmote.no##.advert-horseshoe
 minmote.no#?#article:-abp-has(:scope > div[id^="advert-"])
+mobil.nu,mobilkunden.dk##.tower
+nattogdag.no##.category-annonse
 netdoktor.dk##.common-advert-bold
 newz.dk##.widget_widget_ads
 nhi.no##.advert
@@ -416,6 +447,8 @@ nordjyske.dk##.print-to-web-row
 nordjyske.dk##div[class*="banner"]
 nordjyske.dk##div[class^="jubii-"]
 norge.bz,kragero.org#?#td:-abp-has(:scope > script[src*="/hst.tradedoubler.com/"])
+nutiminn.is##.custom-html-widget.textwidget
+nutiminn.is##section[id^="wp_is_mobile"]
 nyheder.tv2.dk##.o-article_sidebar > div.g-item
 onlinenytt.com##.textwidget > p
 parcferme.no##.code-block > p
@@ -426,12 +459,20 @@ pengenytt.no#?#.so-widget-sow-editor:-abp-has(a[href^="https://online.adservicem
 pengenytt.no#?#.textwidget:-abp-contains(Annonse)
 pengenytt.no#?#.widget-title:-abp-contains(Annonser)
 poki.no##div[class*=" advertisement-GP-"]
+politiken.dk##.u-clearfix.row--justify-center.row > .js-sticky-container
+prisjakt.*,prisjagt.dk###footer_header
+prisjakt.*,prisjagt.dk,dv.is##.adbox
 prisjakt.no,prisjagt.dk##.desktop-inline-ad
 prisjakt.no,prisjagt.dk##.outsider-ads
 prissok.no##.internal-poster
 procycling.no##.container-ad
+pulze.dk###topads
 purehelp.no##.dfptop
 purehelp.no#?#.float-left:-abp-has(span[id^="ezoic-pub-ad-placeholder-"])
+qxl.*###crosslistingLauritzAdsenseBanner
+qxl.*###GoogleAdsensePanorama
+qxl.*##.n_ListHeader:style(margin-top: 5px !important)
+qxl.no###whitetop:style(margin-top: 0px !important)
 resett.no#?#.code-block:-abp-contains(Reklame):not(:-abp-contains(butikk))
 rorfag.no###right_side
 rorfag.no##.anonse
@@ -445,6 +486,7 @@ speed.bredbandsguiden.no##.admark
 spillespill.no###bannerAdmeenRectangleTopContainer
 spillespill.no##.banner-leaderboard
 spillespill.no##.push
+sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
 sporttv.is#?#.box:-abp-has(div[class^="auglysing-"])
 sporttv.is,utdanningsnytt.no##.banner-right
 startsiden.no##div[class*="advertisement_"]
@@ -464,10 +506,12 @@ tv2.dk#?#.o-deck:-abp-has(div[class^="ad ad-wide"])
 tv2.no##div[data-cyp$="Advertisement"]
 tv3.dk##.channelHeaderLogo
 tv3sport.dk##.panorama
+tvkampen.com,tvsporten.dk###before-matches
 tvkampen.com,tvsporten.dk###clickable-bg
 tvkampen.com,tvsporten.dk###panorama
 ugeskriftet.dk##.ufl-banner
 uniavisen.dk##.hide-from-print.banner-module.module
+united.no##.ads
 utdanningsnytt.no###Topbanner
 utdanningsnytt.no##fieldset
 utrop.no##.bottom-widead
@@ -476,9 +520,17 @@ valkal.no##.ads
 valutakurser.dk##.bottom_banner_div
 varden.no##.top_banner
 vartoslo.no##.vo-annonse
+vb.is##.big_spons
 vg.no##.ad-wrapper
+vg.no##.finn-placeholder
+vg.no##div[id^="ad-front-netboard_"]
+vg.no,bt.no##div[id^="adPlacement"]
+vg.no,familieklubben.no##.appnexus
+vgtv.no##.page-container:style(margin-top: 0px !important)
 vimedhund.dk,madogvenner.dk##.g-ads
 visir.is##.df-auto-article
+visir.is##.padded.limit--tight.limit:style(padding-top: 15px !important)
+visir.is##div.padded--no-bottom.padded--less.padded.limit:style(padding-top: 5px !important)
 visitnorway.no#?##dtnContainer:-abp-has(.dtnad)
 vl.no##.ad-cols
 vl.no##.ad-fullwidth-container
@@ -486,78 +538,14 @@ vl.no##.vlDesktopAd
 vredens-gnag.no##.ab-appnexus-ads-wrapper
 win-xp.no#?#tr > td > div:-abp-has(a[href*="clk.tradedoubler."])
 woman.dk##.gutter-bottom.article-content > div.wg-banner
-||730.no/banner/*/sonymusic/$subdocument
-||gaysir.no/rek/bb_inline$subdocument
-dmi.dk##.add-container
-dmi.dk#?#.large-6:-abp-has(:scope > .section-1-ad)
-jubii.dk##.mobiletakeover-background
-pulze.dk###topads
-menn.is#?#.vc_column:-abp-has(.mobile-ad):not(:-abp-has(a))
-menn.is#?#.vc_column-inner:-abp-has(.mobile-ad):not(:-abp-has(a))
-nutiminn.is##.custom-html-widget.textwidget
-nutiminn.is##section[id^="wp_is_mobile"]
-kart.1881.no##.panel-ad-skyscraper
-vb.is##.big_spons
-kjarninn.is##.ad-container
-jn.fo##.lysingarspot
-guloggratis.dk##.banner-container
-united.no##.ads
-freak.no##.right-column-wrapper
-daria.no##.container[style*=" solid "]
-daria.no##div[style*=";width:200px;"]
-digi.no,medier24.no##.ad-label-vertical
-mobil.nu,mobilkunden.dk##.tower
-itavisen.no,tvguide.dk##div[id^="ad-"]
-vg.no,familieklubben.no##.appnexus
-vg.no,bt.no##div[id^="adPlacement"]
-nattogdag.no##.category-annonse
-vg.no##div[id^="ad-front-netboard_"]
-vg.no##.finn-placeholder
-||static.vg.no/css/admark_top.gif
-filmweb.no##.adrow
-filmweb.no##.topad.row
-bilnorge.no#?#tr:-abp-has(td:-abp-contains(Annonse:))
-bilnorge.no###nettboard_art1
-||bilnorge.no/gifs/*emty.gif$image
-bilnorge.no###artikkel300x250right
 yrkesbil.no###side > div:nth-of-type(1)
-bt.dk##.hidden-md-down.col-xl-12
-bt.dk##.sidebar.col-xl-4.col-lg-4.col-md-12.col-sm-12.col-xs-12
-byggebolig.no##.maestro-content-plugins
-cw.no##.ad-fit-body
-cw.no##.desktop-only.l-row > .omega.grid-12.grid-item.col
-dagensbyggeri.dk##.banner-megaboard-top
-dagensbyggeri.dk##.pushBelow.pushAbove
-dagensbyggeri.dk##div.no-print.hidden-xs.row
-dagensmedisin.no##.mobile-hidden
-dagensmedisin.no##.widget-article-ad.widget
-dailyrush.dk##.dr-medium-rectangle
-dailyrush.dk##.dr-top-banner
-dba.dk##.marketing-container
-denstoredanske.dk###banner-zone-1
-diskusjon.no###diskusjon_toppbanner
-diskusjon.no##.prisguide-content
-dn.no##[id^="googlead-"]:not(#googlead-toppbanner)
-dn.no###googlead-toppbanner:style(min-height: 0 !important)
-politiken.dk##.u-clearfix.row--justify-center.row > .js-sticky-container
-sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
-aftenbladet.no##.article-content:style(padding: 0 0 0 0)
-dagbladet.no#?#div[class^="css"]:matches-css-before(content: "Annonse")
-eurogamer.*###leaderboard
-eurogamer.*##.advert
-lydogbilde.no,lydogbillede.dk##.background-ad:style(min-height: 0px !important)
-mbl.is##.container:style(margin-top: 0px !important)
-mbl.is##.main-header:style(margin-top: 0px !important)
-prisjakt.*,prisjagt.dk###footer_header
-qxl.*###crosslistingLauritzAdsenseBanner
-qxl.*###GoogleAdsensePanorama
-qxl.*##.n_ListHeader:style(margin-top: 5px !important)
-qxl.no###whitetop:style(margin-top: 0px !important)
-tvkampen.com,tvsporten.dk###before-matches
-vgtv.no##.page-container:style(margin-top: 0px !important)
-visir.is##.padded.limit--tight.limit:style(padding-top: 15px !important)
-visir.is##div.padded--no-bottom.padded--less.padded.limit:style(padding-top: 5px !important)
+||730.no/banner/*/sonymusic/$subdocument
+||bilnorge.no/gifs/*emty.gif$image
+||gaysir.no/rek/bb_inline$subdocument
+||static.vg.no/css/admark_top.gif
 ~raymond.cc,~win-rar.com,~bolha.com,~wiwo.de##.ad
+gamer.no##.aaa-placeholder
+google.*###cnsi ~ [jsaction*="dismiss"]
 ! — — — — —
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
@@ -579,6 +567,7 @@ qxl.no###leaderBoardListingviewTop
 ##.block-AnnonceBlocksAdform
 ##.clearfix.top_banner_container
 vafo.dk##.adform-flexblock
+##.adform__topbanner
 ! https://reelligestilling.dk/
 ##.googlepublisherpluginad
 ! https://www.rbnett.no/
@@ -587,6 +576,8 @@ vafo.dk##.adform-flexblock
 ! https://www.op.no/
 ##.am-bazaar-ad
 ##.bazaarSpinnerContainer
+##[id^="art-bazaarAdGrid-"]
+##optimus-element[id^="art-bazaarAd-"][version="default"]
 ! https://journalisten.dk/
 ###jobads-topbanner
 ! http://www.altomfotball.no/
@@ -604,8 +595,13 @@ vafo.dk##.adform-flexblock
 ##.mh-loop-ad
 ! https://www.mbl.is/frettir/
 ##.ticker-ad
+! https://adressa.no
+##div[data-contenttype="ad"]
 
-! 🇬🇧: Empty divider spaces (Section under construction)
+! 🇳🇴: ——— Tomme skillebokser ———
+! 🇩🇰: ——— Tomme adskillerbokser ———
+! 🇬🇧: ——— Empty divider spaces ———
+##.skille
 icelandreview.com,bir.no,medier24.no,knr.gl,nutiminn.is#?#p:-abp-contains(/^\xA0$/)
 icelandreview.com##.mk-padding-divider
 talkmore.no##.spacer
@@ -614,16 +610,19 @@ tnt-tv.no##.desktop_element.promo
 tnt-tv.no##.logos
 tnt-tv.no##.tabs_placeholder
 avvir.no###block-block-1 > p:nth-of-type(4)
-##.skille
 dyrevennene.no##.td-footer-wrapper
 
-! 🇬🇧: Distracting background images (Section under construction)
+! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
+! 🇩🇰: ——— Distraherende baggrundsbilleder ———
+! 🇬🇧: ——— Distracting background images ———
 ||images.media.xxlsports.com/images/h90/h9d/9339713159198/bg.jpg$image
 ||platekompaniet.no/assets/img/background.png$image
 ||pepcall.no/wp-content/uploads/2015/04/bakgrunn-forside.jpg$image
 ||tv2.no/s/lab/2.5/p/img/tv2-background.svg$image
 
-! 🇬🇧: Unbreakage
+! 🇳🇴: ——— Fiksing av knekte sider ———
+! 🇩🇰: ——— Fiksing af knækte websider ———
+! 🇬🇧: ——— Unbreakage ———
 nettavisen.no###topover-loader
 nettavisen.no##body.no-scroll:style(overflow: auto !important)
 gamer.no#@#iframe[width="300"][height="250"]
@@ -650,7 +649,8 @@ krom.is#@#.share-container
 ! 🇬🇧: Solcellespesialisten, loading issue
 ||wo.tc
 
-! 🇬🇧: Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion
+! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
+! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 @@*.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 @@||5e529.v.fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
 @@||bondebladet.screen9.tv^$generichide
@@ -681,6 +681,8 @@ viafree.*##+js(addEventListener-defuser.js, /^ad/)
 viafree.*##+js(addEventListener-defuser.js, /^media/)
 viafree.*##+js(setTimeout-defuser.js, r, 0)
 viafree.*##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs-progress-control:style(display: initial !important;)
+@@/js/ads.js$1p,domain=tvkampen.com|tvsporten.dk
+@@||www.tv2.no/s/js/ads.js$script,1p
 !#if !ext_ublock
 @@||bildeler.name$generichide
 @@||reservedele.name$generichide
@@ -691,16 +693,12 @@ viafree.*##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs
 ! 🇳🇴: Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne)
 ! 🇬🇧: Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book)
 ||widget.norsktippingpartner.no$subdocument
-||widget.tippebannere.no$subdocument
+||widget.tippebannere.no$subdocument,domain=~tipster.no
 ||tipster.no/embed$subdocument
 ###ntwidget
 ##.ntbox-btn
 ##.ntbox-tab.bg-primary
 ###sportspill-box-top
-ba.no##a[href*="/x/5-8-"]
-seher.no#?#.css-vk53wn:-abp-contains(norsk tipping)
-side2.no###nt-box
-nettavisen.no#?#.df-article-content:-abp-has(a[href*="/sportspill/"])
 vglive.no##.tipster-liveodds-embed
 
 ! Gamereactor
