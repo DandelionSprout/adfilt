@@ -7,6 +7,8 @@
 
 <b>IMPORTANT NOTE FOR CHROMIUM-BROWSER USERS:</b> My lists does not, can not, and will never ever support Manifest v3, due to its laughably short rule limit and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions will not be accepted, and if you do submit one, you would be asked to use an alternate web browser or web browser version instead.
 
+And just in case anyone thinks I'm not serious about it, <b>I will no longer offer support to Safari ≥13 users</b> (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
+
 ————————————————————————————
 
 This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. GitHub was in mid-2017 by far the easiest way for laymen like me to store pure text files, which is a necessity to create subscribable lists.
