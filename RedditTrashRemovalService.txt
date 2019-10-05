@@ -1,6 +1,6 @@
-[Adblock Plus 3.2]
+[Adblock Plus 3.4]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 01September2019v1-Beta
+! Version: 25September2019v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
@@ -30,6 +30,7 @@ reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
 ||reddit.com/r/antifurry_irl^$document
 ||reddit.com/r/yiffinhell^$document
 ||reddit.com/r/blackpeopletwitter^$document
+||reddit.com/r/conservative^$document
 reddit.com#?#div[class*="scrollerItem"]:-abp-contains(r/antifurry_irl)
 
 ! Subreddits known to condone mass-murders or the notion of such to varying degrees
@@ -59,7 +60,7 @@ reddit.com#?#.Post:-abp-has(a[data-click-id="timestamp"][href*="/europe/"]):-abp
 
 ! Posts that are too new to have been given a points score
 reddit.com#?#.Post:-abp-has(div[style^="color:"]:-abp-contains(•):not(:-abp-contains(/[a-z]/i)))
-!!!reddit.com#?#.Post:not(:-abp-has(i[class*="icon-save"])):not(:-abp-has(span[role="presentation"])):not(:-abp-has(div > span[style^="color:"]:nth-of-type(3)))
+reddit.com#?#.Post:-abp-has(span[data-click-id="metadata_comments"]):not(:-abp-has(span[data-click-id="metadata_votes"]))
 
 ! Usernames that are 139% guaranteed to be trolls
 reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
@@ -68,8 +69,10 @@ reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i))
 reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i))
 reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/RedditAdmins/i))
 reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/RedditAdmins/i))
-reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi][w]?[sz]?/i)):-abp-contains(/white/i))
-reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi][w]?[sz]?/i)):-abp-contains(/white/i))
+reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi][w]?[sz]?/i):-abp-contains(/white/i))
+reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi][w]?[sz]?/i):-abp-contains(/white/i))
+reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/g[o0]y/i):-abp-contains(/wh[i1]te/i))
+reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/g[o0]y/i):-abp-contains(/wh[i1]te/i))
 
 ! Removes the "n new posts for you" banner
 reddit.com#?#div:-abp-has(:scope > svg[viewbox="0 0 34 16"])

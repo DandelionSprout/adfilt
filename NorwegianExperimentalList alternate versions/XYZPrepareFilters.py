@@ -23,17 +23,18 @@ def download_filters() -> str:
         text += r.text
     return text
 
+# ——— AdGuard version ———
+
 # function that prepares the filter list for AdGuard
 def prepare_ag(lines) -> str:
     text = ''
 
     for line in lines:
 
-
         # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
         line = re.sub(
            r"([\$,])doc.*", 
-           "\1empty,important", 
+           r"\1empty,important", 
            line
         )
 
@@ -148,6 +149,8 @@ def prepare_ag(lines) -> str:
         text += line + '\r\n'
 
     return text
+
+# ——— Adblock Plus version ———
 
 def is_supported_abp(line) -> bool:
     for token in UNSUPPORTED_ABP:
@@ -342,7 +345,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.4\]", 
+           r"\[Adblock Plus .*\]", 
            "msFilterList", 
            line
         )
@@ -451,8 +454,8 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "Expires: ", 
-           "expires = ", 
+           "# Expires: ", 
+           ": expires = ", 
            line
         )
 
@@ -507,6 +510,84 @@ def prepare_tpl(lines) -> str:
         line = re.sub(
            r"(# Version: .*[0-9][A-Z].*)", 
            r"\1-Beta", 
+           line
+        )
+
+        line = re.sub(
+           r":  (.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
            line
         )
 
@@ -719,6 +800,8 @@ if __name__ == "__main__":
 
     print('The adblocker-based list versions have been generated.')
 
+
+
 import requests
 import re
 
@@ -733,6 +816,12 @@ OUTPUT_HOSTS = 'AdawayHosts'
 OUTPUT_LS = 'LittleSnitchNorwegianList.lsrules'
 OUTPUT_DNSMASQ = 'NordicFiltersDnsmasq.conf'
 OUTPUT_HOSTSDENY = 'NordicFiltersHostsDeny.deny'
+OUTPUT_PIHOLE = 'NordicFiltersPiHole.txt'
+OUTPUT_AGH = 'NordicFiltersAdGuardHome.txt'
+OUTPUT_SHADOWSOCKS = 'NordicFiltersSocks5.list'
+OUTPUT_RPZ = 'NordicFiltersRPZ.txt'
+OUTPUT_UNBOUND = 'NordicFiltersUnbound.conf'
+OUTPUT_MINERBLOCK = 'NordicFiltersForMinerBlock.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -783,7 +872,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"# Platform notes:.*", 
-           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including Blokada, DNS66, Gas Mask, Diversion, and many others; as well as those who edit their OS' «hosts» system file.", 
+           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.", 
            line
         )
 
@@ -814,7 +903,7 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"$(?<=\.com$)|(?<=\.no$)|(?<=\.dk$)|(?<=\.is$)|(?<=\.fo$)|(?<=\.gl$)|(?<=\.org$)|(?<=\.net$)|(?<=\.tc$)|(?<=\.it$)|(?<=\.online$)|(?<=\.top$)|(?<=\.tv$)|(?<=\.eu$)|(?<=\.us$)|(?<=\.info$)|(?<=\.club$)", 
+           r"$(?<=\.com$)|(?<=\.no$)|(?<=\.dk$)|(?<=\.is$)|(?<=\.fo$)|(?<=\.gl$)|(?<=\.org$)|(?<=\.net$)|(?<=\.tc$)|(?<=\.it$)|(?<=\.online$)|(?<=\.top$)|(?<=\.tv$)|(?<=\.eu$)|(?<=\.us$)|(?<=\.info$)|(?<=\.club$)|(?<=\.io$)", 
            "\" },", 
            line
         )
@@ -941,6 +1030,326 @@ def prepare_hostsdeny(lines) -> str:
 
     return text
 
+# ————— Pi-hole version —————
+
+def prepare_pihole(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for Pi-hole)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for Pi-hole)", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for those who make use of the Regex functionality in Pi-Hole.", 
+           line
+        )
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.(.*)\.\*", 
+           r"(^|\.)\1\\.\2\\..*$", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.\*$", 
+           r"(^|\.)\1\\..*$", 
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\.(.*)-\*", 
+           r"(^|\.)\1\\.\2-*$", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.\*\.(.*)", 
+           r"(^|\.)\1\\..*\\.\2$", 
+           line
+        )
+
+        line = re.sub(
+           r"^\*\.(.*)\.\*", 
+           r"(^|\.)*\\.\1\\..*$", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+# ————— AdGuard Home version —————
+
+def prepare_agh(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for AdGuard Home)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for AdGuard Home)", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for those who use AdGuard Home and its oddly specific subset of adblocker syntaxes.", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9*].*)$", 
+           r"||\1^", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+# ————— Shadowsocks version —————
+
+def prepare_shadowsocks(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for Shadowsocks)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for Shadowsocks)", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for those who use Shadowsocks, Shadowrocket, and other Socks5-based tools that have become popular in PR-China for several reasons.", 
+           line
+        )
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*?\.[a-z0-9].*?\.[a-z].*)$", 
+           r"DOMAIN,\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^([^D].*)\.\*.*\.(.*)", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.*\\.\2", 
+           line
+        )
+
+        line = re.sub(
+           r"^([^DU].*?\.[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?)$", 
+           r"DOMAIN-SUFFIX,\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.(.*)\.\*", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.\2\\.*", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.(.*)-\*$", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.\2-*", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.\*\.(.*)", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.*\\.\2", 
+           line
+        )
+
+        line = re.sub(
+           r"^\*\.(.*)\.\*", 
+           r"URL-REGEX,^https?:\\/\\/\*\\.\1\\.*", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)\.\*$", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.*", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+# ————— RPZ version —————
+
+def prepare_rpz(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)", 
+           r"\1 CNAME .", 
+           line
+        )
+
+        line = re.sub(
+           r"^# ", 
+           "; ", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "; Platform notes: This list version is intended for those who use BIND or other DNS server tools that support RPZ files.", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for BIND/RPZ)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for BIND/RPZ)", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+# ————— Unbound version —————
+
+def prepare_unbound(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)", 
+           r"local-zone: \"\1\" static", 
+           line
+        )
+
+        line = re.sub(
+           r"\\", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for those who use the DNS server tool Unbound.", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for Unbound)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for Unbound)", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+# ————— MinerBlock version —————
+
+def prepare_minerblock(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)", 
+           r"*://*.\1/*", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: So, let's say your company boss is not letting you install any adblocker on your awful work laptop, but (s)he lets you install MinerBlock for some indeterminable reason? In this very unlikely case, I've saved your day.\nNote: This list does not actually block any mining-related stuff.", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (for MinerBlock)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (for MinerBlock)", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
+
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -951,6 +1360,12 @@ if __name__ == "__main__":
     ls_filter = prepare_ls(lines)
     dnsmasq_filter = prepare_dnsmasq(lines)
     hostsdeny_filter = prepare_hostsdeny(lines)
+    pihole_filter = prepare_pihole(lines)
+    agh_filter = prepare_agh(lines)
+    shadowsocks_filter = prepare_shadowsocks(lines)
+    rpz_filter = prepare_rpz(lines)
+    unbound_filter = prepare_unbound(lines)
+    minerblock_filter = prepare_minerblock(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -966,6 +1381,24 @@ if __name__ == "__main__":
 
     with open(OUTPUT_HOSTSDENY, "w") as text_file:
         text_file.write(hostsdeny_filter)
+
+    with open(OUTPUT_PIHOLE, "w") as text_file:
+        text_file.write(pihole_filter)
+
+    with open(OUTPUT_AGH, "w") as text_file:
+        text_file.write(agh_filter)
+
+    with open(OUTPUT_SHADOWSOCKS, "w") as text_file:
+        text_file.write(shadowsocks_filter)
+
+    with open(OUTPUT_RPZ, "w") as text_file:
+        text_file.write(rpz_filter)
+
+    with open(OUTPUT_UNBOUND, "w") as text_file:
+        text_file.write(unbound_filter)
+
+    with open(OUTPUT_MINERBLOCK, "w") as text_file:
+        text_file.write(minerblock_filter)
 
     print('The domains-based list versions have been generated.')
 
@@ -1214,7 +1647,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.4\]", 
+           r"\[Adblock Plus .*\]", 
            "msFilterList", 
            line
         )
@@ -1245,13 +1678,31 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "\^", 
+           r"~([a-z0-9].*?)\|", 
+           r"\n+d \1", 
+           line
+        )
+
+        line = re.sub(
+           r"\$doc,domain=.*", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\$.*", 
+           r"-d (\..*)\^", 
+           r"- *\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^- \^.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"\^", 
            "", 
            line
         )
@@ -1269,20 +1720,8 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "-d \.", 
-           "- ", 
-           line
-        )
-
-        line = re.sub(
            "com\* ", 
            "com ", 
-           line
-        )
-
-        line = re.sub(
-           r"([-][d].*[.][*].*)", 
-           "", 
            line
         )
 
@@ -1295,6 +1734,12 @@ def prepare_tpl(lines) -> str:
         line = re.sub(
            "@@_", 
            "+d _", 
+           line
+        )
+
+        line = re.sub(
+           r"^\.[a-z]", 
+           "", 
            line
         )
 
@@ -1323,8 +1768,8 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "Expires: ", 
-           "expires = ", 
+           "# Expires: ", 
+           ": expires = ", 
            line
         )
 
@@ -1395,24 +1840,6 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^- agency$", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"^- gdn$", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"^- bid$", 
-           "", 
-           line
-        )
-
-        line = re.sub(
            r"^-d .*\*\..*", 
            "", 
            line
@@ -1420,6 +1847,78 @@ def prepare_tpl(lines) -> str:
 
         line = re.sub(
            r"^- https\?.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r":  (.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r":  (.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           r"://(.*?) ", 
+           r"://\1/", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])//", 
+           r"\1/ ", 
+           line
+        )
+
+        line = re.sub(
+           "Windows Mac", 
+           "Windows/Mac", 
+           line
+        )
+
+        line = re.sub(
+           r"\$.*", 
            "", 
            line
         )

@@ -3,7 +3,7 @@ import re
 
 SOURCES = ['https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://easylist-downloads.adblockplus.org/liste_fr.txt', 'https://www.i-dont-care-about-cookies.eu/abp/']
 
-UNSUPPORTED_AGH = ['##', '@#', '#?#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '~image', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=']
+UNSUPPORTED_AGH = ['/', '##', '@#', '#?#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '~image', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AGH = 'AdGuardHomeCompilationList.txt'
@@ -27,8 +27,12 @@ def is_supported_agh(line) -> bool:
 def prepare_agh(lines) -> str:
     text = ''
 
-    # remove or modifiy entries with unsupported modifiers
+    previous_line = None
+
     for line in lines:
+            
+        if line == previous_line:
+            continue
 
         line = re.sub(
            r"([$,])third-party", 
@@ -138,7 +142,43 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        if is_supported_agh(line):
+        line = re.sub(
+           r".*\^[*$,].*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r".*\.js$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^[&+-.=?^_%].*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z])", 
+           r"||\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^[0-9].*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^!#.*", 
+           "", 
+           line
+        )
+
+        if is_supported_agh(line) and not line == '':
             text += line + '\r\n'
 
     return text

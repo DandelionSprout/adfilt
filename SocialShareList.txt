@@ -1,6 +1,6 @@
-[Adblock Plus 3.2]
+[Adblock Plus 3.4]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 03September2019v1-Alpha
+! Version: 02October2019v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -13,6 +13,7 @@
 ###likebuttons
 ###mashfbar-header
 ###pinterest
+###rail-share-bar
 ###share-buttons
 ###share-tool
 ###share-unit
@@ -44,6 +45,7 @@
 ##.button__twitter
 ##.c-article__byline-social
 ##.dre-share-band
+##.et_social_icons_container
 ##.facebook-like-box
 ##.facebook-messenger-share
 ##.facebook-share
@@ -66,6 +68,7 @@
 ##.linkedinShare
 ##.loader-container.shares
 ##.mashsb-box
+##.news-share-link
 ##.news_share
 ##.pinterest-share
 ##.pinterest[href*="/pin/create/"]
@@ -73,23 +76,33 @@
 ##.recentsocial
 ##.sbtn_main
 ##.share
+##.share-actions
 ##.share-article
 ##.share-article-vertical
 ##.share-bar
 ##.share-btns
+##.share-button
 ##.share-facebook
 ##.share-icon
 ##.share-it
+##.share-item-plus
 ##.share-list
 ##.share-metas
 ##.share-nw
 ##.share-pinterest
+##.share-reddit
+##.share-social
+##.share-this
 ##.share-toggle
 ##.share-toolbar
+##.share-tools
 ##.share_area
 ##.share_btn
 ##.share_toggle
+##.shareBar
 ##.shareBottom
+##.sharebtns
+##.ShareButton
 ##.ShareButtons
 ##.shareit
 ##.sharethis-wrapper
@@ -98,6 +111,7 @@
 ##.sharing-btn
 ##.sharing-container
 ##.sharing-item
+##.sharing.social
 ##.sns
 ##.soc-list
 ##.social-action[test-id*="facebook"]
@@ -122,22 +136,30 @@
 ##.twitter-share
 ##.twitter.share-icon
 ##.twitter[href*="/share?"]
+##[app="addtoany"]
 ##[data-flip-widget="shareflip"]
 ##[socialshare]
+##a[class$="sharebtn"]
+##a[class$="social_share"]
 ##a[class*="-sharing-popup"]
 ##a[class*="-socials__item"]
 ##a[class*="BtnShare"]
+##a[class*="google_plus_share"]
 ##a[class*="share__button"]
+##a[class*="ShareButton" i]
 ##a[class*="social-share"]
 ##a[class="facebook" i][title="Share this"]
 ##a[class="twitter" i][title="Tweet"]
 ##a[class^="addthis_button"]
 ##a[class^="pagetools"][class*="icon--twitter"]
+##a[class^="pinterest-save"]
 ##a[class^="share_btn"]
 ##a[class^="socialbutton" i][onclick*="window.open"]
 ##a[data-ga-event-action^="share:"]
+##a[data-pin-do="buttonPin"]
 ##a[data-share$="Facebook" i]
 ##a[data-type="sharing-button"]
+##a[href*="/social_plugins/share"]
 ##a[href*="://plus.google.com/share?url="]
 ##a[href*="://share.flipboard.com/bookmarklet/popout?"]
 ##a[href*="://twitter.com/home?status="]
@@ -147,7 +169,9 @@
 ##a[href*="pinterest.com/pin/create/button/?"]
 ##a[href*="share-tools"]
 ##a[href^="/sharer/sharer.php?"] > button[type="submit"]
+##a[href^="https://api.whatsapp.com/send?text=http"]
 ##a[href^="https://plus.google.com/share?url=http"]
+##a[href^="https://t.me/share/url"]
 ##a[href^="https://twitter.com/intent/tweet?"]
 ##a[href^="https://twitter.com/share?text="][href*="/&via="]
 ##a[href^="https://www.facebook.com/dialog/feed"]
@@ -161,6 +185,7 @@
 ##a[title="Share on Twitter" i]
 ##a[title="Share on whatsapp" i]
 ##amedia-share
+##amp-social-share
 ##button[data-a-target^="share"]
 ##button[ng-click^="shareOn"]
 ##button[title^="Share this "]
@@ -182,12 +207,11 @@
 ##div[class*="share-box"]
 ##div[class*="share-content"]
 ##div[class*="share-link"]
-##div[class*="sharebar"]
 ##div[class*="sharer-tool"]
 ##div[class*="sharethisbutton" i]
 ##div[class*="shareToolbar"]
 ##div[class*="social"][class*="sharing"]
-##div[class*="social-buttons"]
+##div[class*="social-bar__sharing"]
 ##div[class*="social-panel"]
 ##div[class*="social-share"]
 ##div[class*="social_sidebar"]
@@ -199,6 +223,7 @@
 ##div[class="socialshare" i]
 ##div[class="twitterShare" i]
 ##div[class^="container_NotificationsBanner_"]
+##div[class^="fbshare" i]
 ##div[class^="icon-share-"]
 ##div[class^="share-button" i]
 ##div[class^="share-options"]
@@ -206,6 +231,7 @@
 ##div[class^="shareLinks"]
 ##div[class^="social-like"]
 ##div[class^="social-media-container"]
+##div[class^="twittshare"]
 ##div[data-aop^="sharingtoolbar"]
 ##div[id$="_sharethis"]
 ##div[id^="sthoverbuttons"]
@@ -219,12 +245,12 @@
 ##p[class^="del-artikel"]
 ##share-grid
 ##span[class*="share-icon"]
-##span[class*="ShareButton"]
+##span[class*="ShareButton" i]
 ##span[class^="share_btn"]
 ##span[data-lnkd-debug]
 ##ul[class*="-share-buttons"]
 ##ul[class*="-soc-list"]
-##ul[class*="social-bar"]
+##ul[class^="share-action"]
 ##ul[class^="sociale-ikoner-del"]
 /share/facebook-icon.png$image
 /share/reddit-icon.png$image
@@ -236,27 +262,25 @@
 /sharing/twitter.$image
 ||addthis.com/static/btn/sm-share*.gif
 ||apis.google.com/*/+1/fastbutton$subdocument
+||assets.pinterest.com/js/pinit*^
 ||facebook.com/*/plugins/like.php$subdocument
 ||facebook.com/*/plugins/share_button.php?app_id$subdocument
 ||facebook.com/plugins/page.php$subdocument
 ||facebook.com/plugins/share_button$subdocument
 ||platform.twitter.com/widgets/follow_button$subdocument
 ||platform.twitter.com/widgets/tweet_button$subdocument
+||social-plugins.line.me/widget/share?url=$subdocument
 ||softwareok.com/img/i_like_this.png?$image
 ||widgets.getpocket.com/v1/button?label=pocket$subdocument
+||ws.sharethis.com^$third-party
 ||www.facebook.com/plugins/like.php$subdocument
 ||yastatic.net/share/*-icon.*
+~allrecipes.com##div[class*="sharebar"]
 ~mewe.com##button[class*="share-button"]
 ~pinterest.*##a[href^="https://pinterest.com/pin/create/bookmarklet/"]
+~reddit.com##a[href*="://www.reddit.com/submit?"]
 ~tecmint.com,~ostechnix.com##.share
-||ws.sharethis.com^$third-party
-##.ShareButton
-##[app="addtoany"]
-##a[class*="BtnShare"]
-##.news-share-link
-##.share-item-plus
-##a[class$="sharebtn"]
-##.sharing.social
+~whatsapp.com##[href^="whatsapp://send"]
 
 ! Exceptionally annoying leftover floating bars
 pixivision.net##._floated-bottom-bar
@@ -270,6 +294,8 @@ ekstrabladet.dk##label[for*="ShareModal"]
 eurogamer.net##.social
 vg.no##button[aria-label*="Facebook"]
 tomshardware.co.uk##.share-bar
+knowyourmeme.com##a[class^="pinterest-save"]
+racefans.net##.sd-social
 
 ! Circumventing Artstation's use of "Display: block !important"
 artstation.com##button[ng-click]
@@ -287,3 +313,5 @@ artstation.com##button[ng-click]
 !!! ##.fb_iframe_widget:not(.fb-post):not(.fb-login-button):not(.fb-comments) (There were simply too many exemption criteria that I'd have to find and add)
 !!! ##a[onclick*="reddit" i] (https://gizmodo.com/these-are-the-10-most-hated-reddit-posts-of-all-time-1785954923)
 !!! ##.linkedin (edbpriser.dk)
+!!! ##ul[class*="social-bar"] (https://wannabemagazine.com/)
+!!! ##div[class*="social-buttons"] (https://tara.se/)
