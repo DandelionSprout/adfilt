@@ -1,16 +1,16 @@
 msFilterList
-# Version: 30September2019v4-Beta
-# Version: 300920194 (for Adblock Plus' issue report system)
+# Version: 05October2019v3-Beta
+# Version: 051020193 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
-# 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information, detaljer, nyttige værktøjer og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
+# 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 # If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
 # 🇳🇴: Ukategoriserte oppføringer
-# 🇩🇰: Ukategoriserede opføringer
+# 🇩🇰: Ukategoriserede regler
 # 🇬🇧: Uncategorised entries
 # 🇳🇴: ——— Reklamer ———
 # 🇩🇰: ——— Reklamer ———
@@ -176,7 +176,7 @@ contentMarketing
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
-# Tak til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/opføringer.
+# Tak til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/af/disse/regler.
 # 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
 # Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
 -d dagligvarehandelen.no sites all themes custom ledelseas gfx veil.png
@@ -188,7 +188,7 @@ contentMarketing
 -d tipster.no embed
 # ——— Gamereactor ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
-# 🇩🇰: Disse opføringer bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
+# 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 # 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
 -d openx.gamereactor.dk multi.php?
 -d media.gamereactor.dk prerolls *
@@ -215,7 +215,7 @@ contentMarketing
 # 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
 # 🇳🇴: Landseksklusive versjoner for enkle reklameblokkerere, av flernasjonsoppføringer som er i utvidelsesfilen for avanserte reklameblokkerere; ettersom Adblock Plus og AdGuard for øyeblikket ikke støtter *-jokertegn i nettadressene til blokkeringsregler.
 # ABP diskuterte på et tidspunkt å støtte det i https://issues.adblockplus.org/ticket/6773,/men/det/bunnet/ut/i ingenting.
-# 🇩🇰: Landseksklusive versioner til enkle adblockere, af flerlandsposter, der findes i udvidelsesfilen for avancerede adblockere; eftersom Adblock Plus og AdGuard i øjeblikket ikke understøtter * -jokertegn i blokeringsregel-URL-er.
+# 🇩🇰: Landseksklusive versioner til enkle adblockere, af flerlandsregler, der findes i udvidelsesfilen for avancerede adblockere; eftersom Adblock Plus og AdGuard i øjeblikket ikke understøtter * -jokertegn i blokeringsregel-URL-er.
 # ABP drøftede på et tidspunkt at støtte det i https://issues.adblockplus.org/ticket/6773,/men/det/førede/ikke/til noget.
 # 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
 # ABP was at one point discussing supporting it in https://issues.adblockplus.org/ticket/6773,/but/it/stranded/out/into nothing.
