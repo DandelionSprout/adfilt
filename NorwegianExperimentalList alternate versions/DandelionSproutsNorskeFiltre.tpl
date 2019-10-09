@@ -1,6 +1,6 @@
 msFilterList
-# Version: 05October2019v3-Beta
-# Version: 051020193 (for Adblock Plus' issue report system)
+# Version: 10October2019v1-Beta
+# Version: 101020191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -153,13 +153,16 @@ contentMarketing
 -d scripts.tv2a.dk oil 
 # 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
 +d api.instagram.com
-# Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy
-# Attempts to resolve how some frontpage articles are hard to open when using EasyPrivacy.
+# Attempting to fix a problem with voting online on Idol Norway when using "EasyPrivacy"
+# Attempts to resolve how some frontpage articles are hard to open when using "EasyPrivacy".
 # https://github.com/easylist/easylist/issues/1861
 +d _prebid_
 # 🇳🇴: Solcellespesialisten, innlastingsproblem
 # 🇬🇧: Solcellespesialisten, loading issue
 -d wo.tc
+# 🇳🇴: Får Dplay sin påloggingsside til å vises riktig når «EasyPrivacy» blir brukt
+# 🇬🇧: Makes Dplay's login page show up properly when using "EasyPrivacy"
++d mparticle.com
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv
@@ -278,6 +281,10 @@ contentMarketing
 -d surveryrewards1.com
 # https://www.nrk.no/mr/1.14649436
 -d pprfct.com
+# https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
+-d liveshopdealz.com
+# https://www.datahjelperne.no/facebook-slankesvindel/
+-d fxqt.uk.com
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
