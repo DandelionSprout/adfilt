@@ -1,6 +1,6 @@
 msFilterList
-# Version: 10October2019v1-Beta
-# Version: 101020191 (for Adblock Plus' issue report system)
+# Version: 13October2019v1-Beta
+# Version: 131020191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -100,6 +100,7 @@ contentMarketing
 -d feltet.dk octo_cms files Feltet.dk  
 -d langrenn.com getbanner.php * getfile.php 
 - annonse_
+-d tv2a.dk
 # — — — — —
 +d vgtv.no
 -d adnxs.com
@@ -148,9 +149,6 @@ contentMarketing
 # 🇬🇧: ——— Unbreakage ———
 # 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
 # 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
-# 🇩🇰: Gør det muligt igen at scrolle når «I Don't Care About Cookies» er benyttet
-# 🇬🇧: Re-enables scrolling when using "I Don't Care About Cookies"
--d scripts.tv2a.dk oil 
 # 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
 +d api.instagram.com
 # Attempting to fix a problem with voting online on Idol Norway when using "EasyPrivacy"
@@ -285,6 +283,10 @@ contentMarketing
 -d liveshopdealz.com
 # https://www.datahjelperne.no/facebook-slankesvindel/
 -d fxqt.uk.com
+# https://www.nrk.no/livsstil/1.14732503
+-d elkjop*.club
+# https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
+- css *sparebank1.no
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
