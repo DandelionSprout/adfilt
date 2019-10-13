@@ -19,36 +19,36 @@ contentMarketing
 - -bazaar-
 - *-annonse-*
 - _bm abd
-- annonse *
-- auglysing *
-- Bannere *
-- bazaar *
+- annonse
+- auglysing
+- Bannere
+- bazaar
 - bilder erotikk1.jpg
 - entag.js
-- js smartbanner *
+- js smartbanner
 - linktag2.js
 - liveodds-button_nordicbet
 - nordicbet_logo
 - partners *_ad_icon
-- reklam *
-- reklame *
-- resources dfp *
--d acdn.adnxs.com ast ast.js
--d acdn.adnxs.com ast ast.js
+- reklam
+- reklame
+- resources dfp
+-d acdn.adnxs.com ast.js
+-d acdn.adnxs.com ast.js
 -d ad.no.doubleclick.net
 -d adext.inkclub.com
 -d ads.no
 -d adservicemedia.dk
 -d akamai.net
--d akamaihd.net video-assets 
--d amino.dk images partners agera 240x140-forside-hardcoded*.jpg
--d austevollforlag.no wp-content * annonsar 
--d austevollforlag.no wp-content * yachtmarine2014.
+-d akamaihd.net video-assets
+-d amino.dk 240x140-forside-hardcoded*.jpg
+-d austevollforlag.no annonsar
+-d austevollforlag.no yachtmarine2014.
 -d avod-fw-config.mtg-api.com
 -d banner.landbrugsavisen.dk reklame.aspx
 -d bannere.oslonett.no
 -d boligkanalen-maestro-new.azurewebsites.net
--d bornholm.nu nonsec banner
+-d bornholm.nu banner
 -d brandstudio.inventory.schibsted.io
 -d cdn.ravenjs.com
 -d client-stream-events.mtg-api.com
@@ -57,25 +57,25 @@ contentMarketing
 -d damoh.vgtv.no hic_qos
 -d delivered-by-madington.com
 -d dotbanner.dk
--d dust2.dk img banners *
+-d dust2.dk banners
 -d easy-ad.no
 -d emerio.no
 -d euroads.dk
 -d euroads.no
--d eyjar.net skrar ads
+-d eyjar.net ads
 -d freewheel-mtgx-tv.akamaized.net
 -d getsentry.com
 -d gratisxxx.no
 -d i1media.no
 -d isweb.no
--d klikk.no common js klikk.desktop-thirdparty.min.js
+-d klikk.no klikk.desktop-thirdparty.min.js
 -d matriell.dm-storage.no
--d media.sonymusic.no marketing *.html
+-d media.sonymusic.no *.html
 -d myad.no
 -d nettklikk.no
--d norskenettsider.no images ageras-banner.jpg
--d norskenettsider.no images remember-banner-2016.jpg
--d nvnytt.no images *annonse-
+-d norskenettsider.no ageras-banner.jpg
+-d norskenettsider.no remember-banner-2016.jpg
+-d nvnytt.no *annonse-
 -d openadex.dk
 -d piwik.onlinemagasinet.no
 -d primetime.ad.primetime.net
@@ -89,16 +89,16 @@ contentMarketing
 -d ssl.p.jwpcdn.com vast.js
 -d svonm.com hd-main.js
 -d track.adform.net
--d track.adform.net Banners 
+-d track.adform.net Banners
 -d tracking-genesisaffiliates.com
--d tvshop.com tradedoubler_files 
+-d tvshop.com tradedoubler_files
 -d vevlysingar.fo
--d viasport-assets.mtg-api.com * prod comScore-*.js
--d vikari.is skjol frjalsi-lif*.png
+-d viasport-assets.mtg-api.com comScore-*.js
+-d vikari.is frjalsi-lif*.png
 -d webclick.no
 -d webhotell.enivest.no
--d feltet.dk octo_cms files Feltet.dk  
--d langrenn.com getbanner.php * getfile.php 
+-d feltet.dk 
+-d langrenn.com getfile.php
 - annonse_
 -d tv2a.dk
 # — — — — —
@@ -113,10 +113,10 @@ contentMarketing
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
--d 730.no banner * sonymusic 
--d bilnorge.no gifs *emty.gif
--d gaysir.no rek bb_inline
--d static.vg.no css admark_top.gif
+-d 730.no sonymusic
+-d bilnorge.no *emty.gif
+-d gaysir.no bb_inline
+-d static.vg.no admark_top.gif
 # — — — — —
 # https://sol.no/
 # http://www.qxl.no/
@@ -140,10 +140,10 @@ contentMarketing
 # 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 # 🇩🇰: ——— Distraherende baggrundsbilleder ———
 # 🇬🇧: ——— Distracting background images ———
--d images.media.xxlsports.com images h90 h9d 9339713159198 bg.jpg
--d platekompaniet.no assets img background.png
--d pepcall.no wp-content uploads 2015 04 bakgrunn-forside.jpg
--d tv2.no s lab 2.5 p img tv2-background.svg
+-d images.media.xxlsports.com bg.jpg
+-d platekompaniet.no background.png
+-d pepcall.no bakgrunn-forside.jpg
+-d tv2.no tv2-background.svg
 # 🇳🇴: ——— Fiksing av knekte sider ———
 # 🇩🇰: ——— Fiksing af knækte websider ———
 # 🇬🇧: ——— Unbreakage ———
@@ -167,10 +167,10 @@ contentMarketing
 +d eurosport.*
 +d eurosport.no
 +d sixscissors.com
--d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com 
+-d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
--d imasdk.googleapis.com pal sdkloader pal.js
--d vg.no cnp-assets src sites vg components AdblockModal
+-d imasdk.googleapis.com pal.js
+-d vg.no AdblockModal
 +d bildeler.name
 +d reservedele.name
 +d eurosport.no,eurosport.dk
@@ -180,7 +180,7 @@ contentMarketing
 # Tak til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/af/disse/regler.
 # 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
 # Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
--d dagligvarehandelen.no sites all themes custom ledelseas gfx veil.png
+-d dagligvarehandelen.no veil.png
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
@@ -192,10 +192,10 @@ contentMarketing
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 # 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
 -d openx.gamereactor.dk multi.php?
--d media.gamereactor.dk prerolls *
+-d media.gamereactor.dk prerolls
 -d ssl.p.jwpcdn.com gapro.js
 - insert_grtv_stats.
-- prerolls *
+- prerolls
 - adblock_mobile.
 - viewability.
 # 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
@@ -216,7 +216,7 @@ contentMarketing
 # 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
 # 🇳🇴: Landseksklusive versjoner for enkle reklameblokkerere, av flernasjonsoppføringer som er i utvidelsesfilen for avanserte reklameblokkerere; ettersom Adblock Plus og AdGuard for øyeblikket ikke støtter *-jokertegn i nettadressene til blokkeringsregler.
 # ABP diskuterte på et tidspunkt å støtte det i https://issues.adblockplus.org/ticket/6773,/men/det/bunnet/ut/i ingenting.
-# 🇩🇰: Landseksklusive versioner til enkle adblockere, af flerlandsregler, der findes i udvidelsesfilen for avancerede adblockere; eftersom Adblock Plus og AdGuard i øjeblikket ikke understøtter * -jokertegn i blokeringsregel-URL-er.
+# 🇩🇰: Landseksklusive versioner til enkle adblockere, af flerlandsregler, der findes i udvidelsesfilen for avancerede adblockere; eftersom Adblock Plus og AdGuard i øjeblikket ikke understøtter -jokertegn i blokeringsregel-URL-er.
 # ABP drøftede på et tidspunkt at støtte det i https://issues.adblockplus.org/ticket/6773,/men/det/førede/ikke/til noget.
 # 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
 # ABP was at one point discussing supporting it in https://issues.adblockplus.org/ticket/6773,/but/it/stranded/out/into nothing.
@@ -230,14 +230,14 @@ contentMarketing
 -d kjolenorge.com
 - finn.no finno.htm
 - ?finn.no login
-- begrensede-tilbudet 
-- bli-avbrutt-bor-du-oppdater 
-- Norgesecure 
+- begrensede-tilbudet
+- bli-avbrutt-bor-du-oppdater
+- Norgesecure
 - gratis-reisebilletter.
-- KiwiErbjudanden1 
+- KiwiErbjudanden1
 -d trackvoluum.com
 -d jagerjack.com
-- pakkerlevering 
+- pakkerlevering
 -d posten.club
 -d kundklubb-se.com
 -d prisjakt.org
@@ -249,7 +249,7 @@ contentMarketing
 -d apple-account-locked.losjevegen.no
 -d arvetellefsen.no curry
 -d holmedalblikk.no
-- dnb11111 
+- dnb11111
 -d nymelding.com
 -d mrcal365.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
@@ -288,7 +288,7 @@ contentMarketing
 # https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 - css *sparebank1.no
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
-# 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
+# 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 # Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
 -d adidasko.com

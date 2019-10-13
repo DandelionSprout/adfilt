@@ -591,6 +591,60 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"( \*$)|( \* )", 
+           r" ", 
+           line
+        )
+
+        line = re.sub(
+           r" $", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"(-d .*? ).*? ", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(-d .*? ).*? ", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(-d .*? ).*? ", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(-d .*? ).*? ", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(-d .*? ).*? ", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(-d .*? ).*? ", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(-d .*? ).*? ", 
+           r"\1", 
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
@@ -598,7 +652,6 @@ def prepare_tpl(lines) -> str:
 
 # ————— Privoxy version —————
 
-# Attempts to achieve Internet Explorer TPL support
 def is_supported_privoxy(line) -> bool:
     for token in UNSUPPORTED_PRIVOXY:
         if token in line:
