@@ -604,6 +604,12 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
+           r" $", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"(-d .*? ).*? ", 
            r"\1", 
            line

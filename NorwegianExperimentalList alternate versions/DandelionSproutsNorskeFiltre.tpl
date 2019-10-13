@@ -97,7 +97,7 @@ contentMarketing
 -d vikari.is frjalsi-lif*.png
 -d webclick.no
 -d webhotell.enivest.no
--d feltet.dk 
+-d feltet.dk Feltet.dk
 -d langrenn.com getfile.php
 - annonse_
 -d tv2a.dk
