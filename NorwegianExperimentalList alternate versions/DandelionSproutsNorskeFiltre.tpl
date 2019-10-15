@@ -1,6 +1,6 @@
 msFilterList
-# Version: 13October2019v1-Beta
-# Version: 131020191 (for Adblock Plus' issue report system)
+# Version: 15October2019v2-Beta
+# Version: 151020192 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -110,6 +110,7 @@ contentMarketing
 # https://www.op.no/
 # https://arendalstidende.no/
 # https://www.langrenn.com/cppage.6250314-1743.html
+# https://sport.tv2.dk/formel-1/2019-10-15-jeg-viste-alle-hvad-man-ikke-skal-goere-siger-magnussen
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
