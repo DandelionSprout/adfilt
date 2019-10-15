@@ -1,6 +1,6 @@
 msFilterList
-# Version: 15October2019v2-Beta
-# Version: 151020192 (for Adblock Plus' issue report system)
+# Version: 15October2019v3-Beta
+# Version: 151020193 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -162,6 +162,8 @@ contentMarketing
 # 🇳🇴: Får Dplay sin påloggingsside til å vises riktig når «EasyPrivacy» blir brukt
 # 🇬🇧: Makes Dplay's login page show up properly when using "EasyPrivacy"
 +d mparticle.com
+# 🇩🇰: Fikser knækking af videoer på TV 2 når "EasyList" bliver brugt
+# 🇬🇧: Unbreaks videos at TV2 Denmark when using "EasyList"
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv

@@ -812,6 +812,12 @@ def prepare_privacy(lines) -> str:
         )
 
         line = re.sub(
+           r"^@.*\.googleapis\..*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)", 
            line
