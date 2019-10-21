@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
-! Version: 19October2019v3
-! Version: 191020193 (for Adblock Plus' issue report system)
+! Version: 21October2019v1
+! Version: 211020191 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -25,8 +25,7 @@
 ##.rotating-junglebogen
 ##div.size-300x160.fixed-placement
 
-! 🇳🇴: ——— Reklamer ———
-! 🇩🇰: ——— Reklamer ———
+! 🇳🇴/🇩🇰: ——— Reklamer ———
 ! 🇬🇧: ——— Ads ———
 ##.annonselenker
 ##.content-adunit
@@ -165,7 +164,9 @@ nettavisen.no#?#.story:-abp-has(.vignette)
 .no/ads/
 /*-annonse-*$image,domain=resett.no
 /_bm/abd$script,domain=eurosport.no|eurosport.dk
+/annonsar/*
 /annonse/*
+/annonser/*
 /auglysing/*
 /Bannere/*$image,domain=tek.no|gamer.no
 /bazaar/*$script,domain=nettavisen.no
@@ -196,7 +197,6 @@ nettavisen.no#?#.story:-abp-has(.vignette)
 ||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
 ||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
 ||annonser.*.no^
-||austevollforlag.no/wp-content/*/annonsar/$image
 ||austevollforlag.no/wp-content/*/yachtmarine2014.$image
 ||avod-fw-config.mtg-api.com^$important,xhr,domain=viafree.no|viafree.dk
 ||banner.*.no^
@@ -215,7 +215,7 @@ nettavisen.no#?#.story:-abp-has(.vignette)
 ||dust2.dk/img/banners/*$image
 ||easy-ad.no^
 ||emerio.no^
-||euroads.dk
+||euroads.dk^
 ||euroads.no^
 ||eyjar.net/skrar/ads
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.no|viafree.dk
@@ -566,6 +566,7 @@ tek.no##section[class*="canvas"]
 tek.no##section[class^="GreatCanvas__smallArticles-"]:style(width: 100% !important)
 finn.no#?#.ad-stream__unit:-abp-has(div[id*=google-ad])
 trening.no##[id^="dt-netboard"]
+itavisen.no##.ad:before
 ! — — — — —
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
@@ -739,6 +740,8 @@ morgenbladet.no##.preview-overlay
 dagogtid.no##.dot-shorttext:before
 aftenposten.no##.widget-salesposter:before
 fiskeribladet.no##.teaser_overlay
+information.dk##.greyed-text
+information.dk##.paywall-box:style(margin-top: 0px !important)
 
 ! 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 ! 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
