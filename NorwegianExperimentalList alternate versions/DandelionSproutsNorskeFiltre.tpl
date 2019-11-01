@@ -1,6 +1,6 @@
 msFilterList
-# Version: 15October2019v3-Beta
-# Version: 151020193 (for Adblock Plus' issue report system)
+# Version: 01November2019v1-Beta
+# Version: 011120191 (for Adblock Plus' issue report system)
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -12,14 +12,15 @@ msFilterList
 # 🇳🇴: Ukategoriserte oppføringer
 # 🇩🇰: Ukategoriserede regler
 # 🇬🇧: Uncategorised entries
-# 🇳🇴: ——— Reklamer ———
-# 🇩🇰: ——— Reklamer ———
+# 🇳🇴 🇩🇰: ——— Reklamer ———
 # 🇬🇧: ——— Ads ———
 contentMarketing
 - -bazaar-
 - *-annonse-*
 - _bm abd
+- annonsar
 - annonse
+- annonser
 - auglysing
 - Bannere
 - bazaar
@@ -42,7 +43,6 @@ contentMarketing
 -d akamai.net
 -d akamaihd.net video-assets
 -d amino.dk 240x140-forside-hardcoded*.jpg
--d austevollforlag.no annonsar
 -d austevollforlag.no yachtmarine2014.
 -d avod-fw-config.mtg-api.com
 -d banner.landbrugsavisen.dk reklame.aspx
@@ -111,6 +111,8 @@ contentMarketing
 # https://arendalstidende.no/
 # https://www.langrenn.com/cppage.6250314-1743.html
 # https://sport.tv2.dk/formel-1/2019-10-15-jeg-viste-alle-hvad-man-ikke-skal-goere-siger-magnussen
+# https://bobilverden.no/
+- annonse-
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
@@ -135,6 +137,8 @@ contentMarketing
 # https://www.latterkula.no/artikler/
 # https://www.mbl.is/frettir/
 # https:  adressa.no
+# kk.no, sol.no
+# historienet.no, natgeo.no, komputer.no
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇬🇧: ——— Empty divider spaces ———
@@ -190,6 +194,7 @@ contentMarketing
 -d widget.norsktippingpartner.no
 -d widget.tippebannere.no
 -d tipster.no embed
+# https://www.nettavisen.no/
 # ——— Gamereactor ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
@@ -290,6 +295,16 @@ contentMarketing
 -d elkjop*.club
 # https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 - css *sparebank1.no
+# https://www.faktisk.no/notiser/Ly/nei-sophie-elise-har-ikke-anbefalt-kryptovaluta-program
+-d getheretecblogz.me
+# https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
+-d phosphox.com
+-d nodzoom.com
+# https://www.faktisk.no/faktasjekker/geo/nei-skam-tarjei-har-ikke-tjent-millioner-pa-bitcoin-program
+-d affilicircle.com
+# https://www.faktisk.no/notiser/ql/nei-du-far-ikke-rayban-briller-til-22299-kr-pa-denne-nettsiden
+-d rbgeg.com
+-d rbkbb.com
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
