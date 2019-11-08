@@ -1,5 +1,5 @@
 [Adblock Plus 3.2]
-! Version: 13June2019v2
+! Version: 09November2019v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 14 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -16,9 +16,6 @@
 ###nativeapp_ad
 ###search-appPromote
 ###smart-app-banner
-###smart-banner
-###smartbanner
-###smartbanner-area
 ##.abb.abt.apl.acy.touchable.area.last.first.touchableArea
 ##.aclb.grouped._4fmw
 ##.ad-app
@@ -38,16 +35,13 @@
 ##.header-promo-apps
 ##.install_app
 ##.OpenInAppBanner
-##.smart-banner
-##.smartbanner
-##.SmartBanner
-##.SmartBannerContainer
-###smartBanner
-##.smartBanner-content
+##div[class*="smartbanner" i]
+##div[id*="smartbanner" i]
+##div[class*="smart-banner" i]
+##div[id*="smart-banner" i]
 ##.smart-app-banner
 ##.tmblr-iframe--loaded.tmblr-iframe--app-cta-button
 ##.wds-is-community-apps
-##.z-bit-smartbanner
 ##amp-app-banner
 ##body > .AppBanner
 ##div[class^="mobile-upsell"]
@@ -223,14 +217,13 @@ naturalatlas.com##.mapbar-btn.btn-has-icon
 ||assets.ilcdn.fi/IL_Parassaa_612px.gif$image
 ||banki.ru/static/common/vendor-libs/jquery.smartbanner/
 ||dogruhaber.com.tr/image/foto/*/mobil-uygulamamamiz_*.gif
-||gamer-mods.ru/.s/src/jquery.smartbanner.js
+*.smartbanner.js
 ||klavyer.com/android/klavyer-android-uygulamamiz.jpg
-||m.faz.net/*/fit/project/files/js/smartbanner.js
 ||malatyahaber.com/wp-content/uploads/2016/05/SA.gif
 ||my.klarna.com/assets/images/backgrounds/app-blur.png$image
 ||ntv.com.tr/Content/img/promote.jpg
 ||rueconomics.ru/template/mobile/assets/jquery.smartbanner/jquery.smartbanner.js
-||s.livelib.ru/js/smartbanner.
+/js/smartbanner.
 ||superfb.com/_img/banner/sfb*.png
 ||superfb.com/_img/mobil_imaj.png
 ||turkiyecocuk.com.tr/banner/
@@ -239,6 +232,7 @@ naturalatlas.com##.mapbar-btn.btn-has-icon
 ||vizefinalsorupaylasimi.com/uploads/googleplay.jpg
 
 ! Below are entries that I borrowed from "I Don't Want Your App", which is maintained by https://github.com/lassekongo83 at https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/i-dont-want-your-app.txt, and which is licenced as GPLv3
+! Generic
 ##.ViewInAppLink
 ##a[href*=".app.link/"]
 reddit.com##a[href*=".app.link/"]:not(.PostHeader__post-link)
@@ -261,6 +255,11 @@ soundcloud.com##.footer__appButtonContainer
 soundcloud.com##.upsellBanner__app
 accuweather.com###app-store-links
 .SmartMessage.$script,domain=weather.com
+mobile.twitter.com#?#+js(addEventListener-defuser.js, scroll, (e))
+quora.com#?#html,body:style(overflow: auto !important; user-select: text !important)
+quora.com#?#.PageWrapper:style(filter: none !important)
+quora.com##.modal_bg
+yelp.*##.menu-bar-pitch_open-in-app
 
 ! Inspired by (but not borrowed from) "App ads blocklist China", which is maintained by https://github.com/HankAviator at https://raw.githubusercontent.com/HankAviator/app-ads-blocklist-china/master/app_blocklist.txt
 booking.com##.appacq-banner-rating-wrap
