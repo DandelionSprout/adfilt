@@ -80,7 +80,7 @@
 * `! Redirect: `: Tells the adblocker to look for list updates from a new URL from that point on.
 * `#?#`: Required to make entries with `:-abp-has`, `:-abp-contains` and `:-abp-properties` work in those particular extensions.
 * `@@||` + `$document`: Turns off adblocking entirely while on that domain.
-* `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
+* `@@||` + `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
 * `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
 
 ### AdGuard only:
@@ -97,7 +97,6 @@
 # Particularly important usage notes
 
 * `||` entries do support asterisk wildcards, but only in the criteria text. Additionally, when using `$domain=`, domains are separated with vertical lines, since commas are instead used to stack multiple `$` values.
-* `$generichide` entries must start with `@@||`.
 * ABP is known to severely struggle with handling `:style` entries, to the point where having ABP try to load a list with such an entry will cause it to invalidate the list *and* all its entries. A workaround is to use `#?#` in all `:style` entries.
 * To make the text detection for `:-abp-contains` and `:has-text` case-insensitive, wrap the paranthesised text into `(/Example text/i)`.
 * `127.0.0.1` / `0.0.0.0` / `::1` supports only whole domains, and it can not be narrowed down to subdomains or elements.
