@@ -43,6 +43,9 @@
 * `~`: Means that an entry does *not* apply to a specific domain.
 * `/\/\/\/` and similar: Text detections in RegEx format.
 * `[Adblock Plus n.n]`: Used by Adblock Plus, AdBlock, and forks of them to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. This has no effect on uBO or its forks.
+* `! Title:` Specifies the intended name of the list. Required to make the name automatically show up in the settings of most adblockers, instead of the URL or of manual text input.
+* `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Has significant overlap with `! Last modified`.
+* `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days". ABP also supports "hour/hours".
 
 ### Nano Adblocker, uBlock Origin and AdGuard only:
 #### Hiding
@@ -64,7 +67,7 @@
 * `:xpath`: An entry written with the very advanced Xpath syntax.
 * `##^`: Blocks resources before they've even been loaded, based on their values in *View source* instead of their F12 ones.
 #### Blocking
-* `127.0.0.1` / `0.0.0.0` / `::1`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`.
+* `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`.
 * `||` + `$document`: Guarantees a danger warning when loading a page, which is not 110% guaranteed otherwise.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions.
 * `$3p`: Same as `$third-party`.
