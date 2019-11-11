@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
-! Version: 11November2019v1
-! Version: 111120191 (for Adblock Plus' issue report system)
+! Version: 11November2019v2
+! Version: 111120192 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -125,8 +125,8 @@ tek.no##.partnerstudio-ad-inline
 tek.no#?#div.clearfix.col-full-width:-abp-contains(kommersielle partner)
 ticketmaster.*##div[id^="ad-slot-"]
 trening.no##.cp-slidein-body
-tv2.no##+js(golem.de.js)
 tv2.no,abcnyheter.no,medier24.no##a[href*="adform.net"]
+tv2.no##+js(json-prune, enabled, testhide)
 tvkampen.com,tvsporten.dk##+js(abort-on-property-write.js, onload)
 tvkampen.com,tvsporten.dk##.custom-background:style(background-image: none !important)
 tvkampen.com,tvsporten.dk##a.p-icon.partner
@@ -245,7 +245,6 @@ rett24.no##.p_banner-responsive
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
-||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=tv2.no
 ||track.adform.net$domain=118.dk
 ||track.adform.net/Banners/
 ||tracking-genesisaffiliates.com$image,3p
@@ -263,7 +262,8 @@ utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
 /annonse_$image
 ||tv2a.dk^
 blogg.no##.contentmarketing-box
-nettavisen.no##article:-abp-has(:scope > a[href*="?utm_source="])
+nettavisen.no#?#article:-abp-has(:scope > a[href*="?utm_source="])
+nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ! — — — — —
 !#if !ext_ublock
 @@||vgtv.no$generichide
@@ -630,6 +630,8 @@ vafo.dk##.adform-flexblock
 ##[class^="AdWrapper"]
 ! historienet.no, natgeo.no, komputer.no
 ##.wallpaper > .horseshoe
+! https://www.nettavisen.no/okonomi/3423875562.html
+##.os-inline
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
