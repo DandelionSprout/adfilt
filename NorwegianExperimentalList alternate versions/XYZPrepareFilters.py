@@ -318,6 +318,78 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"! Version: (.*)January(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>01\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)February(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>02\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)March(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>03\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)April(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>04\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)May(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>05\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)June(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>06\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)July(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>07\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)August(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>08\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)September(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>09\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)October(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>10\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)November(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>11\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)December(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>12\2\3", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 

@@ -1,6 +1,5 @@
 msFilterList
-# Version: 01November2019v1-Beta
-# Version: 011120191 (for Adblock Plus' issue report system)
+# Version: 12November2019v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -15,6 +14,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Reklamer ———
 # 🇬🇧: ——— Ads ———
 contentMarketing
+-d rett24.no inline
 - -bazaar-
 - *-annonse-*
 - _bm abd
@@ -87,7 +87,6 @@ contentMarketing
 -d ssl.p.jwpcdn.com jwpsrv.js
 -d ssl.p.jwpcdn.com sharing.js
 -d ssl.p.jwpcdn.com vast.js
--d svonm.com hd-main.js
 -d track.adform.net
 -d track.adform.net Banners
 -d tracking-genesisaffiliates.com
@@ -111,6 +110,7 @@ contentMarketing
 # https://arendalstidende.no/
 # https://www.langrenn.com/cppage.6250314-1743.html
 # https://sport.tv2.dk/formel-1/2019-10-15-jeg-viste-alle-hvad-man-ikke-skal-goere-siger-magnussen
+# https://nyheder.tv2.dk/samfund/2019-11-04-vold-fanget-paa-video-gerningsmand-fik-lov-at-gaa-fri-i-tre-aar
 # https://bobilverden.no/
 - annonse-
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
@@ -139,6 +139,7 @@ contentMarketing
 # https:  adressa.no
 # kk.no, sol.no
 # historienet.no, natgeo.no, komputer.no
+# https://www.nettavisen.no/okonomi/3423875562.html
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇬🇧: ——— Empty divider spaces ———
@@ -172,7 +173,6 @@ contentMarketing
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv
 +d eurosport.*
-+d eurosport.no
 +d sixscissors.com
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
@@ -222,12 +222,6 @@ contentMarketing
 +d solutions.tradedoubler.com
 # 🇳🇴: Lagt til fordi min egen mor (Hun er i 40-årene) trodde jeg hadde rotet til PCen hennes, når den i stedet bare viste en uBO-sideadvarsel på grunn av en oppføring i «AdGuards hovedfilter», også kjent som AdGuard Base.
 # 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
-# 🇳🇴: Landseksklusive versjoner for enkle reklameblokkerere, av flernasjonsoppføringer som er i utvidelsesfilen for avanserte reklameblokkerere; ettersom Adblock Plus og AdGuard for øyeblikket ikke støtter *-jokertegn i nettadressene til blokkeringsregler.
-# ABP diskuterte på et tidspunkt å støtte det i https://issues.adblockplus.org/ticket/6773,/men/det/bunnet/ut/i ingenting.
-# 🇩🇰: Landseksklusive versioner til enkle adblockere, af flerlandsregler, der findes i udvidelsesfilen for avancerede adblockere; eftersom Adblock Plus og AdGuard i øjeblikket ikke understøtter -jokertegn i blokeringsregel-URL-er.
-# ABP drøftede på et tidspunkt at støtte det i https://issues.adblockplus.org/ticket/6773,/men/det/førede/ikke/til noget.
-# 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
-# ABP was at one point discussing supporting it in https://issues.adblockplus.org/ticket/6773,/but/it/stranded/out/into nothing.
 # 🇬🇧: Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)

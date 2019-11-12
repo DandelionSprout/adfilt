@@ -1,6 +1,5 @@
 [AdGuard ≥6]
-! Version: 01November2019v1
-
+! Version: 12November2019v2
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -125,8 +124,8 @@ tek.no##.partnerstudio-ad-inline
 tek.no#?#div.clearfix.col-full-width:-abp-contains(kommersielle partner)
 ticketmaster.no,ticketmaster.dk##div[id^="ad-slot-"]
 trening.no##.cp-slidein-body
-tv2.no##+js(golem.de.js)
 tv2.no,abcnyheter.no,medier24.no##a[href*="adform.net"]
+tv2.no##+js(json-prune, enabled, testhide)
 tvkampen.com,tvsporten.dk##+js(abort-on-property-write.js, onload)
 tvkampen.com,tvsporten.dk##.custom-background:style(background-image: none !important)
 tvkampen.com,tvsporten.dk##a.p-icon.partner
@@ -153,6 +152,8 @@ xstra.no##.td-fix-index
 gamer.no,tek.no,digi.no##.products-carousel
 feltet.dk##a[onclick^="octo_"]
 nettavisen.no#?#.story:-abp-has(.vignette)
+rett24.no##.p_banner-responsive
+||rett24.no/*/_/attachment/inline/$image
 -bazaar-$script,domain=nettavisen.no
 .dk/ad/
 .dk/ads/
@@ -243,7 +244,6 @@ nettavisen.no#?#.story:-abp-has(.vignette)
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
-||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=tv2.no
 ||track.adform.net$domain=118.dk
 ||track.adform.net/Banners/
 ||tracking-genesisaffiliates.com$image,third-party
@@ -261,7 +261,8 @@ utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
 /annonse_$image
 ||tv2a.dk^
 blogg.no##.contentmarketing-box
-nettavisen.no##article:-abp-has(:scope > a[href*="?utm_source="])
+nettavisen.no#?#article:-abp-has(:scope > a[href*="?utm_source="])
+nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ! — — — — —
 !#if !ext_ublock
 @@||vgtv.no$generichide
@@ -280,6 +281,9 @@ nettavisen.no##article:-abp-has(:scope > a[href*="?utm_source="])
 ##.spklw-post-attr[data-recommendation-type="ad"]
 ! https://sport.tv2.dk/formel-1/2019-10-15-jeg-viste-alle-hvad-man-ikke-skal-goere-siger-magnussen
 @@||tv2a.dk/js/lazysizes
+! https://nyheder.tv2.dk/samfund/2019-11-04-vold-fanget-paa-video-gerningsmand-fik-lov-at-gaa-fri-i-tre-aar
+@@||tv2a.dk/js/Video
+@@||tv2a.dk/js/tv2player
 ! https://bobilverden.no/
 /annonse-$image
 ##img[alt^="Annonse"]
@@ -570,6 +574,8 @@ tek.no##section[class^="GreatCanvas__smallArticles-"]:style(width: 100% !importa
 finn.no#?#.ad-stream__unit:-abp-has(div[id*=google-ad])
 trening.no##[id^="dt-netboard"]
 itavisen.no##.ad:before
+filmweb.no##div[class^="ad-module"]
+lydogbilde.no,lydogbillede.dk##.adremark
 ! — — — — —
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
@@ -624,6 +630,8 @@ vafo.dk##.adform-flexblock
 ##[class^="AdWrapper"]
 ! historienet.no, natgeo.no, komputer.no
 ##.wallpaper > .horseshoe
+! https://www.nettavisen.no/okonomi/3423875562.html
+##.os-inline
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -686,7 +694,6 @@ krom.is#@#.share-container
 @@||5e529.v.fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
 @@||bondebladet.screen9.tv^$generichide
 @@||eurosport.*^$generichide
-@@||eurosport.no^$generichide
 @@||fwmrm.net/*/AdManager.js$script,domain=viafree.no|viafree.dk
 @@||fwmrm.net/ad/$xmlhttprequest,domain=viafree.no|viafree.dk
 @@||fwmrm.net/ad/*$script,domain=viafree.no|viafree.dk
@@ -729,6 +736,7 @@ viafree.no,viafree.dk##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-
 ! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
 ##.Article-header-body:before
 ##.paywall-fade
+##.polarisSpid.widget:before
 digi.no,tu.no,medier24.no,porten.no##.faded-article-content:after
 dagbladet.no##.CTA-body-faded
 aftenbladet.no,fvn.no##.overlay-wrap:before
@@ -847,17 +855,6 @@ frihetskamp.net##a[href*="nordenstil.no"]
 ! 🇳🇴: Lagt til fordi min egen mor (Hun er i 40-årene) trodde jeg hadde rotet til PCen hennes, når den i stedet bare viste en uBO-sideadvarsel på grunn av en oppføring i «AdGuards hovedfilter», også kjent som AdGuard Base.
 ! 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
 @@||track.adform.net/*%2Fapollo.no%2F
-
-! 🇳🇴: Landseksklusive versjoner for enkle reklameblokkerere, av flernasjonsoppføringer som er i utvidelsesfilen for avanserte reklameblokkerere; ettersom Adblock Plus og AdGuard for øyeblikket ikke støtter *-jokertegn i nettadressene til blokkeringsregler.
-! ABP diskuterte på et tidspunkt å støtte det i https://issues.adblockplus.org/ticket/6773, men det bunnet ut i ingenting.
-! 🇩🇰: Landseksklusive versioner til enkle adblockere, af flerlandsregler, der findes i udvidelsesfilen for avancerede adblockere; eftersom Adblock Plus og AdGuard i øjeblikket ikke understøtter * -jokertegn i blokeringsregel-URL-er.
-! ABP drøftede på et tidspunkt at støtte det i https://issues.adblockplus.org/ticket/6773, men det førede ikke til noget.
-! 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
-! ABP was at one point discussing supporting it in https://issues.adblockplus.org/ticket/6773, but it stranded out into nothing.
-!#if !ext_ublock
-dagligvarehandelen.no,avisen.dk,bt.dk,sondagsavisen.dk,lokalavisen.dk,folketidende.dk,realityportalen.dk,fyens.dk,plbold.dk,tv2.no,seoghoer.dk,telepristjek.dk,abcnyheter.no,dagsavisen.no,nettavisen.no,bramat.no,hblad.no,itavisen.no,gjoviksblad.no,h-a.no,kreativeideer.no,vartoslo.no,viivilla.no#?#div.spklw-post-attr:-abp-has(div[class*="spklw-sponsored"])
-folkebladet.no,hitra-froya.no,rbnett.no,smp.no##.polarisSpid.widget:before
-!#endif
 
 !#if !adguard
 ! 🇬🇧: Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
