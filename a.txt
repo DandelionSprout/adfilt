@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 Imres filtre
-! Version: 12November2019v1-Personal
+! Version: 12November2019v2-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include Anti-'Battle%20Royale'%20List.txt
@@ -32,7 +32,7 @@ netflix.com#?#.ptrack-content:-abp-has(a[href*="70242311"])
 netflix.com#?#.ptrack-content:-abp-has(a[href*="80022632"])
 netflix.com#?#.ptrack-content:-abp-has(a[href*="80039517"])
 netflix.com#?#.ptrack-content:-abp-has(a[href*="80050008"])
-nexusmods.com##li.mod-tile:has-text(Queen Vanessa)
+nexusmods.com#?#li.mod-tile:-abp-contains(Queen Vanessa)
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Battle Dimension)
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Nightcore)
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Taylor Swift)
@@ -182,6 +182,13 @@ osu.ppy.sh#?#.beatmapsets__item:-abp-contains(jubeat )
 
 ! ———————————————————————————————————————————————————————————————————————————————————————————————
 
+! ★ Paste remover from "Have I Been Pwned" ★
+haveibeenpwned.com###pasteDescription
+haveibeenpwned.com###pastes
+haveibeenpwned.com###pwnCount > a[href="/FAQs#Pastes"]
+haveibeenpwned.com#?#.col-sm-3:-abp-contains(paste)
+haveibeenpwned.com##a[href="/Pastes"]
+
 ! Webstores that ignore "Mail-in-store" and who instead delivers to PostNord Norway's generic pick-up points in the middle of bloody nowhere
 ||kjell.com^$document
 ||skousen.no^$document
@@ -218,9 +225,9 @@ www.nrk.no#?#.kur-room:-abp-contains(«Skam»)
 www.nrk.no#?#div.relation:-abp-contains(«Skam»)
 
 ! Removing empty padding lines on non-Nordic sites (Many more sites to be included when I find them again)
-change.org,indiegogo.com,thejc.com#?#p:has-text(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
-indiegogo.com##h3:has-text(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
-indiegogo.com##h2:has-text(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
+change.org,indiegogo.com,thejc.com#?#p:-abp-contains(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
+indiegogo.com##h3:-abp-contains(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
+indiegogo.com##h2:-abp-contains(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
 
 ! Removes those creepy square bubbles on Google Documents about how many people that are watching every move you make there
 docs.google.com##div[class*="docs-presence-plus-collab-widget-image"]
@@ -261,8 +268,3 @@ bulbapedia.bulbagarden.net###reswitch
 whois.net###alternative_filters > table
 whois.net###midColumn
 netflix.com##.notifications-menu
-
-! Paste remover from "Have I Been Pwned"
-haveibeenpwned.com###pasteDescription
-haveibeenpwned.com###pastes
-haveibeenpwned.com###pwnCount > a[href="/FAQs#Pastes"]
