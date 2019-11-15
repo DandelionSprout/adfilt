@@ -28,7 +28,7 @@
 #### File blocking (a.k.a. blocking rules)
 * `||`: Blocks resources from domains or parts thereof from being loaded. For non-domain-specific resources, no pre-emption is needed at all.
 * `@@`: Whitelists resources from specific URLs to make them load.
-* `^`: Usually ensures that the subdomains are also covered by the entry.
+* `^`: Wildcard for anything that isn't alphanumerical or "_-.%" . Often used to cover both slash ( / ) and non-slash domain name endings at the same time.
 * `$third-party`: Ensures that resources from a domain are only blocked if you're not visiting the domain itself.
 * `$~third-party`: Ensures that resources from a domain are only blocked if you're visiting the domain itself.
 * `$domain=`: Ensures that resources from a domain are only blocked if you're visiting a specified website.
