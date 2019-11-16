@@ -1,5 +1,5 @@
 msFilterList
-# Version: 12November2019v2-Beta
+# Version: 17November2019v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -254,6 +254,11 @@ contentMarketing
 - dnb11111
 -d nymelding.com
 -d mrcal365.com
+-d ultimate-tech-products.myshopify.com
+-d look-like-star.myshipify.com
+-d limitedvoucher.com
+-d vouchersnationhub.com
+-d com-airs1.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
@@ -299,6 +304,45 @@ contentMarketing
 # https://www.faktisk.no/notiser/ql/nei-du-far-ikke-rayban-briller-til-22299-kr-pa-denne-nettsiden
 -d rbgeg.com
 -d rbkbb.com
+# https://www.facebook.com/viralspiralen/posts/2494251397311027
+-d addmoviesnow.com
+# https://www.facebook.com/viralspiralen/posts/2367894249946743
+-d grabdiscountdeals.com
+# https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
+-d com-dk.com
+# https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
+-d com-usx.com
+# https://www.mm.dk/tjekdet/artikel/ikea-advarer-svindelnummer-erklaerer-dig-for-vinder-af-gavekort
+-d canvasclub.net
+# https://www.mm.dk/tjekdet/artikel/norwegian-billetter-til-valgfri-destination-er-snyd-og-bedrag
+-d bondiblue.co.uk
+# https://www.mm.dk/tjekdet/artikel/geggo-har-ikke-lanceret-ny-skoenhedscreme22
+-d organiclife24.info
+# https://www.mm.dk/tjekdet/artikel/overrasket-bjarne-riis-kender-intet-til-investering-i-bitcoin-platform
+-d ucrhealthyhearts.com
+-d limewow.com
+# https://www.mm.dk/tjekdet/artikel/svindel-breder-sig-ogsaa-lars-larsen-misbruges-nu-i-bitcoin-fup
+-d myk-news.com
+# https://www.mm.dk/tjekdet/artikel/tidligere-lego-chef-misbruges-i-bitcoin-svindelnummer
+-d meretro.com
+# https://www.mm.dk/tjekdet/artikel/svindelnummer-fodboldspiller-skuespiller-og-komiker-loejet-konkurs-og-rige
+-d infos-online.com
+# https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
+-d hcliips.com
+# https://www.mm.dk/tjekdet/artikel/kendt-dansk-blogger-og-realitystjerne-offer-for-svindelnummer
+-d myfitlifestyle24.com
+# https://www.mm.dk/tjekdet/artikel/han-afviser-at-have-investeret-500-mio-i-bitcoin-platform-graensende-til-humor
+-d bestphoneapplication.com
+# https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
+-d vision-hey.club
+# https://www.mm.dk/tjekdet/artikel/fup-dovne-robert-har-ikke-tjent-en-boejet-5-oere-paa-bitcoins
+-d marissatomei.com
+# https://www.mm.dk/tjekdet/artikel/fupartikel-haevder-at-rasmus-paludan-er-blevet-rig-paa-investeringer-i-bitcoins
+-d marymaclane.net
+# https://www.mm.dk/tjekdet/artikel/loevens-hule-misbruges-igen-i-svindel-om-bitcoin-investeringer
+-d web-technoti.com
+# https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
+-d top-topic.co
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
