@@ -1,5 +1,5 @@
 msFilterList
-# Version: 17November2019v1-Beta
+# Version: 17November2019v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -81,7 +81,6 @@ contentMarketing
 -d primetime.ad.primetime.net
 -d rig.idg.no
 -d sannsyn.com
--d sentry-cdn.com
 -d soda.is
 -d ssl.p.jwpcdn.com freewheel.js
 -d ssl.p.jwpcdn.com jwpsrv.js
