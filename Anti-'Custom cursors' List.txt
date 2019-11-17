@@ -1,16 +1,33 @@
 ! Title: ↖ Anti-'Custom cursors' List
-! Version: 14November2019v1-Alpha
+! Version: 17November2019v1-Alpha
 ! Expires: 14 days
 ! Description: This list is a proof-of-concept for Nano and uBO only (Not AdGuard), which aims to replace websites' custom cursors with the default OS cursor.
 ! If you encounter non-covered custom-cursor-using sites, or serious site functionality breakage, do not hesitate to tell me about it on GitHub.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
-! https://amigalove.com/viewtopic.php?f=6&t=1031
-! https://contrarycon.com/
-com,net,org,company,~duckduckgo.com##html:style(cursor: unset !important)
 ! https://www.new.company/
-com,net,org,company##body:style(cursor: unset !important)
+/new_cursor.$image
+! https://amigalove.com/viewtopic.php?f=6&t=1031
+/images/pointer.
 ! https://winx.fandom.com/wiki/Tecna
-com,net,org,company##a:link:style(cursor: pointer)
+/images/*/Cursor*
+@@||wikia.nocookie.net^*/images/$image,badfilter
 ! https://www.muttagency.com/
-com,net,org,company##button:style(cursor: unset !important)
+/svg/arrow-home*
+! https://contrarycon.com/
+###cursor
+! https://disney.fandom.com/wiki/Disney_Fairies
+/images/*/Mouse.png
+/Mousehover.$image
+fandom.com,wikia.org#?#a:link:style(cursor: pointer !important)
+! https://corpseparty.fandom.com/wiki/Corpseparty_Wiki
+*cursor_hover.$image
+! https://kanal.fandom.com/el/wiki/KanalWiki
+.cur/$image
+! https://freddy-fazbears-pizza.fandom.com/wiki/Five_Nights_at_Freddy%27s_Wiki
+/CustomCursor*$image
+! https://pikmin.fandom.com/wiki/Pikmin_Wiki
+||nocookie.net/*/OnionSprite*$image
+! http://www.flockofsiegel.tv/
+/images/Cursor.
+/images/Cursor-
