@@ -1,5 +1,4 @@
-msFilterList
-# Version: 17November2019v2-Beta
+# Version: 20November2019v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -105,13 +104,14 @@ contentMarketing
 # framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
 # The ':not' exception is needed for opp.no
 # https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
-# https://www.op.no/
-# https://arendalstidende.no/
+# www.op.no
+# arendalstidende.no
 # https://www.langrenn.com/cppage.6250314-1743.html
 # https://sport.tv2.dk/formel-1/2019-10-15-jeg-viste-alle-hvad-man-ikke-skal-goere-siger-magnussen
 # https://nyheder.tv2.dk/samfund/2019-11-04-vold-fanget-paa-video-gerningsmand-fik-lov-at-gaa-fri-i-tre-aar
-# https://bobilverden.no/
+# bobilverden.no
 - annonse-
+# norskenettsider.no
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
@@ -120,22 +120,22 @@ contentMarketing
 -d gaysir.no bb_inline
 -d static.vg.no admark_top.gif
 # — — — — —
-# https://sol.no/
-# http://www.qxl.no/
-# https://www.vtb.no/
-# https://vafo.dk/
-# https://reelligestilling.dk/
-# https://www.rbnett.no/
-# https://www.op.no/
-# https://journalisten.dk/
-# http://www.altomfotball.no/
+# sol.no
+# www.qxl.no
+# www.vtb.no
+# vafo.dk
+# reelligestilling.dk
+# www.rbnett.no
+# www.op.no
+# journalisten.dk
+# www.altomfotball.no
 # dv.is
 # dinside.no, seher.no
 # bt.no
 # https://www.latterkula.no/se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live/
-# https://www.latterkula.no/artikler/
-# https://www.mbl.is/frettir/
-# https:  adressa.no
+# www.latterkula.no artikler
+# www.mbl.is frettir
+# adressa.no
 # kk.no, sol.no
 # historienet.no, natgeo.no, komputer.no
 # https://www.nettavisen.no/okonomi/3423875562.html
@@ -287,8 +287,6 @@ contentMarketing
 -d pprfct.com
 # https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
 -d liveshopdealz.com
-# https://www.datahjelperne.no/facebook-slankesvindel/
--d fxqt.uk.com
 # https://www.nrk.no/livsstil/1.14732503
 -d elkjop*.club
 # https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
@@ -311,25 +309,18 @@ contentMarketing
 -d com-dk.com
 # https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
 -d com-usx.com
-# https://www.mm.dk/tjekdet/artikel/ikea-advarer-svindelnummer-erklaerer-dig-for-vinder-af-gavekort
--d canvasclub.net
 # https://www.mm.dk/tjekdet/artikel/norwegian-billetter-til-valgfri-destination-er-snyd-og-bedrag
 -d bondiblue.co.uk
 # https://www.mm.dk/tjekdet/artikel/geggo-har-ikke-lanceret-ny-skoenhedscreme22
 -d organiclife24.info
 # https://www.mm.dk/tjekdet/artikel/overrasket-bjarne-riis-kender-intet-til-investering-i-bitcoin-platform
 -d ucrhealthyhearts.com
--d limewow.com
 # https://www.mm.dk/tjekdet/artikel/svindel-breder-sig-ogsaa-lars-larsen-misbruges-nu-i-bitcoin-fup
 -d myk-news.com
 # https://www.mm.dk/tjekdet/artikel/tidligere-lego-chef-misbruges-i-bitcoin-svindelnummer
 -d meretro.com
-# https://www.mm.dk/tjekdet/artikel/svindelnummer-fodboldspiller-skuespiller-og-komiker-loejet-konkurs-og-rige
--d infos-online.com
 # https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
-# https://www.mm.dk/tjekdet/artikel/kendt-dansk-blogger-og-realitystjerne-offer-for-svindelnummer
--d myfitlifestyle24.com
 # https://www.mm.dk/tjekdet/artikel/han-afviser-at-have-investeret-500-mio-i-bitcoin-platform-graensende-til-humor
 -d bestphoneapplication.com
 # https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
@@ -338,8 +329,6 @@ contentMarketing
 -d marissatomei.com
 # https://www.mm.dk/tjekdet/artikel/fupartikel-haevder-at-rasmus-paludan-er-blevet-rig-paa-investeringer-i-bitcoins
 -d marymaclane.net
-# https://www.mm.dk/tjekdet/artikel/loevens-hule-misbruges-igen-i-svindel-om-bitcoin-investeringer
--d web-technoti.com
 # https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
 -d top-topic.co
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
@@ -351,12 +340,10 @@ contentMarketing
 -d airmaxskobillige.com
 -d allergyfl.com
 -d apvoc-ga.com
--d ashskonorge.com
 -d assassinfitness.com
 -d benshermanoslo.com
 -d billigesalg.com
 -d billigskos.com
--d bilstokken.com
 -d bncentertainment.com
 -d bostongrnhsflowers.com
 -d caperforaciones.com
@@ -379,7 +366,6 @@ contentMarketing
 -d godeskonettbutikk.com
 -d godsfillingstation.org
 -d gsport.com
--d helseprodukt.co
 -d hernoclothing.com
 -d hollisternorge.com
 -d horizonbagel.com
@@ -387,14 +373,12 @@ contentMarketing
 -d jakkesalgs.com
 -d jakkesnorge.com
 -d joseph-holland.com
--d klmyu.com
 -d jessicaivory.com
 -d legarralazcoz.com
 -d lindseysopticians.com
 -d linkshe.com
 -d locchalet2alpes.com
 -d lrgst.com
--d lymaq.com
 -d manasporthorse.com
 -d mayor4london.com
 -d mbtnorge.com
@@ -421,17 +405,13 @@ contentMarketing
 -d oflike.com
 -d omgrm.com
 -d ontariokitcarbuilders.com
--d parajumpers-longbear.com
 -d parajumpers-salg.com
 -d parajumpersitoutlet.com
 -d parajumpersit.com
--d parajumperjakke.net
 -d parajumpersnettbutikk.com
--d parajumpers-norge.site
 -d parajumpersnorway.com
 -d parajumperssalg.com
 -d parajumpersoutletnorge.com
--d pmnft.com
 -d pjs.outlet.com
 -d popeurope.com
 -d quiltstudiolaren.com
@@ -448,7 +428,6 @@ contentMarketing
 -d um-bs.com
 -d vansnorge.com
 -d wausauorthopedics.com
--d zaskal.com
 # 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
