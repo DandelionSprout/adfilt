@@ -390,6 +390,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(! Version: .*)", 
+           r"[Adblock Plus 3.4]\n\1", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -417,8 +423,8 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"\[Adblock Plus .*\]", 
-           "msFilterList", 
+           r"(# Version: .*)", 
+           r"msFilterList\n\1", 
            line
         )
 
@@ -1058,18 +1064,6 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"$(?<=\.com$)|(?<=\.no$)|(?<=\.dk$)|(?<=\.is$)|(?<=\.fo$)|(?<=\.gl$)|(?<=\.org$)|(?<=\.net$)|(?<=\.tc$)|(?<=\.it$)|(?<=\.online$)|(?<=\.top$)|(?<=\.tv$)|(?<=\.eu$)|(?<=\.us$)|(?<=\.info$)|(?<=\.club$)|(?<=\.io$)|(?<=\.me$)", 
-           "\" },", 
-           line
-        )
-
-        line = re.sub(
-           r"\.co$", 
-           ".co\" },", 
-           line
-        )
-
-        line = re.sub(
            r"{ \"action\": \"deny\", \"process\": \"any\", \"remote-hosts\": \"$", 
            "", 
            line
@@ -1084,6 +1078,36 @@ def prepare_ls(lines) -> str:
         line = re.sub(
            r"^# Description:.*", 
            "\"description\": \"This list aims to block Norwegian and Danish scam sellers, ad servers, and a small handful of tracking servers.\",\n\"rules\": [", 
+           line
+        )
+
+        line = re.sub(
+           r"(.*\..*[a-z]$)", 
+           r"\1\" },", 
+           line
+        )
+
+        line = re.sub(
+           "(.*\..*[a-z])\\\"", 
+           r"\1\\", 
+           line
+        )
+
+        line = re.sub(
+           "\\\"\"", 
+           "\"", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])\\", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(\"wo.tc\" }),", 
+           r"\1\n]}", 
            line
         )
 
@@ -1114,14 +1138,8 @@ def prepare_dnsmasq(lines) -> str:
         )
 
         line = re.sub(
-           r"$(?<=\.com$)|(?<=\.no$)|(?<=\.dk$)|(?<=\.is$)|(?<=\.fo$)|(?<=\.gl$)|(?<=\.org$)|(?<=\.net$)|(?<=\.tc$)|(?<=\.it$)|(?<=\.online$)|(?<=\.top$)|(?<=\.tv$)|(?<=\.eu$)|(?<=\.us$)|(?<=\.info$)|(?<=\.club$)", 
-           "/127.0.0.1", 
-           line
-        )
-
-        line = re.sub(
-           r"\.co$", 
-           ".co/127.0.0.1", 
+           r"(.*\..*[a-z]$)", 
+           r"\1/127.0.0.1", 
            line
         )
 
