@@ -1,6 +1,6 @@
 {
-    "createdBy": "Redirector v3.2",
-    "createdAt": "2019-11-23T22:46:49.000Z",
+    "createdBy": "Redirector v3.2.1",
+    "createdAt": "2019-11-23T22:57:22.800Z",
     "redirects": [
         {
             "description": "Redirect Facebook.com links to Facebook's .onion Tor server (Also works for m.facebook.com)",
@@ -36,8 +36,8 @@
         },
         {
             "description": "Redirect New York Times links to New York Times's .onion Tor server",
-            "exampleUrl": "https://www.nytimes.com/2018/08/31/sports/colin-kaepernick.html?action=click&module=Editors%20Picks&pgtype=Homepage",
-            "exampleResult": "https://www.nytimes3xbfgragh.onion/2018/08/31/sports/colin-kaepernick.html?action=click&module=Editors%20Picks&pgtype=Homepage",
+            "exampleUrl": "https://www.nytimes.com/2018/08/31/sports/colin-kaepernick.html",
+            "exampleResult": "https://www.nytimes3xbfgragh.onion/2018/08/31/sports/colin-kaepernick.html",
             "error": null,
             "includePattern": "*://www.nytimes.com*",
             "excludePattern": "",
@@ -99,63 +99,15 @@
             ]
         },
         {
-            "description": "Redirect Archive.is links to Archive.is' .onion Tor server",
-            "exampleUrl": "https://archive.is",
-            "exampleResult": "http://archivecaslytosk.onion",
+            "description": "Redirect Archive.is/.li/.fo/.today links to Archive.is' .onion Tor server",
+            "exampleUrl": "https://archive.li/",
+            "exampleResult": "http://archivecaslytosk.onion/",
             "error": null,
-            "includePattern": "*://archive.is*",
+            "includePattern": "(.*)://archive.[ilft][sio]d?a?y?(/.*)",
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "http://archivecaslytosk.onion$2",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Redirect Archive.li links to Archive.is' .onion Tor server",
-            "exampleUrl": "https://archive.li",
-            "exampleResult": "http://archivecaslytosk.onion",
-            "error": null,
-            "includePattern": "*://archive.li*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "http://archivecaslytosk.onion$2",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Redirect Archive.fo links to Archive.is' .onion Tor server",
-            "exampleUrl": "https://archive.fo",
-            "exampleResult": "http://archivecaslytosk.onion",
-            "error": null,
-            "includePattern": "*://archive.fo*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "http://archivecaslytosk.onion$2",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Redirect Archive.today links to Archive.is' .onion Tor server",
-            "exampleUrl": "https://archive.today",
-            "exampleResult": "http://archivecaslytosk.onion",
-            "error": null,
-            "includePattern": "*://archive.today*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "http://archivecaslytosk.onion$2",
-            "patternType": "W",
+            "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,
             "appliesTo": [
@@ -177,7 +129,7 @@
             "appliesTo": [
                 "main_frame"
             ]
-        }
+        },
         {
             "description": "Redirect Keybase.io links to Keybase's .onion Tor server",
             "exampleUrl": "https://keybase.io/",
@@ -244,8 +196,8 @@
         },
         {
             "description": "Redirect 0xacab.org links to 0xacab's .onion Tor server",
-            "exampleUrl": "https://protonmail.com/",
-            "exampleResult": "https://protonirockerxow.onion/",
+            "exampleUrl": "http://0xacab.org/",
+            "exampleResult": "http://vivmyccb3jdb7yij.onion/",
             "error": null,
             "includePattern": "*://0xacab.org/*",
             "excludePattern": "",
@@ -265,7 +217,7 @@
             "error": null,
             "includePattern": "*://www.bbc.com/*",
             "excludePattern": "",
-            "patternDesc": "",
+            "patternDesc": "This entry currently does not affect links to BBC.co.uk, just in case one would have missed out on .co.uk-exclusive articles.",
             "redirectUrl": "https://www.bbcnewsv2vjtpsuy.onion/$2",
             "patternType": "W",
             "processMatches": "noProcessing",
