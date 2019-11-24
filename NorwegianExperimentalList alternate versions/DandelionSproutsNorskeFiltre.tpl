@@ -1,5 +1,5 @@
 msFilterList
-# Version: 20November2019v1-Beta
+# Version: 24November2019v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -140,6 +140,7 @@ contentMarketing
 # kk.no, sol.no
 # historienet.no, natgeo.no, komputer.no
 # https://www.nettavisen.no/okonomi/3423875562.html
+# qxl.no
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇬🇧: ——— Empty divider spaces ———
@@ -332,6 +333,10 @@ contentMarketing
 -d marymaclane.net
 # https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
 -d top-topic.co
+# https://www.nrk.no/troms/1.14788086
+-d geometra-bologna.it
+# https://www.nrk.no/nyheter/1.14793929
+-d sky.gs
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.

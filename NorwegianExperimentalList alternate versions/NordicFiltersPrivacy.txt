@@ -1,4 +1,4 @@
-! Version: 20November2019v1
+! Version: 24November2019v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 12 hours
@@ -484,10 +484,9 @@ purehelp.no##.dfptop
 purehelp.no#?#.float-left:-abp-has(span[id^=ezoic-pub-ad-placeholder-])
 qxl.*###crosslistingLauritzAdsenseBanner
 qxl.*###lauritzListingView
-qxl.*###GoogleAdsensePanorama
 qxl.*##.n_ListHeader:style(margin-top: 5px !important)
-qxl.no###whitetop:style(margin-top: 0px !important)
-qxl.no###leaderBoardListingviewTop
+qxl.*###whitetop:style(margin-top: 0px !important)
+qxl.*###leaderBoardListingviewTop
 resett.no#?#.code-block:-abp-contains(Reklame):not(:-abp-contains(butikk))
 rorfag.no###right_side
 rorfag.no##.anonse
@@ -572,6 +571,7 @@ trening.no##[id^=dt-netboard]
 itavisen.no##.ad:before
 filmweb.no##div[class^=ad-module]
 lydogbilde.no,lydogbillede.dk##.adremark
+qxl.*###GoogleAdsenseFooter + div[style^="width: 100%;"]
 ! — — — — —
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
@@ -628,6 +628,9 @@ vafo.dk##.adform-flexblock
 ##.wallpaper > .horseshoe
 ! https://www.nettavisen.no/okonomi/3423875562.html
 ##.os-inline
+! qxl.no
+###GoogleAdsensePanorama
+###GoogleAdsenseFooter
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -999,6 +1002,10 @@ fuglelyder.net#@##banner_ad
 ||marymaclane.net^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
 ! https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
 ||top-topic.co^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
+! https://www.nrk.no/troms/1.14788086
+||geometra-bologna.it^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sparebank 1.
+! https://www.nrk.no/nyheter/1.14793929
+||sky.gs^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Netflix.
 
 ! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 ! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
