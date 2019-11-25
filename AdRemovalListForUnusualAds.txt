@@ -1,0 +1,34 @@
+[Adblock Plus 3.4]
+! Title: 🎫 Ad Removal List for Unusual Ads
+! Version: 25November2019v1-Alpha
+! Expires: 4 days
+! Description: This is a list to remove the kinds of ads that very few well-established international adblocker lists would want to remove, due to many of them not meeting those lists' strict criteria of what an ad actually is. So that's where this list comes into play.
+! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! ——— Webstore coupon aggregator listings that are not actually coupons ———
+aftenposten.no##.offer
+cuponation.*##.first .d.v
+e-rabattkode.no#?#.er-offer-item:-abp-has(.coupon-button:not([data-clip-code]))
+kupongkode.com##.promotionCouponPopup
+nettavisen.no##.type-tilbud
+nyerabattkoder.no#?#.item-holder:-abp-contains(Klikk for å løse inn)
+rabattkalas.se#?#.voucher:-abp-contains(Använd erbjudandet nu)
+rabattkod.nyheter24.se,rabattkod.gp.se#?#.card:-abp-contains(Till rabatt)
+rabattkode.gulesider.no##.deal
+rabble.*#?#.offer-card:-abp-has(i.icon-link-ext)
+tradera.com#?#.traderase-voucher:-abp-contains(Visa rabatten)
+varejakten.no#?#.no-gutters.row:-abp-contains(Vis tilbud)
+vg.no#?#.offer-details:-abp-contains(Vis tilbud)
+
+! ——— Unnecessarily obtrusive premium service banners ———
+! If a banner is in this category, it means that those who still do want to buy into their premium services, can do so through the user settings without having to see the obtrusive banners.
+pixiv.net##._2rrT-wz._premium-lead-popular-d-body
+pixiv.net##._premium-lead-tag-search-bar > a[href^="/premium.php"]
+pixiv.net#?#div:-abp-has(:scope > aside + a[href^="/premium/lead/"])
+soundcloud.com##.statsBadge__upsell
+discordapp.com#?#div[class^="card-"]:-abp-has(div[class*=coloredBackground-]):not(:-abp-contains(Xbox))
+
+! ——— Other obtrusive self-ads ———
+whois.net###alternative_filters > table
+whois.net###midColumn
+mewe.com##.emoji-picker-promotion
