@@ -1033,7 +1033,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"# Platform notes:.*", 
-           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.", 
+           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including pfBlockerNG, Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.", 
            line
         )
 
