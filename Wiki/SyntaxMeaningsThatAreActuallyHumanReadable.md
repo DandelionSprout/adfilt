@@ -38,6 +38,7 @@
 * `$csp`: Inserts additional *Content Security Policies* into the page.
 * `$xmlhttprequest` / `$websocket` / `$dom`: Prevents such resources from being downloaded through the titular JavaScript APIs.
 * `$popup` / `$image` / `$object` / `$font` / `$other`: These ones should hopefully be self-explanatory (Give me a heads-up in an issue report if it isn't).
+* `$match-case`: Makes the criteria case-sensitive.
 * `|text`: Matches URLs that *begin* with the text.
 * `text|`: Matches URLs that *end* with the text.
 
@@ -85,6 +86,7 @@
 * `@@||` + `$document`: Turns off adblocking entirely while on that domain.
 * `@@||` + `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
 * `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
+* `$rewrite=abp-resource:`: Similar to uBO's `$redirect`, but with a rather different selection of neutered files.
 
 ### AdGuard only:
 
