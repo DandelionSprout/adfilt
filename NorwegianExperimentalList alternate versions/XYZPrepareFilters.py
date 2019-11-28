@@ -3,7 +3,7 @@ import re
 
 SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.txt']
 
-UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
+UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', 'dk,no##']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
@@ -393,6 +393,18 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"(! Version: .*)", 
            r"[Adblock Plus 3.4]\n\1", 
+           line
+        )
+
+        line = re.sub(
+           "redirect=noopjs", 
+           "rewrite=abp-resource:blank-js", 
+           line
+        )
+
+        line = re.sub(
+           r"redirect=noopmp[34]-[0]?[.]?1s", 
+           r"rewrite=abp-resource:blank-mp3", 
            line
         )
 
@@ -1033,7 +1045,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"# Platform notes:.*", 
-           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including pfBlockerNG, Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.", 
+           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.", 
            line
         )
 

@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 241120191
+! Version: 271120192
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -168,6 +168,7 @@ rett24.no##.p_banner-responsive
 /reklame/*
 /resources/dfp/*$domain=nettavisen.no
 ||acdn.adnxs.com/ast/ast.js$script,domain=vg.no
+||acdn.adnxs.com/ast/ast.js$script,rewrite=abp-resource:blank-js,domain=vgtv.no
 ||ad.*.no^
 ||ad.no.doubleclick.net^
 ||ad1.*.dk^
@@ -180,6 +181,7 @@ rett24.no##.p_banner-responsive
 ||adserver.*.dk^
 ||adservicemedia.dk
 ||akamai.net^$script,domain=eniro.se|eniro.no|eniro.dk
+||akamaihd.net/video-assets/$media,rewrite=abp-resource:blank-mp3,domain=dplay.no
 ||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
 ||annonser.*.no^
 ||austevollforlag.no/wp-content/*/yachtmarine2014.$image
@@ -194,6 +196,7 @@ rett24.no##.p_banner-responsive
 ||client-stream-events.mtg-api.com^$domain=viafree.no|viafree.dk
 ||cluster.chart.dk$third-party
 ||cmt.no^
+||damoh.vgtv.no/hic_qos$script,rewrite=abp-resource:blank-js,domain=vg.no
 ||delivered-by-madington.com^$third-party
 ||dotbanner.dk$third-party
 ||dust2.dk/img/banners/*$image
@@ -660,6 +663,10 @@ krom.is#@#.share-container
 ! 🇩🇰: Fikser knækking af videoer på TV 2 når "EasyList" bliver brugt
 ! 🇬🇧: Unbreaks videos at TV2 Denmark when using "EasyList"
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=tv2.dk
+! https://github.com/ryanbr/fanboy-adblock/issues/1241/
+live.nettavisen.no#@#.active > div
+! https://github.com/ryanbr/fanboy-adblock/issues/1243/
+||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
@@ -677,7 +684,9 @@ godt.no##.adblock-info-box
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
 minmote.no,godt.no##.adblock-info
+||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,rewrite=abp-resource:blank-mp3,domain=dplay.dk|dplay.no
 ||elderlyscissors.com^
+||imasdk.googleapis.com/pal/sdkloader/pal.js$script,rewrite=abp-resource:blank-js,domain=dplay.dk|dplay.no
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
 @@||www.tv2.no/s/js/ads.js$script,~third-party
@@ -757,6 +766,7 @@ gamereactor.no,gamereactor.dk##div[style*="width:300px;height:600px;"]
 gamereactor.no,gamereactor.dk##div[style="min-height: 600px; margin-bottom: 20px;"]
 ||gamereactor.*/media/eventad/$image
 @@||openx.gamereactor.dk/www/delivery/fc.php$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
+||media.gamereactor.dk/prerolls/*$media,rewrite=abp-resource:blank-mp3,domain=gamereactor.no|gamereactor.dk
 ||ssl.p.jwpcdn.com^*/gapro.js$script,domain=gamereactor.no|gamereactor.dk
 /insert_grtv_stats.$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
 /prerolls/*$domain=gamereactor.no|gamereactor.dk
