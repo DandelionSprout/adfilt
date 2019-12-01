@@ -90,14 +90,25 @@
 
 ### AdGuard only:
 
-* `#%#var AG_`: Similar to `##+js`, except with a completely different set of scriptlets.
+* `#%#`: Either inserts JavaScript code that is written into the list, or refers to such à la `##+js`.
 * `$empty`: Results in a fake empty page being loaded, instead of an error page.
 * `:properties`: Claims to be similar to `:-abp-properties`, but is incompatible with it.
+* `$$script` = Uses very advanced criteria to block scripts that meet them.
+* `$cookie` = Blocks cookies.
+* `$cookie=` = Blocks cookies with specific names.
+* `$cookie=` + `maxAge`: Changes the cookie to have an expiration time in seconds.
+* `$cookie=` + `same-site`: Changes the cookie to use the "Lax" mode of `samesite` known from the `Set-Cookie` browser HTTP response system.
 
 ### AdGuard for [Windows/Mac/Android] only:
 
 * `! Description:`: Shows a description of the list's purpose, when the question mark next to the list in the AdGuard settings is hovered over. That being said, a description is convenient for users of all adblockers, if they're willing to look up a list's raw content.
 * `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Individual ports can be specified. IPv6 addresses must be surrounded by square brackets. Can very easily break legitimate sites as collateral damage, and should be used very sparingly.
+* `@@` + `$jsinject` = Prevents `#%#` entries from working on that site.
+* `@@` + `$extensions` = Prevents AdGuard userscripts from working on that site.
+* `@@` + `$content` = Prevents `$$script` entries from working on that site.
+* `@@` + `$stealth` = Turns off Stealth Mode on that site.
+* `$mp4` = Presumably equivalent to `$redirect=noopmp4`.
+* `$replace` = Changes the text of text elements on a site. Supports and requires use of RegEx.
 
 # Particularly important usage notes
 
