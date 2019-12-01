@@ -93,8 +93,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           "eurogamer.\*#", 
-           "eurogamer.dk#", 
+           r"eurogamer\.\*([#,])", 
+           r"eurogamer.dk\1", 
            line
         )
 
@@ -259,8 +259,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           "eurogamer.\*#", 
-           "eurogamer.dk#", 
+           r"eurogamer\.\*([#,])", 
+           r"eurogamer.dk\1", 
            line
         )
 
