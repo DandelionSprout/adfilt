@@ -146,6 +146,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           "redirect=noopmp4-1s", 
+           "mp4", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
