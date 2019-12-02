@@ -1,5 +1,5 @@
 msFilterList
-# Version: 30November2019v1-Beta
+# Version: 02December2019v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -145,6 +145,9 @@ contentMarketing
 # gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no
 # steigan.no, allers.no, icelandreview.com, resett.no
 # demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb.no
+# ba.no
+# https://github.com/DandelionSprout/adfilt/pull/53
+-d services.api.no bazaar
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇬🇧: ——— Empty divider spaces ———
@@ -177,6 +180,7 @@ contentMarketing
 # https://github.com/ryanbr/fanboy-adblock/issues/1241/
 # https://github.com/ryanbr/fanboy-adblock/issues/1243/
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
+# https://github.com/easylist/easylist/issues/4413
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv
