@@ -1,9 +1,9 @@
 import requests
 import re
 
-SOURCES = ['https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://easylist-downloads.adblockplus.org/liste_fr.txt', 'https://www.i-dont-care-about-cookies.eu/abp/']
+SOURCES = ['https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://easylist-downloads.adblockplus.org/liste_fr.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt']
 
-UNSUPPORTED_AGH = ['/', '##', '@#', '#?#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '~image', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=']
+UNSUPPORTED_AGH = ['/', '##', '@#', '#?#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '~image', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AGH = 'AdGuardHomeCompilationList.txt'
@@ -174,6 +174,18 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^!#.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|[a-z0-9].*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^;[a-z0-9].*", 
            "", 
            line
         )
