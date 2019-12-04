@@ -60,6 +60,7 @@
 * `!#if`: Specifies that a section of entries only applies to specific platforms or extensions. Closed out by `!#endif`.
 * `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
 * `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
+* `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
 #### Blocking
 * `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
@@ -67,13 +68,12 @@
 ### Nano Adblocker and uBlock Origin only:
 #### Hiding
 * `!#include`: Embeds another filterlist that is hosted on the same domain (with numerous restrictions).
-* `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site.
+* `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph).
 * `:xpath`: An entry written with the very advanced Xpath syntax.
 * `##^`: Blocks resources before they've even been loaded, based on their values in *View source* instead of their F12 ones.
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`.
 * `||` + `$document`: Guarantees a danger warning when loading a page, which is not 110% guaranteed otherwise.
-* `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions.
 * `$3p`: Same as `$third-party`.
 * `$first-party` / `$1p`: Same as `$~third-party`.
 * `$xhr`: Same as `$xmlhttprequest`.
@@ -86,17 +86,14 @@
 * `@@||` + `$document`: Turns off adblocking entirely while on that domain.
 * `@@||` + `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
 * `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
-* `$rewrite=abp-resource:`: Similar to uBO's `$redirect`, but with a rather different selection of neutered files.
-* `#$#abort-on-property-read`: "wraps a given property of the window object and throws an error if the property is read."
-* `#$#abort-on-property-write`: "for terminating scripts that assign a value to a given property".
-* `#$#abort-current-inline-script`: "for terminating inline scripts containing a given pattern".
-* `#$#hide-if-contains`: "looks for (…) text within an element and hides the element if the text is found."
-* `#$#hide-if-contains-and-matches-style`: Same as above, but with the extra note of "hide the element only if the text is visible."
-* `#$#hide-if-shadow-contains`: "Hides any HTML element or one of its ancestors matching a CSS selector if the text (…) of the element's shadow contains [specific text]."
+* `$rewrite=abp-resource:`: Similar to `$redirect`, but with a rather different selection of neutered files. Possible options are listed on [this help page](https://help.eyeo.com/adblockplus/how-to-write-filters#rewrite).
+* `#$#`: Similar to, but incompatible with, `##+js`. Possible options are listed in [this file](https://gitlab.com/eyeo/adblockplus/adblockpluscore/blob/next/lib/content/snippets.js) (text-search `@alias`).
 
 ### AdGuard only:
 
-* `#%#`: Either inserts JavaScript code that is written into the list, or refers to such à la `##+js`.
+* `#%#//scriptlet`: Similar to, but only partially compatible with, `##+js` and ABP's `#$#`. Possible options are listed in [this file](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/scriptlets.js) (text-search ".names").
+* `#%#AG_`: A few extra scriptlets for whom documentation appears to be non-existent.
+* `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file.
 * `$empty`: Results in a fake empty page being loaded, instead of an error page.
 * `:properties`: Claims to be similar to `:-abp-properties`, but is incompatible with it.
 * `$$script` = Uses very advanced criteria to block scripts that meet them.
