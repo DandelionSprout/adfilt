@@ -165,6 +165,12 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
+           r"##\+js\(addEventListener-defuser\.js, (.*), (.*)\)", 
+           r'#%#//scriptlet("prevent-addEventListener", "\1", "\2")', 
+           line
+        )
+
+        line = re.sub(
            r"##\+js\(addEventListener-defuser\.js, (.*)\)", 
            r'#%#//scriptlet("prevent-addEventListener", "\1")', 
            line
