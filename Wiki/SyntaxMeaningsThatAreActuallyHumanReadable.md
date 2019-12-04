@@ -87,6 +87,12 @@
 * `@@||` + `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
 * `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
 * `$rewrite=abp-resource:`: Similar to uBO's `$redirect`, but with a rather different selection of neutered files.
+* `#$#abort-on-property-read`: "wraps a given property of the window object and throws an error if the property is read."
+* `#$#abort-on-property-write`: "for terminating scripts that assign a value to a given property".
+* `#$#abort-current-inline-script`: "for terminating inline scripts containing a given pattern".
+* `#$#hide-if-contains`: "looks for (…) text within an element and hides the element if the text is found."
+* `#$#hide-if-contains-and-matches-style`: Same as above, but with the extra note of "hide the element only if the text is visible."
+* `#$#hide-if-shadow-contains`: "Hides any HTML element or one of its ancestors matching a CSS selector if the text (…) of the element's shadow contains [specific text]."
 
 ### AdGuard only:
 
