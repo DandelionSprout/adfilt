@@ -152,6 +152,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"##\+js\(abort-on-property-write.js, (.*)\)", 
+           r'#%#//scriptlet(abort-on-property-write, "\1")', 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -411,6 +417,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"redirect=noopmp[34]-[0]?[.]?1s", 
            r"rewrite=abp-resource:blank-mp3", 
+           line
+        )
+
+        line = re.sub(
+           r"##\+js\(abort-on-property-write.js, (.*)\)", 
+           r"#$#abort-on-property-write \1", 
            line
         )
 
