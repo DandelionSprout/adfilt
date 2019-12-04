@@ -154,7 +154,7 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            r"##\+js\(abort-on-property-write.js, (.*)\)", 
-           r'#%#//scriptlet(abort-on-property-write, "\1")', 
+           r'#%#//scriptlet("abort-on-property-write", "\1")', 
            line
         )
 
