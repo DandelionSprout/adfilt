@@ -152,42 +152,6 @@ def prepare_ag(lines) -> str:
            line
         )
 
-        line = re.sub(
-           r"##\+js\(abort-on-property-write\.js, (.*)\)", 
-           r'#%#//scriptlet("abort-on-property-write", "\1")', 
-           line
-        )
-
-        line = re.sub(
-           r"##\+js\(set-constant\.js, (.*), (.*)\)", 
-           r'#%#//scriptlet("set-constant", "\1", "\2")', 
-           line
-        )
-
-        line = re.sub(
-           r"##\+js\(addEventListener-defuser\.js, (.*), (.*)\)", 
-           r'#%#//scriptlet("prevent-addEventListener", "\1", "\2")', 
-           line
-        )
-
-        line = re.sub(
-           r"##\+js\(addEventListener-defuser\.js, (.*)\)", 
-           r'#%#//scriptlet("prevent-addEventListener", "\1")', 
-           line
-        )
-
-        line = re.sub(
-           r"##\+js\(addEventListener-defuser\.js, (.*)\)", 
-           r'#%#//scriptlet("prevent-setTimeout", "\1")', 
-           line
-        )
-
-        line = re.sub(
-           r"##\+js\(abort-current-inline-script\.js, (.*), (.*)\)", 
-           r'#%#//scriptlet("abort-current-inline-script", "\1", "\2")', 
-           line
-        )
-
         text += line + '\r\n'
 
     return text

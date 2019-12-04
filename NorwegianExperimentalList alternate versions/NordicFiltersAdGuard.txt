@@ -40,7 +40,7 @@ arendalstidende.no#?#.wpb_wrapper:-abp-contains(/^Annonse:/)
 arendalstidende.no,sorlandsavisen.no##.g-single
 austurfrett.is##.banneritem
 bb.is##.wpb_content_element
-blogg.no#%#//scriptlet("set-constant", "showAd", "false")
+blogg.no##+js(set-constant.js, showAd, false)
 boblad.no##.uk-overlay-hover.uk-panel
 bornholm.nu##.bannercontent
 borsen.dk##[href*="://borsen.dk/sponsoreret"]
@@ -69,7 +69,7 @@ frisms.nu##.numbered-phones
 frisms.nu,mobilsiden.dk##.side-block-products
 gamer.no##.posta-placeholder
 gamer.no#?#.column.one-half:-abp-has(.promoted-offer)
-gamer.no,tu.no#%#//scriptlet("abort-current-inline-script", "dfpConfig", "loadAds")
+gamer.no,tu.no##+js(abort-current-inline-script.js, dfpConfig, loadAds)
 guloggratis.dk##div.item_profa
 jn.fo###the_banners
 kanalen.no##.bannergroup
@@ -121,18 +121,18 @@ ticketmaster.no,ticketmaster.dk##div[id^=ad-slot-]
 trening.no##.cp-slidein-body
 tv2.no,abcnyheter.no,medier24.no##a[href*="adform.net"]
 tv2.no##+js(json-prune, enabled, testhide)
-tvkampen.com,tvsporten.dk#%#//scriptlet("abort-on-property-write", "onload")
+tvkampen.com,tvsporten.dk##+js(abort-on-property-write.js, onload)
 tvkampen.com,tvsporten.dk##.custom-background:style(background-image: none !important)
 tvkampen.com,tvsporten.dk##a.p-icon.partner
 vartoslo.no#?#.vc_column-inner:-abp-has(.vo-annonse):not(:-abp-has(div[class^=td_module_])):not(:-abp-has(#sb_instagram))
 vb.is##.spons
 veier24.no,tu.no,digi.no##.top-poster-wrap
-vg.no#%#//scriptlet("abort-current-inline-script", "Math.floor", "g00")
+vg.no##+js(abort-current-inline-script.js, Math.floor, g00)
 vg.no##.betting-widgets
 vg.no##.tipster
 vg.no##.wid-betting
 vg.no#?#.partner-studio:not(:-abp-has(a[href*="/nordiskfilm/"]))
-vg.no,e24.no,gamer.no,tek.no,digi.no#%#//scriptlet("abort-on-property-write", "__AB__")
+vg.no,e24.no,gamer.no,tek.no,digi.no##+js(abort-on-property-write.js, __AB__)
 vgtv.no##+js(golem.de.js)
 vgtv.no##.apnx-container
 vgtv.no##.video-branding
@@ -720,24 +720,24 @@ live.nettavisen.no#@#.active > div
 @@||fwmrm.net/ad/*$script,domain=viafree.no|viafree.dk
 @@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.no|viafree.dk
 @@||sixscissors.com^$third-party,domain=itavisen.no
-1200kcalkostplan.dk,1800kcalkostplan.dk#%#//scriptlet("abort-on-property-write", "KillAdBlock")
+1200kcalkostplan.dk,1800kcalkostplan.dk##+js(abort-on-property-write.js, KillAdBlock)
 csp.screen9.com#@#.adsbox
 dagensbyggeri.dk##+js(setTimeout-defuser.js, (), 2500)
-eurosport.no,eurosport.dk#%#//scriptlet("prevent-addEventListener", "contextmenu")
+eurosport.no,eurosport.dk##+js(addEventListener-defuser.js, contextmenu)
 godt.no##.adblock-info-box
-gratisspil.dk#%#//scriptlet("abort-on-property-write", "AdBlockerInfo")
+gratisspil.dk##+js(abort-on-property-write.js, AdBlockerInfo)
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
 minmote.no,godt.no##.adblock-info
-techstart.dk#%#//scriptlet("set-constant", "adblock", "false")
+techstart.dk##+js(set-constant.js, adblock, false)
 tv2.no##+js(abort-current-inline-script.js, adblockDetector)
-vg.no#%#//scriptlet("prevent-addEventListener", "load", "concat")
+vg.no##+js(addEventListener-defuser.js, load, concat)
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.dk|dplay.no
 ||elderlyscissors.com^
 ||imasdk.googleapis.com/pal/sdkloader/pal.js$script,redirect=noopjs,domain=dplay.dk|dplay.no
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
-viafree.no,viafree.dk#%#//scriptlet("prevent-addEventListener", "/^ad/")
-viafree.no,viafree.dk#%#//scriptlet("prevent-addEventListener", "/^media/")
+viafree.no,viafree.dk##+js(addEventListener-defuser.js, /^ad/)
+viafree.no,viafree.dk##+js(addEventListener-defuser.js, /^media/)
 viafree.no,viafree.dk##+js(setTimeout-defuser.js, r, 0)
 viafree.no,viafree.dk##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs-progress-control:style(display: initial !important;)
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
@@ -797,9 +797,9 @@ vglive.no##.tipster-liveodds-embed
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
 gamereactor.no,gamereactor.dk###pagebackground:style(background-image: none !important)
 gamereactor.no,gamereactor.dk##+js(abort-current-inline-script.js, phpads_deliver)
-gamereactor.no,gamereactor.dk#%#//scriptlet("abort-on-property-write", "banner_video")
-gamereactor.no,gamereactor.dk#%#//scriptlet("set-constant", "adblockEnabled", "noopFunc")
-gamereactor.no,gamereactor.dk#%#//scriptlet("set-constant", "trackAdblock", "noopFunc")
+gamereactor.no,gamereactor.dk##+js(abort-on-property-write.js, banner_video)
+gamereactor.no,gamereactor.dk##+js(set-constant.js, adblockEnabled, noopFunc)
+gamereactor.no,gamereactor.dk##+js(set-constant.js, trackAdblock, noopFunc)
 ||gamereactor.*/lay/ad-video-stats.$important,script
 ||gamereactor.*/lay/js/adblock_desktop.$important,script
 ||gamereactor.*/lay/js/background.$important,script
