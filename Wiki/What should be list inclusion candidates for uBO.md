@@ -1,5 +1,4 @@
 — Ads (0/3)<br>
-☐ [Kowabit Bl\*cklist](https://blocklist.kowabit.de/list.txt) [🏠](https://www.kowabit.de/blcklst/) 0 used out of 20,823 🕘<br>
 ☐ [Nano Defender Integration](https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt) [🏠](https://github.com/NanoAdblocker/NanoFilters) 0 used out of ~2,654 🕘<br>
 ☐ [Energized Core List](https://github.com/AdroitAdorKhan/EnergizedProtection/raw/master/core/hosts) [🏠](https://github.com/EnergizedProtection/block/issues) 0 used out of 20,555 🕘<br>
 ☐ [Nano Placeholder Buster](https://raw.githubusercontent.com/NanoAdblockerLab/NanoContrib/master/dist/placeholder-buster.txt) [🏠](https://github.com/NanoAdblocker/NanoFilters) 0 used out of 390 🕘<br>
@@ -37,3 +36,4 @@
 | To show off more potential list maintainers, no maintainers may have more than 2 candidate lists at once. | YouTube: Even More Pure Video Experience |
 | List maintainers may not be treating their lists as previews of paid services. | Squid Blacklist |
 | The list's entries must make sense in some or another way. | IndianList |
+| There should be no ridiculous blocking entries against major non-purpose-meeting sites | Kowabit Bl\*cklist (e.g. `yandex.ru`) |
