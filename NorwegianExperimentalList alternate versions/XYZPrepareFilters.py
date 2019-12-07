@@ -1599,13 +1599,9 @@ if __name__ == "__main__":
 
     print('The domains-based list versions have been generated.')
 
-
-
-
-import requests
-import re
-import os
-os.mkdir('Anti-Malware List')
+#/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\
+#•X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X•
+#\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/
 
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout\'s%20Anti-Malware%20List.txt']
 
@@ -2528,3 +2524,746 @@ if __name__ == "__main__":
         text_file.write(agh_filter)
 
     print('The script has finished its work')
+
+#/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\
+#•X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X•
+#\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-F%D1%96%D0%9C%20List.txt']
+
+UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
+
+OUTPUT = 'Domeneversjoner/xyzzyxfim.txt'
+OUTPUT_DOMAINS = 'Domeneversjoner/AntiF%D1%96%D0%9C%20ListDomains.txt'
+OUTPUT_HOSTS = 'Domeneversjoner/AntiF%D1%96%D0%9C%20ListHosts.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+def is_supported_domains(line) -> bool:
+    for token in UNSUPPORTED_DOMAINS:
+        if token in line:
+            return False
+
+    return True
+
+# function that prepares the filter list for AdGuard Home
+def prepare_domains(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r".*[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 (Domains version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+def prepare_hosts(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r".*[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"127.0.0.1 ", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 («Hosts» version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    domains_filter = prepare_domains(lines)
+    hosts_filter = prepare_hosts(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_DOMAINS, "w") as text_file:
+        text_file.write(domains_filter)
+
+    with open(OUTPUT_HOSTS, "w") as text_file:
+        text_file.write(hosts_filter)
+
+    print('The list versions have been generated.')
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/WikiaPureBrowsingExperience.txt']
+
+UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
+
+OUTPUT = 'Domeneversjoner/xyzzyxwikia.txt'
+OUTPUT_DOMAINS = 'Domeneversjoner/WikiaPureBrowsingExperienceDomains.txt'
+OUTPUT_HOSTS = 'Domeneversjoner/WikiaPureBrowsingExperienceHosts.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+def is_supported_domains(line) -> bool:
+    for token in UNSUPPORTED_DOMAINS:
+        if token in line:
+            return False
+
+    return True
+
+# function that prepares the filter list for AdGuard Home
+def prepare_domains(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 (Domains version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+def prepare_hosts(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"127.0.0.1 ", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 («Hosts» version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    domains_filter = prepare_domains(lines)
+    hosts_filter = prepare_hosts(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_DOMAINS, "w") as text_file:
+        text_file.write(domains_filter)
+
+    with open(OUTPUT_HOSTS, "w") as text_file:
+        text_file.write(hosts_filter)
+
+    print('The list versions have been generated.')
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt']
+
+UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
+
+OUTPUT = 'Domeneversjoner/xyzzyxbrowsewebsites.txt'
+OUTPUT_DOMAINS = 'Domeneversjoner/BrowseWebsitesWithoutLoggingInDomains.txt'
+OUTPUT_HOSTS = 'Domeneversjoner/BrowseWebsitesWithoutLoggingInHosts.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+def is_supported_domains(line) -> bool:
+    for token in UNSUPPORTED_DOMAINS:
+        if token in line:
+            return False
+
+    return True
+
+# function that prepares the filter list for AdGuard Home
+def prepare_domains(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 (Domains version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        line = re.sub(
+           r"/\*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"/\?meter", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"[$,]third-party.*", 
+           r"", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+def prepare_hosts(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"127.0.0.1 ", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 («Hosts» version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        line = re.sub(
+           r"/\*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"/\?meter", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"[$,]third-party.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(cdn\.)", 
+           r"127.0.0.1 \1", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    domains_filter = prepare_domains(lines)
+    hosts_filter = prepare_hosts(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_DOMAINS, "w") as text_file:
+        text_file.write(domains_filter)
+
+    with open(OUTPUT_HOSTS, "w") as text_file:
+        text_file.write(hosts_filter)
+
+    print('The list versions have been generated.')
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiAmazonListForTwitch.txt']
+
+UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
+
+OUTPUT = 'Domeneversjoner/xyzzyxantiamazon.txt'
+OUTPUT_DOMAINS = 'Domeneversjoner/AntiAmazonListForTwitchDomains.txt'
+OUTPUT_HOSTS = 'Domeneversjoner/AntiAmazonListForTwitchHosts.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+def is_supported_domains(line) -> bool:
+    for token in UNSUPPORTED_DOMAINS:
+        if token in line:
+            return False
+
+    return True
+
+# function that prepares the filter list for AdGuard Home
+def prepare_domains(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 (Domains version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+def prepare_hosts(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"127.0.0.1 ", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 («Hosts» version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    domains_filter = prepare_domains(lines)
+    hosts_filter = prepare_hosts(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_DOMAINS, "w") as text_file:
+        text_file.write(domains_filter)
+
+    with open(OUTPUT_HOSTS, "w") as text_file:
+        text_file.write(hosts_filter)
+
+    print('The list versions have been generated.')
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiStevenUniverseList.txt']
+
+UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
+
+OUTPUT = 'Domeneversjoner/xyzzyxsu.txt'
+OUTPUT_DOMAINS = 'Domeneversjoner/AntiStevenUniverseListDomains.txt'
+OUTPUT_HOSTS = 'Domeneversjoner/AntiStevenUniverseListHosts.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+def is_supported_domains(line) -> bool:
+    for token in UNSUPPORTED_DOMAINS:
+        if token in line:
+            return False
+
+    return True
+
+# function that prepares the filter list for AdGuard Home
+def prepare_domains(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 (Domains version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+def prepare_hosts(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"127.0.0.1 ", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 («Hosts» version)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    domains_filter = prepare_domains(lines)
+    hosts_filter = prepare_hosts(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_DOMAINS, "w") as text_file:
+        text_file.write(domains_filter)
+
+    with open(OUTPUT_HOSTS, "w") as text_file:
+        text_file.write(hosts_filter)
+
+    print('The list versions have been generated.')
