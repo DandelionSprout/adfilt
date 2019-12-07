@@ -1061,6 +1061,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(127\.0\.0\.1) (.*)", 
+           r"\1 \2 www.\2", 
+           line
+        )
+
         if is_supported_hosts(line):
             text += line + '\r\n'
 
