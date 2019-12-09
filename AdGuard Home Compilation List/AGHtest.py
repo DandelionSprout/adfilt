@@ -139,13 +139,19 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r"([$,])~stylesheet", 
+           "", 
+           line
+        )
+
+        line = re.sub(
            r",important", 
            "$important", 
            line
         )
 
         line = re.sub(
-           r".*\^[*$,][ac-z].*", 
+           r".*\^[*$,][ac-hj-z?].*", 
            "", 
            line
         )
@@ -241,13 +247,25 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r"\^badfilter", 
+           r"^$badfilter", 
+           line
+        )
+
+        line = re.sub(
            r".*\^\*.*", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*\*\^[a-z0-9].*", 
+           r".*\*\^[a-z0-9?].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\^&.*", 
            r"", 
            line
         )
