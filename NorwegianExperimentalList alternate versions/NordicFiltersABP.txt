@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 071220191
+! Version: 101220192
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -204,7 +204,6 @@ rett24.no##.p_banner-responsive
 ||dust2.dk/img/banners/*$image
 ||easy-ad.no^
 ||emerio.no^
-||euroads.dk^
 ||euroads.no^
 ||eyjar.net/skrar/ads
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.no|viafree.dk
@@ -224,7 +223,6 @@ rett24.no##.p_banner-responsive
 ||openadex.dk
 ||piwik.onlinemagasinet.no^
 ||primetime.ad.primetime.net^
-||rig.idg.no^
 ||sannsyn.com^$third-party
 ||soda.is$third-party
 ||ssl.p.jwpcdn.com^*/freewheel.js$script,domain=eurosport.no|eurosport.dk
@@ -251,6 +249,10 @@ blogg.no##.contentmarketing-box
 nettavisen.no#?#article:-abp-has(:scope > a[href*="?utm_source="])
 nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ||tunnelsyn1.files.wordpress.com/*/sotra-trelast-isolasjon$image
+||heartbeat.airserve.net^$third-party
+||static.airserve.net^$third-party
+||cdnboligkanalen.azureedge.net^$third-party
+||tankeogteknikk.no^$third-party
 ! — — — — —
 
 @@||vgtv.no$generichide
@@ -323,10 +325,9 @@ bt.dk##.sidebar.col-xl-4.col-lg-4.col-md-12.col-sm-12.col-xs-12
 budstikka.no##.bazaar
 byas.no##.section-ad-netboard
 byggebolig.no##.maestro-content-plugins
-byggfakta.no,byggfaktabolig.no,vvsaktuelt.no###bannerContainer
+byggfakta.no,byggfaktabolig.no,vvsaktuelt.no###bannerContainer:not(.HeaderBanner1)
 computerworld.dk###computerworldleaderboard
 computerworld.dk##.paragraphAd
-computerworld.dk#?#.columnLeftContent > div:-abp-has(.dfp-ad)
 cw.no##.ad-fit-body
 cw.no##.desktop-only.l-row > .omega.grid-12.grid-item.col
 dagbladet.no#?#div[class^=css]:-abp-properties(content: "Annonse")
@@ -556,6 +557,7 @@ sysla.no##.ad-nexus-ad
 dagbladet.no##[class^="AdPrefix-"]
 tunnelsyn.no#?#.widget_media_image:-abp-contains(/^ANNONSE/)
 tv2.no##.lp-r > div
+tidssonen.no##.widget_custom_html
 ! — — — — —
 
 
@@ -680,13 +682,8 @@ krom.is#@#.share-container
 ! 🇩🇰: Fikser knækking af videoer på TV 2 når "EasyList" bliver brugt
 ! 🇬🇧: Unbreaks videos at TV2 Denmark when using "EasyList"
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=tv2.dk
-! https://github.com/ryanbr/fanboy-adblock/issues/1241/
-live.nettavisen.no#@#.active > div
 ! https://github.com/ryanbr/fanboy-adblock/issues/1243/
 ||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
-! https://github.com/easylist/easylist/issues/4413
-@@||flowplayer.com/*/ads.min.js$domain=nettavisen.no
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=nettavisen.no
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
@@ -855,7 +852,6 @@ fuglelyder.net#@##banner_ad
 ! 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 ! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
-||kjolenorge.com^
 ||paypal.*.no^
 ||vg.no.
 ||elkjop.no.
@@ -892,7 +888,6 @@ fuglelyder.net#@##banner_ad
 ||102.112.2o7.net^
 ||tromselementbygg.no^
 ||no.zxxyw.com^
-||digitoday.com^
 ||apple-account-locked.losjevegen.no^
 ||arvetellefsen.no/curry^
 ||holmedalblikk.no^
@@ -910,9 +905,6 @@ fuglelyder.net#@##banner_ad
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 ! 🇬🇧: As mentioned in various news articles about fraud sites
-! https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
-||breakoutstory24.com^
-||thefivereport.online^
 ! https://www.tv2.no/nyheter/10493336/
 ||rnbinance.com^
 ||brightertrade.com^
@@ -995,14 +987,12 @@ fuglelyder.net#@##banner_ad
 ! 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 ! Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
 ||adidasko.com^
-||adidassuperstarnorge.com^
 ||airmaxskobillige.com^
 ||allergyfl.com^
 ||apvoc-ga.com^
 ||assassinfitness.com^
 ||benshermanoslo.com^
 ||billigesalg.com^
-||billigskos.com^
 ||bncentertainment.com^
 ||bostongrnhsflowers.com^
 ||caperforaciones.com^
@@ -1066,7 +1056,6 @@ fuglelyder.net#@##banner_ad
 ||ontariokitcarbuilders.com^
 ||parajumpers-salg.com^
 ||parajumpersitoutlet.com^
-||parajumpersit.com^
 ||parajumpersnettbutikk.com^
 ||parajumpersnorway.com^
 ||parajumperssalg.com^

@@ -1,5 +1,5 @@
 msFilterList
-# Version: 07December2019v1-Beta
+# Version: 10December2019v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -60,7 +60,6 @@ contentMarketing
 -d dust2.dk banners
 -d easy-ad.no
 -d emerio.no
--d euroads.dk
 -d euroads.no
 -d eyjar.net ads
 -d freewheel-mtgx-tv.akamaized.net
@@ -79,7 +78,6 @@ contentMarketing
 -d openadex.dk
 -d piwik.onlinemagasinet.no
 -d primetime.ad.primetime.net
--d rig.idg.no
 -d sannsyn.com
 -d soda.is
 -d ssl.p.jwpcdn.com freewheel.js
@@ -100,6 +98,10 @@ contentMarketing
 - annonse_
 -d tv2a.dk
 -d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
+-d heartbeat.airserve.net
+-d static.airserve.net
+-d cdnboligkanalen.azureedge.net
+-d tankeogteknikk.no
 # — — — — —
 +d vgtv.no
 -d adnxs.com
@@ -178,10 +180,8 @@ contentMarketing
 +d mparticle.com
 # 🇩🇰: Fikser knækking af videoer på TV 2 når "EasyList" bliver brugt
 # 🇬🇧: Unbreaks videos at TV2 Denmark when using "EasyList"
-# https://github.com/ryanbr/fanboy-adblock/issues/1241/
 # https://github.com/ryanbr/fanboy-adblock/issues/1243/
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
-# https://github.com/easylist/easylist/issues/4413
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv
@@ -242,7 +242,6 @@ contentMarketing
 # 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 # 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 # Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no sport
--d kjolenorge.com
 - finn.no finno.htm
 - ?finn.no login
 - begrensede-tilbudet
@@ -260,7 +259,6 @@ contentMarketing
 -d 102.112.2o7.net
 -d tromselementbygg.no
 -d no.zxxyw.com
--d digitoday.com
 -d apple-account-locked.losjevegen.no
 -d arvetellefsen.no curry
 -d holmedalblikk.no
@@ -275,9 +273,6 @@ contentMarketing
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
-# https://www.dagbladet.no/kultur/jeg-blir-hver-dag-kontaktet-av-folk-som-faktisk-tror-pa-denne-svindelen/70487841
--d breakoutstory24.com
--d thefivereport.online
 # https://www.tv2.no/nyheter/10493336/
 -d rnbinance.com
 -d brightertrade.com
@@ -354,14 +349,12 @@ contentMarketing
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 # Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
 -d adidasko.com
--d adidassuperstarnorge.com
 -d airmaxskobillige.com
 -d allergyfl.com
 -d apvoc-ga.com
 -d assassinfitness.com
 -d benshermanoslo.com
 -d billigesalg.com
--d billigskos.com
 -d bncentertainment.com
 -d bostongrnhsflowers.com
 -d caperforaciones.com
@@ -425,7 +418,6 @@ contentMarketing
 -d ontariokitcarbuilders.com
 -d parajumpers-salg.com
 -d parajumpersitoutlet.com
--d parajumpersit.com
 -d parajumpersnettbutikk.com
 -d parajumpersnorway.com
 -d parajumperssalg.com
