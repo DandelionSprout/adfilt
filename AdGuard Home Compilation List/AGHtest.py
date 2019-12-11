@@ -217,7 +217,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^:.*", 
+           r"^:[a-z0-9?!].*", 
            "", 
            line
         )
@@ -266,6 +266,24 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r".*\^&.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^://", 
+           r"||", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|.*/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\*[&?].*", 
            r"", 
            line
         )
