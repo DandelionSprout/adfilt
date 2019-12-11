@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 Imres filtre
-! Version: 11December2019v1-Personal
+! Version: 11December2019v2-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include AdRemovalListForUnusualAds.txt
@@ -26,7 +26,6 @@
 finn.no#?#.ads__unit:-abp-contains(Emirates Airline)
 metacritic.com###primary_menu_item_games
 mewe.com##.c-mw-sharing-info
-mewe.com##.chat-avatar_dot
 netflix.com#?#.ptrack-content:-abp-has(a[href*="70135743"])
 netflix.com#?#.ptrack-content:-abp-has(a[href*="70242311"])
 netflix.com#?#.ptrack-content:-abp-has(a[href*="80022632"])
@@ -37,7 +36,6 @@ osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Battle Dimension)
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Nightcore)
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Taylor Swift)
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(XXXTENTACION)
-portalbank.no#?#.navigation__item:-abp-contains(Post):after
 ||sproutsluckycorner.wordpress.com/wp-includes/charts/admin-bar-hours-scale-2x.php?masterbar=1
 
 ! People I just really don't like, without it being deserving of going on public lists
@@ -175,17 +173,6 @@ netflix.com#?#.ptrack-content:-abp-has(a[href*="80095649"])
 netflix.com#?#.ptrack-content:-abp-has(a[href*="80178943"])
 netflix.com#?#.ptrack-content:-abp-has(a[href*="81004957"])
 netflix.com#?#.lolomoRow:-abp-contains(Populært nå)
-pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(Glaceon)
-pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(Glaceon))
-pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(Glaceon))
-pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(Sylveon)
-pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(Sylveon))
-pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(Sylveon))
-pixiv.net#?#div[class^="gtm-illust-"] > div:-abp-has(figure > figcaption:-abp-contains(Umbreon))
-pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(Umbreon)
-pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(Umbreon))
-pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(Umbreon))
-pixiv.net#?#div[class^="gtm-illust-"] > div:-abp-has(figure > figcaption:-abp-contains(Tootie))
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(Tootie)
 pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(Tootie))
 pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(Tootie))
@@ -230,14 +217,12 @@ pixiv.net##.popular-introduction-overlay
 ||cdon.no^$document
 
 ! Things that showed me content that I didn't want to see (e.g. American politics, bad-taste memes, etc.)
-imgur.com###right-content
-imgur.com##.right.post-unification
 mewe.com#?#.header_nav_item:-abp-has(a[href="/pages"])
 vox.com###rock-trending
 vox.com##.c-compact-river
 vox.com##.c-related-list
-buzzfeed.com##.list-unstyled.js-now-buzzing__list
-huffingtonpost.com##.js-right-rail.right-rail
+buzzfeed.com##.js-now-buzzing__list
+huffingtonpost.com##.js-right-rail
 huffingtonpost.com##.recirc__content
 mewe.com#?#.smart-search_result > .c-mw-post:-abp-has(.post_header > .post_header_user-wrapper > .post_header_user-info > .c-mw-author > a:only-of-type)
 pastebin.com###content_right
@@ -255,17 +240,19 @@ www.nrk.no#?#div.relation:-abp-contains(«Skam»)
 change.org,indiegogo.com,thejc.com#?#p:-abp-contains(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
 indiegogo.com##h3:-abp-contains(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
 indiegogo.com##h2:-abp-contains(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
+lyricsmania.com,songtextemania.com##.spacer-20.clear
 
 ! Removes those creepy square bubbles on Google Documents about how many people that are watching every move you make there
 docs.google.com##div[class*="docs-presence-plus-collab-widget-image"]
 
 ! Aims to remove unavailable emotes from the Discord emote selector
-discordapp.com#?#div[class^="row-"]:-abp-has(:scope > div[class^="emojiItem-"][class*="disabled"])
+discordapp.com#?#div[class^="row-"]:-abp-has(:scope > div[class^=emojiItem-][class*=disabled])
 
 ! Removes listings in certain lists, that are simply unwanted and unwarranted space wasters
 freelancer.com#?#.PageProjectViewLogout-freelancerInfo:-abp-has(.small-flag.bangladesh)
 whynohttps.com#?#tbody > tr:-abp-has([src="/flags/4x3/cn.svg"])
 twofactorauth.org##.negative
+manage.ntppool.org#?#span[id^=server_]:-abp-has(.deletion):-abp-contains(/-[3-9][0-9]|-100/)
 
 ! Particularly saccharine baby stuff that backfired on me
 ||mediacache1.stoffstil.com/de/a9/0be5-41c0-4d2d-ada7-996c89ad62fe/landing_metervare_no.jpg
@@ -288,3 +275,15 @@ adressa.no##.cartoon
 ||spectrum.s3.amazonaws.com^|
 !#endif
 !#endif
+
+! Imgur: Pure Imagery Experience
+! Recommendations (≥2020 GUI)
+imgur.com##.Gallery-Sidebar
+! Comments (≥2020)
+imgur.com##.CommentsList
+! Recommendations (≤2019)
+imgur.com###side-gallery
+! Comments (≤2019)
+imgur.com###comments-container
+! Point scores on single-image/-gallery pages (≤2019)
+imgur.com##.post-action-stats-points
