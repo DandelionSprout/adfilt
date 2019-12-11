@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 Imres filtre
-! Version: 10December2019v1-Personal
+! Version: 11December2019v1-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include AdRemovalListForUnusualAds.txt
@@ -65,6 +65,19 @@ reddit.com#?#.Post:-abp-has(a[href="/user/swiet"])
 ||rogersmovienation.com^$document
 ||theverge.com$document,domain=~ Warning displayed due to: Mounted the PSU fan the wrong way; and then accused people of being racist when this was pointed out to them.
 ||youtube.com/tv^$document
+
+! Personal entries for AdGuard Home
+||lgtvonline.lge.com^
+||lgsmartad.com^
+||lgtvsdp.com^
+||tvsdp.lgeapi.com^
+||version.bind^
+!#if !ext_ublock
+!#if !adguard
+||yahoo.com^|
+||config.edge.skype.com^
+!#endif
+!#endif
 
 ! ↓ Below are categories that may or may not get independent lists for public use one day. ↓
 ! And yes, there's a reason why a.txt is for private use only: It shows the seething despisement I have against large chunks of planet Earth.
@@ -216,11 +229,6 @@ pixiv.net##.popular-introduction-overlay
 ||skousen.no^$document
 ||cdon.no^$document
 
-! When the Bitcoin bubble of late 2017 was building up, I figured out that it was going to burst. Did anyone listen to me? No.
-finn.no#?#.clickable.man.align-items-stretch.flex.mod:-abp-contains(Antminer)
-finn.no#?#.clickable.man.align-items-stretch.flex.mod:-abp-contains(Mining )
-finn.no#?#.r-pal.inner:-abp-contains(mining)
-
 ! Things that showed me content that I didn't want to see (e.g. American politics, bad-taste memes, etc.)
 imgur.com###right-content
 imgur.com##.right.post-unification
@@ -272,3 +280,11 @@ adressa.no##.cartoon
 
 ! Highly inept and vague customer service forums
 ||answers.microsoft.com$document
+
+! Anti-'Amazon Alexa features' (for e.g. Yamaha RX-V685)
+!#if !ext_ublock
+!#if !adguard
+||avs.na.amazonalexa.com^|
+||spectrum.s3.amazonaws.com^|
+!#endif
+!#endif
