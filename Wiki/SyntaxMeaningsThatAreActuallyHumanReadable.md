@@ -33,6 +33,8 @@
 * `$~third-party`: Ensures that resources from a domain are only blocked if you're visiting the domain itself.
 * `$domain=`: Ensures that resources from a domain are only blocked if you're visiting a specified website. Multiple domains are separated with `|` (Vertical line) and not commas.
 * `@@||` + `$generichide`: Prevents all non-domain-specific (a.k.a. generic) hiding entries from working on a website. On Nano/uBO it prevents *all* non-domain-specific entries from working.
+* `@@||` + `$specifichide`: Prevents all domain-specific hiding entries from working on a website. On Nano/uBO it seems to prevent *all* domain-specific entries from working.
+* `@@||` + `$elemhide`: Combines `$generichide` and `$specifichide`. Also completely breaks the element picker in Nano/uBO on that site as of the 14th of December 2019.
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it's a script, e.g. a JavaScript runtime.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
 * `$xmlhttprequest` / `$websocket` / `$dom`: Prevents such resources from being downloaded through the titular JavaScript APIs.
