@@ -1,4 +1,4 @@
-! Version: 12December2019v2
+! Version: 15December2019v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -740,7 +740,9 @@ vg.no##+js(addEventListener-defuser.js, load, concat)
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,1p
 viafree.*##+js(addEventListener-defuser.js, /^ad/)
 viafree.*##+js(addEventListener-defuser.js, /^media/)
+!#if !env_firefox
 viafree.*##+js(setTimeout-defuser.js, r, 0)
+!#endif
 viafree.*##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs-progress-control:style(display: initial !important;)
 @@/js/ads.js$1p,domain=tvkampen.com|tvsporten.dk
 @@||www.tv2.no/s/js/ads.js$script,1p
