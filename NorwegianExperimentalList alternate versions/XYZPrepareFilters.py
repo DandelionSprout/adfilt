@@ -1852,13 +1852,13 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^([@][@][|][|])", 
+           r"^(@@\|\|)", 
            "+d ", 
            line
         )
 
         line = re.sub(
-           r"^([|][|])", 
+           r"^(\|\|)", 
            "-d ", 
            line
         )
@@ -1877,8 +1877,14 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"~([a-z0-9].*?)\|", 
+           r"~(.*?)\|", 
            r"\n+d \1", 
+           line
+        )
+
+        line = re.sub(
+           r"~ Warning.*", 
+           r"", 
            line
         )
 
