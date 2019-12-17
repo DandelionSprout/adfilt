@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 171220191
+! Version: 171220192
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -129,8 +129,6 @@ vg.no#?#.partner-studio:not(:-abp-has(a[href*="/nordiskfilm/"]))
 vg.no,e24.no,gamer.no,tek.no,digi.no#$#abort-on-property-write __AB__
 vgtv.no##.apnx-container
 vgtv.no##.video-branding
-viafree.no,viafree.dk##.ad-click-through
-viafree.no,viafree.dk##.pause-ad
 viaplay.no,viaplay.dk##.interaction-block
 xlmoto.no##.overlay-bg
 xlmoto.no##.overlay-container
@@ -162,7 +160,6 @@ rett24.no##.p_banner-responsive
 /bilder/erotikk1.jpg$domain=eavisa.com
 /entag.js$script,domain=eniro.se|eniro.no|eniro.dk|proff.se|proff.no|proff.dk
 /js/smartbanner/*$domain=tvkampen.com|tvsporten.dk
-/linktag2.js$script,domain=viafree.no|viafree.dk
 /liveodds-button_nordicbet$domain=tvkampen.com|tvsporten.dk
 /nordicbet_logo$domain=tvkampen.com|tvsporten.dk
 /partners/*_ad_icon$image,domain=tvkampen.com|tvsporten.dk
@@ -187,15 +184,12 @@ rett24.no##.p_banner-responsive
 ||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
 ||annonser.*.no^
 ||austevollforlag.no/wp-content/*/yachtmarine2014.$image
-||avod-fw-config.mtg-api.com^,xmlhttprequest,domain=viafree.no|viafree.dk
 ||banner.*.no^
 ||banner.landbrugsavisen.dk/reklame.aspx$subdocument
 ||bannere.oslonett.no^
 ||boligkanalen-maestro-new.azurewebsites.net$image
 ||bornholm.nu/nonsec/banner$image
 ||brandstudio.inventory.schibsted.io$subdocument,third-party
-||cdn.ravenjs.com^$script,domain=viafree.no|viafree.dk
-||client-stream-events.mtg-api.com^$domain=viafree.no|viafree.dk
 ||cluster.chart.dk$third-party
 ||cmt.no^
 ||damoh.vgtv.no/hic_qos$script,rewrite=abp-resource:blank-js,domain=vg.no
@@ -206,8 +200,6 @@ rett24.no##.p_banner-responsive
 ||emerio.no^
 ||euroads.no^
 ||eyjar.net/skrar/ads
-||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.no|viafree.dk
-||getsentry.com^$third-party,domain=viafree.no|viafree.dk
 ||gratisxxx.no$image,domain=nakenprat.com
 ||helios.*.no
 ||i1media.no^
@@ -234,7 +226,6 @@ rett24.no##.p_banner-responsive
 ||tracking-genesisaffiliates.com$image,third-party
 ||tvshop.com/tradedoubler_files/
 ||vevlysingar.fo$subdocument,third-party
-||viafree.*/collect,xmlhttprequest
 ||viasport-assets.mtg-api.com/*/prod/comScore-*.js$script
 ||vikari.is/skjol/frjalsi-lif*.png$image
 ||webclick.no^
@@ -700,10 +691,6 @@ krom.is#@#.share-container
 @@||5e529.v.fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
 @@||bondebladet.screen9.tv^$generichide
 @@||eurosport.*^$generichide
-@@||fwmrm.net/*/AdManager.js$script,domain=viafree.no|viafree.dk
-@@||fwmrm.net/ad/$xmlhttprequest,domain=viafree.no|viafree.dk
-@@||fwmrm.net/ad/*$script,domain=viafree.no|viafree.dk
-@@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.no|viafree.dk
 @@||sixscissors.com^$third-party,domain=itavisen.no
 1200kcalkostplan.dk,1800kcalkostplan.dk#$#abort-on-property-write KillAdBlock
 csp.screen9.com#@#.adsbox
@@ -716,8 +703,6 @@ minmote.no,godt.no##.adblock-info
 ||elderlyscissors.com^
 ||imasdk.googleapis.com/pal/sdkloader/pal.js$script,rewrite=abp-resource:blank-js,domain=dplay.dk|dplay.no
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
-
-
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
 @@||www.tv2.no/s/js/ads.js$script,~third-party
 
@@ -768,18 +753,15 @@ vglive.no##.tipster-liveodds-embed
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/eurojackpot"]
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/extra"]
 
-! ——— Gamereactor ———
+! ——— Gamereactor + Viafree ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 ! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
-gamereactor.no,gamereactor.dk#$#abort-on-property-write banner_video
-||gamereactor.*/lay/ad-video-stats.,script
-||gamereactor.*/lay/js/adblock_desktop.,script
-||gamereactor.*/lay/js/background.,script
-||gamereactor.*/lay/js/banners_config.,script
-||openx.gamereactor.dk/multi.php?,script
-gamereactor.no,gamereactor.dk##^script[onError="adblockEnabled()"]
-gamereactor.no,gamereactor.dk#@#.afs_ads
+/adblock_mobile.$script,domain=gamereactor.no|gamereactor.dk
+/insert_grtv_stats.$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
+/prerolls/*$domain=gamereactor.no|gamereactor.dk
+/viewability.$script,domain=gamereactor.no|gamereactor.dk
+@@||openx.gamereactor.dk/www/delivery/fc.php$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
 gamereactor.no,gamereactor.dk###ad_mobiletopinsidetext
 gamereactor.no,gamereactor.dk###ad_video
 gamereactor.no,gamereactor.dk###bigVideoAd
@@ -787,22 +769,33 @@ gamereactor.no,gamereactor.dk###eventad
 gamereactor.no,gamereactor.dk###facebooknotification
 gamereactor.no,gamereactor.dk###fbnotification
 gamereactor.no,gamereactor.dk###sky2_1
+gamereactor.no,gamereactor.dk#$#abort-on-property-write banner_video
 gamereactor.no,gamereactor.dk##.ad_smartphbig
 gamereactor.no,gamereactor.dk##.ad_video
 gamereactor.no,gamereactor.dk##.cocacola
 gamereactor.no,gamereactor.dk##.sponsor
+gamereactor.no,gamereactor.dk##^script[onError="adblockEnabled()"]
 gamereactor.no,gamereactor.dk##a[href*="/adclick.php"]
 gamereactor.no,gamereactor.dk##div[class^=ad300]
 gamereactor.no,gamereactor.dk##div[style*="width:300px;height:600px;"]
 gamereactor.no,gamereactor.dk##div[style="min-height: 600px; margin-bottom: 20px;"]
+gamereactor.no,gamereactor.dk#@#.afs_ads
+||gamereactor.*/lay/ad-video-stats.,script
+||gamereactor.*/lay/js/adblock_desktop.,script
+||gamereactor.*/lay/js/background.,script
+||gamereactor.*/lay/js/banners_config.,script
 ||gamereactor.*/media/eventad/$image
-@@||openx.gamereactor.dk/www/delivery/fc.php$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
 ||media.gamereactor.dk/prerolls/*$media,rewrite=abp-resource:blank-mp3,domain=gamereactor.no|gamereactor.dk
+||openx.gamereactor.dk/multi.php?,script
 ||ssl.p.jwpcdn.com^*/gapro.js$script,domain=gamereactor.no|gamereactor.dk
-/insert_grtv_stats.$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
-/prerolls/*$domain=gamereactor.no|gamereactor.dk
-/adblock_mobile.$script,domain=gamereactor.no|gamereactor.dk
-/viewability.$script,domain=gamereactor.no|gamereactor.dk
+@@||fwmrm.net/ad/$image,xmlhttprequest,domain=viafree.no|viafree.dk
+@@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.no|viafree.dk
+viafree.no,viafree.dk##.ad-click-through
+viafree.no,viafree.dk##.pause-ad
+viafree.no,viafree.dk##.pause-ad-container
+||client-stream-events.mtg-api.com^$domain=viafree.no|viafree.dk
+||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.no|viafree.dk
+||viafree.*/collect,xmlhttprequest
 
 ! 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
 ! 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen til mange produkter stadigt benytter før-2016-fargene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.

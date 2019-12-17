@@ -1,5 +1,5 @@
 msFilterList
-# Version: 17December2019v1-Beta
+# Version: 17December2019v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -27,7 +27,6 @@ contentMarketing
 - bilder erotikk1.jpg
 - entag.js
 - js smartbanner
-- linktag2.js
 - liveodds-button_nordicbet
 - nordicbet_logo
 - partners *_ad_icon
@@ -44,14 +43,11 @@ contentMarketing
 -d akamaihd.net video-assets
 -d amino.dk 240x140-forside-hardcoded*.jpg
 -d austevollforlag.no yachtmarine2014.
--d avod-fw-config.mtg-api.com
 -d banner.landbrugsavisen.dk reklame.aspx
 -d bannere.oslonett.no
 -d boligkanalen-maestro-new.azurewebsites.net
 -d bornholm.nu banner
 -d brandstudio.inventory.schibsted.io
--d cdn.ravenjs.com
--d client-stream-events.mtg-api.com
 -d cluster.chart.dk
 -d cmt.no
 -d damoh.vgtv.no hic_qos
@@ -62,8 +58,6 @@ contentMarketing
 -d emerio.no
 -d euroads.no
 -d eyjar.net ads
--d freewheel-mtgx-tv.akamaized.net
--d getsentry.com
 -d gratisxxx.no
 -d i1media.no
 -d isweb.no
@@ -212,17 +206,19 @@ contentMarketing
 -d widget.tippebannere.no
 -d tipster.no embed
 # https://www.nettavisen.no/
-# ——— Gamereactor ———
+# ——— Gamereactor + Viafree ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 # 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
--d openx.gamereactor.dk multi.php?
--d media.gamereactor.dk prerolls
--d ssl.p.jwpcdn.com gapro.js
+- adblock_mobile.
 - insert_grtv_stats.
 - prerolls
-- adblock_mobile.
 - viewability.
+-d media.gamereactor.dk prerolls
+-d openx.gamereactor.dk multi.php?
+-d ssl.p.jwpcdn.com gapro.js
+-d client-stream-events.mtg-api.com
+-d freewheel-mtgx-tv.akamaized.net
 # 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
 # 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen til mange produkter stadigt benytter før-2016-fargene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
 # 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
