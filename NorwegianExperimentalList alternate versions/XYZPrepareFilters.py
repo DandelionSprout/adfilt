@@ -2403,20 +2403,14 @@ def prepare_agh(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"domain=.*", 
+           "\$doc,", 
            "", 
            line
         )
 
         line = re.sub(
-           "\$doc,", 
-           "$important", 
-           line
-        )
-
-        line = re.sub(
            r",important", 
-           "$important", 
+           "", 
            line
         )
 
@@ -2451,19 +2445,19 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"=~ Warning.*", 
-           "", 
+           r"~(.*?)\|", 
+           r"\n@@||\1^", 
            line
         )
 
         line = re.sub(
-           r"\$domain$", 
-           "", 
+           r"~ Warning.*", 
+           r"", 
            line
         )
 
         line = re.sub(
-           r"\|~ Warning.*", 
+           r"\$doc,domain=.*", 
            "", 
            line
         )
@@ -2481,14 +2475,20 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"! Placeholder line.*", 
-           "! Manually updated AdGuard Home version of the whitelisted domains from the other versions of this list.\n@@||coolcmd.tk^$important\n@@||budterence.tk^$important\n@@||intr0.tk^$important\n@@||google.tk^$important\n@@||transportnews.tk^$important\n@@||unicorncardlist.tk^$important\n@@||c0d3c.tk^$important\n@@||loljp-wiki.tk^$important\n@@||ninetail.tk^$important\n@@||goshujin.tk^$important\n@@||graph.tk^$important\n@@||google.ga^$important\n@@||filtri-dns.ga^$important\n@@||google.ml^$important\n@@||deimos.gq^$important\n@@||1hos.cf^$important\n@@||intr0.cf^$important\n@@||ivoid.cd^$important\n@@||domainvoider.cf^$important\n@@||google.cf^$important\n@@||rths.cf^$important\n@@||anonytext.tk^$important\n@@||tokelau-info.tk^$important\n@@||fakaofo.tk^$important\n@@||nukunonu.tk^$important\n@@||anpigabon.ga^$important\n@@||dgdi.ga^$important\n@@||voitures.ga^$important\n@@||mobili.ml^$important\n@@||inege.gq^$important\n@@||tvgelive.gq^$important\n@@||comprarcarros.gq^$important\n@@||voitures.cf^$important\n@@||assembleenationale-rca.cf^$important\n@@||cps-rca.cf^$important\n@@||acap.cf^$important",
+           r"domain=", 
+           "", 
            line
         )
 
         line = re.sub(
            r"([$])1.*", 
            "", 
+           line
+        )
+
+        line = re.sub(
+           r"\|\|\.", 
+           r"||*.", 
            line
         )
 
