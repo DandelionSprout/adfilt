@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 101220192
+! Version: 171220191
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -537,7 +537,6 @@ yrkesbil.no###side > div:nth-of-type(1)
 ||bilnorge.no/gifs/*emty.gif$image
 ||gaysir.no/rek/bb_inline$subdocument
 ||static.vg.no/css/admark_top.gif
-~raymond.cc,~bolha.com,~wiwo.de,~game.co.uk,~farnell.com##.ad:not(html):not(a)
 gamer.no##.aaa-placeholder
 google.no,google.dk,google.is###cnsi ~ [jsaction*=dismiss]
 180.no##.ai-top-ad-outer
@@ -558,6 +557,9 @@ dagbladet.no##[class^="AdPrefix-"]
 tunnelsyn.no#?#.widget_media_image:-abp-contains(/^ANNONSE/)
 tv2.no##.lp-r > div
 tidssonen.no##.widget_custom_html
+finn.no#?#div[class^=ads__unit]:-abp-has(:scope > div[id^=ad-stream__google])
+mbl.is#?#.col-sm-6.col-12:-abp-has(.augl):not(:-abp-has(.fluid))
+gulesider.no,degulesider.dk,krak.dk##.e-banner
 ! — — — — —
 
 
@@ -597,7 +599,7 @@ vafo.dk##.adform-flexblock
 ##.adunit-wrapper
 ! bt.no
 ##.premium-spot
-! https://www.latterkula.no/se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live/
+! latterkula.no/se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live/
 ##.annonser
 ! www.latterkula.no/artikler/
 ##.mh-loop-ad
@@ -623,11 +625,16 @@ vafo.dk##.adform-flexblock
 ##.vc_empty_space
 ! demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb.no
 ##.banners.post_sticky
+##div[data-adtext]
 ! ba.no
 ! https://github.com/DandelionSprout/adfilt/pull/53
 ##bazaar-ad
 ##[id^=art-bazaarAd]
 ||services.api.no/api/bazaar^$third-party
+! aftenbladet.no
+##.ad[data-config-name]
+! avisalofoten.no
+##.ad.text-center
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -674,7 +681,7 @@ krom.is#@#.share-container
 @@_prebid_$domain=seher.no
 ! 🇳🇴: Solcellespesialisten, innlastingsproblem
 ! 🇬🇧: Solcellespesialisten, loading issue
-||wo.tc
+||wo.tc^
 ! 🇳🇴: Får Dplay sin påloggingsside til å vises riktig når «EasyPrivacy» blir brukt
 ! 🇬🇧: Makes Dplay's login page show up properly when using "EasyPrivacy"
 @@||mparticle.com$script,domain=auth.dplay.no|auth.dplay.dk
@@ -682,8 +689,10 @@ krom.is#@#.share-container
 ! 🇩🇰: Fikser knækking af videoer på TV 2 når "EasyList" bliver brugt
 ! 🇬🇧: Unbreaks videos at TV2 Denmark when using "EasyList"
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=tv2.dk
-! https://github.com/ryanbr/fanboy-adblock/issues/1243/
+! https://github.com/ryanbr/fanboy-adblock/issues/1243
 ||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
+! https://github.com/ryanbr/fanboy-adblock/issues/1261
+@@||cookieinformation.com^$third-party,domain=kart.gulesider.no|map.krak.dk|kort.degulesider.dk|kartor.eniro.se
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
@@ -707,6 +716,8 @@ minmote.no,godt.no##.adblock-info
 ||elderlyscissors.com^
 ||imasdk.googleapis.com/pal/sdkloader/pal.js$script,rewrite=abp-resource:blank-js,domain=dplay.dk|dplay.no
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
+
+
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
 @@||www.tv2.no/s/js/ads.js$script,~third-party
 

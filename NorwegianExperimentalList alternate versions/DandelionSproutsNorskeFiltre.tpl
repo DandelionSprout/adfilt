@@ -1,5 +1,5 @@
 msFilterList
-# Version: 10December2019v2-Beta
+# Version: 17December2019v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -136,7 +136,7 @@ contentMarketing
 # dv.is
 # dinside.no, seher.no
 # bt.no
-# https://www.latterkula.no/se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live/
+# latterkula.no se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live
 # www.latterkula.no artikler
 # www.mbl.is frettir
 # adressa.no
@@ -151,6 +151,8 @@ contentMarketing
 # ba.no
 # https://github.com/DandelionSprout/adfilt/pull/53
 -d services.api.no bazaar
+# aftenbladet.no
+# avisalofoten.no
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇬🇧: ——— Empty divider spaces ———
@@ -180,8 +182,10 @@ contentMarketing
 +d mparticle.com
 # 🇩🇰: Fikser knækking af videoer på TV 2 når "EasyList" bliver brugt
 # 🇬🇧: Unbreaks videos at TV2 Denmark when using "EasyList"
-# https://github.com/ryanbr/fanboy-adblock/issues/1243/
+# https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
+# https://github.com/ryanbr/fanboy-adblock/issues/1261
++d cookieinformation.com
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv
