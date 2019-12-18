@@ -1,4 +1,4 @@
-! Version: 18December2019v1
+! Version: 18December2019v2
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -16,7 +16,6 @@
 ##.ad_mobil_API
 ##.ads__grid-item
 ##.am-page-ad
-##.annonsetag
 ##.midtbanner
 ##.mvp-feat1-list-ad
 ##.rotating-junglebogen
@@ -47,7 +46,7 @@ borsen.dk##[href*="://borsen.dk/sponsoreret"]
 byggebolig.no##.maestro-resize
 byggfakta.no##.sponsor-row
 computerworld.dk##.candis-spot
-contentMarketing$xmlhttprequest,domain=sol.no
+contentMarketing$xhr,domain=sol.no
 dagens.dk##.col-sticky > div > p
 dagens.dk##.col-sticky > p
 dailyrush.dk,karfan.is##.td-header-rec-wrap
@@ -275,7 +274,7 @@ nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ! bobilverden.no
 /annonse-$image
 ##img[alt^=Annonse]
-! norskenettsider.no
+! norskenettsider.no, sva.no
 ##a[href*="online.adservicemedia.dk"]
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
@@ -570,6 +569,10 @@ tidssonen.no##.widget_custom_html
 finn.no#?#div[class^=ads__unit]:-abp-has(:scope > div[id^=ad-stream__google])
 mbl.is#?#.col-sm-6.col-12:-abp-has(.augl):not(:-abp-has(.fluid))
 gulesider.no,degulesider.dk,krak.dk##.e-banner
+##.annonsetag
+eavisa.com##.post-content > .items-container
+sva.no##section:not(:has(a))
+sva.no##.widget_text:not(:has(a))
 ! — — — — —
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
@@ -646,6 +649,8 @@ vafo.dk##.adform-flexblock
 ##.ad[data-config-name]
 ! avisalofoten.no
 ##.ad.text-center
+! blv.no/nyheter/kan-bruke-23-millioner-pa-the-whale-undersokelsene
+##div[id*=html-embedded-ad]
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -684,11 +689,11 @@ pensjonistferie.no#@##adsense
 ! 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
-@@||api.instagram.com^$domain=www.samiteahter.org
+@@||api.instagram.com^$domain=samiteahter.org
 ! Attempting to fix a problem with voting online on Idol Norway when using "EasyPrivacy"
 @@||tv2.no/*/config/analytics.json$xhr,1p
 ! Attempts to resolve how some frontpage articles are hard to open when using "EasyPrivacy".
-@@||schibsted.com/autoTracker$domain=www.vg.no
+@@||schibsted.com/autoTracker$domain=vg.no
 ! https://github.com/easylist/easylist/issues/1861
 @@_prebid_$domain=seher.no
 ! 🇳🇴: Solcellespesialisten, innlastingsproblem
@@ -704,7 +709,7 @@ krom.is#@#.share-container
 ! https://github.com/ryanbr/fanboy-adblock/issues/1243
 ||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
 ! https://github.com/ryanbr/fanboy-adblock/issues/1261
-@@||cookieinformation.com^$third-party,domain=kart.gulesider.no|map.krak.dk|kort.degulesider.dk|kartor.eniro.se
+@@||cookieinformation.com^$3p,domain=kart.gulesider.no|map.krak.dk|kort.degulesider.dk|kartor.eniro.se
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
@@ -735,7 +740,6 @@ vg.no##+js(addEventListener-defuser.js, load, concat)
 @@||bildeler.name$generichide
 @@||reservedele.name$generichide
 1800kcalkostplan.dk,1200kcalkostplan.dk##div[class*=-container][class$=-hide]
-@@||eurosport.no,eurosport.dk^$generichide
 !#endif
 
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
