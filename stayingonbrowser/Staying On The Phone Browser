@@ -1,11 +1,13 @@
 [Adblock Plus 3.2]
-! Version: 09November2019v2
+! Version: 20November2019v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 14 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
 ! Many entries in this list were originally taken from Adguard Annoyances filter, but the entries as a whole have now been sufficiently transformed from their original states that I personally believe that only this small creditation line to them is sufficient.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 !#include StayingOnThePhoneBrowser-uBOExtension.txt
+!#endif
+!#if env_mobile
 ###AndroidMobileAppBanner
 ###app-badges
 ###app-modal
@@ -35,19 +37,22 @@
 ##.header-promo-apps
 ##.install_app
 ##.OpenInAppBanner
-##div[class*="smartbanner" i]
-##div[id*="smartbanner" i]
-##div[class*="smart-banner" i]
-##div[id*="smart-banner" i]
 ##.smart-app-banner
 ##.tmblr-iframe--loaded.tmblr-iframe--app-cta-button
 ##.wds-is-community-apps
 ##amp-app-banner
 ##body > .AppBanner
+##div[class*="smart-banner" i]
+##div[class*="smartbanner" i]
 ##div[class^="mobile-upsell"]
+##div[id*="smart-banner" i]
+##div[id*="smartbanner" i]
 ##head[prefix~="medium-com:"] ~ body .js-openInAppButton
 ##head[prefix~="medium-com:"] ~ body .js-postActionsBarContent > .js-readNextInteractions
+*.smartbanner.js
+*/smart-app-banner.
 /js/jquery.smartbanner.js
+/js/smartbanner.
 /mobiquo/smartbanner/appbanner.js
 17track.net##.jsAppDown
 9gag.com##.badge-sticky-button
@@ -78,11 +83,14 @@ ifeng.com##.openApp[onclick^="loadOpen.init(download"]
 ihlassondakika.com##.MobilContainer
 iltalehti.fi##[href="/sovellus"]
 imageban.ru##img[alt="Get it on Google Play"]
+imgur.com##.FloatingOIA
+imgur.com##.Post-contentContainer > div.Post-metaContainer
+imgur.com##.PostContainer-postGetApp
 instagram.com##._40dde
 instagram.com##._c05qa
 instagram.com##a[href^="https://itunes.apple.com/app/instagram/id389801252?"][role="alert"]
-instagram.com#?#nav > div > div > section > div:-abp-has(div > div > button > div)
 instagram.com##body > span > section > nav > div > div > section.xZ2Xk
+instagram.com#?#nav > div > div > section > div:-abp-has(div > div > button > div)
 intellicast.com###promoAd
 intellicast.com###stormLink
 ipaddressguide.com##img[alt="iptools android app"]
@@ -105,11 +113,6 @@ m.evensi.de##.down-app
 m.facebook.com,touch.facebook.com,m.facebookcorewwwi.onion##.cc.ib
 m.geektimes.ru##.footer__apps
 m.huffpost.com###aol-banner
-!#if env_mobile
-imgur.com##.FloatingOIA
-imgur.com##.Post-contentContainer > div.Post-metaContainer
-imgur.com##.PostContainer-postGetApp
-!#endif
 m.ndtv.com###header_ap_id
 m.ntv.ru###androidbanner
 m.pikabu.ru##.fb-widget-below-comments-mw.promo
@@ -130,6 +133,7 @@ money.yandex.ru##.promo-header
 moviefone.com##.app-intercept
 my.klarna.com##.reveal-overlay
 mywot.com##.app-stripe
+naturalatlas.com##.mapbar-btn.btn-has-icon
 nfb.ca##.bandeOuterHeightLogo
 nytimes.com,nytimes3xbfgragh.onion##.css-990mwl
 obzor.press###meerkat-wrap
@@ -148,11 +152,11 @@ presseportal.de##.mobile-container.app-notification
 pvplive.net##a[href="/m/getmobile"]
 radugaskidok.ru##.store-bg
 rambler.ru##.wrap > section.promo.j-promo
+reddit.com##.chat-badge
 reddit.com##.DualPartInterstitialFooter
 reddit.com##.NavFrame > .DualPartInterstitial
 reddit.com##.TransparentOverlay__overlay
 reddit.com##path[d="M18.5 13.17a1.62 1.62 0 0 1-2.35 0c-.31-.3-.48-.73-.48-1.17 0-.44.17-.87.49-1.17a1.7 1.7 0 0 1 2.35 0c.32.3.49.73.49 1.17 0 .44-.17.87-.5 1.17m-4.86-.85c-.03.1-.05.21-.1.32l-.15.28c-.07.1-.14.19-.22.25a1.62 1.62 0 0 1-2.35 0 1.85 1.85 0 0 1-.36-.53c-.05-.1-.07-.21-.1-.32-.01-.1-.03-.21-.03-.32 0-.44.18-.87.5-1.17a1.7 1.7 0 0 1 2.34 0c.32.3.5.73.5 1.17l-.03.32m-5.33 0c-.03.1-.06.21-.11.32-.04.1-.1.2-.15.28-.06.1-.13.19-.21.27a1.67 1.67 0 0 1-2.35 0c-.08-.08-.14-.18-.21-.27a1.85 1.85 0 0 1-.25-.6 1.62 1.62 0 0 1 .47-1.5 1.7 1.7 0 0 1 2.34 0 1.85 1.85 0 0 1 .47.85l.02.33-.02.32M12 0A12.01 12.01 0 0 0 1.99 18.6L.7 22.46a.67.67 0 0 0 .84.84L5.4 22A12.01 12.01 0 0 0 24 12c0-6.62-5.38-12-12-12"]
-reddit.com##.chat-badge
 regnum.ru##.footer-apps
 reuters.com##[class^="GetTheAppBanner"]
 roblox.com###app-bumper-main
@@ -186,9 +190,13 @@ tabs.ultimate-guitar.com##.spl-content-side-overflow:after
 tabs.ultimate-guitar.com##.spl-content-side-overflow:before
 tabs.ultimate-guitar.com#?#.undefined:-abp-has(button[icon="android"])
 tellows.de###hint_box
+trondelagkraft.no#?#.article__ingress > p:-abp-contains(Med appen vår )
+trondelagkraft.no#?#.editorButton.button__action:-abp-contains(Last ned vår fordelsapp)
 tumblr.com##.mobile-banner-inner
 twitter.com##.toast.client_prompt
 ultimate-guitar.com##.ug-floated-splash.js-splash-container
+userstyles.org##.overlay_background
+userstyles.org#?#div.us-stylecard--short:-abp-has(img[src="/ui/images/280x294.png"])
 valyuta.com###bannerParent
 video.az##.sidebar-right > .text-center > a[href*="/app"] > img
 viu.com##.v-foot-wrap > div#app
@@ -196,6 +204,7 @@ vsco.co#?#div[class^="css-"]:-abp-has(.mb0)
 wap.ithome.com###a_ad
 wattpad.com###announcements-container
 wattpad.com###bottom-banner-container
+waze.com##.wz-downloadbar
 webaslan.com##a[href="http://www.webaslan.com/mobil"]
 webaslan.com##center > a[href^="http://bit.ly/"] > img
 webtekno.com##.android-dropdown.dropdown-container
@@ -207,31 +216,23 @@ zaycev.fm##.soft-promo
 zedge.net##.column.grid_12.leader
 zedge.net##.column.trailer.leader
 zona.mobi###zona-android
-trondelagkraft.no#?#.editorButton.button__action:-abp-contains(Last ned vår fordelsapp)
-trondelagkraft.no#?#.article__ingress > p:-abp-contains(Med appen vår )
-waze.com##.wz-downloadbar
-naturalatlas.com##.mapbar-btn.btn-has-icon
 ||2app.lk^$third-party
 ||3mdrlz4flj1hjzvp11ni1z71-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/romaniainsider-app.png$image
 ||anistar.ru/templates/*/images/android-app-on-google-play.png
 ||assets.ilcdn.fi/IL_Parassaa_612px.gif$image
 ||banki.ru/static/common/vendor-libs/jquery.smartbanner/
 ||dogruhaber.com.tr/image/foto/*/mobil-uygulamamamiz_*.gif
-*.smartbanner.js
 ||klavyer.com/android/klavyer-android-uygulamamiz.jpg
 ||malatyahaber.com/wp-content/uploads/2016/05/SA.gif
 ||my.klarna.com/assets/images/backgrounds/app-blur.png$image
 ||ntv.com.tr/Content/img/promote.jpg
 ||rueconomics.ru/template/mobile/assets/jquery.smartbanner/jquery.smartbanner.js
-/js/smartbanner.
 ||superfb.com/_img/banner/sfb*.png
 ||superfb.com/_img/mobil_imaj.png
 ||turkiyecocuk.com.tr/banner/
-*/smart-app-banner.
+||universitystar.com/wp-content/uploads/2019/02/NEW_web_rectangle_1-1.jpg$image
 ||unleashedprepaids.com/mobiquo/smartbanner/
 ||vizefinalsorupaylasimi.com/uploads/googleplay.jpg
-userstyles.org##.overlay_background
-userstyles.org#?#div.us-stylecard--short:-abp-has(img[src="/ui/images/280x294.png"])
 
 ! Below are entries that I borrowed from "I Don't Want Your App", which is maintained by https://github.com/lassekongo83 at https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/i-dont-want-your-app.txt, and which is licenced as GPLv3
 ! Generic
