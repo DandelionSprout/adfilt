@@ -74,11 +74,12 @@
 * `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph).
 * `:xpath`: An entry written with the very advanced Xpath syntax.
 * `##^`: Blocks resources before they've even been loaded, based on their values in *View source* instead of their F12 ones.
+* `:nth-ancestor`: Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree.
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
 * `||` + `$document`: Guarantees a danger warning when loading a page, which is not 110% guaranteed otherwise.
 * `$3p`: Same as `$third-party`.
-* `$first-party` / `$1p`: Same as `$~third-party`.
+* `$1p` / `$first-party`: Same as `$~third-party`.
 * `$xhr`: Same as `$xmlhttprequest`.
 * `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup`.
 
@@ -99,9 +100,9 @@
 * `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file.
 * `$empty`: Results in a fake empty page being loaded, instead of an error page.
 * `:properties`: Claims to be similar to `:-abp-properties`, but is incompatible with it.
-* `$$script` = Uses very advanced criteria to block scripts that meet them.
-* `$cookie` = Blocks cookies.
-* `$cookie=` = Blocks cookies with specific names.
+* `$$script`: Uses very advanced criteria to block scripts that meet them.
+* `$cookie`: Blocks cookies.
+* `$cookie=`: Blocks cookies with specific names.
 * `$cookie=` + `maxAge`: Changes the cookie to have an expiration time in seconds.
 * `$cookie=` + `same-site`: Changes the cookie to use the "Lax" mode of `samesite` known from the `Set-Cookie` browser HTTP response system.
 
@@ -109,12 +110,12 @@
 
 * `! Description:`: Shows a description of the list's purpose, when the question mark next to the list in the AdGuard settings is hovered over. That being said, a description is convenient for users of all adblockers, if they're willing to look up a list's raw content.
 * `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Individual ports can be specified. IPv6 addresses must be surrounded by square brackets. Can very easily break legitimate sites as collateral damage, and should be used very sparingly.
-* `@@` + `$jsinject` = Prevents `#%#` entries from working on that site.
-* `@@` + `$extensions` = Prevents AdGuard userscripts from working on that site.
-* `@@` + `$content` = Prevents `$$script` entries from working on that site.
-* `@@` + `$stealth` = Turns off Stealth Mode on that site.
-* `$mp4` = Seems to be equivalent to `$redirect=noopmp4`, but does not require any AdGuard trust rights.
-* `$replace` = Changes the text of text elements on a site. Supports and requires use of RegEx. Requires ridiculous amounts of trust rights and cannot be used in web-hosted lists.
+* `@@` + `$jsinject`: Prevents `#%#` entries from working on that site.
+* `@@` + `$extensions`: Prevents AdGuard userscripts from working on that site.
+* `@@` + `$content`: Prevents `$$script` entries from working on that site.
+* `@@` + `$stealth`: Turns off Stealth Mode on that site.
+* `$mp4`: Seems to be equivalent to `$redirect=noopmp4`, but does not require any AdGuard trust rights.
+* `$replace`: Changes the text of text elements on a site. Supports and requires use of RegEx. Requires ridiculous amounts of trust rights and cannot be used in web-hosted lists.
 
 # Other particularly important usage notes
 
