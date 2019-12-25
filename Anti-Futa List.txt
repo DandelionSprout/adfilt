@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 👩 Anti-Futa List
-! Version: 24December2019v2-Beta
+! Version: 25December2019v1-Beta
 ! Expires: 3 days
 ! Description: It seems to me that a common thought process on porn sites are "Hey, do you know what would've made this cute woman even sexier? I know. We should give her a dick!". Well, not anymore, thanks to this list.
 ! Note that on some of these sites, such as Pixiv, quite a few futa images are uploaded without having "futa" in its title or in its search result metadata, making them practically unblockable through this method. Categories known to have significant slipthrough percentages are marked with a 🔴.
@@ -17,6 +17,7 @@
 ##.tag-futanari
 
 ! ——— Pixiv ——— 
+!#if !env_mobile
 ! New search results, image suggestions on image pages, and carousel items on image pages
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="Futa" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="dickgirl" i])
@@ -59,34 +60,12 @@ pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption a[href$="?id=753859
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption a[href$="?id=13847"])
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption a[href$="?id=848248"])
 pixiv.net#?#div:-abp-has(:scope > figure > figcaption > ul > li > a:-abp-contains(/Futa/i):not(:-abp-contains(/[b-eg-hj-mo-qsv-z]/i))
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="Futa"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="dickgirl" i])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="ふたなり"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="StevenCarson"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="futanari" i])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="フタナリ"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*=" futa " i])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="ふたけっと"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="squarepeg3d"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="ふた〇"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="SaintsGringo"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="SkyKliker"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="Heatheartattack"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="BadTelevision"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="Rust And Bolts"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="JAJA-SINE"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="Necrobern"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="Rulean"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="BlueGirl91"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="TheeShrimp"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="Futink"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="Ztyoho"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="ちんぽどうぞ"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="（M×２エ"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="灯油ブラック"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="うねた＠skeb募集中"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="YelfTea"])
-pixiv.net#?#div[class="thumbnail"]:-abp-has(:scope > img[alt*="Cre3pSFM"])
+!#endif
+! Phone version
+pixiv.net#?#div[class^="list-item column"]:has(img[alt*="Futa" i])
+pixiv.net#?#div[class^="list-item column"]:has(img[alt*="dickgirl" i])
+pixiv.net#?#div[class^="list-item column"]:has(img[alt*="ふたなり"])
+pixiv.net#?#div[class^="list-item column"]:has(img[alt*="フタナリ"])
 
 ! ——— LusciousNET ———
 luscious.net#?#.block_wrapper:-abp-contains(Futa)
