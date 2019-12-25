@@ -1,8 +1,9 @@
 [Adblock Plus 3.4]
 ! Title: 🤗 Anti-'Abuse porn' list
-! Version: 25December2019v1-Alpha
+! Version: 26December2019v1-Alpha
 ! Description: Pixiv is an East Asian artsite, whose on-average art quality wipes the floor with DeviantArt. It also allows porn of many types. Pressure on "many". So say that you're looking for imagery of consensual and pleasurable sex, and then you stumble across a crying Daniel Tiger with a corset being strapped to a bench in a diaper? Now such scenarios won't occur nearly as often as they did before!
 ! This list currently deals with: Excessive bondage, uncomfortable bondage, rubber dolls, slaves, physical abuse, fluid-based abuse, breathplay, diapers, shortly incoming death.
+! This list does not normally deal with foot art, due to the abnormally high popularity of such. However, foot-dirt and -sweat art are taken care of by https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiVomitList.txt
 
 !#if !env_mobile
 ! Search results and «Discovery» page
@@ -64,11 +65,13 @@ pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(/toil
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(Raikoh Xaiorkh))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(/loli/i):-abp-contains(/auction/i))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(/domestic/i):-abp-contains(/violence/i))
+pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(/ fart/i))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption a[href$="?id=30742521"])
 ! Suggestions on image pages and the frontpage
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="diaper" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="diarrhea" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*=" fart" i])
+pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="fart," i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*=" scat" i]:not([alt*=scatman]))
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="torture" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="bitchsuit" i])
@@ -139,6 +142,7 @@ pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="diaper" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="diarrhea" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*=" fart" i])
+pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="fart," i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*=" scat" i]:not([alt*=scatman]))
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="torture" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="bitchsuit" i])
@@ -170,10 +174,12 @@ rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="feeding"][title*="forced"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="peskybatfish"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*=" fart "])
 
+! PornHub
+pornhub.com#?#.videoblock:-abp-has(a[data-title*="breathplay" i])
+pornhub.com#?#.videoblock:-abp-has(a[data-title*="suffocat" i])
+pornhub.com#?#.videoblock:-abp-has(a[data-title*="death" i])
+
 ! Other sites
 rule34.paheal.net#?#div.thumb:-abp-has(img[id="thumb_1455016"])
 ||rule34.paheal.net/post/view/1455016^
 ||paheal.net/_images/*/1455016%^
-pornhub.com#?#.videoblock:-abp-has(a[data-title*="breathplay" i])
-pornhub.com#?#.videoblock:-abp-has(a[data-title*="suffocating" i])
-pornhub.com#?#.videoblock:-abp-has(a[data-title*="death" i])
