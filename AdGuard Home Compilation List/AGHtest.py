@@ -1,10 +1,10 @@
 import requests
 import re
 
-SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://easylist-downloads.adblockplus.org/liste_fr.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt']
+SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://easylist-downloads.adblockplus.org/liste_fr.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/sections/push-notifications.txt']
 
-UNSUPPORTED_AGH = ['##', '@#', '#?#', 'domain=', 'generichide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '~image', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#']
-UNSUPPORTED_IP = ['##', '@#', '#?#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '~image', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#']
+UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain' ]
+UNSUPPORTED_IP = ['##', '@#', '#?#', '#%#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '!+']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AGH = 'AdGuardHomeCompilationList.txt'
@@ -109,12 +109,6 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"([$,])~subdocument", 
-           "", 
-           line
-        )
-
-        line = re.sub(
            r"([$,])object", 
            "", 
            line
@@ -134,12 +128,6 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"([$,])all", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])~stylesheet", 
            "", 
            line
         )
@@ -271,19 +259,37 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^://", 
-           r"||", 
-           line
-        )
-
-        line = re.sub(
            r"^\|\|.*/.*", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*\*[&?].*", 
+           r".*\*[&?@].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\*/[a-z0-9]*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[,=^/?~].*", 
            r"", 
            line
         )
