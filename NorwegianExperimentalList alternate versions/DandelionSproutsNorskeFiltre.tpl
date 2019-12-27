@@ -1,5 +1,5 @@
 msFilterList
-# Version: 17December2019v2-Beta
+# Version: 27December2019v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -109,7 +109,7 @@ contentMarketing
 # https://nyheder.tv2.dk/samfund/2019-11-04-vold-fanget-paa-video-gerningsmand-fik-lov-at-gaa-fri-i-tre-aar
 # bobilverden.no
 - annonse-
-# norskenettsider.no
+# norskenettsider.no, sva.no
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
@@ -147,6 +147,8 @@ contentMarketing
 -d services.api.no bazaar
 # aftenbladet.no
 # avisalofoten.no
+# blv.no nyheter kan-bruke-23-millioner-pa-the-whale-undersokelsene
+# https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇬🇧: ——— Empty divider spaces ———
@@ -189,9 +191,9 @@ contentMarketing
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js
 -d vg.no AdblockModal
+-d aftenposten.no ads-
 +d bildeler.name
 +d reservedele.name
-+d eurosport.no,eurosport.dk
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———

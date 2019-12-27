@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 171220192
+! Version: 271220191
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -17,7 +17,6 @@
 ##.ad_mobil_API
 ##.ads__grid-item
 ##.am-page-ad
-##.annonsetag
 ##.midtbanner
 ##.mvp-feat1-list-ad
 ##.rotating-junglebogen
@@ -268,7 +267,7 @@ nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ! bobilverden.no
 /annonse-$image
 ##img[alt^=Annonse]
-! norskenettsider.no
+! norskenettsider.no, sva.no
 ##a[href*="online.adservicemedia.dk"]
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
@@ -347,7 +346,7 @@ dv.is##.adbox_310x400
 dv.is##.ticker
 e24.no###main > div:nth-of-type(1)
 e24.no###main > div:nth-of-type(3)
-e24.no##[id^=adPlacement_]
+e24.no,aftenbladet.no##[id^=adPlacement_]
 eavisa.com##.custom-a-ds
 eavisa.com##.post-content > p:-abp-has(.adsbygoogle)
 eavisa.com##.post-content > p:-abp-has(a[onclick^="javascript:window.open("])
@@ -551,6 +550,10 @@ tidssonen.no##.widget_custom_html
 finn.no#?#div[class^=ads__unit]:-abp-has(:scope > div[id^=ad-stream__google])
 mbl.is#?#.col-sm-6.col-12:-abp-has(.augl):not(:-abp-has(.fluid))
 gulesider.no,degulesider.dk,krak.dk##.e-banner
+##.annonsetag
+eavisa.com##.post-content > .items-container
+sva.no##section:not(:has(a))
+sva.no##.widget_text:not(:has(a))
 ! — — — — —
 
 
@@ -626,6 +629,12 @@ vafo.dk##.adform-flexblock
 ##.ad[data-config-name]
 ! avisalofoten.no
 ##.ad.text-center
+! blv.no/nyheter/kan-bruke-23-millioner-pa-the-whale-undersokelsene
+##div[id*=html-embedded-ad]
+! https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
+##.ad[id^=netboard_]
+##.ad[id^=skyscraper]
+##.ad.topBanner
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -663,11 +672,11 @@ pensjonistferie.no#@##adsense
 ! 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
-@@||api.instagram.com^$domain=www.samiteahter.org
+@@||api.instagram.com^$domain=samiteahter.org
 ! Attempting to fix a problem with voting online on Idol Norway when using "EasyPrivacy"
 @@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
 ! Attempts to resolve how some frontpage articles are hard to open when using "EasyPrivacy".
-@@||schibsted.com/autoTracker$domain=www.vg.no
+@@||schibsted.com/autoTracker$domain=vg.no
 ! https://github.com/easylist/easylist/issues/1861
 @@_prebid_$domain=seher.no
 ! 🇳🇴: Solcellespesialisten, innlastingsproblem
@@ -705,11 +714,12 @@ minmote.no,godt.no##.adblock-info
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
 @@||www.tv2.no/s/js/ads.js$script,~third-party
+||aftenposten.no/seksjon/dist/ads-$script
+aftenposten.no##div[style*="width: 10"][style*="z-index: 2147"]
 
 @@||bildeler.name$generichide
 @@||reservedele.name$generichide
 1800kcalkostplan.dk,1200kcalkostplan.dk##div[class*=-container][class$=-hide]
-@@||eurosport.no,eurosport.dk^$generichide
 
 
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
@@ -788,7 +798,7 @@ gamereactor.no,gamereactor.dk#@#.afs_ads
 ||media.gamereactor.dk/prerolls/*$media,rewrite=abp-resource:blank-mp3,domain=gamereactor.no|gamereactor.dk
 ||openx.gamereactor.dk/multi.php?,script
 ||ssl.p.jwpcdn.com^*/gapro.js$script,domain=gamereactor.no|gamereactor.dk
-@@||fwmrm.net/ad/$image,xmlhttprequest,domain=viafree.no|viafree.dk
+@@||fwmrm.net/ad/$image,xmlhttprequest$script,domain=viafree.no|viafree.dk
 @@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.no|viafree.dk
 viafree.no,viafree.dk##.ad-click-through
 viafree.no,viafree.dk##.pause-ad

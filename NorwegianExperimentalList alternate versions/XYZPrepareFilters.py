@@ -2724,6 +2724,7 @@ UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
 
 OUTPUT = 'Domeneversjoner/xyzzyxbrowsewebsites.txt'
 OUTPUT_DOMAINS = 'Domeneversjoner/BrowseWebsitesWithoutLoggingInDomains.txt'
+OUTPUT_AGH = 'Domeneversjoner/BrowseWebsitesWithoutLoggingInAGH.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -2810,6 +2811,81 @@ def prepare_domains(lines) -> str:
 
     return text
 
+def prepare_agh(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"[$,]document.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! (Title: .*)", 
+           r"# \1 (for AdGuard Home)", 
+           line
+        )
+
+        line = re.sub(
+           r"!(.*:)", 
+           r"#\1", 
+           line
+        )
+
+        line = re.sub(
+           r"/\*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"/\?meter", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"[$,]third-party.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9].*)", 
+           r"||\1^", 
+           line
+        )
+
+        if is_supported_domains(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -2817,12 +2893,16 @@ if __name__ == "__main__":
     print('Total number of rules: ' + str(len(lines)))
 
     domains_filter = prepare_domains(lines)
+    agh_filter = prepare_agh(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
 
     with open(OUTPUT_DOMAINS, "w") as text_file:
         text_file.write(domains_filter)
+
+    with open(OUTPUT_AGH, "w") as text_file:
+        text_file.write(agh_filter)
 
     print('The list versions have been generated.')
 
