@@ -217,12 +217,6 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[/\\].*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"@?@?\|\|.*/.*", 
            r"", 
            line
@@ -289,7 +283,37 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[,=^/?~].*", 
+           r"^[,=^?~_].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/[a-zA-Z0-9_!?~].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"https\?:\\/\\/", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\\//$", 
+           r"/", 
+           line
+        )
+
+        line = re.sub(
+           r"^[./*|-]$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/\*.*$", 
            r"", 
            line
         )
@@ -566,12 +590,6 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"^[/\\].*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"^@@.*[a-z].*", 
            r"", 
            line
@@ -579,7 +597,7 @@ def prepare_ip(lines) -> str:
 
         line = re.sub(
            r"\[Adblock Plus 3\.4\]", 
-           "! Title: IP Entries from Adblock Lists\n! Contains transformated entries from: EasyList, uBlock Filters, uBlock Filters - Badware Risks, Nano Defender Integration, Liste FR, I Don't Care About Cookies, EasyList Germany, ABP Anti-Circumvention Filters\n! Expires: 14 days\n! Licence: In accordance with the Dandelicence, the borrowed entries are considered to have been changed and reduced enough from their original lists, that they're counted as transformative work, meaning that creditation and seperate paragraphs are not necessary unless one of the lists' makers were to ask for such.\n! Description: This was made as a proof-of-concept to see if the IP-based entries of major adblock lists, could be used to create an IP adblocker list for IP blockers, despite how IP lists are normally only meant to block malware, E-mail spam, or port scanners.", 
+           "! Title: IP Entries from Adblock Lists\n! Contains transformated entries from: EasyList, uBlock Filters, uBlock Filters - Badware Risks, Nano Defender Integration, Liste FR, I Don't Care About Cookies, EasyList Germany, and ABP Anti-Circumvention Filters\n! Expires: 14 days\n! Licence: In accordance with the Dandelicence, the borrowed entries are considered to have been changed and reduced enough from their original lists, that they're counted as transformative work, meaning that creditation and seperate paragraphs are not necessary unless one of the lists' makers were to ask for such.\n! Description: This was made as a proof-of-concept to see if the IP-based entries of major adblock lists, could be used to create an IP adblocker list for IP blockers, despite how IP lists are normally only meant to block malware, E-mail spam, or port scanners.", 
            line
         )
 
@@ -591,6 +609,30 @@ def prepare_ip(lines) -> str:
 
         line = re.sub(
            r"^!$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\\.\(\\d\)\{1,3\}\\.\(\\d\)\{1,3\}\\.\(\\d\)\{1,3\}\\//", 
+           r".0.0.0/8", 
+           line
+        )
+
+        line = re.sub(
+           r"/\^https\?:\\/\\/", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\(([0-9][0-9]?[0-9]?)\|([0-9][0-9]?[0-9]?)\)(.0.0.0/8)", 
+           r"\1\3\n\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"^[/a-z.([]..*", 
            r"", 
            line
         )
