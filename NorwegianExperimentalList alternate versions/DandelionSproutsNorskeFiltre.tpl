@@ -1,5 +1,5 @@
 msFilterList
-# Version: 27December2019v1-Beta
+# Version: 30December2019v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -395,7 +395,6 @@ contentMarketing
 -d manasporthorse.com
 -d mayor4london.com
 -d mbtnorge.com
--d meadtalkofthetown.com
 -d meladermfacts.com
 -d mncprobuild.com
 -d moebel-thiems.com
@@ -427,7 +426,6 @@ contentMarketing
 -d pjs.outlet.com
 -d popeurope.com
 -d quiltstudiolaren.com
--d reeconindustries.com
 -d retoaudi.com
 -d scottfamilyministries.org
 -d skoeccosandaler.com
@@ -439,7 +437,6 @@ contentMarketing
 -d tobiascelebritymusicevents.com
 -d um-bs.com
 -d vansnorge.com
--d wausauorthopedics.com
 # 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
