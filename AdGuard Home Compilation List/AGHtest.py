@@ -259,7 +259,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|.*/.*", 
+           r".*\|.*/.*", 
            r"", 
            line
         )
@@ -289,7 +289,25 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[,=^/?~].*", 
+           r"^[,=^/?~.-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! \|.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[,=^/?~.-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\.php\?$", 
            r"", 
            line
         )
