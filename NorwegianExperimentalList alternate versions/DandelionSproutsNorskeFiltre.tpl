@@ -1,5 +1,5 @@
 msFilterList
-# Version: 30December2019v1-Beta
+# Version: 09January2020v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -7,6 +7,7 @@ msFilterList
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
 # 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+# CRITICAL NOTE FOR PFBLOCKERNG USERS: This version of my list was never meant to be used with pfBlockerNG in the first place, and I was never asked or inquired about it before it was added to it. Instead I currently recommend https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AdawayHosts./This/has been fixed in fresh stock installations of ≥2.2.5_27. For all other pfBlockerNG users, please replace the list link manually.
 # If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
 # 🇳🇴: Ukategoriserte oppføringer
 # 🇩🇰: Ukategoriserede regler
@@ -110,6 +111,7 @@ contentMarketing
 # bobilverden.no
 - annonse-
 # norskenettsider.no, sva.no
+# https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
@@ -149,6 +151,8 @@ contentMarketing
 # avisalofoten.no
 # blv.no nyheter kan-bruke-23-millioner-pa-the-whale-undersokelsene
 # https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
+# http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
+-d 85.17.76.181
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇬🇧: ——— Empty divider spaces ———
@@ -230,11 +234,8 @@ contentMarketing
 # 🇬🇧: Sites that I refuse to visit on my own to test the entries
 # ——————————————————————————————————————————————————————————————————————————————————————————————————————
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
-# 🇳🇴: Hvitelisting av sporere som er nødvendige for brukere av Prisjakt, Kickback, og Viatrumf
-# 🇩🇰: Tracker-hvidlistninger, der er nødvendige for brugere af Prisjagt, såvel som de norske handletjenester Kickback og Viatrumf
-# 🇬🇧: Tracker whitelistings that are necessary for users of Prisjakt, Kickback, and Viatrumf
-+d clk.tradedoubler.com
-+d solutions.tradedoubler.com
+# 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "+d doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
+# 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "+d doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
 # 🇳🇴: Lagt til fordi min egen mor (Hun er i 40-årene) trodde jeg hadde rotet til PCen hennes, når den i stedet bare viste en uBO-sideadvarsel på grunn av en oppføring i «AdGuards hovedfilter», også kjent som AdGuard Base.
 # 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
 # 🇬🇧: Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
@@ -272,6 +273,7 @@ contentMarketing
 -d limitedvoucher.com
 -d vouchersnationhub.com
 -d com-airs1.com
+-d pensjonistferie.no
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
@@ -346,6 +348,8 @@ contentMarketing
 -d geometra-bologna.it
 # https://www.nrk.no/nyheter/1.14793929
 -d sky.gs
+# https://www.online.no/sikkerhet/falsk-online-nettside
+-d is-a-personaltrainer.com
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.

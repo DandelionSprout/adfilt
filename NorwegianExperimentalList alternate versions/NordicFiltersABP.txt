@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 301220191
+! Version: 090120201
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -7,6 +7,7 @@
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
 ! 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+! CRITICAL NOTE FOR PFBLOCKERNG USERS: This version of my list was never meant to be used with pfBlockerNG in the first place, and I was never asked or inquired about it before it was added to it. Instead I currently recommend https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AdawayHosts. This has been fixed in fresh stock installations of ≥2.2.5_27. For all other pfBlockerNG users, please replace the list link manually.
 ! If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
 
 ! 🇳🇴: Ukategoriserte oppføringer
@@ -269,6 +270,8 @@ nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ##img[alt^=Annonse]
 ! norskenettsider.no, sva.no
 ##a[href*="online.adservicemedia.dk"]
+! https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
+~prisguiden.no##.prisguidePost
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -554,6 +557,24 @@ gulesider.no,degulesider.dk,krak.dk##.e-banner
 eavisa.com##.post-content > .items-container
 sva.no##section:not(:has(a))
 sva.no##.widget_text:not(:has(a))
+langrenn.com#?#.bannerlocation:-abp-has(script[src*=pagead])
+kanalfrederikshavn.dk#?#div:-abp-has(:scope > div > .boxbanner)
+kanalfrederikshavn.dk###c2283
+kanalfrederikshavn.dk##td[width="315"][height="55"]
+kanalfrederikshavn.dk###c1671
+kanalfrederikshavn.dk##.banner
+kanalfrederikshavn.dk##table[width="620"]
+kanalfrederikshavn.dk###knapper
+kanalfrederikshavn.dk##td[height="237"]:not([valign])
+kanalfrederikshavn.dk##td[height="237"][width="315"]:not(#colRight)
+kanalfrederikshavn.dk###c888
+kanalfrederikshavn.dk###c890
+kanalfrederikshavn.dk###c1670
+m.kanalfrederikshavn.dk##.OA
+m.kanalfrederikshavn.dk##.OX
+tv2.no#?#.large-12:not(:-abp-has(a))
+fyens.dk##.adblock__text
+friflyt.no###ads_fullwidth_container
 ! — — — — —
 
 
@@ -635,6 +656,8 @@ vafo.dk##.adform-flexblock
 ##.ad[id^=netboard_]
 ##.ad[id^=skyscraper]
 ##.ad.topBanner
+! http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
+||85.17.76.181^$image
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -662,9 +685,7 @@ dyrevennene.no##.td-footer-wrapper
 ! 🇩🇰: ——— Fiksing af knækte websider ———
 ! 🇬🇧: ——— Unbreakage ———
 nettavisen.no###topover-loader
-gamer.no#@#iframe[width=300][height=250]
-pensjonistferie.no#@##adsense
-@@||fagbladetjournalen.no/*/300x250_
+gamer.no#@#iframe[width="300"][height="250"]
 @@||seher.no/reise$generichide
 ! 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
 ! 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
@@ -835,16 +856,9 @@ frihetskamp.net##a[href*="nordenstil.no"]
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
 
-! 🇳🇴: Hvitelisting av sporere som er nødvendige for brukere av Prisjakt, Kickback, og Viatrumf
-! 🇩🇰: Tracker-hvidlistninger, der er nødvendige for brugere af Prisjagt, såvel som de norske handletjenester Kickback og Viatrumf
-! 🇬🇧: Tracker whitelistings that are necessary for users of Prisjakt, Kickback, and Viatrumf
-@@||track.adtraction.com/t
-@@||clk.tradedoubler.com
-@@||solutions.tradedoubler.com
-@@||ad.zanox.com/ppc
-@@||redirects.tradedoubler.com/projectr/?utm_source=prisjakt
-@@||redirects.tradedoubler.com/cdon/
-@@||clkuk.tradedoubler.com/*/nb-no
+! 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "@@||doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
+! 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "@@||doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
+
 ! 🇳🇴: Lagt til fordi min egen mor (Hun er i 40-årene) trodde jeg hadde rotet til PCen hennes, når den i stedet bare viste en uBO-sideadvarsel på grunn av en oppføring i «AdGuards hovedfilter», også kjent som AdGuard Base.
 ! 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
 @@||track.adform.net/*%2Fapollo.no%2F
@@ -915,6 +929,7 @@ fuglelyder.net#@##banner_ad
 ||vouchersnationhub.com^
 ||djurs.com-*.*^
 ||com-airs1.com^
+||pensjonistferie.no^
 
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
@@ -995,6 +1010,8 @@ fuglelyder.net#@##banner_ad
 ||geometra-bologna.it^
 ! https://www.nrk.no/nyheter/1.14793929
 ||sky.gs^
+! https://www.online.no/sikkerhet/falsk-online-nettside
+||is-a-personaltrainer.com^
 
 ! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 ! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).

@@ -753,6 +753,13 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r'"@@\|\|', 
+           '"+d ', 
+           line
+        )
+
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
