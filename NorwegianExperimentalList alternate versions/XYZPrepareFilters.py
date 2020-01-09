@@ -152,6 +152,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^!.*PFBLOCKERNG.*", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -417,6 +423,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"##\+js\(abort-on-property-write.js, (.*)\)", 
            r"#$#abort-on-property-write \1", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.*PFBLOCKERNG.*", 
+           r"", 
            line
         )
 
@@ -759,6 +771,11 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^!.*PFBLOCKERNG.*", 
+           r"", 
+           line
+        )
 
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
@@ -850,6 +867,12 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            r"(# Version: .*[0-9][A-Z].*)", 
            r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.*PFBLOCKERNG.*", 
+           r"", 
            line
         )
 
@@ -1014,6 +1037,7 @@ OUTPUT_SHADOWSOCKS = 'NordicFiltersSocks5.list'
 OUTPUT_RPZ = 'NordicFiltersRPZ.txt'
 OUTPUT_UNBOUND = 'NordicFiltersUnbound.conf'
 OUTPUT_MINERBLOCK = 'NordicFiltersForMinerBlock.txt'
+OUTPUT_HOSTSIPV6 = 'NordicFiltersHostsIPv6.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -1064,7 +1088,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"# Platform notes:.*", 
-           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including pfBlockerNG, Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.", 
+           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including pfBlockerNG, Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.\n# If you use a tool that edits the system's own hosts file, such as Hosts File Editor, Gas Mask, or Magisk Manager, make sure to also use the IPv6 version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersHostsIPv6.txt", 
            line
         )
 
@@ -1119,13 +1143,13 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"(.*\..*[a-z]$)", 
+           r"(.*\..*[a-z0-9]$)", 
            r"\1\" },", 
            line
         )
 
         line = re.sub(
-           "(.*\..*[a-z])\\\"", 
+           "(.*\..*[a-z0-9])\\\"", 
            r"\1\\", 
            line
         )
@@ -1137,7 +1161,7 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z])\\", 
+           r"([a-z0-9])\\", 
            r"\1", 
            line
         )
@@ -1558,6 +1582,54 @@ def prepare_minerblock(lines) -> str:
 
     return text
 
+# ————— IPv6 .\hosts version —————
+
+def prepare_hostsipv6(lines) -> str:
+    text = ''
+
+    # remove or modifiy entries with unsupported modifiers
+    for line in lines:
+
+        line = re.sub(
+           r"^(?!#)", 
+           ":: ", 
+           line
+        )
+
+        line = re.sub(
+           r":: $", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "📔 Dandelion Sprouts nordiske filtre \(Domenelisteversjonen\)", 
+           "Dandelion Sprouts nordiske filtre (IPv6-«hosts»-versjonen)", 
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprout's Nordic Filters \(The domains list version\)", 
+           "Dandelion Sprout's Nordic Filters (The IPv6 «hosts» file version)", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is meant to be used simultaneously of the regular «Hosts» version when using computer/Android system hosts file editors like Hosts File Editor, Gas Mask, Magisk Manager, etc. It is not needed for tools that strip away the entries' IP address, such as Blokada and pfBlockerNG.", 
+           line
+        )
+
+        line = re.sub(
+           r"^(::) (.*)", 
+           r"\1 \2 www.\2", 
+           line
+        )
+
+        if is_supported_hosts(line):
+            text += line + '\r\n'
+
+    return text
 
 
 if __name__ == "__main__":
@@ -1576,6 +1648,7 @@ if __name__ == "__main__":
     rpz_filter = prepare_rpz(lines)
     unbound_filter = prepare_unbound(lines)
     minerblock_filter = prepare_minerblock(lines)
+    hostsipv6_filter = prepare_hostsipv6(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -1609,6 +1682,9 @@ if __name__ == "__main__":
 
     with open(OUTPUT_MINERBLOCK, "w") as text_file:
         text_file.write(minerblock_filter)
+
+    with open(OUTPUT_HOSTSIPV6, "w") as text_file:
+        text_file.write(hostsipv6_filter)
 
     print('The domains-based list versions have been generated.')
 
