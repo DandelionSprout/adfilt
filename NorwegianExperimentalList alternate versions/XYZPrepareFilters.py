@@ -2575,6 +2575,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"@@.*pokeacer\.tk\^", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line):
             text += line + '\r\n'
 
