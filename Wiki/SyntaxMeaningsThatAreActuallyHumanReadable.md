@@ -48,7 +48,7 @@
 * `/\/\/\/` and similar: Text detections in RegEx format.
 * `[Adblock Plus n.n]`: Used by Adblock Plus, AdBlock, and forks of them to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. This has no effect on uBO or its forks.
 * `! Title:` Specifies the intended name of the list. Required to make the name automatically show up in the settings of most adblockers, instead of the URL or of manual text input.
-* `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Has significant overlap with `! Last modified`.
+* `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
 * `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days". ABP also supports "hour/hours".
 
 ### Nano Adblocker, uBlock Origin, Adblock Plus and AdBlock only:
@@ -71,7 +71,7 @@
 ### Nano Adblocker and uBlock Origin only:
 #### Hiding
 * `!#include`: Embeds another filterlist that is hosted on the same domain (with numerous restrictions).
-* `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph).
+* `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph). Nano has a select few additional scripts.
 * `:xpath`: An entry written with the very advanced Xpath syntax.
 * `##^`: Blocks resources before they've even been loaded, based on their values in *View source* instead of their F12 ones.
 * `:nth-ancestor`: Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree.
@@ -105,25 +105,25 @@
 * `$cookie=`: Blocks cookies with specific names.
 * `$cookie=` + `maxAge`: Changes the cookie to have an expiration time in seconds.
 * `$cookie=` + `same-site`: Changes the cookie to use the "Lax" mode of `samesite` known from the `Set-Cookie` browser HTTP response system.
+* `$mp4`: Seems to be equivalent to `$redirect=noopmp4`, but does not require any AdGuard trust rights. Allegedly to be obsoleted soon.
 
 ### AdGuard for [Windows/Mac/Android] only:
 
 * `! Description:`: Shows a description of the list's purpose, when the question mark next to the list in the AdGuard settings is hovered over. That being said, a description is convenient for users of all adblockers, if they're willing to look up a list's raw content.
-* `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Individual ports can be specified. IPv6 addresses must be surrounded by square brackets. Can very easily break legitimate sites as collateral damage, and should be used very sparingly.
+* `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Individual ports can be specified with `:`. IPv6 addresses must be surrounded by square brackets. Can very easily break legitimate sites as collateral damage, and should be used very sparingly.
 * `@@` + `$jsinject`: Prevents `#%#` entries from working on that site.
 * `@@` + `$extensions`: Prevents AdGuard userscripts from working on that site.
 * `@@` + `$content`: Prevents `$$script` entries from working on that site.
 * `@@` + `$stealth`: Turns off Stealth Mode on that site.
-* `$mp4`: Seems to be equivalent to `$redirect=noopmp4`, but does not require any AdGuard trust rights.
 * `$replace`: Changes the text of text elements on a site. Supports and requires use of RegEx. Requires ridiculous amounts of trust rights and cannot be used in web-hosted lists.
 
 # Other particularly important usage notes
 
 * To make the text detection for `:-abp-contains` and `:has-text` case-insensitive, wrap the paranthesised text into `(/Example text/i)`.
-* The `"` in `[href="text"]` is optional, but *only* if the criteria text is only a single word.
+* The `"` in `[href="text"]` is optional, but *only* if the criteria text is only a single word and has no numbers.
 * `:style` and `{ }` does not allow changing `background-image` into a URL value.
 * It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
 * Amazingly, using `! Redirect: ` in the intended target link's list, will cause an infinite loop that prevents the list from being loaded.
 * In Opera, the F12 filetree is not actually opened with F12 by default, but instead with Ctrl+Shift+I (Capital İ).
 
-¹ = Includes Nano Adblocker, uBlock Origin ≥1.14.0, AdGuard, AdNauseum, Adblock Plus version ≥3.1, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, or Blokada, whose syntax supports are considerably inferior to the above list.
+¹ = Includes Nano Adblocker, uBlock Origin ≥1.20.0, AdGuard, AdNauseum, Adblock Plus version ≥3.5, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, or Blokada, whose syntax supports are considerably inferior to the above list.
