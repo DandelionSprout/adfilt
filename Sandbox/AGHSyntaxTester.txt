@@ -1,6 +1,6 @@
 ! Title: AdGuard Home Gradual Syntax Inclusion Test List
-! Version: 08January2020v2-Sandbox
-! Description: This list contains a lot of syntaxes that currently disqualify their entire entries in AdGuard Home. When any of the entries do indeed block access to the very, very legitimate and reasonable Norwegian newssite NRK, they are removed from this list, and (if applicable) changes will be made to https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AGHtest.py to accomodate for the working entries.
+! Version: 12January2020v2-Sandbox
+! Description: This list contains a lot of syntaxes that currently disqualify their entire entries in AdGuard Home. When any of the entries do indeed block access to the very, very legitimate and reasonable Norwegian newssite NRK, they are removed from this list, and (If applicable) changes will be made to https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AGHtest.py to accomodate for the working entries.
 ||nrk.no^$1p
 ||nrk.no^$3p
 ||nrk.no^$all
@@ -36,4 +36,22 @@
 ||nrk.no^$~popunder
 ||nrk.no^$~third-party
 ||nrk.no^$~xhr
+! https://github.com/AdguardTeam/AdGuardHome/issues/1328 (Although unclear if it was actually covered by the fix commit)
 0 www.nrk.no
+! https://github.com/AdguardTeam/AdGuardHome/issues/1249#issuecomment-573378507
+https://www.nrk.no/
+https://www.nrk.no
+! Privoxy
+.www.nrk.no
+! RPZ
+www.nrk.no CNAME .
+! TPL
+-d www.nrk.no
+! MinerBlock
+*://*.nrk.no/*
+! dnsmasq
+address=/www.nrk.no/127.0.0.1
+! hosts.deny
+ALL: www.nrk.no
+! BIND
+zone "www.nrk.no" { type master; notify no; file "null.zone.file"; };
