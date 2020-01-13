@@ -1,5 +1,5 @@
 msFilterList
-# Version: 09January2020v1-Beta
+# Version: 12January2020v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -9,9 +9,6 @@ msFilterList
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 # CRITICAL NOTE FOR PFBLOCKERNG USERS: This version of my list was never meant to be used with pfBlockerNG in the first place, and I was never asked or inquired about it before it was added to it. Instead I currently recommend https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AdawayHosts./This/has been fixed in fresh stock installations of ≥2.2.5_27. For all other pfBlockerNG users, please replace the list link manually.
 # If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
-# 🇳🇴: Ukategoriserte oppføringer
-# 🇩🇰: Ukategoriserede regler
-# 🇬🇧: Uncategorised entries
 # 🇳🇴 🇩🇰: ——— Reklamer ———
 # 🇬🇧: ——— Ads ———
 contentMarketing
@@ -153,6 +150,8 @@ contentMarketing
 # https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
 # http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
 -d 85.17.76.181
+# https://krs247.no/
+# lsk.no
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇬🇧: ——— Empty divider spaces ———
@@ -166,26 +165,25 @@ contentMarketing
 # 🇳🇴: ——— Fiksing av knekte sider ———
 # 🇩🇰: ——— Fiksing af knækte websider ———
 # 🇬🇧: ——— Unbreakage ———
-# 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
-# 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
-# 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
-+d api.instagram.com
-# Attempting to fix a problem with voting online on Idol Norway when using "EasyPrivacy"
-# Attempts to resolve how some frontpage articles are hard to open when using "EasyPrivacy".
-# https://github.com/easylist/easylist/issues/1861
-+d _prebid_
-# 🇳🇴: Solcellespesialisten, innlastingsproblem
-# 🇬🇧: Solcellespesialisten, loading issue
--d wo.tc
-# 🇳🇴: Får Dplay sin påloggingsside til å vises riktig når «EasyPrivacy» blir brukt
-# 🇬🇧: Makes Dplay's login page show up properly when using "EasyPrivacy"
+# Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
+# ——— Caused by «EasyPrivacy» ———
+# Attempting to fix a problem with voting online on Idol Norway
+# Attempts to resolve how some frontpage articles are hard to open
+# 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
+# 🇬🇧: Makes Dplay's login page show up properly
 +d mparticle.com
-# 🇩🇰: Fikser knækking af videoer på TV 2 når "EasyList" bliver brugt
-# 🇬🇧: Unbreaks videos at TV2 Denmark when using "EasyList"
+# ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
++d api.instagram.com
+# ——— Caused by «Fanboy's Annoyances List» ———
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
-# https://github.com/ryanbr/fanboy-adblock/issues/1261
-+d cookieinformation.com
+# ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
+# 🇩🇰: Fikser knækking af videoer på TV 2
+# 🇬🇧: Unbreaks videos at TV2 Denmark
+# https://github.com/easylist/easylist/issues/1861
++d _prebid_
+# ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ———
+# Makes a Discord group embed show up again
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv
@@ -236,9 +234,7 @@ contentMarketing
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
 # 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "+d doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
 # 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "+d doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
-# 🇳🇴: Lagt til fordi min egen mor (Hun er i 40-årene) trodde jeg hadde rotet til PCen hennes, når den i stedet bare viste en uBO-sideadvarsel på grunn av en oppføring i «AdGuards hovedfilter», også kjent som AdGuard Base.
-# 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
-# 🇬🇧: Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
+# 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport

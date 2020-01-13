@@ -1,4 +1,4 @@
-! Version: 09January2020v1
+! Version: 12January2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -8,19 +8,6 @@
 ! Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
 ! If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
-
-! 🇳🇴: Ukategoriserte oppføringer
-! 🇩🇰: Ukategoriserede regler
-! 🇬🇧: Uncategorised entries
-###inlineannonse
-##.ad-centered
-##.ad_mobil_API
-##.ads__grid-item
-##.am-page-ad
-##.midtbanner
-##.mvp-feat1-list-ad
-##.rotating-junglebogen
-##div.size-300x160.fixed-placement
 
 ! 🇳🇴/🇩🇰: ——— Reklamer ———
 ! 🇬🇧: ——— Ads ———
@@ -258,7 +245,7 @@ nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 !#endif
 ! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
 ! The ':not' exception is needed for opp.no
-##.gofollow:not([href*=radioe6])
+##.gofollow:not([href*="radioe6"])
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
 ! www.op.no
@@ -453,7 +440,7 @@ nordjyske.dk##.print-to-web-row
 nordjyske.dk##div[class*=banner]
 nordjyske.dk##div[class^=jubii-]
 norge.bz,kragero.org#?#td:-abp-has(:scope > script[src*="/hst.tradedoubler.com/"])
-nutiminn.is##.custom-html-widget.textwidget
+nutiminn.is,newz.dk##.custom-html-widget.textwidget
 nutiminn.is##section[id^=wp_is_mobile]
 nyheder.tv2.dk##.o-article_sidebar > div.g-item
 onlinenytt.com##.textwidget > p
@@ -594,6 +581,10 @@ m.kanalfrederikshavn.dk##.OX
 tv2.no#?#.large-12:not(:-abp-has(a))
 fyens.dk##.adblock__text
 friflyt.no###ads_fullwidth_container
+tek.no##.b
+tek.no##.i
+railgun.dk##.widget_widget_ads
+krs247.no##.prl-span-12 + h5
 ! — — — — —
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
@@ -678,6 +669,10 @@ vafo.dk##.adform-flexblock
 ##.ad.topBanner
 ! http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
 ||85.17.76.181^$image
+! https://krs247.no/
+##div[id^=webbannernetboard]
+! lsk.no
+##.ads__grid-item
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -704,37 +699,33 @@ dyrevennene.no##.td-footer-wrapper
 ! 🇳🇴: ——— Fiksing av knekte sider ———
 ! 🇩🇰: ——— Fiksing af knækte websider ———
 ! 🇬🇧: ——— Unbreakage ———
-nettavisen.no###topover-loader
-nettavisen.no##body.no-scroll:style(overflow: auto !important)
-gamer.no#@#iframe[width="300"][height="250"]
+! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
 @@||seher.no/reise$generichide
-! 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
-! 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
-@@||play2.qbrick.com/framework/modules/analytics/analytics.min.js$script
-! 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
+! ——— Caused by «EasyPrivacy» ———
+! Attempting to fix a problem with voting online on Idol Norway
+@@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
+! Attempts to resolve how some frontpage articles are hard to open
+@@||schibsted.com/autoTracker$domain=vg.no
+! 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
+! 🇬🇧: Makes Dplay's login page show up properly
+@@||mparticle.com$script,domain=auth.dplay.no|auth.dplay.dk
+@@||assets.adobedtm.com/*/satelliteLib-$domain=auth.dplay.no|auth.dplay.dk
+! ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
 @@||api.instagram.com^$domain=samiteahter.org
-! Attempting to fix a problem with voting online on Idol Norway when using "EasyPrivacy"
-@@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
-! Attempts to resolve how some frontpage articles are hard to open when using "EasyPrivacy".
-@@||schibsted.com/autoTracker$domain=vg.no
-! https://github.com/easylist/easylist/issues/1861
-@@_prebid_$domain=seher.no
-! 🇳🇴: Solcellespesialisten, innlastingsproblem
-! 🇬🇧: Solcellespesialisten, loading issue
-||wo.tc^
-! 🇳🇴: Får Dplay sin påloggingsside til å vises riktig når «EasyPrivacy» blir brukt
-! 🇬🇧: Makes Dplay's login page show up properly when using "EasyPrivacy"
-@@||mparticle.com$script,domain=auth.dplay.no|auth.dplay.dk
-@@||assets.adobedtm.com/*/satelliteLib-$domain=auth.dplay.no|auth.dplay.dk
-! 🇩🇰: Fikser knækking af videoer på TV 2 når "EasyList" bliver brugt
-! 🇬🇧: Unbreaks videos at TV2 Denmark when using "EasyList"
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=tv2.dk
+! ——— Caused by «Fanboy's Annoyances List» ———
 ! https://github.com/ryanbr/fanboy-adblock/issues/1243
 ||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
-! https://github.com/ryanbr/fanboy-adblock/issues/1261
-@@||cookieinformation.com^$third-party,domain=kart.gulesider.no|map.krak.dk|kort.degulesider.dk|kartor.eniro.se
+! ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
+! 🇩🇰: Fikser knækking af videoer på TV 2
+! 🇬🇧: Unbreaks videos at TV2 Denmark
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=tv2.dk
+! https://github.com/easylist/easylist/issues/1861
+@@_prebid_$domain=seher.no
+! ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ———
+! Makes a Discord group embed show up again
+gamer.no#@#iframe[width="300"][height="250"]
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
@@ -839,7 +830,7 @@ gamereactor.no,gamereactor.dk##.cocacola
 gamereactor.no,gamereactor.dk##.sponsor
 gamereactor.no,gamereactor.dk##^script[onError="adblockEnabled()"]
 gamereactor.no,gamereactor.dk##a[href*="/adclick.php"]
-gamereactor.no,gamereactor.dk##div[class^=ad300]
+gamereactor.no,gamereactor.dk##div[class^="ad300"]
 gamereactor.no,gamereactor.dk##div[style*="width:300px;height:600px;"]
 gamereactor.no,gamereactor.dk##div[style="min-height: 600px; margin-bottom: 20px;"]
 gamereactor.no,gamereactor.dk#@#.afs_ads
@@ -894,12 +885,8 @@ frihetskamp.net##a[href*="nordenstil.no"]
 ! 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "@@||doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
 ! 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "@@||doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
 
-! 🇳🇴: Lagt til fordi min egen mor (Hun er i 40-årene) trodde jeg hadde rotet til PCen hennes, når den i stedet bare viste en uBO-sideadvarsel på grunn av en oppføring i «AdGuards hovedfilter», også kjent som AdGuard Base.
-! 🇬🇧: Added because my own mom (She's in her 40s) thought I had messed up her PC, when instead it just displayed a uBO page warning due to an AdGuard Base entry.
-@@||track.adform.net/*%2Fapollo.no%2F
-
 !#if !adguard
-! 🇬🇧: Entries that are also present in AdGuard English Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
+! 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 newz.dk##.top-interstitial
 krs247.no#@##adsense
 tu.no,digi.no##.poster-placeholder

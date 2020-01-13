@@ -1793,6 +1793,18 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9])\^\$.*", 
+           r"\1$network", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|\[(.*)\]\^\$.*", 
+           r"[\1]$network", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -2392,6 +2404,36 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"127\.0\.0\.1 gjtech\.net$", 
+           "127.0.0.1 gjtech.net adblock.gjtech.net ww1.gjtech.net ww7.gjtech.net ww12.gjtech.net", 
+           line
+        )
+
+        line = re.sub(
+           r"127\.0\.0\.1 tncrun\.net$", 
+           "127.0.0.1 tncrun.net www.tncrun.net amanda.tncrun.net sarah.tncrun.net pamela.tncrun.net jessica.tncrun.net ics.tncrun.net katie.tncrun.net pbu.tncrun.net emily.tncrun.net", 
+           line
+        )
+
+        line = re.sub(
+           r"127\.0\.0\.1 ublock\.org$", 
+           "127.0.0.1 ublock.org www.ublock.org demo.ublock.org", 
+           line
+        )
+
+        line = re.sub(
+           r"127\.0\.0\.1 \[(.*)\]", 
+           r":: \1", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\r\n'
 
@@ -2578,6 +2620,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"@@.*pokeacer\.tk\^", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]).*", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|\[(.*)\].*", 
+           r"\1", 
            line
         )
 
