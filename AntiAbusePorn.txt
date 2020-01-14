@@ -1,8 +1,8 @@
 [Adblock Plus 3.4]
 ! Title: 🤗 Anti-'Abuse porn' list
-! Version: 14January2020v1-Beta
+! Version: 14January2020v2-Beta
 ! Description: Pixiv is an East Asian artsite, whose on-average art quality wipes the floor with DeviantArt. It also allows porn of many types. Pressure on "many". So say that you're looking for imagery of consensual and pleasurable sex, and then you stumble across a crying Daniel Tiger with a corset being strapped to a bench in a diaper? Now such scenarios won't occur nearly as often as they did before!
-! This list currently deals with: Excessive bondage, uncomfortable bondage, mistreated rubber dolls, slaves, physical abuse (incl. syringe injections, violence against submissives), fluid-based abuse (incl. blood, farting, scat, vomiting, force-feeding), breathplay, diapers, shortly incoming death (incl. drowning), extreme mockery of human respect.
+! This list currently deals with: Excessive bondage, uncomfortable bondage, mistreated rubber dolls, slaves, physical abuse (incl. syringe injections, violence against submissives, spanking of minors), fluid-based abuse (incl. blood, farting, scat, vomiting, force-feeding), breathplay, diapers, shortly incoming death (incl. drowning), extreme mockery of human respect.
 ! This list does not normally deal with foot art, due to the abnormally high popularity of such. However, unwashed feet art are taken care of by https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiVomitList.txt
 
 !#if !env_mobile
@@ -68,6 +68,7 @@ pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(/dome
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(/ fart/i))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(SketchyOwO))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(altereggo))
+pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(Aiko-chan13))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption a[href$="?id=30742521"])
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption a[href$="?id=19814487"])
 ! Suggestions on image pages and the frontpage
@@ -75,7 +76,7 @@ pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="diarrhea" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*=" fart" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="fart," i])
-pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*=" scat" i]:not([alt*=scatman]))
+pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*=" scat" i]:not([alt*="scatman" i]))
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="torture" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="bitchsuit" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="gimpsuit" i])
@@ -86,6 +87,7 @@ pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="domestic" i][alt*="violence" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="drowning" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="bedwet" i])
+pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="spanking" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"]):-abp-contains( bondage)
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"]):-abp-contains(Slave )
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"]):-abp-contains( slaves)
@@ -149,7 +151,7 @@ pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="diaper" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="diarrhea" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*=" fart" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="fart," i])
-pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*=" scat" i]:not([alt*=scatman]))
+pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*=" scat" i]:not([alt*="scatman" i]))
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="torture" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="bitchsuit" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="gimpsuit" i])
@@ -160,16 +162,17 @@ pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="loli" i][alt*="auc
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="domestic" i][alt*="violence" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="drowning" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="bedwet" i])
+pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="spanking" i])
 !#endif
 ! Other
 ||i.pximg.net/c/*/img-master/img/2018/05/27/*/68941772_p0*.jpg^
 ||i.pximg.net/c/*/img-master/img/2018/05/27/*/68941922_p0*.jpg^
 
 ! Rule34.xxx / E621
+rule34.xxx,e621.net,rule34.paheal.net#?#.thumb:-abp-has(img[title*="diaper"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="gimp_suit"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="gimpsuit"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*=" scat "])
-rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="diaper"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="asphyxiation"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="drowning"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="fart_fetish"])
@@ -179,6 +182,7 @@ rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="force_feeding"][title*="gag"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="feeding"][title*="forced"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="peskybatfish"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*=" fart "])
+rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*="spanking"])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*=syringe][title*=torture])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*=syringe][title*=body_modification])
 rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*=syringe][title*=injection])
