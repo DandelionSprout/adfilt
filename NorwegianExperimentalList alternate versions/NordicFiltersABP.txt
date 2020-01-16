@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 120120201
+! Version: 160120201
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -60,7 +60,7 @@ guloggratis.dk##div.item_profa
 jn.fo###the_banners
 kanalen.no##.bannergroup
 karfan.is##.td-pb-span6
-karfan.is#?#.td-pb-span4:-abp-has(img[height=400][width=310])
+karfan.is#?#.td-pb-span4:-abp-has(img[height="400"][width="310"])
 kode24.no##.top-profile.row
 komogvind.dk##.spotContainer
 landbrugsavisen.dk##.banner
@@ -231,6 +231,7 @@ nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ||static.airserve.net^$third-party
 ||cdnboligkanalen.azureedge.net^$third-party
 ||tankeogteknikk.no^$third-party
+digi.no##.native
 ! — — — — —
 
 @@||vgtv.no$generichide
@@ -338,8 +339,8 @@ e24.no###main > div:nth-of-type(1)
 e24.no###main > div:nth-of-type(3)
 e24.no,aftenbladet.no##[id^=adPlacement_]
 eavisa.com##.custom-a-ds
-eavisa.com##.post-content > p:-abp-has(.adsbygoogle)
-eavisa.com##.post-content > p:-abp-has(a[onclick^="javascript:window.open("])
+eavisa.com#?#.post-content > p:-abp-has(.adsbygoogle)
+eavisa.com#?#.post-content > p:-abp-has(a[onclick^="javascript:window.open("])
 ebcontent.dk###ebcontentMegaboard
 ehandel.com##aside
 ekstrabladet.dk###manipulate_monster
@@ -542,8 +543,8 @@ mbl.is#?#.col-sm-6.col-12:-abp-has(.augl):not(:-abp-has(.fluid))
 gulesider.no,degulesider.dk,krak.dk##.e-banner
 ##.annonsetag
 eavisa.com##.post-content > .items-container
-sva.no##section:not(:has(a))
-sva.no##.widget_text:not(:has(a))
+sva.no#?#section:not(:-abp-has(a))
+sva.no#?#.widget_text:not(:-abp-has(a))
 langrenn.com#?#.bannerlocation:-abp-has(script[src*=pagead])
 kanalfrederikshavn.dk#?#div:-abp-has(:scope > div > .boxbanner)
 kanalfrederikshavn.dk###c2283
@@ -559,13 +560,14 @@ kanalfrederikshavn.dk###c890
 kanalfrederikshavn.dk###c1670
 m.kanalfrederikshavn.dk##.OA
 m.kanalfrederikshavn.dk##.OX
-tv2.no#?#.large-12:not(:-abp-has(a))
+tv2.no#?#.large-12:not(.article-figure):not(:-abp-has(a))
 fyens.dk##.adblock__text
 friflyt.no###ads_fullwidth_container
 tek.no##.b
 tek.no##.i
 railgun.dk##.widget_widget_ads
 krs247.no##.prl-span-12 + h5
+gamer.no##.aaa-980x150
 ! — — — — —
 
 
@@ -698,14 +700,8 @@ krom.is#@#.share-container
 ! https://github.com/ryanbr/fanboy-adblock/issues/1243
 ||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
 ! ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
-! 🇩🇰: Fikser knækking af videoer på TV 2
-! 🇬🇧: Unbreaks videos at TV2 Denmark
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=tv2.dk
 ! https://github.com/easylist/easylist/issues/1861
 @@_prebid_$domain=seher.no
-! ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ———
-! Makes a Discord group embed show up again
-gamer.no#@#iframe[width="300"][height="250"]
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———

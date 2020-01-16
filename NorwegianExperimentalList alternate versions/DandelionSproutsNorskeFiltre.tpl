@@ -1,5 +1,5 @@
 msFilterList
-# Version: 12January2020v1-Beta
+# Version: 16January2020v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -178,12 +178,8 @@ contentMarketing
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
-# 🇩🇰: Fikser knækking af videoer på TV 2
-# 🇬🇧: Unbreaks videos at TV2 Denmark
 # https://github.com/easylist/easylist/issues/1861
 +d _prebid_
-# ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ———
-# Makes a Discord group embed show up again
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv
