@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 👩 Anti-Futa List
-! Version: 13January2020v1-Beta
+! Version: 16January2020v1-Beta
 ! Expires: 3 days
 ! Description: It seems to me that a common thought process on porn sites are "Hey, do you know what would've made this cute woman even sexier? I know. We should give her a dick!". Well, not anymore, thanks to this list.
 ! Note that on some of these sites, such as Pixiv, quite a few futa images are uploaded without having "futa" in its title or in its search result metadata, making them practically unblockable through this method. Categories known to have significant slipthrough percentages are marked with a 🔴.
@@ -19,13 +19,13 @@
 ! ——— Pixiv ——— 
 !#if !env_mobile
 ! New search results, image suggestions on image pages, and carousel items on image pages
-pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="Futa" i])
+pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="Futa" i]:not([alt*="Futaba" i]):not([alt*="Futari" i]))
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="dickgirl" i])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="ふたなり"])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"] img[alt*="フタナリ"])
 pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="/artworks/"]):-abp-contains(洗脳くノ一 クラゲちゃん)
 ! «Discovery» page 🔴
-pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(Futa))
+pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(Futa):not(:-abp-contains(Futari)):not(:-abp-contains(Futaba)))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(/dickgirl/i))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(ふたなり))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(StevenCarson))
@@ -39,7 +39,7 @@ pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(Saint
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(SkyKliker))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(Heatheartattack))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(BadTelevision))
-pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(/^ふた/))
+pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(/^ふた/):not(:-abp-contains(/^ふたば/)):not(:-abp-contains(/^ふたり/)))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(Rust And Bolts))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(JAJA-SINE))
 pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption:-abp-contains(Necrobern))
@@ -65,7 +65,7 @@ pixiv.net#?#div:-abp-has(:scope > figure[style] > figcaption a[href$="?id=848248
 pixiv.net#?#div:-abp-has(:scope > figure > figcaption > ul > li > a:-abp-contains(/Futa/i):not(:-abp-contains(/[b-eg-hj-mo-qsv-z]/i)))
 !#endif
 ! Phone version
-pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="Futa" i])
+pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="Futa" i]:not([alt*="Futaba" i]):not([alt*="Futari" i]))
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="dickgirl" i])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="ふたなり"])
 pixiv.net#?#div[class^="list-item column"]:-abp-has(img[alt*="フタナリ"])
