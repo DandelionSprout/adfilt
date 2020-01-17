@@ -1,6 +1,6 @@
 ### All up-to-date significant adblockers¹
 
-#### Element removal (a.k.a. cosmetic rules, a.k.a. hiding rules)
+#### Element removal (a.k.a. cosmetic rules, a.k.a. hiding rules, a.k.a. ##-rules)
 * `##.`: Hides parts of a page, based on one or more `class` values in the F12 filetree (separated with full-stops).
 * `##`: Hides parts of a page based on the element type, e.g. `a`, `li`, `button`, `iframe`, etc., usually highlighted in purple in the F12 filetree.
 * `###`: Hides parts of a page based on the `id` value.
@@ -22,9 +22,9 @@
 * The first two `##` of an element entry, are not used for elements written after e.g. `>`, `+` or `:-abp-has`. In those cases, the `##` in `##element` gets removed, `##.class` becomes `.class`, and `###id` becomes `#id`.
 * `##element.element2`: Hide something both based on its element (##element1) and `class` value (.element2). Note the placement/absence of fullstops.
 * While they're based on the same `class` values, `##.element1` will match any `class` (sub-)value, whereas `##div[class="element1"]` and their modifiers are based on the *entire* `class` string in the F12 filetree.
-* `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or domain-specific, where they have one or more domains in front of them, separated by commas. Only Nano and uBO support wildcard asterisks (`*`) in such domains, while other adblockers do not.
+* `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or (domain-)specific, where they have one or more domains in front of them, separated by commas. Only Nano and uBO support wildcard asterisks (`*`) in such domains, while other adblockers do not.
 
-#### File blocking (a.k.a. blocking rules)
+#### File blocking (a.k.a. blocking rules, a.k.a. non-#-rules)
 * `||`: Blocks resources from domains or parts thereof from being loaded. For non-domain-specific resources, no pre-emption is needed at all.
 * `@@`: Whitelists resources from specific URLs to make them load.
 * `^`: Wildcard for anything that isn't alphanumerical or "_-.%" . Often used to cover both slash ( / ) and non-slash domain name endings at the same time.
@@ -36,7 +36,7 @@
 * `@@||` + `$elemhide`: Combines `$generichide` and `$specifichide`. Also completely breaks the element picker in Nano/uBO on that site as of the 14th of December 2019.
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it's a script, e.g. a JavaScript runtime.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
-* `$xmlhttprequest` / `$websocket` / `$dom`: Prevents such resources from being downloaded through the titular JavaScript APIs.
+* `$xmlhttprequest` / `$websocket`: Prevents such resources from being downloaded through the titular JavaScript APIs.
 * `$popup` / `$image` / `$object` / `$font` / `$other`: These ones should hopefully be self-explanatory (Give me a heads-up in an issue report if it isn't).
 * `$match-case`: Makes the criteria case-sensitive.
 * `|text`: Matches URLs that *begin* with the text.
@@ -45,7 +45,7 @@
 #### Universal
 * `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
 * `~`: Means that an entry does *not* apply to a specific domain.
-* `/\/\/\/` and similar: Text detections in RegEx format.
+* `/\/\/\/`, `/regextext/`, and similar: Text detections in RegEx format. Supported in most (if not all) blocking rules, as well as in `:-abp-contains` and `:has-text`.
 * `[Adblock Plus n.n]`: Used by Adblock Plus, AdBlock, and forks of them to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. This has no effect on uBO or its forks.
 * `! Title:` Specifies the intended name of the list. Required to make the name automatically show up in the settings of most adblockers, instead of the URL or of manual text input.
 * `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
@@ -63,14 +63,14 @@
 * `!#if`: Specifies that a section of entries only applies to specific platforms or extensions. Closed out by `!#endif`.
 * `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
 * `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
-* `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
 #### Blocking
 * `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
+* `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
 
 ### Nano Adblocker and uBlock Origin only:
 #### Hiding
-* `!#include`: Embeds another filterlist that is hosted on the same domain (with numerous restrictions).
+* `!#include`: Embeds another filterlist that is hosted on the same domain (with a whole lot of restrictions). Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard.
 * `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph). Nano has a select few additional scripts.
 * `:xpath`: An entry written with the very advanced Xpath syntax.
 * `##^`: Blocks resources before they've even been loaded, based on their values in *View source* instead of their F12 ones.
@@ -84,22 +84,26 @@
 * `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup`.
 
 ### Adblock Plus and AdBlock only:
-
 * `! Redirect: `: Tells the adblocker to look for list updates from a new URL from that point on.
+#### Hiding
 * `#?#`: Required to make entries with `:-abp-has`, `:-abp-contains` and `:-abp-properties` work in those particular extensions, and to make `:style` entries not break the list extremely heavily.
-* `@@||` + `$document`: Turns off adblocking entirely while on that domain.
-* `@@||` + `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
 * `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
-* `$rewrite=abp-resource:`: Similar to `$redirect`, but with a rather different selection of neutered files. Possible options are listed on [this help page](https://help.eyeo.com/adblockplus/how-to-write-filters#rewrite).
 * `#$#`: Similar to, but incompatible with, `##+js`. Possible options are listed in [this file](https://gitlab.com/eyeo/adblockplus/adblockpluscore/blob/next/lib/content/snippets.js) (text-search `@alias`).
+#### Blocking
+* `@@||` + `$document`: Turns off adblocking entirely while on that domain.
+* `@@||` + `$~document`: Not easily obvious. Could possibly make sure to not turn off adblockers while on that domain, while preventing blockage of on-site elements.
+* `@@||` + `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
+* `$rewrite=abp-resource:`: Similar to `$redirect`, but with a rather different selection of neutered files. Possible options are listed on [this help page](https://help.eyeo.com/adblockplus/how-to-write-filters#rewrite).
+* `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API.
 
 ### AdGuard only:
-
+#### Hiding
 * `#%#//scriptlet`: Similar to, but only partially compatible with, `##+js` and ABP's `#$#`. Possible options are listed in [this file](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/scriptlets.js) (text-search ".names").
 * `#%#AG_`: A few extra scriptlets for whom documentation appears to be non-existent.
-* `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file.
-* `$empty`: Results in a fake empty page being loaded, instead of an error page.
+* `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file. Requires heavy privileges.
 * `:properties`: Claims to be similar to `:-abp-properties`, but is incompatible with it.
+#### Blocking
+* `$empty`: Results in a fake empty page being loaded, instead of an error page.
 * `$$script`: Uses very advanced criteria to block scripts that meet them.
 * `$cookie`: Blocks cookies.
 * `$cookie=`: Blocks cookies with specific names.
