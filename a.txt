@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 Imres filtre
-! Version: 18January2020v1-Personal
+! Version: 18January2020v2-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include AdRemovalListForUnusualAds.txt
@@ -185,10 +185,10 @@ pixiv.net##.popular-introduction-overlay
 ! Pokémon No-GO Zone
 ! May also work against 'Harry Potter: Wizards Unite' and 'Ingress Prime'
 !#if !env_ublock
-!#if !adguard
+!+ NOT_PLATFORM(ios, android)
 ||nianticlabs.com^
+!+ NOT_PLATFORM(ios, android)
 ||crittercism.com^
-!#endif
 !#endif
 
 ! ———————————————————————————————————————————————————————————————————————————————————————————————
@@ -205,7 +205,7 @@ tv2.no#?#.spklw-post:-abp-contains(/farmen/i)
 www.nrk.no#?#.kur-room:-abp-contains(«Skam»)
 www.nrk.no#?#div.relation:-abp-contains(«Skam»)
 
-! Removing empty padding lines on non-Nordic sites (Many more sites to be included when I find them again)
+! ★ Removing empty padding lines on non-Nordic sites (Many more sites to be included when I find them again) ★
 ! change.org, indiegogo.com, thejc.com
 *##p:has-text(/^\xA0$/):not(:has-text(/\S/))
 indiegogo.com##h3:-abp-contains(/^\xA0$/):not(:-abp-contains(/[a-z]/i))
