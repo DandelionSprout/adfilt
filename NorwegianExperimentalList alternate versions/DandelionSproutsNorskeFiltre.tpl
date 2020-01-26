@@ -1,5 +1,5 @@
 msFilterList
-# Version: 16January2020v1-Beta
+# Version: 26January2020v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -109,6 +109,7 @@ contentMarketing
 - annonse-
 # norskenettsider.no, sva.no
 # https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
+# tv2.no
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
@@ -206,6 +207,7 @@ contentMarketing
 -d widget.tippebannere.no
 -d tipster.no embed
 # https://www.nettavisen.no/
+# https://www.ba.no/s/5-8-1221171
 # ——— Gamereactor + Viafree ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
@@ -263,7 +265,6 @@ contentMarketing
 -d ultimate-tech-products.myshopify.com
 -d look-like-star.myshopify.com
 -d limitedvoucher.com
--d vouchersnationhub.com
 -d com-airs1.com
 -d pensjonistferie.no
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
@@ -373,12 +374,10 @@ contentMarketing
 -d fotballskotilbud.com
 -d gantoslo.com
 -d godeskonettbutikk.com
--d godsfillingstation.org
 -d gsport.com
 -d hernoclothing.com
 -d hollisternorge.com
 -d horizonbagel.com
--d itsthetrendydealstore.com
 -d jakkesalgs.com
 -d jakkesnorge.com
 -d joseph-holland.com
@@ -386,7 +385,6 @@ contentMarketing
 -d legarralazcoz.com
 -d lindseysopticians.com
 -d linkshe.com
--d locchalet2alpes.com
 -d lrgst.com
 -d manasporthorse.com
 -d mayor4london.com
@@ -418,12 +416,10 @@ contentMarketing
 -d parajumpersnettbutikk.com
 -d parajumpersnorway.com
 -d parajumperssalg.com
--d parajumpersoutletnorge.com
 -d pjs.outlet.com
 -d popeurope.com
 -d quiltstudiolaren.com
 -d retoaudi.com
--d scottfamilyministries.org
 -d skoeccosandaler.com
 -d skonmdnorge.com
 -d sykkeltrøye.com
