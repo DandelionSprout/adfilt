@@ -73,7 +73,8 @@
 * `!#include`: Embeds another filterlist that is hosted on the same domain (with a whole lot of restrictions). Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard.
 * `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph). Nano has a select few additional scripts.
 * `:xpath`: An entry written with the very advanced Xpath syntax.
-* `##^`: Blocks resources before they've even been loaded, based on their values in *View source* instead of their F12 ones. **Only** works in Firefox.
+* `##^.element`: Blocks page elements before they've even been loaded, based on their values in *View source* instead of their F12 ones. **Only** works in Firefox.
+* `##^script:has-text` (prev. `##script:contains`): Intends to prevent inline scripts from starting up, based on the content of the scripts in the F12 filetree. Also only works in Firefox.
 * `:nth-ancestor`: Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree.
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
