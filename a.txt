@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 Imres filtre
-! Version: 24January2020v2-Personal
+! Version: 26January2020v3-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include AdRemovalListForUnusualAds.txt
@@ -186,6 +186,21 @@ pixiv.net##.popular-introduction-overlay
 
 ! ———————————————————————————————————————————————————————————————————————————————————————————————
 
+! ★ Removing empty padding lines on non-Nordic sites (Many more sites to be included when I find them again) ★
+! change.org, indiegogo.com, thejc.com
+*##p:has-text(/^\xA0$/):not(:has-text(/\S/))
+! lyricsmania.com,songtextemania.com
+##.spacer-20.clear
+indiegogo.com##h3:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
+indiegogo.com##h2:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
+kentonline.co.uk##.clearfix + .clearfix
+kentonline.co.uk##.line + .clearfix
+
+! ★ Gradients on media sites ★
+netflix.com##.title-episode-gradient
+viaplay.*##.backdrop-bottom
+telenor.no##section.banner-hero > .gradient
+
 ! Webstores that ignore "Mail-in-store" and who instead delivers to PostNord Norway's generic pick-up points in the middle of bloody nowhere
 ||kjell.com^$document
 ||skousen.no^$document
@@ -197,16 +212,6 @@ tv2.no#?#.tv2-story:-abp-contains(/farmen/i)
 tv2.no#?#.spklw-post:-abp-contains(/farmen/i)
 www.nrk.no#?#.kur-room:-abp-contains(«Skam»)
 www.nrk.no#?#div.relation:-abp-contains(«Skam»)
-
-! ★ Removing empty padding lines on non-Nordic sites (Many more sites to be included when I find them again) ★
-! change.org, indiegogo.com, thejc.com
-*##p:has-text(/^\xA0$/):not(:has-text(/\S/))
-! lyricsmania.com,songtextemania.com
-##.spacer-20.clear
-indiegogo.com##h3:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
-indiegogo.com##h2:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
-kentonline.co.uk##.clearfix + .clearfix
-kentonline.co.uk##.line + .clearfix
 
 ! Removes those creepy square bubbles on Google Documents about how many people that are watching every move you make there
 docs.google.com##div[class*="docs-presence-plus-collab-widget-image"]
@@ -223,10 +228,6 @@ manage.ntppool.org#?#span[id^=server_]:-abp-has(.deletion):-abp-contains(/-[3-9]
 ! Particularly saccharine baby stuff that backfired on me
 ||mediacache1.stoffstil.com/de/a9/0be5-41c0-4d2d-ada7-996c89ad62fe/landing_metervare_no.jpg
 rule34.xxx#?#.thumb:-abp-has(img[title*=" pregnant "])
-
-! Gradients on media sites
-telenor.no##section.banner-hero > .gradient
-netflix.com##.title-episode-gradient
 
 ! Boring unfunny comics on non-comic sites
 adressa.no##.cartoon
