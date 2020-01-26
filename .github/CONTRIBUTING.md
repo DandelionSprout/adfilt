@@ -1,4 +1,4 @@
-(Last updated: 13th of October 2019)
+(Last updated: 26th of January 2020)
 
 Notes on how to contribute:
 
@@ -20,8 +20,8 @@ I will refuse to write, double-check or fix entries for the following sites, and
 * Any websites listed in [Remover for Mainstream Tabloid and Alt-Right Sites](https://github.com/DandelionSprout/adfilt/blob/master/TabloidRemover.txt)
 * Any websites listed in [Anti-'Insane religious preachers' List](https://github.com/DandelionSprout/adfilt/blob/master/AntiPreacherList.txt)
 * Any websites listed in [Anti-FiM List](https://github.com/DandelionSprout/adfilt/blob/master/Other%20domains%20versions/AntiF%25D1%2596%25D0%259C%2520ListDomains.txt)
-* Any websites listen in [Anti-'Steven Universe' List](https://github.com/DandelionSprout/adfilt/blob/master/Other%20domains%20versions/AntiStevenUniverseListDomains.txt)
-* Any websites listen in [Anti-'Hivemind cartoon trashing' List](https://github.com/DandelionSprout/adfilt/blob/master/Other%20domains%20versions/AntiHivemindCartoonTrashingListDomains.txt)
+* Any websites listed in [Anti-'Steven Universe' List](https://github.com/DandelionSprout/adfilt/blob/master/Other%20domains%20versions/AntiStevenUniverseListDomains.txt)
+* Any websites listed in [Anti-'Hivemind cartoon trashing' List](https://github.com/DandelionSprout/adfilt/blob/master/Other%20domains%20versions/AntiHivemindCartoonTrashingListDomains.txt)
 * deviantART
 * Inkbunny
 * LatexStories.net
