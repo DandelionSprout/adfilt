@@ -1,22 +1,61 @@
 [Adblock Plus 3.4]
 ! Title: ⏰ Anti-'Prayer times' List
-! Version: 06September2019v2-Alpha
+! Version: 29January2020v1-Alpha
 ! Expires: 7 days
 ! Description: So you're sitting there reading a newssite, and then you find big banners that try to tell you the exact points in time you're supposed to pray? If you want to feel less stressed and less like a slave of the clock, then this list is for you.
-! At the current point in time, those banners only seem to show up on Pakistani, UAE, and Malay websites as far as mainstream sites go, and they are very rare elsewhere. If you know of any other countries whose websites tend to display prayer times, give me a heads-up about it. I am also willing to add entries for non-Islamic prayer times, such as for e.g. Evangelical Christian movements.
+! If you know of any other general websites that tend to display prayer times, give me a heads-up about it. I am also willing to add entries for non-Islamic prayer times, such as for e.g. Evangelical Christian movements.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! Generic
 ###pray_time
 ##.prayer-sec_1
 ##.prayerBg
 ##.waktu-solat-block
 ##[href^="https://www.e-solat."]
-##a[href$="/prayer-times"]
 ##a[href*="/prayer_timings."]
 ##a[title="Prayer Timings"]
 ##div[class^="waktusolat_"]
 ##li > [href*="/prayer-time-"]
+~google.*##a[href$="/prayer-times"]
+~albayan.ae##.prayertime
+! almanar.com.lb
+##.prayer-times
+! almasryalyoum.com
+##.prayer_time
+! alrai.com
+##.salat-time
+! todaytime.ir
+##.pray_times
+! adwhit.com
+##a[href$=PrayerTimes]
+! info-algerie.com
+##a[href*=horaires-priere]
+! albayan.ae
+##.prayertimer
+! bahesab.ir
+##[href$="/time/prayer/"]
+
+! Site-specific
+yjc.ir,tabnak.ir##a[href$="/fa/prayer"]
 hamariweb.com#?#div.col-md-4:-abp-has(td[width="25%"])
 thenational.ae#?#.dropdown:-abp-has(.prayer)
 yenisafak.com##.prayer
 yenisafak.com#?#.item:-abp-has(a[href$="-prayer-times"])
 dubai-online.com#?#.entry:-abp-contains(Prayer Times)
+yabiladi.*#?#.frame:-abp-has(.prayer)
+tunisienumerique.com##li:-abp-has(:scope > a[href*="/%d8%a3%d9%88%d9%82%d8%a7%d8%aa-%d8%a7%d9%84%d8%b5%d9%84%d8%a7%d8%a9-%d9%81%d9%8a-%d8%aa%d9%88%d9%86%d8%b3/"])
+almanar.com.lb#?#.box-wrapper:-abp-has(.prayer-times)
+albayan.ae##.prayername
+shobiddak.com#?#li:-abp-has(a[href="/prayers/cities"])
+shobiddak.com#?#h4:-abp-contains(/^أوقات الصلاة$/)
+visitabudhabi.ae#̀?#li:-abp-has(:scope > a[href*="/prayer.times.aspx"])
+adnocdistribution.ae##.footer-info-time
+elwatannews.com##li > [href$="/pray"]
+alrai.com#?#.padd10px:-abp-has(:scope > .salat-time)
+menara.ma##.main-horaires
+info-algerie.com#?#.blog-single-sidebar:-abp-has(a[href*=ajouter-heure-priere])
+info-algerie.com##a[href*=ajouter-heure-priere]
+todaytime.ir##.navbar-nav [href="/اوقات-شرعی-اذان"]
+www.aviny.com##a[href*="prayer.aviny.com"]
+portal.moi.gov.qa#?#li:-abp-has(:scope > a[href*="/prayertimings/"])
+thenews.com.pk##a[href$="/prayer-time"]
