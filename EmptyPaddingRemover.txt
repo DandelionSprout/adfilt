@@ -1,0 +1,37 @@
+[Adblock Plus 3.4]
+! Title: 🕳 Empty Padding Remover
+! Version: 30January2020v1-Alpha
+! Expires: 4 days
+! Description: The font situation on many Japanese websites is kind-of absolutely atrocious. They use super-stiff fonts resemblant of Windows 95 or Amiga. And even worse, many of the sites also default to the stiff Japanese fonts' atrocious Latin letter types. Here's how to use the sites in a way that is compatible with the 3rd decade of the 21st century.
+! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! ——— Generic ———
+##.skille
+! change.org, indiegogo.com, thejc.com, icelandreview.com, bir.no, medier24.no, knr.gl, nutiminn.is
+*##p:has-text(/^\xA0$/):not(:has-text(/\S/))
+! https://zh.cn.nikkei.com/politicsaeconomy/stockforex/39110-2020-01-21-09-55-57.html
+*##p:has-text(/^\xA0\xA0$/):not(:has-text(/\S/))
+! lyricsmania.com,songtextemania.com
+!!!##.spacer-20.clear
+##.spacer-20
+! alrai.com
+##.space20
+! talkmore.no
+##.spacer
+! icelandreview.com
+##.mk-padding-divider
+
+! ——— Site-specific ———
+indiegogo.com#?#h3:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
+indiegogo.com#?#h2:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
+kentonline.co.uk##.clearfix + .clearfix
+kentonline.co.uk##.line + .clearfix
+skiinfo.*,onthesnow.*##.clear
+alarabiya.net#?#.main-content > section:not(:-abp-has(a))
+theweatheroutlook.com##.row20
+appleinsider.com#?#.cfix:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
+ice.no##.air-block
+tnt-tv.no,tnt-tv.dk##.desktop_element.promo
+tnt-tv.no,tnt-tv.dk##.logos
+tnt-tv.no,tnt-tv.dk##.tabs_placeholder
+dyrevennene.no##.td-footer-wrapper
