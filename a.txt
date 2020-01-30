@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 Imres filtre
-! Version: 30January2020v1-Personal
+! Version: 30January2020v2-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include AdRemovalListForUnusualAds.txt
@@ -27,6 +27,8 @@
 !#include TabloidRemover.txt
 !#include Twitter%20De-Politificator.txt
 !#include VeryThoroughWebsiteCleaner.txt
+!#include EmptyPaddingRemover.txt
+!#include JapaneseTextSoftener.txt
 finn.no#?#.ads__unit:-abp-contains(Emirates Airline)
 metacritic.com###primary_menu_item_games
 netflix.com#?#.ptrack-content:-abp-has(a[href*="70135743"])
@@ -186,25 +188,6 @@ pixiv.net##.popular-introduction-overlay
 
 ! ———————————————————————————————————————————————————————————————————————————————————————————————
 
-! ★ Removing empty padding lines on non-Nordic sites (Many more sites to be included when I find them again) ★
-! change.org, indiegogo.com, thejc.com
-*##p:has-text(/^\xA0$/):not(:has-text(/\S/))
-! https://zh.cn.nikkei.com/politicsaeconomy/stockforex/39110-2020-01-21-09-55-57.html
-*##p:has-text(/^\xA0\xA0$/):not(:has-text(/\S/))
-! lyricsmania.com,songtextemania.com
-!!!##.spacer-20.clear
-##.spacer-20
-! alrai.com
-##.space20
-indiegogo.com#?#h3:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
-indiegogo.com#?#h2:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
-kentonline.co.uk##.clearfix + .clearfix
-kentonline.co.uk##.line + .clearfix
-skiinfo.*,onthesnow.*##.clear
-alarabiya.net#?#.main-content > section:not(:-abp-has(a))
-theweatheroutlook.com##.row20
-appleinsider.com#?#.cfix:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
-
 ! Gradients on media sites
 netflix.com##.title-episode-gradient
 viaplay.*##.backdrop-bottom
@@ -243,15 +226,6 @@ adressa.no##.cartoon
 
 ! Highly inept and vague customer service forums
 ||answers.microsoft.com^$document
-
-! ★ Japanese Text Softener ★
-www.nikkei.com,tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico##body:style(font-family: "Segoe UI", "Calibri", "Noto Sans CJK", "Verdana", "Ubuntu", "Hiragino Maru Gothic Pro", "メイリオ", "Meiryo", "Ume Gothic" !important)
-www.nikkei.com,tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico##div:style(font-family: "Segoe UI", "Calibri", "Noto Sans CJK", "Verdana", "Ubuntu", "Hiragino Maru Gothic Pro", "メイリオ", "Meiryo", "Ume Gothic" !important)
-www.nikkei.com,tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico##li:style(font-family: "Segoe UI", "Calibri", "Noto Sans CJK", "Verdana", "Ubuntu", "Hiragino Maru Gothic Pro", "メイリオ", "Meiryo", "Ume Gothic" !important)
-www.nikkei.com,tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico##a:style(font-family: "Segoe UI", "Calibri", "Noto Sans CJK", "Verdana", "Ubuntu", "Hiragino Maru Gothic Pro", "メイリオ", "Meiryo", "Ume Gothic" !important)
-www.nikkei.com,tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico##strong:style(font-family: "Segoe UI", "Calibri", "Noto Sans CJK", "Verdana", "Ubuntu", "Hiragino Maru Gothic Pro", "メイリオ", "Meiryo", "Ume Gothic" !important)
-www.nikkei.com,tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico##dd:style(font-family: "Segoe UI", "Calibri", "Noto Sans CJK", "Verdana", "Ubuntu", "Hiragino Maru Gothic Pro", "メイリオ", "Meiryo", "Ume Gothic" !important)
-www.nikkei.com,tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico##span:style(font-family: "Segoe UI", "Calibri", "Noto Sans CJK", "Verdana", "Ubuntu", "Hiragino Maru Gothic Pro", "メイリオ", "Meiryo", "Ume Gothic" !important)
 
 ! Key stores with stupid ID requirements
 ||gameflip.com^$document
