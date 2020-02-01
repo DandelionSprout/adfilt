@@ -1,5 +1,5 @@
 msFilterList
-# Version: 01February2020v1-Beta
+# Version: 01February2020v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -94,6 +94,13 @@ contentMarketing
 -d static.airserve.net
 -d cdnboligkanalen.azureedge.net
 -d tankeogteknikk.no
+-d adservice.dk
+-d mediasense.dk
+-d easy-ads.dk
+-d 3.248.18.175
+-d adframe.no
+-d adstream.no
+-d advertising.no
 # — — — — —
 +d vgtv.no
 -d adnxs.com
@@ -268,6 +275,12 @@ contentMarketing
 -d com-airs1.com
 -d pensjonistferie.no
 -d postuksus.com
+-d 52.216.146.90
+-d 92.42.104.146
+-d beatapple.top
+-d jimmychoostore.top
+-d hervelegeroutletusa.com
+-d replicapatekphilippe.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
@@ -344,6 +357,11 @@ contentMarketing
 -d sky.gs
 # https://www.online.no/sikkerhet/falsk-online-nettside
 -d is-a-personaltrainer.com
+# IP addresses of servers notorious for hosting many of the sites above
+-d 138.201.126.227
+-d 156.236.126.173
+-d 136.243.73.30
+-d 82.118.242.69
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
@@ -433,4 +451,10 @@ contentMarketing
 # 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
+-d nodrakts.com
 -d dkfodboldstore.com
+-d vmfodboldtoj.com
+-d minfodboldbutik.com
+-d 5.39.217.206
+-d 193.148.70.153
+-d 5.39.221.180
