@@ -16,9 +16,10 @@
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order.
 * `:only-of-type` / `first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
 * `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
-* `>`: Creates chain criteria, in which a selected page element must have a specific element above it in the filetree.
+* `>`: Creates chain criteria, in which a selected page element must have a specific element on the floor above it in the filetree.
 * `+`: Blocks the element that is right below the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
-* `~`, as in `##.element ~ div`: Similar to `+`, but blocks *all* such elements that are below in the same tier on the filetree, and not just the one right below.
+* `~`, as in `##.element ~ div`: Similar to `+`, but blocks *all* such elements that are below it on the same floor in the filetree, and not just the one right below.
+* Spacing between elements, e.g. `##.element .element`: Similar to `>`, but can mean *any* number of floors between the elements, and not just those that are one floor apart.
 
 ##### Advanced examples:
 * The first two `##` of an element entry, are not used for elements written after e.g. `>`, `+` or `:-abp-has`. In those cases, the `##` in `##element` gets removed, `##.class` becomes `.class`, and `###id` becomes `#id`.
@@ -127,7 +128,7 @@
 # Other particularly important usage notes
 
 * To make the text detection for `:-abp-contains` and `:has-text` case-insensitive, wrap the paranthesised text into `(/Example text/i)`.
-* The `"` in `[href="text"]` is optional, but *only* if the criteria text is only a single word and has no numbers.
+* The `"` in `[href="text"]` is optional, but *only* if the criteria text is only a single word, and has no numbers, slashes, or certain other characters.
 * `:style` and `{ }` does not allow changing `background-image` into a URL value.
 * It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
 * Amazingly, using `! Redirect: ` in the intended target link's list, will cause an infinite loop that prevents the list from being loaded.
