@@ -18,6 +18,7 @@
 * `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
 * `>`: Creates chain criteria, in which a selected page element must have a specific element above it in the filetree.
 * `+`: Blocks the element that is right below the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
+* `~`, as in `##.element ~ div`: Similar to `+`, but blocks *all* such elements that are below in the same tier on the filetree, and not just the one right below.
 
 ##### Advanced examples:
 * The first two `##` of an element entry, are not used for elements written after e.g. `>`, `+` or `:-abp-has`. In those cases, the `##` in `##element` gets removed, `##.class` becomes `.class`, and `###id` becomes `#id`.
@@ -42,12 +43,12 @@
 * `$match-case`: Makes the criteria case-sensitive.
 * `|text`: Matches URLs that *begin* with the text.
 * `text|`: Matches URLs that *end* with the text.
+* `~`: Means that an entry does *not* apply to a specific domain.
 
 #### Universal
 * `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
-* `~`: Means that an entry does *not* apply to a specific domain.
 * `/\/\/\/`, `/regextext/`, and similar: Text detections in RegEx format. Supported in most (if not all) blocking rules, as well as in `:-abp-contains` and `:has-text`.
-* `[Adblock Plus n.n]`: Used by Adblock Plus, AdBlock, and forks of them to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. This has no effect on uBO or its forks.
+* `[Adblock Plus n.n]`: Mandatory for Adblock Plus, AdBlock, and forks of them, as they use the tag to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. This has no effect on uBO or its forks. Tags like `[uBlock Origin 1.20.0]` are just for clarification of intent, and have no effect on anything whatsoever.
 * `! Title:` Specifies the intended name of the list. Required to make the name automatically show up in the settings of most adblockers, instead of the URL or of manual text input.
 * `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
 * `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days". ABP also supports "hour/hours".
