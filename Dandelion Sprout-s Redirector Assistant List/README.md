@@ -20,7 +20,7 @@ These things are also included in the list, but must be turned on manually:
 
 It's also possible to redirect regular webpage links into .onion pages (e.g. for Facebook and DuckDuckGo), although those entries have now been spun off into a separate list, called <b>Tor Redirector List</b>.
 
-The lists have been successfully tested with [Redirector](http://einaregilsson.com/redirector/) on Chrome and Basilisk. They have also been tested with at least two other extensions, which it did not work with.
+The lists have been successfully tested with [Redirector](https://einaregilsson.com/redirector/) on Chrome, Tor Browser, and pre-awful-era Basilisk. They have also been tested with at least two other extensions, which they did not work with.
 
 To download the main list file in a usable capacity, right-click [on the link to the JSON file](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/DandelionSproutRedirectorList.json), and save it as a JSON file. ([Link for *Tor Redirector List*](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List/TorRedirectorList.json))
 
