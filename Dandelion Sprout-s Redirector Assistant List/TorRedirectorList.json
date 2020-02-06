@@ -305,6 +305,38 @@
             "appliesTo": [
                 "main_frame"
             ]
+        },
+        {
+            "description": "Redirect beta.Cliqz.com links to Cliqz's .onion Tor server",
+            "exampleUrl": "https://beta.cliqz.com/",
+            "exampleResult": "http://search4tor7txuze.onion/",
+            "error": null,
+            "includePattern": "*://beta.cliqz.com/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "http://search4tor7txuze.onion/$2",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Redirect Pornhub links to Internet Archive's .onion Tor server",
+            "exampleUrl": "https://pornhub.com/",
+            "exampleResult": "http://pornhubthbh7ap3u.onion/",
+            "error": null,
+            "includePattern": "*://pornhub.com/*",
+            "excludePattern": "",
+            "patternDesc": "Note that the auto-fetched country settings can be slightly flimsy on the Tor domain.",
+            "redirectUrl": "http://pornhubthbh7ap3u.onion/$2",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
         }
     ]
 }
