@@ -158,6 +158,18 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9])\^\$.*", 
+           r"\1$network", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9])\^", 
+           r"\1$network", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -421,8 +433,20 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"##\+js\(abort-on-property-write.js, (.*)\)", 
+           r"##\+js\(aopw, (.*)\)", 
            r"#$#abort-on-property-write \1", 
+           line
+        )
+
+        line = re.sub(
+           r"##\+js\(aopr, (.*)\)", 
+           r"#$#abort-on-property-read \1", 
+           line
+        )
+
+        line = re.sub(
+           r"##\+js\(acis, (.*)\)", 
+           r"#$#abort-current-inline-script \1", 
            line
         )
 
@@ -1357,6 +1381,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^([a-z0-9*].*)$", 
            r"||\1^", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9*].*)$", 
+           r"||\1^", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9])\^", 
+           r"\1", 
            line
         )
 

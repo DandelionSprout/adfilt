@@ -1,5 +1,5 @@
 msFilterList
-# Version: 01February2020v2-Beta
+# Version: 07February2020v1-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -101,11 +101,14 @@ contentMarketing
 -d adframe.no
 -d adstream.no
 -d advertising.no
+-d finn.no
 # — — — — —
+# 🇳🇴: Generelle oppføringer med kilder
+# 🇬🇧: Generic entries that have sources
 +d vgtv.no
 -d adnxs.com
 # framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
-# The ':not' exception is needed for opp.no
+# (Exception: opp.no)
 # https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 # www.op.no
 # arendalstidende.no
@@ -117,6 +120,8 @@ contentMarketing
 # norskenettsider.no, sva.no
 # https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
 # tv2.no
+# bt.no
+-d finn.no distribution-carousel?
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
@@ -125,6 +130,8 @@ contentMarketing
 -d gaysir.no bb_inline
 -d static.vg.no admark_top.gif
 # — — — — —
+# 🇳🇴: Generelle oppføringer med kilder
+# 🇬🇧: Generic entries that have sources
 # sol.no
 # www.qxl.no
 # www.vtb.no
@@ -188,6 +195,8 @@ contentMarketing
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 # https://github.com/easylist/easylist/issues/1861
 +d _prebid_
+# ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
+# Makes E-newspaper previews show up properly
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 +d bondebladet.screen9.tv
@@ -229,7 +238,7 @@ contentMarketing
 -d client-stream-events.mtg-api.com
 -d freewheel-mtgx-tv.akamaized.net
 # 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
-# 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen til mange produkter stadigt benytter før-2016-fargene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
+# 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
 # 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
 # Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
 # ——————————————————————————————————————————————————————————————————————————————————————————————————————
@@ -277,10 +286,12 @@ contentMarketing
 -d postuksus.com
 -d 52.216.146.90
 -d 92.42.104.146
--d beatapple.top
+-d beatsapple.top
 -d jimmychoostore.top
 -d hervelegeroutletusa.com
 -d replicapatekphilippe.com
+-d hot-rap-beats.top
+-d replicarolexyachtmaster.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites

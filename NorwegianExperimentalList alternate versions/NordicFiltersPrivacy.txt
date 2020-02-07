@@ -1,4 +1,4 @@
-! Version: 01February2020v2
+! Version: 07February2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 12 hours
@@ -56,7 +56,7 @@ frisms.nu##.numbered-phones
 frisms.nu,mobilsiden.dk##.side-block-products
 gamer.no##.posta-placeholder
 gamer.no#?#.column.one-half:-abp-has(.promoted-offer)
-gamer.no,tu.no##+js(abort-current-inline-script.js, dfpConfig, loadAds)
+gamer.no,tu.no##+js(acis, dfpConfig, loadAds)
 guloggratis.dk##div.item_profa
 jn.fo###the_banners
 kanalen.no##.bannergroup
@@ -108,18 +108,18 @@ ticketmaster.*##div[id^=ad-slot-]
 trening.no##.cp-slidein-body
 tv2.no,abcnyheter.no,medier24.no##a[href*="adform.net"]
 tv2.no##+js(json-prune, enabled, testhide)
-tvkampen.com,tvsporten.dk##+js(abort-on-property-write.js, onload)
+tvkampen.com,tvsporten.dk##+js(aopw, onload)
 tvkampen.com,tvsporten.dk##.custom-background:style(background-image: none !important)
 tvkampen.com,tvsporten.dk##a.p-icon.partner
 vartoslo.no#?#.vc_column-inner:-abp-has(.vo-annonse):not(:-abp-has(div[class^=td_module_])):not(:-abp-has(#sb_instagram))
 vb.is##.spons
 veier24.no,tu.no,digi.no##.top-poster-wrap
-vg.no##+js(abort-current-inline-script.js, Math.floor, g00)
+vg.no##+js(acis, Math.floor, g00)
 vg.no##.betting-widgets
 vg.no##.tipster
 vg.no##.wid-betting
 vg.no#?#.partner-studio:not(:-abp-has(a[href*="/nordiskfilm/"]))
-vg.no,e24.no,gamer.no,tek.no,digi.no##+js(abort-on-property-write.js, __AB__)
+vg.no,e24.no,gamer.no,tek.no,digi.no##+js(aopw, __AB__)
 vgtv.no##+js(golem.de.js)
 vgtv.no##.apnx-container
 vgtv.no##.video-branding
@@ -246,13 +246,17 @@ digi.no##.native
 ||adframe.no^
 ||adstream.no^
 ||advertising.no^
+bt.no##section[class$=-ad]
+||finn.no$subdocument,domain=bt.no
 ! — — — — —
+! 🇳🇴: Generelle oppføringer med kilder
+! 🇬🇧: Generic entries that have sources
 !#if !ext_ublock
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 !#endif
 ! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
-! The ':not' exception is needed for opp.no
+! (Exception: opp.no)
 ##.gofollow:not([href*="radioe6"])
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
@@ -276,6 +280,8 @@ digi.no##.native
 ~prisguiden.no##.prisguidePost
 ! tv2.no
 ##.spklw-post-attr[data-type=ad]
+! bt.no
+||finn.no/distribution-carousel?$object,3p
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -588,16 +594,19 @@ kanalfrederikshavn.dk###c890
 kanalfrederikshavn.dk###c1670
 m.kanalfrederikshavn.dk##.OA
 m.kanalfrederikshavn.dk##.OX
-tv2.no#?#.large-12:not(.article-figure):not(:-abp-has(a))
+tv2.no#?#.large-12:not(.article-figure):not(:-abp-has(a)):not(:-abp-has(img))
 fyens.dk##.adblock__text
 friflyt.no###ads_fullwidth_container
 tek.no##.b
-tek.no##.i
+tek.no###application > div[class]:nth-of-type(1):nth-last-of-type(2)
 railgun.dk##.widget_widget_ads
 krs247.no##.prl-span-12 + h5
 gamer.no##.aaa-980x150
 studievalg.no###top-announce
+bt.no##.vertical-x1-ad > .column--big
 ! — — — — —
+! 🇳🇴: Generelle oppføringer med kilder
+! 🇬🇧: Generic entries that have sources
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
 !#endif
@@ -732,6 +741,9 @@ krom.is#@#.share-container
 ! ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 ! https://github.com/easylist/easylist/issues/1861
 
+! ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
+! Makes E-newspaper previews show up properly
+@@/teasers/*$domain=agderposten.no
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
@@ -740,17 +752,17 @@ krom.is#@#.share-container
 @@||bondebladet.screen9.tv^$generichide
 @@||eurosport.*^$generichide
 @@||sixscissors.com^$3p,domain=itavisen.no
-1200kcalkostplan.dk,1800kcalkostplan.dk##+js(abort-on-property-write.js, KillAdBlock)
+1200kcalkostplan.dk,1800kcalkostplan.dk##+js(aopw, KillAdBlock)
 csp.screen9.com#@#.adsbox
 dagensbyggeri.dk##+js(setTimeout-defuser.js, (), 2500)
 eurosport.*##+js(addEventListener-defuser.js, contextmenu)
 godt.no##.adblock-info-box
-gratisspil.dk##+js(abort-on-property-write.js, AdBlockerInfo)
+gratisspil.dk##+js(aopw, AdBlockerInfo)
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
 langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
 minmote.no,godt.no##.adblock-info
 techstart.dk##+js(set-constant.js, adblock, false)
-tv2.no##+js(abort-current-inline-script.js, adblockDetector)
+tv2.no##+js(acis, adblockDetector)
 vg.no##+js(addEventListener-defuser.js, load, concat)
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.dk|dplay.no
 ||elderlyscissors.com^
@@ -830,8 +842,8 @@ gamereactor.*###facebooknotification
 gamereactor.*###fbnotification
 gamereactor.*###pagebackground:style(background-image: none !important)
 gamereactor.*###sky2_1
-gamereactor.*##+js(abort-current-inline-script.js, phpads_deliver)
-gamereactor.*##+js(abort-on-property-write.js, banner_video)
+gamereactor.*##+js(acis, phpads_deliver)
+gamereactor.*##+js(aopw, banner_video)
 gamereactor.*##+js(nano-setTimeout-booster.js)
 gamereactor.*##+js(set-constant.js, adblockEnabled, noopFunc)
 gamereactor.*##+js(set-constant.js, trackAdblock, noopFunc)
@@ -863,7 +875,7 @@ viafree.*##.pause-ad-container
 ||viafree.*/collect$important,xhr
 
 ! 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
-! 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen til mange produkter stadigt benytter før-2016-fargene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
+! 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
 ! 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
 ! Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
 elkjop.no,elgiganten.dk###A-value:style(fill: #fff12c !important)
@@ -965,10 +977,12 @@ fuglelyder.net#@##banner_ad
 ||postuksus.com^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av VG.
 ||52.216.146.90^
 ||92.42.104.146^
-||beatapple.top^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||beatsapple.top^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
 ||jimmychoostore.top^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
 ||hervelegeroutletusa.com^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
 ||replicapatekphilippe.com^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||hot-rap-beats.top^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||replicarolexyachtmaster.com^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
 
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
