@@ -1,5 +1,5 @@
 msFilterList
-# Version: 07February2020v1-Beta
+# Version: 07February2020v3-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -292,6 +292,7 @@ contentMarketing
 -d replicapatekphilippe.com
 -d hot-rap-beats.top
 -d replicarolexyachtmaster.com
+-d secureriches.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
