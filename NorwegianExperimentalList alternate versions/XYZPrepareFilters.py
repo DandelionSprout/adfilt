@@ -451,6 +451,18 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"##\+js\(acis, (.*)\)", 
+           r"#$#abort-current-inline-script \1", 
+           line
+        )
+
+        line = re.sub(
+           r"(#\$#.*),", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
            r"^!.*PFBLOCKERNG.*", 
            r"", 
            line
