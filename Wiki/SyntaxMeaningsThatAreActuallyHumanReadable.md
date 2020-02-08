@@ -41,7 +41,6 @@
 * `$csp`: Inserts additional *Content Security Policies* into the page.
 * `$xmlhttprequest` / `$websocket`: Prevents such resources from being downloaded through the titular JavaScript APIs.
 * `$popup` / `$image` / `$object` / `$font` / `$other`: These ones should hopefully be self-explanatory (Give me a heads-up in an issue report if it isn't).
-* `$match-case`: Makes the criteria case-sensitive.
 * `|text`: Matches URLs that *begin* with the text.
 * `text|`: Matches URLs that *end* with the text.
 * `~`: Means that an entry does *not* apply to a specific domain.
@@ -81,11 +80,14 @@
 * `:nth-ancestor`: Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree.
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
-* `||` + `$document`: Guarantees a danger warning when loading a page, which is not 110% guaranteed otherwise.
+* `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
 * `$3p`: Same as `$third-party`.
 * `$1p` / `$first-party`: Same as `$~third-party`.
 * `$xhr`: Same as `$xmlhttprequest`.
-* `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup`.
+* `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup` + `$document`.
+
+### Adblock Plus, Adblock and AdGuard only:
+* `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API.
 
 ### Adblock Plus and AdBlock only:
 * `! Redirect: `: Tells the adblocker to look for list updates from a new URL from that point on.
@@ -98,7 +100,6 @@
 * `@@||` + `$~document`: Not easily obvious. Could possibly make sure to not turn off adblockers while on that domain, while preventing blockage of on-site elements.
 * `@@||` + `$genericblock`: Prevents all non-domain-specific blocking entries from working on a website.
 * `$rewrite=abp-resource:`: Similar to `$redirect`, but with a rather different selection of neutered files. Possible options are listed on [this help page](https://help.eyeo.com/adblockplus/how-to-write-filters#rewrite).
-* `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API.
 
 ### AdGuard only:
 #### Hiding
@@ -108,6 +109,7 @@
 * `:properties`: Claims to be similar to `:-abp-properties`, but is incompatible with it.
 #### Blocking
 * `$empty`: Results in a fake empty page being loaded, instead of an error page.
+* `$match-case`: Makes the criteria case-sensitive.
 * `$$script`: Uses very advanced criteria to block scripts that meet them.
 * `$cookie`: Blocks cookies.
 * `$cookie=`: Blocks cookies with specific names.
