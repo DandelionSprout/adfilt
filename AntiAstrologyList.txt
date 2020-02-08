@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🛤️ Anti-Astrology List
-! Version: 04February2020v1-Beta
+! Version: 08February2020v1-Beta
 ! Expires: 3 days
 ! Description: The alignment of the stars predict that you will use this list, in order to stop listening so much to such completely unfounded predictions anymore, and to get your eyes off the starry skies and onto your life that should be planted firmly on the ground.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -91,9 +91,20 @@ me.me##a[href*="astrologymemes.com"]
 */img/prophecies/
 ! https://www.telegraaf.nl/
 ##a[href*="/horoscopen/"]
+! elle.com/uk/, elle.com/jp/, elle.com/tw/
+##a[href*="/horoscopes/"]
+! metronieuws.nl, libelle.be
+##a[href$="/horoscoop"]
+! radioscoop.com
+##.horoscoop
+##.horoscoop-div
+##a[href$="/horoscoop.php"]
 
 ! Austria
 woman.at#?#.wgt:-abp-contains(Horoskop)
+
+! Belgium
+seniorennet.be##.hp-items > div:has-text(Horoscoop van de Dag)
 
 ! Croatia
 24sata.hr#?#.suffix-lg-3:-abp-contains(horoskop)
@@ -115,6 +126,9 @@ pulze.dk#?#.recent-comments li:-abp-has(a[href*="stjernetegn"])
 pulze.dk##.starposts
 pulze.dk#?#.dealbg:-abp-contains(Stjernetegn)
 
+! France
+radioscoop.com#?#.slider-btn > a:-abp-contains(L'horoscoop)
+
 ! Germany
 ! https://www.brigitte.de/
 ###widgetTageshoroskop
@@ -129,9 +143,39 @@ mbl.is##.bundle:-abp-contains(Sporðdrekinn)
 indiatimes.com#?#.md_news_box:-abp-contains(/Zodiac/i)
 pinkvilla.com#?#.article_content:-abp-contains(/zodiac/i)
 
+! Italy
+! iodonna.it, elle.com/it/
+##a[href*="/oroscopo/"]
+! https://www.oggi.it/
+###oroscopo
+! https://www.alfemminile.com/
+##a[href*="/oroscopo-"]
+! https://gds.it/
+##a[href*="/loroscopo-"]
+! https://www.porto.it/
+##a[href*="/oroscopo.htm"]
+! https://www.starbene.it/
+##.oroscopowidget
+gazzetta.it#?#.section-standard-row:-abp-contains(OROSCOPO)
+controcampus.it##div[id^=oroscopo]
+controcampus.it##div[id^=tempolibero]
+gds.it#?#article:-abp-has(a[href*=oroscopo])
+alfemminile.com#?#.af-block:-abp-has(a[href*="/oroscopo"])
+porto.it##a[href*="/astro"]
+zon.it#?#.td_block_wrap:-abp-has(.td-block-title:-abp-contains(Oroscopo))
+
 ! Netherlands
 ! https://www.telegraaf.nl/
 ##[data-vr-contentbox-url*=horoscoop]
+! https://www.elle.com/nl/
+##a[href*="/horoscoop/"]
+! https://www.cosmopolitan.com/nl/
+##div[class*=daghoroscoop]
+! https://www.libelle.nl/huis-tuin-feestje/
+##a[href*="/horoscoop-"]
+elle.com#?#.feed-block-container:-abp-has(.feed-block-heading:-abp-contains(Horoscoop))
+margriet.nl##.nav-main-link[href$="/horoscoop/"] ~ *
+libelle.nl##article:has(:scope > div > a[href*=horoscoop])
 
 ! North Macedonia
 skopjeinfo.mk#?#.responsive-item-list > .list-to-block.row > .views-row:-abp-has(a[href*="-horoskop"])
@@ -148,6 +192,10 @@ sveip.net#?#li:-abp-has(:scope > a[href$="/horoskop/"])
 nezavisne.com##a[href$="_horoskop"]
 wannabemagazine.com#?#article:-abp-has(a[title^="Astrologi"])
 
+! Spain
+! https://www.elle.com/es/
+##a[href*="/horoscopo/"]
+
 ! Sweden
 twice.se#?#.col-xs-12:-abp-contains( orakelkort)
 twice.se##[href="/astro.html"]
@@ -155,6 +203,7 @@ twice.se#?#.breadcrumb:-abp-contains(horoskop)
 
 ! Switzerland
 20min.ch##a[href*="/horoskop/"]
+tio.ch##.containerHomeMeteoOroscopo
 
 ! United Arab Emirates
 khaleejtimes.com#?#.tab_right_pane_3:-abp-has(a[href$="horoscope"])
