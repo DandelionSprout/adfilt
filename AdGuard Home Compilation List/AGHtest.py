@@ -318,6 +318,72 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|9anime\.\*\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$", 
+           r"/^\1\.\2\.\3\..*/", 
+           line
+        )
+
+        line = re.sub(
+           r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$", 
+           r"/^\1\.\2\..*/", 
+           line
+        )
+
+        line = re.sub(
+           r"! https?://forums\.lanik\.us.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! https?://www\.reddit\.com/r/uBlockOrigin.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! https?://github\.com/uBlockOrigin.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! https://github\.com/NanoMeow.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! https://github\.com/jspenguin2017/uBlockProtector.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! https://github.com/reek/anti-adblock-killer.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! https://github.com/NanoAdblocker.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! https://github\.com/jspenguin2017/uBlockProtector.*", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\r\n'
 
