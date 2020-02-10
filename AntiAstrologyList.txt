@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🛤️ Anti-Astrology List
-! Version: 08February2020v1-Beta
+! Version: 10February2020v1-Beta
 ! Expires: 3 days
 ! Description: The alignment of the stars predict that you will use this list, in order to stop listening so much to such completely unfounded predictions anymore, and to get your eyes off the starry skies and onto your life that should be planted firmly on the ground.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -13,10 +13,10 @@
 ##[href^="/horoscop"]
 ##a[href*="/horoskop"]
 ##[href*="horoskop/"]
-##a[href*="zodiac-sign"]
+##a[href*=zodiac-sign]
 ##[href*="хороскоп"]
-##a[href*="-horoskop"]
-##div[aria-labelledby*="astrology"]
+##a[href*=-horoskop]
+##div[aria-labelledby*=astrology]
 */horoscope/$document
 */horoskop/$document
 */astrology/$document
@@ -56,7 +56,7 @@ me.me##a[href*="astrologymemes.com"]
 ! https://net.hr/
 ##.horoskop-big
 ! https://mondo.rs/
-##section[class*="horoscope-signs-slide"]
+##section[class*=horoscope-signs-slide]
 ! https://spray.se/
 ##.home-article-horoscope
 ! https://www.hemtrevligt.se/hemmetsjournal/
@@ -99,6 +99,25 @@ me.me##a[href*="astrologymemes.com"]
 ##.horoscoop
 ##.horoscoop-div
 ##a[href$="/horoscoop.php"]
+! https://hindi.webdunia.com/
+##.horroscope
+##area[href$="/Horoscope/"]
+! https://www.prokerala.com/
+##a[href="/astrology/"]
+##.wdgt-astrology:first-of-type
+! https://hindi.oneindia.com/
+##a[href*="/astrology/horoscope/"]
+! https://www.patrika.com/
+###horoscope_section
+! https://www.abplive.com/
+##a[href*="/weekly-horoscope"]
+##a[href*="/astro/horoscope"]
+! ! https://www.bhaskarhindi.com/
+##a[href$="/horoscope"]
+! https://www.punjabkesari.in/
+##.horoscope_section
+! https://www.sanjeevnitoday.com/
+##a[href*="todays-horoscope/"]
 
 ! Austria
 woman.at#?#.wgt:-abp-contains(Horoskop)
@@ -140,8 +159,35 @@ freenet.de##.frn_horoskop
 mbl.is##.bundle:-abp-contains(Sporðdrekinn)
 
 ! India
+! https://www.bhaskar.com/
+##a[href*="/rashifal-"]
+##a[href*="-rashifal-"]
+! https://www.livehindustan.com/
+##.zordic-info
+##a[href*="/astrology/rashifal"]
+! https://aajtak.intoday.in/
+##.rashifalContainer
+! https://www.7inews.com/
+##a[href$="-rashifal"]
+! https://www.raftaar.in/
+##a[href*="/rashifal/"]
+! https://www.indiatv.in/
+##a[href$="/rashifal"]
+! https://hindi.asianetnews.com/
+##.rashifal
 indiatimes.com#?#.md_news_box:-abp-contains(/Zodiac/i)
 pinkvilla.com#?#.article_content:-abp-contains(/zodiac/i)
+bhaskar.com#?#.originalTab > ul > li:-abp-has(a[href*="/rashifal/"])
+bhaskar.com#?#li:-abp-has(:scope > a[href*="-rashifal-"])
+amarujala.com###astro-widget-home
+amarujala.com##.video-live:has-text(राशिफल)
+livehindustan.com##.common-bg:has(:scope > h2:has-text(राशिफल))
+7inews.com##section > .container:has(.web-heading2:has-text(राशिफल))
+bhaskarhindi.com##.news-box:has(h5:has(a[href$="/rashifal"]))
+bhaskarhindi.com##a[href*="/astrology/"]
+bhaskarhindi.com##.relative:has(a[href*="/astrology/"]) + h6
+raftaar.in##.dharm > .row > div.col-md-4:has-text(राशिफल)
+inextlive.com##.index-spiritual li:has-text(horoscope)
 
 ! Italy
 ! iodonna.it, elle.com/it/
@@ -184,7 +230,7 @@ crnobelo.com#?#.items-row:-abp-has(a[href*="-horoskop/"])
 
 ! Norway
 ##.idag_hor_wrap
-##a[href*="stjernetegn"]
+##a[href*=stjernetegn]
 elle.no#?#.subheader:-abp-contains(Horoskop)
 sveip.net#?#li:-abp-has(:scope > a[href$="/horoskop/"])
 
