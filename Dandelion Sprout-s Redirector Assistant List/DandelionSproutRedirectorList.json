@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.5.2",
-    "createdAt": "2020-02-06T01:09:39.552Z",
+    "createdAt": "2020-02-10T16:21:23.066Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -55,7 +55,7 @@
             "exampleUrl": "https://www.burnaware.com/downloads/burnaware_free_11.4.exe",
             "exampleResult": "https://www.burnaware.com/downloads/burnaware_cfree_11.4.exe",
             "error": null,
-            "includePattern": "*://www.burnaware.com/downloads/burnaware_free_*.exe",
+            "includePattern": "https://www.burnaware.com/downloads/burnaware_free_*.exe",
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "https://www.burnaware.com/downloads/burnaware_cfree_$1.exe",
@@ -140,31 +140,24 @@
             "exampleUrl": "https://pbs.twimg.com/media/DdO7F3tU0AA1CnQ.jpg:large",
             "exampleResult": "https://pbs.twimg.com/media/DdO7F3tU0AA1CnQ.jpg",
             "error": null,
-            "includePattern": "https://pbs.twimg.com*jpg:large",
+            "includePattern": "https://pbs.twimg.com(.*)[jp][pn]g:large",
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "https://pbs.twimg.com$1jpg",
-            "patternType": "W",
+            "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,
             "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "{Hidden webpages 5} Change more Twitter images to functionally readable images, so that they can be easily opened in image applications",
-            "exampleUrl": "https://pbs.twimg.com/media/EA94YMzVUAAbeow.png:large",
-            "exampleResult": "https://pbs.twimg.com/media/EA94YMzVUAAbeow.png",
-            "error": null,
-            "includePattern": "https://pbs.twimg.com*png:large",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://pbs.twimg.com$1png",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "history",
+                "other"
             ]
         },
         {
@@ -673,6 +666,22 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "$2://$3/$4",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "{Direct outgoings 3} Steam",
+            "exampleUrl": "https://steamcommunity.com/linkfilter/?url=https://www.dreamcastlive.net/games",
+            "exampleResult": "https://www.dreamcastlive.net/games",
+            "error": null,
+            "includePattern": "https://steamcommunity.com/linkfilter/?url=*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
