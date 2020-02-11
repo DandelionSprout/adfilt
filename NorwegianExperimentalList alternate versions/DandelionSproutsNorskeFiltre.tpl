@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08February2020v2-Beta
+# Version: 11February2020v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -383,6 +383,9 @@ contentMarketing
 -d sky.gs
 # https://www.online.no/sikkerhet/falsk-online-nettside
 -d is-a-personaltrainer.com
+# https://nyheder.tv2.dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
+-d rigspolitiet.com
+-d nemid.org
 # IP addresses of servers notorious for hosting many of the sites above
 -d 138.201.126.227
 -d 156.236.126.173
