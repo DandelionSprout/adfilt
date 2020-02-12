@@ -87,10 +87,11 @@
 * `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup` + `$document`.
 
 ### Adblock Plus, Adblock and AdGuard only:
-* `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API.
+* `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API. The uBO equivalent seems to be `##+js(nowebrtc)`, but conversion is not done automatically.
 
 ### Adblock Plus and AdBlock only:
-* `! Redirect: `: Tells the adblocker to look for list updates from a new URL from that point on.
+* `! Redirect:`: Tells the adblocker to look for list updates from a new URL from that point on.
+* `! Checksum:`: No longer in use by *any* adblockers. Was used by ABP/AB on Firefox prior to November 2017, out of a then-decade-old fear that antivirus tools could tamper with list contents to create disastrously miswritten entries.
 #### Hiding
 * `#?#`: Required to make entries with `:-abp-has`, `:-abp-contains` and `:-abp-properties` work in those particular extensions, and to make `:style` entries not break the list extremely heavily.
 * `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
