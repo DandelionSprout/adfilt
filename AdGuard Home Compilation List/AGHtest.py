@@ -1,7 +1,7 @@
 import requests
 import re
 
-SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://easylist-downloads.adblockplus.org/liste_fr.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/sections/push-notifications.txt', 'https://easylist-downloads.adblockplus.org/advblock.txt', 'https://easylist-downloads.adblockplus.org/Liste_AR.txt', 'https://easylist-downloads.adblockplus.org/easylistspanish.txt']
+SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://easylist-downloads.adblockplus.org/liste_fr.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://easylist-downloads.adblockplus.org/advblock.txt', 'https://easylist-downloads.adblockplus.org/Liste_AR.txt', 'https://easylist-downloads.adblockplus.org/easylistspanish.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/sections/push-notifications.txt', 'https://easylist-downloads.adblockplus.org/fanboy-notifications.txt']
 
 UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain' ]
 UNSUPPORTED_IP = ['##', '@#', '#?#', '#%#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '!+']
@@ -98,6 +98,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"([$,])document", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])doc", 
            "", 
            line
         )
