@@ -15,6 +15,7 @@
 * `:-abp-has(.element)`: Finds page elements that contains such an element within it.
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order.
 * `:only-of-type` / `first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
+* `:first-child` / `:last-child`: Appears to be synonymous with `first-of-type` and `last-of-type` for adblocking purposes.
 * `:before` / `:after`: Removes the pseudo-elements that belong to a page element.
 * `>`: Creates chain criteria, in which a selected page element must have a specific element on the floor above it in the filetree.
 * `+`: Blocks the element that is right below the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
