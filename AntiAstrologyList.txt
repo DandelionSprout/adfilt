@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🛤️ Anti-Astrology List
-! Version: 10February2020v1-Beta
+! Version: 15February2020v1-Beta
 ! Expires: 3 days
 ! Description: The alignment of the stars predict that you will use this list, in order to stop listening so much to such completely unfounded predictions anymore, and to get your eyes off the starry skies and onto your life that should be planted firmly on the ground.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -25,8 +25,8 @@
 */astrology/
 facebook.com,facebookcorewwwi.onion#?#.userContentWrapper:-abp-contains(/#zodiac/i):not(:-abp-contains(/killer/i))
 instagram.com#?#a:-abp-has(:scope > div > div > img[alt*="#zodiac"]:not([alt*="killer"]))
-microsoft.com#?#.m-channel-placement-item:has-text(/Astrolog/i)
-microsoft.com#?#.m-channel-placement-item:has-text(/Horoscop/i)
+microsoft.com#?#.m-channel-placement-item:-abp-contains(/Astrolog/i)
+microsoft.com#?#.m-channel-placement-item:-abp-contains(/Horoscop/i)
 msn.com##li[role="presentation"][data-aaid*="Astrology"]
 msn.com#?#.headlines:-abp-contains(/astrology/i)
 msn.com#?#li:-abp-has(a[href*="/horoscope/"])
@@ -118,12 +118,31 @@ me.me##a[href*="astrologymemes.com"]
 ##.horoscope_section
 ! https://www.sanjeevnitoday.com/
 ##a[href*="todays-horoscope/"]
+! https://www.univision.com/
+##a[href$="/horoscopos"]
+! https://www.lanacion.com.ar/
+##a[href$="/horoscopo"]
+! https://www.clarin.com/
+##.horoscopo
+! https://www.abc.es/motor/
+##a[href^="https://horoscopo."]
+! https://www.diariocritico.com/
+##a[href*="/horoscopo-"]
+! https://libero.pe/
+##a[href^="horoscopo/"]
+
+! Argentina
+clarin.com##a[href*="/horoscopo"]
 
 ! Austria
 woman.at#?#.wgt:-abp-contains(Horoskop)
 
 ! Belgium
-seniorennet.be##.hp-items > div:has-text(Horoscoop van de Dag)
+seniorennet.be#?#.hp-items > div:-abp-contains(Horoscoop van de Dag)
+
+! Colombia
+! https://www.elespectador.com/noticias/
+##.block-ee_zodiac-home_horoscope
 
 ! Croatia
 24sata.hr#?#.suffix-lg-3:-abp-contains(horoskop)
@@ -138,7 +157,7 @@ ekstrabladet.dk##a[href*="/horoskoper/"]
 udeoghjemme.dk#?#.last:-abp-has(a[href="/horoskoper"])
 ni.dk##.col-3:-abp-contains( horoskop)
 familiejournal.dk#?#section.row.t-normal:-abp-contains(horoskoper)
-hotstart.dk##[href="/Horoskop/"]
+hotstart.dk##a[href="/Horoskop/"]
 pulze.dk#?##dmf_widget-3:-abp-contains(horoskop)
 pulze.dk##.hotadtxt
 pulze.dk#?#.recent-comments li:-abp-has(a[href*="stjernetegn"])
@@ -180,14 +199,14 @@ pinkvilla.com#?#.article_content:-abp-contains(/zodiac/i)
 bhaskar.com#?#.originalTab > ul > li:-abp-has(a[href*="/rashifal/"])
 bhaskar.com#?#li:-abp-has(:scope > a[href*="-rashifal-"])
 amarujala.com###astro-widget-home
-amarujala.com##.video-live:has-text(राशिफल)
-livehindustan.com##.common-bg:has(:scope > h2:has-text(राशिफल))
-7inews.com##section > .container:has(.web-heading2:has-text(राशिफल))
-bhaskarhindi.com##.news-box:has(h5:has(a[href$="/rashifal"]))
+amarujala.com#?#.video-live:-abp-contains(राशिफल)
+livehindustan.com#?#.common-bg:-abp-has(:scope > h2:-abp-contains(राशिफल))
+7inews.com#?#section > .container:-abp-has(.web-heading2:-abp-contains(राशिफल))
+bhaskarhindi.com#?#.news-box:-abp-has(h5:-abp-has(a[href$="/rashifal"]))
 bhaskarhindi.com##a[href*="/astrology/"]
-bhaskarhindi.com##.relative:has(a[href*="/astrology/"]) + h6
-raftaar.in##.dharm > .row > div.col-md-4:has-text(राशिफल)
-inextlive.com##.index-spiritual li:has-text(horoscope)
+bhaskarhindi.com#?#.relative:-abp-has(a[href*="/astrology/"]) + h6
+raftaar.in#?#.dharm > .row > div.col-md-4:-abp-contains(राशिफल)
+inextlive.com#?#.index-spiritual li:-abp-contains(horoscope)
 
 ! Italy
 ! iodonna.it, elle.com/it/
@@ -234,6 +253,9 @@ crnobelo.com#?#.items-row:-abp-has(a[href*="-horoskop/"])
 elle.no#?#.subheader:-abp-contains(Horoskop)
 sveip.net#?#li:-abp-has(:scope > a[href$="/horoskop/"])
 
+! Peru
+libero.pe#?#.col-thirdpart-md:-abp-contains(Horóscopo)
+
 ! Serbia
 nezavisne.com##a[href$="_horoskop"]
 wannabemagazine.com#?#article:-abp-has(a[title^="Astrologi"])
@@ -241,6 +263,10 @@ wannabemagazine.com#?#article:-abp-has(a[title^="Astrologi"])
 ! Spain
 ! https://www.elle.com/es/
 ##a[href*="/horoscopo/"]
+abc.es##a[href*=-prediccion-horoscopo-]
+lecturas.com##a[href="/horoscopo"] + i
+heraldo.es#?#.articleModuleContent:-abp-contains(Consulta el horóscopo)
+elpais.com#?#.flex_1:-abp-contains(horóscopo)
 
 ! Sweden
 twice.se#?#.col-xs-12:-abp-contains( orakelkort)
@@ -256,6 +282,9 @@ khaleejtimes.com#?#.tab_right_pane_3:-abp-has(a[href$="horoscope"])
 khaleejtimes.com#?#a[href="javascript:"]:-abp-contains(HOROSCOPE)
 
 ! USA
+! https://thoughtcatalog.com/
+###tcf_astrology
+##.subnav-astrology
 allure.com#?#.article:-abp-contains(/Zodiac/i):not(:-abp-contains(/killer/i))
 allure.com#?#.summary-item:-abp-contains(/Zodiac/i):not(:-abp-contains(/killer/i))
 bustle.com#?#.iN:not(.iO):-abp-contains(/Astrolog/i)
@@ -296,9 +325,10 @@ wishafriend.com##a[href*="zodiac"]
 www.wishafriend.com#?#.msg-sec:not(:-abp-contains(Wedding date)):-abp-contains(Zodiac)
 m.wishafriend.com#?#h3:-abp-contains(Zodiac)
 m.wishafriend.com#?#h3:-abp-contains(Zodiac) + #mainlinks
-! https://thoughtcatalog.com/
-###tcf_astrology
-##.subnav-astrology
+univision.com##.widget[data-widget-type=AllCarouselIconPromo]
+univision.com#?#.widget[data-widget-type=HeroWidget]:-abp-contains(Horóscopos)
+elnuevoherald.com#?#a:-abp-contains(Walter Mercado)
+elnuevoherald.com##a[title="Walter Mercado"]
 
 ! Videogaming
 nookipedia.com#?#tbody > tr:-abp-has(:scope > td > [href="/wiki/Star_sign"])
