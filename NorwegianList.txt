@@ -1,4 +1,4 @@
-! Version: 15February2020v3
+! Version: 16February2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -283,6 +283,7 @@ bt.no##section[class$=-ad]
 ~prisguiden.no##.prisguidePost
 ! tv2.no
 ##.spklw-post-attr[data-type=ad]
+##.spklw-post-attr[data-pc]
 ! bt.no
 ||finn.no/distribution-carousel?$object,3p
 
@@ -705,6 +706,7 @@ vafo.dk##.adform-flexblock
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
+! 🇮🇸: ——— Tóma skilirammar ———
 ! 🇬🇧: ——— Empty divider spaces ———
 ##.skille
 icelandreview.com,bir.no,medier24.no,knr.gl,nutiminn.is#?#p:-abp-contains(/^\xA0$/)
@@ -719,6 +721,7 @@ dyrevennene.no##.td-footer-wrapper
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ! 🇩🇰: ——— Distraherende baggrundsbilleder ———
+! 🇮🇸: ——— Truflanda baksýnsmyndir ———
 ! 🇬🇧: ——— Distracting background images ———
 ||images.media.xxlsports.com/images/h90/h9d/9339713159198/bg.jpg$image
 ||platekompaniet.no/assets/img/background.png$image
@@ -727,6 +730,7 @@ dyrevennene.no##.td-footer-wrapper
 
 ! 🇳🇴: ——— Fiksing av knekte sider ———
 ! 🇩🇰: ——— Fiksing af knækte websider ———
+! 🇮🇸: ——— Óbrot ———
 ! 🇬🇧: ——— Unbreakage ———
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
 @@||seher.no/reise$generichide
@@ -756,6 +760,7 @@ krom.is#@#.share-container
 @@/teasers/*$domain=agderposten.no
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
+! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
 @@*.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 @@||5e529.v.fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
@@ -788,8 +793,8 @@ aftenposten.no##div[style*="width: 10"][style*="z-index: 2147"]
 1800kcalkostplan.dk,1200kcalkostplan.dk##div[class*=-container][class$=-hide]
 !#endif
 
-! 🇳🇴: ———Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon———
-! 🇬🇧: ———Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version———
+! 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
+! 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
 ! Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP for showing me the existence of this particular CSP command.
 ! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
 $csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no
@@ -938,6 +943,7 @@ fuglelyder.net#@##banner_ad
 ! 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 ! Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no/sport
 ! 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
+! 🇮🇸: Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
 ! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
 ||paypal.*.no^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av PayPal
