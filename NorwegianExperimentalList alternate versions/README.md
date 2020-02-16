@@ -1,0 +1,1 @@
+Important note to self: Running Python scripts in Cygwin and Powershell seems to create **COMPLETELY** different file encodings that completely overwrite one another. Stick to the Cygwin output versions if at all humanly possible for logkeeping's sake.
