@@ -1,5 +1,5 @@
 msFilterList
-# Version: 16February2020v3-Beta
+# Version: 18February2020v3-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -390,6 +390,17 @@ contentMarketing
 # https://nyheder.tv2.dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
 -d rigspolitiet.com
 -d nemid.org
+# https://www.tv2.no/nyheter/11203952/
+-d topgadgetboom.com
+# https://www.faktisk.no/faktasjekker/vw8/erik-gikk-fra-arbeidsledig-til-millionaer-pa-8-uker
+-d ocgadgets.com
+-d ocgadgetss.myshopify.com
+# https://www.mm.dk/tjekdet/artikel/nej-mads-mikkelsen-har-stadig-ikke-skraemt-de-store-banker-med-bitcoins
+-d dailynews.to
+-d onelifetechno.com
+# https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
+-d rbaab.net
+-d rbppg.net
 # IP addresses of servers notorious for hosting many of the sites above
 -d 138.201.126.227
 -d 156.236.126.173
