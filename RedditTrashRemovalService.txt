@@ -1,11 +1,10 @@
 [Adblock Plus 3.4]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 04January2020v1-Beta
+! Version: 18February2020v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-!#include uBO%20list%20extensions/RedditTrashRemovalService-uBOExtension.txt
 
 ! Removes sitewide feeds from the dropdown menu, on the assumption that they contain posts from bad subreddits
 ! Dropdown menu
@@ -127,6 +126,9 @@ reddit.com#?#div[data-redditstyle=false] + div:-abp-has(:scope > div[data-reddit
 ! Let's give people a more free choice whether to use New or Old Reddit, okay?
 ||styles.redditmedia.com/t5_2qimj/styles/image_widget_hosy9x86gxv11.png$image
 reddit.com#?#div[data-redditstyle=false][style]:-abp-contains(/Old Reddit/i)
+
+! Aims to prevent Imgur embeds from cutting off half the preview
+imgur.com#?#img[id=image-element][src*=imgur]:style(margin-top: 0px !important)
 
 ! ————— ↓ Removes content posted by the top 10 karma hoarders ↓ —————
 
