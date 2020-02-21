@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 18February2020v1
+! Version: 21February2020v1
 ! Expires: 6 days
 !#include uBO%20list%20extensions/YouTubeEvenMorePureVideoExperience-uBOExtension.txt
 ! Description: This list removes even more distracting or uncomfortable things on YouTube.
@@ -33,9 +33,10 @@ m.youtube.com##.scbrr-tab[href="/"]
 youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="UClgRkhTL3_hImCAmdLfDE4g"])
 
 ! Removes the app drawer in the top-right menu
-www.youtube.com#?##button:-abp-has([aria-label*="app"])
+www.youtube.com#?##button:-abp-has([aria-label*=app])
 
 ! Removes video suggestions
+##.ytp-endscreen-content
 youtube.com###related
 m.youtube.com##ytm-watch ytm-compact-video-renderer
 /annotations_module.js$script,domain=youtube.com
@@ -49,8 +50,8 @@ youtube.com##ytd-toggle-button-renderer #text
 youtube.com###sentiment
 m.youtube.com#?#c3-material-button:-abp-has(path[d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"]) span[aria-label]
 m.youtube.com#?#c3-material-button:-abp-has(path[d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"]) span[aria-label]
-invidio.us,kgg2m7yk5aybusll.onion,axqzx4s6s54s32yentfqojs3x5i7faxza6xo3ehd4bzzsg2ii4fv2iid.onion,174.138.43.128#?#.h-box > p:-abp-has(i[class*="ion-ios-thumbs-"])
-invidious.*.*#?#.h-box > p:-abp-has(i[class*="ion-ios-thumbs-"])
+invidio.us,kgg2m7yk5aybusll.onion,axqzx4s6s54s32yentfqojs3x5i7faxza6xo3ehd4bzzsg2ii4fv2iid.onion,174.138.43.128#?#.h-box > p:-abp-has(i[class*=ion-ios-thumbs-])
+invidious.*.*#?#.h-box > p:-abp-has(i[class*=ion-ios-thumbs-])
 hooktube.com###video-stats .text-right
 hooktube.com###progress-bar-likes
 twitch.tv#?#.ffz__tooltip .stats:-abp-contains(👍):-abp-contains(👎)
@@ -60,13 +61,14 @@ youtube.com##ytd-rich-metadata-renderer.ytd-rich-metadata-row-renderer
 m.youtube.com##ytm-watch-metadata-app-promo-renderer
 
 ! Removes the Share arrow button in fullscreen mode and in embeds
-youtube.com##button[class*="share-button"]
+youtube.com##button[class*=share-button]
 
 ! Removes a rarely occuring login nag module with an octopus and a treasure chest when not logged in
 ! Turned off by request from the guy who submitted the entry, as it now also removes a «Terms of Service» update notification
 !!! youtube.com#?#paper-dialog:-abp-has(ytd-mealbar-promo-renderer)
 
-! (Not recently tested) Aims to prevent video suggestions from showing up when pausing embedded videos
+! Aims to prevent video suggestions from showing up when pausing embedded videos
+##.ytp-scroll-min
 ##.ytp-pause-overlay
 
 ! Removes the frontpage link from the upper left YouTube logo (Not supported by ABP or AdBlock)
@@ -133,7 +135,7 @@ youtube.com#?#div.top-nav-tab:-abp-contains(/^Gaming$/)
 
 ! Removes comments on video pages
 ||youtube.com/live_chat_fragments_ajax?$xmlhttprequest
-||youtube.com/comment_service_ajax?$domain=youtube.com
+||youtube.com/comment_service_ajax?$domain=youtube.com,youtu.be
 youtube.com###comments
 ! Removes all annotations in videos
 ||youtube.com/annotations_invideo?$object-subrequest
@@ -151,7 +153,7 @@ youtube.com##.guide-builder-v2 .branded-page-v2-secondary-col
 youtube.com##.action-panel-trigger[role="button"][data-trigger-for="action-panel-share"]
 youtube.com##.yt-uix-button[data-trigger-for="action-panel-share"]
 ! Removes recommended and featured videos in the endscreen
-||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com
+||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com,youtu.be
 youtube.com##.html5-endscreen-content
 youtube.com##.html5-endscreen
 ! Removes related/featured/popular channels on channel pages
