@@ -1,4 +1,4 @@
-! Version: 18February2020v3
+! Version: 22February2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 12 hours
@@ -243,12 +243,15 @@ nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ||tankeogteknikk.no^$3p
 digi.no##.native
 ||adservice.dk^
-||mediasense.dk^
+||mediasense.dk^$3p
 ||easy-ads.dk^
 ||3.248.18.175^
 ||adframe.no^
 ||adstream.no^
 ||advertising.no^
+||fotbolti.net/banners^
+||auglysingar.*.is^$subdocument
+||samfilm.codelab.is^$3p
 bt.no##section[class$=-ad]
 ||finn.no$subdocument,domain=bt.no
 ! — — — — —
@@ -283,7 +286,7 @@ bt.no##section[class$=-ad]
 ~prisguiden.no##.prisguidePost
 ! tv2.no
 ##.spklw-post-attr[data-type=ad]
-##.spklw-post-attr[data-pc]
+tv2.no##.spklw-post-attr[data-pc]
 ! bt.no
 ||finn.no/distribution-carousel?$object,3p
 
@@ -550,6 +553,8 @@ visitnorway.no#?##dtnContainer:-abp-has(.dtnad)
 vl.no##.ad-cols
 vl.no##.ad-fullwidth-container
 vl.no##.vlDesktopAd
+telefonterror.co.no,ukendtnummer.dk##.ad-comments
+framtiden.no##.center[style*=";font-weight:700;"]
 itavisen.no##.itavi-after-content
 itavisen.no##.itavi-article-page-video-player-outstream
 vredens-gnag.no##.ab-appnexus-ads-wrapper
@@ -615,6 +620,8 @@ gamer.no##.aaa-980x150
 studievalg.no###top-announce
 bt.no##.vertical-x1-ad > .column--big
 friflyt.no###wallpaperCenterAd
+trening.no##.mb-top-banner-wrapper
+trening.no##.dfp-netboard
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources
