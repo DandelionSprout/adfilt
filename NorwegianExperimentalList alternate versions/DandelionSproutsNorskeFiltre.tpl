@@ -17,7 +17,7 @@ msFilterList
 # 🇬🇱: ——— Pilerisaarniarlugit ———
 # ❄: ——— Reklámaid ———
 # 🇬🇧: ——— Advertisements ———
-contentMarketing
+- contentMarketing
 -d rett24.no inline
 - -bazaar-
 - _bm abd
