@@ -1,5 +1,5 @@
 msFilterList
-# Version: 22February2020v1-Beta
+# Version: 25February2020v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -108,7 +108,6 @@ contentMarketing
 -d advertising.no
 -d fotbolti.net banners
 -d samfilm.codelab.is
--d finn.no
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -129,6 +128,7 @@ contentMarketing
 # tv2.no
 # bt.no
 -d finn.no distribution-carousel?
+# https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
