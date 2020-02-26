@@ -1,4 +1,4 @@
-! Version: 25February2020v2
+! Version: 26February2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -232,6 +232,7 @@ rett24.no##.p_banner-responsive
 utrop.no##.lazyautosizes
 utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
 /annonse_$image
+!+ NOT_OPTIMZED
 ||tv2a.dk^
 blogg.no##.contentmarketing-box
 nettavisen.no#?#article:-abp-has(:scope > a[href*="?utm_source="])
@@ -246,8 +247,11 @@ digi.no##.native
 ||mediasense.dk^$3p
 ||easy-ads.dk^
 ||3.248.18.175^
+!+ NOT_OPTIMZED
 ||adframe.no^
+!+ NOT_OPTIMZED
 ||adstream.no^
+!+ NOT_OPTIMZED
 ||advertising.no^
 ||fotbolti.net/banners^
 ||auglysingar.*.is^$subdocument
@@ -508,6 +512,7 @@ spillespill.no###bannerAdmeenRectangleTopContainer
 spillespill.no##.banner-leaderboard
 spillespill.no##.push
 tek.no#?#main > section > section:-abp-contains(/^annonse$/)
+!+ NOT_OPTIMZED
 tek.no##.eA:style(column-count: 3 !important; width: 100% !important)
 tek.no##div[id$=_body_ad]:nth-ancestor(1)
 sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
@@ -625,6 +630,7 @@ bt.no##.vertical-x1-ad > .column--big
 friflyt.no###wallpaperCenterAd
 trening.no##.mb-top-banner-wrapper
 trening.no##.dfp-netboard
+!+ NOT_OPTIMZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
@@ -729,6 +735,7 @@ ice.no##.air-block
 tnt-tv.no,tnt-tv.dk##.desktop_element.promo
 tnt-tv.no,tnt-tv.dk##.logos
 tnt-tv.no,tnt-tv.dk##.tabs_placeholder
+!+ NOT_OPTIMZED
 avvir.no###block-block-1 > p:nth-of-type(4)
 dyrevennene.no##.td-footer-wrapper
 
@@ -919,8 +926,10 @@ resett.no##[class="td_single_image_bg"]
 resett.no##a[href*="dekristne.no"]
 resett.no#?#.code-block:-abp-contains(annonse)
 resett.no##.td-visible-desktop
+!+ NOT_OPTIMZED
 resett.no##a[href*="ekstrahus.no"]
 resett.no##.td-ss-main-sidebar
+!+ NOT_OPTIMZED
 resett.no##a[href*="pureorganic.no"]
 /*-annonse-*$image,domain=resett.no
 resett.no#?#.code-block:-abp-contains(Reklame):not(:-abp-contains(butikk))
@@ -937,6 +946,13 @@ elkjop.no,elgiganten.dk###B-value:style(fill: #edb731 !important)
 elkjop.no,elgiganten.dk###C-value:style(fill: #ed8631 !important)
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
+
+! Hotfixes for Internet Explorer 11
+! https://github.com/AdguardTeam/AdguardForWindows/issues/3209
+!#if !env_ublock
+!+ NOT_OPTIMZED PLATFORM(windows)
+vg.no#?#span:style(font-feature-settings: normal)
+!#endif
 
 ! 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "@@||doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
 ! 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "@@||doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
@@ -973,6 +989,7 @@ fuglelyder.net#@##banner_ad
 ||nordea.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordea
 ||sbanken.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sbanken
 ||danskebank.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Danske Bank
+!+ NOT_OPTIMZED
 ||*/?finn.no/login$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
 ||komplett.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Komplett
 ||nordnet.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordnet
