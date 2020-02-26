@@ -1,4 +1,4 @@
-! Version: 26February2020v2
+! Version: 26February2020v3
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -474,6 +474,8 @@ nordjyske.dk##div[class^=jubii-]
 nutiminn.is,newz.dk##.custom-html-widget.textwidget
 nutiminn.is##section[id^=wp_is_mobile]
 nyheder.tv2.dk##.o-article_sidebar > div.g-item
+tek.no#?#section:-abp-has(:scope > div > div:-abp-contains(/^annonse$/))
+tek.no#?#section[hidden] + section:style(column-count: 3 !important; width: 100% !important)
 onlinenytt.com##.textwidget > p
 parcferme.no##.code-block > p
 pengenytt.no##.footer-ad-wrap
@@ -512,8 +514,6 @@ spillespill.no###bannerAdmeenRectangleTopContainer
 spillespill.no##.banner-leaderboard
 spillespill.no##.push
 tek.no#?#main > section > section:-abp-contains(/^annonse$/)
-!+ NOT_OPTIMZED
-tek.no##.eA:style(column-count: 3 !important; width: 100% !important)
 tek.no##div[id$=_body_ad]:nth-ancestor(1)
 sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
 sporttv.is#?#.box:-abp-has(div[class^=auglysing-])
