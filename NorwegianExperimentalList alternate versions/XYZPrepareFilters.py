@@ -468,6 +468,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"!\+.*", 
+           r"", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -825,6 +831,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"!\+.*", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
@@ -920,6 +932,12 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"^!.*PFBLOCKERNG.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"!\+.*", 
            r"", 
            line
         )
