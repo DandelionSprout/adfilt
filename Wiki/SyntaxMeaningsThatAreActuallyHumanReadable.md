@@ -92,7 +92,7 @@
 
 ### Adblock Plus and AdBlock only:
 * `! Redirect:`: Tells the adblocker to look for list updates from a new URL from that point on.
-* `! Checksum:`: No longer in use by *any* adblockers. Was used by ABP/AB on Firefox prior to November 2017, out of a then-decade-old fear that antivirus tools could tamper with list contents to create disastrously miswritten entries.
+* `! Checksum:`: No longer in use by *any* adblockers. Was used by ABP/AB on Firefox prior to November 2017, out of a then-decade-old fear that antivirus tools could tamper with list contents to create disastrously miswritten entries. AdGuard adds their own checksums to natively included lists, which do not need any maintainer intervention.
 #### Hiding
 * `#?#`: Required to make entries with `:-abp-has`, `:-abp-contains` and `:-abp-properties` work in those particular extensions, and to make `:style` entries not break the list extremely heavily.
 * `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
