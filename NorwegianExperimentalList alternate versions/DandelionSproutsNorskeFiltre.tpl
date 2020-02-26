@@ -1,5 +1,5 @@
 msFilterList
-# Version: 25February2020v2-Beta
+# Version: 26February2020v5-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -93,6 +93,7 @@ msFilterList
 -d feltet.dk Feltet.dk
 -d langrenn.com getfile.php
 - annonse_
+!+ NOT_OPTIMZED
 -d tv2a.dk
 -d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
 -d heartbeat.airserve.net
@@ -103,8 +104,11 @@ msFilterList
 -d mediasense.dk
 -d easy-ads.dk
 -d 3.248.18.175
+!+ NOT_OPTIMZED
 -d adframe.no
+!+ NOT_OPTIMZED
 -d adstream.no
+!+ NOT_OPTIMZED
 -d advertising.no
 -d fotbolti.net banners
 -d samfilm.codelab.is
@@ -140,6 +144,7 @@ msFilterList
 -d bilnorge.no *emty.gif
 -d gaysir.no bb_inline
 -d static.vg.no admark_top.gif
+!+ NOT_OPTIMZED
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -182,6 +187,7 @@ msFilterList
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇮🇸: ——— Tóma skilirammar ———
 # 🇬🇧: ——— Empty divider spaces ———
+!+ NOT_OPTIMZED
 # 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 # 🇩🇰: ——— Distraherende baggrundsbilleder ———
 # 🇮🇸: ——— Truflanda baksýnsmyndir ———
@@ -259,12 +265,17 @@ msFilterList
 -d freewheel-mtgx-tv.akamaized.net
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer for dem vil bli ordrett godkjent.
 # 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries for them will be accepted verbatim.
+!+ NOT_OPTIMZED
+!+ NOT_OPTIMZED
 - *-annonse-*
 # 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
 # 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
 # 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
 # Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
+# Hotfixes for Internet Explorer 11
+# https://github.com/AdguardTeam/AdguardForWindows/issues/3209
+!+ NOT_OPTIMZED PLATFORM(windows)
 # 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "+d doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
 # 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "+d doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
@@ -276,6 +287,7 @@ msFilterList
 # 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 # Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no sport
 - finn.no finno.htm
+!+ NOT_OPTIMZED
 - ?finn.no login
 - begrensede-tilbudet
 - bli-avbrutt-bor-du-oppdater
