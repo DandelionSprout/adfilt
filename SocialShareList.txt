@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 20February2020v1-Alpha
+! Version: 27February2020v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -57,7 +57,6 @@
 ##.facebook-messenger-share
 ##.facebook-share
 ##.facebook-share-button
-##.facebook.share-icon
 ##.facebook[href*="/sharer/"]
 ##.facebook_top
 ##.fb-like-box
@@ -144,7 +143,6 @@
 ##.social-btns
 ##.social-footer
 ##.social-icon
-##.social-links
 ##.social-share
 ##.social-share-sidebar-component
 ##.social-sharing-buttons
@@ -161,7 +159,6 @@
 ##.ssk-group
 ##.twit_share_button
 ##.twitter-share
-##.twitter.share-icon
 ##.twitter[href*="/share?"]
 ##[app=addtoany]
 ##[data-flip-widget=shareflip]
@@ -240,6 +237,7 @@
 ##div[class*=social_slide]
 ##div[class*=socials-share]
 ##div[class="instagram-Share" i]
+##div[class="instagram_Share" i]
 ##div[class="instagramShare" i]
 ##div[class="socialshare" i]
 ##div[class="twitterShare" i]
@@ -281,9 +279,6 @@
 /sharing/reddit.$image
 /sharing/stumbleupon.$image
 /sharing/twitter.$image
-ikea.com##.social-media-bar__content
-pixivision.net##._floated-bottom-bar
-telesign.com##.share-area
 ~allrecipes.com##div[class*=sharebar]
 ~facebook.com,~facebookcorewwwi.onion##.btn[href*="facebook.com/sharer/"]
 ~facebook.com,~facebookcorewwwi.onion##a[href*="facebook.com/dialog/feed"]
@@ -327,6 +322,7 @@ telesign.com##.share-area
 ||platform.twitter.com/widgets/follow_button$subdocument
 ||platform.twitter.com/widgets/tweet_button$subdocument
 ||share.*.*^$image
+||sharing.*.*^$image
 ||social-plugins.line.me/widget/share?url=$subdocument
 ||softwareok.com/img/i_like_this.png?$image
 ||tumblr.com/share/$third-party
@@ -343,6 +339,8 @@ telesign.com##.share-area
 ##.twitter_share
 ##.facebook_share
 ##.shareToggle
+~twitter.com##a[title="Tweet this post"]
+~facebook.com,~facebookcorewwwi.onion##a[title="Share this post on Facebook"]
 
 ! NOT allowed to be generic
 pastebin.com##.h_800.tweet
@@ -352,6 +350,9 @@ hardreset.info##.modal-backdrop
 180.*##.social
 liberaldictionary.com##.share-post
 tass.com##.social__button
+ikea.com##.social-media-bar__content
+pixivision.net##._floated-bottom-bar
+telesign.com##.share-area
 
 ! For sites that have $generichide
 e24.no##.article-share
@@ -381,3 +382,4 @@ artstation.com##button[ng-click]
 !!! ##ul[class*="social-bar"] (https://wannabemagazine.com/)
 !!! ##div[class*="social-buttons"] (https://tara.se/)
 !!! ##div[class*="share-content"] (https://onsizzle.com/i/introducing-hoofshoes-imagine-horsing-around-in-these-beauties-%F0%9F%90%B4%F0%9F%90%90-91a5f7675ffa4a80b5b34be6e9edead4)
+!!! ##.social-links (https://highonandroid.com/android-smartphones/how-to-root-galaxy-s9-s9-on-android-9-0-pie/)
