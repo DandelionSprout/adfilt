@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 02March2020v1-Alpha
+! Version: 03March2020v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -351,6 +351,7 @@
 ~facebook.com,~facebookcorewwwi.onion##a[onclick*="facebook.com/sharer.php?"]
 ##.sharing-links
 ##button[class*="ShareOverlayButton" i]
+##div[data-hook=social-sharing]
 
 ! NOT allowed to be generic
 pastebin.com##.h_800.tweet
@@ -363,14 +364,15 @@ tass.com##.social__button
 ikea.com##.social-media-bar__content
 pixivision.net##._floated-bottom-bar
 telesign.com##.share-area
+kickstarter.com##.bttn-facebook
 
 ! For sites that have $generichide
 e24.no##.article-share
-ekstrabladet.dk##label[for*="ShareModal"]
+ekstrabladet.dk##label[for*=ShareModal]
 eurogamer.net##.social
-vg.no##button[aria-label*="Facebook"]
+vg.no##button[aria-label*=Facebook]
 tomshardware.co.uk##.share-bar
-knowyourmeme.com##a[class^="pinterest-save"]
+knowyourmeme.com##a[class^=pinterest-save]
 racefans.net##.sd-social
 
 ! Circumventing Artstation's use of "Display: block !important"
