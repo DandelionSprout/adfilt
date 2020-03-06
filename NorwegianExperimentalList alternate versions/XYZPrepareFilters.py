@@ -1581,6 +1581,12 @@ def prepare_shadowsocks(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^([0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]\.[0-9][0-9]?[0-9])$", 
+           r"IP-CIDR,\1/32,REJECT,no-resolve", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
