@@ -1605,7 +1605,7 @@ def prepare_rpz(lines) -> str:
         )
 
         line = re.sub(
-           r"^([a-z0-9].*)", 
+           r"^([a-z0-9*].*)", 
            r"\1 CNAME .", 
            line
         )
@@ -1652,7 +1652,7 @@ def prepare_unbound(lines) -> str:
         )
 
         line = re.sub(
-           r"^([a-z0-9].*)", 
+           r"^([a-z0-9*].*)", 
            r"local-zone: \"\1\" static", 
            line
         )
@@ -1699,7 +1699,7 @@ def prepare_minerblock(lines) -> str:
         )
 
         line = re.sub(
-           r"^([a-z0-9].*)", 
+           r"^([a-z0-9*].*)", 
            r"*://*.\1/*", 
            line
         )
