@@ -1,4 +1,4 @@
-! Version: 05March2020v2
+! Version: 06March2020v2
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -198,6 +198,7 @@ rett24.no##.p_banner-responsive
 ||euroads.no^
 ||eyjar.net/skrar/ads
 ||gratisxxx.no$image,domain=nakenprat.com
+||deiligejenter.no$image,domain=nakenprat.com
 ||helios.*.no
 ||i1media.no^
 ||isweb.no^$subdocument
@@ -297,6 +298,10 @@ tv2.no##.spklw-post-attr[data-pc]
 ||finn.no/distribution-carousel?$object,third-party
 ! https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
 ##.spklw-post-attr[data-recommendation-type=sprinkleit]
+! Copied over from the New AdAway list
+||admob.no^$third-party
+||admob.dk^$third-party
+||api.advista.no^$third-party
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -639,6 +644,9 @@ trening.no##.dfp-netboard
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 version2.dk###headersub
 installator.dk##.addon--ad
+nakenprat.com##.sidebarleft
+nakenprat.com#?##content:style(margin-left: 0px !important)
+nakenprat.com##.threadbit:not([id])
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources
@@ -970,9 +978,13 @@ vg.no#?#span:style(font-feature-settings: normal)
 newz.dk##.top-interstitial
 krs247.no#@##adsense
 tu.no,digi.no##.poster-placeholder
-vg.no##.ad
+vg.no,e24.no##.ad
 vgtv.no###player.pulse-isPauseAdVisible > .jw-overlays
 fuglelyder.net#@##banner_ad
+gulindex.no###cintmodal
+||panel.cint.com^$domain=gulindex.no
+jyllands-posten.dk##.bpTopPlacement
+finans.dk##.baPosition
 !#endif
 
 ! ——————————————————————————————————————————————————————————————————————————————————————————
@@ -1140,10 +1152,10 @@ fuglelyder.net#@##banner_ad
 ||rbaab.net^$empty,important
 ||rbppg.net^$empty,important
 ! IP addresses of servers notorious for hosting many of the sites above
+82.118.242.69$network
+136.243.73.30$network
 138.201.126.227$network
 156.236.126.173$network
-136.243.73.30$network
-82.118.242.69$network
 
 ! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 ! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
@@ -1240,5 +1252,14 @@ fuglelyder.net#@##banner_ad
 ||vmfodboldtoj.com^$empty,important
 ||minfodboldbutik.com^$empty,important
 5.39.217.206$network
-193.148.70.153$network
 5.39.221.180$network
+193.148.70.153$network
+
+! 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
+||desidert.no^
+||tomter.no^
+||brigitteheilmann.dk^
+!+ NOT_OPTIMIZED
+||storustovu.dk^
+!+ NOT_OPTIMIZED
+||campingnews.dk^

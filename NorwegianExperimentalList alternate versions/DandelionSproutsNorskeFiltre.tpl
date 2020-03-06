@@ -1,5 +1,5 @@
 msFilterList
-# Version: 05March2020v2-Beta
+# Version: 06March2020v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -62,6 +62,7 @@ msFilterList
 -d euroads.no
 -d eyjar.net ads
 -d gratisxxx.no
+-d deiligejenter.no
 -d i1media.no
 -d isweb.no
 -d klikk.no klikk.desktop-thirdparty.min.js
@@ -130,6 +131,10 @@ msFilterList
 # bt.no
 -d finn.no distribution-carousel?
 # https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
+# Copied over from the New AdAway list
+-d admob.no
+-d admob.dk
+-d api.advista.no
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
@@ -271,6 +276,7 @@ msFilterList
 # 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "+d doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
 # 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "+d doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
+-d panel.cint.com
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
@@ -407,10 +413,10 @@ msFilterList
 -d rbaab.net
 -d rbppg.net
 # IP addresses of servers notorious for hosting many of the sites above
+-d 82.118.242.69
+-d 136.243.73.30
 -d 138.201.126.227
 -d 156.236.126.173
--d 136.243.73.30
--d 82.118.242.69
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
@@ -505,5 +511,11 @@ msFilterList
 -d vmfodboldtoj.com
 -d minfodboldbutik.com
 -d 5.39.217.206
--d 193.148.70.153
 -d 5.39.221.180
+-d 193.148.70.153
+# 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
+-d desidert.no
+-d tomter.no
+-d brigitteheilmann.dk
+-d storustovu.dk
+-d campingnews.dk
