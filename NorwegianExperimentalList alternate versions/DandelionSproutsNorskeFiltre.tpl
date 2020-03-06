@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06March2020v2-Beta
+# Version: 06March2020v4-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -170,7 +170,7 @@ msFilterList
 # https://www.nettavisen.no/okonomi/3423875562.html
 # qxl.no
 # nickelodeon.no, tv2.dk, side3.no, klikk.no, zooom.no, adressa.no, blogg.no, kjarkinn.is
-# gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no
+# gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi.no
 # steigan.no, allers.no, icelandreview.com, resett.no
 # demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb.no
 # ba.no
@@ -221,6 +221,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
+@@.dk assets templates ads.png
 +d bondebladet.screen9.tv
 +d eurosport.*
 +d sixscissors.com
@@ -242,6 +243,7 @@ msFilterList
 # 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
 # Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
 -d dagligvarehandelen.no veil.png
+# dagbladet.no,elbil24.no
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
