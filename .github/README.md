@@ -11,6 +11,10 @@ And just in case anyone thinks I'm not serious about it, <b>I will no longer off
 
 ————————————————————————————
 
+Note for UXP browser users: Although this repo's lists are not made with UXP browsers like Pale Moon in mind, we do co-operate with and officially support the [uBlock Origin for Firefox Legacy](https://github.com/gorhill/uBlock-for-firefox-legacy) project to ensure underlying entry compatibility and conversions. Other UXP adblock extensions are not supported.
+
+————————————————————————————
+
 This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists, for use in adblock tools and the likes. GitHub was in mid-2017 by far the easiest way for laymen like me to store pure text files, which is a necessity to create subscribable lists.
 
 This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed considerable energy and effort into, for the enjoyment of all of us.
