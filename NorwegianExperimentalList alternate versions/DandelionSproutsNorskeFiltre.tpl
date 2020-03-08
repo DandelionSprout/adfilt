@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06March2020v4-Beta
+# Version: 08March2020v2-Beta
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -8,8 +8,7 @@ msFilterList
 # 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-# CRITICAL NOTE FOR PFBLOCKERNG USERS: This version of my list was never meant to be used with pfBlockerNG in the first place, and I was never asked or inquired about it before it was added to it. Instead I currently recommend https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AdawayHosts./This/has been fixed in fresh stock installations of ≥2.2.5_27. For all other pfBlockerNG users, please replace the list link manually.
-# If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
+# If you wish to remove cookie banners from Nordic websites, check out https://easylist-downloads.adblockplus.org/easylist-cookie.tpl (Can also be subscribed to from https://raw.githack.com/collinbarrett/FilterLists/master/data/TPLSubscriptionAssistant.html)
 # 🇳🇴 🇩🇰: ——— Reklamer ———
 # 🇳🇴🏞: ——— Reklamar ———
 # 🇮🇸: ——— Auglýsingar ———
@@ -110,6 +109,22 @@ msFilterList
 -d advertising.no
 -d fotbolti.net banners
 -d samfilm.codelab.is
+-d tvkampen.com banner*
+-d tvkampen.com unibet-lo
+-d 1819.is infosmall
+-d austurfrett.is banners
+-d austurfrett.is *augl.jpg
+-d feltet.dk wallpaper_1.jpg
+-d feltet.dk topbanner_*.jpg
+-d feltet.dk Feltet.dk
+-d feltet.dk *_300x60.gif
+-d cdn.rikstoto.no GameShop
+-d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
+-d karfan.is *-470x130*.jpg
+-d karfan.is *.gif
+-d karfan.is *300x250.jpg
+- vefauglysingar
+- blob:https://www.veier24.no/
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -251,6 +266,8 @@ msFilterList
 -d tipster.no embed
 # https://www.nettavisen.no/
 # https://www.ba.no/s/5-8-1221171
+-d vg.no tipster.png
+-d vgc.no betting-header.png
 # ——— Gamereactor + Viafree ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.

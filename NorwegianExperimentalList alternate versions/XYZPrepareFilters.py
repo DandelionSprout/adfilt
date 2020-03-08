@@ -868,7 +868,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^!.*PFBLOCKERNG.*", 
+           r"^#.*PFBLOCKERNG.*", 
            r"", 
            line
         )
@@ -894,6 +894,24 @@ def prepare_tpl(lines) -> str:
         line = re.sub(
            r"@@\..* [a-z0-9].*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\* ([a-z0-9])", 
+           r"- \1", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|([a-z0-9])", 
+           r"- \1", 
+           line
+        )
+
+        line = re.sub(
+           r"(.*)check out https://www\.i-dont-care-about-cookies\.eu/", 
+           r"\1check out https://easylist-downloads.adblockplus.org/easylist-cookie.tpl (Can also be subscribed to from https://raw.githack.com/collinbarrett/FilterLists/master/data/TPLSubscriptionAssistant.html)", 
            line
         )
 
@@ -999,6 +1017,18 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            r"!\+.*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\*/", 
+           r"./", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|([a-z0-9])", 
+           r".\1", 
            line
         )
 
