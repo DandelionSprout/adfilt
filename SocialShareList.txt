@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 07March2020v1-Alpha
+! Version: 08March2020v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -295,7 +295,7 @@
 ~mewe.com##div[class*=share-link]
 ~pinterest.*##.pinterest[href*="/pin/create/"]
 ~pinterest.*##a[class$=share-pinterest]
-~pinterest.*##a[href*="pinterest"][href*="/pin/create/b"]
+~pinterest.*##a[href*=pinterest][href*="/pin/create/b"]
 ~reddit.com##a[href*="://www.reddit.com/submit?"]
 ~tecmint.com,~ostechnix.com##.share
 ~tidssonen.no##div[class*=share-container]
@@ -315,10 +315,9 @@
 ||addthis.com/static/btn/sm-share*.gif
 ||apis.google.com/*/+1/fastbutton$subdocument
 ||assets.pinterest.com/js/pinit*^
-||facebook.com/*/plugins/share_button.php?app_id$subdocument
 ||facebook.com/*lugins/like.php$subdocument
-||facebook.com/plugins/page.php$subdocument
-||facebook.com/plugins/share_button$subdocument
+||facebook.com/*lugins/page.php$subdocument
+||facebook.com/*lugins/share_button$subdocument
 ||linkedin.com/shareArticle$third-party
 ||lists.malwarepatrol.net/images/searchbg.gif$image
 ||platform.twitter.com/widgets/follow_button$subdocument
@@ -353,6 +352,8 @@
 ##button[class*="ShareOverlayButton" i]
 ##div[data-hook=social-sharing]
 ##.shr-opn
+##li[class$=-share-toggle]
+||static.addtoany.com/buttons^$image
 
 ! NOT allowed to be generic
 pastebin.com##.h_800.tweet
