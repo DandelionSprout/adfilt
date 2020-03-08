@@ -578,6 +578,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*[a-z0-9]//\$.*$", 
+           "", 
+           line
+        )
+
     # TO-DO: Figure out how to make this NOT apply to lines that have the character "!" in them.
         line = re.sub(
            "/", 
@@ -906,6 +912,12 @@ def prepare_tpl(lines) -> str:
         line = re.sub(
            r"^\|([a-z0-9])", 
            r"- \1", 
+           line
+        )
+
+        line = re.sub(
+           r"^-d (.*)", 
+           r"-d \1\n-d www.\1", 
            line
         )
 
