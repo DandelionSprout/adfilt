@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08March2020v2-Beta
+# Version: 08March2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -8,6 +8,7 @@ msFilterList
 # 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+# Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.
 # If you wish to remove cookie banners from Nordic websites, check out https://easylist-downloads.adblockplus.org/easylist-cookie.tpl (Can also be subscribed to from https://raw.githack.com/collinbarrett/FilterLists/master/data/TPLSubscriptionAssistant.html)
 # 🇳🇴 🇩🇰: ——— Reklamer ———
 # 🇳🇴🏞: ——— Reklamar ———
@@ -18,7 +19,6 @@ msFilterList
 # 🇬🇧: ——— Advertisements ———
 - contentMarketing
 -d rett24.no inline
--d www.rett24.no inline
 - -bazaar-
 - _bm abd
 - annonsar
@@ -37,178 +37,92 @@ msFilterList
 - reklame
 - resources dfp
 -d acdn.adnxs.com ast.js
--d www.acdn.adnxs.com ast.js
 -d acdn.adnxs.com ast.js
--d www.acdn.adnxs.com ast.js
 -d ad.no.doubleclick.net
--d www.ad.no.doubleclick.net
 -d adext.inkclub.com
--d www.adext.inkclub.com
 -d ads.no
--d www.ads.no
 -d adservicemedia.dk
--d www.adservicemedia.dk
 -d akamai.net
--d www.akamai.net
 -d akamaihd.net
--d www.akamaihd.net
 -d amino.dk 240x140-forside-hardcoded*.jpg
--d www.amino.dk 240x140-forside-hardcoded*.jpg
 -d austevollforlag.no yachtmarine2014.
--d www.austevollforlag.no yachtmarine2014.
 -d banner.landbrugsavisen.dk reklame.aspx
--d www.banner.landbrugsavisen.dk reklame.aspx
 -d bannere.oslonett.no
--d www.bannere.oslonett.no
 -d boligkanalen-maestro-new.azurewebsites.net
--d www.boligkanalen-maestro-new.azurewebsites.net
 -d bornholm.nu banner
--d www.bornholm.nu banner
 -d brandstudio.inventory.schibsted.io
--d www.brandstudio.inventory.schibsted.io
 -d cluster.chart.dk
--d www.cluster.chart.dk
 -d cmt.no
--d www.cmt.no
 -d damoh.vgtv.no hic_qos
--d www.damoh.vgtv.no hic_qos
 -d delivered-by-madington.com
--d www.delivered-by-madington.com
 -d dotbanner.dk
--d www.dotbanner.dk
 -d dust2.dk banners
--d www.dust2.dk banners
 -d easy-ad.no
--d www.easy-ad.no
 -d emerio.no
--d www.emerio.no
 -d euroads.no
--d www.euroads.no
 -d eyjar.net ads
--d www.eyjar.net ads
 -d gratisxxx.no
--d www.gratisxxx.no
 -d deiligejenter.no
--d www.deiligejenter.no
 -d i1media.no
--d www.i1media.no
 -d isweb.no
--d www.isweb.no
 -d klikk.no klikk.desktop-thirdparty.min.js
--d www.klikk.no klikk.desktop-thirdparty.min.js
 -d matriell.dm-storage.no
--d www.matriell.dm-storage.no
 -d media.sonymusic.no *.html
--d www.media.sonymusic.no *.html
 -d myad.no
--d www.myad.no
 -d nettklikk.no
--d www.nettklikk.no
 -d norskenettsider.no ageras-banner.jpg
--d www.norskenettsider.no ageras-banner.jpg
 -d norskenettsider.no remember-banner-2016.jpg
--d www.norskenettsider.no remember-banner-2016.jpg
 -d nvnytt.no *annonse-
--d www.nvnytt.no *annonse-
 -d openadex.dk
--d www.openadex.dk
 -d piwik.onlinemagasinet.no
--d www.piwik.onlinemagasinet.no
 -d primetime.ad.primetime.net
--d www.primetime.ad.primetime.net
 -d sannsyn.com
--d www.sannsyn.com
 -d soda.is
--d www.soda.is
 -d ssl.p.jwpcdn.com freewheel.js
--d www.ssl.p.jwpcdn.com freewheel.js
 -d ssl.p.jwpcdn.com jwpsrv.js
--d www.ssl.p.jwpcdn.com jwpsrv.js
 -d ssl.p.jwpcdn.com sharing.js
--d www.ssl.p.jwpcdn.com sharing.js
 -d ssl.p.jwpcdn.com vast.js
--d www.ssl.p.jwpcdn.com vast.js
 -d track.adform.net
--d www.track.adform.net
 -d track.adform.net Banners
--d www.track.adform.net Banners
 -d tracking-genesisaffiliates.com
--d www.tracking-genesisaffiliates.com
 -d tvshop.com tradedoubler_files
--d www.tvshop.com tradedoubler_files
 -d vevlysingar.fo
--d www.vevlysingar.fo
 -d viasport-assets.mtg-api.com comScore-*.js
--d www.viasport-assets.mtg-api.com comScore-*.js
 -d vikari.is frjalsi-lif*.png
--d www.vikari.is frjalsi-lif*.png
 -d webclick.no
--d www.webclick.no
 -d webhotell.enivest.no
--d www.webhotell.enivest.no
 -d feltet.dk Feltet.dk
--d www.feltet.dk Feltet.dk
 -d langrenn.com getfile.php
--d www.langrenn.com getfile.php
 -d dnitv.com
--d www.dnitv.com
 - annonse_
 -d tv2a.dk
--d www.tv2a.dk
 -d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
--d www.tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
 -d heartbeat.airserve.net
--d www.heartbeat.airserve.net
 -d static.airserve.net
--d www.static.airserve.net
 -d cdnboligkanalen.azureedge.net
--d www.cdnboligkanalen.azureedge.net
 -d tankeogteknikk.no
--d www.tankeogteknikk.no
 -d adservice.dk
--d www.adservice.dk
 -d mediasense.dk
--d www.mediasense.dk
 -d easy-ads.dk
--d www.easy-ads.dk
 -d 3.248.18.175
--d www.3.248.18.175
 -d adframe.no
--d www.adframe.no
 -d adstream.no
--d www.adstream.no
 -d advertising.no
--d www.advertising.no
 -d fotbolti.net banners
--d www.fotbolti.net banners
 -d samfilm.codelab.is
--d www.samfilm.codelab.is
 -d tvkampen.com banner*
--d www.tvkampen.com banner*
 -d tvkampen.com unibet-lo
--d www.tvkampen.com unibet-lo
 -d 1819.is infosmall
--d www.1819.is infosmall
 -d austurfrett.is banners
--d www.austurfrett.is banners
 -d austurfrett.is *augl.jpg
--d www.austurfrett.is *augl.jpg
 -d feltet.dk wallpaper_1.jpg
--d www.feltet.dk wallpaper_1.jpg
 -d feltet.dk topbanner_*.jpg
--d www.feltet.dk topbanner_*.jpg
 -d feltet.dk *_300x60.gif
--d www.feltet.dk *_300x60.gif
 -d cdn.rikstoto.no GameShop
--d www.cdn.rikstoto.no GameShop
 -d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
--d www.youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
 -d karfan.is *-470x130*.jpg
--d www.karfan.is *-470x130*.jpg
 -d karfan.is *.gif
--d www.karfan.is *.gif
 -d karfan.is *300x250.jpg
--d www.karfan.is *300x250.jpg
 - vefauglysingar
 - blob:https://www.veier24.no/
 # — — — — —
@@ -216,7 +130,6 @@ msFilterList
 # 🇬🇧: Generic entries that have sources
 +d vgtv.no
 -d adnxs.com
--d www.adnxs.com
 # framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
 # (Exception: opp.no)
 # https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
@@ -232,15 +145,11 @@ msFilterList
 # tv2.no
 # bt.no
 -d finn.no distribution-carousel?
--d www.finn.no distribution-carousel?
 # https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
 # Copied over from the New AdAway list
 -d admob.no
--d www.admob.no
 -d admob.dk
--d www.admob.dk
 -d api.advista.no
--d www.api.advista.no
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
@@ -249,13 +158,9 @@ msFilterList
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
 -d 730.no sonymusic
--d www.730.no sonymusic
 -d bilnorge.no *emty.gif
--d www.bilnorge.no *emty.gif
 -d gaysir.no bb_inline
--d www.gaysir.no bb_inline
 -d static.vg.no admark_top.gif
--d www.static.vg.no admark_top.gif
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -286,14 +191,12 @@ msFilterList
 # ba.no
 # https://github.com/DandelionSprout/adfilt/pull/53
 -d services.api.no bazaar
--d www.services.api.no bazaar
 # aftenbladet.no
 # avisalofoten.no
 # blv.no nyheter kan-bruke-23-millioner-pa-the-whale-undersokelsene
 # https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
 # http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
 -d 85.17.76.181
--d www.85.17.76.181
 # https://krs247.no/
 # lsk.no
 # 🇳🇴: ——— Tomme skillebokser ———
@@ -305,13 +208,9 @@ msFilterList
 # 🇮🇸: ——— Truflanda baksýnsmyndir ———
 # 🇬🇧: ——— Distracting background images ———
 -d images.media.xxlsports.com bg.jpg
--d www.images.media.xxlsports.com bg.jpg
 -d platekompaniet.no background.png
--d www.platekompaniet.no background.png
 -d pepcall.no bakgrunn-forside.jpg
--d www.pepcall.no bakgrunn-forside.jpg
 -d tv2.no tv2-background.svg
--d www.tv2.no tv2-background.svg
 # 🇳🇴: ——— Fiksing av knekte sider ———
 # 🇩🇰: ——— Fiksing af knækte websider ———
 # 🇮🇸: ——— Óbrot ———
@@ -329,7 +228,6 @@ msFilterList
 # ——— Caused by «Fanboy's Annoyances List» ———
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
--d www.ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 # https://github.com/easylist/easylist/issues/1861
 +d _prebid_
@@ -342,15 +240,9 @@ msFilterList
 +d eurosport.*
 +d sixscissors.com
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
--d www.dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
--d www.elderlyscissors.com
 -d imasdk.googleapis.com pal.js
--d www.imasdk.googleapis.com pal.js
--d vg.no AdblockModal
--d www.vg.no AdblockModal
 -d aftenposten.no ads-
--d www.aftenposten.no ads-
 +d bildeler.name
 +d reservedele.name
 # 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
@@ -364,23 +256,17 @@ msFilterList
 # 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
 # Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
 -d dagligvarehandelen.no veil.png
--d www.dagligvarehandelen.no veil.png
 # dagbladet.no,elbil24.no
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
 -d widget.norsktippingpartner.no
--d www.widget.norsktippingpartner.no
 -d widget.tippebannere.no
--d www.widget.tippebannere.no
 -d tipster.no embed
--d www.tipster.no embed
 # https://www.nettavisen.no/
 # https://www.ba.no/s/5-8-1221171
 -d vg.no tipster.png
--d www.vg.no tipster.png
 -d vgc.no betting-header.png
--d www.vgc.no betting-header.png
 # ——— Gamereactor + Viafree ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
@@ -390,15 +276,10 @@ msFilterList
 - prerolls
 - viewability.
 -d media.gamereactor.dk prerolls
--d www.media.gamereactor.dk prerolls
 -d openx.gamereactor.dk multi.php?
--d www.openx.gamereactor.dk multi.php?
 -d ssl.p.jwpcdn.com gapro.js
--d www.ssl.p.jwpcdn.com gapro.js
 -d client-stream-events.mtg-api.com
--d www.client-stream-events.mtg-api.com
 -d freewheel-mtgx-tv.akamaized.net
--d www.freewheel-mtgx-tv.akamaized.net
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer for dem vil bli ordrett godkjent.
 # 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries for them will be accepted verbatim.
 - *-annonse-*
@@ -413,7 +294,6 @@ msFilterList
 # 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "+d doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 -d panel.cint.com
--d www.panel.cint.com
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
@@ -429,406 +309,230 @@ msFilterList
 - gratis-reisebilletter.
 - KiwiErbjudanden1
 -d trackvoluum.com
--d www.trackvoluum.com
 -d jagerjack.com
--d www.jagerjack.com
 - pakkerlevering
 -d posten.club
--d www.posten.club
 -d kundklubb-se.com
--d www.kundklubb-se.com
 -d prisjakt.org
--d www.prisjakt.org
 -d postnord-norge.com
--d www.postnord-norge.com
 -d 102.112.2o7.net
--d www.102.112.2o7.net
 -d tromselementbygg.no
--d www.tromselementbygg.no
 -d no.zxxyw.com
--d www.no.zxxyw.com
 -d apple-account-locked.losjevegen.no
--d www.apple-account-locked.losjevegen.no
 -d arvetellefsen.no curry
--d www.arvetellefsen.no curry
 -d holmedalblikk.no
--d www.holmedalblikk.no
 - dnb11111
 -d nymelding.com
--d www.nymelding.com
 -d mrcal365.com
--d www.mrcal365.com
 -d ultimate-tech-products.myshopify.com
--d www.ultimate-tech-products.myshopify.com
 -d look-like-star.myshopify.com
--d www.look-like-star.myshopify.com
 -d limitedvoucher.com
--d www.limitedvoucher.com
 -d com-airs1.com
--d www.com-airs1.com
 -d pensjonistferie.no
--d www.pensjonistferie.no
 -d postuksus.com
--d www.postuksus.com
 -d 52.216.146.90
--d www.52.216.146.90
 -d 92.42.104.146
--d www.92.42.104.146
 -d beatsapple.top
--d www.beatsapple.top
 -d jimmychoostore.top
--d www.jimmychoostore.top
 -d hervelegeroutletusa.com
--d www.hervelegeroutletusa.com
 -d replicapatekphilippe.com
--d www.replicapatekphilippe.com
 -d hot-rap-beats.top
--d www.hot-rap-beats.top
 -d replicarolexyachtmaster.com
--d www.replicarolexyachtmaster.com
 -d secureriches.com
--d www.secureriches.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
 # https://www.tv2.no/nyheter/10493336/
 -d rnbinance.com
--d www.rnbinance.com
 -d brightertrade.com
--d www.brightertrade.com
 # https://www.nrk.no/ytring/1.14496024
 -d cost2buy.net
--d www.cost2buy.net
 # https://www.nrk.no/norge/1.14511067
 -d com-fryd.com
--d www.com-fryd.com
 -d com-norwegian.com
--d www.com-norwegian.com
 # https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
 -d ruter.top
--d www.ruter.top
 # https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
 -d 101mesh.com
--d www.101mesh.com
 -d gokkw.com
--d www.gokkw.com
 -d earnmoneyglobal.com
--d www.earnmoneyglobal.com
 # https://www.datahjelperne.no/stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel/
 -d trendyn.me
--d www.trendyn.me
 # https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
 # https://www.datahjelperne.no/falske-telenor-undersokelser/
 -d surveryrewards1.com
--d www.surveryrewards1.com
 # https://www.nrk.no/mr/1.14649436
 -d pprfct.com
--d www.pprfct.com
 # https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
 -d liveshopdealz.com
--d www.liveshopdealz.com
 # https://www.nrk.no/livsstil/1.14732503
 -d elkjop*.club
--d www.elkjop*.club
 # https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 - css *sparebank1.no
 # https://www.faktisk.no/notiser/Ly/nei-sophie-elise-har-ikke-anbefalt-kryptovaluta-program
 -d getheretecblogz.me
--d www.getheretecblogz.me
 # https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
 -d phosphox.com
--d www.phosphox.com
 -d nodzoom.com
--d www.nodzoom.com
 # https://www.faktisk.no/faktasjekker/geo/nei-skam-tarjei-har-ikke-tjent-millioner-pa-bitcoin-program
 -d affilicircle.com
--d www.affilicircle.com
 # https://www.faktisk.no/notiser/ql/nei-du-far-ikke-rayban-briller-til-22299-kr-pa-denne-nettsiden
 -d rbgeg.com
--d www.rbgeg.com
 -d rbkbb.com
--d www.rbkbb.com
 # https://www.facebook.com/viralspiralen/posts/2494251397311027
 -d addmoviesnow.com
--d www.addmoviesnow.com
 # https://www.facebook.com/viralspiralen/posts/2367894249946743
 -d grabdiscountdeals.com
--d www.grabdiscountdeals.com
 # https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
 -d com-dk.com
--d www.com-dk.com
 # https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
 -d com-usx.com
--d www.com-usx.com
 # https://www.mm.dk/tjekdet/artikel/norwegian-billetter-til-valgfri-destination-er-snyd-og-bedrag
 -d bondiblue.co.uk
--d www.bondiblue.co.uk
 # https://www.mm.dk/tjekdet/artikel/geggo-har-ikke-lanceret-ny-skoenhedscreme22
 -d organiclife24.info
--d www.organiclife24.info
 # https://www.mm.dk/tjekdet/artikel/overrasket-bjarne-riis-kender-intet-til-investering-i-bitcoin-platform
 -d ucrhealthyhearts.com
--d www.ucrhealthyhearts.com
 # https://www.mm.dk/tjekdet/artikel/svindel-breder-sig-ogsaa-lars-larsen-misbruges-nu-i-bitcoin-fup
 -d myk-news.com
--d www.myk-news.com
 # https://www.mm.dk/tjekdet/artikel/tidligere-lego-chef-misbruges-i-bitcoin-svindelnummer
 -d meretro.com
--d www.meretro.com
 # https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
--d www.hcliips.com
 # https://www.mm.dk/tjekdet/artikel/han-afviser-at-have-investeret-500-mio-i-bitcoin-platform-graensende-til-humor
 -d bestphoneapplication.com
--d www.bestphoneapplication.com
 # https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
 -d vision-hey.club
--d www.vision-hey.club
 # https://www.mm.dk/tjekdet/artikel/fup-dovne-robert-har-ikke-tjent-en-boejet-5-oere-paa-bitcoins
 -d marissatomei.com
--d www.marissatomei.com
 # https://www.mm.dk/tjekdet/artikel/fupartikel-haevder-at-rasmus-paludan-er-blevet-rig-paa-investeringer-i-bitcoins
 -d marymaclane.net
--d www.marymaclane.net
 # https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
 -d top-topic.co
--d www.top-topic.co
 # https://www.nrk.no/troms/1.14788086
 -d geometra-bologna.it
--d www.geometra-bologna.it
 # https://www.nrk.no/nyheter/1.14793929
 -d sky.gs
--d www.sky.gs
 # https://www.online.no/sikkerhet/falsk-online-nettside
 -d is-a-personaltrainer.com
--d www.is-a-personaltrainer.com
 # https://nyheder.tv2.dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
 -d rigspolitiet.com
--d www.rigspolitiet.com
 -d nemid.org
--d www.nemid.org
 # https://www.tv2.no/nyheter/11203952/
 -d topgadgetboom.com
--d www.topgadgetboom.com
 # https://www.faktisk.no/faktasjekker/vw8/erik-gikk-fra-arbeidsledig-til-millionaer-pa-8-uker
 -d ocgadgets.com
--d www.ocgadgets.com
 -d ocgadgetss.myshopify.com
--d www.ocgadgetss.myshopify.com
 # https://www.mm.dk/tjekdet/artikel/nej-mads-mikkelsen-har-stadig-ikke-skraemt-de-store-banker-med-bitcoins
 -d dailynews.to
--d www.dailynews.to
 -d onelifetechno.com
--d www.onelifetechno.com
 # https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
 -d rbaab.net
--d www.rbaab.net
 -d rbppg.net
--d www.rbppg.net
 # IP addresses of servers notorious for hosting many of the sites above
 -d 82.118.242.69
--d www.82.118.242.69
 -d 136.243.73.30
--d www.136.243.73.30
 -d 138.201.126.227
--d www.138.201.126.227
 -d 156.236.126.173
--d www.156.236.126.173
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 # Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
 -d adidasko.com
--d www.adidasko.com
 -d airmaxskobillige.com
--d www.airmaxskobillige.com
 -d allergyfl.com
--d www.allergyfl.com
 -d apvoc-ga.com
--d www.apvoc-ga.com
 -d assassinfitness.com
--d www.assassinfitness.com
 -d benshermanoslo.com
--d www.benshermanoslo.com
 -d billigesalg.com
--d www.billigesalg.com
 -d bncentertainment.com
--d www.bncentertainment.com
 -d bostongrnhsflowers.com
--d www.bostongrnhsflowers.com
 -d caperforaciones.com
--d www.caperforaciones.com
 -d charpente-ramel.com
--d www.charpente-ramel.com
 -d coralls.com
--d www.coralls.com
 -d crossfiterada.com
--d www.crossfiterada.com
 -d crownedwithlaurels.com
--d www.crownedwithlaurels.com
 -d daradis.com
--d www.daradis.com
 -d denningwelldrilling.com
--d www.denningwelldrilling.com
 -d drakternorge.com
--d www.drakternorge.com
 -d drcarolyngroff.com
--d www.drcarolyngroff.com
 -d dunjakke-no.com
--d www.dunjakke-no.com
 -d easyliving4you.com
--d www.easyliving4you.com
 -d eurosko.net
--d www.eurosko.net
 -d fatalfailblog.com
--d www.fatalfailblog.com
 -d festmusikk.com
--d www.festmusikk.com
 -d fotballsko-salg.com
--d www.fotballsko-salg.com
 -d fotballskotilbud.com
--d www.fotballskotilbud.com
 -d gantoslo.com
--d www.gantoslo.com
 -d godeskonettbutikk.com
--d www.godeskonettbutikk.com
 -d gsport.com
--d www.gsport.com
 -d hernoclothing.com
--d www.hernoclothing.com
 -d hollisternorge.com
--d www.hollisternorge.com
 -d horizonbagel.com
--d www.horizonbagel.com
 -d jakkesalgs.com
--d www.jakkesalgs.com
 -d jakkesnorge.com
--d www.jakkesnorge.com
 -d joseph-holland.com
--d www.joseph-holland.com
 -d jessicaivory.com
--d www.jessicaivory.com
 -d legarralazcoz.com
--d www.legarralazcoz.com
 -d lindseysopticians.com
--d www.lindseysopticians.com
 -d linkshe.com
--d www.linkshe.com
 -d lrgst.com
--d www.lrgst.com
 -d manasporthorse.com
--d www.manasporthorse.com
 -d mayor4london.com
--d www.mayor4london.com
 -d mbtnorge.com
--d www.mbtnorge.com
 -d meladermfacts.com
--d www.meladermfacts.com
 -d mncprobuild.com
--d www.mncprobuild.com
 -d moebel-thiems.com
--d www.moebel-thiems.com
 -d moslt.com
--d www.moslt.com
 -d moteshoes.com
--d www.moteshoes.com
 -d mrarmstrongsclass.com
--d www.mrarmstrongsclass.com
 -d mudancaslvc.com
--d www.mudancaslvc.com
 -d museuw.com
--d www.museuw.com
 -d mycraftypad.com
--d www.mycraftypad.com
 -d nasajones.com
--d www.nasajones.com
 -d nikebutikks.com
--d www.nikebutikks.com
 -d no.moncleritalien.com
--d www.no.moncleritalien.com
 -d nordartisan.com
--d www.nordartisan.com
 -d norfotball.com
--d www.norfotball.com
 -d norgefotball.com
--d www.norgefotball.com
 -d norge.parkaoutdoor.com
--d www.norge.parkaoutdoor.com
 -d norgejakke.com
--d www.norgejakke.com
 -d norgejakkerbutikk.com
--d www.norgejakkerbutikk.com
 -d norgeshoes.com
--d www.norgeshoes.com
 -d oflike.com
--d www.oflike.com
 -d omgrm.com
--d www.omgrm.com
 -d ontariokitcarbuilders.com
--d www.ontariokitcarbuilders.com
 -d parajumpers-salg.com
--d www.parajumpers-salg.com
 -d parajumpersitoutlet.com
--d www.parajumpersitoutlet.com
 -d parajumpersnettbutikk.com
--d www.parajumpersnettbutikk.com
 -d parajumpersnorway.com
--d www.parajumpersnorway.com
 -d parajumperssalg.com
--d www.parajumperssalg.com
 -d pjs.outlet.com
--d www.pjs.outlet.com
 -d popeurope.com
--d www.popeurope.com
 -d quiltstudiolaren.com
--d www.quiltstudiolaren.com
 -d retoaudi.com
--d www.retoaudi.com
 -d skoeccosandaler.com
--d www.skoeccosandaler.com
 -d skonmdnorge.com
--d www.skonmdnorge.com
 -d sykkeltrøye.com
--d www.sykkeltrøye.com
 -d ssrodeolivestock.com
--d www.ssrodeolivestock.com
 -d swellsup.com
--d www.swellsup.com
 -d tiranaaquapark-eg.com
--d www.tiranaaquapark-eg.com
 -d tobiascelebritymusicevents.com
--d www.tobiascelebritymusicevents.com
 -d um-bs.com
--d www.um-bs.com
 -d vansnorge.com
--d www.vansnorge.com
 # 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
--d www.nofotballshop.com
 -d nofotballstore.com
--d www.nofotballstore.com
 -d nodrakts.com
--d www.nodrakts.com
 -d dkfodboldstore.com
--d www.dkfodboldstore.com
 -d vmfodboldtoj.com
--d www.vmfodboldtoj.com
 -d minfodboldbutik.com
--d www.minfodboldbutik.com
 -d 5.39.217.206
--d www.5.39.217.206
 -d 5.39.221.180
--d www.5.39.221.180
 -d 193.148.70.153
--d www.193.148.70.153
 # 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 -d desidert.no
--d www.desidert.no
 -d tomter.no
--d www.tomter.no
 -d brigitteheilmann.dk
--d www.brigitteheilmann.dk
 -d storustovu.dk
--d www.storustovu.dk
 -d campingnews.dk
--d www.campingnews.dk

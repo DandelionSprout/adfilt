@@ -584,6 +584,30 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*\$1p$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r".*\$1p,.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r".*,1p$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r".*,1p,.*", 
+           "", 
+           line
+        )
+
     # TO-DO: Figure out how to make this NOT apply to lines that have the character "!" in them.
         line = re.sub(
            "/", 
@@ -725,7 +749,7 @@ def prepare_tpl(lines) -> str:
 
         line = re.sub(
            r"(# Version: .*[0-9][A-Z].*)", 
-           r"\1-Beta", 
+           r"\1-Alpha", 
            line
         )
 
@@ -875,7 +899,7 @@ def prepare_tpl(lines) -> str:
 
         line = re.sub(
            r"^#.*PFBLOCKERNG.*", 
-           r"", 
+           r"# Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.", 
            line
         )
 
@@ -912,12 +936,6 @@ def prepare_tpl(lines) -> str:
         line = re.sub(
            r"^\|([a-z0-9])", 
            r"- \1", 
-           line
-        )
-
-        line = re.sub(
-           r"^-d (.*)", 
-           r"-d \1\n-d www.\1", 
            line
         )
 
