@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08March2020v2-Alpha
+# Version: 10March2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -125,6 +125,7 @@ msFilterList
 -d karfan.is *300x250.jpg
 - vefauglysingar
 - blob:https://www.veier24.no/
+-d samler.no banners
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources

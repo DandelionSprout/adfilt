@@ -82,7 +82,7 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            "viaplay.\*#", 
-           "viaplay.no,viaplay.dk#", 
+           "viaplay.no,viaplay.dk,viaplay.is#", 
            line
         )
 
@@ -266,7 +266,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            "viaplay.\*#", 
-           "viaplay.no,viaplay.dk#", 
+           "viaplay.no,viaplay.dk,viaplay.is#", 
            line
         )
 
