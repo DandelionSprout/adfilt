@@ -1,4 +1,4 @@
-! Version: 10March2020v2
+! Version: 12March2020v3
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 12 hours
@@ -232,7 +232,6 @@ rett24.no##.p_banner-responsive
 ||langrenn.com/getbanner.php/*/getfile.php/$image
 ||dnitv.com^$media,domain=dplay.dk
 dplay.*##[class^=notificationArea]
-utrop.no##.lazyautosizes
 utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
 /annonse_$image
 !+ NOT_OPTIMIZED
@@ -274,6 +273,9 @@ bt.no##section[class$=-ad]
 ||cdn.rikstoto.no/expert/GameShop^$subdocument,3p,domain=~tipster.no
 ||youtube.com/embed/*&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1$subdocument
 ||karfan.is/*-470x130*.jpg^
+||utrop.no/wp-content/uploads/*.gif$image
+||utrop.no/wp-content/uploads/*/Banner_utrop$image
+||adr.kulingen.no^
 !+ NOT_OPTIMIZED
 ||karfan.is/wp-content/uploads/*.gif^
 ||karfan.is/*300x250.jpg^
@@ -340,11 +342,10 @@ tv2.no##.spklw-post-attr[data-pc]
 ###ad_topp
 1001spill.no###footer
 1001spill.no##.omega.grid_6
-180.no##td[class^=frame-shadow-]
+180.*##td[class^=frame-shadow-]
 1881.no##.ad-sleepy
 730.no#?#.g-10:-abp-contains(Artikkelen fortsetter )
 abcnyheter.no#?#.o-grid__col:-abp-has(.c-ad)
-abcnyheter.no#?#.o-grid__col:-abp-has(article[id^=ad_native_])
 aftenbladet.no##.article-content:style(padding: 0 0 0 0)
 aftenposten.no##.standard-ad-container
 aftenposten.no,hockeymagasinet.dk###top-ads-container
@@ -604,7 +605,7 @@ yrkesbil.no###side > div:nth-of-type(1)
 ||static.vg.no/css/admark_top.gif
 gamer.no##.aaa-placeholder
 google.*###cnsi ~ [jsaction*=dismiss]
-180.no##.ai-top-ad-outer
+180.*##.ai-top-ad-outer
 forum.klikk.no##.ehm-megaboard
 tv2.dk##.tc_ad
 finn.no##div[id^=netboard_]
@@ -667,6 +668,11 @@ nakenprat.com#?##content:style(margin-left: 0px !important)
 nakenprat.com##.threadbit:not([id])
 1001spill.no##.layout-two-columns-aside
 kreativtforum.no##.sidebar-box
+totensblad.no##.mobile-banner-widget
+sva.no##.code-block-1
+norskkalender.no##.spacerDesktop
+180.*##.ad-min-height
+180.*##.cc-top-ad-outer
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources

@@ -1,5 +1,5 @@
 msFilterList
-# Version: 10March2020v2-Alpha
+# Version: 12March2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -121,6 +121,9 @@ msFilterList
 -d cdn.rikstoto.no GameShop
 -d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
 -d karfan.is *-470x130*.jpg
+-d utrop.no *.gif
+-d utrop.no Banner_utrop
+-d adr.kulingen.no
 -d karfan.is *.gif
 -d karfan.is *300x250.jpg
 - vefauglysingar

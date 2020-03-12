@@ -147,6 +147,12 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
+           "180.\*#", 
+           "180.no,180.dk#", 
+           line
+        )
+
+        line = re.sub(
            "redirect=noopmp4-1s", 
            "mp4", 
            line
@@ -327,6 +333,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            "prisjakt.\*,", 
            "prisjakt.no,", 
+           line
+        )
+
+        line = re.sub(
+           "180.\*#", 
+           "180.no,180.dk#", 
            line
         )
 
