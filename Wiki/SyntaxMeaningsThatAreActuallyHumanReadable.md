@@ -70,6 +70,7 @@
 * `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
+* `$empty`: Results in a fake empty page being loaded, instead of an error page.
 
 ### Nano Adblocker and uBlock Origin only:
 #### Hiding
@@ -78,8 +79,9 @@
 * `:xpath`: An entry written with the very advanced Xpath syntax.
 * `##^.element`: Blocks page elements before they've even been loaded, based on their values in *View source* instead of their F12 ones. **Only** works in Firefox.
 * `##^script:has-text` (prev. `##script:contains`): Intends to prevent inline scripts from starting up, based on the content of the scripts in the F12 filetree. Also only works in Firefox.
-* `:nth-ancestor`: Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree. Equivalent to `:xpath(../..)`, but with normal numbers.
-* `@@||` + `$ghide`: Same as `@@||` + `$generichide`. 
+* `:upward` (prev. `:nth-ancestor`): Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree. Equivalent to `:xpath(../..)`, but with normal numbers. The ability to look for specific element names at *any* indentation amount, is being tested in uBO beta versions.
+* `:min-text-length`: Appears to select elements whose underlying source content has at least that amount of characters. Is completely disassociated from the actual on-page visible text by an order of several magnitudes.
+* `:watch-attr`: Claims to be able to reconsider a blocking if something new happens to the element (e.g. to its element types).
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
 * `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
@@ -88,6 +90,7 @@
 * `$xhr`: Same as `$xmlhttprequest`.
 * `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup` + `$document`.
 * `$redirect-rule`: Similar to `$redirect`, but is only applied if it's already blocked by *another* entry or dynamic rule(set).
+* `@@||` + `$ghide`: Same as `@@||` + `$generichide`.
 
 ### Adblock Plus, Adblock and AdGuard only:
 * `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API. The uBO equivalent seems to be `##+js(nowebrtc)`, but conversion is not done automatically.
@@ -112,7 +115,6 @@
 * `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file. Requires heavy privileges.
 * `:properties`: Claims to be similar to `:-abp-properties`, but is incompatible with it.
 #### Blocking
-* `$empty`: Results in a fake empty page being loaded, instead of an error page.
 * `$match-case`: Makes the criteria case-sensitive.
 * `$$script`: Uses very advanced criteria to block scripts that meet them.
 * `$cookie`: Blocks cookies.
