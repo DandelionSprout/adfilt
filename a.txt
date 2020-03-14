@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 Imres filtre
-! Version: 13March2020v1-Personal
+! Version: 14March2020v1-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include AdRemovalListForUnusualAds.txt
@@ -255,6 +255,7 @@ ekstrabladet.dk##a[href*=viser-sin-kropp]
 ekstrabladet.dk##a[href*=stoerre-bryster]
 ekstrabladet.dk##a[href*=fraek-fest]
 ekstrabladet.dk##a[href*="bordel/"]
+ekstrabladet.dk##a[href*=bryst-beskyldning]
 ekstrabladet.dk#?#.section-area:-abp-contains(          Sex og samliv)
 ekstrabladet.dk#?#.section-area:-abp-contains(          Sex og samliv) + .section-area
 
@@ -309,7 +310,67 @@ twitter.com#?#.r-1j63xyz:-abp-contains(/Monkook/i)
 twitter.com#?#.r-1j63xyz:-abp-contains(/BTS_twt/i)
 twitter.com#?#.r-1j63xyz:-abp-contains(/ bts/i)
 twitter.com#?#.r-1j63xyz:-abp-contains(/@junh/i)
-twitter.com#?#.r-1j63xyz:-abp-contains(/Corbyn/i)
+
+! Experimental blocking of homograph domain attacks
+! https://github.com/AdguardTeam/AdGuardHome/issues/1446#issuecomment-596035576
+/.*?xn--.*\.[a-z][a-z][a-z]?\.?[a-z]?[a-z]?[a-z]?/
+
+! Removal of pork (and some champignon) entries from restaurant menus (I just really hate the taste of pork meat)
+! https://bellaitalia.no/meny/pasta
+bellaitalia.no#?#li:-abp-contains(SKINKE)
+bellaitalia.no#?#li:-abp-contains(BACON)
+bellaitalia.no#?#li:-abp-contains(PEPPERONI)
+bellaitalia.no#?#li:-abp-contains(CHAMPIGNON)
+! https://www.frati.no/
+frati.no#?#.category > .item:-abp-contains(skinke)
+frati.no#?#.category > .item:-abp-contains(salam)
+frati.no#?#.category > .item:-abp-contains(salsiccia)
+frati.no#?#.category > .item:-abp-contains(svinenakke)
+frati.no#?#.category > .item:-abp-contains(pølse)
+frati.no#?#.category > .item:-abp-contains(pancetta)
+! https://kompisrestauranter.no/Meny
+kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Bacon/i)
+kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Champignon/i)
+kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Parma/i)
+kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Skinke/i)
+kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Pepperoni/i)
+! https://egon.no/menyen
+egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(parma)
+egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(pork)
+egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Skinke/i)
+egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(sjampinjong)
+egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(pepperoni)
+egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Bacon/i):not(:-abp-contains(ENGLISH BREAKFAST))
+egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Pølse/i):not(:-abp-contains(ENGLISH BREAKFAST))
+! https://www.peppes.no/desktop/meny/pizza/classic-chicago-1?9
+peppes.no#?#.item-wrapper:-abp-contains(bacon):not(:-abp-contains(Very Special))
+peppes.no#?#.item-wrapper:-abp-contains(/Skinke/i):not(:-abp-contains(Very Special))
+peppes.no#?#.item-wrapper:-abp-contains(/Pepperoni/i):not(:-abp-contains(Very Special))
+! https://www.mcdonalds.com/no/nb-no/meny/hamburgere.html
+mcdonalds.com#?#.categories-list-item:-abp-contains(Bacon)
+mcdonalds.com#?#.categories-list-item:-abp-contains(Homestyle Crave Beef)
+mcdonalds.com#?#.categories-list-item:-abp-contains(McToast)
+! https://www.subway.com/nb-NO/MenuNutrition/Menu/All
+subway.com#?#.menu-category-item:-abp-has(img[src$="-ham.jpg"])
+subway.com#?#.menu-category-item:-abp-has(img[src$="-blt.jpg"])
+subway.com#?#.menu-category-item:-abp-has(img[src$="-BMT.jpg"])
+subway.com#?#.menu-category-item:-abp-has(img[src$="andham.jpg"])
+subway.com#?#.menu-category-item:-abp-contains(Subway Melt™)
+subway.com#?#.menu-category-item:-abp-contains(Bacon)
+! https://www.dominos.no/menu/lerkendal#pizzas
+dominos.*#?#.product_item:-abp-contains(bacon)
+dominos.*,~dominos.it#?#.product_item:-abp-contains(pepperoni)
+dominos.no#?#.product_item:-abp-contains(skinke)
+! https://www.dolly.no/meny/pizza
+dolly.no#?#.grid__elm:-abp-contains(bacon)
+dolly.no#?#.grid__elm:-abp-contains(/Skinke/i)
+dolly.no#?#.grid__elm:-abp-contains(/Pepperoni/i)
+! https://www.pizzabakeren.no/menu.php#tab-deals
+pizzabakeren.no#?#.pizza_item:-abp-contains(bacon)
+pizzabakeren.no#?#.pizza_item:-abp-contains(skinke)
+pizzabakeren.no#?#.pizza_item:-abp-contains(pepperoni)
+pizzabakeren.no#?#.pizza_item:-abp-contains(chorizo)
+pizzabakeren.no#?#.pizza_item:-abp-contains(sjampinjong)
 
 ! Webstores that ignore "Mail-in-store" and who instead delivers to PostNord Norway's generic pick-up points in the middle of bloody nowhere
 !!!||kjell.com^$document
