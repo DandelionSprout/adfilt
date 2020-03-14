@@ -1408,6 +1408,12 @@ def prepare_dnsmasq(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"address=/([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])$", 
+           r"server=/\4.\3.\2.\1.in-addr.arpa/127.0.0.1", 
+           line
+        )
+
         if is_supported_dnsmasq(line):
             text += line + '\r\n'
 
