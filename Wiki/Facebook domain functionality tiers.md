@@ -25,6 +25,10 @@
 * https://pixel.facebookcorewwwi.onion/StrawberryShortcake/
 * https://error.facebookcorewwwi.onion/StrawberryShortcake/
 
+#### Tested 16th of March 2020
+* https://t.facebook.com/StrawberryShortcake/
+* https://t.facebookcorewwwi.onion/StrawberryShortcake/
+
 ## Tier 2 (Phones and non-keyboard tablets):
 
 (I couldn't find any ways to remove the extreme banner image crust on the Tier 2 domains. My apologies in advance for your sore eyes.)
