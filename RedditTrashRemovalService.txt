@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 17March2020v1-Beta
+! Version: 21March2020v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
@@ -61,6 +61,8 @@ reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
 ||reddit.com/r/KotakuInAction^$document,domain=~ Warning shown due to: Known to condone mass suicide of transgenders.
 ||reddit.com/r/islamicsub^$document,domain=~ Warning shown due to: Known to condone mass murdering of apostates and LGBT.
 ||reddit.com/r/WatchRedditDie^$document,domain=~ Warning shown due to: Known to promote fake screenshots in order to incite violence and hanging of users of competing subreddits.
+||reddit.com/r/shortcels^$document,domain=~ Warning shown due to: Known to condone mass murdering of women.
+||reddit.com/r/TruePoliticalHumor^$document,domain=~ Warning shown due to: Known to condone mass murdering of Afro-Americans.
 
 ! Posts whose scores are lower than a certain amount
 ! The default for all subreddits is 10 points, although this can be adjusted for a handful of subreddits whose quality levels are deemed to sharply increase with a higher or lower limit.
@@ -86,16 +88,11 @@ reddit.com#?#.Post:-abp-has(span[data-click-id="metadata_comments"]):not(:-abp-h
 reddit.com#?#.Post:-abp-has(div[style*="-postfooter-"]):not(:-abp-has(span[data-click-id="metadata_votes"]))
 
 ! Usernames that are 139% guaranteed to be trolls
-reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
-reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
-reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i))
-reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i))
-reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/RedditAdmins/i))
-reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/RedditAdmins/i))
-reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi][w]?[sz]?/i):-abp-contains(/white/i))
-reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi][w]?[sz]?/i):-abp-contains(/white/i))
-reddit.com#?#.Post:-abp-has(a[href^="/user"]:-abp-contains(/g[o0]y/i):-abp-contains(/wh[i1]te/i))
-reddit.com#?#.Comment:-abp-has(a[href^="/user"]:-abp-contains(/g[o0]y/i):-abp-contains(/wh[i1]te/i))
+reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
+reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i))
+reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/RedditAdmins/i))
+reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi][w]?[sz]?/i):-abp-contains(/white/i))
+reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/g[o0]y/i):-abp-contains(/wh[i1]te/i))
 
 ! Removes the "n new posts for you" banner
 reddit.com#?#div:-abp-has(:scope > svg[viewbox="0 0 34 16"])
@@ -133,29 +130,17 @@ imgur.com#?#img[id=image-element][src*=imgur]:style(margin-top: 0px !important)
 
 ! ————— ↓ Removes content posted by the top 10 karma hoarders ↓ —————
 
-! Comments on New Reddit
-reddit.com#?#.Comment:-abp-has(a[href="/user/GallowBoob"])
-reddit.com#?#.Comment:-abp-has(a[href="/user/pepsi_next"])
-reddit.com#?#.Comment:-abp-has(a[href="/user/TooShiftyForYou"])
-reddit.com#?#.Comment:-abp-has(a[href="/user/mvea"])
-reddit.com#?#.Comment:-abp-has(a[href="/user/SlimJones123"])
-reddit.com#?#.Comment:-abp-has(a[href="/user/BunyipPouch"])
-reddit.com#?#.Comment:-abp-has(a[href="/user/iBleeedorange"])
-reddit.com#?#.Comment:-abp-has(a[href="/user/KevlarYarmulke"])
-reddit.com#?#.Comment:-abp-has(a[href="/user/maxwellhill"])
-reddit.com#?#.Comment:-abp-has(a[href="/user/bubblr"])
-
-! Posts on New Reddit
-reddit.com#?#.Post:-abp-has(a[href="/user/GallowBoob"])
-reddit.com#?#.Post:-abp-has(a[href="/user/pepsi_next"])
-reddit.com#?#.Post:-abp-has(a[href="/user/TooShiftyForYou"])
-reddit.com#?#.Post:-abp-has(a[href="/user/mvea"])
-reddit.com#?#.Post:-abp-has(a[href="/user/SlimJones123"])
-reddit.com#?#.Post:-abp-has(a[href="/user/BunyipPouch"])
-reddit.com#?#.Post:-abp-has(a[href="/user/iBleeedorange"])
-reddit.com#?#.Post:-abp-has(a[href="/user/KevlarYarmulke"])
-reddit.com#?#.Post:-abp-has(a[href="/user/maxwellhill"])
-reddit.com#?#.Post:-abp-has(a[href="/user/bubblr"])
+! Comments and Posts on New Reddit
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/GallowBoob"])
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/pepsi_next"])
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/TooShiftyForYou"])
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/mvea"])
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/SlimJones123"])
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/BunyipPouch"])
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/iBleeedorange"])
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/KevlarYarmulke"])
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/maxwellhill"])
+reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/bubblr"])
 
 ! Comments on Old Reddit
 reddit.com#?#.entry:-abp-has(a[href*="/user/GallowBoob"])
