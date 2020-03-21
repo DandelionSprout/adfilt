@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 21March2020v2-Alpha
+! Version: 21March2020v3-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -313,7 +313,7 @@
 ~whatsapp.com##a[href*="api.whatsapp.com/send?"]
 |whatsapp://send$domain=~whatsapp.com
 ||addthis.com/static/btn/sm-share*.gif
-||apis.google.com/*/+1/fastbutton$subdocument
+||apis.google.com/*/+1/*button$subdocument
 ||assets.pinterest.com/js/pinit*^
 ||facebook.com/*lugins/like.php$subdocument
 ||facebook.com/*lugins/page.php$subdocument
@@ -369,6 +369,8 @@
 ##div[href*="plus.google.com/share?url="]
 /mixx_share.gif$image
 ##a[href="#javascript"][class*=social-link]
+##a[href*=".cmd=addShare"]
+##a[href*="telegram.me/share/url?"]
 
 ! NOT allowed to be generic
 pastebin.com##.h_800.tweet
