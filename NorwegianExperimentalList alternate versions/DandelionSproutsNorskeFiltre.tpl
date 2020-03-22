@@ -1,5 +1,5 @@
 msFilterList
-# Version: 13March2020v1-Alpha
+# Version: 22March2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -150,6 +150,7 @@ msFilterList
 # bt.no
 -d finn.no distribution-carousel?
 # https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
+# https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
 # Copied over from the New AdAway list
 -d admob.no
 -d admob.dk
@@ -203,6 +204,7 @@ msFilterList
 -d 85.17.76.181
 # https://krs247.no/
 # lsk.no
+# https://www.budstikka.no/
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇮🇸: ——— Tóma skilirammar ———
@@ -226,6 +228,8 @@ msFilterList
 # 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
 # 🇬🇧: Makes Dplay's login page show up properly
 +d mparticle.com
+# https://github.com/easylist/easylist/issues/5110
++d widgets.spklw.com
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
