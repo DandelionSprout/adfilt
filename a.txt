@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 Imres filtre
-! Version: 22March2020v2-Personal
+! Version: 23March2020v1-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include AdRemovalListForUnusualAds.txt
@@ -165,12 +165,6 @@ twitch.tv#?#.vod-message:-abp-contains(/Teen Titans/i)
 twitch.tv#?#.chat-line__message:-abp-contains(/Teen Titans/i)
 rule34.paheal.net#?#div.thumb:-abp-has(img[title*="Teen_Titans"]):not(:-abp-has(img[title*="Teen_Titans_GO"]))
 
-! Anti-'Kansai Collection'
-! It's a mobile game, and with very generic anime girls at that. Nothing good can or has come out of this.
-pixiv.net#?#li:not([class*="level"]):not(.SXucpBq):-abp-has(a[href*="mode=medium"]):-abp-contains(艦)
-pixiv.net#?#li[id*=il]:-abp-has(a:-abp-contains(艦))
-pixiv.net#?#section[id^="js-react-"] > div > div:-abp-has(figure[style^="width: 200px; "]:-abp-contains(艦))
-
 ! Anti-'DuckTales 2017'
 ! This show is an utter blasphemy against Don Rosa, Carl Barks, and the 60's-00's Italian comics, turning almost all of the characters they made into bumbling moronic idiots.
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(DuckTales)
@@ -210,7 +204,7 @@ osu.ppy.sh#?#.beatmapsets__item:-abp-contains(beatmania )
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(jubeat )
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(ブレンド・S)
 ##a[href="/memes/subcultures/doki-doki-literature-club"]
-reddit.com#?#.Post:-abp-contains(DDLC)
+reddit.com#?#.Post,.thing:-abp-contains(DDLC)
 pixiv.net##.abroad.item
 pixiv.net##.daily.item
 pixiv.net##.geta.overlay
@@ -219,6 +213,8 @@ pixiv.net##.popular-introduction-overlay
 store.steampowered.com##a[data-ds-tagids*="12095"][data-ds-tagids*="6650"]
 store.steampowered.com##a[data-ds-tagids*="12095"][data-ds-tagids*="3799"]
 store.steampowered.com##a[data-ds-tagids*="6650"][data-ds-tagids*="3799"]
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*="Kancolle" i])
+pixiv.net#?#.works-item:-abp-has(img[alt*="Kancolle" i])
 
 ! There's too many goddamn Undertale things on SoundCloud
 soundcloud.com#?#li:not([data-test-id]):-abp-contains(/Undertale/i)
