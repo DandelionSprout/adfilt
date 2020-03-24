@@ -114,6 +114,7 @@
 * `#%#AG_`: A few extra scriptlets for whom documentation appears to be non-existent.
 * `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file. Requires heavy privileges.
 * `:properties`: Claims to be similar to `:-abp-properties`, but is incompatible with it.
+* `!+ PLATFORM`: Very similar to `!#if`, but is designed to have AdGuard's many versions be used as criteria, and not necessarily the browser that is being used.
 #### Blocking
 * `$match-case`: Makes the criteria case-sensitive.
 * `$$script`: Uses very advanced criteria to block scripts that meet them.
@@ -132,6 +133,10 @@
 * `@@` + `$content`: Prevents `$$script` entries from working on that site.
 * `@@` + `$stealth`: Turns off Stealth Mode on that site.
 * `$replace`: Changes the text of text elements on a site. Supports and requires use of RegEx. Requires ridiculous amounts of trust rights and cannot be used in web-hosted lists.
+
+### AdGuard for [Android/iOS] only:
+
+* `!+ NOT_OPTIMIZED`: Used to state that the entry immediately below is to be discarded, when an end-user has turned on "Simplified rules" mode in the AdGuard settings.
 
 # Other particularly important usage notes
 
