@@ -4,7 +4,7 @@ import re
 SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , ':xpath', 'dk,no##', ':nth-ancestor']
+    ':style', '##+js', '.*#' , ':xpath', 'dk,no##', ':nth-ancestor', '!#if', '!#endif', '!+ ']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
 
@@ -219,12 +219,6 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            "Dandelion Sprout's Nordic filters for tidier websites", 
            "Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)",
-           line
-        )
-
-        line = re.sub(
-           r"!#.*", 
-           "", 
            line
         )
 
@@ -475,12 +469,6 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"!\+.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"([a-z*])#[?]?#(.*):nth-ancestor(1)", 
            r"\1#?#*:-abp-has(:scope > \2)", 
            line
@@ -537,6 +525,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"([a-z*])#[?]?#(.*):nth-ancestor(10)", 
            r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r".*mm\.dk##\.fadeout.*", 
+           r"", 
            line
         )
 

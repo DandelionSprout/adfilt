@@ -1,5 +1,5 @@
 msFilterList
-# Version: 22March2020v2-Alpha
+# Version: 24March2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -18,56 +18,58 @@ msFilterList
 # ❄: ——— Reklámaid ———
 # 🇬🇧: ——— Advertisements ———
 - contentMarketing
--d rett24.no inline
-- -bazaar-
-- _bm abd
-- annonsar
-- annonse
-- annonser
-- auglysing
-- Bannere
-- bazaar
-- bilder erotikk1.jpg
-- entag.js
-- js smartbanner
-- liveodds-button_nordicbet
-- nordicbet_logo
-- partners *_ad_icon
-- reklam
-- reklame
-- resources dfp
+- blob:https://www.veier24.no/
+-d 1819.is infosmall
+-d 3.248.18.175
 -d acdn.adnxs.com ast.js
 -d acdn.adnxs.com ast.js
 -d ad.no.doubleclick.net
 -d adext.inkclub.com
+-d adr.kulingen.no
 -d ads.no
+-d adservice.dk
 -d adservicemedia.dk
 -d akamai.net
 -d akamaihd.net
 -d amino.dk 240x140-forside-hardcoded*.jpg
 -d austevollforlag.no yachtmarine2014.
+-d austurfrett.is *augl.jpg
+-d austurfrett.is banners
 -d banner.landbrugsavisen.dk reklame.aspx
 -d bannere.oslonett.no
 -d boligkanalen-maestro-new.azurewebsites.net
 -d bornholm.nu banner
 -d brandstudio.inventory.schibsted.io
+-d cdn.rikstoto.no GameShop
+-d cdnboligkanalen.azureedge.net
 -d cluster.chart.dk
 -d cmt.no
 -d damoh.vgtv.no hic_qos
+-d deiligejenter.no
 -d delivered-by-madington.com
+-d dnitv.com
 -d dotbanner.dk
 -d dust2.dk banners
 -d easy-ad.no
+-d easy-ads.dk
 -d emerio.no
 -d euroads.no
 -d eyjar.net ads
+-d feltet.dk topbanner_*.jpg
+-d feltet.dk wallpaper_1.jpg
+-d feltet.dk *_300x60.gif
+-d fotbolti.net banners
 -d gratisxxx.no
--d deiligejenter.no
+-d heartbeat.airserve.net
 -d i1media.no
 -d isweb.no
+-d karfan.is *-470x130*.jpg
+-d karfan.is *300x250.jpg
 -d klikk.no klikk.desktop-thirdparty.min.js
+-d langrenn.com getfile.php
 -d matriell.dm-storage.no
 -d media.sonymusic.no *.html
+-d mediasense.dk
 -d myad.no
 -d nettklikk.no
 -d norskenettsider.no ageras-banner.jpg
@@ -76,59 +78,56 @@ msFilterList
 -d openadex.dk
 -d piwik.onlinemagasinet.no
 -d primetime.ad.primetime.net
+-d rett24.no inline
+-d samfilm.codelab.is
+-d samler.no banners
 -d sannsyn.com
 -d soda.is
 -d ssl.p.jwpcdn.com freewheel.js
 -d ssl.p.jwpcdn.com jwpsrv.js
 -d ssl.p.jwpcdn.com sharing.js
 -d ssl.p.jwpcdn.com vast.js
+-d static.airserve.net
+-d tankeogteknikk.no
 -d track.adform.net
 -d track.adform.net Banners
 -d tracking-genesisaffiliates.com
+-d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
+-d tvkampen.com banner*
+-d tvkampen.com unibet-lo
 -d tvshop.com tradedoubler_files
+-d utrop.no *.gif
+-d utrop.no Banner_utrop
 -d vevlysingar.fo
 -d viasport-assets.mtg-api.com comScore-*.js
 -d vikari.is frjalsi-lif*.png
 -d webclick.no
 -d webhotell.enivest.no
--d feltet.dk Feltet.dk
--d langrenn.com getfile.php
--d dnitv.com
+-d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
+- -bazaar-
+- annonsar
+- annonse
 - annonse_
+- annonser
+- auglysing
+- reklam
+- reklame
+- vefauglysingar
+- _bm abd
+- Bannere
+- bazaar
+- bilder erotikk1.jpg
+- entag.js
+- js smartbanner
+- liveodds-button_nordicbet
+- nordicbet_logo
+- partners *_ad_icon
+- resources dfp
 -d tv2a.dk
--d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
--d heartbeat.airserve.net
--d static.airserve.net
--d cdnboligkanalen.azureedge.net
--d tankeogteknikk.no
--d adservice.dk
--d mediasense.dk
--d easy-ads.dk
--d 3.248.18.175
 -d adframe.no
 -d adstream.no
 -d advertising.no
--d fotbolti.net banners
--d samfilm.codelab.is
--d tvkampen.com banner*
--d tvkampen.com unibet-lo
--d 1819.is infosmall
--d austurfrett.is banners
--d austurfrett.is *augl.jpg
--d feltet.dk wallpaper_1.jpg
--d feltet.dk topbanner_*.jpg
--d feltet.dk *_300x60.gif
--d cdn.rikstoto.no GameShop
--d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
--d karfan.is *-470x130*.jpg
--d utrop.no *.gif
--d utrop.no Banner_utrop
--d adr.kulingen.no
 -d karfan.is *.gif
--d karfan.is *300x250.jpg
-- vefauglysingar
-- blob:https://www.veier24.no/
--d samler.no banners
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -205,6 +204,7 @@ msFilterList
 # https://krs247.no/
 # lsk.no
 # https://www.budstikka.no/
+# e24.no, aftenbladet.no, sysla.no
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇮🇸: ——— Tóma skilirammar ———
@@ -244,13 +244,13 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
-+d bondebladet.screen9.tv
-+d eurosport.*
-+d sixscissors.com
+-d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js
--d aftenposten.no ads-
++d bondebladet.screen9.tv
++d eurosport.*
++d sixscissors.com
 +d bildeler.name
 +d reservedele.name
 # 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
@@ -265,6 +265,7 @@ msFilterList
 # Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
 -d dagligvarehandelen.no veil.png
 # dagbladet.no,elbil24.no
+# digi.no, tu.no, medier24.no, porten.no
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
@@ -437,6 +438,12 @@ msFilterList
 # https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
 -d rbaab.net
 -d rbppg.net
+# https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
+# https://www.mm.dk/tjekdet/artikel/folkekaer-fodboldhelt-ked-af-at-blive-misbrugt-af-svindlere
+-d kronoscm.com
+# https://www.mm.dk/tjekdet/artikel/nej-joergen-leth-har-ikke-investeret-500-millioner-kroner-i-bitcoins
+-d daily-news.tech
+-d limevow.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 82.118.242.69
 -d 136.243.73.30
