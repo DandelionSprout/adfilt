@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 Imres filtre
-! Version: 24March2020v1-Personal
+! Version: 27March2020v1-Personal
 ! Expires: 12 hours
 !#include a2.txt
 !#include AdRemovalListForUnusualAds.txt
@@ -210,9 +210,13 @@ pixiv.net##.daily.item
 pixiv.net##.geta.overlay
 pixiv.net##.male.item
 pixiv.net##.popular-introduction-overlay
+! 12095 = Sexual Content; 6650 = Nudity; 3799 = Visual Novel; 4085 = Anime
 store.steampowered.com##a[data-ds-tagids*="12095"][data-ds-tagids*="6650"]
 store.steampowered.com##a[data-ds-tagids*="12095"][data-ds-tagids*="3799"]
 store.steampowered.com##a[data-ds-tagids*="6650"][data-ds-tagids*="3799"]
+store.steampowered.com##a[data-ds-tagids*="4085"][data-ds-tagids*="12095"]
+store.steampowered.com##a[data-ds-tagids*="4085"][data-ds-tagids*="6650"]
+store.steampowered.com##.top_new_releases
 pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*="Kancolle" i])
 pixiv.net#?#.works-item:-abp-has(img[alt*="Kancolle" i])
 
@@ -247,6 +251,9 @@ soundcloud.com#?#.sound:-abp-contains(/Rude Buster/i)
 soundcloud.com#?#li:not([data-test-id]):-abp-contains( Sans)
 soundcloud.com#?#.playableTile:-abp-contains( Sans)
 soundcloud.com#?#.sound:-abp-contains( Sans)
+
+! Trading Card Game Remover for Steam
+store.steampowered.com##a[data-ds-tagids*="1666"]:not([href*=Ticket_to_Ride]):not([href*=Durak]):not([href*=UNO]):not([href*=Tabletop])
 
 ! ———————————————————————————————————————————————————————————————————————————————————————————————
 
