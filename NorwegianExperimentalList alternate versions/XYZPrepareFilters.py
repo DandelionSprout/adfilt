@@ -529,7 +529,73 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(1)", 
+           r"\1#?#*:-abp-has(:scope > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(2)", 
+           r"\1#?#*:-abp-has(:scope > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(3)", 
+           r"\1#?#*:-abp-has(:scope > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(4)", 
+           r"\1#?#*:-abp-has(:scope > * > * >  * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(5)", 
+           r"\1#?#*:-abp-has(:scope > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(6)", 
+           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(7)", 
+           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(8)", 
+           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(9)", 
+           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):upward(10)", 
+           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
            r".*mm\.dk##\.fadeout.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"tipsbladet\.dk###js-promo-welcome", 
            r"", 
            line
         )

@@ -1,5 +1,5 @@
 msFilterList
-# Version: 24March2020v2-Alpha
+# Version: 28March2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -123,6 +123,8 @@ msFilterList
 - nordicbet_logo
 - partners *_ad_icon
 - resources dfp
+-d liveads.no
+-d banners.unibet.dk
 -d tv2a.dk
 -d adframe.no
 -d adstream.no
@@ -266,6 +268,7 @@ msFilterList
 -d dagligvarehandelen.no veil.png
 # dagbladet.no,elbil24.no
 # digi.no, tu.no, medier24.no, porten.no
+# https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
@@ -348,6 +351,7 @@ msFilterList
 -d hot-rap-beats.top
 -d replicarolexyachtmaster.com
 -d secureriches.com
+-d itunesconnect-*.no
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites

@@ -1,4 +1,4 @@
-! Version: 24March2020v2
+! Version: 28March2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -273,6 +273,8 @@ xstra.no##.td-fix-index
 /partners/*_ad_icon$image,domain=tvkampen.com|tvsporten.dk
 /resources/dfp/*$domain=nettavisen.no
 @@||cdnboligkanalen.azureedge.net/*width=2000^
+||liveads.no^
+||banners.unibet.dk^$third-party
 !+ NOT_OPTIMIZED
 ||tv2a.dk^
 !+ NOT_OPTIMIZED
@@ -672,6 +674,12 @@ vredens-gnag.no##.ab-appnexus-ads-wrapper
 win-xp.no#?#tr > td > div:-abp-has(a[href*="clk.tradedoubler."])
 woman.dk##.gutter-bottom.article-content > div.wg-banner
 yrkesbil.no###side > div:nth-of-type(1)
+sistenytt.com###midten
+sistenytt.com###annonse_side
+tipsbladet.dk##.concept_banners-tag-wrapper
+tipsbladet.dk##.h-background-color-gray-background
+tipsbladet.dk##.c-single__box-inset
+tipsbladet.dk##.col--lg-fixed-width-sidebar.col--xs-12
 ||730.no/banner/*/sonymusic/$subdocument
 ||bilnorge.no/gifs/*emty.gif$image
 ||gaysir.no/rek/bb_inline$subdocument
@@ -850,6 +858,8 @@ minmote.no,godt.no##.adblock-info
 techstart.dk##+js(set, adblock, false)
 tv2.no##+js(acis, adblockDetector)
 vg.no##+js(aeld, load, concat)
+tipsbladet.dk##.js-isblured:style(-webkit-filter: none !important; filter: none !important)
+tipsbladet.dk###js-promo-welcome
 ||aftenposten.no/seksjon/dist/ads-$script
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.no|dplay.dk
 ||elderlyscissors.com^
@@ -902,6 +912,8 @@ vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:before
 ##.CTA-body-faded
 ! digi.no, tu.no, medier24.no, porten.no
 ##.faded-article-content:after
+! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
+##.paywall-gradient
 
 ! 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 ! 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
@@ -1099,6 +1111,8 @@ finans.dk##.baPosition
 ||hot-rap-beats.top^$empty,important
 ||replicarolexyachtmaster.com^$empty,important
 ||secureriches.com^$empty,important
+||appleid.*.no^
+||itunesconnect-*.no^
 
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
