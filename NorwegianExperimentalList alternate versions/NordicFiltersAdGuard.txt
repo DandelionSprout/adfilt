@@ -1,4 +1,4 @@
-! Version: 28March2020v1
+! Version: 02April2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -394,7 +394,7 @@ cw.no##.ad-fit-body
 cw.no##.desktop-only.l-row > .omega.grid-12.grid-item.col
 dagbladet.no#?#div[class^=css]:matches-css-before(content: "Annonse")
 dagbladet.no,sol.no##[class^=AdPrefix-]
-dagens.dk,dust2.dk,kanalfrederikshavn.dk##.banner
+dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk##.banner
 dagensbyggeri.dk##.banner-megaboard-top
 dagensbyggeri.dk##.pushBelow.pushAbove
 dagensbyggeri.dk##div.no-print.hidden-xs.row
@@ -680,8 +680,16 @@ tipsbladet.dk##.concept_banners-tag-wrapper
 tipsbladet.dk##.h-background-color-gray-background
 tipsbladet.dk##.c-single__box-inset
 tipsbladet.dk##.col--lg-fixed-width-sidebar.col--xs-12
+bilnorge.no##td[colspan="7"][style]
+yrkesbil.no###nettboard_art1
+yrkesbil.no#?#td:-abp-has(:scope > noscript)
+yrkesbil.no##.forside_adholder:nth-ancestor(1)
+yrkesbil.no#?#td:-abp-has(img[src="gifs/1pix.gif"])
+yrkesbil.no##td:empty
+||yrkesbil.no/gifs/*emty.gif^
+||yrkesbil.no/gifs/1pix.gif^
 ||730.no/banner/*/sonymusic/$subdocument
-||bilnorge.no/gifs/*emty.gif$image
+||bilnorge.no/gifs/*emty.gif^
 ||gaysir.no/rek/bb_inline$subdocument
 ||static.vg.no/css/admark_top.gif
 !+ NOT_OPTIMIZED
@@ -799,6 +807,8 @@ tnt-tv.no,tnt-tv.dk##.tabs_placeholder
 !+ NOT_OPTIMIZED
 avvir.no###block-block-1 > p:nth-of-type(4)
 dyrevennene.no##.td-footer-wrapper
+yrkesbil.no#?#tr:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
+yrkesbil.no#?#td:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ! 🇩🇰: ——— Distraherende baggrundsbilleder ———

@@ -1983,8 +1983,8 @@ if __name__ == "__main__":
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout\'s%20Anti-Malware%20List.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##']
-UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^']
+    ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com']
+UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^']
 UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.4]', '*', '/^']
 UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
@@ -2545,7 +2545,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           "\|\|", 
+           r"^\|\|", 
            ".", 
            line
         )
@@ -2608,6 +2608,12 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            "-Beta", 
            "-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|", 
+           ".", 
            line
         )
 
@@ -2675,7 +2681,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           "\|\|", 
+           r"^\|\|", 
            "127.0.0.1 ", 
            line
         )
@@ -2719,6 +2725,12 @@ def prepare_hosts(lines) -> str:
         line = re.sub(
            r"^/.*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|", 
+           "127.0.0.1 ", 
            line
         )
 
@@ -2785,13 +2797,19 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           "\|\|", 
+           r"^\|\|", 
            "", 
            line
         )
 
         line = re.sub(
            r"^/$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|", 
            "", 
            line
         )
