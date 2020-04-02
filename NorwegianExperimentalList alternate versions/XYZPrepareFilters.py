@@ -3208,7 +3208,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"\^$", 
+           r"\^", 
            r"", 
            line
         )
@@ -3327,6 +3327,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^([a-z0-9].*)", 
            r"||\1^", 
+           line
+        )
+
+        line = re.sub(
+           r"\^\^", 
+           r"^", 
            line
         )
 
