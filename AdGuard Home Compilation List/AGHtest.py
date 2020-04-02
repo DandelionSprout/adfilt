@@ -373,7 +373,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^/.*[a-z0-9_=.,*?|^@&~+;-]$", 
+           r"^/.*[a-zA-Z0-9_=.,*?!|^@&~+;-]$", 
            r"", 
            line
         )
@@ -397,7 +397,13 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^/.*[a-zA-Z0-9]\\?/[a-z0-9\(].*", 
+           r"^/.*[a-z0-9]\\?/[a-z0-9\(].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\|\|.*_.*", 
            r"", 
            line
         )
@@ -758,7 +764,7 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"^@@", 
+           r"^@@.*", 
            r"", 
            line
         )
