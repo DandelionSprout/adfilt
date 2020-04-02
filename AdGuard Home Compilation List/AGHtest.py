@@ -223,12 +223,6 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[/\\].*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"@?@?\|\|.*/.*", 
            r"", 
            line
@@ -289,25 +283,13 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r".*\*/[a-z0-9]*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"^[,=^/?~.-].*", 
+           r"^[,=^?~.-].*", 
            r"", 
            line
         )
 
         line = re.sub(
            r"^! \|.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"^[,=^/?~.-].*", 
            r"", 
            line
         )
@@ -386,6 +368,36 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"! https://github\.com/jspenguin2017/uBlockProtector.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*[a-z0-9_=.,*?|^@&~+;-]$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*[\]]$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^://.*/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*104\\\.154\\\.\..*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*[a-zA-Z0-9]\\?/[a-z0-9\(].*", 
            r"", 
            line
         )
@@ -662,12 +674,6 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"^[/\\].*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"^@@.*[a-z].*", 
            r"", 
            line
@@ -687,6 +693,72 @@ def prepare_ip(lines) -> str:
 
         line = re.sub(
            r"^!$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*[a-zA-Z0-9_=.,*?|^@&~+;-]$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*[\]]$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^://.*/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*104\\\.154\\\.\..*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*[a-z0-9]\\?/[a-z0-9\(].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/\^[h.].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/\\.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/\(https\?:\\/\\/\)([0-9][0-9]?[0-9]?)\\.([0-9][0-9]?[0-9]?)\\.([0-9][0-9]?[0-9]?)\\.\.\*/", 
+           r"\1.\2.\3.0/24", 
+           line
+        )
+
+        line = re.sub(
+           r"^/\(https\?:\\/\\/\)([0-9][0-9]?[0-9]?)\\.([0-9][0-9]?[0-9]?)\\.\.\*/", 
+           r"\1.\2.0.0/16", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@", 
            r"", 
            line
         )
