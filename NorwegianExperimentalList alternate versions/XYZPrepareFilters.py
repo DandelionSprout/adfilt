@@ -45,7 +45,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: [0-9][0-9][0-9][0-9].*", 
+           r"! Version: [0-9]{4}.*", 
            "", 
            line
         )
@@ -165,13 +165,13 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9])\^\$.*", 
+           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*", 
            r"\1$network", 
            line
         )
 
         line = re.sub(
-           r"^\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9])\^", 
+           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^", 
            r"\1$network", 
            line
         )
@@ -469,121 +469,61 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(1)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
            r"\1#?#*:-abp-has(:scope > \2)", 
            line
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(2)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
            r"\1#?#*:-abp-has(:scope > * > \2)", 
            line
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(3)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
            r"\1#?#*:-abp-has(:scope > * > * > \2)", 
            line
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(4)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
            r"\1#?#*:-abp-has(:scope > * > * >  * > \2)", 
            line
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(5)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
            r"\1#?#*:-abp-has(:scope > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(6)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
            r"\1#?#*:-abp-has(:scope > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(7)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
            r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(8)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
            r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(9)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
            r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):nth-ancestor(10)", 
-           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(1)", 
-           r"\1#?#*:-abp-has(:scope > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(2)", 
-           r"\1#?#*:-abp-has(:scope > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(3)", 
-           r"\1#?#*:-abp-has(:scope > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(4)", 
-           r"\1#?#*:-abp-has(:scope > * > * >  * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(5)", 
-           r"\1#?#*:-abp-has(:scope > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(6)", 
-           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(7)", 
-           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(8)", 
-           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(9)", 
-           r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):upward(10)", 
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
            r"\1#?#*:-abp-has(:scope > * > * > * > * > * > * > * > * > * > \2)", 
            line
         )
@@ -1637,7 +1577,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9])\^", 
+           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^", 
            r"\1", 
            line
         )
@@ -1690,7 +1630,7 @@ def prepare_shadowsocks(lines) -> str:
         )
 
         line = re.sub(
-           r"^([^DU].*?\.[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?)$", 
+           r"^([^DU].*?\.[a-z]{2,6})$", 
            r"DOMAIN-SUFFIX,\1", 
            line
         )
@@ -1726,7 +1666,7 @@ def prepare_shadowsocks(lines) -> str:
         )
 
         line = re.sub(
-           r"^([0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]\.[0-9][0-9]?[0-9])$", 
+           r"^(([1-2]?[0-9]?[0-9]\.?){4})$", 
            r"IP-CIDR,\1/32,REJECT,no-resolve", 
            line
         )
@@ -2034,7 +1974,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: [0-9][0-9][0-9][0-9].*", 
+           r"! Version: [0-9]{4}.*", 
            "", 
            line
         )
@@ -2082,7 +2022,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9])\^\$.*", 
+           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*", 
            r"\1$network", 
            line
         )
@@ -2930,7 +2870,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"\|\|([1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]).*", 
+           r"\|\|(([1-2]?[0-9]?[0-9]\.?){4}).*", 
            r"\1", 
            line
         )
