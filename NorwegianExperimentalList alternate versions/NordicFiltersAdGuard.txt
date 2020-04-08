@@ -1,4 +1,4 @@
-! Version: 06April2020v1
+! Version: 08April2020v2
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -846,6 +846,8 @@ yrkesbil.no#?#td:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has
 ! 🇬🇧: Makes Dplay's login page show up properly
 @@||mparticle.com$script,domain=auth.dplay.no|auth.dplay.dk
 @@||assets.adobedtm.com/*/satelliteLib-$domain=auth.dplay.no|auth.dplay.dk
+! Makes Postnord tracking pages work properly
+@@||postnord.*/api/tracking^
 ! ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
@@ -934,6 +936,8 @@ vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:before
 ##.faded-article-content:after
 ! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
 ##.paywall-gradient
+! https://www.vg.no/nyheter/i/y3Mka2/ (08/04/2020)
+vg.no##div[data-test-tag=timestamp] + div:before
 
 ! 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 ! 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———

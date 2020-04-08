@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06April2020v1-Alpha
+# Version: 08April2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -232,6 +232,7 @@ msFilterList
 # 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
 # 🇬🇧: Makes Dplay's login page show up properly
 +d mparticle.com
+# Makes Postnord tracking pages work properly
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
@@ -269,6 +270,7 @@ msFilterList
 # dagbladet.no,elbil24.no
 # digi.no, tu.no, medier24.no, porten.no
 # https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
+# https://www.vg.no/nyheter/i/y3Mka2//(08/04/2020)
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
