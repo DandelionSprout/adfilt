@@ -212,13 +212,13 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
-           "Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)",
+           "Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)",
            line
         )
 
         line = re.sub(
            "Dandelion Sprout's Nordic filters for tidier websites", 
-           "Dandelion Sprout's Nordic filters for tidier websites (for AdBlock and Adblock Plus)",
+           "Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)",
            line
         )
 
