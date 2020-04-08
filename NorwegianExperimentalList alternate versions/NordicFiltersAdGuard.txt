@@ -1,4 +1,4 @@
-! Version: 02April2020v1
+! Version: 06April2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -146,6 +146,9 @@ xlmoto.no##.overlay-container
 xlmoto.no##.overlay-wrapper
 xlmoto.no##.sb-overlay
 xstra.no##.td-fix-index
+dagens.dk#?#div:-abp-has(:scope > p > a[href*=".bedrageri.com/"])
+itavisen.no#?#.spklw-post:-abp-has(a[href*=smartadserver])
+730.no##.gofollow:nth-ancestor(3)
 |blob:https://www.veier24.no/$image
 ||1819.is/infosmall/$image
 3.248.18.175$network
@@ -201,7 +204,7 @@ xstra.no##.td-fix-index
 ||fotbolti.net/banners^
 ||gratisxxx.no$image,domain=nakenprat.com
 ||heartbeat.airserve.net^$third-party
-||helios.*.no
+||helios.*.no^
 ||i1media.no^
 ||isweb.no^$subdocument
 ||karfan.is/*-470x130*.jpg^
@@ -274,7 +277,6 @@ xstra.no##.td-fix-index
 /resources/dfp/*$domain=nettavisen.no
 @@||cdnboligkanalen.azureedge.net/*width=2000^
 ||liveads.no^
-||banners.unibet.dk^$third-party
 !+ NOT_OPTIMIZED
 ||tv2a.dk^
 !+ NOT_OPTIMIZED
@@ -531,8 +533,8 @@ m.kanalfrederikshavn.dk##.OX
 markedsforing.dk##.articles-baner-content
 markedsforing.dk##.banner-annonce
 markedsforing.dk#?#.row-second:-abp-has(div[class*=banner-annonce])
-matoppskrift.no###sticky:has(:scope > .adsbygoogle)
-matoppskrift.no##.text-center:not(:has(img))
+matoppskrift.no#?##sticky:-abp-has(:scope > .adsbygoogle)
+matoppskrift.no#?#.text-center:not(:-abp-has(img))
 mbl.is##.container:style(margin-top: 0px !important)
 mbl.is##.main-header:style(margin-top: 0px !important)
 mbl.is#?#.col-sm-6.col-12:-abp-has(.augl):not(:-abp-has(.fluid))
@@ -686,6 +688,13 @@ yrkesbil.no#?#td:-abp-has(:scope > noscript)
 yrkesbil.no##.forside_adholder:nth-ancestor(1)
 yrkesbil.no#?#td:-abp-has(img[src="gifs/1pix.gif"])
 yrkesbil.no##td:empty
+1881.no#?#.content:-abp-has(.ad-takeover)
+austurfrett.is##.upperad
+austurfrett.is##.lowerad
+e24.no##div[data-ad-subtype]
+itavisen.no##.comcontent:nth-ancestor(1)
+m.feltet.dk##.banner_mobile
+klikk.no##.floatRight.columns
 ||yrkesbil.no/gifs/*emty.gif^
 ||yrkesbil.no/gifs/1pix.gif^
 ||730.no/banner/*/sonymusic/$subdocument
@@ -791,6 +800,9 @@ vafo.dk##.adform-flexblock
 ##div[data-placeholder=lokalnative]
 ! e24.no, aftenbladet.no, sysla.no
 ##div[id^=adPlacement_]
+! https://www.aftenposten.no/ (Mobile useragent)
+###adBlinkContainer
+###innocode-ad
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -834,8 +846,6 @@ yrkesbil.no#?#td:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has
 ! 🇬🇧: Makes Dplay's login page show up properly
 @@||mparticle.com$script,domain=auth.dplay.no|auth.dplay.dk
 @@||assets.adobedtm.com/*/satelliteLib-$domain=auth.dplay.no|auth.dplay.dk
-! https://github.com/easylist/easylist/issues/5110
-@@||widgets.spklw.com^$domain=abcnyheter.no
 ! ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
@@ -946,6 +956,8 @@ ba.no##.sportspill
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/viking-lotto"]
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/sales/validateCouponAndStoreToSession.json"]
 ~norsk-tipping.no,~tipster.no##a[href*="nettavisen.no/sportspill/tipping/blir-du-mangemillionr-pa-onsdag"]
+nettavisen.no##a[href*=lotto-million]
+nettavisen.no#?#.front article:-abp-contains(Eurojackpot)
 ||vg.no/vgc/pool/tipster.png$image
 ||vgc.no/pustehullet/betting-header.png$image
 
@@ -1091,10 +1103,7 @@ finans.dk##.baPosition
 ||trackvoluum.com^$empty,important
 ||jagerjack.com^$empty,important
 ||*/pakkerlevering/$empty,important
-||posten.club^$empty,important
-||kundklubb-se.com^$empty,important
 ||prisjakt.org^$empty,important
-||postnord-norge.com^$empty,important
 ||102.112.2o7.net^$empty,important
 ||tromselementbygg.no^$empty,important
 ||no.zxxyw.com^
@@ -1162,8 +1171,6 @@ finans.dk##.baPosition
 ! https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
 ||phosphox.com^$empty,important
 ||nodzoom.com^$empty,important
-! https://www.faktisk.no/faktasjekker/geo/nei-skam-tarjei-har-ikke-tjent-millioner-pa-bitcoin-program
-||affilicircle.com^$empty,important
 ! https://www.faktisk.no/notiser/ql/nei-du-far-ikke-rayban-briller-til-22299-kr-pa-denne-nettsiden
 ||rbgeg.com^$empty,important
 ||rbkbb.com^$empty,important
@@ -1195,8 +1202,6 @@ finans.dk##.baPosition
 ||vision-hey.club^$empty,important
 ! https://www.mm.dk/tjekdet/artikel/fup-dovne-robert-har-ikke-tjent-en-boejet-5-oere-paa-bitcoins
 ||marissatomei.com^$empty,important
-! https://www.mm.dk/tjekdet/artikel/fupartikel-haevder-at-rasmus-paludan-er-blevet-rig-paa-investeringer-i-bitcoins
-||marymaclane.net^$empty,important
 ! https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
 ||top-topic.co^$empty,important
 ! https://www.nrk.no/troms/1.14788086
@@ -1243,7 +1248,6 @@ finans.dk##.baPosition
 ||assassinfitness.com^$empty,important
 ||benshermanoslo.com^$empty,important
 ||billigesalg.com^$empty,important
-||bncentertainment.com^$empty,important
 ||bostongrnhsflowers.com^$empty,important
 ||caperforaciones.com^$empty,important
 ||charpente-ramel.com^$empty,important
@@ -1284,7 +1288,6 @@ finans.dk##.baPosition
 ||moslt.com^$empty,important
 ||moteshoes.com^$empty,important
 ||mrarmstrongsclass.com^$empty,important
-||mudancaslvc.com^$empty,important
 ||museuw.com^$empty,important
 ||mycraftypad.com^$empty,important
 ||nasajones.com^$empty,important
@@ -1309,12 +1312,10 @@ finans.dk##.baPosition
 ||popeurope.com^$empty,important
 ||quiltstudiolaren.com^$empty,important
 ||retoaudi.com^$empty,important
-||skoeccosandaler.com^$empty,important
 ||skonmdnorge.com^$empty,important
 ||sykkeltrøye.com^$empty,important
 ||ssrodeolivestock.com^$empty,important
 ||swellsup.com^$empty,important
-||tiranaaquapark-eg.com^$empty,important
 ||tobiascelebritymusicevents.com^$empty,important
 ||um-bs.com^$empty,important
 ||vansnorge.com^$empty,important

@@ -1,5 +1,5 @@
 msFilterList
-# Version: 02April2020v1-Alpha
+# Version: 06April2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -124,7 +124,6 @@ msFilterList
 - partners *_ad_icon
 - resources dfp
 -d liveads.no
--d banners.unibet.dk
 -d tv2a.dk
 -d adframe.no
 -d adstream.no
@@ -209,6 +208,7 @@ msFilterList
 # lsk.no
 # https://www.budstikka.no/
 # e24.no, aftenbladet.no, sysla.no
+# https://www.aftenposten.no/ (Mobile useragent)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇮🇸: ——— Tóma skilirammar ———
@@ -232,8 +232,6 @@ msFilterList
 # 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
 # 🇬🇧: Makes Dplay's login page show up properly
 +d mparticle.com
-# https://github.com/easylist/easylist/issues/5110
-+d widgets.spklw.com
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
@@ -325,10 +323,7 @@ msFilterList
 -d trackvoluum.com
 -d jagerjack.com
 - pakkerlevering
--d posten.club
--d kundklubb-se.com
 -d prisjakt.org
--d postnord-norge.com
 -d 102.112.2o7.net
 -d tromselementbygg.no
 -d no.zxxyw.com
@@ -389,8 +384,6 @@ msFilterList
 # https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
 -d phosphox.com
 -d nodzoom.com
-# https://www.faktisk.no/faktasjekker/geo/nei-skam-tarjei-har-ikke-tjent-millioner-pa-bitcoin-program
--d affilicircle.com
 # https://www.faktisk.no/notiser/ql/nei-du-far-ikke-rayban-briller-til-22299-kr-pa-denne-nettsiden
 -d rbgeg.com
 -d rbkbb.com
@@ -420,8 +413,6 @@ msFilterList
 -d vision-hey.club
 # https://www.mm.dk/tjekdet/artikel/fup-dovne-robert-har-ikke-tjent-en-boejet-5-oere-paa-bitcoins
 -d marissatomei.com
-# https://www.mm.dk/tjekdet/artikel/fupartikel-haevder-at-rasmus-paludan-er-blevet-rig-paa-investeringer-i-bitcoins
--d marymaclane.net
 # https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
 -d top-topic.co
 # https://www.nrk.no/troms/1.14788086
@@ -466,7 +457,6 @@ msFilterList
 -d assassinfitness.com
 -d benshermanoslo.com
 -d billigesalg.com
--d bncentertainment.com
 -d bostongrnhsflowers.com
 -d caperforaciones.com
 -d charpente-ramel.com
@@ -507,7 +497,6 @@ msFilterList
 -d moslt.com
 -d moteshoes.com
 -d mrarmstrongsclass.com
--d mudancaslvc.com
 -d museuw.com
 -d mycraftypad.com
 -d nasajones.com
@@ -532,12 +521,10 @@ msFilterList
 -d popeurope.com
 -d quiltstudiolaren.com
 -d retoaudi.com
--d skoeccosandaler.com
 -d skonmdnorge.com
 -d sykkeltrøye.com
 -d ssrodeolivestock.com
 -d swellsup.com
--d tiranaaquapark-eg.com
 -d tobiascelebritymusicevents.com
 -d um-bs.com
 -d vansnorge.com

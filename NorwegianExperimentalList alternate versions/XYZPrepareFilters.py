@@ -4,7 +4,7 @@ import re
 SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , ':xpath', 'dk,no##', ':nth-ancestor', '!#if', '!#endif', '!+ ']
+    ':style', '##+js', '.*#' , ':xpath', 'dk,no##', ':nth-ancestor', '!#if', '!#endif', '!+ ', '##^']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
 
@@ -537,6 +537,18 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"tipsbladet\.dk###js-promo-welcome", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"([.?]),script", 
+           r"\1$script", 
+           line
+        )
+
+        line = re.sub(
+           r"xmlhttprequest\$", 
+           r"xmlhttprequest,", 
            line
         )
 
