@@ -1,5 +1,64 @@
 ! Title: !#if Test
-! Version: 13April2020v2-Sandbox
+! Version: 13April2020v3-Sandbox
+
+! Personal entries for AdGuard Home
+!#if !ext_ublock
+!#if !adguard
+||google.com^$ctag=device_tv
+facebook.com$ctag=device_tv
+yahoo.com$ctag=device_tv
+|avs.na.amazonalexa.com^|
+!#endif
+!#endif
+
+! Syncing whitelist with those of AdGuard:
+@@||settings.crashlytics.com^
+@@||e.crashlytics.com^
+@@||app-measurement.com^
+@@||mobileapptracking.com^
+@@||pixapi.net^
+
+! LG ads disqualified by Perflyst
+||ngfts.lge.com^
+
+! Caused by "AdGuard Annoyances Filter - Anti-Adblock"
+@@||translate.googleusercontent.com^$generichide,badfilter
+
+! I hate the weebs' total domination of Pixiv's new translation system
+crowdin.com##.untranslated_phrase:has-text(アークナイツ)
+crowdin.com##.untranslated_phrase:has-text(アズールレーン)
+crowdin.com##.untranslated_phrase:has-text(ライブ!)
+crowdin.com##.untranslated_phrase:has-text(オルティナ)
+crowdin.com##.untranslated_phrase:has-text((FE))
+crowdin.com##.untranslated_phrase:has-text(SAO)
+crowdin.com##.untranslated_phrase:has-text(/^スカジ$/)
+crowdin.com##.untranslated_phrase:has-text(ドールズフロントライン)
+crowdin.com##.untranslated_phrase:has-text(/^[ア-ン][ア-ンー][ア-ンー][ア-ンー]$/)
+crowdin.com##.untranslated_phrase:has-text(フェルドロ)
+crowdin.com##.untranslated_phrase:has-text(崩壊)
+crowdin.com##.untranslated_phrase:has-text(ナイトメアブラッド)
+crowdin.com##.untranslated_phrase:has-text(FEif)
+crowdin.com##.untranslated_phrase:has-text(Истина)
+crowdin.com##.untranslated_phrase:has-text(少女前線)
+crowdin.com##.untranslated_phrase:has-text(プラマニクス)
+crowdin.com##.untranslated_phrase:has-text(青雲映す碧波)
+crowdin.com##.untranslated_phrase:has-text(/^マーアル$/)
+crowdin.com##.untranslated_phrase:has-text(远山)
+crowdin.com##.untranslated_phrase:has-text(タシュケント)
+crowdin.com##.untranslated_phrase:has-text(フェリディミ)
+crowdin.com##.untranslated_phrase:has-text(Зима)
+crowdin.com##.untranslated_phrase:has-text(フロストリーフ)
+crowdin.com##.untranslated_phrase:has-text(ファイアーエムブレム)
+crowdin.com##.untranslated_phrase:has-text(アイドル)
+crowdin.com##.untranslated_phrase:has-text(シャドウバース)
+crowdin.com##.untranslated_phrase:has-text(ヤンデレ)
+crowdin.com##.untranslated_phrase:has-text(ネプテューヌ)
+
+! Test to avoid game patches/updates on the go
+||sun.hac.lp1.d4c.nintendo.net$ctag=user_regular
+||scsi-download.lp1.scsi.srv.nintendo.net^$ctag=user_regular
+
+! "This community is available in the app". Reddit's mobile backend crew is an absolute embarassment to the already widely embarassed human species.
 !#if env_mobile
 ||reddit.com^$document,domain=~ Reddit hates phone users on a personal level and you know it.
 !#endif
