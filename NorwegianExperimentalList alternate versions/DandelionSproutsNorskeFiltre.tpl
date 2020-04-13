@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08April2020v2-Alpha
+# Version: 13April2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -226,13 +226,12 @@ msFilterList
 # 🇮🇸: ——— Óbrot ———
 # 🇬🇧: ——— Unbreakage ———
 # Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
-# ——— «EasyPrivacy» unbreakage ———
+# ——— Caused by «EasyPrivacy» ———
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
 # 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
 # 🇬🇧: Makes Dplay's login page show up properly
 +d mparticle.com
-# Makes Postnord tracking pages work properly
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
@@ -271,6 +270,7 @@ msFilterList
 # digi.no, tu.no, medier24.no, porten.no
 # https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
 # https://www.vg.no/nyheter/i/y3Mka2//(08/04/2020)
+# https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
@@ -294,8 +294,8 @@ msFilterList
 -d ssl.p.jwpcdn.com gapro.js
 -d client-stream-events.mtg-api.com
 -d freewheel-mtgx-tv.akamaized.net
-# 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer for dem vil bli ordrett godkjent.
-# 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries for them will be accepted verbatim.
+# 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer so blir foreslått for dem vil bli ordrett godkjent.
+# 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
 - *-annonse-*
 # 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
 # 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.

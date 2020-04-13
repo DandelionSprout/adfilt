@@ -205,6 +205,12 @@ def prepare_abp(lines) -> str:
 
         # remove $important modifier from the rule
         line = re.sub(
+           r"\$important,", 
+           "$", 
+           line
+        )
+
+        line = re.sub(
            r"([$,])important", 
            "", 
            line
@@ -549,6 +555,18 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"xmlhttprequest\$", 
            r"xmlhttprequest,", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.* Elgiganten .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.* elko\.is .*", 
+           r"", 
            line
         )
 
