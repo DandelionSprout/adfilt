@@ -7,6 +7,7 @@ UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', 'dk,no##', ':nth-ancestor', '!#if', '!#endif', '!+ ', '##^']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
+UNSUPPORTED_BRAVE = ['##', '#@#', '#?#', '!#', '!+', '$csp', '$generichide', '$elemhide', '$specificblock', '$redirect', ',redirect', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
@@ -14,6 +15,7 @@ OUTPUT_ABP = 'NordicFiltersABP.txt'
 OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
 OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
 OUTPUT_PRIVACY = 'NordicFiltersPrivacy.txt'
+OUTPUT_BRAVE = 'NordicFiltersBrave.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -1115,7 +1117,6 @@ def prepare_privacy(lines) -> str:
 
     for line in lines:
 
-
         # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
         line = re.sub(
            r"^@.*tradedoubler\.com.*", 
@@ -1217,6 +1218,133 @@ def prepare_privacy(lines) -> str:
 
     return text
 
+# ————— Brave version —————
+
+def is_supported_brave(line) -> bool:
+    for token in UNSUPPORTED_BRAVE:
+        if token in line:
+            return False
+
+    return True
+
+# function that prepares the filter list for ABP
+def prepare_brave(lines) -> str:
+    text = ''
+
+    # remove or modifiy entries with unsupported modifiers
+    for line in lines:
+
+        # remove $document modifier from the rule
+        line = re.sub(
+           r"\$doc.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$all.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])xhr", 
+           r"\1xmlhttprequest", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])3p", 
+           r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])important$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$important,", 
+           r"$", 
+           line
+        )
+
+        line = re.sub(
+           r",important,", 
+           r",", 
+           line
+        )
+
+        line = re.sub(
+           r".*background.*\$image", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*bakgrunn.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*xxlsports.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: [0-9]{4}.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"(! Version: .*)", 
+           r"[Adblock Plus 3.4]\n\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(itle:.*Dandelion Sprout.*)", 
+           r"\1 (for Brave Browser)", 
+           line
+        )
+
+        line = re.sub(
+           r"^! [a-z].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! \(.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        if is_supported_brave(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
+
+
+
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -1228,6 +1356,7 @@ if __name__ == "__main__":
     tpl_filter = prepare_tpl(lines)
     privoxy_filter = prepare_privoxy(lines)
     privacy_filter = prepare_privacy(lines)
+    brave_filter = prepare_brave(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -1246,6 +1375,9 @@ if __name__ == "__main__":
 
     with open(OUTPUT_PRIVACY, "w") as text_file:
         text_file.write(privacy_filter)
+
+    with open(OUTPUT_BRAVE, "w") as text_file:
+        text_file.write(brave_filter)
 
     print('The adblocker-based list versions have been generated.')
 
