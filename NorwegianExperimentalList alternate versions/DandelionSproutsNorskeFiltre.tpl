@@ -1,5 +1,5 @@
 msFilterList
-# Version: 13April2020v2-Alpha
+# Version: 14April2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -241,6 +241,7 @@ msFilterList
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 # https://github.com/easylist/easylist/issues/1861
 +d _prebid_
+# https://github.com/easylist/easylist/issues/5220
 # ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
 # Makes E-newspaper previews show up properly
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
@@ -443,6 +444,9 @@ msFilterList
 # https://www.mm.dk/tjekdet/artikel/nej-joergen-leth-har-ikke-investeret-500-millioner-kroner-i-bitcoins
 -d daily-news.tech
 -d limevow.com
+# https://www.faktisk.no/notiser/ywM/se-opp-for-bitcoin-svindlere
+-d travelersloch.com
+-d trainingcalculate.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 82.118.242.69
 -d 136.243.73.30
