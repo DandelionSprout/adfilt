@@ -124,7 +124,7 @@ msFilterList
 - partners *_ad_icon
 - resources dfp
 -d liveads.no
--d leikjaland.is *logo.png|
+-d leikjaland.is *logo.png
 -d leikjaland.is bannerstopright
 -d siglo.is strevda
 -d trolli.is videoval_logo

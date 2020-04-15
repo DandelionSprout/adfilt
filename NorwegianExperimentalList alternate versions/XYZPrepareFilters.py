@@ -989,6 +989,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\|$", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
@@ -1332,7 +1338,7 @@ def prepare_brave(lines) -> str:
         )
 
         line = re.sub(
-           r"^(! Version: .*)", 
+           r"(! Version: .*)", 
            r"\1-Alpha", 
            line
         )
