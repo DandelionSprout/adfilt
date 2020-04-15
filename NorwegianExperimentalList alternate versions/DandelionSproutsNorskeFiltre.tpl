@@ -1,5 +1,5 @@
 msFilterList
-# Version: 14April2020v1-Alpha
+# Version: 15April2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -124,6 +124,17 @@ msFilterList
 - partners *_ad_icon
 - resources dfp
 -d liveads.no
+-d leikjaland.is *logo.png|
+-d leikjaland.is bannerstopright
+-d siglo.is strevda
+-d trolli.is videoval_logo
+-d trolli.is Hollin_olafsfirdi
+-d trolli.is banner
+-d trolli.is *logo-*.png
+-d trolli.is syngjum-kubbur
+-d trolli.is Untitled-1-1.jpg
+-d trolli.is vefsmarinn
+-d trolli.is benecta.png
 -d tv2a.dk
 -d adframe.no
 -d adstream.no
@@ -155,6 +166,8 @@ msFilterList
 -d admob.no
 -d admob.dk
 -d api.advista.no
+# bilasolur.is (15 04 2020)
+- lykill_banner
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
@@ -209,6 +222,7 @@ msFilterList
 # https://www.budstikka.no/
 # e24.no, aftenbladet.no, sysla.no
 # https://www.aftenposten.no/ (Mobile useragent)
+# https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi/(15/04/2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇮🇸: ——— Tóma skilirammar ———
@@ -244,6 +258,8 @@ msFilterList
 # https://github.com/easylist/easylist/issues/5220
 # ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
 # Makes E-newspaper previews show up properly
+# ——— Caused by «AdGuard Base» ———
+# https://trolli.is/smitudum-faekkar-a-nordurlandi-vestra/
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
