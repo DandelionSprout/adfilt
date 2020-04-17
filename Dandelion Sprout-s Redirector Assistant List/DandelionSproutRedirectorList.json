@@ -1,6 +1,6 @@
 {
-    "createdBy": "Redirector v3.5.2",
-    "createdAt": "2020-02-10T16:21:23.066Z",
+    "createdBy": "Redirector v3.5.3",
+    "createdAt": "2020-04-17T09:46:38.963Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -14,6 +14,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -30,6 +31,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -46,6 +48,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -62,6 +65,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -78,6 +82,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -94,6 +99,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -110,6 +116,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame",
                 "stylesheet",
@@ -131,6 +138,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -140,13 +148,40 @@
             "exampleUrl": "https://pbs.twimg.com/media/DdO7F3tU0AA1CnQ.jpg:large",
             "exampleResult": "https://pbs.twimg.com/media/DdO7F3tU0AA1CnQ.jpg",
             "error": null,
-            "includePattern": "https://pbs.twimg.com(.*)[jp][pn]g:large",
+            "includePattern": "https://pbs.twimg.com(.*)([jp][pn]g):large",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://pbs.twimg.com$1jpg",
+            "redirectUrl": "https://pbs.twimg.com$1$2",
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "history",
+                "other"
+            ]
+        },
+        {
+            "description": "{Hidden webpages 5} Change some Twitter images to functionally readable images, so that they can be easily opened in image applications (Part 2)",
+            "exampleUrl": "https://pbs.twimg.com/media/EP6X6_LX0AAake7?format=jpg&name=large",
+            "exampleResult": "https://pbs.twimg.com/media/EP6X6_LX0AAake7.jpg",
+            "error": null,
+            "includePattern": "(.*)\\?format=jpg&name=(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1.jpg",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame",
                 "sub_frame",
@@ -172,6 +207,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -188,6 +224,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -204,6 +241,7 @@
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -220,6 +258,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -236,6 +275,24 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "{Raw image res upgrade 6} Get larger versions of various random sites' raw JPG images",
+            "exampleUrl": "https://static.tvno.nu/4084728?forceFit=0&height=760&quality=50&width=1350",
+            "exampleResult": "https://static.tvno.nu/4084728?forceFit=0&height=760&quality=100&width=1350",
+            "error": null,
+            "includePattern": "(.*)&quality=[2-8][0-9](&(.*))?$",
+            "excludePattern": "",
+            "patternDesc": "JPG qualities below 20 are likely done for comedic purposes only, and 90-99 are acceptable tradeoffs for smaller image byte sizes.",
+            "redirectUrl": "$1&quality=100$2",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -252,6 +309,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame",
                 "xmlhttprequest"
@@ -269,6 +327,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame",
                 "xmlhttprequest"
@@ -286,6 +345,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "xmlhttprequest"
             ]
@@ -302,6 +362,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -318,6 +379,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -334,6 +396,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -350,6 +413,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -366,6 +430,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -382,6 +447,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -398,6 +464,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -414,6 +481,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -430,6 +498,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -446,6 +515,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -462,6 +532,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -478,6 +549,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -494,6 +566,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame",
                 "sub_frame",
@@ -518,6 +591,7 @@
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": true,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -534,6 +608,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": true,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -550,6 +625,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": true,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -566,6 +642,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": true,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -582,6 +659,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -598,6 +676,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -614,6 +693,7 @@
             "patternType": "W",
             "processMatches": "urlDecode",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -629,7 +709,8 @@
             "redirectUrl": "https://www.youtube.com/embed/xKm7GVceWQQ$1",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": false,
+            "disabled": true,
+            "grouped": false,
             "appliesTo": [
                 "sub_frame",
                 "stylesheet",
@@ -653,6 +734,7 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -662,13 +744,14 @@
             "exampleUrl": "https://www.pixiv.net/jump.php?url=https%3A%2F%2Fwww.jabarchives.com%2Fjoerandel",
             "exampleResult": "https://www.jabarchives.com/joerandel",
             "error": null,
-            "includePattern": "http*://www.pixiv.net/jump.php?url=*%3A%2F%2F*%2F*",
+            "includePattern": "http[s]?://www.pixiv.net/jump.php\\?(url=)?(.*)",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "$2://$3/$4",
-            "patternType": "W",
-            "processMatches": "noProcessing",
+            "redirectUrl": "$2",
+            "patternType": "R",
+            "processMatches": "urlDecode",
             "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
@@ -685,6 +768,24 @@
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "{Direct outgoings 4} Google",
+            "exampleUrl": "https://www.google.no/url?sa=t&source=web&rct=j&url=https://www.warcraft3refunded.com/",
+            "exampleResult": "https://www.warcraft3refunded.com/",
+            "error": null,
+            "includePattern": "https://www.google.*/url*&url=*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$3",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
