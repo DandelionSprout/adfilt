@@ -1,8 +1,8 @@
 ## All up-to-date significant adblockers¹
 
 #### Element removal (a.k.a. cosmetic rules, a.k.a. hiding rules, a.k.a. ##-rules)
-* `##.`: Hides page elements, based on one or more `class` values in the F12 filetree (separated with full-stops).
-* `##`: Hides page elements based on the element type, e.g. `a`, `li`, `button`, `iframe`, etc., that are usually highlighted in purple in the F12 filetree.
+* `##.`: Hides page elements, based on one or more `class` values in the F12 "Elements" filetree (separated with full-stops).
+* `##`: Hides page elements based on the element type, e.g. `a`, `li`, `button`, `iframe`, etc., that are usually highlighted in purple in the F12 "Elements" filetree.
 * `###`: Hides page elements based on the `id` value.
 * `#@#.`/`#@#`/`#@##`: Whitelists page elements to make them load.
 * `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or numerous other things that are highlighted in brown in the F12 filetree. Does not support RegEx.
