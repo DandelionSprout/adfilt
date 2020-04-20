@@ -150,5 +150,6 @@
 * Amazingly, using `! Redirect: ` in the intended target link's list, will cause an infinite loop that prevents the list from being loaded.
 * In Opera, the F12 filetree is not actually opened with F12 by default, but instead with Ctrl+Shift+I (Capital İ).
 * No entries can use both `||` and `##` at the same time.
+* Major note to advanced CSS experts: Some advanced terms have been replaced in this guide, because they'd be less than obvious to laymen who'd need this guide. For instance, I replaced `DOM tree` with `F12 filetree`, because I 100% genuinely felt that it was easy to think `DOM` was short for "dominatrix", and also because many people may not even know how to open said tree in web browsers.
 
 ¹ = Includes Nano Adblocker, uBlock Origin ≥1.20.0, AdGuard, AdNauseum, Adblock Plus version ≥3.5, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, or Blokada, whose syntax supports are considerably inferior to the above list.
