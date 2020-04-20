@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 20April2020v1-Beta
+! Version: 20April2020v2-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
@@ -102,14 +102,14 @@ reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/j[eo
 reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/g[o0]y/i):-abp-contains(/wh[i1]te/i))
 
 ! Removes the "n new posts for you" banner
-reddit.com#?#div:-abp-has(:scope > svg[viewbox="0 0 34 16"])
-reddit.com#?#div[class^=SubredditVars-r-] > div:-abp-has(:scope > svg)
+reddit.com#?#div:-abp-has(> svg[viewbox="0 0 34 16"])
+reddit.com#?#div[class^=SubredditVars-r-] > div:-abp-has(> svg)
 
 ! Attempts to remove the "Recommended posts" feed on the bottom of almost all posts
-reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):-abp-has(:scope > div[data-redditstyle])
-reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(:scope > div[data-redditstyle])
+reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):-abp-has(> div[data-redditstyle])
+reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(> div[data-redditstyle])
 reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):-abp-has(div[data-redditstyle])
-reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(:scope > div > div[data-redditstyle])
+reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(> div > div[data-redditstyle])
 
 ! Removes three specific types of comments that offer nothing to a thread apart from vapid far-out-of-place greetings
 reddit.com#?#.Comment:-abp-contains(/Happy Cake[ ]?Day/i)
@@ -126,7 +126,7 @@ reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/Thank/i):-abp-contains(/aw
 reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/Thank/i):-abp-contains(/stranger/i)
 
 ! Attempts to remove the "Recommended posts" feed on the right of most posts
-reddit.com#?#div[data-redditstyle=false] + div:-abp-has(:scope > div[data-redditstyle="true"])
+reddit.com#?#div[data-redditstyle=false] + div:-abp-has(> div[data-redditstyle="true"])
 
 ! Let's give people a more free choice whether to use New or Old Reddit, okay?
 ||styles.redditmedia.com/t5_2qimj/styles/image_widget_hosy9x86gxv11.png$image
