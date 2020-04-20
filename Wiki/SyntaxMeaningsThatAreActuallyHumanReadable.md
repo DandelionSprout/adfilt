@@ -13,7 +13,7 @@
 * `:not(.element)`: Finds page elements that doesn't contain a specified element or text string. Can be paired with other syntaxes à la `:not(:-abp-contains(Example text))`.
 * `:-abp-contains(text)`: Finds page elements that contains such text within it.
 * `:-abp-has(.element)`: Finds page elements that contains such an element within it.
-* `:-abp-has(> .element)`: Tells `:-abp-has` to only find elements whose criteria match their immediate subelement.
+* `:-abp-has(>`, a.k.a. `:-abp-has(:scope >` : Tells `:-abp-has` to only find elements whose criteria match their immediate subelement(s).
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order.
 * `:only-of-type` / `first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
 * `:first-child` / `:last-child`: Appears to be synonymous with `first-of-type` and `last-of-type` for adblocking purposes.
@@ -56,9 +56,6 @@
 * `! Title:` Specifies the intended name of the list. Required to make the name automatically show up in the settings of most adblockers, instead of the URL or of manual text input.
 * `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
 * `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days". ABP also supports "hour/hours".
-
-## Nano Adblocker, uBlock Origin, Adblock Plus and AdBlock only:
-* `:-abp-has(:scope > .element)`: Very similar to `:-abp-has(> .element)`, but can select multiple levels of child elements, e.g. `:-abp-has(:scope > div > div > div)`.
 
 ## Nano Adblocker, uBlock Origin and AdGuard only:
 #### Hiding
