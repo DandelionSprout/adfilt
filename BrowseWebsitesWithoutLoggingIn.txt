@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🚪 Browse websites without logging in
-! Version: 16April2020v1
+! Version: 20April2020v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! For more information and details about this list and other lists of mine, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -88,7 +88,7 @@ pinterest.*##header[data-test-id=unauthHeader] ~ div[data-test-id=fullPageSignup
 
 ! Twitter
 !! Removes a "See What's Happening" prompt at the bottom of some tweet chains
-twitter.com#?#div[data-testid=primaryColumn] div:-abp-has(:scope > div > div > a[href="/login"])
+twitter.com#?#div[data-testid=primaryColumn] div:-abp-has(> div > div > a[href="/login"])
 !! Removes a login prompt when visiting "/intent/follow"-type links in mobile environments
 ! https://twitter.com/intent/follow?screen_name=mesitsu (13/04/2020)
 mobile.twitter.com#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
