@@ -178,6 +178,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
+           r"\1#?#*:-abp-has(> \2)", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -568,6 +574,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^!.* elko\.is .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r":remove()", 
            r"", 
            line
         )

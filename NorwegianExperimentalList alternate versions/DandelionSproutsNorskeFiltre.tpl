@@ -1,5 +1,5 @@
 msFilterList
-# Version: 15April2020v3-Alpha
+# Version: 20April2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -255,11 +255,8 @@ msFilterList
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 # https://github.com/easylist/easylist/issues/1861
 +d _prebid_
-# https://github.com/easylist/easylist/issues/5220
 # ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
 # Makes E-newspaper previews show up properly
-# ——— Caused by «AdGuard Base» ———
-# https://trolli.is/smitudum-faekkar-a-nordurlandi-vestra/
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
