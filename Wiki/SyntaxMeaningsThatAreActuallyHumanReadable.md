@@ -13,6 +13,7 @@
 * `:not(.element)`: Finds page elements that doesn't contain a specified element or text string. Can be paired with other syntaxes à la `:not(:-abp-contains(Example text))`.
 * `:-abp-contains(text)`: Finds page elements that contains such text within it.
 * `:-abp-has(.element)`: Finds page elements that contains such an element within it.
+* `:-abp-has(> .element)`: Tells `:-abp-has` to only find elements whose criteria match their immediate subelement.
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order.
 * `:only-of-type` / `first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
 * `:first-child` / `:last-child`: Appears to be synonymous with `first-of-type` and `last-of-type` for adblocking purposes.
@@ -56,7 +57,7 @@
 * `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days". ABP also supports "hour/hours".
 
 ### Nano Adblocker, uBlock Origin, Adblock Plus and AdBlock only:
-* `:scope`: Used alongside `:-abp-has` to make it only find elements whose criteria match their immediate subelements.
+* `:-abp-has(:scope > .element)`: Very similar to `:-abp-has(> .element)`, but can select multiple levels of child elements, e.g. `:-abp-has(:scope > div > div > div)`.
 
 ### Nano Adblocker, uBlock Origin and AdGuard only:
 #### Hiding
