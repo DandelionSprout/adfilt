@@ -1,11 +1,17 @@
 [Adblock Plus 3.4]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 20April2020v2-Beta
+! Version: 27April2020v2-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
+! "This community is available in the app". Reddit's mobile backend crew is an absolute embarassment to the already widely embarassed human species.
+!#if env_mobile
+||reddit.com^$document,domain=~ Reddit hates phone users on a personal level and you know it.
+!#endif
+
+!#if !env_mobile
 ! Removes sitewide feeds from the dropdown menu, on the assumption that they contain posts from bad subreddits
 ! Dropdown menu
 reddit.com###focus-All
@@ -95,11 +101,11 @@ reddit.com#?#.Post:-abp-has(span[data-click-id="metadata_comments"]):not(:-abp-h
 reddit.com#?#.Post:-abp-has(div[style*="-postfooter-"]):not(:-abp-has(span[data-click-id="metadata_votes"]))
 
 ! Usernames that are 139% guaranteed to be trolls
-reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
-reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i))
-reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/RedditAdmins/i))
-reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi][w]?[sz]?/i):-abp-contains(/white/i))
-reddit.com#?#.Post,.Comment,.entry:-abp-has(a[href^="/user"]:-abp-contains(/g[o0]y/i):-abp-contains(/wh[i1]te/i))
+reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
+reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i))
+reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/RedditAdmins/i))
+reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi][w]?[sz]?/i):-abp-contains(/white/i))
+reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/g[o0]y/i):-abp-contains(/wh[i1]te/i))
 
 ! Removes the "n new posts for you" banner
 reddit.com#?#div:-abp-has(> svg[viewbox="0 0 34 16"])
@@ -175,27 +181,4 @@ reddit.com#?#.thing[data-author="iBleeedorange"]
 reddit.com#?#.thing[data-author="KevlarYarmulke"]
 reddit.com#?#.thing[data-author="maxwellhill"]
 reddit.com#?#.thing[data-author="bubblr"]
-
-! Comments on Reddit Mobile
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/GallowBoob"])
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/pepsi_next"])
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/TooShiftyForYou"])
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/mvea"])
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/SlimJones123"])
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/BunyipPouch"])
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/iBleeedorange"])
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/KevlarYarmulke"])
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/maxwellhill"])
-reddit.com#?#article:-abp-has(.PostHeader__author-link[href="/user/bubblr"])
-
-! Posts on Reddit Mobile
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^GallowBoob$/))
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^pepsi_next$/))
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^TooShiftyForYou$/))
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^mvea$/))
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^SlimJones123$/))
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^BunyipPouch$/))
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^iBleeedorange$/))
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^KevlarYarmulke$/))
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^maxwellhill$/))
-reddit.com#?#.Comment:-abp-has(.CommentHeader__username:-abp-contains(/^bubblr$/))
+!#endif
