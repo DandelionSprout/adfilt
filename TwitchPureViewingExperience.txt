@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 💬 Twitch: Pure Viewing Experience
-! Version: 25April2020v1-Beta
+! Version: 27April2020v1-Beta
 ! Expires: 4 days
 ! Description: This list aims to remove distracting elements, and to maximise the elements inside the chat to make it easier to read.
 ! Note that this list does not remove in-player ads at all. There are several other lists out there that you'll need to keep frequently updated in order to accomplish that.
@@ -8,13 +8,13 @@
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
 ! Removes the "Recommended channels" section when you're logged on
-twitch.tv##.recommended-channels
+www.twitch.tv##.recommended-channels
 
 ! Removes the "Recommended channels" section when you're not logged on
-twitch.tv##.tw-full-width > .tw-mg-b-2
+www.twitch.tv##.tw-full-width > .tw-mg-b-2
 
 ! Attempts to remove suggestions from the "Following" page
-twitch.tv#?#div:-abp-has(> .tw-mg-b-1 > h4[data-a-target="live-channels-header"]) + div
+www.twitch.tv#?#div:-abp-has(> .tw-mg-b-1 > h4[data-a-target="live-channels-header"]) + div
 
 ! Aims to remove the spacing between Twitch emotes, for the sake of multi-part emotes
 twitch.tv##.message > span:-abp-contains( ):not(:-abp-contains(/\S/))
@@ -24,7 +24,7 @@ clips.twitch.tv##span.text-fragment:not(:-abp-contains(/\S/))
 clips.twitch.tv#?#div:nth-of-type(3):-abp-has(> .tw-pd-y-2)
 
 ! Removes the ungodly awful Hype Train chat banner
-twitch.tv##.community-highlight-stack__card
+www.twitch.tv##.community-highlight-stack__card
 
 ! Aims to remove mass spamming of "!play" on streams of 'Marbles on Stream'
 twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-has(.message:-abp-contains(/^!play$/))
@@ -32,19 +32,19 @@ twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-has(.message:-abp-contains(
 ! ——— ↓ Not supported by ABP or AdBlock ↓ ———
 
 ! Removes the spacing between the video player and the sidebars
-twitch.tv#?#.tw-pd-t-2.tw-pd-x-3:style(padding-left: 2px !important; padding-right: 3px !important)
-twitch.tv#?#.channel-root:style(padding: 2px !important)
-twitch.tv#?#.persistent-player:style(max-width: calc(100% - 5px) !important)
+www.twitch.tv#?#.tw-pd-t-2.tw-pd-x-3:style(padding-left: 2px !important; padding-right: 3px !important)
+www.twitch.tv#?#.channel-root:style(padding: 2px !important)
+www.twitch.tv#?#.persistent-player:style(max-width: calc(100% - 5px) !important)
 
 ! Reduces the size of the chat header
-twitch.tv#?#.video-chat__header:style(height: 20px !important)
-twitch.tv#?#.tw-pd-r-1.tw-pd-l-2.tw-justify-content-between.tw-full-width:style(height: 2rem)
+www.twitch.tv#?#.video-chat__header:style(height: 20px !important)
+www.twitch.tv#?#.tw-pd-r-1.tw-pd-l-2.tw-justify-content-between.tw-full-width:style(height: 2rem)
 
 ! Broadens the chat textbox
-twitch.tv#?#.tw-flex-shrink-0.tw-full-width.tw-pd-b-2.tw-pd-t-1.tw-pd-x-2.video-chat__input:style(padding-left: 1px !important; padding-right: 1px !important; padding-top: 4px !important; padding-bottom: 1px !important)
-twitch.tv#?#.tw-textarea.tw-textarea--no-resize:style(padding-left: 3px; padding-right: 3px; padding-top: 1px; padding-bottom: 1px; height: 55px !important)
-twitch.tv#?#.chat-input.tw-block:style(padding-left: 3px !important; padding-right: 3px !important; padding-bottom: 2px !important)
-twitch.tv#?#.tw-textarea:style(padding: 2px 28px 2px 2px !important)
+www.twitch.tv#?#.tw-flex-shrink-0.tw-full-width.tw-pd-b-2.tw-pd-t-1.tw-pd-x-2.video-chat__input:style(padding-left: 1px !important; padding-right: 1px !important; padding-top: 4px !important; padding-bottom: 1px !important)
+www.twitch.tv#?#.tw-textarea.tw-textarea--no-resize:style(padding-left: 3px; padding-right: 3px; padding-top: 1px; padding-bottom: 1px; height: 55px !important)
+www.twitch.tv#?#.chat-input.tw-block:style(padding-left: 3px !important; padding-right: 3px !important; padding-bottom: 2px !important)
+www.twitch.tv#?#.tw-textarea:style(padding: 2px 28px 2px 2px !important)
 
 ! Reduces the size of the "Hosting [channel]" header
 twitch.tv#?#.tw-align-items-center.tw-flex.tw-flex-nowrap.tw-justify-content-between.tw-pd-1:style(padding-top: 0px !important; padding-bottom: 0px !important)
