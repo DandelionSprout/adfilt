@@ -35,7 +35,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 ## The tools that I use:
 
-• [Checker for redundant filter entries and for ABP syntaxes](https://web.archive.org/web/20171209102004/https://arestwo.org/famlam/redundantRuleChecker.html), made by Famlam. It does however not account for uBO-syntax-specific entries, nor for ABP syntaxes newer than 2017. <br>
+• [Checker for redundant filter entries and for ABP syntaxes](https://abp.surge.sh/redundantRuleChecker/), made by Famlam. It does however not account for uBO-syntax-specific entries, nor for ABP syntaxes newer than 2017. <br>
 • [Recentmost tool I used to test IP server availability](https://github.com/funilrys/PyFunceble), made by [Funilrys](https://github.com/funilrys). (I previously used the _Find dead, redirected and/or parked domains_ tool at [this link](https://web.archive.org/web/20171209102004/https://arestwo.org/famlam/redundantRuleChecker.html) to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead). <br>
 • To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed. <br>
 • To easily create GitCDN links to the lists, in case anyone have list connection problems: [GitHub GitCDN Button](https://greasyfork.org/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul) <br>
