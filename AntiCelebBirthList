@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 😌 Anti-'Newsstories about celebs giving birth' List
-! Version: 29April2020v1-Beta
+! Version: 29April2020v2-Beta
 ! Expires: 3 days
 ! Description: We hear so much talk about "fake news" nowadays, but we never hear any talk about non-news, such as C-tier celebrities either expecting offspring or giving birth to such. This list will aid in removing such kinds of non-news.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -29,6 +29,7 @@ tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-conta
 tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains(/sitt første barn/i)
 tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains(/fått barn/i):not(:-abp-contains(/fått barna/i))
 tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains(/fikk en datter/i)
+tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains(/fikk en sønn/i)
 tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains(/baby på vei/i)
 tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains(/gladnyhet/i)
 tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains(/føder/i)
@@ -44,17 +45,18 @@ tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-conta
 tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains( fødte )
 tv2.no#?#.article-story:-abp-has(.title:has-text(/^Gravid$/i))
 
-! The Independent
-independent.co.uk##a[href*=baby-birth]
-independent.co.uk##a[href*=baby-news]
-independent.co.uk##a[href*=baby-pregnant]
-independent.co.uk#?#.article-hero:-abp-has(a[href*=baby-birth])
-
 ! Ekstra Bladet
 ekstrabladet.dk##a[href*="-gravid/"]
 ekstrabladet.dk##a[href*=om-gravid]
 ekstrabladet.dk##a[href*=faaet-tvillinger]
 ekstrabladet.dk##a[href*=deler-stor-nyhed]
+ekstrabladet.dk##a[href*="blevet-far/"]
+
+! The Independent
+independent.co.uk##a[href*=baby-birth]
+independent.co.uk##a[href*=baby-news]
+independent.co.uk##a[href*=baby-pregnant]
+independent.co.uk#?#.article-hero:-abp-has(a[href*=baby-birth])
 
 ! Se og Hør Norway
 seher.no#?#article:-abp-contains(/sitt første barn/i)
@@ -74,11 +76,12 @@ bbc.co.uk,bbcnewsv2vjtpsuy.onion#?#.gel-layout__item:-abp-contains(welcome baby)
 tv2.dk#?#.g-item:not(section):-abp-contains(baby på vej)
 tv2.dk#?#.g-item:not(section):-abp-contains(fået tvillinger)
 
+! Adresseavisen
+adressa.no##a[href*="venter-tvilling"]
+adressa.no##a[href*="f%C3%A5tt-en-gutt"]
+
 ! CNN International
 cnn.com##a[href*=-baby-]
 
 ! The Daily Star
 dailystar.co.uk#?#.teaser:-abp-contains(gives birth)
-
-! Adresseavisen
-adressa.no#?#.article:-abp-contains(/Venter tvilling/i)
