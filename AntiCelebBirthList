@@ -1,10 +1,12 @@
 [Adblock Plus 3.4]
 ! Title: 😌 Anti-'Newsstories about celebs giving birth' List
-! Version: 22April2020v2-Alpha
+! Version: 29April2020v1-Beta
 ! Expires: 3 days
 ! Description: We hear so much talk about "fake news" nowadays, but we never hear any talk about non-news, such as C-tier celebrities either expecting offspring or giving birth to such. This list will aid in removing such kinds of non-news.
-! Currently, only Norwegian newssites are supported, in part because TV2 Norway has more such stories in a month than what BBC's newssite has ever had in their entire 25+ years. If you know of a non-Norwegian newssite that frequently posts such non-news, give me a heads-up about it.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! Multiple sites
+theguardian.com,dw.com##a[href*=birth-of-baby]
 
 ! TV2 Norway
 tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains(/bl[ie][tr]?[t]? [pm]a[pm][pm]a/i):not(:-abp-contains(/ mappa/i))
@@ -42,19 +44,11 @@ tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-conta
 tv2.no#?#.boxwrapper.a-ca,.tv2-story,.spklw-post,article[data-lp-url]:-abp-contains( fødte )
 tv2.no#?#.article-story:-abp-has(.title:has-text(/^Gravid$/i))
 
-! Se og Hør Norway
-seher.no#?#article:-abp-contains(/sitt første barn/i)
-seher.no#?#article:-abp-contains(/bleieskift/i)
-seher.no#?#article:-abp-has(.label:-abp-contains(/gravid/i))
-
-! NRK
-www.nrk.no#?#.kur-room:-abp-contains(/å bli pappa/i)
-www.nrk.no#?#.kur-room:-abp-contains(/baby-nyhet/i)
-nrk.no#?#.bulletin:-abp-contains(blitt foreldre)
-
-! TV2 Denmark
-tv2.dk#?#.g-item:not(section):-abp-contains(baby på vej)
-tv2.dk#?#.g-item:not(section):-abp-contains(fået tvillinger)
+! The Independent
+independent.co.uk##a[href*=baby-birth]
+independent.co.uk##a[href*=baby-news]
+independent.co.uk##a[href*=baby-pregnant]
+independent.co.uk#?#.article-hero:-abp-has(a[href*=baby-birth])
 
 ! Ekstra Bladet
 ekstrabladet.dk##a[href*="-gravid/"]
@@ -62,5 +56,29 @@ ekstrabladet.dk##a[href*=om-gravid]
 ekstrabladet.dk##a[href*=faaet-tvillinger]
 ekstrabladet.dk##a[href*=deler-stor-nyhed]
 
-! Adressa
+! Se og Hør Norway
+seher.no#?#article:-abp-contains(/sitt første barn/i)
+seher.no#?#article:-abp-contains(/bleieskift/i)
+seher.no#?#article:-abp-has(.label:-abp-contains(/gravid/i))
+
+! NRK
+nrk.no#?#.kur-room:-abp-contains(/å bli pappa/i)
+nrk.no#?#.kur-room:-abp-contains(/baby-nyhet/i)
+nrk.no#?#.bulletin:-abp-contains(blitt foreldre)
+
+! BBC
+bbc.com,s5rhoqqosmcispfb.onion#?#.media-list__item:-abp-contains(birth of son)
+bbc.co.uk,bbcnewsv2vjtpsuy.onion#?#.gel-layout__item:-abp-contains(welcome baby)
+
+! TV2 Denmark
+tv2.dk#?#.g-item:not(section):-abp-contains(baby på vej)
+tv2.dk#?#.g-item:not(section):-abp-contains(fået tvillinger)
+
+! CNN International
+cnn.com##a[href*=-baby-]
+
+! The Daily Star
+dailystar.co.uk#?#.teaser:-abp-contains(gives birth)
+
+! Adresseavisen
 adressa.no#?#.article:-abp-contains(/Venter tvilling/i)
