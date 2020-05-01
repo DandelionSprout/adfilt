@@ -54,7 +54,7 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            "\[Adblock Plus 3.4\]", 
-           "[AdGuard ≥6]", 
+           "[AdGuard ≥7.2]", 
            line
         )
 
@@ -79,78 +79,6 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"([$,])1p", 
            r"\1~third-party", 
-           line
-        )
-
-        line = re.sub(
-           "viaplay.\*#", 
-           "viaplay.no,viaplay.dk,viaplay.is#", 
-           line
-        )
-
-        line = re.sub(
-           "google.\*#", 
-           "google.no,google.dk,google.is#", 
-           line
-        )
-
-        line = re.sub(
-           r"eurogamer\.\*([#,])", 
-           r"eurogamer.dk\1", 
-           line
-        )
-
-        line = re.sub(
-           "ticketmaster.\*#", 
-           "ticketmaster.no,ticketmaster.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "qxl.\*#", 
-           "qxl.no,qxl.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "expedia.\*#", 
-           "expedia.no,expedia.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "gamereactor.\*#", 
-           "gamereactor.no,gamereactor.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "viafree.\*#", 
-           "viafree.no,viafree.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "momondo.\*#", 
-           "momondo.no,monondo.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "eurosport.\*#", 
-           "eurosport.no,eurosport.dk#", 
-           line
-        )
-
-        line = re.sub(
-           "prisjakt.\*,", 
-           "prisjakt.no,", 
-           line
-        )
-
-        line = re.sub(
-           "180.\*#", 
-           "180.no,180.dk#", 
            line
         )
 
@@ -247,6 +175,60 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r":-abp-has\(", 
            r":has(", 
+           line
+        )
+
+        line = re.sub(
+           r":-abp-contains\(", 
+           r":has-text(", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=dplay\.no\|dplay\.dk", 
+           r"domain=dplay.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=auth.dplay\.no\|auth.dplay\.dk", 
+           r"domain=auth.dplay.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=gamereactor\.no\|gamereactor\.dk", 
+           r"domain=gamereactor.*", 
+           line
+        )
+
+        line = re.sub(
+           r"\|gamereactor\.no\|gamereactor\.dk", 
+           r"|gamereactor.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=viafree\.no\|viafree\.dk", 
+           r"domain=viafree.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=eniro.se\|eniro\.no\|eniro\.dk", 
+           r"domain=eniro.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=eurosport\.no\|eurosport\.dk", 
+           r"domain=eurosport.*", 
+           line
+        )
+
+        line = re.sub(
+           r"\|proff.se\|proff\.no\|proff\.dk", 
+           r"|proff.*", 
            line
         )
 
