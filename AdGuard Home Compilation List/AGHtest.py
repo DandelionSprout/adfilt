@@ -408,6 +408,36 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^/.*[a-z]\\/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*[a-z]\/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/[a-z0-9.*_/-]{1,70}/$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"@@.*/", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-z0-9@|].*\?.*", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\r\n'
 
