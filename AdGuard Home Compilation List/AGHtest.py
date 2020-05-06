@@ -1,9 +1,9 @@
 import requests
 import re
 
-SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://easylist-downloads.adblockplus.org/liste_fr.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://easylist-downloads.adblockplus.org/advblock.txt', 'https://easylist-downloads.adblockplus.org/Liste_AR.txt', 'https://easylist-downloads.adblockplus.org/easylistspanish.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/sections/push-notifications.txt', 'https://easylist-downloads.adblockplus.org/fanboy-notifications.txt']
+SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt', 'https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://easylist-downloads.adblockplus.org/liste_fr.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://easylist-downloads.adblockplus.org/advblock.txt', 'https://easylist-downloads.adblockplus.org/Liste_AR.txt', 'https://easylist-downloads.adblockplus.org/easylistspanish.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/sections/push-notifications.txt', 'https://easylist-downloads.adblockplus.org/fanboy-notifications.txt']
 
-UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain' ]
+UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain', '[Adblock Plus 2.0]']
 UNSUPPORTED_IP = ['##', '@#', '#?#', '#%#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '!+']
 
 OUTPUT = 'xyzzyx.txt'
@@ -325,49 +325,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"! https?://forums\.lanik\.us.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"! https?://www\.reddit\.com/r/uBlockOrigin.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"! https?://github\.com/uBlockOrigin.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"! https://github\.com/NanoMeow.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"! https://github\.com/jspenguin2017/uBlockProtector.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"! https://github.com/reek/anti-adblock-killer.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"! https://github.com/NanoAdblocker.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"! https://github\.com/jspenguin2017/uBlockProtector.*", 
+           r"^! http.*",
            r"", 
            line
         )
@@ -434,6 +392,36 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^[a-z0-9@|].*\?.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! Checksum:.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\(update frequency\)", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! 20(1|2).*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! Ref:.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! #", 
            r"", 
            line
         )
