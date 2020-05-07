@@ -1,5 +1,5 @@
 msFilterList
-# Version: 20April2020v2-Alpha
+# Version: 07May2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -166,8 +166,9 @@ msFilterList
 -d admob.no
 -d admob.dk
 -d api.advista.no
-# bilasolur.is (15 04 2020)
+# bilasolur.is (03 05 2020)
 - lykill_banner
+-d bilasolur.is banners
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
