@@ -1,5 +1,5 @@
 msFilterList
-# Version: 07May2020v1-Alpha
+# Version: 09May2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -135,6 +135,7 @@ msFilterList
 -d trolli.is Untitled-1-1.jpg
 -d trolli.is vefsmarinn
 -d trolli.is benecta.png
+-d oyggjatidindi.com *L%C3%BDsing
 -d tv2a.dk
 -d adframe.no
 -d adstream.no
@@ -169,6 +170,8 @@ msFilterList
 # bilasolur.is (03 05 2020)
 - lykill_banner
 -d bilasolur.is banners
+# portal.fo (09 05 2020)
+# https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein/(09/05/2020)
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
@@ -176,6 +179,7 @@ msFilterList
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
+-l%C3%BDsing-
 -d yrkesbil.no *emty.gif
 -d yrkesbil.no 1pix.gif
 -d 730.no sonymusic
@@ -224,6 +228,8 @@ msFilterList
 # e24.no, aftenbladet.no, sysla.no
 # https://www.aftenposten.no/ (Mobile useragent)
 # https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi/(15/04/2020)
+# https://fiskur.fo/gitte-henning-1-landar-i-maloy/(09/05/2020)
+-d *.fo banner2x1.png
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇮🇸: ——— Tóma skilirammar ———

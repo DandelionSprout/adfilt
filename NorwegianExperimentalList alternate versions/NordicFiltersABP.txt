@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 070520201
+! Version: 090520201
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -146,6 +146,9 @@ dagens.dk#?#*:-abp-has(> * > a[href*=".bedrageri.com/"])
 itavisen.no#?#.spklw-post:-abp-has(a[href*=smartadserver])
 730.no#?#*:-abp-has(> * > * > .gofollow)
 itavisen.no##.sponsored
+brudleyp.fo,hvat.fo##.vev
+torg.fo##.add
+hvat.fo##.vev-wrap
 |blob:https://www.veier24.no/$image
 ||1819.is/infosmall/$image
 ||3.248.18.175^
@@ -245,6 +248,7 @@ itavisen.no##.sponsored
 ||webclick.no^
 ||webhotell.enivest.no^
 ||youtube.com/embed/*&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1$subdocument
+||vevlysingar.*.com^$third-party
 -bazaar-$script,domain=nettavisen.no
 .dk/ad/
 .dk/ads/
@@ -286,6 +290,7 @@ itavisen.no##.sponsored
 ||trolli.is/wp-content/uploads/2018/05/Untitled-1-1.jpg$image
 ||trolli.is/wp-content/*/vefsmarinn$image
 ||trolli.is/wp-content/*/benecta.png
+||oyggjatidindi.com/vev_banners/*L%C3%BDsing$image
 ||tv2a.dk^
 ||adframe.no^
 ||adstream.no^
@@ -336,6 +341,14 @@ tv2.no##.spklw-post-attr[data-pc]
 ! bilasolur.is (03/05/2020)
 /lykill_banner$image
 ||bilasolur.is/banners^
+! portal.fo (09/05/2020)
+##.multiple-vevlysingar
+##.full-width-vevlysingar
+portal.fo###top_vev
+portal.fo##.full-width-vev.all
+! https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein (09/05/2020)
+portal.fo,fiskur.fo###footer-adds
+portal.fo##.ablock
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -691,6 +704,8 @@ m.feltet.dk##.banner_mobile
 klikk.no##.floatRight.columns
 veitingastadir.is##.footer_top > .footer-wrap > .columns
 bilasolur.is#?#*:-abp-has(> div[class*=advertisement-spot])
+tv2.no##div[data-third-party-link^="\[\""]
+-l%C3%BDsing-$image,domain=news.fo
 ||yrkesbil.no/gifs/*emty.gif^
 ||yrkesbil.no/gifs/1pix.gif^
 ||730.no/banner/*/sonymusic/$subdocument
@@ -795,6 +810,8 @@ vafo.dk##.adform-flexblock
 ###innocode-ad
 ! https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi (15/04/2020)
 ##.undirsidaad
+! https://fiskur.fo/gitte-henning-1-landar-i-maloy (09/05/2020)
+||*.fo/css/img/banner2x1.png$image
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -812,6 +829,8 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 dyrevennene.no##.td-footer-wrapper
 yrkesbil.no#?#tr:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
 yrkesbil.no#?#td:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
+kvf.fo##.panels-flexible-row-grein-rnd-13
+oyggjatidindi.com##.bottom_space
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ! 🇩🇰: ——— Distraherende baggrundsbilleder ———
