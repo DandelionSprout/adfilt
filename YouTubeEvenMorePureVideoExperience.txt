@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 28April2020v1
+! Version: 10May2020v1
 ! Expires: 6 days
 ! Description: This list removes even more distracting or uncomfortable things on YouTube.
 ! If you want to block even more things on top of these two lists, feel free to check out the anti-Autoplay (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt) and anti-Elsagate (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt) lists that I've made.
@@ -38,8 +38,8 @@ www.youtube.com#?##button:-abp-has([aria-label*=app])
 ##.ytp-endscreen-content
 youtube.com###related
 m.youtube.com##ytm-watch ytm-compact-video-renderer
-/annotations_module.js$script,domain=youtube.com
-/endscreen.js$script,domain=youtube.com
+/annotations_module.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
+/endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
 invidio.us,kgg2m7yk5aybusll.onion,axqzx4s6s54s32yentfqojs3x5i7faxza6xo3ehd4bzzsg2ii4fv2iid.onion,174.138.43.128,yewtu.be,invidious.snopyta.org,invidious.13ad.de,invidious.ggc-project.de,invidious.toot.koeln,invidious.fdn.fr#?#.pure-u-lg-1-5 > .h-box:-abp-has(.pure-u-14-24)
 hooktube.com#?#.col-lg-4:-abp-has(#video-list)
 
@@ -58,11 +58,7 @@ youtube.com##ytd-rich-metadata-renderer.ytd-rich-metadata-row-renderer
 m.youtube.com##ytm-watch-metadata-app-promo-renderer
 
 ! Removes the Share arrow button in fullscreen mode and in embeds
-youtube.com##button[class*=share-button]
-
-! Removes a rarely occuring login nag module with an octopus and a treasure chest when not logged in
-! Turned off by request from the guy who submitted the entry, as it now also removes a «Terms of Service» update notification
-!!! youtube.com#?#paper-dialog:-abp-has(ytd-mealbar-promo-renderer)
+youtube.com,youtube-nocookie.com##button[class*=share-button]
 
 ! Aims to prevent video suggestions from showing up when pausing embedded videos
 ##.ytp-scroll-min
@@ -130,16 +126,16 @@ youtube.com#?#div.top-nav-tab:-abp-contains(/^Gaming$/)
 
 ! ————————————————————————————————————————————————————————————————
 
-! Below are entries that I borrowed verbatim from «YouTube: Pure Video Experience», which is maintained by anonymous maintainers at https://youtube.adblockplus.me/, and which is currently believed to have no known copyright statements or licences.
+! Below are entries that I borrowed verbatim (except for adding extra domain coverage) from «YouTube: Pure Video Experience», which was maintained by monztA until 2017, and which is currently believed to have no known copyright statements or licences.
 
 ! Removes comments on video pages
 ||youtube.com/live_chat_fragments_ajax?$xmlhttprequest
-||youtube.com/comment_service_ajax?$domain=youtube.com|youtu.be
+||youtube.com/comment_service_ajax?$domain=youtube.com|youtu.be|youtube-nocookie.com
 youtube.com###comments
 ! Removes all annotations in videos
 ||youtube.com/annotations_invideo?$object-subrequest
 ! HTML5 version
-youtube.com##.video-annotations
+youtube.com,youtube-nocookie.com##.video-annotations
 ! Removes video suggestions on video pages
 youtube.com##.watch-sidebar-body > #watch-related > .related-list-item > .related-video
 youtube.com##.watch-sidebar-body > #watch-related > .related-list-item
@@ -152,9 +148,9 @@ youtube.com##.guide-builder-v2 .branded-page-v2-secondary-col
 youtube.com##.action-panel-trigger[role="button"][data-trigger-for="action-panel-share"]
 youtube.com##.yt-uix-button[data-trigger-for="action-panel-share"]
 ! Removes recommended and featured videos in the endscreen
-||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com|youtu.be
-youtube.com##.html5-endscreen-content
-youtube.com##.html5-endscreen
+||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com|youtu.be|youtube-nocookie.com
+youtube.com,youtube-nocookie.com##.html5-endscreen-content
+youtube.com,youtube-nocookie.com##.html5-endscreen
 ! Removes related/featured/popular channels on channel pages
 youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip
 youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip + .branded-page-related-channels-list
