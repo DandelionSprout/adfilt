@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 10May2020v1
+! Version: 12May2020v1
 ! Expires: 6 days
 ! Description: This list removes even more distracting or uncomfortable things on YouTube.
 ! If you want to block even more things on top of these two lists, feel free to check out the anti-Autoplay (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt) and anti-Elsagate (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt) lists that I've made.
@@ -9,27 +9,29 @@
 ! ——— IMPORTANT NOTICE (10th of July 2019): After my lists were relicenced to become more accomodative and easier to swallow for differently licenced projects, I have decided to simply add the entries from "YouTube: Pure Video Experience" to my lists instead of mandating the use of both lists. ———
 
 ! Removes the YouTube Gaming button in the left-hand menu
-youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="/gaming"])
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="/gaming"])
 
 ! Removes the Trending button in the left-hand menu
-youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/trending"])
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/trending"])
 m.youtube.com##.scbrr-tab[href="/feed/trending"]
+m.youtube.com##ytm-pivot-bar-item-renderer:nth-of-type(2)
 
 ! Removes the Discover button in the left-hand menu
-youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/guide_builder"])
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/guide_builder"])
 
 ! Removes the pop-out player button in the video player
-youtube.com##.ytp-button.ytp-miniplayer-button
+www.youtube.com##.ytp-button.ytp-miniplayer-button
 
 ! Removes the Livestream button in the left-hand menu
-youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="UC4R8DWoMoI7CAwX8_LjQHig"])
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*=UC4R8DWoMoI7CAwX8_LjQHig])
 
 ! Removes the Homepage button in the left-hand menu
-youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href="/"])
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href="/"])
 m.youtube.com##.scbrr-tab[href="/"]
+m.youtube.com##ytm-pivot-bar-item-renderer:first-of-type
 
 ! Removes the video store button in the left-hand menu
-youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="UClgRkhTL3_hImCAmdLfDE4g"])
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*=UClgRkhTL3_hImCAmdLfDE4g])
 
 ! Removes the app drawer in the top-right menu
 www.youtube.com#?##button:-abp-has([aria-label*=app])
@@ -38,6 +40,7 @@ www.youtube.com#?##button:-abp-has([aria-label*=app])
 ##.ytp-endscreen-content
 youtube.com###related
 m.youtube.com##ytm-watch ytm-compact-video-renderer
+m.youtube.com##[section-identifier=related-items]
 /annotations_module.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
 /endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
 invidio.us,kgg2m7yk5aybusll.onion,axqzx4s6s54s32yentfqojs3x5i7faxza6xo3ehd4bzzsg2ii4fv2iid.onion,174.138.43.128,yewtu.be,invidious.snopyta.org,invidious.13ad.de,invidious.ggc-project.de,invidious.toot.koeln,invidious.fdn.fr#?#.pure-u-lg-1-5 > .h-box:-abp-has(.pure-u-14-24)
@@ -56,6 +59,7 @@ twitch.tv#?#.ffz__tooltip .stats:-abp-contains(👍):-abp-contains(👎)
 ! Removes the large grey [YouTube Kids / game info] buttons below gaming videos
 youtube.com##ytd-rich-metadata-renderer.ytd-rich-metadata-row-renderer
 m.youtube.com##ytm-watch-metadata-app-promo-renderer
+m.youtube.com##ytm-rich-metadata-renderer
 
 ! Removes the Share arrow button in fullscreen mode and in embeds
 youtube.com,youtube-nocookie.com##button[class*=share-button]
@@ -91,24 +95,24 @@ invidio.us,kgg2m7yk5aybusll.onion,axqzx4s6s54s32yentfqojs3x5i7faxza6xo3ehd4bzzsg
 ! ——— "Disable Polymer" mode ———
 
 ! Removes the Homepage button in the left-hand menu when using "Disable polymer"
-youtube.com###what_to_watch-guide-item
+www.youtube.com###what_to_watch-guide-item
 
 ! Removes the video store and YouTube Gaming buttons in the left-hand menu when using "Disable polymer"
-youtube.com##li.guide-section:nth-of-type(5) > .personal-item.guide-item-container > .yt-box.yt-uix-tdl.guide-user-links
+www.youtube.com##li.guide-section:nth-of-type(5) > .personal-item.guide-item-container > .yt-box.yt-uix-tdl.guide-user-links
 
 ! Removes the Discover button in the left-hand menu when using "Disable polymer"
-youtube.com##li.guide-section:nth-of-type(4)
+www.youtube.com##li.guide-section:nth-of-type(4)
 
 ! Removes the Trending button in the left-hand menu when using "Disable polymer"
-youtube.com###trending-guide-item
+www.youtube.com###trending-guide-item
 
 ! Attempts to remove YouTube frontpage recommended videos and channels when using "Disable polymer" (and using YouTube in a Germanic language)
-youtube.com#?#.feed-item-container.browse-list-item-container:-abp-has(.shelf-title-annotation:-abp-contains( for ))
+www.youtube.com#?#.feed-item-container.browse-list-item-container:-abp-has(.shelf-title-annotation:-abp-contains( for ))
 
 ! Removes the like/dislike counters
-youtube.com##.like-button-renderer-like-button > .yt-uix-button-content
-youtube.com##.like-button-renderer-dislike-button > .yt-uix-button-content
-youtube.com##.video-extras-sparkbars
+www.youtube.com##.like-button-renderer-like-button > .yt-uix-button-content
+www.youtube.com##.like-button-renderer-dislike-button > .yt-uix-button-content
+www.youtube.com##.video-extras-sparkbars
 
 ! ————————————————————————————————————————————————————————————————
 
@@ -116,13 +120,13 @@ youtube.com##.video-extras-sparkbars
 
 ! Removes most video suggestions in TV mode
 ! Sadly, at least one suggestion had to remain in each row, or else you couldn't browse down to the Home and Search buttons.
-youtube.com##.exp-enable-live-seeking > #leanback > #app-markup > #watch > #bottom-half .pivot-row .watchable-tile:not(:nth-of-type(1))
+www.youtube.com##.exp-enable-live-seeking > #leanback > #app-markup > #watch > #bottom-half .pivot-row .watchable-tile:not(:first-of-type)
 
 ! Removes the Trending button in the top bar. At least I think it's the Trending button.
-youtube.com##div.top-nav-tab:nth-of-type(2)
+www.youtube.com##div.top-nav-tab:nth-of-type(2)
 
 ! Removes the Gaming button in the top bar
-youtube.com#?#div.top-nav-tab:-abp-contains(/^Gaming$/)
+www.youtube.com#?#div.top-nav-tab:-abp-contains(/^Gaming$/)
 
 ! ————————————————————————————————————————————————————————————————
 
@@ -145,8 +149,8 @@ youtube.com##.feed .branded-page-v2-secondary-col
 youtube.com##.guide-builder-v2 .branded-page-v2-secondary-col
 ! Removes sharing tab below videos
 ||youtube.com/share_ajax?action_get_share_box=1&video_id=$xmlhttprequest
-youtube.com##.action-panel-trigger[role="button"][data-trigger-for="action-panel-share"]
-youtube.com##.yt-uix-button[data-trigger-for="action-panel-share"]
+youtube.com##.action-panel-trigger[role=button][data-trigger-for=action-panel-share]
+youtube.com##.yt-uix-button[data-trigger-for=action-panel-share]
 ! Removes recommended and featured videos in the endscreen
 ||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com|youtu.be|youtube-nocookie.com
 youtube.com,youtube-nocookie.com##.html5-endscreen-content
