@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2020-04-17T09:46:38.963Z",
+    "createdAt": "2020-05-13T23:16:37.848Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -351,6 +351,23 @@
             ]
         },
         {
+            "description": "{Good link shortening 4} Makes Amazon products easier to link to",
+            "exampleUrl": "https://www.amazon.co.uk/Bos-Magical-New-Friend-Scholastic/dp/1338323326/ref=pd_sbs_14_1/262-3877129-1714269?_encoding=UTF8&pd_rd_i=1338323326&pd_rd_r=da2a232b-99a2-4202-ade0-6b52bb20749b&pd_rd_w=cXLbd&pd_rd_wg=46K05&pf_rd_p=2773aa8e-42c5-4dbe-bda8-5cdf226aa078&pf_rd_r=1HVF5BQG27VGX33FG5J6&psc=1&refRID=1HVF5BQG27VGX33FG5J6",
+            "exampleResult": "https://www.amazon.co.uk/Bos-Magical-New-Friend-Scholastic/dp/1338323326/",
+            "error": null,
+            "includePattern": "https://www.amazon.*/ref=*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.amazon.$1/",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
             "description": "{Force 64-bit Windows installers 1} 7-Zip",
             "exampleUrl": "https://www.7-zip.org/a/7z1801.exe",
             "exampleResult": "https://www.7-zip.org/a/7z1801-x64.exe",
@@ -368,40 +385,6 @@
             ]
         },
         {
-            "description": "{Force 64-bit Windows installers 2} iTunes",
-            "exampleUrl": "https://secure-appldnld.apple.com/itunes12/091-76320-20180329-6D5B23D2-32F7-11E8-993D-9ABAB071F5CF/iTunesSetup.exe",
-            "exampleResult": "https://secure-appldnld.apple.com/itunes12/091-76320-20180329-6D5B23D2-32F7-11E8-993D-9ABAB071F5CF/iTunes64Setup.exe",
-            "error": null,
-            "includePattern": "*://secure-appldnld.apple.com/*/iTunesSetup.exe",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://secure-appldnld.apple.com/$2/iTunes64Setup.exe",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "{Force 64-bit Windows installers 3} Microsoft Office 365",
-            "exampleUrl": "https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365HomePremRetail&platform=X86&language=nb-NO&TaxRegion=db&correlationId=0c664037-8710-4b2e-9ffe-783d4c1c3baa&token=08cfdf54-5f3a-4d96-a036-eb2f50dc3bd2&version=O16GA&source=O15OLSOMEX$StoreId=CFQ7TTC0K5DM",
-            "exampleResult": "https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365HomePremRetail&platform=X64&language=nb-NO&TaxRegion=db&correlationId=0c664037-8710-4b2e-9ffe-783d4c1c3baa&token=08cfdf54-5f3a-4d96-a036-eb2f50dc3bd2&version=O16GA&source=O15OLSOMEX$StoreId=CFQ7TTC0K5DM",
-            "error": null,
-            "includePattern": "*://c2rsetup.officeapps.live.com/c2r/download.aspx?*&platform=X86&*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "$1://c2rsetup.officeapps.live.com/c2r/download.aspx?$2&platform=X64&$3",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
             "description": "{Force 64-bit Windows installers 4} Mozilla Thunderbird (May not work with all language-specific versions)",
             "exampleUrl": "https://download.mozilla.org/?product=thunderbird-60.0-SSL&os=win&lang=nb-NO",
             "exampleResult": "https://download-origin.cdn.mozilla.net/pub/thunderbird/releases/60.0/win64/nb-NO/Thunderbird%20Setup%2060.0.exe",
@@ -410,23 +393,6 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "https://download-origin.cdn.mozilla.net/pub/thunderbird/releases/$1/win64/$2/Thunderbird%20Setup%20$1.exe",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "{Force 64-bit Windows installers 5} PeaZip",
-            "exampleUrl": "https://www.peazip.org/download-installer-p-windows.html",
-            "exampleResult": "https://www.peazip.org/peazip-64bit.html",
-            "error": null,
-            "includePattern": "*.peazip.org/download-installer-p-windows.html",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.peazip.org/peazip-64bit.html",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -585,7 +551,7 @@
             "exampleResult": "https://www.youtube.com/watch?v=S18Bogcp2l4&disable_polymer=1",
             "error": null,
             "includePattern": "(.*)://www.youtube.com/(.*)?([?&])?(.*)?",
-            "excludePattern": "",
+            "excludePattern": ".*(disable_polymer=1|channel).*",
             "patternDesc": "",
             "redirectUrl": "https://www.youtube.com/$2$3$4&disable_polymer=1",
             "patternType": "R",
@@ -597,7 +563,24 @@
             ]
         },
         {
-            "description": "{UI changer 1B} Turn the newest YouTube GUI into the second-newest one, part 3",
+            "description": "{UI changer 1B} Turn the newest YouTube GUI into the second-newest one, part 2",
+            "exampleUrl": "https://www.youtube.com/channel/UClgRkhTL3_hImCAmdLfDE4g",
+            "exampleResult": "https://www.youtube.com/channel/UClgRkhTL3_hImCAmdLfDE4g?disable_polymer=1",
+            "error": null,
+            "includePattern": "(.*)://www.youtube.com/channel/(.*)",
+            "excludePattern": ".*disable_polymer=1",
+            "patternDesc": "",
+            "redirectUrl": "https://www.youtube.com/channel/$2?disable_polymer=1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "{UI changer 1C} Turn the newest YouTube GUI into the second-newest one, part 3",
             "exampleUrl": "https://www.youtube.com/",
             "exampleResult": "https://www.youtube.com/?disable_polymer=1",
             "error": null,
@@ -709,7 +692,7 @@
             "redirectUrl": "https://www.youtube.com/embed/xKm7GVceWQQ$1",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": true,
+            "disabled": false,
             "grouped": false,
             "appliesTo": [
                 "sub_frame",
