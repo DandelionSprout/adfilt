@@ -1,12 +1,12 @@
-! Version: 09May2020v1
+! Version: 12May2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 12 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
-! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
-! 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
-! 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
-! Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
+! 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, Sydslesvig, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
+! 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
+! Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! CRITICAL NOTE FOR PFBLOCKERNG USERS: This version of my list was never meant to be used with pfBlockerNG in the first place, and I was never asked or inquired about it before it was added to it. Instead I currently recommend https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AdawayHosts. This has been fixed in fresh stock installations of ≥2.2.5_27. For all other pfBlockerNG users, please replace the list link manually.
 ! Warning: This list version does not exchange tracker protection for added browsing convenience, and is for advanced tech users ONLY! Some web stuff that are unbroken by whitelistings in the normal version, are NOT fixed in this version! Additionally, it is only made with uBO and close derivatives in mind.
 
@@ -105,9 +105,8 @@ sedenne.no#?#div[class*=articleItem]:-abp-contains(ANNONSE)
 sedenne.no#?#div[class*=articleListItem]:-abp-contains(ANNONSE)
 side2.no##[href*="clk.tradedoubler.com/click"]
 side2.no##[href*="track.adtraction.com/t/t"]
-side2.no,side3.no#?#.channel-item:-abp-has(.content > [href*="/annonsebilag/"])
-side2.no,side3.no#?#a:not([href*="side3.no"]):not([href*="side2.no"]):not([href*=".blogg.no"]):-abp-has(figure[class*="img-container"])
-side3.no#?#.strossle:-abp-has(div[data-third-party-link])
+side2.no#?#.channel-item:-abp-has(.content > [href*="/annonsebilag/"])
+side2.no#?#a:not([href*="side2.no"]):not([href*=".blogg.no"]):-abp-has(figure[class*="img-container"])
 skessuhorn.is##.kostad-efni
 smis.no#?#.widget:-abp-contains(Annonse)
 sorlandsavisen.no#?#div:-abp-has(> span:-abp-contains(Annonse))
@@ -153,6 +152,9 @@ itavisen.no##.sponsored
 brudleyp.fo,hvat.fo##.vev
 torg.fo##.add
 hvat.fo##.vev-wrap
+travservice.dk##.widget_widgetkit
+travservice.dk##.tm-main-top
+melkoghonning.no##.g
 |blob:https://www.veier24.no/$image
 ||1819.is/infosmall/$image
 ||3.248.18.175^
@@ -169,7 +171,7 @@ hvat.fo##.vev-wrap
 ||ads.*.no^
 ||ads.no^
 ||adserver.*.dk^
-||adservice.dk^
+||adservice.com^
 ||adservicemedia.dk
 ||akamai.net^$script,domain=eniro.se|eniro.no|eniro.dk
 ||akamaihd.net^$media,domain=dplay.no|dplay.dk
@@ -181,14 +183,12 @@ hvat.fo##.vev-wrap
 ||austurfrett.is/images/banners$image
 ||banner.*.no^
 ||banner.landbrugsavisen.dk/reklame.aspx$subdocument
-||bannere.oslonett.no^
 ||boligkanalen-maestro-new.azurewebsites.net$image
 ||bornholm.nu/nonsec/banner$image
 ||brandstudio.inventory.schibsted.io$subdocument,3p
 ||cdn.rikstoto.no/expert/GameShop^$subdocument,3p,domain=~tipster.no
 ||cdnboligkanalen.azureedge.net^$3p
 ||cluster.chart.dk$3p
-||cmt.no^
 ||damoh.vgtv.no/hic_qos$script,redirect=noopjs,domain=vg.no
 ||deiligejenter.no$image,domain=nakenprat.com
 ||delivered-by-madington.com^$3p
@@ -197,8 +197,6 @@ hvat.fo##.vev-wrap
 ||dust2.dk/img/banners/*$image
 ||easy-ad.no^
 ||easy-ads.dk^
-||emerio.no^
-||euroads.no^
 ||eyjar.net/skrar/ads
 ||feltet.dk/*/topbanner_*.jpg^
 ||feltet.dk/*/wallpaper_1.jpg^
@@ -209,23 +207,18 @@ hvat.fo##.vev-wrap
 ||gratisxxx.no$image,domain=nakenprat.com
 ||heartbeat.airserve.net^$3p
 ||helios.*.no^
-||i1media.no^
 ||isweb.no^$subdocument
 ||karfan.is/*-470x130*.jpg^
 ||karfan.is/*300x250.jpg^
-||klikk.no/common/js/klikk.desktop-thirdparty.min.js
 ||langrenn.com/getbanner.php/*/getfile.php/$image
 ||matriell.dm-storage.no$image,3p
 ||media.sonymusic.no/marketing/*.html$subdocument,3p
-||mediasense.dk^$3p
 ||myad.no^
 ||nettklikk.no^
 ||norskenettsider.no/images/ageras-banner.jpg
 ||norskenettsider.no/images/remember-banner-2016.jpg
 ||nvnytt.no/images/*annonse-$image
-||openadex.dk^
-||piwik.onlinemagasinet.no^
-||primetime.ad.primetime.net^
+||ad.primetime.net^
 ||rett24.no/*/_/attachment/inline/$image
 ||samfilm.codelab.is^$3p
 ||samler.no/images/banners/$image
@@ -243,16 +236,15 @@ hvat.fo##.vev-wrap
 ||tunnelsyn1.files.wordpress.com/*/sotra-trelast-isolasjon$image
 ||tvkampen.com/media/*/banner*$image
 ||tvkampen.com/media/partners/unibet-lo$image
-||tvshop.com/tradedoubler_files/
 ||utrop.no/wp-content/uploads/*.gif$image
 ||utrop.no/wp-content/uploads/*/Banner_utrop$image
 ||vevlysingar.fo$subdocument,3p
 ||viasport-assets.mtg-api.com/*/prod/comScore-*.js$script
 ||vikari.is/skjol/frjalsi-lif*.png$image
 ||webclick.no^
-||webhotell.enivest.no^
 ||youtube.com/embed/*&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1$subdocument
 ||vevlysingar.*.com^$3p
+||melkoghonning.no/wp-content/uploads/*_Banner_$image
 -bazaar-$script,domain=nettavisen.no
 .dk/ad/
 .dk/ads/
@@ -295,6 +287,7 @@ hvat.fo##.vev-wrap
 ||trolli.is/wp-content/*/vefsmarinn$image
 ||trolli.is/wp-content/*/benecta.png
 ||oyggjatidindi.com/vev_banners/*L%C3%BDsing$image
+||travservice.dk/wp-content^$image
 !+ NOT_OPTIMIZED
 ||tv2a.dk^
 !+ NOT_OPTIMIZED
@@ -312,9 +305,8 @@ hvat.fo##.vev-wrap
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 !#endif
-! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
-! (Exception: opp.no)
-##.gofollow:not([href*="radioe6"])
+! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
+##.gofollow
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
 ! www.op.no
@@ -360,6 +352,8 @@ portal.fo##.full-width-vev.all
 ! https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein (09/05/2020)
 portal.fo,fiskur.fo###footer-adds
 portal.fo##.ablock
+! Bet365 widget triggered for Norwegian audiences only
+goal.com##.js-betting-widget.is-country-no:upward(2)
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -731,13 +725,17 @@ veitingastadir.is##.footer_top > .footer-wrap > .columns
 bilasolur.is##div[class*=advertisement-spot]:upward(1)
 beta.tv2.no##body:style(padding-top: 70px !important)
 tv2.no##div[data-third-party-link^="\[\""]
--l%C3%BDsing-$image,domain=news.fo
+advokatbladet.no##.adnuntius-ad
+fla.de##.adsenseblock
+fl-arena.de##.content_right_medium_rect_ad_box
+fl-arena.de##.do_not_print.article_teaser_no_border
 ||yrkesbil.no/gifs/*emty.gif^
 ||yrkesbil.no/gifs/1pix.gif^
 ||730.no/banner/*/sonymusic/$subdocument
 ||bilnorge.no/gifs/*emty.gif^
 ||gaysir.no/rek/bb_inline$subdocument
 ||static.vg.no/css/admark_top.gif
+-l%C3%BDsing-$image,domain=news.fo
 !+ NOT_OPTIMIZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 !+ NOT_OPTIMIZED
@@ -803,7 +801,7 @@ vafo.dk##.adform-flexblock
 ! qxl.no
 ###GoogleAdsensePanorama
 ###GoogleAdsenseFooter
-! nickelodeon.no, tv2.dk, side3.no, klikk.no, zooom.no, adressa.no, blogg.no, kjarkinn.is
+! nickelodeon.no, tv2.dk, klikk.no, zooom.no, adressa.no, blogg.no, kjarkinn.is
 ##.ad-container
 ! gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi.no
 ##.poster-placeholder

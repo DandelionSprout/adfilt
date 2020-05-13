@@ -4,7 +4,7 @@ import re
 SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , ':xpath', 'dk,no##', ':nth-ancestor', '!#if', '!#endif', '!+ ', '##^']
+    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
 UNSUPPORTED_BRAVE = ['##', '#@#', '#?#', '!#', '!+', '$csp', '$generichide', '$elemhide', '$specificblock', '$redirect', ',redirect', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn']
@@ -629,6 +629,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r":remove()", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"##:xpath\((.*)\)$", 
+           r"#$#hide-if-matches-xpath \1", 
            line
         )
 

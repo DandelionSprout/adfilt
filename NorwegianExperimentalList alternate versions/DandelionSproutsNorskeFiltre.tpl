@@ -1,13 +1,13 @@
 msFilterList
-# Version: 09May2020v1-Alpha
+# Version: 12May2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
-# 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
-# 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
-# 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
-# Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+# 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
+# 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, Sydslesvig, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
+# 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
+# Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 # Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.
 # If you wish to remove cookie banners from Nordic websites, check out https://easylist-downloads.adblockplus.org/easylist-cookie.tpl (Can also be subscribed to from https://raw.githack.com/collinbarrett/FilterLists/master/data/TPLSubscriptionAssistant.html)
 # 🇳🇴 🇩🇰: ——— Reklamer ———
@@ -27,7 +27,7 @@ msFilterList
 -d adext.inkclub.com
 -d adr.kulingen.no
 -d ads.no
--d adservice.dk
+-d adservice.com
 -d adservicemedia.dk
 -d akamai.net
 -d akamaihd.net
@@ -36,14 +36,12 @@ msFilterList
 -d austurfrett.is *augl.jpg
 -d austurfrett.is banners
 -d banner.landbrugsavisen.dk reklame.aspx
--d bannere.oslonett.no
 -d boligkanalen-maestro-new.azurewebsites.net
 -d bornholm.nu banner
 -d brandstudio.inventory.schibsted.io
 -d cdn.rikstoto.no GameShop
 -d cdnboligkanalen.azureedge.net
 -d cluster.chart.dk
--d cmt.no
 -d damoh.vgtv.no hic_qos
 -d deiligejenter.no
 -d delivered-by-madington.com
@@ -52,8 +50,6 @@ msFilterList
 -d dust2.dk banners
 -d easy-ad.no
 -d easy-ads.dk
--d emerio.no
--d euroads.no
 -d eyjar.net ads
 -d feltet.dk topbanner_*.jpg
 -d feltet.dk wallpaper_1.jpg
@@ -61,23 +57,18 @@ msFilterList
 -d fotbolti.net banners
 -d gratisxxx.no
 -d heartbeat.airserve.net
--d i1media.no
 -d isweb.no
 -d karfan.is *-470x130*.jpg
 -d karfan.is *300x250.jpg
--d klikk.no klikk.desktop-thirdparty.min.js
 -d langrenn.com getfile.php
 -d matriell.dm-storage.no
 -d media.sonymusic.no *.html
--d mediasense.dk
 -d myad.no
 -d nettklikk.no
 -d norskenettsider.no ageras-banner.jpg
 -d norskenettsider.no remember-banner-2016.jpg
 -d nvnytt.no *annonse-
--d openadex.dk
--d piwik.onlinemagasinet.no
--d primetime.ad.primetime.net
+-d ad.primetime.net
 -d rett24.no inline
 -d samfilm.codelab.is
 -d samler.no banners
@@ -95,15 +86,14 @@ msFilterList
 -d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
 -d tvkampen.com banner*
 -d tvkampen.com unibet-lo
--d tvshop.com tradedoubler_files
 -d utrop.no *.gif
 -d utrop.no Banner_utrop
 -d vevlysingar.fo
 -d viasport-assets.mtg-api.com comScore-*.js
 -d vikari.is frjalsi-lif*.png
 -d webclick.no
--d webhotell.enivest.no
 -d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
+-d melkoghonning.no *_Banner_
 - -bazaar-
 - annonsar
 - annonse
@@ -136,6 +126,7 @@ msFilterList
 -d trolli.is vefsmarinn
 -d trolli.is benecta.png
 -d oyggjatidindi.com *L%C3%BDsing
+-d travservice.dk wp-content
 -d tv2a.dk
 -d adframe.no
 -d adstream.no
@@ -146,8 +137,7 @@ msFilterList
 # 🇬🇧: Generic entries that have sources
 +d vgtv.no
 -d adnxs.com
-# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
-# (Exception: opp.no)
+# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
 # https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 # www.op.no
 # arendalstidende.no
@@ -172,6 +162,7 @@ msFilterList
 -d bilasolur.is banners
 # portal.fo (09 05 2020)
 # https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein/(09/05/2020)
+# Bet365 widget triggered for Norwegian audiences only
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
@@ -179,13 +170,13 @@ msFilterList
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
--l%C3%BDsing-
 -d yrkesbil.no *emty.gif
 -d yrkesbil.no 1pix.gif
 -d 730.no sonymusic
 -d bilnorge.no *emty.gif
 -d gaysir.no bb_inline
 -d static.vg.no admark_top.gif
+-l%C3%BDsing-
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -209,7 +200,7 @@ msFilterList
 # historienet.no, natgeo.no, komputer.no
 # https://www.nettavisen.no/okonomi/3423875562.html
 # qxl.no
-# nickelodeon.no, tv2.dk, side3.no, klikk.no, zooom.no, adressa.no, blogg.no, kjarkinn.is
+# nickelodeon.no, tv2.dk, klikk.no, zooom.no, adressa.no, blogg.no, kjarkinn.is
 # gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi.no
 # steigan.no, allers.no, icelandreview.com, resett.no
 # demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb.no
