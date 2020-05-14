@@ -2285,6 +2285,66 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
+           r"\1#?#*:has(> \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
+           r"\1#?#*:has(> * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
+           r"\1#?#*:has(> * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
+           r"\1#?#*:has(> * > * >  * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
+           r"\1#?#*:has(> * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
+           r"\1#?#*:has(> * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -2391,6 +2451,66 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"([$,])domain$", 
            "", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
+           r"\1#?#*:has(> \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
+           r"\1#?#*:has(> * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
+           r"\1#?#*:has(> * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
+           r"\1#?#*:has(> * > * >  * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
+           r"\1#?#*:has(> * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
+           r"\1#?#*:has(> * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
@@ -2703,6 +2823,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^-d [a-z]{2,6}$", 
+           "", 
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\r\n'
 
@@ -2926,6 +3052,18 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^127\.0\.0\.1 [a-z]{2,6}$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^#$", 
+           "", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\r\n'
 
@@ -3002,6 +3140,24 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^\|", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-z]{2,6}$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^#$", 
            "", 
            line
         )
