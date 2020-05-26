@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 28April2020v1-Beta
+! Version: 26May2020v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
@@ -21,7 +21,7 @@ reddit.com###focus-Home
 reddit.com###header-quicklinks-oc
 reddit.com###header-quicklinks-popular
 reddit.com###header-quicklinks-all
-reddit.com##div[role="navigation"]
+reddit.com##div[role=navigation]
 ! The user feed, if I don't remember completely wrong
 reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/all/"])
 reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/popular/"])
@@ -119,9 +119,9 @@ reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2
 reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(> div > div[data-redditstyle])
 
 ! Removes three specific types of comments that offer nothing to a thread apart from vapid far-out-of-place greetings
-reddit.com#?#.Comment:-abp-contains(/Happy Cake[ ]?Day/i)
-reddit.com#?#.Comment:-abp-contains(/charge your phone/i)
-reddit.com#?#.Comment:-abp-has(a:-abp-contains(/^r/chargeyourphone$/))
+reddit.com#?#.Comment,.entry:-abp-contains(/Happy Cake[ ]?Day/i)
+reddit.com#?#.Comment,.entry:-abp-contains(/charge your phone/i)
+reddit.com#?#.Comment,.entry:-abp-has(a:-abp-contains(/^r/chargeyourphone$/))
 reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/first gold/i)
 reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/first silver/i)
 reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/first platinum/i)
@@ -140,7 +140,7 @@ reddit.com#?#div[data-redditstyle=false] + div:-abp-has(> div[data-redditstyle="
 reddit.com#?#div[data-redditstyle=false][style]:-abp-contains(/Old Reddit/i)
 
 ! Aims to prevent Imgur embeds from cutting off half the preview
-imgur.com#?#img[id=image-element][src*=imgur]:style(margin-top: 0px !important)
+imgur.com#?#img[id=image-element][src*=imgur]:style(margin-top: 0 !important)
 
 ! If you're planning to run a background-related April Fools' joke, please don't let it run for ≥2 weeks afterwards
 ||styles.redditmedia.com/*/styles/backgroundImage_n3apip7pe9q41.jpg^
@@ -172,14 +172,14 @@ reddit.com#?#.entry:-abp-has(a[href*="/user/maxwellhill"])
 reddit.com#?#.entry:-abp-has(a[href*="/user/bubblr"])
 
 ! Posts on Old Reddit
-reddit.com#?#.thing[data-author="GallowBoob"]
-reddit.com#?#.thing[data-author="pepsi_next"]
-reddit.com#?#.thing[data-author="TooShiftyForYou"]
-reddit.com#?#.thing[data-author="mvea"]
+reddit.com#?#.thing[data-author=GallowBoob]
+reddit.com#?#.thing[data-author=pepsi_next"]
+reddit.com#?#.thing[data-author=TooShiftyForYou]
+reddit.com#?#.thing[data-author=mvea]
 reddit.com#?#.thing[data-author="SlimJones123"]
-reddit.com#?#.thing[data-author="BunyipPouch"]
-reddit.com#?#.thing[data-author="iBleeedorange"]
-reddit.com#?#.thing[data-author="KevlarYarmulke"]
-reddit.com#?#.thing[data-author="maxwellhill"]
-reddit.com#?#.thing[data-author="bubblr"]
+reddit.com#?#.thing[data-author=BunyipPouch]
+reddit.com#?#.thing[data-author=iBleeedorange]
+reddit.com#?#.thing[data-author=KevlarYarmulke]
+reddit.com#?#.thing[data-author=maxwellhill]
+reddit.com#?#.thing[data-author=bubblr]
 !#endif
