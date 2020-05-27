@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 200520201
+! Version: 270520201
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -38,7 +38,6 @@ blogg.no##.contentmarketing-box
 boblad.no##.uk-overlay-hover.uk-panel
 bornholm.nu##.bannercontent
 borsen.dk##[href*="://borsen.dk/sponsoreret"]
-bt.no##section[class$=-ad]
 byggebolig.no##.maestro-resize
 byggfakta.no##.sponsor-row
 computerworld.dk##.candis-spot
@@ -383,6 +382,7 @@ avvir.no##.avvir-block-top.avvir-block-container
 ba.no###cm2-1
 ba.no##.maelstrom-topbanner
 ba.no##.adp-inscreen
+ba.no##.sponsored
 bilnorge.no###artikkel300x250right
 bilnorge.no###nettboard_art1
 bilnorge.no#?#tr:-abp-has(td:-abp-contains(Annonse:))
@@ -868,6 +868,10 @@ krom.is#@#.share-container
 ! ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
 ! Makes E-newspaper previews show up properly
 @@/teasers/*$domain=agderposten.no
+! ——— Unknown cause ———
+! https://github.com/DandelionSprout/adfilt/issues/67
+@@||fe.adstate.net/assets/common/img/web_ad^$domain=ba.no|nidaros.no
+@@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=ba.no|nidaros.no
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
@@ -1088,7 +1092,6 @@ finans.dk##.baPosition
 ||.gratis-reisebilletter.
 ||*/KiwiErbjudanden1/
 ||trackvoluum.com^
-||jagerjack.com^
 ||*/pakkerlevering/
 ||prisjakt.org^
 ||102.112.2o7.net^
@@ -1153,8 +1156,6 @@ finans.dk##.baPosition
 ||elkjop*.club^
 ! https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 ||*/css/*sparebank1.no^
-! https://www.faktisk.no/notiser/Ly/nei-sophie-elise-har-ikke-anbefalt-kryptovaluta-program
-||getheretecblogz.me^
 ! https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
 ||phosphox.com^
 ||nodzoom.com^
@@ -1163,8 +1164,6 @@ finans.dk##.baPosition
 ||rbkbb.com^
 ! https://www.facebook.com/viralspiralen/posts/2494251397311027
 ||addmoviesnow.com^
-! https://www.facebook.com/viralspiralen/posts/2367894249946743
-||grabdiscountdeals.com^
 ! https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
 ||faarup.com-*.*^
 ||com-dk.com^
@@ -1206,7 +1205,6 @@ finans.dk##.baPosition
 ||ocgadgets.com^
 ||ocgadgetss.myshopify.com^
 ! https://www.mm.dk/tjekdet/artikel/nej-mads-mikkelsen-har-stadig-ikke-skraemt-de-store-banker-med-bitcoins
-||dailynews.to^
 ||onelifetechno.com^
 ! https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
 ||rbaab.net^

@@ -1,4 +1,4 @@
-! Version: 20May2020v1
+! Version: 27May2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 12 hours
@@ -38,7 +38,6 @@ blogg.no##.contentmarketing-box
 boblad.no##.uk-overlay-hover.uk-panel
 bornholm.nu##.bannercontent
 borsen.dk##[href*="://borsen.dk/sponsoreret"]
-bt.no##section[class$=-ad]
 byggebolig.no##.maestro-resize
 byggfakta.no##.sponsor-row
 computerworld.dk##.candis-spot
@@ -381,7 +380,7 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 1881.no##.ad-sleepy
 730.no#?#.g-10:-abp-contains(Artikkelen fortsetter )
 abcnyheter.no#?#.o-grid__col:-abp-has(.c-ad)
-aftenbladet.no##.article-content:style(padding: 0 0 0 0)
+aftenbladet.no##.article-content:style(padding: 0)
 aftenposten.no##.standard-ad-container
 aftenposten.no,hockeymagasinet.dk###top-ads-container
 altomfotball.no#?#div[style^="padding: "]:-abp-has([class^="tv2-ad"])
@@ -395,6 +394,7 @@ avvir.no##.avvir-block-top.avvir-block-container
 ba.no###cm2-1
 ba.no##.maelstrom-topbanner
 ba.no##.adp-inscreen
+ba.no##.sponsored
 bilnorge.no###artikkel300x250right
 bilnorge.no###nettboard_art1
 bilnorge.no#?#tr:-abp-has(td:-abp-contains(Annonse:))
@@ -549,7 +549,7 @@ langrenn.com#?#.bannerlocation:-abp-has(script[src*=pagead])
 lokal-avisen.no#?#.title:-abp-contains(/ANNONSE/i)
 lp.no,varden.no#?#.outline:-abp-has([class=annonse])
 lydogbilde.no,lydogbillede.dk##.adremark
-lydogbilde.no,lydogbillede.dk##.background-ad:style(min-height: 0px !important)
+lydogbilde.no,lydogbillede.dk##.background-ad:style(min-height: 0 !important)
 m.kanalfrederikshavn.dk##.OA
 m.kanalfrederikshavn.dk##.OX
 markedsforing.dk##.articles-baner-content
@@ -557,8 +557,8 @@ markedsforing.dk##.banner-annonce
 markedsforing.dk#?#.row-second:-abp-has(div[class*=banner-annonce])
 matoppskrift.no#?##sticky:-abp-has(> .adsbygoogle)
 matoppskrift.no#?#.text-center:not(:-abp-has(img))
-mbl.is##.container:style(margin-top: 0px !important)
-mbl.is##.main-header:style(margin-top: 0px !important)
+mbl.is##.container:style(margin-top: 0 !important)
+mbl.is##.main-header:style(margin-top: 0 !important)
 mbl.is#?#.col-sm-6.col-12:-abp-has(.augl):not(:-abp-has(.fluid))
 medier24.no##.ad-toppbanner-article
 menn.is#?#.vc_column-inner:-abp-has(.mobile-ad):not(:-abp-has(a))
@@ -572,7 +572,7 @@ minmote.no##.advert-horseshoe
 minmote.no##div[id^=advert-]:upward(1)
 mobil.nu,mobilkunden.dk##.tower
 nakenprat.com##.threadbit:not([id])
-nakenprat.com#?##content:style(margin-left: 0px !important)
+nakenprat.com#?##content:style(margin-left: 0 !important)
 nattogdag.no##.category-annonse
 netdoktor.dk##.common-advert-bold
 newz.dk,railgun.dk##.widget_widget_ads
@@ -688,7 +688,7 @@ vg.no##.finn-placeholder
 vg.no##div[id^=ad-front-netboard_]
 vg.no,bt.no##div[id^=adPlacement]
 vg.no,familieklubben.no##.appnexus
-vgtv.no##.page-container:style(margin-top: 0px !important)
+vgtv.no##.page-container:style(margin-top: 0 !important)
 vimedhund.dk,madogvenner.dk##.g-ads
 visir.is##.df-auto-article
 visir.is##.padded.limit--tight.limit:style(padding-top: 15px !important)
@@ -901,6 +901,10 @@ krom.is#@#.share-container
 ! ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
 ! Makes E-newspaper previews show up properly
 @@/teasers/*$domain=agderposten.no
+! ——— Unknown cause ———
+! https://github.com/DandelionSprout/adfilt/issues/67
+@@||fe.adstate.net/assets/common/img/web_ad^$domain=ba.no|nidaros.no
+@@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=ba.no|nidaros.no
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
@@ -1147,7 +1151,6 @@ finans.dk##.baPosition
 ||.gratis-reisebilletter.$doc,domain=~ Advarselen vises grunnet: Falsk svindel
 ||*/KiwiErbjudanden1/$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Kiwi
 ||trackvoluum.com^$doc
-||jagerjack.com^$doc
 ||*/pakkerlevering/$doc,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
 ||prisjakt.org^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Prisjakt
 ||102.112.2o7.net^$doc
@@ -1212,8 +1215,6 @@ finans.dk##.baPosition
 ||elkjop*.club^$doc,domain=~ Advarselen vises grunnet: Falsk kampanjesvindel.
 ! https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 ||*/css/*sparebank1.no^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sparebank1.
-! https://www.faktisk.no/notiser/Ly/nei-sophie-elise-har-ikke-anbefalt-kryptovaluta-program
-||getheretecblogz.me^$doc,domain=~ Warning displayed due to: Bitcoin scam fraudsters.
 ! https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
 ||phosphox.com^$doc,domain=~ Warning displayed due to: Bitcoin scam fraudsters.
 ||nodzoom.com^$doc,domain=~ Warning displayed due to: Bitcoin scam fraudsters.
@@ -1222,8 +1223,6 @@ finans.dk##.baPosition
 ||rbkbb.com^$doc,domain=~ Advarselen vises grunnet: Falsk klesbutikksvindel
 ! https://www.facebook.com/viralspiralen/posts/2494251397311027
 ||addmoviesnow.com^$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Netflix
-! https://www.facebook.com/viralspiralen/posts/2367894249946743
-||grabdiscountdeals.com^$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Rema 1000
 ! https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
 ||faarup.com-*.*^$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Faarup Sommerland
 ||com-dk.com^$doc
@@ -1265,7 +1264,6 @@ finans.dk##.baPosition
 ||ocgadgets.com^$doc,domain=~ Advarselen vises grunnet: Bitcoin-svindel
 ||ocgadgetss.myshopify.com^$doc,domain=~ Advarselen vises grunnet: Bitcoin-svindel
 ! https://www.mm.dk/tjekdet/artikel/nej-mads-mikkelsen-har-stadig-ikke-skraemt-de-store-banker-med-bitcoins
-||dailynews.to^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
 ||onelifetechno.com^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
 ! https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
 ||rbaab.net^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.

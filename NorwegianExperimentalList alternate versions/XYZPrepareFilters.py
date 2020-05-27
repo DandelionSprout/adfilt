@@ -2175,12 +2175,12 @@ if __name__ == "__main__":
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout\'s%20Anti-Malware%20List.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com']
-UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com']
-UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^']
+    ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com', 'gamecopyworld']
+UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com', 'gamecopyworld']
+UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^', 'gamecopyworld']
 UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.4]', '*', '/^']
 UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
-    '##', '.*#' , '#?#']
+    '##', '.*#' , '#?#', 'gamecopyworld']
 
 OUTPUT = 'Anti-Malware List\\xyzzyx.txt'
 OUTPUT_AG = 'Anti-Malware List\\AntiMalwareAdGuard.txt'
@@ -3064,6 +3064,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*gamecopyworld.*", 
+           "", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\r\n'
 
@@ -3286,6 +3292,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^\|\|\[(.*)\].*", 
            r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(.*\.168\.192\.)$", 
+           r"||\1in-addr.arpa^", 
            line
         )
 

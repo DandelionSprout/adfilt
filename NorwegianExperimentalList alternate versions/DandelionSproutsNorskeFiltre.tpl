@@ -1,5 +1,5 @@
 msFilterList
-# Version: 20May2020v1-Alpha
+# Version: 27May2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -255,6 +255,8 @@ msFilterList
 +d _prebid_
 # ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
 # Makes E-newspaper previews show up properly
+# ——— Unknown cause ———
+# https://github.com/DandelionSprout/adfilt/issues/67
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
@@ -335,7 +337,6 @@ msFilterList
 - gratis-reisebilletter.
 - KiwiErbjudanden1
 -d trackvoluum.com
--d jagerjack.com
 - pakkerlevering
 -d prisjakt.org
 -d 102.112.2o7.net
@@ -393,8 +394,6 @@ msFilterList
 -d elkjop*.club
 # https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 - css *sparebank1.no
-# https://www.faktisk.no/notiser/Ly/nei-sophie-elise-har-ikke-anbefalt-kryptovaluta-program
--d getheretecblogz.me
 # https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
 -d phosphox.com
 -d nodzoom.com
@@ -403,8 +402,6 @@ msFilterList
 -d rbkbb.com
 # https://www.facebook.com/viralspiralen/posts/2494251397311027
 -d addmoviesnow.com
-# https://www.facebook.com/viralspiralen/posts/2367894249946743
--d grabdiscountdeals.com
 # https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
 -d com-dk.com
 # https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
@@ -444,7 +441,6 @@ msFilterList
 -d ocgadgets.com
 -d ocgadgetss.myshopify.com
 # https://www.mm.dk/tjekdet/artikel/nej-mads-mikkelsen-har-stadig-ikke-skraemt-de-store-banker-med-bitcoins
--d dailynews.to
 -d onelifetechno.com
 # https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
 -d rbaab.net
