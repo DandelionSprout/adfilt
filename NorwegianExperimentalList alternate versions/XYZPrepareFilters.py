@@ -1462,7 +1462,7 @@ import re
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^']
+    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i']
 
 OUTPUT = 'xyzzyxeyeo.txt'
 OUTPUT_ABP = 'NordicFiltersABP-Eyeo.txt'
