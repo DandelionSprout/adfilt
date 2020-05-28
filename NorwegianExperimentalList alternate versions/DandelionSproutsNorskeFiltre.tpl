@@ -1,5 +1,5 @@
 msFilterList
-# Version: 27May2020v1-Alpha
+# Version: 28May2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -257,18 +257,7 @@ msFilterList
 # Makes E-newspaper previews show up properly
 # ——— Unknown cause ———
 # https://github.com/DandelionSprout/adfilt/issues/67
-# 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
-# 🇮🇸: ——— And-and-auglýsingshindrun ———
-# 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273/were/to/specifically/mention/such/entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
--d aftenposten.no ads-
--d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
--d elderlyscissors.com
--d imasdk.googleapis.com pal.js
-+d bondebladet.screen9.tv
-+d eurosport.*
-+d sixscissors.com
-+d bildeler.name
-+d reservedele.name
+!#include NorwegianExperimentalList%20alternate%20versions AntiAdblockEntries.txt
 # 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
 # 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
 # Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP/for/showing me the existence of this particular CSP command.
@@ -557,3 +546,16 @@ msFilterList
 -d brigitteheilmann.dk
 -d storustovu.dk
 -d campingnews.dk
+# 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
+# 🇮🇸: ——— And-and-auglýsingshindrun ———
+# 🇬🇧: ——— Anti-anti-adblocking ———
+# Last updated: 28May2020v2-Extension
+-d aftenposten.no ads-
+-d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
+-d elderlyscissors.com
+-d imasdk.googleapis.com pal.js
++d bondebladet.screen9.tv
++d eurosport.*
++d sixscissors.com
++d bildeler.name
++d reservedele.name

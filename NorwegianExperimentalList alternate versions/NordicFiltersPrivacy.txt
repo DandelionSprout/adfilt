@@ -1,4 +1,4 @@
-! Version: 27May2020v1
+! Version: 28May2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 12 hours
@@ -906,41 +906,7 @@ krom.is#@#.share-container
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=ba.no|nidaros.no
 @@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=ba.no|nidaros.no
 
-! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
-! 🇮🇸: ——— And-and-auglýsingshindrun ———
-! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
-gratiskostplaner.dk##+js(aopw, KillAdBlock)
-aftenposten.no##div[style*="width: 10"][style*="z-index: 2147"]
-csp.screen9.com#@#.adsbox
-dagensbyggeri.dk##+js(std, (), 2500)
-eurosport.*##+js(aeld, contextmenu)
-godt.no##.adblock-info-box
-gratisspil.dk##+js(aopw, AdBlockerInfo)
-langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
-langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
-minmote.no,godt.no##.adblock-info
-techstart.dk##+js(set, adblock, false)
-tv2.no##+js(acis, adblockDetector)
-vg.no##+js(aeld, load, concat)
-tipsbladet.dk##.js-isblured:style(-webkit-filter: none !important; filter: none !important)
-tipsbladet.dk###js-promo-welcome
-abcnyheter.no##div[style^="bottom: 0px;"]
-||aftenposten.no/seksjon/dist/ads-$script
-||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.no|dplay.dk
-||elderlyscissors.com^
-||imasdk.googleapis.com/pal/sdkloader/pal.js$script,redirect=noopjs,domain=dplay.no|dplay.dk
-||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,1p
-@@.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
-@@/js/ads.js$1p,domain=tvkampen.com|tvsporten.dk
-@@||bondebladet.screen9.tv^$generichide
-@@||eurosport.*^$generichide
-@@||fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
-@@||sixscissors.com^$3p,domain=itavisen.no
-@@||www.tv2.no/s/js/ads.js$script,1p
-!#if !ext_ublock
-@@||bildeler.name$generichide
-@@||reservedele.name$generichide
-!#endif
+!#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt
 
 ! 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
 ! 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
@@ -1386,3 +1352,39 @@ finans.dk##.baPosition
 ||storustovu.dk^
 !+ NOT_OPTIMIZED
 ||campingnews.dk^
+! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
+! 🇮🇸: ——— And-and-auglýsingshindrun ———
+! 🇬🇧: ——— Anti-anti-adblocking ———
+! Last updated: 28May2020v2-Extension
+gratiskostplaner.dk##+js(aopw, KillAdBlock)
+aftenposten.no##div[style*="width: 10"][style*="z-index: 2147"]
+csp.screen9.com#@#.adsbox
+dagensbyggeri.dk##+js(std, (), 2500)
+eurosport.*##+js(aeld, contextmenu)
+godt.no##.adblock-info-box
+gratisspil.dk##+js(aopw, AdBlockerInfo)
+langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
+langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
+minmote.no,godt.no##.adblock-info
+techstart.dk##+js(set, adblock, false)
+tv2.no##+js(acis, adblockDetector)
+vg.no##+js(aeld, load, concat)
+tipsbladet.dk##.js-isblured:style(-webkit-filter: none !important; filter: none !important)
+tipsbladet.dk###js-promo-welcome
+abcnyheter.no##div[style^="bottom: 0px;"]
+||aftenposten.no/seksjon/dist/ads-$script
+||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.no|dplay.dk
+||elderlyscissors.com^
+||imasdk.googleapis.com/pal/sdkloader/pal.js$script,redirect=noopjs,domain=dplay.no|dplay.dk
+||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,1p
+@@.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
+@@/js/ads.js$1p,domain=tvkampen.com|tvsporten.dk
+@@||bondebladet.screen9.tv^$generichide
+@@||eurosport.*^$generichide
+@@||fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
+@@||sixscissors.com^$3p,domain=itavisen.no
+@@||www.tv2.no/s/js/ads.js$script,1p
+!#if !ext_ublock
+@@||bildeler.name$generichide
+@@||reservedele.name$generichide
+!#endif

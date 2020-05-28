@@ -1,7 +1,7 @@
 import requests
 import re
 
-SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianList.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^']
@@ -1452,6 +1452,477 @@ if __name__ == "__main__":
         text_file.write(brave_filter)
 
     print('The adblocker-based list versions have been generated.')
+
+
+
+
+    import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt']
+
+UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
+    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^']
+
+OUTPUT = 'xyzzyxeyeo.txt'
+OUTPUT_ABP = 'NordicFiltersABP-Eyeo.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# ——— Adblock Plus version ———
+
+def is_supported_abp(line) -> bool:
+    for token in UNSUPPORTED_ABP:
+        if token in line:
+            return False
+
+    return True
+
+# function that prepares the filter list for ABP
+def prepare_abp(lines) -> str:
+    text = ''
+
+    # remove or modifiy entries with unsupported modifiers
+    for line in lines:
+
+        # remove $document modifier from the rule
+        line = re.sub(
+           r"\$doc.*", 
+           "", 
+           line
+        )
+
+        # remove $important modifier from the rule
+        line = re.sub(
+           r"\$important,", 
+           "$", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])important", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
+           "Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter Eyeo sine regler)",
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprout's Nordic filters for tidier websites", 
+           "Dandelion Sprout's West Nordic filters for tidier websites (for Adblock Plus with Eyeo compliance)",
+           line
+        )
+
+        line = re.sub(
+           r"^no##.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"! Redirect:.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])xhr", 
+           r"\1xmlhttprequest", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,~])3p", 
+           r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
+           line
+        )
+
+        line = re.sub(
+           ":matches-css-before\(", 
+           ":-abp-properties(", 
+           line
+        )
+
+        line = re.sub(
+           ":matches-css\(", 
+           ":-abp-properties(", 
+           line
+        )
+
+        line = re.sub(
+           "viaplay.\*#", 
+           "viaplay.no,viaplay.dk,viaplay.is#", 
+           line
+        )
+
+        line = re.sub(
+           "google.\*#", 
+           "google.no,google.dk,google.is#", 
+           line
+        )
+
+        line = re.sub(
+           r"eurogamer\.\*([#,])", 
+           r"eurogamer.dk\1", 
+           line
+        )
+
+        line = re.sub(
+           "ticketmaster.\*#", 
+           "ticketmaster.no,ticketmaster.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "qxl.\*#", 
+           "qxl.no,qxl.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "expedia.\*#", 
+           "expedia.no,expedia.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "gamereactor.\*#", 
+           "gamereactor.no,gamereactor.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "viafree.\*#", 
+           "viafree.no,viafree.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "momondo.\*#", 
+           "momondo.no,monondo.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "eurosport.\*#", 
+           "eurosport.no,eurosport.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "prisjakt.\*,", 
+           "prisjakt.no,", 
+           line
+        )
+
+        line = re.sub(
+           "180.\*#", 
+           "180.no,180.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "^,", 
+           "^$", 
+           line
+        )
+
+        line = re.sub(
+           ",script,", 
+           "$script,", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)January(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>01\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)February(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>02\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)March(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>03\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)April(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>04\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)May(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>05\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)June(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>06\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)July(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>07\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)August(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>08\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)September(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>09\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)October(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>10\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)November(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>11\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: (.*)December(.*)v([0-9][0-9]?)", 
+           r"! Version: \g<1>12\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"(! Version: .*)", 
+           r"[Adblock Plus 3.4]\n\1", 
+           line
+        )
+
+        line = re.sub(
+           "redirect=noopjs", 
+           "rewrite=abp-resource:blank-js", 
+           line
+        )
+
+        line = re.sub(
+           r"redirect=noopmp[34]-[0]?[.]?1s", 
+           r"rewrite=abp-resource:blank-mp3", 
+           line
+        )
+
+        line = re.sub(
+           r"##\+js\(aopw, (.*)\)", 
+           r"#$#abort-on-property-write \1", 
+           line
+        )
+
+        line = re.sub(
+           r"##\+js\(aopr, (.*)\)", 
+           r"#$#abort-on-property-read \1", 
+           line
+        )
+
+        line = re.sub(
+           r"##\+js\(acis, (.*)\)", 
+           r"#$#abort-current-inline-script \1", 
+           line
+        )
+
+        line = re.sub(
+           r"(#\$#.*),", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.*PFBLOCKERNG.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
+           r"\1#?#*:-abp-has(> \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
+           r"\1#?#*:-abp-has(> * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
+           r"\1#?#*:-abp-has(> * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
+           r"\1#?#*:-abp-has(> * > * >  * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
+           r"\1#?#*:-abp-has(> * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
+           r"\1#?#*:-abp-has(> * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
+           r"\1#?#*:-abp-has(> * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
+           r"\1#?#*:-abp-has(> * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
+           r"\1#?#*:-abp-has(> * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
+           r"\1#?#*:-abp-has(> * > * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r".*mm\.dk##\.fadeout.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"tipsbladet\.dk###js-promo-welcome", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"([.?]),script", 
+           r"\1$script", 
+           line
+        )
+
+        line = re.sub(
+           r"xmlhttprequest\$", 
+           r"xmlhttprequest,", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.* Elgiganten .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.* elko\.is .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r":remove()", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"##:xpath\((.*)\)$", 
+           r"#$#hide-if-matches-xpath \1", 
+           line
+        )
+
+        line = re.sub(
+           r"(samebefolkningen\.)", 
+           r"\1 Denne versjonen av listen inkluderer ikke anti-anti-reklameblokkering, ettersom slike oppføringer ikke er tillatt for lister som er inkludert i Adblock Plus.", 
+           line
+        )
+
+        line = re.sub(
+           r"(samiske befolkning\.)", 
+           r"\1 Den her listeversion indeholder ikke anti-anti-reklameblokkering, eftersom sådanne opføringer ikke er tilladt for lister, der er inkluderet i Adblock Plus.", 
+           line
+        )
+
+        line = re.sub(
+           r"(samefolkesetnadene\.)", 
+           r"\1 Denne versjonen av lista inneheld ikkje anti-anti-reklameblokkering, sidan slike oppføringer ikkje er tillete for listar som er inkludert i Adblock Plus.", 
+           line
+        )
+
+        line = re.sub(
+           r"(indigenous population\.)", 
+           r"\1 This list version does not contain anti-anti-adblocking, due to how such entries are not allowed in lists that are included in Adblock Plus.", 
+           line
+        )
+
+        if is_supported_abp(line):
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    abp_filter = prepare_abp(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_ABP, "w") as text_file:
+        text_file.write(abp_filter)
+
+    print('The Eyeo list version has been generated.')
+
+
 
 
 
