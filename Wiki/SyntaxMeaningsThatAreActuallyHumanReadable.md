@@ -33,7 +33,7 @@
 * \[no prefix\]: Blocks resources that have this text string *anywhere* in its URL.
 * `||`: Blocks resources that have a specific domain as its main domain.
 * `@@`: Whitelists resources to make them load.
-* `^`: Wildcard for anything that isn't alphanumerical or "_-.%" . Often used to cover both slash ( / ) and non-slash domain name endings at the same time.
+* `^`: Wildcard for anything that isn't alphanumerical or _-.%, and for end-of-lines.
 * `$third-party`: Ensures that resources from a domain are only blocked if you're not visiting the domain itself.
 * `$~third-party`: Ensures that resources from a domain are only blocked if you're visiting the domain itself.
 * `$domain=`: Ensures that resources from a domain are only blocked if you're visiting a specified website. Multiple domains are separated with `|` (Vertical line) and not commas. Supports top-level domain wildcards with e.g. `$domain=tk`.
