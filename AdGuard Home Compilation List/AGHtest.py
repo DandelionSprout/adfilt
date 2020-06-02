@@ -145,6 +145,12 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r",domain=in-addr\.arpa", 
+           "", 
+           line
+        )
+
+        line = re.sub(
            r".*\^[*$,][ac-hj-z?].*", 
            "", 
            line
@@ -314,13 +320,13 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$", 
-           r"/^\1\.\2\.\3\..*/", 
+           r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^", 
            line
         )
 
         line = re.sub(
            r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$", 
-           r"/^\1\.\2\..*/", 
+           r"://\1.\2.\n@@://\1.\2.*in-addr.arpa^", 
            line
         )
 
@@ -380,12 +386,6 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^/[a-z0-9.*_/-]{1,70}/$", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"@@.*/", 
            r"", 
            line
         )
