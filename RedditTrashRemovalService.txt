@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 26May2020v1-Beta
+! Version: 04June2020v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8chan. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
@@ -77,10 +77,10 @@ reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
 ! Posts whose scores are lower than a certain amount (New Reddit)
 ! The default for all subreddits is 10 points, although this can be adjusted for a handful of subreddits whose quality levels are deemed to sharply increase with a higher or lower limit.
 reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp]:not([href*="/mapswithoutnz/"])):-abp-has(button + div:-abp-contains(/^[0-9]$/))
-reddit.com#?#.Post:-abp-has(span + a[data-click-id=timestamp]:not([href*="/MapsWithoutNZ/" i])):-abp-has(span[style^="color:"]:nth-of-type(1):has-text(/^[0-9]\xA0/))
+reddit.com#?#.Post:-abp-has(span + a[data-click-id=timestamp]:not([href*="/MapsWithoutNZ/" i])):-abp-has(span[style^="color:"]:nth-of-type(1):-abp-contains(/^[0-9]\xA0/))
 ! 5 points
 reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/mapswithoutnz/"]):-abp-has(button + div:-abp-contains(/^[0-4]$/))
-reddit.com#?#.Post:-abp-has(span + a[data-click-id=timestamp][href*="/MapsWithoutNZ/" i]):-abp-has(span[style^="color:"]:nth-of-type(1):has-text(/^[0-4]\xA0/))
+reddit.com#?#.Post:-abp-has(span + a[data-click-id=timestamp][href*="/MapsWithoutNZ/" i]):-abp-has(span[style^="color:"]:nth-of-type(1):-abp-contains(/^[0-4]\xA0/))
 ! 15 points
 reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/dontdeadopeninside/"]):-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-4]$/))
 reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/assholedesign/"]):-abp-has(button + div:-abp-contains(/^[0-9]$|^1[0-4]$/))
