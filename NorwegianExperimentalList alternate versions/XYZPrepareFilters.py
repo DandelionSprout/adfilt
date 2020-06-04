@@ -2816,6 +2816,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\$all$", 
+           r"$empty,important", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -2985,6 +2991,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\$all$", 
+           r"", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -3121,7 +3133,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^([-][d].*[o|k|m]\.$)", 
+           r"^([-][d].*[okm]\.$)", 
            "", 
            line
         )
@@ -3145,7 +3157,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^\.([d|i|n]).*", 
+           r"^\.[din].*", 
            "", 
            line
         )
@@ -3769,6 +3781,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"(.*\.168\.192\.)$", 
            r"||\1in-addr.arpa^", 
+           line
+        )
+
+        line = re.sub(
+           r"\$doc$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$all,$", 
+           r"", 
            line
         )
 
