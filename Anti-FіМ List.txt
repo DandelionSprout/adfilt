@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 👸 Anti-FіМ list
-! Version: 05June2020v1-Beta
+! Version: 06June2020v1-Beta
 ! Expires: 5 days
 ! Description: Do you feel that Friendship is Magic overstayed its welcome? Here's a list that'll let you keep more of a distance to it.
 ! Motivation: You probably think that I'm one of those "Men shouldn't watch My Little Pony" fools? Nope, on the contrary. Being a fulltime viewer of actual preschool cartoons (read: Nella the Princess Knight, etc.), and have therefore seen just how staggeringly irrational that bronies can act towards them, I consider bronies to be fakers who preach hatred, destruction, and clan mentality, and I strongly regret that I was once one of them, many years ago.
@@ -101,6 +101,8 @@
 ||bronibooru.com^$document,domain=~ Warning displayed due to: Brony imagebooru.
 ||aminoapps.com/c/equestria^$document,domain=~ Warning displayed due to: Brony forum.
 ||mlpfanart.fandom.com^$document,domain=~ Warning displayed due to: Brony fanart site.
+||canterlot.com^$document,domain=~ Warning displayed due to: Brony RP site.
+||pony.tube^$document,domain=~ Warning displayed due to: Brony video site.
 
 !! Old and inoptimal entries for AdGuard, ABP, and AdBlock
 !#if !ext_ublock
@@ -130,6 +132,8 @@
 ||pbooru.com^
 ||bronibooru.com^
 ||mlpfanart.fandom.com^
+||canterlot.com^
+||pony.tube^
 !#endif
 
 ! YouTube videos
@@ -1945,9 +1949,15 @@ weasyl.com#?#.item:-abp-contains(Twilight):not(:-abp-contains(G1))
 weasyl.com#?#.item:-abp-contains(Twis:)
 
 ! PicartoTV
-picarto.tv##.dropdown-item:-abp-contains(Pony)
-picarto.tv##.exploreStreamFrameHolder:-abp-contains(/Equine/i)
-picarto.tv##.exploreStreamFrameHolder:-abp-contains(/Ponies/i)
+picarto.tv#?#.dropdown-item:-abp-contains(Pony)
+picarto.tv#?#.exploreStreamFrameHolder:-abp-contains(/Equine/i)
+picarto.tv#?#.exploreStreamFrameHolder:-abp-contains(/Ponies/i)
 
 ! DLive
 ||images.prd.dlivecdn.com/emote/401e63340008fe2_300300
+
+! Bilibili - 哔哩哔哩
+bilibili.com#?#.video-page-card:-abp-contains(MLP)
+bilibili.com#?#.video-page-card:-abp-contains(彩虹摇滚)
+bilibili.com#?#.video-page-card:-abp-contains(小马定格动画)
+bilibili.com#?#.video-page-card:-abp-contains(孩之宝):-abp-contains(小马)
