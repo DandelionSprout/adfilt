@@ -1,4 +1,4 @@
-! Version: 05June2020v1
+! Version: 07June2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -908,6 +908,13 @@ krom.is#@#.share-container
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=ba.no|nidaros.no
 @@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=ba.no|nidaros.no
+! https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
+@@||cmp.ekstrabladet.dk/get_site_data$xhr,1p
+@@||dialogue.sp-prod.net/messagingWithoutDetection.js$script,domain=ekstrabladet.dk
+@@||notice.sp-prod.net^$frame,domain=ekstrabladet.dk
+!#if env_firefox
+@@||sp-prod.net^$xhr,domain=ekstrabladet.dk
+!#endif
 
 
 !#if ext_ublock
