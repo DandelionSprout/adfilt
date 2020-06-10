@@ -1,5 +1,5 @@
 msFilterList
-# Version: 01June2020v1-Alpha
+# Version: 10June2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -258,6 +258,9 @@ msFilterList
 # Makes E-newspaper previews show up properly
 # ——— Unknown cause ———
 # https://github.com/DandelionSprout/adfilt/issues/67
+# https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
++d notice.sp-prod.net
++d sp-prod.net
 !#include NorwegianExperimentalList%20alternate%20versions AntiAdblockEntries.txt
 # 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
 # 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———

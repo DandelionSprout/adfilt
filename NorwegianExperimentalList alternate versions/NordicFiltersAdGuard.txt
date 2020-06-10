@@ -1,4 +1,4 @@
-! Version: 01June2020v1
+! Version: 10June2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -729,7 +729,7 @@ advokatbladet.no##.adnuntius-ad
 fla.de##.adsenseblock
 fl-arena.de##.content_right_medium_rect_ad_box
 fl-arena.de##.do_not_print.article_teaser_no_border
-www.tv2.no##body:not(.broom):style(padding-top: 70px !important)
+www.tv2.no##body:not(.broom):not(.lab):style(padding-top: 70px !important)
 tv2.no#?#div[id^=module-]:has(div[data-adslot^=fullscreen-])
 ||yrkesbil.no/gifs/*emty.gif^
 ||yrkesbil.no/gifs/1pix.gif^
@@ -908,9 +908,16 @@ krom.is#@#.share-container
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=ba.no|nidaros.no
 @@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=ba.no|nidaros.no
+! https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
+@@||cmp.ekstrabladet.dk/get_site_data$xmlhttprequest,~third-party
+@@||dialogue.sp-prod.net/messagingWithoutDetection.js$script,domain=ekstrabladet.dk
+@@||notice.sp-prod.net^$frame,domain=ekstrabladet.dk
+!#if env_firefox
+@@||sp-prod.net^$xmlhttprequest,domain=ekstrabladet.dk
+!#endif
 
 
-!#if ext_ublock
+!#if !adguard
 !#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt
 !#endif
 
