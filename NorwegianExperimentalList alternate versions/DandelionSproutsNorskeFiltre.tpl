@@ -1,5 +1,5 @@
 msFilterList
-# Version: 10June2020v1-Alpha
+# Version: 10June2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -171,10 +171,9 @@ msFilterList
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
--d yrkesbil.no *emty.gif
+- gifs *emty.gif
 -d yrkesbil.no 1pix.gif
 -d 730.no sonymusic
--d bilnorge.no *emty.gif
 -d gaysir.no bb_inline
 -d static.vg.no admark_top.gif
 -l%C3%BDsing-
@@ -212,13 +211,14 @@ msFilterList
 # avisalofoten.no
 # blv.no nyheter kan-bruke-23-millioner-pa-the-whale-undersokelsene
 # https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
+# https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
+# https://www.aftenposten.no/ (Mobile useragent)
 # http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
 -d 85.17.76.181
 # https://krs247.no/
 # lsk.no
 # https://www.budstikka.no/
 # e24.no, aftenbladet.no, sysla.no
-# https://www.aftenposten.no/ (Mobile useragent)
 # https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi/(15/04/2020)
 # https://fiskur.fo/gitte-henning-1-landar-i-maloy/(09/05/2020)
 -d *.fo banner2x1.png
@@ -553,7 +553,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 28May2020v2-Extension
+# Last updated: 10June2020v1-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
