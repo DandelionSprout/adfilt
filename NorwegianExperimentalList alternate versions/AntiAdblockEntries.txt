@@ -1,7 +1,7 @@
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 28May2020v2-Extension
+! Last updated: 10June2020v1-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 aftenposten.no##div[style*="width: 10"][style*="z-index: 2147"]
 csp.screen9.com#@#.adsbox
@@ -30,7 +30,12 @@ abcnyheter.no##div[style^="bottom: 0px;"]
 @@||fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
 @@||sixscissors.com^$3p,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,1p
+gamereactor.*##+js(set, adblockEnabled, noopFunc)
+gamereactor.*##+js(set, trackAdblock, noopFunc)
 !#if !ext_ublock
 @@||bildeler.name$generichide
 @@||reservedele.name$generichide
+!#endif
+!#if env_firefox
+gamereactor.*##^script[onError="adblockEnabled()"]
 !#endif
