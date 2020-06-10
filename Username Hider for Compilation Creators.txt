@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 05May2020v1
+! Version: 11June2020v1
 ! Title: 🖼️ Username Hider for Compilation Creators
 ! Expires: 3 days
 ! Description: Are you tired of having to use Paint to remove potentially sensitive usernames, each and every time you're making a compilation of social media posts? Say no more! This list will remove posters' usernames from the biggest compilation sources, so that you can simply take a screencap and add it directly into your video/timeline!
@@ -10,10 +10,14 @@
 
 ! 📛 = This category requires using either Nano Adblocker or uBlock Origin.
 
+! ——— 🌍 The relatively free-ish world ———
+
 ! Multi-domain
 twitter.com,rule34.paheal.net##.username
 aminoapps.com,tiktok.com,douyin.com##.nickname
 tiktok.com,douyin.com,bilibili.com##.user-name
+! Mastodon feediverse
+##.display-name
 
 ! Facebook
 facebook.com,facebookcorewwwi.onion##.profileLink
@@ -28,8 +32,7 @@ tumblr.com##strong > .answerer
 tumblr.com##strong > .asker
 
 ! Twitter
-twitter.com##.fullname
-twitter.com##.js-user-profile-link.pretty-link
+twitter.com#?#div > span:-abp-contains(/^@/):upward(5)
 
 ! MeWe
 mewe.com##.post-author_name-role
@@ -41,23 +44,21 @@ amazon.*##.a-profile-name
 ! Reddit
 reddit.com##.Comment a[href^="/user/"]
 reddit.com##.Post a[href^="/user/"]
-! Reddit in mobile browser mode
-reddit.com##.CommentHeader__username
 ! Old Reddit
 reddit.com##.may-blank.author
 
 ! YouTube
-youtube.com###author-text
-youtube.com###byline-inner-container
-youtube.com###owner-name
+www.youtube.com###author-text
+www.youtube.com###byline-inner-container
+www.youtube.com###owner-name
 ! YouTube in mobile browser mode
 m.youtube.com##.comment-title
 m.youtube.com##.compact-media-item-byline
 m.youtube.com##.slim-owner-icon-and-title > div > h3
 ! YouTube in "Disable Polymer" mode
-youtube.com##.comment-author-text
-youtube.com###watch7-user-header > .yt-user-info
-youtube.com##.attribution.stat > span
+www.youtube.com##.comment-author-text
+www.youtube.com###watch7-user-header > .yt-user-info
+www.youtube.com##.attribution.stat > span
 
 ! Instagram PC
 instagram.com##.notranslate
@@ -70,7 +71,7 @@ ebay.*###mbgLink
 minds.com##strong
 
 ! Pornhub
-pornhub.com,pornhubthbh7ap3u.onion##.topCommentBlock > .clearfix.usernameWrap > .js-pop.usernameLink
+pornhub.*,pornhubthbh7ap3u.onion##.topCommentBlock > .clearfix.usernameWrap > .js-pop.usernameLink
 
 ! Yahoo Answers
 answers.yahoo.com##.Clr-b.uname
@@ -101,24 +102,6 @@ brainly.*,nosdevoirs.fr,eodev.com,znanija.com##.sg-link--disabled.sg-link--gray.
 imgur.com##.comment-username
 imgur.com##.post-account
 
-! VKontakte - ВКонтакте
-vk.com##.author
-vk.com##.reply_to
-vk.com###pv_author_name
-
-! Odnoklassniki - Одноклассники
-ok.ru##.comments_author
-ok.ru##.mlr_user_i__author
-
-! Sina Weibo - 新浪微博
-weibo.com##.WB_text > a[usercard]
-weibo.com##.WB_text > * > .W_icon_yystyle
-weibo.com##.WB_text > * > .W_icon
-weibo.com##.WB_info > a[usercard]
-weibo.com##.WB_info > * > .W_icon_yystyle
-weibo.com##.WB_info > * > .W_icon
-weibo.com##.Tf_info
-
 ! iFunny
 ifunny.co##.comment__nickname
 ifunny.co##.metapanel__user-nickname
@@ -139,6 +122,28 @@ riot.im##.mx_SenderProfile
 ! Slack
 app.slack.com##.c-message__sender
 
+! ——— 🇷🇺🇧🇰🇿🇾 Russosphere - Россисфера ———
+
+! VKontakte - ВКонтакте
+vk.com##.author
+vk.com##.reply_to
+vk.com###pv_author_name
+
+! Odnoklassniki - Одноклассники
+ok.ru##.comments_author
+ok.ru##.mlr_user_i__author
+
+! ——— 🇨🇳 PR-China (mainland only) - 中华人民共和国 (内地大陆只是) ———
+
+! Sina Weibo - 新浪微博
+weibo.com##.WB_text > a[usercard]
+weibo.com##.WB_text > * > .W_icon_yystyle
+weibo.com##.WB_text > * > .W_icon
+weibo.com##.WB_info > a[usercard]
+weibo.com##.WB_info > * > .W_icon_yystyle
+weibo.com##.WB_info > * > .W_icon
+weibo.com##.Tf_info
+
 ! Youku - 优酷
 v.youku.com##.comment-user-info > a:first-of-type
 
@@ -147,3 +152,6 @@ bilibili.com##.room-owner-username
 bilibili.com##.ex-up
 bilibili.com##.video-card-common > .up
 bilibili.com##.article-card .up
+
+! Ixigua - 西瓜视频
+ixigua.com##.user__name
