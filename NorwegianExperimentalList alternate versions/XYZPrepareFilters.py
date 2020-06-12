@@ -10,7 +10,6 @@ UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
 UNSUPPORTED_BRAVE = ['##', '#@#', '#?#', '!#', '!+', '$csp', '$generichide', '$elemhide', '$specificblock', '$redirect', ',redirect', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn']
 
 OUTPUT = 'xyzzyx.txt'
-OUTPUT_AG = 'NordicFiltersAdGuard.txt'
 OUTPUT_ABP = 'NordicFiltersABP.txt'
 OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
 OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
@@ -23,217 +22,6 @@ def download_filters() -> str:
     for url in SOURCES:
         r = requests.get(url)
         text += r.text
-    return text
-
-# ——— AdGuard version ———
-
-# function that prepares the filter list for AdGuard
-def prepare_ag(lines) -> str:
-    text = ''
-
-    for line in lines:
-
-        # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
-        line = re.sub(
-           r"([\$,])doc.*", 
-           r"\1empty,important", 
-           line
-        )
-
-        line = re.sub(
-           r"(itle:.*Dandelion Sprout.*)", 
-           r"\1 (for AdGuard)", 
-           line
-        )
-
-        line = re.sub(
-           r"! Version: [0-9]{4}.*", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           "\[Adblock Plus 3.4\]", 
-           "[AdGuard ≥7.2]", 
-           line
-        )
-
-        line = re.sub(
-           r"! Redirect:.*", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])xhr", 
-           r"\1xmlhttprequest", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,~])3p", 
-           r"\1third-party", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])1p", 
-           r"\1~third-party", 
-           line
-        )
-
-        line = re.sub(
-           "redirect=noopmp4-1s", 
-           "mp4", 
-           line
-        )
-
-        line = re.sub(
-           r"^!.*PFBLOCKERNG.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*", 
-           r"\1$network", 
-           line
-        )
-
-        line = re.sub(
-           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^", 
-           r"\1$network", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
-           r"\1#?#*:has(> \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
-           r"\1#?#*:has(> * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
-           r"\1#?#*:has(> * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
-           r"\1#?#*:has(> * > * >  * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
-           r"\1#?#*:has(> * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
-           r"\1#?#*:has(> * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"has\(:scope >", 
-           r"has(>", 
-           line
-        )
-
-        line = re.sub(
-           r":-abp-has\(", 
-           r":has(", 
-           line
-        )
-
-        line = re.sub(
-           r":-abp-contains\(", 
-           r":has-text(", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=dplay\.no\|dplay\.dk", 
-           r"domain=dplay.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=auth.dplay\.no\|auth.dplay\.dk", 
-           r"domain=auth.dplay.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=gamereactor\.no\|gamereactor\.dk", 
-           r"domain=gamereactor.*", 
-           line
-        )
-
-        line = re.sub(
-           r"\|gamereactor\.no\|gamereactor\.dk", 
-           r"|gamereactor.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=viafree\.no\|viafree\.dk", 
-           r"domain=viafree.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=eniro.se\|eniro\.no\|eniro\.dk", 
-           r"domain=eniro.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=eurosport\.no\|eurosport\.dk", 
-           r"domain=eurosport.*", 
-           line
-        )
-
-        line = re.sub(
-           r"\|proff.se\|proff\.no\|proff\.dk", 
-           r"|proff.*", 
-           line
-        )
-
-        text += line + '\r\n'
-
     return text
 
 # ——— Adblock Plus version ———
@@ -1423,7 +1211,6 @@ if __name__ == "__main__":
     lines = text.splitlines(False)
     print('Total number of rules: ' + str(len(lines)))
 
-    ag_filter = prepare_ag(lines)
     abp_filter = prepare_abp(lines)
     tpl_filter = prepare_tpl(lines)
     privoxy_filter = prepare_privoxy(lines)
@@ -1432,9 +1219,6 @@ if __name__ == "__main__":
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
-
-    with open(OUTPUT_AG, "w") as text_file:
-        text_file.write(ag_filter)
 
     with open(OUTPUT_ABP, "w") as text_file:
         text_file.write(abp_filter)
@@ -1466,6 +1250,7 @@ UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
 
 OUTPUT = 'xyzzyxeyeo.txt'
 OUTPUT_ABP = 'NordicFiltersABP-Eyeo.txt'
+OUTPUT_AG = 'NordicFiltersAdGuard.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -1906,6 +1691,223 @@ def prepare_abp(lines) -> str:
 
     return text
 
+# ——— AdGuard version ———
+
+# function that prepares the filter list for AdGuard
+def prepare_ag(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
+        line = re.sub(
+           r"([\$,])doc.*", 
+           r"\1empty,important", 
+           line
+        )
+
+        line = re.sub(
+           r"(itle:.*Dandelion Sprout.*)", 
+           r"\1 (for AdGuard)", 
+           line
+        )
+
+        line = re.sub(
+           r"! Version: [0-9]{4}.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           "\[Adblock Plus 3.4\]", 
+           "[AdGuard ≥7.2]", 
+           line
+        )
+
+        line = re.sub(
+           r"! Redirect:.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])xhr", 
+           r"\1xmlhttprequest", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,~])3p", 
+           r"\1third-party", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])1p", 
+           r"\1~third-party", 
+           line
+        )
+
+        line = re.sub(
+           "redirect=noopmp4-1s", 
+           "mp4", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.*PFBLOCKERNG.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*", 
+           r"\1$network", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^", 
+           r"\1$network", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
+           r"\1#?#*:has(> \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
+           r"\1#?#*:has(> * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
+           r"\1#?#*:has(> * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
+           r"\1#?#*:has(> * > * >  * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
+           r"\1#?#*:has(> * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
+           r"\1#?#*:has(> * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r"has\(:scope >", 
+           r"has(>", 
+           line
+        )
+
+        line = re.sub(
+           r":-abp-has\(", 
+           r":has(", 
+           line
+        )
+
+        line = re.sub(
+           r":-abp-contains\(", 
+           r":has-text(", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=dplay\.no\|dplay\.dk", 
+           r"domain=dplay.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=auth.dplay\.no\|auth.dplay\.dk", 
+           r"domain=auth.dplay.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=gamereactor\.no\|gamereactor\.dk", 
+           r"domain=gamereactor.*", 
+           line
+        )
+
+        line = re.sub(
+           r"\|gamereactor\.no\|gamereactor\.dk", 
+           r"|gamereactor.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=viafree\.no\|viafree\.dk", 
+           r"domain=viafree.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=eniro.se\|eniro\.no\|eniro\.dk", 
+           r"domain=eniro.*", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=eurosport\.no\|eurosport\.dk", 
+           r"domain=eurosport.*", 
+           line
+        )
+
+        line = re.sub(
+           r"\|proff.se\|proff\.no\|proff\.dk", 
+           r"|proff.*", 
+           line
+        )
+
+        line = re.sub(
+           r"!#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries\.txt", 
+           r"!#include AntiAdblockEntries.txt", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
 if __name__ == "__main__":
     print('Starting the script')
     text = download_filters()
@@ -1913,6 +1915,7 @@ if __name__ == "__main__":
     print('Total number of rules: ' + str(len(lines)))
 
     abp_filter = prepare_abp(lines)
+    ag_filter = prepare_ag(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -1920,7 +1923,10 @@ if __name__ == "__main__":
     with open(OUTPUT_ABP, "w") as text_file:
         text_file.write(abp_filter)
 
-    print('The Eyeo list version has been generated.')
+    with open(OUTPUT_AG, "w") as text_file:
+        text_file.write(ag_filter)
+
+    print('The Eyeo and AdGuard list versions have been generated.')
 
 
 
