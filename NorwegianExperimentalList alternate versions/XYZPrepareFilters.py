@@ -1070,7 +1070,7 @@ def prepare_privacy(lines) -> str:
 
         line = re.sub(
            r"!#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries\.txt", 
-           r"!#include AntiAdblockEntries.txt", 
+           r"", 
            line
         )
 
