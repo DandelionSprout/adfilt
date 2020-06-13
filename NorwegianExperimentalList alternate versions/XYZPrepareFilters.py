@@ -1057,12 +1057,6 @@ def prepare_privacy(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: [0-9][0-9][0-9][0-9].*", 
-           "", 
-           line
-        )
-
-        line = re.sub(
            "\[Adblock Plus 3.4\]", 
            "", 
            line
@@ -1071,6 +1065,12 @@ def prepare_privacy(lines) -> str:
         line = re.sub(
            r"! If you wish to remove cookie banners.*", 
            "! Warning: This list version does not exchange tracker protection for added browsing convenience, and is for advanced tech users ONLY! Some web stuff that are unbroken by whitelistings in the normal version, are NOT fixed in this version! Additionally, it is only made with uBO and close derivatives in mind.", 
+           line
+        )
+
+        line = re.sub(
+           r"!#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries\.txt", 
+           r"!#include AntiAdblockEntries.txt", 
            line
         )
 
