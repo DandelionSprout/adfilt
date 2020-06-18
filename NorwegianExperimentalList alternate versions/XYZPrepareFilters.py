@@ -1773,66 +1773,6 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
-           r"\1#?#*:has(> \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
-           r"\1#?#*:has(> * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
-           r"\1#?#*:has(> * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
-           r"\1#?#*:has(> * > * >  * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
-           r"\1#?#*:has(> * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
-           r"\1#?#*:has(> * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
-           line
-        )
-
-        line = re.sub(
            r"has\(:scope >", 
            r"has(>", 
            line
