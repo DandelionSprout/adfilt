@@ -1,3 +1,9 @@
+#### Recommended lists to look up example entries for the syntaxes below:
+
+* Main example list: [uBlock Filters](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt)
+* AdGuard-specific syntaxes: [AdGuard Base Filters ('AdGuard for Windows' version)](https://filters.adtidy.org/windows/filters/2.txt)
+* ABP-/AdBlock-specific syntaxes: [ABP Anti-Circumvention List](https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt)
+
 ## All up-to-date significant adblockers¹
 
 #### Element removal (a.k.a. cosmetic rules, a.k.a. hiding rules, a.k.a. ##-rules)
