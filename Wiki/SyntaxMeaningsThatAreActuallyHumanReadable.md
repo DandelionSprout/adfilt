@@ -49,7 +49,7 @@
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it's a script, e.g. a JavaScript runtime.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
 * `$xmlhttprequest` / `$websocket`: Prevents such resources from being downloaded through the titular JavaScript APIs.
-* `$popup` / `$image` / `$font` / `$other`: These ones should hopefully be self-explanatory (Give me a heads-up in an issue report if it isn't).
+* `$popup` / `$image` / `$font` / `$other` / `$stylesheet` / `$css`: These ones should hopefully be self-explanatory (Give me a heads-up in an issue report if it isn't).
 * `$object`: Despite its name, it refers to blocking resources that use a request type called `object`, and not just all sorts of objects.
 * `|text`: Matches URLs that *begin* with the text.
 * `text|`: Matches URLs that *end* with the text.
