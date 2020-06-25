@@ -2186,6 +2186,18 @@ def prepare_pihole(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^([a-z0-9].*)\*\.(.*)", 
+           r"(^|\.)\1.*\\.\2$", 
+           line
+        )
+
+        line = re.sub(
+           r"(\(\^\|\\\.\)){2}", 
+           r"(^|\.)", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -2276,7 +2288,7 @@ def prepare_shadowsocks(lines) -> str:
 
         line = re.sub(
            r"# Platform notes:.*", 
-           "# Platform notes: This list version is intended for those who use Shadowsocks, Shadowrocket, and other Socks5-based tools that have become popular in PR-China for several reasons.", 
+           "# Platform notes: This list version is intended for those who use Shadowsocks, Shadowrocket, Surge, and other Socks5-based tools that have become popular in PR-China for several reasons.", 
            line
         )
 
@@ -2337,6 +2349,12 @@ def prepare_shadowsocks(lines) -> str:
         line = re.sub(
            r"^(([1-2]?[0-9]?[0-9]\.?){4})$", 
            r"IP-CIDR,\1/32,REJECT,no-resolve", 
+           line
+        )
+
+        line = re.sub(
+           r"^DOMAIN(.*),(.*)\*\.([a-z]{2,17})$", 
+           r"URL-REGEX,^https?:\\/\\/\2.*\\.\3", 
            line
         )
 

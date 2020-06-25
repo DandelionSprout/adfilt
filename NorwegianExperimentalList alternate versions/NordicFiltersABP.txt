@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 120620201
+! Version: 250620201
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -382,7 +382,6 @@ avisen.dk##.Ad
 avvir.no##.avvir-block-top.avvir-block-container
 ba.no###cm2-1
 ba.no##.maelstrom-topbanner
-ba.no##.adp-inscreen
 ba.no##.sponsored
 bilnorge.no###artikkel300x250right
 bilnorge.no###nettboard_art1
@@ -703,6 +702,11 @@ fla.de##.adsenseblock
 fl-arena.de##.content_right_medium_rect_ad_box
 fl-arena.de##.do_not_print.article_teaser_no_border
 tv2.no#?#div[id^=module-]:-abp-has(div[data-adslot^=fullscreen-])
+finn.no##.banners
+dfly.no#?#*:-abp-has(> .sidebar-ad)
+dfly.no#?#*:-abp-has(> .container-footer-ad)
+nyereiselivsavisen.no##.widget-annonse
+dagsavisen.no#?#div[class^=col-sm-]:not([class*=article]):-abp-has(> .dagsavisenDesktopAd)
 */gifs/*emty.gif^$domain=yrkesbil.no|bilnorge.no
 ||yrkesbil.no/gifs/1pix.gif^
 ||730.no/banner/*/sonymusic/$subdocument
@@ -811,6 +815,8 @@ vafo.dk##.adform-flexblock
 ##.undirsidaad
 ! https://fiskur.fo/gitte-henning-1-landar-i-maloy (09/05/2020)
 ||*.fo/css/img/banner2x1.png$image
+! https://www.dagsavisen.no/nyheter/verden/1.1731911 (18/06/2020)
+##div[data-third-party-link*=".smartadserver.com/"]
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -880,9 +886,9 @@ krom.is#@#.share-container
 @@||notice.sp-prod.net^$frame,domain=ekstrabladet.dk
 @@||sp-prod.net^$xmlhttprequest,domain=ekstrabladet.dk
 
-
+!
 !#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt
-
+!
 
 ! 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
 ! 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
@@ -946,6 +952,7 @@ ba.no##.sportspill
 ~norsk-tipping.no,~tipster.no##a[href*="nettavisen.no/sportspill/tipping/blir-du-mangemillionr-pa-onsdag"]
 nettavisen.no##a[href*=lotto-million]
 nettavisen.no#?#.front article:-abp-contains(Eurojackpot)
+dagsavisen.no##a[href*="norsk-tipping.no/artikler/"]
 ||vg.no/vgc/pool/tipster.png$image
 ||vgc.no/pustehullet/betting-header.png$image
 
@@ -1201,6 +1208,9 @@ finans.dk##.baPosition
 ! https://www.faktisk.no/notiser/ywM/se-opp-for-bitcoin-svindlere
 ||travelersloch.com^
 ||trainingcalculate.com^
+! https://www.tv2.no/nyheter/11516670/
+||fintechnow*.buzz^
+||wealthnews*.xyz^
 ! IP addresses of servers notorious for hosting many of the sites above
 ||82.118.242.69^
 ||136.243.73.30^

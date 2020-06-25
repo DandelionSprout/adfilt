@@ -1,5 +1,5 @@
 msFilterList
-# Version: 12June2020v1-Alpha
+# Version: 25June2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -222,6 +222,7 @@ msFilterList
 # https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi/(15/04/2020)
 # https://fiskur.fo/gitte-henning-1-landar-i-maloy/(09/05/2020)
 -d *.fo banner2x1.png
+# https://www.dagsavisen.no/nyheter/verden/1.1731911/(18/06/2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇮🇸: ——— Tóma skilirammar ———
@@ -261,7 +262,9 @@ msFilterList
 # https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 +d notice.sp-prod.net
 +d sp-prod.net
+!
 !#include NorwegianExperimentalList%20alternate%20versions AntiAdblockEntries.txt
+!
 # 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
 # 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
 # Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP/for/showing me the existence of this particular CSP command.
@@ -447,6 +450,9 @@ msFilterList
 # https://www.faktisk.no/notiser/ywM/se-opp-for-bitcoin-svindlere
 -d travelersloch.com
 -d trainingcalculate.com
+# https://www.tv2.no/nyheter/11516670/
+-d fintechnow*.buzz
+-d wealthnews*.xyz
 # IP addresses of servers notorious for hosting many of the sites above
 -d 82.118.242.69
 -d 136.243.73.30
