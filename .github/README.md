@@ -25,7 +25,7 @@ This is a hobby project of mine, in which I work just as much on these lists and
 
 For a basic overview of the lists in this repo, go to [FilterLists.com](https://filterlists.com/), click on the Maintainers button in the upper right, and choose Imre Kristoffer Eilertsen in the Maintainers dropdown menu. It proved to be too much work for me to maintain a GitHub spreadsheet for my lists, unfortunately.
 
-However, if you were led here by uBlock Origin, AdGuard, AdBlock, pfBlockerNG, or [Adblock Plus' secondary subscription page](https://adblockplus.org/en/subscriptions), it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits.
+However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits.
 
 If you have any problems, suggestions, or a desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things for the time being. Don't be shy to ask/tell me. In particular, I have a [wishlist of things](https://github.com/DandelionSprout/adfilt/issues/new?assignees=&labels=I+wish+to+help&template=forms-for-those-who-wish-to-help-me-write-lists.md&title=I+wish+to+help) that I wish for assistance from others with.
 
@@ -42,6 +42,8 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • To find very similar domains for Hosts files, or to find all domains hosted by specific IP addresses (both IPv4 and IPv6): [SecurityTrails](https://securitytrails.com/) <br>
 • To look for invalidly written entries according to Nano/uBO's syntax: Use Nano Adblocker, set logger to *All*, and resync the lists. <br>
 • To correctly sort IP addresses (which Sublime Text cannot do): [Browserling IP Sort](https://www.browserling.com/tools/ip-sort)
+• To correctly sort IP addresses, and also compress them into CIDRs: [Tehnoblog IP Address Aggregator](https://tehnoblog.org/ip-tools/ip-address-aggregator/)
+• To find lists of the biggest newssites of most countries: [DomainTyper](https://domaintyper.com/top-websites/most-popular-websites-with-no-domain)
 
 ### Ways one can use [Sublime Text](https://www.sublimetext.com/) (made by Jon Skinner and Will Bond) to improve his/her filter lists:
 
@@ -58,6 +60,6 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • The contributor communities that surround uBlock Origin and Nano Adblocker in general (including [okiehsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser) among others), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
 • [krystian3w](https://github.com/krystian3w) for teaching me that using `:style` entries completely breaks a list *and* its entries in ABP. <br>
 • [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *[Browse Websites Without Logging In](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt)*) to *uBlock Filters - Annoyances*.<br>
-• [Andrey Meshkov](https://github.com/ameshkov) for invaluable push-start assistance in creating [the conversion script](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/XYZPrepareFilters.py) for *Dandelion Sprouts nordiske filtre* that eventually became a very important backbone in my adblocker activities
+• [Andrey Meshkov](https://github.com/ameshkov) for invaluable push-start assistance in creating [the conversion script](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/XYZPrepareFilters.py) for *Dandelion Sprouts nordiske filtre* that eventually became a very important backbone in my adblocker activities.
 
 If you've contributed to or helped me and you aren't on the above list, don't feel bad about it. I still give my regular thanks to you.
