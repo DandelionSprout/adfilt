@@ -41,8 +41,8 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • To easily create GitCDN links to the lists, in case anyone have list connection problems: [GitHub GitCDN Button](https://greasyfork.org/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul) <br>
 • To find very similar domains for Hosts files, or to find all domains hosted by specific IP addresses (both IPv4 and IPv6): [SecurityTrails](https://securitytrails.com/) <br>
 • To look for invalidly written entries according to Nano/uBO's syntax: Use Nano Adblocker, set logger to *All*, and resync the lists. <br>
-• To correctly sort IP addresses (which Sublime Text cannot do): [Browserling IP Sort](https://www.browserling.com/tools/ip-sort)
-• To correctly sort IP addresses, and also compress them into CIDRs: [Tehnoblog IP Address Aggregator](https://tehnoblog.org/ip-tools/ip-address-aggregator/)
+• To correctly sort IP addresses (which Sublime Text cannot do): [Browserling IP Sort](https://www.browserling.com/tools/ip-sort)<br>
+• To correctly sort IP addresses, and also compress them into CIDRs: [Tehnoblog IP Address Aggregator](https://tehnoblog.org/ip-tools/ip-address-aggregator/)<br>
 • To find lists of the biggest newssites of most countries: [DomainTyper](https://domaintyper.com/top-websites/most-popular-websites-with-no-domain)
 
 ### Ways one can use [Sublime Text](https://www.sublimetext.com/) (made by Jon Skinner and Will Bond) to improve his/her filter lists:
