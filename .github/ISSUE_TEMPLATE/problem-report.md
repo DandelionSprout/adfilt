@@ -1,5 +1,5 @@
 ---
-name: Problem report
+name: Problem report (English)
 about: To report broken websites, lists, and/or functions
 title: ''
 labels: Problem report
@@ -7,16 +7,16 @@ assignees: ''
 
 ---
 
-<!-- Safari ≥13 is NOT supported by Adfilt, except when using AdGuard's paid version. If you have a problem on that browser, change to another browser. -->
-
 <!-- PS: If you already have written an entry that'd fix the problem, it's better to use the *Feature Request* template instead. -->
+
+<!-- Read through https://github.com/DandelionSprout/adfilt/blob/master/.github/CONTRIBUTING.md if possible, so that you know what to expect of how reports will be processed. -->
 
 ## Describe the problem below this line as meticulously and detailed as possible:
 
 ## Add screenshots below if needed:
 
 ## Add a screenshot of the extension's logger:
-<!-- If you're using an up-to-date version of Nano Adblocker or uBlock Origin, it's recommended to filter the selection down to Blocked+Allowed, to reduce the amount of irrelevant "white" log entries. -->
+<!-- If you're using Nano Adblocker or uBlock Origin, it's recommended to filter the selection down to Blocked+Allowed, to reduce the amount of irrelevant "white" log entries. -->
 
 ## Which adblocker(s) and version did you use when testing this?
 <!-- For info on supported extensions, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md -->
@@ -24,20 +24,18 @@ assignees: ''
 - [ ] Nano Defender
 - [ ] uBlock Origin
 - [ ] uBlock Origin Plus
-- [ ] AdNauseam
 - [ ] AdBlock
 - [ ] Adblock Plus
 - [ ] AdGuard (Paid desktop version)
 - [ ] AdGuard (for browsers)
+- [ ] AdGuard Home
 - [ ] Blokada
-- [ ] Pi-hole
 
 Other(s):
 
-Version(s):
+Adblocker version(s):
 
 ## Which filterlists did you use? Failing to write this will result in instant report closing.
-
 <!-- If you want to save time, you can take a screenshot of your adblocker's list settings. -->
 
 ## Which browser(s) and version did you use?
@@ -48,10 +46,9 @@ Version(s):
 - [ ] Windows 8.1
 - [ ] Windows 7 SP1
 - [ ] macOS
-- [ ] Linux (Debian-based)
-- [ ] Linux (Not Debian-based)
+- [ ] Linux
 - [ ] Android
 
 Other(s):
 
-Version:
+OS version:
