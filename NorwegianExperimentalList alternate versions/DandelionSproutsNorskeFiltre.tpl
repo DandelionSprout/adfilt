@@ -1,5 +1,5 @@
 msFilterList
-# Version: 25June2020v1-Alpha
+# Version: 27June2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -164,6 +164,13 @@ msFilterList
 # https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein/(09/05/2020)
 # Bet365 widget triggered for Norwegian audiences only
 # jyllands-posten.dk
+# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
+-d f.nordiskemedier.dk *.gif
+-d f.nordiskemedier.dk 2*.jpg
+# metalsupply.no
+-d f.nordiskemedier.dk 2*.png
+# building-supply.dk
+-d f.nordiskemedier.dk banner
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
