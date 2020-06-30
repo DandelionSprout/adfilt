@@ -1,5 +1,5 @@
 msFilterList
-# Version: 27June2020v2-Alpha
+# Version: 01July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -341,7 +341,6 @@ msFilterList
 - KiwiErbjudanden1
 -d trackvoluum.com
 - pakkerlevering
--d prisjakt.org
 -d 102.112.2o7.net
 -d tromselementbygg.no
 -d no.zxxyw.com
@@ -376,12 +375,9 @@ msFilterList
 # https://www.nrk.no/ytring/1.14496024
 -d cost2buy.net
 # https://www.nrk.no/norge/1.14511067
--d com-fryd.com
--d com-norwegian.com
 # https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
 -d ruter.top
 # https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
--d 101mesh.com
 -d gokkw.com
 -d earnmoneyglobal.com
 # https://www.datahjelperne.no/stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel/
@@ -408,11 +404,8 @@ msFilterList
 # https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
 -d com-dk.com
 # https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
--d com-usx.com
 # https://www.mm.dk/tjekdet/artikel/norwegian-billetter-til-valgfri-destination-er-snyd-og-bedrag
 -d bondiblue.co.uk
-# https://www.mm.dk/tjekdet/artikel/geggo-har-ikke-lanceret-ny-skoenhedscreme22
--d organiclife24.info
 # https://www.mm.dk/tjekdet/artikel/overrasket-bjarne-riis-kender-intet-til-investering-i-bitcoin-platform
 -d ucrhealthyhearts.com
 # https://www.mm.dk/tjekdet/artikel/svindel-breder-sig-ogsaa-lars-larsen-misbruges-nu-i-bitcoin-fup
@@ -478,7 +471,6 @@ msFilterList
 -d billigesalg.com
 -d bostongrnhsflowers.com
 -d caperforaciones.com
--d charpente-ramel.com
 -d coralls.com
 -d crossfiterada.com
 -d crownedwithlaurels.com
