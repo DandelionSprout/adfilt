@@ -1,11 +1,19 @@
 ! Title: 🛀 Pokémon No-GO Zone
-! Version: 21January2020v1-Alpha
-! Description: Are you desperate to get some quality time with your brother or dad, who is so much into Pokémon GO that they play it to this day while hacking around from the couch? Here's how to get that quality time back… unless they just switch to 4G instead, in which case you're screwed. May also work against 'Harry Potter: Wizards Unite' and 'Ingress Prime'
-! Note: This list is almost solely intended for AdGuard Home and phone versions of AdGuard. There is no reason whatsoever to use this list on a desktop PC, so I've intentionally made this list not work in any uBlock Origin- or Adblock Plus-based adblockers, nor in PC or browser versions of AdGuard.
+! Version: 30June2020v1-Alpha
+! Description: Are you desperate to get some quality time with your brother or dad, who is so much into Pokémon GO that they play it to this day while hacking around from the couch? Here's how to get that quality time back… unless they just change their connection to 4G instead, in which case you're screwed. May also work against 'Harry Potter: Wizards Unite' and 'Ingress Prime'.
+! Note: The list currently only supports AdGuard Home, AdGuard for Android, AdGuard for iOS, and presumably Pi-Hole (RegEx versions only). There is no reason whatsoever to use this list on a desktop PC, so I've intentionally made this list not work in any uBlock Origin- or Adblock Plus-based adblockers, nor in PC or browser versions of AdGuard.
 ! For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 !#if !env_ublock
-!+ PLATFORM(ios, android)
+!+ PLATFORM(android)
+||nianticlabs.com^$app=com.nianticlabs.pokemongo|com.nianticlabs.hpwu.prod|com.nianticproject.ingress
+!+ PLATFORM(android)
+||crittercism.com^$app=com.nianticlabs.pokemongo|com.nianticlabs.hpwu.prod|com.nianticproject.ingress
+!+ PLATFORM(ios)
 ||nianticlabs.com^
-!+ PLATFORM(ios, android)
+!+ PLATFORM(ios)
 ||crittercism.com^
+!#if !adguard
+(^|.*\.)nianticlabs\.com$
+(^|.*\.)crittercism\.com$
+!#endif
 !#endif
