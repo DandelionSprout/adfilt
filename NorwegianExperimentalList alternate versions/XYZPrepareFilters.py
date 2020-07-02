@@ -1120,7 +1120,7 @@ def prepare_brave(lines) -> str:
         )
 
         line = re.sub(
-           r".*##[a-z.].*", 
+           r".*##[a-zA-Z.^[].*", 
            r"", 
            line
         )
