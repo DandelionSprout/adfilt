@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 😌 Anti-'Newsstories about celebs giving birth' List
-! Version: 30June2020v1-Beta
+! Version: 02July2020v1-Beta
 ! Expires: 3 days
 ! Description: We hear so much talk about "fake news" nowadays, but we never hear any talk about non-news, such as C-tier celebrities either expecting offspring or giving birth to such. This list will aid in removing such kinds of non-news.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -10,8 +10,8 @@ theguardian.com,dw.com##a[href*=birth-of-baby]
 
 ! TV2 Norway
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/bl[ie][tr]?[t]? [pm]a[pm][pm]a/i):not(:-abp-contains(/ mappa/i))
-tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/bl[ie][tr]?[t]? mor/i)
-tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/bl[ie][tr]?[t]? far/i)
+tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/bl[ie][tr]?[t]? mor/i):not(:-abp-contains(morsom))
+tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/bl[ie][tr]?[t]? far/i):not(:-abp-contains(farlig))
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/bl[ie][tr]?[t]? bestefar/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/bl[ie][tr]?[t]? bestemor/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/bl[ie][tr]?[t]? foreldre/i)
@@ -23,7 +23,7 @@ tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/Venter tvilling/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/datteren ble født/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/mikroutro/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/fødte datter/i)
-tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/babyboom /i)
+tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/babyboom( |$)/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/ble foreldre/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/klødd i livmor/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/sitt første barn/i)
@@ -42,13 +42,13 @@ tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/etter fødsel/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/venter sitt første barn/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/termin[-]?dato/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/Baby[-]?lykke/i)
-tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains( fødte )
+tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains( fødte( |$))
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/oppkall/i):-abp-contains(/sønn/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/fjerde barn/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/stor avsløring/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/hun tobarnsmor/i)
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/sitt andre barn/i)
-tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/ er gravid/i)
+tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/(^| )er gravid/i)
 tv2.no#?#.article:-abp-has(.title:-abp-contains(/^Gravid$/i))
 tv2.no#?#.article:-abp-has(.article__title:-abp-contains(/^Gravid$/))
 
@@ -107,3 +107,6 @@ cnn.com##a[href*=-baby-]:not([href*=mortality])
 
 ! The Daily Star
 dailystar.co.uk#?#.teaser:-abp-contains(gives birth)
+
+! Nettavisen
+nettavisen.no##.story:has-text(/ble far([  ]|$)/)
