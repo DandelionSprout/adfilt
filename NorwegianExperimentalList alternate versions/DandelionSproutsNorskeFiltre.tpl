@@ -1,5 +1,5 @@
 msFilterList
-# Version: 01July2020v3-Alpha
+# Version: 02July2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -94,6 +94,7 @@ msFilterList
 -d webclick.no
 -d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
 -d melkoghonning.no *_Banner_
+-d deals.innocode.no api
 - -bazaar-
 - annonsar
 - annonse
@@ -139,7 +140,6 @@ msFilterList
 -d adnxs.com
 # framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
 # https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
-# www.op.no
 # arendalstidende.no
 # https://www.langrenn.com/cppage.6250314-1743.html
 # https://sport.tv2.dk/formel-1/2019-10-15-jeg-viste-alle-hvad-man-ikke-skal-goere-siger-magnussen
@@ -262,6 +262,7 @@ msFilterList
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 # https://github.com/easylist/easylist/issues/1861
 +d _prebid_
+# https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 # ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
 # Makes E-newspaper previews show up properly
 # ——— Unknown cause ———
