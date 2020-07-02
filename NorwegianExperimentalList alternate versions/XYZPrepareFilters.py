@@ -1177,7 +1177,7 @@ UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i']
 
 OUTPUT = 'xyzzyxeyeo.txt'
-OUTPUT_ABP = 'NordicFiltersABP-Eyeo.txt'
+OUTPUT_ABP = 'NordicFiltersABP-Inclusion.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
 
 # function that downloads the filter list
@@ -1226,13 +1226,13 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
-           "Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter Eyeo sine regler)",
+           "Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingregler)",
            line
         )
 
         line = re.sub(
            "Dandelion Sprout's Nordic filters for tidier websites", 
-           "Dandelion Sprout's West Nordic filters for tidier websites (for Adblock Plus with Eyeo compliance)",
+           "Dandelion Sprout's West Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)",
            line
         )
 
