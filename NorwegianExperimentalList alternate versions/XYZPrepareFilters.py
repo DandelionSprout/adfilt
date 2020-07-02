@@ -7,7 +7,7 @@ UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
-UNSUPPORTED_BRAVE = ['##', '#@#', '#?#', '!#', '!+', '$csp', '$generichide', '$elemhide', '$specificblock', '$redirect', ',redirect', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn']
+UNSUPPORTED_BRAVE = ['##', '#@#', '#?#', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn', '!+ NOT_OPTIMIZED']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_ABP = 'NordicFiltersABP.txt'
@@ -1096,73 +1096,7 @@ def prepare_brave(lines) -> str:
 
         # remove $document modifier from the rule
         line = re.sub(
-           r"\$doc.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"\$all.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])xhr", 
-           r"\1xmlhttprequest", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])3p", 
-           r"\1third-party", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])1p", 
-           r"\1~third-party", 
-           line
-        )
-
-        line = re.sub(
-           r"([$,])important$", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"\$important,", 
-           r"$", 
-           line
-        )
-
-        line = re.sub(
-           r",important,", 
-           r",", 
-           line
-        )
-
-        line = re.sub(
-           r".*background.*\$image", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r".*bakgrunn.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r".*xxlsports.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"! Version: [0-9]{4}.*", 
+           r"\$doc,domain=~ .*", 
            "", 
            line
         )
@@ -1180,20 +1114,8 @@ def prepare_brave(lines) -> str:
         )
 
         line = re.sub(
-           r"^! [a-z].*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"^! \(.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"(! Version: .*)", 
-           r"\1-Alpha", 
+           r"\1-Beta", 
            line
         )
 
