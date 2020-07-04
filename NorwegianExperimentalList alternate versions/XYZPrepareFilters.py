@@ -4,10 +4,10 @@ import re
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^']
+    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '$$']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
-UNSUPPORTED_BRAVE = ['#@#', '#?#', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn', '!+ NOT_OPTIMIZED']
+UNSUPPORTED_BRAVE = ['#@#', '#?#', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn', '!+ NOT_OPTIMIZED', '$$']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
@@ -641,6 +641,12 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
+           r".*\$\$script.*", 
+           "-d ", 
+           line
+        )
+
+        line = re.sub(
            r"^/", 
            "- ", 
            line
@@ -1042,6 +1048,12 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            "! ", 
            "# ", 
+           line
+        )
+
+        line = re.sub(
+           r".*\$\$script.*", 
+           r"", 
            line
         )
 

@@ -571,4 +571,4 @@ msFilterList
 +d sixscissors.com
 +d bildeler.name
 +d reservedele.name
-- gamereactor.*
+-d
