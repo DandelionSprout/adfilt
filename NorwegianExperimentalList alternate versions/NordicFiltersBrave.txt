@@ -632,7 +632,7 @@ gamereactor.*##+js(nano-stb)
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 10June2020v1-Extension
+! Last updated: 04July2020v1-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
@@ -659,4 +659,7 @@ gamereactor.*##+js(set, trackAdblock, noopFunc)
 @@||reservedele.name$generichide
 !#endif
 !#if env_firefox
+!#endif
+!#if !ext_ublock
+gamereactor.*$$script[onError="adblockEnabled()"]
 !#endif
