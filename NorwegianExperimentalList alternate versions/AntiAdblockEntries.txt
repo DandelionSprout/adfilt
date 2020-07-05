@@ -1,7 +1,7 @@
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 04July2020v1-Extension
+! Last updated: 05July2020v1-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 aftenposten.no##div[style*="width: 10"][style*="z-index: 2147"]
 csp.screen9.com#@#.adsbox
@@ -18,6 +18,7 @@ vg.no##+js(aeld, load, concat)
 tipsbladet.dk##.js-isblured:style(-webkit-filter: none !important; filter: none !important)
 tipsbladet.dk###js-promo-welcome
 abcnyheter.no##div[style^="bottom: 0px;"]
+newsbreak.dk,kendte.dk,madensverden.dk##div[style*=" fixed; width: 10"]
 ||aftenposten.no/seksjon/dist/ads-$script
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.no|dplay.dk
 ||elderlyscissors.com^
@@ -35,10 +36,8 @@ gamereactor.*##+js(set, trackAdblock, noopFunc)
 !#if !ext_ublock
 @@||bildeler.name$generichide
 @@||reservedele.name$generichide
+gamereactor.*$$script[onError="adblockEnabled()"]
 !#endif
 !#if env_firefox
 gamereactor.*##^script[onError="adblockEnabled()"]
-!#endif
-!#if !ext_ublock
-gamereactor.*$$script[onError="adblockEnabled()"]
 !#endif
