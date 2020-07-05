@@ -1,5 +1,5 @@
 msFilterList
-# Version: 02July2020v4-Alpha
+# Version: 05July2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -130,6 +130,8 @@ msFilterList
 -d trolli.is benecta.png
 -d oyggjatidindi.com *L%C3%BDsing
 -d travservice.dk wp-content
+-d print2web.sn.dk
+-d xn--bredbnd-ixa.dk velkommen_banner
 -d tv2a.dk
 -d adframe.no
 -d adstream.no
@@ -173,6 +175,8 @@ msFilterList
 -d f.nordiskemedier.dk 2*.png
 # building-supply.dk
 -d f.nordiskemedier.dk banner
+# https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
+-d images.sprinklecontent.com *.amazonaws.com%2Fimages%
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
@@ -291,6 +295,9 @@ msFilterList
 # https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
 # https://www.vg.no/nyheter/i/y3Mka2//(08/04/2020)
 # https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
+# Anti-'CPU slaughtering'
+# https://kendte.dk/stjernespaekket-havefest-foejer-nye-navne-paa-plakaten-04072020/
+- advisibility_*.js
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
@@ -561,7 +568,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 04July2020v1-Extension
+# Last updated: 05July2020v1-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
