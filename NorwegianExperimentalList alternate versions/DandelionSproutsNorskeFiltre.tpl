@@ -1,5 +1,5 @@
 msFilterList
-# Version: 05July2020v1-Alpha
+# Version: 05July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -86,7 +86,7 @@ msFilterList
 -d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
 -d tvkampen.com banner*
 -d tvkampen.com unibet-lo
--d utrop.no *.gif
+-d utrop.no utrop.no_-1.jpg
 -d utrop.no Banner_utrop
 -d vevlysingar.fo
 -d viasport-assets.mtg-api.com comScore-*.js
@@ -130,13 +130,16 @@ msFilterList
 -d trolli.is benecta.png
 -d oyggjatidindi.com *L%C3%BDsing
 -d travservice.dk wp-content
--d print2web.sn.dk
 -d xn--bredbnd-ixa.dk velkommen_banner
+-d avvir.no banners
+-d saernieh.no j%C3%B8rn-jensen.jpg
 -d tv2a.dk
 -d adframe.no
 -d adstream.no
 -d advertising.no
 -d karfan.is *.gif
+-d samimag.no Screenshot-2020-03-21-at-12.40.32.png
+-d print2web.sn.dk
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -335,6 +338,7 @@ msFilterList
 # 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "+d doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 -d panel.cint.com
+# https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
