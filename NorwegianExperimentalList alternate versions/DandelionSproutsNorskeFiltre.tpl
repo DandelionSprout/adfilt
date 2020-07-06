@@ -1,5 +1,5 @@
 msFilterList
-# Version: 05July2020v2-Alpha
+# Version: 06July2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -213,6 +213,7 @@ msFilterList
 # www.mbl.is frettir
 # adressa.no
 # kk.no, sol.no
+# (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/58527)
 # historienet.no, natgeo.no, komputer.no
 # https://www.nettavisen.no/okonomi/3423875562.html
 # qxl.no
@@ -269,6 +270,7 @@ msFilterList
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
++d candidate.hr-manager.net Advertisement PreviewAdvertisement.
 # https://github.com/easylist/easylist/issues/1861
 +d _prebid_
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
