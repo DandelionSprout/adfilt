@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06July2020v1-Alpha
+# Version: 06July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -469,6 +469,8 @@ msFilterList
 # https://www.tv2.no/nyheter/11516670/
 -d fintechnow*.buzz
 -d wealthnews*.xyz
+# https://sol.no/nyheter/pass-deg-for-solbrillesvindlere/72639445
+-d rbono.net
 # IP addresses of servers notorious for hosting many of the sites above
 -d 82.118.242.69
 -d 136.243.73.30
