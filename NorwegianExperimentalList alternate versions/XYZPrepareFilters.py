@@ -2435,7 +2435,7 @@ def prepare_minerblock(lines) -> str:
 
         line = re.sub(
            r"# Platform notes:.*", 
-           "# Platform notes: So, let's say your company boss is not letting you install any adblocker on your awful work laptop, but (s)he lets you install MinerBlock for some indeterminable reason? In this very unlikely case, I've saved your day.\nNote: This list does not actually block any mining-related stuff.", 
+           "# Platform notes: So, let's say your company boss is not letting you install any adblocker on your awful work laptop, but (s)he lets you install MinerBlock for some indeterminable reason? In this very unlikely case, I've saved your day.\n# Note: This list does not actually block any mining-related stuff.", 
            line
         )
 
@@ -2448,6 +2448,12 @@ def prepare_minerblock(lines) -> str:
         line = re.sub(
            r" Dandelion Sprout's Nordic Filters.*", 
            " Dandelion Sprout's Nordic Filters (for MinerBlock)", 
+           line
+        )
+
+        line = re.sub(
+           r"(.*For more information and .*)", 
+           r"\1\n# PSA: I am currently considering adding entries for filepaths from the uBO version, in addition to the existing entries taken from the raw-domains version. However, to do so, it'd take me an hour of heavy work to modify the conversion script, so first I'd want to know if anyone are actually using this list version in their daily lives, to help motivate me to do this. If you do use it actively, go to https://github.com/DandelionSprout/adfilt/issues/new/choose, choose whatever option, and explain to me that you're using the minerBlock list version and how.", 
            line
         )
 
