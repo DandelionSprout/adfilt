@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08July2020v1-Alpha
+# Version: 08July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -21,6 +21,9 @@ msFilterList
 - blob:https://www.veier24.no/
 -d 1819.is infosmall
 -d 3.248.18.175
+-d 82.221.81.9
+-d 45.58.146.154
+-d 82.196.13.38
 -d acdn.adnxs.com ast.js
 -d acdn.adnxs.com ast.js
 -d ad.no.doubleclick.net
@@ -476,6 +479,10 @@ msFilterList
 -d 136.243.73.30
 -d 138.201.126.227
 -d 156.236.126.173
+-d 196.196.230.76
+-d 167.71.49.177
+-d 134.209.82.119
+-d 154.213.16.136
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
