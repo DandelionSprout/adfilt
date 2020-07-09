@@ -1,5 +1,5 @@
 msFilterList
-# Version: 09July2020v1-Alpha
+# Version: 09July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -190,6 +190,7 @@ msFilterList
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
+-d gulindex.no spring.js
 - gifs *emty.gif
 -d yrkesbil.no 1pix.gif
 -d 730.no sonymusic
@@ -346,6 +347,7 @@ msFilterList
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 -d panel.cint.com
 # https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
+# jyllands-posten.dk (09 07 2020)
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
