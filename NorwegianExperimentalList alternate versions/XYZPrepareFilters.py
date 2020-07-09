@@ -1980,7 +1980,7 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"(\"wo.tc\" }),", 
+           r"(\"196\.196\.230\.76\" }),", 
            r"\1\n]}", 
            line
         )
