@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08July2020v2-Alpha
+# Version: 09July2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -341,6 +341,8 @@ msFilterList
 # https://github.com/AdguardTeam/AdguardForWindows/issues/3209
 # 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "+d doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
 # 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "+d doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
+# 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
+# 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 -d panel.cint.com
 # https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
