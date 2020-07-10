@@ -1,5 +1,5 @@
 msFilterList
-# Version: 09July2020v2-Alpha
+# Version: 10July2020v4-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -244,6 +244,7 @@ msFilterList
 # https://fiskur.fo/gitte-henning-1-landar-i-maloy/(09/05/2020)
 -d *.fo banner2x1.png
 # https://www.dagsavisen.no/nyheter/verden/1.1731911/(18/06/2020)
+# https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇮🇸: ——— Tóma skilirammar ———
