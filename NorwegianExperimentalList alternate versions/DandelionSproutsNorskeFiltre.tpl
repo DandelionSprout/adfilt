@@ -1,5 +1,5 @@
 msFilterList
-# Version: 11July2020v3-Alpha
+# Version: 12July2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -195,6 +195,7 @@ msFilterList
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
+-d mmm.dk safeframe
 -d gulindex.no spring.js
 - gifs *emty.gif
 -d yrkesbil.no 1pix.gif
