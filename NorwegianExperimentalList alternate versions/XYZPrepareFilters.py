@@ -2221,6 +2221,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(.*ssl-mtgstream\.tns-cs\.net.*)", 
+           r"\1\n@@5d404.v.fwmrm.net", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
