@@ -1,5 +1,5 @@
 msFilterList
-# Version: 16July2020v1-Alpha
+# Version: 16July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -147,6 +147,8 @@ msFilterList
 -d storfjordnytt.no 26_hh.png
 -d storfjordnytt.no *_hovleriet.jpg
 -d storfjordnytt.no *_bilsenter.jpg
+-d scripts.tv2a.dk *tv2ads.js
+-d scripts.tv2a.dk prebid*
 -d freewheel-mtgx-tv.akamaized.net
 -d ssl-mtgstream.tns-cs.net
 -d krxd.net
@@ -155,7 +157,6 @@ msFilterList
 -d ssl-dnnstream.tns-cs.net
 -d discoverynordics.hb.omtrdc.net
 -d widgets.sprinklecontent.com
--d tv2a.dk
 -d adframe.no
 -d adstream.no
 -d advertising.no
@@ -171,8 +172,6 @@ msFilterList
 # https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 # arendalstidende.no
 # https://www.langrenn.com/cppage.6250314-1743.html
-# https://sport.tv2.dk/formel-1/2019-10-15-jeg-viste-alle-hvad-man-ikke-skal-goere-siger-magnussen
-# https://nyheder.tv2.dk/samfund/2019-11-04-vold-fanget-paa-video-gerningsmand-fik-lov-at-gaa-fri-i-tre-aar
 # bobilverden.no
 - annonse-
 # norskenettsider.no, sva.no
