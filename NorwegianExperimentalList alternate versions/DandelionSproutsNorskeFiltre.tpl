@@ -147,8 +147,8 @@ msFilterList
 -d storfjordnytt.no 26_hh.png
 -d storfjordnytt.no *_hovleriet.jpg
 -d storfjordnytt.no *_bilsenter.jpg
--d scripts.tv2a.dk *tv2ads.js
--d scripts.tv2a.dk prebid*
+-d scripts.tv2a.dk ads
+-d scripts.tv2a.dk prebid
 -d freewheel-mtgx-tv.akamaized.net
 -d ssl-mtgstream.tns-cs.net
 -d krxd.net
