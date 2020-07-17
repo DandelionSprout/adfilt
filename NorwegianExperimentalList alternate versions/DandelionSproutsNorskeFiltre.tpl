@@ -1,5 +1,5 @@
 msFilterList
-# Version: 17July2020v1-Alpha
+# Version: 17July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -410,6 +410,7 @@ msFilterList
 -d replicarolexyachtmaster.com
 -d secureriches.com
 -d itunesconnect-*.no
+-d fullbagcash.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
