@@ -1,4 +1,4 @@
-! Version: 17July2020v2
+! Version: 18July2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -333,6 +333,11 @@ storfjordnytt.no##.wpls-logo-clearfix
 magasinetreiselyst.no###topBanner
 magasinetreiselyst.no##.adLarge
 ||magasinetreiselyst.no/wp-content/*_annonse*promo$image
+bilgalleri.dk##a[href*=casino]:upward(3)
+bilgalleri.dk##.top-fixed-wrapper
+bilgalleri.dk#?#.container:-abp-contains(Premium annoncør)
+||bilgalleri.dk/content/images/fixed^$image
+mobilsiden.dk#?#.content-widget:-abp-contains(Annoncer)
 !#if !ext_ublock
 ||freewheel-mtgx-tv.akamaized.net^$app=no.viafree.android|dk.viafree.android
 ||ssl-mtgstream.tns-cs.net^$app=no.viafree.android|dk.viafree.android
@@ -768,7 +773,6 @@ sistenytt.com###annonse_side
 tipsbladet.dk##.concept_banners-tag-wrapper
 tipsbladet.dk##.h-background-color-gray-background
 tipsbladet.dk##.c-single__box-inset
-tipsbladet.dk##.col--lg-fixed-width-sidebar.col--xs-12
 bilnorge.no##td[colspan="7"][style]
 yrkesbil.no#?#td:-abp-has(> noscript)
 yrkesbil.no##.forside_adholder:upward(1)
@@ -857,6 +861,26 @@ sporttv.is##.row div[class^="auglysing-"]:upward(1)
 ||gaysir.no/rek/bb_inline$subdocument
 ||static.vg.no/css/admark_top.gif
 -l%C3%BDsing-$image,domain=news.fo
+edbpriser.dk##div[id^=leftAdSpotAdcontainer]:upward(2)
+||danishfamilysearch.dk/images/xp2^$image
+danishfamilysearch.dk##div[id^=ContentPlaceHolder1_div_annonce]
+jodelgrin.dk###text-2
+gaffa.dk##.sticky-banner-wrapper
+stiften.dk##.adform__text
+stiften.dk#?#.grid__section:-abp-has(.adblock)
+stiften.dk##.adblock
+stiften.dk###lpc_belowArticle_1
+stiften.dk###lpc_belowArticle_3
+bilgalleri.dk##.container-topbanner
+bilgalleri.dk###leftFloatingBanner
+bilgalleri.dk###rightFloatingBanner
+bilgalleri.dk##.recbanner300x250
+mobilsiden.dk,telepristjek.dk###wrapper-top
+superchat.dk###topbanner_container
+superchat.dk##div[id^=div-ppas]:upward(1)
+recordere.dk##.td-header-header
+recordere.dk#?#.widget_text:-abp-has(script):first-of-type
+recordere.dk#?#.textwidget > div:-abp-has(script)
 !+ NOT_OPTIMIZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 !+ NOT_OPTIMIZED
@@ -1031,6 +1055,9 @@ krom.is#@#.share-container
 ! https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 @@||cdn.easy-ads.com/js/swipemod.js^$script,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no
 @@||easy-ads.com/subscriber^$image,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no
+! ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
+! https://www.danishfamilysearch.dk/
+danishfamilysearch.dk#@#iframe[width="300"][height="250"]
 ! ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
 ! Makes E-newspaper previews show up properly
 @@/teasers/*$domain=agderposten.no
