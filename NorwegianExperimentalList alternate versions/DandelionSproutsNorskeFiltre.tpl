@@ -1,5 +1,5 @@
 msFilterList
-# Version: 17July2020v2-Alpha
+# Version: 18July2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -150,6 +150,7 @@ msFilterList
 -d scripts.tv2a.dk ads
 -d scripts.tv2a.dk prebid
 -d magasinetreiselyst.no *_annonse*promo
+-d bilgalleri.dk fixed
 -d freewheel-mtgx-tv.akamaized.net
 -d ssl-mtgstream.tns-cs.net
 -d krxd.net
@@ -217,6 +218,7 @@ msFilterList
 -d gaysir.no bb_inline
 -d static.vg.no admark_top.gif
 -l%C3%BDsing-
+-d danishfamilysearch.dk xp2
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -299,6 +301,8 @@ msFilterList
 # https://github.com/easylist/easylist/issues/5682
 +d candidate.hr-manager.net Advertisement PreviewAdvertisement.
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
+# ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
+# https://www.danishfamilysearch.dk/
 # ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
 # Makes E-newspaper previews show up properly
 # ——— Unknown cause ———
@@ -609,7 +613,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 05July2020v1-Extension
+# Last updated: 18July2020v1-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
