@@ -619,7 +619,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 18July2020v1-Extension
+# Last updated: 19July2020v1-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
