@@ -11,7 +11,7 @@ And just in case anyone thinks I'm not serious about it, <b>I will no longer off
 
 ————————————————————————————
 
-Note for UXP browser users: Although this repo's lists are not made with UXP browsers like Pale Moon in mind, we do co-operate with and officially support the [uBlock Origin for Firefox Legacy](https://github.com/gorhill/uBlock-for-firefox-legacy) project to ensure underlying entry compatibility and conversions. Other UXP adblock extensions are not supported.
+Note for UXP browser users: Due to the Pale Moon community being protective of consistent abusive hate speech and grave insultments, I will no longer use Pale Moon or Basilisk to test any entries or for anything else. PC browser entries that can't be reproduced by Chrome, Firefox, Vivaldi or Tor Browser, will be delegated to [uAssets](https://github.com/uBlockOrigin/uAssets/blob/master/filters/legacy.txt) instead.
 
 ————————————————————————————
 
