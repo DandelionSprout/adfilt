@@ -1,4 +1,4 @@
-! Version: 19July2020v2
+! Version: 19July2020v3
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -168,14 +168,14 @@ biip.no###advertisement
 82.196.13.38$network
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
 ||acdn.adnxs.com/ast/ast.js$script,redirect=noopjs,important,domain=vgtv.no
-||ad.*.no^
+||ad.*.no^$domain=~ad.dep.no|~ad.hem.no
 ||ad.no.doubleclick.net^
 ||ad1.*.dk^
 ||ad1.*.no^
 ||adcache.*.no^
 ||adext.inkclub.com^
 ||adr.kulingen.no^
-||ads.*.dk^
+||ads.*.dk^$domain=~ads.mst.dk
 ||ads.*.is^
 ||ads.*.no^
 ||ads.no^
@@ -185,7 +185,7 @@ biip.no###advertisement
 ||akamai.net^$script,domain=eniro.*
 ||akamaihd.net^$media,domain=dplay.*
 ||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
-||annonser.*.no^
+||annonser.*.no^$domain=~annonser.gess.no
 ||auglysingar.*.is^$subdocument
 ||austevollforlag.no/wp-content/*/yachtmarine2014.$image
 ||austurfrett.is/images/*augl.jpg^
@@ -346,6 +346,8 @@ mobilsiden.dk#?#.content-widget:has-text(Annoncer)
 ||melkoghonning.no/wp-content/uploads/*_980x300px.jpg^
 ||export.prisguide.no^$domain=diskusjon.no
 ||export.prisguiden.no^$domain=diskusjon.no
+||footy.dk/wp-content/uploads/*/Sk%C3%A6rmbillede-*.png^$image
+skivefolkeblad.dk##.view-cf-skf-avisannoncer
 !#if !ext_ublock
 ||freewheel-mtgx-tv.akamaized.net^$app=no.viafree.android|dk.viafree.android
 ||ssl-mtgstream.tns-cs.net^$app=no.viafree.android|dk.viafree.android
@@ -889,6 +891,9 @@ superchat.dk##div[id^=div-ppas]:upward(1)
 recordere.dk##.td-header-header
 recordere.dk#?#.widget_text:has(script):first-of-type
 recordere.dk#?#.textwidget > div:has(script)
+elmagasinet.no##.SkyskraperWrapper
+elmagasinet.no##.RightBoxWrapper
+hwt.dk##.box.text-center
 !+ NOT_OPTIMIZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 !+ NOT_OPTIMIZED

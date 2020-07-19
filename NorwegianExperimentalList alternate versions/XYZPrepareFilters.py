@@ -1911,6 +1911,18 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"([a-z]) www\.www\..*", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r" www\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
             text += line + '\r\n'
 
@@ -2007,7 +2019,7 @@ def prepare_dnsmasq(lines) -> str:
 
         line = re.sub(
            r"^(?!#)", 
-           "address=/", 
+           "server=/", 
            line
         )
 
@@ -2018,13 +2030,13 @@ def prepare_dnsmasq(lines) -> str:
         )
 
         line = re.sub(
-           r"address=/$", 
+           r"server=/$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"address=/([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])$", 
+           r"server=/([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])$", 
            r"server=/\4.\3.\2.\1.in-addr.arpa/127.0.0.1", 
            line
         )
@@ -2218,6 +2230,24 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^(\|\|skatteetaten\.no\.\*\^)$", 
            r"\1\n@@||skatteetaten.no.cdn.cloudflare.net^", 
+           line
+        )
+
+        line = re.sub(
+           r"(.*ad\.\*\.no.*)", 
+           r"\1\n@@||ad.dep.no^\n@@||ad.hem.no^", 
+           line
+        )
+
+        line = re.sub(
+           r"(.*annonser\.\*\.no.*)", 
+           r"\1\n@@||annonser.gess.no^", 
+           line
+        )
+
+        line = re.sub(
+           r"(.*ads\.\*\.dk.*)", 
+           r"\1\n@@||ads.mst.dk^", 
            line
         )
 
@@ -2508,6 +2538,18 @@ def prepare_hostsipv6(lines) -> str:
         line = re.sub(
            r"^(::) (.*)", 
            r"\1 \2 www.\2", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z]) www\.www\..*", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r" www\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}", 
+           r"", 
            line
         )
 
