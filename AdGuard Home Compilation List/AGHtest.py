@@ -319,6 +319,12 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r"^\|\|play-asia\.com\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$", 
            r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^", 
            line
