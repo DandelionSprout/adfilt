@@ -1,5 +1,5 @@
 msFilterList
-# Version: 20July2020v3-Alpha
+# Version: 20July2020v4-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -161,6 +161,7 @@ msFilterList
 -d footy.dk Sk%C3%A6rmbillede-*.png
 -d adserver.xh.no
 -d n247.no salg
+-d bilborsen.webannonse.no
 -d freewheel-mtgx-tv.akamaized.net
 -d ssl-mtgstream.tns-cs.net
 -d krxd.net
@@ -373,6 +374,9 @@ msFilterList
 # 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
 # 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
 # Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
+# 🇳🇴: Falske innlastings som sløser bort tid
+# 🇩🇰: Falske indlastinger, der søler bort tid
+# 🇬🇧: Fake loading screens that waste time
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
 # Hotfixes for Internet Explorer 11
 # https://github.com/AdguardTeam/AdguardForWindows/issues/3209
