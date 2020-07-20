@@ -1,5 +1,5 @@
 msFilterList
-# Version: 20July2020v2-Alpha
+# Version: 20July2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -159,6 +159,8 @@ msFilterList
 -d export.prisguide.no
 -d export.prisguiden.no
 -d footy.dk Sk%C3%A6rmbillede-*.png
+-d adserver.xh.no
+-d n247.no salg
 -d freewheel-mtgx-tv.akamaized.net
 -d ssl-mtgstream.tns-cs.net
 -d krxd.net
@@ -211,6 +213,7 @@ msFilterList
 -d f.nordiskemedier.dk banner
 # https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
 -d images.sprinklecontent.com *.amazonaws.com%2Fimages%
+# n247.no
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———

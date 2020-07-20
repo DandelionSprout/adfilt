@@ -190,6 +190,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\$~doc$", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -593,6 +599,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"##:xpath\((.*)\)$", 
            r"#$#hide-if-matches-xpath \1", 
+           line
+        )
+
+        line = re.sub(
+           r"\$~doc$", 
+           r"", 
            line
         )
 
@@ -1307,6 +1319,12 @@ def prepare_brave(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\$~doc$", 
+           r"", 
+           line
+        )
+
         if is_supported_brave(line) and not line == '':
             text += line + '\r\n'
 
@@ -1801,6 +1819,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r".*\$\$script.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$~doc$", 
            r"", 
            line
         )
