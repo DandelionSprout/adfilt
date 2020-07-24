@@ -1,5 +1,5 @@
 msFilterList
-# Version: 22July2020v1-Alpha
+# Version: 24July2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -215,6 +215,8 @@ msFilterList
 # https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
 -d images.sprinklecontent.com *.amazonaws.com%2Fimages%
 # n247.no
+# Adressa.no
+-d drbrand.herokuapp.com
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
@@ -628,7 +630,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 19July2020v1-Extension
+# Last updated: 22July2020v4-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
@@ -639,3 +641,5 @@ msFilterList
 +d bildeler.name
 +d reservedele.name
 -d
+# Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
+-d googletagmanager.com gtm.js

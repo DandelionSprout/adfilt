@@ -1,4 +1,4 @@
-! Version: 22July2020v1
+! Version: 24July2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 12 hours
@@ -348,7 +348,7 @@ mobilsiden.dk#?#.content-widget:-abp-contains(Annoncer)
 ||footy.dk/wp-content/uploads/*/Sk%C3%A6rmbillede-*.png^$image
 skivefolkeblad.dk##.view-cf-skf-avisannoncer
 .is/netbordar/
-||adserver.xh.no^$~doc
+||adserver.xh.no^$3p
 ||n247.no/salg^
 @@||n247.no/salg/an_%7B6C
 @@||n247.no/salg/karusell_17
@@ -443,6 +443,8 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ||images.sprinklecontent.com/*.amazonaws.com%2Fimages%$image
 ! n247.no
 ##.annonseheader
+! Adressa.no
+||drbrand.herokuapp.com^
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -1571,7 +1573,7 @@ trendsales.dk##.top__banner
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 19July2020v1-Extension
+! Last updated: 22July2020v4-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 aftenposten.no##div[style*="width: 10"][style*="z-index: 2147"]
 csp.screen9.com#@#.adsbox
@@ -1579,8 +1581,6 @@ dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
 godt.no##.adblock-info-box
 gratisspil.dk##+js(aopw, AdBlockerInfo)
-langaa-guiden.dk,madforfattigroeve.dk##div[class][style*="z-index: 9999999; opacity"]
-langaa-guiden.dk,madforfattigroeve.dk##div[class][style^="z-index: 999999; background: rgba"]
 minmote.no,godt.no##.adblock-info
 techstart.dk##+js(set, adblock, false)
 tv2.no##+js(acis, adblockDetector)
@@ -1588,7 +1588,6 @@ vg.no##+js(aeld, load, concat)
 tipsbladet.dk##.js-isblured:style(-webkit-filter: none !important; filter: none !important)
 tipsbladet.dk###js-promo-welcome
 abcnyheter.no##div[style^="bottom: 0px;"]
-newsbreak.dk,kendte.dk,madensverden.dk,gaffa.dk,stiften.dk,bilgalleri.dk,recordere.dk,bornholm.nu##div[style*=" fixed; width: 10"]
 ||aftenposten.no/seksjon/dist/ads-$script
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.no|dplay.dk
 ||elderlyscissors.com^
@@ -1611,3 +1610,5 @@ gamereactor.*$$script[onError="adblockEnabled()"]
 !#if env_firefox
 gamereactor.*##^script[onError="adblockEnabled()"]
 !#endif
+! Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
+||googletagmanager.com/gtm.js^$domain=dk|bornholm.nu
