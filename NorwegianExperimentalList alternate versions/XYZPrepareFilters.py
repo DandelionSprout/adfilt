@@ -2240,19 +2240,31 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\|\|elkjop\.no\.\*\^)$", 
+           r"\.\*\^$", 
+           r".", 
+           line
+        )
+
+        line = re.sub(
+           r"\*\^$", 
+           r"*", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\|\|elkjop\.no\.)$", 
            r"\1\n@@||elkjop.no.edgekey.net^", 
            line
         )
 
         line = re.sub(
-           r"^(\|\|dnb\.no\.\*\^)$", 
+           r"^(\|\|dnb\.no\.)$", 
            r"\1\n@@||dnb.no.edgekey.net^", 
            line
         )
 
         line = re.sub(
-           r"^(\|\|skatteetaten\.no\.\*\^)$", 
+           r"^(\|\|skatteetaten\.no\.)$", 
            r"\1\n@@||skatteetaten.no.cdn.cloudflare.net^", 
            line
         )
