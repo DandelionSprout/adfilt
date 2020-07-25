@@ -1,5 +1,5 @@
 msFilterList
-# Version: 24July2020v1-Alpha
+# Version: 25July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -170,6 +170,11 @@ msFilterList
 -d ssl-dnnstream.tns-cs.net
 -d discoverynordics.hb.omtrdc.net
 -d widgets.sprinklecontent.com
+- tv2ads.js
+- -bazaar-
+- bazaar
+- resources dfp
+- contentMarketing
 -d adframe.no
 -d adstream.no
 -d advertising.no
@@ -278,7 +283,7 @@ msFilterList
 # e24.no, aftenbladet.no, sysla.no
 # https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi/(15/04/2020)
 # https://fiskur.fo/gitte-henning-1-landar-i-maloy/(09/05/2020)
--d *.fo banner2x1.png
+- fo css img banner2x1.png
 # https://www.dagsavisen.no/nyheter/verden/1.1731911/(18/06/2020)
 # https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
 # 🇳🇴: ——— Tomme skillebokser ———
@@ -356,7 +361,7 @@ msFilterList
 # https://www.ba.no/s/5-8-1221171
 -d vg.no tipster.png
 -d vgc.no betting-header.png
-# ——— Gamereactor + Viafree ———
+# ——— Gamereactor + Viafree PC ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 # 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
@@ -369,6 +374,10 @@ msFilterList
 -d ssl.p.jwpcdn.com gapro.js
 -d client-stream-events.mtg-api.com
 -d freewheel-mtgx-tv.akamaized.net
+- adblock_mobile.
+- insert_grtv_stats.
+- prerolls
+- viewability.
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 # 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
 - *-annonse-*
@@ -401,9 +410,9 @@ msFilterList
 - ?finn.no login
 - begrensede-tilbudet
 - bli-avbrutt-bor-du-oppdater
-- Norgesecure
+* Norgesecure
 - gratis-reisebilletter.
-- KiwiErbjudanden1
+* KiwiErbjudanden1
 -d trackvoluum.com
 - pakkerlevering
 -d 102.112.2o7.net
@@ -412,12 +421,14 @@ msFilterList
 -d apple-account-locked.losjevegen.no
 -d arvetellefsen.no curry
 -d holmedalblikk.no
+-d vipps-sikkerhet.
 - dnb11111
 -d nymelding.com
 -d mrcal365.com
 -d ultimate-tech-products.myshopify.com
 -d look-like-star.myshopify.com
 -d limitedvoucher.com
+-d djurs.com-*.
 -d com-airs1.com
 -d pensjonistferie.no
 -d postuksus.com
@@ -468,8 +479,10 @@ msFilterList
 # https://www.facebook.com/viralspiralen/posts/2494251397311027
 -d addmoviesnow.com
 # https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
+-d faarup.com-*.
 -d com-dk.com
 # https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
+-d legoland.com-*.
 # https://www.mm.dk/tjekdet/artikel/norwegian-billetter-til-valgfri-destination-er-snyd-og-bedrag
 -d bondiblue.co.uk
 # https://www.mm.dk/tjekdet/artikel/overrasket-bjarne-riis-kender-intet-til-investering-i-bitcoin-platform
@@ -508,6 +521,7 @@ msFilterList
 -d rbaab.net
 -d rbppg.net
 # https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
+-d ekstrabiadet.
 # https://www.mm.dk/tjekdet/artikel/folkekaer-fodboldhelt-ked-af-at-blive-misbrugt-af-svindlere
 -d kronoscm.com
 # https://www.mm.dk/tjekdet/artikel/nej-joergen-leth-har-ikke-investeret-500-millioner-kroner-i-bitcoins
