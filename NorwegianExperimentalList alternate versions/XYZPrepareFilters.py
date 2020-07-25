@@ -608,6 +608,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*\$.*,app=.*", 
+           r"", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -1325,6 +1331,12 @@ def prepare_brave(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*\$.*,app=.*", 
+           r"", 
+           line
+        )
+
         if is_supported_brave(line) and not line == '':
             text += line + '\r\n'
 
@@ -1829,6 +1841,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*\$.*,app=.*", 
+           r"", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -1848,7 +1866,7 @@ if __name__ == "__main__":
     with open(OUTPUT_ABP, "w") as text_file:
         text_file.write(abp_filter)
 
-    print('The Eyeo and AdGuard list versions have been generated.')
+    print('The Eyeo list version has been generated.')
 
 
 
