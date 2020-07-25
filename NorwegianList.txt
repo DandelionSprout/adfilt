@@ -1,4 +1,4 @@
-! Version: 24July2020v1
+! Version: 25July2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -365,6 +365,12 @@ nettavisen.no#?#optimus-element:-abp-has(.dredition-embed-header)
 ||ssl-dnnstream.tns-cs.net^$app=com.discovery.dplay
 ||discoverynordics.hb.omtrdc.net^$app=com.discovery.dplay
 ||widgets.sprinklecontent.com^$app=no.startsiden.bookmarks
+/tv2ads.js$app=dk.tv2.nyhedscenter
+-bazaar-$app=no.nettavisen.phonegap.na
+/bazaar/*$app=no.nettavisen.phonegap.na
+/resources/dfp/*$app=no.nettavisen.phonegap.na
+||finn.no$subdocument,app=no.bt
+contentMarketing$app=no.sol
 !#endif
 !+ NOT_OPTIMIZED
 ||adframe.no^
@@ -1016,7 +1022,7 @@ vafo.dk##.adform-flexblock
 ! https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi (15/04/2020)
 ##.undirsidaad
 ! https://fiskur.fo/gitte-henning-1-landar-i-maloy (09/05/2020)
-||*.fo/css/img/banner2x1.png$image
+.fo/css/img/banner2x1.png$image
 ! https://www.dagsavisen.no/nyheter/verden/1.1731911 (18/06/2020)
 ##div[data-third-party-link*=".smartadserver.com/"]
 ! https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807 (10/07/2020)
@@ -1180,7 +1186,7 @@ startsiden.no##div[class*=partnerModule][data-ga-category^=NorskTipping]
 ||vg.no/vgc/pool/tipster.png$image
 ||vgc.no/pustehullet/betting-header.png$image
 
-! ——— Gamereactor + Viafree ———
+! ——— Gamereactor + Viafree PC ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 ! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
@@ -1222,11 +1228,18 @@ viafree.*##.vjs-playing:upward(1) ~ .no-autoplay-overlay
 viafree.*##.ad-click-through
 viafree.*##.pause-ad
 viafree.*##.pause-ad-container
-||viafree.*/collect$important,xmlhttprequest
+||viafree.*/collect$important,xhr
 ||client-stream-events.mtg-api.com^$domain=viafree.no|viafree.dk
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.no|viafree.dk
 @@||fwmrm.net/ad/$image,xhr,domain=viafree.no|viafree.dk
 @@||fwmrm.net/crossdomain.xml$xhr,domain=viafree.no|viafree.dk
+!#if !ext_ublock
+/adblock_mobile.$important,app=com.gamereactor
+/insert_grtv_stats.$xhr,app=com.gamereactor
+/prerolls/*$app=com.gamereactor
+/viewability.$important,app=com.gamereactor
+@@||openx.gamereactor.dk/www/delivery/fc.php$app=com.gamereactor
+!#endif
 
 ! 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 ! 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
@@ -1313,41 +1326,41 @@ trendsales.dk##.top__banner
 ||finn.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
 ||posten.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Posten
 ||postnord.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Postnord
-||*/finn.no/finno.htm$doc,domain=~facebook.com
+/finn.no/finno.htm$doc,domain=~facebook.com
 ||dnb.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av DNB
 ||sparebank1.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sparebank1
 ||nordea.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordea
 ||sbanken.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sbanken
 ||danskebank.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Danske Bank
 !+ NOT_OPTIMIZED
-||*/?finn.no/login$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
+/?finn.no/login$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
 ||komplett.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Komplett
 ||nordnet.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordnet
 ||skatteetaten.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Skatteetaten
-||*/begrensede-tilbudet/$doc,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
+*/begrensede-tilbudet/$doc,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
 ||norwegian.com.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Norwegian
 ||flysas-no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av SAS
 ||tusenfryd-com.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Tusenfryd
-/bli-avbrutt-bor-du-oppdater/*$doc,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
-||*/Norgesecure/$doc,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
+*/bli-avbrutt-bor-du-oppdater/$doc,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
+*/Norgesecure/$doc,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
 ||.gratis-reisebilletter.$doc,domain=~ Advarselen vises grunnet: Falsk svindel
-||*/KiwiErbjudanden1/$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Kiwi
+*/KiwiErbjudanden1/$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Kiwi
 ||trackvoluum.com^$doc
-||*/pakkerlevering/$doc,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
+*/pakkerlevering/$doc,domain=~ Advarselen vises grunnet: Feiloversettelse som brukes i svindeladresser
 ||102.112.2o7.net^$doc
 ||tromselementbygg.no^$doc,domain=~ Advarselen vises grunnet: Ansett av Maltiverse som phishing
 ||no.zxxyw.com^
 ||apple-account-locked.losjevegen.no^$doc
 ||arvetellefsen.no/curry^$doc,domain=~ Advarselen vises grunnet: Ansett av Pulsedive som phishing
 ||holmedalblikk.no^$doc,domain=~ Advarselen vises grunnet: Falsk klesbutikksvindel
-||vipps-sikkerhet.*^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Vipps
-||*/dnb11111/^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av DNB
+||vipps-sikkerhet.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Vipps
+*/dnb11111^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av DNB
 ||nymelding.com^$doc
 ||mrcal365.com^$doc,domain=~ Warning displayed due to: Bitcoin scam fraudsters.
 ||ultimate-tech-products.myshopify.com^$doc,domain=~ Advarslen vises fordi: Falsk webbutikkfup
 ||look-like-star.myshopify.com^$doc,domain=~ Advarslen vises fordi: Falsk webbutikkfup
 ||limitedvoucher.com^$doc,domain=~ Advarslen vises fordi: Falsk webbutikkfup
-||djurs.com-*.*$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Djurs Sommerland
+||djurs.com-*.$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Djurs Sommerland
 ||com-airs1.com^$doc
 ||pensjonistferie.no^$doc,domain=~ Advarselen vises grunnet: Det tidligere legitime nettstedet har blitt tatt over av Bitcoin-svindlere.
 ||postuksus.com^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av VG.
@@ -1383,7 +1396,7 @@ trendsales.dk##.top__banner
 ! https://www.datahjelperne.no/stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel/
 ||trendyn.me^$doc,domain=~ Warning displayed due to: Bitcoin scam fraudsters.
 ! https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
-||getmail-no.*^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Get
+||getmail-no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Get
 ! https://www.datahjelperne.no/falske-telenor-undersokelser/
 ||surveryrewards1.com^$doc
 ! https://www.nrk.no/mr/1.14649436
@@ -1393,7 +1406,7 @@ trendsales.dk##.top__banner
 ! https://www.nrk.no/livsstil/1.14732503
 ||elkjop*.club^$doc,domain=~ Advarselen vises grunnet: Falsk kampanjesvindel.
 ! https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
-||*/css/*sparebank1.no^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sparebank1.
+/css/*sparebank1.no^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sparebank1.
 ! https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
 ||phosphox.com^$doc,domain=~ Warning displayed due to: Bitcoin scam fraudsters.
 ||nodzoom.com^$doc,domain=~ Warning displayed due to: Bitcoin scam fraudsters.
@@ -1403,10 +1416,10 @@ trendsales.dk##.top__banner
 ! https://www.facebook.com/viralspiralen/posts/2494251397311027
 ||addmoviesnow.com^$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Netflix
 ! https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
-||faarup.com-*.*$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Faarup Sommerland
+||faarup.com-*.$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Faarup Sommerland
 ||com-dk.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
-||legoland.com-*.*$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Legoland
+||legoland.com-*.$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Legoland
 ! https://www.mm.dk/tjekdet/artikel/norwegian-billetter-til-valgfri-destination-er-snyd-og-bedrag
 ||bondiblue.co.uk^$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Norwegian
 ! https://www.mm.dk/tjekdet/artikel/overrasket-bjarne-riis-kender-intet-til-investering-i-bitcoin-platform
@@ -1445,7 +1458,7 @@ trendsales.dk##.top__banner
 ||rbaab.net^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
 ||rbppg.net^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
 ! https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
-||ekstrabiadet.*^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
+||ekstrabiadet.$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
 ! https://www.mm.dk/tjekdet/artikel/folkekaer-fodboldhelt-ked-af-at-blive-misbrugt-af-svindlere
 ||kronoscm.com^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
 ! https://www.mm.dk/tjekdet/artikel/nej-joergen-leth-har-ikke-investeret-500-millioner-kroner-i-bitcoins
