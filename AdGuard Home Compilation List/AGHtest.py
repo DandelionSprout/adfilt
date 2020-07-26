@@ -343,6 +343,12 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r"^/([a-z0-9_]{1,30}\.$)",
+           r"://\1", 
+           line
+        )
+
+        line = re.sub(
            r"^/.*[a-zA-Z0-9_=.,*?!|^@&~+;-]$", 
            r"", 
            line
