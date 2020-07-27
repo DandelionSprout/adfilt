@@ -19,8 +19,7 @@ This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists f
 
 This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed considerable energy and effort into, for the enjoyment of all of us.
 
-* [Official repo mirror](https://repo.or.cz/FilterMirrorRepo.git/tree/refs/heads/master)
-* [Secondary official repo mirror](https://gitlab.com/DandelionSprout/adfilt)
+* [Official repo mirror](https://gitlab.com/DandelionSprout/adfilt)
 * [Official donation links](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations)
 
 For a basic overview of the lists in this repo, go to [FilterLists.com](https://filterlists.com/), click on the Maintainers button in the upper right, and choose Imre Kristoffer Eilertsen in the Maintainers dropdown menu. It proved to be too much work for me to maintain a GitHub spreadsheet for my lists, unfortunately. It is normally not recommended to subscribe to lists directly from this repo, as the mostly unsorted lists [can be unsuitable for your tool(s)](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Pok%C3%A9monNoGOZone.txt), [block things you may not have intended to block at all](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Twitter%20De-Politificator.txt), or [otherwise cause confusion in general](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EkstraBladetEroticContentRemover.txt) if they aren't vetted properly before use on tech units.
