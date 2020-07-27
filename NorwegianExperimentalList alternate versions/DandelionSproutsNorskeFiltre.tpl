@@ -1,5 +1,5 @@
 msFilterList
-# Version: 25July2020v3-Alpha
+# Version: 27July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -8,7 +8,6 @@ msFilterList
 # 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, Sydslesvig, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-# Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.
 # If you wish to remove cookie banners from Nordic websites, check out https://easylist-downloads.adblockplus.org/easylist-cookie.tpl (Can also be subscribed to from https://raw.githack.com/collinbarrett/FilterLists/master/data/TPLSubscriptionAssistant.html)
 # 🇳🇴 🇩🇰: ——— Reklamer ———
 # 🇳🇴🏞: ——— Reklamar ———
@@ -18,27 +17,40 @@ msFilterList
 # ❄: ——— Reklámaid ———
 # 🇬🇧: ——— Advertisements ———
 - contentMarketing
+- annonsar
+- annonse
+- annonse_
+- annonser
+- auglysing
+- reklam
+- reklame
+- vefauglysingar
 - blob:https://www.veier24.no/
 -d 1819.is infosmall
--d 3.248.18.175
--d 82.221.81.9
--d 45.58.146.154
--d 82.196.13.38
 -d acdn.adnxs.com ast.js
 -d acdn.adnxs.com ast.js
 -d ad.no.doubleclick.net
+-d ad.primetime.net
 -d adext.inkclub.com
+-d adnordics.com
 -d adr.kulingen.no
 -d ads.no
+-d adserver.xh.no
 -d adservice.com
 -d adservicemedia.dk
+-d advertisement.vg.no
 -d akamai.net
 -d akamaihd.net
 -d amino.dk 240x140-forside-hardcoded*.jpg
+-d arendalstidende.no *_490px.jpg
 -d austevollforlag.no yachtmarine2014.
 -d austurfrett.is *augl.jpg
--d austurfrett.is banners
+- images banners
 -d banner.landbrugsavisen.dk reklame.aspx
+-d biip.no *320x250.jpg
+-d bilborsen.webannonse.no
+-d bilgalleri.dk fixed
+-d bobilverden.no Banner-1200x300px.jpg
 -d boligkanalen-maestro-new.azurewebsites.net
 -d bornholm.nu banner
 -d brandstudio.inventory.schibsted.io
@@ -46,6 +58,7 @@ msFilterList
 -d cdnboligkanalen.azureedge.net
 -d cluster.chart.dk
 -d damoh.vgtv.no hic_qos
+-d deals.innocode.no api
 -d deiligejenter.no
 -d delivered-by-madington.com
 -d dnitv.com
@@ -53,29 +66,51 @@ msFilterList
 -d dust2.dk banners
 -d easy-ad.no
 -d easy-ads.dk
+-d export.prisguide.no
+-d export.prisguiden.no
 -d eyjar.net ads
 -d feltet.dk topbanner_*.jpg
 -d feltet.dk wallpaper_1.jpg
 -d feltet.dk *_300x60.gif
+-d footy.dk Sk%C3%A6rmbillede-*.png
 -d fotbolti.net banners
 -d gratisxxx.no
 -d heartbeat.airserve.net
+-d hnytt.no *.gif
+-d hnytt.no Fluffy.jpg
 -d isweb.no
 -d karfan.is *-470x130*.jpg
 -d karfan.is *300x250.jpg
+-d karfan.is *-vefbor%C3%B0i-
+-d kynning.olis.is
 -d langrenn.com getfile.php
+-d leikjaland.is bannerstopright
+-d leikjaland.is *logo.png
+-d liveads.no
+-d magasinetreiselyst.no *_annonse*promo
 -d matriell.dm-storage.no
 -d media.sonymusic.no *.html
+-d melkoghonning.no *_980x300px.jpg
+-d melkoghonning.no *_Banner_
 -d myad.no
+-d n247.no salg
 -d nettklikk.no
+-d nordlysid.fo lysing
 -d norskenettsider.no ageras-banner.jpg
 -d norskenettsider.no remember-banner-2016.jpg
 -d nvnytt.no *annonse-
--d ad.primetime.net
--d rett24.no inline
+-d openad.visir.is
+-d oyggjatidindi.com *L%C3%BDsing
+-d rett24.no* inline
+-d saernieh.no j%C3%B8rn-jensen.jpg
 -d samfilm.codelab.is
--d samler.no banners
 -d sannsyn.com
+-d siglo.is strevda
+-d storfjordnytt.no *.jpg
+-d storfjordnytt.no 26_hh.png
+-d storfjordnytt.no *_bilsenter.jpg
+-d storfjordnytt.no *_hovleriet.jpg
+-d storfjordnytt.no *_muri.jpg
 -d soda.is
 -d ssl.p.jwpcdn.com freewheel.js
 -d ssl.p.jwpcdn.com jwpsrv.js
@@ -86,32 +121,27 @@ msFilterList
 -d track.adform.net
 -d track.adform.net Banners
 -d tracking-genesisaffiliates.com
+-d travservice.dk wp-content
+-d trolli.is banner
+-d trolli.is benecta.png
+-d trolli.is Hollin_olafsfirdi
+-d trolli.is syngjum-kubbur
+-d trolli.is vefsmarinn
+-d trolli.is videoval_logo
+-d trolli.is *logo-*.png
+-d trolli.is Untitled-1-1.jpg
 -d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
 -d tvkampen.com banner*
 -d tvkampen.com unibet-lo
--d utrop.no utrop.no_-1.jpg
 -d utrop.no Banner_utrop
+-d utrop.no utrop.no_-1.jpg
 -d vevlysingar.fo
 -d viasport-assets.mtg-api.com comScore-*.js
 -d vikari.is frjalsi-lif*.png
 -d webclick.no
+-d widgets.sprinklecontent.com
+-d xn--bredbnd-ixa.dk velkommen_banner
 -d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
--d kynning.olis.is
--d openad.visir.is
--d melkoghonning.no *_Banner_
--d deals.innocode.no api
--d advertisement.vg.no
--d nordlysid.fo lysing
-- -bazaar-
-- annonsar
-- annonse
-- annonse_
-- annonser
-- auglysing
-- reklam
-- reklame
-- vefauglysingar
-- _bm abd
 - Bannere
 - bazaar
 - bilder erotikk1.jpg
@@ -120,48 +150,15 @@ msFilterList
 - liveodds-button_nordicbet
 - nordicbet_logo
 - partners *_ad_icon
+- wp-content banners
+- _bm abd
+- -bazaar-
 - resources dfp
--d liveads.no
--d leikjaland.is *logo.png
--d leikjaland.is bannerstopright
--d siglo.is strevda
--d trolli.is videoval_logo
--d trolli.is Hollin_olafsfirdi
--d trolli.is banner
--d trolli.is *logo-*.png
--d trolli.is syngjum-kubbur
--d trolli.is Untitled-1-1.jpg
--d trolli.is vefsmarinn
--d trolli.is benecta.png
--d oyggjatidindi.com *L%C3%BDsing
--d travservice.dk wp-content
--d xn--bredbnd-ixa.dk velkommen_banner
--d avvir.no banners
--d saernieh.no j%C3%B8rn-jensen.jpg
--d hnytt.no *.gif
--d hnytt.no Fluffy.jpg
--d biip.no *320x250.jpg
--d widgets.sprinklecontent.com
--d storfjordnytt.no *.jpg
--d storfjordnytt.no *_muri.jpg
--d storfjordnytt.no 26_hh.png
--d storfjordnytt.no *_hovleriet.jpg
--d storfjordnytt.no *_bilsenter.jpg
 - tv2ads.js
--d magasinetreiselyst.no *_annonse*promo
--d bilgalleri.dk fixed
--d adnordics.com
--d arendalstidende.no banners
--d arendalstidende.no *_490px.jpg
--d karfan.is *-vefbor%C3%B0i-
--d rett24.no inline
--d melkoghonning.no *_980x300px.jpg
--d export.prisguide.no
--d export.prisguiden.no
--d footy.dk Sk%C3%A6rmbillede-*.png
--d adserver.xh.no
--d n247.no salg
--d bilborsen.webannonse.no
+-d 3.248.18.175
+-d 45.58.146.154
+-d 82.196.13.38
+-d 82.221.81.9
 -d freewheel-mtgx-tv.akamaized.net
 -d ssl-mtgstream.tns-cs.net
 -d krxd.net
@@ -229,15 +226,15 @@ msFilterList
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
--d mmm.dk safeframe
--d gulindex.no spring.js
-- gifs *emty.gif
--d yrkesbil.no 1pix.gif
 -d 730.no sonymusic
--d gaysir.no bb_inline
--d static.vg.no admark_top.gif
--l%C3%BDsing-
 -d danishfamilysearch.dk xp2
+-d gaysir.no bb_inline
+-d gulindex.no spring.js
+-d mmm.dk safeframe
+-d static.vg.no admark_top.gif
+-d yrkesbil.no 1pix.gif
+- gifs *emty.gif
+-l%C3%BDsing-
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
