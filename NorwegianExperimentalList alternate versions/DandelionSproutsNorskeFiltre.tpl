@@ -1,5 +1,5 @@
 msFilterList
-# Version: 27July2020v2-Alpha
+# Version: 28July2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -16,7 +16,28 @@ msFilterList
 # 🇬🇱: ——— Pilerisaarniarlugit ———
 # ❄: ——— Reklámaid ———
 # 🇬🇧: ——— Advertisements ———
-- contentMarketing
+# — — — — — — — — —
+# 🇳🇴: Generelle #-oppføringer med kilder
+# 🇬🇧: Generic #-entries that have sources
+# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
+# https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
+# arendalstidende.no
+# https://www.langrenn.com/cppage.6250314-1743.html
+# bobilverden.no
+# norskenettsider.no, sva.no
+# https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
+# tv2.no
+# https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
+# https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
+# portal.fo (09 05 2020)
+# https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein/(09/05/2020)
+# Bet365 widget triggered for Norwegian audiences only
+# jyllands-posten.dk
+# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
+# n247.no
+# — — — — — — —
+# 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
+# 🇬🇧: Broad or whole-domain blocking rules
 - annonsar
 - annonse
 - annonse_
@@ -25,10 +46,6 @@ msFilterList
 - reklam
 - reklame
 - vefauglysingar
-- blob:https://www.veier24.no/
--d 1819.is infosmall
--d acdn.adnxs.com ast.js
--d acdn.adnxs.com ast.js
 -d ad.no.doubleclick.net
 -d ad.primetime.net
 -d adext.inkclub.com
@@ -39,6 +56,46 @@ msFilterList
 -d adservice.com
 -d adservicemedia.dk
 -d advertisement.vg.no
+-d bilborsen.webannonse.no
+-d cluster.chart.dk
+-d dotbanner.dk
+-d easy-ad.no
+-d easy-ads.dk
+-d isweb.no
+-d kynning.olis.is
+-d liveads.no
+-d myad.no
+-d nettklikk.no
+-d samfilm.codelab.is
+-d sannsyn.com
+-d heartbeat.airserve.net
+-d openad.visir.is
+-d static.airserve.net
+-d tankeogteknikk.no
+-d soda.is
+-d delivered-by-madington.com
+-d vevlysingar.fo
+-d webclick.no
+-d adframe.no
+-d adstream.no
+-d advertising.no
+-d print2web.sn.dk
+# Adressa.no
+-d drbrand.herokuapp.com
+# Copied over from the New AdAway list
+-d admob.no
+-d admob.dk
+-d api.advista.no
+# bobilverden.no
+- annonse-
+# — — — — — — —
+# 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
+# 🇬🇧: Fileserver or site-specific blocking rules
+- contentMarketing
+- blob:https://www.veier24.no/
+-d 1819.is infosmall
+-d acdn.adnxs.com ast.js
+-d acdn.adnxs.com ast.js
 -d akamai.net
 -d akamaihd.net
 -d amino.dk 240x140-forside-hardcoded*.jpg
@@ -48,7 +105,6 @@ msFilterList
 - images banners
 -d banner.landbrugsavisen.dk reklame.aspx
 -d biip.no *320x250.jpg
--d bilborsen.webannonse.no
 -d bilgalleri.dk fixed
 -d bobilverden.no Banner-1200x300px.jpg
 -d boligkanalen-maestro-new.azurewebsites.net
@@ -56,16 +112,11 @@ msFilterList
 -d brandstudio.inventory.schibsted.io
 -d cdn.rikstoto.no GameShop
 -d cdnboligkanalen.azureedge.net
--d cluster.chart.dk
 -d damoh.vgtv.no hic_qos
 -d deals.innocode.no api
 -d deiligejenter.no
--d delivered-by-madington.com
 -d dnitv.com
--d dotbanner.dk
 -d dust2.dk banners
--d easy-ad.no
--d easy-ads.dk
 -d export.prisguide.no
 -d export.prisguiden.no
 -d eyjar.net ads
@@ -75,49 +126,37 @@ msFilterList
 -d footy.dk Sk%C3%A6rmbillede-*.png
 -d fotbolti.net banners
 -d gratisxxx.no
--d heartbeat.airserve.net
 -d hnytt.no *.gif
 -d hnytt.no Fluffy.jpg
--d isweb.no
 -d karfan.is *-470x130*.jpg
 -d karfan.is *300x250.jpg
 -d karfan.is *-vefbor%C3%B0i-
--d kynning.olis.is
 -d langrenn.com getfile.php
 -d leikjaland.is bannerstopright
 -d leikjaland.is *logo.png
--d liveads.no
 -d magasinetreiselyst.no *_annonse*promo
 -d matriell.dm-storage.no
 -d media.sonymusic.no *.html
 -d melkoghonning.no *_980x300px.jpg
 -d melkoghonning.no *_Banner_
--d myad.no
 -d n247.no salg
--d nettklikk.no
 -d nordlysid.fo lysing
 -d norskenettsider.no ageras-banner.jpg
 -d norskenettsider.no remember-banner-2016.jpg
 -d nvnytt.no *annonse-
--d openad.visir.is
 -d oyggjatidindi.com *L%C3%BDsing
 -d rett24.no* inline
 -d saernieh.no j%C3%B8rn-jensen.jpg
--d samfilm.codelab.is
--d sannsyn.com
 -d siglo.is strevda
 -d storfjordnytt.no *.jpg
 -d storfjordnytt.no 26_hh.png
 -d storfjordnytt.no *_bilsenter.jpg
 -d storfjordnytt.no *_hovleriet.jpg
 -d storfjordnytt.no *_muri.jpg
--d soda.is
 -d ssl.p.jwpcdn.com freewheel.js
 -d ssl.p.jwpcdn.com jwpsrv.js
 -d ssl.p.jwpcdn.com sharing.js
 -d ssl.p.jwpcdn.com vast.js
--d static.airserve.net
--d tankeogteknikk.no
 -d track.adform.net
 -d track.adform.net Banners
 -d tracking-genesisaffiliates.com
@@ -135,10 +174,8 @@ msFilterList
 -d tvkampen.com unibet-lo
 -d utrop.no Banner_utrop
 -d utrop.no utrop.no_-1.jpg
--d vevlysingar.fo
 -d viasport-assets.mtg-api.com comScore-*.js
 -d vikari.is frjalsi-lif*.png
--d webclick.no
 -d widgets.sprinklecontent.com
 -d xn--bredbnd-ixa.dk velkommen_banner
 -d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
@@ -155,6 +192,27 @@ msFilterList
 - -bazaar-
 - resources dfp
 - tv2ads.js
++d vgtv.no
+-d adnxs.com
+-d karfan.is *.gif
+-d samimag.no Screenshot-2020-03-21-at-12.40.32.png
+# bilasolur.is (03 05 2020)
+- lykill_banner
+-d bilasolur.is banners
+# bt.no
+-d finn.no distribution-carousel?
+# https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
+-d images.sprinklecontent.com *.amazonaws.com%2Fimages%
+# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
+-d f.nordiskemedier.dk *.gif
+-d f.nordiskemedier.dk 2*.jpg
+# metalsupply.no
+-d f.nordiskemedier.dk 2*.png
+# building-supply.dk
+-d f.nordiskemedier.dk banner
+# — — — — — — — — —
+# 🇳🇴: Hovedsaklig for AdGuard
+# 🇬🇧: Mostly for AdGuard
 -d 3.248.18.175
 -d 45.58.146.154
 -d 82.196.13.38
@@ -172,53 +230,10 @@ msFilterList
 - bazaar
 - resources dfp
 - contentMarketing
--d adframe.no
--d adstream.no
--d advertising.no
--d karfan.is *.gif
--d samimag.no Screenshot-2020-03-21-at-12.40.32.png
--d print2web.sn.dk
-# — — — — —
-# 🇳🇴: Generelle oppføringer med kilder
-# 🇬🇧: Generic entries that have sources
-+d vgtv.no
--d adnxs.com
-# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
-# https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
-# arendalstidende.no
-# https://www.langrenn.com/cppage.6250314-1743.html
-# bobilverden.no
-- annonse-
-# norskenettsider.no, sva.no
-# https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
-# tv2.no
-# bt.no
--d finn.no distribution-carousel?
-# https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
-# https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
-# Copied over from the New AdAway list
--d admob.no
--d admob.dk
--d api.advista.no
-# bilasolur.is (03 05 2020)
-- lykill_banner
--d bilasolur.is banners
-# portal.fo (09 05 2020)
-# https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein/(09/05/2020)
-# Bet365 widget triggered for Norwegian audiences only
-# jyllands-posten.dk
-# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
--d f.nordiskemedier.dk *.gif
--d f.nordiskemedier.dk 2*.jpg
-# metalsupply.no
--d f.nordiskemedier.dk 2*.png
-# building-supply.dk
--d f.nordiskemedier.dk banner
-# https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
--d images.sprinklecontent.com *.amazonaws.com%2Fimages%
-# n247.no
-# Adressa.no
--d drbrand.herokuapp.com
+# — — — — — — — — —
+# 🇳🇴: Ikke kategorisert enda
+# 🇬🇧: Not yet categorised
+# (None at the moment)
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
@@ -382,7 +397,7 @@ msFilterList
 # 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
 # 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
 # Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
-# 🇳🇴: Falske innlastings som sløser bort tid
+# 🇳🇴: Falske innlastinger som sløser bort tid
 # 🇩🇰: Falske indlastinger, der søler bort tid
 # 🇬🇧: Fake loading screens that waste time
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
