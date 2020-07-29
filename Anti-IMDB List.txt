@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 💺 Anti-IMDB List
-! Version: 28July2020v2-Beta
+! Version: 29July2020v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically the hipsters that run around on IMDB? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -10,6 +10,8 @@
 ~imdb.com##.imdb-container
 ! tv.nu, sfanytime.com, watchsomuch.info, playpilot.com
 ~imdb.com##.imdb
+! fmovies.world (28/07/2020)
+~imdb.com##.imdb + b
 ! Amazon
 ~imdb.com##.imdb-rating
 ! Rakuten TV
@@ -26,17 +28,21 @@
 ~imdb.com##div[v-uib-tooltip=IMDB]
 ! pantaflix.com
 ~imdb.com##div[class*=ImdbRating]
-! https://kissanime.ru.com/ (Link working as of 13th of December 2019)
+! kissanime.ru.com (Link working as of 13th of December 2019)
 ~imdb.com##.top-imdb-list
-! https://ww2.1movies.is/ (28/07/2020)
+! ww2.1movies.is (28/07/2020)
 ~imdb.com##a[href="/top-imdb"]
 ! movies2k.pro (28/07/2020)
 ~imdb.com###repimdb
 ~imdb.com##.owl-item .poster > .rating
 ! moviewatcher.is (28/07/2020)
 ~imdb.com##span[data-title="IMDB Rating"]
-! fmovies.world (28/07/2020)
-~imdb.com##.imdb + b
+! watchfreemovies.ch (29/07/2020)
+~imdb.com##.mlink_imdb
+! moviechat.org (29/07/2020)
+~imdb.com##a[href*=".imdb."] > .rating
+! www1.movie4u.live (29/07/2020)
+~imdb.com##a[href$="/top-imdb/"]
 
 ! International (All adblockers)
 bing.com#?#.b_algo:-abp-has(cite:-abp-contains(imdb.com)) .b_sritem
@@ -83,3 +89,7 @@ yuptorrents.com#?#div.row:-abp-contains(IMDB Rating)
 movies2k.pro,mmsubtitles.co#?#.custom_fields:-abp-contains(IMDb)
 moviewatcher.is#?#img[alt="Movie rating"]:upward(2)
 c123movies.com#?#p:-abp-contains(IMDb: )
+watchfreemovies.ch##.movie_ratings:nth-of-type(2)
+watchfreemovies.ch#?#.movie_info tr:-abp-contains(IMDB)
+watchfreemovies.ch##.index_ratings
+tornadomovies.co#?#.first > div:-abp-contains(IMDb)
