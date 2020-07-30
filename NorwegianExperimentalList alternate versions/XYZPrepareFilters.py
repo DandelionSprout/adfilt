@@ -1875,7 +1875,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/raw/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt']
 
 UNSUPPORTED_HOSTS = ['*', '# ———']
 UNSUPPORTED_LS = ['*', '# ———', '# Translated title', '# Version', 'Don\'t be worried', 'General-info', '# Platform notes:']
@@ -1961,6 +1961,12 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r" www\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r" www\.[0-9a-f:]{6,71}$", 
            r"", 
            line
         )
@@ -2080,6 +2086,12 @@ def prepare_dnsmasq(lines) -> str:
         line = re.sub(
            r"server=/([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])$", 
            r"server=/\4.\3.\2.\1.in-addr.arpa/127.0.0.1", 
+           line
+        )
+
+        line = re.sub(
+           r".*=/[0-9a-f:]{6,71}$", 
+           r"", 
            line
         )
 
@@ -2270,6 +2282,12 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r"^\|\|([0-9a-f:]{6,71})\^", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
            r"^(\|\|elkjop\.no\.)$", 
            r"\1\n@@||elkjop.no.edgekey.net^", 
            line
@@ -2403,6 +2421,12 @@ def prepare_shadowsocks(lines) -> str:
         line = re.sub(
            r"^DOMAIN(.*),(.*)\*\.([a-z]{2,17})$", 
            r"URL-REGEX,^https?:\\/\\/\2.*\\.\3", 
+           line
+        )
+
+        line = re.sub(
+           r"^([0-9a-f:]{6,71})$", 
+           r"IP-CIDR6,\1/64,REJECT,no-resolve", 
            line
         )
 
@@ -2603,6 +2627,12 @@ def prepare_hostsipv6(lines) -> str:
 
         line = re.sub(
            r" www\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r" www\.[0-9a-f:]{6,71}$", 
            r"", 
            line
         )

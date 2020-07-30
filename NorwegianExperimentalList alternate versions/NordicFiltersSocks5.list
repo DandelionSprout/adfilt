@@ -1,6 +1,6 @@
 # Title: 📔 Dandelion Sprouts nordiske filtre (for Shadowsocks)
 # Translated title: Dandelion Sprout's Nordic Filters (for Shadowsocks)
-# Version: 30July2020v2-Alpha
+# Version: 30July2020v4-Alpha
 # Description: This is a slimmer version of "Dandelion Sprout's Nordic Filters", intended for users of software tools that doesn't support adblocker syntaxes. It chiefly targets scams, malware and adverts, on Norwegian, Danish, Icelandic and Faroese websites.
 # Platform notes: This list version is intended for those who use Shadowsocks, Shadowrocket, Surge, and other Socks5-based tools that have become popular in PR-China for several reasons.
 # For mere informasjon og detaljer om denne listen og om andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -31,16 +31,24 @@ DOMAIN,ads.bleikt.is
 DOMAIN,ads.brandenburg.is
 DOMAIN,ads.crontab.no
 DOMAIN,ads.drm24.no
+DOMAIN,ads.e24.no
+DOMAIN,ads.godt.no
 DOMAIN,ads.hun.is
 DOMAIN,ads.hwn.no
 DOMAIN,ads.kanalfrederikshavn.dk
 DOMAIN,ads.konsept.is
 DOMAIN,ads.let.no
 DOMAIN,ads.lifdununa.is
+DOMAIN,ads.minmote.no
 DOMAIN-SUFFIX,ads.no
+DOMAIN,ads.pent.no
 DOMAIN,ads.pressan.is
 DOMAIN,ads.studienett.no
 DOMAIN,ads.tvh.no
+DOMAIN,ads.vg.no
+DOMAIN,ads.vgd.no
+DOMAIN,ads.vglive.no
+DOMAIN,ads.vgtv.no
 DOMAIN,adserver.detailfolk.dk
 DOMAIN,adserver.fbg.dk
 DOMAIN,adserver.globalnyt.dk
@@ -49,13 +57,28 @@ DOMAIN,adserver.karamco.dk
 DOMAIN,adserver.wagawaga.dk
 DOMAIN,adserver.xh.no
 DOMAIN-SUFFIX,adservice.com
+DOMAIN-SUFFIX,adservice.dk
 DOMAIN-SUFFIX,adservicemedia.dk
+DOMAIN,advert.e24.no
 DOMAIN,advert.file.no
+DOMAIN,advert.godt.no
+DOMAIN,advert.minmote.no
+DOMAIN,advert.pent.no
 DOMAIN,advert.single.no
 DOMAIN,advert.vg.no
+DOMAIN,advert.vgd.no
+DOMAIN,advert.vglive.no
+DOMAIN,advert.vgtv.no
 DOMAIN,advertisement.crontab.no
+DOMAIN,advertisement.e24.no
 DOMAIN,advertisement.file.no
+DOMAIN,advertisement.godt.no
+DOMAIN,advertisement.minmote.no
+DOMAIN,advertisement.pent.no
 DOMAIN,advertisement.vg.no
+DOMAIN,advertisement.vgd.no
+DOMAIN,advertisement.vglive.no
+DOMAIN,advertisement.vgtv.no
 DOMAIN-SUFFIX,airmaxskobillige.com
 DOMAIN-SUFFIX,allergyfl.com
 DOMAIN,annoncer.solrodnyt.dk
@@ -262,6 +285,7 @@ DOMAIN-SUFFIX,xn--sykkeltrye-7cb.com
 
 # ——— Entries for IP addresses hosting various of the sites above. ———
 IP-CIDR,3.248.18.175/32,REJECT,no-resolve
+IP-CIDR,35.227.231.163/32,REJECT,no-resolve
 IP-CIDR,45.58.146.154/32,REJECT,no-resolve
 IP-CIDR,52.216.146.90/32,REJECT,no-resolve
 IP-CIDR,82.118.242.69/32,REJECT,no-resolve
@@ -275,7 +299,11 @@ IP-CIDR,138.201.126.227/32,REJECT,no-resolve
 IP-CIDR,154.213.16.136/32,REJECT,no-resolve
 IP-CIDR,156.236.126.173/32,REJECT,no-resolve
 IP-CIDR,167.71.49.177/32,REJECT,no-resolve
+IP-CIDR,185.13.40.150/32,REJECT,no-resolve
+IP-CIDR,195.88.54.21/32,REJECT,no-resolve
+IP-CIDR,195.88.55.21/32,REJECT,no-resolve
 IP-CIDR,196.196.230.76/32,REJECT,no-resolve
+IP-CIDR6,2001:67c:21e0::ad/64,REJECT,no-resolve
 
 # ——— Anti-phishing filters for tools that support wildcards, are below this line. ———
 # ——— Don't be worried if you see entries that resemble major Nordic websites; those are wildcard entries for use with e.g. Samsung Knox, that attempts to stop phishing sites that have stolen the website brands in question. ———
@@ -322,6 +350,8 @@ URL-REGEX,^https?:\/\/adserver\.*\.dk
 URL-REGEX,^https?:\/\/annonser\.*\.no
 URL-REGEX,^https?:\/\/banner\.*\.no
 URL-REGEX,^https?:\/\/helios\.*\.no
+URL-REGEX,^https?:\/\/advert\.*\.no
+URL-REGEX,^https?:\/\/advertisement\.*\.no
 URL-REGEX,^https?:\/\/auglysingar\.*\.is
 URL-REGEX,^https?:\/\/vefbordar\.*\.is
 URL-REGEX,^https?:\/\/vevlysingar\.*\.*

@@ -1,5 +1,5 @@
 msFilterList
-# Version: 30July2020v5-Alpha
+# Version: 30July2020v6-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -213,6 +213,7 @@ msFilterList
 # 🇮🇸: Aðallega fyrir AdGuard
 # 🇬🇧: Mostly for AdGuard
 -d 3.248.18.175
+-d 35.227.231.163
 -d 45.58.146.154
 -d 82.196.13.38
 -d 82.221.81.9
