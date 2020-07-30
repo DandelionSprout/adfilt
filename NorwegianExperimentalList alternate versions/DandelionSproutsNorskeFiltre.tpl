@@ -1,5 +1,5 @@
 msFilterList
-# Version: 28July2020v2-Alpha
+# Version: 30July2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -16,6 +16,7 @@ msFilterList
 # 🇫🇴: ——— Lýsingar ———
 # 🇬🇱: ——— Pilerisaarniarlugit ———
 # ❄: ——— Reklámaid ———
+# ❄🌳: ——— Reklaameidie ———
 # 🇬🇧: ——— Advertisements ———
 # — — — — — — — — —
 # 🇳🇴: Generelle #-oppføringer med kilder
@@ -213,6 +214,8 @@ msFilterList
 -d f.nordiskemedier.dk banner
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
+# 🇳🇴🏞: Hovudsakleg for AdGuard
+# 🇮🇸: Aðallega fyrir AdGuard
 # 🇬🇧: Mostly for AdGuard
 -d 3.248.18.175
 -d 45.58.146.154
@@ -301,6 +304,7 @@ msFilterList
 # https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
+# 🇳🇴🏞: ——— Tomme skiljeboksar ———
 # 🇮🇸: ——— Tóma skilirammar ———
 # 🇬🇧: ——— Empty divider spaces ———
 # 🇳🇴: ——— Distraherende bakgrunnsbilder ———
@@ -333,10 +337,9 @@ msFilterList
 # https://github.com/easylist/easylist/issues/5682
 +d candidate.hr-manager.net Advertisement PreviewAdvertisement.
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
+# Forum feeds in the upper right of articles
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
 # https://www.danishfamilysearch.dk/
-# ——— Caused by «RU AdList» (Should be submitted to RU AdList itself at some point) ———
-# Makes E-newspaper previews show up properly
 # ——— Unknown cause ———
 # https://github.com/DandelionSprout/adfilt/issues/67
 # https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
@@ -361,11 +364,14 @@ msFilterList
 # https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
 # https://www.vg.no/nyheter/i/y3Mka2//(08/04/2020)
 # https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
-# Anti-'CPU slaughtering'
+# 🇳🇴: Anti-'CPU-massakrering'
+# 🇮🇸: And-örgjörvislatrun
+# 🇬🇧: Anti-'CPU slaughtering'
 # https://kendte.dk/stjernespaekket-havefest-foejer-nye-navne-paa-plakaten-04072020/
 - advisibility_*.js
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
+# 🇳🇴🏞: ——— Norsk Tipping, inkl. tvilsamt motiverte lottoreklamar (Ein håndfull ikkje-påtrengande tippereklamar er i orden for meg) ———
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
 -d widget.norsktippingpartner.no
 -d widget.tippebannere.no
@@ -392,6 +398,7 @@ msFilterList
 - prerolls
 - viewability.
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
+# 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
 # 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
 - *-annonse-*
 # 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
@@ -402,7 +409,9 @@ msFilterList
 # 🇩🇰: Falske indlastinger, der søler bort tid
 # 🇬🇧: Fake loading screens that waste time
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
-# Hotfixes for Internet Explorer 11
+# 🇳🇴: Hurtigfikser for Internet Explorer 11
+# 🇮🇸: Skyndilausn fyrir Internet Explorer 11
+# 🇬🇧: Hotfixes for Internet Explorer 11
 # https://github.com/AdguardTeam/AdguardForWindows/issues/3209
 # 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "+d doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
 # 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "+d doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
