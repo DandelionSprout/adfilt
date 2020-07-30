@@ -1,5 +1,5 @@
 msFilterList
-# Version: 30July2020v2-Alpha
+# Version: 30July2020v5-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -67,7 +67,6 @@ msFilterList
 -d kynning.olis.is
 -d liveads.no
 -d myad.no
--d nettklikk.no
 -d samfilm.codelab.is
 -d sannsyn.com
 -d heartbeat.airserve.net
@@ -77,10 +76,6 @@ msFilterList
 -d soda.is
 -d delivered-by-madington.com
 -d vevlysingar.fo
--d webclick.no
--d adframe.no
--d adstream.no
--d advertising.no
 -d print2web.sn.dk
 # Adressa.no
 -d drbrand.herokuapp.com
@@ -334,8 +329,6 @@ msFilterList
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 +d _prebid_
-# https://github.com/easylist/easylist/issues/5682
-+d candidate.hr-manager.net Advertisement PreviewAdvertisement.
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 # Forum feeds in the upper right of articles
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
@@ -451,7 +444,6 @@ msFilterList
 -d look-like-star.myshopify.com
 -d limitedvoucher.com
 -d djurs.com-*.
--d com-airs1.com
 -d pensjonistferie.no
 -d postuksus.com
 -d 52.216.146.90
@@ -519,8 +511,6 @@ msFilterList
 -d bestphoneapplication.com
 # https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
 -d vision-hey.club
-# https://www.mm.dk/tjekdet/artikel/fup-dovne-robert-har-ikke-tjent-en-boejet-5-oere-paa-bitcoins
--d marissatomei.com
 # https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
 -d top-topic.co
 # https://www.nrk.no/troms/1.14788086
@@ -598,7 +588,6 @@ msFilterList
 -d gsport.com
 -d hernoclothing.com
 -d hollisternorge.com
--d horizonbagel.com
 -d jakkesalgs.com
 -d jakkesnorge.com
 -d joseph-holland.com
@@ -642,7 +631,6 @@ msFilterList
 -d retoaudi.com
 -d skonmdnorge.com
 -d sykkeltrøye.com
--d ssrodeolivestock.com
 -d swellsup.com
 -d tobiascelebritymusicevents.com
 -d um-bs.com
@@ -659,7 +647,6 @@ msFilterList
 -d 193.148.70.153
 # 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 -d desidert.no
--d tomter.no
 -d brigitteheilmann.dk
 -d storustovu.dk
 -d campingnews.dk
