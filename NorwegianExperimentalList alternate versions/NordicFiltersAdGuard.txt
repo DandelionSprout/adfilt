@@ -1,4 +1,4 @@
-! Version: 31July2020v1
+! Version: 31July2020v3
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -920,6 +920,7 @@ hjartalif.is#?#aside.WP_Editor_Widget:has(script)
 hjartalif.is#?#.tdc-row:not(:has(a))
 kjarninn.is#?#.boxlist:has(.adspot-article-wrapper)
 gaming.fo###sticky_ad
+vg.no#?#.bundle li[class^=css-]:has(div[data-ad-subtype])
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
 ||gaysir.no/rek/bb_inline$subdocument
@@ -929,6 +930,10 @@ gaming.fo###sticky_ad
 ||yrkesbil.no/gifs/1pix.gif^
 */gifs/*emty.gif^$domain=yrkesbil.no|bilnorge.no
 -l%C3%BDsing-$image,domain=news.fo
+!#if !env_mobile
+bt.dk##.article-container > .row > .sidebar
+bt.dk##.article-container > .row > .col-12.col-xl-8:style(width: 98.1% !important; max-width: none !important; flex: none !important)
+!#endif
 !+ NOT_OPTIMIZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 !+ NOT_OPTIMIZED
@@ -1102,8 +1107,8 @@ krom.is#@#.share-container
 ! ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 @@_prebid_$domain=seher.no
 ! https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
-@@||cdn.easy-ads.com/js/swipemod.js^$script,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no
-@@||easy-ads.com/subscriber^$image,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no
+@@||cdn.easy-ads.com/js/swipemod.js^$script,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no
+@@||easy-ads.com/subscriber^$image,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no
 ! Forum feeds in the upper right of articles
 babyklar.dk#@#.ad-cell
 babyklar.dk#@#.ads300-250
