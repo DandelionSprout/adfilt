@@ -1,4 +1,4 @@
-! Version: 31July2020v1
+! Version: 31July2020v2
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -920,6 +920,7 @@ hjartalif.is#?#aside.WP_Editor_Widget:-abp-has(script)
 hjartalif.is#?#.tdc-row:not(:-abp-has(a))
 kjarninn.is#?#.boxlist:-abp-has(.adspot-article-wrapper)
 gaming.fo###sticky_ad
+vg.no#?#.bundle li[class^=css-]:-abp-has(div[data-ad-subtype])
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
 ||gaysir.no/rek/bb_inline$subdocument
@@ -929,6 +930,10 @@ gaming.fo###sticky_ad
 ||yrkesbil.no/gifs/1pix.gif^
 */gifs/*emty.gif^$domain=yrkesbil.no|bilnorge.no
 -l%C3%BDsing-$image,domain=news.fo
+!#if !env_mobile
+bt.dk##.article-container > .row > .sidebar
+bt.dk##.article-container > .row > .col-12.col-xl-8:style(width: 98.1% !important; max-width: none !important; flex: none !important)
+!#endif
 !+ NOT_OPTIMIZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 !+ NOT_OPTIMIZED
