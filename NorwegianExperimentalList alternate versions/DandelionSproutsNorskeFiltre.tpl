@@ -1,5 +1,5 @@
 msFilterList
-# Version: 03August2020v1-Alpha
+# Version: 03August2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -22,6 +22,7 @@ msFilterList
 # 🇳🇴: Generelle #-oppføringer med kilder
 # 🇬🇧: Generic #-entries that have sources
 # framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
+# Exceptions: ballade.no
 # https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 # arendalstidende.no
 # https://www.langrenn.com/cppage.6250314-1743.html
@@ -86,6 +87,9 @@ msFilterList
 -d api.advista.no
 # bobilverden.no
 - annonse-
+# https://www.ballade.no/
+- wp-content uploads *_Annonse_
+_toppbanner_
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -191,6 +195,8 @@ msFilterList
 - resources dfp
 - tv2ads.js
 -d i0.wp.com 180x500.png
+-d musikknyheter.no banners
+-d ballade.no *Uke*_Sky
 +d vgtv.no
 -d adnxs.com
 -d karfan.is *.gif

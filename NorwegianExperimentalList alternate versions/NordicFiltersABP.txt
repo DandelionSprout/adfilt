@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 030820201
+! Version: 030820202
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -170,11 +170,13 @@ xlmoto.no##.overlay-wrapper
 xlmoto.no##.sb-overlay
 xstra.no##.td-fix-index
 bobilportal.no#?##secondary > .widget_text:-abp-has(.external)
+musikknyheter.no##.spklw-widget
 ! — — — — — — — — —
 ! 🇳🇴: Generelle #-oppføringer med kilder
 ! 🇬🇧: Generic #-entries that have sources
 ! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
-##.gofollow
+! Exceptions: ballade.no
+##.gofollow:not([href*=nyhetsbrev]):not([href*=radio])
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
 ! arendalstidende.no
@@ -283,6 +285,9 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ||api.advista.no^$third-party
 ! bobilverden.no
 /annonse-$image
+! https://www.ballade.no/
+/wp-content/uploads/*_Annonse_$image
+_toppbanner_$image
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -388,7 +393,7 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||utrop.no/wp-content/uploads/2019/07/utrop.no_-1.jpg^$image
 ||viasport-assets.mtg-api.com/*/prod/comScore-*.js$script
 ||vikari.is/skjol/frjalsi-lif*.png$image
-||widgets.sprinklecontent.com^$domain=startsiden.no
+||widgets.sprinklecontent.com^$domain=startsiden.no|musikknyheter.no
 ||xn--bredbnd-ixa.dk/wp-content/*/velkommen_banner$image
 ||youtube.com/embed/*&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1$subdocument
 /Bannere/*$image,domain=tek.no|gamer.no
@@ -405,6 +410,9 @@ contentMarketing$xmlhttprequest,domain=sol.no
 /resources/dfp/*$domain=nettavisen.no
 /tv2ads.js$domain=tv2.dk
 ||i0.wp.com/bobilportalen.no/*/180x500.png^
+||musikknyheter.no/banners^
+@@||musikknyheter.no/banners/skribent
+||ballade.no/wp-content/uploads/*Uke*_Sky
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||karfan.is/wp-content/uploads/*.gif^
@@ -889,6 +897,7 @@ popidol.no,helsesjefen.no##.td-footer-ad
 f7hvordanlage.no##.navigation-banner
 f7city.no###text-5
 bobilportal.no###secondary > .widget_custom_html
+musikknyheter.no##.centered:not(#toTop)
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
 ||gaysir.no/rek/bb_inline$subdocument
