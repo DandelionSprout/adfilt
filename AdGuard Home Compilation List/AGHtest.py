@@ -163,6 +163,12 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r"^(\.[a-z0-9.]{4,60}\.)$", 
+           r"||*\1", 
+           line
+        )
+
+        line = re.sub(
            r"^[&+-.=?^_%].*", 
            "", 
            line
@@ -343,7 +349,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^/([a-z0-9_]{1,30}\.$)",
+           r"^/([a-z0-9.]{1,60}\.$)",
            r"://\1", 
            line
         )
@@ -435,6 +441,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^! #", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\*\^$", 
+           r"*", 
            line
         )
 
