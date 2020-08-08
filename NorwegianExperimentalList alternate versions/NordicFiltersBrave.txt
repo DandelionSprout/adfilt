@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 06August2020v1-Beta
+! Version: 08August2020v1-Beta
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Brave Browser)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for Brave Browser)
 ! Expires: 12 hours
@@ -46,6 +46,7 @@ vgtv.no##+js(golem.de.js)
 ! jyllands-posten.dk
 ! buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
 ! n247.no
+! https://www.healthtalk.no/
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -121,6 +122,10 @@ vgtv.no##+js(golem.de.js)
 ! https://www.ballade.no/
 /wp-content/uploads/*_Annonse_$image
 _toppbanner_$image
+! https://www.osterud.name/FF57W10/norwegian-filters.txt
+*/bannerannonser/
+! byggenytt.no
+/_annonser^$image
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -160,9 +165,8 @@ contentMarketing$xhr,domain=sol.no
 ||feltet.dk/octo_cms/files/Feltet.dk//$image
 ||finn.no$subdocument,domain=bt.no
 ||footy.dk/wp-content/uploads/*/Sk%C3%A6rmbillede-*.png^$image
-||fotbolti.net/banners^
 ||gratisxxx.no$image,domain=nakenprat.com
-||hnytt.no/wp-content/uploads/*.gif^$image
+/wp-content/uploads/*.gif^$image,domain=hnytt.no|karfan.is
 ||hnytt.no/wp-content/uploads/*/Fluffy.jpg^$image
 ||karfan.is/*-470x130*.jpg^
 ||karfan.is/*300x250.jpg^
@@ -243,18 +247,19 @@ contentMarketing$xhr,domain=sol.no
 /resources/dfp/*$domain=nettavisen.no
 /tv2ads.js$domain=tv2.dk
 ||i0.wp.com/bobilportalen.no/*/180x500.png^
-||musikknyheter.no/banners^
+/banners^$domain=musikknyheter.no|bilasolur.is|fotbolti.is
 @@||musikknyheter.no/banners/skribent
 ||ballade.no/wp-content/uploads/*Uke*_Sky
+||teknologiskmatforum.no/ViewImage.aspx?*width=343^$image
+||healthtalkweb.s3.amazonaws.com/images/*_560x210.$image
+||oppdrettstorget.no/images/cms^$image
 !#if !ext_ublock
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 !#endif
-||karfan.is/wp-content/uploads/*.gif^
 ||samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png^
 ! bilasolur.is (03/05/2020)
 /lykill_banner$image
-||bilasolur.is/banners^
 ! bt.no
 ||finn.no/distribution-carousel?$object,3p
 ! https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
@@ -382,6 +387,8 @@ contentMarketing$app=no.sol
 @@||cdn.easy-ads.com/js/swipemod.js^$script,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no
 @@||easy-ads.com/subscriber^$image,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no
 ! Forum feeds in the upper right of articles
+! https://oppdrettstorget.no/utstyr/brukt
+@@||oppdrettstorget.no/images/ads/
 ! ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
 ! https://www.danishfamilysearch.dk/
 ! ——— Unknown cause ———

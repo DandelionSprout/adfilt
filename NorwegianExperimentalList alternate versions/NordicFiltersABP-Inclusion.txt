@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 060820201
+! Version: 080820201
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
 ! Expires: 12 hours
@@ -171,6 +171,12 @@ xlmoto.no##.sb-overlay
 xstra.no##.td-fix-index
 bobilportal.no#?##secondary > .widget_text:-abp-has(.external)
 musikknyheter.no##.spklw-widget
+byggenytt.no#?#*:-abp-has(> .home-ads)
+teknologiskmatforum.no##.page-home__logos-sidebar
+oppdrettstorget.no##.index_extadsm
+ksu.no#?#.center.size-100:not(.nopaddingall)
+ksu.no#?##g-aside .size-100:-abp-has(.bannergroup)
+ksu.no#?##g-aside .size-100:-abp-has(.sprocket-strips-s)
 ! — — — — — — — — —
 ! 🇳🇴: Generelle #-oppføringer med kilder
 ! 🇬🇧: Generic #-entries that have sources
@@ -213,6 +219,8 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ##.rotating-junglebogen
 ! n247.no
 ##.annonseheader
+! https://www.healthtalk.no/
+##.reklame-spot
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -288,6 +296,10 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ! https://www.ballade.no/
 /wp-content/uploads/*_Annonse_$image
 _toppbanner_$image
+! https://www.osterud.name/FF57W10/norwegian-filters.txt
+*/bannerannonser/
+! byggenytt.no
+/_annonser^$image
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -327,9 +339,8 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||feltet.dk/octo_cms/files/Feltet.dk//$image
 ||finn.no$subdocument,domain=bt.no
 ||footy.dk/wp-content/uploads/*/Sk%C3%A6rmbillede-*.png^$image
-||fotbolti.net/banners^
 ||gratisxxx.no$image,domain=nakenprat.com
-||hnytt.no/wp-content/uploads/*.gif^$image
+/wp-content/uploads/*.gif^$image,domain=hnytt.no|karfan.is
 ||hnytt.no/wp-content/uploads/*/Fluffy.jpg^$image
 ||karfan.is/*-470x130*.jpg^
 ||karfan.is/*300x250.jpg^
@@ -410,16 +421,17 @@ contentMarketing$xmlhttprequest,domain=sol.no
 /resources/dfp/*$domain=nettavisen.no
 /tv2ads.js$domain=tv2.dk
 ||i0.wp.com/bobilportalen.no/*/180x500.png^
-||musikknyheter.no/banners^
+/banners^$domain=musikknyheter.no|bilasolur.is|fotbolti.is
 @@||musikknyheter.no/banners/skribent
 ||ballade.no/wp-content/uploads/*Uke*_Sky
+||teknologiskmatforum.no/ViewImage.aspx?*width=343^$image
+||healthtalkweb.s3.amazonaws.com/images/*_560x210.$image
+||oppdrettstorget.no/images/cms^$image
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
-||karfan.is/wp-content/uploads/*.gif^
 ||samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png^
 ! bilasolur.is (03/05/2020)
 /lykill_banner$image
-||bilasolur.is/banners^
 ! bt.no
 ||finn.no/distribution-carousel?$object,third-party
 ! https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
@@ -516,7 +528,7 @@ bt.dk##.sidebar.col-xl-4.col-lg-4.col-md-12.col-sm-12.col-xs-12
 bt.no,byas.no##.vertical-x1-ad > .column--big
 budstikka.no##.bazaar
 byas.no##.section-ad-netboard
-bygg.no,mmm.dk##.ad
+bygg.no,mmm.dk,kino.no##.ad
 bygg.no##.ads-strip
 byggebolig.no##.maestro-content-plugins
 byggfakta.no,byggfaktabolig.no,vvsaktuelt.no###bannerContainer:not(.HeaderBanner1)
@@ -898,6 +910,7 @@ f7hvordanlage.no##.navigation-banner
 f7city.no###text-5
 bobilportal.no###secondary > .widget_custom_html
 musikknyheter.no##.centered:not(#toTop)
+mittkongsvinger.no##.advertising
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
 ||gaysir.no/rek/bb_inline$subdocument
@@ -1079,6 +1092,8 @@ krom.is#@#.share-container
 babyklar.dk#@#.ad-cell
 babyklar.dk#@#.ads300-250
 babyklar.dk#@#.ads300_250-widget
+! https://oppdrettstorget.no/utstyr/brukt
+@@||oppdrettstorget.no/images/ads/
 ! ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
 ! https://www.danishfamilysearch.dk/
 danishfamilysearch.dk#@#iframe[width="300"][height="250"]

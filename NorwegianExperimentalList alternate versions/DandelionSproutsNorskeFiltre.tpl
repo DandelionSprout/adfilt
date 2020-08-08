@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06August2020v1-Alpha
+# Version: 08August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -38,6 +38,7 @@ msFilterList
 # jyllands-posten.dk
 # buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
 # n247.no
+# https://www.healthtalk.no/
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -90,6 +91,10 @@ msFilterList
 # https://www.ballade.no/
 - wp-content uploads *_Annonse_
 _toppbanner_
+# https://www.osterud.name/FF57W10/norwegian-filters.txt
+- bannerannonser
+# byggenytt.no
+- _annonser
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -126,9 +131,8 @@ _toppbanner_
 -d feltet.dk wallpaper_1.jpg
 -d feltet.dk *_300x60.gif
 -d footy.dk Sk%C3%A6rmbillede-*.png
--d fotbolti.net banners
 -d gratisxxx.no
--d hnytt.no *.gif
+- wp-content uploads *.gif
 -d hnytt.no Fluffy.jpg
 -d karfan.is *-470x130*.jpg
 -d karfan.is *300x250.jpg
@@ -195,15 +199,16 @@ _toppbanner_
 - resources dfp
 - tv2ads.js
 -d i0.wp.com 180x500.png
--d musikknyheter.no banners
+- banners
 -d ballade.no *Uke*_Sky
+-d teknologiskmatforum.no ViewImage.aspx?*width=343
+-d healthtalkweb.s3.amazonaws.com *_560x210.
+-d oppdrettstorget.no cms
 +d vgtv.no
 -d adnxs.com
--d karfan.is *.gif
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
 # bilasolur.is (03 05 2020)
 - lykill_banner
--d bilasolur.is banners
 # bt.no
 -d finn.no distribution-carousel?
 # https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
@@ -340,6 +345,7 @@ _toppbanner_
 +d _prebid_
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 # Forum feeds in the upper right of articles
+# https://oppdrettstorget.no/utstyr/brukt
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
 # https://www.danishfamilysearch.dk/
 # ——— Unknown cause ———
