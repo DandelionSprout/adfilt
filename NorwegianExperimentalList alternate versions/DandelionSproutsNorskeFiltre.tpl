@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08August2020v1-Alpha
+# Version: 08August2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -39,6 +39,7 @@ msFilterList
 # buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
 # n247.no
 # https://www.healthtalk.no/
+# appetitt.no
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -204,6 +205,21 @@ _toppbanner_
 -d teknologiskmatforum.no ViewImage.aspx?*width=343
 -d healthtalkweb.s3.amazonaws.com *_560x210.
 -d oppdrettstorget.no cms
+-d appetitt.no 320x640-*.png
+-d appetitt.no Topp-banner-*.jpg
+-d appetitt.no 1150*
+-d appetitt.no *_widescreen_1920x1080_*.jpg
+-d appetitt.no *_1150x350.jpg
+-d appetitt.no Annis.jpg
+-d semegleren.com video
+-d canariposten.no 300x1500*
+-d frilansinfo.no *-annonse.jpg
+-d thaiguiden.no tg-980.html
+-d thainytt.no 160_*
+-d thainytt.no *-160.jpg
+-d nyteknikk.no 180x
+-d nyteknikk.no x150
+-d norsk-rally.com banners
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
