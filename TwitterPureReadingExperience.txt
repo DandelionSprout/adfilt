@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🐥 Twitter: Pure Reading Experience
-! Version: 20April2020v3-Alpha
+! Version: 12August2020v1-Alpha
 ! Expires: 5 days
 ! Description: Twitter is a place full of distractions, strange things, and people you'd want to stay 200km away from at all times. If you wish to focus strictly on the 2% of Twitter that is actually any good nowadays, here's a list for you.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -8,16 +8,16 @@
 ! Removes the "Related users" sections
 twitter.com##.RelatedUsers
 twitter.com##.WhoToFollow
-twitter.com##div[data-testid="sidebarColumn"] > div > div > div > div > div > div > div:nth-of-type(3)
-twitter.com##div[data-testid="UserCell"]
+twitter.com##div[data-testid=sidebarColumn] > div > div > div > div > div > div > div:nth-of-type(3)
+twitter.com##div[data-testid=UserCell]
 twitter.com#?#div:-abp-has(> div > a[href^="/i/related_users/"])
 twitter.com#?#div:-abp-has(> aside[role="complementary"])
 !!!twitter.com#?#div:-abp-has(> .r-qklmqi:not(:-abp-has(a)))
 
 ! Removes the Trending list
-twitter.com##div[data-testid="sidebarColumn"] section > div[aria-label]
+twitter.com##div[data-testid=sidebarColumn] section > div[aria-label]
 ||twitter.com/i/trends?
-!!!twitter.com##section[aria-labelledby="accessible-list-4"]
+!!!twitter.com##section[aria-labelledby=accessible-list-4]
 twitter.com##.trends-inner
 twitter.com##.r-1u4rsef.r-9cbz99
 
@@ -27,4 +27,4 @@ twitter.com#?#div:-abp-has(> div > a[href^="/i/connect_people"])
 
 ! Removes a login nag
 ! https://mobile.twitter.com/nasuno_Posi
-twitter.com##div[data-testid="sidebarColumn"] section[aria-label][role="region"]
+twitter.com##div[data-testid=sidebarColumn] section[aria-label][role=region]
