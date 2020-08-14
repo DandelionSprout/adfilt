@@ -1,0 +1,65 @@
+[Adblock Plus 3.4]
+! Title: 🛃 Anti-Adoptables List
+! Version: 14August2020v1-Alpha
+! Expires: 7 days
+! Description: The concept of adoptables on artsites is bewilderingly ludicrous, and goes against every known measure of good-practice capitalism. It denies the freedom to make transformative fan art, does not check if the seller has the skills to make art based on the purchase (s)he bought, and implies litigation threats that'd make Disney want the sellers' autographs. Here's how to avoid that shameful hateful culture.
+! Note: Due to me (The list maintainer) running into mental health problems after looking through heaps of horrendous "artpieces", my lists can no longer deal with deviantART or Inkbunny.
+! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! ——— Weasyl ———
+weasyl.com##a[href*=adopt]
+weasyl.com##a[href*=auction]
+weasyl.com##a[href$="-for-sale"]
+weasyl.com##a[href$="/sold"]
+weasyl.com##a[href*="/cs-"]
+weasyl.com##a[href*="/fumi-"]
+weasyl.com##a[href*="~fumilex/"]
+weasyl.com##a[href*="~happysorry/"]
+weasyl.com##a[href*="~paper-rabbit/"]
+weasyl.com##a[href*="~ziel/"]
+weasyl.com##a[href*="~zoeyhoshi/"]
+weasyl.com##a[href*=-low-price]
+weasyl.com##a[href*=batch][href*=open]
+weasyl.com##a[href*=closed][href*=male]
+weasyl.com##a[href*=closed][href*=specie]
+weasyl.com##a[href*=closed][href*=speice]
+weasyl.com##a[href*=flat-sale]
+weasyl.com##a[href*=flatsale]
+weasyl.com##a[href*=premium][href*=specie]
+
+! ——— Fur Affinity ———
+furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*="Adopt" i])
+furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*="Auction" i])
+furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*="Abopt" i])
+furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*="reminder" i])
+furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*="for sale" i])
+
+! ——— ArtStation ———
+artstation.com#?#.gallery-grid-item:-abp-contains(/(^| |\|)adopt/i)
+artstation.com#?#.gallery-grid-item:-abp-contains(/auction/i)
+
+! ——— Pixiv ———
+! Most search pages
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*=adoptable i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*="[Open]" i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*="[Closed]" i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*=" adopts!" i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*="closedspecies" i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*="closed_species" i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"]:not([data-gtm-recommend-zone=discovery])):-abp-has(a[href$="users/37189328"])
+! Discovery
+pixiv.net#?#div[data-gtm-recommend-zone=discovery] > div:-abp-has(> figure[style] > figcaption > ul:-abp-contains(/Adoptable/i))
+pixiv.net#?#div[data-gtm-recommend-zone=discovery] > div:-abp-has(> figure[style] > figcaption > ul:-abp-contains(/[Open]/i))
+pixiv.net#?#div[data-gtm-recommend-zone=discovery] > div:-abp-has(> figure[style] > figcaption > ul:-abp-contains(/[Closed]/i))
+pixiv.net#?#div[data-gtm-recommend-zone=discovery] > div:-abp-has(> figure[style] > figcaption > ul:-abp-contains(/ adopts!"))
+pixiv.net#?#div[data-gtm-recommend-zone=discovery] > div:-abp-has(> figure[style] > figcaption > ul a[href$="?id=37189328"])
+! Phone
+pixiv.net#?#.works-item:-abp-has(img[alt*=adoptable i])
+pixiv.net#?#.works-item:-abp-has(img[alt*="[Open]" i])
+pixiv.net#?#.works-item:-abp-has(img[alt*="[Closed]" i])
+pixiv.net#?#.works-item:-abp-has(img[alt*=" adopts!" i])
+pixiv.net#?#.works-item:-abp-has(img[alt*="closedspecies" i])
+pixiv.net#?#.works-item:-abp-has(img[alt*="closed_species" i])
+! Promotion cards on some user galleries
+pixiv.net##ul > li > div:last-of-type:nth-of-type(2):-abp-contains(/adoptable/i)
+pixiv.net##ul > li > div:last-of-type:nth-of-type(2):-abp-contains(/closed species/i)
