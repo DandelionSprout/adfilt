@@ -1,4 +1,4 @@
-(Last updated: 25th of June 2020)
+(Last updated: 14th of August 2020)
 
 ## Notes on how to contribute:
 
@@ -15,7 +15,7 @@ Issues and problems will normally be tested for in the most recent stable versio
 ### Nordic list submissions
 
 When making a submission pull request to the Nordic list, make sure to do the edits to either:
-* [The uBlock Origin version](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt) (for the uBO, AdGuard, Adblock Plus, Adblock Plus Eyeo, Privoxy, TPL, and uBO+privacy versions).
+* [The uBlock Origin version](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt) (for the uBO, AdGuard, AdBlock, Adblock Plus, Privoxy, TPL, and uBO+privacy versions).
 * [The file for anti-anti-adblock entries](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt).
 * [The domains version](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt) (for all other versions).
 
@@ -41,6 +41,10 @@ I will refuse to write, double-check or fix entries for the following sites, and
 
 Additionally, I'll only write and test fixes for these sites and not brand new entries:
 * The Verge
+
+### Version dates in pull requests
+
+If possible, change the `! Version:` date if you're making a pull request, into the date where the pull request is submitted to me. If the existing date is the same as the submission date, increase its `v` number by one instead.
 
 ### Other
 
