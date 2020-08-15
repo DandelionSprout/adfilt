@@ -2318,6 +2318,12 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r"^(\|\|skatteetaten\.com\.)$", 
+           r"\1\n@@||norwegian.com.cdn.cloudflare.net^", 
+           line
+        )
+
+        line = re.sub(
            r"(.*ad\.\*\.no.*)", 
            r"\1\n@@||ad.dep.no^\n@@||ad.hem.no^", 
            line
@@ -3586,6 +3592,12 @@ def prepare_hosts(lines) -> str:
         line = re.sub(
            r"127\.0\.0\.1 ublock\.org$", 
            "127.0.0.1 ublock.org www.ublock.org demo.ublock.org", 
+           line
+        )
+
+        line = re.sub(
+           r"127\.0\.0\.1 ttnrd\.com$", 
+           "127.0.0.1 ttnrd.com www.ttnrd.com amanda.ttnrd.com katie.ttnrd.com briana.ttnrd.com sarah.ttnrd.com pamela.ttnrd.com", 
            line
         )
 
