@@ -2318,7 +2318,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\|\|skatteetaten\.com\.)$", 
+           r"^(\|\|norwegian\.com\.)$", 
            r"\1\n@@||norwegian.com.cdn.cloudflare.net^", 
            line
         )
