@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 09August2020v1-Alpha
+! Version: 16August2020v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -343,9 +343,10 @@
 /sharing/stumbleupon.$image
 /sharing/twitter.$image
 |whatsapp://send$domain=~whatsapp.com
-||addthis.com/static/btn/sm-share*.gif
+||addthis.com/static/btn/sm-share*.gif^
 ||apis.google.com/*/+1/*button$subdocument
-||assets.pinterest.com/js/pinit*^
+||apis.google.com/js/plusone.js^
+||assets.pinterest.com/js/pinit
 ||facebook.com/*lugins/like.php$subdocument
 ||facebook.com/*lugins/page.php$subdocument
 ||facebook.com/*lugins/share_button$subdocument
@@ -355,8 +356,8 @@
 ||milotree.com^$third-party
 ||platform.twitter.com/widgets/follow_button$subdocument
 ||platform.twitter.com/widgets/tweet_button$subdocument
-||share.*.*^$image
-||sharing.*.*^$image
+||share.*.$image
+||sharing.*.$image
 ||social-plugins.line.me/widget/share?url=$subdocument
 ||softwareok.com/img/i_like_this.png?$image
 ||static.addtoany.com/buttons^$image
@@ -364,7 +365,7 @@
 ||twitter.com/share$third-party
 ||widgets.getpocket.com/v1/button?label=pocket$subdocument
 ||ws.sharethis.com^$third-party
-||yastatic.net/share/*-icon.*
+||yastatic.net/share/*-icon.
 ~allrecipes.com##div[class*=sharebar]
 ~facebook.com,~facebookcorewwwi.onion##.btn[href*="facebook.com/sharer/"]
 ~facebook.com,~facebookcorewwwi.onion##a[data-popup-url*="facebook.com/dialog/share?"]
@@ -407,7 +408,7 @@
 ~whatsapp.com##[href^="whatsapp://send"]
 ~whatsapp.com##a[href*="api.whatsapp.com/send?"]
 ~pinterest.*##.inline-share-pinterest
-~hatena.ne.jp##iframe[class^=hatena-bookmark]
+~ne.jp##iframe[class^=hatena-bookmark]
 ||static.mixi.jp/share_button.html^$subdocument,domain=~mixi.jp
 ##button[class$=_ShareButton]
 ##.facebookShare
