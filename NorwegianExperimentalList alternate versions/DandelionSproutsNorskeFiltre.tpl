@@ -1,5 +1,5 @@
 msFilterList
-# Version: 13August2020v1-Alpha
+# Version: 16August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -96,6 +96,8 @@ _toppbanner_
 - bannerannonser
 # byggenytt.no
 - _annonser
+# https://malviknytt.no/2020/07/31/skyting-pa-hjemmebande/ (16 08 2020)
+- Nettbanner-
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -220,6 +222,10 @@ _toppbanner_
 -d nyteknikk.no 180x
 -d nyteknikk.no x150
 -d norsk-rally.com banners
+-d malviknytt.no ani*-*.gif
+-d malviknytt.no *-998x1024.jpeg
+-d malviknytt.no *-firkant-*e1*.
+-d reiseliv.no *-Annons%C3%B8rinnhold-*-Aksjer-*.
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -259,10 +265,6 @@ _toppbanner_
 - bazaar
 - resources dfp
 - contentMarketing
-# — — — — — — — — —
-# 🇳🇴: Ikke kategorisert enda
-# 🇬🇧: Not yet categorised
-# (None at the moment)
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
