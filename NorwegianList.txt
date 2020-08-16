@@ -1,4 +1,4 @@
-! Version: 13August2020v1
+! Version: 16August2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -187,6 +187,8 @@ thaiguiden.no###extraContainer3
 nyteknikk.no##.rightbanner
 nyteknikk.no##.toppbanner
 norsk-rally.com###left > .bgbottom > .moduletable
+skinnelangs.no###sponsor_frame_front_white
+reiseliv.no##a[href*=annonsorartikler][href*=aksje]
 ! — — — — — — — — —
 ! 🇳🇴: Generelle #-oppføringer med kilder
 ! 🇬🇧: Generic #-entries that have sources
@@ -315,6 +317,8 @@ _toppbanner_$image
 */bannerannonser/
 ! byggenytt.no
 /_annonser^$image
+! https://malviknytt.no/2020/07/31/skyting-pa-hjemmebande/ (16/08/2020)
+/Nettbanner-$image
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -457,6 +461,10 @@ contentMarketing$xhr,domain=sol.no
 ||nyteknikk.no/images.php/180x^$image
 ||nyteknikk.no/images.php/x150^$image
 ||norsk-rally.com/images/banners^$image
+||malviknytt.no/*/ani*-*.gif^
+||malviknytt.no/wp-content/uploads/*-998x1024.jpeg^
+||malviknytt.no/wp-content/uploads/*-firkant-*e1*.$image
+||reiseliv.no/wp-content/uploads/*-Annons%C3%B8rinnhold-*-Aksjer-*.$image
 !#if !ext_ublock
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
@@ -504,10 +512,6 @@ contentMarketing$xhr,domain=sol.no
 ||finn.no^$app=no.bt
 contentMarketing$app=no.sol
 !#endif
-! — — — — — — — — —
-! 🇳🇴: Ikke kategorisert enda
-! 🇬🇧: Not yet categorised
-! (None at the moment)
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -995,6 +999,11 @@ vagabond.no##.simple-news + .ad
 vagabond.no###facebook + .ad
 vagabond.no##.social + .ad
 spritnyt.com##.td-g-rec
+skinnelangs.no###sponsor_large
+skinnelangs.no###sponsor
+bygg.no##.ads-floating
+malviknytt.no#?#.td-pb-span8:-abp-has(.adsbygoogle)
+reiseliv.no#?#.has-text-align-center:-abp-has(> a[href*=".adservice"])
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
 ||gaysir.no/rek/bb_inline$subdocument
