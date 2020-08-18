@@ -6,7 +6,7 @@ SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Norw
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '$$', '$app']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
-UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#']
+UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', 'Expires:']
 UNSUPPORTED_BRAVE = ['#@#', '#?#', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn', '!+ NOT_OPTIMIZED', '$$']
 
 OUTPUT = 'xyzzyx.txt'
@@ -1070,67 +1070,6 @@ def prepare_privoxy(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           "! ", 
-           "# ", 
-           line
-        )
-
-        line = re.sub(
-           r".*\$\$script.*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"\$.*", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           "\|\|", 
-           ".", 
-           line
-        )
-
-        line = re.sub(
-           "\^", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           "\[Adblock Plus 3.4\]", 
-           "{+block}", 
-           line
-        )
-
-        line = re.sub(
-           r"^$", 
-           "#", 
-           line
-        )
-
-        line = re.sub(
-           r"^\!.*", 
-           "#", 
-           line
-        )
-
-        line = re.sub(
-           "# 🇬🇧: ", 
-           "{+block{", 
-           line
-        )
-
-      # Note the use of parenthesises and "\1" combined.
-        line = re.sub(
-           r"(\{\+block{.*)", 
-           r"\1}}", 
-           line
-        )
-
-        line = re.sub(
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Privoxy)", 
            line
@@ -1143,36 +1082,228 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"(# Version: .*[0-9][A-Z].*)", 
+           r"(! Version: .*)", 
            r"\1-Alpha", 
            line
         )
 
         line = re.sub(
-           r"^!.*PFBLOCKERNG.*", 
-           r"", 
+           r"^!", 
+           r"#", 
            line
         )
 
         line = re.sub(
-           r"!\+.*", 
-           r"", 
+           r"^\|\|([a-z0-9].*\..*/.*)", 
+           r"{+block}\n.\1", 
            line
         )
 
         line = re.sub(
-           r"^\*/", 
+           r"^@@\|\|(.*)", 
+           r"{-block}\n.\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@/(.*)", 
+           r"{-block}\n./\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@_(.*)", 
+           r"{-block}\n._\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@(\..*)", 
+           r"{-block}\n\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^# ([a-zA-Z0-9.-]{1,40})$", 
+           r"{+block{\1}}", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|([a-z0-9].*\..*/.*)", 
+           r"{+block}\n.\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|", 
+           r".", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|", 
+           r".", 
+           line
+        )
+
+        line = re.sub(
+           r"^/", 
            r"./", 
            line
         )
 
         line = re.sub(
-           r"^\|([a-z0-9])", 
-           r".\1", 
+           r"[$,]3p$", 
+           r"", 
            line
         )
 
-        if is_supported_privoxy(line):
+        line = re.sub(
+           r"\$image$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"[$,]important$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\$app=.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# (http.*)", 
+           r"{+block{\1}}", 
+           line
+        )
+
+        line = re.sub(
+           r"\$doc.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# (🇬🇧: .*)", 
+           r"{+block{\1}}", 
+           line
+        )
+
+        line = re.sub(
+           r"^_", 
+           r".*_", 
+           line
+        )
+
+        line = re.sub(
+           r"\$csp.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^#\+.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\*", 
+           r".*", 
+           line
+        )
+
+        line = re.sub(
+           r"\$script$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$domain=~(.*)", 
+           r"\n{-block}\n.\1\n{+block}", 
+           line
+        )
+
+        line = re.sub(
+           r"\|~", 
+           r"\n.", 
+           line
+        )
+
+        line = re.sub(
+           r".*[$,]domain.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$xhr.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"important,([a-z])", 
+           r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"[$,]subdocument$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$script$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$xhr.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\$object.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$script,1p$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$3p$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$image$", 
+           r"", 
+           line
+        )
+
+        if is_supported_privoxy(line) and not line == '':
           text += line + '\r\n'
 
     return text
