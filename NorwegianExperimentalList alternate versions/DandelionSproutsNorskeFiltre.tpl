@@ -1,5 +1,5 @@
 msFilterList
-# Version: 16August2020v2-Alpha
+# Version: 18August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -411,19 +411,17 @@ _toppbanner_
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 # 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
-- adblock_mobile.
-- insert_grtv_stats.
-- prerolls
-- viewability.
+-d media.gamereactor.dk *Promo
 -d media.gamereactor.dk prerolls
 -d openx.gamereactor.dk multi.php?
--d ssl.p.jwpcdn.com gapro.js
--d client-stream-events.mtg-api.com
--d freewheel-mtgx-tv.akamaized.net
-- adblock_mobile.
 - insert_grtv_stats.
 - prerolls
-- viewability.
+- videojs.ima.
+-d client-stream-events.mtg-api.com
+-d freewheel-mtgx-tv.akamaized.net
+- insert_grtv_stats.
+- prerolls
+- videojs.ima.
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 # 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
 # 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
@@ -689,7 +687,7 @@ _toppbanner_
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 22July2020v4-Extension
+# Last updated: 18August2020v1-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
