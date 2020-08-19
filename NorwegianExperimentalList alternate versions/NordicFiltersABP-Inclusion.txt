@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 180820203
+! Version: 190820202
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
 ! Expires: 12 hours
@@ -65,7 +65,7 @@ e24.no##.bg-xAdrow
 e24.no##.content-marketing-container
 e24.no##a[href*="/go.click?"]
 ekstrabladet.dk##.advertorials
-ekstrabladet.dk##a[href^="https://click-dk.plista.com/csc?"]
+
 ekstrabladet.dk#?#div[class^="df-article "]:-abp-has(span:-abp-contains(Annoncørbetalt indhold))
 feltet.dk###struct_topBanner
 feltet.dk##.box_300_default
@@ -86,7 +86,6 @@ hvat.fo##.vev-wrap
 itavisen.no##.article-ad-video
 itavisen.no##.itavi-homepage-video-player-instream
 itavisen.no##.sponsored
-itavisen.no#?#.item:not(:-abp-contains(TEST)):-abp-has(.meta:-abp-contains(/^Annonse$/))
 itavisen.no#?#.spklw-post:-abp-has(a[href*=smartadserver])
 jn.fo###the_banners
 kanalen.no##.bannergroup
@@ -153,14 +152,12 @@ tvh.no##.article-contentmarketing
 tvkampen.com,tvsporten.dk#$#abort-on-property-write onload
 tvkampen.com,tvsporten.dk##a.p-icon.partner
 utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
-vartoslo.no#?#.vc_column-inner:-abp-has(.vo-annonse):not(:-abp-has(div[class^=td_module_])):not(:-abp-has(#sb_instagram))
 vb.is##.spons
 veier24.no,tu.no,digi.no##.top-poster-wrap
 vg.no#$#abort-current-inline-script Math.floor g00
 vg.no##.betting-widgets
 vg.no##.tipster
 vg.no##.wid-betting
-vg.no#?#.partner-studio:not(:-abp-has(a[href*="/nordiskfilm/"]))
 vg.no,e24.no,gamer.no,tek.no,digi.no#$#abort-on-property-write __AB__
 vgtv.no##.apnx-container
 vgtv.no##.video-branding
@@ -658,7 +655,6 @@ gamer.no##.aaa-980x150
 gamer.no##.aaa-placeholder
 gamer.no##.pst-placeholder
 gaysir.no##.ad_wrapper_content
-gjerrigknark.com#?#.dividerBlock:not(:-abp-has(.dividerBlockNewsletterSubscribe))
 godt.no##[class^=advert]
 google.no,google.dk,google.is###cnsi ~ [jsaction*=dismiss]
 gratiskryssord.no###adSign
@@ -686,7 +682,7 @@ hwt.dk#?#.box.text-center:-abp-has(script[src^="//ads."])
 information.dk##.masthead
 installator.dk##.addon--ad
 itavisen.no##.\35 00Add:not(.homepage-video-area)
-itavisen.no##.ad:before
+itavisen.no##.ad::before
 itavisen.no#?#*:-abp-has(> .comcontent)
 itavisen.no##.fifth-article-ad
 itavisen.no##.itavi-after-content
@@ -738,11 +734,7 @@ markedsforing.dk##.banner-annonce
 markedsforing.dk#?#.row-second:-abp-has(div[class*=banner-annonce])
 matematikbogen.dk##td:nth-of-type(3)
 matoppskrift.no#?##sticky:-abp-has(> .adsbygoogle)
-matoppskrift.no#?#.text-center:not(:-abp-has(img))
-mbl.is#?#.col-sm-6.col-12:-abp-has(.augl):not(:-abp-has(.fluid))
 medier24.no##.ad-toppbanner-article
-menn.is#?#.vc_column-inner:-abp-has(.mobile-ad):not(:-abp-has(a))
-menn.is#?#.vc_column:-abp-has(.mobile-ad):not(:-abp-has(a))
 meremobil.dk##.a-single
 meremobil.dk#?##header > div:-abp-has(div[id*=gpt-ad-])
 min-mave.dk##.topAdBannerFixed
@@ -825,7 +817,7 @@ sognavis.no##.row.hidden-print:not(.vspace)
 spillespill.no###bannerAdmeenRectangleTopContainer
 spillespill.no##.banner-leaderboard
 spillespill.no##.push
-sporttv.is#?#*:-abp-has(> .row div[class^="auglysing-"])
+sporttv.is#?#.row *:-abp-has(> div[class^="auglysing-"])
 sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
 sporttv.is#?#.box:-abp-has(div[class^=auglysing-])
 sporttv.is,utdanningsnytt.no##.banner-right
@@ -840,15 +832,13 @@ studievalg.no###top-announce
 superchat.dk###topbanner_container
 superchat.dk#?#*:-abp-has(> div[id^=div-ppas])
 sva.no##.code-block-1
-sva.no#?#.widget_text:not(:-abp-has(a))
-sva.no#?#section:not(:-abp-has(a))
 sveip.net#?#*:-abp-has(> .adsbygoogle)
 sveip.net##.app_ad2
 sveip.no##.notnews
 sysla.no##.ad-nexus-ad
 tek.no###application > div[class]:nth-of-type(1):nth-last-of-type(2)
 tek.no#?#*:-abp-has(> #topboard)
-tek.no##body:before
+tek.no##body::before
 tek.no##div[class^=styles__]
 tek.no##section[class*=canvas]
 tek.no#?#article > div:-abp-contains(/^annonse$/)
@@ -930,7 +920,6 @@ babyklar.dk##.top_header
 babyklar.dk##.text_box
 altomcamping.dk##.article-content > div[style^=width]
 hjartalif.is#?#aside.WP_Editor_Widget:-abp-has(script)
-hjartalif.is#?#.tdc-row:not(:-abp-has(a))
 kjarninn.is#?#.boxlist:-abp-has(.adspot-article-wrapper)
 gaming.fo###sticky_ad
 vg.no#?#.bundle li[class^=css-]:-abp-has(div[data-ad-subtype])
@@ -950,7 +939,7 @@ canariajournalen.no##.ad-separator
 canariajournalen.no##.ad-separator-top
 thainytt.no##.blog-entry > .stacks_out
 thaiguiden.no#?#*:-abp-has(> * > * > * > * > .adsbygoogle)
-tek.no##div:-abp-properties(min-height: 165px)
+tek.no#?#div:-abp-properties(min-height: 165px)
 teknologia.no#?#.widget_text:-abp-has(.adsbygoogle)
 opn.no###sidebar_2 #sidebarelement_2
 kondis.no##.wallpaperad
@@ -1102,8 +1091,6 @@ tnt-tv.no,tnt-tv.dk##.logos
 tnt-tv.no,tnt-tv.dk##.tabs_placeholder
 avvir.no###block-block-1 > p:nth-of-type(4)
 dyrevennene.no##.td-footer-wrapper
-yrkesbil.no#?#tr:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
-yrkesbil.no#?#td:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
 kvf.fo##.panels-flexible-row-grein-rnd-13
 oyggjatidindi.com##.bottom_space
 
@@ -1163,7 +1150,7 @@ danishfamilysearch.dk#@#iframe[width="300"][height="250"]
 ! https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 @@||cmp.ekstrabladet.dk/get_site_data$xmlhttprequest,~third-party
 @@||dialogue.sp-prod.net/messagingWithoutDetection.js$script,domain=ekstrabladet.dk
-@@||notice.sp-prod.net^$frame,domain=ekstrabladet.dk
+@@||notice.sp-prod.net^$subdocument,domain=ekstrabladet.dk
 @@||sp-prod.net^$xmlhttprequest,domain=ekstrabladet.dk
 
 !
@@ -1174,42 +1161,6 @@ danishfamilysearch.dk#@#iframe[width="300"][height="250"]
 ! Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP for showing me the existence of this particular CSP command.
 ! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
 $csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no
-
-! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
-! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
-! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
-! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
-! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
-! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
-##.Article-header-body:before
-##.paywall-fade
-##.polarisSpid.widget:before
-aftenbladet.no,fvn.no##.overlay-wrap:before
-aftenposten.no##.widget-salesposter:before
-dagogtid.no##.dot-shorttext:before
-dinepenger.no##.article-body:after
-dn.no##.vrs-image-block__image-description-overlay
-fiskeribladet.no##.teaser_overlay
-information.dk##.greyed-text
-
-morgenbladet.no##.preview-overlay
-nationen.no##.article-container.locked:after
-politiken.dk##.card.stopsign__article.stopsign:before
-vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:before
-borsen.dk##.indent-wrapper > .overlay
-dknyt.dk,kommunen.dk##.fade-out
-h-a.no##.faded-content:before
-||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
-! dagbladet.no,elbil24.no
-##.CTA-body-faded
-! digi.no, tu.no, medier24.no, porten.no
-##.faded-article-content:after
-! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
-##.paywall-gradient
-! https://www.vg.no/nyheter/i/y3Mka2/ (08/04/2020)
-vg.no##div[data-test-tag=timestamp] + div:before
-! https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
-vg.no##div[data-test-tag=timestamp] + p + div:before
 
 ! 🇳🇴: Anti-'CPU-massakrering'
 ! 🇮🇸: And-örgjörvislatrun
@@ -1310,7 +1261,6 @@ resett.no##a[href*="ekstrahus.no"]
 resett.no##.td-ss-main-sidebar
 resett.no##a[href*="pureorganic.no"]
 /*-annonse-*$image,domain=resett.no
-resett.no#?#.code-block:-abp-contains(Reklame):not(:-abp-contains(butikk))
 norgesavisen.no##.td-fix-index
 frihetskamp.net##a[href*="greenpilled.com"]
 frihetskamp.net##a[href*="nordenstil.no"]
@@ -1325,6 +1275,11 @@ frihetskamp.net##a[href*="nordenstil.no"]
 ! 🇬🇧: Fake loading screens that waste time
 nettavisen.no###topover-loader
 nettavisen.no###topover
+
+! "Generic Hide"
+@@||bondebladet.screen9.tv^$generichide
+@@||eurosport.no^$generichide
+@@||eurosport.dk^$generichide
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
 

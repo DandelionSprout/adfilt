@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 180820203
+! Version: 190820202
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 12 hours
@@ -686,7 +686,7 @@ hwt.dk#?#.box.text-center:-abp-has(script[src^="//ads."])
 information.dk##.masthead
 installator.dk##.addon--ad
 itavisen.no##.\35 00Add:not(.homepage-video-area)
-itavisen.no##.ad:before
+itavisen.no##.ad::before
 itavisen.no#?#*:-abp-has(> .comcontent)
 itavisen.no##.fifth-article-ad
 itavisen.no##.itavi-after-content
@@ -825,7 +825,7 @@ sognavis.no##.row.hidden-print:not(.vspace)
 spillespill.no###bannerAdmeenRectangleTopContainer
 spillespill.no##.banner-leaderboard
 spillespill.no##.push
-sporttv.is#?#*:-abp-has(> .row div[class^="auglysing-"])
+sporttv.is#?#.row *:-abp-has(> div[class^="auglysing-"])
 sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
 sporttv.is#?#.box:-abp-has(div[class^=auglysing-])
 sporttv.is,utdanningsnytt.no##.banner-right
@@ -848,7 +848,7 @@ sveip.no##.notnews
 sysla.no##.ad-nexus-ad
 tek.no###application > div[class]:nth-of-type(1):nth-last-of-type(2)
 tek.no#?#*:-abp-has(> #topboard)
-tek.no##body:before
+tek.no##body::before
 tek.no##div[class^=styles__]
 tek.no##section[class*=canvas]
 tek.no#?#article > div:-abp-contains(/^annonse$/)
@@ -950,7 +950,7 @@ canariajournalen.no##.ad-separator
 canariajournalen.no##.ad-separator-top
 thainytt.no##.blog-entry > .stacks_out
 thaiguiden.no#?#*:-abp-has(> * > * > * > * > .adsbygoogle)
-tek.no##div:-abp-properties(min-height: 165px)
+tek.no#?#div:-abp-properties(min-height: 165px)
 teknologia.no#?#.widget_text:-abp-has(.adsbygoogle)
 opn.no###sidebar_2 #sidebarelement_2
 kondis.no##.wallpaperad
@@ -1163,7 +1163,7 @@ danishfamilysearch.dk#@#iframe[width="300"][height="250"]
 ! https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 @@||cmp.ekstrabladet.dk/get_site_data$xmlhttprequest,~third-party
 @@||dialogue.sp-prod.net/messagingWithoutDetection.js$script,domain=ekstrabladet.dk
-@@||notice.sp-prod.net^$frame,domain=ekstrabladet.dk
+@@||notice.sp-prod.net^$subdocument,domain=ekstrabladet.dk
 @@||sp-prod.net^$xmlhttprequest,domain=ekstrabladet.dk
 
 !
@@ -1175,42 +1175,6 @@ danishfamilysearch.dk#@#iframe[width="300"][height="250"]
 ! Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP for showing me the existence of this particular CSP command.
 ! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
 $csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no
-
-! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
-! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
-! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
-! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
-! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
-! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
-##.Article-header-body:before
-##.paywall-fade
-##.polarisSpid.widget:before
-aftenbladet.no,fvn.no##.overlay-wrap:before
-aftenposten.no##.widget-salesposter:before
-dagogtid.no##.dot-shorttext:before
-dinepenger.no##.article-body:after
-dn.no##.vrs-image-block__image-description-overlay
-fiskeribladet.no##.teaser_overlay
-information.dk##.greyed-text
-
-morgenbladet.no##.preview-overlay
-nationen.no##.article-container.locked:after
-politiken.dk##.card.stopsign__article.stopsign:before
-vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:before
-borsen.dk##.indent-wrapper > .overlay
-dknyt.dk,kommunen.dk##.fade-out
-h-a.no##.faded-content:before
-||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
-! dagbladet.no,elbil24.no
-##.CTA-body-faded
-! digi.no, tu.no, medier24.no, porten.no
-##.faded-article-content:after
-! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
-##.paywall-gradient
-! https://www.vg.no/nyheter/i/y3Mka2/ (08/04/2020)
-vg.no##div[data-test-tag=timestamp] + div:before
-! https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
-vg.no##div[data-test-tag=timestamp] + p + div:before
 
 ! 🇳🇴: Anti-'CPU-massakrering'
 ! 🇮🇸: And-örgjörvislatrun
@@ -1326,6 +1290,11 @@ frihetskamp.net##a[href*="nordenstil.no"]
 ! 🇬🇧: Fake loading screens that waste time
 nettavisen.no###topover-loader
 nettavisen.no###topover
+
+! "Generic Hide"
+@@||bondebladet.screen9.tv^$generichide
+@@||eurosport.no^$generichide
+@@||eurosport.dk^$generichide
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
 
@@ -1620,6 +1589,42 @@ trendsales.dk##.top__banner
 ||brigitteheilmann.dk^
 ||storustovu.dk^
 ||campingnews.dk^
+! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
+! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
+! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
+! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
+! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
+! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
+##.Article-header-body::before
+##.paywall-fade
+##.polarisSpid.widget::before
+aftenbladet.no,fvn.no##.overlay-wrap::before
+aftenposten.no##.widget-salesposter::before
+dagogtid.no##.dot-shorttext::before
+dinepenger.no##.article-body::after
+dn.no##.vrs-image-block__image-description-overlay
+fiskeribladet.no##.teaser_overlay
+information.dk##.greyed-text
+
+morgenbladet.no##.preview-overlay
+nationen.no##.article-container.locked::after
+politiken.dk##.card.stopsign__article.stopsign::before
+vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]::before
+borsen.dk##.indent-wrapper > .overlay
+dknyt.dk,kommunen.dk##.fade-out
+h-a.no##.faded-content::before
+||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
+! dagbladet.no,elbil24.no
+##.CTA-body-faded
+! digi.no, tu.no, medier24.no, porten.no
+##.faded-article-content::after
+! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
+##.paywall-gradient
+! https://www.vg.no/nyheter/i/y3Mka2/ (08/04/2020)
+vg.no##div[data-test-tag=timestamp] + div::before
+! https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
+vg.no##div[data-test-tag=timestamp] + p + div::before
+
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
@@ -1640,8 +1645,6 @@ abcnyheter.no##div[style^="bottom: 0px;"]
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
 @@.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
-@@||bondebladet.screen9.tv^$generichide
-@@||eurosport.*^$generichide
 @@||fwmrm.net/ad/$script,domain=dplay.no|dplay.dk
 @@||sixscissors.com^$third-party,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,~third-party

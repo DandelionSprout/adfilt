@@ -1,4 +1,4 @@
-! Version: 18August2020v3
+! Version: 19August2020v2
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -990,7 +990,7 @@ canariajournalen.no##.ad-separator
 canariajournalen.no##.ad-separator-top
 thainytt.no##.blog-entry > .stacks_out
 thaiguiden.no##.adsbygoogle:upward(5)
-tek.no##div:matches-css(min-height: 165px)
+tek.no#?#div:matches-css(min-height: 165px)
 teknologia.no#?#.widget_text:has(.adsbygoogle)
 opn.no###sidebar_2 #sidebarelement_2
 kondis.no##.wallpaperad
@@ -1230,46 +1230,6 @@ danishfamilysearch.dk#@#iframe[width="300"][height="250"]
 ! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
 $csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no
 
-! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
-! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
-! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
-! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
-! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
-! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
-##.Article-header-body:before
-##.paywall-fade
-##.polarisSpid.widget:before
-aftenbladet.no,fvn.no##.overlay-wrap:before
-aftenposten.no##.widget-salesposter:before
-dagogtid.no##.dot-shorttext:before
-dinepenger.no##.article-body:after
-dn.no##.vrs-image-block__image-description-overlay
-fiskeribladet.no##.teaser_overlay
-information.dk##.greyed-text
-information.dk##.paywall-box:style(margin-top: 0px !important)
-mm.dk##.fadeout
-mm.dk##.promotion:style(top: 0px !important)
-morgenbladet.no##.preview-overlay
-nationen.no##.article-container.locked:after
-politiken.dk##.card.stopsign__article.stopsign:before
-vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:before
-borsen.dk##.paywall:style(top: 0px !important)
-borsen.dk##.indent-wrapper > .overlay
-dknyt.dk,kommunen.dk##.fade-out
-h-a.no##.faded-content:before
-h-a.no##.faded-content:style(overflow: unset !important)
-||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
-! dagbladet.no,elbil24.no
-##.CTA-body-faded
-! digi.no, tu.no, medier24.no, porten.no
-##.faded-article-content:after
-! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
-##.paywall-gradient
-! https://www.vg.no/nyheter/i/y3Mka2/ (08/04/2020)
-vg.no##div[data-test-tag=timestamp] + div:before
-! https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
-vg.no##div[data-test-tag=timestamp] + p + div:before
-
 ! 🇳🇴: Anti-'CPU-massakrering'
 ! 🇮🇸: And-örgjörvislatrun
 ! 🇬🇧: Anti-'CPU slaughtering'
@@ -1400,6 +1360,11 @@ elkjop.no,elgiganten.dk###C-value:style(fill: #ed8631 !important)
 ! 🇬🇧: Fake loading screens that waste time
 nettavisen.no###topover-loader
 nettavisen.no###topover
+
+! "Generic Hide"
+@@||bondebladet.screen9.tv^$generichide
+@@||eurosport.no^$generichide
+@@||eurosport.dk^$generichide
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
 
@@ -1702,6 +1667,46 @@ trendsales.dk##.top__banner
 ||storustovu.dk^
 !+ NOT_OPTIMIZED
 ||campingnews.dk^
+! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
+! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
+! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
+! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
+! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
+! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
+##.Article-header-body:before
+##.paywall-fade
+##.polarisSpid.widget:before
+aftenbladet.no,fvn.no##.overlay-wrap:before
+aftenposten.no##.widget-salesposter:before
+dagogtid.no##.dot-shorttext:before
+dinepenger.no##.article-body:after
+dn.no##.vrs-image-block__image-description-overlay
+fiskeribladet.no##.teaser_overlay
+information.dk##.greyed-text
+information.dk##.paywall-box:style(margin-top: 0px !important)
+mm.dk##.fadeout
+mm.dk##.promotion:style(top: 0px !important)
+morgenbladet.no##.preview-overlay
+nationen.no##.article-container.locked:after
+politiken.dk##.card.stopsign__article.stopsign:before
+vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:before
+borsen.dk##.paywall:style(top: 0px !important)
+borsen.dk##.indent-wrapper > .overlay
+dknyt.dk,kommunen.dk##.fade-out
+h-a.no##.faded-content:before
+h-a.no##.faded-content:style(overflow: unset !important)
+||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
+! dagbladet.no,elbil24.no
+##.CTA-body-faded
+! digi.no, tu.no, medier24.no, porten.no
+##.faded-article-content:after
+! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
+##.paywall-gradient
+! https://www.vg.no/nyheter/i/y3Mka2/ (08/04/2020)
+vg.no##div[data-test-tag=timestamp] + div:before
+! https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
+vg.no##div[data-test-tag=timestamp] + p + div:before
+
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
@@ -1727,8 +1732,6 @@ abcnyheter.no##div[style^="bottom: 0px;"]
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
 @@.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
-@@||bondebladet.screen9.tv^$generichide
-@@||eurosport.*^$generichide
 @@||fwmrm.net/ad/$script,domain=dplay.*
 @@||sixscissors.com^$third-party,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,~third-party

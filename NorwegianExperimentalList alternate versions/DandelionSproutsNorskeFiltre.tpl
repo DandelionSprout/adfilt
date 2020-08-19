@@ -1,5 +1,5 @@
 msFilterList
-# Version: 18August2020v3-Alpha
+# Version: 19August2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -381,18 +381,6 @@ _toppbanner_
 # 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
 # Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP/for/showing me the existence of this particular CSP command.
 # Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS/as/your/main/solution/for these kinds of HTTPS upgrades.
-# 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
-# Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
-# 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
-# Tak til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/af/disse/regler.
-# 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
-# Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
--d dagligvarehandelen.no veil.png
-# dagbladet.no,elbil24.no
-# digi.no, tu.no, medier24.no, porten.no
-# https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
-# https://www.vg.no/nyheter/i/y3Mka2//(08/04/2020)
-# https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
 # 🇳🇴: Anti-'CPU-massakrering'
 # 🇮🇸: And-örgjörvislatrun
 # 🇬🇧: Anti-'CPU slaughtering'
@@ -435,6 +423,10 @@ _toppbanner_
 # 🇳🇴: Falske innlastinger som sløser bort tid
 # 🇩🇰: Falske indlastinger, der søler bort tid
 # 🇬🇧: Fake loading screens that waste time
+# "Generic Hide"
++d bondebladet.screen9.tv
++d eurosport.no
++d eurosport.dk
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
 # 🇳🇴: Hurtigfikser for Internet Explorer 11
 # 🇮🇸: Skyndilausn fyrir Internet Explorer 11
@@ -684,6 +676,18 @@ _toppbanner_
 -d brigitteheilmann.dk
 -d storustovu.dk
 -d campingnews.dk
+# 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
+# Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
+# 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
+# Tak til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/af/disse/regler.
+# 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
+# Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
+-d dagligvarehandelen.no veil.png
+# dagbladet.no,elbil24.no
+# digi.no, tu.no, medier24.no, porten.no
+# https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
+# https://www.vg.no/nyheter/i/y3Mka2//(08/04/2020)
+# https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
@@ -692,8 +696,6 @@ _toppbanner_
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js
-+d bondebladet.screen9.tv
-+d eurosport.*
 +d sixscissors.com
 +d bildeler.name
 +d reservedele.name

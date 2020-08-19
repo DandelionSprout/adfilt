@@ -495,6 +495,66 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(1\)", 
+           r"\1#?#\2\3*:-abp-has(> \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(2\)", 
+           r"\1#?#\2\3*:-abp-has(> * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(3\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(4\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * >  * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(5\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(6\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(7\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(8\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(9\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(10\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
            r"\1#?#*:-abp-has(> \2)", 
            line
@@ -617,6 +677,24 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"^bt\.dk##\.article-container > \.row > \.sidebar$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r":before", 
+           r"::before", 
+           line
+        )
+
+        line = re.sub(
+           r":after", 
+           r"::after", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])frame(,|$)", 
+           r"\1subdocument\2", 
            line
         )
 
@@ -1527,7 +1605,7 @@ import re
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app']
+    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app', ':not(:-abp-']
 
 OUTPUT = 'xyzzyxeyeo.txt'
 OUTPUT_ABP = 'NordicFiltersABP-Inclusion.txt'
@@ -1835,6 +1913,66 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(1\)", 
+           r"\1#?#\2\3*:-abp-has(> \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(2\)", 
+           r"\1#?#\2\3*:-abp-has(> * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(3\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(4\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * >  * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(5\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(6\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(7\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(8\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(9\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(10\)", 
+           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > * > * > * > \4)", 
+           line
+        )
+
+        line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
            r"\1#?#*:-abp-has(> \2)", 
            line
@@ -1986,6 +2124,30 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^bt\.dk##\.article-container > \.row > \.sidebar$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r":before", 
+           r"::before", 
+           line
+        )
+
+        line = re.sub(
+           r":after", 
+           r"::after", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])frame(,|$)", 
+           r"\1subdocument\2", 
+           line
+        )
+
+        line = re.sub(
+           r"^ekstrabladet\.dk##a\[href\^=\"https://click-dk\.plista\.com/csc\?\"\]$", 
            r"", 
            line
         )
