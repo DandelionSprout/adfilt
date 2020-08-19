@@ -1,4 +1,4 @@
-# Norsk
+# 🇳🇴 Norsk
 
 Senest oppdatert den: 19. august 2020
 
@@ -26,7 +26,21 @@ Seinast oppdatert den: 19. august 2020
 
 Du kan sjølvsagt også kontakte meg på bokmål, dansk, svensk, eller engelsk. Det er sjølvklart ikkje påkravd å bruke nynorsk, tross alt. 🙂 <br>
 
-# English
+# 🇩🇰 Dansk
+
+Sidst opdateret den: 19. august 2020
+
+• [Listen(e)s hjemmeside på kodelagringswebstedet GitHub](https://github.com/DandelionSprout/adfilt) <br>
+• [Licensen til mine lister. Den er specielt udformet for at kunne inkludere indhold fra andres filterlister](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md), mens den forsøger at være så lidt stødende for listenes vedligeholdere som muligt. <br>
+• [Donationsmetoder](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
+• Listernes kombinerede systemer for [sagsindmelding](https://github.com/DandelionSprout/adfilt/issues) og [kodeanmodninger](https://github.com/DandelionSprout/adfilt/pulls). (Kræver en GitHub-konto). <br>
+• [Andre lister, jeg har lavet](https://filterlists.com/) (Gå til "Maintainers" og vælg «Imre Kristoffer Eilertsen»), for mange forskellige formål og værktøjer. <br>
+• [Oversættelsesprojekt for en lille håndfuld af mine lister](https://crwd.in/dandelion-sprout-nordic-filter), herunder denne side. <br>
+• [Sikkerhedskopi af mine lister på GitLab](https://gitlab.com/DandelionSprout/adfilt) 🙂 <br>
+
+Du kan selvfølgelig også kontakte mig på norsk, nynorsk, svensk eller engelsk. Det er så klart ikke påkrævet at bruge dansk, trods alt.
+
+# 🇬🇧 English
 
 Last updated: 19th of August 2020
 
