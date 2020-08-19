@@ -26,7 +26,7 @@ Du kan sjølvsagt også kontakte meg på bokmål, dansk, svensk, eller engelsk. 
 
 Last updated: 19th of August 2020
 
-• [The lists' homepage on the code storage site GitHub](https://github.com/DandelionSprout/adfilt) <br>
+• [The list(s)' homepage on the code storage site GitHub](https://github.com/DandelionSprout/adfilt) <br>
 • [The licence for my lists](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). It is specifically crafted to be able to include content from others' filterlists, while trying to be as unoffensive to the list maintainers as possible.<br>
 • [Donation methods](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • The lists' combined systems for [issue tracking](https://github.com/DandelionSprout/adfilt/issues) and [pull requests](https://github.com/DandelionSprout/adfilt/pulls) (Translations for non-geeks: Situation reports and code addition suggestions). <br>
