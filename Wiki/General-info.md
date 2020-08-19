@@ -29,7 +29,7 @@ Last updated: 19th of August 2020
 • [The list(s)' homepage on the code storage site GitHub](https://github.com/DandelionSprout/adfilt) <br>
 • [The licence for my lists](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). It is specifically crafted to be able to include content from others' filterlists, while trying to be as unoffensive to the list maintainers as possible.<br>
 • [Donation methods](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
-• The lists' combined systems for [issue tracking](https://github.com/DandelionSprout/adfilt/issues) and [pull requests](https://github.com/DandelionSprout/adfilt/pulls) (Translations for non-geeks: Situation reports and code addition suggestions). <br>
+• The lists' combined systems for [issue tracking](https://github.com/DandelionSprout/adfilt/issues) and [pull requests](https://github.com/DandelionSprout/adfilt/pulls) (Translations for non-geeks: Situation reports and code addition suggestions. Requires a GitHub account). <br>
 • [Other lists that I've made](https://filterlists.com/) (Go to "Maintainers" and pick "Imre Kristoffer Eilertsen), for numerous different purposes and tools. <br><br>
 
 You can of course also contact me in Norwegian, Nynorsk, Danish, or Swedish. It's not mandatory to use English, after all. :^) <br>
