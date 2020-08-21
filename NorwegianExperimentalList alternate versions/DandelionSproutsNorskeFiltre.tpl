@@ -1,5 +1,5 @@
 msFilterList
-# Version: 20August2020v1-Alpha
+# Version: 21August2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -362,6 +362,8 @@ _toppbanner_
 # ——— Caused by «Fanboy's Annoyances List» ———
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
+# ——— Caused by «Thai Adblock List   Thai Ads Filter» with AdGuard ———
+# https://github.com/AdguardTeam/AdguardFilters/issues/62012
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 +d _prebid_
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
