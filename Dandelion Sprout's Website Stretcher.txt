@@ -1,5 +1,5 @@
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! Version: 17August2020v1-Beta
+! Version: 21August2020v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -118,7 +118,6 @@ mewe.com##.profile-posts-routable_feed:style(flex-basis: 100% !important)
 ! ——————————————————————————————————————
 
 ! Category: Pixiv
-! Important note: Due to the exceedingly high difficulty in fixing their constantly-changing search result page structures, a fix for the 17th of August site changes is on-hold while hoping for https://github.com/uBlockOrigin/uBlock-issues/issues/1211 to be accepted.
 
 ! Bookmarks
 pixiv.net##div:style(max-width: none !important)
@@ -126,13 +125,7 @@ pixiv.net##figcaption > div > div:style(width: 90% !important)
 pixiv.net##header > div:style(width: 80vw !important)
 pixiv.net##header > div li:style(margin-right: 35px !important)
 pixiv.net##.layout-column-2:style(width:85vw !important;float:right)
-pixiv.net##.layout-a:style(width:98vw !important;)
-
-! Search pages
-pixiv.net##.layout-body:style(width:98vw !important)
-pixiv.net###wrapper:style(margin-left: 2px !important; margin-right: 2px !important; width: 98vw !important)
-pixiv.net###js-react-search-mid > div:style(margin-left: 0 !important; margin-right: 0 !important)
-pixiv.net##._premium-lead-popular-d-body:style(max-width: 100vw !important)
+pixiv.net##.layout-a:style(width:98vw !important)
 
 ! Search pages (November 2019 redesign)
 pixiv.net##section > div > ul:style(grid-template-columns: repeat(auto-fill, 175px) !important)
@@ -141,10 +134,12 @@ pixiv.net###root > div > div > div:only-child:style(width: 98vw !important; padd
 pixiv.net##div[class*=" sc-"]:style(margin: 10px !important; padding: 4px !important)
 pixiv.net###root > div > div > div:last-child > div:only-child:style(width: 99vw !important; padding: 0 !important)
 pixiv.net###root > div > div > div > div > div > div > ul:style(padding-left: 8px !important)
+pixiv.net##div[class^=sc-]:nth-of-type(4):last-of-type > div[class^=sc-]:only-of-type:style(width: unset !important; padding: 0 3px !important)
 
 ! Front page (May 2020 redesign)
 pixiv.net###root > div > div > div > div > div > ul:style(padding-left: 8px !important)
 pixiv.net##section > div:last-of-type > div:only-of-type > ul:style(width: 98vw !important)
+pixiv.net##div:not([class]) > div[class^=sc-] > div:not([class^=sc-]) > div[class^=sc-]:only-of-type:style(width: unset !important; padding: 0 3px !important)
 
 ! Image collage on image pages
 pixiv.net##div[style^="position: relative;"]:style(width: unset !important)
@@ -169,6 +164,7 @@ pixiv.net##header form:style(margin-left: -120px !important)
 
 ! Artist pages' art logs
 pixiv.net##div[role=presentation] > div > form:style(min-width: 600px !important)
+pixiv.net##div:not([class]) + div:not([class=" "]) > div > section:style(max-width: none !important)
 ! https://www.pixiv.net/en/users/2284714/artworks
 pixiv.net##nav + div > section:style(max-width: 97vw !important)
 pixiv.net##nav + div > section > ul > li:style(margin-right: 0 !important)
