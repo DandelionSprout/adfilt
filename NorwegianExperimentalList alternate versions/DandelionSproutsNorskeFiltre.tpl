@@ -1,5 +1,5 @@
 msFilterList
-# Version: 21August2020v2-Alpha
+# Version: 22August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -369,8 +369,8 @@ _toppbanner_
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 # Forum feeds in the upper right of articles
 # https://oppdrettstorget.no/utstyr/brukt
+# https://www.in.fo/itrottur/sport-detail/news/alex-hevdi-ur-at-gera-i-san-marino/
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
-# https://www.danishfamilysearch.dk/
 # ——— Unknown cause ———
 # https://github.com/DandelionSprout/adfilt/issues/67
 # https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
