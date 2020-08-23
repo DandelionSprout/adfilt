@@ -44,6 +44,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • To correctly sort IP addresses (which Sublime Text cannot do): [Browserling IP Sort](https://www.browserling.com/tools/ip-sort)<br>
 • To correctly sort IP addresses, and also compress them into CIDRs: [Tehnoblog IP Address Aggregator](https://tehnoblog.org/ip-tools/ip-address-aggregator/)<br>
 • To find lists of the biggest newssites of most countries: [DomainTyper](https://domaintyper.com/top-websites/most-popular-websites-with-no-domain)
+• To search with wildcards for domains, e.g. `ads.*.no`: [SecurityTrails API Free](https://docs.securitytrails.com/reference#domain-search)
 
 ### Ways one can use [Sublime Text](https://www.sublimetext.com/) (made by Jon Skinner and Will Bond) to improve his/her filter lists:
 
