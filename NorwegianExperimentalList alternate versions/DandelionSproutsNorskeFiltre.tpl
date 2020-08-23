@@ -1,5 +1,5 @@
 msFilterList
-# Version: 22August2020v3-Alpha
+# Version: 23August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -57,7 +57,6 @@ msFilterList
 -d adext.inkclub.com
 -d adnordics.com
 -d adr.kulingen.no
--d ads.no
 -d adserver.xh.no
 -d adservice.com
 -d adservicemedia.dk
