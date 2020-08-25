@@ -2563,6 +2563,12 @@ def prepare_pihole(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\*\.(.*)\.(.*)$", 
+           r".*\\.\1\\.\2$", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -2682,6 +2688,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^.", 
+           r"||", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -2780,6 +2792,18 @@ def prepare_shadowsocks(lines) -> str:
         line = re.sub(
            r"^([0-9a-f:]{6,71})$", 
            r"IP-CIDR6,\1/64,REJECT,no-resolve", 
+           line
+        )
+
+        line = re.sub(
+           r"^DOMAIN-SUFFIX,\*\.", 
+           r"DOMAIN-SUFFIX,", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z]{10,25})\*\.([a-z]{2,17})$", 
+           r"URL-REGEX,^https?:\\/\\/\1\\*\\.\2", 
            line
         )
 
@@ -2921,6 +2945,12 @@ def prepare_minerblock(lines) -> str:
         line = re.sub(
            r"(.*For more information and .*)", 
            r"\1\n# PSA: I am currently considering adding entries for filepaths from the uBO version, in addition to the existing entries taken from the raw-domains version. However, to do so, it'd take me an hour of heavy work to modify the conversion script, so first I'd want to know if anyone are actually using this list version in their daily lives, to help motivate me to do this. If you do use it actively, go to https://github.com/DandelionSprout/adfilt/issues/new/choose, choose whatever option, and explain to me that you're using the minerBlock list version and how.", 
+           line
+        )
+
+        line = re.sub(
+           r"^\*://\*\.\*\.", 
+           r"*://*.", 
            line
         )
 

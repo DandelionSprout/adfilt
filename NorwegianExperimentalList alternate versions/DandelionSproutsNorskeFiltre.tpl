@@ -1,5 +1,5 @@
 msFilterList
-# Version: 25August2020v3-Alpha
+# Version: 25August2020v4-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
