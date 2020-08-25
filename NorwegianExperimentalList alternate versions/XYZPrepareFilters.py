@@ -2689,7 +2689,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^.", 
+           r"^\.", 
            r"||", 
            line
         )
