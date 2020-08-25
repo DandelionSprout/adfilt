@@ -1,5 +1,5 @@
 msFilterList
-# Version: 25August2020v1-Alpha
+# Version: 25August2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -574,6 +574,30 @@ _toppbanner_
 -d wealthnews*.xyz
 # https://sol.no/nyheter/pass-deg-for-solbrillesvindlere/72639445
 -d rbono.net
+# https://www.tv2.no/underholdning/11604989/
+-d roopede.com
+# https://www.datahjelperne.no/dnb-sms-svindel/
+-d no-personal.com
+# https://www.datahjelperne.no/helse-norge-mail-svindel/
+-d transitsuburban.com
+# https://www.datahjelperne.no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
+-d newzeninfotech.com
+# https://www.datahjelperne.no/viasat-mail-svindel/
+-d viapslayno.com
+# https://www.datahjelperne.no/skatteberegning-mail-svindel/
+-d probenefit.net
+-d ssbeveragedistribution.com
+# https://www.datahjelperne.no/olav-thon-facebook-svindel/
+-d fbsecret.icu
+-d euronews*.buzz
+-d softwaredaily*.monster
+-d stalknews*.buzz
+-d goldupdates*.xyz
+# https://www.datahjelperne.no/vipps-sms-svindel/
+# https://www.datahjelperne.no/hvit-bjorn-river-kvinne-i-stykker-facebook-spam-oppdatert/
+-d vidcopa.me
+# https://www.datahjelperne.no/netflix-korona-svindel/
+-d luxshifting.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 82.118.242.69
 -d 136.243.73.30
