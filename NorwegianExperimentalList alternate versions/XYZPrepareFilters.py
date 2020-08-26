@@ -2386,6 +2386,18 @@ def prepare_ls(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"remote-domains(\": \"[0-9.]{7,15}\")", 
+           r"remote-addresses\1", 
+           line
+        )
+
+        line = re.sub(
+           r"remote-domains(\": \"[0-9a-f:]{4,39}\")", 
+           r"remote-addresses\1", 
+           line
+        )
+
         if is_supported_ls(line):
             text += line + '\r\n'
 
