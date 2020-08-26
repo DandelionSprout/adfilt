@@ -2334,12 +2334,12 @@ def prepare_ls(lines) -> str:
 
         line = re.sub(
            r"^(?!#)", 
-           "{ \"action\": \"deny\", \"process\": \"any\", \"remote-hosts\": \"", 
+           "{ \"action\": \"deny\", \"process\": \"any\", \"remote-domains\": \"", 
            line
         )
 
         line = re.sub(
-           r"{ \"action\": \"deny\", \"process\": \"any\", \"remote-hosts\": \"$", 
+           r"{ \"action\": \"deny\", \"process\": \"any\", \"remote-domains\": \"$", 
            "", 
            line
         )
@@ -2352,7 +2352,7 @@ def prepare_ls(lines) -> str:
 
         line = re.sub(
            r"^# Description:.*", 
-           "\"description\": \"This list aims to block Norwegian and Danish scam sellers, ad servers, and a small handful of tracking servers.\",\n\"rules\": [", 
+           "\"description\": \"This list aims to block Norwegian, Danish, Icelandic and Faroese scam sellers, ad servers, and a small handful of tracking servers.\",\n\"rules\": [", 
            line
         )
 
