@@ -1,4 +1,4 @@
-! Version: 25August2020v4
+! Version: 26August2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -670,6 +670,7 @@ finn.no#?#.ad-stream__unit:has(div[id*=google-ad])
 finn.no#?#div[class^=ads__unit]:has(> div[id^=ad-stream__google])
 finna.is##.augl
 fiskeribladet.no##div[id^=banner_billboard1_]
+fiskeribladet.no##div[id^=banner_billboard1_] + .hide_on_print
 fl-arena.de##.content_right_medium_rect_ad_box
 fl-arena.de##.do_not_print.article_teaser_no_border
 fla.de##.adsenseblock
@@ -1162,6 +1163,8 @@ vafo.dk##.adform-flexblock
 ##.am-page-ad
 ! advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668 (16/08/2020)
 ##.adnuntius-ad
+! folkebladet.no (26/08/2020)
+###viewport > #outer
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -1199,6 +1202,8 @@ oyggjatidindi.com##.bottom_space
 ! 🇬🇧: ——— Unbreakage ———
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
 @@||seher.no/reise$generichide
+! folkebladet.no; Makes job position lists show up correctly
+@@||stillingledig.*.no^
 ! ——— Caused by «EasyPrivacy» ———
 ! Attempting to fix a problem with voting online on Idol Norway
 @@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party

@@ -1,5 +1,5 @@
 msFilterList
-# Version: 25August2020v4-Alpha
+# Version: 26August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -332,6 +332,7 @@ _toppbanner_
 # https://www.dagsavisen.no/nyheter/verden/1.1731911/(18/06/2020)
 # https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
 # advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668/(16/08/2020)
+# folkebladet.no (26 08 2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -350,6 +351,8 @@ _toppbanner_
 # 🇮🇸: ——— Óbrot ———
 # 🇬🇧: ——— Unbreakage ———
 # Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
+# folkebladet.no; Makes job position lists show up correctly
++d stillingledig.*.no
 # ——— Caused by «EasyPrivacy» ———
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
