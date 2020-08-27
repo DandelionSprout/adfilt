@@ -2407,8 +2407,8 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"(\"annonser\.gess\.no$)", 
-           r'\1" }\n]}', 
+           r"(\"annonser\.gess\.no\") },", 
+           r'\1 }\n]}', 
            line
         )
 
