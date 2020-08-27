@@ -2221,6 +2221,7 @@ SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Norw
 UNSUPPORTED_HOSTS = ['*', '# ———']
 UNSUPPORTED_LS = ['*', '# ———', '# Translated title', '# Version', 'Don\'t be worried', 'General-info', '# Platform notes:']
 UNSUPPORTED_DNSMASQ = ['*', '# ']
+UNSUPPORTED_DOMAINSALLOWLIST = ['randomplaceholdertext']
 
 OUTPUT = 'xyzzyxdomains.txt'
 OUTPUT_HOSTS = 'AdawayHosts'
@@ -2234,6 +2235,7 @@ OUTPUT_RPZ = 'NordicFiltersRPZ.txt'
 OUTPUT_UNBOUND = 'NordicFiltersUnbound.conf'
 OUTPUT_MINERBLOCK = 'NordicFiltersForMinerBlock.txt'
 OUTPUT_HOSTSIPV6 = 'NordicFiltersHostsIPv6.txt'
+OUTPUT_DOMAINSALLOWLIST = 'NordicFiltersDomainsAllowlist.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -2308,6 +2310,12 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r" www\.[0-9a-f:]{6,71}$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"127\.0\.0\.1 !.*", 
            r"", 
            line
         )
@@ -2398,6 +2406,12 @@ def prepare_ls(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"{ \"action\": \"deny\", \"process\": \"any\", \"remote-domains\": \"!", 
+           r"{ \"action\": \"allow\", \"process\": \"any\", \"remote-domains\": \"", 
+           line
+        )
+
         if is_supported_ls(line):
             text += line + '\r\n'
 
@@ -2448,7 +2462,13 @@ def prepare_dnsmasq(lines) -> str:
            line
         )
 
-        if is_supported_dnsmasq(line):
+        line = re.sub(
+           r"server=/!(.*)/127\.0\.0\.1$", 
+           r"server=/\1/89.233.43.71", 
+           line
+        )
+
+        if is_supported_dnsmasq(line) and not line == '':
             text += line + '\r\n'
 
     return text
@@ -2494,6 +2514,12 @@ def prepare_hostsdeny(lines) -> str:
         line = re.sub(
            r"(# Version: .*)", 
            r"\1-Beta", 
+           line
+        )
+
+        line = re.sub(
+           r"ALL: !.*", 
+           r"", 
            line
         )
 
@@ -2653,56 +2679,20 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\|\|elkjop\.no\.)$", 
-           r"\1\n@@||elkjop.no.edgekey.net^", 
-           line
-        )
-
-        line = re.sub(
-           r"^(\|\|dnb\.no\.)$", 
-           r"\1\n@@||dnb.no.edgekey.net^", 
-           line
-        )
-
-        line = re.sub(
-           r"^(\|\|skatteetaten\.no\.)$", 
-           r"\1\n@@||skatteetaten.no.cdn.cloudflare.net^", 
-           line
-        )
-
-        line = re.sub(
-           r"^(\|\|norwegian\.com\.)$", 
-           r"\1\n@@||norwegian.com.cdn.cloudflare.net^", 
-           line
-        )
-
-        line = re.sub(
-           r"(.*ad\.\*\.no.*)", 
-           r"\1\n@@||ad.dep.no^\n@@||ad.hem.no^", 
-           line
-        )
-
-        line = re.sub(
-           r"(.*annonser\.\*\.no.*)", 
-           r"\1\n@@||annonser.gess.no^", 
-           line
-        )
-
-        line = re.sub(
-           r"(.*ads\.\*\.dk.*)", 
-           r"\1\n@@||ads.mst.dk^", 
-           line
-        )
-
-        line = re.sub(
-           r"(.*ssl-mtgstream\.tns-cs\.net.*)", 
-           r"\1\n@@5d404.v.fwmrm.net", 
+           r"^!([a-z0-9])", 
+           r"@@||\1^", 
            line
         )
 
         line = re.sub(
            r"^\.", 
            r"||", 
+           line
+        )
+
+        line = re.sub(
+           r".*without modification .*", 
+           r"", 
            line
         )
 
@@ -2819,6 +2809,24 @@ def prepare_shadowsocks(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"DOMAIN-SUFFIX,!(.*)", 
+           r"DOMAIN-SUFFIX,\1,resolve", 
+           line
+        )
+
+        line = re.sub(
+           r"URL-REGEX,(\^https\?:\\/\\/)!(.*)", 
+           r"URL-REGEX,\1\2,resolve", 
+           line
+        )
+
+        line = re.sub(
+           r".*without modification .*", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -2866,6 +2874,18 @@ def prepare_rpz(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^!([a-z0-9].*)", 
+           r"\1 CNAME rpz-passthru.", 
+           line
+        )
+
+        line = re.sub(
+           r".*without modification .*", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -2910,6 +2930,18 @@ def prepare_unbound(lines) -> str:
         line = re.sub(
            r" Dandelion Sprout's Nordic Filters.*", 
            " Dandelion Sprout's Nordic Filters (for Unbound)", 
+           line
+        )
+
+        line = re.sub(
+           r"^!([a-z0-9].*)", 
+           r'local-zone: "\1" transparent', 
+           line
+        )
+
+        line = re.sub(
+           r".*without modification .*", 
+           r"", 
            line
         )
 
@@ -3032,9 +3064,74 @@ def prepare_hostsipv6(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^:: !", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
             text += line + '\r\n'
 
+    return text
+
+# ————— Domains whitelist version —————
+
+def is_supported_domainsallowlist(line) -> bool:
+    for token in UNSUPPORTED_DOMAINSALLOWLIST:
+        if token in line:
+            return False
+
+def prepare_domainsallowlist(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"(# Version: .*)", 
+           r"\1-Beta", 
+           line
+        )
+
+        line = re.sub(
+           r"# Platform notes:.*", 
+           "# Platform notes: This list version is intended for users of Pi-hole, Blokada and DNS66, as a recommended supplement to their regular list versions. For AdGuard Home, the allowlistings are already incorporated in its regular list version.", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprouts nordiske filtre.*", 
+           " Dandelion Sprouts nordiske filtre (Domenehviteliste)", 
+           line
+        )
+
+        line = re.sub(
+           r" Dandelion Sprout's Nordic Filters.*", 
+           " Dandelion Sprout's Nordic Filters (Domains allowlist)", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-z0-9*].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# ——— .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!([a-z0-9*])", 
+           r"\1", 
+           line
+        )
+
+        if not line == '':    
+            text += line + '\r\n'
+        
     return text
 
 
@@ -3055,6 +3152,7 @@ if __name__ == "__main__":
     unbound_filter = prepare_unbound(lines)
     minerblock_filter = prepare_minerblock(lines)
     hostsipv6_filter = prepare_hostsipv6(lines)
+    domainsallowlist_filter = prepare_domainsallowlist(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -3091,6 +3189,9 @@ if __name__ == "__main__":
 
     with open(OUTPUT_HOSTSIPV6, "w") as text_file:
         text_file.write(hostsipv6_filter)
+
+    with open(OUTPUT_DOMAINSALLOWLIST, "w") as text_file:
+        text_file.write(domainsallowlist_filter)
 
     print('The domains-based list versions have been generated.')
 

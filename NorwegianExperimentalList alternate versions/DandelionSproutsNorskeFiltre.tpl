@@ -1,5 +1,5 @@
 msFilterList
-# Version: 26August2020v1-Alpha
+# Version: 27August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -601,7 +601,11 @@ _toppbanner_
 -d vidcopa.me
 # https://www.datahjelperne.no/netflix-korona-svindel/
 -d luxshifting.com
+# https://www.adressa.no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
+-d smallrise.com
 # IP addresses of servers notorious for hosting many of the sites above
+-d 51.195.133.131
+-d 66.206.3.34
 -d 82.118.242.69
 -d 136.243.73.30
 -d 138.201.126.227
