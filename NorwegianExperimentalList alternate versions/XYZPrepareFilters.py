@@ -2389,12 +2389,6 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"(\"2001:67c:21e0::ad$)", 
-           r'\1" }\n]}', 
-           line
-        )
-
-        line = re.sub(
            r"remote-domains(\": \"[0-9.]{7,15}\")", 
            r"remote-addresses\1", 
            line
@@ -2409,6 +2403,12 @@ def prepare_ls(lines) -> str:
         line = re.sub(
            r"{ \"action\": \"deny\", \"process\": \"any\", \"remote-domains\": \"!", 
            r"{ \"action\": \"allow\", \"process\": \"any\", \"remote-domains\": \"", 
+           line
+        )
+
+        line = re.sub(
+           r"(\"2001:67c:21e0::ad$)", 
+           r'\1" }\n]}', 
            line
         )
 
@@ -2679,7 +2679,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^!([a-z0-9])", 
+           r"^!([a-z0-9].*)", 
            r"@@||\1^", 
            line
         )
@@ -3065,7 +3065,7 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r"^:: !", 
+           r"^:: !.*", 
            r"", 
            line
         )
