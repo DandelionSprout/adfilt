@@ -2395,19 +2395,19 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"remote-domains(\": \"[0-9a-f:]{4,39}\")", 
-           r"remote-addresses\1", 
+           r"remote-domains(\": \"[0-9a-f:]{4,39})$", 
+           r'remote-addresses\1" },', 
            line
         )
 
         line = re.sub(
            r"{ \"action\": \"deny\", \"process\": \"any\", \"remote-domains\": \"!", 
-           r"{ \"action\": \"allow\", \"process\": \"any\", \"remote-domains\": \"", 
+           r'{ "action": "allow", "process": "any", "remote-domains": "', 
            line
         )
 
         line = re.sub(
-           r"(\"2001:67c:21e0::ad$)", 
+           r"(\"annonser\.gess\.no$)", 
            r'\1" }\n]}', 
            line
         )
