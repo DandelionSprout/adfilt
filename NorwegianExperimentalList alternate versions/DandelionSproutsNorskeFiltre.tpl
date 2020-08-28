@@ -1,5 +1,5 @@
 msFilterList
-# Version: 27August2020v1-Alpha
+# Version: 28August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -99,6 +99,9 @@ _toppbanner_
 - _annonser
 # https://malviknytt.no/2020/07/31/skyting-pa-hjemmebande/ (16 08 2020)
 - Nettbanner-
+# http://www.sexpiger.dk/
+-d lh3.googleusercontent.com *=w468-h60-
+-d lh3.googleusercontent.com *=w970-h250-
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -227,6 +230,7 @@ _toppbanner_
 -d malviknytt.no *-998x1024.jpeg
 -d malviknytt.no *-firkant-*e1*.
 -d reiseliv.no *-Annons%C3%B8rinnhold-*-Aksjer-*.
+-d escort46.dk bg_images
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
