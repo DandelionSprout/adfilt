@@ -1,12 +1,29 @@
 [Adblock Plus 3.4]
 ! Title: 😌 Anti-'Newsstories about celebs giving birth' List
-! Version: 27August2020v1-Beta
+! Version: 28August2020v1-Beta
 ! Expires: 3 days
 ! Description: We hear so much talk about "fake news" nowadays, but we never hear any talk about non-news, such as C-tier celebrities either expecting offspring or giving birth to such. This list will aid in removing such kinds of non-news.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
-! Multiple sites
-theguardian.com,dw.com##a[href*=birth-of-baby]
+! Multiple sites (English-language)
+theguardian.com,dw.com,theindependent.co.uk##a[href*=birth-of-baby]
+theguardian.com,theindependent.co.uk##a[href*=baby-news]
+
+! Multiple sites (Norwegian + Danish)
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*="babylykke" i]
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*="venter-tvilling" i]
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*=-far-for-foerste]
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*=foedt-datter]
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*=deler-stor-nyhe]
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*=fantastisk-nyhe]
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*=uventet-nyhe]
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href$=-er-gravid]
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*=nyfoedt-]
+
+! Multiple sites (Norwegian)
+nrk.no,vg.no,dagbladet.no,adressa.no##a[href*=-venter-barn]
+nrk.no,vg.no,dagbladet.no,adressa.no##a[href*=foerste-barn]
+nrk.no,vg.no,dagbladet.no,adressa.no##a[href*=stjerna-mister-hele-sesongen]
 
 ! TV2 Norway
 tv2.no#?#.article,.lp-a,.col-sm-12:-abp-contains(/bl[ie][tr]?[t]? [pm]a[pm][pm]a/i):not(:-abp-contains(/ mappa/i))
@@ -65,30 +82,19 @@ ekstrabladet.dk##a[href*=om-gravid]
 ekstrabladet.dk##a[href*=faaet-tvillinger]
 ekstrabladet.dk##a[href*="blevet-far/"]
 ekstrabladet.dk##a[href*=-gravid-]
-ekstrabladet.dk##a[href*=deler-stor-nyhed]
-ekstrabladet.dk##a[href*=fantastisk-nyhed]
-ekstrabladet.dk##a[href*=uventet-nyhed]
-ekstrabladet.dk##a[href*=nyfoedt]
-ekstrabladet.dk##a[href*=foedt-datter]
 ekstrabladet.dk##a[href*=ung-mor]
 ekstrabladet.dk##a[href*="7.-minut"]
 ekstrabladet.dk##a[href*=familieforoegelse]
 ekstrabladet.dk##a[href*="-vaere-far/"]
 ekstrabladet.dk##a[href*=vaere-foraeldre]
-ekstrabladet.dk##a[href*=-venter-barn]
-ekstrabladet.dk##a[href*=-far-for-foerste]
 
 ! Adresseavisen
-adressa.no##a[href*="venter-tvilling" i]
 adressa.no##a[href*="f%C3%A5tt-en-gutt" i]
 adressa.no##a[href*="f%C3%A5tt-barn" i]
-adressa.no##a[href*="babylykke" i]
 adressa.no##a[href*=ble-pappa]
-adressa.no##a[href*=stjerna-mister-hele-sesongen]
 
 ! The Independent
 independent.co.uk##a[href*=baby-birth]
-independent.co.uk##a[href*=baby-news]
 independent.co.uk##a[href*=baby-pregnant]
 independent.co.uk#?#.article-hero:-abp-has(a[href*=baby-birth])
 
@@ -96,7 +102,6 @@ independent.co.uk#?#.article-hero:-abp-has(a[href*=baby-birth])
 tv2.dk#?#.g-item:not(section):-abp-contains(baby på vej)
 tv2.dk#?#.g-item:not(section):-abp-contains(fået tvillinger)
 tv2.dk##a[href*=kommende-barn]
-tv2.dk##a[href$=-er-gravid]
 
 ! TVguide.dk
 tvguide.dk#?#.news-grid-item-container:-abp-has(source[srcset*=gravid])
