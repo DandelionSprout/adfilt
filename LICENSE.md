@@ -15,8 +15,6 @@
 * * **Transformative work** if more than 20% of the lines or 20% of the sentences (whichever is more) have been altered from their original borrowing,
 * * **Near-unmodified** if it is somewhere between those two categories.
 
-For the purposes of section 4, if A believes that their content use has become transformative, A can optionally add a note about it in the 4c template for as long as B does not contest the claim.
-
 * The British English version of this licence is the official version. All other translations are unofficial.
 
 * A **country** is defined as a United Nations member state, the Republic of China, the Sahrawi Arab Democratic Republic's Free Zone, Vatican State, Kosovo, or Northern Cyprus.
@@ -43,7 +41,7 @@ Redistribution and use in all forms, with or without modification, with or witho
 
 6) Transformative versions of the source code can be relicenced into any licence, but will remain subject to §2, §3 and §5.
 
-* * 6a) If the relicenced source code was previously added to the source code from B, then §4 applies to such content as well.
+* * 6a) For those parts of the relicenced source code that were previously added to the source code from B, §4. applies to such content as well.
 
 7) Any (near-)unmodified redistributions of the source code, shall be accessible in some way in ≥100 countries worldwide⁽³⁾. VPN access does not count. If the work is not available in enough countries, any living person can request that A's maintainer must make it available in 10 more countries within 14 days. Once a 14-day period has finished, a new request can be placed, until 100 countries have been reached.
 
