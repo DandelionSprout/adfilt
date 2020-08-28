@@ -125,7 +125,6 @@
 * `#%#//scriptlet`: Similar to, but only partially compatible with, `##+js` and ABP's `#$#`. Possible options are listed in [this file](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/scriptlets.js) (text-search ".names").
 * `#%#AG_`: A few extra scriptlets for whom documentation appears to be non-existent.
 * `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file. Requires heavy privileges.
-* `:properties`: Claims to be similar to `:-abp-properties`, but is incompatible with it.
 * `!+ PLATFORM`: Similar to `!#if`, but is only used during the AdGuard team's compiling of included lists. It has no effect on custom lists.
 #### Blocking
 * `$match-case`: Makes the criteria case-sensitive.
