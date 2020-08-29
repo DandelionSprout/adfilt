@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🕳 Empty Padding Remover
-! Version: 11July2020v1-Alpha
+! Version: 29August2020v1-Alpha
 ! Expires: 4 days
 ! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? If so, this list will help you a little extra bit with that.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -52,6 +52,9 @@ dyrevennene.no##.td-footer-wrapper
 replacementdocs.com#?#.forumheader3:not(:-abp-has(img)):not(:-abp-contains(/\S/)):not(:-abp-has(input))
 transfermarkt.com##.clearer
 sat24.com###headermenu
+!#if !env_mobile
+pixiv.net#?#div[class*=" "]:not(:-abp-has(*)):-abp-has(+ aside + aside)
+!#endif
 
 ! Disqualified entries due to breakage of regular content (Example given)
 !!! *##p:has(br):not(:has-text(/\S/)):not(:has(span)):not(:has(img)) (Caused newlines to fail to work in Slack and MeWe)
