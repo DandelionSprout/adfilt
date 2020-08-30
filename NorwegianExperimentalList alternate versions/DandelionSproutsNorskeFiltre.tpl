@@ -1,5 +1,5 @@
 msFilterList
-# Version: 28August2020v1-Alpha
+# Version: 30August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -357,6 +357,8 @@ _toppbanner_
 # Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
 # folkebladet.no; Makes job position lists show up correctly
 +d stillingledig.*.no
+# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
+@@.isdownorblocked.com
 # ——— Caused by «EasyPrivacy» ———
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
