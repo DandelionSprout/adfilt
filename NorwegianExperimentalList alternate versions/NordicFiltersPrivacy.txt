@@ -1,4 +1,4 @@
-! Version: 30August2020v1
+! Version: 31August2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 12 hours
@@ -130,6 +130,7 @@ side2.no##[href*="clk.tradedoubler.com/click"]
 side2.no##[href*="track.adtraction.com/t/t"]
 side2.no#?#.channel-item:-abp-has(.content > [href*="/annonsebilag/"])
 side2.no#?#a:not([href*="side2.no"]):not([href*=".blogg.no"]):-abp-has(figure[class*=img-container])
+ekstrabladet.dk###front-ekstrabladet-dk-native-1
 skessuhorn.is##.kostad-efni
 skivefolkeblad.dk##.view-cf-skf-avisannoncer
 smis.no#?#.widget:-abp-contains(Annonse)
@@ -1403,6 +1404,10 @@ nettavisen.no###topover
 @@||bondebladet.screen9.tv^$generichide
 @@||eurosport.no^$generichide
 @@||eurosport.dk^$generichide
+!#if !ext_ublock
+@@||bildeler.name^$generichide
+@@||reservedele.name^$generichide
+!#endif
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
 
@@ -1777,14 +1782,11 @@ vg.no##div[data-test-tag=timestamp] + p + div:before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 24August2020v1-Extension
+! Last updated: 31August2020v2-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 csp.screen9.com#@#.adsbox
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
-godt.no##.adblock-info-box
-gratisspil.dk##+js(aopw, AdBlockerInfo)
-minmote.no,godt.no##.adblock-info
 techstart.dk##+js(set, adblock, false)
 tv2.no##+js(acis, adblockDetector)
 vg.no##+js(aeld, load, concat)
@@ -1805,8 +1807,6 @@ gamereactor.*##+js(set, trackAdblock, noopFunc)
 gamereactor.*##+js(acis, AdsReloadConfig)
 aftenposten.no,abcnyheter.no,recordere.dk##div[style^="bottom: 0px;"][style*="width: 10"][style*="z-index: 2147"]
 !#if !ext_ublock
-@@||bildeler.name^$generichide
-@@||reservedele.name^$generichide
 gamereactor.*$$script[onError="adblockEnabled()"]
 !#endif
 !#if env_firefox
@@ -1814,3 +1814,5 @@ gamereactor.*##^script[onError="adblockEnabled()"]
 !#endif
 ! Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 ||googletagmanager.com/gtm.js^$domain=dk|bornholm.nu
+! To be submitted to "AdGuard Warning Removal List" as well
+minmote.no##.adblock-info

@@ -1,5 +1,5 @@
 msFilterList
-# Version: 30August2020v1-Alpha
+# Version: 31August2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -437,6 +437,8 @@ _toppbanner_
 +d bondebladet.screen9.tv
 +d eurosport.no
 +d eurosport.dk
++d bildeler.name
++d reservedele.name
 # 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
 # 🇳🇴: Hurtigfikser for Internet Explorer 11
 # 🇮🇸: Skyndilausn fyrir Internet Explorer 11
@@ -729,14 +731,13 @@ _toppbanner_
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 24August2020v1-Extension
+# Last updated: 31August2020v2-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js
 +d sixscissors.com
-+d bildeler.name
-+d reservedele.name
 -d
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
+# To be submitted to "AdGuard Warning Removal List" as well

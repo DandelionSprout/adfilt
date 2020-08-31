@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 30August2020v1-Beta
+! Version: 31August2020v1-Beta
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Brave Browser)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for Brave Browser)
 ! Expires: 12 hours
@@ -500,6 +500,10 @@ gamereactor.*##+js(ra, autoplay)
 @@||bondebladet.screen9.tv^$generichide
 @@||eurosport.no^$generichide
 @@||eurosport.dk^$generichide
+!#if !ext_ublock
+@@||bildeler.name^$generichide
+@@||reservedele.name^$generichide
+!#endif
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/3209
 !#if adguard_app_windows
@@ -817,11 +821,10 @@ gamereactor.*##+js(ra, autoplay)
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 24August2020v1-Extension
+! Last updated: 31August2020v2-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
-gratisspil.dk##+js(aopw, AdBlockerInfo)
 techstart.dk##+js(set, adblock, false)
 tv2.no##+js(acis, adblockDetector)
 vg.no##+js(aeld, load, concat)
@@ -839,10 +842,9 @@ gamereactor.*##+js(set, adblockEnabled, noopFunc)
 gamereactor.*##+js(set, trackAdblock, noopFunc)
 gamereactor.*##+js(acis, AdsReloadConfig)
 !#if !ext_ublock
-@@||bildeler.name^$generichide
-@@||reservedele.name^$generichide
 !#endif
 !#if env_firefox
 !#endif
 ! Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 ||googletagmanager.com/gtm.js^$domain=dk|bornholm.nu
+! To be submitted to "AdGuard Warning Removal List" as well
