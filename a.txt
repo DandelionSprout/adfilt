@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 01September2020v1-Personal
+! Version: 01September2020v2-Personal
 ! Expires: 12 hours
 ! /\/\ Supercompilations: /\/\
 !#include AnnoyancesList
@@ -26,7 +26,6 @@
 !#include WordPressTranslatorAssistant.txt
 !#include AntiKpopSpammersTwitter.txt
 !#if !env_mobile
-!#include MeWeHappyTimeFunClub.txt
 !#include Special%20security%20lists/IDNHomographProtection-USLatinTLDsOnly.txt
 !#include Anti-'Christmas%20carols'%20List.txt
 !#include NorwegianCashbackAssistantReborn.txt
@@ -76,7 +75,6 @@ pixiv.net#?#.ui-profile-popup[data-user_name]:upward(1):-abp-contains(webbedfing
 ||deviantart.com^$document
 ||inkbunny.com^$document
 ||latexstories.net^$document
-||reddit.com/r/furry_irl^$document,domain=~ Warning displayed due to: Rampant heterophobia; useless repetitive jokes; and they have no idea how relationships work.
 ||theverge.com$document,domain=~ Warning displayed due to: Mounted the PSU fan the wrong way; and then accused people of being racist when this was pointed out to them.
 ||youtube.com/tv^$document
 ||reddit.com^$document
@@ -87,7 +85,7 @@ pixiv.net#?#.ui-profile-popup[data-user_name]:upward(1):-abp-contains(webbedfing
 ||google.com^$ctag=device_tv
 facebook.com$ctag=device_tv
 yahoo.com$ctag=device_tv
-|avs.na.amazonalexa.com^|
+|avs.na.amazonalexa.com|
 !#endif
 
 ! Syncing whitelist with those of AdGuard:
@@ -283,12 +281,11 @@ ekstrabladet.dk##.oo-left.eb-row-item
 ! Aims to remove that one RPG-loot-game embed window that is on some Twitch channels
 twitch.tv##.channel-panels-container div[style^=position]:has(a[href^="/ext/ro13roxp88918kulntih9uzm7vs9jr"])
 
-! Removal of pork (and some champignon) entries from restaurant menus (I just really hate the taste of pork meat)
+! ★ Removal of pork entries from restaurant menus (I just really hate the taste of pork meat) ★
 ! https://bellaitalia.no/meny/pasta
 bellaitalia.no#?#li:-abp-contains(SKINKE)
 bellaitalia.no#?#li:-abp-contains(BACON)
 bellaitalia.no#?#li:-abp-contains(PEPPERONI)
-bellaitalia.no#?#li:-abp-contains(CHAMPIGNON)
 ! https://www.frati.no/
 frati.no#?#.category > .item:-abp-contains(skinke)
 frati.no#?#.category > .item:-abp-contains(salam)
@@ -298,7 +295,6 @@ frati.no#?#.category > .item:-abp-contains(pølse)
 frati.no#?#.category > .item:-abp-contains(pancetta)
 ! https://kompisrestauranter.no/Meny
 kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Bacon/i)
-kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Champignon/i)
 kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Parma/i)
 kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Skinke/i)
 kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Pepperoni/i)
@@ -306,7 +302,6 @@ kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Pepperon
 egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(parma)
 egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(pork)
 egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Skinke/i)
-egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(sjampinjong)
 egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(pepperoni)
 egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Bacon/i):not(:-abp-contains(ENGLISH BREAKFAST))
 egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Pølse/i):not(:-abp-contains(ENGLISH BREAKFAST))
@@ -338,11 +333,9 @@ pizzabakeren.no#?#.pizza_item:-abp-contains(bacon)
 pizzabakeren.no#?#.pizza_item:-abp-contains(skinke)
 pizzabakeren.no#?#.pizza_item:-abp-contains(pepperoni)
 pizzabakeren.no#?#.pizza_item:-abp-contains(chorizo)
-pizzabakeren.no#?#.pizza_item:-abp-contains(sjampinjong)
 ! http://asiahouse.no/lunsj/
 asiahouse.no##.one-column > li:has-text(/svinefilet/i)
 asiahouse.no##.one-column > li:has-text(/svineribbe/i)
-asiahouse.no##.one-column > li:has-text(/champignon/i)
 asiahouse.no###svinekjøtt
 ! http://www.burgerking.no/menu/flame-grilled-burgers
 burgerking.*##.food-item:has-text(Bacon)
@@ -365,6 +358,21 @@ papajohns.*##.menu_items_list > ul > li:has-text(/bacon/i)
 ! https://www.papajohns.ru/
 papajohns.ru##.OCoeO-38:has-text(бекон)
 papajohns.ru##.OCoeO-38:has-text(/пепперони/i)
+! MAX
+max.se,maxhamburger.no##.o-product-list__item:has(.m-product-card__link[href*=bacon])
+maxhamburger.no##.o-product-list__item:has(.m-product-card__link[href*=kyllingburger-classic])
+max.se,maxhamburger.no##.o-product-list__item:has(.m-product-card__link[href*=kycklingmeny-classic])
+max.se,maxhamburger.no##.o-product-list__item:has(.m-product-card__link[href*=frisco])
+! https://www.fiveguys.com/menu
+fiveguys.*##.menu-popup-link[data-target*=Dog]:not([data-target*=Kosher]):not([data-target*=Beef])
+fiveguys.*##.menu-popup-link[data-target*="Bacon" i]
+fiveguys.*##.menu-popup-link[data-target*=BLT]
+! https://www.whitecastle.com/menu
+whitecastle.com##.category__list__item:has(a[href*=bacon])
+whitecastle.com##.category__list__item:has(a[href*=belgian-waffle-slider])
+whitecastle.com##.category__list__item:has(a[href*=sandwich])
+whitecastle.com##.category__list__item:has(a[href*=breakfast-slider])
+whitecastle.com##.category__list__item:has(a[href*=loaded])
 
 ! Pixiv presumably counts as social media, and thus shouldn't have its notifications be blocked
 @@||onesignal.com^$domain=pixiv.net
