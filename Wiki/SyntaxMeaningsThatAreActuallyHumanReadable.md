@@ -75,6 +75,7 @@
 * `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
 * `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
 #### Blocking
+* `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
 * `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
@@ -94,7 +95,6 @@
 
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
-* `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
 * `$3p`: Same as `$third-party`.
 * `$1p` / `$first-party`: Same as `$~third-party`.
 * `$xhr`: Same as `$xmlhttprequest`.
