@@ -33,13 +33,6 @@ def prepare_ag(lines) -> str:
 
     for line in lines:
 
-        # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
-        line = re.sub(
-           r"([\$,])doc.*", 
-           r"\1empty,important", 
-           line
-        )
-
         line = re.sub(
            r"(itle:.*Dandelion Sprout.*)", 
            r"\1 (for AdGuard)", 
@@ -478,7 +471,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"##\+js\(acis, (.*)\)", 
-           r"#$#abort-current-inline-script \1", 
+           r" \1", 
            line
         )
 
@@ -2851,14 +2844,14 @@ def prepare_rpz(lines) -> str:
         )
 
         line = re.sub(
-           r"^# ", 
-           "; ", 
+           r"# Platform notes:.*", 
+           "; Platform notes: This list version is intended for those who use BIND or other DNS server tools that support RPZ files.", 
            line
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
-           "; Platform notes: This list version is intended for those who use BIND or other DNS server tools that support RPZ files.", 
+           r"^# ", 
+           "; ", 
            line
         )
 
@@ -3231,20 +3224,6 @@ def prepare_ag(lines) -> str:
     text = ''
 
     for line in lines:
-
-
-        # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
-        line = re.sub(
-           "\$doc", 
-           "$empty,important", 
-           line
-       )
-
-        line = re.sub(
-           ",doc", 
-           ",empty,important", 
-           line
-       )
 
         line = re.sub(
            "Dandelion Sprout's Anti-Malware List", 
