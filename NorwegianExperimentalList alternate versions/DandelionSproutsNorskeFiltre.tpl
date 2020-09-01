@@ -1,5 +1,5 @@
 msFilterList
-# Version: 01September2020v1-Alpha
+# Version: 01September2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -496,6 +496,7 @@ _toppbanner_
 -d fullbagcash.com
 -d bizcashtrend.com
 -d toptechmania.com
+-d videnskap.dk
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
