@@ -471,7 +471,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"##\+js\(acis, (.*)\)", 
-           r" \1", 
+           r"#$#abort-current-inline-script \1", 
            line
         )
 
