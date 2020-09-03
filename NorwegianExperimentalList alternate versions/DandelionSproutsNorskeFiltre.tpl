@@ -1,5 +1,5 @@
 msFilterList
-# Version: 01September2020v2-Alpha
+# Version: 03September2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -69,7 +69,6 @@ msFilterList
 -d easy-ads.dk
 -d isweb.no
 -d kynning.olis.is
--d liveads.no
 -d myad.no
 -d samfilm.codelab.is
 -d sannsyn.com
@@ -595,13 +594,10 @@ _toppbanner_
 -d transitsuburban.com
 # https://www.datahjelperne.no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
 -d newzeninfotech.com
-# https://www.datahjelperne.no/viasat-mail-svindel/
--d viapslayno.com
 # https://www.datahjelperne.no/skatteberegning-mail-svindel/
 -d probenefit.net
 -d ssbeveragedistribution.com
 # https://www.datahjelperne.no/olav-thon-facebook-svindel/
--d fbsecret.icu
 -d euronews*.buzz
 -d softwaredaily*.monster
 -d stalknews*.buzz
