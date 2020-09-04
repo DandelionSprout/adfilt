@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 💬 Twitch: Pure Viewing Experience
-! Version: 04September2020v1-Beta
+! Version: 04September2020v2-Beta
 ! Expires: 5 days
 ! Description: This list aims to remove distracting elements, and to maximise the elements inside the chat to make it easier to read.
 ! Note that this list does not remove in-player ads at all. There are several other lists out there that you'll need to keep frequently updated in order to accomplish that.
@@ -19,7 +19,7 @@ www.twitch.tv##.tw-full-width > .tw-mg-b-2
 www.twitch.tv#?#div:-abp-has(> .tw-mg-b-1 > h4[data-a-target=live-channels-header]) + div
 
 ! Aims to remove the spacing between Twitch emotes, for the sake of multi-part emotes
-twitch.tv##.message > span:-abp-contains( ):not(:-abp-contains(/\S/))
+twitch.tv##.message > span:-abp-contains(/^ $/)
 clips.twitch.tv##span.text-fragment:not(:-abp-contains(/\S/))
 
 ! Desperately tries to remove the "Popular videos [from everywhere]" row and most likely failing at it.
@@ -38,11 +38,6 @@ www.twitch.tv#?#.video-chat__header:style(height: 20px !important)
 www.twitch.tv#?#.tw-pd-r-1.tw-pd-l-2.tw-justify-content-between.tw-full-width:style(height: 2rem)
 
 ! Broadens the chat textbox
-!!!www.twitch.tv#?#.tw-flex-shrink-0.tw-full-width.tw-pd-b-2.tw-pd-t-1.tw-pd-x-2.video-chat__input:style(padding-left: 1px !important; padding-right: 1px !important; padding-top: 4px !important; padding-bottom: 1px !important)
-!!!www.twitch.tv#?#.tw-textarea.tw-textarea--no-resize:style(padding-left: 3px; padding-right: 3px; padding-top: 1px; padding-bottom: 1px; height: 55px !important)
-!!!www.twitch.tv#?#.chat-input.tw-block:style(padding-left: 3px !important; padding-right: 3px !important; padding-bottom: 2px !important)
-www.twitch.tv#?#.tw-textarea:style(padding: 2px 28px 2px 2px !important)
-
 www.twitch.tv#?#.tw-flex-shrink-0.tw-full-width.tw-pd-b-2.tw-pd-t-1.tw-pd-x-2.video-chat__input:style(padding: 4px 1px 1px !important)
 www.twitch.tv#?#.tw-textarea.tw-textarea--no-resize:style(padding: 1px 3px !important; height: 55px !important)
 www.twitch.tv#?#.chat-input.tw-block:style(padding: 0 3px 2px !important)
@@ -56,7 +51,7 @@ twitch.tv#?#.tw-full-width.tw-pd-l-05.tw-pd-y-05.vod-message:style(padding: 2px 
 clips.twitch.tv#?#.clips-chat-replay > .tw-mg-b-1:style(margin-bottom: 2px !important)
 
 ! Narrows the spacing between the chat comments in mobile browser mode
-twitch.tv#?#li.chat-message:style(padding: 2px !important)
+m.twitch.tv#?#li.chat-message:style(padding: 2px !important)
 
 ! Maximises the size of the clip viewer pages
 clips.twitch.tv#?#.clips-watch.tw-lg-pd-b-5.tw-pd-b-2.tw-sm-pd-b-3:style(max-width: none)
