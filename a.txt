@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 06September2020v1-Personal
+! Version: 06September2020v2-Personal
 ! Expires: 12 hours
 ! /\/\ Supercompilations: /\/\
 !#include AnnoyancesList
@@ -57,8 +57,6 @@ thehill.com#?#.views-row:-abp-has(a[href^="/opinion/"])
 thehill.com#?#.thehill_carousel-processed > li:-abp-has(a[href^="/opinion/"])
 thehill.com##.region-front-magazine-bottom
 thehill.com##a[href^="/opinion/"]
-! netonnet.no
-##.christmasNonLogo:before
 
 ! People I just really don't like, without it being deserving of going on public lists
 twitch.tv#?#.chat-line__message:-abp-has(.chat-author__display-name:-abp-contains(InternetKraken))
@@ -461,9 +459,15 @@ github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/.
 github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/.kz$/))
 github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/.tr$/))
 github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/stfly.me$/))
-github.com##.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/cookie/i))
-github.com##.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/annoyance/i))
-github.com##.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(Privacy))
+github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/cookie/i))
+github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/annoyance/i))
+github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(Privacy))
+
+! Snow banners and such things
+! netonnet.no
+##.christmasNonLogo:before
+! https://web.archive.org/web/20180822143705/https://www.olavskvartalet.com/
+*/wp-content/themes/storexmas/assets/flurry/
 
 ! Workaround while testing for Chrome freezes (Specifically to see if "Google Hit Hider by Domain" can remain turned off)
 google.*##.rc:has(a[href*="deviantart.com"])
