@@ -1,0 +1,170 @@
+[Adblock Plus 3.4]
+! Title: 🛶 Anti-'Pork meat on restaurant menus' List
+! Version: 06September2020v1-Alpha
+! Expires: 7 days
+! Description: Do you feel that bacon and pork tastes really icky and sourly greasy, yet half of all things you'll find in restaurants have pork in them, and there's 30 different terms for pork to keep track of to avoid unpleasant surprises? If so, then this list has saved your taste buds and stomach.
+! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! ——— 🌎 Global ———
+! http://www.burgerking.no/menu/flame-grilled-burgers
+burgerking.*#?#.food-item:-abp-contains(Bacon)
+burgerking.*#?#.food-item:-abp-contains( BLT)
+! https://www.mcdonalds.com/no/nb-no/meny/hamburgere.html
+mcdonalds.com#?#.categories-list-item:-abp-contains(Bacon)
+mcdonalds.com#?#.categories-list-item:-abp-contains(Homestyle Crave Beef)
+mcdonalds.com#?#.categories-list-item:-abp-contains(McToast)
+! https://www.subway.com/nb-NO/MenuNutrition/Menu/All
+subway.com#?#.menu-category-item:-abp-has(img[src$="-ham.jpg"])
+subway.com#?#.menu-category-item:-abp-has(img[src$="-blt.jpg"])
+subway.com#?#.menu-category-item:-abp-has(img[src$="-BMT.jpg"])
+subway.com#?#.menu-category-item:-abp-has(img[src$="andham.jpg"])
+subway.com#?#.menu-category-item:-abp-contains(Subway Melt™)
+subway.com#?#.menu-category-item:-abp-contains(Bacon)
+! https://www.dominos.no/menu/lerkendal#pizzas
+dominos.*#?#.product_item:-abp-contains(bacon)
+dominos.*,~dominos.it#?#.product_item:-abp-contains(pepperoni)
+! https://arbys.ca/our-menu/featured
+##.pork
+! https://arbys.com/our-menu/market-fresh
+arbys.*#?#.col-sm-8:-abp-has(.product-item[class*=bacon])
+arbys.*#?#.col-sm-8:-abp-has(.product-item[class*=club-])
+arbys.*#?#.col-sm-8:-abp-has(.product-item[class*=loaded])
+arbys.*#?#.col-sm-8:-abp-has(.product-item[class*=-ham-])
+arbys.*#?#.col-sm-8:-abp-has(.product-item[class*=pizza-slider])
+! https://www.hooters.com/menu/wings/
+hooters.com#?#.menu-item-tile:-abp-contains(bacon)
+! https://www.fiveguys.com/menu
+fiveguys.*#?#.menu-popup-link[data-target*=Dog]:not([data-target*=Kosher]):not([data-target*=Beef])
+fiveguys.*#?#.menu-popup-link[data-target*="Bacon" i]
+fiveguys.*#?#.menu-popup-link[data-target*=BLT]
+! https://www.maxhamburger.no/var-meny/meny/
+max.se,maxhamburger.no,max.dk,maxpremiumburgers.pl#?#.o-product-list__item:-abp-has(.m-product-card__link[href*=bacon])
+max.se,maxhamburger.no,max.dk,maxpremiumburgers.pl#?#.o-product-list__item:-abp-has(.m-product-card__link[href*=frisco])
+max.se,maxhamburger.no#?#.o-product-list__item:-abp-has(.m-product-card__link[href*=kycklingmeny-classic])
+maxhamburger.no#?#.o-product-list__item:-abp-has(.m-product-card__link[href*=kyllingburger-classic])
+maxpremiumburgers.pl#?#.o-product-list__item:-abp-has(.m-product-card__link[href*=sausage])
+maxpremiumburgers.pl#?#.o-product-list__item:-abp-has(.m-product-card__link[href*=breakfast-toast])
+
+! ——— 🇺🇸 United States ———
+! https://www.whitecastle.com/menu
+whitecastle.com#?#.category__list__item:-abp-has(a[href*=bacon])
+whitecastle.com#?#.category__list__item:-abp-has(a[href*=belgian-waffle-slider])
+whitecastle.com#?#.category__list__item:-abp-has(a[href*=sandwich])
+whitecastle.com#?#.category__list__item:-abp-has(a[href*=breakfast-slider])
+whitecastle.com#?#.category__list__item:-abp-has(a[href*=loaded])
+! https://www.carlsjr.com/menu
+carlsjr.com#?#.product-list > ul > li:-abp-has(a[href*=bacon])
+carlsjr.com#?#.product-list > ul > li:-abp-has(a[href$=biscuit])
+carlsjr.com#?#.product-list > ul > li:-abp-has(a[href*="/biscuit"])
+carlsjr.com#?#.product-list > ul > li:-abp-has(a[href*=breakfast-burger])
+carlsjr.com#?#.product-list > ul > li:-abp-has(a[href*=-breakfast-burrito])
+carlsjr.com#?#.product-list > ul > li:-abp-has(a[href*=angus])
+carlsjr.com#?#.product-list > ul > li:-abp-has(a[href*=club-])
+! https://smashburger.com/menu/
+smashburger.com#?#.wpb_column:-abp-contains(/bacon/i)
+smashburger.com#?#.wpb_column:-abp-has(+ .wpb_column:-abp-contains(/bacon/i))
+! https://www.jackinthebox.com/food/burgers
+jackinthebox.com#?#.menu-item:-abp-has(a[href*=bacon])
+jackinthebox.com#?#.menu-item:-abp-has(a[href*=sriracha-burger])
+jackinthebox.com#?#.menu-item:-abp-has(a[href*=sourdough-jack])
+jackinthebox.com#?#.menu-item:-abp-has(a[href$=-club])
+jackinthebox.com#?#.menu-item:-abp-has(a[href*=club-])
+jackinthebox.com#?#.menu-item:-abp-has(a[href*=sausage])
+jackinthebox.com#?#.menu-item:-abp-has(a[href*="/breakfast-"])
+jackinthebox.com#?#.menu-item:-abp-has(a[href*=-breakfast-])
+jackinthebox.com#?#.menu-item:-abp-has(a[href*=croissant])
+jackinthebox.com#?#.menu-item:-abp-has(a[href*=sourdough-swiss])
+jackinthebox.com#?#.menu-item:-abp-has(a[href*=chick-n-tater])
+
+! ——— 🇳🇴🇸🇪🇩🇰 Scandinavia (multi-country) - Skandinavia (Flernasjons) ———
+! https://egon.no/menyen
+egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(parma)
+egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(pork)
+egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Skink/i)
+egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(pepperoni)
+egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Pølse/i):not(:-abp-contains(ENGLISH BREAKFAST))
+egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Bacon/i):not(:-abp-contains(ENGLISH BREAKFAST))
+! https://www.egon.se/meny+2019
+egon.se#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Korv/i):not(:-abp-contains(ENGLISH BREAKFAST))
+
+! ——— 🇳🇴 Norway (National) - Norge (Nasjonalt) ———
+! https://www.dominos.no/menu/lerkendal#pizzas
+dominos.no#?#.product_item:-abp-contains(skinke)
+! https://www.dolly.no/meny/pizza
+dolly.no#?#.grid__elm:-abp-contains(bacon)
+dolly.no#?#.grid__elm:-abp-contains(/Skinke/i)
+dolly.no#?#.grid__elm:-abp-contains(/Pepperoni/i)
+! https://www.pizzabakeren.no/menu.php#tab-deals
+pizzabakeren.no#?#.pizza_item:-abp-contains(bacon)
+pizzabakeren.no#?#.pizza_item:-abp-contains(skinke)
+pizzabakeren.no#?#.pizza_item:-abp-contains(pepperoni)
+pizzabakeren.no#?#.pizza_item:-abp-contains(chorizo)
+! https://kompisrestauranter.no/Meny
+kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Bacon/i)
+kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Parma/i)
+kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Skinke/i)
+kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Pepperoni/i)
+
+! ——— 🇳🇴 Norway (Trondheim) - Norge (Trondheim) ———
+! https://bellaitalia.no/meny/pasta
+bellaitalia.no#?#li:-abp-contains(SKINKE)
+bellaitalia.no#?#li:-abp-contains(BACON)
+bellaitalia.no#?#li:-abp-contains(PEPPERONI)
+! https://www.frati.no/
+frati.no#?#.category > .item:-abp-contains(skinke)
+frati.no#?#.category > .item:-abp-contains(salam)
+frati.no#?#.category > .item:-abp-contains(salsiccia)
+frati.no#?#.category > .item:-abp-contains(svinenakke)
+frati.no#?#.category > .item:-abp-contains(pølse)
+frati.no#?#.category > .item:-abp-contains(pancetta)
+! http://asiahouse.no/lunsj/
+asiahouse.no#?#.one-column > li:-abp-contains(/svinefilet/i)
+asiahouse.no#?#.one-column > li:-abp-contains(/svineribbe/i)
+###svinekjøtt
+
+! ——— 🇮🇪 Ireland ———
+! https://papajohns.ie/papajohns-food/
+papajohns.*#?#.menu-product:-abp-contains(Pepperoni)
+papajohns.*#?#.menu-product:-abp-contains(All the Meats)
+papajohns.*#?#.menu-product:-abp-contains(The Works)
+papajohns.*#?#.menu-product:-abp-contains(Chicken BBQ)
+papajohns.*#?#.menu-product:-abp-contains(Hawaiian)
+
+! ——— 🇵🇭 Philippines - Pilipinas ———
+! https://timhortons.ph/menu
+timhortons.ph#?#.slick-slide:-abp-has(a[href*="/ham-"])
+timhortons.ph#?#.slick-slide:-abp-has(a[href*=sausage])
+timhortons.ph#?#.slick-slide:-abp-has(a[href*=bacon])
+timhortons.ph#?#.slick-slide:-abp-has(a[href*=italiano])
+timhortons.ph#?#.slick-slide:-abp-has(a[href*=-belt-])
+
+! ——— 🇲🇽 México ———
+! http://www.timhortons.com.mx/es/menu.html
+timhortons.com.mx#?#.menu-items > .box:-abp-contains(Jamón)
+timhortons.com.mx#?#.menu-items > .box:-abp-contains(Tocino)
+timhortons.com.mx#?#.menu-items > .box:-abp-contains(Italiano)
+timhortons.com.mx#?#.menu-items > .box:-abp-contains(Salchicha)
+
+! ——— 🇨🇾 Cyprus - Κύπρος ———
+! https://www.papajohns.com.cy/pizzas.html
+papajohns.*#?#.menuItem:-abp-contains(Ham )
+papajohns.*#?#.menuItem:-abp-contains(Pepperoni)
+papajohns.*#?#.menuItem:-abp-contains(Bacon)
+papajohns.*#?#.menuItem:-abp-contains(Sausage)
+
+! ——— 🇬🇧 United Kingdom ———
+! https://timhortons.co.uk/menu.php
+timhortons.co.uk#?#.menu-items > .box:-abp-contains(Bacon)
+timhortons.co.uk#?#.menu-items > .box:-abp-contains(Ham):not(:-abp-contains(burger))
+timhortons.co.uk#?#.menu-items > .box:-abp-contains(Sausage):not(:-abp-contains(Veggie))
+
+! ——— 🇰🇬 Kyrgyzstan - Кыргызстан ———
+! http://www.papajohns.ky/users/menus/index.html
+papajohns.*#?#.menu_items_list > ul > li:-abp-contains(/Pepperoni/i)
+papajohns.*#?#.menu_items_list > ul > li:-abp-contains(Sausage)
+papajohns.*#?#.menu_items_list > ul > li:-abp-contains(/bacon/i)
+
+! ——— 🇷🇺 Russia - Россия ———
+! https://www.papajohns.ru/
+papajohns.ru#?#.OCoeO-38:-abp-contains(бекон)
+papajohns.ru#?#.OCoeO-38:-abp-contains(/пепперони/i)
