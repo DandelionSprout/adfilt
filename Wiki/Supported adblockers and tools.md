@@ -4,7 +4,7 @@
 
 * Nano Adblocker
 * uBlock Origin (for Chrome and Firefox)
-* AdGuard (for Windows, Chrome, and Firefox)
+* AdGuard (for Windows, Android, Chrome, and Firefox)
 * AdBlock
 * Adblock Plus (incl. Adblock Browser)
 * AdNauseam
@@ -16,13 +16,13 @@
 
 ### Other programs and tools
 
+* AdGuard Home
 * Redirector (by Einar Egilsson)
 * Blokada
 * DNS66
 * Google Hit Hider by Domain
 * uMatrix
-* Internet Explorer Tracking Protection List (if your workplace doesn't allow you to install and pay for AdGuard for Windows)
-* AdGuard Home
+* Internet Explorer Tracking Protection List (if your workplace doesn't allow you to install and pay for *AdGuard for Windows*)
 
 # Limited support
 
@@ -30,12 +30,12 @@ Issue reports will be processed, but issues that are exclusive to these adblocke
 
 | Affected branch | Reason for its support being limited | Fully supported substitute |
 | - | - | - |
-| uBlock Origin's Thunderbird branch | I seem to have problems with getting to block all that much things. | |
+| uBlock Origin's Thunderbird branch | I've never been able to get it to block all that many things in E-mails. | |
 | AdGuard for [Mac/iOS] | I do not have such units to test it with. | |
-| Pi-hole | It would've taken me considerable effort to set up Pi-Hole at the moment. | |
+| Pi-hole | It would've taken me considerable effort to set up Pi-Hole at the moment. | AdGuard Home |
 | 1blocker | I do not have an iOS unit to test it with. | Adblock Browser for iOS | |
 | Little Snitch | I do not have a macOS computer to test it with. | Google Chrome with Nano Adblocker | |
-| Pale Moon / Basilisk with uBlock Origin | Very hostile behaviour by a high-ranking Pale Moon dev | Waterfox Classic with Nano Adblocker | 
+| Pale Moon / Basilisk with uBlock Origin | Very hostile behaviour by a high-ranking Pale Moon dev. | Waterfox Classic with Nano Adblocker | 
 
 # No support
 
@@ -74,9 +74,9 @@ If you use an adblocker from this section, you will be asked to change to a more
 | Personal Blocklist (Chrome version) | Believed to have ceased functioning in late 2018. Firefox version is believed to still work. | Google Hit Hider by Domain |
 | Stylish | Has been involved in several privacy scandals. | Nano Adblocker |
 | Adblocker Professional | Forked from ABP ca. 2016. | Adblock Plus |
-| AdGuard for Pale Moon | Development on it is believed to have ceased. | |
+| AdGuard for Pale Moon | Development on it is believed to have ceased. | Waterfox Classic with Nano Adblocker |
 | uBlock Origin's Microsoft Edge legacy branch | Seemed to have severe problems with list syncing in mid-2018. | Nano Adblocker for Microsoft Edge |
-| Borealis with uBlock Origin | Very hostile behaviour by Borealis' main developer | |
+| Borealis with uBlock Origin | Very hostile behaviour by Borealis' main developer. | Waterfox Classic with Nano Adblocker |
 
 # Other tools
 
