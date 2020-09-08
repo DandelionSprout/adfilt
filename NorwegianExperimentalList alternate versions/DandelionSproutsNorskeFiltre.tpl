@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08September2020v1-Alpha
+# Version: 08September2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -132,6 +132,7 @@ _toppbanner_
 -d dust2.dk banners
 -d export.prisguide.no
 -d export.prisguiden.no
+-d akamai.vgc.no drfront3
 -d eyjar.net ads
 -d feltet.dk topbanner_*.jpg
 -d feltet.dk wallpaper_1.jpg
@@ -407,7 +408,7 @@ _toppbanner_
 # https://www.nettavisen.no/
 # https://www.ba.no/s/5-8-1221171
 -d vg.no tipster.png
--d vgc.no betting-header.png
+- pustehullet betting-header.png
 # ——— Gamereactor + Viafree PC ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
