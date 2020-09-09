@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08September2020v2-Alpha
+# Version: 09September2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -360,6 +360,8 @@ _toppbanner_
 +d stillingledig.*.no
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
 @@.isdownorblocked.com
+# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
+-d prod-adops-proxy.dnitv.net
 # ——— Caused by «EasyPrivacy» ———
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open

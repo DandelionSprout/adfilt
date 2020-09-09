@@ -709,6 +709,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\$empty,", 
+           r"$", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -2178,6 +2184,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"^!$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$empty,", 
+           r"$", 
            line
         )
 
