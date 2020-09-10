@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 10September2020v1-Personal
+! Version: 10September2020v2-Personal
 ! Expires: 12 hours
 ! /\/\ Supercompilations: /\/\
 !#include AnnoyancesList
@@ -26,6 +26,7 @@
 !#include WordPressTranslatorAssistant.txt
 !#include AntiKpopSpammersTwitter.txt
 !#include AntiPorkMeatOnRestaurantMenusList.txt
+!#include AntiSnowMarketingList.txt
 !#if !env_mobile
 !#include Special%20security%20lists/IDNHomographProtection-USLatinTLDsOnly.txt
 !#include Anti-'Christmas%20carols'%20List.txt
@@ -289,9 +290,6 @@ twitch.tv##.channel-panels-container div[style^=position]:has(a[href^="/ext/ro13
 open.tube##.other-videos
 ||ixigua.com/api/feedv2^
 
-! Extraordinarily bad Discord profile statuses in the righthand bar
-discord.com##div[id^=members-] > div[class^=layout-]:-abp-contains(ETHNOSTATE)
-
 ! All of this was becoming pretty literally actively life-threatening for me to read and know about
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=-trump- i]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=-trumps- i]
@@ -324,6 +322,7 @@ twitch.tv#?#.chat-line__message,.vod-message:-abp-contains(/McCarthy/i):-abp-con
 twitch.tv#?#.chat-line__message,.vod-message:-abp-contains(/McCarthy/i):-abp-contains(/another/i)
 ||d.newsweek.com/json/home-opinion^
 ||d.newsweek.com/json/the-debate^
+discord.com#?#div[id^=members-] > div[class^=layout-]:-abp-contains(ETHNOSTATE)
 
 ! To browse more easily through AdGuard Filters' and EasyList's issue tracker
 github.com#?#.js-issue-row:-abp-contains(N: AdGuard for iOS)
@@ -338,12 +337,6 @@ github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/s
 github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/cookie/i))
 github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/annoyance/i))
 github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(Privacy))
-
-! Snow banners and such things
-! netonnet.no
-##.christmasNonLogo:before
-! https://web.archive.org/web/20180822143705/https://www.olavskvartalet.com/
-*/wp-content/themes/storexmas/assets/flurry/
 
 ! Workaround while testing for Chrome freezes (Specifically to see if "Google Hit Hider by Domain" can remain turned off)
 !#if !env_mobile
