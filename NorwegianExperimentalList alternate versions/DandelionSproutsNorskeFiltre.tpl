@@ -1,5 +1,5 @@
 msFilterList
-# Version: 09September2020v1-Alpha
+# Version: 11September2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -37,9 +37,10 @@ msFilterList
 # https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein/(09/05/2020)
 # Bet365 widget triggered for Norwegian audiences only
 # jyllands-posten.dk
-# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
+# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews.dk
+# retailnews.dk (11 09 2020)
 # n247.no
-# https://www.healthtalk.no/
+# healthtalk.no
 # appetitt.no
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer

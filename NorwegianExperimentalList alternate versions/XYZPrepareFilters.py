@@ -3544,6 +3544,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"/,", 
+           r"/$", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -3856,6 +3862,12 @@ def prepare_tpl(lines) -> str:
         line = re.sub(
            r"^-d [a-z]{2,6}$", 
            "", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|([a-z0-9])", 
+           r"-d \1", 
            line
         )
 
@@ -4346,6 +4358,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"\$all,$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"/(live|fun|popup)([,|]|$).*", 
+           r"/", 
            line
         )
 
