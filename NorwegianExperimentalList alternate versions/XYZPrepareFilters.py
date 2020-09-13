@@ -296,12 +296,6 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"eurogamer\.\*([#,])", 
-           r"eurogamer.dk\1", 
-           line
-        )
-
-        line = re.sub(
            "ticketmaster.\*#", 
            "ticketmaster.no,ticketmaster.dk#", 
            line
@@ -352,6 +346,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            "180.\*#", 
            "180.no,180.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "kimbino.\*#", 
+           "kimbino.no,kimbino.dk#", 
            line
         )
 
@@ -1738,12 +1738,6 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"eurogamer\.\*([#,])", 
-           r"eurogamer.dk\1", 
-           line
-        )
-
-        line = re.sub(
            "ticketmaster.\*#", 
            "ticketmaster.no,ticketmaster.dk#", 
            line
@@ -1794,6 +1788,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            "180.\*#", 
            "180.no,180.dk#", 
+           line
+        )
+
+        line = re.sub(
+           "kimbino.\*#", 
+           "kimbino.no,kimbino.dk#", 
            line
         )
 
