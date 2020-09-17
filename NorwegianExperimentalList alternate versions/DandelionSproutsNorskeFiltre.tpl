@@ -1,5 +1,5 @@
 msFilterList
-# Version: 13September2020v1-Alpha
+# Version: 17September2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -20,6 +20,9 @@ msFilterList
 # ❄🌳: ——— Reklaameidie ———
 # 🇬🇧: ——— Advertisements ———
 # — — — — — — — — —
+# 🇳🇴: Oppføringer for minst 3 nettsteder
+# 🇬🇧: Entries for at least 3 websites
+# — — — — — — — — —
 # 🇳🇴: Generelle #-oppføringer med kilder
 # 🇬🇧: Generic #-entries that have sources
 # framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
@@ -35,13 +38,15 @@ msFilterList
 # https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
 # portal.fo (09 05 2020)
 # https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein/(09/05/2020)
-# Bet365 widget triggered for Norwegian audiences only
 # jyllands-posten.dk
 # buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews.dk
 # retailnews.dk (11 09 2020)
 # n247.no
 # healthtalk.no
 # appetitt.no
+# ekstrabladet.dk
+# nab.no (Only shown if cookies are accepted; 18 08 2020)
+# Bet365 widget triggered for Norwegian audiences only
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -249,7 +254,6 @@ _toppbanner_
 -d f.nordiskemedier.dk 2*.png
 # building-supply.dk
 -d f.nordiskemedier.dk banner
-# nab.no (Only shown if cookies are accepted; 18 08 2020)
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -289,6 +293,9 @@ _toppbanner_
 -d yrkesbil.no 1pix.gif
 - gifs *emty.gif
 -l%C3%BDsing-
+# — — — — —
+# 🇳🇴: Oppføringer for minst 3 nettsteder
+# 🇬🇧: Entries for at least 3 websites
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -738,7 +745,7 @@ _toppbanner_
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 15September2020v1-Extension
+# Last updated: 17September2020v1-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
