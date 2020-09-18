@@ -1,4 +1,4 @@
-! Version: 17September2020v1
+! Version: 18September2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 12 hours
@@ -190,6 +190,7 @@ reiseliv.no##a[href*=annonsorartikler][href*=aksje]
 shareholders.dk###left_section
 shareholders.dk###right_section
 vg.no##.df-skin-vgpartnerstudio
+doktor.frettabladid.is##.ad-310x400
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -252,6 +253,8 @@ portal.fo##.ablock
 ##.nf-c-adblock-title
 ! Bet365 widget triggered for Norwegian audiences only
 goal.com##.js-betting-widget.is-country-no:upward(2)
+! doktor.frettabladid.is (18/09/2020)
+##.hringekja__wrapper
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -486,6 +489,11 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||malviknytt.no/wp-content/uploads/*-firkant-*e1*.$image
 ||reiseliv.no/wp-content/uploads/*-Annons%C3%B8rinnhold-*-Aksjer-*.$image
 ||escort46.dk/bg_images^$image
+||doktor.frettabladid.is/wp-content/uploads/*-Doktor-landscape.jpg^
+||doktor.frettabladid.is/wp-content/uploads/*/410x300_*.jpg^
+||doktor.frettabladid.is/wp-content/uploads/*-addoktor.jpg^
+||doktor.frettabladid.is/wp-content/uploads/*heilsu*.$image
+||doktor.frettabladid.is/wp-content/uploads/*/Reidist*.jpg^
 !#if !ext_ublock
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
@@ -1046,6 +1054,7 @@ kimbino.*##.signad
 tilbudsuken.no##.contentBanner
 tiendeo.no###advertising_div
 tiendeo.no##li[style^="order:"]:not([style*="order: "])
+hringbraut.frettabladid.is#?#.popular-articles:has(> .scrolling-side-ad)
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
 ||gaysir.no/rek/bb_inline$subdocument
@@ -1196,6 +1205,13 @@ vafo.dk##.adform-flexblock
 ###viewport > #outer
 ! kimbino.no, kimbino.dk (13/09/2020)
 ##.intersect-ads-load
+! fasteignir.frettabladid.is
+||via.placeholder.com^$image
+! hringbraut.frettabladid.is (18/09/2020)
+##.tag-page-ad-container
+! https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/
+##.scrolling-side-ad-container
+##.ticker-ad-wrapper
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———

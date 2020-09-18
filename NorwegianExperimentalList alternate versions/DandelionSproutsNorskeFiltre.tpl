@@ -1,5 +1,5 @@
 msFilterList
-# Version: 17September2020v1-Alpha
+# Version: 18September2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -47,6 +47,7 @@ msFilterList
 # ekstrabladet.dk
 # nab.no (Only shown if cookies are accepted; 18 08 2020)
 # Bet365 widget triggered for Norwegian audiences only
+# doktor.frettabladid.is (18 09 2020)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -238,6 +239,11 @@ _toppbanner_
 -d malviknytt.no *-firkant-*e1*.
 -d reiseliv.no *-Annons%C3%B8rinnhold-*-Aksjer-*.
 -d escort46.dk bg_images
+-d doktor.frettabladid.is *-Doktor-landscape.jpg
+-d doktor.frettabladid.is 410x300_*.jpg
+-d doktor.frettabladid.is *-addoktor.jpg
+-d doktor.frettabladid.is *heilsu*.
+-d doktor.frettabladid.is Reidist*.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -347,6 +353,10 @@ _toppbanner_
 # advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668/(16/08/2020)
 # folkebladet.no (26 08 2020)
 # kimbino.no, kimbino.dk (13 09 2020)
+# fasteignir.frettabladid.is
+-d via.placeholder.com
+# hringbraut.frettabladid.is (18 09 2020)
+# https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
