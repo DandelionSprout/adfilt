@@ -911,7 +911,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           " 12 hours", 
+           " 1 day", 
            " 1", 
            line
         )
