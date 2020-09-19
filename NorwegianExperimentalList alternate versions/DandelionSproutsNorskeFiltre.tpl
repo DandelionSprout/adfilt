@@ -1,5 +1,5 @@
 msFilterList
-# Version: 19September2020v2-Alpha
+# Version: 20September2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -52,12 +52,9 @@ msFilterList
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
 - annonsar
-- annonse
 - annonse_
-- annonser
 - auglysing
 - reklam
-- reklame
 - vefauglysingar
 -d ad.no.doubleclick.net
 -d ad.primetime.net
@@ -315,7 +312,6 @@ _toppbanner_
 # journalisten.dk
 # www.altomfotball.no
 # dv.is
-# dinside.no, seher.no
 # bt.no
 # latterkula.no se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live
 # www.latterkula.no artikler
