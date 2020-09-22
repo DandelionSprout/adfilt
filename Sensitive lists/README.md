@@ -1,0 +1,1 @@
+Every now and then (Yes, this happened on several occasions with multiple users), privacy nerds would check out my GitHub repo, become worried about various of my lists, and question my integrity and reliability in various ways. So now I suppose it's time to move some of them over to this folder instead.

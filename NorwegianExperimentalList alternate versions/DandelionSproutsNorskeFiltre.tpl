@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08September2020v2-Alpha
+# Version: 22September2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -20,6 +20,9 @@ msFilterList
 # ❄🌳: ——— Reklaameidie ———
 # 🇬🇧: ——— Advertisements ———
 # — — — — — — — — —
+# 🇳🇴: Oppføringer for minst 3 nettsteder
+# 🇬🇧: Entries for at least 3 websites
+# — — — — — — — — —
 # 🇳🇴: Generelle #-oppføringer med kilder
 # 🇬🇧: Generic #-entries that have sources
 # framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
@@ -35,22 +38,23 @@ msFilterList
 # https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
 # portal.fo (09 05 2020)
 # https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein/(09/05/2020)
-# Bet365 widget triggered for Norwegian audiences only
 # jyllands-posten.dk
-# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
+# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews.dk
+# retailnews.dk (11 09 2020)
 # n247.no
-# https://www.healthtalk.no/
+# healthtalk.no
 # appetitt.no
+# ekstrabladet.dk
+# nab.no (Only shown if cookies are accepted; 18 08 2020)
+# Bet365 widget triggered for Norwegian audiences only
+# doktor.frettabladid.is (18 09 2020)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
 - annonsar
-- annonse
 - annonse_
-- annonser
 - auglysing
 - reklam
-- reklame
 - vefauglysingar
 -d ad.no.doubleclick.net
 -d ad.primetime.net
@@ -232,6 +236,11 @@ _toppbanner_
 -d malviknytt.no *-firkant-*e1*.
 -d reiseliv.no *-Annons%C3%B8rinnhold-*-Aksjer-*.
 -d escort46.dk bg_images
+-d doktor.frettabladid.is *-Doktor-landscape.jpg
+-d doktor.frettabladid.is 410x300_*.jpg
+-d doktor.frettabladid.is *-addoktor.jpg
+-d doktor.frettabladid.is *heilsu*.
+-d doktor.frettabladid.is Reidist*.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -248,7 +257,6 @@ _toppbanner_
 -d f.nordiskemedier.dk 2*.png
 # building-supply.dk
 -d f.nordiskemedier.dk banner
-# nab.no (Only shown if cookies are accepted; 18 08 2020)
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -289,6 +297,9 @@ _toppbanner_
 - gifs *emty.gif
 -l%C3%BDsing-
 # — — — — —
+# 🇳🇴: Oppføringer for minst 3 nettsteder
+# 🇬🇧: Entries for at least 3 websites
+# — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
 # sol.no
@@ -301,7 +312,6 @@ _toppbanner_
 # journalisten.dk
 # www.altomfotball.no
 # dv.is
-# dinside.no, seher.no
 # bt.no
 # latterkula.no se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live
 # www.latterkula.no artikler
@@ -338,6 +348,13 @@ _toppbanner_
 # https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
 # advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668/(16/08/2020)
 # folkebladet.no (26 08 2020)
+# kimbino.no, kimbino.dk (13 09 2020)
+# fasteignir.frettabladid.is
+-d via.placeholder.com
+# hringbraut.frettabladid.is (18 09 2020)
+# https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/
+# lokal-avisa.no, ringsakern.no (19 09 2020)
+# gjoviksblad.no (19 09 2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -360,6 +377,8 @@ _toppbanner_
 +d stillingledig.*.no
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
 @@.isdownorblocked.com
+# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
+-d prod-adops-proxy.dnitv.net
 # ——— Caused by «EasyPrivacy» ———
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
@@ -372,6 +391,8 @@ _toppbanner_
 # ——— Caused by «Fanboy's Annoyances List» ———
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
+# https://github.com/easylist/easylist/issues/6067#issuecomment-695115226
++d consent.dk
 # ——— Caused by «Thai Adblock List   Thai Ads Filter» with AdGuard ———
 # https://github.com/AdguardTeam/AdguardFilters/issues/62012
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
@@ -718,6 +739,7 @@ _toppbanner_
 -d brigitteheilmann.dk
 -d storustovu.dk
 -d campingnews.dk
+ 
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -733,7 +755,7 @@ _toppbanner_
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 06September2020v1-Extension
+# Last updated: 22September2020v1-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
@@ -743,3 +765,4 @@ _toppbanner_
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
 # To be submitted to "AdGuard Warning Removal List" as well
+# aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
