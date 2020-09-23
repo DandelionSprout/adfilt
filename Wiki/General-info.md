@@ -1,8 +1,8 @@
 # 🇳🇴 Norsk
 
-Senest oppdatert den: 19. august 2020
+Senest oppdatert den: 23. september 2020
 
-• [Listen(e)s hjemmeside på kodelagringssiden GitHub](https://github.com/DandelionSprout/adfilt) <br>
+• [Listen(e)s hjemmeside på kodelagringssiden GitHub](https://github.com/DandelionSprout/adfilt/blob/master/.github/README.md) <br>
 • [Lisensen til listene mine](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Den er spesialtilpasset for å kunne inkludere innhold fra andre folks adblock-lister, mens den forsøker å være ustøtende for listemakerne.<br>
 • [Donasjonsmetoder](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • Listenes samlede systemer for [saksinnmelding](https://github.com/DandelionSprout/adfilt/issues) og [kodeforslag](https://github.com/DandelionSprout/adfilt/pulls). (Krever GitHub-konto.) <br>
@@ -14,9 +14,9 @@ Du kan selvfølgelig også kontakte meg på nynorsk, dansk, svensk, eller engels
 
 # Norsk nynorsk
 
-Seinast oppdatert den: 19. august 2020
+Seinast oppdatert den: 23. september 2020
 
-• [Lista(ne)s heimeside på kodelagringssiden GitHub](https://github.com/DandelionSprout/adfilt) <br>
+• [Lista(ne)s heimeside på kodelagringssiden GitHub](https://github.com/DandelionSprout/adfilt/blob/master/.github/README.md) <br>
 • [Lisensen til listane mine](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Han er spesialtilpassa for å kunne inkludere innhald frå andre folks lister, mens han prøver å vere ustøytande for listeskaparane.<br>
 • [Donasjonsmetodar](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • Listenes samla system for [saksinnmelding](https://github.com/DandelionSprout/adfilt/issues) og [kodeframlegg](https://github.com/DandelionSprout/adfilt/pulls). (GitHub-konto krevst.) <br>
@@ -28,9 +28,9 @@ Du kan sjølvsagt også kontakte meg på bokmål, dansk, svensk, eller engelsk. 
 
 # 🇩🇰 Dansk
 
-Sidst opdateret den: 19. august 2020
+Sidst opdateret den: 23. september 2020
 
-• [Listen(e)s hjemmeside på kodelagringswebstedet GitHub](https://github.com/DandelionSprout/adfilt) <br>
+• [Listen(e)s hjemmeside på kodelagringswebstedet GitHub](https://github.com/DandelionSprout/adfilt/blob/master/.github/README.md) <br>
 • [Licensen til mine lister. Den er specielt udformet for at kunne inkludere indhold fra andres filterlister](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md), mens den forsøger at være så lidt stødende for listenes vedligeholdere som muligt. <br>
 • [Donationsmetoder](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • Listernes kombinerede systemer for [sagsindmelding](https://github.com/DandelionSprout/adfilt/issues) og [kodeanmodninger](https://github.com/DandelionSprout/adfilt/pulls). (Kræver en GitHub-konto). <br>
@@ -42,9 +42,9 @@ Du kan selvfølgelig også kontakte mig på norsk, nynorsk, svensk eller engelsk
 
 # 🇬🇧 English
 
-Last updated: 19th of August 2020
+Last updated: 23rd of September 2020
 
-• [The list(s)' homepage on the code storage site GitHub](https://github.com/DandelionSprout/adfilt) <br>
+• [The list(s)' homepage on the code storage site GitHub](https://github.com/DandelionSprout/adfilt/blob/master/.github/README.md) <br>
 • [The licence for my lists](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). It is specifically crafted to be able to include content from others' filterlists, while trying to be as unoffensive to the list maintainers as possible.<br>
 • [Donation methods](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • The lists' combined systems for [issue tracking](https://github.com/DandelionSprout/adfilt/issues) and [pull requests](https://github.com/DandelionSprout/adfilt/pulls) (Translations for non-geeks: Situation reports and code addition suggestions. Requires a GitHub account). <br>
