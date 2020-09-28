@@ -1,5 +1,5 @@
 msFilterList
-# Version: 24September2020v2-Alpha
+# Version: 28September2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -83,6 +83,7 @@ msFilterList
 -d soda.is
 -d delivered-by-madington.com
 -d vevlysingar.fo
+-d ndstage.wpengine.com
 -d print2web.sn.dk
 -d lib.idg.no
 # Adressa.no
@@ -241,6 +242,9 @@ _toppbanner_
 -d doktor.frettabladid.is *-addoktor.jpg
 -d doktor.frettabladid.is *heilsu*.
 -d doktor.frettabladid.is Reidist*.jpg
+-d forum.flyprat.no Header
+_300x250px-*.gif
+- -banner_
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -347,7 +351,6 @@ _toppbanner_
 # https://www.dagsavisen.no/nyheter/verden/1.1731911/(18/06/2020)
 # https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
 # advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668/(16/08/2020)
-# folkebladet.no (26 08 2020)
 # kimbino.no, kimbino.dk (13 09 2020)
 # fasteignir.frettabladid.is
 -d via.placeholder.com
@@ -755,7 +758,7 @@ _toppbanner_
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 22September2020v1-Extension
+# Last updated: 24September2020v1-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com

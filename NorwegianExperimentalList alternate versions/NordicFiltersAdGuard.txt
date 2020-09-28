@@ -1,4 +1,4 @@
-! Version: 24September2020v2
+! Version: 28September2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 1 day
@@ -190,6 +190,9 @@ shareholders.dk###left_section
 shareholders.dk###right_section
 vg.no##.df-skin-vgpartnerstudio
 doktor.frettabladid.is##.ad-310x400
+gaffa.no##.single-post > .wrapper-2
+gaffa.no##.ad-continues-txt
+flyprat.no###header_right_cell
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -310,6 +313,7 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ||soda.is$third-party
 ||delivered-by-madington.com^$third-party
 ||vevlysingar.fo$subdocument,third-party
+||ndstage.wpengine.com^$image
 !+ NOT_OPTIMIZED
 ||print2web.sn.dk^$image
 !+ NOT_OPTIMIZED
@@ -488,6 +492,9 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||doktor.frettabladid.is/wp-content/uploads/*-addoktor.jpg^
 ||doktor.frettabladid.is/wp-content/uploads/*heilsu*.$image
 ||doktor.frettabladid.is/wp-content/uploads/*/Reidist*.jpg^
+||forum.flyprat.no/images/r/Header^$subdocument
+_300x250px-*.gif^$domain=ilaks.no
+-banner_$domain=hnytt.no,image
 !#if !ext_ublock
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
@@ -1040,6 +1047,8 @@ tilbudsuken.no##.contentBanner
 tiendeo.no###advertising_div
 tiendeo.no##li[style^="order:"]:not([style*="order: "])
 hringbraut.frettabladid.is#?#.popular-articles:has(> .scrolling-side-ad)
+bimmers.no##div[id="336x280-sidebar"]:upward(1)
+folkebladet.no###viewport > #outer
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
 ||gaysir.no/rek/bb_inline$subdocument
@@ -1183,8 +1192,6 @@ vafo.dk##.adform-flexblock
 ##.am-page-ad
 ! advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668 (16/08/2020)
 ##.adnuntius-ad
-! folkebladet.no (26/08/2020)
-###viewport > #outer
 ! kimbino.no, kimbino.dk (13/09/2020)
 ##.intersect-ads-load
 ! fasteignir.frettabladid.is
@@ -1810,6 +1817,7 @@ dknyt.dk,kommunen.dk##.fade-out
 vartoslo.no##.teaserContent:before
 h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content:before
 h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content:style(max-height: none !important)
+markedsforing.dk##.gradient-y-trans-to-white-95
 ||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
 ! dagbladet.no,elbil24.no
 ##.CTA-body-faded
@@ -1825,7 +1833,7 @@ vg.no##div[data-test-tag=timestamp] + p + div:before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 22September2020v1-Extension
+! Last updated: 24September2020v1-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 csp.screen9.com#@#.adsbox
 dagensbyggeri.dk##+js(std, (), 2500)
