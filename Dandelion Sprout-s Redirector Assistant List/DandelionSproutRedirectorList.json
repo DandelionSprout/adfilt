@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2020-05-13T23:16:37.848Z",
+    "createdAt": "2020-09-30T10:23:43.171Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -551,7 +551,7 @@
             "exampleResult": "https://www.youtube.com/watch?v=S18Bogcp2l4&disable_polymer=1",
             "error": null,
             "includePattern": "(.*)://www.youtube.com/(.*)?([?&])?(.*)?",
-            "excludePattern": ".*(disable_polymer=1|channel).*",
+            "excludePattern": ".*(disable_polymer=1|channel|subscriptions).*",
             "patternDesc": "",
             "redirectUrl": "https://www.youtube.com/$2$3$4&disable_polymer=1",
             "patternType": "R",
@@ -631,7 +631,7 @@
             ]
         },
         {
-            "description": "Turns Wikipedia Mobile links to regular Wikipedia (Very convenient for desktop Reddit users)",
+            "description": "{Mobile to Desktop 1} Turns Wikipedia Mobile links to regular Wikipedia (Very convenient for desktop Reddit users)",
             "exampleUrl": "https://en.m.wikipedia.org/wiki/John_Madden",
             "exampleResult": "https://en.wikipedia.org/wiki/John_Madden",
             "error": null,
@@ -639,6 +639,23 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "$1.wikipedia.org$2",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "{Mobile to Desktop 2} Turns Blogspot Mobile links to regular Blogspot",
+            "exampleUrl": "https://synnesmatglede.blogspot.com/2013/05/appelsinis.html?m=1",
+            "exampleResult": "https://synnesmatglede.blogspot.com/2013/05/appelsinis.html",
+            "error": null,
+            "includePattern": "*.blogspot.com/*?m=1",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1.blogspot.com/$2",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -679,30 +696,6 @@
             "grouped": false,
             "appliesTo": [
                 "main_frame"
-            ]
-        },
-        {
-            "description": "Having a bit of fun with Telenor Norway's new TV pages",
-            "exampleUrl": "https://www.youtube.com/embed/TPYxbMvgR30?rel=0&amp;hd=1&amp;controls=0&amp;autoplay=1&amp;loop=1&amp;showinfo=0&amp;iv_load_policy=3&amp;mute=1&amp;playlist=TPYxbMvgR30&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telenor.no&amp;widgetid=1",
-            "exampleResult": "https://www.youtube.com/embed/xKm7GVceWQQ?rel=0&amp;hd=1&amp;controls=0&amp;autoplay=1&amp;loop=1&amp;showinfo=0&amp;iv_load_policy=3&amp;mute=1&amp;playlist=TPYxbMvgR30&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.telenor.no&amp;widgetid=1",
-            "error": null,
-            "includePattern": "https://www.youtube.com/embed/TPYxbMvgR30*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.youtube.com/embed/xKm7GVceWQQ$1",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "sub_frame",
-                "stylesheet",
-                "script",
-                "image",
-                "imageset",
-                "object",
-                "xmlhttprequest",
-                "other"
             ]
         },
         {
