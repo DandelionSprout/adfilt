@@ -1,5 +1,5 @@
 msFilterList
-# Version: 28September2020v2-Alpha
+# Version: 30September2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -245,6 +245,9 @@ _toppbanner_
 -d forum.flyprat.no Header
 _300x250px-*.gif
 - -banner_
+-d fcbarcelona.dk bcn_*.gif
+-d fcbarcelona.dk banners
+-d annoncelight.dk banner
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -291,6 +294,7 @@ _300x250px-*.gif
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
+-d fcbarcelona.dk footerbg.jpg
 -d 730.no sonymusic
 -d danishfamilysearch.dk xp2
 -d gaysir.no bb_inline
@@ -358,6 +362,9 @@ _300x250px-*.gif
 # https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/
 # lokal-avisa.no, ringsakern.no (19 09 2020)
 # gjoviksblad.no (19 09 2020)
+# midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt.dk (30 09 2020)
+# godstart.dk, sol.dk (30 09 2020)
+-d ni.dk *-bottom.html
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
