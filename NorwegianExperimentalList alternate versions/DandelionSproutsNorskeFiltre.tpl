@@ -248,6 +248,7 @@ _300x250px-*.gif
 -d fcbarcelona.dk bcn_*.gif
 -d fcbarcelona.dk banners
 -d annoncelight.dk banner
+- 930x180_*.gif
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -365,6 +366,7 @@ _300x250px-*.gif
 # midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt.dk (30 09 2020)
 # godstart.dk, sol.dk (30 09 2020)
 -d ni.dk *-bottom.html
+# fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30 09 2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
