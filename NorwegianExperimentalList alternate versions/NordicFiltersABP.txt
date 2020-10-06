@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 021020201
+! Version: 061020201
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 1 day
@@ -1050,6 +1050,7 @@ bilmagasinet.dk#?#.wg-editorial:-abp-has(div[id^=cx_])
 ni.dk###e-header > div[style^=height]
 ni.dk##.narrow-banner
 ni.dk#?#.clearfixP.columns[style] .clearfixP.box-no-border:-abp-has(> .narrow-banner)
+abcnyheter.no##.c-native-group__container
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
@@ -1226,6 +1227,7 @@ yrkesbil.no#?#tr:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has
 yrkesbil.no#?#td:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
 kvf.fo##.panels-flexible-row-grein-rnd-13
 oyggjatidindi.com##.bottom_space
+dr.dk#?#.dre-container--margin-bottom:-abp-has(.hydra-marketing-banner)
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ! 🇩🇰: ——— Distraherende baggrundsbilleder ———
@@ -1783,6 +1785,7 @@ dknyt.dk,kommunen.dk##.fade-out
 vartoslo.no##.teaserContent::before
 h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content::before
 markedsforing.dk##.gradient-y-trans-to-white-95
+berlingske.dk##.paywall-wrapper::before
 ||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
 ! dagbladet.no,elbil24.no
 ##.CTA-body-faded
@@ -1798,7 +1801,7 @@ vg.no##div[data-test-tag=timestamp] + p + div::before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 24September2020v1-Extension
+! Last updated: 05October2020v2-Extension
 gratiskostplaner.dk#$#abort-on-property-write KillAdBlock
 csp.screen9.com#@#.adsbox
 tv2.no#$#abort-current-inline-script adblockDetector
@@ -1814,6 +1817,9 @@ tv2.no#$#abort-current-inline-script adblockDetector
 @@||sixscissors.com^$third-party,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,~third-party
 gamereactor.no,gamereactor.dk#$#abort-current-inline-script AdsReloadConfig
+||avxwcuaagfcdn.net^$domain=dagens.dk
+||allercdn.net/randomurl.js$script,domain=seoghoer.dk
+||egmontassets.net/random.js$script,domain=euroman.dk
 ! Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 ||googletagmanager.com/gtm.js^$domain=dk|bornholm.nu
 ! To be submitted to "AdGuard Warning Removal List" as well

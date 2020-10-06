@@ -1,5 +1,5 @@
 msFilterList
-# Version: 02October2020v1-Alpha
+# Version: 06October2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -770,12 +770,15 @@ _300x250px-*.gif
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 24September2020v1-Extension
+# Last updated: 05October2020v2-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js
 +d sixscissors.com
+-d avxwcuaagfcdn.net
+-d allercdn.net randomurl.js
+-d egmontassets.net random.js
 -d
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
