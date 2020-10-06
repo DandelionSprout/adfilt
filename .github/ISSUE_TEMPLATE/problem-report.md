@@ -20,14 +20,13 @@ assignees: ''
 
 ## Which adblocker(s) and version did you use when testing this?
 <!-- For info on supported extensions, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md -->
-- [ ] Nano Adblocker
-- [ ] Nano Defender
 - [ ] uBlock Origin
-- [ ] uBlock Origin Plus
-- [ ] AdBlock
-- [ ] Adblock Plus
 - [ ] AdGuard (Paid desktop version)
 - [ ] AdGuard (for browsers)
+- [ ] AdBlock
+- [ ] Adblock Plus
+- [ ] Nano Adblocker
+- [ ] Nano Defender
 - [ ] AdGuard Home
 - [ ] Blokada
 
