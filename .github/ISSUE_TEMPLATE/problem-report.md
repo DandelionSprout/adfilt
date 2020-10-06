@@ -16,7 +16,7 @@ assignees: ''
 ## Add screenshots below if needed:
 
 ## Add a screenshot of the extension's logger:
-<!-- If you're using Nano Adblocker or uBlock Origin, it's recommended to filter the selection down to Blocked+Allowed, to reduce the amount of irrelevant "white" log entries. -->
+<!-- If you're using uBlock Origin, it's recommended to filter the selection down to Blocked+Allowed, to reduce the amount of irrelevant "white" log entries. -->
 
 ## Which adblocker(s) and version did you use when testing this?
 <!-- For info on supported extensions, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md -->
