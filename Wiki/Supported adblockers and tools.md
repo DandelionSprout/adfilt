@@ -4,7 +4,6 @@
 
 * uBlock Origin (for Chrome and Firefox)
 * AdGuard (for Windows, Android, Chrome, and Firefox)
-* Nano Adblocker
 * AdBlock
 * Adblock Plus (incl. Adblock Browser)
 * AdNauseam
@@ -12,7 +11,7 @@
 ### Hardeners for regular adblockers
 
 * uBlock Origin Extra
-* Nano Defender
+* AdGuard Extra
 
 ### Other programs and tools
 
@@ -68,7 +67,7 @@ If you use an adblocker from this section, you will be asked to change to a more
 
 | Affected setup | Reason for it having no support | Approximate supported replacement |
 | - | - | - |
-| uBlock Origin's Microsoft Edge legacy branch | Seemed to have severe problems with list syncing in mid-2018. | Nano Adblocker for Microsoft Edge |
+| uBlock Origin's Microsoft Edge legacy branch | Seemed to have severe problems with list syncing in mid-2018. | |
 | Borealis with uBlock Origin | Very hostile behaviour by Borealis' main developer. | Waterfox Classic with uBlock Origin |
 | AdGuard for Safari ≥13 | No support is offered to Safari ≥13 in protest against Manifest V3-like extension systems. | Google Chrome with uBlock Origin |
 | Brave Browser | Did not support adding custom lists as of January 2019. | Google Chrome with uBlock Origin |
