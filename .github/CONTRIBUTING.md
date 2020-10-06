@@ -1,4 +1,4 @@
-(Last updated: 14th of August 2020)
+(Last updated: 6th of October 2020)
 
 ## Notes on how to contribute:
 
@@ -10,7 +10,7 @@ Pull requests can be done, but they should permit me to be able to edit them, ju
 
 I will normally do the utmost to resolve problems to the best of my ability, but I reserve the right to declare a case to be closed if there's too much back and forth with no end in sight. And especially if the reporter isn't even using the list that (s)he is trying to make changes to.
 
-Issues and problems will normally be tested for in the most recent stable version of Nano Adblocker. In rare cases where the problems are only visible in other extensions, I would also test with uBlock Origin, Adblock Plus, AdGuard (chiefly the paid Windows version), AdBlock, AdGuard Home, Blokada, and/or the Windows system hosts file. For a list of supported, unsupported, and recommended adblockers, [read this](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md).
+Issues and problems will normally be tested for in the most recent development version of uBlock Origin. In rare cases where the problems are only visible in other extensions, I would also test with Adblock Plus, AdGuard (chiefly the paid Windows version), AdBlock, AdGuard Home, Blokada, and/or the Windows system hosts file. For a list of supported, unsupported, and recommended adblockers, [read this](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md).
 
 ### Nordic list submissions
 
