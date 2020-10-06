@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06October2020v1-Alpha
+# Version: 06October2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -250,6 +250,7 @@ _300x250px-*.gif
 -d annoncelight.dk banner
 - 930x180_*.gif
 -d salangen-nyheter.com getbanner.php
+-d hytteavisen.no getbanner.php
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
