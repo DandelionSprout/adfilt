@@ -25,8 +25,6 @@ assignees: ''
 - [ ] AdGuard (for browsers)
 - [ ] AdBlock
 - [ ] Adblock Plus
-- [ ] Nano Adblocker
-- [ ] Nano Defender
 - [ ] AdGuard Home
 - [ ] Blokada
 
