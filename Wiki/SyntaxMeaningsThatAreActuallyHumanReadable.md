@@ -35,7 +35,7 @@
 * The first two `##` of an element entry, are not used for elements written after e.g. `>`, `+` or `:-abp-has`. In those cases, the `##` in `##element` gets removed, `##.class` becomes `.class`, and `###id` becomes `#id`.
 * `##element.class`: Hide something both based on its element (##element1) and `class` value (.class). Note the placement/absence of fullstops.
 * While they're based on the same `class` values, `##.element1` will match any `class` (sub-)value, whereas `##div[class="element1"]` and their modifiers are based on the *entire* `class` string in the F12 filetree.
-* `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or (domain-)specific, where they have one or more domains in front of them, separated by commas. Nano/uBO/AdGuard support wildcard asterisks (`*`) in such domains, and only for the immediate pre-TLD part; while ABP/AdBlock do not.
+* `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or (domain-)specific, where they have one or more domains in front of them, separated by commas. uBO/AdGuard support wildcard asterisks (`*`) in such domains, and only for the immediate pre-TLD part; while ABP/AdBlock do not.
 
 #### File blocking (a.k.a. blocking rules, a.k.a. non-#-rules)
 * \[no prefix\]: Blocks resources that have this text string *anywhere* in its URL.
@@ -45,9 +45,9 @@
 * `$third-party`: Ensures that resources from a domain are only blocked if you're not visiting the domain itself.
 * `$~third-party`: Ensures that resources from a domain are only blocked if you're visiting the domain itself.
 * `$domain=`: Ensures that resources from a domain are only blocked if you're visiting a specified website. Multiple domains are separated with `|` (Vertical line) and not commas. Supports top-level domain wildcards with e.g. `$domain=tk`.
-* `@@||` + `$generichide`: Prevents all non-domain-specific (a.k.a. generic) hiding entries from working on a website. On Nano/uBO it prevents *all* generic entries from working.
-* `@@||` + `$specifichide`: Prevents all domain-specific hiding entries from working on a website. On Nano/uBO it seems to prevent *all* domain-specific entries from working.
-* `@@||` + `$elemhide`: Combines `$generichide` and `$specifichide`. Also completely breaks the element picker in Nano/uBO on that site as of the 14th of July 2020.
+* `@@||` + `$generichide`: Prevents all non-domain-specific (a.k.a. generic) hiding entries from working on a website. On uBO it prevents *all* generic entries from working.
+* `@@||` + `$specifichide`: Prevents all domain-specific hiding entries from working on a website. On uBO it seems to prevent *all* domain-specific entries from working.
+* `@@||` + `$elemhide`: Combines `$generichide` and `$specifichide`. Also completely breaks the element picker in uBO on that site as of the 14th of July 2020.
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it's a script, e.g. a JavaScript runtime.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
 * `$xmlhttprequest` / `$websocket`: Prevents such resources from being downloaded through the titular JavaScript APIs.
@@ -65,7 +65,7 @@
 * `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
 * `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days". ABP also supports "hour/hours".
 
-## Nano Adblocker, uBlock Origin and AdGuard only:
+## uBlock Origin, AdGuard and Nano Adblocker only:
 #### Hiding
 * `:style`: Changes the CSS values of an element, in much the same way as what userstyle extensions like Stylish would've done.
 * `{ }`: Same as above.
@@ -81,7 +81,7 @@
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
 
-## Nano Adblocker and uBlock Origin only:
+## uBlock Origin and Nano Adblocker only:
 #### Hiding
 * `!#include`: Embeds another filterlist that is hosted on the same domain (with a whole lot of restrictions). Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard.
 * `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph). Nano has a select few additional scripts.
@@ -94,7 +94,7 @@
 * `:-abp-has(:scope >`: Almost identical to `:-abp-has(>`, but is used to prevent some bugs seen in the latter that I've forgot what they were about.
 
 #### Blocking
-* `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. Nano and uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
+* `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
 * `$3p`: Same as `$third-party`.
 * `$1p` / `$first-party`: Same as `$~third-party`.
 * `$xhr`: Same as `$xmlhttprequest`.
@@ -160,4 +160,4 @@
 * No entries can use both `||` and `##` at the same time.
 * Major note to advanced CSS experts: Some advanced terms have been replaced in this guide, because they'd be less than obvious to laymen who'd need this guide. For instance, I replaced `DOM tree` with `F12 filetree`, because I 100% genuinely felt that it was easy to think `DOM` was short for "dominatrix", and also because many people may not even know how to open said tree in web browsers.
 
-¹ = Includes Nano Adblocker, uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, Adblock Plus version ≥3.5, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, or Blokada, whose syntax supports are considerably inferior to the above list.
+¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, Nano Adblocker ≤1.0.0.153, Adblock Plus version ≥3.5, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, or Blokada, whose syntax supports are considerably inferior to the above list.
