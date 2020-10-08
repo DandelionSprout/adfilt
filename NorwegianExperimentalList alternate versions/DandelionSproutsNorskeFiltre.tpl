@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06October2020v2-Alpha
+# Version: 08October2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -48,6 +48,7 @@ msFilterList
 # nab.no (Only shown if cookies are accepted; 18 08 2020)
 # Bet365 widget triggered for Norwegian audiences only
 # doktor.frettabladid.is (18 09 2020)
+# borsen.no (08 10 2020)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
