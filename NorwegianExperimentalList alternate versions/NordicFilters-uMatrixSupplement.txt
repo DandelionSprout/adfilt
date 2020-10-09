@@ -1,0 +1,142 @@
+! Version: 08October2020v2-Alpha
+! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
+! Translated title: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
+! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
+! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
+! 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, Sydslesvig, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#dansk
+! 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
+! Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+! Wish to help translate more category titles to Nordic languages 🇩🇰 🇮🇸 🇳🇴🏞 🇫🇴 🇬🇱 ❄? https://crwd.in/dandelion-sprout-nordic-filter
+! If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
+! Want to keep your adblocker turned on while using Kickback or Viatrumf? A whitelist for those services is open for public trial at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianCashbackAssistantReborn.txt
+! 🇳🇴: Oppføringer for minst 3 nettsteder
+! 🇬🇧: Entries for at least 3 websites
+! 🇳🇴: Generelle #-oppføringer med kilder
+! 🇬🇧: Generic #-entries that have sources
+! Exceptions: ballade.no
+! Bet365 widget triggered for Norwegian audiences only
+! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
+! 🇬🇧: Broad or whole-domain blocking rules
+third-party adnordics.com * block
+third-party adserver.xh.no * block
+third-party cluster.chart.dk * block
+third-party dotbanner.dk * block
+third-party kynning.olis.is * block
+third-party samfilm.codelab.is * block
+third-party sannsyn.com * block
+third-party heartbeat.airserve.net * block
+third-party openad.visir.is * block
+third-party static.airserve.net * block
+third-party tankeogteknikk.no * block
+third-party soda.is * block
+third-party delivered-by-madington.com * block
+* ndstage.wpengine.com image block
+* print2web.sn.dk image block
+! Adressa.no
+! Copied over from the New AdAway list
+third-party admob.no * block
+third-party admob.dk * block
+third-party api.advista.no * block
+! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
+! 🇬🇧: Fileserver or site-specific blocking rules
+eniro.se akamai.net script block
+eniro.no akamai.net script block
+eniro.dk akamai.net script block
+dplay.no akamaihd.net other block
+dplay.dk akamaihd.net other block
+* boligkanalen-maestro-new.azurewebsites.net image block
+third-party cdnboligkanalen.azureedge.net * block
+nakenprat.com deiligejenter.no image block
+dplay.dk dnitv.com other block
+diskusjon.no export.prisguide.no * block
+diskusjon.no export.prisguiden.no * block
+nakenprat.com gratisxxx.no image block
+third-party matriell.dm-storage.no image block
+118.dk track.adform.net * block
+third-party tracking-genesisaffiliates.com image block
+startsiden.no widgets.sprinklecontent.com * block
+musikknyheter.no widgets.sprinklecontent.com * block
+vgtv.no adnxs.com * block
+! 🇳🇴: Hovedsaklig for AdGuard
+! 🇳🇴🏞: Hovudsakleg for AdGuard
+! 🇮🇸: Aðallega fyrir AdGuard
+! 🇬🇧: Mostly for AdGuard
+! 🇳🇴: Oppføringer for minst 3 nettsteder
+! 🇬🇧: Entries for at least 3 websites
+! 🇳🇴: Generelle oppføringer med kilder
+! 🇬🇧: Generic entries that have sources
+! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/58527)
+* 85.17.76.181 image block
+* via.placeholder.com image block
+! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
+dplay.no prod-adops-proxy.dnitv.net * block
+dplay.dk prod-adops-proxy.dnitv.net * block
+! Attempting to fix a problem with voting online on Idol Norway
+! Attempts to resolve how some frontpage articles are hard to open
+! 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
+! 🇬🇧: Makes Dplay's login page show up properly
+auth.dplay.no mparticle.com script allow
+auth.dplay.dk mparticle.com script allow
+samiteahter.org api.instagram.com * allow
+ekstrabladet.dk consent.dk third-party allow
+! Forum feeds in the upper right of articles
+! Unbreak a "Read out loud for the deaf" banner
+ekstrabladet.dk notice.sp-prod.net frame allow
+ekstrabladet.dk sp-prod.net xhr allow
+!
+!
+! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
+! 🇳🇴: Anti-'CPU-massakrering'
+! 🇮🇸: And-örgjörvislatrun
+! 🇬🇧: Anti-'CPU slaughtering'
+! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
+! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
+! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
+viafree.no client-stream-events.mtg-api.com * block
+viafree.dk client-stream-events.mtg-api.com * block
+viafree.no freewheel-mtgx-tv.akamaized.net other block
+viafree.dk freewheel-mtgx-tv.akamaized.net other block
+! 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
+! 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
+! 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
+! 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
+! 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
+! 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
+! Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
+! 🇳🇴: Falske innlastinger som sløser bort tid
+! 🇩🇰: Falske indlastinger, der søler bort tid
+! 🇬🇧: Fake loading screens that waste time
+! "Generic Hide"
+! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
+! 🇳🇴: Hurtigfikser for Internet Explorer 11
+! 🇮🇸: Skyndilausn fyrir Internet Explorer 11
+! 🇬🇧: Hotfixes for Internet Explorer 11
+! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
+! 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
+! 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
+gulindex.no panel.cint.com * block
+! 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
+! Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no/sport
+! 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
+! 🇮🇸: Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
+! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
+! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
+! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
+! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
+! 🇬🇧: As mentioned in various news articles about fraud sites
+! IP addresses of servers notorious for hosting many of the sites above
+! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
+! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
+! 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
+! Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
+! 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
+! 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
+ 
+! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
+! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
+! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
+! Last updated: 05October2020v2-Extension
+itavisen.no sixscissors.com 3p allow
+dagens.dk avxwcuaagfcdn.net * block
+! Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
+! To be submitted to "AdGuard Warning Removal List" as well

@@ -8,6 +8,7 @@ UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', 'Expires:']
 UNSUPPORTED_BRAVE = ['#@#', '#?#', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn', '!+ NOT_OPTIMIZED', '$$']
+UNSUPPORTED_UMATRIX = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', 'Expires:', 'subdocument', '$app', '!+', '$doc', ' doc ', 'CSP', '$csp', 'generichide', 'ghide']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
@@ -16,6 +17,7 @@ OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
 OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
 OUTPUT_PRIVACY = 'NordicFiltersPrivacy.txt'
 OUTPUT_BRAVE = 'NordicFiltersBrave.txt'
+OUTPUT_UMATRIX = 'NordicFilters-uMatrixSupplement.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -1574,7 +1576,206 @@ def prepare_brave(lines) -> str:
 
     return text
 
+# ——— uMatrix version ———
 
+def is_supported_umatrix(line) -> bool:
+    for token in UNSUPPORTED_UMATRIX:
+        if token in line:
+            return False
+
+    return True
+
+def prepare_umatrix(lines) -> str:
+    text = ''
+
+    # remove or modifiy entries with unsupported modifiers
+    for line in lines:
+
+        # remove $document modifier from the rule
+        line = re.sub(
+           r"^\*?/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\.\*\..*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9.|@].*[a-zA-Z0-9]/[a-zA-Z0-9].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*/\*[a-zA-Z0-9*_=/.-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\*/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9_-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|(.*)\^?\$domain=(.*)", 
+           r"\2 \1 * block", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|(.*)\^?\$(.*),domain=(.*)", 
+           r"\3 \1 \2 block", 
+           line
+        )
+
+        line = re.sub(
+           r"^! [a-z0-9—].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.*—.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|.*\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|(.*)\^?\$([a-z]{1,14})$", 
+           r"* \1 \2 block", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|(.*)\^?\$domain=(.*)", 
+           r"\2 \1 * allow", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|(.*)\^?\$(.*),domain=(.*)", 
+           r"\3 \1 \2 allow", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|(.*)\^?\$([a-z]{1,14})$", 
+           r"* \1 \2 allow", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|(.*)\^?\$3p$", 
+           r"third-party \1 * block", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|(.*)\^?\$3p$", 
+           r"third-party \1 * allow", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|(.*)\^?\$(.*),3p", 
+           r"third-party \1 \2 block", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|(.*)\^?\$(.*),3p", 
+           r"third-party \1 \2 allow", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|[a-zA-Z0-9].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@_.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r" empty ([ab])", 
+           r" * \1", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])  ([a-z])", 
+           r"\1 \2", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-zA-Z0-9.-]{4,50})\|([a-zA-Z0-9.-]{4,50})\|([a-zA-Z0-9.|-]{4,300})( .*)", 
+           r"\1\4\n\2\4\n\3\4", 
+           line
+        )
+
+        line = re.sub(
+           r"^([a-zA-Z0-9.-]{4,50})\|([a-zA-Z0-9.|-]{4,300})( .*)", 
+           r"\1\3\n\2\3", 
+           line
+        )
+
+        line = re.sub(
+           r"\^ ", 
+           r" ", 
+           line
+        )
+
+        line = re.sub(
+           r"^(! Version:.*)", 
+           r"\1-Alpha", 
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
+           "Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)", 
+           line
+        )
+
+        line = re.sub(
+           "Dandelion Sprout's Nordic filters for tidier websites", 
+           "Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)", 
+           line
+        )
+
+        line = re.sub(
+           r" media ", 
+           r" other ", 
+           line
+        )
+
+        if is_supported_umatrix(line) and not line == '':
+            text += line + '\r\n'
+
+    return text
 
 
 if __name__ == "__main__":
@@ -1589,6 +1790,7 @@ if __name__ == "__main__":
     privoxy_filter = prepare_privoxy(lines)
     privacy_filter = prepare_privacy(lines)
     brave_filter = prepare_brave(lines)
+    umatrix_filter = prepare_umatrix(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -1610,6 +1812,9 @@ if __name__ == "__main__":
 
     with open(OUTPUT_BRAVE, "w") as text_file:
         text_file.write(brave_filter)
+
+    with open(OUTPUT_UMATRIX, "w") as text_file:
+        text_file.write(umatrix_filter)
 
     print('The adblocker-based list versions have been generated.')
 
@@ -4388,6 +4593,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"/(live|fun|popup)([,|]|$).*", 
            r"/", 
+           line
+        )
+
+        line = re.sub(
+           r"\$all$", 
+           r"", 
            line
         )
 
