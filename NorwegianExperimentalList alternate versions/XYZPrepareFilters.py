@@ -2398,6 +2398,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^telenor\.no##\.global-overlay-background$", 
+           r"", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
