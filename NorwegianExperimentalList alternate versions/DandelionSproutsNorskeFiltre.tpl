@@ -1,5 +1,5 @@
 msFilterList
-# Version: 09October2020v2-Alpha
+# Version: 10October2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -252,6 +252,7 @@ _300x250px-*.gif
 - 930x180_*.gif
 -d salangen-nyheter.com getbanner.php
 -d hytteavisen.no getbanner.php
+-d veitingageirinn.is haus20g.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -372,6 +373,7 @@ _300x250px-*.gif
 # godstart.dk, sol.dk (30 09 2020)
 -d ni.dk *-bottom.html
 # fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30 09 2020)
+# https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -419,6 +421,8 @@ _300x250px-*.gif
 # https://www.in.fo/itrottur/sport-detail/news/alex-hevdi-ur-at-gera-i-san-marino/
 # Unbreak a "Read out loud for the deaf" banner
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
+# ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
+# Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 # ——— Unknown cause ———
 # https://github.com/DandelionSprout/adfilt/issues/67
 # https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/

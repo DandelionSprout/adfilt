@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 091020202
+! Version: 101020203
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
 ! Expires: 1 day
@@ -191,6 +191,7 @@ noresk.com,eroguide.dk##.ipsSpacer_both
 salangen-nyheter.com##.bannerspot
 hytteavisen.no##.onlybigplaktat
 hytteavisen.no##.prodlist > .row > .small-12
+hestafrettir.is##.wpb_raw_code
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -275,7 +276,6 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ||ad.*.no^$domain=~ad.dep.no|~ad.hem.no
 ||ad1.*.dk^
 ||ad1.*.no^
-||adcache.*.no^
 ||ads.*.dk^$domain=~ads.mst.dk
 ||ads.*.is^
 ||ads.*.no^
@@ -499,6 +499,7 @@ _300x250px-*.gif^$domain=ilaks.no
 /930x180_*.gif^$domain=noresk.com|eroguide.dk
 ||salangen-nyheter.com/getbanner.php^
 ||hytteavisen.no/getbanner.php^
+||veitingageirinn.is/haus20g.jpg^$image
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png^
@@ -1046,6 +1047,12 @@ ni.dk##.narrow-banner
 ni.dk#?#.clearfixP.columns[style] .clearfixP.box-no-border:-abp-has(> .narrow-banner)
 abcnyheter.no##.c-native-group__container
 steinkjer24.no##article.ad
+nutiminn.is#?#.tdc-row:-abp-has(.vc_column:only-of-type .augl-container:only-of-type)
+nutiminn.is#?#.tdc-row:-abp-has(.td_block_text_with_title)
+nutiminn.is##article .tdc-row:first-of-type
+midjan.is##.widget[class*=bs-hidden-xs]:not([id*=thumbnail])
+visir.is##section > .padded--tight
+visir.is##div[data-placeholder=ad]
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
@@ -1202,6 +1209,8 @@ vafo.dk##.adform-flexblock
 ||ni.dk/ni-news/*feed/*-bottom.html^$third-party
 ! fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30/09/2020)
 ##.adform__text
+! https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
+##.augl-container
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -1285,6 +1294,9 @@ in.fo#@#.ads-banner
 @@||images.jfmedier.dk/*_300_250_
 ! ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
 nytid.no#@#.td-a-rec
+! ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
+! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
+telenor.no##.global-overlay-background
 ! ——— Unknown cause ———
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=ba.no|nidaros.no
