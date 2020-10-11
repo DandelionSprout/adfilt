@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 28September2020v2-Beta
+! Version: 10October2020v3-Beta
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Brave Browser)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for Brave Browser)
 ! Expires: 1 day
@@ -55,6 +55,7 @@ vg.no,e24.no,gamer.no,tek.no,digi.no##+js(aopw, __AB__)
 ! nab.no (Only shown if cookies are accepted; 18/08/2020)
 ! Bet365 widget triggered for Norwegian audiences only
 ! doktor.frettabladid.is (18/09/2020)
+! borsen.no (08/10/2020)
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -73,7 +74,6 @@ vg.no,e24.no,gamer.no,tek.no,digi.no##+js(aopw, __AB__)
 ||ad.*.no^$domain=~ad.dep.no|~ad.hem.no
 ||ad1.*.dk^
 ||ad1.*.no^
-||adcache.*.no^
 ||ads.*.dk^$domain=~ads.mst.dk
 ||ads.*.is^
 ||ads.*.no^
@@ -95,8 +95,8 @@ vg.no,e24.no,gamer.no,tek.no,digi.no##+js(aopw, __AB__)
 ||adservicemedia.dk^
 ||advertisement.vg.no^
 ||bilborsen.webannonse.no^
-||cluster.chart.dk$3p
-||dotbanner.dk$3p
+||cluster.chart.dk^$3p
+||dotbanner.dk^$3p
 ||easy-ad.no^
 ||easy-ads.dk^
 ||isweb.no^$subdocument
@@ -108,9 +108,9 @@ vg.no,e24.no,gamer.no,tek.no,digi.no##+js(aopw, __AB__)
 ||openad.visir.is^$3p
 ||static.airserve.net^$3p
 ||tankeogteknikk.no^$3p
-||soda.is$3p
+||soda.is^$3p
 ||delivered-by-madington.com^$3p
-||vevlysingar.fo$subdocument,3p
+||vevlysingar.fo^$subdocument,3p
 ||ndstage.wpengine.com^$image
 ||print2web.sn.dk^$image
 ||lib.idg.no^
@@ -153,15 +153,15 @@ contentMarketing$xhr,domain=sol.no
 ||biip.no/wp-content/uploads/*320x250.jpg^$image
 ||bilgalleri.dk/content/images/fixed^$image
 ||bobilverden.no/wp-content/uploads/*/Banner-1200x300px.jpg^$image
-||boligkanalen-maestro-new.azurewebsites.net$image
+||boligkanalen-maestro-new.azurewebsites.net^$image
 ||bornholm.nu/nonsec/banner$image
-||brandstudio.inventory.schibsted.io$subdocument,3p
+||brandstudio.inventory.schibsted.io^$subdocument,3p
 ||cdn.rikstoto.no/expert/GameShop^$subdocument,3p,domain=~tipster.no
 ||cdnboligkanalen.azureedge.net^$3p
 @@||cdnboligkanalen.azureedge.net/*width=2000^
 ||damoh.vgtv.no/hic_qos$script,redirect=noopjs,domain=vg.no
 ||deals.innocode.no/api^$3p,subdocument
-||deiligejenter.no$image,domain=nakenprat.com
+||deiligejenter.no^$image,domain=nakenprat.com
 ||dnitv.com^$media,domain=dplay.dk
 ||dust2.dk/img/banners/*$image
 ||export.prisguide.no^$domain=diskusjon.no
@@ -172,9 +172,9 @@ contentMarketing$xhr,domain=sol.no
 ||feltet.dk/*/wallpaper_1.jpg^
 ||feltet.dk/*_300x60.gif^
 ||feltet.dk/octo_cms/files/Feltet.dk//$image
-||finn.no$subdocument,domain=bt.no
+||finn.no^$subdocument,domain=bt.no
 ||footy.dk/wp-content/uploads/*/Sk%C3%A6rmbillede-*.png^$image
-||gratisxxx.no$image,domain=nakenprat.com
+||gratisxxx.no^$image,domain=nakenprat.com
 /wp-content/uploads/*.gif^$image,domain=hnytt.no|karfan.is
 ||hnytt.no/wp-content/uploads/*/Fluffy.jpg^$image
 ||karfan.is/*-470x130*.jpg^
@@ -184,7 +184,7 @@ contentMarketing$xhr,domain=sol.no
 ||leikjaland.is/*/bannerstopright/$image
 ||leikjaland.is/images/*logo.png|
 ||magasinetreiselyst.no/wp-content/*_annonse*promo$image
-||matriell.dm-storage.no$image,3p
+||matriell.dm-storage.no^$image,3p
 ||media.sonymusic.no/marketing/*.html$subdocument,3p
 ||melkoghonning.no/wp-content/uploads/*_980x300px.jpg^
 ||melkoghonning.no/wp-content/uploads/*_Banner_$image
@@ -220,9 +220,9 @@ contentMarketing$xhr,domain=sol.no
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
-||track.adform.net$domain=118.dk
+||track.adform.net^$domain=118.dk
 ||track.adform.net/Banners/
-||tracking-genesisaffiliates.com$image,3p
+||tracking-genesisaffiliates.com^$image,3p
 ||travservice.dk/wp-content^$image
 ||trolli.is/wp-content/*/banner$image
 ||trolli.is/wp-content/*/benecta.png
@@ -291,6 +291,13 @@ contentMarketing$xhr,domain=sol.no
 ||forum.flyprat.no/images/r/Header^$subdocument
 _300x250px-*.gif^$domain=ilaks.no
 -banner_$domain=hnytt.no,image
+||fcbarcelona.dk/images/bcn_*.gif^
+||fcbarcelona.dk/images/banners^
+||annoncelight.dk/Graphics/banner^
+/930x180_*.gif^$domain=noresk.com|eroguide.dk
+||salangen-nyheter.com/getbanner.php^
+||hytteavisen.no/getbanner.php^
+||veitingageirinn.is/haus20g.jpg^$image
 !#if !ext_ublock
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
@@ -311,6 +318,8 @@ _300x250px-*.gif^$domain=ilaks.no
 @@||f.nordiskemedier.dk/2*_*.png^$image
 ! building-supply.dk
 ||f.nordiskemedier.dk/banner^
+! strafferunden.no (02/10/2020)
+||custompublish.com/publish/getbanner.php^
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -337,6 +346,7 @@ _300x250px-*.gif^$domain=ilaks.no
 ||finn.no^$app=no.bt
 contentMarketing$app=no.sol
 !#endif
+||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||danishfamilysearch.dk/images/xp2^$image
 ||gulindex.no/-/js/spring.js^
 ||mmm.dk/safeframe^$subdocument
@@ -401,6 +411,11 @@ contentMarketing$app=no.sol
 ! https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/
 ! lokal-avisa.no, ringsakern.no (19/09/2020)
 ! gjoviksblad.no (19/09/2020)
+! midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt.dk (30/09/2020)
+! godstart.dk, sol.dk (30/09/2020)
+||ni.dk/ni-news/*feed/*-bottom.html^$3p
+! fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30/09/2020)
+! https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ||images.media.xxlsports.com/images/h90/h9d/9339713159198/bg.jpg$image
 ||platekompaniet.no/assets/img/background.png$image
@@ -448,6 +463,8 @@ contentMarketing$app=no.sol
 ! Unbreak a "Read out loud for the deaf" banner
 @@||images.jfmedier.dk/*_300_250_
 ! ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
+! ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
+! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 ! ——— Unknown cause ———
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=ba.no|nidaros.no
@@ -476,8 +493,8 @@ $csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|wi
 ! 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 ! 🇳🇴🏞: ——— Norsk Tipping, inkl. tvilsamt motiverte lottoreklamar (Ein håndfull ikkje-påtrengande tippereklamar er i orden for meg) ———
 ! 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
-||widget.norsktippingpartner.no$subdocument
-||widget.tippebannere.no$subdocument,domain=~tipster.no
+||widget.norsktippingpartner.no^$subdocument
+||widget.tippebannere.no^$subdocument,domain=~tipster.no
 ||tipster.no/embed$subdocument
 ! https://www.nettavisen.no/
 ! https://www.ba.no/s/5-8-1221171
@@ -554,183 +571,183 @@ gamereactor.*##+js(ra, autoplay)
 ! 🇮🇸: Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
 ! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
-||paypal.*.no^
-||vg.no.
-||elkjop.no.
-||coop.no.
-||shell.no.
-||finn.no.
-||posten.no.
-||postnord.no.
+||paypal.*.no^$doc
+||vg.no.$doc
+||elkjop.no.$doc
+||coop.no.$doc
+||shell.no.$doc
+||finn.no.$doc
+||posten.no.$doc
+||postnord.no.$doc
 /finn.no/finno.htm$doc,domain=~facebook.com
-||dnb.no.
-||sparebank1.no.
-||nordea.no.
-||sbanken.no.
-||danskebank.no.
-/?finn.no/login
-||komplett.no.
-||nordnet.no.
-||skatteetaten.no.
-*/begrensede-tilbudet/
-||norwegian.com.
-||flysas-no.
-||tusenfryd-com.
-*/bli-avbrutt-bor-du-oppdater/
-*/Norgesecure/
-||.gratis-reisebilletter.
-*/KiwiErbjudanden1/
+||dnb.no.$doc
+||sparebank1.no.$doc
+||nordea.no.$doc
+||sbanken.no.$doc
+||danskebank.no.$doc
+/?finn.no/login$doc
+||komplett.no.$doc
+||nordnet.no.$doc
+||skatteetaten.no.$doc
+*/begrensede-tilbudet/$doc
+||norwegian.com.$doc
+||flysas-no.$doc
+||tusenfryd-com.$doc
+*/bli-avbrutt-bor-du-oppdater/$doc
+*/Norgesecure/$doc
+||.gratis-reisebilletter.$doc
+*/KiwiErbjudanden1/$doc
 ||trackvoluum.com^$doc
-*/pakkerlevering/
+*/pakkerlevering/$doc
 ||102.112.2o7.net^$doc
-||tromselementbygg.no^
+||tromselementbygg.no^$doc
 ||no.zxxyw.com^
 ||apple-account-locked.losjevegen.no^$doc
-||arvetellefsen.no/curry^
-||holmedalblikk.no^
-||vipps-sikkerhet.
-*/dnb11111^
+||arvetellefsen.no/curry^$doc
+||holmedalblikk.no^$doc
+||vipps-sikkerhet.$doc
+*/dnb11111^$doc
 ||nymelding.com^$doc
-||mrcal365.com^
-||ultimate-tech-products.myshopify.com^
-||look-like-star.myshopify.com^
-||limitedvoucher.com^
-||djurs.com-*.
-||pensjonistferie.no^
-||postuksus.com^
+||mrcal365.com^$doc
+||ultimate-tech-products.myshopify.com^$doc
+||look-like-star.myshopify.com^$doc
+||limitedvoucher.com^$doc
+||djurs.com-*.$doc
+||pensjonistferie.no^$doc
+||postuksus.com^$doc
 ||52.216.146.90^
 ||92.42.104.146^
-||beatsapple.top^
-||jimmychoostore.top^
-||hervelegeroutletusa.com^
-||replicapatekphilippe.com^
-||hot-rap-beats.top^
-||replicarolexyachtmaster.com^
-||secureriches.com^
+||beatsapple.top^$doc
+||jimmychoostore.top^$doc
+||hervelegeroutletusa.com^$doc
+||replicapatekphilippe.com^$doc
+||hot-rap-beats.top^$doc
+||replicarolexyachtmaster.com^$doc
+||secureriches.com^$doc
 ||appleid.*.no^
 ||itunesconnect-*.no^
 ||fullbagcash.com^
-||bizcashtrend.com^
-||toptechmania.com^
-||videnskap.dk^
+||bizcashtrend.com^$doc
+||toptechmania.com^$doc
+||videnskap.dk^$doc
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 ! 🇬🇧: As mentioned in various news articles about fraud sites
 ! https://www.tv2.no/nyheter/10493336/
-||rnbinance.com^
-||brightertrade.com^
+||rnbinance.com^$doc
+||brightertrade.com^$doc
 ! https://www.nrk.no/ytring/1.14496024
-||cost2buy.net^
+||cost2buy.net^$doc
 ! https://www.nrk.no/norge/1.14511067
-||kongeparken.com-*
-||kiwi.com-*
+||kongeparken.com-*$doc
+||kiwi.com-*$doc
 ! https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
-||ruter.top^
+||ruter.top^$doc
 ! https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
-||gokkw.com^
-||earnmoneyglobal.com^
+||gokkw.com^$doc
+||earnmoneyglobal.com^$doc
 ! https://www.datahjelperne.no/stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel/
-||trendyn.me^
+||trendyn.me^$doc
 ! https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
-||getmail-no.
+||getmail-no.$doc
 ! https://www.datahjelperne.no/falske-telenor-undersokelser/
 ||surveryrewards1.com^$doc
 ! https://www.nrk.no/mr/1.14649436
-||pprfct.com^
+||pprfct.com^$doc
 ! https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
-||liveshopdealz.com^
+||liveshopdealz.com^$doc
 ! https://www.nrk.no/livsstil/1.14732503
-||elkjop*.club^
+||elkjop*.club^$doc
 ! https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
-/css/*sparebank1.no^
+/css/*sparebank1.no^$doc
 ! https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
-||phosphox.com^
-||nodzoom.com^
+||phosphox.com^$doc
+||nodzoom.com^$doc
 ! https://www.faktisk.no/notiser/ql/nei-du-far-ikke-rayban-briller-til-22299-kr-pa-denne-nettsiden
-||rbgeg.com^
-||rbkbb.com^
+||rbgeg.com^$doc
+||rbkbb.com^$doc
 ! https://www.facebook.com/viralspiralen/posts/2494251397311027
-||addmoviesnow.com^
+||addmoviesnow.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
-||faarup.com-*.
+||faarup.com-*.$doc
 ||com-dk.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
-||legoland.com-*.
+||legoland.com-*.$doc
 ! https://www.mm.dk/tjekdet/artikel/norwegian-billetter-til-valgfri-destination-er-snyd-og-bedrag
-||bondiblue.co.uk^
+||bondiblue.co.uk^$doc
 ! https://www.mm.dk/tjekdet/artikel/overrasket-bjarne-riis-kender-intet-til-investering-i-bitcoin-platform
-||ucrhealthyhearts.com^
+||ucrhealthyhearts.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/svindel-breder-sig-ogsaa-lars-larsen-misbruges-nu-i-bitcoin-fup
-||myk-news.com^
+||myk-news.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/tidligere-lego-chef-misbruges-i-bitcoin-svindelnummer
-||meretro.com^
+||meretro.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
-||hcliips.com^
+||hcliips.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/han-afviser-at-have-investeret-500-mio-i-bitcoin-platform-graensende-til-humor
-||bestphoneapplication.com^
+||bestphoneapplication.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
-||vision-hey.club^
+||vision-hey.club^$doc
 ! https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
-||top-topic.co^
+||top-topic.co^$doc
 ! https://www.nrk.no/troms/1.14788086
-||geometra-bologna.it^
+||geometra-bologna.it^$doc
 ! https://www.nrk.no/nyheter/1.14793929
-||sky.gs^
+||sky.gs^$doc
 ! https://www.online.no/sikkerhet/falsk-online-nettside
-||is-a-personaltrainer.com^
+||is-a-personaltrainer.com^$doc
 ! https://nyheder.tv2.dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
-||rigspolitiet.com^
-||nemid.org^
+||rigspolitiet.com^$doc
+||nemid.org^$doc
 ! https://www.tv2.no/nyheter/11203952/
-||topgadgetboom.com^
+||topgadgetboom.com^$doc
 ! https://www.faktisk.no/faktasjekker/vw8/erik-gikk-fra-arbeidsledig-til-millionaer-pa-8-uker
-||ocgadgets.com^
-||ocgadgetss.myshopify.com^
+||ocgadgets.com^$doc
+||ocgadgetss.myshopify.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/nej-mads-mikkelsen-har-stadig-ikke-skraemt-de-store-banker-med-bitcoins
-||onelifetechno.com^
+||onelifetechno.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
-||rbaab.net^
-||rbppg.net^
+||rbaab.net^$doc
+||rbppg.net^$doc
 ! https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
-||ekstrabiadet.
+||ekstrabiadet.$doc
 ! https://www.mm.dk/tjekdet/artikel/folkekaer-fodboldhelt-ked-af-at-blive-misbrugt-af-svindlere
-||kronoscm.com^
+||kronoscm.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/nej-joergen-leth-har-ikke-investeret-500-millioner-kroner-i-bitcoins
-||daily-news.tech^
-||limevow.com^
+||daily-news.tech^$doc
+||limevow.com^$doc
 ! https://www.faktisk.no/notiser/ywM/se-opp-for-bitcoin-svindlere
-||travelersloch.com^
-||trainingcalculate.com^
+||travelersloch.com^$doc
+||trainingcalculate.com^$doc
 ! https://www.tv2.no/nyheter/11516670/
-||fintechnow*.buzz^
-||wealthnews*.xyz^
+||fintechnow*.buzz^$doc
+||wealthnews*.xyz^$doc
 ! https://sol.no/nyheter/pass-deg-for-solbrillesvindlere/72639445
-||rbono.net^
+||rbono.net^$doc
 ! https://www.tv2.no/underholdning/11604989/
-||roopede.com^
+||roopede.com^$doc
 ! https://www.datahjelperne.no/dnb-sms-svindel/
-||no-personal.com^
+||no-personal.com^$doc
 ! https://www.datahjelperne.no/helse-norge-mail-svindel/
-||transitsuburban.com^
+||transitsuburban.com^$doc
 ! https://www.datahjelperne.no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
-||newzeninfotech.com^
+||newzeninfotech.com^$doc
 ! https://www.datahjelperne.no/skatteberegning-mail-svindel/
-||probenefit.net^
-||ssbeveragedistribution.com^
+||probenefit.net^$doc
+||ssbeveragedistribution.com^$doc
 ! https://www.datahjelperne.no/olav-thon-facebook-svindel/
-||norge.*.icu^
-||euronews*.buzz^
-||softwaredaily*.monster^
-||stalknews*.buzz^
-||goldupdates*.xyz^
+||norge.*.icu^$doc
+||euronews*.buzz^$doc
+||softwaredaily*.monster^$doc
+||stalknews*.buzz^$doc
+||goldupdates*.xyz^$doc
 ! https://www.datahjelperne.no/vipps-sms-svindel/
-||sikre-vipps-konto.
+||sikre-vipps-konto.$doc
 ! https://www.datahjelperne.no/hvit-bjorn-river-kvinne-i-stykker-facebook-spam-oppdatert/
-||vidcopa.me^
+||vidcopa.me^$doc
 ! https://www.datahjelperne.no/netflix-korona-svindel/
-||luxshifting.com^
+||luxshifting.com^$doc
 ! https://www.adressa.no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
-||smallrise.com^
+||smallrise.com^$doc
 ! IP addresses of servers notorious for hosting many of the sites above
 ||51.195.133.131^
 ||66.206.3.34^
@@ -746,88 +763,88 @@ gamereactor.*##+js(ra, autoplay)
 ! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 ! 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 ! Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
-||adidasko.com^
-||airmaxskobillige.com^
-||allergyfl.com^
-||apvoc-ga.com^
-||assassinfitness.com^
-||benshermanoslo.com^
-||billigesalg.com^
-||bostongrnhsflowers.com^
-||caperforaciones.com^
-||coralls.com^
-||crossfiterada.com^
-||crownedwithlaurels.com^
-||daradis.com^
-||denningwelldrilling.com^
-||drakternorge.com^
-||drcarolyngroff.com^
-||dunjakke-no.com^
-||easyliving4you.com^
-||eurosko.net^
-||fatalfailblog.com^
-||festmusikk.com^
-||fotballsko-salg.com^
-||fotballskotilbud.com^
-||gantoslo.com^
-||godeskonettbutikk.com^
-||gsport.com^
-||hernoclothing.com^
-||hollisternorge.com^
-||jakkesalgs.com^
-||jakkesnorge.com^
-||joseph-holland.com^
-||jessicaivory.com^
-||legarralazcoz.com^
-||lindseysopticians.com^
-||linkshe.com^
-||lrgst.com^
-||manasporthorse.com^
-||mayor4london.com^
-||mbtnorge.com^
-||meladermfacts.com^
-||mncprobuild.com^
-||moebel-thiems.com^
-||moslt.com^
-||moteshoes.com^
-||mrarmstrongsclass.com^
-||museuw.com^
-||mycraftypad.com^
-||nasajones.com^
-||nikebutikks.com^
-||no.moncleritalien.com^
-||nordartisan.com^
-||norfotball.com^
-||norgefotball.com^
-||norge.parkaoutdoor.com^
-||norgejakke.com^
-||norgejakkerbutikk.com^
-||norgeshoes.com^
-||oflike.com^
-||omgrm.com^
-||ontariokitcarbuilders.com^
-||parajumpers-salg.com^
-||parajumpersitoutlet.com^
-||parajumpersnettbutikk.com^
-||parajumpersnorway.com^
-||parajumperssalg.com^
-||pjs.outlet.com^
-||popeurope.com^
-||quiltstudiolaren.com^
-||retoaudi.com^
-||skonmdnorge.com^
-||sykkeltrøye.com^
-||swellsup.com^
-||tobiascelebritymusicevents.com^
-||um-bs.com^
-||vansnorge.com^
+||adidasko.com^$doc
+||airmaxskobillige.com^$doc
+||allergyfl.com^$doc
+||apvoc-ga.com^$doc
+||assassinfitness.com^$doc
+||benshermanoslo.com^$doc
+||billigesalg.com^$doc
+||bostongrnhsflowers.com^$doc
+||caperforaciones.com^$doc
+||coralls.com^$doc
+||crossfiterada.com^$doc
+||crownedwithlaurels.com^$doc
+||daradis.com^$doc
+||denningwelldrilling.com^$doc
+||drakternorge.com^$doc
+||drcarolyngroff.com^$doc
+||dunjakke-no.com^$doc
+||easyliving4you.com^$doc
+||eurosko.net^$doc
+||fatalfailblog.com^$doc
+||festmusikk.com^$doc
+||fotballsko-salg.com^$doc
+||fotballskotilbud.com^$doc
+||gantoslo.com^$doc
+||godeskonettbutikk.com^$doc
+||gsport.com^$doc
+||hernoclothing.com^$doc
+||hollisternorge.com^$doc
+||jakkesalgs.com^$doc
+||jakkesnorge.com^$doc
+||joseph-holland.com^$doc
+||jessicaivory.com^$doc
+||legarralazcoz.com^$doc
+||lindseysopticians.com^$doc
+||linkshe.com^$doc
+||lrgst.com^$doc
+||manasporthorse.com^$doc
+||mayor4london.com^$doc
+||mbtnorge.com^$doc
+||meladermfacts.com^$doc
+||mncprobuild.com^$doc
+||moebel-thiems.com^$doc
+||moslt.com^$doc
+||moteshoes.com^$doc
+||mrarmstrongsclass.com^$doc
+||museuw.com^$doc
+||mycraftypad.com^$doc
+||nasajones.com^$doc
+||nikebutikks.com^$doc
+||no.moncleritalien.com^$doc
+||nordartisan.com^$doc
+||norfotball.com^$doc
+||norgefotball.com^$doc
+||norge.parkaoutdoor.com^$doc
+||norgejakke.com^$doc
+||norgejakkerbutikk.com^$doc
+||norgeshoes.com^$doc
+||oflike.com^$doc
+||omgrm.com^$doc
+||ontariokitcarbuilders.com^$doc
+||parajumpers-salg.com^$doc
+||parajumpersitoutlet.com^$doc
+||parajumpersnettbutikk.com^$doc
+||parajumpersnorway.com^$doc
+||parajumperssalg.com^$doc
+||pjs.outlet.com^$doc
+||popeurope.com^$doc
+||quiltstudiolaren.com^$doc
+||retoaudi.com^$doc
+||skonmdnorge.com^$doc
+||sykkeltrøye.com^$doc
+||swellsup.com^$doc
+||tobiascelebritymusicevents.com^$doc
+||um-bs.com^$doc
+||vansnorge.com^$doc
 ! 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
-||nofotballshop.com^
-||nofotballstore.com^
-||nodrakts.com^
-||dkfodboldstore.com^
-||vmfodboldtoj.com^
-||minfodboldbutik.com^
+||nofotballshop.com^$doc
+||nofotballstore.com^$doc
+||nodrakts.com^$doc
+||dkfodboldstore.com^$doc
+||vmfodboldtoj.com^$doc
+||minfodboldbutik.com^$doc
 ||5.39.217.206^
 ||5.39.221.180^
 ||193.148.70.153^
@@ -852,7 +869,7 @@ gamereactor.*##+js(ra, autoplay)
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 24September2020v1-Extension
+! Last updated: 05October2020v2-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
@@ -872,7 +889,10 @@ vg.no##+js(aeld, load, concat)
 gamereactor.*##+js(set, adblockEnabled, noopFunc)
 gamereactor.*##+js(set, trackAdblock, noopFunc)
 gamereactor.*##+js(acis, AdsReloadConfig)
-!#if !ext_ublock
+||avxwcuaagfcdn.net^$domain=dagens.dk
+||allercdn.net/randomurl.js$script,domain=seoghoer.dk
+||egmontassets.net/random.js$script,domain=euroman.dk
+!#if adguard
 !#endif
 !#if env_firefox
 !#endif

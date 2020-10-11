@@ -1,5 +1,5 @@
 msFilterList
-# Version: 28September2020v2-Alpha
+# Version: 10October2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -48,6 +48,7 @@ msFilterList
 # nab.no (Only shown if cookies are accepted; 18 08 2020)
 # Bet365 widget triggered for Norwegian audiences only
 # doktor.frettabladid.is (18 09 2020)
+# borsen.no (08 10 2020)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -245,6 +246,13 @@ _toppbanner_
 -d forum.flyprat.no Header
 _300x250px-*.gif
 - -banner_
+-d fcbarcelona.dk bcn_*.gif
+-d fcbarcelona.dk banners
+-d annoncelight.dk banner
+- 930x180_*.gif
+-d salangen-nyheter.com getbanner.php
+-d hytteavisen.no getbanner.php
+-d veitingageirinn.is haus20g.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -261,6 +269,8 @@ _300x250px-*.gif
 -d f.nordiskemedier.dk 2*.png
 # building-supply.dk
 -d f.nordiskemedier.dk banner
+# strafferunden.no (02 10 2020)
+-d custompublish.com getbanner.php
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -291,6 +301,7 @@ _300x250px-*.gif
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
+-d fcbarcelona.dk footerbg.jpg
 -d 730.no sonymusic
 -d danishfamilysearch.dk xp2
 -d gaysir.no bb_inline
@@ -358,6 +369,11 @@ _300x250px-*.gif
 # https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/
 # lokal-avisa.no, ringsakern.no (19 09 2020)
 # gjoviksblad.no (19 09 2020)
+# midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt.dk (30 09 2020)
+# godstart.dk, sol.dk (30 09 2020)
+-d ni.dk *-bottom.html
+# fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30 09 2020)
+# https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -405,6 +421,8 @@ _300x250px-*.gif
 # https://www.in.fo/itrottur/sport-detail/news/alex-hevdi-ur-at-gera-i-san-marino/
 # Unbreak a "Read out loud for the deaf" banner
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
+# ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
+# Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 # ——— Unknown cause ———
 # https://github.com/DandelionSprout/adfilt/issues/67
 # https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
@@ -758,12 +776,15 @@ _300x250px-*.gif
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 24September2020v1-Extension
+# Last updated: 05October2020v2-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js
 +d sixscissors.com
+-d avxwcuaagfcdn.net
+-d allercdn.net randomurl.js
+-d egmontassets.net random.js
 -d
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js

@@ -1,0 +1,394 @@
+# This list is a copy of a list that was taken over by very questionable new owners, frozen in time at the 5th of October 2020, a couple of weeks-ish before the handover was completed.
+# Original source for this list: https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoFilters/NanoResources.txt
+# Licence: GPL-3.0
+! —————————————————————————————————————————————
+# Expires: 3 days
+# License: See source for license and credits
+# Source: https://github.com/NanoAdblocker/NanoFilters/tree/master/NanoFiltersSource/NanoResources.txt
+# This file is a compiled binary, do not modify
+# All modifications will be overwritten on the next build
+
+nano-tiny-noopvast-2.0 text/xml
+<VAST version="2.0"></VAST>
+
+nano-tiny-noopvast-3.0 text/xml
+<VAST version="3.0"></VAST>
+
+nano-assign-variable-onready.js application/javascript
+(function() {
+    var chain = '{{1}}';
+    var value = '{{2}}';
+    if ( chain === '' || chain === '{{1}}' ) {
+        return;
+    }
+    if ( value === 'null' ) {
+        value = null;
+    } else if ( value === 'true' ) {
+        value = true;
+    } else if ( value === 'false' ) {
+        value = false;
+    } else {
+        return;
+    }
+    var assign = function() {
+        var parent = window;
+        chain = chain.split('.');
+        for ( var i = 0; i < chain.length - 1; i++ ) {
+            parent = parent[chain[i]];
+        }
+        parent[chain[chain.length - 1]] = value;
+    };
+    if ( document.readyState === 'interactive' ||
+         document.readyState === 'complete' ) {
+        assign();
+    } else {
+        addEventListener('DOMContentLoaded', assign);
+    }
+})();
+
+nano-vvvvid-it.js application/javascript
+(function() {
+    // Based on KAADIVVVV
+    // License: https://github.com/Robotex/KAADIVVVV/blob/master/LICENSE
+    function defuse() {
+        var checkAdv = function() {
+            this.hasAdv = false;
+        };
+        vvvvid.models.PlayerObj.prototype.checkAdv = checkAdv;
+        window[wnbshgd] = vvvvid.models.PlayerObj.prototype.checkAdv;
+    }
+    if ( typeof vvvvid === 'object' ) {
+        defuse();
+    } else {
+        addEventListener('DOMContentLoaded', defuse);
+    }
+})();
+
+nano-colombiaonline-com.js application/javascript
+(function() {
+    var magic = 'a' + Math.random().toString(36).substring(2);
+    var testScript = "typeof otab == 'function'";
+    var testComment = /\d{5,} \d{1,2}/;
+    //
+    var getter = function() {
+        var script, temp;
+        //
+        temp = Array.from(document.querySelectorAll(
+            'script:not([src]):not([' + magic + '])'
+        ));
+        if (
+            document.currentScript &&
+            !document.currentScript.hasAttribute(magic)
+        ) {
+            temp.unshift(document.currentScript);
+        }
+        if ( temp.length === 0 ) {
+            return true;
+        }
+        for ( var e of temp ) {
+            e.setAttribute(magic, '');
+            if ( e.textContent && e.textContent.includes(testScript) ) {
+                script = e;
+                break;
+            }
+        }
+        //
+        if ( script === undefined ) {
+            return true;
+        }
+        var prev = script.previousSibling;
+        temp = prev;
+        while ( temp = temp.previousSibling ) {
+            if (
+                temp.nodeType === Node.COMMENT_NODE &&
+                testComment.test(temp.data)
+            ) {
+                prev.style.setProperty('display', 'none', 'important');
+                return false;
+            }
+        }
+    };
+    //
+    Object.defineProperty(window, "trev", {
+        set: function() { },
+        get: function() {
+            var r;
+            var i = 0;
+            do {
+                try {
+                    r = getter();
+                } catch ( err ) { }
+            } while ( i++, !r && i < 100 );
+            return null;
+        }
+    });
+    addEventListener('load', function() {
+        void trev;
+    });
+    //
+    var isInBackground = false;
+    var reStart = /^\/[a-z_]+\.cms/;
+    var reEnd = /^ \d{5,} \d{1,2} $/;
+    var adsHidder = function() {
+        if ( isInBackground || !document.body ) {
+            return;
+        }
+        var iterator = document.createTreeWalker(
+            document.body, NodeFilter.SHOW_COMMENT
+        );
+        var comment;
+        while ( comment = iterator.nextNode() ) {
+            if ( reStart.test(comment.data) ) {
+                var toHide = [];
+                var prev = comment;
+                while ( prev = prev.previousSibling ) {
+                    if (
+                        prev.nodeType === Node.COMMENT_NODE &&
+                        reEnd.test(prev.data)
+                    ) {
+                        if ( toHide.length < 15 ) {
+                            for ( var e of toHide ) {
+                                try {
+                                    e.style.setProperty(
+                                        'display', 'none', 'important'
+                                    );
+                                } catch ( err ) { }
+                            }
+                        }
+                        break;
+                    }
+                    toHide.push(prev);
+                }
+            }
+        }
+    };
+    addEventListener('focus', function() {
+        isInBackground = false;
+    });
+    addEventListener('blur', function() {
+        isInBackground = true;
+    });
+    setInterval(adsHidder, 1000);
+})();
+
+nano-hijack-script-create.js application/javascript
+(function() {
+    var _createElement = document.createElement;
+    var needle = '{{1}}';
+    if ( needle === '' || needle === '{{1}}' ) {
+        needle = '.?';
+    } else if ( needle.length > 2 &&
+                needle.startsWith('/') && needle.endsWith('/') ) {
+        needle = needle.slice(1,-1);
+    } else {
+        needle = needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+    needle = new RegExp(needle);
+    document.createElement = function(name) {
+        var elem = _createElement.apply(this, arguments);
+        if ( name === 'script' ) {
+            elem.addEventListener('error', function(e) {
+                if ( needle.test(elem.src) ) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var ev = new Event('load');
+                    elem.dispatchEvent(ev);
+                }
+            });
+        }
+        return elem;
+    };
+})();
+
+nano-remove-elements-onready.js application/javascript
+(function() {
+    var selector = '{{1}}';
+    if ( selector === '' || selector === '{{1}}' ) {
+        return;
+    }
+    var remove = function() {
+        var elements = document.querySelectorAll(selector);
+        for ( var element of elements ) {
+            element.remove();
+        }
+    };
+    if ( document.readyState === 'interactive' ||
+         document.readyState === 'complete' ) {
+        remove();
+    } else {
+        addEventListener('DOMContentLoaded', remove);
+    }
+})();
+
+nano-make-bait-element.js application/javascript
+(function() {
+    var identifier = '{{1}}';
+    var element = document.createElement('div');
+    if ( identifier.charAt(0) === '#' ) {
+        element.id = identifier.substring(1);
+    } else if ( identifier.charAt(0) === '.' ) {
+        element.className = identifier.substring(1);
+    } else {
+        return;
+    }
+    element.style.display = 'none';
+    document.documentElement.appendChild(element);
+})();
+
+nano-grant-fake-notification.js application/javascript
+(function() {
+    Notification = function() { };
+    Notification.permission = 'default';
+    Notification.requestPermission = function(callback) {
+        Notification.permission = 'granted';
+        if ( callback ) {
+            setTimeout(callback, 0, 'granted');
+        }
+        return Promise.resolve('granted');
+    };
+})();
+
+nano-abort-inline-scripts-by-id.js application/javascript
+(() => {
+    let needle = '{{1}}';
+    if (needle === '' || needle === '{{1}}') {
+        return;
+    } else if (needle.startsWith('/') && needle.endsWith('/')) {
+        needle = needle.slice(1, -1);
+    } else {
+        needle = '^' + needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$';
+    }
+    needle = new RegExp(needle);
+    //
+    const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+            for (const node of mutation.addedNodes) {
+                if (node.tagName === 'SCRIPT' && needle.test(node.id)) {
+                    node.textContent = '';
+                    node.remove();
+                }
+            }
+        }
+    });
+    if (document.readyState === 'interactive' ||
+        document.readyState === 'complete') {
+        return; // Too late
+    } else {
+        observer.observe(document, {
+            childList: true,
+            subtree: true,
+        });
+        addEventListener('DOMContentLoaded', () => {
+            observer.disconnect();
+        });
+    }
+})();
+
+nanop-click-elements-onready.js application/javascript
+(function() {
+    var guard = '{{nano}}';
+    if ( guard === '{{nano}}' ) {
+        return;
+    }
+    var selector = '{{1}}';
+    if ( selector === '' || selector === '{{1}}' ) {
+        return;
+    }
+    var click = function() {
+        var elements = document.querySelectorAll(selector);
+        for ( var element of elements ) {
+            element.click();
+        }
+    };
+    if ( document.readyState === 'interactive' ||
+         document.readyState === 'complete' ) {
+        click();
+    } else {
+        addEventListener('DOMContentLoaded', click);
+    }
+})();
+
+nanop-click-elements-onload.js application/javascript
+(function() {
+    var guard = '{{nano}}';
+    if ( guard === '{{nano}}' ) {
+        return;
+    }
+    var selector = '{{1}}';
+    if ( selector === '' || selector === '{{1}}' ) {
+        return;
+    }
+    var click = function() {
+        var elements = document.querySelectorAll(selector);
+        for ( var element of elements ) {
+            element.click();
+        }
+    };
+    if ( document.readyState === 'complete' ) {
+        click();
+    } else {
+        addEventListener('load', click);
+    }
+})();
+
+nanop-easy-set-cookie.js application/javascript
+(function() {
+    var guard = '{{nano}}';
+    if ( guard === '{{nano}}' ) {
+        return;
+    }
+    var data = '{{1}}';
+    var path = '{{2}}';
+    var domain = '{{3}}';
+    var secure = '{{4}}';
+    var del = '{{5}}';
+    if ( data.indexOf('=') === -1 ) {
+        return;
+    }
+    if ( del === 'true' ) {
+        data += ';max-age=-100';
+    } else {
+        data += ';max-age=2592000'; // 30 days
+    }
+    if ( path !== '' && path !== '{{2}}' ) {
+        data += ';path=' + path;
+    }
+    if ( domain !== '' && domain !== '{{3}}' ) {
+        data += ';domain=' + domain;
+    }
+    if ( secure === 'true' ) {
+        data += ';secure';
+    }
+    document.cookie = data;
+})();
+
+nanop-set-cookie.js application/javascript
+(function() {
+    var guard = '{{nano}}';
+    if ( guard === '{{nano}}' ) {
+        return;
+    }
+    var data = '{{1}}';
+    if ( data.indexOf('=') === -1 ) {
+        return;
+    }
+    document.cookie = data;
+})();
+
+nanop-get-redirect.js application/javascript
+(() => {
+    var guard = '{{nano}}';
+    if ( guard === '{{nano}}' ) {
+        return;
+    }
+    var data = '{{1}}';
+    if ( data === '' || data === '{{1}}' ) {
+        return;
+    }
+    var url = new URL(location.href);
+    var param = url.searchParams.get(data);
+    if ( typeof param !== 'string' || !/^https?:\/\//.test(param) ) {
+        return;
+    }
+    location.href = param;
+})();

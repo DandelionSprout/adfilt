@@ -2,7 +2,7 @@ Important note to self: Running Python scripts in Cygwin and PowerShell seems to
 
 Recommended adblockers for the various list versions:
 
-• Nano Adblocker, uBlock Origin, AdNauseam: **[NorwegianList.txt](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt)**<br>
+• uBlock Origin, AdNauseam: **[NorwegianList.txt](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt)**<br>
 • —||—, but without tracker whitelistings: **NordicFiltersPrivacy.txt**<br>
 • AdGuard: **NordicFiltersAdGuard.txt**<br>
 • AdBlock, ABP users who want anti-anti-adblock: **NordicFiltersABP.txt**<br>

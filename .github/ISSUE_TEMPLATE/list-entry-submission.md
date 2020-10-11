@@ -16,14 +16,11 @@ assignees: ''
 ## Which of my lists are you submitting it to?
 
 ## Which adblocker(s) and version did you use when writing and testing the entries?
-- [ ] Nano Adblocker
-- [ ] Nano Defender
 - [ ] uBlock Origin
-- [ ] uBlock Origin Plus
-- [ ] AdBlock
-- [ ] Adblock Plus
 - [ ] AdGuard (Paid desktop version)
 - [ ] AdGuard (for browsers)
+- [ ] AdBlock
+- [ ] Adblock Plus
 - [ ] AdGuard Home
 - [ ] Blokada
 

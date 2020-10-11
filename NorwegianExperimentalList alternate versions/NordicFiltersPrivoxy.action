@@ -1,4 +1,4 @@
-# Version: 28September2020v2-Alpha
+# Version: 10October2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Privoxy)
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites (for Privoxy)
 # Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -46,6 +46,7 @@
 # nab.no (Only shown if cookies are accepted; 18/08/2020)
 # Bet365 widget triggered for Norwegian audiences only
 # doktor.frettabladid.is (18/09/2020)
+# borsen.no (08/10/2020)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 {+block{🇬🇧: Broad or whole-domain blocking rules}}
@@ -68,7 +69,6 @@
 {+block}
 .ad1.*.dk
 .ad1.*.no
-.adcache.*.no
 .ads.*.dk
 {-block}
 .ads.mst.dk
@@ -385,6 +385,18 @@
 {+block}
 .forum.flyprat.no/images/r/Header
 {+block}
+.fcbarcelona.dk/images/bcn_*.gif
+{+block}
+.fcbarcelona.dk/images/banners
+{+block}
+.annoncelight.dk/Graphics/banner
+{+block}
+.salangen-nyheter.com/getbanner.php
+{+block}
+.hytteavisen.no/getbanner.php
+{+block}
+.veitingageirinn.is/haus20g.jpg
+{+block}
 .samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png
 # bilasolur.is (03/05/2020)
 ./lykill_banner
@@ -409,6 +421,9 @@
 {+block{building-supply.dk}}
 {+block}
 .f.nordiskemedier.dk/banner
+# strafferunden.no (02/10/2020)
+{+block}
+.custompublish.com/publish/getbanner.php
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -426,6 +441,8 @@
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 {+block{🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———}}
+{+block}
+.fcbarcelona.dk/*/images/footerbg.jpg
 {+block}
 .730.no/banner/*/sonymusic/
 {+block}
@@ -499,6 +516,12 @@
 {+block{https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/}}
 # lokal-avisa.no, ringsakern.no (19/09/2020)
 # gjoviksblad.no (19/09/2020)
+# midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt.dk (30/09/2020)
+# godstart.dk, sol.dk (30/09/2020)
+{+block}
+.ni.dk/ni-news/*feed/*-bottom.html
+# fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30/09/2020)
+{+block{https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/}}
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -574,6 +597,8 @@
 {-block}
 .images.jfmedier.dk/*_300_250_
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
+# ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
+# Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 # ——— Unknown cause ———
 {+block{https://github.com/DandelionSprout/adfilt/issues/67}}
 {-block}
@@ -985,7 +1010,7 @@
 # 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 {+block{🇬🇧: ——— Anti-anti-adblocking ———}}
-# Last updated: 24September2020v1-Extension
+# Last updated: 05October2020v2-Extension
 {+block}
 .aftenposten.no/seksjon/dist/ads-
 {+block}
@@ -1005,6 +1030,10 @@
 
 {-block}
 .www.tv2.no/s/js/ads.js
+{+block}
+
+{+block}
+
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 {+block}
 

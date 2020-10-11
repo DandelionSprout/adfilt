@@ -40,7 +40,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed. <br>
 • To easily create GitCDN links to the lists, in case anyone have list connection problems: [GitHub GitCDN Button](https://greasyfork.org/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul) <br>
 • To find very similar domains for Hosts files, or to find all domains hosted by specific IP addresses (both IPv4 and IPv6): [SecurityTrails](https://securitytrails.com/) <br>
-• To look for invalidly written entries according to Nano/uBO's syntax: Use Nano Adblocker, set logger to *All*, and resync the lists. <br>
+• To look for invalidly written entries according to uBO's syntax: Use uBlock Origin, set logger to *All*, and resync the lists. <br>
 • To correctly sort IP addresses (which Sublime Text cannot do): [Browserling IP Sort](https://www.browserling.com/tools/ip-sort)<br>
 • To correctly sort IP addresses, and also compress them into CIDRs: [Tehnoblog IP Address Aggregator](https://tehnoblog.org/ip-tools/ip-address-aggregator/)<br>
 • To find lists of the biggest newssites of most countries: [DomainTyper](https://domaintyper.com/top-websites/most-popular-websites-with-no-domain)<br>
@@ -58,7 +58,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 • [lassekongo83](https://github.com/lassekongo83) for being a pretty solid expert on uBO's syntax, for helping heaps of people (Me included) with writing specific filters, and for having made several lists that I would look through to learn more about how to write filters. <br>
 • [THEtomaso](https://github.com/THEtomaso) for waterproofing parts of the Nordic list, and for several contributions to the same list. <br>
-• The contributor communities that surround uBlock Origin and Nano Adblocker in general (including [okiehsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser) among others), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
+• The contributor communities that surround uBlock Origin in general (including [okiehsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser) among others), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
 • [krystian3w](https://github.com/krystian3w) for teaching me that using `:style` entries completely breaks a list *and* its entries in ABP. <br>
 • [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *[Browse Websites Without Logging In](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt)*) to *uBlock Filters - Annoyances*.<br>
 • [Andrey Meshkov](https://github.com/ameshkov) for invaluable push-start assistance in creating [the conversion script](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/XYZPrepareFilters.py) for *Dandelion Sprouts nordiske filtre* that eventually became a very important backbone in my adblocker activities.

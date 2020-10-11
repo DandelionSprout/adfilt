@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 29September2020v1-Personal
+! Version: 10October2020v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 ! /\/\ Supercompilations: /\/\
@@ -12,18 +12,16 @@
 !#include Sensitive%20lists/Dandelion%20Sprout's%20Anti-Religion%20List.txt
 !#include AntiNonNewsList.txt
 !#include AntiBadCapitalismList.txt
+!#include AntiGachaAndKnockoffGamesList.txt
 !#if !env_mobile
 !#include WebsiteStretcher4K.txt
 !#endif
 ! /\/\ Standalone compilations: /\/\
-!#include Anti-'Battle%20Royale'%20List.txt
 !#include Anti-Skype%20List.txt
 !#include GamestoreMovieRemover.txt
 !#include HaveIBeenPwnedPasteRemover.txt
-!#include IHateOverpromotedGames.txt
 !#include Imperial%20Units%20Remover.txt
 !#include UndertaleRemoverForSoundCloud.txt
-!#include AntiAnthroCombatWaifuList.txt
 !#include WordPressTranslatorAssistant.txt
 !#include AntiKpopSpammersTwitter.txt
 !#include AntiPorkMeatOnRestaurantMenusList.txt
@@ -73,7 +71,7 @@ pixiv.net#?#.ui-profile-popup[data-user_name]:upward(1):-abp-contains(webbedfing
 ||deviantart.com^$document
 ||inkbunny.com^
 ||latexstories.net^$document
-||theverge.com$document,domain=~ Warning displayed due to: Mounted the PSU fan the wrong way; and then accused people of being racist when this was pointed out to them.
+||theverge.com$document
 ||youtube.com/tv^$document
 ||reddit.com^$document
 ||palemoon.org^
@@ -81,16 +79,14 @@ pixiv.net#?#.ui-profile-popup[data-user_name]:upward(1):-abp-contains(webbedfing
 !#if adguard
 108.61.245.105$network
 !#endif
-!#if !ext_ublock
-!#if !adguard
+!#if no
 108.61.245.105
-!#endif
 !#endif
 ||element.io^
 ||riot.im^
 
 ! Personal entries for AdGuard Home
-!#if !ext_ublock
+!#if no
 ||google.com^$ctag=device_tv
 facebook.com$ctag=device_tv
 yahoo.com$ctag=device_tv
@@ -138,6 +134,7 @@ crowdin.com##.untranslated_phrase:has-text(アイドル)
 crowdin.com##.untranslated_phrase:has-text(シャドウバース)
 crowdin.com##.untranslated_phrase:has-text(ヤンデレ)
 crowdin.com##.untranslated_phrase:has-text(ネプテューヌ)
+crowdin.com##.untranslated_phrase:has-text(/^[ァ-ンー]{4}$/)
 
 ! Test to avoid game patches/updates on the go
 !#if !ext_ublock
@@ -286,12 +283,15 @@ adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="/tru
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="/trump_" i]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="/trumps-" i]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="-trump/" i]
+adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="-trump_" i]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href$=-trump]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href$=-trumps]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=-senator]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="/senator"]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=kongress]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=republikan]
+adressa.no,nrk.no,vg.no,dagbladet.no##a[href*=hvite-hus]
+dr.dk,tv2.dk,ekstrabladet.dk##a[href*=hvide-hus]
 nrk.no#?#.tracklp:-abp-has(a[href*=-trump-])
 nrk.no#?#.tracklp:-abp-has(a[href*=-trumps-])
 nrk.no#?#.tracklp:-abp-has(a[href*="/trump-"])
@@ -331,6 +331,7 @@ github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/.
 github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/stfly.me($|/)/))
 github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(turk))
 github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(.xn--p1ai))
+github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/[а-яА-Я]/))
 github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/cookie/i))
 github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/annoyance/i))
 github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(Privacy))
@@ -342,6 +343,8 @@ google.*##.rc,div[data-ow]:has(a[href*="inkbunny.com"])
 google.*##.rc,div[data-ow]:has(a[href*="latexstories.net"])
 google.*##.rc,div[data-ow]:has(a[href*="theverge.com"])
 google.*##.rc,div[data-ow]:has(a[href*="palemoon.org"])
+google.*##.rc,div[data-ow]:has(a[href*="element.io"])
+google.*##.rc,div[data-ow]:has(a[href*="riot.im"])
 google.*##.rc,div[data-ow]:has(a[href*="ngfts.lge.com"])
 google.*##.rc,div[data-ow]:has(a[href*="funtasiadaily.com"])
 google.*##.rc,div[data-ow]:has(a[href*="filly.fandom.com"])
@@ -383,32 +386,48 @@ google.*##.rc,div[data-ow]:has(a[href*="mlpol.net"])
 google.*##.rc,div[data-ow]:has(a[href*="lolnoc.com"])
 google.*##.rc,div[data-ow]:has(a[href*="twitterponies.fandom.com"])
 google.*##.rc,div[data-ow]:has(a[href*="eetgroup.com"])
+google.*##.rc,div[data-ow]:has(a[href*="butikk-vestfold.visolit.no"])
+google.*##.rc,div[data-ow]:has(a[href*="cbk.no"])
 google.*##.rc,div[data-ow]:has(a[href*="databutikk.borgsvakstrom.no"])
+google.*##.rc,div[data-ow]:has(a[href*="datarekvisita.no"])
 google.*##.rc,div[data-ow]:has(a[href*="ecitshop.no"])
+google.*##.rc,div[data-ow]:has(a[href*="eshop.abacus-it.no"])
 google.*##.rc,div[data-ow]:has(a[href*="eshop.advania.no"])
+google.*##.rc,div[data-ow]:has(a[href*="fanadata.no"])
 google.*##.rc,div[data-ow]:has(a[href*="mjosdata.no"])
 google.*##.rc,div[data-ow]:has(a[href*="ner.no"])
 google.*##.rc,div[data-ow]:has(a[href*="nettbutikk.systemitech.no"])
+google.*##.rc,div[data-ow]:has(a[href*="nettbutikk.teleconsulting.no"])
 google.*##.rc,div[data-ow]:has(a[href*="netthandel.centpro.no"])
+google.*##.rc,div[data-ow]:has(a[href*="netthandel.fagdata.no"])
+google.*##.rc,div[data-ow]:has(a[href*="netthandel.r2it.no"])
 google.*##.rc,div[data-ow]:has(a[href*="powerit.no"])
+google.*##.rc,div[data-ow]:has(a[href*="shop.blinq.no"])
+google.*##.rc,div[data-ow]:has(a[href*="shop.cas.no"])
+google.*##.rc,div[data-ow]:has(a[href*="shop.entry.no"])
+google.*##.rc,div[data-ow]:has(a[href*="shop.gda.no"])
 google.*##.rc,div[data-ow]:has(a[href*="shop.hatteland.com"])
 google.*##.rc,div[data-ow]:has(a[href*="shop.ikomm.no"])
 google.*##.rc,div[data-ow]:has(a[href*="shop.iktpartner24.no"])
 google.*##.rc,div[data-ow]:has(a[href*="shop.inv.as"])
 google.*##.rc,div[data-ow]:has(a[href*="shop.isanorge.no"])
+google.*##.rc,div[data-ow]:has(a[href*="shop.itello.no"])
 google.*##.rc,div[data-ow]:has(a[href*="shop.ldp.no"])
 google.*##.rc,div[data-ow]:has(a[href*="shop.lit.no"])
+google.*##.rc,div[data-ow]:has(a[href*="wago.com"])
+google.*##.rc,div[data-ow]:has(a[href*="webshop.adcom.no"])
+google.*##.rc,div[data-ow]:has(a[href*="webshop.braathe.no"])
+google.*##.rc,div[data-ow]:has(a[href*="webshop.cegal.com"])
 google.*##.rc,div[data-ow]:has(a[href*="webshop.coreservices.no"])
+google.*##.rc,div[data-ow]:has(a[href*="webshop.elektroskandia.no"])
 google.*##.rc,div[data-ow]:has(a[href*="webshop.eltele.no"])
 google.*##.rc,div[data-ow]:has(a[href*="webshop.funn.no"])
+google.*##.rc,div[data-ow]:has(a[href*="webshop.intility.no"])
+google.*##.rc,div[data-ow]:has(a[href*="webshop.marcello.no"])
+google.*##.rc,div[data-ow]:has(a[href*="webshop.snorredata.no"])
 google.*##.rc,div[data-ow]:has(a[href*="webshop.telecomputing.no"])
 google.*##.rc,div[data-ow]:has(a[href*="webshop.teneodata.no"])
-google.*##.rc,div[data-ow]:has(a[href*="webshop.snorredata.no"])
-google.*##.rc,div[data-ow]:has(a[href*="fanadata.no"])
-google.*##.rc,div[data-ow]:has(a[href*="webshop.braathe.no"])
-google.*##.rc,div[data-ow]:has(a[href*="cbk.no"])
-google.*##.rc,div[data-ow]:has(a[href*="butikk-vestfold.visolit.no"])
-google.*##.rc,div[data-ow]:has(a[href*="webshop.adcom.no"])
+google.*##.rc,div[data-ow]:has(a[href*="webshop.visolit.no"])
 google.*##.rc,div[data-ow]:has(a[href*="eshop.comm2ig.dk"])
 google.*##.rc,div[data-ow]:has(a[href*="eshop.edgemo.com"])
 google.*##.rc,div[data-ow]:has(a[href*="shop.aktivit.se"])
@@ -420,6 +439,7 @@ google.*##.rc,div[data-ow]:has(a[href*="webshop.teleservice.net"])
 google.*##.rc,div[data-ow]:has(a[href*="webshop.visolit.se"])
 google.*##.rc,div[data-ow]:has(a[href*="b2bshop.fi"])
 google.*##.rc,div[data-ow]:has(a[href*="businessit.fi"])
+google.*##.rc,div[data-ow]:has(a[href*="fiksuit.fi"])
 google.*##.rc,div[data-ow]:has(a[href*="futureport.fi"])
 google.*##.rc,div[data-ow]:has(a[href*="kauppa.tietokeskus.com"])
 google.*##.rc,div[data-ow]:has(a[href*="shop.dataprof.fi"])
@@ -429,6 +449,7 @@ google.*##.rc,div[data-ow]:has(a[href*="webshop.wisdomic.fi"])
 google.*##.rc,div[data-ow]:has(a[href*="webshop.atlantiksysteme.de"])
 google.*##.rc,div[data-ow]:has(a[href*="webshop.unielektro.de"])
 google.*##.rc,div[data-ow]:has(a[href*="eshop.cebeo.be"])
+google.*##.rc,div[data-ow]:has(a[href*="shop.comby.gl"])
 google.*##.rc,div[data-ow]:has(a[href*="dailymail.co.uk"])
 google.*##.rc,div[data-ow]:has(a[href*="thesun.co.uk"])
 google.*##.rc,div[data-ow]:has(a[href*="express.co.uk"])
@@ -728,6 +749,79 @@ google.*##.rc,div[data-ow]:has(a[href*="noagendasocial.com"])
 google.*##.rc,div[data-ow]:has(a[href*="kneegrows.top"])
 google.*##.rc,div[data-ow]:has(a[href*="rapefeminists.network"])
 google.*##.rc,div[data-ow]:has(a[href*="saynoto.lgbt"])
+google.*##.rc,div[data-ow]:has(a[href*="victimsofcommunism.org"])
+google.*##.rc,div[data-ow]:has(a[href*="21stcenturywire.com"])
+google.*##.rc,div[data-ow]:has(a[href*="365usanews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="4thmedia.org"])
+google.*##.rc,div[data-ow]:has(a[href*="4threvolutionarywar.wordpress.com"])
+google.*##.rc,div[data-ow]:has(a[href*="70news.wordpress.com"])
+google.*##.rc,div[data-ow]:has(a[href*="abcnews.com.co"])
+google.*##.rc,div[data-ow]:has(a[href*="abeldanger.net"])
+google.*##.rc,div[data-ow]:has(a[href*="abovetopsecret.com"])
+google.*##.rc,div[data-ow]:has(a[href*="actualidadpanamericana.com"])
+google.*##.rc,div[data-ow]:has(a[href*="addictinginfo.org"])
+google.*##.rc,div[data-ow]:has(a[href*="ae911truth.org"])
+google.*##.rc,div[data-ow]:has(a[href*="americanactionnews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="americannews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="americannewsx.com"])
+google.*##.rc,div[data-ow]:has(a[href*="americanpoliticnews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="americatalks.com"])
+google.*##.rc,div[data-ow]:has(a[href*="angrypatriotmovement.com"])
+google.*##.rc,div[data-ow]:has(a[href*="awarenessact.com"])
+google.*##.rc,div[data-ow]:has(a[href*="awdnews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="beforeitsnews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="bigamericannews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="bipartisanreport.com"])
+google.*##.rc,div[data-ow]:has(a[href*="blackagendareport.com"])
+google.*##.rc,div[data-ow]:has(a[href*="blackgenocide.org"])
+google.*##.rc,div[data-ow]:has(a[href*="blacklistednews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="bluenationreview.com"])
+google.*##.rc,div[data-ow]:has(a[href*="breaking911.com"])
+google.*##.rc,div[data-ow]:has(a[href*="checkoutthehealthyworld.com"])
+google.*##.rc,div[data-ow]:has(a[href*="chicksontheright.com"])
+google.*##.rc,div[data-ow]:has(a[href*="christianfightback.com"])
+google.*##.rc,div[data-ow]:has(a[href*="christianpost.com"])
+google.*##.rc,div[data-ow]:has(a[href*="chronicle.su"])
+google.*##.rc,div[data-ow]:has(a[href*="coasttocoastam.com"])
+google.*##.rc,div[data-ow]:has(a[href*="conservativeoutfitters.com"])
+google.*##.rc,div[data-ow]:has(a[href*="corbettreport.com"])
+google.*##.rc,div[data-ow]:has(a[href*="countdowntozerotime.com"])
+google.*##.rc,div[data-ow]:has(a[href*="counterpsyops.com"])
+google.*##.rc,div[data-ow]:has(a[href*="dailybuzzlive.com"])
+google.*##.rc,div[data-ow]:has(a[href*="davejanda.com"])
+google.*##.rc,div[data-ow]:has(a[href*="disclose.tv"])
+google.*##.rc,div[data-ow]:has(a[href*="dont-tread-on.me"])
+google.*##.rc,div[data-ow]:has(a[href*="educate-yourself.org"])
+google.*##.rc,div[data-ow]:has(a[href*="educateinspirechange.org"])
+google.*##.rc,div[data-ow]:has(a[href*="endoftheamericandream.com"])
+google.*##.rc,div[data-ow]:has(a[href*="enduringvision.com"])
+google.*##.rc,div[data-ow]:has(a[href*="eutimes.net"])
+google.*##.rc,div[data-ow]:has(a[href*="expose1933.com"])
+google.*##.rc,div[data-ow]:has(a[href*="familysecuritymatters.org"])
+google.*##.rc,div[data-ow]:has(a[href*="fellowshipoftheminds.com"])
+google.*##.rc,div[data-ow]:has(a[href*="firebrandleft.com"])
+google.*##.rc,div[data-ow]:has(a[href*="godlikeproductions.com"])
+google.*##.rc,div[data-ow]:has(a[href*="jesus-is-savior.com"])
+google.*##.rc,div[data-ow]:has(a[href*="libertywritersnews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="newsbreakshere.com"])
+google.*##.rc,div[data-ow]:has(a[href*="now8news.com"])
+google.*##.rc,div[data-ow]:has(a[href*="oathkeepers.org"])
+google.*##.rc,div[data-ow]:has(a[href*="politicalears.com"])
+google.*##.rc,div[data-ow]:has(a[href*="prisonplanet.com"])
+google.*##.rc,div[data-ow]:has(a[href*="redflagnews.com"])
+google.*##.rc,div[data-ow]:has(a[href*="theamericantribune.org"])
+google.*##.rc,div[data-ow]:has(a[href*="thedcgazette.com"])
+google.*##.rc,div[data-ow]:has(a[href*="therundownlive.com"])
+google.*##.rc,div[data-ow]:has(a[href*="thesurvivalistblog.net"])
+google.*##.rc,div[data-ow]:has(a[href*="theuspatriot.com"])
+google.*##.rc,div[data-ow]:has(a[href*="tomfernandez28.com"])
+google.*##.rc,div[data-ow]:has(a[href*="truthfrequencyradio.com"])
+google.*##.rc,div[data-ow]:has(a[href*="viralliberty.com"])
+google.*##.rc,div[data-ow]:has(a[href*="whitepower.com"])
+google.*##.rc,div[data-ow]:has(a[href*="willyloman.wordpress.com"])
+google.*##.rc,div[data-ow]:has(a[href*="witscience.org"])
+google.*##.rc,div[data-ow]:has(a[href*="worldnewspolitics.com"])
+google.*##.rc,div[data-ow]:has(a[href*="worldtruth.tv"])
 google.*##.rc,div[data-ow]:has(a[href*="nyhetsspeilet.no"])
 google.*##.rc,div[data-ow]:has(a[href*="geopolitics.co"])
 google.*##.rc,div[data-ow]:has(a[href*="onechoice.no"])
@@ -795,7 +889,6 @@ google.*##.rc,div[data-ow]:has(a[href*="bethelredding.com"])
 google.*##.rc,div[data-ow]:has(a[href*="bibel-skolen.com"])
 google.*##.rc,div[data-ow]:has(a[href*="bibel-skolen.org"])
 google.*##.rc,div[data-ow]:has(a[href*="biblicalgenderroles.com"])
-google.*##.rc,div[data-ow]:has(a[href*="bigamericannews.com"])
 google.*##.rc,div[data-ow]:has(a[href*="boards.christogenea.org"])
 google.*##.rc,div[data-ow]:has(a[href*="bossierchurchofchrist.com"])
 google.*##.rc,div[data-ow]:has(a[href*="briarwood.org"])
@@ -804,9 +897,7 @@ google.*##.rc,div[data-ow]:has(a[href*="calvaryoftampa.org"])
 google.*##.rc,div[data-ow]:has(a[href*="cbn.com"])
 google.*##.rc,div[data-ow]:has(a[href*="charismanews.com"])
 google.*##.rc,div[data-ow]:has(a[href*="chick.com"])
-google.*##.rc,div[data-ow]:has(a[href*="christianfightback.com"])
 google.*##.rc,div[data-ow]:has(a[href*="christianidentityministries.com"])
-google.*##.rc,div[data-ow]:has(a[href*="christianpost.com"])
 google.*##.rc,div[data-ow]:has(a[href*="christianscience.com"])
 google.*##.rc,div[data-ow]:has(a[href*="christinthewild.com"])
 google.*##.rc,div[data-ow]:has(a[href*="christiscoming777.com"])
@@ -845,7 +936,6 @@ google.*##.rc,div[data-ow]:has(a[href*="globalvisionbc.com"])
 google.*##.rc,div[data-ow]:has(a[href*="gloriavale.org.nz"])
 google.*##.rc,div[data-ow]:has(a[href*="god.tv"])
 google.*##.rc,div[data-ow]:has(a[href*="godencounters.com"])
-google.*##.rc,div[data-ow]:has(a[href*="godlikeproductions.com"])
 google.*##.rc,div[data-ow]:has(a[href*="godsvoice.us"])
 google.*##.rc,div[data-ow]:has(a[href*="gracefamilybaptist.net"])
 google.*##.rc,div[data-ow]:has(a[href*="hankandbrenda.org"])
@@ -861,7 +951,6 @@ google.*##.rc,div[data-ow]:has(a[href*="itsgoodtobeaman.com"])
 google.*##.rc,div[data-ow]:has(a[href*="jamespayneministries.com"])
 google.*##.rc,div[data-ow]:has(a[href*="jamesrobison.net"])
 google.*##.rc,div[data-ow]:has(a[href*="jeremiahproject.com"])
-google.*##.rc,div[data-ow]:has(a[href*="jesus-is-savior.com"])
 google.*##.rc,div[data-ow]:has(a[href*="jesustruthdeliverance.com"])
 google.*##.rc,div[data-ow]:has(a[href*="jimbakkershow.com"])
 google.*##.rc,div[data-ow]:has(a[href*="jordens-allersidstetid.com"])
@@ -935,7 +1024,6 @@ google.*##.rc,div[data-ow]:has(a[href*="thevillagechurch.net"])
 google.*##.rc,div[data-ow]:has(a[href*="thirdeaglemedia.com"])
 google.*##.rc,div[data-ow]:has(a[href*="toddstarnes.com"])
 google.*##.rc,div[data-ow]:has(a[href*="tradcatfem.com"])
-google.*##.rc,div[data-ow]:has(a[href*="truthfrequencyradio.com"])
 google.*##.rc,div[data-ow]:has(a[href*="twelvetribes.com"])
 google.*##.rc,div[data-ow]:has(a[href*="urbanfamilytalk.com"])
 google.*##.rc,div[data-ow]:has(a[href*="vaccinesandchristianity.org"])
@@ -1082,6 +1170,9 @@ google.*##.rc,div[data-ow]:has(a[href*="acclaimmaxsports.com"])
 google.*##.rc,div[data-ow]:has(a[href*="hip-games.com"])
 google.*##.rc,div[data-ow]:has(a[href*="thq.com.au"])
 google.*##.rc,div[data-ow]:has(a[href*="gp32.com"])
+google.*##.rc,div[data-ow]:has(a[href*="kidnkid.com"])
+google.*##.rc,div[data-ow]:has(a[href*="b-shooter.com"])
+google.*##.rc,div[data-ow]:has(a[href*="100-9.com"])
 google.*##.rc,div[data-ow]:has(a[href*="tplinklogin.net"])
 google.*##.rc,div[data-ow]:has(a[href*="tplinkextender.net"])
 google.*##.rc,div[data-ow]:has(a[href*="dreamlinux.com.br"])
@@ -1164,9 +1255,22 @@ google.*##.rc,div[data-ow]:has(a[href*="veremund-hon.com"])
 google.*##.rc,div[data-ow]:has(a[href*="collectfasttracks.com"])
 google.*##.rc,div[data-ow]:has(a[href*="ttnrd.com"])
 google.*##.rc,div[data-ow]:has(a[href*="deviuser.com"])
+google.*##.rc,div[data-ow]:has(a[href*="gridserver.com"])
+google.*##.rc,div[data-ow]:has(a[href*="watch-video.net"])
+google.*##.rc,div[data-ow]:has(a[href*="findmedia.biz"])
+google.*##.rc,div[data-ow]:has(a[href*="whiteclick.biz"])
+google.*##.rc,div[data-ow]:has(a[href*="ilo134ulih.com"])
+google.*##.rc,div[data-ow]:has(a[href*="hooligapps.com"])
+google.*##.rc,div[data-ow]:has(a[href*="theonlygames.com"])
 google.*##.rc,div[data-ow]:has(a[href*="unofficialtwrp.com"])
 google.*##.rc,div[data-ow]:has(a[href*="androidweblog.com"])
 google.*##.rc,div[data-ow]:has(a[href*="hardreset.info"])
+google.*##.rc,div[data-ow]:has(a[href*="pizzaseo.com"])
+google.*##.rc,div[data-ow]:has(a[href*="version.server"])
+google.*##.rc,div[data-ow]:has(a[href*="id.server"])
+google.*##.rc,div[data-ow]:has(a[href*="dominiosvision.com"])
+google.*##.rc,div[data-ow]:has(a[href*="hitnslab.cn"])
+google.*##.rc,div[data-ow]:has(a[href*="hitnslab.xyz"])
 google.*##.rc,div[data-ow]:has(a[href*="githubus.com"])
 google.*##.rc,div[data-ow]:has(a[href*="githubu.com"])
 google.*##.rc,div[data-ow]:has(a[href*="githu.com"])
