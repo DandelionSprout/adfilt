@@ -4608,6 +4608,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\^~(.*)", 
+           r"^\n@@||\1^", 
+           line
+        )
+
         if is_supported_agh(line):
             text += line + '\r\n'
 

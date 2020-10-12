@@ -1,5 +1,5 @@
 msFilterList
-# Version: 12October2020v1-Alpha
+# Version: 12October2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -81,10 +81,14 @@ msFilterList
 -d openad.visir.is
 -d static.airserve.net
 -d tankeogteknikk.no
--d soda.is
 -d delivered-by-madington.com
 -d vevlysingar.fo
 -d ndstage.wpengine.com
+-d boligkanalen-maestro-new.azurewebsites.net
+-d cdnboligkanalen.azureedge.net
+-d brandstudio.inventory.schibsted.io
+-d matriell.dm-storage.no
+-d tracking-genesisaffiliates.com
 -d print2web.sn.dk
 -d lib.idg.no
 # Adressa.no
@@ -126,11 +130,8 @@ _toppbanner_
 -d biip.no *320x250.jpg
 -d bilgalleri.dk fixed
 -d bobilverden.no Banner-1200x300px.jpg
--d boligkanalen-maestro-new.azurewebsites.net
 -d bornholm.nu banner
--d brandstudio.inventory.schibsted.io
 -d cdn.rikstoto.no GameShop
--d cdnboligkanalen.azureedge.net
 -d damoh.vgtv.no hic_qos
 -d deals.innocode.no api
 -d deiligejenter.no
@@ -150,11 +151,9 @@ _toppbanner_
 -d karfan.is *-470x130*.jpg
 -d karfan.is *300x250.jpg
 -d karfan.is *-vefbor%C3%B0i-
--d langrenn.com getfile.php
 -d leikjaland.is bannerstopright
 -d leikjaland.is *logo.png
 -d magasinetreiselyst.no *_annonse*promo
--d matriell.dm-storage.no
 -d media.sonymusic.no *.html
 -d melkoghonning.no *_980x300px.jpg
 -d melkoghonning.no *_Banner_
@@ -178,7 +177,6 @@ _toppbanner_
 -d ssl.p.jwpcdn.com vast.js
 -d track.adform.net
 -d track.adform.net Banners
--d tracking-genesisaffiliates.com
 -d travservice.dk wp-content
 -d trolli.is banner
 -d trolli.is benecta.png
@@ -232,7 +230,7 @@ _toppbanner_
 -d thainytt.no *-160.jpg
 -d nyteknikk.no 180x
 -d nyteknikk.no x150
--d norsk-rally.com banners
+- images banners
 -d malviknytt.no ani*-*.gif
 -d malviknytt.no *-998x1024.jpeg
 -d malviknytt.no *-firkant-*e1*.
@@ -247,11 +245,8 @@ _toppbanner_
 _300x250px-*.gif
 - -banner_
 -d fcbarcelona.dk bcn_*.gif
--d fcbarcelona.dk banners
 -d annoncelight.dk banner
 - 930x180_*.gif
--d salangen-nyheter.com getbanner.php
--d hytteavisen.no getbanner.php
 -d veitingageirinn.is haus20g.jpg
 -d utvarpsaga.is *-bordi.jpg
 -d utvarpsaga.is *_banner.png
@@ -272,8 +267,8 @@ _300x250px-*.gif
 -d f.nordiskemedier.dk 2*.png
 # building-supply.dk
 -d f.nordiskemedier.dk banner
-# strafferunden.no (02 10 2020)
--d custompublish.com getbanner.php
+# salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12 10 2020)
+- getbanner.php
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -544,7 +539,6 @@ _300x250px-*.gif
 -d fullbagcash.com
 -d bizcashtrend.com
 -d toptechmania.com
--d videnskap.dk
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
@@ -591,8 +585,6 @@ _300x250px-*.gif
 -d ucrhealthyhearts.com
 # https://www.mm.dk/tjekdet/artikel/svindel-breder-sig-ogsaa-lars-larsen-misbruges-nu-i-bitcoin-fup
 -d myk-news.com
-# https://www.mm.dk/tjekdet/artikel/tidligere-lego-chef-misbruges-i-bitcoin-svindelnummer
--d meretro.com
 # https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
 # https://www.mm.dk/tjekdet/artikel/han-afviser-at-have-investeret-500-mio-i-bitcoin-platform-graensende-til-humor
@@ -695,7 +687,6 @@ _300x250px-*.gif
 -d fatalfailblog.com
 -d festmusikk.com
 -d fotballsko-salg.com
--d fotballskotilbud.com
 -d gantoslo.com
 -d godeskonettbutikk.com
 -d gsport.com
@@ -732,7 +723,6 @@ _300x250px-*.gif
 -d norgeshoes.com
 -d oflike.com
 -d omgrm.com
--d ontariokitcarbuilders.com
 -d parajumpers-salg.com
 -d parajumpersitoutlet.com
 -d parajumpersnettbutikk.com
@@ -744,7 +734,6 @@ _300x250px-*.gif
 -d retoaudi.com
 -d skonmdnorge.com
 -d sykkeltrøye.com
--d swellsup.com
 -d tobiascelebritymusicevents.com
 -d um-bs.com
 -d vansnorge.com
