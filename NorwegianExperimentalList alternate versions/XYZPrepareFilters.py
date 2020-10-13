@@ -7,7 +7,6 @@ UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '$$', '$app', '$csp=upgrade-insecure-requests']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', 'Expires:']
-UNSUPPORTED_BRAVE = ['#@#', '#?#', 'emty.gif', '1pix.gif', '730.no/banner/', 'gaysir.no/rek/', '85.17.76.181', 'youtube.jpg', 'instagram', 'cookieinformation', 'Social Blocking', '/admark_', 'PFBLOCKERNG', 'boks', 'rammar', ' spaces', 'services.api.no', 'Viatrumf', 'Internet Explorer', 'Elkjøp', ' elding.fo', ' background', 'baggrund', 'EasyList —', 'baksýn', '!+ NOT_OPTIMIZED', '$$']
 UNSUPPORTED_UMATRIX = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', 'Expires:', 'subdocument', '$app', '!+', '$doc', ' doc ', 'CSP', '$csp', 'generichide', 'ghide']
 
 OUTPUT = 'xyzzyx.txt'
@@ -16,7 +15,6 @@ OUTPUT_ABP = 'NordicFiltersABP.txt'
 OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
 OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
 OUTPUT_PRIVACY = 'NordicFiltersPrivacy.txt'
-OUTPUT_BRAVE = 'NordicFiltersBrave.txt'
 OUTPUT_UMATRIX = 'NordicFilters-uMatrixSupplement.txt'
 
 # function that downloads the filter list
@@ -1512,70 +1510,6 @@ def prepare_privacy(lines) -> str:
 
     return text
 
-# ————— Brave version —————
-
-def is_supported_brave(line) -> bool:
-    for token in UNSUPPORTED_BRAVE:
-        if token in line:
-            return False
-
-    return True
-
-# function that prepares the filter list for ABP
-def prepare_brave(lines) -> str:
-    text = ''
-
-    # remove or modifiy entries with unsupported modifiers
-    for line in lines:
-
-        # remove $document modifier from the rule
-        line = re.sub(
-           r"\$doc,domain=~ .*", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"(! Version: .*)", 
-           r"[Adblock Plus 3.4]\n\1", 
-           line
-        )
-
-        line = re.sub(
-           r"(itle:.*Dandelion Sprout.*)", 
-           r"\1 (for Brave Browser)", 
-           line
-        )
-
-        line = re.sub(
-           r"(! Version: .*)", 
-           r"\1-Beta", 
-           line
-        )
-
-        line = re.sub(
-           r".*##[a-zA-Z.^[].*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"\$~doc$", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r".*\$.*,app=.*", 
-           r"", 
-           line
-        )
-
-        if is_supported_brave(line) and not line == '':
-            text += line + '\r\n'
-
-    return text
-
 # ——— uMatrix version ———
 
 def is_supported_umatrix(line) -> bool:
@@ -1789,7 +1723,6 @@ if __name__ == "__main__":
     tpl_filter = prepare_tpl(lines)
     privoxy_filter = prepare_privoxy(lines)
     privacy_filter = prepare_privacy(lines)
-    brave_filter = prepare_brave(lines)
     umatrix_filter = prepare_umatrix(lines)
 
     with open(OUTPUT, "w") as text_file:
@@ -1809,9 +1742,6 @@ if __name__ == "__main__":
 
     with open(OUTPUT_PRIVACY, "w") as text_file:
         text_file.write(privacy_filter)
-
-    with open(OUTPUT_BRAVE, "w") as text_file:
-        text_file.write(brave_filter)
 
     with open(OUTPUT_UMATRIX, "w") as text_file:
         text_file.write(umatrix_filter)
