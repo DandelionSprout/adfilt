@@ -118,54 +118,6 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"domain=dplay\.no\|dplay\.dk", 
-           r"domain=dplay.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=auth.dplay\.no\|auth.dplay\.dk", 
-           r"domain=auth.dplay.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=gamereactor\.no\|gamereactor\.dk", 
-           r"domain=gamereactor.*", 
-           line
-        )
-
-        line = re.sub(
-           r"\|gamereactor\.no\|gamereactor\.dk", 
-           r"|gamereactor.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=viafree\.no\|viafree\.dk", 
-           r"domain=viafree.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=eniro.se\|eniro\.no\|eniro\.dk", 
-           r"domain=eniro.*", 
-           line
-        )
-
-        line = re.sub(
-           r"domain=eurosport\.no\|eurosport\.dk", 
-           r"domain=eurosport.*", 
-           line
-        )
-
-        line = re.sub(
-           r"\|proff.se\|proff\.no\|proff\.dk", 
-           r"|proff.*", 
-           line
-        )
-
-        line = re.sub(
            r"!#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries\.txt", 
            r"", 
            line
@@ -712,6 +664,60 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"\$empty,", 
            r"$", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])frame", 
+           r"\1subdocument", 
+           line
+        )
+
+        line = re.sub(
+           r"\$mp4", 
+           r"$media,rewrite=abp-resource:blank-mp3", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])viafree\.\*", 
+           r"\1viafree.no|viafree.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])dplay\.\*\|~dplay.it\|~dplay.es", 
+           r"\1dplay.no|dplay.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
+           r"\1auth.dplay.no|auth.dplay.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])gamereactor\.\*", 
+           r"\1gamereactor.no|gamereactor.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])eurosport\.\*", 
+           r"\1eurosport.no|eurosport.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])eniro\.\*", 
+           r"\1eniro.no|eniro.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])proff\.\*", 
+           r"\1proff.no|proff.dk", 
            line
         )
 
@@ -1489,12 +1495,6 @@ def prepare_privacy(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.4\]", 
-           "", 
-           line
-        )
-
-        line = re.sub(
            r"! If you wish to remove cookie banners.*", 
            "! Warning: This list version does not exchange tracker protection for added browsing convenience, and is for advanced tech users ONLY! Some web stuff that are unbroken by whitelistings in the normal version, are NOT fixed in this version! Additionally, it is only made with uBO and close derivatives in mind.", 
            line
@@ -1641,6 +1641,42 @@ def prepare_umatrix(lines) -> str:
         )
 
         line = re.sub(
+           r"viafree\.\*", 
+           r"viafree.no|viafree.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"dplay\.\*\|~dplay.it\|~dplay.es", 
+           r"dplay.no|dplay.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
+           r"auth.dplay.no|auth.dplay.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"gamereactor\.\*", 
+           r"gamereactor.no|gamereactor.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"eurosport\.\*", 
+           r"eurosport.no|eurosport.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"eniro\.\*", 
+           r"eniro.no|eniro.dk", 
+           line
+        )
+
+        line = re.sub(
            r"^\|[a-zA-Z0-9].*", 
            r"", 
            line
@@ -1703,6 +1739,12 @@ def prepare_umatrix(lines) -> str:
         line = re.sub(
            r" media ", 
            r" other ", 
+           line
+        )
+
+        line = re.sub(
+           r"^~(.*) block$", 
+           r"\1 allow", 
            line
         )
 
@@ -2331,6 +2373,60 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"^telenor\.no##\.global-overlay-background$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])frame", 
+           r"\1subdocument", 
+           line
+        )
+
+        line = re.sub(
+           r"\$mp4", 
+           r"$media,rewrite=abp-resource:blank-mp3", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])viafree\.\*", 
+           r"\1viafree.no|viafree.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])dplay\.\*\|~dplay.it\|~dplay.es", 
+           r"\1dplay.no|dplay.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
+           r"\1auth.dplay.no|auth.dplay.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])gamereactor\.\*", 
+           r"\1gamereactor.no|gamereactor.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])eurosport\.\*", 
+           r"\1eurosport.no|eurosport.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])eniro\.\*", 
+           r"\1eniro.no|eniro.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([=|])proff\.\*", 
+           r"\1proff.no|proff.dk", 
            line
         )
 
