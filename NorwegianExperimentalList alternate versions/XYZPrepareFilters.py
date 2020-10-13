@@ -680,43 +680,43 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([=|])viafree\.\*", 
+           r"([a-z][=|])viafree\.\*", 
            r"\1viafree.no|viafree.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])dplay\.\*\|~dplay.it\|~dplay.es", 
+           r"([a-z][=|])dplay\.\*\|~dplay.it\|~dplay.es", 
            r"\1dplay.no|dplay.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
+           r"([a-z][=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
            r"\1auth.dplay.no|auth.dplay.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])gamereactor\.\*", 
+           r"([a-z][=|])gamereactor\.\*", 
            r"\1gamereactor.no|gamereactor.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])eurosport\.\*", 
+           r"([a-z][=|])eurosport\.\*", 
            r"\1eurosport.no|eurosport.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])eniro\.\*", 
+           r"([a-z][=|])eniro\.\*", 
            r"\1eniro.no|eniro.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])proff\.\*", 
+           r"([a-z][=|])proff\.\*", 
            r"\1proff.no|proff.dk", 
            line
         )
@@ -2389,43 +2389,43 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([=|])viafree\.\*", 
+           r"([a-z][=|])viafree\.\*", 
            r"\1viafree.no|viafree.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])dplay\.\*\|~dplay.it\|~dplay.es", 
+           r"([a-z][=|])dplay\.\*\|~dplay.it\|~dplay.es", 
            r"\1dplay.no|dplay.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
+           r"([a-z][=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
            r"\1auth.dplay.no|auth.dplay.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])gamereactor\.\*", 
+           r"([a-z][=|])gamereactor\.\*", 
            r"\1gamereactor.no|gamereactor.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])eurosport\.\*", 
+           r"([a-z][=|])eurosport\.\*", 
            r"\1eurosport.no|eurosport.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])eniro\.\*", 
+           r"([a-z][=|])eniro\.\*", 
            r"\1eniro.no|eniro.dk", 
            line
         )
 
         line = re.sub(
-           r"([=|])proff\.\*", 
+           r"([a-z][=|])proff\.\*", 
            r"\1proff.no|proff.dk", 
            line
         )
