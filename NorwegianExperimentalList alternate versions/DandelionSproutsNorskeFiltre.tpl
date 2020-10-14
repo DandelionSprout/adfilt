@@ -1,5 +1,5 @@
 msFilterList
-# Version: 14October2020v2-Alpha
+# Version: 14October2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -657,6 +657,31 @@ _300x250px-*.gif
 # https://www.nrk.no/sorlandet/advarer-mot-nytt-svindelforsok-1.15197328
 -d lepq.club
 -d lampnatives.com
+# https://www.datahjelperne.no/coop-du-har-fatt-nye-kuponger-mail-svindel/
+-d offerleads.club
+- cop-no index.htm
+# https://www.datahjelperne.no/elkjop-kontaktforsok-mail-svindel/
+-d ninjaschools.org
+-d bamboobotanica.com
+- survey heldige
+# https://www.datahjelperne.no/sparebank-1-din-tilganger-er-blokkert-svindel/
+-d cionialessio.it
+# https://www.dinside.no/okonomi/advarer-mot-falsk-facebook/72891041
+# https://www.datahjelperne.no/norske-facebook-profiler-misbrukes-i-svindel/
+-d sites.google.com truls-svendsen
+-d signup-*vpns.com
+# https://www.datahjelperne.no/fakturaen-din-ble-ikke-fullfort-svindel/
+-d is-by.us
+# https://www.datahjelperne.no/du-er-blitt-rammet-av-taggespam-hva-gjor-du-na/
+-d velumstand.com
+-d thesleepinggod.com
+# https://www.datahjelperne.no/telenor-din-faktura-mislyktes-svindel/
+# https://www.datahjelperne.no/apple-abbonnements-bekreftelse-svindel/
+-d ssl-bekreftelse-abonnement.com
+# https://www.datahjelperne.no/eurocard-falsk-epost-faktura/
+-d valspe.com.br
+# https://www.datahjelperne.no/eika-falsk-epost-svindel/
+-d tekuon.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
