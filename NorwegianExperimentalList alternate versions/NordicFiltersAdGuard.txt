@@ -1,4 +1,4 @@
-! Version: 14October2020v3
+! Version: 16October2020v2
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 1 day
@@ -37,7 +37,7 @@ bb.is##.wpb_content_element
 biip.no###advertisement
 bilgalleri.dk##.top-fixed-wrapper
 bilgalleri.dk##a[href*=casino]:upward(3)
-bilgalleri.dk#?#.container:has-text(Premium annoncør)
+bilgalleri.dk##.container-featured + .container:last-of-type
 blogg.no##+js(set, showAd, false)
 blogg.no##.contentmarketing-box
 bobilverden.no##.grid > h5
@@ -82,32 +82,28 @@ hvat.fo##.vev-wrap
 itavisen.no##.article-ad-video
 itavisen.no##.itavi-homepage-video-player-instream
 itavisen.no##.sponsored
-itavisen.no#?#.item:not(:has-text(TEST)):has(.meta:has-text(/^Annonse$/))
+itavisen.no#?#.item:has(.meta:has-text(/^Annonse$/))
 itavisen.no#?#.spklw-post:has(a[href*=smartadserver])
 jn.fo###the_banners
 kanalen.no##.bannergroup
 karfan.is##.td-pb-span6
-karfan.is#?#.td-pb-span4:has(img[height="400"][width="310"])
 kode24.no##.top-profile.row
 komogvind.dk##.spotContainer
 landbrugsavisen.dk##.banner
 liverpool.no##.spklw-post-attr[data-content-source]
-lokal-avisen.no#?#.header > .right:has-text(ANNONSE)
 lokalavisen.dk##.custom-annoncer-wrapper
-lokalavisen.dk#?#.vdb_player:has-text(ADVERTISEMENT)
 magasinetreiselyst.no###topBanner
 magasinetreiselyst.no##.adLarge
 marsteinen.no###horizontal-outer-widgets-1
 marsteinen.no###horizontal-outer-widgets-2
 marsteinen.no###text-14
 melkoghonning.no##.g
-mobilsiden.dk#?#.content-widget:has-text(Annoncer)
+mobilsiden.dk##.content-widget-HTML
 momondo.*##.type-provider.clearfix.flights
 nakenprat.com##+js(aopr, document.dispatchEvent)
-nettavisen.no#?#.rel-article:has(span:has-text(Reklame))
-nettavisen.no#?#.story:has(.vignette)
-nettavisen.no#?#article:has(> a[href*="?utm_source="])
-nettavisen.no#?#optimus-element:has(.dredition-embed-header)
+nettavisen.no##.rel-article
+nettavisen.no##[param-editionid=reklame]
+nettavisen.no##.optimus-complex-front
 nordlysid.fo###ease_adgroup_3
 nordlysid.fo##.adgroup--component[collapse=top]
 nordlysid.fo##.adgroup--component[collapse=vertical]
@@ -115,17 +111,9 @@ nordlysid.fo##column[class*=ad-style]:not([collapse])
 norskenettsider.no###g_image4
 norskenettsider.no##table
 opp.no##.classified-ads
-opp.no#?#.l-col-12:has(.classifieds-content)
 vg.no##.partnerstudio-front
 rett24.no##.p_banner-responsive
 samler.no##div[class^=sl-banner-outside-child-]
-sedenne.no##div[class*="shareButtonWrap" i]
-sedenne.no#?#div[class*=articleItem]:has-text(ANNONSE)
-sedenne.no#?#div[class*=articleListItem]:has-text(ANNONSE)
-side2.no##[href*="clk.tradedoubler.com/click"]
-side2.no##[href*="track.adtraction.com/t/t"]
-side2.no#?#.channel-item:has(.content > [href*="/annonsebilag/"])
-side2.no#?#a:not([href*="side2.no"]):not([href*=".blogg.no"]):has(figure[class*=img-container])
 ekstrabladet.dk###front-ekstrabladet-dk-native-1
 skessuhorn.is##.kostad-efni
 skivefolkeblad.dk##.view-cf-skf-avisannoncer
@@ -153,13 +141,11 @@ tvkampen.com,tvsporten.dk##+js(aopw, onload)
 tvkampen.com,tvsporten.dk##.custom-background:style(background-image: none !important)
 tvkampen.com,tvsporten.dk##a.p-icon.partner
 utrop.no#?#.td-pb-span4:has-text(ANNONSØRINNHOLD)
-vartoslo.no#?#.vc_column-inner:has(.vo-annonse):not(:has(div[class^=td_module_])):not(:has(#sb_instagram))
 vb.is##.spons
 vg.no##+js(acis, Math.floor, g00)
 vg.no##.betting-widgets
 vg.no##.tipster
 vg.no##.wid-betting
-vg.no#?#.partner-studio:not(:has(a[href*="/nordiskfilm/"]))
 vgtv.no##+js(golem.de.js)
 vgtv.no##.apnx-container
 vgtv.no##.video-branding
@@ -178,7 +164,7 @@ ksu.no#?#.center.size-100:not(.nopaddingall)
 ksu.no#?##g-aside .size-100:has(.bannergroup)
 ksu.no#?##g-aside .size-100:has(.sprocket-strips-s)
 backpacker.no##.ad_box_middle
-canariposten.no#?#.widget_title:has-text(/^Annonse$/)
+canariposten.no##.theiaStickySidebar > .widget-1
 thaiguiden.no###extraContainer3
 nyteknikk.no##.rightbanner
 nyteknikk.no##.toppbanner
@@ -512,7 +498,7 @@ _300x250px-*.gif^$domain=ilaks.no
 ||utvarpsaga.is/file/*_banner.png^
 /utvarpsaga\.is/file/[0-9a-f]{32}\.png/
 !#if !ext_ublock
-@@||vgtv.no$generichide
+@@||vgtv.no$ghide
 ||adnxs.com^$domain=vgtv.no
 !#endif
 !+ NOT_OPTIMIZED
@@ -889,7 +875,7 @@ sognavis.no##.row.hidden-print:not(.vspace)
 spillespill.no###bannerAdmeenRectangleTopContainer
 spillespill.no##.banner-leaderboard
 spillespill.no##.push
-sporttv.is##.row div[class^="auglysing-"]:upward(1)
+sporttv.is##.row div[class^=auglysing-]:upward(1)
 sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
 sporttv.is#?#.box:has(div[class^=auglysing-])
 sporttv.is,utdanningsnytt.no##.banner-right
@@ -1315,7 +1301,7 @@ dr.dk#?#.dre-container--margin-bottom:has(.hydra-marketing-banner)
 ! 🇮🇸: ——— Óbrot ———
 ! 🇬🇧: ——— Unbreakage ———
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
-@@||seher.no/reise$generichide
+@@||seher.no/reise$ghide
 ! folkebladet.no; Makes job position lists show up correctly
 @@||stillingledig.*.no^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
@@ -1420,9 +1406,11 @@ ba.no##.sportspill
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/sales/validateCouponAndStoreToSession.json"]
 ~norsk-tipping.no,~tipster.no##a[href*="nettavisen.no/sportspill/tipping/blir-du-mangemillionr-pa-onsdag"]
 nettavisen.no##a[href*=lotto-million]
+nettavisen.no##[param-editionid=reklame]
 nettavisen.no#?#.front article:has-text(Eurojackpot)
 dagsavisen.no##a[href*="norsk-tipping.no/artikler/"]
 startsiden.no##div[class*=partnerModule][data-ga-category^=NorskTipping]
+side2.no##.markupbox
 ||vg.no/vgc/pool/tipster.png^$image
 /pustehullet/betting-header.png^$image
 
@@ -1493,7 +1481,7 @@ ektenyheter.no##.cm-message
 resett.no##.tdm-mobile-full
 resett.no##a[href="https://resett.no/annonseweb/"]
 resett.no###cookie
-resett.no##[class="td_single_image_bg"]
+resett.no##[class=td_single_image_bg]
 resett.no##a[href*="dekristne.no"]
 resett.no#?#.code-block:has-text(annonse)
 resett.no##.td-visible-desktop
@@ -1509,8 +1497,6 @@ frihetskamp.net##a[href*="greenpilled.com"]
 frihetskamp.net##a[href*="nordenstil.no"]
 ! https://github.com/ryanbr/fanboy-adblock/issues/1405
 @@||politainment.no^*/cookieconsent.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/63269
-@@||politainment.no^*/cookieconsent.min.$script,stylesheet
 
 ! 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
 ! 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
@@ -1527,12 +1513,12 @@ nettavisen.no###topover-loader
 nettavisen.no###topover
 
 ! "Generic Hide"
-@@||bondebladet.screen9.tv^$generichide
-@@||eurosport.no^$generichide
-@@||eurosport.dk^$generichide
+@@||bondebladet.screen9.tv^$ghide
+@@||eurosport.no^$ghide
+@@||eurosport.dk^$ghide
 !#if !ext_ublock
-@@||bildeler.name^$generichide
-@@||reservedele.name^$generichide
+@@||bildeler.name^$ghide
+@@||reservedele.name^$ghide
 !#endif
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
@@ -1561,6 +1547,7 @@ finans.dk##.baPosition
 politiken.dk##.ad--horseshoe
 itavisen.no##.banner
 trendsales.dk##.top__banner
+vg.no##.advert
 ! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 ~nytid.no##.td-a-rec
 ! jyllands-posten.dk (09/07/2020)

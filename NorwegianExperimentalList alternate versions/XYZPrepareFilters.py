@@ -6,8 +6,8 @@ SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Norw
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '$$', '$app', '$csp=upgrade-insecure-requests']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
-UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', 'Expires:']
-UNSUPPORTED_UMATRIX = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', 'Expires:', 'subdocument', '$app', '!+', '$doc', ' doc ', 'CSP', '$csp', 'generichide', 'ghide']
+UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', '$ghide', 'Expires:']
+UNSUPPORTED_UMATRIX = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', 'generichide', 'Expires:', 'subdocument', '$app', '!+', '$doc', ' doc ', 'CSP', '$csp', 'ghide']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
@@ -718,6 +718,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"([a-z][=|])proff\.\*", 
            r"\1proff.no|proff.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"\$ghide", 
+           r"$generichide", 
            line
         )
 
@@ -2427,6 +2433,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"([a-z][=|])proff\.\*", 
            r"\1proff.no|proff.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"\$ghide", 
+           r"$generichide", 
            line
         )
 

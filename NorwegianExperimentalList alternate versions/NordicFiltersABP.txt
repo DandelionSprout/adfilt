@@ -1,5 +1,5 @@
 [Adblock Plus 3.4]
-! Version: 141020203
+! Version: 161020202
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
 ! Expires: 1 day
@@ -38,7 +38,7 @@ bb.is##.wpb_content_element
 biip.no###advertisement
 bilgalleri.dk##.top-fixed-wrapper
 bilgalleri.dk#?#*:-abp-has(> * > * > a[href*=casino])
-bilgalleri.dk#?#.container:-abp-contains(Premium annoncør)
+bilgalleri.dk##.container-featured + .container:last-of-type
 blogg.no##.contentmarketing-box
 bobilverden.no##.grid > h5
 boblad.no##.uk-overlay-hover.uk-panel
@@ -81,32 +81,28 @@ hvat.fo##.vev-wrap
 itavisen.no##.article-ad-video
 itavisen.no##.itavi-homepage-video-player-instream
 itavisen.no##.sponsored
-itavisen.no#?#.item:not(:-abp-contains(TEST)):-abp-has(.meta:-abp-contains(/^Annonse$/))
+itavisen.no#?#.item:-abp-has(.meta:-abp-contains(/^Annonse$/))
 itavisen.no#?#.spklw-post:-abp-has(a[href*=smartadserver])
 jn.fo###the_banners
 kanalen.no##.bannergroup
 karfan.is##.td-pb-span6
-karfan.is#?#.td-pb-span4:-abp-has(img[height="400"][width="310"])
 kode24.no##.top-profile.row
 komogvind.dk##.spotContainer
 landbrugsavisen.dk##.banner
 liverpool.no##.spklw-post-attr[data-content-source]
-lokal-avisen.no#?#.header > .right:-abp-contains(ANNONSE)
 lokalavisen.dk##.custom-annoncer-wrapper
-lokalavisen.dk#?#.vdb_player:-abp-contains(ADVERTISEMENT)
 magasinetreiselyst.no###topBanner
 magasinetreiselyst.no##.adLarge
 marsteinen.no###horizontal-outer-widgets-1
 marsteinen.no###horizontal-outer-widgets-2
 marsteinen.no###text-14
 melkoghonning.no##.g
-mobilsiden.dk#?#.content-widget:-abp-contains(Annoncer)
+mobilsiden.dk##.content-widget-HTML
 momondo.no,monondo.dk##.type-provider.clearfix.flights
 nakenprat.com#$#abort-on-property-read document.dispatchEvent
-nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
-nettavisen.no#?#.story:-abp-has(.vignette)
-nettavisen.no#?#article:-abp-has(> a[href*="?utm_source="])
-nettavisen.no#?#optimus-element:-abp-has(.dredition-embed-header)
+nettavisen.no##.rel-article
+nettavisen.no##[param-editionid=reklame]
+nettavisen.no##.optimus-complex-front
 nordlysid.fo###ease_adgroup_3
 nordlysid.fo##.adgroup--component[collapse=top]
 nordlysid.fo##.adgroup--component[collapse=vertical]
@@ -114,17 +110,9 @@ nordlysid.fo##column[class*=ad-style]:not([collapse])
 norskenettsider.no###g_image4
 norskenettsider.no##table
 opp.no##.classified-ads
-opp.no#?#.l-col-12:-abp-has(.classifieds-content)
 vg.no##.partnerstudio-front
 rett24.no##.p_banner-responsive
 samler.no##div[class^=sl-banner-outside-child-]
-sedenne.no##div[class*="shareButtonWrap" i]
-sedenne.no#?#div[class*=articleItem]:-abp-contains(ANNONSE)
-sedenne.no#?#div[class*=articleListItem]:-abp-contains(ANNONSE)
-side2.no##[href*="clk.tradedoubler.com/click"]
-side2.no##[href*="track.adtraction.com/t/t"]
-side2.no#?#.channel-item:-abp-has(.content > [href*="/annonsebilag/"])
-side2.no#?#a:not([href*="side2.no"]):not([href*=".blogg.no"]):-abp-has(figure[class*=img-container])
 ekstrabladet.dk###front-ekstrabladet-dk-native-1
 skessuhorn.is##.kostad-efni
 skivefolkeblad.dk##.view-cf-skf-avisannoncer
@@ -150,13 +138,11 @@ tvh.no##.article-contentmarketing
 tvkampen.com,tvsporten.dk#$#abort-on-property-write onload
 tvkampen.com,tvsporten.dk##a.p-icon.partner
 utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
-vartoslo.no#?#.vc_column-inner:-abp-has(.vo-annonse):not(:-abp-has(div[class^=td_module_])):not(:-abp-has(#sb_instagram))
 vb.is##.spons
 vg.no#$#abort-current-inline-script Math.floor g00
 vg.no##.betting-widgets
 vg.no##.tipster
 vg.no##.wid-betting
-vg.no#?#.partner-studio:not(:-abp-has(a[href*="/nordiskfilm/"]))
 vgtv.no##.apnx-container
 vgtv.no##.video-branding
 viaplay.no,viaplay.dk,viaplay.is##.interaction-block
@@ -174,7 +160,7 @@ ksu.no#?#.center.size-100:not(.nopaddingall)
 ksu.no#?##g-aside .size-100:-abp-has(.bannergroup)
 ksu.no#?##g-aside .size-100:-abp-has(.sprocket-strips-s)
 backpacker.no##.ad_box_middle
-canariposten.no#?#.widget_title:-abp-contains(/^Annonse$/)
+canariposten.no##.theiaStickySidebar > .widget-1
 thaiguiden.no###extraContainer3
 nyteknikk.no##.rightbanner
 nyteknikk.no##.toppbanner
@@ -855,7 +841,7 @@ sognavis.no##.row.hidden-print:not(.vspace)
 spillespill.no###bannerAdmeenRectangleTopContainer
 spillespill.no##.banner-leaderboard
 spillespill.no##.push
-sporttv.is#?#.row *:-abp-has(> div[class^="auglysing-"])
+sporttv.is#?#.row *:-abp-has(> div[class^=auglysing-])
 sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
 sporttv.is#?#.box:-abp-has(div[class^=auglysing-])
 sporttv.is,utdanningsnytt.no##.banner-right
@@ -1360,9 +1346,11 @@ ba.no##.sportspill
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/sales/validateCouponAndStoreToSession.json"]
 ~norsk-tipping.no,~tipster.no##a[href*="nettavisen.no/sportspill/tipping/blir-du-mangemillionr-pa-onsdag"]
 nettavisen.no##a[href*=lotto-million]
+nettavisen.no##[param-editionid=reklame]
 nettavisen.no#?#.front article:-abp-contains(Eurojackpot)
 dagsavisen.no##a[href*="norsk-tipping.no/artikler/"]
 startsiden.no##div[class*=partnerModule][data-ga-category^=NorskTipping]
+side2.no##.markupbox
 ||vg.no/vgc/pool/tipster.png^$image
 /pustehullet/betting-header.png^$image
 
@@ -1424,7 +1412,7 @@ ektenyheter.no##.cm-message
 resett.no##.tdm-mobile-full
 resett.no##a[href="https://resett.no/annonseweb/"]
 resett.no###cookie
-resett.no##[class="td_single_image_bg"]
+resett.no##[class=td_single_image_bg]
 resett.no##a[href*="dekristne.no"]
 resett.no#?#.code-block:-abp-contains(annonse)
 resett.no##.td-visible-desktop
@@ -1438,8 +1426,6 @@ frihetskamp.net##a[href*="greenpilled.com"]
 frihetskamp.net##a[href*="nordenstil.no"]
 ! https://github.com/ryanbr/fanboy-adblock/issues/1405
 @@||politainment.no^*/cookieconsent.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/63269
-@@||politainment.no^*/cookieconsent.min.$script,stylesheet
 
 
 
@@ -1481,6 +1467,7 @@ finans.dk##.baPosition
 politiken.dk##.ad--horseshoe
 itavisen.no##.banner
 trendsales.dk##.top__banner
+vg.no##.advert
 ! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 ~nytid.no##.td-a-rec
 ! jyllands-posten.dk (09/07/2020)
