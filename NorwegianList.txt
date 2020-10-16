@@ -1,4 +1,4 @@
-! Version: 14October2020v3
+! Version: 16October2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 1 day
@@ -119,7 +119,7 @@ opp.no#?#.l-col-12:-abp-has(.classifieds-content)
 vg.no##.partnerstudio-front
 rett24.no##.p_banner-responsive
 samler.no##div[class^=sl-banner-outside-child-]
-sedenne.no##div[class*="shareButtonWrap" i]
+sedenne.no##div[class*=shareButtonWrap i]
 sedenne.no#?#div[class*=articleItem]:-abp-contains(ANNONSE)
 sedenne.no#?#div[class*=articleListItem]:-abp-contains(ANNONSE)
 side2.no##[href*="clk.tradedoubler.com/click"]
@@ -512,7 +512,7 @@ _300x250px-*.gif^$domain=ilaks.no
 ||utvarpsaga.is/file/*_banner.png^
 /utvarpsaga\.is/file/[0-9a-f]{32}\.png/
 !#if !ext_ublock
-@@||vgtv.no$generichide
+@@||vgtv.no$ghide
 ||adnxs.com^$domain=vgtv.no
 !#endif
 !+ NOT_OPTIMIZED
@@ -889,7 +889,7 @@ sognavis.no##.row.hidden-print:not(.vspace)
 spillespill.no###bannerAdmeenRectangleTopContainer
 spillespill.no##.banner-leaderboard
 spillespill.no##.push
-sporttv.is##.row div[class^="auglysing-"]:upward(1)
+sporttv.is##.row div[class^=auglysing-]:upward(1)
 sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
 sporttv.is#?#.box:-abp-has(div[class^=auglysing-])
 sporttv.is,utdanningsnytt.no##.banner-right
@@ -1315,7 +1315,7 @@ dr.dk#?#.dre-container--margin-bottom:-abp-has(.hydra-marketing-banner)
 ! 🇮🇸: ——— Óbrot ———
 ! 🇬🇧: ——— Unbreakage ———
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
-@@||seher.no/reise$generichide
+@@||seher.no/reise$ghide
 ! folkebladet.no; Makes job position lists show up correctly
 @@||stillingledig.*.no^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
@@ -1463,7 +1463,7 @@ gamereactor.*##+js(ra, autoplay)
 ||media.gamereactor.dk/*Promo$mp4,domain=gamereactor.*
 ||media.gamereactor.dk/prerolls$mp4,domain=gamereactor.*
 ||openx.gamereactor.dk/multi.php?$important,script
-/insert_grtv_stats.$xmlhttprequest,domain=gamereactor.*
+/insert_grtv_stats.$xhr,domain=gamereactor.*
 /prerolls/*$domain=gamereactor.*
 /videojs.ima.$script,domain=gamereactor.*
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.*
@@ -1493,7 +1493,7 @@ ektenyheter.no##.cm-message
 resett.no##.tdm-mobile-full
 resett.no##a[href="https://resett.no/annonseweb/"]
 resett.no###cookie
-resett.no##[class="td_single_image_bg"]
+resett.no##[class=td_single_image_bg]
 resett.no##a[href*="dekristne.no"]
 resett.no#?#.code-block:-abp-contains(annonse)
 resett.no##.td-visible-desktop
@@ -1509,8 +1509,6 @@ frihetskamp.net##a[href*="greenpilled.com"]
 frihetskamp.net##a[href*="nordenstil.no"]
 ! https://github.com/ryanbr/fanboy-adblock/issues/1405
 @@||politainment.no^*/cookieconsent.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/63269
-@@||politainment.no^*/cookieconsent.min.$script,stylesheet
 
 ! 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
 ! 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
@@ -1527,12 +1525,12 @@ nettavisen.no###topover-loader
 nettavisen.no###topover
 
 ! "Generic Hide"
-@@||bondebladet.screen9.tv^$generichide
-@@||eurosport.no^$generichide
-@@||eurosport.dk^$generichide
+@@||bondebladet.screen9.tv^$ghide
+@@||eurosport.no^$ghide
+@@||eurosport.dk^$ghide
 !#if !ext_ublock
-@@||bildeler.name^$generichide
-@@||reservedele.name^$generichide
+@@||bildeler.name^$ghide
+@@||reservedele.name^$ghide
 !#endif
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
