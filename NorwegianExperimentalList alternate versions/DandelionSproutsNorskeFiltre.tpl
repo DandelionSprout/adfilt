@@ -1,5 +1,5 @@
 msFilterList
-# Version: 16October2020v2-Alpha
+# Version: 20October2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -311,6 +311,7 @@ _300x250px-*.gif
 -d mmm.dk safeframe
 -d static.vg.no admark_top.gif
 -d yrkesbil.no 1pix.gif
+-d www-presse-fotos-dk.filesusr.com
 - gifs *emty.gif
 -l%C3%BDsing-
 # — — — — —
@@ -800,7 +801,7 @@ _300x250px-*.gif
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 20October2020v2-Extension
+# Last updated: 20October2020v3-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
