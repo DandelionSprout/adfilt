@@ -40,6 +40,12 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
+           r"\$domain=~in-addr\.arpa$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"! Version: [0-9]{4}.*", 
            "", 
            line
@@ -1185,6 +1191,12 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            "Dandelion Sprout's Nordic filters for tidier websites", 
            "Dandelion Sprout's Nordic filters for tidier websites (for Privoxy)", 
+           line
+        )
+
+        line = re.sub(
+           r"\$domain=~in-addr\.arpa$", 
+           r"", 
            line
         )
 
@@ -2946,6 +2958,72 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r".*without modification .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|annonser?\.[a-z0-9-]{2,50}\.no\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|ad\.[a-z0-9-]{2,50}\.no\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|ad1\.[a-z0-9-]{2,50}\.dk\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|ads\.[a-z0-9-]{2,50}\.no\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|ads\.[a-z0-9-]{2,50}\.dk\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|ads\.[a-z0-9-]{2,50}\.is\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|adserver\.[a-z0-9-]{2,50}\.dk\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|banner\.[a-z0-9-]{2,50}\.no\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|advert(isement)?\.[a-z0-9-]{2,50}\.no\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|auglysingar\.[a-z0-9-]{2,50}\.is\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|mobilannonce\.[a-z0-9-]{2,50}\.dk\^$", 
            r"", 
            line
         )
