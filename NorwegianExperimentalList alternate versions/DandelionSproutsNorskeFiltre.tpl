@@ -1,5 +1,5 @@
 msFilterList
-# Version: 23October2020v1-Alpha
+# Version: 23October2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -377,6 +377,7 @@ _300x250px-*.gif
 -d ni.dk *-bottom.html
 # fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30 09 2020)
 # https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
+# dagsavisen.no (Mobile version; 23 10 2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
