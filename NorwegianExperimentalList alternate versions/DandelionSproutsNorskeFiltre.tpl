@@ -1,5 +1,5 @@
 msFilterList
-# Version: 26October2020v1-Alpha
+# Version: 26October2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -346,7 +346,6 @@ _nettannonse.
 # qxl.no
 # nickelodeon.no, tv2.dk, klikk.no, zooom.no, adressa.no, blogg.no, kjarkinn.is
 # gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi.no
-# steigan.no, allers.no, icelandreview.com, resett.no
 # demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb.no
 # ba.no
 # https://github.com/DandelionSprout/adfilt/pull/53
