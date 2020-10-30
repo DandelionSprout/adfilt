@@ -1,5 +1,5 @@
 ---
-name: Problem report (English)
+name: (English) Problem report
 about: To report broken websites, lists, and/or functions
 title: ''
 labels: Problem report
