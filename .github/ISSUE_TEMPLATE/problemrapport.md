@@ -1,5 +1,5 @@
 ---
-name: Problemrapport (Norsk)
+name: (Norsk) Problemrapport
 about: For å melde inn ødelagte nettsteder, lister, og/eller funksjoner
 title: ''
 labels: Problem report
