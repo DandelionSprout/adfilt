@@ -1,5 +1,5 @@
 ---
-name: List entry submission (English)
+name: (English) List entry submission
 about: For those who want to submit new entries to my lists
 title: ''
 labels: Submission
