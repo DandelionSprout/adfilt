@@ -1,5 +1,5 @@
 ---
-name: Listeregelsforslag (Dansk)
+name: (Dansk) Listeregelsforslag
 about: For de, der ønsker at sende ind nye regler til mine lister
 title: ''
 labels: Submission
