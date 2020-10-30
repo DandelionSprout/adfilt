@@ -1,5 +1,5 @@
 ---
-name: Listeoppføringsforslag (Norsk)
+name: (Norsk) Listeoppføringsforslag
 about: For de som ønsker å sende inn nye oppføringer til listene mine
 title: ''
 labels: Submission
