@@ -4,10 +4,10 @@ import re
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '$$', '$app', '$csp=upgrade-insecure-requests']
+    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '$$', '$app', '$csp=upgrade-insecure-requests', '$removeparam']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$']
-UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', '$ghide', 'Expires:']
-UNSUPPORTED_UMATRIX = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', 'generichide', 'Expires:', 'subdocument', '$app', '!+', '$doc', ' doc ', 'CSP', '$csp', 'ghide']
+UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', '$ghide', 'Expires:', '$removeparam']
+UNSUPPORTED_UMATRIX = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', 'generichide', 'Expires:', 'subdocument', '$app', '!+', '$doc', ' doc ', 'CSP', '$csp', 'ghide', '$removeparam']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
@@ -1162,6 +1162,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^-d jula\.no$", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
@@ -1817,7 +1823,7 @@ import re
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app', ':not(:-abp-', '$csp=upgrade-insecure-requests']
+    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app', ':not(:-abp-', '$csp=upgrade-insecure-requests', '$removeparam']
 
 OUTPUT = 'xyzzyxeyeo.txt'
 OUTPUT_ABP = 'NordicFiltersABP-Inclusion.txt'
