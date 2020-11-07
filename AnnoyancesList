@@ -1,7 +1,7 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 26July2020v1-Beta-Compilation
+! Version: 07November2020v1-Beta-Compilation
 ! Expires: 3 days
-! Description: If Fanboy and AdGuard can make overly broad and imperfect 'Annoyances' lists and get included in uBlock Origin without breaking a sweat, then so can I... hopefully...
+! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 !#include stayingonbrowser/Staying%20On%20The%20Phone%20Browser
 !#include Dandelion%20Sprout's%20Anti-Malware%20List.txt
@@ -18,3 +18,20 @@
 !#include Anti-'Custom%20cursors'%20List.txt
 !#include JapaneseTextSoftener.txt
 !#endif
+
+! ————— Entries that are currently specific to this compilation —————
+
+! Removes listings in certain lists, that are simply unwanted and unwarranted space wasters
+freelancer.com#?#.PageProjectViewLogout-freelancerInfo:-abp-has(.small-flag.bangladesh)
+whynohttps.com#?#tbody > tr:-abp-has([src="/flags/4x3/cn.svg"])
+twofactorauth.org##.table-danger
+manage.ntppool.org#?#span[id^=server_]:-abp-has(.deletion):-abp-contains(/-[3-9][0-9]|-100/)
+
+! Removes those creepy square bubbles on Google Documents about how many people that are watching every move you make there
+docs.google.com###docs-presence
+
+! Very distracting background images
+||images.wikia.nocookie.net/*/freakylogo/images/*/Wiki-background^$image
+
+! https://github.com/AdguardTeam/AdguardForWindows/issues/3570
+@@/antiadblock.txt^
