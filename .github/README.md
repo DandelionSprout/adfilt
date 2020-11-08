@@ -5,9 +5,9 @@
 
 ———————————————————————————
 
-<b>IMPORTANT NOTE FOR CHROMIUM-BROWSER USERS:</b> My lists does not, can not, and will never ever support Manifest v3, due to its laughably short rule limit and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions will not be accepted, and if you do submit one, you would be asked to use an alternate web browser or web browser version instead.
+<b>IMPORTANT NOTE:</b> My lists does not, can not, and will never ever support Manifest v3, due to its laughably short rule limit and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions will not be accepted, and if you do submit one, you would be asked to use an alternate web browser or web browser version instead.
 
-And just in case anyone thinks I'm not serious about it, <b>I will no longer offer support to Safari ≥13 users</b> (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
+And just in case anyone thinks I'm not serious about it, <b>I do no longer offer support to Safari ≥13 users</b> (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
 
 ———————————————————————————
 
@@ -17,18 +17,18 @@ Note for UXP browser users: Due to the Pale Moon community being protective of c
 
 This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists for countless different topics, for use in adblock tools and the likes. GitHub was in mid-2017 by far the easiest way for laymen like me to store pure text files, which is a necessity to create subscribable lists.
 
-This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed considerable energy and effort into, for the enjoyment of all of us.
+This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed lots of energy and effort into, for the enjoyment of all of us.
 
 * [Official repo mirror](https://gitlab.com/DandelionSprout/adfilt)
 * [Official donation links](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations)
 * [Category title translation project](https://crwd.in/dandelion-sprout-nordic-filter)
 * [Paid bounty missions for superskilled filter writers](https://github.com/DandelionSprout/adfilt/search?q=bounty&type=code)
 
-For a basic overview of the lists in this repo, go to [FilterLists.com](https://filterlists.com/), click on the Maintainers button in the upper right, and choose Imre Kristoffer Eilertsen in the Maintainers dropdown menu. It proved to be too much work for me to maintain a GitHub spreadsheet for my lists, unfortunately. It is normally not recommended to subscribe to lists directly from this repo, as the mostly unsorted lists [can be unsuitable for your tool(s)](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Pok%C3%A9monNoGOZone.txt), [block things you may not have intended to block at all](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Twitter%20De-Politificator.txt), or [otherwise cause confusion in general](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EkstraBladetEroticContentRemover.txt) if they aren't vetted properly before use on tech units.
+For an overview of the lists in this repo, go to [FilterLists.com](https://filterlists.com/), click on the Maintainers button in the upper right, and choose Imre Kristoffer Eilertsen in the Maintainers dropdown menu. It became too much work for me to have a GitHub spreadsheet for my lists, unfortunately. It is generally not recommended to subscribe to lists directly from this repo, as the mostly unsorted lists [can be unsuitable for your tool(s)](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Pok%C3%A9monNoGOZone.txt), [block things you may not have intended to block at all](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/Twitter%20De-Politificator.txt), or [otherwise cause confusion in general](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/EkstraBladetEroticContentRemover.txt) if they aren't vetted properly before use on tech units.
 
-However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits.
+However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits. Various modified versions of it are included in uBlock Origin, AdGuard, AdNauseam, AdBlock, AdGuard Home, pfBlockerNG, Brave Browser, and Vivaldi's privacy settings.
 
-If you have any problems, suggestions, or a desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things for the time being. Don't be shy to ask/tell me. In particular, I have a [wishlist of things](https://github.com/DandelionSprout/adfilt/issues/new?assignees=&labels=I+wish+to+help&template=forms-for-those-who-wish-to-help-me-write-lists.md&title=I+wish+to+help) that I wish for assistance from others with.
+If you have any problems, suggestions, or a desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things for the time being. Don't be shy to ask/tell me.
 
 Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listene på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. Man er ikke nødt til å bruke engelsk hele tiden.
 
@@ -37,8 +37,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 ## The tools that I use:
 
 • [Checker for redundant filter entries and for ABP syntaxes](https://abp.surge.sh/redundantRuleChecker/), made by Famlam. It does however not account for uBO-syntax-specific entries, nor for ABP syntaxes newer than 2017. <br>
-• [Recentmost tool I used to test IP server availability](https://github.com/funilrys/PyFunceble), made by [Funilrys](https://github.com/funilrys). (I previously used the _Find dead, redirected and/or parked domains_ tool at [this link](https://web.archive.org/web/20171209102004/https://arestwo.org/famlam/redundantRuleChecker.html) to great effect, but it had a ludicrously long and hardcoded 120sec waiting time before it'd label domains as dead). <br>
-• To create direct addition links that can be linked to on GitHub, I don't use _abp:subscribe_ in the URLs, but instead _subscribe.adblockplus.org_, which works the same way if the addition link has been correctly constructed. <br>
+• [Recentmost tool I used to test IP server availability](https://github.com/funilrys/PyFunceble), made by [Funilrys](https://github.com/funilrys). <br>
 • To easily create GitCDN links to the lists, in case anyone have list connection problems: [GitHub GitCDN Button](https://greasyfork.org/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul) <br>
 • To find very similar domains for Hosts files, or to find all domains hosted by specific IP addresses (both IPv4 and IPv6): [SecurityTrails](https://securitytrails.com/) <br>
 • To look for invalidly written entries according to uBO's syntax: Use uBlock Origin, set logger to *All*, and resync the lists. <br>
@@ -62,6 +61,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • The contributor communities that surround uBlock Origin in general (including [okiehsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser) among others), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
 • [krystian3w](https://github.com/krystian3w) for teaching me that using `:style` entries completely breaks a list *and* its entries in ABP. <br>
 • [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *[Browse Websites Without Logging In](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt)*) to *uBlock Filters - Annoyances*.<br>
-• [Andrey Meshkov](https://github.com/ameshkov) for invaluable push-start assistance in creating [the conversion script](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/XYZPrepareFilters.py) for *Dandelion Sprouts nordiske filtre* that eventually became a very important backbone in my adblocker activities.
+• [Andrey Meshkov](https://github.com/ameshkov) for invaluable push-start assistance in creating [the conversion script](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/XYZPrepareFilters.py) for *Dandelion Sprouts nordiske filtre* that eventually became a very important backbone in my adblocker activities. <br>
+• [HankAviator](https://github.com/HankAviator) for adding significant support for PR-Chinese websites in ≥3 of my lists.
 
 If you've contributed to or helped me and you aren't on the above list, don't feel bad about it. I still give my regular thanks to you.
