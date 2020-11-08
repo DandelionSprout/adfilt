@@ -2587,7 +2587,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"127\.0\.0\.1 !.*", 
+           r"127\.0\.0\.1 [!/].*", 
            r"", 
            line
         )
@@ -2684,6 +2684,12 @@ def prepare_ls(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r'.*remote-domains": "/.*', 
+           r'', 
+           line
+        )
+
         if is_supported_ls(line):
             text += line + '\r\n'
 
@@ -2740,6 +2746,12 @@ def prepare_dnsmasq(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^server=//.*", 
+           r"", 
+           line
+        )
+
         if is_supported_dnsmasq(line) and not line == '':
             text += line + '\r\n'
 
@@ -2790,7 +2802,7 @@ def prepare_hostsdeny(lines) -> str:
         )
 
         line = re.sub(
-           r"ALL: !.*", 
+           r"ALL: [!/].*", 
            r"", 
            line
         )
@@ -2876,6 +2888,12 @@ def prepare_pihole(lines) -> str:
         line = re.sub(
            r"^\*\.(.*)\.(.*)$", 
            r".*\\.\1\\.\2$", 
+           line
+        )
+
+        line = re.sub(
+           r"^/(.*)/$", 
+           r"\1", 
            line
         )
 
@@ -3034,6 +3052,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|\*", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -3165,6 +3189,12 @@ def prepare_shadowsocks(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^/(.*)/$", 
+           r"URL-REGEX,\1", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -3220,6 +3250,12 @@ def prepare_rpz(lines) -> str:
 
         line = re.sub(
            r".*without modification .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*", 
            r"", 
            line
         )
@@ -3283,6 +3319,12 @@ def prepare_unbound(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^/.*", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -3333,6 +3375,12 @@ def prepare_minerblock(lines) -> str:
         line = re.sub(
            r"^\*://\*\.\*\.", 
            r"*://*.", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*", 
+           r"", 
            line
         )
 
@@ -3403,7 +3451,7 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r"^:: !.*", 
+           r"^:: [!/].*", 
            r"", 
            line
         )

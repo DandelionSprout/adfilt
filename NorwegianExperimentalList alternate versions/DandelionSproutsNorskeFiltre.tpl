@@ -1,5 +1,5 @@
 msFilterList
-# Version: 31October2020v1-Alpha
+# Version: 09November2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -689,6 +689,15 @@ _nettannonse.
 -d valspe.com.br
 # https://www.datahjelperne.no/eika-falsk-epost-svindel/
 -d tekuon.com
+# https://www.nrk.no/norge/1.15235615
+- -sparebank1.*.net
+# https://www.datahjelperne.no/er-det-deg-facebook-video-spam/
+-d cinefique.com
+- ://[a-z]{10,12}\.easy\.co(/
+# https://www.datahjelperne.no/posten-sms-svindel/
+-d niupaiba.com
+# https://www.datahjelperne.no/det-ser-ut-som-deg-facebook-spam/
+-d straightbeforemeat14.live
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
