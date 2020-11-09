@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 08November2020v1-Personal
+! Version: 09November2020v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 ! /\/\ Supercompilations: /\/\
@@ -60,16 +60,11 @@ deezer.com#?#.song:-abp-contains(Gabfest)
 ! People I just really don't like, without it being deserving of going on public lists
 twitch.tv#?#.chat-line__message:-abp-has(.chat-author__display-name:-abp-contains(InternetKraken))
 twitch.tv#?#.chat-line__message:-abp-has(.chat-author__display-name:-abp-contains(AlphaTheKoolKid))
-twitch.tv#?#.chat-line__message:-abp-has(.chat-author__display-name:-abp-contains(thedarkangelthe2))
 twitch.tv#?#.vod-message:-abp-has(.chat-author__display-name:-abp-contains(InternetKraken))
 twitch.tv#?#.vod-message:-abp-has(.chat-author__display-name:-abp-contains(AlphaTheKoolKid))
-twitch.tv#?#.vod-message:-abp-has(.chat-author__display-name:-abp-contains(thedarkangelthe2))
 discord.com#?#div[class^=member-]:-abp-contains((haha yes))
 github.com#?#div[id^=issue_]:-abp-contains(/\skulf\o\on/)
 pixiv.net#?#.ui-profile-popup[data-user_name]:upward(1):-abp-contains(webbedfingers)
-!discord.com#?#div[class*=blockedSystemMessage-]:upward(3)
-!discord.com#?#[class*=membersGroup-]:-abp-contains(Pegasus—)
-!discord.com#?#[class*=member-]:-abp-contains(Solbit)
 
 ! Websites I just really don't like, without it being deserving of going on public lists
 ||deviantart.com^$document
@@ -145,11 +140,6 @@ crowdin.com##.untranslated_phrase:has-text(/^[ァ-ンー]{4}$/)
 ||scsi-download.lp1.scsi.srv.nintendo.net^$ctag=user_regular
 !#endif
 
-! Necessary whitelisting of worktools
-!!!@@||securitytrails.com/domain^
-!!!@@||securitytrails.com/app/api/v1/domain^
-!!!@@||logo.clearbit.com^$domain=securitytrails.com
-
 ! ↓ Below are categories that may or may not get independent lists for public use one day. ↓
 ! And yes, there's a reason why a.txt is for private use only: It shows the seething despisement I have against large chunks of planet Earth.
 ! ★ = Fast-tracked to try to become the next list to be spun off.
@@ -164,7 +154,7 @@ reddit.com#?#.Post:-abp-contains(/Teen Titan/i):not(:-abp-contains(/sixteen/i))
 reddit.com#?#.Comment:-abp-contains(/Teen Titan/i):not(:-abp-contains(/sixteen/i))
 twitch.tv#?#.vod-message:-abp-contains(/Teen Titans/i)
 twitch.tv#?#.chat-line__message:-abp-contains(/Teen Titans/i)
-rule34.paheal.net#?#div.thumb:-abp-has(img[title*="Teen_Titans"]):not(:-abp-has(img[title*="Teen_Titans_GO"]))
+rule34.paheal.net#?#div.thumb:-abp-has(img[title*=Teen_Titans]):not(:-abp-has(img[title*=Teen_Titans_GO]))
 
 ! Anti-'Filly Funtasia's fandom'
 ! A show that was once considered the future of European animation (or at least Spanish animation, before bankrupting 4 companies), plagued with a microfandom consisting of imageboard users, bronies, weebs, and Republicans.
@@ -188,7 +178,7 @@ osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Tales of Ladybug)
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(My Life As A Teenage Robot)
 kisscartoon.*##.related_list.full.series_links
 kisscartoon.*##.mb15
-artstation.com#?#.gallery-grid-item:has-text(Barkhat Gay Traveler)
+artstation.com#?#.gallery-grid-item:-abp-contains(Barkhat Gay Traveler)
 graphtreon.com##div.hotCreators-box.col-md-4
 tiermaker.com##.community-rank-button
 
@@ -231,12 +221,6 @@ www.nrk.no#?#div.relation:-abp-contains(«Skam»)
 adressa.no#?#.article:-abp-contains(/bedre halvdel/i)
 ekstrabladet.dk##a[href*="/opinionen/pernillevermund/"]
 
-! Particularly saccharine baby stuff that backfired on me
-||mediacache1.stoffstil.com/de/a9/0be5-41c0-4d2d-ada7-996c89ad62fe/landing_metervare_no.jpg
-rule34.xxx,e621.net#?#.thumb:-abp-has(img[title*=" pregnant "])
-innherred.no###content > .rosa
-adressa.no##a[href*=voksenblad]
-
 ! Boring unfunny comics for boring adults on non-comic sites
 adressa.no##.cartoon
 vg.no##.comics
@@ -245,13 +229,11 @@ ekstrabladet.dk##.oo-left.eb-row-item
 ! Highly inept and vague customer service forums
 ||answers.microsoft.com^$document
 
-! Key stores with stupid ID requirements
+! Key stores with ID requirements
 ||gameflip.com^$document
 ||cjs-cdkeys.com^$document
 ||mmoga.com^$document
-
-! Aims to remove that one RPG-loot-game embed window that is on some Twitch channels
-twitch.tv##.channel-panels-container div[style^=position]:has(a[href^="/ext/ro13roxp88918kulntih9uzm7vs9jr"])
+||mygiftcardsupply.com^$document
 
 ! Pixiv presumably counts as social media, and thus shouldn't have its notifications be blocked
 @@||onesignal.com^$domain=pixiv.net
@@ -347,7 +329,6 @@ thehill.com#?#.views-row:-abp-has(a[href^="/opinion/"])
 thehill.com#?#.thehill_carousel-processed > li:-abp-has(a[href^="/opinion/"])
 thehill.com##.region-front-magazine-bottom
 thehill.com##a[href^="/opinion/"]
-||tv2.no^
 
 ! To browse more easily through AdGuard Filters' and EasyList's issue tracker
 github.com#?#.js-issue-row:-abp-contains(N: AdGuard for iOS)
