@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 15October2020v1
+! Version: 09November2020v1
 ! Expires: 6 days
 ! Description: This list removes even more distracting or uncomfortable things on YouTube.
 ! If you want to block even more things on top of these two lists, feel free to check out the anti-Autoplay (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt) and anti-Elsagate (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt) lists that I've made.
@@ -78,6 +78,9 @@ youtube.com#?##logo:style(pointer-events: none !important; cursor: default !impo
 ! Removes video epilogue suggestion overlays
 youtube.com##.ytp-ce-element-show
 
+! Removes a banner that promotes YouTube Premium
+youtube.com###masthead-ad
+
 ! ————————————————————————————————————————————————————————————————
 
 ! ——— Comment sections that are not covered by "Pure Viewing Experience" ———
@@ -136,7 +139,7 @@ www.youtube.com#?#div.top-nav-tab:-abp-contains(/^Gaming$/)
 
 ! ——— YouTube Android apps (Requires "AdGuard for Android") ———
 
-!#if !ext_ublock
+!#if adguard_app_android
 ! Removes comments on video pages
 ||youtube.com/live_chat_fragments_ajax?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
 ||youtube.com/comment_service_ajax?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
