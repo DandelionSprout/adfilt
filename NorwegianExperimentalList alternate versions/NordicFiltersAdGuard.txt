@@ -1,4 +1,4 @@
-! Version: 09November2020v1
+! Version: 09November2020v2
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 1 day
@@ -187,6 +187,8 @@ hytteavisen.no##.prodlist > .row > .small-12
 hestafrettir.is##.wpb_raw_code
 utvarpsaga.is##.textwidget > center
 biff.no##.ads
+viivilla.no##.digital_bilag_wrapper_horizontal
+costume.*##.teaser__native:upward(4)
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -317,6 +319,7 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ||btrbnrs.link^$third-party
 ||banner.3loops.com^
 ||videotool.fbg.dk^$third-party
+||images.passendo.com^$third-party
 !+ NOT_OPTIMIZED
 ||print2web.sn.dk^$image
 !+ NOT_OPTIMIZED
@@ -341,6 +344,12 @@ _toppbanner_$image
 ! http://www.sexpiger.dk/
 ||lh3.googleusercontent.com/*=w468-h60-$image
 ||lh3.googleusercontent.com/*=w970-h250-$image
+! salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12/10/2020)
+/getbanner.php^$image
+! biff.no (26/10/2020)
+_nettannonse.
+/BINARY/*-BANNER-*.gif^
+/BINARY/*%20200x300.jpg^
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -520,12 +529,6 @@ _300x250px-*.gif^$domain=ilaks.no
 @@||f.nordiskemedier.dk/2*_*.png^$image
 ! building-supply.dk
 ||f.nordiskemedier.dk/banner^
-! salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12/10/2020)
-/getbanner.php^$image
-! biff.no (26/10/2020)
-_nettannonse.
-/BINARY/*-BANNER-*.gif^
-/BINARY/*%20200x300.jpg^
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -1077,7 +1080,6 @@ onlineposten.dk##.textwidget
 onlineposten.dk###header
 side6.dk##.apn-banner
 journalisten.dk##.article:style(padding-bottom: 10px !important)
-iform.dk##.horseshoe
 iform.dk##.responsive-images
 iform.dk,bilmagasinet.dk##.wg-banner
 kommunikationsforum.dk##.col-xs-12[style]
@@ -1108,6 +1110,9 @@ dagsavisen.no##.clickad-container > .row
 dagsavisen.no#?#style + .container > .row:has(> .col-sm-12 > .dagsavisenDesktopAd)
 maskinbladet.dk##.megaboard-inner
 maskinbladet.dk##.outer-skybanner
+viivilla.no##.tree-house
+bo-bedre.no,bobedre.dk##.mb-50.text-center
+boligpluss.no##.article-footer + .wg-editorial
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$frame
 ||danishfamilysearch.dk/images/xp2^$image
@@ -1138,6 +1143,7 @@ dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder
 komputer.no,natgeo.no,historienet.no,koplr.no,ing.dk,in.fo##.top-banner
 hsfo.dk,jv.dk,stiften.dk,viborg-folkeblad.dk,dagbladet-holstebro-struer.dk,ugeavisen.dk,fyens.dk##.adblock
 prisjakt.*,prisjagt.dk,dv.is,drm24.no##.adbox
+iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
 bygg.no,mmm.dk,kino.no##.ad
 byggfakta.no,byggfaktabolig.no,vvsaktuelt.no###bannerContainer:not(.HeaderBanner1)
 gulesider.no,degulesider.dk,krak.dk##.e-banner
@@ -1230,12 +1236,12 @@ vafo.dk##.adform-flexblock
 ##.ad.topBanner
 ! https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
 ###sponsorstripe
-! https://www.aftenposten.no/ (Mobile useragent)
+! aftenposten.no (Mobile useragent)
 ###adBlinkContainer
 ###innocode-ad
 ! http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
 85.17.76.181$network
-! https://krs247.no/
+! krs247.no
 ##div[id^=webbannernetboard]
 ! lsk.no
 ##.ads__grid-item
@@ -1282,6 +1288,10 @@ vafo.dk##.adform-flexblock
 ###top-ads-container
 ! bt.no, byas.no, aftenbladet.no (30/10/2020)
 ##.vertical-x1-ad > .column--big
+! costume.no, costume.dk (09/11/2020)
+##.flow-banner
+! boligpluss.no (09/11/2020)
+##.wg-banner
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———

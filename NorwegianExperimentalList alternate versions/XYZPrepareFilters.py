@@ -242,74 +242,80 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           "viaplay.\*#", 
-           "viaplay.no,viaplay.dk,viaplay.is#", 
+           r"(^|,)viaplay.\*(#|,)", 
+           r"\1viaplay.no,viaplay.dk,viaplay.is\2", 
            line
         )
 
         line = re.sub(
-           "google.\*#", 
-           "google.no,google.dk,google.is#", 
+           r"(^|,)google.\*(#|,)", 
+           r"\1google.no,google.dk,google.is\2", 
            line
         )
 
         line = re.sub(
-           "ticketmaster.\*#", 
-           "ticketmaster.no,ticketmaster.dk#", 
+           r"(^|,)ticketmaster.\*(#|,)", 
+           r"\1ticketmaster.no,ticketmaster.dk\2", 
            line
         )
 
         line = re.sub(
-           "qxl.\*#", 
-           "qxl.no,qxl.dk#", 
+           r"(^|,)qxl.\*(#|,)", 
+           r"\1qxl.no,qxl.dk\2", 
            line
         )
 
         line = re.sub(
-           "expedia.\*#", 
-           "expedia.no,expedia.dk#", 
+           r"(^|,)expedia.\*(#|,)", 
+           r"\1expedia.no,expedia.dk\2", 
            line
         )
 
         line = re.sub(
-           "gamereactor.\*#", 
-           "gamereactor.no,gamereactor.dk#", 
+           r"(^|,)gamereactor.\*(#|,)", 
+           r"\1gamereactor.no,gamereactor.dk\2", 
            line
         )
 
         line = re.sub(
-           "viafree.\*#", 
-           "viafree.no,viafree.dk#", 
+           r"(^|,)viafree.\*(#|,)", 
+           r"\1viafree.no,viafree.dk\2", 
            line
         )
 
         line = re.sub(
-           "momondo.\*#", 
-           "momondo.no,monondo.dk#", 
+           r"(^|,)momondo.\*(#|,)", 
+           r"\1momondo.no,monondo.dk\2", 
            line
         )
 
         line = re.sub(
-           "eurosport.\*#", 
-           "eurosport.no,eurosport.dk#", 
+           r"(^|,)eurosport.\*(#|,)", 
+           r"\1eurosport.no,eurosport.dk\2", 
            line
         )
 
         line = re.sub(
-           "prisjakt.\*,", 
-           "prisjakt.no,", 
+           r"(^|,)prisjakt.\*(#|,)", 
+           r"\1prisjakt.no\2", 
            line
         )
 
         line = re.sub(
-           "180.\*#", 
-           "180.no,180.dk#", 
+           r"(^|,)180.\*(#|,)", 
+           r"\g<1>180.no,180.dk\2", 
            line
         )
 
         line = re.sub(
-           "kimbino.\*#", 
-           "kimbino.no,kimbino.dk#", 
+           r"(^|,)kimbino.\*(#|,)", 
+           r"\1kimbino.no,kimbino.dk\2", 
+           line
+        )
+
+        line = re.sub(
+           r"(^|,)costume.\*(#|,)", 
+           r"\1costume.no,costume.dk\2", 
            line
         )
 
@@ -1927,74 +1933,80 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           "viaplay.\*#", 
-           "viaplay.no,viaplay.dk,viaplay.is#", 
+           r"(^|,)viaplay.\*(#|,)", 
+           r"\1viaplay.no,viaplay.dk,viaplay.is\2", 
            line
         )
 
         line = re.sub(
-           "google.\*#", 
-           "google.no,google.dk,google.is#", 
+           r"(^|,)google.\*(#|,)", 
+           r"\1google.no,google.dk,google.is\2", 
            line
         )
 
         line = re.sub(
-           "ticketmaster.\*#", 
-           "ticketmaster.no,ticketmaster.dk#", 
+           r"(^|,)ticketmaster.\*(#|,)", 
+           r"\1ticketmaster.no,ticketmaster.dk\2", 
            line
         )
 
         line = re.sub(
-           "qxl.\*#", 
-           "qxl.no,qxl.dk#", 
+           r"(^|,)qxl.\*(#|,)", 
+           r"\1qxl.no,qxl.dk\2", 
            line
         )
 
         line = re.sub(
-           "expedia.\*#", 
-           "expedia.no,expedia.dk#", 
+           r"(^|,)expedia.\*(#|,)", 
+           r"\1expedia.no,expedia.dk\2", 
            line
         )
 
         line = re.sub(
-           "gamereactor.\*#", 
-           "gamereactor.no,gamereactor.dk#", 
+           r"(^|,)gamereactor.\*(#|,)", 
+           r"\1gamereactor.no,gamereactor.dk\2", 
            line
         )
 
         line = re.sub(
-           "viafree.\*#", 
-           "viafree.no,viafree.dk#", 
+           r"(^|,)viafree.\*(#|,)", 
+           r"\1viafree.no,viafree.dk\2", 
            line
         )
 
         line = re.sub(
-           "momondo.\*#", 
-           "momondo.no,monondo.dk#", 
+           r"(^|,)momondo.\*(#|,)", 
+           r"\1momondo.no,monondo.dk\2", 
            line
         )
 
         line = re.sub(
-           "eurosport.\*#", 
-           "eurosport.no,eurosport.dk#", 
+           r"(^|,)eurosport.\*(#|,)", 
+           r"\1eurosport.no,eurosport.dk\2", 
            line
         )
 
         line = re.sub(
-           "prisjakt.\*,", 
-           "prisjakt.no,", 
+           r"(^|,)prisjakt.\*(#|,)", 
+           r"\1prisjakt.no\2", 
            line
         )
 
         line = re.sub(
-           "180.\*#", 
-           "180.no,180.dk#", 
+           r"(^|,)180.\*(#|,)", 
+           r"\g<1>180.no,180.dk\2", 
            line
         )
 
         line = re.sub(
-           "kimbino.\*#", 
-           "kimbino.no,kimbino.dk#", 
+           r"(^|,)kimbino.\*(#|,)", 
+           r"\1kimbino.no,kimbino.dk\2", 
+           line
+        )
+
+        line = re.sub(
+           r"(^|,)costume.\*(#|,)", 
+           r"\1costume.no,costume.dk\2", 
            line
         )
 

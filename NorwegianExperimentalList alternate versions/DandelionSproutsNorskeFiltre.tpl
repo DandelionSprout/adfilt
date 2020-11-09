@@ -1,5 +1,5 @@
 msFilterList
-# Version: 09November2020v1-Alpha
+# Version: 09November2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -93,6 +93,7 @@ msFilterList
 -d btrbnrs.link
 -d banner.3loops.com
 -d videotool.fbg.dk
+-d images.passendo.com
 -d print2web.sn.dk
 -d lib.idg.no
 # Adressa.no
@@ -115,6 +116,12 @@ _toppbanner_
 # http://www.sexpiger.dk/
 -d lh3.googleusercontent.com *=w468-h60-
 -d lh3.googleusercontent.com *=w970-h250-
+# salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12 10 2020)
+- getbanner.php
+# biff.no (26 10 2020)
+_nettannonse.
+- BINARY *-BANNER-*.gif
+- BINARY *%20200x300.jpg
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -271,12 +278,6 @@ _300x250px-*.gif
 -d f.nordiskemedier.dk 2*.png
 # building-supply.dk
 -d f.nordiskemedier.dk banner
-# salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12 10 2020)
-- getbanner.php
-# biff.no (26 10 2020)
-_nettannonse.
-- BINARY *-BANNER-*.gif
-- BINARY *%20200x300.jpg
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -356,10 +357,10 @@ _nettannonse.
 # blv.no nyheter kan-bruke-23-millioner-pa-the-whale-undersokelsene
 # https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
 # https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
-# https://www.aftenposten.no/ (Mobile useragent)
+# aftenposten.no (Mobile useragent)
 # http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
 -d 85.17.76.181
-# https://krs247.no/
+# krs247.no
 # lsk.no
 # https://www.budstikka.no/
 # e24.no, aftenbladet.no, sysla.no
@@ -384,6 +385,8 @@ _nettannonse.
 # dagsavisen.no (Mobile version; 23 10 2020)
 # aftenposten.no, hockeymagasinet.dk, l-a.no, aftenbladet.no (30 10 2020)
 # bt.no, byas.no, aftenbladet.no (30 10 2020)
+# costume.no, costume.dk (09 11 2020)
+# boligpluss.no (09 11 2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
