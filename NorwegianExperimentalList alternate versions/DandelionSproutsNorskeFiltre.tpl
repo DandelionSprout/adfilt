@@ -1,5 +1,5 @@
 msFilterList
-# Version: 10November2020v2-Alpha
+# Version: 10November2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -272,6 +272,8 @@ _300x250px-*.gif
 -d finn.no distribution-carousel?
 # https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
 -d images.sprinklecontent.com *.amazonaws.com%2Fimages%
+# https://github.com/AdguardTeam/AdguardFilters/issues/67358#issuecomment-724888304
+-d gfx.no* refererPromo
 # buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
 -d f.nordiskemedier.dk *.gif
 -d f.nordiskemedier.dk 2*.jpg
