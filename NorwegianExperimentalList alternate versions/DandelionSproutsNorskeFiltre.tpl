@@ -1,5 +1,5 @@
 msFilterList
-# Version: 09November2020v2-Alpha
+# Version: 10November2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -278,6 +278,10 @@ _300x250px-*.gif
 -d f.nordiskemedier.dk 2*.png
 # building-supply.dk
 -d f.nordiskemedier.dk banner
+# viivilla.no (10 11 2020)
+-d bcm.interactives.dk script
+# adressa.no (10 11 2020)
+-d static.polarismedia.no cxense.js
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
