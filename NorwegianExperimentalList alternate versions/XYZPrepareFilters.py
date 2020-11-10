@@ -1174,6 +1174,36 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^_", 
+           r"- _", 
+           line
+        )
+
+        line = re.sub(
+           r"^(-[a-ce-zA-Z0-9])", 
+           r"- \1", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\.", 
+           r"+d ", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z])\* ", 
+           r"\1 ", 
+           line
+        )
+
+        line = re.sub(
+           r"^\* ", 
+           r"- ", 
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 

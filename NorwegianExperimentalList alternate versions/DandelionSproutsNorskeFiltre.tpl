@@ -106,7 +106,7 @@ msFilterList
 - annonse-
 # https://www.ballade.no/
 - wp-content uploads *_Annonse_
-_toppbanner_
+- _toppbanner_
 # https://www.osterud.name/FF57W10/norwegian-filters.txt
 - bannerannonser
 # byggenytt.no
@@ -119,7 +119,7 @@ _toppbanner_
 # salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12 10 2020)
 - getbanner.php
 # biff.no (26 10 2020)
-_nettannonse.
+- _nettannonse.
 - BINARY *-BANNER-*.gif
 - BINARY *%20200x300.jpg
 # — — — — — — —
@@ -174,7 +174,7 @@ _nettannonse.
 -d norskenettsider.no remember-banner-2016.jpg
 -d nvnytt.no *annonse-
 -d oyggjatidindi.com *L%C3%BDsing
--d rett24.no* inline
+-d rett24.no inline
 -d saernieh.no j%C3%B8rn-jensen.jpg
 -d siglo.is strevda
 -d storfjordnytt.no *.jpg
@@ -254,7 +254,7 @@ _nettannonse.
 -d doktor.frettabladid.is *heilsu*.
 -d doktor.frettabladid.is Reidist*.jpg
 -d forum.flyprat.no Header
-_300x250px-*.gif
+- _300x250px-*.gif
 - -banner_
 -d fcbarcelona.dk bcn_*.gif
 -d annoncelight.dk banner
@@ -273,7 +273,7 @@ _300x250px-*.gif
 # https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
 -d images.sprinklecontent.com *.amazonaws.com%2Fimages%
 # https://github.com/AdguardTeam/AdguardFilters/issues/67358#issuecomment-724888304
--d gfx.no* refererPromo
+-d gfx.no refererPromo
 # buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
 -d f.nordiskemedier.dk *.gif
 -d f.nordiskemedier.dk 2*.jpg
@@ -326,7 +326,7 @@ _300x250px-*.gif
 -d yrkesbil.no 1pix.gif
 -d www-presse-fotos-dk.filesusr.com
 - gifs *emty.gif
--l%C3%BDsing-
+- -l%C3%BDsing-
 # — — — — —
 # 🇳🇴: Oppføringer for minst 3 nettsteder
 # 🇬🇧: Entries for at least 3 websites
@@ -415,7 +415,7 @@ _300x250px-*.gif
 # folkebladet.no; Makes job position lists show up correctly
 +d stillingledig.*.no
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
-@@.isdownorblocked.com
++d isdownorblocked.com
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 -d prod-adops-proxy.dnitv.net
 # ——— Caused by «EasyPrivacy» ———
@@ -526,9 +526,9 @@ _300x250px-*.gif
 - ?finn.no login
 - begrensede-tilbudet
 - bli-avbrutt-bor-du-oppdater
-* Norgesecure
+- Norgesecure
 - gratis-reisebilletter.
-* KiwiErbjudanden1
+- KiwiErbjudanden1
 -d trackvoluum.com
 - pakkerlevering
 -d 102.112.2o7.net
