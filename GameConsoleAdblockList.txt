@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🎮 Game Console Adblock List
-! Version: 10February2020v3-Alpha
+! Version: 11November2020v1-Alpha
 ! Expires: 4 days
 ! Description: Much like there's now lists for AdGuard Home and Pi-hole to block ads on smart-TVs, here's an attempt from me at doing the same for videogame consoles with AdGuard Home. Enjoy.
 ! Important note: To block ads in the consoles' dedicated internet browsers with AdGuard Home, and not in the system menus, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt instead.
@@ -38,7 +38,10 @@
 
 ! ——— Nintendo Switch ———
 ! There is a system setting for getting rid of the Nintendo eShop advertisements on the lockscreen, which is hidden in System Settings → System → News Channel Settings → Nintendo News → Unfollow.
-! I am considering adding "@@||104.198.251.169" as I had much more luck finding online opponents in Mario & Sonic 2020 when I whitelisted it, but it'd only be needed for those who use those converted versions of EasyList that block 104.198.*.*, and it would likely have interfered with update blocker lists.
+! The following entries gives access on demand to the web browser, as per SwitchBru's DNS server trick (https://www.switchbru.com/dns/), while also making it possible to use AdGuard Home for adblocking at the same time. However, since SwitchBru uses a trick to make the Switch think it's partway into logging on to a hotel network, the entries would reject access to all other Switch web activities while the entries are live:
+!!! 45.55.142.122 ctest.cdn.nintendo.net
+!!! 127.0.0.1 receive-lp1.er.srv.nintendo.net
+!!! 127.0.0.1 aauth-lp1.ndas.srv.nintendo.net
 
 ! ——— Nintendo DS / Wii ———
 ! For a largely official list to connect to Wiimmfi (for DS games only) and RiiConnect24, check out https://raw.githubusercontent.com/RiiConnect24/DNS-Server/master/dns_zones-hosts.txt
