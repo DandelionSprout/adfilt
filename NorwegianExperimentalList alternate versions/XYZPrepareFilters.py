@@ -1808,6 +1808,12 @@ def prepare_umatrix(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^@@/.*", 
+           r"", 
+           line
+        )
+
         if is_supported_umatrix(line) and not line == '':
             text += line + '\r\n'
 
