@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🛤️ Anti-Astrology List
-! Version: 23October2020v1-Beta
+! Version: 12November2020v1-Beta
 ! Expires: 3 days
 ! Description: The alignment of the stars predict that you will use this list, in order to stop listening so much to such completely unfounded predictions anymore, and to get your eyes off the starry skies and onto your life that should be planted firmly on the ground.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -49,6 +49,20 @@ refinery29.com#?#div:-abp-has(> .card > a[href*=horoscope])
 me.me##a[href*="astrologymemes.com"]
 artstation.com#?#projects-list-item:-abp-contains(/Aries($| )/)
 artstation.com#?#projects-list-item:-abp-contains(/Virgo($| )/)
+!#if !env_mobile
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*=Capricorn i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*=Scorpio- i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*=Pisces i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*=Sagittarius i])
+pixiv.net#?#li:-abp-has(a[href*="/artworks/"] img[alt*=Aries-])
+!#endif
+!#if env_mobile
+pixiv.net#?#.works-item:-abp-has(img[alt*=Capricorn i]
+pixiv.net#?#.works-item:-abp-has(img[alt*=Scorpio- i]
+pixiv.net#?#.works-item:-abp-has(img[alt*=Pisces i]
+pixiv.net#?#.works-item:-abp-has(img[alt*=Sagittarius i]
+pixiv.net#?#.works-item:-abp-has(img[alt*=Aries-]
+!#endif
 ! https://www.kurir.rs/
 ##.horoscopeSlider
 ##.horoscopeTabs
