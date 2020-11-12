@@ -3,7 +3,7 @@ import re
 
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt', 'https://filters.adtidy.org/extension/ublock/filters/16.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://easylist-downloads.adblockplus.org/advblock.txt', 'https://easylist-downloads.adblockplus.org/Liste_AR.txt', 'https://easylist-downloads.adblockplus.org/easylistspanish.txt']
 
-UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$ghide', ',ghide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain', '[Adblock Plus 2.0]', 'CV-']
+UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$ghide', ',ghide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain', '[Adblock Plus 2.0]', 'CV-', '$csp']
 UNSUPPORTED_IP = ['##', '@#', '#?#', '#%#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '!+']
 
 OUTPUT = 'xyzzyx.txt'
@@ -349,24 +349,6 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^/([a-z0-9.-]{1,60}\.$)",
-           r"://\1", 
-           line
-        )
-
-        line = re.sub(
-           r"^/.*[a-zA-Z0-9_=.,*?!|^@&~+;-]$", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"^/.*[\]]$", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"^://.*/.*", 
            r"", 
            line
@@ -536,6 +518,24 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^[a-z0-9.-].*[a-z0-9.-][/?_+=&][a-zA-Z0-9.$*-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*[_?=/;~@%#+].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[|:/.-].*[%:].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/[a-zA-Z0-9-]{1,100}[|^]$", 
            r"", 
            line
         )
@@ -1283,24 +1283,6 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^/([a-z0-9.-]{1,60}\.$)",
-           r"://\1", 
-           line
-        )
-
-        line = re.sub(
-           r"^/.*[a-zA-Z0-9_=.,*?!|^@&~+;-]$", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"^/.*[\]]$", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"^://.*/.*", 
            r"", 
            line
@@ -1416,6 +1398,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^[a-z0-9.-].*[a-z0-9.-][/?_+=&][a-z0-9.$-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^/.*[_?=/;~@%#+].*", 
            r"", 
            line
         )
