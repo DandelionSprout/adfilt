@@ -823,10 +823,11 @@ msFilterList
 # https://www.vg.no/nyheter/i/y3Mka2//(08/04/2020)
 # https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-712799898
+# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-725741350
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 20October2020v3-Extension
+# Last updated: 12November2020v1-Extension
 -d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
