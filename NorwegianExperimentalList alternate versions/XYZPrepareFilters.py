@@ -802,6 +802,12 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
+           r".*\$removeparam.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
            r".*\$1p$", 
            "", 
            line
