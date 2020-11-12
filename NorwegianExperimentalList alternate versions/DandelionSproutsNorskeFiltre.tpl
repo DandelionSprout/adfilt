@@ -1,5 +1,5 @@
 msFilterList
-# Version: 11November2020v1-Alpha
+# Version: 12November2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -85,7 +85,6 @@ msFilterList
 -d vevlysingar.fo
 -d ndstage.wpengine.com
 -d boligkanalen-maestro-new.azurewebsites.net
--d cdnboligkanalen.azureedge.net
 -d brandstudio.inventory.schibsted.io
 -d matriell.dm-storage.no
 -d tracking-genesisaffiliates.com
@@ -309,6 +308,7 @@ msFilterList
 - bazaar
 - resources dfp
 - contentMarketing
+-d norsktipping.no
 # 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 # 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
 # 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
