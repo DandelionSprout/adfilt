@@ -1,4 +1,4 @@
-! Version: 12November2020v1
+! Version: 13November2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
 ! Expires: 1 day
@@ -167,6 +167,7 @@ ksu.no#?##g-aside .size-100:-abp-has(.sprocket-strips-s)
 backpacker.no##.ad_box_middle
 canariposten.no##.theiaStickySidebar > .widget-1
 thaiguiden.no###extraContainer3
+itavisen.no#?#.td-c-loop-item:-abp-has(.meta-info:-abp-contains(Annonse))
 nyteknikk.no##.rightbanner
 nyteknikk.no##.toppbanner
 norsk-rally.com###left > .bgbottom > .moduletable
@@ -638,6 +639,10 @@ bygg.no##.ads-strip
 byggebolig.no##.maestro-content-plugins
 computerworld.dk###computerworldleaderboard
 computerworld.dk##.paragraphAd
+bt.no##div[class^=article-wrapper-] > div[class^=_]
+itavisen.no##.td-adspot-title
+itavisen.no##.td-c-loop-ad
+itavisen.no##.td-header-ad-wrap
 cw.no##.ad-fit-body
 cw.no##.desktop-only.l-row > .omega.grid-12.grid-item.col
 cw.no##div[nf-desk-widget="spot.content"]:upward(2)
@@ -1977,10 +1982,10 @@ vg.no##div[data-test-tag=timestamp] + div:before
 vg.no##div[data-test-tag=timestamp] + p + div:before
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-712799898
 !#if !env_mobile
-no###aid-overlay
-no,~nettavisen.no##.aid-incentive-overlay:style(top: 850px !important)
-no##.incentive-selector__positioner--visible, .incentive-selector__positioner, .aid-background-blur:style(filter: none !important)
-no##.login-card:style(color: #000 !important)
+no,~ba.no###aid-overlay
+no,~nettavisen.no,~ba.no##.aid-incentive-overlay:style(top: 950px !important)
+no,~ba.no##.incentive-selector__positioner--visible, .incentive-selector__positioner, .aid-background-blur:style(filter: none !important)
+no,~ba.no##.login-card:style(color: #000 !important)
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-725741350
 nettavisen.no##.aid-incentive-overlay:style(top: 1875px !important)
 !#endif
@@ -1988,7 +1993,7 @@ nettavisen.no##.aid-incentive-overlay:style(top: 1875px !important)
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 12November2020v1-Extension
+! Last updated: 13November2020v1-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 csp.screen9.com#@#.adsbox
 dagensbyggeri.dk##+js(std, (), 2500)
