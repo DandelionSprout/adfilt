@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 15November2020v3-Beta
+! Version: 15November2020v4-Beta
 ! Expires: 7 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware injectors, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Note that this only works on AdGuard for Windows/Mac/Android, because "$removeparam" is directly based on Stealth Mode's "Remove URL tracking parameters" feature. However, it does not require Stealth Mode to be turned on to work.
@@ -44,3 +44,14 @@ $removeparam=th
 $removeparam=psc
 ||amazon.$removeparam=tag
 ||amazon.$removeparam=linkCode
+! https://www.netonnet.no/art/data-og-nettbrett/nettbrett/lader-og-dokking/apple-thunderboltgigabitethernet/182650.11071/?dclid=CjkKEQiAwMP9BRDt06nU9a_8_bABEiQAL_PHDRXNVIm2rrWiTDbj0z7kJeilQ-_BYvMHw3xzuRcnB2Dw_wcB (15/11/2020)
+$removeparam=dclid
+! https://www.apple.com/no/shop/product/MD463ZM/A/thunderbolt-til-gigabit-ethernet-adapter?afid=p239%7C1405819&cid=aos-no-aff-ir (15/11/2020)
+$removeparam=afid
+||apple.com$removeparam=cid
+! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
+||deal.no$removeparam=ref
+! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
+$removeparam=WebSiteMapNodeID
+! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
+||cdon.$removeparam=g
