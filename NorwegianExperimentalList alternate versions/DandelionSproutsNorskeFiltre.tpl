@@ -1,5 +1,5 @@
 msFilterList
-# Version: 13November2020v1-Alpha
+# Version: 18November2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -417,6 +417,7 @@ msFilterList
 +d isdownorblocked.com
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 -d prod-adops-proxy.dnitv.net
+# https://github.com/uBlockOrigin/uAssets/issues/8230/
 # ——— Caused by «EasyPrivacy» ———
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
@@ -426,6 +427,7 @@ msFilterList
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
+# https://github.com/ryanbr/fanboy-adblock/issues/1434
 # ——— Caused by «Fanboy's Annoyances List» ———
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
