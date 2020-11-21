@@ -2733,8 +2733,8 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"remote-domains(\": \"[0-9a-f:]{4,39})$", 
-           r'remote-addresses\1" },', 
+           r".*remote-domains(\": \"[0-9a-f:]{4,39})$", 
+           r'', 
            line
         )
 
@@ -5161,6 +5161,12 @@ def prepare_domains(lines) -> str:
         line = re.sub(
            r"[$,]third-party.*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(# Description: .*)", 
+           r"\1 Note that this list version is only meant for lists that support no adblocker syntaxes whatsoever, such as Pi-Hole, Blokada, DNS66, and uMatrix.", 
            line
         )
 
