@@ -453,7 +453,6 @@ msFilterList
 +d notice.sp-prod.net
 +d sp-prod.net
 !
-!#include NorwegianExperimentalList%20alternate%20versions AntiAdblockEntries.txt
 !
 # 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
 # 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
@@ -815,7 +814,6 @@ msFilterList
 -d storustovu.dk
 -d campingnews.dk
 !
-!#include uBO%20list%20extensions TemporaryWaterfoxClassicFixForNordicFilters.txt
  
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
