@@ -1,5 +1,5 @@
 msFilterList
-# Version: 18November2020v2-Alpha
+# Version: 22November2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -442,6 +442,9 @@ msFilterList
 # https://www.in.fo/itrottur/sport-detail/news/alex-hevdi-ur-at-gera-i-san-marino/
 # Unbreak a "Read out loud for the deaf" banner
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
+# https://github.com/AdguardTeam/AdguardFilters/issues/68028
+-d v.fwmrm.net 1?resp=
+-d v.fwmrm.net 1?resp=
 # ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 # ——— Unknown cause ———
@@ -811,6 +814,8 @@ msFilterList
 -d brigitteheilmann.dk
 -d storustovu.dk
 -d campingnews.dk
+!
+!#include uBO%20list%20extensions TemporaryWaterfoxClassicFixForNordicFilters.txt
  
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
