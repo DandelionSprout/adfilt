@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2020-09-30T10:23:43.171Z",
+    "createdAt": "2020-11-22T15:55:31.967Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -234,10 +234,10 @@
             "exampleUrl": "https://i.imgur.com/zlDG14al.jpg",
             "exampleResult": "https://i.imgur.com/zlDG14a.jpg",
             "error": null,
-            "includePattern": "https://i.imgur.com/([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])([a-zA-Z0-9])l.([j|p])([p|n])g",
+            "includePattern": "https://i.imgur.com/([a-zA-Z0-9]{7})l.(jp|pn)g",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://i.imgur.com/$1$2$3$4$5$6$7.$8$9g",
+            "redirectUrl": "https://i.imgur.com/$1.$2g",
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -298,24 +298,6 @@
             ]
         },
         {
-            "description": "{Good link shortening 1} Makes internal Facebook pages easier to link to",
-            "exampleUrl": "https://www.facebook.com/johnmadden/?__tn__=Mooo",
-            "exampleResult": "https://www.facebook.com/johnmadden/",
-            "error": null,
-            "includePattern": "*facebook.com*?__tn__=Mooo*",
-            "excludePattern": "",
-            "patternDesc": "Special thanks to https://github.com/FlandreDaisuki/Facebook-Dont-Track-Me for this entry.",
-            "redirectUrl": "$1facebook.com$2",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame",
-                "xmlhttprequest"
-            ]
-        },
-        {
             "description": "{Good link shortening 2} Makes external links on Facebook pages lead directly to the intended pages",
             "exampleUrl": "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.nrk.no%2F",
             "exampleResult": "https://www.nrk.no/",
@@ -330,23 +312,6 @@
             "grouped": false,
             "appliesTo": [
                 "main_frame",
-                "xmlhttprequest"
-            ]
-        },
-        {
-            "description": "{Good link shortening 3} Makes eBay article pages easier to link to",
-            "exampleUrl": "https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1",
-            "exampleResult": "https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659",
-            "error": null,
-            "includePattern": "http*://www.ebay.com/itm/*?_trkparms=*",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.ebay.com/itm/$2",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
                 "xmlhttprequest"
             ]
         },
@@ -504,7 +469,7 @@
             ]
         },
         {
-            "description": "{Assistant for the \"Browsing Websites Without Logging In\" adblocker filterlist 1} A considerable resolution upgrade when opening raw Pinterest images without being logged in",
+            "description": "{Assistant for the \"Browse Websites Without Logging In\" adblocker filterlist 1} A considerable resolution upgrade when opening raw Pinterest images without being logged in",
             "exampleUrl": "https://i.pinimg.com/236x/5d/d7/c0/5dd7c071fcd6b8f5cbc9d3da136dd277--hadas-disney-disney-fairies.jpg",
             "exampleResult": "https://i.pinimg.com/originals/5d/d7/c0/5dd7c071fcd6b8f5cbc9d3da136dd277--hadas-disney-disney-fairies.jpg",
             "error": null,
@@ -521,7 +486,7 @@
             ]
         },
         {
-            "description": "{Assistant for the \"Browsing Websites Without Logging In\" adblocker filterlist 3} View Nijie images without being logged in",
+            "description": "{Assistant for the \"Browse Websites Without Logging In\" adblocker filterlist 3} View Nijie images without being logged in",
             "exampleUrl": "https://pic05.nijie.info/__rs_l30x30/nijie_picture/660423_20180905234121_0.jpg",
             "exampleResult": "https://pic05.nijie.info/__rs_cns3000x3000/nijie_picture/660423_20180905234121_0.jpg",
             "error": null,
@@ -529,6 +494,31 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "$1://$2.nijie.info/__rs_cns3000x3000/nijie_picture/$4",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "other"
+            ]
+        },
+        {
+            "description": "{Assistant for the \"Browse Websites Without Logging In\" adblocker filterlist 4} View Fantia images without being logged in",
+            "exampleUrl": "https://c.fantia.jp/uploads/post/file/520965/micro_f1bb6497-c0b9-428e-b789-69ce7719f783.jpg",
+            "exampleResult": "https://c.fantia.jp/uploads/post/file/520965/f1bb6497-c0b9-428e-b789-69ce7719f783.jpg",
+            "error": null,
+            "includePattern": "*://c.fantia.jp/uploads/post/file/*/micro_*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1://c.fantia.jp/uploads/post/file/$2/$3",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -720,7 +710,7 @@
             "exampleUrl": "https://www.pixiv.net/jump.php?url=https%3A%2F%2Fwww.jabarchives.com%2Fjoerandel",
             "exampleResult": "https://www.jabarchives.com/joerandel",
             "error": null,
-            "includePattern": "http[s]?://www.pixiv.net/jump.php\\?(url=)?(.*)",
+            "includePattern": "https?://www.pixiv.net/jump.php\\?(url=)?(.*)",
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "$2",
