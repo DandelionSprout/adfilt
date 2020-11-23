@@ -1,5 +1,5 @@
 msFilterList
-# Version: 22November2020v4-Alpha
+# Version: 23November2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -410,6 +410,7 @@ msFilterList
 # 🇩🇰: ——— Fiksing af knækte websider ———
 # 🇮🇸: ——— Óbrot ———
 # 🇬🇧: ——— Unbreakage ———
+# Posten's new parcel tracker, fixes the form for giving them delivery information (doorbell name number)
 # Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
 # folkebladet.no; Makes job position lists show up correctly
 +d stillingledig.*.no
