@@ -102,6 +102,7 @@
 * `$redirect-rule`: Similar to `$redirect`, but is only applied if it's already blocked by *another* entry or dynamic rule(set).
 * `@@||` + `$ghide`: Same as `@@||` + `$generichide`.
 * `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented.
+* `$queryprune`: Removes URL parameters, e.g. `$tracker=sitecampaignpage`. Assumes RegEx by default; add a `|` after the `=` to avoid assuming such.
 
 ## Adblock Plus, Adblock and AdGuard only:
 * `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API. The uBO equivalent seems to be `##+js(nowebrtc)`, but conversion is not done automatically.
@@ -145,6 +146,7 @@
 * `@@` + `$stealth`: Turns off Stealth Mode on that site.
 * `$replace`: Changes the text of text elements on a site. Supports and requires use of RegEx. Requires ridiculous amounts of trust rights and cannot be used in web-hosted lists.
 * `$protobuf`: Similar to `$replace`, but strips away numeric values from responses given by the `Protocol Buffers` API.
+* `$removeparam`: Very similar to `$queryprune`, except that it assumes ordinary text by default and that RegEx is opt-in.
 
 ## AdGuard for [Android/iOS] only:
 
