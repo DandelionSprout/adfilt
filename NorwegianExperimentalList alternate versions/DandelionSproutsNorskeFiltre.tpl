@@ -1,5 +1,5 @@
 msFilterList
-# Version: 24November2020v2-Alpha
+# Version: 24November2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -262,6 +262,7 @@ msFilterList
 -d utvarpsaga.is *-bordi.jpg
 -d utvarpsaga.is *_banner.png
 - utvarpsaga\.is file [0-9a-f]{32}\.png
+- wp-content uploads *bruktbilann*.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
