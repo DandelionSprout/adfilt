@@ -1,5 +1,5 @@
 msFilterList
-# Version: 24November2020v1-Alpha
+# Version: 24November2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -540,7 +540,6 @@ msFilterList
 -d no.zxxyw.com
 -d apple-account-locked.losjevegen.no
 -d arvetellefsen.no curry
--d holmedalblikk.no
 -d vipps-sikkerhet.
 - dnb11111
 -d nymelding.com
@@ -749,7 +748,6 @@ msFilterList
 -d fatalfailblog.com
 -d festmusikk.com
 -d fotballsko-salg.com
--d gantoslo.com
 -d godeskonettbutikk.com
 -d gsport.com
 -d hernoclothing.com
@@ -768,14 +766,11 @@ msFilterList
 -d meladermfacts.com
 -d mncprobuild.com
 -d moebel-thiems.com
--d moslt.com
 -d moteshoes.com
--d mrarmstrongsclass.com
 -d museuw.com
 -d mycraftypad.com
 -d nasajones.com
 -d nikebutikks.com
--d no.moncleritalien.com
 -d nordartisan.com
 -d norfotball.com
 -d norgefotball.com
@@ -785,15 +780,12 @@ msFilterList
 -d norgeshoes.com
 -d oflike.com
 -d omgrm.com
--d parajumpers-salg.com
 -d parajumpersitoutlet.com
 -d parajumpersnettbutikk.com
 -d parajumpersnorway.com
 -d parajumperssalg.com
 -d pjs.outlet.com
 -d popeurope.com
--d quiltstudiolaren.com
--d retoaudi.com
 -d skonmdnorge.com
 -d sykkeltrøye.com
 -d tobiascelebritymusicevents.com
