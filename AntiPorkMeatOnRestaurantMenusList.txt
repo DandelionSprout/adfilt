@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🛶 Anti-'Pork meat on restaurant menus' List
-! Version: 25November2020v1-Alpha
+! Version: 25November2020v2-Alpha
 ! Expires: 7 days
 ! Description: Do you feel that bacon and pork tastes really icky and sourly greasy, yet half of all things you'll find in restaurants have pork in them, and there's 30 different terms for pork to keep track of to avoid unpleasant surprises? If so, then this list has saved your taste buds and stomach.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -35,7 +35,7 @@ arbys.*#?#.col-sm-8:-abp-has(.product-item[class*=pizza-slider])
 hooters.com#?#.menu-item-tile:-abp-contains(bacon)
 ! https://www.fiveguys.com/menu
 fiveguys.*#?#.menu-popup-link[data-target*=Dog]:not([data-target*=Kosher]):not([data-target*=Beef])
-fiveguys.*#?#.menu-popup-link[data-target*="Bacon" i]
+fiveguys.*#?#.menu-popup-link[data-target*=Bacon i]
 fiveguys.*#?#.menu-popup-link[data-target*=BLT]
 ! https://www.maxhamburger.no/var-meny/meny/
 max.se,maxhamburger.no,max.dk,maxpremiumburgers.pl#?#.o-product-list__item:-abp-has(.m-product-card__link[href*=bacon])
@@ -63,6 +63,13 @@ futureordering.com#?#li[id^=product]:-abp-contains(/Pepperoni/i)
 futureordering.com#?#li[id^=product]:-abp-contains(/Pølse/i)
 futureordering.com#?#li[id^=product]:-abp-contains(/Skink/i)
 futureordering.com#?#li[id^=product]:-abp-contains(/Korv/i)
+! https://pizzabakeren.no/lunsj-tilbud
+pizzabakeren.no,pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com##.prod_item,.pizza_item:-abp-contains(/pepperoni/i)
+pizzabakeren.no,pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com##.prod_item,.pizza_item:-abp-contains(/bacon/i)
+pizzabakeren.no,pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com##.prod_item,.pizza_item:-abp-contains(/chorizo/i)
+pizzabakeren.no##.prod_item,.pizza_item:-abp-contains(/svin/i)
+pizzabakeren.no##.prod_item,.pizza_item:-abp-contains(/skinke/i)
+pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com##.prod_item,.pizza_item:-abp-contains(/ham[, ]/i)
 
 ! ——— 🇺🇸 United States ———
 ! https://www.whitecastle.com/menu
@@ -166,6 +173,29 @@ frati.no#?#.category > .item:-abp-contains(pancetta)
 asiahouse.no#?#.one-column > li:-abp-contains(/svinefilet/i)
 asiahouse.no#?#.one-column > li:-abp-contains(/svineribbe/i)
 ###svinekjøtt
+
+! ——— 🇸🇪 Sweden - Sverige ———
+! https://www.pizzabakeren.se/Pizzor
+pizzabakeren.se##.pizza:has-text(/bacon/i)
+pizzabakeren.se##.pizza:has-text(/bacon/i) + .price
+pizzabakeren.se##.pizza:has-text(/bacon/i) + .price + .price
+pizzabakeren.se##.pizza:has-text(/bacon/i) + .price + .price + .price
+pizzabakeren.se##.pizza:has-text(/bacon/i) + .price + .price + .price + .price
+pizzabakeren.se##.pizza:has-text(/chorizo/i)
+pizzabakeren.se##.pizza:has-text(/chorizo/i) + .price
+pizzabakeren.se##.pizza:has-text(/chorizo/i) + .price + .price
+pizzabakeren.se##.pizza:has-text(/chorizo/i) + .price + .price + .price
+pizzabakeren.se##.pizza:has-text(/chorizo/i) + .price + .price + .price + .price
+pizzabakeren.se##.pizza:has-text(/skinka/i)
+pizzabakeren.se##.pizza:has-text(/skinka/i) + .price
+pizzabakeren.se##.pizza:has-text(/skinka/i) + .price + .price
+pizzabakeren.se##.pizza:has-text(/skinka/i) + .price + .price + .price
+pizzabakeren.se##.pizza:has-text(/skinka/i) + .price + .price + .price + .price
+pizzabakeren.se##.pizza:has-text(/pepperoni/i)
+pizzabakeren.se##.pizza:has-text(/pepperoni/i) + .price
+pizzabakeren.se##.pizza:has-text(/pepperoni/i) + .price + .price
+pizzabakeren.se##.pizza:has-text(/pepperoni/i) + .price + .price + .price
+pizzabakeren.se##.pizza:has-text(/pepperoni/i) + .price + .price + .price + .price
 
 ! ——— 🇮🇪 Ireland ———
 ! https://papajohns.ie/papajohns-food/
