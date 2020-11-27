@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 27November2020v2-Beta
+! Version: 27November2020v3-Beta
 ! Expires: 3 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware injectors, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Note that this only works on AdGuard for Windows/Mac/Android, because "$removeparam" is directly based on Stealth Mode's "Remove URL tracking parameters" feature. However, it does not require Stealth Mode to be turned on to work.
@@ -91,5 +91,11 @@ $removeparam=bih
 $removeparam=gs_lcp
 $removeparam=cshid
 ||google.$removeparam=ei
-! https://www.tv2.no/a/10534772?referral=tv2v
+! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
 ||tv2.no^$removeparam=referral
+! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
+$removeparam=ref
+! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
+$removeparam=dchild
+$removeparam=qid
+$removeparam=sr
