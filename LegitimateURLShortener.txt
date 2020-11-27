@@ -1,6 +1,6 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 27November2020v3-Beta
-! Expires: 3 days
+! Version: 27November2020v4-Beta
+! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware injectors, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Note that this only works on AdGuard for Windows/Mac/Android, because "$removeparam" is directly based on Stealth Mode's "Remove URL tracking parameters" feature. However, it does not require Stealth Mode to be turned on to work.
 ! A test version for uBlock Origin is at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sandbox/QuerypruneTest.txt, which'll be deleted as soon as uBO adds an alias for $removeparam.
@@ -50,8 +50,6 @@ $removeparam=dclid
 ! https://www.apple.com/no/shop/product/MD463ZM/A/thunderbolt-til-gigabit-ethernet-adapter?afid=p239%7C1405819&cid=aos-no-aff-ir (15/11/2020)
 $removeparam=afid
 $removeparam=cid,domain=apple.com|microsoft.com
-! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
-$removeparam=ref,domain=deal.no|crystalidea.com|politiken.dk|jyllands-posten.dk|lokalavisen.dk
 ! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
 $removeparam=WebSiteMapNodeID
 ! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
@@ -93,9 +91,14 @@ $removeparam=cshid
 ||google.$removeparam=ei
 ! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
 ||tv2.no^$removeparam=referral
+! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 $removeparam=ref
 ! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
 $removeparam=dchild
 $removeparam=qid
 $removeparam=sr
+! https://www.ebay.com/sch/i.html?_from=R40&_nkw=Born+Pretty&_sacat=0&_pgn=5&rt=nc (27/11/2020)
+$removeparam=_from
+$removeparam=sacat
+||ebay.$removeparam=rt
