@@ -1,9 +1,8 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 27November2020v5-Beta
+! Version: 27November2020v6-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware injectors, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Note that this only works on AdGuard for Windows/Mac/Android, because "$removeparam" is directly based on Stealth Mode's "Remove URL tracking parameters" feature. However, it does not require Stealth Mode to be turned on to work.
-! A test version for uBlock Origin is at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sandbox/QuerypruneTest.txt, which'll be deleted as soon as uBO adds an alias for $removeparam.
 ! Versions for Redirector and URLRedirector are planned in the near future as of November 2020.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! From AdGuard CoreLibs (11/11/2020)
@@ -104,3 +103,9 @@ $removeparam=sacat
 ||ebay.$removeparam=rt
 ! https://www.ebay.com/sch/i.html?_from=R40&_nkw=Ugreen&_blrs=spell_auto_correct (27/11/2020)
 $removeparam=_blrs
+! https://www.elgiganten.dk/product/lyd-hi-fi/hovedtelefoner/WH1000XM3B/sony-tradlose-around-ear-hovedtelefoner-wh-1000xm3-sort?scid=Pricecomparison8084162610 (27/11/2020)
+$removeparam=scid
+! https://salming.com/sv-se/produkter/p/1099805-0416/salming-oval-fusion?trackID=79064280 (27/11/2020)
+$removeparam=trackID
+! https://productkeys.dk/produkt/pokemon-lets-go-pikachu/?dTribesID=9OIiIkbuCBtHQnvUeuU6ZD05WpuicLKP%7Cadtribes%7C11543 (27/11/2020)
+$removeparam=dTribesID
