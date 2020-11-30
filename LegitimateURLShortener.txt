@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 28November2020v4-Beta
+! Version: 30November2020v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Versions for Redirector and URLRedirector were planned in the near future as of November 2020, but are on hold after uBO added support for lowercase $removeparam entries.
@@ -149,3 +149,15 @@ $removeparam=dartycid
 ! https://fr.shopping.rakuten.com/offer/buy/5483124993/apple-airpods-2-avec-case-2eme-generation-blanc-mv7n2zm-a.html?bbaid=6680578123&t=6862148 (28/11/2020)
 $removeparam=bbaid
 ||rakuten.com^$removeparam=t
+! https://archive.org/donate/?origin=email-2020eoyappl2smdnrfnl-v1
+||archive.org^$removeparam=origin
+! https://blog.archive.org/matching-gifts/?iax=typage
+||archive.org^$removeparam=iax
+! https://www.paypal.com/myaccount/transaction/details/7CY16898V3123435J?v=1&utm_unptid=&ppid=RT000016&cnac=NO&rsta=no_NO(nb-NO)&cust=&unptid=&calc=24c08e54728d&unp_tpcid=null&page=main%3Aemail%3ART000016&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.26.0&xt=
+$removeparam=utm_unptid
+$removeparam=ppid
+$removeparam=unptid
+||paypal.com^$removeparam=calc
+$removeparam=unp_tpcid
+$removeparam=pgrp
+$removeparam=mchn
