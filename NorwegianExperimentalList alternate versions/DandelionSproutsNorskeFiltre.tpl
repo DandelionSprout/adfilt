@@ -1,5 +1,5 @@
 msFilterList
-# Version: 30November2020v1-Alpha
+# Version: 30November2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -121,6 +121,8 @@ msFilterList
 - _nettannonse.
 - BINARY *-BANNER-*.gif
 - BINARY *%20200x300.jpg
+# nett.no (30 11 2020)
+- byteads
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
