@@ -71,7 +71,7 @@
 * `{ }`: Same as above.
 * `:has-text`: Same as `:-abp-contains`.
 * `:has`: Same as `:-abp-has`.
-* `!#if`: Specifies that a section of entries only applies to specific platforms or extensions. Closed out by `!#endif`.
+* `!#if`: Specifies that a section of entries only applies to specific platforms or extensions. Closed out by `!#endif`. Possible options are listed [here](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#if-condition).
 * `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
 * `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
 #### Blocking
