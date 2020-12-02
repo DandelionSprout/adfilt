@@ -1,4 +1,4 @@
-! Version: 02December2020v1
+! Version: 02December2020v2
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 1 day
@@ -201,6 +201,7 @@ alvdalmiv.no,tynsetingen.no##.widget-1.columns-5
 alvdalmiv.no,tynsetingen.no##.widgetFullWidth.columns-5
 alvdalmiv.no,tynsetingen.no##.article-panel-mixed + .front-page-widget
 randaberg24.no###site-main > main + div.container
+detailersclub.no##.cWidgetContainer[data-widgetarea=footer]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -522,6 +523,7 @@ _300x250px-*.gif^$domain=ilaks.no
 ||utvarpsaga.is/file/*_banner.png^
 /utvarpsaga\.is/file/[0-9a-f]{32}\.png/
 /wp-content/uploads/*bruktbilann*.jpg^$domain=alvdalmiv.no|tynsetingen.no
+||detailersclub.no/uploads/*_banner.$image
 !#if !ext_ublock
 @@||vgtv.no$ghide
 ||adnxs.com^$domain=vgtv.no
@@ -1143,6 +1145,11 @@ fla.de##div[data-glade]
 fla.de##.font-robotoregular.font10
 nettavisen.no##.skyskraper-container
 nettavisen.no##amedia-include[param-editionid=reklame]:upward(1)
+glr.no##.widget_custom_html
+test.no##.ad-stamp
+test.no##.ad-position-top
+ordtak.no##.boksmarg
+bramat.no##.scs-banner
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$frame
 ||danishfamilysearch.dk/images/xp2^$image
@@ -1202,7 +1209,7 @@ seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
 ###viewItemAdsenseBanner
 ###viewItemEniroBanner
 ! www.vtb.no
-##.annonse:not(.article-entity)
+~rockefeller.no##.annonse:not(.article-entity)
 ! vafo.dk
 ##.block-AnnonceBlocksAdform
 ##.clearfix.top_banner_container
