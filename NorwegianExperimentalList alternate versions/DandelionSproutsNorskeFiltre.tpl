@@ -1,5 +1,5 @@
 msFilterList
-# Version: 30November2020v3-Alpha
+# Version: 02December2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -123,6 +123,8 @@ msFilterList
 - BINARY *%20200x300.jpg
 # nett.no (30 11 2020)
 - byteads
+# adressa.no (02 12 2020)
+- polarnexus.js
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -505,6 +507,8 @@ msFilterList
 # 🇳🇴: Falske innlastinger som sløser bort tid
 # 🇩🇰: Falske indlastinger, der søler bort tid
 # 🇬🇧: Fake loading screens that waste time
+# adressa.no (02 12 2020)
+-d collector.schibsted.io
 # "Generic Hide"
 +d bondebladet.screen9.tv
 +d eurosport.no
