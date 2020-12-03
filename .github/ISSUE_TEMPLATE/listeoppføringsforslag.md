@@ -16,6 +16,7 @@ assignees: ''
 ## Hvilke av mine lister sender du den inn til?
 
 ## Hvilken reklameblokkerer og versjon brukte du da du skrev og testet oppføringen(e)?
+<!-- For info om støttede utvidelser, besøk https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md -->
 - [ ] uBlock Origin
 - [ ] AdGuard (Betalt skrivebordsversjon)
 - [ ] AdGuard (Nettleserutvidelse)
