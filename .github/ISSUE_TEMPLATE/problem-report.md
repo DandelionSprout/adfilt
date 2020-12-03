@@ -33,7 +33,7 @@ Other(s):
 
 Adblocker version(s):
 
-## Which filterlists did you use? Failing to write this will result in instant report closing.
+## Which filterlists did you use? Failing to tell this will temporarily close the report until it has been told.
 <!-- If you want to save time, you can take a screenshot of your adblocker's list settings. -->
 
 ## Which browser(s) and version did you use?
