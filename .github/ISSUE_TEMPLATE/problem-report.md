@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-<!-- PS: If you already have written an entry that'd fix the problem, it's better to use the *Feature Request* template instead. -->
+<!-- PS: If you already have written an entry that'd fix the problem, it's better to use the *List entry submission* template instead. -->
 
 <!-- Read through https://github.com/DandelionSprout/adfilt/blob/master/.github/CONTRIBUTING.md if possible, so that you know what to expect of how reports will be processed. -->
 
