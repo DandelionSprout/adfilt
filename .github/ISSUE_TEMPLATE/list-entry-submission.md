@@ -16,6 +16,7 @@ assignees: ''
 ## Which of my lists are you submitting it to?
 
 ## Which adblocker(s) and version did you use when writing and testing the entries?
+<!-- For info on supported extensions, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md -->
 - [ ] uBlock Origin
 - [ ] AdGuard (Paid desktop version)
 - [ ] AdGuard (for browsers)
