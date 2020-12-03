@@ -16,7 +16,7 @@ assignees: ''
 ## Legg til skærmbillede under hvis det behøves:
 
 ## Legg til et skærmbillede av udvidelsens logføring:
-<!-- Hvis du bruger uBlock Origin, er det anbefalet at filtrere visningen ned til Blokeret+Tilladt, for at reducere de (som oftest irrelevante) "hvide" logpostene. -->
+<!-- Hvis du bruger uBlock Origin, er det anbefalet at filtrere visningen ned til Blokeret+Tilladt+Modificeret, for at reducere de (som oftest irrelevante) "hvide" logpostene. -->
 
 ## Hvilken reklameblokerer og version brugte du da du testet dette?
 <!-- For info om støttede udvidelser, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md -->
