@@ -1,5 +1,5 @@
 msFilterList
-# Version: 02December2020v3-Alpha
+# Version: 05December2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -125,6 +125,8 @@ msFilterList
 - byteads
 # adressa.no (02 12 2020)
 - polarnexus.js
+# lokalavisen.dk (05 12 2020)
+-d tcnworkaround.dk
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
