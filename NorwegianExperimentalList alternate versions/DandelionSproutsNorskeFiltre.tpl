@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06December2020v2-Alpha
+# Version: 06December2020v4-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -488,6 +488,8 @@ msFilterList
 # 🇬🇧: Anti-'CPU slaughtering'
 # https://kendte.dk/stjernespaekket-havefest-foejer-nye-navne-paa-plakaten-04072020/
 - advisibility_*.js
+# Submitted by a Visma user on Google Hangouts
+-d walkme.com
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇳🇴🏞: ——— Norsk Tipping, inkl. tvilsamt motiverte lottoreklamar (Ein håndfull ikkje-påtrengande tippereklamar er i orden for meg) ———
