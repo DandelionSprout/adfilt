@@ -1,5 +1,5 @@
 msFilterList
-# Version: 05December2020v2-Alpha
+# Version: 06December2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -49,6 +49,7 @@ msFilterList
 # doktor.frettabladid.is (18 09 2020)
 # borsen.no (08 10 2020)
 # https://www.nettavisen.no/3424050834.html/(24/11/2020)
+# reavisa.no (06 12 2020)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -127,6 +128,10 @@ msFilterList
 - polarnexus.js
 # lokalavisen.dk (05 12 2020)
 -d tcnworkaround.dk
+# reavisa.no (06 12 2020)
+- _nettbanner_
+- _visittkortannonse_
+- -visittkortannonse-
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -270,6 +275,13 @@ msFilterList
 - utvarpsaga\.is file [0-9a-f]{32}\.png
 - wp-content uploads *bruktbilann*.jpg
 -d detailersclub.no *_banner.
+-d reavisa.blob.core.windows.net *_NETT.jpg
+-d reavisa.blob.core.windows.net *-NETT.jpg
+-d reavisa.blob.core.windows.net *_300x100
+-d reavisa.blob.core.windows.net *visittkort
+-d reavisa.blob.core.windows.net *_annonse_
+-d reavisa.blob.core.windows.net *-annonse-
+-d reavisa.blob.core.windows.net *-NET.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
