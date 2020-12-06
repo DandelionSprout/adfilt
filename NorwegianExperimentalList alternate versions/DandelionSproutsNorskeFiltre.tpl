@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06December2020v1-Alpha
+# Version: 06December2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -445,6 +445,7 @@ msFilterList
 # 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
 # 🇬🇧: Makes Dplay's login page show up properly
 +d mparticle.com
+# https://github.com/easylist/easylist/issues/6633
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
@@ -468,6 +469,9 @@ msFilterList
 -d v.fwmrm.net 1?resp=
 # ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
+# ——— Caused by «AdGuard Annoyances filter» ———
+# https://github.com/AdguardTeam/AdguardFilters/issues/69425
++d js.pusher.com
 # ——— Unknown cause ———
 # https://github.com/DandelionSprout/adfilt/issues/67
 # https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/

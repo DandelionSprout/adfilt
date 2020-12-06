@@ -1561,6 +1561,18 @@ def prepare_privacy(lines) -> str:
         )
 
         line = re.sub(
+           r"^@@\|\|fe\.adstate\.net.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|.*sp-prod\.net.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)", 
            line
