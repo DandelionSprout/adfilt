@@ -1,4 +1,4 @@
-! Version: 05December2020v2
+! Version: 06December2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 1 day
@@ -207,6 +207,7 @@ lokalavisen.dk#?#div[class=" margin-top-lg "]:-abp-has(.custom-ad-container)
 bt.no##.contentboard-container
 bt.no###related-articles + div[class^=_]
 bt.no##div[data-ad-subtype=in-feed]:upward(2)
+reavisa.no##.ad
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -270,6 +271,9 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ##.native-advertisement
 ! https://www.nettavisen.no/3424050834.html (24/11/2020)
 ##.commercial-teaser
+! reavisa.no (06/12/2020)
+###newswire-banner
+~finn.no##a[href*="finn.no/realestate/newbuildings/ad.htm"]
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -370,6 +374,10 @@ _nettannonse.
 /polarnexus.js
 ! lokalavisen.dk (05/12/2020)
 ||tcnworkaround.dk^$3p
+! reavisa.no (06/12/2020)
+_nettbanner_$image
+_visittkortannonse_$image
+-visittkortannonse-$image
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -531,6 +539,13 @@ _300x250px-*.gif^$domain=ilaks.no
 /utvarpsaga\.is/file/[0-9a-f]{32}\.png/
 /wp-content/uploads/*bruktbilann*.jpg^$domain=alvdalmiv.no|tynsetingen.no
 ||detailersclub.no/uploads/*_banner.$image
+||reavisa.blob.core.windows.net/*_NETT.jpg^$image
+||reavisa.blob.core.windows.net/*-NETT.jpg^$image
+||reavisa.blob.core.windows.net/*_300x100$image
+||reavisa.blob.core.windows.net/*visittkort$image
+||reavisa.blob.core.windows.net/*_annonse_$image
+||reavisa.blob.core.windows.net/*-annonse-$image
+||reavisa.blob.core.windows.net/*-NET.jpg^$image
 !#if !ext_ublock
 @@||vgtv.no$ghide
 ||adnxs.com^$domain=vgtv.no
