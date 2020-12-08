@@ -1,4 +1,4 @@
-! Version: 07December2020v1
+! Version: 08December2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 1 day
@@ -287,7 +287,6 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 /annonsar/*
 /annonse_$image
 /auglysing/*
-/reklam/*
 /vefauglysingar/*
 ||ad.*.no^$domain=~ad.dep.no|~ad.hem.no
 ||ad1.*.dk^
@@ -309,8 +308,8 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ||adnordics.com^$3p
 ||adr.kulingen.no^
 ||adserver.xh.no^$3p
-||adservice.com^
-||adservicemedia.dk^
+||adservice.com^$3p
+||adservicemedia.dk^$3p
 ||advertisement.vg.no^
 ||bilborsen.webannonse.no^
 ||cluster.chart.dk^$3p
@@ -621,7 +620,6 @@ contentMarketing$app=no.sol
 1001spill.no##.layout-two-columns-aside
 1001spill.no##.omega.grid_6
 180.*##.ad-min-height
-180.*##.ai-top-ad-outer
 180.*##.cc-top-ad-outer
 180.*##.idle-timeout-outer
 180.*##td[class^=frame-shadow-]
@@ -888,7 +886,6 @@ onlinenytt.com##.textwidget > p
 parcferme.no##.code-block > p
 parcferme.no##ins[data-revive-zoneid]:upward(2)
 parcferme.no,rbkweb.no##.adsbygoogle:upward(2)
-pengenytt.no##.footer-ad-wrap
 pengenytt.no#?#.entry-content > h4:-abp-has(script[src$="/adsbygoogle.js"])
 pengenytt.no#?#.entry-content > h6:-abp-has(script[src$="/adsbygoogle.js"])
 pengenytt.no#?#.so-widget-sow-editor:-abp-has(a[href^="https://online.adservicemedia.dk/"])
@@ -1009,7 +1006,6 @@ vartoslo.no##.vo-annonse
 vb.is##.big_spons
 veitingastadir.is##.footer_top > .footer-wrap > .columns
 version2.dk###headersub
-vg.no##.ad-wrapper
 vg.no##.finn-placeholder
 vg.no##div[id^=ad-front-netboard_]
 vg.no,bt.no##div[id^=adPlacement]
@@ -1129,7 +1125,6 @@ flatpanels.dk##div[style="text-align:center;clear:both;"]
 onlineposten.dk###header
 side6.dk##.apn-banner
 journalisten.dk##.article:style(padding-bottom: 10px !important)
-iform.dk,bilmagasinet.dk##.wg-banner
 kommunikationsforum.dk##.col-xs-12[style]
 finn.no##div.ads__unit[aria-hidden]
 123mc.dk##.dfp-top-wrp-wide
@@ -1206,7 +1201,6 @@ iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
 bygg.no,mmm.dk,kino.no##.ad
 byggfakta.no,byggfaktabolig.no,vvsaktuelt.no###bannerContainer:not(.HeaderBanner1)
 gulesider.no,degulesider.dk,krak.dk##.e-banner
-komputer.no,natgeo.no,historienet.no##.wg-banner
 byggeplads.dk,magasinetgulv.dk,officeplusdesign.dk##.region-header
 byggeplads.dk,magasinetgulv.dk,officeplusdesign.dk##.region-sidebar-second > div:first-of-type
 midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##main > .container:not([class*=" "])
@@ -1515,12 +1509,11 @@ ba.no##.sportspill
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/sales/validateCouponAndStoreToSession.json"]
 ~norsk-tipping.no,~tipster.no##a[href*="nettavisen.no/sportspill/tipping/blir-du-mangemillionr-pa-onsdag"]
 nettavisen.no##a[href*=lotto-million]
-nettavisen.no##[param-editionid=reklame]
 nettavisen.no#?#.front article:-abp-contains(Eurojackpot)
 dagsavisen.no##a[href*="norsk-tipping.no/artikler/"]
 startsiden.no##div[class*=partnerModule][data-ga-category^=NorskTipping]
 side2.no##.markupbox
-nettavisen.no##article[data-lp-section=sportspill]:-abp-has(.slotHeader):-abp-contains(/lotto/i)
+nettavisen.no#?#article[data-lp-section=sportspill]:-abp-has(.slotHeader):-abp-contains(/lotto/i)
 ||vg.no/vgc/pool/tipster.png^$image
 /pustehullet/betting-header.png^$image
 
@@ -1649,15 +1642,12 @@ vg.no#?#span:style(font-feature-settings: normal)
 ! 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 ! 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 newz.dk##.top-interstitial
-krs247.no#@##adsense
 vg.no,e24.no##.ad
 vgtv.no###player.pulse-isPauseAdVisible > .jw-overlays
-fuglelyder.net#@##banner_ad
 gulindex.no###cintmodal
 ||panel.cint.com^$domain=gulindex.no
 jyllands-posten.dk##.bpTopPlacement
 finans.dk##.baPosition
-politiken.dk##.ad--horseshoe
 itavisen.no##.banner
 trendsales.dk##.top__banner
 vg.no##.advert
