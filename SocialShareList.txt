@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 05December2020v1-Alpha
+! Version: 08December2020v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Note: This list does not intentionally try to remove links to websites' social accounts, or to third-party logins. However, there currently will be many de facto false positives that end up removing such buttons as well.
@@ -13,6 +13,7 @@
 ###divShare
 ###fb-share
 ###fb_share
+###inline-share-links
 ###likebuttons
 ###mashfbar-header
 ###new-social-share
@@ -27,6 +28,7 @@
 ###sharebar
 ###ShareEntryPoint
 ###sharingfooter
+###social-share
 ###social_buttons
 ###ss-floating-bar
 ###story-socials
@@ -65,6 +67,7 @@
 ##.facebook[href*="/sharer/"]
 ##.facebook_share
 ##.facebook_top
+##.facebookShare
 ##.fb-like-box
 ##.fb-page-plugin
 ##.fbbsb-button
@@ -134,6 +137,7 @@
 ##.share_icon_area
 ##.Share_Icons
 ##.share_toggle
+##.sharea
 ##.shareBar
 ##.shareBottom
 ##.sharebtns
@@ -161,6 +165,7 @@
 ##.social-btns
 ##.social-footer
 ##.social-icon
+##.social-likes
 ##.social-share-sidebar-component
 ##.social-share:not(article)
 ##.social-sharing
@@ -177,6 +182,7 @@
 ##.socialmedia-btns
 ##.socialShare
 ##.socialShareContainer
+##.spotheader__sharing
 ##.ssba
 ##.ssk-group
 ##.swp_social_panel
@@ -187,10 +193,9 @@
 ##[app=addtoany]
 ##[data-flip-widget=shareflip]
 ##[socialshare]
+##a[class$=-sharing-button__link]
 ##a[class$=sharebtn]
 ##a[class$=social_share]:not(article)
-~kjokkenskriveren.no##a[class*=ShareButton i]
-##a[class*=socialshare i]
 ##a[class*=-sharing-popup]
 ##a[class*=-socials__item]
 ##a[class*=BtnShare]
@@ -198,13 +203,14 @@
 ##a[class*=share-facebook]
 ##a[class*=share__button]
 ##a[class*=social-share]
+##a[class*=socialshare i]
 ##a[class=facebook i][title="Share this"]
-##a[class^=socialbutton i][onclick*="window.open"]
 ##a[class^=addthis_button]
 ##a[class^=pagetools][class*=icon--twitter]
 ##a[class^=pinterest-save]
 ##a[class^=share_btn]
 ##a[class^=sharing-popup-]
+##a[class^=socialbutton i][onclick*="window.open"]
 ##a[data-ga-event-action^="share:"]
 ##a[data-js=facebook-share]
 ##a[data-js=twitter-share]
@@ -229,6 +235,7 @@
 ##a[href="/#pinterest"]
 ##a[href^="/sharer/sharer.php?"] > button[type=submit]
 ##a[href^="javascript:fb_share('"]
+##a[href^="javascript:sendSns('"]
 ##a[href^="javascript:tw_share('"]
 ##a[id*=share-][id*=-button]
 ##a[id^=share_btn]
@@ -236,6 +243,7 @@
 ##a[onclick*="plus.google.com/share?"]
 ##a[onclick^="share_toggle("]
 ##a[onclick^="var share"]
+##a[onclick^="window.open('http"][onclick*="facebook.com/sharer"]
 ##a[onclick^=ShowShareDialog]
 ##a[onmouseover^="return addthis_open"]
 ##a[title="Share on Baidu" i]
@@ -251,11 +259,14 @@
 ##a[title^="Share to "]
 ##amedia-share
 ##amp-social-share
+##button[aria-controls=ShareContainer]
+##button[class$=_ShareButton]
+##button[class*=_fbshare]
 ##button[class*=ShareOverlayButton i]
 ##button[class*=SharesButton i]
-##button[class*=_fbshare]
 ##button[class^=share-module__share]
 ##button[data-a-target^=share]
+##button[data-arctrac*=socialShare i]
 ##button[data-fatal-attraction*=":share"]
 ##button[data-share-url]
 ##button[ng-click^=shareOn]
@@ -265,23 +276,23 @@
 ##div[button=share]
 ##div[class$=-share-single]
 ##div[class$=share-buttons]
-##div[class*=facebookShare i]
-##div[class*=FooterShare i]
-##div[class*=ShareButton i]
-##div[class*=sharethisbutton i]
 ##div[class*=-share-buttons]
 ##div[class*=_share_button]
 ##div[class*=addthis]
 ##div[class*=article-share]
 ##div[class*=box--share]
+##div[class*=facebookShare i]
 ##div[class*=fb-share]
 ##div[class*=footer__share]
+##div[class*=FooterShare i]
 ##div[class*=iconShare]
 ##div[class*=lp_sharing]
 ##div[class*=post-sharing]
 ##div[class*=share-article]
 ##div[class*=share-box]
+##div[class*=ShareButton i]
 ##div[class*=sharer-tool]
+##div[class*=sharethisbutton i]
 ##div[class*=shareToolbar]
 ##div[class*=social-panel]
 ##div[class*=social-share]
@@ -294,10 +305,10 @@
 ##div[class=instagramShare i]
 ##div[class=socialshare i]
 ##div[class=twitterShare i]
-##div[class^=fbshare i]
-##div[class^=share-button i]
 ##div[class^=container_NotificationsBanner_]
+##div[class^=fbshare i]
 ##div[class^=icon-share-]
+##div[class^=share-button i]
 ##div[class^=share-options]
 ##div[class^=share-toolbar]
 ##div[class^=shareLinks]
@@ -308,9 +319,11 @@
 ##div[data-hook=social-sharing]
 ##div[href*="plus.google.com/share?url="]
 ##div[id$=_sharethis]
+##div[id^=btnShare i]
 ##div[id^=dpsp-]
 ##div[id^=sthoverbuttons]
 ##div[pw\:twitter-via]
+##div[tmp^="Share on "]
 ##h2[class*=share-links]
 ##h4[class*=social-share-label]
 ##ksf-sharing
@@ -322,9 +335,10 @@
 ##li[data-share=linkedin]
 ##li[data-share=twitter]
 ##p[class^=del-artikel]
+##section[class^=shareButtons]
 ##share-grid
-##span[class*=ShareButton i]
 ##span[class*=share-icon]
+##span[class*=ShareButton i]
 ##span[class^=share_btn]
 ##span[data-lnkd-debug]
 ##ul[aria-label=Del]
@@ -338,6 +352,7 @@
 /addthis_widget.js^
 /mixx_share.gif$image
 /pinitbtn.$image
+/share-icons_$image
 /share/*-icon.png$image
 /sharing/facebook.$image
 /sharing/reddit.$image
@@ -362,6 +377,7 @@
 ||social-plugins.line.me/widget/share?url=$subdocument
 ||softwareok.com/img/i_like_this.png?$image
 ||static.addtoany.com/buttons^$image
+||static.mixi.jp/share_button.html^$subdocument,domain=~mixi.jp
 ||tumblr.com/share/$third-party
 ||twitter.com/share$third-party
 ||widgets.getpocket.com/v1/button?label=pocket$subdocument
@@ -378,17 +394,23 @@
 ~facebook.com,~facebookcorewwwi.onion##a[onclick*="facebook.com/sharer.php?"]
 ~facebook.com,~facebookcorewwwi.onion##a[title="Share this post on Facebook"]
 ~flipboard.com##a[href*="://share.flipboard.com/bookmarklet/popout?"]
+~hatena.ne.jp##.hatena-bookmark-button
+~kjokkenskriveren.no##a[class*=ShareButton i]
+~line.me##a[href*="/lineit/share?"]
 ~linkedin.com##a[href*="linkedin.com/shareArticle?"]
 ~mewe.com##button[class*=share-button]
 ~mewe.com##div[class*=share-link]
 ~mixi.jp##a[href*="mixi.jp/simplepost/voice?status="]
 ~ne.jp##a[href*="b.hatena.ne.jp/add?url="]
+~ne.jp##iframe[class^=hatena-bookmark]
+~pinterest.*##.inline-share-pinterest
 ~pinterest.*##.pinterest[href*="/pin/create/"]
 ~pinterest.*##a[class$=share-pinterest]
 ~pinterest.*##a[href*=pinterest][href*="/pin/create/b"]
 ~pinterest.*##a[href="#pinit"]
 ~reddit.com##a[href*="/reddit.com/submit?url="][href*="&title="]
 ~reddit.com##a[href*="://www.reddit.com/submit?"]
+~skype.com##a[href*="web.skype.com/share?url="]
 ~stumbleupon.com##a[href*="stumbleupon.com/submit?url="]
 ~tecmint.com,~ostechnix.com##.share
 ~tidssonen.no##div[class*=share-container]
@@ -405,32 +427,11 @@
 ~twitter.com##a[title="Tweet this post"]
 ~twitter.com##button[data-href*="twitter.com/share?text="]
 ~twitter.com,~feedly.com##.follow
+~viber.com##a[href^="viber://forward?text"]
 ~vk.com##a[href*="/vk.com/share.php"]
 ~whatsapp.com##[href^="whatsapp://send"]
 ~whatsapp.com##a[href*=".whatsapp.com/send?"]
-~pinterest.*##.inline-share-pinterest
-~ne.jp##iframe[class^=hatena-bookmark]
-||static.mixi.jp/share_button.html^$subdocument,domain=~mixi.jp
-##button[class$=_ShareButton]
-##.facebookShare
-##.sharea
-##button[aria-controls=ShareContainer]
-##a[href^="javascript:sendSns('"]
-##a[class$=-sharing-button__link]
-##a[onclick^="window.open('http"][onclick*="facebook.com/sharer"]
-~line.me##a[href*="/lineit/share?"]
-~hatena.ne.jp##.hatena-bookmark-button
-~viber.com##a[href^="viber://forward?text"]
-~skype.com##a[href*="web.skype.com/share?url="]
-###inline-share-links
-###social-share
-##.social-likes
 ~xing.com###xing-share
-/share-icons_$image
-##div[tmp^="Share on "]
-##section[class^=shareButtons]
-##div[id^=btnShare i]
-##.spotheader__sharing
 
 ! NOT allowed to be generic
 pastebin.com##.h_800.tweet
