@@ -698,49 +698,49 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z][=|])viafree\.\*", 
+           r"([a-z*][=|])viafree\.\*", 
            r"\1viafree.no|viafree.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])dplay\.\*\|~dplay.it\|~dplay.es", 
+           r"([a-z*][=|])dplay\.\*\|~dplay.it\|~dplay.es", 
            r"\1dplay.no|dplay.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
+           r"([a-z*][=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
            r"\1auth.dplay.no|auth.dplay.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])gamereactor\.\*", 
+           r"([a-z*][=|])gamereactor\.\*", 
            r"\1gamereactor.no|gamereactor.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])eurosport\.\*", 
+           r"([a-z*][=|])eurosport\.\*", 
            r"\1eurosport.no|eurosport.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])eniro\.\*", 
+           r"([a-z*][=|])eniro\.\*", 
            r"\1eniro.no|eniro.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])proff\.\*", 
+           r"([a-z*][=|])proff\.\*", 
            r"\1proff.no|proff.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])partyking\.\*", 
+           r"([a-z*][=|])partyking\.\*", 
            r"\1partyking.no|partyking.dk", 
            line
         )
@@ -748,6 +748,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"\$ghide", 
            r"$generichide", 
+           line
+        )
+
+        line = re.sub(
+           r"\(\)$", 
+           r"", 
            line
         )
 
@@ -2491,49 +2497,49 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z][=|])viafree\.\*", 
+           r"([a-z*][=|])viafree\.\*", 
            r"\1viafree.no|viafree.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])dplay\.\*\|~dplay.it\|~dplay.es", 
+           r"([a-z*][=|])dplay\.\*\|~dplay.it\|~dplay.es", 
            r"\1dplay.no|dplay.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
+           r"([a-z*][=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
            r"\1auth.dplay.no|auth.dplay.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])gamereactor\.\*", 
+           r"([a-z*][=|])gamereactor\.\*", 
            r"\1gamereactor.no|gamereactor.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])eurosport\.\*", 
+           r"([a-z*][=|])eurosport\.\*", 
            r"\1eurosport.no|eurosport.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])eniro\.\*", 
+           r"([a-z*][=|])eniro\.\*", 
            r"\1eniro.no|eniro.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])proff\.\*", 
+           r"([a-z*][=|])proff\.\*", 
            r"\1proff.no|proff.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z][=|])partyking\.\*", 
+           r"([a-z*][=|])partyking\.\*", 
            r"\1partyking.no|partyking.dk", 
            line
         )
@@ -2541,6 +2547,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"\$ghide", 
            r"$generichide", 
+           line
+        )
+
+        line = re.sub(
+           r"\(\)$", 
+           r"", 
            line
         )
 
