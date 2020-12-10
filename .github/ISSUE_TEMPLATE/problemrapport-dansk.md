@@ -15,7 +15,7 @@ assignees: ''
 
 ## Legg til skærmbillede under hvis det behøves:
 
-## Legg til et skærmbillede av udvidelsens logføring:
+## Legg til et skærmbillede af udvidelsens logføring:
 <!-- Hvis du bruger uBlock Origin, er det anbefalet at filtrere visningen ned til Blokeret+Tilladt+Modificeret, for at reducere de (som oftest irrelevante) "hvide" logpostene. -->
 
 ## Hvilken reklameblokerer og version brugte du da du testet dette?
@@ -34,7 +34,7 @@ Andre:
 Reklameblokererversion(er):
 
 ## Hvilke filterlister brugte du? At ikke fortælle dette, vil føre til at sagen bliver midlertidig lukket frem til dette bliver fortalt.
-<!-- Hvis du vil spare tid, kan du ta et skærmbillede av listeindstillingerne til reklameblokereren din. -->
+<!-- Hvis du vil spare tid, kan du ta et skærmbillede af listeindstillingerne til reklameblokereren din. -->
 
 ## Hvilke(n) webbrowser(e) og version(er) brugte du?
 <!-- Hvis du er i tvivl, se i *Om*-siden til webbrowseren din. -->
