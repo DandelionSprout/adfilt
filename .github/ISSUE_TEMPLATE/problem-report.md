@@ -11,7 +11,7 @@ assignees: ''
 
 <!-- Read through https://github.com/DandelionSprout/adfilt/blob/master/.github/CONTRIBUTING.md if possible, so that you know what to expect of how reports will be processed. -->
 
-## Describe the problem below this line as meticulously and detailed as possible:
+## Describe the problem below this line as meticulously and detailed as possible (incl. example pages and links if any):
 
 ## Add screenshots below if needed:
 
