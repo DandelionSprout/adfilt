@@ -4027,6 +4027,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\.,", 
+           r".$", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -4877,6 +4883,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"\^~(.*)", 
            r"^\n@@||\1^", 
+           line
+        )
+
+        line = re.sub(
+           r"\.~([a-z0-9.-]{5,})", 
+           r".\n@@||\1^", 
            line
         )
 
