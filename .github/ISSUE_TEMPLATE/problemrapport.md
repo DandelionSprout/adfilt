@@ -11,7 +11,7 @@ assignees: ''
 
 <!-- Les gjennom https://github.com/DandelionSprout/adfilt/blob/master/.github/CONTRIBUTING.md hvis du har anledning, sånn at du vet hva du kan forvente om hvordan saksrapporter blir behandlet. -->
 
-## Beskriv problemet under denne linjen så detaljert og utdypende som mulig:
+## Beskriv problemet under denne linjen så detaljert og utdypende som mulig (inkl. nettlenker hvis det er noen):
 
 ## Legg til skjermklipp under hvis det trengs:
 
