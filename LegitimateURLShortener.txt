@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 10December2020v1-Beta
+! Version: 11December2020v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Versions for Redirector and URLRedirector were planned in the near future as of November 2020, but are on hold after uBO added support for lowercase $removeparam entries.
@@ -148,8 +148,9 @@ $removeparam=Origin
 ! https://www.darty.com/nav/achat/accessoires/casque_ecouteurs/casque_intra-auriculaire/apple_airpods_v2.html?awc=7735_1606583917_4f791edbe7805b48b06ce7131a26b480&ectrans=1&dartycid=aff_295295_generique_awin (28/11/2020)
 $removeparam=dartycid
 ! https://fr.shopping.rakuten.com/offer/buy/5483124993/apple-airpods-2-avec-case-2eme-generation-blanc-mv7n2zm-a.html?bbaid=6680578123&t=6862148 (28/11/2020)
+! https://steamcdn-a.akamaihd.net/steam/apps/1293120/ss_260369d8b0c8ab69e3a5a66f78174af4319c4acb.jpg?t=1607504533 (11/12/2020)
 $removeparam=bbaid
-||rakuten.com^$removeparam=t
+$removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net
 ! https://archive.org/donate/?origin=email-2020eoyappl2smdnrfnl-v1
 ||archive.org^$removeparam=origin
 ! https://blog.archive.org/matching-gifts/?iax=typage
