@@ -1,5 +1,5 @@
 msFilterList
-# Version: 08December2020v1-Alpha
+# Version: 11December2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -10,7 +10,6 @@ msFilterList
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 # Wish to help translate more category titles to Nordic languages 🇩🇰 🇮🇸 🇳🇴🏞 🇫🇴 🇬🇱 ❄? https://crowdin.com/project/dandelion-sprout-nordic-filter
 # If you wish to remove cookie banners from Nordic websites, check out https://easylist-downloads.adblockplus.org/easylist-cookie.tpl (Can also be subscribed to from https://raw.githack.com/collinbarrett/FilterLists/master/data/TPLSubscriptionAssistant.html)
-# Want to keep your adblocker turned on while using Kickback or Viatrumf? A whitelist for those services is open for public trial at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianCashbackAssistantReborn.txt
 # 🇳🇴 🇩🇰: ——— Reklamer ———
 # 🇳🇴🏞: ——— Reklamar ———
 # 🇮🇸: ——— Auglýsingar ———
@@ -66,7 +65,6 @@ msFilterList
 -d adserver.xh.no
 -d adservice.com
 -d adservicemedia.dk
--d advertisement.vg.no
 -d bilborsen.webannonse.no
 -d cluster.chart.dk
 -d dotbanner.dk
@@ -159,7 +157,6 @@ msFilterList
 -d dust2.dk banners
 -d export.prisguide.no
 -d export.prisguiden.no
--d akamai.vgc.no drfront3
 -d eyjar.net ads
 -d feltet.dk topbanner_*.jpg
 -d feltet.dk wallpaper_1.jpg
@@ -287,7 +284,6 @@ msFilterList
 # bilasolur.is (03 05 2020)
 - lykill_banner
 # bt.no
--d finn.no distribution-carousel?
 # https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
 -d images.sprinklecontent.com *.amazonaws.com%2Fimages%
 # https://github.com/AdguardTeam/AdguardFilters/issues/67358#issuecomment-724888304
@@ -340,7 +336,6 @@ msFilterList
 -d gaysir.no bb_inline
 -d gulindex.no spring.js
 -d mmm.dk safeframe
--d static.vg.no admark_top.gif
 -d yrkesbil.no 1pix.gif
 -d www-presse-fotos-dk.filesusr.com
 - gifs *emty.gif
@@ -496,7 +491,6 @@ msFilterList
 -d tipster.no embed
 # https://www.nettavisen.no/
 # https://www.ba.no/s/5-8-1221171
--d vg.no tipster.png
 - pustehullet betting-header.png
 # ——— Gamereactor + Viafree PC ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
@@ -533,11 +527,6 @@ msFilterList
 +d eurosport.dk
 +d bildeler.name
 +d reservedele.name
-# 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and or functionality whitelisting
-# 🇳🇴: Hurtigfikser for Internet Explorer 11
-# 🇮🇸: Skyndilausn fyrir Internet Explorer 11
-# 🇬🇧: Hotfixes for Internet Explorer 11
-# https://github.com/AdguardTeam/AdguardForWindows/issues/3209
 # 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
@@ -853,7 +842,6 @@ msFilterList
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
 # Last updated: 13November2020v1-Extension
--d aftenposten.no ads-
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js

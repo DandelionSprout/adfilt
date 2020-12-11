@@ -1228,6 +1228,18 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^-d ([a-z0-9-]{1,}\.)?(aftenbladet|aftenposten|av-avis|bt|bygdanytt|dinepenger|e24|finn|godt|minmote|strilen|tek|vestnytt|vg|vgc|vglab|vglive)\.no( .*|$)", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*NorwegianCashbackAssistant.*", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
