@@ -1,4 +1,4 @@
-! Version: 15December2020v1
+! Version: 16December2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 1 day
@@ -208,6 +208,7 @@ bt.no##.contentboard-container
 bt.no###related-articles + div[class^=_]
 bt.no##div[data-ad-subtype=in-feed]:upward(2)
 reavisa.no##.ad
+ytresogn.no###hcol
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -274,6 +275,8 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ! reavisa.no (06/12/2020)
 ###newswire-banner
 ~finn.no##a[href*="finn.no/realestate/newbuildings/ad.htm"]
+! ytresogn.no (16/12/2020)
+###reklamebolk1wrap
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -377,6 +380,8 @@ _nettannonse.
 _nettbanner_$image
 _visittkortannonse_$image
 -visittkortannonse-$image
+! ytresogn.no (16/12/2020)
+/hnuannonse^
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -545,6 +550,17 @@ _300x250px-*.gif^$domain=ilaks.no
 ||reavisa.blob.core.windows.net/*_annonse_$image
 ||reavisa.blob.core.windows.net/*-annonse-$image
 ||reavisa.blob.core.windows.net/*-NET.jpg^$image
+||ytresogn.no/wp-content/*-Topbanner-
+||ytresogn.no/wp-content/uploads/*-nett.jpg^
+||ytresogn.no/wp-content/uploads/*-1.jpg^
+||ytresogn.no/wp-content/*-copy.jpg^
+||ytresogn.no/wp-content/uploads/2016/05/hoybil-1.jpg^
+||ytresogn.no/wp-content/uploads/2016/05/Fureli-nett-mobil.jpg^
+||ytresogn.no/wp-content/uploads/2016/04/128829765_1713260288837784_946999945581640675_n.jpg^
+||ytresogn.no/wp-content/uploads/2020/02/Ytre_718_360_2.jpg^
+||ytresogn.no/wp-content/uploads/2016/04/default_file-1607345037.png^
+||ytresogn.no/wp-content/uploads/2016/04/Fj.-Varmepumpe.png^
+||ytresogn.no/wp-content/uploads/2017/04/image007.jpg^
 !#if !ext_ublock
 @@||vgtv.no$ghide
 ||adnxs.com^$domain=vgtv.no
@@ -1176,6 +1192,7 @@ bramat.no##.scs-banner
 ||static.vg.no/css/admark_top.gif
 ||yrkesbil.no/gifs/1pix.gif^
 ||www-presse-fotos-dk.filesusr.com^
+||ytresogn.no/ete/index.html^
 */gifs/*emty.gif^$domain=yrkesbil.no|bilnorge.no
 -l%C3%BDsing-$image,domain=news.fo
 !#if !env_mobile
@@ -1346,6 +1363,8 @@ vafo.dk##.adform-flexblock
 ##.flow-banner
 ! boligpluss.no (09/11/2020)
 ##.wg-banner
+! ytresogn.no (16/12/2020)
+_980banner_
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———

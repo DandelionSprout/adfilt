@@ -1,5 +1,5 @@
 msFilterList
-# Version: 15December2020v1-Alpha
+# Version: 16December2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -49,6 +49,7 @@ msFilterList
 # borsen.no (08 10 2020)
 # https://www.nettavisen.no/3424050834.html/(24/11/2020)
 # reavisa.no (06 12 2020)
+# ytresogn.no (16 12 2020)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -129,6 +130,8 @@ msFilterList
 - _nettbanner_
 - _visittkortannonse_
 - -visittkortannonse-
+# ytresogn.no (16 12 2020)
+- hnuannonse
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -278,6 +281,17 @@ msFilterList
 -d reavisa.blob.core.windows.net *_annonse_
 -d reavisa.blob.core.windows.net *-annonse-
 -d reavisa.blob.core.windows.net *-NET.jpg
+-d ytresogn.no *-Topbanner-
+-d ytresogn.no *-nett.jpg
+-d ytresogn.no *-1.jpg
+-d ytresogn.no *-copy.jpg
+-d ytresogn.no hoybil-1.jpg
+-d ytresogn.no Fureli-nett-mobil.jpg
+-d ytresogn.no 128829765_1713260288837784_946999945581640675_n.jpg
+-d ytresogn.no Ytre_718_360_2.jpg
+-d ytresogn.no default_file-1607345037.png
+-d ytresogn.no Fj.-Varmepumpe.png
+-d ytresogn.no image007.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -338,6 +352,7 @@ msFilterList
 -d mmm.dk safeframe
 -d yrkesbil.no 1pix.gif
 -d www-presse-fotos-dk.filesusr.com
+-d ytresogn.no index.html
 - gifs *emty.gif
 - -l%C3%BDsing-
 # — — — — —
@@ -407,6 +422,8 @@ msFilterList
 # bt.no, byas.no, aftenbladet.no (30 10 2020)
 # costume.no, costume.dk (09 11 2020)
 # boligpluss.no (09 11 2020)
+# ytresogn.no (16 12 2020)
+- _980banner_
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
