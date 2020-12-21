@@ -36,7 +36,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 ## The tools that I use:
 
-• [Checker for redundant filter entries and for ABP syntaxes](https://abp.surge.sh/redundantRuleChecker/), made by Famlam. It does however not account for uBO-syntax-specific entries, nor for ABP syntaxes newer than 2017. <br>
+• [Checker for redundant filter entries and for ABP syntaxes](https://web.archive.org/web/20201111100216/https://abp.surge.sh/redundantRuleChecker/), made by Famlam (Currently only works in Firefox). It does however not account for uBO-syntax-specific entries, nor for ABP syntaxes newer than 2017. <br>
 • [Recentmost tool I used to test IP server availability](https://github.com/funilrys/PyFunceble), made by [Funilrys](https://github.com/funilrys). <br>
 • To easily create GitCDN links to the lists, in case anyone have list connection problems: [GitHub GitCDN Button](https://greasyfork.org/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul) <br>
 • To find very similar domains for Hosts files, or to find all domains hosted by specific IP addresses (both IPv4 and IPv6): [SecurityTrails](https://securitytrails.com/) <br>
