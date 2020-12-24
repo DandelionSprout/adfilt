@@ -1,5 +1,5 @@
 msFilterList
-# Version: 17December2020v1-Alpha
+# Version: 25December2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -50,6 +50,7 @@ msFilterList
 # https://www.nettavisen.no/3424050834.html/(24/11/2020)
 # reavisa.no (06 12 2020)
 # ytresogn.no (16 12 2020)
+# nettavisen.no (25 12 2020
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -66,32 +67,32 @@ msFilterList
 -d adserver.xh.no
 -d adservice.com
 -d adservicemedia.dk
+-d banner.3loops.com
+-d betterbanners.org
 -d bilborsen.webannonse.no
+-d boligkanalen-maestro-new.azurewebsites.net
+-d brandstudio.inventory.schibsted.io
+-d btrbnrs.link
 -d cluster.chart.dk
+-d delivered-by-madington.com
 -d dotbanner.dk
 -d easy-ad.no
 -d easy-ads.dk
+-d heartbeat.airserve.net
+-d images.passendo.com
 -d isweb.no
 -d kynning.olis.is
+-d matriell.dm-storage.no
 -d myad.no
+-d ndstage.wpengine.com
+-d openad.visir.is
 -d samfilm.codelab.is
 -d sannsyn.com
--d heartbeat.airserve.net
--d openad.visir.is
 -d static.airserve.net
 -d tankeogteknikk.no
--d delivered-by-madington.com
--d vevlysingar.fo
--d ndstage.wpengine.com
--d boligkanalen-maestro-new.azurewebsites.net
--d brandstudio.inventory.schibsted.io
--d matriell.dm-storage.no
 -d tracking-genesisaffiliates.com
--d betterbanners.org
--d btrbnrs.link
--d banner.3loops.com
+-d vevlysingar.fo
 -d videotool.fbg.dk
--d images.passendo.com
 -d print2web.sn.dk
 -d lib.idg.no
 # Adressa.no
