@@ -1,5 +1,5 @@
 msFilterList
-# Version: 25December2020v2-Alpha
+# Version: 25December2020v3-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -569,7 +569,6 @@ msFilterList
 - pakkerlevering
 -d 102.112.2o7.net
 -d tromselementbygg.no
--d no.zxxyw.com
 -d apple-account-locked.losjevegen.no
 -d arvetellefsen.no curry
 -d vipps-sikkerhet.
@@ -624,10 +623,6 @@ msFilterList
 - css *sparebank1.no
 # https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
 -d phosphox.com
--d nodzoom.com
-# https://www.faktisk.no/notiser/ql/nei-du-far-ikke-rayban-briller-til-22299-kr-pa-denne-nettsiden
--d rbgeg.com
--d rbkbb.com
 # https://www.facebook.com/viralspiralen/posts/2494251397311027
 -d addmoviesnow.com
 # https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
@@ -666,7 +661,6 @@ msFilterList
 # https://www.mm.dk/tjekdet/artikel/nej-mads-mikkelsen-har-stadig-ikke-skraemt-de-store-banker-med-bitcoins
 -d onelifetechno.com
 # https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
--d rbaab.net
 -d rbppg.net
 # https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
 -d ekstrabiadet.
@@ -677,7 +671,6 @@ msFilterList
 -d limevow.com
 # https://www.faktisk.no/notiser/ywM/se-opp-for-bitcoin-svindlere
 -d travelersloch.com
--d trainingcalculate.com
 # https://www.tv2.no/nyheter/11516670/
 -d fintechnow*.buzz
 -d wealthnews*.xyz
@@ -771,7 +764,6 @@ msFilterList
 -d caperforaciones.com
 -d coralls.com
 -d crossfiterada.com
--d crownedwithlaurels.com
 -d daradis.com
 -d denningwelldrilling.com
 -d drakternorge.com
@@ -788,14 +780,11 @@ msFilterList
 -d hollisternorge.com
 -d jakkesalgs.com
 -d jakkesnorge.com
--d joseph-holland.com
--d jessicaivory.com
 -d legarralazcoz.com
 -d lindseysopticians.com
 -d linkshe.com
 -d lrgst.com
 -d manasporthorse.com
--d mayor4london.com
 -d mbtnorge.com
 -d meladermfacts.com
 -d mncprobuild.com
@@ -803,9 +792,7 @@ msFilterList
 -d moteshoes.com
 -d museuw.com
 -d mycraftypad.com
--d nasajones.com
 -d nikebutikks.com
--d nordartisan.com
 -d norfotball.com
 -d norgefotball.com
 -d norge.parkaoutdoor.com
@@ -813,7 +800,6 @@ msFilterList
 -d norgejakkerbutikk.com
 -d norgeshoes.com
 -d oflike.com
--d omgrm.com
 -d parajumpersitoutlet.com
 -d parajumpersnettbutikk.com
 -d parajumpersnorway.com
