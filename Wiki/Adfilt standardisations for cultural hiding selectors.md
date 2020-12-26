@@ -3,3 +3,7 @@
 
 ### Dailymotion (26/12/2020)
 `dailymotion.com#?#[class*=__videoCard___]`
+
+### Pixiv
+#### Mobile web browsers (26/12/2020)
+`pixiv.net#?#.works-item:-abp-has(img[alt*=\1])`
