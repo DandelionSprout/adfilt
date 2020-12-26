@@ -1,5 +1,5 @@
 msFilterList
-# Version: 25December2020v3-Alpha
+# Version: 26December2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -425,6 +425,7 @@ msFilterList
 # boligpluss.no (09 11 2020)
 # ytresogn.no (16 12 2020)
 - _980banner_
+# ambulanseforum.no (26 12 2020)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -549,6 +550,7 @@ msFilterList
 # 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 -d panel.cint.com
+-d boost-cdn.manatee.dk mboost
 # https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # jyllands-posten.dk (09 07 2020)
 # ——————————————————————————————————————————————————————————————————————————————————————————
