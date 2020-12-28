@@ -1,5 +1,5 @@
 msFilterList
-# Version: 26December2020v1-Alpha
+# Version: 28December2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -50,7 +50,8 @@ msFilterList
 # https://www.nettavisen.no/3424050834.html/(24/11/2020)
 # reavisa.no (06 12 2020)
 # ytresogn.no (16 12 2020)
-# nettavisen.no (25 12 2020
+# nettavisen.no (25 12 2020)
+# ao.no (28 12 2020)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
