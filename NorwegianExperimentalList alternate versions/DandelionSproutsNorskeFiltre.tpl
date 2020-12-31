@@ -1,5 +1,5 @@
 msFilterList
-# Version: 28December2020v2-Alpha
+# Version: 31December2020v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -458,33 +458,25 @@ msFilterList
 # 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
 # 🇬🇧: Makes Dplay's login page show up properly
 +d mparticle.com
-# https://github.com/easylist/easylist/issues/6633
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
-# https://github.com/ryanbr/fanboy-adblock/issues/1434
 # ——— Caused by «Fanboy's Annoyances List» ———
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
 # https://github.com/easylist/easylist/issues/6067#issuecomment-695115226
 +d consent.dk
-# ——— Caused by «Thai Adblock List   Thai Ads Filter» with AdGuard ———
-# https://github.com/AdguardTeam/AdguardFilters/issues/62012
 # ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
 +d _prebid_
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 # Forum feeds in the upper right of articles
 # https://www.in.fo/itrottur/sport-detail/news/alex-hevdi-ur-at-gera-i-san-marino/
 # Unbreak a "Read out loud for the deaf" banner
+# Makes 1p info banners show up correctly
++d _980x100.
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
-# https://github.com/AdguardTeam/AdguardFilters/issues/68028
--d v.fwmrm.net 1?resp=
--d v.fwmrm.net 1?resp=
 # ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
-# ——— Caused by «AdGuard Annoyances filter» ———
-# https://github.com/AdguardTeam/AdguardFilters/issues/69425
-+d js.pusher.com
 # ——— Unknown cause ———
 # https://github.com/DandelionSprout/adfilt/issues/67
 # https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
