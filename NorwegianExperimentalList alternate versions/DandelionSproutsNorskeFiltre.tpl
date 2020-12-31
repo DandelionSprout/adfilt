@@ -1,5 +1,5 @@
 msFilterList
-# Version: 31December2020v1-Alpha
+# Version: 31December2020v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -471,7 +471,6 @@ msFilterList
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 # Forum feeds in the upper right of articles
 # https://www.in.fo/itrottur/sport-detail/news/alex-hevdi-ur-at-gera-i-san-marino/
-# Unbreak a "Read out loud for the deaf" banner
 # Makes 1p info banners show up correctly
 +d _980x100.
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
