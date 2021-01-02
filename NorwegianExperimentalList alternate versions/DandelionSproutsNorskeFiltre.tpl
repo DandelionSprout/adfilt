@@ -1,5 +1,5 @@
 msFilterList
-# Version: 01January2021v1-Alpha
+# Version: 02January2021v4-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -426,6 +426,7 @@ msFilterList
 # ytresogn.no (16 12 2020)
 - _980banner_
 # ambulanseforum.no (26 12 2020)
+# fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad.dk (02 01 2021)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -466,11 +467,11 @@ msFilterList
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
 # https://github.com/easylist/easylist/issues/6067#issuecomment-695115226
 +d consent.dk
-# ——— Caused by «EasyList» (Should be submitted to EasyList itself at some point) ———
+# ——— Caused by «EasyList» ———
 +d _prebid_
+@@://billink*.blob.core.windows.net/*/annonser
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 # Forum feeds in the upper right of articles
-# https://www.in.fo/itrottur/sport-detail/news/alex-hevdi-ur-at-gera-i-san-marino/
 # Makes 1p info banners show up correctly
 +d _980x100.
 # ——— Caused by «AdGuard Base» (Should be submitted to AdGuard Base itself at some point) ——
