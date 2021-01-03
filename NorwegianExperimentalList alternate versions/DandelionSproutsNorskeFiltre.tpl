@@ -1,5 +1,5 @@
 msFilterList
-# Version: 02January2021v4-Alpha
+# Version: 03January2021v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -79,6 +79,7 @@ msFilterList
 -d dotbanner.dk
 -d easy-ad.no
 -d easy-ads.dk
+-d finndelbilder.blob.core.windows.net
 -d heartbeat.airserve.net
 -d images.passendo.com
 -d isweb.no
@@ -293,6 +294,8 @@ msFilterList
 -d ytresogn.no default_file-1607345037.png
 -d ytresogn.no Fj.-Varmepumpe.png
 -d ytresogn.no image007.jpg
+-d webforumet.no *-250x250.jpg
+-d webforumet.no AD-*.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -588,6 +591,7 @@ msFilterList
 -d fullbagcash.com
 -d bizcashtrend.com
 -d toptechmania.com
+-d marked.no
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
