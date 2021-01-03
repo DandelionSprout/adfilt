@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 01January2021v2-Personal
+! Version: 03January2021v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 ! /\/\ Supercompilations: /\/\
@@ -225,6 +225,7 @@ nrk.no#?#.kur-floor--apartment:-abp-contains(God jul)
 adressa.no##.cartoon
 vg.no##.comics
 ekstrabladet.dk##.oo-left.eb-row-item
+at.no#?#.row:-abp-has(a[href*="at.no/tegneserie/"])
 
 ! Highly inept and vague customer service forums
 ||answers.microsoft.com^$document
@@ -304,10 +305,11 @@ thehill.com#?#.thehill_carousel-processed > li:-abp-has(a[href^="/opinion/"])
 thehill.com##.region-front-magazine-bottom
 thehill.com##a[href^="/opinion/"]
 
-! To browse more easily through AdGuard Filters' and EasyList's issue tracker
+! To browse more easily through AdGuard Filters' and EasyList's issue trackers
 github.com#?#.js-issue-row:-abp-contains(N: AdGuard for iOS)
 github.com#?#.js-issue-row:-abp-contains(N: AdGuard for Safari)
 github.com#?#.js-issue-row:-abp-contains(A: In progress)
+github.com#?#.js-issue-row:-abp-contains(A: Resolved)
 github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/.ru($|/)/))
 github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/.ua($|/)/))
 github.com#?#.js-issue-row:-abp-has(a[href*="/AdguardFilters/"]:-abp-contains(/.by($|/)/))
@@ -323,6 +325,12 @@ github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/cookie/
 github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/annoyance/i))
 github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(Privacy))
 github.com#?#.js-issue-row:-abp-has(a[href*="/easylist/"]:-abp-contains(/track/i))
+domaintyper.com#?#.rankTable tr:-abp-contains(bank)
+domaintyper.com#?#.rankTable tr:-abp-contains(kommune)
+domaintyper.com#?#.rankTable tr:-abp-contains(pasient)
+domaintyper.com#?#.rankTable tr:-abp-contains(fylke)
+domaintyper.com#?#.rankTable tr:-abp-has(td:-abp-contains(/^ui/))
+domaintyper.com#?#.rankTable tr:-abp-has(td:-abp-contains(/^hi/))
 
 ! Workaround while testing for Chrome freezes (Specifically to see if "Google Hit Hider by Domain" can remain turned off)
 !#if !env_mobile
