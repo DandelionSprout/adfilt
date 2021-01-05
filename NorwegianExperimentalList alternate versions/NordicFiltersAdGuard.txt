@@ -1,4 +1,4 @@
-! Version: 03January2021v1
+! Version: 05January2021v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
 ! Expires: 1 day
@@ -210,6 +210,8 @@ xlmoto.no##.sb-overlay
 xstra.no##.td-fix-index
 ytresogn.no###hcol
 finndel.no###ads
+vf.is##.m-auto.ad
+keldan.is##.x-box-inner > .x-panel-noborder:not(.x-grid-panel)
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -282,6 +284,9 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ##.lp_p2_api_ad
 ! ao.no (28/12/2020)
 ###art-pomimuko
+! keldan.is (05/01/2021)
+##div[id^=AdvPortlet]
+##.currencyaugl
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -344,6 +349,7 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ||static.airserve.net^$third-party
 ||tankeogteknikk.no^$third-party
 ||tracking-genesisaffiliates.com^$image,third-party
+||vefborda.is^$third-party
 ||vevlysingar.fo^$frame,third-party
 ||videotool.fbg.dk^$third-party
 !+ NOT_OPTIMIZED
@@ -568,6 +574,8 @@ _300x250px-*.gif^$domain=ilaks.no
 ||ytresogn.no/wp-content/uploads/2017/04/image007.jpg^
 ||webforumet.no/images/*-250x250.jpg^
 ||webforumet.no/blogg/wp-content/uploads/AD-*.jpg^
+||vf.is/media/1/geysir-dekkjaskipti.jpg^
+||vf.is/media/1/*2000x616.jpg^
 !#if !ext_ublock
 @@||vgtv.no$ghide
 ||adnxs.com^$domain=vgtv.no
@@ -595,6 +603,9 @@ _300x250px-*.gif^$domain=ilaks.no
 ||bcm.interactives.dk/script^$third-party
 ! adressa.no (10/11/2020)
 ||static.polarismedia.no/*/cxense.js
+! keldan.is (05/01/2021)
+/images/augl^
+||tac.is/kunnar^
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -1197,6 +1208,8 @@ hangar.no##.theiaStickySidebar >  .widget_text
 iform.no#?#.block:has(>.block-content .sam_ad)
 kreativtforum.no##.overflow-hidden.hidden
 kreativtforum.no##aside > .overflow-hidden.mb-6
+visir.is##section.-bg-gray > .padded--less:not(.padded--no-bottom)
+kvennabladid.is##.top-banner
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$frame
 ||danishfamilysearch.dk/images/xp2^$image

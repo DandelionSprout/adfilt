@@ -1,5 +1,5 @@
 msFilterList
-# Version: 03January2021v1-Alpha
+# Version: 05January2021v1-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -52,6 +52,7 @@ msFilterList
 # ytresogn.no (16 12 2020)
 # nettavisen.no (25 12 2020)
 # ao.no (28 12 2020)
+# keldan.is (05 01 2021)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -93,6 +94,7 @@ msFilterList
 -d static.airserve.net
 -d tankeogteknikk.no
 -d tracking-genesisaffiliates.com
+-d vefborda.is
 -d vevlysingar.fo
 -d videotool.fbg.dk
 -d print2web.sn.dk
@@ -296,6 +298,8 @@ msFilterList
 -d ytresogn.no image007.jpg
 -d webforumet.no *-250x250.jpg
 -d webforumet.no AD-*.jpg
+-d vf.is geysir-dekkjaskipti.jpg
+-d vf.is *2000x616.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -317,6 +321,9 @@ msFilterList
 -d bcm.interactives.dk script
 # adressa.no (10 11 2020)
 -d static.polarismedia.no cxense.js
+# keldan.is (05 01 2021)
+- images augl
+-d tac.is kunnar
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
