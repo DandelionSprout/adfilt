@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06January2021v1-Alpha
+# Version: 06January2021v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -467,8 +467,8 @@ msFilterList
 # ——— Caused by «EasyPrivacy» ———
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
-# 🇳🇴: Får Dplay sin påloggingsside til å vises riktig
-# 🇬🇧: Makes Dplay's login page show up properly
+# 🇳🇴: Får discoveryplus sin påloggingsside til å vises riktig
+# 🇬🇧: Makes discoveryplus's login page show up properly
 +d mparticle.com
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com

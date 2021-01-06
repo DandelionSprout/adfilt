@@ -710,14 +710,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z*][=|])dplay\.\*\|~dplay.it\|~dplay.es", 
-           r"\1dplay.no|dplay.dk", 
+           r"([a-z*][=|])discoveryplus\.\*\|~discoveryplus.it\|~discoveryplus.es", 
+           r"\1discoveryplus.no|discoveryplus.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z*][=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
-           r"\1auth.dplay.no|auth.dplay.dk", 
+           r"([a-z*][=|])auth.discoveryplus\.\*\|~auth.discoveryplus.it\|~auth.discoveryplus.es", 
+           r"\1auth.discoveryplus.no|auth.discoveryplus.dk", 
            line
         )
 
@@ -1767,14 +1767,14 @@ def prepare_umatrix(lines) -> str:
         )
 
         line = re.sub(
-           r"dplay\.\*\|~dplay.it\|~dplay.es", 
-           r"dplay.no|dplay.dk", 
+           r"discoveryplus\.\*\|~discoveryplus.it\|~discoveryplus.es", 
+           r"discoveryplus.no|discoveryplus.dk", 
            line
         )
 
         line = re.sub(
-           r"auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
-           r"auth.dplay.no|auth.dplay.dk", 
+           r"auth.discoveryplus\.\*\|~auth.discoveryplus.it\|~auth.discoveryplus.es", 
+           r"auth.discoveryplus.no|auth.discoveryplus.dk", 
            line
         )
 
@@ -2533,14 +2533,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z*][=|])dplay\.\*\|~dplay.it\|~dplay.es", 
-           r"\1dplay.no|dplay.dk", 
+           r"([a-z*][=|])discoveryplus\.\*\|~discoveryplus.it\|~discoveryplus.es", 
+           r"\1discoveryplus.no|discoveryplus.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z*][=|])auth.dplay\.\*\|~auth.dplay.it\|~auth.dplay.es", 
-           r"\1auth.dplay.no|auth.dplay.dk", 
+           r"([a-z*][=|])auth.discoveryplus\.\*\|~auth.discoveryplus.it\|~auth.discoveryplus.es", 
+           r"\1auth.discoveryplus.no|auth.discoveryplus.dk", 
            line
         )
 
