@@ -1,5 +1,5 @@
 msFilterList
-# Version: 06January2021v2-Alpha
+# Version: 07January2021v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 : expires = 1
@@ -94,7 +94,7 @@ msFilterList
 -d static.airserve.net
 -d tankeogteknikk.no
 -d tracking-genesisaffiliates.com
--d vefborda.is
+-d vefbordi.is
 -d vevlysingar.fo
 -d videotool.fbg.dk
 -d print2web.sn.dk
@@ -851,7 +851,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 13November2020v1-Extension
+# Last updated: 06January2021v1-Extension
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js
