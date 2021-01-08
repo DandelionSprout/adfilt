@@ -1,7 +1,7 @@
-msFilterList
-# Version: 07January2021v2-Alpha
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
+msFilterList
+# Version: 08January2021v3-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -813,7 +813,7 @@ msFilterList
 -d pjs.outlet.com
 -d popeurope.com
 -d skonmdnorge.com
--d sykkeltrøye.com
+-d xn--sykkeltrye-7cb.com
 -d tobiascelebritymusicevents.com
 -d um-bs.com
 -d vansnorge.com

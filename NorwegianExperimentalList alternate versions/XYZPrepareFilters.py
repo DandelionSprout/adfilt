@@ -416,7 +416,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"(! Version: .*)", 
+           r"(! Title: 🏔️ Dandelion Sprout.*)", 
            r"[Adblock Plus 3.4]\n\1", 
            line
         )
@@ -2197,8 +2197,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"(! Version: .*)", 
-           r"[Adblock Plus 3.4]\n\1", 
+           r"^(! Title: 🏔️ Dandelion Sprout.*)", 
+           r"[Adblock Plus 3.7]\n\1", 
            line
         )
 
@@ -2588,6 +2588,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r",mp4", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\[Adblock Plus [1-3]\.[0-6]\]$", 
            r"", 
            line
         )
