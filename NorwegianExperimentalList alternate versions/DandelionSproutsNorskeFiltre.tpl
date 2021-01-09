@@ -1,3 +1,4 @@
+msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
 # Version: 09January2021v3-Alpha

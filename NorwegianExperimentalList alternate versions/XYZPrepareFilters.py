@@ -802,7 +802,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"(! Title: 🏔️ Dandelion Sprout.*)", 
+           r"(# Title: 🏔️ Dandelion Sprout.*)", 
            r"msFilterList\n\1", 
            line
         )
