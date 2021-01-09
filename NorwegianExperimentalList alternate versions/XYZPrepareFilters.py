@@ -769,6 +769,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r'(#\?#)([a-z.]{1,}\[.*) (\*:-abp-.*)( [0-9%;"]{1,})', 
+           r"\1\3 \2\4", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -796,7 +802,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"(# Version: .*)", 
+           r"(! Title: 🏔️ Dandelion Sprout.*)", 
            r"msFilterList\n\1", 
            line
         )
@@ -2396,25 +2402,25 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"(samebefolkningen\.)", 
-           r"\1 Denne versjonen av listen inkluderer ikke anti-anti-reklameblokkering, ettersom slike oppføringer ikke er tillatt for lister som er inkludert i Adblock Plus. Grunnet langvarig behandlingstid mellom Adblock Plus-avdelinger, inkluderer denne listen også «Adblock List for Finland» og «Swedish List for Adblock Plus» i skrivende stund.", 
+           r"\1 Denne versjonen av listen inkluderer ikke anti-anti-reklameblokkering, ettersom slike oppføringer ikke er tillatt for lister som er inkludert i Adblock Plus.", 
            line
         )
 
         line = re.sub(
            r"(samiske befolkning\.)", 
-           r"\1 Den her listeversion indeholder ikke anti-anti-reklameblokkering, eftersom sådanne opføringer ikke er tilladt for lister, der er inkluderet i Adblock Plus. På grund af langvarig behandlingstid mellem Adblock Plus-afdelinger, inkluderer denne listen også «Adblock List for Finland» og «Swedish List for Adblock Plus» i skrivende stund.", 
+           r"\1 Den her listeversion indeholder ikke anti-anti-reklameblokkering, eftersom sådanne opføringer ikke er tilladt for lister, der er inkluderet i Adblock Plus.", 
            line
         )
 
         line = re.sub(
            r"(samefolkesetnadene\.)", 
-           r"\1 Denne versjonen av lista inneheld ikkje anti-anti-reklameblokkering, sidan slike oppføringer ikkje er tillete for listar som er inkludert i Adblock Plus. På grunn av langvarig behandlingstid mellom Adblock Plus-avdelingar, inkluderer denne lista også «Adblock List for Finland» og «Swedish List for Adblock Plus» i skrivande stund.", 
+           r"\1 Denne versjonen av lista inneheld ikkje anti-anti-reklameblokkering, sidan slike oppføringer ikkje er tillete for listar som er inkludert i Adblock Plus.", 
            line
         )
 
         line = re.sub(
            r"(indigenous population\.)", 
-           r"\1 This list version does not contain anti-anti-adblocking, due to how such entries are not allowed in lists that are included in Adblock Plus. Due to overly long processing time between Adblock Plus teams, this list also includes «Adblock List for Finland» and «Swedish List for Adblock Plus» for the time being.", 
+           r"\1 This list version does not contain anti-anti-adblocking, due to how such entries are not allowed in lists that are included in Adblock Plus.", 
            line
         )
 
@@ -2577,6 +2583,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"^\[Adblock Plus [1-3]\.[0-6]\]$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r'(#\?#)([a-z.]{1,}\[.*) (\*:-abp-.*)( [0-9%;"]{1,})', 
+           r"\1\3 \2\4", 
            line
         )
 
