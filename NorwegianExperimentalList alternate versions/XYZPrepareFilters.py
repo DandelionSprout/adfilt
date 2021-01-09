@@ -2215,24 +2215,6 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"##\+js\(aopw, (.*)\)", 
-           r"#$#abort-on-property-write \1", 
-           line
-        )
-
-        line = re.sub(
-           r"##\+js\(aopr, (.*)\)", 
-           r"#$#abort-on-property-read \1", 
-           line
-        )
-
-        line = re.sub(
-           r"##\+js\(acis, (.*)\)", 
-           r"#$#abort-current-inline-script \1", 
-           line
-        )
-
-        line = re.sub(
            r"(#\$#.*),", 
            r"\1", 
            line
