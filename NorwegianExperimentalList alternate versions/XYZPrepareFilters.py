@@ -710,7 +710,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z*][=|])discoveryplus\.\*\|~discoveryplus.it\|~discoveryplus.es", 
+           r"([a-z*][=|])discoveryplus\.\*(\|~discoveryplus.it\|~discoveryplus.es)?", 
            r"\1discoveryplus.no|discoveryplus.dk", 
            line
         )
