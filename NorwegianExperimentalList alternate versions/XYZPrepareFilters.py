@@ -4396,6 +4396,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".* bounty .*", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\r\n'
 
@@ -4504,6 +4510,12 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"\|$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".* bounty .*", 
            r"", 
            line
         )
@@ -4655,6 +4667,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".* bounty .*", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\r\n'
 
@@ -4755,6 +4773,12 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"\|$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".* bounty .*", 
            r"", 
            line
         )
@@ -4925,6 +4949,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"\.~([a-z0-9.-]{5,})", 
            r".\n@@||\1^", 
+           line
+        )
+
+        line = re.sub(
+           r".* bounty .*", 
+           r"", 
            line
         )
 
