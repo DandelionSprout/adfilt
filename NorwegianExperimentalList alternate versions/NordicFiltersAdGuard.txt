@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 15January2021v1
+! Version: 16January2021v4
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -524,6 +524,7 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||appetitt.no/uploads/library/*_Bannere_$image
 ||semegleren.com/video^$domain=canariajournalen.no
 ||canariposten.no/wp-content/uploads/300x1500*$image
+||stream.fo/wp-content/uploads/*-300x111.jpg^$image
 ||frilansinfo.no/wp-content/themes/frilansinfo-no/img/*-annonse.jpg^$image
 ||thaiguiden.no/tg-980.html$frame
 ||thainytt.no/files/160_*$image
@@ -575,6 +576,17 @@ _300x250px-*.gif^$domain=ilaks.no
 ||webforumet.no/blogg/wp-content/uploads/AD-*.jpg^
 ||vf.is/media/1/geysir-dekkjaskipti.jpg^
 ||vf.is/media/1/*2000x616.jpg^
+||isolor.no/wp-content/uploads/*-toppbanner-$image
+||isolor.no/wp-content/uploads/*_480x150px.jpg^
+||radiohallingdal.no/abanners^
+@@||radiohallingdal.no/abanners/img/facebook.
+||ksu247.no/wp-content/uploads/*/Bunnpris2.jpg^
+||ksu247.no/wp-content/uploads/*/banner-*.jpg^
+||ksu247.no/wp-content/uploads/*/BP-logo-*.png^
+||ksu247.no/wp-content/uploads/*-300x64.jpg^
+||radiorana.no/wp-content/uploads/*-300x300.jpg^
+||radiorana.no/wp-content/uploads/*/Meyership.jpg^
+||radiorana.no/wp-content/uploads/*/Telemix2.jpg^
 !#if !ext_ublock
 @@||vgtv.no$ghide
 ||adnxs.com^$domain=vgtv.no
@@ -605,6 +617,8 @@ _300x250px-*.gif^$domain=ilaks.no
 ! keldan.is (05/01/2021)
 /images/augl^
 ||tac.is/kunnar^
+! isolor.no (16/01/2021)
+-skyskraper-annonse.$image
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -1212,6 +1226,9 @@ visir.is##section.-bg-gray > .padded--less:not(.padded--no-bottom)
 kvennabladid.is##.top-banner
 aftenposten.no,vg.no#?##main > div:has([data-ad-subtype^=skyscraper])
 klikk.no,side2.no##div[style$=" padding-top: 31%;"]:upward(2)
+radiololand.no##.elementor-widget-theme-post-content + .elementor-widget-text-editor
+bardufoss.no##.btDivider + section:not(.btDivider)
+skagafm.dk##.frontbanner
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$frame
 ||danishfamilysearch.dk/images/xp2^$image
@@ -1426,6 +1443,7 @@ tnt-tv.no,tnt-tv.dk##.logos
 tnt-tv.no,tnt-tv.dk##.tabs_placeholder
 yrkesbil.no#?#td:has-text(/^\xA0$/):not(:has-text(/\S/)):not(:has(img))
 yrkesbil.no#?#tr:has-text(/^\xA0$/):not(:has-text(/\S/)):not(:has(img))
+foodora.no##.top-skinny-banner-container
 !+ NOT_OPTIMIZED
 avvir.no###block-block-1 > p:nth-of-type(4)
 

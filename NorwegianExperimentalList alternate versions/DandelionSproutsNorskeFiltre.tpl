@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 15January2021v1-Alpha
+# Version: 16January2021v4-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -249,6 +249,7 @@ msFilterList
 -d appetitt.no *_Bannere_
 -d semegleren.com video
 -d canariposten.no 300x1500*
+-d stream.fo *-300x111.jpg
 -d frilansinfo.no *-annonse.jpg
 -d thaiguiden.no tg-980.html
 -d thainytt.no 160_*
@@ -300,6 +301,16 @@ msFilterList
 -d webforumet.no AD-*.jpg
 -d vf.is geysir-dekkjaskipti.jpg
 -d vf.is *2000x616.jpg
+-d isolor.no *-toppbanner-
+-d isolor.no *_480x150px.jpg
+-d radiohallingdal.no abanners
+-d ksu247.no Bunnpris2.jpg
+-d ksu247.no banner-*.jpg
+-d ksu247.no BP-logo-*.png
+-d ksu247.no *-300x64.jpg
+-d radiorana.no *-300x300.jpg
+-d radiorana.no Meyership.jpg
+-d radiorana.no Telemix2.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -324,6 +335,8 @@ msFilterList
 # keldan.is (05 01 2021)
 - images augl
 -d tac.is kunnar
+# isolor.no (16 01 2021)
+- -skyskraper-annonse.
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
