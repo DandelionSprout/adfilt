@@ -864,7 +864,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 18January2021v1-Extension
+# Last updated: 18January2021v2-Extension
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js
