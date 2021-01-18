@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 16January2021v4-Alpha
+# Version: 18January2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -860,10 +860,11 @@ msFilterList
 # https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-712799898
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-725741350
+# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-761870246
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 11January2021v1-Extension
+# Last updated: 18January2021v1-Extension
 -d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
 -d elderlyscissors.com
 -d imasdk.googleapis.com pal.js
