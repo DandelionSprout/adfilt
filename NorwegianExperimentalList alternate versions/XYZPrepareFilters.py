@@ -332,6 +332,12 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"(^|,)intrafish.\*(#|,)", 
+           r"\1intrafish.no\2", 
+           line
+        )
+
+        line = re.sub(
            "^,", 
            "^$", 
            line
@@ -2115,6 +2121,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"(^|,)manuall.\*(#|,)", 
            r"\1manuall.no,manuall.dk\2", 
+           line
+        )
+
+        line = re.sub(
+           r"(^|,)intrafish.\*(#|,)", 
+           r"\1intrafish.no\2", 
            line
         )
 
