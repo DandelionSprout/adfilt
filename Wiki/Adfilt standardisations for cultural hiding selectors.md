@@ -5,8 +5,8 @@
 `dailymotion.com#?#[class*=__videoCard___]`
 
 ### Pixiv
-#### Discovery (26/12/2020)
-`pixiv.net#?#li:-abp-has(a[href*="/artworks/"]:not([data-gtm-recommend-zone=discovery]))`
+#### Modern search pages (18/01/2021)
+`pixiv.net#?#li[class*=" "]:-abp-has(a[href*="/artworks/"] img[alt*=\1 i])`
 #### Mobile web browsers (26/12/2020)
 `pixiv.net#?#.works-item:-abp-has(img[alt*=\1])`
 
