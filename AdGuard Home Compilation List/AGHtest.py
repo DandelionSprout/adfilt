@@ -523,7 +523,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^/.*[_?=/;~@%#+].*", 
+           r"^/.*[_?=/;~@%#+,].*", 
            r"", 
            line
         )
