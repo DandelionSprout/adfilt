@@ -71,15 +71,17 @@
 * `{ }`: Same as above.
 * `:has-text`: Same as `:-abp-contains`.
 * `:has`: Same as `:-abp-has`.
-* `!#if`: Specifies that a section of entries only applies to specific platforms or extensions. Closed out by `!#endif`. Possible options are listed [here](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#if-condition).
+* `!#if`: Specifies that a section of entries only apply to specific platforms or extensions. Closed out by `!#endif`. Possible options are listed [here](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#if-condition).
 * `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
-* `:matches-css-before`: Same as above, but looks for CSS values in its pseudo-elements instead.
+* `:matches-css-before` / `:matches-css-after`: Same as above, but looks for CSS values in its pseudo-elements instead.
 #### Blocking
 * `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
 * `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
+* `$queryprune`: Removes URL parameters, e.g. `$tracker=sitecampaignpage`. Assumes RegEx by default; add a `|` after the `=` to avoid assuming such.
+* `$removeparam`: Very similar to, but not identical to, `$queryprune`.
 
 ## uBlock Origin only:
 #### Hiding
@@ -98,11 +100,11 @@
 * `$3p`: Same as `$third-party`.
 * `$1p` / `$first-party`: Same as `$~third-party`.
 * `$xhr`: Same as `$xmlhttprequest`.
+* `$doc`: Same as `$document`.
 * `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup` + `$document`.
 * `$redirect-rule`: Similar to `$redirect`, but is only applied if it's already blocked by *another* entry or dynamic rule(set).
 * `@@||` + `$ghide`: Same as `@@||` + `$generichide`.
-* `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented.
-* `$queryprune`: Removes URL parameters, e.g. `$tracker=sitecampaignpage`. Assumes RegEx by default; add a `|` after the `=` to avoid assuming such.
+* `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Only applies to Firefox and Tor Browser.
 
 ## Adblock Plus, Adblock and AdGuard only:
 * `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API. The uBO equivalent seems to be `##+js(nowebrtc)`, but conversion is not done automatically.
@@ -146,7 +148,6 @@
 * `@@` + `$stealth`: Turns off Stealth Mode on that site.
 * `$replace`: Changes the text of text elements on a site. Supports and requires use of RegEx. Requires ridiculous amounts of trust rights and cannot be used in web-hosted lists.
 * `$protobuf`: Similar to `$replace`, but strips away numeric values from responses given by the `Protocol Buffers` API.
-* `$removeparam`: Very similar to `$queryprune`, except that it assumes ordinary text by default and that RegEx is opt-in.
 
 ## AdGuard for [Android/iOS] only:
 
@@ -158,8 +159,8 @@
 * The `"` in `[href="text"]` is optional, but *only* if the criteria text is only a single word, and has no numbers, slashes, or certain other characters.
 * `:style` and `{ }` do not allow the use of URL values.
 * It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
-* In Opera, the F12 filetree is not actually opened with F12 by default, but instead with Ctrl+Shift+I (Capital İ).
+* In Opera, the F12 filetree is not actually opened with F12, but instead with Ctrl+Shift+I (Capital İ).
 * No entries can use both `||` and `##` at the same time.
 * Major note to advanced CSS experts: Some advanced terms have been replaced in this guide, because they'd be less than obvious to laymen who'd need this guide. For instance, I replaced `DOM tree` with `F12 filetree`, because I 100% genuinely felt that it was easy to think `DOM` was short for "dominatrix", and also because many people may not even know how to open said tree in web browsers.
 
-¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, Adblock Plus version ≥3.5, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, or Blokada, whose syntax supports are considerably inferior to the above list.
+¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, Adblock Plus version ≥3.5, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, Blokada, or Pi-hole, whose syntax supports are considerably inferior to the above list.
