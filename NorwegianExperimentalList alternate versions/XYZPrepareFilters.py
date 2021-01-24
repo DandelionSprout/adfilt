@@ -148,6 +148,12 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
+           r"\$doc$", 
+           r"$document", 
+           line
+        )
+
+        line = re.sub(
            r"!#include uBO%20list%20extensions/TemporaryWaterfoxClassicFixForNordicFilters\.txt", 
            r"", 
            line
