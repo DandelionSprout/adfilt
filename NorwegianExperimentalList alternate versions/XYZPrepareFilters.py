@@ -148,8 +148,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"\$doc$", 
-           r"$document", 
+           r"\$doc(,|$)", 
+           r"$document\1", 
            line
         )
 
@@ -3782,7 +3782,7 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            "\[Adblock Plus 3.4\]", 
-           "[AdGuard ≥6]", 
+           "[AdGuard versions from ≥2019]", 
            line
         )
 
@@ -3897,6 +3897,12 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"\$all$", 
            r"$empty,important", 
+           line
+        )
+
+        line = re.sub(
+           r"\$doc(,|$)", 
+           r"$document\1", 
            line
         )
 
