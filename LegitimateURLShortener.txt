@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 27January2021v1-Beta
+! Version: 28January2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Versions for Redirector and URLRedirector were planned in the near future as of November 2020, but are on hold after uBO added support for lowercase $removeparam entries.
@@ -78,9 +78,12 @@ $removeparam=cp_ksver
 ! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
 $removeparam=biw
 $removeparam=bih
-!||google.$removeparam=sa (Seems to break imagesearch redirection links.)
+!#if !env_mobile
+! All of these seem to break imagesearch redirection links on Fennic 68.12
+||google.$removeparam=sa
 ||google.$removeparam=ved
 @@||google.com/url?$removeparam=ved
+!#endif
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ||thunderbird.net^$removeparam=src
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
