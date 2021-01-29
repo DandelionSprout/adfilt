@@ -3648,7 +3648,7 @@ def prepare_domainsallowlist(lines) -> str:
         )
 
         line = re.sub(
-           r"^[a-z0-9*].*", 
+           r"^[a-z0-9*/].*", 
            r"", 
            line
         )
