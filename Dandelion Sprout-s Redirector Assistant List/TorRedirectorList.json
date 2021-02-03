@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.2.1",
-    "createdAt": "2021-01-09T00:00:01.000Z",
+    "createdAt": "2021-02-03T00:00:01.000Z",
     "redirects": [
         {
             "description": "Redirect Facebook.com links to Facebook's .onion Tor server",
@@ -350,6 +350,34 @@
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": true,
+            "appliesTo": ["main_frame"]
+        },
+        {
+            "description": "Redirect Ctrl.blog links to Ctrl.blog's .onion Tor server",
+            "exampleUrl": "https://www.ctrl.blog/",
+            "exampleResult": "http://v65ngaoj2nyaiq2ltf4uzota254gnasarrkuj4aqndi2bb5lw6frt3ad.onion/",
+            "error": null,
+            "includePattern": "(.*):/(.*[/.])ctrl.blog/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "http://v65ngaoj2nyaiq2ltf4uzota254gnasarrkuj4aqndi2bb5lw6frt3ad.onion/$3",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": ["main_frame"]
+        },
+        {
+            "description": "Redirect AirVPN.org links to AirVPN's .onion Tor server",
+            "exampleUrl": "https://airvpn.org/",
+            "exampleResult": "http://airvpn3epnw2fnsbx5x2ppzjs6vxtdarldas7wjyqvhscj7x43fxylqd.onion/",
+            "error": null,
+            "includePattern": "(.*):/(.*[/.])airvpn.org/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "http:/$2airvpn3epnw2fnsbx5x2ppzjs6vxtdarldas7wjyqvhscj7x43fxylqd.onion/$3",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
             "appliesTo": ["main_frame"]
         }
     ]
