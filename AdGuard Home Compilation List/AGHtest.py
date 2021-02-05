@@ -331,6 +331,18 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r"^\|\|dmcdn\.net\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|canyoublockit\.com\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$", 
            r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^", 
            line
@@ -536,12 +548,6 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^/[a-zA-Z0-9-]{1,100}[|^]$", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
-           r"^\|\|dmcdn\.net\^$", 
            r"", 
            line
         )
