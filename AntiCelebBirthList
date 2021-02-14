@@ -1,13 +1,18 @@
 [Adblock Plus 3.4]
 ! Title: 😌 Anti-'Newsstories about celebs giving birth' List
-! Version: 05February2021v2-Beta
+! Version: 14February2021v1-Beta
 ! Expires: 3 days
 ! Description: We hear so much talk about "fake news" nowadays, but we never hear any talk about non-news, such as C-tier celebrities either expecting offspring or giving birth to such. This list will aid in removing such kinds of non-news.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
 ! Multiple sites (English-language)
-theguardian.com,dw.com,theindependent.co.uk##a[href*=birth-of-baby]
-theguardian.com,theindependent.co.uk##a[href*=baby-news]
+theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=birth-of-baby]
+theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=baby-news]
+theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=second-child]
+theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=second-baby]
+theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=baby-birth]
+theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=baby-pregnant]
+theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=gives-birth]
 
 ! Multiple sites (Norwegian + Danish)
 nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*=babylykke i]
@@ -34,6 +39,19 @@ nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk##a[href*="skal
 nrk.no,vg.no,dagbladet.no,adressa.no##a[href*=stjerna-mister-hele-sesongen]
 nrk.no,vg.no,dagbladet.no,adressa.no##a[href*=fikk-en-sonn]
 nrk.no,vg.no,dagbladet.no,adressa.no##a[href*=-bli-far-]
+nrk.no,vg.no,dagbladet.no,adressa.no##a[href*="andre-barn?"]
+nrk.no,vg.no,dagbladet.no,adressa.no##a[href*="andre-barn/"]
+nrk.no,vg.no,dagbladet.no,adressa.no##a[href*="andre-barn-"]
+
+! Multiple sites (Danish)
+dr.dk,tv2.dk,ekstrabladet.dk##a[href*=andet-barn]
+dr.dk,tv2.dk,ekstrabladet.dk##a[href*="blevet-far/"]
+dr.dk,tv2.dk,ekstrabladet.dk##a[href*=blevet-far-]
+dr.dk,tv2.dk,ekstrabladet.dk##a[href$=blevet-far]
+dr.dk,tv2.dk,ekstrabladet.dk##a[href*="blevet-mor/"]
+dr.dk,tv2.dk,ekstrabladet.dk##a[href*=blevet-mor-]
+dr.dk,tv2.dk,ekstrabladet.dk##a[href$=blevet-mor]
+dr.dk,tv2.dk,ekstrabladet.dk##a[href*=blevet-foraeldre]
 
 ! TV2 Norway
 tv2.no#?#.article,.lp-a,.col-sm-12,article.column:-abp-contains(/bl[ie][tr]?t? [pm]a[pm][pm]a/i):not(:-abp-contains(/ mappa/i))
@@ -96,8 +114,6 @@ ekstrabladet.dk##a[href*="-gravid/"]
 ekstrabladet.dk##a[href*="/gravid-"]
 ekstrabladet.dk##a[href*=om-gravid]
 ekstrabladet.dk##a[href*=faaet-tvillinger]
-ekstrabladet.dk##a[href*="blevet-far/"]
-ekstrabladet.dk##a[href*=blevet-far-]
 ekstrabladet.dk##a[href*=-gravid-]
 ekstrabladet.dk##a[href*=ung-mor]
 ekstrabladet.dk##a[href*="7.-minut"]
@@ -112,16 +128,11 @@ ekstrabladet.dk##a[href*=inden-foedsel]
 ekstrabladet.dk##a[href*=skal-han-hedde]
 ekstrabladet.dk##a[href*=mavebillede]
 ekstrabladet.dk##a[href*=glaedelig-nyhed]
-ekstrabladet.dk##a[href*="blevet-mor/"]
-ekstrabladet.dk##a[href*=blevet-mor-]
 
 ! TV2 Denmark
 tv2.dk#?#.g-item:not(section):-abp-contains(baby på vej)
 tv2.dk#?#.g-item:not(section):-abp-contains(fået tvillinger)
 tv2.dk##a[href*=kommende-barn]
-tv2.dk##a[href*=blevet-foraeldre]
-tv2.dk##a[href$=blevet-far]
-tv2.dk##a[href$=blevet-mor]
 tv2.dk##a[href*=nybagt-far]
 tv2.dk##a[href$=blive-far]
 tv2.dk##a[href$=blive-mor]
@@ -131,11 +142,6 @@ adressa.no##a[href*="f%C3%A5tt-en-gutt" i]
 adressa.no##a[href*="f%C3%A5tt-barn" i]
 adressa.no##a[href*=ble-pappa]
 adressa.no#?#.article:-abp-has(.headline:-abp-contains(/fødsel på gang/i))
-
-! The Independent
-independent.co.uk##a[href*=baby-birth]
-independent.co.uk##a[href*=baby-pregnant]
-independent.co.uk#?#.article-hero:-abp-has(a[href*=baby-birth])
 
 ! TVguide.dk
 tvguide.dk#?#.news-grid-item-container:-abp-has(source[srcset*=gravid])
@@ -154,9 +160,6 @@ bbc.co.uk,bbcnewsv2vjtpsuy.onion#?#.gel-layout__item:-abp-contains(welcome baby)
 
 ! CNN International
 cnn.com##a[href*=-baby-]:not([href*=mortality])
-
-! The Daily Star
-dailystar.co.uk#?#.teaser:-abp-contains(gives birth)
 
 ! Nettavisen
 nettavisen.no#?#.story:-abp-contains(/ble far([  ]|$)/)
