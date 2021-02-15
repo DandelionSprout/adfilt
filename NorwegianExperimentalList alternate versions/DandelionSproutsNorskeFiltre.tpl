@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 14February2021v1-Alpha
+# Version: 15February2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -855,6 +855,24 @@ msFilterList
 -d 5.39.217.206
 -d 5.39.221.180
 -d 193.148.70.153
+# 🇳🇴: Falske nettapoteker
+# 🇬🇧: Fake online pharmacies
+-d *-med.footeo.com
+-d *medisin*.over-blog.com
+-d alphaapotek.com
+-d bedsteapoteksverige.com
+-d garantere-apotek.com
+-d godtdsamaritansk.com
+-d helsehjelp.over-blog.com
+-d jensapoteker.com
+-d kjop-palitelige-medisiner.com
+-d kobconcerta54mgonlineidanmark.wordpress.com
+-d konstantleverans.blogspot.com
+-d marson.footeo.com
+-d nkwana-medstore.com
+-d sikkertapotek.com
+-d sobrilleverandoridanmark.wordpress.com
+-d xanax*.over-blog.com
 # 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 -d desidert.no
 -d brigitteheilmann.dk
