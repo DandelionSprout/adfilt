@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 15February2021v1
+! Version: 15February2021v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -673,8 +673,6 @@ _300x500pix$domain=rykindribe.dk,image
 /resources/dfp/*$app=no.nettavisen.phonegap.na
 ||finn.no^$app=no.bt
 contentMarketing$app=no.sol
-||jula.no^$removeparam=gclsrc
-||norsktipping.no$removeparam=WT.mc_id
 !#endif
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
@@ -1470,6 +1468,7 @@ _980banner_
 ! 🇳🇴🏞: ——— Tomme skiljeboksar ———
 ! 🇮🇸: ——— Tóma skilirammar ———
 ! 🇬🇧: ——— Empty divider spaces ———
+! Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt, which has not been the case.
 ##.skille
 icelandreview.com,bir.no,medier24.no,knr.gl,nutiminn.is#?#p:-abp-contains(/^\xA0$/)
 allers.no,steigan.no##.vc_empty_space
@@ -1529,7 +1528,7 @@ hero-magazine.com###header:style(position: inherit !important)
 ! ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
-@@||api.instagram.com^$domain=samiteahter.org
+
 ! https://github.com/ryanbr/fanboy-adblock/issues/1261
 @@||cookieinformation.com/*/*.js$domain=gulesider.no|degulesider.dk|krak.dk
 ! ——— Caused by «Fanboy's Annoyances List» ———
@@ -1546,8 +1545,8 @@ eyjar.net#@#.side_ads
 @@://billink*.blob.core.windows.net/*/annonser^
 @@||finn.no/user/ads.html^$popup
 ! https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
-@@||cdn.easy-ads.com/js/swipemod.js^$script,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no|h-avis.no
-@@||easy-ads.com/subscriber^$image,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no|h-avis.no
+
+
 ! Forum feeds in the upper right of articles
 babyklar.dk#@#.ad-cell
 babyklar.dk#@#.ads300-250
@@ -1727,6 +1726,19 @@ nettavisen.no###topover
 @@||bildeler.name^$ghide
 @@||reservedele.name^$ghide
 !#endif
+
+! 🇳🇴: Fjerner overflødige deler av URL-er for å gjøre dem kortere og lettere å dele
+! 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
+! Infrequently synced with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
+$removeparam=utm_id,domain=elkjop.no|elgiganten.dk
+||cdon.$removeparam=g
+||deal.no^$removeparam=ref
+||digitalimpuls.no^$removeparam=WebSiteMapNodeID
+||jula.no^$removeparam=gclsrc
+||netonnet.no^$removeparam=dclid
+||norsktipping.no$removeparam=WT.mc_id
+||p3.no^$removeparam=draftsforfriends
+||tv2.no^$removeparam=r
 
 !#if !adguard
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
