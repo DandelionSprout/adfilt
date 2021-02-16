@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🚪 Browse websites without logging in
-! Version: 24December2020v1
+! Version: 16February2021v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! For more information and details about this list and other lists of mine, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -206,12 +206,12 @@ mobile.twitter.com##.rn-13w96dm
 mobile.twitter.com##.rn-1kihuf0.rn-1awozwy
 ! https://mobile.twitter.com/nasuno_Posi
 !! Removes the "Are you new on Twitter?" banner in the upper right of user timelines (Screen area has to be ≥~1400px wide)
-mobile.twitter.com##div[data-testid="sidebarColumn"] section[aria-label][role=region]
+mobile.twitter.com##div[data-testid=sidebarColumn] section[aria-label][role=region]
 
 ! Pinterest ↪️📛🌇 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
 ! For very important notes about Pinterest, see https://github.com/DandelionSprout/adfilt/issues/26.
 !! Removes the login prompt when browsing down on a page
-pinterest.*##div[data-test-id="giftWrap"]
+pinterest.*##div[data-test-id=giftWrap]
 !! Removes the login prompts when opening the "Full page modal scroller" (Which was very hard to do without removing the intentional login prompt)
 pinterest.*##div[class=Closeup__wrapper] > div > div[style^="cursor: default"]
 pinterest.*##.Hsu.iyn.zI7:nth-of-type(2) > div > .FullPageModal__scroller
@@ -287,7 +287,7 @@ behance.net##.Popup-popup-T3F
 ! https://www.zulily.com/e/sew-on-and-sew-forth-338868.html
 !! Aims to remove the forced login overlay, without breaking the login button in the upper right
 !#if !ext_ublock
-zulily.com###loginModal[aria-hidden="false"]:not([aria-describedby="subtitle-signin"])
+zulily.com###loginModal[aria-hidden=false]:not([aria-describedby=subtitle-signin])
 !#endif
 
 ! The Australian Frequent Flyer
@@ -315,7 +315,7 @@ dev.mysql.com##.login-callout
 m.youtube.com###mealbar\:3 > ytm-mealbar.mealbar-promo-renderer
 ! https://new.reddit.com/r/uBlockOrigin/comments/bet7iu/
 ! Removes a short-lasting note about being logged off
-youtube.com##ytd-popup-container > .ytd-popup-container > #contentWrapper > .ytd-popup-container[position-type="OPEN_POPUP_POSITION_BOTTOMLEFT"]
+youtube.com##ytd-popup-container > .ytd-popup-container > #contentWrapper > .ytd-popup-container[position-type=OPEN_POPUP_POSITION_BOTTOMLEFT]
 
 ! ——————————————————————————————————————————————————————————————————————
 
