@@ -26,4 +26,4 @@
 
 ### Google Play Store
 #### Media franchises (Covers both "Apps" and "Movies") (21/02/2021)
-* `play.google.com##div[class$=" "] > div[class*=" "][jscontroller] > div[class*=" "]:-abp-contains( )`
+* `play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > div[class*=" "]:-abp-contains( )`
