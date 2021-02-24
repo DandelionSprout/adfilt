@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 15February2021v2
+! Version: 24February2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -1537,6 +1537,8 @@ krom.is#@#.share-container
 ! https://github.com/easylist/easylist/issues/6067#issuecomment-695115226
 @@||consent.dk^$third-party,domain=ekstrabladet.dk
 dagbladet.no,elbil24.no#@#.subscription-box
+! https://github.com/easylist/easylist/issues/7269
+dnb.no#@##consent-modal
 ! ——— Caused by «EasyList» ———
 @@_prebid_$domain=seher.no
 @@/images/ads-db/right-tower/vipps-sponsor-$domain=canariajournalen.no
@@ -1553,6 +1555,8 @@ babyklar.dk#@#.ads300-250
 babyklar.dk#@#.ads300_250-widget
 ! Makes 1p info banners show up correctly
 @@_980x100.$domain=ruijan-kaiku.no
+! Makes most links show up correctly (Fixed in AdGuard Base)
+ni.dk#@#a[href*=".adform.net/"]
 ! ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
 ! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 telenor.no##.global-overlay-background
@@ -1640,7 +1644,7 @@ gamereactor.*##.videoContent > .clickTag
 gamereactor.*##a[href*="/adclick.php"]
 gamereactor.*##a[href^="/grtv/"][title*=Sponsored]:upward(1)
 gamereactor.*#?#article.rwd_row:has(a[href$="/sponsoredcontent/"])
-gamereactor.*##div[class^="ad300"]
+gamereactor.*##div[class^=ad300]
 gamereactor.*##div[style*="width:300px;height:600px;"]
 gamereactor.*##div[style="min-height: 600px; margin-bottom: 20px;"]
 gamereactor.*##+js(ra, autoplay)

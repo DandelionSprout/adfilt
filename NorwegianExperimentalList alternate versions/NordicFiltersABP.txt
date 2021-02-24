@@ -1,7 +1,7 @@
 [Adblock Plus 3.4]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 150220212
+! Version: 240220211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -1476,6 +1476,8 @@ krom.is#@#.share-container
 ! https://github.com/easylist/easylist/issues/6067#issuecomment-695115226
 @@||consent.dk^$third-party,domain=ekstrabladet.dk
 dagbladet.no,elbil24.no#@#.subscription-box
+! https://github.com/easylist/easylist/issues/7269
+dnb.no#@##consent-modal
 ! ——— Caused by «EasyList» ———
 @@_prebid_$domain=seher.no
 @@/images/ads-db/right-tower/vipps-sponsor-$domain=canariajournalen.no
@@ -1492,6 +1494,8 @@ babyklar.dk#@#.ads300-250
 babyklar.dk#@#.ads300_250-widget
 ! Makes 1p info banners show up correctly
 @@_980x100.$domain=ruijan-kaiku.no
+! Makes most links show up correctly (Fixed in AdGuard Base)
+ni.dk#@#a[href*=".adform.net/"]
 ! ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
 ! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 telenor.no##.global-overlay-background
@@ -1572,7 +1576,7 @@ gamereactor.no,gamereactor.dk##.videoContent > .clickTag
 gamereactor.no,gamereactor.dk##a[href*="/adclick.php"]
 gamereactor.no,gamereactor.dk#?#*:-abp-has(> a[href^="/grtv/"][title*=Sponsored])
 gamereactor.no,gamereactor.dk#?#article.rwd_row:-abp-has(a[href$="/sponsoredcontent/"])
-gamereactor.no,gamereactor.dk##div[class^="ad300"]
+gamereactor.no,gamereactor.dk##div[class^=ad300]
 gamereactor.no,gamereactor.dk##div[style*="width:300px;height:600px;"]
 gamereactor.no,gamereactor.dk##div[style="min-height: 600px; margin-bottom: 20px;"]
 ||gamereactor.*/lay/ad-video-stats.$script
