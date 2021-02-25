@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🛶 Anti-'Pork meat on restaurant menus' List
-! Version: 17February2021v1-Alpha
+! Version: 25February2021v1-Alpha
 ! Expires: 7 days
 ! Description: Do you feel that bacon and pork tastes really icky and sourly greasy, yet half of all things you'll find in restaurants have pork in them, and there's 30 different terms for pork to keep track of to avoid unpleasant surprises? If so, then this list has saved your taste buds and stomach.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -114,14 +114,16 @@ jackinthebox.com#?#.menu-item:-abp-has(a[href*=chick-n-tater])
 
 ! ——— 🇳🇴🇸🇪🇩🇰 Scandinavia (multi-country) - Skandinavia (Flernasjons) ———
 ! https://egon.no/menyen
-egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(parma)
-egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(pork)
-egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Skink/i)
-egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(pepperoni)
-egon.*#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Pølse/i):not(:-abp-contains(ENGLISH BREAKFAST))
-egon.no#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Bacon/i):not(:-abp-contains(ENGLISH BREAKFAST))
+egon.*#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/(^| |a)skink/i)
+egon.*#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/bacon/i)
+egon.*#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/pepperoni/i)
+egon.*#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/pork/i)
+egon.*#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/sparerib/i)
+egon.no#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/(^| )svin/i)
+egon.no#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/chistorra/i)
+egon.no#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/pølse/i):not(:-abp-contains(ENGLISH BREAKFAST))
 ! https://www.egon.se/meny+2019
-egon.se#?#.food-menu-set > .menu-item-wrap:-abp-contains(/Korv/i):not(:-abp-contains(ENGLISH BREAKFAST))
+egon.se#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/revben/i)
 ! Foodora
 foodora.*#?#.dish-card,.product-topping-item:-abp-contains(/bacon/i)
 foodora.*#?#.dish-card,.product-topping-item:-abp-contains(/salami/i)
