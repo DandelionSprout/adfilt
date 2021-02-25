@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🎮 Game Console Adblock List
-! Version: 02January2021v1-Alpha
+! Version: 25February2021v1-Alpha
 ! Expires: 4 days
 ! Description: Much like there's now lists for AdGuard Home and Pi-hole to block ads on smart-TVs, here's an attempt from me at doing the same for videogame consoles with AdGuard Home. Enjoy.
 ! Important note: To block ads in the consoles' dedicated internet browsers with AdGuard Home, and not in the system menus, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt instead.
@@ -29,7 +29,8 @@
 ! ——— Xbox One ———
 ! Removes sponsored info slots in the system menu
 ! https://new.reddit.com/r/pihole/comments/act023/psa_block_the_sponsored_banner_ad_on_the_xbox_one/
-||arc.msn.com^
+! Note that this also blocks Perks from Xbox Game Pass if you are subscribed to that (https://github.com/DandelionSprout/adfilt/pull/162).
+||arc.msn.com^$ctag=~device_pc|~os_windows
 
 ! ——— Xbox 360 ———
 ! Removes paid advertising on the Xbox Live Dashboard
