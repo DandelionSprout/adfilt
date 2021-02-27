@@ -1,7 +1,7 @@
 [Adblock Plus 3.4]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 240220211
+! Version: 270220211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -410,7 +410,6 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||acdn.adnxs.com/ast/ast.js$script,domain=vg.no
 ||acdn.adnxs.com/ast/ast.js$script,rewrite=abp-resource:blank-js,domain=vgtv.no
 ||akamai.net^$script,domain=eniro.no|eniro.dk
-||akamaihd.net^$media,domain=discoveryplus.no|discoveryplus.dk
 ||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
 ||arendalstidende.no/wp-content/uploads/*_490px.jpg^$image
 ||austevollforlag.no/wp-content/*/yachtmarine2014.$image
@@ -425,7 +424,6 @@ contentMarketing$xmlhttprequest,domain=sol.no
 @@||cdnboligkanalen.azureedge.net/*width=2000^
 ||damoh.vgtv.no/hic_qos$script,rewrite=abp-resource:blank-js,domain=vg.no
 ||deals.innocode.no/api^$third-party,subdocument
-||dnitv.com^$media,domain=discoveryplus.no|discoveryplus.dk
 ||dust2.dk/img/banners/*$image
 ||export.prisguide.no^$domain=diskusjon.no
 ||export.prisguiden.no^$domain=diskusjon.no
@@ -604,6 +602,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||img.sofabold.dk/images/banner^
 ||vaktin.is/grkuk^$image
 ||indblik.net/wp-content/uploads/angwp^$image
+||akamaihd.net^$media,domain=discoveryplus.no|discoveryplus.dk
+||dnitv.com^$media,domain=discoveryplus.no|discoveryplus.dk
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png^
@@ -1460,10 +1460,9 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 @@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
 ! Attempts to resolve how some frontpage articles are hard to open
 @@||schibsted.com/autoTracker$domain=vg.no
-! 🇳🇴: Får discoveryplus sin påloggingsside til å vises riktig
-! 🇬🇧: Makes discoveryplus's login page show up properly
-@@||mparticle.com$script,domain=auth.discoveryplus.no|auth.discoveryplus.dk
-@@||assets.adobedtm.com/*/satelliteLib-$domain=auth.discoveryplus.no|auth.discoveryplus.dk
+! 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
+! 🇬🇧: Makes Discovery+'s login page show up properly
+@@||mparticle.com^*/login$domain=discoveryplus.no|discoveryplus.dk
 ! ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
@@ -2053,19 +2052,16 @@ aasavis.no,amta.no,an.no,auraavis.no,austagderblad.no,avisenagder.no,budstikka.n
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 18January2021v2-Extension
+! Last updated: 27February2021v1-Extension
 gratiskostplaner.dk#$#abort-on-property-write KillAdBlock
 csp.screen9.com#@#.adsbox
 tv2.no#$#abort-current-inline-script adblockDetector
 
 ||aftenposten.no/seksjon/dist/ads-$script
-||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,rewrite=abp-resource:blank-mp3,domain=discoveryplus.no|discoveryplus.dk
 ||elderlyscissors.com^
-||imasdk.googleapis.com/pal/sdkloader/pal.js$script,rewrite=abp-resource:blank-js,domain=discoveryplus.no|discoveryplus.dk
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
 @@.dk/assets/templates/*/ads.png^$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
-@@||fwmrm.net/ad/$script,domain=discoveryplus.no|discoveryplus.dk
 @@||sixscissors.com^$third-party,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,~third-party
 gamereactor.no,gamereactor.dk#$#abort-current-inline-script AdsReloadConfig

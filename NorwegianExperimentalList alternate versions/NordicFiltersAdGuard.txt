@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 24February2021v1
+! Version: 27February2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -75,7 +75,6 @@ detailersclub.no##.cWidgetContainer[data-widgetarea=footer]
 digi.no##.commercial
 digi.no##.native
 doktor.frettabladid.is##.ad-310x400
-discoveryplus.*##[class^=notificationArea]
 dusken.no##.ad-col-article
 dusken.no##.ad-in-column
 e24.no###adPlaceholderFront
@@ -417,7 +416,6 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
 ||acdn.adnxs.com/ast/ast.js$script,redirect=noopjs,important,domain=vgtv.no
 ||akamai.net^$script,domain=eniro.*
-||akamaihd.net^$media,domain=discoveryplus.*|~discoveryplus.it|~discoveryplus.es
 ||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
 ||arendalstidende.no/wp-content/uploads/*_490px.jpg^$image
 ||austevollforlag.no/wp-content/*/yachtmarine2014.$image
@@ -432,7 +430,6 @@ contentMarketing$xmlhttprequest,domain=sol.no
 @@||cdnboligkanalen.azureedge.net/*width=2000^
 ||damoh.vgtv.no/hic_qos$script,redirect=noopjs,domain=vg.no
 ||deals.innocode.no/api^$third-party,frame
-||dnitv.com^$media,domain=discoveryplus.*|~discoveryplus.it|~discoveryplus.es
 ||dust2.dk/img/banners/*$image
 ||export.prisguide.no^$domain=diskusjon.no
 ||export.prisguiden.no^$domain=diskusjon.no
@@ -611,6 +608,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||img.sofabold.dk/images/banner^
 ||vaktin.is/grkuk^$image
 ||indblik.net/wp-content/uploads/angwp^$image
+||akamaihd.net^$media,domain=discoveryplus.*
+||dnitv.com^$media,domain=discoveryplus.*
 !#if false
 @@||vgtv.no$ghide
 !#endif
@@ -1512,7 +1511,7 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 @@.isdownorblocked.com^$document
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 !#if env_chromium
-||prod-adops-proxy.dnitv.net^$empty,domain=discoveryplus.*|~discoveryplus.it|~discoveryplus.es
+||prod-adops-proxy.dnitv.net^$empty,domain=discoveryplus.*
 !#endif
 ! https://github.com/uBlockOrigin/uAssets/issues/8230/
 hero-magazine.com###header:style(position: inherit !important)
@@ -1521,10 +1520,9 @@ hero-magazine.com###header:style(position: inherit !important)
 @@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
 ! Attempts to resolve how some frontpage articles are hard to open
 @@||schibsted.com/autoTracker$domain=vg.no
-! 🇳🇴: Får discoveryplus sin påloggingsside til å vises riktig
-! 🇬🇧: Makes discoveryplus's login page show up properly
-@@||mparticle.com$script,domain=auth.discoveryplus.*|~auth.discoveryplus.it|~auth.discoveryplus.es
-@@||assets.adobedtm.com/*/satelliteLib-$domain=auth.discoveryplus.*|~auth.discoveryplus.it|~auth.discoveryplus.es
+! 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
+! 🇬🇧: Makes Discovery+'s login page show up properly
+@@||mparticle.com^*/login$domain=discoveryplus.*
 ! ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
@@ -2164,7 +2162,7 @@ altaposten.no,andalsnes-avis.no,dolen.no,driva.no,fjordabladet.no,fjordingen.no,
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 18January2021v2-Extension
+! Last updated: 27February2021v1-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 csp.screen9.com#@#.adsbox
 dagensbyggeri.dk##+js(std, (), 2500)
@@ -2175,13 +2173,10 @@ vg.no##+js(aeld, load, concat)
 tipsbladet.dk##.js-isblured:style(-webkit-filter: none !important; filter: none !important)
 tipsbladet.dk###js-promo-welcome
 ||aftenposten.no/seksjon/dist/ads-$script
-||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=discoveryplus.*
 ||elderlyscissors.com^
-||imasdk.googleapis.com/pal/sdkloader/pal.js$script,redirect=noopjs,domain=discoveryplus.*
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
 @@.dk/assets/templates/*/ads.png^$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
-@@||fwmrm.net/ad/$script,domain=discoveryplus.*
 @@||sixscissors.com^$third-party,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,~third-party
 gamereactor.*##+js(set, adblockEnabled, noopFunc)

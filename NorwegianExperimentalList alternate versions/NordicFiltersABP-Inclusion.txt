@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 240220211
+! Version: 270220211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. Denne versjonen av listen inkluderer ikke anti-anti-reklameblokkering, ettersom slike oppføringer ikke er tillatt for lister som er inkludert i Adblock Plus. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -406,7 +406,6 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||acdn.adnxs.com/ast/ast.js$script,domain=vg.no
 ||acdn.adnxs.com/ast/ast.js$script,rewrite=abp-resource:blank-js,domain=vgtv.no
 ||akamai.net^$script,domain=eniro.no|eniro.dk
-||akamaihd.net^$media,domain=discoveryplus.no|discoveryplus.dk
 ||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
 ||arendalstidende.no/wp-content/uploads/*_490px.jpg^$image
 ||austevollforlag.no/wp-content/*/yachtmarine2014.$image
@@ -421,7 +420,6 @@ contentMarketing$xmlhttprequest,domain=sol.no
 @@||cdnboligkanalen.azureedge.net/*width=2000^
 ||damoh.vgtv.no/hic_qos$script,rewrite=abp-resource:blank-js,domain=vg.no
 ||deals.innocode.no/api^$third-party,subdocument
-||dnitv.com^$media,domain=discoveryplus.no|discoveryplus.dk
 ||dust2.dk/img/banners/*$image
 ||export.prisguide.no^$domain=diskusjon.no
 ||export.prisguiden.no^$domain=diskusjon.no
@@ -600,6 +598,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||img.sofabold.dk/images/banner^
 ||vaktin.is/grkuk^$image
 ||indblik.net/wp-content/uploads/angwp^$image
+||akamaihd.net^$media,domain=discoveryplus.*
+||dnitv.com^$media,domain=discoveryplus.*
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png^
@@ -1440,17 +1440,16 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
 @@.isdownorblocked.com^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
-||prod-adops-proxy.dnitv.net^$domain=discoveryplus.no|discoveryplus.dk
+||prod-adops-proxy.dnitv.net^$domain=discoveryplus.*
 ! https://github.com/uBlockOrigin/uAssets/issues/8230/
 ! ——— Caused by «EasyPrivacy» ———
 ! Attempting to fix a problem with voting online on Idol Norway
 @@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
 ! Attempts to resolve how some frontpage articles are hard to open
 @@||schibsted.com/autoTracker$domain=vg.no
-! 🇳🇴: Får discoveryplus sin påloggingsside til å vises riktig
-! 🇬🇧: Makes discoveryplus's login page show up properly
-@@||mparticle.com$script,domain=auth.discoveryplus.no|auth.discoveryplus.dk
-@@||assets.adobedtm.com/*/satelliteLib-$domain=auth.discoveryplus.no|auth.discoveryplus.dk
+! 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
+! 🇬🇧: Makes Discovery+'s login page show up properly
+@@||mparticle.com^*/login$domain=discoveryplus.*
 ! ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk

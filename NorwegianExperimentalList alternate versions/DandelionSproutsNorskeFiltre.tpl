@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 24February2021v1-Alpha
+# Version: 27February2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -147,7 +147,6 @@ msFilterList
 -d acdn.adnxs.com ast.js
 -d acdn.adnxs.com ast.js
 -d akamai.net
--d akamaihd.net
 -d amino.dk 240x140-forside-hardcoded*.jpg
 -d arendalstidende.no *_490px.jpg
 -d austevollforlag.no yachtmarine2014.
@@ -161,7 +160,6 @@ msFilterList
 -d cdn.rikstoto.no GameShop
 -d damoh.vgtv.no hic_qos
 -d deals.innocode.no api
--d dnitv.com
 -d dust2.dk banners
 -d export.prisguide.no
 -d export.prisguiden.no
@@ -321,6 +319,8 @@ msFilterList
 -d img.sofabold.dk banner
 -d vaktin.is grkuk
 -d indblik.net angwp
+-d akamaihd.net
+-d dnitv.com
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -496,9 +496,8 @@ msFilterList
 # ——— Caused by «EasyPrivacy» ———
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
-# 🇳🇴: Får discoveryplus sin påloggingsside til å vises riktig
-# 🇬🇧: Makes discoveryplus's login page show up properly
-+d mparticle.com
+# 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
+# 🇬🇧: Makes Discovery+'s login page show up properly
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
@@ -904,10 +903,8 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 18January2021v2-Extension
--d dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com
+# Last updated: 27February2021v1-Extension
 -d elderlyscissors.com
--d imasdk.googleapis.com pal.js
 +d sixscissors.com
 -d avxwcuaagfcdn.net
 -d allercdn.net randomurl.js

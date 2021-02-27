@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
-! Version: 24February2021v1-Alpha
+! Version: 27February2021v1-Alpha
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
 ! 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, Sydslesvig, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#dansk
@@ -57,10 +57,6 @@ third-party tcnworkaround.dk * block
 ! 🇬🇧: Fileserver or site-specific blocking rules
 eniro.no akamai.net script block
 eniro.dk akamai.net script block
-discoveryplus.no akamaihd.net other block
-discoveryplus.dk akamaihd.net other block
-discoveryplus.no dnitv.com other block
-discoveryplus.dk dnitv.com other block
 diskusjon.no export.prisguide.no * block
 diskusjon.no export.prisguiden.no * block
 bt.no finn.no frame block
@@ -68,6 +64,8 @@ nakenprat.com gratisxxx.no image block
 118.dk track.adform.net * block
 startsiden.no widgets.sprinklecontent.com * block
 musikknyheter.no widgets.sprinklecontent.com * block
+discoveryplus.* akamaihd.net other block
+discoveryplus.* dnitv.com other block
 vgtv.no adnxs.com * block
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -89,14 +87,11 @@ in-addr.arpa 178.79.136.45 * allow
 ! Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt, which has not been the case.
 ! Posten's new parcel tracker, fixes the form for giving them delivery information (doorbell name/number)
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
-discoveryplus.no prod-adops-proxy.dnitv.net * block
-discoveryplus.dk prod-adops-proxy.dnitv.net * block
+discoveryplus.* prod-adops-proxy.dnitv.net * block
 ! Attempting to fix a problem with voting online on Idol Norway
 ! Attempts to resolve how some frontpage articles are hard to open
-! 🇳🇴: Får discoveryplus sin påloggingsside til å vises riktig
-! 🇬🇧: Makes discoveryplus's login page show up properly
-auth.discoveryplus.no mparticle.com script allow
-auth.discoveryplus.dk mparticle.com script allow
+! 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
+! 🇬🇧: Makes Discovery+'s login page show up properly
 samiteahter.org api.instagram.com * allow
 ekstrabladet.dk consent.dk third-party allow
 ! Forum feeds in the upper right of articles
@@ -175,7 +170,7 @@ in-addr.arpa 193.148.70.153 * allow
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
 ! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
-! Last updated: 18January2021v2-Extension
+! Last updated: 27February2021v1-Extension
 itavisen.no sixscissors.com 3p allow
 dagens.dk avxwcuaagfcdn.net * block
 ! Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
