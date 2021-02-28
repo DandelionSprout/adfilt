@@ -1,16 +1,10 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 28February2021v3-Beta
+! Version: 28February2021v4-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Versions for Redirector and URLRedirector were planned in the near future as of November 2020, but are on hold after uBO added support for lowercase $removeparam entries.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! From AdGuard CoreLibs (11/11/2020)
-$removeparam=utm_source,domain=~redir.tradedoubler.com
-$removeparam=utm_medium,domain=~redir.tradedoubler.com
-$removeparam=utm_term
-$removeparam=utm_content
-$removeparam=utm_campaign
-$removeparam=utm_referrer
 $removeparam=yclid
 $removeparam=gclid
 $removeparam=fbclid
@@ -22,6 +16,11 @@ $removeparam=fb_ref
 $removeparam=fb_source
 $removeparam=action_object_map
 $removeparam=action_ref_map
+! https://www.elkjop.no/product/data/kabler-og-tilkobling-pc-og-nettverk/APPLEMD463ZA/thunderbolt-til-gigabit-ethernet-adapter?utm_id=Pricecomparison2989_5_False&utm_medium=Pricecomparison (14/11/2020)
+! https://www.ikea.com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
+! https://www.infoq.com/containers/?itm_source=infoq&itm_medium=header_graybar&itm_campaign=topic_clk (28/02/2021)
+! https://app.sheetgo.com/workflows/1606149317012600L5SS/connections?stm_source=sheetgo-webapp-workflow-invite&stm_medium=email&stm_campaign=on-demand-invitation (28/02/2021)
+$removeparam=/[a-z]tm_.*/,domain=~redir.tradedoubler.com
 ! https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1 (31/10/2020)
 $removeparam=_trkparms
 $removeparam=_trksid
@@ -33,8 +32,6 @@ $removeparam=gclsrc
 $removeparam=smid
 ! https://www.norsk-tipping.no/redirector/oddsen/kjop?WT.mc_id=Nettavisen_nettavisen_ekomm_langoddsen_Oddsartikkel__ekomm&utm_source=nettavisen&utm_medium=ekomm&utm_content=langoddsen_Oddsartikkel_&utm_campaign=ekomm&view=lobby&rekker=[1548011,4825429,1]&spillsystem=1 (15/11/2020)
 $removeparam=WT.mc_id
-! https://www.elkjop.no/product/data/kabler-og-tilkobling-pc-og-nettverk/APPLEMD463ZA/thunderbolt-til-gigabit-ethernet-adapter?utm_id=Pricecomparison2989_5_False&utm_medium=Pricecomparison (14/11/2020)
-$removeparam=utm_id
 ! https://twitter.com/PlanNorge/status/1181537299038953473?ref_src=twsrc%2525255Etfw%2525257Ctwcamp%2525255Etweetembed%2525257Ctwterm%2525255E1181537299038953473&ref_url=https%2525253A%2525252F%2525252Fwww.vg.no%2525252F (14/11/2020; does not seem to work with AdGuard)
 $removeparam=ref_src
 $removeparam=ref_url
@@ -73,7 +70,7 @@ $removeparam=pf_rd_p
 $removeparam=pf_rd_r
 $removeparam=refRID
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
-$removeparam=source,domain=googleusercontent.com|contabo.com
+$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com
 $removeparam=cp_ksver
 ! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
 $removeparam=biw
@@ -161,7 +158,6 @@ $removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net
 ! https://blog.archive.org/matching-gifts/?iax=typage
 ||archive.org^$removeparam=iax
 ! https://www.paypal.com/myaccount/transaction/details/7CY16898V3123435J?v=1&utm_unptid=&ppid=RT000016&cnac=NO&rsta=no_NO(nb-NO)&cust=&unptid=&calc=24c08e54728d&unp_tpcid=null&page=main%3Aemail%3ART000016&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.26.0&xt=
-$removeparam=utm_unptid
 $removeparam=ppid
 $removeparam=unptid
 ||paypal.com^$removeparam=calc
@@ -220,16 +216,9 @@ $removeparam=sfnsn
 $removeparam=guccounter
 $removeparam=guce_referrer
 $removeparam=guce_referrer_sig
-! https://www.ikea.com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
-$removeparam=itm_campaign
-$removeparam=itm_element
-$removeparam=itm_content
 ! https://my.postnord.no/tracking/73330062019301037?mobile=00000000&signed=30c93bff-3e20-4bca-bedf-d96c464a9328
 ||postnord.$removeparam=mobile
 ||postnord.$removeparam=signed
-! https://www.infoq.com/containers/?itm_source=infoq&itm_medium=header_graybar&itm_campaign=topic_clk (28/02/2021)
-$removeparam=itm_source
-$removeparam=itm_medium
 ! https://www.nytimes.com/interactive/2020/09/27/us/donald-trump-taxes.html?referringSource=articleShare (28/02/2021)
 $removeparam=referringSource
 ! https://www.computing.co.uk/news/4019233/monzo-learned-lot-self-hosting-kubernetes-wouldn%E2%80%99?im_edp=7467218-78983dec13ce65eb%26campaignname%3DCTG.Daily_RL.EU.A.U&im_company=FAKE%20COMPANY%20NAME (28/02/2021)
@@ -238,3 +227,25 @@ $removeparam=im_company
 ! https://www.change.org/p/arkane-encourage-the-release-of-an-unfinished-build-of-arkane-s-half-life-2-return-to-ravenholm-273b1585-73cc-49c7-9d51-09433e172f80/psf/share?source_location=combo_psf&psf_variant=combo&share_intent=1 (28/02/2021)
 $removeparam=source_location
 $removeparam=psf_variant
+! https://accelerateworkshopserverless.splashthat.com/?sc_channel=sm&sc_campaign=startupaccelerate_q3_serverless&sc_geo=emea&sc_country=mult&sc_outcome=reg&trkCampaign=bnl20_accelerate_q3_serverless&trk=bnl20_accelerate_q3_serverless_e&es_id=9ee9c1a102
+! https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html?sc_icampaign=Adoption_Campaign_pac-optimize-2020-console-1-asg-max&sc_ichannel=ha&sc_icontent=awssm-5270&sc_ioutcome=Enterprise_Digital_Marketing&sc_iplace=console-ec2autoscaling_infobar&trk=ha_a121p21423yfe1DAD~ha_awssm-5270&trkCampaign=pac-edm-2019-optimize-autoscaling-instance-asg
+$removeparam=/sc_i?channel/
+$removeparam=/sc_i?campaign/
+$removeparam=/sc_i?geo/
+$removeparam=/sc_i?country/
+$removeparam=/sc_i?outcome/
+$removeparam=/sc_i?content/
+$removeparam=/sc_i?place/
+$removeparam=trkCampaign
+$removeparam=trk,domain=splashthat.com|aws.amazon.com
+$removeparam=es_id
+! https://open.hpi.de/courses/malware2021?tracking_user=74v365zif700sQKXlqj020vyd&tracking_type=news&tracking_id=5ED4ZiWEw48Lft3MGkAag
+$removeparam=tracking_type
+$removeparam=tracking_id,domain=hpi.de
+$removeparam=tracking_user
+! https://www.wired.com/story/how-to-solve-a-rubiks-cube-in-5-seconds-or-less/?bxid=5de6860acff06b68651dc0f7&cndid=59299325&esrc=&hasha=43963980a2110b889196f6ae90238cc6&hashb=e7bacab69176108b7edf6b15a2a80087a5eb1fb7&hashc=f0716ab5f4a5ef793da5e3f103cb64e3362c54aedb9630096cfd18f0244b9815&source=EDT_WIR_NEWSLETTER_0_ENGAGEMENT_ZZ
+$removeparam=bxid
+$removeparam=cndid
+$removeparam=hasha
+$removeparam=hashb
+$removeparam=hashc
