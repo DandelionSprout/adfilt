@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 02March2021v2-Beta
+! Version: 02March2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Versions for Redirector and URLRedirector were planned in the near future as of November 2020, but are on hold after uBO added support for lowercase $removeparam entries.
@@ -85,7 +85,7 @@ $removeparam=bih
 ||thunderbird.net^$removeparam=src
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 ||files.wordpress.com^$removeparam=w
-||files.wordpress.com^$removeparam=h
+$removeparam=h,domain=files.wordpress.com|facebook.com|facebookcorewwwi.onion
 ! https://www.google.no/search?ei=rKq_X621OYCHwPAP5YCiuA0&q=penli.fi&oq=penli.fi&gs_lcp=CgZwc3ktYWIQAzIECAAQEzIGCAAQHhATMgYIABAeEBNQw2VYw2Vg-2ZoAHAAeACAAWGIAacBkgEBMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&uact=5 (26/11/2020)
 $removeparam=gs_lcp
 $removeparam=cshid
@@ -273,3 +273,14 @@ $removeparam=token,domain=substack.com
 ! https://i-viaplay-com.akamaized.net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d.jpg?width=400&height=600 (02/03/2021)
 $removeparam=width,domain=i-viaplay.com.akamaized.net
 $removeparam=height,domain=i-viaplay.com.akamaized.net
+! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
+$removeparam=cvid
+$removeparam=form,domain=bing.com
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-421689 (02/03/2021)
+$removeparam=c[0]
+$removeparam=rlz
+$removeparam=pcampaignid
+$removeparam=igshid
+$removeparam=curator_clanid
+$removeparam=ser
+$removeparam=snr
