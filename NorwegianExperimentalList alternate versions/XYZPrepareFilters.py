@@ -728,7 +728,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z*][=|])auth.discoveryplus\.\*\|~auth.discoveryplus.it\|~auth.discoveryplus.es", 
+           r"([a-z*][=|])auth.discoveryplus\.\*", 
            r"\1auth.discoveryplus.no|auth.discoveryplus.dk", 
            line
         )
@@ -1803,13 +1803,13 @@ def prepare_umatrix(lines) -> str:
         )
 
         line = re.sub(
-           r"discoveryplus\.\*\|~discoveryplus.it\|~discoveryplus.es", 
+           r"discoveryplus\.\*", 
            r"discoveryplus.no|discoveryplus.dk", 
            line
         )
 
         line = re.sub(
-           r"auth.discoveryplus\.\*\|~auth.discoveryplus.it\|~auth.discoveryplus.es", 
+           r"auth.discoveryplus\.\*", 
            r"auth.discoveryplus.no|auth.discoveryplus.dk", 
            line
         )
@@ -1958,7 +1958,7 @@ if __name__ == "__main__":
     import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/Swedish-List-for-Adblock-Plus/main/Swedish%20List%20for%20Adblock%20Plus.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app', ':not(:-abp-', '$csp=upgrade-insecure-requests', '$removeparam', 'badfilter']
@@ -2557,13 +2557,13 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z*][=|])discoveryplus\.\*\|~discoveryplus.it\|~discoveryplus.es", 
+           r"([a-z*][=|])discoveryplus\.\*", 
            r"\1discoveryplus.no|discoveryplus.dk", 
            line
         )
 
         line = re.sub(
-           r"([a-z*][=|])auth.discoveryplus\.\*\|~auth.discoveryplus.it\|~auth.discoveryplus.es", 
+           r"([a-z*][=|])auth.discoveryplus\.\*", 
            r"\1auth.discoveryplus.no|auth.discoveryplus.dk", 
            line
         )
