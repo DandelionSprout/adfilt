@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 04March2021v2
+! Version: 04March2021v3
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -71,7 +71,7 @@ dagbladet.no##.xrow.fullwidth
 dagens.dk##.col-sticky > div > p
 dagens.dk##.col-sticky > p
 dagens.dk##a[href*=".bedrageri.com/"]:upward(2)
-dailyrush.dk,karfan.is##.td-header-rec-wrap
+karfan.is##.td-header-rec-wrap
 detailersclub.no##.cWidgetContainer[data-widgetarea=footer]
 digi.no##.commercial
 digi.no##.native
@@ -224,6 +224,7 @@ spanienidag.es###topbanner:style(height: 1px !important)
 vaktin.is###banners
 vikubladid.is##.box_advert:not(.box_pdf)
 indblik.net##div[id^=adni_widgets-]
+xklub.dk###seealladv
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -611,6 +612,9 @@ _300x500pix$domain=rykindribe.dk,image
 ||indblik.net/wp-content/uploads/angwp^$image
 ||akamaihd.net^$media,domain=discoveryplus.*
 ||dnitv.com^$media,domain=discoveryplus.*
+||check-in.dk/wp-content/uploads/*_930x180.gif^
+||xklub.dk/bannercache^
+||xklub.dk/xsite/img/banner^
 !#if false
 @@||vgtv.no$ghide
 !#endif
@@ -781,8 +785,6 @@ dagensmedisin.no##.widget-article-ad.widget
 dagsavisen.no##.clickad-container > .row
 dagsavisen.no##.dagsavisenDesktopAd
 dagsavisen.no#?#style + .container > .row:has(> .col-sm-12 > .dagsavisenDesktopAd)
-dailyrush.dk##.dr-medium-rectangle
-dailyrush.dk##.dr-top-banner
 danishfamilysearch.dk##div[id^=ContentPlaceHolder1_div_annonce]
 daria.no##.container[style*=" solid "]
 daria.no##div[style*=";width:200px;"]
@@ -1264,6 +1266,9 @@ skagafm.dk##.frontbanner
 intrafish.*##.text-center.mb-3
 intrafish.no##.row > .d-lg-block
 spaniaidag.no##.footer > .wf-wrap
+autouncle.dk##body > div[style^="text-align: center;"]
+connery.dk##.ad
+feltet.dk##p[style^=" color:#bbb;"]
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$frame
 ||danishfamilysearch.dk/images/xp2^$image
@@ -1486,6 +1491,7 @@ tnt-tv.no,tnt-tv.dk##.tabs_placeholder
 yrkesbil.no#?#td:has-text(/^\xA0$/):not(:has-text(/\S/)):not(:has(img))
 yrkesbil.no#?#tr:has-text(/^\xA0$/):not(:has-text(/\S/)):not(:has(img))
 foodora.no##.top-skinny-banner-container
+check-in.dk#?#p:has-text(/^\xA0$/):not(:has-text(/\S/)):not(:has(img))
 !+ NOT_OPTIMIZED
 avvir.no###block-block-1 > p:nth-of-type(4)
 
@@ -1545,6 +1551,8 @@ eyjar.net#@#.side_ads
 @@/adnetwork/*$domain=fla.de
 @@://billink*.blob.core.windows.net/*/annonser^
 @@||finn.no/user/ads.html^$popup
+check-in.dk#@#.home-ads
+check-in.dk#@#.ads-top
 ! https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 @@||cdn.easy-ads.com/js/swipemod.js^$script,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no|h-avis.no
 @@||easy-ads.com/subscriber^$image,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no|h-avis.no
@@ -2155,7 +2163,7 @@ altaposten.no,andalsnes-avis.no,dolen.no,driva.no,fjordabladet.no,fjordingen.no,
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 27February2021v1-Extension
+! Last updated: 04March2021v1-Extension
 gratiskostplaner.dk##+js(aopw, KillAdBlock)
 csp.screen9.com#@#.adsbox
 dagensbyggeri.dk##+js(std, (), 2500)
@@ -2190,3 +2198,5 @@ gamereactor.*$$script[onError="adblockEnabled()"]
 minmote.no##.adblock-info
 ! aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
 ##div[style^="bottom: 0px;"][style*="width: 10"][style*="z-index: 2147"]
+! https://github.com/uBlockOrigin/uAssets/issues/8648
+connery.dk##+js(set, adblockerAlert, noopFunc)

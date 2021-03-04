@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 04March2021v2-Alpha
+# Version: 04March2021v3-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -321,6 +321,9 @@ msFilterList
 -d indblik.net angwp
 -d akamaihd.net
 -d dnitv.com
+-d check-in.dk *_930x180.gif
+-d xklub.dk bannercache
+-d xklub.dk banner
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -899,7 +902,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 27February2021v1-Extension
+# Last updated: 04March2021v1-Extension
 -d elderlyscissors.com
 +d sixscissors.com
 -d avxwcuaagfcdn.net
@@ -910,3 +913,4 @@ msFilterList
 -d googletagmanager.com gtm.js
 # To be submitted to "AdGuard Warning Removal List" as well
 # aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
+# https://github.com/uBlockOrigin/uAssets/issues/8648
