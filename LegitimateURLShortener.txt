@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 04March2021v1-Beta
+! Version: 04March2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Versions for Redirector and URLRedirector were planned in the near future as of November 2020, but are on hold after uBO added support for lowercase $removeparam entries.
@@ -286,3 +286,6 @@ $removeparam=ser
 $removeparam=snr
 ! https://www.bing.com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.com^$removeparam=sp
+||bing.com^$removeparam=sc
+||bing.com^$removeparam=sk
+||bing.com^$removeparam=qs
