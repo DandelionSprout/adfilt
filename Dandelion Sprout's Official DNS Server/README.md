@@ -1,3 +1,7 @@
+Update 5th of March 2021: The server is not live for use after all, due to heavy problems with "WAN Connection: ISP's DHCP did not function properly." on my ASUS router after a firmware update.
+
+—————————————————————————————————————————————————————
+
 After 1½ years of trial setups and tinkering until March 2021, I now offer my DNS server to be used by the public! That being said, there are a considerable number of drawbacks with it that means that it should ***NOT*** be used in setups where uptime, privacy, or impartiality is important. By using this server, you agree to at least having *read* and being aware of all the info written below.
 
 ### DNS IP addresses
