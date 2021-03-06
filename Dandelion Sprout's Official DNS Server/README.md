@@ -6,7 +6,7 @@ After 1½ years of trial setups and tinkering until March 2021, I now offer my D
 
 ### DNS IP addresses
 
-The main connection addresses are `https://dandelionsprout.asuscomm.com:2501` and `tls://dandelionsprout.asuscomm.com:853`.
+The main connection addresses are `https://dandelionsprout.asuscomm.com:2501/dns-query` and `tls://dandelionsprout.asuscomm.com:853`.
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are almost always available at https://www.ntppool.org/a/DandelionSprout.
 
