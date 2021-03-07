@@ -1,14 +1,10 @@
-Update 5th of March 2021: The server is not live for use after all, due to heavy problems with "WAN Connection: ISP's DHCP did not function properly." on my ASUS router after a firmware update.
-
-—————————————————————————————————————————————————————
-
 After 1½ years of trial setups and tinkering until March 2021, I now offer my DNS server to be used by the public! That being said, there are a considerable number of drawbacks with it that means that it should ***NOT*** be used in setups where uptime, privacy, or impartiality is important. By using this server, you agree to at least having *read* and being aware of all the info written below.
 
 ### DNS IP addresses
 
 The main connection addresses are `https://dandelionsprout.asuscomm.com:2501/dns-query` and `tls://dandelionsprout.asuscomm.com:853`.
 
-Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are almost always available at https://www.ntppool.org/a/DandelionSprout.
+Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
 The encrypted addresses may also go down during (pretty rare) Raspberry Pi restarts, or if ASUS' lookup servers for Asuscomm are acting funky.
 
@@ -16,13 +12,13 @@ The encrypted addresses may also go down during (pretty rare) Raspberry Pi resta
 
 The server attempts to block ads, malware, fake webshops, push notifications, and TV- and gaming-interface ads, with considerably better blocking of those than what AdGuard DNS offers. It also offers partial support for Wiimmfi online gaming, such as *Pokémon Pearl Version*, and *42 All-Time Classics*.
 
-On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Pokémon GO, Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
+On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Pokémon GO, Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 2nd of March 2021:
+Current list set as of 7th of March 2021:
 
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
 * Dandelion Sprout's AdGuard Home Compilation - Web Push Notifications — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt
-* Dandelion Sprouts Nordic Filters (for AdGuard Home) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt
+* Dandelion Sprout's Nordic Filters (for AdGuard Home) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt
 * 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt
 * Ad Domains Filter List — https://raw.githubusercontent.com/LanikSJ/ubo-filters/master/filters/combined-filters.txt
 * AdGuard DNS Filter - Extra Exclusions — https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exceptions.txt
@@ -58,6 +54,7 @@ Current list set as of 2nd of March 2021:
 * 🚸 Anti-'Anthro combat-equipment gacha waifu' List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiAnthroCombatWaifuList.txt
 * 🛀 Pokémon No-GO Zone — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Pok%C3%A9monNoGOZone.txt
 * 🏘 Semi-public stuff for Dandelion Sprout's Official DNS Server — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/a%20%E2%80%94%20AdGuard%20Home%20Miscellaneous.txt
+* 🤗 Anti-'Abuse porn' list — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiAbusePorn.txt
 
 ### Who can use the server
 
