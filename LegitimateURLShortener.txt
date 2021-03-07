@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 05March2021v3-Beta
+! Version: 07March2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -82,9 +82,6 @@ $removeparam=bih
 !#endif
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ||thunderbird.net^$removeparam=src
-! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
-||files.wordpress.com^$removeparam=w
-$removeparam=h,domain=files.wordpress.com|facebook.com|facebookcorewwwi.onion
 ! https://www.google.no/search?ei=rKq_X621OYCHwPAP5YCiuA0&q=penli.fi&oq=penli.fi&gs_lcp=CgZwc3ktYWIQAzIECAAQEzIGCAAQHhATMgYIABAeEBNQw2VYw2Vg-2ZoAHAAeACAAWGIAacBkgEBMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&uact=5 (26/11/2020)
 $removeparam=gs_lcp
 $removeparam=cshid
@@ -240,7 +237,7 @@ $removeparam=trk,domain=splashthat.com|aws.amazon.com
 $removeparam=es_id
 ! https://open.hpi.de/courses/malware2021?tracking_user=74v365zif700sQKXlqj020vyd&tracking_type=news&tracking_id=5ED4ZiWEw48Lft3MGkAag (28/02/2021)
 $removeparam=tracking_type
-$removeparam=tracking_id,domain=hpi.de
+||hpi.de^$removeparam=tracking_id
 $removeparam=tracking_user
 ! https://www.wired.com/story/how-to-solve-a-rubiks-cube-in-5-seconds-or-less/?bxid=5de6860acff06b68651dc0f7&cndid=59299325&esrc=&hasha=43963980a2110b889196f6ae90238cc6&hashb=e7bacab69176108b7edf6b15a2a80087a5eb1fb7&hashc=f0716ab5f4a5ef793da5e3f103cb64e3362c54aedb9630096cfd18f0244b9815&source=EDT_WIR_NEWSLETTER_0_ENGAGEMENT_ZZ (28/02/2021)
 $removeparam=bxid
@@ -254,7 +251,7 @@ $removeparam=tid
 $removeparam=clickid
 ! https://www.alibaba.com/toprankedsellers/index.html?spm=a2700.8293689.0.0.2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
 $removeparam=spm
-$removeparam=categoryIds,domain=alibaba.com
+||alibaba.com^$removeparam=categoryIds
 $removeparam=tracelog
 $removeparam=cardId
 ! https://metro.co.uk/2017/04/11/hubble-just-spotted-something-massive-coming-out-of-uranus-6567896/?ito=article.desktop.share.top.facebook
@@ -263,18 +260,15 @@ $removeparam=ito
 $removeparam=pvid
 $removeparam=_t
 ! https://es.aliexpress.com/item/4001349152860.html?gps-id=5547572&scm_id=1007.19201.130907.0&scm=1007.19201.130907.0&scm-url=1007.19201.130907.0
-$removeparam=gps-id,domain=aliexpress.*
+||aliexpress.$removeparam=gps-id
 $removeparam=scm_id
 $removeparam=scm
 $removeparam=scm-url
 ! https://heathercoxrichardson.substack.com/p/a-new-narrative/comments?token=eyJ1c2VyX2lkIjo4Nzk4NDQyLCJwb3N0X2lkIjoyMTAzMDA1MiwiXyI6ImtkSWlHIiwiaWF0IjoxNjA2NzgxODUxLCJleHAiOjE2MDY3ODU0NTEsImlzcyI6InB1Yi0yMDUzMyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.tTGn1X5uPyuv73zXQEp7JY1cserdlOVCNwshJONiHRw
-$removeparam=token,domain=substack.com
-! https://i-viaplay-com.akamaized.net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d.jpg?width=400&height=600 (02/03/2021)
-$removeparam=width,domain=i-viaplay.com.akamaized.net
-$removeparam=height,domain=i-viaplay.com.akamaized.net
+||substack.com^$removeparam=token
 ! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
 $removeparam=cvid
-$removeparam=form,domain=bing.com
+||bing.com^$removeparam=form
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-421689 (02/03/2021)
 $removeparam=c[0]
 $removeparam=rlz
@@ -296,3 +290,13 @@ $removeparam=referrer
 ! https://rugby.no/finn-din-lokale-klubb/ (05/03/2021)
 ||maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate^$removeparam=/.*/
 ||maps.googleapis.com/maps/api/js/QuotaService.RecordEvent^$removeparam=/.*/
+
+! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
+!#if !env_mobile
+! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
+||files.wordpress.com^$removeparam=w
+$removeparam=h,domain=files.wordpress.com|facebook.com|facebookcorewwwi.onion
+! https://i-viaplay-com.akamaized.net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d.jpg?width=400&height=600 (02/03/2021)
+||i-viaplay.com.akamaized.net^$removeparam=width
+||i-viaplay.com.akamaized.net^$removeparam=height
+!#endif
