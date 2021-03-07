@@ -75,6 +75,8 @@ Current upstreams as of 2nd of March 2021:
 * `tls://unicast.censurfridns.dk`
 * `[/1.168.192.in-addr.arpa/]192.168.1.1`
 
+The DNS server has one server-PC and location, in Norway. This (most likely) makes the server more suited for European users than for users elsewhere.
+
 This README is licenced under [the Dandelicence](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md).
 
 Contacting me about the server, should be done at https://github.com/DandelionSprout/adfilt/issues
