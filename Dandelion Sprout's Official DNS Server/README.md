@@ -64,6 +64,10 @@ Additionally, company networks from The Netherlands, Russia, Ukraine, and Romani
 
 Many companies known to look through the fingers with port-scanners and spammers, are also prohibited. Full list: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuardHomeDisallowedIPs.txt
 
+### Other technical aspects
+
+The server runs on a Raspberry Pi 4 4GB, with Raspberry Pi OS 32-bit.
+
 ### Privacy
 
 Since the server is based on AdGuard Home, the user's IP addresses and the domains they query, are stored on the server, and I reserve the right to browse through the queries if I feel bored for some reason.
