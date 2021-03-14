@@ -6,7 +6,7 @@ The main connection addresses are `https://dandelionsprout.asuscomm.com:2501/dns
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
-The encrypted addresses may also go down during (pretty rare) Raspberry Pi restarts, or if ASUS' lookup servers for Asuscomm are acting funky.
+The encrypted addresses may also go down during (pretty rare) Raspberry Pi restarts, or if ASUS' lookup servers for Asuscomm are acting wonky.
 
 ### What is being blocked
 
@@ -14,13 +14,14 @@ The server attempts to block ads, malware, fake webshops, push notifications, an
 
 On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Pokémon GO, Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 7th of March 2021:
+Current list set as of 14th of March 2021:
 
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
 * Dandelion Sprout's AdGuard Home Compilation - Web Push Notifications — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt
 * Dandelion Sprout's Nordic Filters (for AdGuard Home) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt
 * 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt
-* Ad Domains Filter List — https://raw.githubusercontent.com/LanikSJ/ubo-filters/master/filters/combined-filters.txt
+* Perflyst and Dandelion Sprout's Smart-TV Blocklist for AdGuard Home — https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt
+* Ad Domains Filter List — https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/combined-filters.txt
 * AdGuard DNS Filter - Extra Exclusions — https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exceptions.txt
 * AdGuard Home Gradual Syntax Inclusion Test List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sandbox/AGHSyntaxTester.txt
 * AdGuard Mobile Ads filter — https://filters.adtidy.org/extension/chromium/filters/11.txt
@@ -34,7 +35,6 @@ Current list set as of 7th of March 2021:
 * Magento - Burner Domains — https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt
 * noads.online anti scumware list — https://raw.githubusercontent.com/deletescape/noads/master/lists/fo-scumware.txt
 * Nolovia - Government Malware — https://raw.githubusercontent.com/parseword/nolovia/master/skel/hosts-government-malware.txt
-* Perflyst and Dandelion Sprout's Smart-TV Blocklist for AdGuard Home — https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt
 * RiiConnect24/Wiimmfi List for Users of AdGuard Home and Pi-Hole — https://raw.githubusercontent.com/RiiConnect24/DNS-Server/master/dns_zones-hosts.txt
 * Scam Blocklist by DurableNapkin — https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
 * Spam404 Domains — https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
@@ -66,13 +66,13 @@ Many companies known to look through the fingers with port-scanners and spammers
 
 ### Other technical aspects
 
-The server runs on a Raspberry Pi 4 4GB, with Raspberry Pi OS 32-bit.
+The server runs on a Raspberry Pi 4 4GB, with Raspberry Pi OS 32-bit. Several attempts at upgrading to a 64-bit distro have failed, including Raspberry Pi OS Beta (Couldn't handle backports), openSUSE (RaspPi version is broken), and Ubuntu MATE (Very bad optimising).
 
 ### Privacy
 
 Since the server is based on AdGuard Home, the user's IP addresses and the domains they query, are stored on the server, and I reserve the right to browse through the queries if I feel bored for some reason.
 
-Current upstreams as of 2nd of March 2021:
+Current upstreams as of 14th of March 2021:
 
 * `https://mozilla.cloudflare-dns.com/dns-query`
 * `https://dns.google/dns-query`
