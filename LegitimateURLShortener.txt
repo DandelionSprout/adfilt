@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 17March2021v2-Beta
+! Version: 17March2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Submit and discuss entries: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -312,6 +312,12 @@ $removeparam=/^zero_/,domain=facebook.com,facebookcorewwwi.onion,messenger.com
 ||facebook.com/ads^$removeparam=session_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-487427 (17/03/2021)
 ||tradera.com^$removeparam=transactionalEmail
+! https://graphicriver.net/item/invoice-estimation-brief/20668760?iradid=275988&irpid=1288974&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1 (17/03/2021)
+$removeparam=iradid
+$removeparam=irpid
+$removeparam=iradtype
+$removeparam=irmptype
+$removeparam=mp_value1
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
