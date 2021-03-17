@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 17March2021v1-Beta
+! Version: 17March2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Submit and discuss entries: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -58,10 +58,7 @@ $removeparam=WebSiteMapNodeID
 $removeparam=tt_content
 $removeparam=tt_medium
 ! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/157
-$removeparam=eid,domain=facebook.com|facebookcorewwwi.onion
-$removeparam=__xts__[0]
-$removeparam=fref
-$removeparam=__tn__
+$removeparam=eid,domain=facebook.com|facebookcorewwwi.onion,messenger.com
 $removeparam=hc_ref
 $removeparam=hc_location
 ! https://www.amazon.co.uk/Bos-Magical-New-Friend-Scholastic/dp/1338323326/ref=pd_sbs_14_1/262-3877129-1714269?_encoding=UTF8&pd_rd_i=1338323326&pd_rd_r=da2a232b-99a2-4202-ade0-6b52bb20749b&pd_rd_w=cXLbd&pd_rd_wg=46K05&pf_rd_p=2773aa8e-42c5-4dbe-bda8-5cdf226aa078&pf_rd_r=1HVF5BQG27VGX33FG5J6&psc=1&refRID=1HVF5BQG27VGX33FG5J6
@@ -300,6 +297,21 @@ $removeparam=referrer
 $removeparam=ext_source
 ! https://www.google.no/imghp?hl=no&ogbl (13/03/2021)
 $removeparam=ogbl
+! https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/filterlist/other/SurvivedTrackingLinkWarning.txt (Considered by me to be transformative work)
+?*__$removeparam=/^__[a-z]/,domain=facebook.com,facebookcorewwwi.onion,messenger.com
+$removeparam=acontext
+$removeparam=dti
+$removeparam=/^fb_dtsg/
+$removeparam=fref
+$removeparam=/^hc_/,domain=facebook.com,facebookcorewwwi.onion,messenger.com
+$removeparam=lst,domain=facebook.com,facebookcorewwwi.onion,messenger.com
+$removeparam=/^pn_/,domain=facebook.com,facebookcorewwwi.onion,messenger.com
+$removeparam=privacy_mutation_token
+$removeparam=settings_tracking
+$removeparam=/^zero_/,domain=facebook.com,facebookcorewwwi.onion,messenger.com
+||facebook.com/ads^$removeparam=session_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-487427 (17/03/2021)
+||tradera.com^$removeparam=transactionalEmail
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
