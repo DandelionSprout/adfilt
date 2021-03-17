@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 13March2021v1-Beta
+! Version: 17March2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Submit and discuss entries: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -20,7 +20,10 @@ $removeparam=action_ref_map
 ! https://www.ikea.com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
 ! https://www.infoq.com/containers/?itm_source=infoq&itm_medium=header_graybar&itm_campaign=topic_clk (28/02/2021)
 ! https://app.sheetgo.com/workflows/1606149317012600L5SS/connections?stm_source=sheetgo-webapp-workflow-invite&stm_medium=email&stm_campaign=on-demand-invitation (28/02/2021)
-$removeparam=/[a-z]tm_.*/,domain=~redir.tradedoubler.com
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488307
+$removeparam=/^utm_/,domain=~redir.tradedoubler.com
+$removeparam=/^itm_/,domain=~redir.tradedoubler.com
+$removeparam=/^stm_/,domain=~redir.tradedoubler.com
 ! https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1 (31/10/2020)
 $removeparam=_trkparms
 $removeparam=_trksid
@@ -45,7 +48,7 @@ $removeparam=dclid
 ! https://www.apple.com/no/shop/product/MD463ZM/A/thunderbolt-til-gigabit-ethernet-adapter?afid=p239%7C1405819&cid=aos-no-aff-ir (15/11/2020)
 ! https://www.proshop.dk/HyperX-Predator-RGB-ram?cid=64e93f7a-cee2-44d9-911a-37f3eafd7b5f (23/01/2021)
 $removeparam=afid
-! Can NOT be made generic (e.g. due to sparebank1.no)
+! Can NOT be made generic (e.g. due to sparebank1.no, RARbg.to)
 $removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.no|proshop.dk|disneyplus.com
 ! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
 $removeparam=WebSiteMapNodeID
@@ -91,7 +94,8 @@ $removeparam=cshid
 ||tv2.no^$removeparam=referral
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
-$removeparam=ref
+! Can NOT be made generic (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
+$removeparam=ref,domain=amazon.*|deal.no
 ! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
 $removeparam=dchild
 $removeparam=qid
