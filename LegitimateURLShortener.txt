@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21March2021v1-Beta
+! Version: 23March2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Submit and discuss entries: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -321,12 +321,14 @@ $removeparam=mp_value1
 ! https://no.pinterest.com/pin/371476669268114259/?d=t&mt=signupOrPersonalizedLogin (21/03/2021)
 ||pinterest.*mt=signup$removeparam=d
 ||pinterest.*mt=signup$removeparam=mt
+! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
+||open.spotify.com^$removeparam=si
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
-||files.wordpress.com^$removeparam=w
-$removeparam=h,domain=files.wordpress.com|facebook.com|facebookcorewwwi.onion
+$removeparam=w,domain=files.wordpress.com|store.playstation.com
+$removeparam=h,domain=files.wordpress.com|facebook.com|facebookcorewwwi.onion|store.playstation.com
 ! https://i-viaplay-com.akamaized.net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d.jpg?width=400&height=600 (02/03/2021)
 ||i-viaplay.com.akamaized.net^$removeparam=width
 ||i-viaplay.com.akamaized.net^$removeparam=height
