@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 24March2021v1-Beta
+! Version: 24March2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Submit and discuss entries: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -323,6 +323,14 @@ $removeparam=mp_value1
 ||pinterest.*mt=signup$removeparam=mt
 ! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
 ||open.spotify.com^$removeparam=si
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
+||wsj.com/*mod=trending$removeparam=mod
+$removeparam=surface,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=fellback,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=req_id,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=algo
+$removeparam=variant,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=imp_id
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
