@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 24March2021v2-Alpha
+# Version: 24March2021v3-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -289,7 +289,6 @@ msFilterList
 -d ytresogn.no *-nett.jpg
 -d ytresogn.no *-1.jpg
 -d ytresogn.no *-copy.jpg
--d ytresogn.no hoybil-1.jpg
 -d ytresogn.no Fureli-nett-mobil.jpg
 -d ytresogn.no 128829765_1713260288837784_946999945581640675_n.jpg
 -d ytresogn.no Ytre_718_360_2.jpg
