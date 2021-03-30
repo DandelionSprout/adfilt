@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30March2021v4-Beta
+! Version: 30March2021v5-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Submit and discuss entries: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -75,11 +75,10 @@ $removeparam=cp_ksver
 ! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
 $removeparam=biw
 $removeparam=bih
-!#if !env_mobile
-! All of these seem to break imagesearch redirection links on Fennic 68.12
-! ||google.$removeparam=sa (Breaks image search redirection links on multiple platforms)
+!#if env_chromium
 ||google.$removeparam=ved
 @@||google.com/url?$removeparam=ved
+$removeparam=usg,domain=~translate.googleusercontent.com|~translate.google.*
 !#endif
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ||thunderbird.net^$removeparam=src
@@ -201,7 +200,6 @@ $removeparam=_ga
 ! https://www.google.no/search?newwindow=1&source=univ&tbm=isch&q=fursuit&hl=no&fir=nwjEObe4q69GJM%2(…abridged by Dandelion…)3ezNNzM%252C_&usg=AI4_-kQL51ABubPt5Njl2wYsc9VKumls8Q&sa=X (23/01/2021)
 !+ NOT_OPTIMIZED
 $removeparam=fir
-$removeparam=usg,domain=~translate.googleusercontent.com|~translate.google.*
 ||google.*/search$removeparam=source
 ! https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=https%3A%2F%2Fwww.nytimes.com%2F2021%2F01%2F21%2Fopinion%2Fpublic-transit-funding.html%3Faction%3Dclick%26module%3DWell%26pgtype%3DHomepage%26section%3DEditorials (24/01/2021)
 $removeparam=action,domain=nytimes.com|nytimes3xbfgragh.onion
