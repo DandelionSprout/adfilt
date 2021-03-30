@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 30March2021v2-Alpha
+# Version: 31March2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -783,6 +783,8 @@ msFilterList
 -d m-dnbnorge.com
 # https://www.adressa.no/pluss/nyheter/2021/03/20/Politiet-advarer-Dette-er-ikke-et-jobbintervju.-Det-er-et-svindelfors%C3%B8k-23687158.ece/(21 03 2021)
 -d job-view.link
+# https://www.adressa.no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece
+-d nordeninterior.weebly.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
