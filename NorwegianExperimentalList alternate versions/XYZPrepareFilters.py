@@ -5356,6 +5356,12 @@ def prepare_domains(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*removeparam.*", 
+           r"", 
+           line
+        )
+
         if is_supported_domains(line) and not line == '':
             text += line + '\r\n'
 
@@ -5434,6 +5440,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"\^\^", 
            r"^", 
+           line
+        )
+
+        line = re.sub(
+           r".*removeparam.*", 
+           r"", 
            line
         )
 
