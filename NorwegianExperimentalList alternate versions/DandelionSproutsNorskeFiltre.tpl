@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 31March2021v6-Alpha
+# Version: 01April2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -65,7 +65,6 @@ msFilterList
 -d ad.shareholders.dk
 -d adext.inkclub.com
 -d adnordics.com
--d adr.kulingen.no
 -d adserver.xh.no
 -d adservice.com
 -d adservicemedia.dk
@@ -74,7 +73,6 @@ msFilterList
 -d bilborsen.webannonse.no
 -d boligkanalen-maestro-new.azurewebsites.net
 -d brandstudio.inventory.schibsted.io
--d btrbnrs.link
 -d cluster.chart.dk
 -d delivered-by-madington.com
 -d dotbanner.dk
@@ -133,8 +131,6 @@ msFilterList
 - byteads
 # adressa.no (02 12 2020)
 - polarnexus.js
-# lokalavisen.dk (05 12 2020)
--d tcnworkaround.dk
 # reavisa.no (06 12 2020)
 - _nettbanner_
 - _visittkortannonse_
@@ -582,15 +578,12 @@ msFilterList
 +d bondebladet.screen9.tv
 +d eurosport.no
 +d eurosport.dk
-+d bildeler.name
-+d reservedele.name
 # 🇳🇴: Fjerner overflødige deler av URL-er for å gjøre dem kortere og lettere å dele
 # 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
 # Infrequently synced with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
 # 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
--d panel.cint.com
 -d boost-cdn.manatee.dk mboost
 # https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # jyllands-posten.dk (09 07 2020)
@@ -612,7 +605,6 @@ msFilterList
 - pakkerlevering
 -d 102.112.2o7.net
 -d tromselementbygg.no
--d apple-account-locked.losjevegen.no
 -d arvetellefsen.no curry
 -d vipps-sikkerhet.
 - dnb11111
@@ -645,19 +637,11 @@ msFilterList
 # https://www.tv2.no/nyheter/10493336/
 -d rnbinance.com
 -d brightertrade.com
-# https://www.nrk.no/ytring/1.14496024
--d cost2buy.net
 # https://www.nrk.no/norge/1.14511067
 # https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
 -d ruter.top
-# https://www.faktisk.no/faktasjekker/YAb/nei-olav-thon-har-ikke-investert-850-millioner-kroner-i-bitcoin-program
--d gokkw.com
 -d earnmoneyglobal.com
-# https://www.datahjelperne.no/stein-erik-hagen-og-fredrik-skavlan-misbrukes-i-bitcoin-svindel/
--d trendyn.me
 # https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
-# https://www.datahjelperne.no/falske-telenor-undersokelser/
--d surveryrewards1.com
 # https://www.nrk.no/mr/1.14649436
 -d pprfct.com
 # https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
@@ -683,8 +667,6 @@ msFilterList
 -d myk-news.com
 # https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
-# https://www.mm.dk/tjekdet/artikel/han-afviser-at-have-investeret-500-mio-i-bitcoin-platform-graensende-til-humor
--d bestphoneapplication.com
 # https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
 -d vision-hey.club
 # https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
@@ -698,22 +680,13 @@ msFilterList
 # https://nyheder.tv2.dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
 -d rigspolitiet.com
 -d nemid.org
-# https://www.tv2.no/nyheter/11203952/
--d topgadgetboom.com
 # https://www.faktisk.no/faktasjekker/vw8/erik-gikk-fra-arbeidsledig-til-millionaer-pa-8-uker
 -d ocgadgets.com
 -d ocgadgetss.myshopify.com
-# https://www.mm.dk/tjekdet/artikel/nej-mads-mikkelsen-har-stadig-ikke-skraemt-de-store-banker-med-bitcoins
--d onelifetechno.com
-# https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
--d rbppg.net
 # https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
 -d ekstrabiadet.
-# https://www.mm.dk/tjekdet/artikel/folkekaer-fodboldhelt-ked-af-at-blive-misbrugt-af-svindlere
--d kronoscm.com
 # https://www.mm.dk/tjekdet/artikel/nej-joergen-leth-har-ikke-investeret-500-millioner-kroner-i-bitcoins
 -d daily-news.tech
--d limevow.com
 # https://www.faktisk.no/notiser/ywM/se-opp-for-bitcoin-svindlere
 -d travelersloch.com
 # https://www.tv2.no/nyheter/11516670/
@@ -721,8 +694,6 @@ msFilterList
 -d wealthnews*.xyz
 # https://sol.no/nyheter/pass-deg-for-solbrillesvindlere/72639445
 -d rbono.net
-# https://www.tv2.no/underholdning/11604989/
--d roopede.com
 # https://www.datahjelperne.no/dnb-sms-svindel/
 -d no-personal.com
 # https://www.datahjelperne.no/helse-norge-mail-svindel/
@@ -823,7 +794,6 @@ msFilterList
 -d easyliving4you.com
 -d eurosko.net
 -d fatalfailblog.com
--d festmusikk.com
 -d fotballsko-salg.com
 -d godeskonettbutikk.com
 -d gsport.com
@@ -831,14 +801,12 @@ msFilterList
 -d hollisternorge.com
 -d jakkesalgs.com
 -d jakkesnorge.com
--d legarralazcoz.com
 -d lindseysopticians.com
 -d linkshe.com
 -d lrgst.com
 -d manasporthorse.com
 -d mbtnorge.com
 -d meladermfacts.com
--d mncprobuild.com
 -d moebel-thiems.com
 -d moteshoes.com
 -d museuw.com
@@ -846,7 +814,6 @@ msFilterList
 -d nikebutikks.com
 -d norfotball.com
 -d norgefotball.com
--d norge.parkaoutdoor.com
 -d norgejakke.com
 -d norgejakkerbutikk.com
 -d norgeshoes.com
@@ -859,9 +826,7 @@ msFilterList
 -d popeurope.com
 -d skonmdnorge.com
 -d xn--sykkeltrye-7cb.com
--d tobiascelebritymusicevents.com
 -d um-bs.com
--d vansnorge.com
 # 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
