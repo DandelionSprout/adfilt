@@ -64,6 +64,7 @@
 * `! Title:` Specifies the intended name of the list. Required to make the name automatically show up in the settings of most adblockers, instead of the URL or of manual text input.
 * `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
 * `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days". ABP also supports "hour/hours".
+* `! Homepage:` In uBlock Origin, it determines the link that the list's 🏠 (house) button in uBO's settings leads to. Often also used in other adblockers for informational purposes.
 
 ## uBlock Origin and AdGuard only:
 #### Hiding
