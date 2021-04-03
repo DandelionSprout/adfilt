@@ -14,7 +14,7 @@ The server attempts to block ads, malware, fake webshops, push notifications, an
 
 On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Pokémon GO, Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 14th of March 2021:
+Current list set as of 4th of April 2021:
 
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
 * Dandelion Sprout's AdGuard Home Compilation - Web Push Notifications — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt
@@ -36,7 +36,7 @@ Current list set as of 14th of March 2021:
 * Scam Blocklist by DurableNapkin — https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
 * Spam404 Domains — https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
 * Steam Scam Site — https://raw.githubusercontent.com/PoorPocketsMcNewHold/steamscamsites/master/steamscamsite.txt
-* Supplemental uBO filter by Sportsfan — https://raw.githubusercontent.com/VernonStow/Filterlist/master/Filterlist.txt
+* Grayware Blocklist — https://raw.githubusercontent.com/VernonStow/Filterlist/master/Filterlist.txt
 * Windscribe Clickbait — https://assets.windscribe.com/custom_blocklists/clickbait.txt
 * ☔ Anti-'Steven Universe' List (Domains version) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Other%20domains%20versions/AntiStevenUniverseListDomains.txt
 * 🆗 IDN Homograph Attack Protection - Does Not Block Non-Latin TLDs — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Special%20security%20lists/IDNHomographProtection-USLatinTLDsOnly.txt
