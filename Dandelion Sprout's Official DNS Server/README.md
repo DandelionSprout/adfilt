@@ -39,7 +39,6 @@ Current list set as of 4th of April 2021:
 * Grayware Blocklist — https://raw.githubusercontent.com/VernonStow/Filterlist/master/Filterlist.txt
 * Windscribe Clickbait — https://assets.windscribe.com/custom_blocklists/clickbait.txt
 * ☔ Anti-'Steven Universe' List (Domains version) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Other%20domains%20versions/AntiStevenUniverseListDomains.txt
-* 🆗 IDN Homograph Attack Protection - Does Not Block Non-Latin TLDs — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Special%20security%20lists/IDNHomographProtection-USLatinTLDsOnly.txt
 * 🍚 Extremely Condensed Adblocking List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ExtremelyCondensedList.txt
 * 🎮 Game Console Adblock List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
 * 🏗 Remover for Mainstream Tabloid and Alt-Right Sites — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/TabloidRemover.txt
