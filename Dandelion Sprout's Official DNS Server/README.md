@@ -25,7 +25,6 @@ Current list set as of 14th of March 2021:
 * AdGuard DNS Filter - Extra Exclusions — https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exceptions.txt
 * AdGuard Home Gradual Syntax Inclusion Test List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sandbox/AGHSyntaxTester.txt
 * AdGuard Mobile Ads filter — https://filters.adtidy.org/extension/chromium/filters/11.txt
-* Adware Filter Block — https://raw.githubusercontent.com/kano1/I/master/adware_Scrip.txt
 * CB Malicious Domains — https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/adblock_plus.txt
 * Confirmed Phishing Domains — https://raw.githubusercontent.com/MrThreat/Confirmed-Phish/master/phish.txt
 * DodgySiteBlocker — https://raw.githubusercontent.com/callmenemo491/DodgySiteBlocker/master/DodgySiteBlocker.txt
