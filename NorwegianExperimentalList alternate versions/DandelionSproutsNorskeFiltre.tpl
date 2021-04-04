@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 02April2021v1-Alpha
+# Version: 04April2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -473,6 +473,7 @@ msFilterList
 # https://www.tronderdebatt.no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453/(20/03/2021)
 # https://viralefilmer.no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25 03 2021)
 # https://www.terrengsykkelforumet.no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021)
+# nettavisen.no (04 04 2021)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
