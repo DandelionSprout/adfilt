@@ -28,3 +28,7 @@
 ### Google Play Store
 #### Media franchises (Covers both "Apps" and "Movies") (21/02/2021)
 * `play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > div[class*=" "]:-abp-contains( )`
+
+### Tumblr (06/04/2021)
+* Profile timelines: `.post`
+* Tag result pages: `div[tabindex]`
