@@ -35,4 +35,4 @@
 
 ### ArtStation (14/04/2021)
 * Search results: `.gallery-grid-item`
-* Artist art archive: `.project-image`
+* Artist art archive: `.project`
