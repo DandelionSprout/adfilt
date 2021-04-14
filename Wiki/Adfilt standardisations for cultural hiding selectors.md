@@ -32,3 +32,7 @@
 ### Tumblr (06/04/2021)
 * Profile timelines: `.post`
 * Tag result pages: `div[tabindex]`
+
+### ArtStation (14/04/2021)
+* Search results: `.gallery-grid-item`
+* Artist art archive: `.project-image`
