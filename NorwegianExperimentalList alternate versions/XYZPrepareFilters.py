@@ -124,6 +124,12 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
+           r"!#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries\.txt", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"##\^script:has-text\((.*)\)", 
            r"$$script[\1]", 
            line
