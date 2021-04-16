@@ -2,7 +2,10 @@ After 1½ years of trial setups and tinkering until March 2021, I now offer my D
 
 ### DNS IP addresses
 
-The main connection addresses are `https://dandelionsprout.asuscomm.com:2501/dns-query` and `tls://dandelionsprout.asuscomm.com:853`.
+The main connection addresses are:
+* DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
+* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853`
+* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:853`
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
@@ -56,7 +59,7 @@ Current list set as of 4th of April 2021:
 
 Users from PR-China will not have their queries processed by the server, due to considerable amounts of query spam from that country, some of which even came from residential networks.
 
-Additionally, company networks from The Netherlands, Russia, Ukraine, and Romania will usually be prohibited as well. Residential networks from those countries are fine.
+Additionally, company networks from The Netherlands, Romania, Russia and Ukraine will usually be prohibited as well. Residential networks from those countries are fine.
 
 Many companies known to look through the fingers with port-scanners and spammers, are also prohibited. Full list: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuardHomeDisallowedIPs.txt
 
@@ -68,12 +71,11 @@ The server runs on a Raspberry Pi 4 4GB, with Raspberry Pi OS 32-bit. Several at
 
 Since the server is based on AdGuard Home, the user's IP addresses and the domains they query, are stored on the server, and I reserve the right to browse through the queries if I feel bored for some reason.
 
-Current upstreams as of 14th of March 2021:
+Current non-LAN upstreams as of 16th of April 2021:
 
 * `https://mozilla.cloudflare-dns.com/dns-query`
 * `https://dns.google/dns-query`
 * `tls://unicast.censurfridns.dk`
-* `[/1.168.192.in-addr.arpa/]192.168.1.1`
 
 The DNS server has one server-PC and location, in Norway. This (most likely) makes the server more suited for European users than for users elsewhere.
 
