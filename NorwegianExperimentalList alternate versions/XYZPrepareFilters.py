@@ -118,7 +118,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"!#include !#include NorwegianExperimentalList%20alternate%20versions/NordicFilters-FirefoxAndroidUBOWorkaround\.txt", 
+           r"!#include NorwegianExperimentalList%20alternate%20versions/NordicFilters-FirefoxAndroidUBOWorkaround\.txt", 
            r"", 
            line
         )
