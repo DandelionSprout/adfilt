@@ -52,12 +52,6 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.4\]", 
-           "[AdGuard ≥7.2]", 
-           line
-        )
-
-        line = re.sub(
            r"! Redirect:.*", 
            "", 
            line
@@ -124,7 +118,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"!#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries\.txt", 
+           r"!#include !#include NorwegianExperimentalList%20alternate%20versions/NordicFilters-FirefoxAndroidUBOWorkaround\.txt", 
            r"", 
            line
         )
@@ -429,7 +423,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"(! Title: 🏔️ Dandelion Sprout.*)", 
-           r"[Adblock Plus 3.4]\n\1", 
+           r"[Adblock Plus 3.6]\n\1", 
            line
         )
 
@@ -3759,7 +3753,7 @@ UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com', 'gamecopyworld']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com', 'gamecopyworld', ':  ']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^', 'gamecopyworld', '://']
-UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.4]', '*', '/^', '://']
+UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.', '*', '/^', '://']
 UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
     '##', '.*#' , '#?#', 'gamecopyworld']
 
@@ -3799,8 +3793,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.4\]", 
-           "[AdGuard versions from ≥2019]", 
+           r"\[Adblock Plus 3\..*", 
+           r"[AdGuard versions from ≥2019]", 
            line
         )
 
@@ -4508,8 +4502,8 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           "\[Adblock Plus 3.4\]", 
-           "{+block}", 
+           r"^\[Adblock Plus 3\..*", 
+           r"{+block}", 
            line
         )
 
