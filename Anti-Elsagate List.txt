@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: ☣️ Anti-Elsagate List
-! Version: 24March2021v1
+! Version: 17April2021v1
 ! Expires: 3 days
 ! Description: This list aims to remove particularly disturbing content on YouTube, Vimeo, DailyMotion, Internet Archive, and Rumble that targets young children, as well as nursery rhymes, "Finger Family", "Wrong Heads", and other things that are hotbeds for extremely unproductive videos. Also supports YouTube on mobile browsers (but sadly not the apps).
 ! Motivation: I do not think of this as protecting children. I see this as protecting all of mankind. No humans, old or young, should need to be subjected to Elsagate-style material.
@@ -8,6 +8,7 @@
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
 ! —— YouTube on desktop browsers, including "Disable Polymer" mode and TV mode ——
+!#if !adguard
 www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Nursery)
 www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Finger Family/i)
 www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Family Finger/i)
@@ -64,6 +65,7 @@ www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-til
 www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Learn Colors)
 www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
 www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(SONIC):-abp-contains(BABY)
+!#endif
 
 ! —— YouTube on mobile browsers ——
 m.youtube.com#?#.compact-media-item:-abp-contains(Nursery)
@@ -124,6 +126,7 @@ m.youtube.com#?#.compact-media-item:-abp-contains(/PAW Patrol/i):-abp-contains(/
 m.youtube.com#?#.compact-media-item:-abp-contains(SONIC):-abp-contains(BABY)
 
 ! YouTube in "Kids" mode
+!#if !adguard
 youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Nursery)
 youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Finger Family/i)
 youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Family Finger/i)
@@ -180,6 +183,7 @@ youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#r
 youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Learn Colors)
 youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
 youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(SONIC):-abp-contains(BABY)
+!#endif
 
 ! —— Prevents autoplay on YouTube ——
 /watch_autoplayrenderer.js$script,domain=youtube.com
@@ -243,6 +247,7 @@ dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/PAW Patrol/i):-abp-cont
 dailymotion.com#?#[class*=__videoCard___]:-abp-contains(SONIC):-abp-contains(BABY)
 
 ! —— Vimeo on browsers ——
+!#if !adguard
 vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Nursery)
 vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Finger Family/i)
 vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Family Finger/i)
@@ -299,6 +304,7 @@ vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-a
 vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Learn Colors)
 vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
 vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(SONIC):-abp-contains(BABY)
+!#endif
 
 ! —— Prevents curious children from inadvertently downloading the Vimeo app, which'd bypass this list ——
 vimeo.com#?#.js-app_banner.app_banner
@@ -534,6 +540,7 @@ hooktube.com#?#.mb-2.row:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
 hooktube.com#?#.mb-2.row:-abp-contains(SONIC):-abp-contains(BABY)
 
 ! —— Invidio.us ——
+!#if !adguard
 invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Nursery)
 invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Finger Family/i)
 invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Family Finger/i)
@@ -590,6 +597,7 @@ invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect
 invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Learn Colors)
 invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
 invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(SONIC):-abp-contains(BABY)
+!#endif
 
 ! Adobe Flash and HTML5 "game" "sites"
 ||mygames4girls.com^$document
