@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 16April2021v1-Alpha
+# Version: 17April2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -60,6 +60,7 @@ msFilterList
 - annonsar
 - annonse_
 - auglysing
+- auglysingar
 - vefauglysingar
 -d ad.no.doubleclick.net
 -d ad.primetime.net
@@ -138,6 +139,7 @@ msFilterList
 - -visittkortannonse-
 # ytresogn.no (16 12 2020)
 - hnuannonse
+# heilsutorg.is (17 04 2021)
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -188,7 +190,6 @@ msFilterList
 -d oyggjatidindi.com *L%C3%BDsing
 -d rett24.no inline
 -d saernieh.no j%C3%B8rn-jensen.jpg
--d siglo.is strevda
 -d storfjordnytt.no *.jpg
 -d storfjordnytt.no 26_hh.png
 -d storfjordnytt.no *_bilsenter.jpg

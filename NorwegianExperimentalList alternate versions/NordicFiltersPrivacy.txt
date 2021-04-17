@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 16April2021v1
+! Version: 17April2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -36,7 +36,6 @@ alvdalmiv.no,tynsetingen.no##.widget-1.columns-5
 alvdalmiv.no,tynsetingen.no##.widgetFullWidth.columns-5
 amino.dk###Abox.AminoBox
 arendalstidende.no#?#.wpb_wrapper:-abp-contains(/^Annonse:/)
-arendalstidende.no,sorlandsavisen.no##.g-single
 austurfrett.is##.banneritem
 backpacker.no##.ad_box_middle
 bb.is##.wpb_content_element
@@ -238,10 +237,18 @@ xn--bodposten-n8a.no,ranaposten.no##a[href$="/vpn-til-mac/"]
 viralefilmer.no#?#.td_module_wrap:-abp-has(a[href*=casino])
 viralefilmer.no#?#.td_module_wrap:-abp-has(a[href*=automat])
 viralefilmer.no##.td_mod_wrap
+lindaben.is##.h-banner
+heilsutorg.is##.strevda
+audlindin.is##.g-dyn
+audlindin.is##.owl-stage-outer
+veitingageirinn.is#?#.mvp-widget-home:-abp-contains(/^Velunnarar/)
+veitingageirinn.is#?#.mvp-flex-ad:-abp-has(img[width="300"])
+veitingageirinn.is###mvp-leader-wrap
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
 vg.no,e24.no,gamer.no,tek.no,digi.no##+js(aopw, __AB__)
+arendalstidende.no,sorlandsavisen.no,audlindin.is,eirikurjonsson.is##.g-single
 building-supply.dk,licitationen.dk,jernindustri.dk##.grid-article-sponsored
 gamer.no,tek.no,digi.no##.products-carousel
 veier24.no,tu.no,digi.no##.top-poster-wrap
@@ -326,6 +333,7 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 /annonsar/*
 /annonse_$image
 /auglysing/*
+/auglysingar/*
 /vefauglysingar/*
 ||ad.*.no^$domain=~ad.dep.no|~ad.hem.no
 ||ad1.*.dk^
@@ -421,6 +429,8 @@ _visittkortannonse_$image
 -visittkortannonse-$image
 ! ytresogn.no (16/12/2020)
 /hnuannonse^
+! heilsutorg.is (17/04/2021)
+.is/static/strevda/$image
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -478,7 +488,6 @@ contentMarketing$xhr,domain=sol.no
 ||oyggjatidindi.com/vev_banners/*L%C3%BDsing$image
 ||rett24.no*/_/attachment/inline/$image
 ||saernieh.no/wp-content/uploads/2020/03/j%C3%B8rn-jensen.jpg$image
-||siglo.is/static/strevda/$image
 @@||siglo.is/static/strevda/*upphafssida$image
 ||storfjordnytt.no/wp-content/uploads/*.jpg^$image
 ||storfjordnytt.no/wp-content/uploads/*/26_hh.png^
@@ -1287,6 +1296,7 @@ crazygames.no##div[class*=" jss312 "]
 crazygames.no##.jss270
 bt.no###topstripes
 bt.no##[data-variants*=article_netboard]:upward(1)
+audlindin.is##.main-post
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$frame
 ||danishfamilysearch.dk/images/xp2^$image
