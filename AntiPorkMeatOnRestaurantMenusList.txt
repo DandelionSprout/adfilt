@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: 🛶 Anti-'Pork meat on restaurant menus' List
-! Version: 25March2021v3-Alpha
+! Version: 17April2021v1-Alpha
 ! Expires: 7 days
 ! Description: Do you feel that bacon and pork tastes really icky and sourly greasy, yet half of all things you'll find in restaurants have pork in them, and there's 30 different terms for pork to keep track of to avoid unpleasant surprises? If so, then this list has saved your taste buds and stomach.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -66,6 +66,7 @@ futureordering.com,bestill.egon.no#?#li[id^=product]:-abp-contains(/Korv/i)
 futureordering.com,bestill.egon.no#?#li[id^=product]:-abp-contains(/Sparerib/i)
 futureordering.com,bestill.egon.no#?#li[id^=product]:-abp-contains(/Svin/i)
 ! https://pizzabakeren.no/lunsj-tilbud
+!#if !adguard
 pizzabakeren.no,pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com#?#.prod_item,.pizza_item:-abp-contains(/pepperoni/i)
 pizzabakeren.no,pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com#?#.prod_item,.pizza_item:-abp-contains(/bacon/i)
 pizzabakeren.no,pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com#?#.prod_item,.pizza_item:-abp-contains(/chorizo/i)
@@ -73,6 +74,7 @@ pizzabakeren.no,pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com#?#.prod_item,.piz
 pizzabakeren.no#?#.prod_item,.pizza_item:-abp-contains(/svin/i)
 pizzabakeren.no#?#.prod_item,.pizza_item:-abp-contains(/skinke/i)
 pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com#?#.prod_item,.pizza_item:-abp-contains(/ham[, ]/i)
+!#endif
 ! https://www.ikea.com/no/no/stores/restaurant/#f1b2a02b-5bd1-11eb-8f61-53ccc1e0abc9
 ikea.com#?#html:not([lang*=it]) div[data-pub-type] > div[class*=" "] > div[class]:not([class=" "]) > div[class*=" "]:-abp-contains(/pepperoni/i)
 ikea.com#?#div[data-pub-type] > div[class*=" "] > div[class]:not([class=" "]) > div[class*=" "]:-abp-contains(/hot dog/i)
@@ -116,6 +118,7 @@ jackinthebox.com#?#.menu-item:-abp-has(a[href*=chick-n-tater])
 
 ! ——— 🇳🇴🇸🇪🇩🇰 Scandinavia (multi-country) - Skandinavia (Flernasjons) ———
 ! https://egon.no/menyen
+!#if !adguard
 egon.*#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/(^| |a)skink/i)
 egon.*#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/bacon/i)
 egon.*#?#.menu-item-wrap,.recommendedItems-container:-abp-contains(/pepperoni/i)
@@ -140,6 +143,7 @@ foodora.no#?#.dish-card,.product-topping-item:-abp-contains(/pølse/i)
 foodora.no#?#.dish-card,.product-topping-item:-abp-contains(/skinke/i)
 foodora.no#?#.dish-card,.product-topping-item:-abp-contains(/svin/i)
 foodora.se#?#.dish-card,.product-topping-item:-abp-contains(/korv/i)
+!#endif
 ! https://pinchonation.no/menu?id=no-oslo-fred-olsens
 ! https://www.pinchos.se/menu?id=se-ostersund-thomegrand
 pinchos.se,pinchonation.*##.products li:-abp-contains(/BACON/i)
@@ -161,6 +165,7 @@ kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Parma/i)
 kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Skinke/i)
 kompisrestauranter.no#?#.menu-category-content .col-lg-4:-abp-contains(/Pepperoni/i)
 ! https://ordr.no/edoramen
+!#if !adguard
 ordr.no#?#.dish-card,menu-item:-abp-contains(/bacon/i)
 ordr.no#?#.dish-card,menu-item:-abp-contains(/salami/i)
 ordr.no#?#.dish-card,menu-item:-abp-contains(/pancetta/i)
@@ -173,6 +178,7 @@ ordr.no#?#.dish-card,menu-item:-abp-contains(/pølse/i)
 ordr.no#?#.dish-card,menu-item:-abp-contains(/skinke/i)
 ordr.no#?#.dish-card,menu-item:-abp-contains(/korv/i)
 ordr.no#?#.dish-card,menu-item:-abp-contains(/svin/i)
+!#endif
 ! https://oliviarestauranter.no/meny/
 oliviarestauranter.no##.rett:-abp-contains(/bacon/i)
 oliviarestauranter.no##.rett:-abp-contains(/guanciale/i)
@@ -222,6 +228,7 @@ unapizzeria.no#?#.menu-segment > .item:-abp-contains(pølse)
 unapizzeria.no#?#.menu-segment > .item:-abp-contains(bacon) 
 unapizzeria.no#?#.menu-segment > .item:-abp-contains(/coppa di parma/i)
 ! https://grano.no/middag/
+!#if !adguard
 grano.no##p,h6:-abp-contains(/skinke/i)
 grano.no##p,h6:-abp-contains(/pølse/i)
 grano.no##p,h6:-abp-contains(/salami/i)
@@ -230,6 +237,7 @@ grano.no##p,h6:-abp-contains(/ventricina/i)
 grano.no##p,h6:-abp-contains(/guanciale/i)
 grano.no##p,h6:-abp-contains(/mortadella/i)
 grano.no##p,h6:-abp-contains(/speck/i)
+!#endif
 ! http://www.lillethailand-trondheim.no/lille-thailand-elgeseter/
 lillethailand-trondheim.no##.elementor-price-list-item:-abp-contains( svin)
 lillethailand-trondheim.no##.elementor-price-list-item:-abp-contains(Svin)
