@@ -3761,7 +3761,7 @@ UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzas
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^', 'gamecopyworld', '://']
 UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.', '*', '/^', '://']
 UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
-    '##', '.*#' , '#?#', 'gamecopyworld']
+    '##', '.*#' , '#?#', 'gamecopyworld', 'version.bind', 'hostname.bind', '|id.server|']
 
 OUTPUT = 'Anti-Malware List\\xyzzyx.txt'
 OUTPUT_AG = 'Anti-Malware List\\AntiMalwareAdGuard.txt'
