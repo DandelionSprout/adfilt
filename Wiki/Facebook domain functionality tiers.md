@@ -1,10 +1,10 @@
 #### Test environment(s)
 
-* Last tested on the 25th of February 2020 from Trondheim, Norway.
+* Last tested on the 18th of April 2021 from Trondheim, Norway.
 * The default browser locale was set to Norwegian Bokmål.
 * Facebook domains were tested in Chrome on Windows 10 Pro. Facebookcorewwwi domains were tested in Tor Browser for Windows.
 * No proxies were used.
-* No user-agent changes were made to the browsers (which may explain some strange outcomes regarding phone-specific domains between Facebook and Facebookcorewwwi; and between Chromium and Gecko browsers).
+* No user-agent changes were made to the browsers.
 
 # Results
 
@@ -42,20 +42,15 @@
 * https://mtouch.beta.facebook.com/StrawberryShortcake/
 * https://x.beta.facebook.com/StrawberryShortcake/
 * https://iphone.beta.facebook.com/StrawberryShortcake/
+* https://m.facebook.com/StrawberryShortcake/
+* https://b-m.facebook.com/StrawberryShortcake/
 * https://touch.facebookcorewwwi.onion/StrawberryShortcake/
 * https://mtouch.facebookcorewwwi.onion/StrawberryShortcake/
 * https://x.facebookcorewwwi.onion/StrawberryShortcake/
 * https://iphone.facebookcorewwwi.onion/StrawberryShortcake/
-* https://touch.beta.facebookcorewwwi.onion/StrawberryShortcake/ (Its SSL certificate is currently broken)
-
-## Tier 2.5 (Domains that may or may not change between Tier 2 and 3 based on the user-agent and/or country)
-
-* https://m.facebook.com/StrawberryShortcake/ (T2 in Chrome and Vivaldi, T3 in Firefox and Tor Browser)
-* https://m.facebookcorewwwi.onion/StrawberryShortcake/ (T3 in Tor Browser)
-* https://b-m.facebook.com/StrawberryShortcake/ (T2 in Chrome and Vivaldi, T3 in Firefox and Tor Browser)
-* https://b-m.facebookcorewwwi.onion/StrawberryShortcake/ (T3 in Tor Browser)
-* https://mobile.facebook.com/StrawberryShortcake/ (T2 in Chrome and Vivaldi, T3 in Firefox and Tor Browser)
-* https://mobile.facebookcorewwwi.onion/StrawberryShortcake/ (T3 in Tor Browser)
+* https://touch.beta.facebookcorewwwi.onion/StrawberryShortcake/
+* https://m.facebookcorewwwi.onion/StrawberryShortcake/
+* https://b-m.facebookcorewwwi.onion/StrawberryShortcake/
 
 ## Tier 3 (Old phones):
 
@@ -74,11 +69,6 @@
 * https://0.facebook.com/StrawberryShortcake/ (Normally redirects to mobile.facebook.com except in some non-Western countries)
 
 ## Unclear status:
-* https://zero.facebook.com/StrawberryShortcake/ (This and the 3 links below redirects to mobile.facebook.com)
-* https://zero.beta.facebook.com/StrawberryShortcake/
-* https://o.facebook.com/StrawberryShortcake/
-* https://o.beta.facebook.com/StrawberryShortcake/
-* https://0.beta.facebook.com/StrawberryShortcake/ (Redirects to mobile.beta.facebook.com)
 * https://apps.facebook.com/StrawberryShortcake/ (Requires being logged on to access)
 * https://web.facebook.com/StrawberryShortcake/ (Redirects to facebook.com)
 * https://web.beta.facebook.com/StrawberryShortcake/ (Redirects to beta.facebook.com)
@@ -96,3 +86,10 @@
 * https://star.facebook.com/StrawberryShortcake/ (Redirects to facebook.com)
 * https://l.facebook.com/StrawberryShortcake/ (Redirects to facebook.com)
 * https://lm.facebook.com/StrawberryShortcake/ (Redirects to m.facebook.com)
+* https://mobile.facebook.com/StrawberryShortcake/ (Redirects to m.facebook.com)
+* https://mobile.facebookcorewwwi.onion/StrawberryShortcake/ (Redirects to m.facebook.com)
+* https://zero.facebook.com/StrawberryShortcake/ (This and the 4 links below redirects to m.facebook.com)
+* https://zero.beta.facebook.com/StrawberryShortcake/
+* https://o.facebook.com/StrawberryShortcake/
+* https://o.beta.facebook.com/StrawberryShortcake/
+* https://0.beta.facebook.com/StrawberryShortcake/ (Redirects to m.beta.facebook.com)
