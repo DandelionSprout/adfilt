@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 20April2021v1-Beta
+! Version: 20April2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -70,7 +70,7 @@ $removeparam=pf_rd_p
 $removeparam=pf_rd_r
 $removeparam=refRID
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
-$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com
+$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com
 $removeparam=cp_ksver
 ! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
 $removeparam=biw
@@ -343,6 +343,15 @@ $removeparam=refsrc
 $removeparam=_rdr
 ! https://www.theverge.com/2021/4/16/22387492/google-floc-ad-tech-privacy-browsers-brave-vivaldi-edge-mozilla-chrome-safari?scrolla=5eb6d68b7fedc32c19ef33b4 (20/04/2021)
 $removeparam=scrolla
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
+||tiktok.com^$removeparam=app
+||tiktok.com^$removeparam=_r
+$removeparam=share_ab_group
+$removeparam=u_code
+$removeparam=is_copy_url
+$removeparam=is_from_webapp
+$removeparam=sender_device
+$removeparam=sender_web_id
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
