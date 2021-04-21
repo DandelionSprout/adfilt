@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 17April2021v2
+! Version: 21April2021v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -244,6 +244,13 @@ audlindin.is##.owl-stage-outer
 veitingageirinn.is#?#.mvp-widget-home:-abp-contains(/^Velunnarar/)
 veitingageirinn.is#?#.mvp-flex-ad:-abp-has(img[width="300"])
 veitingageirinn.is###mvp-leader-wrap
+dingeo.dk###nordea-beregner
+dingeo.dk##.alert-offers
+peters1.dk##.sleeknote-anchor
+peters1.dk##div[style="width: 100%;"]
+peters1.dk##div[style="width: 100%;"] + p
+selvsalg.dk##.frontpage-nordea
+madridista.dk#?#.uk-panel-box:-abp-has(a[href*=casino])
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -320,6 +327,13 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ! keldan.is (05/01/2021)
 ##div[id^=AdvPortlet]
 ##.currencyaugl
+! madridista.dk (21/04/2021)
+~casinotop.com##a[href*="casinotop.com"]
+/banners/casinotop$image
+! gnavergalleri.dk (along with ~60 affiliates sites)
+##.top-fixed-wrapper
+##.section-module.blog-frontpage-module.margin-top-10.row
+*galleri.dk/content/images/fixed^$image
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -408,9 +422,11 @@ _toppbanner_$image
 */bannerannonser/
 ! byggenytt.no
 /_annonser^$image
+! frende.no
+||api.frende.no/webshop/log$xhr,domain=www.frende.no
 ! https://malviknytt.no/2020/07/31/skyting-pa-hjemmebande/ (16/08/2020)
 /Nettbanner-$image
-! http://www.sexpiger.dk/
+! sexpiger.dk
 ||lh3.googleusercontent.com/*=w468-h60-$image
 ||lh3.googleusercontent.com/*=w970-h250-$image
 ! salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12/10/2020)
@@ -935,7 +951,7 @@ guloggratis.dk###bottomBanner
 guloggratis.dk###topBanner
 guloggratis.dk##.ad_form_header_right
 guloggratis.dk##.adservering-container
-guloggratis.dk##.banner-container
+guloggratis.dk,webopskrifter.dk##.banner-container
 h-a.no##.banners-row
 hammerfestingen.no##.annonsestyle
 hardwareonline.dk##.centerfull
@@ -1219,7 +1235,6 @@ treningsforum.no##.ad.sideboard
 treningsforum.no##.ad.superboard
 trinesmatblogg.no##.sidebar__widget--ad
 tu.no##.frontpage-top-poster-wrap
-tungt.no#?#.columns:-abp-has([src="http://stillingsarena.no/stillingsarena/feeds.wa2?_cmd=feedshoriz&size=980x285"])
 tungt.no#?#div.large-12.row:-abp-contains(MASCUS)
 tunnelsyn.no#?#.widget_media_image:-abp-contains(/^ANNONSE/)
 tv2.dk#?#.o-deck:-abp-has(div[class^="ad ad-wide"])
@@ -1297,6 +1312,15 @@ crazygames.no##.jss270
 bt.no###topstripes
 bt.no##[data-variants*=article_netboard]:upward(1)
 audlindin.is##.main-post
+sundhedslex.dk##.boxl
+madensverden.dk##.maden-site-header
+madensverden.dk##.maden-after-content
+localeyes.dk##.td-header-rec-wrap
+rejsespejder.dk##.an-unit
+madridista.dk##.uk-grid:not([class*=" "])
+travelmarket.no#?#.pages-container__element:-abp-has([class*=gpt])
+travelmarket.no#?#.pages-container__element:-abp-has([class*=banner])
+travelmarket.dk##.pages-container__element:first-of-type
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$frame
 ||danishfamilysearch.dk/images/xp2^$image
@@ -1331,6 +1355,7 @@ prisjakt.*,prisjagt.dk,dv.is,drm24.no##.adbox
 iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
 av-avis.no,bygdanytt.no,strilen.no,vestnytt.no##.carousel-ad
 bygg.no,mmm.dk,kino.no,connery.dk##.ad
+hushagehobby.no,tidssonen.no,glr.no,peters1.dk##.widget_custom_html
 byggfakta.no,byggfaktabolig.no,vvsaktuelt.no###bannerContainer:not(.HeaderBanner1)
 gulesider.no,degulesider.dk,krak.dk##.e-banner
 byggeplads.dk,magasinetgulv.dk,officeplusdesign.dk##.region-header
@@ -1339,7 +1364,6 @@ midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##main > .container:no
 midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##.container-spacer
 midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##.container-outer-wrapper > .col-2:last-of-type
 united.no,valkal.no,montages.no##.ads
-hushagehobby.no,tidssonen.no,glr.no##.widget_custom_html
 !+ NOT_OPTIMIZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 ! — — — — —
@@ -1427,7 +1451,7 @@ vafo.dk##.adform-flexblock
 ! aftenposten.no (Mobile useragent)
 ###adBlinkContainer
 ###innocode-ad
-! http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
+! https://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
 ||85.17.76.181^$image
 ! krs247.no
 ##div[id^=webbannernetboard]
@@ -1507,6 +1531,8 @@ _980banner_
 ##amedia-include[src*="services.api.no/api/bazaar/"]
 ! steinkjer-avisa.no (12/04/2021)
 ##optimus-element[linecount=undefined][width="280"]
+! gnavergalleri.dk (along with ~60 affiliates sites; 21/04/2021)
+##.container-topbanner
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———

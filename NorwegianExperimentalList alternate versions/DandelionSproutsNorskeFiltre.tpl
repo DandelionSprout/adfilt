@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 17April2021v2-Alpha
+# Version: 21April2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -54,6 +54,10 @@ msFilterList
 # nettavisen.no (25 12 2020)
 # ao.no (28 12 2020)
 # keldan.is (05 01 2021)
+# madridista.dk (21 04 2021)
+- banners casinotop
+# gnavergalleri.dk (along with ~60 affiliates sites)
+*galleri.dk content images fixed
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -118,9 +122,11 @@ msFilterList
 - bannerannonser
 # byggenytt.no
 - _annonser
+# frende.no
+-d api.frende.no log
 # https://malviknytt.no/2020/07/31/skyting-pa-hjemmebande/ (16 08 2020)
 - Nettbanner-
-# http://www.sexpiger.dk/
+# sexpiger.dk
 -d lh3.googleusercontent.com *=w468-h60-
 -d lh3.googleusercontent.com *=w970-h250-
 # salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12 10 2020)
@@ -437,7 +443,7 @@ msFilterList
 # https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
 # https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
 # aftenposten.no (Mobile useragent)
-# http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
+# https://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
 -d 85.17.76.181
 # krs247.no
 # lsk.no
@@ -478,6 +484,7 @@ msFilterList
 # https://www.terrengsykkelforumet.no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021)
 # nettavisen.no (04 04 2021)
 # steinkjer-avisa.no (12 04 2021)
+# gnavergalleri.dk (along with ~60 affiliates sites; 21 04 2021)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
