@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 210420212
+! Version: 230420212
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -219,7 +219,6 @@ vaktin.is###banners
 vikubladid.is##.box_advert:not(.box_pdf)
 indblik.net##div[id^=adni_widgets-]
 xklub.dk###seealladv
-artige.no##a[href*=casino]
 artige.no##a[href="//artige.no/blogg"]
 123nyheter.no##a[href*="clk.tradedoubler."]
 123nyheter.no##.visible-lg-block
@@ -244,13 +243,31 @@ peters1.dk##div[style="width: 100%;"]
 peters1.dk##div[style="width: 100%;"] + p
 selvsalg.dk##.frontpage-nordea
 madridista.dk#?#.uk-panel-box:-abp-has(a[href*=casino])
+blabyhallen.no#?#a:-abp-has(> img[src$="/homepg.gif"])
+butikkoversikten.no#?#.lenkeboks:-abp-contains(/Casino/i)
+eikernytt.no###nav_menu-3.widget_nav_menu
+eikernytt.no##.eiker-adlabel
+eikernytt.no##[href*="eikernytt.no/linkout/"]
+gunnarandreassen.com##a[href*=betting]
+gunnarandreassen.com##a[href*=dreamz]
+gunnarandreassen.com##a[href*=rizk]
+gunnarandreassen.com#?#a:-abp-contains(/[kc]asino/i)
+latterkula.no##a[title*=casino]
+latterkula.no##a[title*=spill]
+spill.no##.footer_widget.widget-3
+startsidendin.no##a[href*=blackjack]
+startsidendin.no##a[href*=gambling]
+teknologia.no#?#.one-half:-abp-contains(/[kc]asino/i)
+teknologia.no,gunnarandreassen.com##a[href*=kasino]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
+artige.no,latterkula.no,eikernytt.no,addpressure.no,startsidendin.no,teknologia.no,gunnarandreassen.com,butikkoversikten.no##a[href*=casino]
 arendalstidende.no,sorlandsavisen.no,audlindin.is,eirikurjonsson.is##.g-single
 building-supply.dk,licitationen.dk,jernindustri.dk##.grid-article-sponsored
 gamer.no,tek.no,digi.no##.products-carousel
 veier24.no,tu.no,digi.no##.top-poster-wrap
+latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! — — — — — — — — —
 ! 🇳🇴: Generelle #-oppføringer med kilder
 ! 🇬🇧: Generic #-entries that have sources
@@ -393,6 +410,7 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ||vevlysingar.fo^$subdocument,third-party
 ||videotool.fbg.dk^$third-party
 ||farm-dk.plista.com^$third-party
+||svindel.info^
 ||print2web.sn.dk^$image
 ||lib.idg.no^
 ! Adressa.no

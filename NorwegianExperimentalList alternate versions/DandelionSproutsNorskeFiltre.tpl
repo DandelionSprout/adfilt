@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 21April2021v2-Alpha
+# Version: 23April2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -103,6 +103,7 @@ msFilterList
 -d vevlysingar.fo
 -d videotool.fbg.dk
 -d farm-dk.plista.com
+-d svindel.info
 -d print2web.sn.dk
 -d lib.idg.no
 # Adressa.no
