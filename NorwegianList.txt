@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 23April2021v2
+! Version: 25April2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -255,7 +255,7 @@ butikkoversikten.no#?#.lenkeboks:-abp-contains(/Casino/i)
 eikernytt.no###nav_menu-3.widget_nav_menu
 eikernytt.no##.eiker-adlabel
 eikernytt.no##[href*="eikernytt.no/linkout/"]
-gunnarandreassen.com##a[href*=betting]
+gunnarandreassen.com,fodboldspilleren.dk##a[href*=betting]
 gunnarandreassen.com##a[href*=dreamz]
 gunnarandreassen.com##a[href*=rizk]
 gunnarandreassen.com#?#a:-abp-contains(/[kc]asino/i)
@@ -263,15 +263,44 @@ latterkula.no##a[title*=casino]
 latterkula.no##a[title*=spill]
 spill.no##.footer_widget.widget-3
 startsidendin.no##a[href*=blackjack]
-startsidendin.no##a[href*=gambling]
+startsidendin.no,iphoneluppen.dk##a[href*=gambling]
 teknologia.no#?#.one-half:-abp-contains(/[kc]asino/i)
 teknologia.no,gunnarandreassen.com##a[href*=kasino]
+holdsport.dk#?#.article:-abp-has(a[href*=casino])
+holdsport.dk#?#.article:-abp-has(a[href*=betting])
+holdsport.dk#?#.article:-abp-has(a[href*=spillemaskin])
+holdsport.dk#?#.article:-abp-has(a[href*=mr-green])
+holdsport.dk#?#.article:-abp-has(a[href*=online-spil])
+kulturnet.dk#?#.col-md-4:-abp-has(a[href*=casino])
+kulturnet.dk#?#.col-md-4:-abp-has(a[href*=spil])
+kulturnet.dk#?#.col-md-4:-abp-has(a[href*=afkobling-hverdag])
+padleguide.dk#?#h2:-abp-contains(/casino/i)
+fcfredericia.dk##.et_pb_equal_columns
+iphoneluppen.dk##a[href*=bingo]
+jumpb.dk#?#strong:-abp-contains(/Casino/i)
+margit-henriksen.dk,thura.dk#?#.blog-post:-abp-contains(/casino/i)
+esportsmagasinet.dk##.wrapper:style(margin-top: 0 !important)
+esportsmagasinet.dk##.sidebar > div[class=widget] ~ *
+foredragstjenesten.dk#?#p:-abp-contains(/casino/i)
+bossman.dk###right_container > .right_content:not(:first-of-type)
+polarmedia.dk#?#p:-abp-has(a[href*=casino])
+ridr.dk##.partnersites
+ridr.dk##a[href="/blog"]
+fodboldspilleren.dk##a[href*=tjen-penge]
+fodboldspilleren.dk##a[href*=odds]
+fodboldspilleren.dk###footer-widgets
+fodboldspilleren.dk#?#.et_section_regular:-abp-contains(/casino/i)
+kendte.dk#?#.list-group:-abp-contains(/casino/i)
+ni.dk#?#.color-scheme-1:-abp-contains(/Casino/i)
+ni.dk#?#.color-scheme-1:-abp-contains(/Casino/i) + div
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
-artige.no,latterkula.no,eikernytt.no,addpressure.no,startsidendin.no,teknologia.no,gunnarandreassen.com,butikkoversikten.no##a[href*=casino]
+artige.no,latterkula.no,eikernytt.no,addpressure.no,startsidendin.no,teknologia.no,gunnarandreassen.com,butikkoversikten.no,iphoneluppen.dk,fodboldspilleren.dk,ni.dk##a[href*=casino]
+padleguide.dk,polarmedia.dk,iphoneluppen.dk,anettelyskjaer.dk,kobenhavnsmusikteater.dk,fairstyles.dk,dreampapers.dk,nemsvar.nu,cuben-linedance.dk##p:-abp-contains(/casino/i)
 vg.no,e24.no,gamer.no,tek.no,digi.no##+js(aopw, __AB__)
 arendalstidende.no,sorlandsavisen.no,audlindin.is,eirikurjonsson.is##.g-single
+iphoneluppen.dk,anettelyskjaer.dk,dreampapers.dk,nemsvar.nu##h2:-abp-has(+ p:-abp-contains(/casino/i))
 building-supply.dk,licitationen.dk,jernindustri.dk##.grid-article-sponsored
 gamer.no,tek.no,digi.no##.products-carousel
 veier24.no,tu.no,digi.no##.top-poster-wrap
@@ -351,6 +380,10 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ##.top-fixed-wrapper
 ##.section-module.blog-frontpage-module.margin-top-10.row
 *galleri.dk/content/images/fixed^$image
+! sol.dk (25/04/2021)
+~norges.casino##a[href*="norges.casino"]
+! bilgalleri.dk (25/04/2021)
+~casino24.dk##a[href*="casino24.dk"]
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -671,6 +704,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||xklub.dk/xsite/img/banner^
 /wp-content/uploads/*casino$domain=xn--bodposten-n8a.no|ranaposten.no|viralefilmer.no
 ||viralefilmer.no/wp-content/uploads/*slot-
+||ni.dk/ni-img/*banner
+||ridr.dk/images/partners^
 !#if false
 @@||vgtv.no$ghide
 !#endif
@@ -709,6 +744,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||img.norrbom.com/*-300x60.png^
 ! vg.no (14/04/2021)
 /gfx/fishfingers^
+! xpresstryk.dk
+||images.staticjw.com/*/casino24.jpg^$image
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -2151,6 +2188,13 @@ sofabold.dk##.centerMgfx
 ||sikkertapotek.com^$doc
 ||sobrilleverandoridanmark.wordpress.com^$doc
 ||xanax*.over-blog.com^$doc
+
+! 🇬🇧: Old domains stolen by casino sites
+||kohlershop.dk^
+||fredensborg-orredfiskeri.dk^
+||tvaalborg.dk^
+||informationer.nu^
+||cphspaogwellness.dk^
 
 ! 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 ||desidert.no^
