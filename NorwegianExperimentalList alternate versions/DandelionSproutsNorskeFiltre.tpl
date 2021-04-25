@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 23April2021v2-Alpha
+# Version: 25April2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -58,6 +58,8 @@ msFilterList
 - banners casinotop
 # gnavergalleri.dk (along with ~60 affiliates sites)
 *galleri.dk content images fixed
+# sol.dk (25 04 2021)
+# bilgalleri.dk (25 04 2021)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -333,6 +335,8 @@ msFilterList
 -d xklub.dk banner
 - wp-content uploads *casino
 -d viralefilmer.no *slot-
+-d ni.dk *banner
+-d ridr.dk partners
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -363,6 +367,8 @@ msFilterList
 -d img.norrbom.com *-300x60.png
 # vg.no (14 04 2021)
 - gfx fishfingers
+# xpresstryk.dk
+-d images.staticjw.com casino24.jpg
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -873,6 +879,12 @@ msFilterList
 -d sikkertapotek.com
 -d sobrilleverandoridanmark.wordpress.com
 -d xanax*.over-blog.com
+# 🇬🇧: Old domains stolen by casino sites
+-d kohlershop.dk
+-d fredensborg-orredfiskeri.dk
+-d tvaalborg.dk
+-d informationer.nu
+-d cphspaogwellness.dk
 # 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 -d desidert.no
 -d brigitteheilmann.dk
