@@ -1,10 +1,9 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 02May2021v1-Beta
+! Version: 03May2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Homepage for the repository: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-! Known issues: Occasionally, when clicking on image results on Google text search pages, the image result page fails to load as intended and/or differ dramatically from the images on the text search page. This problem has proven difficult to trigger on command.
 
 ! From AdGuard CoreLibs (11/11/2020)
 $removeparam=yclid
@@ -183,7 +182,6 @@ $removeparam=widget-ref
 $removeparam=taid
 ! https://scontent.fosl3-2.fna.fbcdn.net/v/t1.0-9/107461725_178044047037717_1670568338259435866_o.jpg?_nc_cat=106&ccb=2&_nc_sid=dd9801&_nc_ohc=rwZyfBjoc_gAX-qiWab&_nc_ht=scontent.fosl3-2.fna&oh=250a678cd3d6a37531e9ff24466b2f56&oe=5FF90248 (11/12/2020)
 $removeparam=_nc_cat
-$removeparam=ccb
 $removeparam=_nc_sid
 ! https://www.tipsbladet.dk/nyhed/superliga/cv-afviser-traenerskifte-jeg-har-ikke-talt-med-kristian?eblink=artikel (14/12/2020)
 $removeparam=eblink
@@ -204,6 +202,9 @@ $removeparam=_ga
 !+ NOT_OPTIMIZED
 $removeparam=fir
 ||google.*/search$removeparam=source
+! https://www.google.no/search?q=beetle&sa=X&hl=no&tbm=isch&ictx=1&fir=hA_sSJDgDUD05M%252Cra9C8zPHQZacDM%252C_%253BjHMPo_nzeT4CHM%252CJ-BwVgjGhTXbRM%252C_%253B8idWw3wKyv8TEM%252CEq9NAOyMjA8-LM%252C_%253BIr3d2npsvZA5mM%252Carwh6OytVDPyyM%252C_&vet=1&usg=AI4_-kQywyXRkRPeAWvGNhHd9wKvex-4AQ#imgrc=hA_sSJDgDUD05M (03/05/2021)
+@@||google.*&tbm=isch&*#imgrc=$removeparam=fir
+@@||google.*&tbm=isch&*#imgrc=$removeparam=usg
 ! https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=https%3A%2F%2Fwww.nytimes.com%2F2021%2F01%2F21%2Fopinion%2Fpublic-transit-funding.html%3Faction%3Dclick%26module%3DWell%26pgtype%3DHomepage%26section%3DEditorials (24/01/2021)
 $removeparam=action,domain=nytimes.com|nytimes3xbfgragh.onion
 $removeparam=module,domain=nytimes.com|nytimes3xbfgragh.onion
@@ -359,6 +360,8 @@ $removeparam=sender_web_id
 $removeparam=itok
 ! https://www.nytimes.com/2021/04/27/business/media/new-york-post-kamala-harris.html?smtyp=cur&smid=fb-nytimes&fbclid=IwAR1mH8MOV2qhIoD5pdX9gbEWedBAdS4sYOXB0yHJi3tZZ6Hg5r0Us-EEv0s (28/04/2021)
 $removeparam=smtyp
+! https://techcrunch.com/2021/04/30/riot-games-updates-its-privacy-notice-to-start-developing-voice-comms-moderation/?tpcc=ECTW2020
+$removeparam=tpcc
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
