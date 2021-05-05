@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 30April2021v1-Alpha
+# Version: 05May2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -478,17 +478,17 @@ msFilterList
 # aftenposten.no, hockeymagasinet.dk, l-a.no, aftenbladet.no (30 10 2020)
 # bt.no, byas.no, aftenbladet.no (30 10 2020)
 # costume.no, costume.dk (09 11 2020)
-# boligpluss.no (09 11 2020)
+# boligpluss.no (09 11 2020), women.dk
 # ytresogn.no (16 12 2020)
 - _980banner_
 # ambulanseforum.no (26 12 2020)
 # fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad.dk (02 01 2021)
-# forum.doktoronline.no (06 01 2021)
+# forum.doktoronline.no (06 01 2021), forum.klikk.no, forum.kvinneguiden.no
 # nettavisen.no (20 01 2021)
 # https://www.helsenett.no/spor-oss/har-du-smabarn/50657-svstadig-tilbakevendende-forkjolelsehostefeber.html/(10/02/2021)
-# https://www.tronderdebatt.no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453/(20/03/2021)
-# https://viralefilmer.no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25 03 2021)
-# https://www.terrengsykkelforumet.no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021)
+# https://www.tronderdebatt.no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453/(20/03/2021),/ba.no
+# https://viralefilmer.no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25 03 2021), eavisa.no
+# https://www.terrengsykkelforumet.no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021),/terrengsykkel.no
 # nettavisen.no (04 04 2021)
 # steinkjer-avisa.no (12 04 2021)
 # gnavergalleri.dk (along with ~60 affiliates sites; 21 04 2021)
@@ -518,7 +518,6 @@ msFilterList
 +d isdownorblocked.com
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 -d prod-adops-proxy.dnitv.net
-# https://github.com/uBlockOrigin/uAssets/issues/8230/
 # ——— Caused by «EasyPrivacy» ———
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
@@ -527,14 +526,11 @@ msFilterList
 # ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
-# ——— Caused by «EasyList Cookie List» ———
-# https://github.com/easylist/easylist/issues/7566
-# ——— Caused by «Fanboy's Annoyances List» ———
+# https://github.com/easylist/easylist/issues/7805/(05/05/2021)
++d cookieinformation.com
+# ——— Caused by «Fanboy's Annoyances List» and «EasyList Cookie List» ———
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
-# https://github.com/easylist/easylist/issues/6067#issuecomment-695115226
-+d consent.dk
-# https://github.com/easylist/easylist/issues/7269
 # https://github.com/ryanbr/fanboy-adblock/issues/1469
 +d service.signalr.net
 # ——— Caused by «EasyList» ———
@@ -552,7 +548,6 @@ msFilterList
 # https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 +d notice.sp-prod.net
 +d sp-prod.net
-!
 !
 # 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
 # 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
