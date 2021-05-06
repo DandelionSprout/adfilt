@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 03May2021v1-Beta
+! Version: 06May2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -50,7 +50,7 @@ $removeparam=dclid
 ! https://www.proshop.dk/HyperX-Predator-RGB-ram?cid=64e93f7a-cee2-44d9-911a-37f3eafd7b5f (23/01/2021)
 $removeparam=afid
 ! Can NOT be made generic (e.g. due to sparebank1.no, RARbg.to)
-$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.no|proshop.dk|disneyplus.com
+$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.no|proshop.dk|disneyplus.com|rightmove.co.uk
 ! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
 $removeparam=WebSiteMapNodeID
 ! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
@@ -151,7 +151,7 @@ $removeparam=dartycid
 ! https://fr.shopping.rakuten.com/offer/buy/5483124993/apple-airpods-2-avec-case-2eme-generation-blanc-mv7n2zm-a.html?bbaid=6680578123&t=6862148 (28/11/2020)
 ! https://steamcdn-a.akamaihd.net/steam/apps/1293120/ss_260369d8b0c8ab69e3a5a66f78174af4319c4acb.jpg?t=1607504533 (11/12/2020)
 $removeparam=bbaid
-$removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net
+$removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com
 ! https://archive.org/donate/?origin=email-2020eoyappl2smdnrfnl-v1
 ||archive.org^$removeparam=origin
 ! https://blog.archive.org/matching-gifts/?iax=typage
@@ -173,7 +173,7 @@ $removeparam=draftsforfriends
 .userapi.com/impg^$removeparam=proxy
 .userapi.com/impg^$removeparam=type
 ! https://www.imdb.com/title/tt7826036/?ref_=ttep_ep5
-||imdb.com^$removeparam=ref_
+$removeparam=ref_,domain=imdb.com|amazon.*
 ! https://www.bloglovin.com/blogs/enestaende-mat-2346432?widget-ref=https://enestaaendemat.no/ (07/12/2020)
 $removeparam=widget-ref
 ! https://www.youtube.com/watch?v=ACb-3n4tRGE&ab_channel=BillyO%27Reilly (07/12/2020)
@@ -362,6 +362,36 @@ $removeparam=itok
 $removeparam=smtyp
 ! https://techcrunch.com/2021/04/30/riot-games-updates-its-privacy-notice-to-start-developing-voice-comms-moderation/?tpcc=ECTW2020
 $removeparam=tpcc
+! https://www.rightmove.co.uk/properties/84442384?sc_id=36495303&onetime_FromEmail=true&cid=5a1f743a-db62-42d8-9d64-7fc6f01b0f2a&csg=Cns44tNNx5uSB2wZD7erMYDKCPA8xMUpm8yGDzQtyn3FSnEhKa#/ (06/05/2021)
+$removeparam=onetime_FromEmail
+$removeparam=sc_id
+! https://www.humblebundle.com/store/?linkID=&mcID=102:UUIDHERE:ot:UUIDHERE:1 (06/05/2021)
+||humblebundle.com^$removeparam=linkID
+||humblebundle.com^$removeparam=mcID
+! https://www.google.com/webhp?client=firefox-b-m&channel=ts (06/05/2021)
+||google.*/webhp$removeparam=channel
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700500 (06/05/2021)
+$removeparam=amdata,domain=ebay.*
+$removeparam=epid,domain=ebay.*
+$removeparam=hash,domain=ebay.*
+$removeparam=iid,domain=ebay.*
+! https://cdnb.artstation.com/p/assets/images/images/030/045/719/large/abhishek-karmakar-b56f0421b303b8d9016f022d17330898.jpg?1599443127 (06/05/2021)
+||artstation.com^$removeparam=/^[0-9]/
+! https://new.reddit.com/r/uBlockOrigin/comments/n1o5pv/correct_removeparam_filter_for_duckduckgo/
+||duckduckgo.com^$removeparam=doc
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700946
+||amazon.$removeparam=/__mk_*_*/
+||amazon.$removeparam=ascsubtag
+||amazon.$removeparam=camp
+||amazon.$removeparam=crid
+||amazon.$removeparam=cv_ct_*
+||amazon.$removeparam=ie
+||amazon.$removeparam=linkId
+||amazon.$removeparam=rnid
+||amazon.$removeparam=s
+||amazon.$removeparam=sprefix
+||amazon.$removeparam=ac_md
+||amazon.$removeparam=pf_rd_*
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
