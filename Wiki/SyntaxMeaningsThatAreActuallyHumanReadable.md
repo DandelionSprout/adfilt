@@ -69,7 +69,7 @@
 ## uBlock Origin and AdGuard only:
 #### Hiding
 * `:style`: Changes the CSS values of an element, in much the same way as what userstyle extensions like Stylish would've done.
-* `{ }`: Same as above.
+* `#$#` + `{ }`: Same as above.
 * `:has-text`: Same as `:-abp-contains`.
 * `:has`: Same as `:-abp-has`.
 * `!#if`: Specifies that a section of entries only apply to specific platforms or extensions. Closed out by `!#endif`. Possible options are listed [here](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#if-condition).
