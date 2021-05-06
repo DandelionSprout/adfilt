@@ -81,8 +81,7 @@
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
-* `$queryprune`: Removes URL parameters, e.g. `$tracker=sitecampaignpage`. Assumes RegEx by default; add a `|` after the `=` to avoid assuming such.
-* `$removeparam`: Very similar to, but not identical to, `$queryprune`.
+* `$removeparam`: Removes URL parameters, e.g. `$tracker=sitecampaignpage`. Assumes RegEx by default; add a `|` after the `=` to avoid assuming such.
 
 ## uBlock Origin only:
 #### Hiding
