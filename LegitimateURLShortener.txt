@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 06May2021v1-Beta
+! Version: 10May2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -392,6 +392,36 @@ $removeparam=iid,domain=ebay.*
 ||amazon.$removeparam=sprefix
 ||amazon.$removeparam=ac_md
 ||amazon.$removeparam=pf_rd_*
+! https://www.wired.com/story/oversight-board-to-facebook-not-going-to-do-your-dirty-work/?mbid=social_twitter
+$removeparam=mbid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-706290
+||bandcamp.com^$removeparam=from
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-711131
+$removeparam=itid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
+$removeparam=full_trSrc
+$removeparam=cmpg_for_af
+$removeparam=ICID
+$removeparam=icid
+||www.google.$removeparam=aqs
+||www.google.$removeparam=stick
+||www.google.$removeparam=btnG
+||www.google.$removeparam=iflsig
+||www.google.$removeparam=gbv
+$removeparam=hmb_campaign
+$removeparam=hmb_medium
+$removeparam=/^utm-/
+$removeparam=aff
+$removeparam=mc_cid
+$removeparam=mc_eid
+$removeparam=/^intgrtn_/
+$removeparam=afftag
+$removeparam=affid
+! https://www.thedailybeast.com/russian-doctor-alexander-murakhovsky-who-lied-about-navalny-poisoning-disappeared-in-the-woods?source=articles&via=rss
+||thedailybeast.com^$removeparam=source
+||thedailybeast.com^$removeparam=via
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-716142
+||cbc.ca^$removeparam=cmp
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
