@@ -51,7 +51,6 @@
 * https://mtouch.facebookcorewwwi.onion/StrawberryShortcake/
 * https://x.facebookcorewwwi.onion/StrawberryShortcake/
 * https://iphone.facebookcorewwwi.onion/StrawberryShortcake/
-* https://touch.beta.facebookcorewwwi.onion/StrawberryShortcake/
 * https://m.facebookcorewwwi.onion/StrawberryShortcake/
 * https://b-m.facebookcorewwwi.onion/StrawberryShortcake/
 
@@ -95,5 +94,6 @@
 * https://0.beta.facebook.com/StrawberryShortcake/ (Redirects to m.beta.facebook.com)
 * https://www.beta.facebookcorewwwi.onion/StrawberryShortcake/ ("Error 400" browser page)
 * https://m.beta.facebookcorewwwi.onion/StrawberryShortcake/ ("Error 400" browser page)
+* https://touch.beta.facebookcorewwwi.onion/StrawberryShortcake/ ("Error 400" browser page)
 * https://web.facebook.com/StrawberryShortcake/ (Redirects to facebook.com)
 * https://web.beta.facebook.com/StrawberryShortcake/ (Redirects to beta.facebook.com)
