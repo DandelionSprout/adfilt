@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 12May2021v1-Beta
+! Version: 15May2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -42,7 +42,7 @@ $removeparam=ref_url
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 ||amazon.$removeparam=th
 $removeparam=psc
-||amazon.$removeparam=tag
+$removeparam=tag,domain=amazon.*|argos.co.uk
 ||amazon.$removeparam=linkCode
 ! https://www.netonnet.no/art/data-og-nettbrett/nettbrett/lader-og-dokking/apple-thunderboltgigabitethernet/182650.11071/?dclid=CjkKEQiAwMP9BRDt06nU9a_8_bABEiQAL_PHDRXNVIm2rrWiTDbj0z7kJeilQ-_BYvMHw3xzuRcnB2Dw_wcB (15/11/2020)
 $removeparam=dclid
@@ -71,7 +71,7 @@ $removeparam=pf_rd_p
 $removeparam=pf_rd_r
 $removeparam=refRID
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
-$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com
+$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com|thedailybeast.com|itnext.io
 $removeparam=cp_ksver
 ! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
 $removeparam=biw
@@ -83,7 +83,7 @@ $removeparam=usg,domain=~translate.googleusercontent.com|~translate.google.*
 !#endif
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=thunderbird.net|twitter.com
+$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org
 ! https://www.google.no/search?ei=rKq_X621OYCHwPAP5YCiuA0&q=penli.fi&oq=penli.fi&gs_lcp=CgZwc3ktYWIQAzIECAAQEzIGCAAQHhATMgYIABAeEBNQw2VYw2Vg-2ZoAHAAeACAAWGIAacBkgEBMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&uact=5 (26/11/2020)
 $removeparam=gs_lcp
 $removeparam=cshid
@@ -93,7 +93,7 @@ $removeparam=cshid
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! Can NOT be made generic (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no
+$removeparam=ref,domain=amazon.*|deal.no|expo.com
 ! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
 $removeparam=dchild
 $removeparam=qid
@@ -415,10 +415,31 @@ $removeparam=/^intgrtn_/
 $removeparam=afftag
 $removeparam=affid
 ! https://www.thedailybeast.com/russian-doctor-alexander-murakhovsky-who-lied-about-navalny-poisoning-disappeared-in-the-woods?source=articles&via=rss
-||thedailybeast.com^$removeparam=source
 ||thedailybeast.com^$removeparam=via
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-716142
 ||cbc.ca^$removeparam=cmp
+! https://www.imdb.com/title/tt10048342/mediaviewer/rm2490882049/?context=default
+||imdb.com^$removeparam=context
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-728592
+$removeparam=referralCose
+$removeparam=LSNPUBID
+||udemy.com^$removeparam=publisher_id
+||udemy.com^$removeparam=website_id
+$removeparam=admitad_uid
+$removeparam=traffic_type
+$removeparam=traffic_id
+$removeparam=dcmp
+||hostinger.com^$removeparam=session
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-737564
+$removeparam=clickOrigin
+$removeparam=clickSR
+$removeparam=istCompanyId
+$removeparam=istFeedId
+$removeparam=istItemId
+$removeparam=istBid
+$removeparam=cmpid
+||riverisland.com^$removeparam=sem
+||marksandspencer.com^$removeparam=bvstate
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
