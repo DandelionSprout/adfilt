@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 05May2021v1-Alpha
+# Version: 14May2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -106,6 +106,7 @@ msFilterList
 -d videotool.fbg.dk
 -d farm-dk.plista.com
 -d svindel.info
+-d annoncer.nichehuset.dk
 -d print2web.sn.dk
 -d lib.idg.no
 # Adressa.no
@@ -149,6 +150,8 @@ msFilterList
 # ytresogn.no (16 12 2020)
 - hnuannonse
 # heilsutorg.is (17 04 2021)
+# fugleognatur.dk (14 05 2021)
+- images bannere
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -409,6 +412,7 @@ msFilterList
 -d yrkesbil.no 1pix.gif
 -d www-presse-fotos-dk.filesusr.com
 -d ytresogn.no index.html
+-d erotikmix.dk mixads300.html
 - gifs *emty.gif
 - -l%C3%BDsing-
 # — — — — —
