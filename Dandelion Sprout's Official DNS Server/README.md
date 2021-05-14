@@ -17,7 +17,7 @@ The server attempts to block ads, malware, fake webshops, push notifications, an
 
 On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Pokémon GO, Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 4th of April 2021:
+Current list set as of 15th of May 2021:
 
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
 * Dandelion Sprout's AdGuard Home Compilation - Web Push Notifications — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt
@@ -66,6 +66,8 @@ Many companies known to look through the fingers with port-scanners and spammers
 ### Other technical aspects
 
 The server runs on a Raspberry Pi 4 4GB, with Raspberry Pi OS 32-bit. Several attempts at upgrading to a 64-bit distro have failed, including Raspberry Pi OS Beta (Couldn't handle backports), openSUSE (RaspPi version is broken), and Ubuntu MATE (Very bad optimising).
+
+The AdGuard Home update channel in use is the Beta channel (As opposed to Stable or Nightly).
 
 ### Privacy
 
