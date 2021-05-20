@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 200520212
+! Version: 200520213
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -288,6 +288,16 @@ erotikmix.dk##.hustle-slidein
 erotikmix.dk##.widget_custom_html
 erotikmix.dk##.ai_widget
 abcnyheter.no###commercial
+sona.fo###__next > div:not([class]):not([id])
+r7.fo##div[id*=adgroup]
+portal.fo###sidebar_asside > a
+livescore.dk###betting_offer
+livescore.dk##div[style^="padding:5px; "]
+livescore.dk###right_sidebar_news
+boligdebatten.dk###selvsalg-reklame
+gaming.dk##.article-body > .row
+gaming.dk##.main > .container > .row > .col-md-12
+gaming.dk#?#.panel-latest-forum-threads:-abp-contains( sponsor)
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -701,6 +711,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||viralefilmer.no/wp-content/uploads/*slot-
 ||ni.dk/ni-img/*banner
 ||ridr.dk/images/partners^
+||cms.sona.fo/ads^
+||r7.fo/lysing^
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png^
@@ -1325,6 +1337,7 @@ goerdetselv.dk##div[id^=cx_]
 madbanditten.dk##.madbanditten-widget
 abcnyheter.no#?#.o-grid__col:-abp-has(> [id^=ad_native])
 abcnyheter.no##.container-newsfeed + section .u-x3of5-medium
+gaming.dk##div[style^="width: 370px; "]
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$subdocument
 ||danishfamilysearch.dk/images/xp2^$image
@@ -2096,7 +2109,7 @@ sofabold.dk##.centerMgfx
 
 ! Title: 🇸🇪 Swedish List for Adblock Plus
 ! Expires: 6 days (update frequency)
-! Version: 300420212
+! Version: 200520211
 ! Homepage: https://github.com/DandelionSprout/Swedish-List-for-Adblock-Plus
 ! 🇸🇪 Beskrivning: Den här listan fjärnar reklamar och sporing på svenskspråkiga websidor. Den er mycket närt tilknyttad «Frellwit's Swedish Filters», men har blivit modifiserad för at fjärna uppföringer som stridar imot reglementet för inkludering i Adblock Plus (så som anti-anti-adblocking, cookie-notifikationer, nyhetsbrev, med mer), och öka kompatibiliteten med ABP sin syntax, eftersom Frellwits lista inte tilbjuder offisiell brukerstöd för ABP-brukare. Planen är at synkronisera med listan honoms omkring en gång i månaden, och at vi i ABP-teamet lägger til båda variga och mildertidiga fixer i mällantiden.
 ! 🇬🇧 Description: This list removes advertising and tracking on Swedish-language websites. It is very closely connected to "Frellwit's Swedish Filters", but has been modified to remove entries that are against the rules for inclusion in Adblock Plus (such as anti-anti-adblocking, cookie notifications, newsletters, etc.), and increase compatibility with ABP's syntax, since Frellwit's list does not offer official user support for ABP users. The plan is to synchronise with his list roughly once a month, and that the ABP team add both permanent and temporary fixes in the meantime.
@@ -4027,3 +4040,6 @@ wellness.se#?#*:-abp-has(> [id^=adPlacement])
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 fastighetssverige.se##.bnr_box
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
+
+! /\/\/\/\/\/\/\/\/\/\ Temporary fixes for Finnish-language websites, wished for by the Adblock Plus team, in the interrim before Adblock List for Finland is allowed to be included in All-Nordic Filters /\/\/\/\/\/\/\/\/\/\
+seiska.fi##div[class*=AdAndCarousel__Wrapper]
