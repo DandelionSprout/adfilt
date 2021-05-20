@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 14May2021v1-Alpha
+# Version: 20May2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -628,7 +628,6 @@ msFilterList
 - pakkerlevering
 -d 102.112.2o7.net
 -d tromselementbygg.no
--d arvetellefsen.no curry
 -d vipps-sikkerhet.
 - dnb11111
 -d nymelding.com
@@ -702,7 +701,6 @@ msFilterList
 -d is-a-personaltrainer.com
 # https://nyheder.tv2.dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
 -d rigspolitiet.com
--d nemid.org
 # https://www.faktisk.no/faktasjekker/vw8/erik-gikk-fra-arbeidsledig-til-millionaer-pa-8-uker
 -d ocgadgets.com
 -d ocgadgetss.myshopify.com
@@ -814,9 +812,7 @@ msFilterList
 -d drakternorge.com
 -d drcarolyngroff.com
 -d dunjakke-no.com
--d easyliving4you.com
 -d eurosko.net
--d fatalfailblog.com
 -d fotballsko-salg.com
 -d godeskonettbutikk.com
 -d gsport.com
@@ -830,7 +826,6 @@ msFilterList
 -d manasporthorse.com
 -d mbtnorge.com
 -d meladermfacts.com
--d moebel-thiems.com
 -d moteshoes.com
 -d museuw.com
 -d mycraftypad.com
