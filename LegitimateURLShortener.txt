@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 15May2021v4-Beta
+! Version: 20May2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -51,7 +51,7 @@ $removeparam=dclid
 ! https://www.proshop.dk/HyperX-Predator-RGB-ram?cid=64e93f7a-cee2-44d9-911a-37f3eafd7b5f (23/01/2021)
 $removeparam=afid
 ! Can NOT be made generic (e.g. due to sparebank1.no, RARbg.to)
-$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.no|proshop.dk|disneyplus.com|rightmove.co.uk
+$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.no|proshop.dk|disneyplus.com|rightmove.co.uk|giphy.com
 ! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
 $removeparam=WebSiteMapNodeID
 ! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
@@ -68,8 +68,6 @@ $removeparam=pd_rd_i
 $removeparam=pd_rd_r
 $removeparam=pd_rd_w
 $removeparam=pd_rd_wg
-$removeparam=pf_rd_p
-$removeparam=pf_rd_r
 $removeparam=refRID
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
 $removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com|thedailybeast.com|itnext.io|medium.com
@@ -383,14 +381,14 @@ $removeparam=iid,domain=ebay.*
 ||amazon.$removeparam=ascsubtag
 ||amazon.$removeparam=camp
 ||amazon.$removeparam=crid
-||amazon.$removeparam=cv_ct_*
+||amazon.$removeparam=/^cv_ct_/
 ||amazon.$removeparam=ie
 ||amazon.$removeparam=linkId
 ||amazon.$removeparam=rnid
-||amazon.$removeparam=s
+! ||amazon.$removeparam=s
 ||amazon.$removeparam=sprefix
 ||amazon.$removeparam=ac_md
-||amazon.$removeparam=pf_rd_*
+||amazon.$removeparam=/^pf_rd_/
 ! https://www.wired.com/story/oversight-board-to-facebook-not-going-to-do-your-dirty-work/?mbid=social_twitter
 $removeparam=mbid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-706290
@@ -430,7 +428,7 @@ $removeparam=admitad_uid
 $removeparam=traffic_type
 $removeparam=traffic_id
 $removeparam=dcmp
-||hostinger.com^$removeparam=session
+||hostinger.$removeparam=session
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-737564
 $removeparam=clickOrigin
 $removeparam=clickSR
@@ -443,6 +441,51 @@ $removeparam=cmpid
 ||marksandspencer.com^$removeparam=bvstate
 ! https://www.theguardian.com/technology/2021/may/11/apple-accused-of-breaking-uk-competition-law-by-overcharging-for-apps?CMP=Share_AndroidApp_Other
 $removeparam=CMP
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
+||microsoft.com^$removeparam=epi
+$removeparam=OCID
+$removeparam=tduid
+$removeparam=irclickid
+$removeparam=irclicid
+$removeparam=intcmp
+||xbox.com^$removeparam=xr
+$removeparam=sourceid
+$removeparam=sharedid
+$removeparam=affiliates_ad_id
+$removeparam=campaign_id
+$removeparam=wmlspartner
+$removeparam=wpa_bd
+$removeparam=wpa_pg_seller_id
+$removeparam=wpa_ref_id
+$removeparam=wpa_tag
+$removeparam=wpa_aux_info
+$removeparam=wpa_pos
+$removeparam=wpa_plmt
+$removeparam=wpa_aduid
+$removeparam=aff_key
+$removeparam=sscid
+||banggood.com^$removeparam=SSAID
+$removeparam=rmmds
+$removeparam=act_poa
+$removeparam=utmid
+||deepdiscount.com^$removeparam=bid
+$removeparam=pjxsource
+||deepdiscount.com^$removeparam=medium
+$removeparam=pjxaffiliate_id
+$removeparam=pjxclick_id
+$removeparam=clickId
+$removeparam=msclkid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750307
+||tiktok.com^$removeparam=_d
+||tiktok.com^$removeparam=tt_from
+||tiktok.com^$removeparam=preview_pb
+||tiktok.com^$doc,removeparam=user_id
+||tiktok.com^$doc,removeparam=sec_user_id
+$removeparam=share_app_id
+$removeparam=share_item_id
+$removeparam=share_link_id
+$removeparam=rid,domain=giphy.com
+||rightmove.co.uk^$removeparam=csg
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
