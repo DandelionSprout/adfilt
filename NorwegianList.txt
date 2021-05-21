@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 21May2021v3
+! Version: 21May2021v5
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -327,7 +327,7 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! 🇬🇧: Generic #-entries that have sources
 ! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
 ! Exceptions: ballade.no
-##.gofollow:not([href*=nyhetsbrev]):not([href*=radio])
+##.gofollow:not([href*=nyhetsbrev], [href*=radio])
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
 ! arendalstidende.no
@@ -1357,7 +1357,7 @@ vl.no##.ad-fullwidth-container
 vl.no##.vlDesktopAd
 vredens-gnag.no##.ab-appnexus-ads-wrapper
 win-xp.no#?#tr > td > div:-abp-has(a[href*="clk.tradedoubler."])
-www.tv2.no##body:not(.broom):not(.lab):style(padding-top: 70px !important)
+www.tv2.no##body:not(.broom, .lab):style(padding-top: 70px !important)
 yrkesbil.no###side > div:nth-of-type(1)
 yrkesbil.no##.forside_adholder:upward(1)
 yrkesbil.no##td:empty
