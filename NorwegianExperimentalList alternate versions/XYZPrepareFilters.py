@@ -7,7 +7,7 @@ UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '$$', '$app', '$csp=upgrade-insecure-requests', '$removeparam', 'badfilter', '!#include']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '!#include']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', '$generichide', '$ghide', 'Expires:', '$removeparam']
-UNSUPPORTED_UMATRIX = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', 'generichide', 'Expires:', 'subdocument', '$app', '!+', '$doc', ' doc ', 'CSP', '$csp', 'ghide', '$removeparam']
+UNSUPPORTED_UMATRIX = ['##', '#@#', '#?#', '!#', '$$', '$redirect', ',redirect', 'generichide', 'Expires:', 'subdocument', '$app', '!+', '$doc', ' doc ', 'CSP', '$csp', 'ghide', '$removeparam', '$all']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AG = 'NordicFiltersAdGuard.txt'
@@ -782,6 +782,12 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"(.*)\$all", 
+           r"\1\n\1$popup", 
+           line
+        )
+
+        line = re.sub(
            r'(#\?#)([a-z.]{1,}\[.*) (\*:-abp-.*)( [0-9%;"]{1,})', 
            r"\1\3 \2\4", 
            line
@@ -1526,6 +1532,12 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"\$image$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$all$", 
            r"", 
            line
         )
@@ -2619,6 +2631,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"^\[Adblock Plus [1-3]\.[0-6]\]$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"(.*)\$all", 
+           r"\1\n\1$popup", 
            line
         )
 
