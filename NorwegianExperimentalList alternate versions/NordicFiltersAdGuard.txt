@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 22May2021v2
+! Version: 23May2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -310,6 +310,7 @@ gaming.dk#?#.panel-latest-forum-threads:has-text( sponsor)
 norges.online###modaladv
 norges.online##.modal-backdrop
 norges.online##+js(aopr, adclick)
+3point.dk###top-header-partner
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -737,6 +738,9 @@ _300x500pix$domain=rykindribe.dk,image
 !#endif
 !#if !ext_ublock
 ||adnxs.com^$domain=vgtv.no
+!#endif
+!#if env_chromium
+||bluesnews.no/Files/Images/video/Blues-promo-2021.mp4^$~third-party
 !#endif
 !+ NOT_OPTIMIZED
 ||samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png^
@@ -1702,6 +1706,8 @@ eyjar.net#@#.side_ads
 @@||finn.no/user/ads.html^$popup
 check-in.dk#@#.home-ads
 check-in.dk#@#.ads-top
+@@||bluesnews.no/Files/Images/annonser^
+@@||lnk.no/wp-content/uploads/*/ads
 ! https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 @@||cdn.easy-ads.com/js/swipemod.js^$script,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no|h-avis.no
 @@||easy-ads.com/subscriber^$image,domain=oa.no|rb.no|ta.no|sb.no|ostlendingen.no|smp.no|h-avis.no

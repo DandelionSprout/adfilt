@@ -4112,8 +4112,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"\$all$", 
-           r"", 
+           r"(.*)\$all", 
+           r"\1\n\1$popup", 
            line
         )
 
