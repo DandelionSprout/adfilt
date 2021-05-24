@@ -5,7 +5,7 @@
 
 ———————————————————————————
 
-<b>IMPORTANT NOTE:</b> My lists does not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions or Chrome ≥97 ±1 will <b>not</b> be accepted, and if you do submit one, you would be asked to use an alternate web browser instead.
+<b>IMPORTANT NOTE:</b> My lists does not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions or Chrome ≥99 ±1 will <b>not</b> be accepted, and if you do submit one, you would be asked to use an alternate web browser instead.
 
 And just in case anyone thinks I'm not serious about it, <b>I do no longer offer support to Safari ≥13 users</b> (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
 
