@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 27May2021v1-Beta
+! Version: 27May2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -42,10 +42,8 @@ $removeparam=WT.mc_id
 $removeparam=ref_src
 $removeparam=ref_url
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
-||amazon.$removeparam=th
-$removeparam=psc
 $removeparam=tag,domain=amazon.*|argos.co.uk|tv2.no
-||amazon.$removeparam=linkCode
+$removeparam=psc
 ! https://www.netonnet.no/art/data-og-nettbrett/nettbrett/lader-og-dokking/apple-thunderboltgigabitethernet/182650.11071/?dclid=CjkKEQiAwMP9BRDt06nU9a_8_bABEiQAL_PHDRXNVIm2rrWiTDbj0z7kJeilQ-_BYvMHw3xzuRcnB2Dw_wcB (15/11/2020)
 $removeparam=dclid
 ! https://www.apple.com/no/shop/product/MD463ZM/A/thunderbolt-til-gigabit-ethernet-adapter?afid=p239%7C1405819&cid=aos-no-aff-ir (15/11/2020)
@@ -64,13 +62,6 @@ $removeparam=tt_medium
 $removeparam=eid,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 $removeparam=hc_ref
 $removeparam=hc_location
-! https://www.amazon.co.uk/Bos-Magical-New-Friend-Scholastic/dp/1338323326/ref=pd_sbs_14_1/262-3877129-1714269?_encoding=UTF8&pd_rd_i=1338323326&pd_rd_r=da2a232b-99a2-4202-ade0-6b52bb20749b&pd_rd_w=cXLbd&pd_rd_wg=46K05&pf_rd_p=2773aa8e-42c5-4dbe-bda8-5cdf226aa078&pf_rd_r=1HVF5BQG27VGX33FG5J6&psc=1&refRID=1HVF5BQG27VGX33FG5J6
-$removeparam=pd_rd_i
-$removeparam=pd_rd_r
-$removeparam=pd_rd_w
-$removeparam=pd_rd_wg
-$removeparam=refRID
-@@||amazon.*/gp/slredirect/picassoRedirect.html^$removeparam
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
 $removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com|thedailybeast.com|itnext.io|medium.com
 $removeparam=cp_ksver
@@ -95,10 +86,6 @@ $removeparam=cshid
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! Can NOT be made generic (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
 $removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com
-! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
-$removeparam=dchild
-$removeparam=qid
-||amazon.$removeparam=sr
 ! https://www.ebay.com/sch/i.html?_from=R40&_nkw=Born+Pretty&_sacat=0&_pgn=5&rt=nc (27/11/2020)
 $removeparam=_from
 $removeparam=sacat
@@ -120,9 +107,6 @@ $removeparam=tbas
 ||pbtech.$removeparam=qr
 ! https://shop.bt.com/products/nintendo-switch-hw---neon-red-and-neon-blue--2019-version--10002208-FCM1.html?awc=3043_1606583260_feef24aba0ca5ffbbf513bb8f34cd1be (28/11/2020)
 $removeparam=awc
-! https://www.amazon.co.uk/dp/B08K443FBQ/ref=asc_df_B08K443FBQ1606003200000/?creative=22374&creativeASIN=B08K443FBQ (28/11/2020)
-$removeparam=creative
-$removeparam=creativeASIN
 ! https://www.onbuy.com/gb/nintendo-switch-62-32gb-touchscreen-wi-fi-blue-grey-red~c9482~p5584084/?exta=pspy (28/11/2020)
 $removeparam=exta
 ! https://www.go2games.com/switch/nintendo-switch-console-fortnite-edition?ranMID=42957&ranEAID=ORHQW7E8X5A&ranSiteID=ORHQW7E8X5A-JzvoI1XaPNAAx901cYMaQw (28/11/2020)
@@ -229,17 +213,6 @@ $removeparam=im_company
 $removeparam=source_location
 $removeparam=psf_variant
 ! https://accelerateworkshopserverless.splashthat.com/?sc_channel=sm&sc_campaign=startupaccelerate_q3_serverless&sc_geo=emea&sc_country=mult&sc_outcome=reg&trkCampaign=bnl20_accelerate_q3_serverless&trk=bnl20_accelerate_q3_serverless_e&es_id=9ee9c1a102 (28/02/2021)
-! https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html?sc_icampaign=Adoption_Campaign_pac-optimize-2020-console-1-asg-max&sc_ichannel=ha&sc_icontent=awssm-5270&sc_ioutcome=Enterprise_Digital_Marketing&sc_iplace=console-ec2autoscaling_infobar&trk=ha_a121p21423yfe1DAD~ha_awssm-5270&trkCampaign=pac-edm-2019-optimize-autoscaling-instance-asg (28/02/2021)
-$removeparam=/sc_i?channel/
-$removeparam=/sc_i?campaign/
-$removeparam=/sc_i?geo/
-$removeparam=/sc_i?country/
-$removeparam=/sc_i?outcome/
-$removeparam=/sc_i?content/
-$removeparam=/sc_i?place/
-$removeparam=trkCampaign
-$removeparam=trk,domain=splashthat.com|aws.amazon.com
-$removeparam=es_id
 ! https://open.hpi.de/courses/malware2021?tracking_user=74v365zif700sQKXlqj020vyd&tracking_type=news&tracking_id=5ED4ZiWEw48Lft3MGkAag (28/02/2021)
 $removeparam=tracking_type
 ||hpi.de^$removeparam=tracking_id
@@ -378,19 +351,6 @@ $removeparam=hash,domain=ebay.*
 $removeparam=iid,domain=ebay.*
 ! https://cdnb.artstation.com/p/assets/images/images/030/045/719/large/abhishek-karmakar-b56f0421b303b8d9016f022d17330898.jpg?1599443127 (06/05/2021)
 ||artstation.com^$removeparam=/^[0-9]/
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700946
-||amazon.$removeparam=/__mk_*_*/
-||amazon.$removeparam=ascsubtag
-||amazon.$removeparam=camp
-||amazon.$removeparam=crid
-||amazon.$removeparam=/^cv_ct_/
-||amazon.$removeparam=ie
-||amazon.$removeparam=linkId
-||amazon.$removeparam=rnid
-! ||amazon.$removeparam=s
-||amazon.$removeparam=sprefix
-||amazon.$removeparam=ac_md
-||amazon.$removeparam=/^pf_rd_/
 ! https://www.wired.com/story/oversight-board-to-facebook-not-going-to-do-your-dirty-work/?mbid=social_twitter
 $removeparam=mbid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-706290
@@ -505,6 +465,49 @@ $removeparam=ggdev
 $removeparam=ggdevm
 $removeparam=ggplm
 $removeparam=ggtgt
+
+! ——— Amazon ———
+! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
+||amazon.$removeparam=th
+||amazon.$removeparam=linkCode
+! https://www.amazon.co.uk/Bos-Magical-New-Friend-Scholastic/dp/1338323326/ref=pd_sbs_14_1/262-3877129-1714269?_encoding=UTF8&pd_rd_i=1338323326&pd_rd_r=da2a232b-99a2-4202-ade0-6b52bb20749b&pd_rd_w=cXLbd&pd_rd_wg=46K05&pf_rd_p=2773aa8e-42c5-4dbe-bda8-5cdf226aa078&pf_rd_r=1HVF5BQG27VGX33FG5J6&psc=1&refRID=1HVF5BQG27VGX33FG5J6
+$removeparam=pd_rd_i
+$removeparam=pd_rd_r
+$removeparam=pd_rd_w
+$removeparam=pd_rd_wg
+$removeparam=refRID
+@@||amazon.*/gp/slredirect/picassoRedirect.html^$removeparam
+! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
+$removeparam=dchild
+$removeparam=qid
+||amazon.$removeparam=sr
+! https://www.amazon.co.uk/dp/B08K443FBQ/ref=asc_df_B08K443FBQ1606003200000/?creative=22374&creativeASIN=B08K443FBQ (28/11/2020)
+$removeparam=creative
+$removeparam=creativeASIN
+! https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html?sc_icampaign=Adoption_Campaign_pac-optimize-2020-console-1-asg-max&sc_ichannel=ha&sc_icontent=awssm-5270&sc_ioutcome=Enterprise_Digital_Marketing&sc_iplace=console-ec2autoscaling_infobar&trk=ha_a121p21423yfe1DAD~ha_awssm-5270&trkCampaign=pac-edm-2019-optimize-autoscaling-instance-asg (28/02/2021)
+$removeparam=/sc_i?channel/
+$removeparam=/sc_i?campaign/
+$removeparam=/sc_i?geo/
+$removeparam=/sc_i?country/
+$removeparam=/sc_i?outcome/
+$removeparam=/sc_i?content/
+$removeparam=/sc_i?place/
+$removeparam=trkCampaign
+$removeparam=trk,domain=splashthat.com|aws.amazon.com
+$removeparam=es_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700946
+||amazon.$removeparam=/__mk_*_*/
+||amazon.$removeparam=ascsubtag
+||amazon.$removeparam=camp
+||amazon.$removeparam=crid
+||amazon.$removeparam=/^cv_ct_/
+||amazon.$removeparam=ie
+||amazon.$removeparam=linkId
+||amazon.$removeparam=rnid
+! ||amazon.$removeparam=s
+||amazon.$removeparam=sprefix
+||amazon.$removeparam=ac_md
+||amazon.$removeparam=/^pf_rd_/
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
