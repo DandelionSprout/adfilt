@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 29May2021v1-Alpha
+# Version: 30May2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -624,42 +624,42 @@ msFilterList
 # 🇮🇸: Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
 # 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 # Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no sport
-- finn.no finno.htm
-- ?finn.no login
 - begrensede-tilbudet
 - bli-avbrutt-bor-du-oppdater
-- Norgesecure
-- gratis-reisebilletter.
-- KiwiErbjudanden1
--d trackvoluum.com
-- pakkerlevering
--d 102.112.2o7.net
--d tromselementbygg.no
--d vipps-sikkerhet.
 - dnb11111
--d nymelding.com
--d mrcal365.com
--d ultimate-tech-products.myshopify.com
--d look-like-star.myshopify.com
--d limitedvoucher.com
--d djurs.com-*.
--d pensjonistferie.no
--d postuksus.com
+- KiwiErbjudanden1
+- Norgesecure
+- pakkerlevering
+- finn.no finno.htm
+- gratis-reisebilletter.
+-d 102.112.2o7.net
 -d 52.216.146.90
 -d 92.42.104.146
 -d beatsapple.top
--d jimmychoostore.top
+-d bizcashtrend.com
+-d djurs.com-*.
+-d fullbagcash.com
 -d hervelegeroutletusa.com
--d replicapatekphilippe.com
 -d hot-rap-beats.top
+-d itunesconnect-*.no
+-d jimmychoostore.top
+-d limitedvoucher.com
+-d look-like-star.myshopify.com
+-d marked.no
+-d mrcal365.com
+-d nymelding.com
+-d optimizersppc.com
+-d pensjonistferie.no
+-d postuksus.com
+-d replicapatekphilippe.com
 -d replicarolexyachtmaster.com
 -d secureriches.com
--d itunesconnect-*.no
--d fullbagcash.com
--d bizcashtrend.com
 -d toptechmania.com
--d marked.no
--d optimizersppc.com
+-d trackvoluum.com
+-d tromselementbygg.no
+-d ultimate-tech-products.myshopify.com
+-d vipps-sikkerhet.
+- ?finn.no login
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
