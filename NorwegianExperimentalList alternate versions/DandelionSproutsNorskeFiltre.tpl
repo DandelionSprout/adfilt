@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 30May2021v1-Alpha
+# Version: 30May2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -485,7 +485,7 @@ msFilterList
 -d ni.dk *-bottom.html
 # fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30 09 2020)
 # https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
-# dagsavisen.no (Mobile version; 23 10 2020)
+# dagsavisen.no (30 05 2021)
 # aftenposten.no, hockeymagasinet.dk, l-a.no, aftenbladet.no (30 10 2020)
 # bt.no, byas.no, aftenbladet.no (30 10 2020)
 # costume.no, costume.dk (09 11 2020)
