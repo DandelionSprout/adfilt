@@ -2646,6 +2646,30 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"og samebefolkningen\.", 
+           r"samebefolkningen, Sverige, og Finland.", 
+           line
+        )
+
+        line = re.sub(
+           r"og den samiske befolkning\.", 
+           r"den samiske befolkning, Sverige, og Finland.", 
+           line
+        )
+
+        line = re.sub(
+           r"og samefolkesetnadene\.", 
+           r"samefolkesetnadene, Sverige, og Finland.", 
+           line
+        )
+
+        line = re.sub(
+           r"and the Sami indigenous population\.", 
+           r"the Sami indigenous population, Sweden, and Finland.", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
