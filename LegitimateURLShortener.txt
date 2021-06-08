@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 05June2021v1-Beta
+! Version: 08June2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -27,9 +27,6 @@ $removeparam=/^utm_/,domain=~redir.tradedoubler.com
 $removeparam=/^itm_/,domain=~redir.tradedoubler.com
 $removeparam=/^stm_/,domain=~redir.tradedoubler.com
 @@mailinglist$removeparam=/^utm_/
-! https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1 (31/10/2020)
-$removeparam=_trkparms
-$removeparam=_trksid
 ! https://www.ixigua.com/6888869154099629319?logTag=Y8JlCALntSDuDesMiPno8 (31/10/2020)
 $removeparam=logTag
 ! https://www.jula.no/catalog/fritid/trening/treningsutstyr/manualer-og-vektstenger/manualsett-951150?gclid=Cj0KCQjwlvT8BRDeARIsAACRFiUj4R30NdrcmVwC1-pBi43uGBKic6uEq0zEJfkXS3hxOfGrJ3CrR9waAoy9EALw_wcB&gclsrc=aw.ds (31/10/2020)
@@ -58,49 +55,21 @@ $removeparam=WebSiteMapNodeID
 ! https://clips.twitch.tv/HotGenerousBearHeyGirl?tt_content=player_title&tt_medium=clips_embed
 $removeparam=tt_content
 $removeparam=tt_medium
-! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/157
-$removeparam=eid,domain=facebook.com|facebookcorewwwi.onion|messenger.com
-$removeparam=hc_ref
-$removeparam=hc_location
-! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
-$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com|thedailybeast.com|itnext.io|medium.com|awd-it.*
-$removeparam=cp_ksver
-! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
-$removeparam=biw
-$removeparam=bih
-!#if env_chromium
-||google.$removeparam=ved
-@@||google.com/url?$removeparam=ved
-$removeparam=usg,domain=~translate.googleusercontent.com|~translate.google.*
-!#endif
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
 $removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com
-! https://www.google.no/search?ei=rKq_X621OYCHwPAP5YCiuA0&q=penli.fi&oq=penli.fi&gs_lcp=CgZwc3ktYWIQAzIECAAQEzIGCAAQHhATMgYIABAeEBNQw2VYw2Vg-2ZoAHAAeACAAWGIAacBkgEBMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&uact=5 (26/11/2020)
-$removeparam=gs_lcp
-$removeparam=cshid
-||google.$removeparam=ei
 ! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
 ||tv2.no^$removeparam=referral
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! Can NOT be made generic (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
 $removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi
-! https://www.ebay.com/sch/i.html?_from=R40&_nkw=Born+Pretty&_sacat=0&_pgn=5&rt=nc (27/11/2020)
-$removeparam=_from
-$removeparam=sacat
-! ||ebay.$removeparam=rt (Believed to break search filter buttons; #174)
-! https://www.ebay.com/sch/i.html?_from=R40&_nkw=Ugreen&_blrs=spell_auto_correct (27/11/2020)
-$removeparam=_blrs
 ! https://www.elgiganten.dk/product/lyd-hi-fi/hovedtelefoner/WH1000XM3B/sony-tradlose-around-ear-hovedtelefoner-wh-1000xm3-sort?scid=Pricecomparison8084162610 (27/11/2020)
 $removeparam=scid
 ! https://salming.com/sv-se/produkter/p/1099805-0416/salming-oval-fusion?trackID=79064280 (27/11/2020)
 $removeparam=trackID
 ! https://productkeys.dk/produkt/pokemon-lets-go-pikachu/?dTribesID=9OIiIkbuCBtHQnvUeuU6ZD05WpuicLKP%7Cadtribes%7C11543 (27/11/2020)
 $removeparam=dTribesID
-! https://www.google.com/search?q=%22The%20Butterfly%20Fairy%20Friends%22%20little%20airplane&newwindow=1&sxsrf=ALeKk011aAibMJ9b29iUUQWPxzOfWhZZJA%3A1606560888505&tbas=0&source=lnt&sa=X (28/11/2020)
-$removeparam=sxsrf
-$removeparam=tbas
 ! https://www.youtube.com/watch?v=7yk3WDZRcTM&feature=youtu.be (28/11/2020)
 ||youtube.com^$removeparam=feature
 ! https://www.pbtech.co.nz/product/MPHSAM00510/Samsung-Galaxy-A51-2020-Dual-SIM-Smartphone-6GB128?qr=pspy (28/11/2020)
@@ -183,20 +152,11 @@ $removeparam=hmb_source
 $removeparam=FMID
 $removeparam=LID
 $removeparam=_ga
-! https://www.google.no/search?newwindow=1&source=univ&tbm=isch&q=fursuit&hl=no&fir=nwjEObe4q69GJM%2(…abridged by Dandelion…)3ezNNzM%252C_&usg=AI4_-kQL51ABubPt5Njl2wYsc9VKumls8Q&sa=X (23/01/2021)
-!+ NOT_OPTIMIZED
-$removeparam=fir
-||google.*/search$removeparam=source
-! https://www.google.no/search?q=beetle&sa=X&hl=no&tbm=isch&ictx=1&fir=hA_sSJDgDUD05M%252Cra9C8zPHQZacDM%252C_%253BjHMPo_nzeT4CHM%252CJ-BwVgjGhTXbRM%252C_%253B8idWw3wKyv8TEM%252CEq9NAOyMjA8-LM%252C_%253BIr3d2npsvZA5mM%252Carwh6OytVDPyyM%252C_&vet=1&usg=AI4_-kQywyXRkRPeAWvGNhHd9wKvex-4AQ#imgrc=hA_sSJDgDUD05M (03/05/2021)
-@@||google.*&tbm=isch&*#imgrc=$removeparam=fir
-@@||google.*&tbm=isch&*#imgrc=$removeparam=usg
 ! https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=https%3A%2F%2Fwww.nytimes.com%2F2021%2F01%2F21%2Fopinion%2Fpublic-transit-funding.html%3Faction%3Dclick%26module%3DWell%26pgtype%3DHomepage%26section%3DEditorials (24/01/2021)
 $removeparam=action,domain=nytimes.com|nytimes3xbfgragh.onion
 $removeparam=module,domain=nytimes.com|nytimes3xbfgragh.onion
 $removeparam=pgtype,domain=nytimes.com|nytimes3xbfgragh.onion
 $removeparam=section,domain=nytimes.com|nytimes3xbfgragh.onion
-! https://www.facebook.com/206669696035334/posts/3670522079650061/?sfnsn=mo (08/02/2021)
-$removeparam=sfnsn
 ! https://techcrunch.com/2021/02/09/eus-lead-data-supervisor-for-most-of-big-tech-is-still-using-lotus-notes/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZGlnaS5uby8&guce_referrer_sig=AQAAAJnvyfO0iClmtx73_ycersFbfhSLMdJB5kyLHseaWdi9TiXKa3ao3deC8nvfiBm9IQAwmBtL8QaSY7_01D0_zasr2yeupMAku3-KxlDkOxDyxYUx3AQ5Q8Y9C0U16b4NGeZWMVUyVkqEhj-UruGKz5DG1uVu7gBjEoBlwtGYgoQu (12/02/2021)
 $removeparam=guccounter
 $removeparam=guce_referrer
@@ -270,20 +230,6 @@ $removeparam=referrer,domain=~f4map.com|~deviantart.com
 ! https://ekstrabladet.dk/nyheder/samfund/slut-med-massageannoncer/8498857?account=ebreaking&ext_source=twitter (10/03/2021)
 ||ekstrabladet.dk^$removeparam=account
 $removeparam=ext_source
-! https://www.google.no/imghp?hl=no&ogbl (13/03/2021)
-$removeparam=ogbl
-! https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/filterlist/other/SurvivedTrackingLinkWarning.txt (Considered by me to be transformative work)
-?*__$removeparam=/^__[bce-z]/,domain=facebook.com|facebookcorewwwi.onion|messenger.com,~xmlhttprequest
-$removeparam=acontext
-$removeparam=dti
-$removeparam=fref
-$removeparam=/^hc_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
-$removeparam=lst,domain=facebook.com|facebookcorewwwi.onion|messenger.com
-$removeparam=/^pn_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
-$removeparam=privacy_mutation_token
-$removeparam=settings_tracking
-$removeparam=/^zero_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
-||facebook.com/ads^$removeparam=session_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-487427 (17/03/2021)
 ||tradera.com^$removeparam=transactionalEmail
 ! https://graphicriver.net/item/invoice-estimation-brief/20668760?iradid=275988&irpid=1288974&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1 (17/03/2021)
@@ -316,9 +262,6 @@ $removeparam=__twitter_impression
 $removeparam=email_work_card
 ! https://www.behance.net/gallery/40969175/MELOWY-MAGAZINE-FABBRI?tracking_source=search_projects_recommended%7Cvanni%20fabbri (06/04/2021)
 $removeparam=tracking_source
-! https://x.facebook.com/mylittlepony/videos/917830495715016/?refsrc=https%3A%2F%2Fx.facebook.com%2Fmylittlepony%2Fposts%2F4640468362637231&_rdr (09/04/2021)
-$removeparam=refsrc
-$removeparam=_rdr
 ! https://www.theverge.com/2021/4/16/22387492/google-floc-ad-tech-privacy-browsers-brave-vivaldi-edge-mozilla-chrome-safari?scrolla=5eb6d68b7fedc32c19ef33b4 (20/04/2021)
 $removeparam=scrolla
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
@@ -341,13 +284,6 @@ $removeparam=onetime_FromEmail
 ! https://www.humblebundle.com/store/?linkID=&mcID=102:UUIDHERE:ot:UUIDHERE:1 (06/05/2021)
 ||humblebundle.com^$removeparam=linkID
 ||humblebundle.com^$removeparam=mcID
-! https://www.google.com/webhp?client=firefox-b-m&channel=ts (06/05/2021)
-||google.*/webhp$removeparam=channel
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700500 (06/05/2021)
-$removeparam=amdata,domain=ebay.*
-$removeparam=epid,domain=ebay.*
-$removeparam=hash,domain=ebay.*
-$removeparam=iid,domain=ebay.*
 ! https://cdnb.artstation.com/p/assets/images/images/030/045/719/large/abhishek-karmakar-b56f0421b303b8d9016f022d17330898.jpg?1599443127 (06/05/2021)
 ||artstation.com^$removeparam=/^[0-9]/
 ! https://www.wired.com/story/oversight-board-to-facebook-not-going-to-do-your-dirty-work/?mbid=social_twitter
@@ -361,10 +297,6 @@ $removeparam=full_trSrc
 $removeparam=cmpg_for_af
 $removeparam=ICID
 $removeparam=icid
-||www.google.$removeparam=aqs
-||www.google.$removeparam=stick
-||www.google.$removeparam=btnG
-||www.google.$removeparam=iflsig
 $removeparam=hmb_campaign
 $removeparam=hmb_medium
 $removeparam=/^utm-/
@@ -447,9 +379,6 @@ $removeparam=share_item_id
 $removeparam=share_link_id
 $removeparam=rid,domain=giphy.com
 ||rightmove.co.uk^$removeparam=csg
-! https://www.facebook.com/2021iihfworlds/videos/hey-we-are-moving-on-with-spiky-video-series-this-time-our-mascot-helps-organizi/925480501570258/?__so__=permalink&__rv__=related_videos (22/05/2021)
-$removeparam=__so__
-$removeparam=__rv__
 ! https://m.lightinthebox.com/no/p/kvinners-svart-blaa-groenn-vintage-maxi-kjole-langarmet-troeye-med-v-hals_p4298383.html?currency=NOK&litb_from=paid_adwords_shopping&sku=1_6920%7C2_286&country_code=no&adword_mt&adword_ct=496040937781&adword_kw&adword_pos&adword_pl&adword_net=u&adword_tar&adw_src_id=7573621213_12242627236_117670768776_pla-402619472328 (22/05/2021)
 $removeparam=litb_from
 $removeparam=/^adword_/
@@ -503,8 +432,6 @@ $removeparam=hvlocint
 $removeparam=hvlocphy
 $removeparam=hvtargid
 $removeparam=adgrpid
-||ebay.$removeparam=epid
-||ebay.$removeparam=amdata
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-783185
 $removeparam=wgu
 $removeparam=wgexpiry
@@ -540,9 +467,6 @@ $removeparam=hsCtaTracking
 ||microsoft.com^$removeparam=/^AAAA/
 $removeparam=affId
 ||proicc.com^$removeparam=tblci
-||ebay.^$removeparam=mkevt
-||ebay.^$removeparam=mkcid
-||ebay.^$removeparam=customid
 ||babbel.com^$removeparam=bsc
 ||babbel.com^$removeparam=btp
 $removeparam=tblci
@@ -564,6 +488,14 @@ $removeparam=elqTrackId
 ||discshop.fi^$removeparam=/^ad/
 ||hammacher.com^$removeparam=promo
 ||keepersecurity.com^$removeparam=campaignid
+! https://www.netflix.com/watch/80057171?trackId=14170056&tctx=2%2C0%2Cad3cd321-a42b-461e-81d3-b18c51559559-25047246%2Ce7fede3c-e54d-4941-9849-8fb5d51dbada_37683809X10XX1622546150880%2Ce7fede3c-e54d-4941-9849-8fb5d51dbada_ROOT%2C
+||netflix.com^$removeparam=trackId
+$removeparam=tctx
+! https://www.archdaily.com/962593/house-for-a-pianist-pedra-liquida?ad_medium=gallery
+$removeparam=ad_medium
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-831247
+||malwarebytes.com^$removeparam=guard
+||malwarebytes.com^$removeparam=x-source
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
@@ -601,9 +533,94 @@ $removeparam=es_id
 ||amazon.$removeparam=sprefix
 ||amazon.$removeparam=ac_md
 ||amazon.$removeparam=/^pf_rd_/
+! https://www.amazon.com/dp/B08NPNYMW4/?coliid=I15X2UZZA97XNK
+$removeparam=coliid
 ! Other
 ||amazon.$removeparam=ingress
 @@/b/ref=$removeparam=ie
+
+! ——— Facebook ———
+! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/157
+$removeparam=eid,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=hc_ref
+$removeparam=hc_location
+! https://www.facebook.com/206669696035334/posts/3670522079650061/?sfnsn=mo (08/02/2021)
+$removeparam=sfnsn
+! https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/filterlist/other/SurvivedTrackingLinkWarning.txt (Considered by me to be transformative work)
+! https://www.facebook.com/2021iihfworlds/videos/hey-we-are-moving-on-with-spiky-video-series-this-time-our-mascot-helps-organizi/925480501570258/?__so__=permalink&__rv__=related_videos (22/05/2021)
+?*__$~xmlhttprequest,removeparam=/^__[bce-z]/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=acontext
+$removeparam=dti
+$removeparam=fref
+$removeparam=/^hc_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=lst,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=/^pn_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=privacy_mutation_token
+$removeparam=settings_tracking
+$removeparam=/^zero_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+||facebook.com/ads^$removeparam=session_id
+! https://x.facebook.com/mylittlepony/videos/917830495715016/?refsrc=https%3A%2F%2Fx.facebook.com%2Fmylittlepony%2Fposts%2F4640468362637231&_rdr (09/04/2021)
+$removeparam=refsrc
+$removeparam=_rdr
+
+! ——— eBay ———
+! https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1 (31/10/2020)
+$removeparam=_trkparms
+$removeparam=_trksid
+! https://www.ebay.com/sch/i.html?_from=R40&_nkw=Born+Pretty&_sacat=0&_pgn=5&rt=nc (27/11/2020)
+$removeparam=_from
+$removeparam=sacat
+! ||ebay.$removeparam=rt (Believed to break search filter buttons; #174)
+! https://www.ebay.com/sch/i.html?_from=R40&_nkw=Ugreen&_blrs=spell_auto_correct (27/11/2020)
+$removeparam=_blrs
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700500 (06/05/2021)
+$removeparam=amdata,domain=ebay.*
+$removeparam=epid,domain=ebay.*
+$removeparam=hash,domain=ebay.*
+$removeparam=iid,domain=ebay.*
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-771456
+||ebay.$removeparam=epid
+||ebay.$removeparam=amdata
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-783185
+||ebay.^$removeparam=mkevt
+||ebay.^$removeparam=mkcid
+||ebay.^$removeparam=customid
+
+! ——— Google Search ———
+! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
+$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com|thedailybeast.com|itnext.io|medium.com|awd-it.*
+$removeparam=cp_ksver
+! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
+$removeparam=biw
+$removeparam=bih
+!#if env_chromium
+||google.$removeparam=ved
+@@||google.com/url?$removeparam=ved
+$removeparam=usg,domain=~translate.googleusercontent.com|~translate.google.*
+!#endif
+! https://www.google.no/search?ei=rKq_X621OYCHwPAP5YCiuA0&q=penli.fi&oq=penli.fi&gs_lcp=CgZwc3ktYWIQAzIECAAQEzIGCAAQHhATMgYIABAeEBNQw2VYw2Vg-2ZoAHAAeACAAWGIAacBkgEBMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&uact=5 (26/11/2020)
+$removeparam=gs_lcp
+$removeparam=cshid
+||google.$removeparam=ei
+! https://www.google.com/search?q=%22The%20Butterfly%20Fairy%20Friends%22%20little%20airplane&newwindow=1&sxsrf=ALeKk011aAibMJ9b29iUUQWPxzOfWhZZJA%3A1606560888505&tbas=0&source=lnt&sa=X (28/11/2020)
+$removeparam=sxsrf
+$removeparam=tbas
+! https://www.google.no/search?newwindow=1&source=univ&tbm=isch&q=fursuit&hl=no&fir=nwjEObe4q69GJM%2(…abridged by Dandelion…)3ezNNzM%252C_&usg=AI4_-kQL51ABubPt5Njl2wYsc9VKumls8Q&sa=X (23/01/2021)
+!+ NOT_OPTIMIZED
+$removeparam=fir
+||google.*/search$removeparam=source
+! https://www.google.no/search?q=beetle&sa=X&hl=no&tbm=isch&ictx=1&fir=hA_sSJDgDUD05M%252Cra9C8zPHQZacDM%252C_%253BjHMPo_nzeT4CHM%252CJ-BwVgjGhTXbRM%252C_%253B8idWw3wKyv8TEM%252CEq9NAOyMjA8-LM%252C_%253BIr3d2npsvZA5mM%252Carwh6OytVDPyyM%252C_&vet=1&usg=AI4_-kQywyXRkRPeAWvGNhHd9wKvex-4AQ#imgrc=hA_sSJDgDUD05M (03/05/2021)
+@@||google.*&tbm=isch&*#imgrc=$removeparam=fir
+@@||google.*&tbm=isch&*#imgrc=$removeparam=usg
+! https://www.google.no/imghp?hl=no&ogbl (13/03/2021)
+$removeparam=ogbl
+! https://www.google.com/webhp?client=firefox-b-m&channel=ts (06/05/2021)
+||google.*/webhp$removeparam=channel
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
+||www.google.$removeparam=aqs
+||www.google.$removeparam=stick
+||www.google.$removeparam=btnG
+||www.google.$removeparam=iflsig
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
