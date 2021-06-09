@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 30May2021v2-Alpha
+# Version: 10June2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -529,22 +529,22 @@ msFilterList
 +d isdownorblocked.com
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 -d prod-adops-proxy.dnitv.net
-# ——— Caused by «EasyPrivacy» ———
+# ★★★ Caused by «EasyPrivacy» ★★★
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
 # 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
 # 🇬🇧: Makes Discovery+'s login page show up properly
-# ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
+# ★★★ Caused by «Fanboy's Social Blocking List», if I recall correctly ★★★
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
 # https://github.com/easylist/easylist/issues/7805/(05/05/2021)
 +d cookieinformation.com
-# ——— Caused by «Fanboy's Annoyances List» and «EasyList Cookie List» ———
+# ★★★ Caused by «Fanboy's Annoyances List» and «EasyList Cookie List» ★★★
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
 # https://github.com/ryanbr/fanboy-adblock/issues/1469
 +d service.signalr.net
-# ——— Caused by «EasyList» ———
+# ★★★ Caused by «EasyList» ★★★
 +d _prebid_
 @@://billink*.blob.core.windows.net/*/annonser
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
@@ -552,9 +552,11 @@ msFilterList
 # Makes 1p info banners show up correctly
 +d _980x100.
 # Makes most links show up correctly (Fixed in AdGuard Base)
-# ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
+# ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
-# ——— Unknown cause ———
+# ★★★ Caused by «AdGuard Russian» ★★★
+# https://github.com/AdguardTeam/AdguardFilters/issues/85331
+# ★★★ Unknown cause ★★★
 # https://github.com/DandelionSprout/adfilt/issues/67
 # https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 +d notice.sp-prod.net

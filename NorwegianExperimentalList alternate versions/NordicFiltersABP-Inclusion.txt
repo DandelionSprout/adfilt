@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 300520212
+! Version: 100620211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1602,7 +1602,7 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 @@.isdownorblocked.com^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 ||prod-adops-proxy.dnitv.net^$domain=discoveryplus.no|discoveryplus.dk
-! ——— Caused by «EasyPrivacy» ———
+! ★★★ Caused by «EasyPrivacy» ★★★
 ! Attempting to fix a problem with voting online on Idol Norway
 @@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
 ! Attempts to resolve how some frontpage articles are hard to open
@@ -1610,7 +1610,7 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 ! 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
 ! 🇬🇧: Makes Discovery+'s login page show up properly
 @@||mparticle.com^*/login$domain=discoveryplus.no|discoveryplus.dk
-! ——— Caused by «Fanboy's Social Blocking List», if I recall correctly ———
+! ★★★ Caused by «Fanboy's Social Blocking List», if I recall correctly ★★★
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
 @@||api.instagram.com^$domain=samiteahter.org
@@ -1618,13 +1618,13 @@ krom.is#@#.share-container
 ! https://github.com/easylist/easylist/issues/7805 (05/05/2021)
 @@||cookieinformation.com^$domain=gulesider.no|degulesider.dk|krak.dk|altibox.no
 altibox.no#@##coiOverlay[role="banner"][style*="flex"]
-! ——— Caused by «Fanboy's Annoyances List» and «EasyList Cookie List» ———
+! ★★★ Caused by «Fanboy's Annoyances List» and «EasyList Cookie List» ★★★
 dagbladet.no,elbil24.no#@#.subscription-box
 ! https://github.com/ryanbr/fanboy-adblock/issues/1243
 ||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
 ! https://github.com/ryanbr/fanboy-adblock/issues/1469
 @@||service.signalr.net^$third-party
-! ——— Caused by «EasyList» ———
+! ★★★ Caused by «EasyList» ★★★
 @@_prebid_$domain=seher.no
 @@/images/ads-db/right-tower/vipps-sponsor-$domain=canariajournalen.no
 eyjar.net#@#.side_ads
@@ -1646,10 +1646,13 @@ babyklar.dk#@#.ads300_250-widget
 @@_980x100.$domain=ruijan-kaiku.no
 ! Makes most links show up correctly (Fixed in AdGuard Base)
 ni.dk#@#a[href*=".adform.net/"]
-! ——— Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ———
+! ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 ! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 
-! ——— Unknown cause ———
+! ★★★ Caused by «AdGuard Russian» ★★★
+! https://github.com/AdguardTeam/AdguardFilters/issues/85331
+finn.no#@##ad-content
+! ★★★ Unknown cause ★★★
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=ba.no|nidaros.no
 @@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=ba.no|nidaros.no
@@ -4074,7 +4077,7 @@ wellness.se#?#*:-abp-has(> [id^=adPlacement])
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 
-! Version: 070620212
+! Version: 090620211
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4470,6 +4473,7 @@ mobiili.fi##.article_ad_2
 mobiili.fi##.execphpwidget
 mobiili.fi##.single-content-all > div[style^="float:left"][style*="width:100%"][style*="text-align:center"][style*="margin-bottom:17px"]
 mobiili.fi##.singlehinta.header_ad
+mobiili.fi##.textwidget > div[style="width:300px; height:600px;"]
 mobiili.fi##body.category > div .header_ad
 mobiili.fi##div[class="tops-bar"][style="height:36px!important;"]
 mobiili.fi##img[src^="https://impr.adservicemedia.dk/cgi-bin/Services/ImpressionService/Image.pl"]
@@ -4887,6 +4891,8 @@ ruutu.fi##.RuutuPlayer__Error-sc-1o2b3la-0
 ! Lowe's list and Easyprivacy prevents opening thread replys via email
 @@||click.redditmail.com^$~third-party
 
+kotiliesi.fi##.placeholder
+
 ! -----UNSORTED END-----
 ! -----UNBREAK-----
 
@@ -4944,6 +4950,3 @@ tjareborg.fi#@#.push-container
 
 ! https://github.com/easylist/easylist/pull/7774
 timma.fi#@##cookieConsentModal
-
-! https://github.com/easylist/easylist/pull/7985
-##.advert.box
