@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 11June2021v2-Alpha
+# Version: 12June2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -661,6 +661,10 @@ msFilterList
 -d tromselementbygg.no
 -d ultimate-tech-products.myshopify.com
 -d vipps-sikkerhet.
+-d noipermontanera.it
+-d lydmagasinet.com
+-d norskposten.com
+-d oslo-tannlegene.no
 - ?finn.no login
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
