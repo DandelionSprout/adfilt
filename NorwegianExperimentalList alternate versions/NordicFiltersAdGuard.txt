@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 12June2021v1
+! Version: 15June2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -312,6 +312,10 @@ xn--bodposten-n8a.no,ranaposten.no#?#.widget-goodpress-home-block-one:has-text(A
 xstra.no##.td-fix-index
 ytresogn.no###hcol
 e24.no##div[class^=article-wrapper] > div[class^=_][class*=" "]
+feltet.dk#?#div[class^=tmplNews_body_] > p:last-of-type:has(a[href*=casino])
+fodbold-transfers.dk#?#.post-content > p:has(a[href*=casino])
+tipsbladet.dk##main > section.l-padding-top-lg
+dagens.dk#?#.col-300 > .wrapper-sticky:has(a[href*=casino])
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -406,6 +410,8 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ~casino24.dk##a[href*="casino24.dk"]
 ! forum.ipmsnorge.org (24/05/2021)
 ##a[href*="&do=advertisement&"]
+! tipsbladet.dk (15/06/2021)
+~onlinecasinoer.com##a[href*="onlinecasinoer.com"]
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -737,6 +743,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||ridr.dk/images/partners^
 ||cms.sona.fo/ads^
 ||r7.fo/lysing^
+||aftenposten.no/seksjon/dist/ads-$script
 !#if false
 @@||vgtv.no$ghide
 !#endif
@@ -1447,10 +1454,10 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
-dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder24.dk,tilbudsugen.dk,alletilbudsaviser.co.no,sedirekte.com##.banner
+dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder24.dk,tilbudsugen.dk,alletilbudsaviser.co.no,sedirekte.com,tilbudsuken.no##.banner
 hsfo.dk,jv.dk,stiften.dk,viborg-folkeblad.dk,dagbladet-holstebro-struer.dk,ugeavisen.dk,fyens.dk,lydogbilde.no,lydogbillede.dk##.adblock
 komputer.no,natgeo.no,historienet.no,koplr.no,ing.dk,in.fo,kvennabladid.is##.top-banner
-bygg.no,mmm.dk,kino.no,connery.dk,golferen.no##.ad
+bygg.no,mmm.dk,kino.no,connery.dk,golferen.no,spilcomputer.dk##.ad
 prisjakt.*,prisjagt.dk,dv.is,drm24.no##.adbox
 iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
 av-avis.no,bygdanytt.no,strilen.no,vestnytt.no##.carousel-ad
@@ -1632,6 +1639,8 @@ _980banner_
 ##optimus-element[linecount=undefined][width="280"]
 ! gnavergalleri.dk (along with ~60 affiliates sites; 21/04/2021)
 ##.container-topbanner
+! nidaros.no
+##.ad-iframe-nt
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -1908,6 +1917,14 @@ $removeparam=utm_id,domain=elkjop.no|elgiganten.dk
 ||p3.no^$removeparam=draftsforfriends
 ||tv2.no^$removeparam=r
 
+! 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
+! 🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
+csp.screen9.com#@#.adsbox
+@@.dk/assets/templates/*/ads.png^$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
+@@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
+@@||sixscissors.com^$third-party,domain=itavisen.no
+@@||www.tv2.no/s/js/ads.js$script,~third-party
+
 !#if !adguard
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
@@ -1997,6 +2014,7 @@ sofabold.dk##.centerMgfx
 ||lydmagasinet.com^$document
 ||norskposten.com^$document
 ||oslo-tannlegene.no^$document
+||y6.no^$all
 !+ NOT_OPTIMIZED
 /?finn.no/login$document
 
@@ -2296,44 +2314,21 @@ lydogbilde.no,lydogbillede.dk##.lbplussinfo
 vg.no##div[data-test-tag=timestamp] + div:before
 ! https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
 vg.no##div[data-test-tag=timestamp] + p + div:before
-! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-712799898
-!#if !env_mobile
-aasavis.no,amta.no,an.no,auraavis.no,austagderblad.no,avisenagder.no,budstikka.no,bygdebladet.no,bygdeposten.no,dt.no,eikerbladet.no,enebakkavis.no,finnmarkdagblad.no,finnmarken.no,finnmarksposten.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gd.no,gjengangeren.no,glomdalen.no,hadeland.no,helg.no,inderoyningen.no,indre.no,jarlsbergavis.no,jbl.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofotposten.no,lyngdalsavis.no,namdalsavisa.no,noblad.no,norddalen.no,nordhordland.no,nordlys.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,pd.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,sa.no,sandeavis.no,sandnesposten.no,sb.no,smaalenene.no,snasningen.no,sognavis.no,solabladet.no,solungavisa.no,strandbuen.no,svelviksposten.no,ta.no,tb.no,telen.no,tk.no,tvedestrandsposten.no,varingen.no,vestbyavis.no###aid-overlay
-aasavis.no,amta.no,an.no,auraavis.no,austagderblad.no,avisenagder.no,budstikka.no,bygdebladet.no,bygdeposten.no,dt.no,eikerbladet.no,enebakkavis.no,finnmarkdagblad.no,finnmarken.no,finnmarksposten.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gd.no,gjengangeren.no,glomdalen.no,hadeland.no,helg.no,inderoyningen.no,indre.no,jarlsbergavis.no,jbl.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofotposten.no,lyngdalsavis.no,namdalsavisa.no,noblad.no,norddalen.no,nordhordland.no,nordlys.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,pd.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,sa.no,sandeavis.no,sandnesposten.no,sb.no,smaalenene.no,snasningen.no,sognavis.no,solabladet.no,solungavisa.no,strandbuen.no,svelviksposten.no,ta.no,tb.no,telen.no,tk.no,tvedestrandsposten.no,varingen.no,vestbyavis.no##.aid-incentive-overlay:style(top: 950px !important)
-aasavis.no,amta.no,an.no,auraavis.no,austagderblad.no,avisenagder.no,budstikka.no,bygdebladet.no,bygdeposten.no,dt.no,eikerbladet.no,enebakkavis.no,finnmarkdagblad.no,finnmarken.no,finnmarksposten.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gd.no,gjengangeren.no,glomdalen.no,hadeland.no,helg.no,inderoyningen.no,indre.no,jarlsbergavis.no,jbl.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofotposten.no,lyngdalsavis.no,namdalsavisa.no,noblad.no,norddalen.no,nordhordland.no,nordlys.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,pd.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,sa.no,sandeavis.no,sandnesposten.no,sb.no,smaalenene.no,snasningen.no,sognavis.no,solabladet.no,solungavisa.no,strandbuen.no,svelviksposten.no,ta.no,tb.no,telen.no,tk.no,tvedestrandsposten.no,varingen.no,vestbyavis.no##.incentive-selector__positioner--visible, .incentive-selector__positioner, .aid-background-blur:style(filter: none !important)
-aasavis.no,amta.no,an.no,auraavis.no,austagderblad.no,avisenagder.no,budstikka.no,bygdebladet.no,bygdeposten.no,dt.no,eikerbladet.no,enebakkavis.no,finnmarkdagblad.no,finnmarken.no,finnmarksposten.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gd.no,gjengangeren.no,glomdalen.no,hadeland.no,helg.no,inderoyningen.no,indre.no,jarlsbergavis.no,jbl.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofotposten.no,lyngdalsavis.no,namdalsavisa.no,noblad.no,norddalen.no,nordhordland.no,nordlys.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,pd.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,sa.no,sandeavis.no,sandnesposten.no,sb.no,smaalenene.no,snasningen.no,sognavis.no,solabladet.no,solungavisa.no,strandbuen.no,svelviksposten.no,ta.no,tb.no,telen.no,tk.no,tvedestrandsposten.no,varingen.no,vestbyavis.no##.login-card:style(color: #000 !important)
-! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-725741350
-nettavisen.no##.aid-incentive-overlay:style(top: 1875px !important)
-!#endif
-! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-761870246
-altaposten.no,andalsnes-avis.no,dolen.no,driva.no,fjordabladet.no,fjordingen.no,fjt.no,fjuken.no,folkebladet.no,framtidinord.no,heroynytt.no,ht.no,itromso.no,morenytt.no,rbnett.no,smp.no,sunnmoringen.no,vigga.no,vikebladet.no,vol.no##.article-body > [style^="display: none;"]:style(display: unset !important)
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 11June2021v1-Extension
-gratiskostplaner.dk##+js(aopw, KillAdBlock)
-csp.screen9.com#@#.adsbox
+! Last updated: 15June2021v1-Extension
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
 techstart.dk##+js(set, adblock, false)
 tv2.no##+js(acis, adblockDetector)
 vg.no##+js(aeld, load, concat)
-tipsbladet.dk##.js-isblured:style(-webkit-filter: none !important; filter: none !important)
-tipsbladet.dk###js-promo-welcome
-||aftenposten.no/seksjon/dist/ads-$script
 ||elderlyscissors.com^
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
-@@.dk/assets/templates/*/ads.png^$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
-@@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
-@@||sixscissors.com^$third-party,domain=itavisen.no
-@@||www.tv2.no/s/js/ads.js$script,~third-party
 gamereactor.*##+js(set, adblockEnabled, noopFunc)
 gamereactor.*##+js(set, trackAdblock, noopFunc)
 gamereactor.*##+js(acis, AdsReloadConfig)
-||avxwcuaagfcdn.net^$domain=dagens.dk
-||allercdn.net/randomurl.js$script,domain=seoghoer.dk
-||egmontassets.net/random.js$script,domain=euroman.dk
 !#if adguard
 gamereactor.*$$script[onError="adblockEnabled()"]
 !#endif
@@ -2342,8 +2337,6 @@ gamereactor.*$$script[onError="adblockEnabled()"]
 !#endif
 ! Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 ||googletagmanager.com/gtm.js^$domain=dk|bornholm.nu
-! To be submitted to "AdGuard Warning Removal List" as well
-minmote.no##.adblock-info
 ! aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
 ##div[style^="bottom: 0px;"][style*="width: 10"][style*="z-index: 2147"]
 ! https://github.com/uBlockOrigin/uAssets/issues/8648

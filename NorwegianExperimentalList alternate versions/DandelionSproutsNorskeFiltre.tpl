@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 12June2021v1-Alpha
+# Version: 15June2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -61,6 +61,7 @@ msFilterList
 # sol.dk (25 04 2021)
 # bilgalleri.dk (25 04 2021)
 # forum.ipmsnorge.org (24 05 2021)
+# tipsbladet.dk (15 06 2021)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -503,6 +504,7 @@ msFilterList
 # nettavisen.no (04 04 2021)
 # steinkjer-avisa.no (12 04 2021)
 # gnavergalleri.dk (along with ~60 affiliates sites; 21 04 2021)
+# nidaros.no
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -613,6 +615,9 @@ msFilterList
 # 🇳🇴: Fjerner overflødige deler av URL-er for å gjøre dem kortere og lettere å dele
 # 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
 # Infrequently synced with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
+# 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
+# 🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
++d sixscissors.com
 # 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
@@ -665,6 +670,7 @@ msFilterList
 -d lydmagasinet.com
 -d norskposten.com
 -d oslo-tannlegene.no
+-d y6.no
 - ?finn.no login
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
@@ -910,21 +916,13 @@ msFilterList
 # https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
 # https://www.vg.no/nyheter/i/y3Mka2//(08/04/2020)
 # https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
-# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-712799898
-# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-725741350
-# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-761870246
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 11June2021v1-Extension
+# Last updated: 15June2021v1-Extension
 -d elderlyscissors.com
-+d sixscissors.com
--d avxwcuaagfcdn.net
--d allercdn.net randomurl.js
--d egmontassets.net random.js
 -d
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
-# To be submitted to "AdGuard Warning Removal List" as well
 # aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
 # https://github.com/uBlockOrigin/uAssets/issues/8648

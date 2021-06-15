@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 120620211
+! Version: 150620211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -302,6 +302,10 @@ xn--bodposten-n8a.no,ranaposten.no#?#.widget-goodpress-home-block-one:-abp-conta
 xstra.no##.td-fix-index
 ytresogn.no###hcol
 e24.no##div[class^=article-wrapper] > div[class^=_][class*=" "]
+feltet.dk#?#div[class^=tmplNews_body_] > p:last-of-type:-abp-has(a[href*=casino])
+fodbold-transfers.dk#?#.post-content > p:-abp-has(a[href*=casino])
+tipsbladet.dk##main > section.l-padding-top-lg
+dagens.dk#?#.col-300 > .wrapper-sticky:-abp-has(a[href*=casino])
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -395,6 +399,8 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ~casino24.dk##a[href*="casino24.dk"]
 ! forum.ipmsnorge.org (24/05/2021)
 ##a[href*="&do=advertisement&"]
+! tipsbladet.dk (15/06/2021)
+~onlinecasinoer.com##a[href*="onlinecasinoer.com"]
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -727,6 +733,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||ridr.dk/images/partners^
 ||cms.sona.fo/ads^
 ||r7.fo/lysing^
+||aftenposten.no/seksjon/dist/ads-$script
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||bluesnews.no/Files/Images/video/Blues-promo-2021.mp4^$~third-party
@@ -1380,10 +1387,10 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
-dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder24.dk,tilbudsugen.dk,alletilbudsaviser.co.no,sedirekte.com##.banner
+dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder24.dk,tilbudsugen.dk,alletilbudsaviser.co.no,sedirekte.com,tilbudsuken.no##.banner
 hsfo.dk,jv.dk,stiften.dk,viborg-folkeblad.dk,dagbladet-holstebro-struer.dk,ugeavisen.dk,fyens.dk,lydogbilde.no,lydogbillede.dk##.adblock
 komputer.no,natgeo.no,historienet.no,koplr.no,ing.dk,in.fo,kvennabladid.is##.top-banner
-bygg.no,mmm.dk,kino.no,connery.dk,golferen.no##.ad
+bygg.no,mmm.dk,kino.no,connery.dk,golferen.no,spilcomputer.dk##.ad
 prisjakt.no,prisjagt.dk,dv.is,drm24.no##.adbox
 iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
 av-avis.no,bygdanytt.no,strilen.no,vestnytt.no##.carousel-ad
@@ -1561,6 +1568,8 @@ _980banner_
 ##optimus-element[linecount=undefined][width="280"]
 ! gnavergalleri.dk (along with ~60 affiliates sites; 21/04/2021)
 ##.container-topbanner
+! nidaros.no
+##.ad-iframe-nt
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -1802,6 +1811,14 @@ nettavisen.no###topover
 ! 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
 ! Infrequently synced with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
 
+! 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
+! 🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
+csp.screen9.com#@#.adsbox
+@@.dk/assets/templates/*/ads.png^$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
+@@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
+@@||sixscissors.com^$third-party,domain=itavisen.no
+@@||www.tv2.no/s/js/ads.js$script,~third-party
+
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 ! 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
@@ -1889,6 +1906,8 @@ sofabold.dk##.centerMgfx
 ||lydmagasinet.com^
 ||norskposten.com^
 ||oslo-tannlegene.no^
+||y6.no^
+||y6.no^$popup
 /?finn.no/login
 
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
@@ -4087,7 +4106,7 @@ wellness.se#?#*:-abp-has(> [id^=adPlacement])
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 
-! Version: 110620213
+! Version: 140620213
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4238,6 +4257,7 @@ anna.fi##.kaupalliset
 anna.fi,kaksplus.fi##.widget_nativearticles
 anna.fi##div.grid__item_tn-1-2
 arcticinsider.com##a[href*="bannerTrack"]
+arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com##div[class*="post"] > hr, hr ~ *:not(aside)
 arvopaperi.fi##div#skyscraper-height-div > div > aside > div > div > a[href^="/kumppaniblogit/"]
 arvopaperi.fi##div#skyscraper-height-div > div > aside > div > div > a[href^="https://studio.arvopaperi.fi/"]
 arvopaperi.fi#?#div#skyscraper-height-div > aside > div > a:-abp-contains(Kaupallinen yhteistyö)
@@ -4314,6 +4334,8 @@ halloota.com##a[href$="koronaavastaan.fi/?ref=metrotuotanto"]
 hameensanomat.fi###herald_posts_widget-5
 hardelli.com##.td-a-rec-id-sidebar
 hardelli.com#?#div[class="wpb_wrapper"][style^="width: 324px;"] > div[data-td-block-uid]:-abp-contains(PELIT)
+hardware.fi##.adsbygoogle + script + br
+hardware.fi#?#br:-abp-has(+ .adsbygoogle)
 hardware.fi,kaksplus.fi##.advertisement
 hbl.fi##ksf-adblockers
 heili.fi###sp-alabanneri
@@ -4389,6 +4411,9 @@ kansanuutiset.fi##A[href="http://www.autonvaraosastore.fi/"]
 kansanuutiset.fi##div[class*="intextad"]
 karjalainen.fi,sammysatv.com##center
 kauppalehti.fi#?#div:-abp-has( > a[href^="https://www.kauppalehti.fi/kumppanisisallot/"])
+keskustelu.afterdawn.com###div-ad-below-message
+keskustelu.afterdawn.com##.pageWidth > div[style="min-height:90px;text-align:center;margin:auto;"]
+keskustelu.afterdawn.com##.sidebar > div[style="min-height:250px;text-align:center;margin:auto;"]
 keskustelu.kaksplus.fi###native_text_wrapper
 keskustelu.kaksplus.fi##.native.feed_box_container
 keskustelu.kauppalehti.fi##.blogi__nosto
@@ -4419,12 +4444,10 @@ kuljetusnet.fi###middle
 kuljetusnet.fi##div[class*="banner"]
 kulutusluottovertailu.fi##.fusion-carousel
 kuvake.net##.addme
-kuvake.net,nainen.com,viikonloppu.com###ticker
+kuvake.net###ticker
 kuvaton.com##.addme
 kuvaton.com##[href^="https://www.kasinokaverit.com/"]
 kuvaton.com##[href^="https://www.lainaovi.fi/"]
-laliiga.com,leijonat.com,nhlsuomi.com,suomifutis.com,suomikiekko.com,valioliiga.com#?#.td-post-content > h4:-abp-contains(talletusbonus)
-laliiga.com,leijonat.com,nhlsuomi.com,suomifutis.com,suomikiekko.com,valioliiga.com#?#.td-post-content > ol:-abp-contains(pelitili)
 lapinkansa.fi###content1-container
 lapinkansa.fi###outstream-container
 lapinkansa.fi###paraati-ad-grid
@@ -4469,13 +4492,9 @@ mediuutiset.fi##div#skyscraper-height-div > div > section > a[href^="/kumppanisi
 mediuutiset.fi##div#skyscraper-height-div > section > a[href^="/kumppanisisaltoa/"]
 mediuutiset.fi#?#a[href^="https://studio.mediuutiset.fi/"]:-abp-contains(Kaupallinen yhteistyö)
 mesta.net##.gofollow
-metropoli.net###bs-text-listing-4-7.widget_bs-text-listing-4
-metropoli.net###menu-item-46797 > [href="https://www.metropoli.net/rahapelit/"]
-metropoli.net###tdt_widget_minilanding-7
-metropoli.net##.rp-holder-419.main-term-1.listing-item-grid
-metropoli.net##.widget_bs-text-listing-4.widget.primary-sidebar-widget.w-t.h-bg-f2861a.h-bg.h-c-ffffff.h-c.h-ni.article-popular-post-widget
-metropoli.net#?#article[class|="post"][class~="listing-item-grid"]:-abp-has( > div.item-inner > div.featured.clearfix > a[href^="https://www.metropoli.net/rahapelit/"])
-metropoli.net,suomif1.com,suomifutis.com,suomikoris.com,suomiurheilu.com,viikonloppu.com##hr + h3 > strong, p + hr + h3, h3 + p, h3 + p + ul
+metropoli.net##.ads-desktop
+metropoli.net##.ads-mobile
+metropoli.net#?#.block-box.news-post:-abp-has(a[href^="https://www.metropoli.net/rahapelit/"])
 mikrobitti,talouselama.fi##div[id|="almad"]
 mikrobitti.fi##.is-visible.LazyLoad
 mikrobitti.fi##aside > div > div > a[href^="https://studio.mikrobitti.fi/mikrobitti-studiovieras/"]
@@ -4527,7 +4546,6 @@ mvlehti.net##.content-center.header-nav-ad
 mvlehti.net##.premium_container
 mvlehti.net##[href="https://www.cbdtukku.fi/"]
 mvlehti.net##[href="https://www.halvinlaina.fi/"]
-nainen.com###text-3 > .textwidget
 nainen.com##[href="https://www.kasinokaverit.com/ilmaiskierroksia-nettikasinoilla/"]
 nainen.com##[href="https://www.nainen.com/lainoja-kilpailuttamalla-saastat-aikaa-ja-rahaa/"]
 napsu.fi###banneriwrapper
@@ -4644,7 +4662,7 @@ taisto.org###mw-data-after-content > div
 taisto.org##a[id="top"] ~ [id="siteNotice"][class="mw-body-content"]
 talouselama.fi##[id="skyscraper-height-div"] > div > main > div[class="LazyLoad is-visible"] > section > div:first-of-type + div[class^="sc-"]
 talouselama.fi##a[href^="https://www.talouselama.fi/kumppanisisallot/"]
-talouselama.fi#?##root > div > div > div > div > div:-abp-has([id="almad-parade-1"])
+talouselama.fi#?#.lazyload-wrapper:-abp-has([id|="almad"])
 talouselama.fi#?#[class]:-abp-has( > a[href^="https://www.talouselama.fi/kumppanisisallot/"])
 talouselama.fi#?#[id|="podcasti"]:-abp-contains(Kaupallinen Yhteistyö)
 talouselama.fi#?#div.article-body > div:-abp-has( > div.LazyLoad.is-visible)
@@ -4706,19 +4724,11 @@ verkkouutiset.fi##.page-ad__location
 verkkouutiset.fi##article.rp-lift.featured-post
 vertaa.fi##[id|="gpt-slot-billboard"]
 vertaa.fi#?#li[class^="cg-"][data-role="items-list-item"]:-abp-has( > div > [id^="gpt-slot-results-"][id*="rectangle"])
-viikonloppu.com###text-10 > .textwidget
 viikonloppu.com###text-8
 viikonloppu.com###text-9
-viikonloppu.com##.category-uutiset.category-pelit
-viikonloppu.com##.tag-eurojackpot.category-uutiset
-viikonloppu.com##.tag-kasino.category-uutiset
-viikonloppu.com##.tag-nettikasino.category-uutiset
-viikonloppu.com##.tag-rizk.category-uutiset
 viikonloppu.com##[href^="https://www.kasinokaverit.com/"]
 viikonloppu.com##[href^="https://www.lainaovi.fi/"]
-viikonloppu.com##[rel="noreferrer noopener"]
-viikonloppu.com##li > a[href*="-jackpot-"]
-viikonloppu.com##p[style="text-align: right;"] + .rp-holder-612
+viikonloppu.com#?#.listing-item:-abp-has( > .item-inner > .native-title)
 viisasraha.fi##.d-md-block.d-lg-block.d-none
 viisasraha.fi##.kumppani-artikkelit
 viisasraha.fi##div[class*="native-article"] > div[class="ezrichtext-field"] > p > a[href^="https://danskebank.fi/"]
@@ -4794,6 +4804,8 @@ yrittajat.fi##div[class$="kaupallinen-yhteistyo"]
 ||media.vuokraovi.com^$third-party
 ||mobiili.fi/wp-content/uploads/2019/08/bms_2019_980x120.jpg
 ||monster.almamedia.fi/nostobannerit/
+||mvlehti.net/image/adv.jpg
+||mvlehti.net/uploads/2021/06/Halvinlaina-Otsikko.jpg
 ||nayadaya.com^$third-party
 ||nettiauto.com/en/ampparitBanner*.php$subdocument,domain=ampparit.com
 ||otavamedia.fi/ad/$script
