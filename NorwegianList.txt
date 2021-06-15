@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 14June2021v1
+! Version: 15June2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -312,6 +312,10 @@ xn--bodposten-n8a.no,ranaposten.no#?#.widget-goodpress-home-block-one:-abp-conta
 xstra.no##.td-fix-index
 ytresogn.no###hcol
 e24.no##div[class^=article-wrapper] > div[class^=_][class*=" "]
+feltet.dk#?#div[class^=tmplNews_body_] > p:last-of-type:-abp-has(a[href*=casino])
+fodbold-transfers.dk#?#.post-content > p:-abp-has(a[href*=casino])
+tipsbladet.dk##main > section.l-padding-top-lg
+dagens.dk#?#.col-300 > .wrapper-sticky:-abp-has(a[href*=casino])
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -406,6 +410,8 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ~casino24.dk##a[href*="casino24.dk"]
 ! forum.ipmsnorge.org (24/05/2021)
 ##a[href*="&do=advertisement&"]
+! tipsbladet.dk (15/06/2021)
+~onlinecasinoer.com##a[href*="onlinecasinoer.com"]
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -737,6 +743,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||ridr.dk/images/partners^
 ||cms.sona.fo/ads^
 ||r7.fo/lysing^
+||aftenposten.no/seksjon/dist/ads-$script
 !#if false
 @@||vgtv.no$ghide
 !#endif
@@ -1447,10 +1454,10 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
-dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder24.dk,tilbudsugen.dk,alletilbudsaviser.co.no,sedirekte.com##.banner
+dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder24.dk,tilbudsugen.dk,alletilbudsaviser.co.no,sedirekte.com,tilbudsuken.no##.banner
 hsfo.dk,jv.dk,stiften.dk,viborg-folkeblad.dk,dagbladet-holstebro-struer.dk,ugeavisen.dk,fyens.dk,lydogbilde.no,lydogbillede.dk##.adblock
 komputer.no,natgeo.no,historienet.no,koplr.no,ing.dk,in.fo,kvennabladid.is##.top-banner
-bygg.no,mmm.dk,kino.no,connery.dk,golferen.no##.ad
+bygg.no,mmm.dk,kino.no,connery.dk,golferen.no,spilcomputer.dk##.ad
 prisjakt.*,prisjagt.dk,dv.is,drm24.no##.adbox
 iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
 av-avis.no,bygdanytt.no,strilen.no,vestnytt.no##.carousel-ad
@@ -1632,6 +1639,8 @@ _980banner_
 ##optimus-element[linecount=undefined][width="280"]
 ! gnavergalleri.dk (along with ~60 affiliates sites; 21/04/2021)
 ##.container-topbanner
+! nidaros.no
+##.ad-iframe-nt
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -1907,6 +1916,14 @@ $removeparam=utm_id,domain=elkjop.no|elgiganten.dk
 ||norsktipping.no$removeparam=WT.mc_id
 ||p3.no^$removeparam=draftsforfriends
 ||tv2.no^$removeparam=r
+
+! 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
+! 🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
+csp.screen9.com#@#.adsbox
+@@.dk/assets/templates/*/ads.png^$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
+@@/js/ads.js$1p,domain=tvkampen.com|tvsporten.dk
+@@||sixscissors.com^$3p,domain=itavisen.no
+@@||www.tv2.no/s/js/ads.js$script,1p
 
 !#if !adguard
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
