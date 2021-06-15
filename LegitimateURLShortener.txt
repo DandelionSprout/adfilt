@@ -100,7 +100,7 @@ $removeparam=coagent
 $removeparam=cotracking
 ! https://www.fnac.com/Apple-AirPods-2-avec-boitier-de-charge-Ecouteurs-sans-fil-True-Wireless/a10086709/w-4?ectrans=1&Origin=Awin295295&awc=12665_1606583916_a0dffc62f7c4e34914d0e5660e0c6dcf (28/11/2020)
 $removeparam=ectrans
-$removeparam=Origin
+||fnac.com^$removeparam=Origin
 ! https://www.darty.com/nav/achat/accessoires/casque_ecouteurs/casque_intra-auriculaire/apple_airpods_v2.html?awc=7735_1606583917_4f791edbe7805b48b06ce7131a26b480&ectrans=1&dartycid=aff_295295_generique_awin (28/11/2020)
 $removeparam=dartycid
 ! https://fr.shopping.rakuten.com/offer/buy/5483124993/apple-airpods-2-avec-case-2eme-generation-blanc-mv7n2zm-a.html?bbaid=6680578123&t=6862148 (28/11/2020)
@@ -197,7 +197,7 @@ $removeparam=cardId
 $removeparam=ito
 ! https://es.aliexpress.com/item/4000672272353.html?pvid=c4cdc770-f05a-4b7b-8a50-d8b81efff6c9&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:c4cdc770-f05a-4b7b-8a50-d8b81efff6c9,tpp_buckets:668%230%23131923%230_668%23808%234094%23200_668%23888%233325%231_668%232846%238113%23646_668%232717%237558%23188_668%231000022185%231000066059%230_668%233468%2315617%23897
 $removeparam=pvid
-$removeparam=_t
+||aliexpress.com^$removeparam=_t
 ! https://es.aliexpress.com/item/4001349152860.html?gps-id=5547572&scm_id=1007.19201.130907.0&scm=1007.19201.130907.0&scm-url=1007.19201.130907.0
 ||aliexpress.$removeparam=gps-id
 $removeparam=scm_id
@@ -497,6 +497,70 @@ $removeparam=ad_medium
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-831247
 ||malwarebytes.com^$removeparam=guard
 ||malwarebytes.com^$removeparam=x-source
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
+$removeparam=adgroup
+$removeparam=ads_name
+||tiktok.com^$removeparam=c
+||tiktok.com^$removeparam=is_retargeting
+$removeparam=ad_type
+$removeparam=CAWELAID
+$removeparam=partition_id
+$removeparam=target_id
+$removeparam=adgroup_id
+$removeparam=cid,domain=rei.com
+$removeparam=channel,domain=rei.com|squarespace.com
+||squarespace.com^$removeparam=subchannel
+||squarespace.com^$removeparam=source
+$removeparam=rlsatarget
+$removeparam=targetid
+$removeparam=elqCampaignId
+$removeparam=dc_campid
+$removeparam=dc_adgroupid
+$removeparam=AFID
+$removeparam=ref,domain=target.com
+$removeparam=adgroupid
+$removeparam=wt_mc
+||humblebundle.com^$removeparam=partner
+$removeparam=AFFID
+$removeparam=AFFNAME
+$removeparam=ACRID
+$removeparam=ASUBID
+$removeparam=ASID
+$removeparam=cm_sp
+$removeparam=cm_re
+$removeparam=/^mbsy/
+$removeparam=campaignid
+||mechanicalkeyboards.com^$removeparam=creator
+$removeparam=mkref
+||play.google.com^$removeparam=shortlink
+||play.google.com^$removeparam=pid
+||audible.$removeparam=ref
+||audible.$removeparam=source_code
+||audible.$removeparam=ipRedirectFrom
+||audible.$removeparam=ipRedirectOriginalURL
+$removeparam=refer_code
+$removeparam=ref,domain=bestbuy.com|shopping.google.*
+$removeparam=loc
+$removeparam=acampID
+||google.$removeparam=prds
+$removeparam=pj_creativeid
+$removeparam=pj_publisherid
+||spotify.com^$removeparam=referral
+||boson.com^$removeparam=eid
+$removeparam=cid,domain=lenovo.com
+||dustdeal.nl^$removeparam=tracker
+$removeparam=track_campaignid
+$removeparam=track_adgroupid
+$removeparam=track_keyword
+||booking.com^$removeparam=label
+||bloomberg.com^$removeparam=sref
+! https://www.verizon.com/deals/?SID=908A84AE-9041-433A-8EC7-CD9AB19B08F4&vendorid=CJM&PUBID=746431&cjevent=fb375adac6a811eb838200b20a18050d&cjdata=MXxZfDB8WXww
+$removeparam=SID
+||verizon.com^$removeparam=vendorid
+||verizon.com^$removeparam=cjevent
+||verizon.com^$removeparam=cjdata
+! https://www.coolblue.nl/nokia?cmt=c_b%2Ccp_386708701%2Caid_1235851292258762%2Ct_kwd-77240886961109%3Aloc-129%2Cn_s%2Cd_c%2Clp_2488
+$removeparam=cmt
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
@@ -536,6 +600,11 @@ $removeparam=es_id
 ||amazon.$removeparam=/^pf_rd_/
 ! https://www.amazon.com/dp/B08NPNYMW4/?coliid=I15X2UZZA97XNK
 $removeparam=coliid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
+$removeparam=geniuslink
+||amazon.$removeparam=aaxitk
+||amazon.$removeparam=hsa_cr_id
+||amazon.$removeparam=/^pd_rd_/
 ! Other
 ||amazon.$removeparam=ingress
 @@/b/ref=$removeparam=ie
@@ -586,6 +655,17 @@ $removeparam=iid,domain=ebay.*
 ||ebay.^$removeparam=mkevt
 ||ebay.^$removeparam=mkcid
 ||ebay.^$removeparam=customid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
+||ebay.$removeparam=chn
+||ebay.$removeparam=mkrid
+||ebay.$removeparam=mktype
+$removeparam=googleloc
+||ebay.$removeparam=poi
+||ebay.$removeparam=mkgroupid
+||ebay.$removeparam=abcId
+$removeparam=_sacat
+||ebay.$removeparam=campid
+||ebay.$removeparam=toolid
 
 ! ——— Google Search ———
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
@@ -619,7 +699,7 @@ $removeparam=ogbl
 ||google.*/webhp$removeparam=channel
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
 ||www.google.$removeparam=aqs
-||www.google.$removeparam=stick
+! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 ||www.google.$removeparam=btnG
 ||www.google.$removeparam=iflsig
 
