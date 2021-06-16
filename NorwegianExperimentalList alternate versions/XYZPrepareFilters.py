@@ -2670,6 +2670,18 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"! Homepage: https://github\.com/finnish-easylist-addition/finnish-easylist-addition", 
+           r"! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition", 
+           line
+        )
+
+        line = re.sub(
+           r"! Homepage: https://github\.com/DandelionSprout/Swedish-List-for-Adblock-Plus", 
+           r"! Swedish section's homepage: https://github.com/DandelionSprout/Swedish-List-for-Adblock-Plus", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
