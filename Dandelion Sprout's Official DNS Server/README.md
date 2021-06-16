@@ -17,7 +17,7 @@ The server attempts to block ads, malware, fake webshops, push notifications, an
 
 On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Pokémon GO, Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 3rd of June 2021:
+Current list set as of 16th of June 2021:
 
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
 * Dandelion Sprout's AdGuard Home Compilation - Web Push Notifications — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt
@@ -69,13 +69,20 @@ The server runs on a Raspberry Pi 4 4GB, with Raspberry Pi OS 32-bit. Several at
 
 The AdGuard Home update channel in use is the Beta channel (As opposed to Stable or Nightly).
 
+Average uptime is more than 23h59min per day, but is not close enough to 24h00min00sec to be suited for life-or-death scenarios.
+
+### Known problems
+
+* Many (but not all) redirection/affiliation links on e.g. price comparison sites, may be blocked too. This is a known problem inherent to all major DNS adblocker servers, incl. AdGuard DNS.
+* <i>Grayware Blocklist</i> blocks TLDs that aren't 100.0% malware, most notably `||club^`. Problems with specific `.club` sites are therefore extra important for me to be told about.
+
 ### Privacy
 
-Since the server is based on AdGuard Home, the user's IP addresses and the domains they query, are stored on the server, and I reserve the right to browse through the queries if I feel bored for some reason. Additionally, the query log will occasionally help improve the lists that are used ([Example](https://github.com/DandelionSprout/adfilt/commit/cd222a03bf37ee133604008227238bc52d5932b2#diff-4f9e07c6df3e782fd76b51a2dcbe332049dcc066bad61fa0997b737dfe62e22a)).
+Since the server is based on AdGuard Home, the user's IP addresses and the domains they query, are stored on the server, and I reserve the right to browse through the queries if I feel bored for some reason. Additionally, the query log will occasionally help improve the lists that are used ([Example](https://github.com/DandelionSprout/adfilt/commit/cd222a03bf37ee133604008227238bc52d5932b2#diff-4f9e07c6df3e782fd76b51a2dcbe332049dcc066bad61fa0997b737dfe62e22a)), and to determine the (hopefully) least interruptive times to run updates for AdGuard Home or apt-get.
 
 No query or IP data are shared or sold to third-parties, especially so because I dislike user data buyers, and because Linux does not support OneDrive.
 
-Current non-LAN upstreams as of 16th of April 2021:
+Current non-LAN upstreams as of 16th of June 2021:
 
 * `https://mozilla.cloudflare-dns.com/dns-query`
 * `https://dns.google/dns-query`
