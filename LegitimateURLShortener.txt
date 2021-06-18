@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 15June2021v4-Beta
+! Version: 18June2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -561,6 +561,9 @@ $removeparam=SID
 ||verizon.com^$removeparam=cjdata
 ! https://www.coolblue.nl/nokia?cmt=c_b%2Ccp_386708701%2Caid_1235851292258762%2Ct_kwd-77240886961109%3Aloc-129%2Cn_s%2Cd_c%2Clp_2488
 $removeparam=cmt
+! https://www.discoveryplus.dk/programmer/fk-ikke-med-piger?idp=Facebook&responseCode=212 (18/06/2021)
+||discoveryplus.$removeparam=idp
+||discoveryplus.$removeparam=responseCode
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
