@@ -4959,12 +4959,6 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^no##.*", 
-           "", 
-           line
-        )
-
-        line = re.sub(
            r"! Redirect:.*", 
            "", 
            line
@@ -5025,7 +5019,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"\|\|(([1-2]?[0-9]?[0-9]\.?){4}).*", 
+           r"\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^.*", 
            r"\1", 
            line
         )

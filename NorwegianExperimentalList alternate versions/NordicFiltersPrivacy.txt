@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 15June2021v1
+! Version: 18June2021v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1332,7 +1332,6 @@ tek.no#?#main > div > div:-abp-contains(kommersielle partner)
 tek.no#?#main > section > section:-abp-contains(/^annonse$/)
 tek.no#?#section + div:-abp-has(span)
 tek.no#?#section:-abp-has(> div > div:-abp-contains(/^annonse$/))
-tek.no#?#section:-abp-has(> div[class]:only-of-type)
 tek.no#?#section[hidden] + section:style(column-count: 3 !important; width: 100% !important)
 teknologia.no#?#.widget_text:-abp-has(.adsbygoogle)
 telefonterror.co.no,ukendtnummer.dk##.ad-comments
@@ -1426,6 +1425,24 @@ aftenposten.no##div[id^=netboard_]
 aftenposten.no###topboard
 aftenposten.no#?##main > div[class^=css-]:-abp-has(> div[id^=skyscraper])
 alle-apningstider.com##div[id^=google_ad_]
+! — — — — —
+! 🇳🇴: Oppføringer med spesielle omstendigheter
+! 🇬🇧: Entries with special circumstances
+!#if !env_mobile
+bt.dk##.article-container > .row > .sidebar
+bt.dk##.article-container > .row > .col-12.col-xl-8:style(width: 98.1% !important; max-width: none !important; flex: none !important)
+!#endif
+!+ NOT_OPTIMIZED
+nakenprat.com###sidebar
+!+ NOT_OPTIMIZED
+innherred.no##.master.x10
+!+ NOT_OPTIMIZED
+rbkweb.no#?#font > table:first-of-type
+!+ NOT_OPTIMIZED
+baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
+! — — — — —
+! 🇳🇴: Blokkeringsoppføringer
+! 🇬🇧: Blocking-entries
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
 ||730.no/banner/*/sonymusic/$frame
 ||danishfamilysearch.dk/images/xp2^$image
@@ -1439,18 +1456,6 @@ alle-apningstider.com##div[id^=google_ad_]
 ||erotikmix.dk/mixads300.html^
 */gifs/*emty.gif^$domain=yrkesbil.no|bilnorge.no
 -l%C3%BDsing-$image,domain=news.fo
-!#if !env_mobile
-bt.dk##.article-container > .row > .sidebar
-bt.dk##.article-container > .row > .col-12.col-xl-8:style(width: 98.1% !important; max-width: none !important; flex: none !important)
-!#endif
-!+ NOT_OPTIMIZED
-nakenprat.com###sidebar
-!+ NOT_OPTIMIZED
-innherred.no##.master.x10
-!+ NOT_OPTIMIZED
-rbkweb.no#?#font > table:first-of-type
-!+ NOT_OPTIMIZED
-baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1641,6 +1646,8 @@ _980banner_
 ##.container-topbanner
 ! nidaros.no
 ##.ad-iframe-nt
+! dagsavisen.no
+##.arcad-block-container
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———

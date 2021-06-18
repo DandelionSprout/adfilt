@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 15June2021v1-Alpha
+# Version: 18June2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -411,6 +411,12 @@ msFilterList
 # 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
 # ❄: ——— Gurrosat bovssaid bearrái EasyList ———
 # 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
+# — — — — —
+# 🇳🇴: Oppføringer med spesielle omstendigheter
+# 🇬🇧: Entries with special circumstances
+# — — — — —
+# 🇳🇴: Blokkeringsoppføringer
+# 🇬🇧: Blocking-entries
 -d fcbarcelona.dk footerbg.jpg
 -d 730.no sonymusic
 -d danishfamilysearch.dk xp2
@@ -505,6 +511,7 @@ msFilterList
 # steinkjer-avisa.no (12 04 2021)
 # gnavergalleri.dk (along with ~60 affiliates sites; 21 04 2021)
 # nidaros.no
+# dagsavisen.no
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
