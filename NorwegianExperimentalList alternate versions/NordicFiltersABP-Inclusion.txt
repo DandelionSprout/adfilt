@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 180620212
+! Version: 190620211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -306,6 +306,8 @@ feltet.dk#?#div[class^=tmplNews_body_] > p:last-of-type:-abp-has(a[href*=casino]
 fodbold-transfers.dk#?#.post-content > p:-abp-has(a[href*=casino])
 tipsbladet.dk##main > section.l-padding-top-lg
 dagens.dk#?#.col-300 > .wrapper-sticky:-abp-has(a[href*=casino])
+dagbladet.no##main > div[class^=Row-] > div[class^=Column-]:last-of-type
+startsiden.no##div[class*=partnerWidgetContainer]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1701,7 +1703,6 @@ finn.no#@##ad-content
 ! 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 ! 🇳🇴🏞: ——— Norsk Tipping, inkl. tvilsamt motiverte lottoreklamar (Ein håndfull ikkje-påtrengande tippereklamar er i orden for meg) ———
 ! 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
-||widget.norsktippingpartner.no^$subdocument
 ||widget.tippebannere.no^$subdocument,domain=~tipster.no
 ||tipster.no/embed$subdocument
 ###ntwidget
@@ -1728,6 +1729,8 @@ side2.no##.markupbox
 nettavisen.no#?#article[data-lp-section=sportspill]:-abp-has(.slotHeader):-abp-contains(/lotto/i)
 ||vg.no/vgc/pool/tipster.png^$image
 /pustehullet/betting-header.png^$image
+startsiden.no###consumer_service_tipping
+||norsktippingpartner.no^$third-party,domain=~norsktipping.no|~tipster.no
 
 ! ——— Gamereactor + Viafree PC ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
@@ -4110,7 +4113,7 @@ wellness.se#?#*:-abp-has(> [id^=adPlacement])
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 
-! Version: 180620211
+! Version: 190620212
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4204,6 +4207,7 @@ _mainosnappi.
 ##.yhteistyossa
 ##.ylamainokset
 ##.ylamainos
+##[href="https://www.nettikasinot.org"]
 ##[href^="https://media.suomikasino.com/"]
 ##[href^="https://tc.tradetracker.net/"]
 ##a[href*="/clickthrgh.asp?"]
@@ -4248,6 +4252,7 @@ aksa.fi##.vaihtuvamainos
 aksa.fi##div[class="w-full md:w-2/5 pt-6 md:pt-0 pl-0 md:pl-8"]
 alibi.fi##.box--full.grid__container.clearfix
 alibi.fi##.magazineorderwidget__content
+alibi.fi#?#.article__body > p:-abp-contains(/^\xA0$/)
 alibi.fi,ampparit.com,anna.fi,eralehti.fi,golfpiste.com,hymy.fi,kaksplus.fi,kipparilehti.fi,kotilaakari.fi,kotiliesi.fi,koululainen.fi,muropaketti.com,nettiauto.com,nettikone.com,nettivuokraus.com,rakennusmaailma.fi,seura.fi,suomenkuvalehti.fi,tekniikanmaailma.fi,venelehti.fi##div[id^="dfp__"]
 alibi.fi,hymy.fi##[href="https://www.paratiisi.fi/netchat.php"]
 alueviesti.fi##.soliloquy-link
@@ -4261,8 +4266,9 @@ ampparit.com##div[class*="ticker"]
 ampparit.com##div[class="nettiauto-newslist-banner"]
 anna.fi###native_text_wrapper
 anna.fi##.kaupalliset
-anna.fi,kaksplus.fi##.widget_nativearticles
 anna.fi##div.grid__item_tn-1-2
+anna.fi#?#.grid__item_1:-abp-has( > [id^="dfp__native-card"])
+anna.fi,kaksplus.fi##.widget_nativearticles
 arcticinsider.com##a[href*="bannerTrack"]
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com##div[class*="post"] > hr, hr ~ *:not(aside)
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com#?#body.post-template-default * .td-main-content-wrap:-abp-has(.tdt-ad-wrap)
@@ -4435,6 +4441,8 @@ kiinteistolehti.fi##.mpc-row.vc_custom_1515750168978.vc_row-fluid.wpb_row.vc_row
 kilipailut.fi##.bannerlink
 kinuskikissa.fi##app-ad
 konekuriiri.fi,koneporssi.com##.banners
+koneviesti.fi###traktorpool-ad
+koneviesti.fi#?#.layout__article-area__text-content > p:-abp-contains(/^\xA0$/)
 koneviesti.fi,maaseuduntulevaisuus.fi#?#.row * .col-small-12.col-medium-12.col-large-12:-abp-contains(Mainos:)
 kotikokki.net###partners-container-big
 kotikokki.net##[id="content"][class="content hrecipe"] ~ [style="float: left; width: 100%; height: 200px; padding-left:20px; padding-right:20px; box-sizing:border-box; background-color:#fff;"]
@@ -4707,7 +4715,7 @@ tulikulma.fi##.slideshow
 tvmatsit.com##.annons
 twitter.com#?#div:-abp-has( > div > div > div > h2 > div > span:-abp-contains(Mainostettu twiitti))
 uudenkaupunginsanomat.fi###auto-grid-container-5c40764673d19
-uusisuomi.fi#?#div#skyscraper-height-div > aside > section > a:-abp-contains(Kaupallinen yhteistyö)
+uusisuomi.fi#?#.lazyload-wrapper + section:-abp-contains(Kaupallinen yhteistyö)
 uusisuomi.fi#?#div#skyscraper-height-div > div > aside > section > a:-abp-contains(Kaupallinen yhteistyö)
 uusisuomi.fi#?#div#skyscraper-height-div > div > main > div > a:-abp-contains(Kaupallinen yhteistyö)
 uusisuomi.fi#?#div:-abp-has( > a[href^="https://www.uusisuomi.fi/kumppanisisallot/"])
