@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 19June2021v1-Alpha
+# Version: 20June2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -657,7 +657,6 @@ msFilterList
 -d hot-rap-beats.top
 -d itunesconnect-*.no
 -d jimmychoostore.top
--d limitedvoucher.com
 -d look-like-star.myshopify.com
 -d marked.no
 -d mrcal365.com
@@ -687,11 +686,8 @@ msFilterList
 -d brightertrade.com
 # https://www.nrk.no/norge/1.14511067
 # https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
--d ruter.top
 -d earnmoneyglobal.com
 # https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
-# https://www.nrk.no/mr/1.14649436
--d pprfct.com
 # https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
 -d liveshopdealz.com
 # https://www.nrk.no/livsstil/1.14732503
@@ -711,8 +707,6 @@ msFilterList
 -d bondiblue.co.uk
 # https://www.mm.dk/tjekdet/artikel/overrasket-bjarne-riis-kender-intet-til-investering-i-bitcoin-platform
 -d ucrhealthyhearts.com
-# https://www.mm.dk/tjekdet/artikel/svindel-breder-sig-ogsaa-lars-larsen-misbruges-nu-i-bitcoin-fup
--d myk-news.com
 # https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
 # https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
@@ -734,8 +728,6 @@ msFilterList
 -d ekstrabiadet.
 # https://www.mm.dk/tjekdet/artikel/nej-joergen-leth-har-ikke-investeret-500-millioner-kroner-i-bitcoins
 -d daily-news.tech
-# https://www.faktisk.no/notiser/ywM/se-opp-for-bitcoin-svindlere
--d travelersloch.com
 # https://www.tv2.no/nyheter/11516670/
 -d fintechnow*.buzz
 -d wealthnews*.xyz
@@ -743,8 +735,6 @@ msFilterList
 -d rbono.net
 # https://www.datahjelperne.no/dnb-sms-svindel/
 -d no-personal.com
-# https://www.datahjelperne.no/helse-norge-mail-svindel/
--d transitsuburban.com
 # https://www.datahjelperne.no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
 -d newzeninfotech.com
 # https://www.datahjelperne.no/skatteberegning-mail-svindel/
@@ -832,7 +822,6 @@ msFilterList
 -d bostongrnhsflowers.com
 -d caperforaciones.com
 -d coralls.com
--d crossfiterada.com
 -d daradis.com
 -d denningwelldrilling.com
 -d drakternorge.com
