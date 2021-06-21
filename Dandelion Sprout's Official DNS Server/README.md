@@ -1,7 +1,3 @@
-⚠ The server currently has a major outage, due to the total collapse of my 32-bit Raspbian installation, and the complete inability to assign static addresses. Current restoration estimate is Thursday 24th of June 2021.
-
-———————————————————————————
-
 After 1½ years of trial setups and tinkering until March 2021, I now offer my DNS server to be used by the public! That being said, there are a considerable number of drawbacks with it that means that it should ***NOT*** be used in setups where uptime, privacy, or impartiality is important. By using this server, you agree to at least having *read* and being aware of all the info written below.
 
 ### DNS IP addresses
@@ -97,3 +93,7 @@ The DNS server has one server-PC and location, in Norway. This (most likely) mak
 This README is licenced under [the Dandelicence](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md).
 
 Contacting me about the server, should be done at https://github.com/DandelionSprout/adfilt/issues
+
+### Outage log
+
+* 21st of June 2021 20:15-22:29 UTC: What was planned as a 5min outage to set up a 2.5Gb Ethernet card, escalated when it turned out my soon-to-be-discarded Raspbian installation had *the entire network settings menu* disappear permanently, leading to huge problems assigning a static LAN IP to it.
