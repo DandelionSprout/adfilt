@@ -1,3 +1,7 @@
+⚠ The server currently has a major outage, due to the total collapse of my 32-bit Raspbian installation, and the complete inability to assign static addresses. Current restoration estimate is Thursday 24th of June 2021.
+
+———————————————————————————
+
 After 1½ years of trial setups and tinkering until March 2021, I now offer my DNS server to be used by the public! That being said, there are a considerable number of drawbacks with it that means that it should ***NOT*** be used in setups where uptime, privacy, or impartiality is important. By using this server, you agree to at least having *read* and being aware of all the info written below.
 
 ### DNS IP addresses
