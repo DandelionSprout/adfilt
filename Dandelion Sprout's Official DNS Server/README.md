@@ -17,7 +17,7 @@ The server attempts to block ads, malware, fake webshops, push notifications, an
 
 On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Pokémon GO, Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 16th of June 2021:
+Current list set as of 24th of June 2021:
 
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
 * Dandelion Sprout's AdGuard Home Compilation - Web Push Notifications — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt
@@ -27,8 +27,7 @@ Current list set as of 16th of June 2021:
 * Ad Domains Filter List — https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/combined-filters.txt
 * AdGuard DNS Filter - Extra Exclusions — https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exceptions.txt
 * AdGuard Home Gradual Syntax Inclusion Test List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sandbox/AGHSyntaxTester.txt
-* AdGuard Mobile Ads filter — https://filters.adtidy.org/extension/chromium/filters/11.txt
-* DodgySiteBlocker — https://raw.githubusercontent.com/callmenemo491/DodgySiteBlocker/master/DodgySiteBlocker.txt
+* AdGuard Mobile Ads filter — https://filters.adtidy.org/extension/android-content-blocker/filters/11.txt
 * Fake-Local-Journals-List — https://raw.githubusercontent.com/MassMove/AttackVectors/master/LocalJournals/fake-local-journals-list.txt
 * Frellwit's Swedish Hosts File — https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt
 * Hexxium Creations Threat List — https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/hexxiumthreatlist.txt
