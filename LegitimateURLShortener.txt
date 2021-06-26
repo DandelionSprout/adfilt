@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 26June2021v1-Beta
+! Version: 26June2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -63,7 +63,7 @@ $removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|blueje
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! Can NOT be made generic (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com
 ! https://www.elgiganten.dk/product/lyd-hi-fi/hovedtelefoner/WH1000XM3B/sony-tradlose-around-ear-hovedtelefoner-wh-1000xm3-sort?scid=Pricecomparison8084162610 (27/11/2020)
 $removeparam=scid
 ! https://salming.com/sv-se/produkter/p/1099805-0416/salming-oval-fusion?trackID=79064280 (27/11/2020)
@@ -517,7 +517,6 @@ $removeparam=elqCampaignId
 $removeparam=dc_campid
 $removeparam=dc_adgroupid
 $removeparam=AFID
-$removeparam=ref,domain=target.com
 $removeparam=adgroupid
 $removeparam=wt_mc
 ||humblebundle.com^$removeparam=partner
@@ -539,7 +538,6 @@ $removeparam=mkref
 ||audible.$removeparam=ipRedirectFrom
 ||audible.$removeparam=ipRedirectOriginalURL
 $removeparam=refer_code
-$removeparam=ref,domain=bestbuy.com|shopping.google.*
 $removeparam=loc
 $removeparam=acampID
 ||google.$removeparam=prds
@@ -577,6 +575,15 @@ $removeparam=_gl
 ! https://www.webhallen.com/se/product/290554-ASUS-TPM-M-R2-0-Module?ref=adtraction&epi=cyDowRclgCfa
 ||webhallen.com^$removeparam=ref
 ||webhallen.com^$removeparam=epi
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-895430
+$removeparam=gtmtrack
+! https://www.hs.fi/talous/art-2000006474289.html?share=095cb51bfd3619323ff183dd633ae8ab
+||hs.fi^$removeparam=share
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-899565
+$removeparam=vifAdCount
+$removeparam=vifNav
+! https://www.siteground.es/index.htm?afcode=dfe40d3ff0fcb7398f1c2a21ccc60504
+$removeparam=afcode
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
