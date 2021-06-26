@@ -64,7 +64,7 @@ Many companies known to look through the fingers with port-scanners and spammers
 
 ### Other technical aspects
 
-The server runs on a Raspberry Pi 4 4GB, with Raspberry Pi OS 32-bit. Several attempts at upgrading to a 64-bit distro have failed, including Raspberry Pi OS Beta (Couldn't handle backports), openSUSE (RaspPi version is broken), and Ubuntu MATE (Very bad optimising).
+The server runs on a Raspberry Pi 4 8GB, with Fedora Workstation aarch64 (ARM64).
 
 The AdGuard Home update channel in use is the Beta channel (As opposed to Stable or Nightly).
 
@@ -96,3 +96,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 ### Outage log
 
 * 21st of June 2021 20:15-22:29 UTC: What was planned as a 5min outage to set up a 2.5Gb Ethernet card, escalated when it turned out my soon-to-be-discarded Raspbian installation had *the entire network settings menu* disappear permanently, leading to huge problems assigning a static LAN IP to it.
+* Intermittently from 24th to 26th of June 2021: In relation to upgrading to an ARM64 distro, there were problems with *firewalld* and a seemingly dead Ethernet overvoltage protector (APC PNET1GB) that led to frequent downtimes of a few minutes every few hours.
