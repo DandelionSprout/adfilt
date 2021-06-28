@@ -1,5 +1,5 @@
 ! Title: 🥒 Anti-'Non-news' List
-! Version: 07June2021v1-Alpha-Compilation
+! Version: 28June2021v1-Alpha-Compilation
 ! Expires: 5 days
 ! Description: For those who prefer for newssites to cover actual news, and not odd distractions or conspiracy theories.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -18,3 +18,14 @@ op.se,ltz.se#?#.teaser:-abp-contains(/kvadratmeter/i)
 
 ! Football/skiing fantasy games
 tv2.no#?#.article,.lp-a,.col-sm-12,article.column:-abp-contains(/-fantasy/i)
+
+! Incel-hosted podcasts that also promote society pressure about getting babies
+adressa.no##a[href*=Singelkrisa]
+adressa.no#?#.polarisStories:-abp-contains(Singelkrisa)
+
+! Boring unfunny strip comics for boring adults on non-comics sites
+adressa.no##.cartoon
+vg.no##.comics
+ekstrabladet.dk##.oo-left.eb-row-item
+at.no#?#.row:-abp-has(a[href*="at.no/tegneserie/"])
+||sykepleien.no/sites/default/files/styles/cartoon_image^$image
