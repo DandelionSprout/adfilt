@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 200620212
+! Version: 300620211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -818,7 +818,7 @@ abcnyheter.no##.container-newsfeed + section .u-x3of5-medium
 abcnyheter.no#?#.js-strossle-widget .o-grid__col:-abp-has(> article[id^=ad_native])
 abcnyheter.no#?#.o-grid__col:-abp-has(.c-ad)
 abcnyheter.no#?#.o-grid__col:-abp-has(> [id^=ad_native])
-adressa.no#?#.gridUnit:-abp-has(div[id^=netboard_])
+adressa.no#?#.gridUnit.span6:-abp-has(div[id^=netboard_])
 aftenbladet.no##div[class^=article-wrapper-] > div[class^=" css"]
 aftenposten.no##.standard-ad-container
 aftenposten.no,vg.no#?##main > div:-abp-has([data-ad-subtype^=skyscraper])
@@ -1581,6 +1581,8 @@ _980banner_
 ##.ad-iframe-nt
 ! dagsavisen.no
 ##.arcad-block-container
+! elbil24.no, vi.no (21/06/2021)
+##.adunit-content-marketing
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -4105,7 +4107,7 @@ wellness.se#?#*:-abp-has(> [id^=adPlacement])
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 
-! Version: 200620212
+! Version: 290620212
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4172,10 +4174,10 @@ _mainosnappi.
 ###ylamainokset
 ###ylamainos
 ##.adbox_content
+##.advertorial-teaser
 ##.bottomads
 ##.card--native
 ##.dfpBoxBottom
-##.dfpListNativeBanner
 ##.keskimainos
 ##.mainokset
 ##.mainokset_oikea
@@ -4199,9 +4201,12 @@ _mainosnappi.
 ##.yhteistyossa
 ##.ylamainokset
 ##.ylamainos
+##[class^="dfp"]
 ##[href="https://www.nettikasinot.org"]
+##[href^="/artikkeli/kaupallinen-yhteistyo/"]
 ##[href^="https://media.suomikasino.com/"]
 ##[href^="https://tc.tradetracker.net/"]
+##[id^="dfp"]
 ##a[href*="/clickthrgh.asp?"]
 ##a[href^="https://app.readpeak.com/ads"]
 ##div[class*="element--nativead"]
@@ -4213,25 +4218,23 @@ _mainosnappi.
 ##div[class="ad-banner"]
 ##div[class="ad-wrapper"]
 ##div[class="block-ad"]
-##div[id*="AdContainer"]
 ##div[id="commercial-carousel"]
 ##div[id^="ads-content-bottom"]
 ##td[class="adbanner"]
-#[href^="/artikkeli/kaupallinen-yhteistyo/"]
+~nettimokki.com##div[id*="AdContainer"]
 
 ! -----GENERAL FILTERS END-----
 ! -----SPECIFIC FILTERS-----
 
-aamulehti.fi##article.advertorial-teaser.bg-native-ad-1
 aamulehti.fi##div.adContainer
 aamulehti.fi#?#article:-abp-has( > header > h2 > span:-abp-contains(Mainokset))
 aamulehti.fi#?#div:-abp-has( > a > div > div > div > span:-abp-contains(Kaupallinen yhteistyö))
 aamulehti.fi#?#div[id*="pipe"] > div > div:-abp-contains(Kaupallinen yhteistyö)
 aamulehti.fi#?#div[id^="morearticles_"]:-abp-has(h2:-abp-has(span:-abp-contains(Kaupallinen yhteistyö)))
 aamulehti.fi,hs.fi###header ~ .xl\:pr-sideAdOffset.bg-softwall
-aamulehti.fi,hs.fi,web.archive.org##article.ticker-promo-10
-aamulehti.fi,satakunnankansa.fi,janakkalansanomat.fi,sydansatakunta.fi,jamsanseutu.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,suurkeuruu.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi###bottomBanner
-aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi##.parade-ad.ad
+aamulehti.fi,hs.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,satakunnankansa.fi,suurkeuruu.fi,sydansatakunta.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi##article[class|="ticker-promo"]
+aamulehti.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,satakunnankansa.fi,suurkeuruu.fi,sydansatakunta.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi###bottomBanner
+aamulehti.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,satakunnankansa.fi,suurkeuruu.fi,sydansatakunta.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi##.parade-ad.ad
 aamuset.fi##div[class$="nativead"]
 aarrelehti.fi,koneviesti.fi,maaseuduntulevaisuus.fi##.promo
 afterdawn.com###div-gpt-ad-below-navi + div[style~="background-color:blue;"]
@@ -4245,7 +4248,6 @@ aksa.fi##div[class="w-full md:w-2/5 pt-6 md:pt-0 pl-0 md:pl-8"]
 alibi.fi##.box--full.grid__container.clearfix
 alibi.fi##.magazineorderwidget__content
 alibi.fi#?#.article__body > p:-abp-contains(/^\xA0$/)
-alibi.fi,ampparit.com,anna.fi,eralehti.fi,golfpiste.com,hymy.fi,kaksplus.fi,kipparilehti.fi,kotilaakari.fi,kotiliesi.fi,koululainen.fi,muropaketti.com,nettiauto.com,nettikone.com,nettivuokraus.com,rakennusmaailma.fi,seura.fi,suomenkuvalehti.fi,tekniikanmaailma.fi,venelehti.fi##div[id^="dfp__"]
 alibi.fi,hymy.fi##[href="https://www.paratiisi.fi/netchat.php"]
 alueviesti.fi##.soliloquy-link
 alypaa.com##[class^="banner-slot-preroll"]
@@ -4262,6 +4264,7 @@ anna.fi##div.grid__item_tn-1-2
 anna.fi#?#.grid__item_1:-abp-has( > [id^="dfp__native-card"])
 anna.fi,kaksplus.fi##.widget_nativearticles
 arcticinsider.com##a[href*="bannerTrack"]
+aromilehti.fi##.ad-paper-order
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com##div[class*="post"] > hr, hr ~ *:not(aside)
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com#?#body.post-template-default * .td-main-content-wrap:-abp-has(.tdt-ad-wrap)
 arvopaperi.fi##div#skyscraper-height-div > div > aside > div > div > a[href^="/kumppaniblogit/"]
@@ -4391,7 +4394,6 @@ is.fi##.border-b.lg\:w-main-lane.bg-is-ad-blue.mb-16
 is.fi##.is-advertorial.external.full-width.teaser
 is.fi##.ticker-promo-10
 is.fi##a[href="https://www.startel.fi/?infront"]
-is.fi##article.advertorial-teaser
 is.fi##article[class*="native-ad"]
 is.fi##div.sadblob-loading
 is.fi#?#article:-abp-has( > header > h2 span:-abp-contains(Alennuskoodit))
@@ -4428,6 +4430,9 @@ keskustelu.suomi24.fi##div[class*="HeaderAdWrapper"]
 keskustelu.suomi24.fi##div[class*="__AdWrapper"]
 keskustelu.suomi24.fi##div[class^="RightSidePanel__AdContainer"]
 keskustelu.suomi24.fi,kirkkojakaupunki.fi,luukku.com,mtvuutiset.fi,seiska.fi,studio55.fi##.ad-container
+kestavyysurheilu.fi###precont
+kestavyysurheilu.fi##.middleads
+kestavyysurheilu.fi#?#.moduleBox:-abp-contains(Kaupalliset yhteistyöt)
 kiinteistolehti.fi###new-post-list-headings-17
 kiinteistolehti.fi##.mpc-row.vc_custom_1515749959295.vc_row-fluid.wpb_row.vc_row
 kiinteistolehti.fi##.mpc-row.vc_custom_1515750168978.vc_row-fluid.wpb_row.vc_row
@@ -4472,6 +4477,10 @@ luukku.com##.banner.content
 m.facebook.com#?#article:-abp-has( > * header > * span:-abp-contains(Sponsoroitu))
 m.jaatama.fi##.c-box-space:not(.c-box)
 m.jaatama.fi##li:-abp-has(div[id|="div-gpt-ad"])
+m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com###banner_area
+m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##.lazyLoadInhouseBanner
+m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##.topBannerMinHeight
+m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##[style^="border-top:1px solid #b3b3b3"]
 maalampofoorumi.fi##div[id="sponsor"]
 maaseuduntulevaisuus.fi##.ads__native-tall-teaser
 maaseuduntulevaisuus.fi##.banners__suomen-parhaat
@@ -4554,14 +4563,6 @@ mvlehti.net##[href="https://www.halvinlaina.fi/"]
 nainen.com##[href="https://www.kasinokaverit.com/ilmaiskierroksia-nettikasinoilla/"]
 nainen.com##[href="https://www.nainen.com/lainoja-kilpailuttamalla-saastat-aikaa-ja-rahaa/"]
 napsu.fi###banneriwrapper
-nettiauto.com,nettikaravaani.com,nettikone.com,nettimarkkina.com,nettimokki.com,nettimoto.com,nettivaraosa.com,nettivene.com###homeTopBoxBanner
-nettiauto.com,nettikaravaani.com,nettikone.com,nettimokki.com,nettimoto.com,nettivaraosa.com,nettivene.com##.listing
-nettiauto.com,nettikaravaani.com,nettikone.com,nettimoto.com,nettivaraosa.com,nettivene.com##.inh_banner_nl
-nettiauto.com,nettimoto.com###homeBottomBoxBanner
-nettiauto.com,nettimoto.com,nettivaraosa.com,nettimarkkina.com,nettikone.com##div[id="huge_banner"]
-nettiauto.com,nettimoto.com,nettivaraosa.com,nettimarkkina.com,nettikone.com##li#left_part
-nettimarkkina.com##[class="center"][style="padding-top:15px;"]
-nettimokki.com##div.nc_r_banner
 nyt.fi##div#javascript-disabled-error
 offroadpro.fi,mpmaailma.fi##div[class*="advertisement"]
 offroadpro.fi,mpmaailma.fi##div[class*="bgBanner"]
@@ -4570,6 +4571,7 @@ offroadpro.fi,mpmaailma.fi##div[class*="pane-ad"]
 offroadpro.fi,mpmaailma.fi##div[id="googlePlusOne"]
 offroadpro.fi,mpmaailma.fi##div[id="logo-area"]
 offroadpro.fi,mpmaailma.fi##div[id^="block-ad"]
+olutposti.fi#?#.aside.widget:-abp-contains(Mainos)
 opensubtitles.org#?#fieldset:-abp-contains(Poista mainos)
 orivedensanomat.fi##.CMAC_AdChangerWidget.widget
 outokummunseutu.fi,pielisjokiseutu.fi,pogostansanomat.fi,ylakarjala.fi#?#.sp-module:-abp-has(.tassaWidget)
@@ -4606,6 +4608,7 @@ rakentaja.fi##div[id="kauppa_hot"]
 rakentaja.fi##div[id^="banner"]
 rakentaja.fi##img[id="js_ad"]
 rantapallo.fi###lomakone-results-horizontal-ads-3
+rantapallo.fi##.ad-empty
 rantapallo.fi##.recommended.lomakone-results-row
 rantapallo.fi##div[class="optin-monster-saas-overlay"]
 riemurasia.net###PowerRectangle
@@ -4617,6 +4620,7 @@ rytmi.com##.sisalto-ilmoitus-mainos
 sammysatv.com##a[href*="banner"]
 satakunnankansa.fi##div[class="s-ryhma-carousel-wrapper"]
 satakunnankansa.fi##div[class^="adContainer"]
+satakunnankansa.fi#?#article.list:-abp-contains(Mainokset)
 seiska.fi###inhouse_ad
 seiska.fi##.ad-inhouse-desktop
 seiska.fi##.category-container--commercial.category-container.container-fluid
@@ -4660,6 +4664,7 @@ suomi24.fi##div[class^="HomePage__HeaderAd"]
 suomi24.fi#?#div[class^="ThreadGridItemWrapper__CardCol"]:-abp-has([class^="AdLivewrapped__AdWrapper"])
 suomifutis.com##[href$="/nettikasinot/"]
 suomimobiili.fi##.sbmainos
+suomimobiili.fi#?#.content-wrap > .bkmodule:-abp-contains(Sponsoroitu)
 suomimobiili.fi#?#div:-abp-has( > div.strike)
 superlehti.fi##.ad-banner-lift__article.ad-banner-lift
 supersaa.fi##div[class^="supers-app-promo-container"]
@@ -4747,6 +4752,19 @@ vuodatus.net###fb-root + div > div[style="background-color: #fff; margin: 0 auto
 vuokraovi.com##.advertising
 wizhdsports.fi##.widget_media_image
 www.io-tech.fi###text-7
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###homeBottomBoxBanner
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###homeTopBoxBanner
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###huge_banner
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###largeViewHouseBanner
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.huge-banner
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.inh_banner_nl
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.leftAdvDiv
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.listing:not(.tricky_link_listing)
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.quick-search__banner
+www.nettimarkkina.com##[class="center"][style="padding-top:15px;"]
+www.nettimarkkina.com#?#.right_rpt_block:-abp-has(#vif_right_banner)
+www.nettimokki.com##div.nc_r_banner
+www.nettimoto.com###smallViewHouseBanner
 www.suomi24.fi##.asp
 www.suomi24.fi##div[class^="Vaalikone__HeaderAdWrapper"]
 www.suomi24.fi#?#p:-abp-has(+ p + .asp)
@@ -4985,3 +5003,10 @@ tjareborg.fi#@#.push-container
 
 ! https://github.com/easylist/easylist/pull/7774
 timma.fi#@##cookieConsentModal
+
+! https://github.com/easylist/easylist/pull/8177
+danskebank.fi#@##cookie-text
+danskebank.fi#@#.cookie-consent-banner
+
+! https://github.com/easylist/easylist/pull/8197
+@@||gdpr-wrapper.privacymanager.io^$domain=nettivuokraus.com
