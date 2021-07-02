@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2020-11-22T15:55:31.967Z",
+    "createdAt": "2021-07-02T20:05:38.259Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -13,7 +13,7 @@
             "redirectUrl": "https://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_ppapi.exe",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": false,
+            "disabled": true,
             "grouped": false,
             "appliesTo": [
                 "main_frame"
@@ -30,7 +30,7 @@
             "redirectUrl": "https://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player.exe",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": false,
+            "disabled": true,
             "grouped": false,
             "appliesTo": [
                 "main_frame"
@@ -45,23 +45,6 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "https://www.filehorse.com/download-adobe-acrobat-reader-dc/download/",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "{Anti-PUP 4} Burnaware without PUP offers (\"Mirror Downloads\" only)",
-            "exampleUrl": "https://www.burnaware.com/downloads/burnaware_free_11.4.exe",
-            "exampleResult": "https://www.burnaware.com/downloads/burnaware_cfree_11.4.exe",
-            "error": null,
-            "includePattern": "*://www.burnaware.com/downloads/burnaware_free_*.exe",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://www.burnaware.com/downloads/burnaware_cfree_$2.exe",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -326,7 +309,7 @@
             "redirectUrl": "https://www.amazon.$1/",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": false,
+            "disabled": true,
             "grouped": false,
             "appliesTo": [
                 "main_frame"
@@ -785,12 +768,12 @@
         {
             "description": "AMP removal 1",
             "exampleUrl": "https://www.google.no/amp/s/www.news18.com/amp/news/buzz/bengal-woman-changes-name-to-supreme-imperium-viral-newspaper-ad-has-internet-in-splits-3510020.html",
-            "exampleResult": "https://www.news18.com/news/buzz/bengal-woman-changes-name-to-supreme-imperium-viral-newspaper-ad-has-internet-in-splits-3510020.html",
+            "exampleResult": "https://www.news18.com/amp/news/buzz/bengal-woman-changes-name-to-supreme-imperium-viral-newspaper-ad-has-internet-in-splits-3510020.html",
             "error": null,
-            "includePattern": "https://www\\.google\\.[a-z]{2,}/amp/s/([a-z0-9.-]{1,})/amp/(.*)",
+            "includePattern": "https://www\\.google\\.[a-z]{2,}/amp/s/(.*)",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://$1/$2",
+            "redirectUrl": "https://$1",
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -813,7 +796,16 @@
             "disabled": false,
             "grouped": false,
             "appliesTo": [
-                "main_frame"
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "history",
+                "other"
             ]
         },
         {
@@ -842,6 +834,74 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "AMP removal 5",
+            "exampleUrl": "https://www.bbc.com/news/world-us-canada-57665715.amp",
+            "exampleResult": "https://www.bbc.com/news/world-us-canada-57665715",
+            "error": null,
+            "includePattern": "(.*)\\.amp$",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "AMP removal 6",
+            "exampleUrl": "https://amp.theguardian.com/world/2021/jul/01/british-columbia-sees-195-increase-in-sudden-deaths-during-canada-heatwave",
+            "exampleResult": "https://www.theguardian.com/world/2021/jul/01/british-columbia-sees-195-increase-in-sudden-deaths-during-canada-heatwave",
+            "error": null,
+            "includePattern": "https://amp\\.(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "AMP removal 7",
+            "exampleUrl": "https://www.cnet.com/google-amp/news/brutal-heat-wave-in-us-and-canada-summed-up-in-one-staggering-satellite-image/",
+            "exampleResult": "https://www.cnet.com/news/brutal-heat-wave-in-us-and-canada-summed-up-in-one-staggering-satellite-image/",
+            "error": null,
+            "includePattern": "(.*)/google-amp/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1/$2",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "AMP removal 8",
+            "exampleUrl": "https://www.hindustantimes.com/world-news/explained-what-s-causing-heat-wave-in-northwestern-us-canada-101625036778779-amp.html",
+            "exampleResult": "https://www.hindustantimes.com/world-news/explained-what-s-causing-heat-wave-in-northwestern-us-canada-101625036778779.html",
+            "error": null,
+            "includePattern": "(.*)-amp\\.html$",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1.html",
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,
