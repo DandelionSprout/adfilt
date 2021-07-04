@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 04July2021v2-Beta
+! Version: 05July2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -46,8 +46,8 @@ $removeparam=dclid
 ! https://www.apple.com/no/shop/product/MD463ZM/A/thunderbolt-til-gigabit-ethernet-adapter?afid=p239%7C1405819&cid=aos-no-aff-ir (15/11/2020)
 ! https://www.proshop.dk/HyperX-Predator-RGB-ram?cid=64e93f7a-cee2-44d9-911a-37f3eafd7b5f (23/01/2021)
 $removeparam=afid
-! Can NOT be made generic (e.g. due to sparebank1.no, RARbg.to, Disney+)
-$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.no|proshop.dk|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk
+! Can NOT be made generic (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
+$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.no|proshop.dk|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com
 ! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
 $removeparam=WebSiteMapNodeID
 ! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
@@ -505,9 +505,8 @@ $removeparam=ads_name
 $removeparam=ad_type
 $removeparam=CAWELAID
 $removeparam=partition_id
-$removeparam=target_id
+||rei.com^$removeparam=target_id
 $removeparam=adgroup_id
-$removeparam=cid,domain=rei.com
 $removeparam=channel,domain=rei.com|squarespace.com
 ||squarespace.com^$removeparam=subchannel
 ||squarespace.com^$removeparam=source
@@ -545,7 +544,6 @@ $removeparam=pj_creativeid
 $removeparam=pj_publisherid
 ||spotify.com^$removeparam=referral
 ||boson.com^$removeparam=eid
-$removeparam=cid,domain=lenovo.com
 ||dustdeal.nl^$removeparam=tracker
 $removeparam=track_campaignid
 $removeparam=track_adgroupid
