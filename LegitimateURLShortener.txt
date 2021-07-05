@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 05July2021v1-Beta
+! Version: 05July2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -47,7 +47,7 @@ $removeparam=dclid
 ! https://www.proshop.dk/HyperX-Predator-RGB-ram?cid=64e93f7a-cee2-44d9-911a-37f3eafd7b5f (23/01/2021)
 $removeparam=afid
 ! Can NOT be made generic (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.no|proshop.dk|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com
+$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com
 ! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
 $removeparam=WebSiteMapNodeID
 ! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
@@ -57,13 +57,13 @@ $removeparam=tt_content
 $removeparam=tt_medium
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com
+$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com
 ! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
 ||tv2.no^$removeparam=referral
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! Can NOT be made generic (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com
 ! https://www.elgiganten.dk/product/lyd-hi-fi/hovedtelefoner/WH1000XM3B/sony-tradlose-around-ear-hovedtelefoner-wh-1000xm3-sort?scid=Pricecomparison8084162610 (27/11/2020)
 $removeparam=scid
 ! https://salming.com/sv-se/produkter/p/1099805-0416/salming-oval-fusion?trackID=79064280 (27/11/2020)
@@ -483,7 +483,7 @@ $removeparam=wt.mc_id
 $removeparam=twitchReferral
 ! ||www.google.*/search?$removeparam=client (Breaks search-term suggestions)
 ||tiktok.com^$removeparam=/(referer_url|referer_video_id|refer|sender_device|sender_web_id|is_from_webapp|is_copy_url)/ 
-$removeparam=shared,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi
+$removeparam=/^shared/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi
 $removeparam=origin,domain=yle.fi|flaticon.com|drop.com|symbolab.com
 $removeparam=elqTrackId
 ||discshop.fi^$removeparam=/^ad/
@@ -588,6 +588,34 @@ $removeparam=_source_page
 $removeparam=vfadid
 ! https://www.washingtonpost.com/gdpr-consent/?next_url=https%3a%2f%2fwww.washingtonpost.com%2fworld%2f2021%2f06%2f29%2fcanada-heat-dome-deaths%2f%3foutputType%3damp&outputType=amp
 &outputType=amp^$removeparam=outputType
+! https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fduckduckgo.com%2F
+$removeparam=orig_referrer
+! https://www.detur.fi/?AgentCode=NAPSU
+$removeparam=AgentCode
+! https://www.loistoristeilyt.fi/?agency=napsu
+$removeparam=agency
+! https://www.nazar.fi/?AgencyNbr=1233
+$removeparam=AgencyNbr
+! https://scandjet.fi/?agentcodeweblink=Napsu
+$removeparam=agentcodeweblink
+! https://www.tui.fi/?agent=napsu
+||tui.$removeparam=agent
+! https://www.engadget.com/onedrive-windows-64-bit-preview-222528824.html?ncid=txtlnkusaolp00000618
+$removeparam=ncid
+! https://www.f-secure.com/en/home/products/freedome?ecid=10588&adcid=10588
+$removeparam=ecid
+$removeparam=adcid
+! https://www.gamereactor.fi/?sid=39feac60637556f2d1f67482abf2b1ea
+$removeparam=sid
+! https://spreadprivacy.com/duckduckgrowing/?s=pr-hd
+||spreadprivacy.com^$removeparam=s
+! https://www.marvel.com/insider?Osocial=YT&CID=MarvelInsider
+||marvel.com^$removeparam=CID
+$removeparam=Osocial
+! https://www.hp.com/us-en/shop/slp/weekly-deals?jumpid=ma_home_hero_na_1_210623
+||hp.com^$removeparam=jumpid
+! https://www.nytimes.com/2008/12/16/sports/othersports/16beckey.html?adxnnl=1&adxnnlx=1257549224-XSk5v9i4LDrKlVwQmlgO8A&
+$removeparam=/^adxnnl/
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
@@ -634,6 +662,21 @@ $removeparam=geniuslink
 ||amazon.$removeparam=/^pd_rd_/
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 $~xmlhttprequest,removeparam=psc
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-944078
+||amazon.$removeparam=twitchToken
+||amazon.$removeparam=sigts
+||amazon.$removeparam=sig
+||amazon.$removeparam=adId
+||amazon.$removeparam=ref-refURL
+||amazon.$removeparam=imprToken
+! https://www.amazon.es/stores/page/592C024E-4E49-421A-8F46-E0D751082704?store_ref=SB_A05201253TLBE81101JJ5&lp_asins=B07L8XGM53%2CB07L8Y3YFP%2CB07L8N2T51&lp_slot=desktop-arbies&lp_page_asin=B0777WPMPH
+||amazon.$removeparam=store_ref
+||amazon.$removeparam=lp_asins
+||amazon.$removeparam=lp_slot
+||amazon.$removeparam=lp_page_asin
+! https://www.amazon.com/dp/B07HHB4V52/ref=sxin_10?asc_contentid=amzn1.osa.0c5b64f1-890d-494e-907a-f004c81dc340.A1RKKUPIHCS9HS.en_US&asc_contenttype=article&keywords=monitor
+||amazon.$removeparam=asc_contentid
+||amazon.$removeparam=asc_contenttype
 ! Other
 ||amazon.$removeparam=ingress
 @@/b/ref=$removeparam=ie
