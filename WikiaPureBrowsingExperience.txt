@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: 🎓 Wikia: Pure Browsing Experience
-! Version: 28June2021v1-Beta
+! Version: 05July2021v1-Beta
 ! Expires: 5 days
 ! Description: Do you like to browse casually through different Wikia wikis, but are tired of FANDOM promotions, and promotions for movies that you don't care about? Then this list will save your day.
 ! Note: To make Wikia pages wider, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Website%20Stretcher.txt. The Wikia rules that were previously in this list, were removed by request and for being arguably superfluous.
@@ -61,3 +61,20 @@ fandom.com##.unified-search__layout__right-rail
 ! Removes other wiki advertising images
 ||vignette.wikia.nocookie.net/*/images/0/0e^$important
 ||vignette.wikia.nocookie.net/*/images/c/cd^$important
+
+! Removes background images, on the grounds that the ones on wikias with transparent boxes can be distracting, even if those with opaque boxes are not
+! kungfupanda.fandom.com
+||wikia.nocookie.net/*/images/*/Wiki-bg-$domain=fandom.com
+! piny-institute-of-new-york.fandom.com
+||wikia.nocookie.net/*/images/*/Wiki-background^$domain=fandom.com
+! winx.fandom.com
+||wikia.nocookie.net/*/images/*/WIKI_BG.$domain=fandom.com
+! disney.fandom.com
+||wikia.nocookie.net/*/images/*/Site-background-$domain=fandom.com
+! https://github.com/DandelionSprout/adfilt/pull/211
+||wikia.com/*/images/*/Wiki-background^$domain=wikia.org|fandom.com
+! In general
+fandom.com#?#.community-background:style(background-image: none !important)
+fandom.com#?#.background-image:style(background-image: none !important)
+fandom.com#?#:root:style(--oasis-community-background-image: none !important)
+fandom.com#?#:root:style(--theme-body-background-image: none !important)
