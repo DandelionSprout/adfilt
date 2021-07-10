@@ -3280,6 +3280,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\|\|prod-adops-proxy.dnitv.net\^", 
+           r"||prod-adops-proxy.dnitv.net^$ctag=os_android|os_ios|device_tv", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text

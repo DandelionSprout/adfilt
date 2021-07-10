@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 30June2021v1-Alpha
+# Version: 10July2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -118,7 +118,6 @@ msFilterList
 # Copied over from the New AdAway list
 -d admob.no
 -d admob.dk
--d api.advista.no
 # bobilverden.no
 - annonse-
 # https://www.ballade.no/
@@ -155,7 +154,6 @@ msFilterList
 # fugleognatur.dk (14 05 2021)
 - images bannere
 # https://norges.online/produkt/nestle-viking-melk-410-g
--d lt45.net
 -d fr135.net
 -d static-dscn.net
 # — — — — — — —
@@ -769,8 +767,6 @@ msFilterList
 # https://www.datahjelperne.no/norske-facebook-profiler-misbrukes-i-svindel/
 -d sites.google.com truls-svendsen
 -d signup-*vpns.com
-# https://www.datahjelperne.no/fakturaen-din-ble-ikke-fullfort-svindel/
--d is-by.us
 # https://www.datahjelperne.no/du-er-blitt-rammet-av-taggespam-hva-gjor-du-na/
 -d velumstand.com
 -d thesleepinggod.com

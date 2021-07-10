@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 070720211
+! Version: 100720212
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -481,7 +481,6 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ! Copied over from the New AdAway list
 ||admob.no^$third-party
 ||admob.dk^$third-party
-||api.advista.no^$third-party
 ! bobilverden.no
 /annonse-$image
 ! https://www.ballade.no/
@@ -519,8 +518,6 @@ _visittkortannonse_$image
 ! fugleognatur.dk (14/05/2021)
 /images/bannere^$image
 ! https://norges.online/produkt/nestle-viking-melk-410-g
-||lt45.net^
-||lt45.net^$popup
 ||fr135.net^
 ||fr135.net^$popup
 ||static-dscn.net^
@@ -2020,8 +2017,6 @@ sofabold.dk##.centerMgfx
 ! https://www.datahjelperne.no/norske-facebook-profiler-misbrukes-i-svindel/
 ||sites.google.com/view/truls-svendsen^
 ||signup-*vpns.com^
-! https://www.datahjelperne.no/fakturaen-din-ble-ikke-fullfort-svindel/
-||is-by.us^
 ! https://www.datahjelperne.no/du-er-blitt-rammet-av-taggespam-hva-gjor-du-na/
 ||velumstand.com^
 ||thesleepinggod.com^
@@ -4107,7 +4102,7 @@ wellness.se#?#*:-abp-has(> [id^=adPlacement])
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 
-! Version: 060720212
+! Version: 090720212
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4178,6 +4173,7 @@ _mainosnappi.
 ##.bottomads
 ##.card--native
 ##.dfpBoxBottom
+##.dfpListNativeBanner
 ##.keskimainos
 ##.mainokset
 ##.mainokset_oikea
@@ -4205,7 +4201,6 @@ _mainosnappi.
 ##[href^="/artikkeli/kaupallinen-yhteistyo/"]
 ##[href^="https://media.suomikasino.com/"]
 ##[href^="https://tc.tradetracker.net/"]
-##[id^="dfp"]
 ##a[href*="/clickthrgh.asp?"]
 ##a[href^="https://app.readpeak.com/ads"]
 ##div[class*="element--nativead"]
@@ -4249,6 +4244,7 @@ aksa.fi##div[class="w-full md:w-2/5 pt-6 md:pt-0 pl-0 md:pl-8"]
 alibi.fi##.box--full.grid__container.clearfix
 alibi.fi##.magazineorderwidget__content
 alibi.fi#?#.article__body > p:-abp-contains(/^\xA0$/)
+alibi.fi,ampparit.com,anna.fi,eralehti.fi,golfpiste.com,hymy.fi,kaksplus.fi,kipparilehti.fi,kotilaakari.fi,kotiliesi.fi,koululainen.fi,muropaketti.com,nettiauto.com,nettikaravaani.com,nettikone.com,nettimarkkina.com,nettimokki.com,nettimoto.com,nettivaraosa.com,nettivene.com,nettivuokraus.com,rakennusmaailma.fi,seura.fi,suomenkuvalehti.fi,tekniikanmaailma.fi,venelehti.fi##div[id^="dfp__"]
 alibi.fi,hymy.fi##[href="https://www.paratiisi.fi/netchat.php"]
 alueviesti.fi##.soliloquy-link
 alypaa.com##[class^="banner-slot-preroll"]
@@ -4311,7 +4307,7 @@ f1-forum.fi##a[href*="netb11.com"]
 f1-forum.fi##img[src*="banneri"]
 facebook.com##a[aria-label="Mainostajan linkki"]
 facebook.com#?#div[data-pagelet="RightRail"] > div:-abp-has( div * h3 > span:-abp-contains(Sponsoroitu))
-facebook.com#?#div[data-pagelet^="FeedUnit_"]:-abp-has( > * div[role="article"] > * div[style^="border-radius"] > * span[dir="auto"] > * a[aria-label="Sponsoroitu"])
+facebook.com#?#div[data-pagelet^="FeedUnit_"]:-abp-has(div[role="article"] div[style^="border-radius"] span[dir="auto"] > span:-abp-contains(Sponsoroitu))
 feissarimokat.com###billboard
 feissarimokat.com###logopal
 feissarimokat.com##.flexibox
@@ -4326,6 +4322,7 @@ finder.fi##.Advertisement__Top
 finnkino.fi,fum.fi,tilt.fi##.advertising
 fonecta.fi##div[class^="AdBlock_adContainer"]
 fontanka.fi##.widget_custom_html
+foreca.fi##div[id|="inline-banner-mobi"]
 foreigner.fi#?#article:-abp-contains(SPONSORED)
 funtampere.fi##.banner_container
 gamereactor.fi###adContainer
@@ -4875,6 +4872,7 @@ iltalehti.fi###il-alekoodit-right-column-box
 iltalehti.fi##.card.eo-embed-container
 iltalehti.fi##.center.category-list-embed
 iltalehti.fi##.commercial-list-item
+iltalehti.fi##.etua-widget-container
 iltalehti.fi##.leiki-container-markkinapaikka2.leiki-container
 iltalehti.fi##.slider-content
 iltalehti.fi##div.footer-wrapper__item.is-visible.LazyLoad
@@ -4998,10 +4996,10 @@ tjareborg.fi#@#.push-container
 ! Will be removed after PR's accepted (whitelistings for issues caused by other lists or additions to the main Easylist)
 
 ! https://github.com/easylist/easylist/pull/5738
-@@||assets.strossle.com/strossle-widget-sdk/1/strossle-widget-sdk.js$script,domain=tilt.fi
-@@||images.sprinklecontent.com^$image,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|rytmi.com|soundi.fi|tilt.fi
-@@||widgets.spklw.com/v1/$xmlhttprequest,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|rytmi.com|soundi.fi|tilt.fi
-@@||widgets.sprinklecontent.com/v2/$script,xmlhttprequest,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|rytmi.com|soundi.fi|tilt.fi
+@@||assets.strossle.com/strossle-widget-sdk/$script,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|soundi.fi|tilt.fi
+@@||images.sprinklecontent.com^$image,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|soundi.fi|tilt.fi
+@@||widgets.spklw.com/v1/$xmlhttprequest,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|soundi.fi|tilt.fi
+@@||widgets.sprinklecontent.com/v2/$script,xmlhttprequest,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|soundi.fi|tilt.fi
 
 ! https://github.com/easylist/easylist/pull/6885
 ##div[class^="AdSlot__container"]
@@ -5024,12 +5022,12 @@ tjareborg.fi#@#.push-container
 ! https://github.com/easylist/easylist/pull/7774
 timma.fi#@##cookieConsentModal
 
-! https://github.com/easylist/easylist/pull/8177
-danskebank.fi#@##cookie-text
-danskebank.fi#@#.cookie-consent-banner
-
-! https://github.com/easylist/easylist/pull/8197
-@@||gdpr-wrapper.privacymanager.io^$domain=nettivuokraus.com
-
 ! https://github.com/easylist/easylist/pull/8295
 @@||frosmo.com^$xmlhttprequest,domain=terve.fi
+
+! https://github.com/easylist/easylist/pull/8314
+m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com#@#.ad_caption
+
+! https://github.com/easylist/easylist/pull/8317
+! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/306
+@@||pelaaja.fi/sites/default/files/googleanalytics/analytics.js
