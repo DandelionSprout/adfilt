@@ -103,7 +103,8 @@ This README is licenced under [the Dandelicence](https://github.com/DandelionSpr
 
 Contacting me about the server, should be done at https://github.com/DandelionSprout/adfilt/issues
 
-### Outage log
+### Outage log (Oldest first)
 
 * 21st of June 2021 20:15-22:29 UTC: What was planned as a 5min outage to set up a 2.5Gb Ethernet card, escalated when it turned out my soon-to-be-discarded Raspbian installation had *the entire network settings menu* disappear permanently, leading to huge problems assigning a static LAN IP to it.
 * Intermittently from 24th to 26th of June 2021: In relation to upgrading to an ARM64 distro, there were problems with *firewalld* and a seemingly dead Ethernet overvoltage protector (APC PNET1GB) that led to frequent downtimes of a few minutes every few hours.
+* 12th of July 2021 00:01-01:35 UTC: The AdGuard Home installation was stuck at a "The DNS server is starting" error screen, until I noticed the error by pure coincidence and powercycled the RaspPi.
