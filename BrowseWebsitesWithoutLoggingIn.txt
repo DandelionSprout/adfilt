@@ -1,13 +1,13 @@
 [Adblock Plus 3.4]
 ! Title: 🚪 Browse websites without logging in
-! Version: 12July2021v1
+! Version: 13July2021v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 !#include uBO%20list%20extensions/BrowseWebsitesWithoutLoggingIn-uBOExtension.txt
 
 ! ↪️ = This category requires Redirector (https://einaregilsson.com/redirector/) and a related entry in Dandelion Sprout's Redirector List (https://github.com/DandelionSprout/adfilt/tree/master/Dandelion%20Sprout-s%20Redirector%20Assistant%20List) for the best results.
-! 📛 = This category requires using uBlock Origin for the best results.
+! 📛 = This category requires using uBlock Origin or AdGuard for the best results.
 ! 🌇 = One has to begin to browse the sites in this category from a content page, and not from the front page.
 ! 🔨 = This category's entries are know to also break intentional login boxes for that site. Such entries may not be transferred to "uBlock Filters - Annoyances".
 ! 📠 = Rejected from "uBlock Filters - Annoyances" and similar lists due to their content or dependencies.
@@ -21,7 +21,7 @@
 ! Pinterest (🔨?)
 ||smartlock.google.com/iframe/request?client=http$subdocument
 ! Autosport 📠
-||blueconic.net$third-party
+||blueconic.net^$third-party
 ! https://linustechtips.com/main/topic/1133668-how-to-get-rid-of-green-fps-counter-with-beeping-sound/
 linustechtips.com,forum.malwarebytes.com,community.ccleaner.com#?#.cTopicPostArea:-abp-has(.cGuestTeaser):not(:-abp-has(.ipsComposeArea_editor))
 ! theepochtimes.com
@@ -40,15 +40,15 @@ linustechtips.com,forum.malwarebytes.com,community.ccleaner.com#?#.cTopicPostAre
 ! vaterland.li (11/11/2020)
 ##.epayPaywall__fadeOut
 
-! Facebook 🌇🔨
+! Facebook 🌇
 ! https://touch.facebook.com/Sonic/
-!! Removes the login bars
-b-m.facebook.com,b-m.facebookcorewwwi.onion,iphone.beta.facebook.com,iphone.facebook.com,iphone.facebookcorewwwi.onion,m.beta.facebook.com,m.facebook.com,m.facebookcorewwwi.onion,mobile.facebook.com,mobile.facebookcorewwwi.onion,mtouch.beta.facebook.com,mtouch.facebook.com,mtouch.facebookcorewwwi.onion,touch.beta.facebook.com,touch.beta.facebookcorewwwi.onion,touch.facebook.com,touch.facebookcorewwwi.onion,x.beta.facebook.com,x.facebook.com,x.facebookcorewwwi.onion###mobile_login_bar,div[style="background: none; height: 214px;"]
+!! Removes the login bars (In order to log in with this list turned on, use the pages' "Share" or "Become [group] member" buttons)
+touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,m.facebook.com,b-m.facebook.com,touch.facebookcorewwwi.onion,mtouch.facebookcorewwwi.onion,x.facebookcorewwwi.onion,iphone.facebookcorewwwi.onion,m.facebookcorewwwi.onion,b-m.facebookcorewwwi.onion###mobile_login_bar,div[style="background: none; height: 214px;"]
 !#if env_firefox
-b-m.facebook.com,b-m.facebookcorewwwi.onion,iphone.beta.facebook.com,iphone.facebook.com,iphone.facebookcorewwwi.onion,m.beta.facebook.com,m.facebook.com,m.facebookcorewwwi.onion,mobile.facebook.com,mobile.facebookcorewwwi.onion,mtouch.beta.facebook.com,mtouch.facebook.com,mtouch.facebookcorewwwi.onion,touch.beta.facebook.com,touch.beta.facebookcorewwwi.onion,touch.facebook.com,touch.facebookcorewwwi.onion,x.beta.facebook.com,x.facebook.com,x.facebookcorewwwi.onion###mobile_login_bar + div
+touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,m.facebook.com,b-m.facebook.com,touch.facebookcorewwwi.onion,mtouch.facebookcorewwwi.onion,x.facebookcorewwwi.onion,iphone.facebookcorewwwi.onion,m.facebookcorewwwi.onion,b-m.facebookcorewwwi.onion###mobile_login_bar + div
 !#endif
 ! Removes the remnants of a login banner
-b-m.facebook.com,b-m.facebookcorewwwi.onion,iphone.beta.facebook.com,iphone.facebook.com,iphone.facebookcorewwwi.onion,m.beta.facebook.com,m.facebook.com,m.facebookcorewwwi.onion,mobile.facebook.com,mobile.facebookcorewwwi.onion,mtouch.beta.facebook.com,mtouch.facebook.com,mtouch.facebookcorewwwi.onion,touch.beta.facebook.com,touch.beta.facebookcorewwwi.onion,touch.facebook.com,touch.facebookcorewwwi.onion,x.beta.facebook.com,x.facebook.com,x.facebookcorewwwi.onion###msite-pages-header-contents > div[id]
+touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,m.facebook.com,b-m.facebook.com,touch.facebookcorewwwi.onion,mtouch.facebookcorewwwi.onion,x.facebookcorewwwi.onion,iphone.facebookcorewwwi.onion,m.facebookcorewwwi.onion,b-m.facebookcorewwwi.onion###msite-pages-header-contents > div[id]
 
 ! Nijie ↪️📛📠
 !! Removes the login prompt above the images
@@ -87,8 +87,8 @@ sciencedirect.com##.usabilla__overlay
 pinterest.*##div[style*="height: 100%; touch-action: none"]
 pinterest.*##div[role=button] + div[style*="touch-action: none"]
 
-! Pinterest 🔨
-pinterest.*##header[data-test-id=unauthHeader] ~ div[data-test-id=fullPageSignupModal]
+! Pinterest (🔨?)
+! pinterest.*##header[data-test-id=unauthHeader] ~ div[data-test-id=fullPageSignupModal] # Temporarily turned off in expectance of AdGuard inclusion.
 pinterest.*##div[data-test-id=pin-closeup-image] > div[role=button] > div:not([class]) ~ div
 ! https://no.pinterest.com/pin/371476669268114259/?d=t&mt=signupOrPersonalizedLogin (21/03/2021)
 ||pinterest.*mt=signup$removeparam=d
