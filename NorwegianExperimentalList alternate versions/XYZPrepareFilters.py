@@ -2682,6 +2682,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^[a-z0-9^|.$=-]{1,5}$", 
+           r"", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
