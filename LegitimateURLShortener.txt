@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 14July2021v1-Beta
+! Version: 15July2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -267,15 +267,6 @@ $removeparam=email_work_card
 $removeparam=tracking_source
 ! https://www.theverge.com/2021/4/16/22387492/google-floc-ad-tech-privacy-browsers-brave-vivaldi-edge-mozilla-chrome-safari?scrolla=5eb6d68b7fedc32c19ef33b4 (20/04/2021)
 $removeparam=scrolla
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
-||tiktok.com^$removeparam=app
-||tiktok.com^$removeparam=_r
-$removeparam=share_ab_group
-$removeparam=u_code
-$removeparam=is_copy_url
-$removeparam=is_from_webapp
-$removeparam=sender_device
-$removeparam=sender_web_id
 ! https://dagligvarehandelen.no/sites/default/files/styles/wysiwyg_full_width/public/70x100_cocashake_skisse_0.jpg?itok=k31KtKuB (30/04/2021)
 $removeparam=itok
 ! https://www.nytimes.com/2021/04/27/business/media/new-york-post-kamala-harris.html?smtyp=cur&smid=fb-nytimes&fbclid=IwAR1mH8MOV2qhIoD5pdX9gbEWedBAdS4sYOXB0yHJi3tZZ6Hg5r0Us-EEv0s (28/04/2021)
@@ -372,14 +363,6 @@ $removeparam=pjxclick_id
 $removeparam=clickId
 $removeparam=msclkid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750307
-||tiktok.com^$removeparam=_d
-||tiktok.com^$removeparam=tt_from
-||tiktok.com^$removeparam=preview_pb
-||tiktok.com^$doc,removeparam=user_id
-||tiktok.com^$doc,removeparam=sec_user_id
-$removeparam=share_app_id
-$removeparam=share_item_id
-$removeparam=share_link_id
 $removeparam=rid,domain=giphy.com
 ||rightmove.co.uk^$removeparam=csg
 ! https://m.lightinthebox.com/no/p/kvinners-svart-blaa-groenn-vintage-maxi-kjole-langarmet-troeye-med-v-hals_p4298383.html?currency=NOK&litb_from=paid_adwords_shopping&sku=1_6920%7C2_286&country_code=no&adword_mt&adword_ct=496040937781&adword_kw&adword_pos&adword_pl&adword_net=u&adword_tar&adw_src_id=7573621213_12242627236_117670768776_pla-402619472328 (22/05/2021)
@@ -483,7 +466,6 @@ $removeparam=wt.mc_id
 ||microsoft.com^$removeparam=destrt
 $removeparam=twitchReferral
 ! ||www.google.*/search?$removeparam=client (Breaks search-term suggestions)
-||tiktok.com^$removeparam=/(referer_url|referer_video_id|refer|sender_device|sender_web_id|is_from_webapp|is_copy_url)/ 
 $removeparam=/^shared/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi
 $removeparam=origin,domain=yle.fi|flaticon.com|drop.com|symbolab.com
 $removeparam=elqTrackId
@@ -501,8 +483,6 @@ $removeparam=ad_medium
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
 $removeparam=adgroup
 $removeparam=ads_name
-||tiktok.com^$removeparam=c
-||tiktok.com^$removeparam=is_retargeting
 $removeparam=ad_type
 $removeparam=CAWELAID
 $removeparam=partition_id
@@ -619,6 +599,23 @@ $removeparam=Osocial
 $removeparam=/^adxnnl/
 ! https://blog.jetbrains.com/kotlin/2021/06/kotlin-features-survey-edition-2/?mkt_tok=NDI2LVFWRC0xMTQAAAF9-3GNOHYuxznbVfWFJwaLccIFxZDcCoVn3_IUPwxq_RTzesK-rXihOxgp71Zz10Pas3LnxiN048toSrAP2Miqq858ZZZg6PMPH0KaOYbu-lQfkA
 ||jetbrains.com^$removeparam=mkt_tok
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
+||aliexpress.$removeparam=/^aff_/
+||aliexpress.$removeparam=tt
+||aliexpress.$removeparam=sk
+||aliexpress.$removeparam=terminal_id
+$removeparam=tmLog
+$removeparam=aem_p4p_detail
+$removeparam=algo_exp_id
+||primevideo.com^$removeparam=ref_
+$removeparam=mkt_tok
+$removeparam=/^amp;/
+$removeparam=/^WT.z_/
+$removeparam=/^WT.v_/
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-987226
+||linode.com^$~xmlhttprequest,removeparam=r
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1004671
+$removeparam=ampcid
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
@@ -680,6 +677,9 @@ $~xmlhttprequest,removeparam=psc
 ! https://www.amazon.com/dp/B07HHB4V52/ref=sxin_10?asc_contentid=amzn1.osa.0c5b64f1-890d-494e-907a-f004c81dc340.A1RKKUPIHCS9HS.en_US&asc_contenttype=article&keywords=monitor
 ||amazon.$removeparam=asc_contentid
 ||amazon.$removeparam=asc_contenttype
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-978858
+||amazon.$removeparam=visitId
+||amazon.$removeparam=field-lbr_brands_browse-bin
 ! Other
 ||amazon.$removeparam=ingress
 @@/b/ref=$removeparam=ie
@@ -746,7 +746,7 @@ $removeparam=_sacat
 
 ! ——— Google Search ———
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
-$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com|thedailybeast.com|itnext.io|medium.com|awd-it.*
+$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com|thedailybeast.com|itnext.io|medium.com|awd-it.*|webhint.io
 $removeparam=cp_ksver
 ! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
 $removeparam=biw
@@ -779,6 +779,33 @@ $removeparam=ogbl
 ! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 ||www.google.$removeparam=btnG
 ||www.google.$removeparam=iflsig
+
+! ———TikTok———
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
+||tiktok.com^$removeparam=app
+||tiktok.com^$removeparam=_r
+$removeparam=share_ab_group
+$removeparam=u_code
+$removeparam=is_copy_url
+$removeparam=is_from_webapp
+$removeparam=sender_device
+$removeparam=sender_web_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750307
+||tiktok.com^$removeparam=_d
+||tiktok.com^$removeparam=tt_from
+||tiktok.com^$removeparam=preview_pb
+||tiktok.com^$doc,removeparam=user_id
+||tiktok.com^$doc,removeparam=sec_user_id
+$removeparam=share_app_id
+$removeparam=share_item_id
+$removeparam=share_link_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-783185
+||tiktok.com^$~xmlhttprequest,removeparam=/(referer_url|referer_video_id|refer|sender_device|sender_web_id|is_from_webapp|is_copy_url)/
+! ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
+||tiktok.com^$removeparam=c
+||tiktok.com^$removeparam=is_retargeting
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-974118
+||tiktok.com^$removeparam=checksum
 
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 !#if !env_mobile
