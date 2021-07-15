@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 10July2021v2-Alpha
+# Version: 15July2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -172,7 +172,6 @@ msFilterList
 - images banners
 -d banner.landbrugsavisen.dk reklame.aspx
 -d biip.no *320x250.jpg
--d bilgalleri.dk fixed
 -d bobilverden.no Banner-1200x300px.jpg
 -d bornholm.nu banner
 -d cdn.rikstoto.no GameShop
