@@ -56,13 +56,13 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 ## Projects known to use my lists:
 
-• [AdGuard](https://adguard.com/welcome.html) - Includes Dandelion Sprout's Nordic Filters, Dandelion Sprout's Annoyances List, and Legitimate URL Shortener.
-• [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome) - Includes Dandelion Sprout's Nordic Filters and Game Console Adblock List
-• [uBlock Origin](https://github.com/gorhill/uBlock), [Adblock Plus](https://adblockplus.org/), AdNauseam, Brave Browser, AdBlock, pfBlockerNG, and Vivaldi - Includes various versions of Dandelion Sprout's Nordic Filters
-• [OISD.nl](https://oisd.nl/) - Incorporates Dandelion Sprout's Nordic Filters and Dandelion Sprout's Anti-Malware List
-• [1Hosts](https://github.com/badmojr/1Hosts), [T145's The Blacklist](https://github.com/T145/the-blacklist) - Incorporates Dandelion Sprout's Anti-Malware List
-• Energized Regional Protection - Incorporates Dandelion Sprout's Nordic Filters
-• [Developer Dan](https://blocklist-tools.developerdan.com/blocklists), Bajins, [jgdye](https://git.ovalwonder.com/jgdye/samwiseetc/src/branch/master/pihole), [Molinero](https://hmirror.molinero.dev/) - Stores third-party mirrors of at least one of my lists
+• [AdGuard](https://adguard.com/welcome.html) - Includes Dandelion Sprout's Nordic Filters, Dandelion Sprout's Annoyances List, and Legitimate URL Shortener.<br>
+• [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome) - Includes Dandelion Sprout's Nordic Filters and Game Console Adblock List.<br>
+• [uBlock Origin](https://github.com/gorhill/uBlock), [Adblock Plus](https://adblockplus.org/), AdNauseam, Brave Browser, AdBlock, pfBlockerNG, and Vivaldi - Includes various versions of Dandelion Sprout's Nordic Filters.<br>
+• [OISD.nl](https://oisd.nl/) - Incorporates Dandelion Sprout's Nordic Filters and Dandelion Sprout's Anti-Malware List.<br>
+• [1Hosts](https://github.com/badmojr/1Hosts), [T145's The Blacklist](https://github.com/T145/the-blacklist) - Incorporates Dandelion Sprout's Anti-Malware List.<br>
+• Energized Regional Protection - Incorporates Dandelion Sprout's Nordic Filters.<br>
+• [Developer Dan](https://blocklist-tools.developerdan.com/blocklists), Bajins, [jgdye](https://git.ovalwonder.com/jgdye/samwiseetc/src/branch/master/pihole), [Molinero](https://hmirror.molinero.dev/) - Stores third-party mirrors of at least one of my lists.
 
 Occasionally, [this link](https://www.google.no/search?q=%22if-a-large-hosts-file-contains-this-entry-then-it%22&filter=0) can be used to find additional projects. However, it is somewhat inaccurate, because most such projects remove non-live domains.
 
