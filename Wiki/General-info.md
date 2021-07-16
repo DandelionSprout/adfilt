@@ -67,3 +67,17 @@ Senast uppdaterad den: 19. maj 2021 (Tack til Johannes Nilsson for översättnin
 • [Säkerhetskopia av mina listor på GitLab](https://gitlab.com/DandelionSprout/adfilt) <br>
 
 Du kan naturligtvis också kontakta mig på norska, nynorsk, danska, eller svenska. Det är trots allt inte obligatoriskt att använda engelska. 🙂 <br>
+
+# 🇩🇪 Deutsch
+
+Letzte Aktualisierung: 16. Juli 2021 (Danke, alsa64, für Übersetzung)
+
+• [Die Homepage der Liste(n) auf der Code-Speicher-Seite GitHub](https://github.com/DandelionSprout/adfilt/blob/master/.github/README.md) <br>
+• [Die Lizenz für meine Listen](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Sie ist speziell so konstruiert, dass sie Inhalte von den Filterlisten anderer einbinden kann, während sie versucht, dem Listenbetreuer so wenig wie möglich in den Weg zu kommen. <br>
+• [Optionen zum Spenden](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
+• Die kombinierten Systeme der Listen für [Fehlerverfolgung](https://github.com/DandelionSprout/adfilt/issues) und [Pull-Requests](https://github.com/DandelionSprout/adfilt/pulls) (Benötigt ein GitHub Konto). <br>
+• [Andere Listen, die ich gemacht habe](https://filterlists.com/) (Gehen Sie zu "Maintainers" und wählen Sie "Imre Kristoffer Eilertsen"), für zahlreiche verschiedene Zwecke und Werkzeuge. <br>
+• [Übersetzungsprojekt für eine kleine Handvoll meiner Listen](https://crwd.in/dandelion-sprout-nordic-filter), einschließlich dieser Seite. <br>
+• [Sicherheitskopie meiner Listen auf GitLab](https://gitlab.com/DandelionSprout/adfilt) <br>
+
+Natürlich können Sie mich auch auf Norwegisch, Nynorsk, Dänisch oder Schwedisch kontaktieren. Es ist ja nicht zwingend erforderlich, Englisch zu verwenden. 🙂 <br>
