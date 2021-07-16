@@ -22,7 +22,6 @@ This is a hobby project of mine, in which I work just as much on these lists and
 * [Official repo mirror](https://gitlab.com/DandelionSprout/adfilt)
 * [Official donation links](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations)
 * [Category title translation project](https://crwd.in/dandelion-sprout-nordic-filter)
-* [Projects that make use of my lists](https://www.google.no/search?q=%22if-a-large-hosts-file-contains-this-entry-then-it%22&filter=0) (Currently somewhat inaccurate, because most projects remove non-live domains)
 * [Paid bounty missions for superskilled filter writers](https://github.com/DandelionSprout/adfilt/search?q=bounty&type=code)
 
 For an overview of the lists in this repo, go to [FilterLists.com](https://filterlists.com/), click on the <b>Maintainers</b> button in the upper right, and choose <b>Imre Kristoffer Eilertsen</b> in the Maintainers dropdown menu. It became too much work for me to have a GitHub spreadsheet for my lists, unfortunately. It is generally not recommended to subscribe to lists directly from this repo, as the mostly unsorted lists [can be unsuitable for your tool(s)](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Pok%C3%A9monNoGOZone.txt), [block things you may not have intended to block at all](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/Twitter%20De-Politificator.txt), or [otherwise cause confusion in general](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/EkstraBladetEroticContentRemover.txt) if they aren't vetted properly before use on tech units.
@@ -54,6 +53,18 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • To remove duplicates: Edit → Permute Lines → Unique <br>
 • To remove duplicates across files: Paste the content of the file that shall retain its filters on top, and paste the content of the file that shall delete its duplicates on bottom. <br>
 • To remove element-rule targets from adblock files, so that the rules' domains can be run through PyFunceble: Ctrl+H / Find → Replace, turn on RegEx, and then replace `##.*` and `#?#.*` with nothing.
+
+## Projects known to use my lists:
+
+• [AdGuard](https://adguard.com/welcome.html) - Includes Dandelion Sprout's Nordic Filters, Dandelion Sprout's Annoyances List, and Legitimate URL Shortener.
+• [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome) - Includes Dandelion Sprout's Nordic Filters and Game Console Adblock List
+• [uBlock Origin](https://github.com/gorhill/uBlock), [Adblock Plus](https://adblockplus.org/), AdNauseam, Brave Browser, AdBlock, pfBlockerNG, and Vivaldi - Includes various versions of Dandelion Sprout's Nordic Filters
+• [OISD.nl](https://oisd.nl/) - Incorporates Dandelion Sprout's Nordic Filters and Dandelion Sprout's Anti-Malware List
+• [1Hosts](https://github.com/badmojr/1Hosts), [T145's The Blacklist](https://github.com/T145/the-blacklist) - Incorporates Dandelion Sprout's Anti-Malware List
+• Energized Regional Protection - Incorporates Dandelion Sprout's Nordic Filters
+• [Developer Dan](https://blocklist-tools.developerdan.com/blocklists), Bajins, [jgdye](https://git.ovalwonder.com/jgdye/samwiseetc/src/branch/master/pihole), [Molinero](https://hmirror.molinero.dev/) - Stores third-party mirrors of at least one of my lists
+
+Occasionally, [this link](https://www.google.no/search?q=%22if-a-large-hosts-file-contains-this-entry-then-it%22&filter=0) can be used to find additional projects. However, it is somewhat inaccurate, because most such projects remove non-live domains.
 
 ## Special thanks to:
 
