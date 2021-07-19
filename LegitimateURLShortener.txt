@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 16July2021v1-Beta
+! Version: 20July2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -57,7 +57,7 @@ $removeparam=tt_content
 $removeparam=tt_medium
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com
+$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi
 ! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
 ||tv2.no^$removeparam=referral
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
@@ -214,7 +214,7 @@ $removeparam=rlz
 $removeparam=pcampaignid
 $removeparam=igshid
 $removeparam=curator_clanid
-$removeparam=ser
+$~media,removeparam=ser
 $removeparam=snr
 ! https://www.bing.com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.com^$removeparam=sp
@@ -281,7 +281,7 @@ $removeparam=onetime_FromEmail
 ! https://cdnb.artstation.com/p/assets/images/images/030/045/719/large/abhishek-karmakar-b56f0421b303b8d9016f022d17330898.jpg?1599443127 (06/05/2021)
 ||artstation.com^$removeparam=/^[0-9]/
 ! https://www.wired.com/story/oversight-board-to-facebook-not-going-to-do-your-dirty-work/?mbid=social_twitter
-$removeparam=mbid
+$~xmlhttprequest,removeparam=mbid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-706290
 ||bandcamp.com^$removeparam=from
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-711131
@@ -616,6 +616,15 @@ $removeparam=/^WT.v_/
 ||linode.com^$~xmlhttprequest,removeparam=r
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1004671
 $removeparam=ampcid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1015504
+||walmart.com^$removeparam=veh
+$removeparam=affname
+$removeparam=MID
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1018250
+||reddit.com^$removeparam=ved
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1018655
+||hinta.fi^$removeparam=v
+@@||hinta.fi/lib/$removeparam=v
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
