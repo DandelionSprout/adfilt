@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 150720211
+! Version: 200720211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1361,6 +1361,7 @@ aftenposten.no#?##main > div[class^=css-]:-abp-has(> div[id^=skyscraper])
 alle-apningstider.com##div[id^=google_ad_]
 startsiden.no#?#.small-6[class*=articleContainer_]:-abp-has(a[href*="tradedoubler.com"])
 startsiden.no###stop-sticky-ad + h4
+eurosport.no,eurosport.dk##div[class$=-top-advert]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -4139,7 +4140,7 @@ wellness.se#?#*:-abp-has(> [id^=adPlacement])
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 
-! Version: 150720211
+! Version: 200720211
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4258,8 +4259,8 @@ _mainosnappi.
 ! -----SPECIFIC FILTERS-----
 
 aamulehti.fi##div.adContainer
-aamulehti.fi#?#article:-abp-has( > header > h2 > span:-abp-contains(Mainokset))
-aamulehti.fi#?#div:-abp-has( > a > div > div > div > span:-abp-contains(Kaupallinen yhteistyö))
+aamulehti.fi#?#article:-abp-has(> header > h2 > span:-abp-contains(Mainokset))
+aamulehti.fi#?#div:-abp-has(> a > div > div > div > span:-abp-contains(Kaupallinen yhteistyö))
 aamulehti.fi#?#div[id*="pipe"] > div > div:-abp-contains(Kaupallinen yhteistyö)
 aamulehti.fi#?#div[id^="morearticles_"]:-abp-has(h2:-abp-has(span:-abp-contains(Kaupallinen yhteistyö)))
 aamulehti.fi,hs.fi###header ~ .xl\:pr-sideAdOffset.bg-softwall
@@ -4271,8 +4272,9 @@ aamuset.fi##div[class$="nativead"]
 aarrelehti.fi,koneviesti.fi,maaseuduntulevaisuus.fi##.promo
 aasiakas.net##div[style="width:970px;height:250px;margin:0 auto;margin-top:25px;"]
 afterdawn.com###div-gpt-ad-below-navi + div[style~="background-color:blue;"]
-afterdawn.com,puhelinvertailu.com#?#br:-abp-has( + ins[class="adsbygoogle"])
-afterdawn.com,puhelinvertailu.com#?#br:-abp-has( + br + ins[class="adsbygoogle"])
+afterdawn.com#?#.video:-abp-has(+ div#bb-iawr-defaultPlayout-afterdawn_com_)
+afterdawn.com,puhelinvertailu.com#?#br:-abp-has(+ br + ins[class="adsbygoogle"])
+afterdawn.com,puhelinvertailu.com#?#br:-abp-has(+ ins[class="adsbygoogle"])
 aijaa.com##div.text-center.col-sm-6 > a[rel$="nofollow"]
 akaanseutu.fi,lvs.fi,shl.fi,ylojarvenuutiset.fi##[href="/tilaa-lehti"]
 akaanseutu.fi,lvs.fi,shl.fi,ylojarvenuutiset.fi##div[class*="omamainos"]
@@ -4295,7 +4297,7 @@ ampparit.com##div[class="nettiauto-newslist-banner"]
 anna.fi###native_text_wrapper
 anna.fi##.kaupalliset
 anna.fi##div.grid__item_tn-1-2
-anna.fi#?#.grid__item_1:-abp-has( > [id^="dfp__native-card"])
+anna.fi#?#.grid__item_1:-abp-has(> [id^="dfp__native-card"])
 anna.fi,kaksplus.fi##.widget_nativearticles
 apteekkari.fi#?#.container:-abp-contains(MAINOS (TEKSTI JATKUU ALLA))
 arcticinsider.com##a[href*="bannerTrack"]
@@ -4321,7 +4323,9 @@ bittiraha.fi###cm-banner
 blogit.fi###pb_top
 bomber.fi###rt-sidebar-b
 brbikers.com##a[href*="tema.fi"]
-como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,rytmi.com,soundi.fi,tilt.fi##div[data-recommendation-type="ad"]
+como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi##div[data-recommendation-type="ad"]
+como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi#?#.col-sm-6.col-xs-12:-abp-has(> a[href*="smartadserver.com"])
+como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi#?#.strossle > div.col-xs-12.col-sm-6:-abp-contains(Mainos)
 dailyfinland.fi##.wrepper.mx-auto > .row[style="margin-bottom:20px"]
 dawn.fi##[style="margin:-15px -15px 15px -15px;text-align:center; min-height: 250px;"]
 dawn.fi##[style="margin:-15px -15px 15px -15px;text-align:center; min-height: 300px;"]
@@ -4330,8 +4334,8 @@ deitti.net##.ad-article
 demokraatti.fi##div[class^="AdStyles__Wrapper"]
 demokraatti.fi##div[class^="OrderMagazinestyles__Container"]
 download.fi##b[style="font-size:bigger;"] > a[class="download_link"][href$=".exe"]
-download.fi#?#div:-abp-has( > h3[style="font-size:20px;"])
-download.fi#?#div[class="splash_title"] + p + p:-abp-has( > a[href$=".exe"])
+download.fi#?#div:-abp-has(> h3[style="font-size:20px;"])
+download.fi#?#div[class="splash_title"] + p + p:-abp-has(> a[href$=".exe"])
 duunitori.fi##.js-fragment-web-lazy_carousel
 elmotv.com##[class^="mstila"]
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##.box.ads
@@ -4352,7 +4356,7 @@ feissarimokat.com##.shopster
 feissarimokat.com##div[class*="adbox"]
 findance.com##div[id^="adslot_content"]
 findance.com##div[id^="adslot_sidebar"]
-findance.com#?#p:-abp-has( > [rel="sponsored"])
+findance.com#?#p:-abp-has(> [rel="sponsored"])
 findance.com#?#p:-abp-has(a[rel="nofollow no-referrer sponsored"])
 finder.fi##.Advertisement__Box
 finder.fi##.Advertisement__Top
@@ -4377,7 +4381,7 @@ glu.fi#?#ul.link:-abp-has(a[href^="http://clk.tradedoubler.com/"])
 golfpiste.com##.native-carousel
 haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi##.ad-list
 haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi##.newslink-ad
-haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi#?#div[class="col-xs-12 col-sm-12 col-md-12 pad-0 hidden-xs"]:-abp-has( > #lunch-widget)
+haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi#?#div[class="col-xs-12 col-sm-12 col-md-12 pad-0 hidden-xs"]:-abp-has(> #lunch-widget)
 halloota.com##.td_block_template_1.td-a-rec-id-custom-spot.td-a-rec.td-block
 halloota.com##a[href$="koronaavastaan.fi/?ref=metrotuotanto"]
 hameensanomat.fi###herald_posts_widget-5
@@ -4425,8 +4429,7 @@ ilkkapohjalainen.fi###ad-jattiboksi2
 ilkkapohjalainen.fi##.ads__wrapper--jattiboksi
 ilmastointilaitteet.com##.boxi
 iltapulu.fi##div[class="footer-ylempi"]
-iltapulu.fi#?#.newsbox:-abp-has( > [id^="div-gpt-ad"])
-inferno.fi#?#.col-sm-6.col-xs-12:-abp-has( > a[href*="smartadserver.com"])
+iltapulu.fi#?#.newsbox:-abp-has(> [id^="div-gpt-ad"])
 inssinosingot.fi##.block-mainos
 inssinosingot.fi##.button-mainos
 inssinosingot.fi##.footer-1.footer.footer-widgets
@@ -4439,7 +4442,7 @@ is.fi##.ticker-promo-10
 is.fi##a[href="https://www.startel.fi/?infront"]
 is.fi##article[class*="native-ad"]
 is.fi##div.sadblob-loading
-is.fi#?#article:-abp-has( > header > h2 span:-abp-contains(Alennuskoodit))
+is.fi#?#article:-abp-has(> header > h2 span:-abp-contains(Alennuskoodit))
 jatkoaika.com##div[class="block block-block"]
 juoksufoorumi.fi##.noAdsCell
 kaksplus.fi##.placeholder
@@ -4449,8 +4452,8 @@ kaleva.fi###puff-container
 kaleva.fi##.ad-container
 kaleva.fi##.right-now-widget__item--commercial
 kaleva.fi##div[class="lyta-lazy-load"]
-kaleva.fi#?#.m-contentListItemThumb:-abp-has( > div > div > div[class^="m-contentListItemThumb__advertisement"])
-kaleva.fi#?#.m-managedListing__column:-abp-has( > div > div > div > div[class^="m-contentListItem__advertisement"])
+kaleva.fi#?#.m-contentListItemThumb:-abp-has(> div > div > div[class^="m-contentListItemThumb__advertisement"])
+kaleva.fi#?#.m-managedListing__column:-abp-has(> div > div > div > div[class^="m-contentListItem__advertisement"])
 kaleva.fi#?#.media-site__widget-container:-abp-has( * .media-widget__title:-abp-contains(Kaupallinen yhteistyö))
 kansalainen.fi##div[id="text-html-widget-5"]
 kansalainen.fi##div[id^="ads"]
@@ -4459,7 +4462,8 @@ kansanuutiset.fi##.intextad.clearfix.cb-module-block.cb-box.cb-a-large
 kansanuutiset.fi##A[href="http://www.autonvaraosastore.fi/"]
 kansanuutiset.fi##div[class*="intextad"]
 karjalainen.fi,sammysatv.com##center
-kauppalehti.fi#?#div:-abp-has( > a[href^="https://www.kauppalehti.fi/kumppanisisallot/"])
+kauppalehti.fi#?#div:-abp-has(> a[href^="https://www.kauppalehti.fi/kumppanisisallot/"])
+kauppalehti.fi#?#div:-abp-has(> div[width] > .ad:not(aside))
 keskipohjanmaa.fi#?#.col-xs-12.col-sm-6.col-md-12:-abp-contains(mainosartikkelit)
 keskustelu.afterdawn.com###div-ad-below-message
 keskustelu.afterdawn.com##.pageWidth > div[style="min-height:90px;text-align:center;margin:auto;"]
@@ -4494,7 +4498,7 @@ kotiliesi.fi##.widget_google-ad-manager
 kotiliesi.fi##body.category * .placeholder
 kotimikro.fi##.campaign-teaser-show
 kotimikro.fi##b > [href^="https://tilaus.kotimikro.fi/brand/kotimikro/"]
-kotimikro.fi#?#div.themebox.widget:-abp-has( > div > div > div > div#cx_4217c66c223ecb55cb7b1d49afa884837bfccda9)
+kotimikro.fi#?#div.themebox.widget:-abp-has(> div > div > div > div#cx_4217c66c223ecb55cb7b1d49afa884837bfccda9)
 kukasoitti.com##a[href*='adsrv']
 kukasoitti.com##div[class="main-bottom"]
 kuljetusnet.fi###middle
@@ -4507,8 +4511,8 @@ kuvaton.com##[href^="https://www.kasinokaverit.com/"]
 kuvaton.com##[href^="https://www.lainaovi.fi/"]
 lapinkansa.fi###content1-container
 lapinkansa.fi###outstream-container
-lapinkansa.fi#?#div[class="m-contentListItemThumb -ctx-frontpage-now -level-1"]:-abp-has( > div > div > [class^="m-contentListItemThumb__advertisement"])
-lapinkansa.fi#?#div[class="m-managedListing__column -ctx-index -level-1 -cols-2"]:-abp-has( > div > div > div > div[class^="m-contentListItem__advertisement"])
+lapinkansa.fi#?#div[class="m-contentListItemThumb -ctx-frontpage-now -level-1"]:-abp-has(> div > div > [class^="m-contentListItemThumb__advertisement"])
+lapinkansa.fi#?#div[class="m-managedListing__column -ctx-index -level-1 -cols-2"]:-abp-has(> div > div > div > div[class^="m-contentListItem__advertisement"])
 lbaanijakuva.fi##.adremark
 leffatykki.com##div[class="ad230x90"]
 leijonat.com,suomikiekko.com,suomiurheilu.com##[href$="/pitkavetovihjeet/"]
@@ -4517,7 +4521,7 @@ ls24.fi##div[class^="advertisement"]
 ls24.fi#?#section[class="page-section page-section--no-main-article"]:-abp-contains(Kaupallinen yhteistyö)
 luukku.com###banneri_yla
 luukku.com##.banner.content
-m.facebook.com#?#article:-abp-has( > * header > * span:-abp-contains(Sponsoroitu))
+m.facebook.com#?#article:-abp-has(> * header > * span:-abp-contains(Sponsoroitu))
 m.jaatama.fi##.c-box-space:not(.c-box)
 m.jaatama.fi##li:-abp-has(div[id|="div-gpt-ad"])
 m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com###banner_area
@@ -4541,8 +4545,8 @@ matkaendurot.net##span[id="banneripaikka"]
 mbnet.fi##div#topbanner
 mbnet.fi##div#tyopaikat-joblift--avainpaikat
 mediuutiset.fi##section > a[href^="https://www.mediuutiset.fi/kumppanisisallot"]
-mediuutiset.fi#?#div:-abp-has( > a[href="/kumppanisisaltoa"])
-mediuutiset.fi#?#div:-abp-has( > a[href^="https://www.mediuutiset.fi/kumppanisisallot/"]:not(a[class^="site-header"]))
+mediuutiset.fi#?#div:-abp-has(> a[href="/kumppanisisaltoa"])
+mediuutiset.fi#?#div:-abp-has(> a[href^="https://www.mediuutiset.fi/kumppanisisallot/"]:not(a[class^="site-header"]))
 mesta.net##.gofollow
 metropoli.net##.ads-desktop
 metropoli.net##.ads-mobile
@@ -4594,7 +4598,7 @@ muropaketti.com##.hintavertailu--widget.hintavertailu
 muropaketti.com##.widget_ads_carousel
 muropaketti.com##SECTION[id*="hintaopaspopular"]
 muropaketti.com##SECTION[id*="yhteistyossa"]
-muropaketti.com#?#article.grid__item_1-2:-abp-has( > div.nativead)
+muropaketti.com#?#article.grid__item_1-2:-abp-has(> div.nativead)
 muropaketti.com#?#article.grid__item_md-1-5.grid__item_1:-abp-contains(Mainos)
 mvlehti.net##.content-center.header-nav-ad
 mvlehti.net##.premium_container
@@ -4675,7 +4679,7 @@ seiska.fi##div[class^="Ad__AdWrapper"]
 selanne-lehti.fi##.ad-list-read-all
 seurakuntalainen.fi##.article-item.column-mainospaikka
 seurakuntalainen.fi##.main-banner-container
-shakerlehti.fi#?#.article:-abp-has( > ul > li > a[href="/artikkelit/kaupallinen-yhteistyo/"])
+shakerlehti.fi#?#.article:-abp-has(> ul > li > a[href="/artikkelit/kaupallinen-yhteistyo/"])
 sijoitustieto.fi##.view-banneripaikka-etusivuoikea1
 sijoitustieto.fi#?#p > em > strong:-abp-contains(Kaupallinen yhteistyö:)
 sketsi.net##footer > .container.tdt-ad-wrap
@@ -4691,9 +4695,9 @@ sportti.com#?#div[style="padding-bottom:10px;border-bottom:1px solid gray;margin
 sss.fi##[class="td_block_wrap td_block_instagram td_block_widget td_uid_24_5ed01647b9b3f_rand td-pb-border-top td_block_template_1"] ~ [class="td_block_template_1 widget widget_text"] > [class="textwidget"]
 suomela.fi##.banner-boksi1
 suomela.fi#?#h2:-abp-contains(Remonttirahoitus)
-suomela.fi#?#hr:-abp-has( + h2:-abp-contains(Remonttirahoitus))
-suomela.fi#?#hr:-abp-has( + p > a[href="https://www.autodoc.fi/"])
-suomela.fi#?#hr:-abp-has( + p:-abp-has(a[href="https://www.autonvaraosat24.fi/"]))
+suomela.fi#?#hr:-abp-has(+ h2:-abp-contains(Remonttirahoitus))
+suomela.fi#?#hr:-abp-has(+ p > a[href="https://www.autodoc.fi/"])
+suomela.fi#?#hr:-abp-has(+ p:-abp-has(a[href="https://www.autonvaraosat24.fi/"]))
 suomela.fi#?#p:-abp-has(a[href="https://www.autodoc.fi/"])
 suomela.fi#?#p:-abp-has(a[href="https://www.autonvaraosat24.fi/"])
 suomela.fi#?#p:-abp-has(a[href="https://www.lainanvälittäjä.fi/"])
@@ -4710,7 +4714,7 @@ suomi24.fi#?#div[class^="ThreadGridItemWrapper__CardCol"]:-abp-has([class^="AdLi
 suomifutis.com##[href$="/nettikasinot/"]
 suomimobiili.fi##.sbmainos
 suomimobiili.fi#?#.content-wrap > .bkmodule:-abp-contains(Sponsoroitu)
-suomimobiili.fi#?#div:-abp-has( > div.strike)
+suomimobiili.fi#?#div:-abp-has(> div.strike)
 superlehti.fi##.ad-banner-lift__article.ad-banner-lift
 supersaa.fi##div[class^="supers-app-promo-container"]
 taisto.org###mw-data-after-content > div
@@ -4718,9 +4722,9 @@ taisto.org##a[id="top"] ~ [id="siteNotice"][class="mw-body-content"]
 talouselama.fi##[id="skyscraper-height-div"] > div > main > div[class="LazyLoad is-visible"] > section > div:first-of-type + div[class^="sc-"]
 talouselama.fi##a[href^="https://www.talouselama.fi/kumppanisisallot/"]
 talouselama.fi#?#.lazyload-wrapper:-abp-has([id|="almad"])
-talouselama.fi#?#[class]:-abp-has( > a[href^="https://www.talouselama.fi/kumppanisisallot/"])
+talouselama.fi#?#[class]:-abp-has(> a[href^="https://www.talouselama.fi/kumppanisisallot/"])
 talouselama.fi#?#[id|="podcasti"]:-abp-contains(Kaupallinen Yhteistyö)
-talouselama.fi#?#div.article-body > div:-abp-has( > div.LazyLoad.is-visible)
+talouselama.fi#?#div.article-body > div:-abp-has(> div.LazyLoad.is-visible)
 talouselama.fi#?#div[width]:-abp-has(.lazyload-wrapper)
 talviopas.fi,turisti-info.fi##.sidebar-banners
 tehylehti.fi##.commercial-bottom.commercial
@@ -4735,39 +4739,40 @@ tekniikkatalous.fi##div#skyscraper-height-div > div > section > div > a[href^="/
 tekniikkatalous.fi##section > div > a[href^="https://www.tekniikkatalous.fi/kumppanisisallot/"]
 tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:-abp-contains(Kaupallinen yhteistyö)
 tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:-abp-contains(Kaupallinen yhteistyö)
-tekniikkatalous.fi#?#div:-abp-has( > a[href^="https://www.tekniikkatalous.fi/kumppanisisallot/"])
-tekniikkatalous.fi#?#div:-abp-has( > span:-abp-contains(KAUPALLINEN YHTEISTYÖ) + a[href^="https://koulutus.almatalent.fi/"])
+tekniikkatalous.fi#?#div:-abp-has(> a[href^="https://www.tekniikkatalous.fi/kumppanisisallot/"])
+tekniikkatalous.fi#?#div:-abp-has(> span:-abp-contains(KAUPALLINEN YHTEISTYÖ) + a[href^="https://koulutus.almatalent.fi/"])
 tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
 telsu.fi###pb_bottom2
 tennis.fi##.ad-blocks
 terve.fi#?#div[class^="PageElementFeedItem__Container"]:-abp-contains(Mainos)
 ticketmaster.fi##div[id^="ad-slot-"]
 tilt.fi##.lazyloading
-tivi.fi#?#aside:-abp-has( > div > span:-abp-contains(KAUPALLINEN YHTEISTYÖ))
+tivi.fi#?#aside:-abp-has(> div > span:-abp-contains(KAUPALLINEN YHTEISTYÖ))
 tivi.fi#?#div#skyscraper-height-div > aside > div > section > div:-abp-contains(KAUPALLINEN YHTEISTYÖ)
 tivi.fi#?#div#skyscraper-height-div > div > aside > div > section > div:-abp-contains(KAUPALLINEN YHTEISTYÖ)
 tivi.fi#?#div#skyscraper-height-div > section > div > a > div:-abp-contains(Kaupallinen yhteistyö)
-tivi.fi#?#div:-abp-has( > a[href^="https://tivi.fi/kumppanisisallot/"])
-tivi.fi#?#div:-abp-has( > a[href^="https://www.tivi.fi/kumppanisisallot/"])
+tivi.fi#?#div:-abp-has(> a[href^="https://tivi.fi/kumppanisisallot/"])
+tivi.fi#?#div:-abp-has(> a[href^="https://www.tivi.fi/kumppanisisallot/"])
 tokentube.net##.no-top-padding.row
 tori.fi###banner_panorama_bottom
 tori.fi###footer_partner_links
 tori.fi##div[id="banner_panorama_topmost"]
 tori.fi##div[id="panorama_top"]
 tori.fi##div[id="panorama_topmost"]
+traktorpool.fi##.billboard
 ts.fi##[class="tsv3-c-common-article__contentad notloaded"]
 ts.fi##div[class*="tsv3-c-common-smart noad-hideaction"]
-ts.fi#?#div[class="tsv3-c-layout__c js-tsv3-c-layout__c"]:-abp-has( > [class$="tsv3-c-layout tsv3-c-common-twocolumnslayout tsv3-c"] [class*="element--nativead"])
+ts.fi#?#div[class="tsv3-c-layout__c js-tsv3-c-layout__c"]:-abp-has(> [class$="tsv3-c-layout tsv3-c-common-twocolumnslayout tsv3-c"] [class*="element--nativead"])
 tulikulma.fi##.slideshow
 tvmatsit.com##.annons
-twitter.com#?#div:-abp-has( > div > div > div > h2 > div > span:-abp-contains(Mainostettu twiitti))
+twitter.com#?#div:-abp-has(> div > div > div > h2 > div > span:-abp-contains(Mainostettu twiitti))
 uudenkaupunginsanomat.fi###auto-grid-container-5c40764673d19
 uusisuomi.fi#?#.lazyload-wrapper + section:-abp-contains(Kaupallinen yhteistyö)
 uusisuomi.fi#?#[width]:-abp-has(.lazyload-wrapper):not(aside)
 uusisuomi.fi#?#div#skyscraper-height-div > div > aside > section > a:-abp-contains(Kaupallinen yhteistyö)
 uusisuomi.fi#?#div#skyscraper-height-div > div > main > div > a:-abp-contains(Kaupallinen yhteistyö)
-uusisuomi.fi#?#div:-abp-has( > a[href^="https://www.uusisuomi.fi/kumppanisisallot/"])
-uusisuomi.fi#?#p + div:-abp-has( > .LazyLoad.is-visible > [id|="almad"])
+uusisuomi.fi#?#div:-abp-has(> a[href^="https://www.uusisuomi.fi/kumppanisisallot/"])
+uusisuomi.fi#?#p + div:-abp-has(> .LazyLoad.is-visible > [id|="almad"])
 uusiteknologia.fi###text-97
 uusiteknologia.fi###text-98
 uutissuora.fi##div[class="td-all-devices"]
@@ -4781,17 +4786,17 @@ vau.fi##.sdaelem.td-block-span12
 vau.fi##.vausda
 vauva.fi##div.cts-row-wrapper
 vauva.fi##div[id^="aldente-"]
-vauva.fi#?#.pane-sbase-static-blocks-sbase-static-blocks-1:-abp-has( > h2 > a[href="https://alennuskoodi.is.fi/"])
+vauva.fi#?#.pane-sbase-static-blocks-sbase-static-blocks-1:-abp-has(> h2 > a[href="https://alennuskoodi.is.fi/"])
 venelehti.fi##.ads_carousel-2.widget
 verkkouutiset.fi##.page-ad__location
 verkkouutiset.fi##article.rp-lift.featured-post
 vertaa.fi##[id|="gpt-slot-billboard"]
-vertaa.fi#?#li[class^="cg-"][data-role="items-list-item"]:-abp-has( > div > [id^="gpt-slot-results-"][id*="rectangle"])
+vertaa.fi#?#li[class^="cg-"][data-role="items-list-item"]:-abp-has(> div > [id^="gpt-slot-results-"][id*="rectangle"])
 viikonloppu.com###text-8
 viikonloppu.com###text-9
 viikonloppu.com##[href^="https://www.kasinokaverit.com/"]
 viikonloppu.com##[href^="https://www.lainaovi.fi/"]
-viikonloppu.com#?#.listing-item:-abp-has( > .item-inner > .native-title)
+viikonloppu.com#?#.listing-item:-abp-has(> .item-inner > .native-title)
 viisasraha.fi##.d-md-block.d-lg-block.d-none
 viisasraha.fi##.kumppani-artikkelit
 viisasraha.fi##div[class*="native-article"] > div[class="ezrichtext-field"] > p > a[href^="https://danskebank.fi/"]
@@ -4818,13 +4823,14 @@ www.nettimoto.com###smallViewHouseBanner
 www.suomi24.fi##.asp
 www.suomi24.fi##div[class^="Vaalikone__HeaderAdWrapper"]
 www.suomi24.fi#?#p:-abp-has(+ p + .asp)
+x2.fi##.mobile-top-ad
 ylilauta.org##.h.fcdn
 yrittajat.fi##div[class$="kaupallinen-yhteistyo"]
 
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
 
-/[./]io-tech\.fi/.*/[0-9a-f]{32}\./$image
+/[.]io-tech\.fi/.*/[0-9a-f]{32}\./$image
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg
 ||ad.citycdn.fi^$third-party
 ||ad.ilcdn.fi^$third-party
@@ -4920,6 +4926,7 @@ iltalehti.fi##.slider-content
 iltalehti.fi##div.footer-wrapper__item.is-visible.LazyLoad
 iltalehti.fi##div[class="iframe-container"]
 iltalehti.fi#?#.article-list > div[class=""] > a[href]:-abp-contains(Kaupallinen yhteistyö)
+iltalehti.fi#?#.card:-abp-has(#il-rantapallo-right-column-box)
 iltalehti.fi#?#a.small-article:-abp-contains(Kaupallinen yhteistyö)
 iltalehti.fi#?#div.card:-abp-contains(Mainos:)
 iltalehti.fi#?#div.fp-container.card:-abp-contains(Kaupallinen yhteistyö)
@@ -4937,7 +4944,7 @@ iltalehti.fi#?#div.is-visible.LazyLoad:-abp-contains(kaupallinen yhteistyö)
 iltalehti.fi#?#div:not(.sub-category-unikulma):not(.sub-category-rahapuhe):not(.sub-category-santander):not(.sub-category-miehen-terveys):not(.sub-category-kehon-hyvinvointi-ja-vitaepro):not(.sub-category-unijaterveys):not(.sub-category-huippukivaa-seksia):not(.sub-category-puhti):not(.sub-category-hyvinvointivinkit):not(.sub-category-hetki):not(.sub-category-kaalimato):not(.sub-category-oslo-skin-lab):not(.sub-category-kodin-siivousvinkit):not(.sub-category-qled-tv):not(.sub-category-jatevesiratkaisut):not(.sub-category-bluestep):not(.sub-category-sortter-reilua-lainavertailua):not(.sub-category-rahalaitos):not(.sub-category-aitien-keittiosta):not(.sub-category-koko-kansan-autokauppa):not(.sub-category-kuljetusten-kestava-kehitys):not(.sub-category-kestavat-liikkuvuusratkaisut):not(.sub-category-hintaopas):not(.sub-category-boltworks) > div > div > main .article-container:-abp-contains(Kaupallinen yhteistyö)
 iltalehti.fi#?#div:not(.sub-category-unikulma):not(.sub-category-rahapuhe):not(.sub-category-santander):not(.sub-category-miehen-terveys):not(.sub-category-kehon-hyvinvointi-ja-vitaepro):not(.sub-category-unijaterveys):not(.sub-category-huippukivaa-seksia):not(.sub-category-puhti):not(.sub-category-hyvinvointivinkit):not(.sub-category-hetki):not(.sub-category-kaalimato):not(.sub-category-oslo-skin-lab):not(.sub-category-kodin-siivousvinkit):not(.sub-category-qled-tv):not(.sub-category-jatevesiratkaisut):not(.sub-category-bluestep):not(.sub-category-sortter-reilua-lainavertailua):not(.sub-category-rahalaitos):not(.sub-category-aitien-keittiosta):not(.sub-category-koko-kansan-autokauppa):not(.sub-category-kuljetusten-kestava-kehitys):not(.sub-category-kestavat-liikkuvuusratkaisut):not(.sub-category-hintaopas):not(.sub-category-boltworks) > div > div > main .half-article:-abp-contains(Kaupallinen yhteistyö)
 iltalehti.fi#?#div:not(.sub-category-unikulma):not(.sub-category-rahapuhe):not(.sub-category-santander):not(.sub-category-miehen-terveys):not(.sub-category-kehon-hyvinvointi-ja-vitaepro):not(.sub-category-unijaterveys):not(.sub-category-huippukivaa-seksia):not(.sub-category-puhti):not(.sub-category-hyvinvointivinkit):not(.sub-category-hetki):not(.sub-category-kaalimato):not(.sub-category-oslo-skin-lab):not(.sub-category-kodin-siivousvinkit):not(.sub-category-qled-tv):not(.sub-category-jatevesiratkaisut):not(.sub-category-bluestep):not(.sub-category-sortter-reilua-lainavertailua):not(.sub-category-rahalaitos):not(.sub-category-aitien-keittiosta):not(.sub-category-koko-kansan-autokauppa):not(.sub-category-kuljetusten-kestava-kehitys):not(.sub-category-kestavat-liikkuvuusratkaisut):not(.sub-category-hintaopas):not(.sub-category-boltworks) > div > div > main div[class="card "]:-abp-has(.full-article:-abp-contains(Kaupallinen yhteistyö))
-iltalehti.fi#?#div[class="card "]:-abp-has( > .block > div[class="content-router-wrapper"]:-abp-contains(kaupallinen yhteistyö))
+iltalehti.fi#?#div[class="card "]:-abp-has(> .block > div[class="content-router-wrapper"]:-abp-contains(kaupallinen yhteistyö))
 iltalehti.fi#?#div[class="card "]:-abp-has(.block > a[class="nakoislehti"][href^="https://plus.iltalehti.fi/nakoislehti/"])
 iltalehti.fi#?#div[class="card "]:-abp-has([class="alennuskoodi-column-embed"])
 
@@ -5062,8 +5069,3 @@ timma.fi#@##cookieConsentModal
 ! https://github.com/easylist/easylist/pull/8317
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/306
 @@||pelaaja.fi/sites/default/files/googleanalytics/analytics.js
-
-! https://github.com/easylist/easylist/pull/8360
-! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/309
-##.ads__container
-##.card-article-ads
