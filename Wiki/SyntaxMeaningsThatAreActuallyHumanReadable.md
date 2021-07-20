@@ -18,7 +18,7 @@
 * `[href*="text"]`: Finds page elements whose value contains the text anywhere within it.
 * `[href~="text"]`: Finds page elements whose value contains the word (with spaces around it) anywhere within it.
 * `[href|="text"]`: Same as `[href="text"]`, but can also select text that is then followed by a dash.
-* `:not(.element)`: Finds page elements that doesn't contain a specified element or text string. Can be paired with other syntaxes à la `:not(:-abp-contains(Example text))`.
+* `:not(.element)`: Finds page elements that doesn't contain a specified element or text string.
 * `:-abp-contains(text)`: Finds page elements that contains such text within it.
 * `:-abp-has(.element)`: Finds page elements that contains such an element within it.
 * `:-abp-has(>` : Tells `:-abp-has` to only find elements whose criteria match their immediate subelement(s).
@@ -75,6 +75,7 @@
 * `!#if`: Specifies that a section of entries only apply to specific platforms or extensions. Closed out by `!#endif`. Possible options are listed [here](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#if-condition).
 * `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
 * `:matches-css-before` / `:matches-css-after`: Same as above, but looks for CSS values in its pseudo-elements instead.
+* `:not(:-abp-contains(Text))` / `:not(:-abp-has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
 #### Blocking
 * `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
 * `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list.
