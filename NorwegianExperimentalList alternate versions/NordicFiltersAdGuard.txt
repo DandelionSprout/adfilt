@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 20July2021v1
+! Version: 21July2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1012,10 +1012,8 @@ fiskeribladet.no##div[id^=banner_billboard1_]
 fiskeribladet.no##div[id^=banner_billboard1_] + .hide_on_print
 fl-arena.de##.content_right_medium_rect_ad_box
 fl-arena.de##.do_not_print.article_teaser_no_border
-fla.de###top-banner
 fla.de##.adsenseblock
 fla.de##.font-robotoregular.font10
-fla.de##.index-banner
 fla.de##div[data-glade]
 flatpanels.dk###sb-site > .hidden-xs.container
 flatpanels.dk##.hidden-xs.forsideboks2
@@ -2263,6 +2261,14 @@ sofabold.dk##.centerMgfx
 !
 !#if env_mobile
 
+!#endif
+
+!
+!#if env_chromium
+!#if env_safari
+!+ NOT_OPTIMIZED
+!#include NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotFirefox.txt
+!#endif
 !#endif
 
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
