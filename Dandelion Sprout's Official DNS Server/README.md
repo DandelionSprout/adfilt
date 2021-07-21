@@ -72,6 +72,8 @@ Additionally, company networks from The Netherlands, Romania, Russia and Ukraine
 
 Many companies known to look through the fingers with port-scanners and spammers, are also prohibited. Full list: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuardHomeDisallowedIPs.txt
 
+The server is (seemingly; confirmation very much wanted) censored by national censorship entities in Turkmenistan as of 21st of July 2021, after having very honourably served approx. 1,500 users there for a week prior, only for connections to rapidly cease just hours after I had <b>finally</b> sorted out multiple major server problems.
+
 ### Other technical aspects
 
 The server runs on a Raspberry Pi 4 8GB, with Fedora Workstation aarch64 (ARM64).
