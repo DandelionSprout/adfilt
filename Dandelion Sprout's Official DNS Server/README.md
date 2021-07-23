@@ -10,7 +10,7 @@ The main connection addresses are:
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
-The encrypted addresses may also go down during (pretty rare) Raspberry Pi restarts, or if ASUS' lookup servers for Asuscomm are acting wonky.
+The encrypted addresses may also go down during rare Raspberry Pi restarts, or if ASUS' lookup servers for Asuscomm are acting wonky.
 
 ### What is being blocked
 
@@ -79,7 +79,7 @@ The server runs on a Raspberry Pi 4 8GB, with Fedora Workstation aarch64 (ARM64)
 
 The AdGuard Home update channel in use is the Beta channel (As opposed to Stable or Nightly).
 
-Average uptime is more than 23h59min per day, but is not close enough to 24h00min00sec to be suited for life-or-death scenarios.
+Average uptime is more than 23h55min per day, but is not close enough to 24h00min00sec to be suited for life-or-death scenarios.
 
 ### Known problems
 
