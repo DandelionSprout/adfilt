@@ -5,7 +5,8 @@ After 1½ years of trial setups and tinkering until March 2021, I now offer my D
 The main connection addresses are:
 * DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
 * DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853`
-* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:853`
+* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:853` (Port will be changed in the near future.)
+* DNSCrypt: Work in progress as of 24th of July 2021.
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
@@ -71,8 +72,6 @@ Users from PR-China will not have their queries processed by the server, due to 
 Additionally, company networks from The Netherlands, Romania, Russia and Ukraine will usually be prohibited as well. Residential networks from those countries are fine.
 
 Many companies known to look through the fingers with port-scanners and spammers, are also prohibited. Full list: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuardHomeDisallowedIPs.txt
-
-The server is (seemingly; confirmation very much wanted) censored by national censorship entities in Turkmenistan as of 21st of July 2021, after having very honourably served approx. 1,500 users there for a week prior, only for connections to rapidly cease just hours after I had <b>finally</b> sorted out multiple major server problems.
 
 ### Other technical aspects
 
