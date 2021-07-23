@@ -6,7 +6,7 @@ The main connection addresses are:
 * DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
 * DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853`
 * DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:853` (Port will be changed in the near future, most likely to 48582.)
-* DNSCrypt: Work in progress as of 24th of July 2021. Most probable port is 56404.
+* DNSCrypt: Work in progress. Completion date unknown due to technical problems.
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
@@ -111,3 +111,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 12th of July 2021 00:01-01:35 UTC: The AdGuard Home installation was stuck at a "The DNS server is starting" error screen, until I noticed the error by pure coincidence and powercycled the RaspPi.
 * 18th of July 2021 17:51-19:10 UTC: My ASUS router's TrendMicro anti-botnet function had a total meltdown. Moreover, attempting to grab the chance to run a Fedora dnf update, took much longer than expected.
 * 19th of July 2021 16:??-20:40 UTC: Near-total server failure in general. Shoutout to https://community.home-assistant.io/t/home-assistant-community-add-on-adguard-home/90684/13 for a fix that returned the server to basic functionality; alongside other network fixes and AGH settings tinkering.
+* 23rd of July 21:30~22:50 UTC: I decided to try to set up DNSCrypt, which took several attempts. And when I finally got it to work, substantial technical problems means I do not recommend using it until a future AGH beta build fix it.
