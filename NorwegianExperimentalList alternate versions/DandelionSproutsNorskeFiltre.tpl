@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 21July2021v1-Alpha
+# Version: 23July2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -345,6 +345,7 @@ msFilterList
 -d ridr.dk partners
 -d cms.sona.fo ads
 -d r7.fo lysing
+-d nocc.no System_Promoteringssaker
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -675,6 +676,7 @@ msFilterList
 -d norskposten.com
 -d oslo-tannlegene.no
 -d y6.no
+-d havfruen4220.dk
 - ?finn.no login
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider

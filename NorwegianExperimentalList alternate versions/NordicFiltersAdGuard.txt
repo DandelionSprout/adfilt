@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 21July2021v1
+! Version: 23July2021v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -317,6 +317,10 @@ tipsbladet.dk##main > section.l-padding-top-lg
 dagens.dk#?#.col-300 > .wrapper-sticky:has(a[href*=casino])
 dagbladet.no##main > div[class^=Row-] > div[class^=Column-]:last-of-type
 startsiden.no##div[class*=partnerWidgetContainer]
+nocc.no##.forsideReklame2
+nocc.no##.forsideReklame
+nocc.no##.forsideInnhold
+campingportalen.no###block-annonse-blokk1
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -742,6 +746,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||cms.sona.fo/ads^
 ||r7.fo/lysing^
 ||aftenposten.no/seksjon/dist/ads-$script
+||nocc.no/System_Promoteringssaker^
 !#if false
 @@||vgtv.no$ghide
 !#endif
@@ -1770,7 +1775,7 @@ finn.no#@##ad-content
 ! 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
 ! Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP for showing me the existence of this particular CSP command.
 ! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
-$csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no
+$csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no|geo.ngu.no|lofotenlinks.no|windowsnett.no|selstad.no|turnforening.no|ernaeringsradet.no|frigg.no|studentvelferd.no|luster.kommune.no|ugk.no|drs.dk|dsmu.dk|92grp.dk|kuntzanimation.dk
 
 ! 🇳🇴: Anti-'CPU-massakrering'
 ! 🇮🇸: And-örgjörvislatrun
@@ -2021,6 +2026,7 @@ sofabold.dk##.centerMgfx
 ||norskposten.com^$document
 ||oslo-tannlegene.no^$document
 ||y6.no^$all
+||havfruen4220.dk^$all
 !+ NOT_OPTIMIZED
 /?finn.no/login$document
 
