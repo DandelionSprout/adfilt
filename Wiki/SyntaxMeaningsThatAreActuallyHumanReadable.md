@@ -78,7 +78,7 @@
 * `:not(:-abp-contains(Text))` / `:not(:-abp-has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
 #### Blocking
 * `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
-* `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list.
+* `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list. Requires the bad entry to be written verbatim; except for removing Hosts prefix IPs.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
