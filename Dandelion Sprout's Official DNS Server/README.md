@@ -6,7 +6,7 @@ The main connection addresses are:
 * DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
 * DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853`
 * DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:853` (Port will be changed in the near future, most likely to 48582.)
-* DNSCrypt: Work in progress as of 24th of July 2021.
+* DNSCrypt: Work in progress as of 24th of July 2021. Most probable port is 56404.
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
