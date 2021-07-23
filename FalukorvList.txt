@@ -1,9 +1,8 @@
 [Adblock Plus 3.6]
 ! Title: 🌭 Falukorv List
-! Version: 22July2021v1-Beta
+! Version: 23July2021v1-Beta
 ! Expires: 10 days
 ! Description: Originally created because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
-! This list is designed for AdGuard Home and Adblock Plus. Support for uBlock Origin or AdGuard would require an alternate syntax list version.
 ! The list is not designed to be used together with anti-'social network' lists.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
@@ -64,22 +63,31 @@
 @@||zhengjian.org^
 @@||zhengwunet.org^
 @@||zhuichaguoji.org^
+
 ! Caused by «Windscribe Clickbait» (https://assets.windscribe.com/custom_blocklists/clickbait.txt)
 @@||buzzfeed.com^
+
 ! Caused by «QAnon conspiracy nazi blocklist» (https://raw.githubusercontent.com/rimu/no-qanon/master/etc_hosts.txt.ipv6)
 @@||mewe.com^
 @@||wikileaks.org^
 @@||t.me^
-@@||vk.com^
 @@||nypost.com^
+vk.com$badfilter
+!#if false
+@@/(^|/)vk\.com/?$/
+@@||vk.com^$stylesheet,script,image,~third-party
+!#endif
+
 ! Caused by «ABP Japanese Filters» (https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt)
 @@||lemondeinformatique.fr^
+
 ! Domains that cause Error -105 on my LG 43UH603V TV if they're blocked (Not in any known filterlists)
 @@||connected-devices.viaplay.tv^
 @@||tv.deezer.com^
 @@||lgrecommends.lgappstv.com^
-! ↑ Disney+
+! Disney+
 @@||cd-dmgz.bamgrid.com^
+
 ! Good sites used to scan domains for malware or ads, and which should/must be allowlisted to avoid having entries in various filterlists interfere with their scanning (Not in any known domains-based filterlists)
 @@||siteadvisor.com^
 @@||securitytrails.com^
