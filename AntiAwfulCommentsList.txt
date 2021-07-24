@@ -1,18 +1,12 @@
 [Adblock Plus 3.6]
 ! Title: 💐 Anti-'Awful comments' list
-! Version: 20April2021v1-Beta
+! Version: 24July2021v1-Beta
 ! Expires: 7 days
 ! Description: This is a somewhat alternate approach to the usual anti-comment-section lists, as this list only removes those comment sections that are filled with exceptionally bad comments.
 ! Note: Out of sheer massive spite against how some newssites deliberately run userpolls on the most contentious articles and only those articles, this list also targets such userpolls now.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
-! Multi-site entries
-###hot-network-questions
-vg.no,youtube.com,e621.net,ghacks.net,en.greatfire.org,nintendolife.com,thejournal.ie,invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion,tube.incognet.io,city-countyobserver.com,polygon.com###comments
-norwegian.com###disqus_thread
-||cmmnts.i.bt.no^
-
-! Disqus embeds
+! ——— Anti-'Malware comments' ———
 ! https://myip.ms/info/limitexcess
 *##.post-list > .post-content:has-text(/Best girls webcam/i)
 ! https://myip.ms/info/memberarea/My_Account.html
@@ -20,10 +14,31 @@ norwegian.com###disqus_thread
 *##script[src*=disquscdn] + #layout .post-content:has-text(We offer unlimited)
 *##script[src*=disquscdn] + #layout .post-content:has-text(.com specialize)
 
-! Single-site entries
+! ——— Newspaper comment sections where commentators have no idea what they're talking about and also haven't actually read the articles either ———
+||comments.vg.no^
+vg.no###comments
+||cmmnts.i.bt.no^
+jyllands-posten.dk##article-facebook-comments
+||comment.youmaker.com^$domain=theepochtimes.com
+theepochtimes.com###remark-side-panel
+||cdn.viafoura.net/chunks/commenting$domain=cbc.ca
+||facebook.com/plugins/*comments.php?*%26domain%3Dglobalnews.ca%26
+realclearpolitics.com##div[data-spmark=social-content]
+||viafoura.co^$domain=nottinghampost.com|liverpoolecho.co.uk
+nottinghampost.com###comments-wrapper
+thejournal.ie,city-countyobserver.com###comments
+
+! ——— Anti-'Other kinds of spam comments' ———
+soundcloud.com#?#.commentItem:-abp-contains(You will be kissed on)
+||disqus.com/embed/comments/?*f=einaregilsson&t_i=redirector$subdocument
+en.greatfire.org###comments
+
+! ——— Anti-'Racist comments' ———
 color-hex.com##.txtgray
 color-hex.com##.well-sm.well.commentcontainer
 color-hex.com##a[href="#comments"]
+
+! ——— Anti-'Megastupid comments' ———
 extra-leker.no###y-badges
 extra-leker.no##.yotpo-display-wrapper
 extra-leker.no##.hide-for-small-only.top-notice
@@ -31,50 +46,54 @@ extra-leker.no##.scroller
 extra-leker.no##.testimonials
 extra-leker.no##.reviewed-products
 ||p.yotpo.com^$domain=extra-leker.no
-lalaloopsyland.fandom.com###WikiaArticleFooter
+
+! ——— Anti-'Pro-abuse comments' (Chiefly porn-related ones) ———
 rule34.paheal.net###commentlistrecent
 rule34.paheal.net###comment-list-recent
-theregister.co.uk##.story_img_wrap > .comments > .count
-youtube.com###watch-discussion
-youtube.com##ytd-live-chat-frame
-m.youtube.com##ytm-comment-section-renderer
-||youtube.com/live_chat_fragments_ajax?$xmlhttprequest
-||youtube.com/comment_service_ajax?$domain=youtube.com
-||nrkbeta.no/wp-content/themes/nrkbeta_2016/images/comment_bubble.jpg$image
-presstv.com##.item-comments
-nintendolife.com##.ui-comments
-nintendolife.com###reply
-||disqus.com/embed/comments/?*%2Few.com%2F$subdocument
-||disqus.com/embed/comments/?*f=einaregilsson&t_i=redirector$subdocument
-||disqus.com/embed/comments/?*%2Fitavisen.no%2F$subdocument
-||disqus.com/embed/comments/?base=default&f=gogoanime-$subdocument
-commonsensemedia.org##.pane-reviews-user-reviews
-commonsensemedia.org##.pane-user-review-statistics
-pastebin.com###content_right
-tv2.no##.dilemma
-||comments.ign.com^
-||ws-comments.ign.com^
 rule34.xxx##div[id^=c][style="display:inline;"]
 rule34.xxx###comment-list
-tv2.dk##.t2toolbox-list-voting
-tv2.dk##.t2toolbox-live-poll
 pixiv.net#?#.N1ZIOon:-abp-contains( her place)
 pixiv.net#?#.N1ZIOon:-abp-contains( their place)
 pixiv.net#?#.N1ZIOon:-abp-contains(slowly suffocate)
-jyllands-posten.dk##article-facebook-comments
-soundcloud.com#?#.commentItem:-abp-contains(You will be kissed on)
-||cdn.viafoura.net/chunks/commenting$domain=cbc.ca
-||facebook.com/plugins/*comments.php?*%26domain%3Dglobalnews.ca%26
-||s0.wp.com/*/plugins/ajax-comment-loading^$domain=variety.com
-variety.com##.o-comments-link
-||facebook.com/*/plugins/comments.php*midtnorskdebatt.no
-||comment.youmaker.com^$domain=theepochtimes.com
-theepochtimes.com###remark-side-panel
-||comments.vg.no^
-gogoanime.*###comment
+e621.net###comments
+
+! ——— Anti-'User polls with results most people wouldn't like to learn about' ———
+tv2.no##.dilemma
+tv2.dk##.t2toolbox-list-voting
+tv2.dk##.t2toolbox-live-poll
+
+! ——— Anti-'Overconcerned parents' comments' ———
+commonsensemedia.org##.pane-reviews-user-reviews
+commonsensemedia.org##.pane-user-review-statistics
+
+! ——— Anti-'Oddly patriotic comments' ———
+norwegian.com###disqus_thread
 ||klix.ba/v1/komentari^
 klix.ba##.komentariCont
-realclearpolitics.com##div[data-spmark=social-content]
-||viafoura.co^$domain=nottinghampost.com|liverpoolecho.co.uk
-nottinghampost.com###comments-wrapper
+
+! ——— Anti-'Posts that sound completely bizarre compared to the page you're currently at'
+###hot-network-questions
+pastebin.com###content_right
+
+! ——— Not yet recategorised ———
+lalaloopsyland.fandom.com###WikiaArticleFooter
+theregister.co.uk##.story_img_wrap > .comments > .count
+presstv.com##.item-comments
+||disqus.com/embed/comments/?*%2Few.com%2F$subdocument
+||disqus.com/embed/comments/?*%2Fitavisen.no%2F$subdocument
+||disqus.com/embed/comments/?base=default&f=gogoanime-$subdocument
+||comments.ign.com^
+||ws-comments.ign.com^
+||s0.wp.com/*/plugins/ajax-comment-loading^$domain=variety.com
+variety.com##.o-comments-link
 ign.com##h5.blocktitle
+ghacks.net,polygon.com###comments
+
+! —!!!— Highly contentious and under re-consideration —!!!—
+!!!youtube.com###watch-discussion
+!!!youtube.com##ytd-live-chat-frame
+!!!m.youtube.com##ytm-comment-section-renderer
+!!!youtube.com###comments
+!!!||youtube.com/live_chat_fragments_ajax?$xmlhttprequest
+!!!||youtube.com/comment_service_ajax?$domain=youtube.com
+!!!invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion,tube.incognet.io###comments
