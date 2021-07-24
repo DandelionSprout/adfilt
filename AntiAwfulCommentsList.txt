@@ -1,18 +1,10 @@
 [Adblock Plus 3.6]
 ! Title: 💐 Anti-'Awful comments' list
-! Version: 24July2021v1-Beta
+! Version: 24July2021v2-Beta
 ! Expires: 7 days
 ! Description: This is a somewhat alternate approach to the usual anti-comment-section lists, as this list only removes those comment sections that are filled with exceptionally bad comments.
 ! Note: Out of sheer massive spite against how some newssites deliberately run userpolls on the most contentious articles and only those articles, this list also targets such userpolls now.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-
-! ——— Anti-'Malware comments' ———
-! https://myip.ms/info/limitexcess
-*##.post-list > .post-content:has-text(/Best girls webcam/i)
-! https://myip.ms/info/memberarea/My_Account.html
-*##script[src*=disquscdn] + #layout .post-content:has-text(Viagra)
-*##script[src*=disquscdn] + #layout .post-content:has-text(We offer unlimited)
-*##script[src*=disquscdn] + #layout .post-content:has-text(.com specialize)
 
 ! ——— Newspaper comment sections where commentators have no idea what they're talking about and also haven't actually read the articles either ———
 ||comments.vg.no^
@@ -46,6 +38,7 @@ extra-leker.no##.scroller
 extra-leker.no##.testimonials
 extra-leker.no##.reviewed-products
 ||p.yotpo.com^$domain=extra-leker.no
+ghacks.net###comments
 
 ! ——— Anti-'Pro-abuse comments' (Chiefly porn-related ones) ———
 rule34.paheal.net###commentlistrecent
@@ -75,21 +68,14 @@ klix.ba##.komentariCont
 ###hot-network-questions
 pastebin.com###content_right
 
-! ——— Not yet recategorised ———
-lalaloopsyland.fandom.com###WikiaArticleFooter
-theregister.co.uk##.story_img_wrap > .comments > .count
-presstv.com##.item-comments
-||disqus.com/embed/comments/?*%2Few.com%2F$subdocument
-||disqus.com/embed/comments/?*%2Fitavisen.no%2F$subdocument
-||disqus.com/embed/comments/?base=default&f=gogoanime-$subdocument
-||comments.ign.com^
-||ws-comments.ign.com^
-||s0.wp.com/*/plugins/ajax-comment-loading^$domain=variety.com
-variety.com##.o-comments-link
-ign.com##h5.blocktitle
-ghacks.net,polygon.com###comments
+! ——— Temporarily turned off while searching for example pages ———
+!!!ign.com##h5.blocktitle
+!!!||comments.ign.com^
+!!!||ws-comments.ign.com^
+!!!polygon.com###comments
+!!!||disqus.com/embed/comments/?base=default&f=gogoanime-$subdocument
 
-! —!!!— Highly contentious and under re-consideration —!!!—
+! —!!!— Highly contentious among end-users and are under re-consideration —!!!—
 !!!youtube.com###watch-discussion
 !!!youtube.com##ytd-live-chat-frame
 !!!m.youtube.com##ytm-comment-section-renderer
