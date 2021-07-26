@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 23July2021v2
+! Version: 26July2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -321,6 +321,7 @@ nocc.no##.forsideReklame2
 nocc.no##.forsideReklame
 nocc.no##.forsideInnhold
 campingportalen.no###block-annonse-blokk1
+skaunnytt.no##.sb-widget
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -2326,7 +2327,7 @@ vg.no##div[data-test-tag=timestamp] + p + div:before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 15June2021v1-Extension
+! Last updated: 25July2021v1-Extension
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
 techstart.dk##+js(set, adblock, false)
@@ -2349,3 +2350,5 @@ gamereactor.*##^script[onError="adblockEnabled()"]
 ##div[style^="bottom: 0px;"][style*="width: 10"][style*="z-index: 2147"]
 ! https://github.com/uBlockOrigin/uAssets/issues/8648
 connery.dk##+js(set, adblockerAlert, noopFunc)
+! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
+no##+js(ra, class, .dfp-loaded)
