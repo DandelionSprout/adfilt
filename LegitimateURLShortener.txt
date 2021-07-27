@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 25July2021v1-Beta
+! Version: 27July2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -46,8 +46,6 @@ $removeparam=dclid
 ! https://www.apple.com/no/shop/product/MD463ZM/A/thunderbolt-til-gigabit-ethernet-adapter?afid=p239%7C1405819&cid=aos-no-aff-ir (15/11/2020)
 ! https://www.proshop.dk/HyperX-Predator-RGB-ram?cid=64e93f7a-cee2-44d9-911a-37f3eafd7b5f (23/01/2021)
 $removeparam=afid
-! Can NOT be made generic (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com
 ! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
 $removeparam=WebSiteMapNodeID
 ! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
@@ -60,10 +58,6 @@ $removeparam=tt_medium
 $removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi
 ! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
 ||tv2.no^$removeparam=referral
-! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
-! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
-! Can NOT be made generic (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com
 ! https://www.elgiganten.dk/product/lyd-hi-fi/hovedtelefoner/WH1000XM3B/sony-tradlose-around-ear-hovedtelefoner-wh-1000xm3-sort?scid=Pricecomparison8084162610 (27/11/2020)
 $removeparam=scid
 ! https://salming.com/sv-se/produkter/p/1099805-0416/salming-oval-fusion?trackID=79064280 (27/11/2020)
@@ -187,7 +181,6 @@ $removeparam=hashb
 $removeparam=hashc
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 $removeparam=irgwc
-$removeparam=tid,domain=~mirrored.to
 $removeparam=clickid
 ! https://www.alibaba.com/toprankedsellers/index.html?spm=a2700.8293689.0.0.2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
 $removeparam=spm
@@ -632,6 +625,17 @@ $removeparam=MID
 ||bbc.$removeparam=at_custom3
 ||bbc.$removeparam=at_custom4
 ||bbc.$removeparam=at_campaign
+
+! ——— Can never be made generic ———
+! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
+$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com
+! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
+! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
+! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com
+! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
+! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
+||comixology.$removeparam=tid
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
