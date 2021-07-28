@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 26July2021v1
+! Version: 28July2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -59,7 +59,7 @@ bold.dk##._adr_abp_container
 boligdebatten.dk###selvsalg-reklame
 bornholm.nu##.bannercontent
 borsen.dk##[href*="://borsen.dk/sponsoreret"]
-bossman.dk###right_container > .right_content:not(:first-of-type)
+bossman.dk###right_container > .right_content:nth-of-type(1n+2)
 brudleyp.fo,hvat.fo##.vev
 bt.dk##.dre-item--feature-e-commerce
 bt.no###related-articles + div[class^=_]
@@ -322,6 +322,9 @@ nocc.no##.forsideReklame
 nocc.no##.forsideInnhold
 campingportalen.no###block-annonse-blokk1
 skaunnytt.no##.sb-widget
+reiseplaneten.no###rt-sidebar-c
+reiseplaneten.no##.custom > p:nth-of-type(1n+2)
+froya.no##.annonse-plass
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -748,6 +751,13 @@ _300x500pix$domain=rykindribe.dk,image
 ||r7.fo/lysing^
 ||aftenposten.no/seksjon/dist/ads-$script
 ||nocc.no/System_Promoteringssaker^
+||s3-eu-west-1.amazonaws.com/froya/*-980x500-$image
+||s3-eu-west-1.amazonaws.com/froya/*-toppannonse-$image
+||s3-eu-west-1.amazonaws.com/froya/*nettannonse-$image
+||s3-eu-west-1.amazonaws.com/froya/*.jpeg.jpg|
+||s3-eu-west-1.amazonaws.com/froya/*-annonse-*.gif|
+||s3-eu-west-1.amazonaws.com/froya/*.-jpg.jpg|
+||s3-eu-west-1.amazonaws.com/froya/bilder/nordbohus.gif|
 !#if false
 @@||vgtv.no$ghide
 !#endif
@@ -1427,6 +1437,8 @@ alle-apningstider.com##div[id^=google_ad_]
 startsiden.no#?#.small-6[class*=articleContainer_]:-abp-has(a[href*="tradedoubler.com"])
 startsiden.no###stop-sticky-ad + h4
 eurosport.*##div[class$=-top-advert]
+bvbnorge.no##.wsite-spacer
+bvbnorge.no#?#.wsite-multicol-col:-abp-has(> .wsite-spacer)
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
