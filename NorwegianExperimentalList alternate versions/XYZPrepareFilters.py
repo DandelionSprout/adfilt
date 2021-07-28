@@ -159,6 +159,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^!#include NorwegianExperimentalList%20alternate%20versions/", 
+           r"!#include ", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -1674,6 +1680,12 @@ def prepare_privacy(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^!#include NorwegianExperimentalList%20alternate%20versions/", 
+           r"!#include ", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -2683,7 +2695,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^[a-z0-9^|.$=-]{1,5}$", 
+           r"^[a-z0-9^|.$:/=-]{1,5}$", 
            r"", 
            line
         )
