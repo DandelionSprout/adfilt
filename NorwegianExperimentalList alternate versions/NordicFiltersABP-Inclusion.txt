@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 260720211
+! Version: 300720211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -59,7 +59,7 @@ bold.dk##._adr_abp_container
 boligdebatten.dk###selvsalg-reklame
 bornholm.nu##.bannercontent
 borsen.dk##[href*="://borsen.dk/sponsoreret"]
-bossman.dk###right_container > .right_content:not(:first-of-type)
+bossman.dk###right_container > .right_content:nth-of-type(1n+2)
 brudleyp.fo,hvat.fo##.vev
 bt.dk##.dre-item--feature-e-commerce
 bt.no###related-articles + div[class^=_]
@@ -312,6 +312,9 @@ nocc.no##.forsideReklame
 nocc.no##.forsideInnhold
 campingportalen.no###block-annonse-blokk1
 skaunnytt.no##.sb-widget
+reiseplaneten.no###rt-sidebar-c
+reiseplaneten.no##.custom > p:nth-of-type(1n+2)
+froya.no##.annonse-plass
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -396,7 +399,8 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ~casinotop.com##a[href*="casinotop.com"]
 /banners/casinotop$image
 ! gnavergalleri.dk (along with ~60 affiliates sites)
-##.top-fixed-wrapper
+! https://github.com/DandelionSprout/adfilt/issues/233
+##.row > div[class=top-fixed-wrapper]
 ##.section-module.blog-frontpage-module.margin-top-10.row
 *galleri.dk/content/images/fixed^$image
 ! sol.dk (25/04/2021)
@@ -737,6 +741,13 @@ _300x500pix$domain=rykindribe.dk,image
 ||r7.fo/lysing^
 ||aftenposten.no/seksjon/dist/ads-$script
 ||nocc.no/System_Promoteringssaker^
+||s3-eu-west-1.amazonaws.com/froya/*-980x500-$image
+||s3-eu-west-1.amazonaws.com/froya/*-toppannonse-$image
+||s3-eu-west-1.amazonaws.com/froya/*nettannonse-$image
+||s3-eu-west-1.amazonaws.com/froya/*.jpeg.jpg|
+||s3-eu-west-1.amazonaws.com/froya/*-annonse-*.gif|
+||s3-eu-west-1.amazonaws.com/froya/*.-jpg.jpg|
+||s3-eu-west-1.amazonaws.com/froya/bilder/nordbohus.gif|
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||bluesnews.no/Files/Images/video/Blues-promo-2021.mp4^$~third-party
@@ -1366,6 +1377,8 @@ alle-apningstider.com##div[id^=google_ad_]
 startsiden.no#?#.small-6[class*=articleContainer_]:-abp-has(a[href*="tradedoubler.com"])
 startsiden.no###stop-sticky-ad + h4
 eurosport.no,eurosport.dk##div[class$=-top-advert]
+bvbnorge.no##.wsite-spacer
+bvbnorge.no#?#.wsite-multicol-col:-abp-has(> .wsite-spacer)
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -4151,7 +4164,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 260720217
+! Version: 280720212
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4379,6 +4392,7 @@ findance.com#?#p:-abp-has(a[rel="nofollow no-referrer sponsored"])
 finder.fi##.Advertisement__Box
 finder.fi##.Advertisement__Top
 finnkino.fi,fum.fi,tilt.fi##.advertising
+fonecta.fi##.map-ad
 fonecta.fi##div[class^="AdBlock_adContainer"]
 fontanka.fi##.widget_custom_html
 foreca.fi##div[id|="inline-banner-mobi"]
@@ -5083,18 +5097,12 @@ tjareborg.fi#@#.push-container
 ! https://github.com/easylist/easylist/pull/7040
 ##.sponsored-article
 
-! https://github.com/easylist/easylist/pull/7774
-timma.fi#@##cookieConsentModal
-
 ! https://github.com/easylist/easylist/pull/8295
 @@||frosmo.com^$xmlhttprequest,domain=terve.fi
 
 ! https://github.com/easylist/easylist/pull/8317
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/306
 @@||pelaaja.fi/sites/default/files/googleanalytics/analytics.js
-
-! https://github.com/easylist/easylist/pull/8404
-vr.fi#@#div[class*="CookieConsent"]
 
 ! https://github.com/easylist/easylist/pull/8449
 ##[id|="bunyad-widget-ads"]

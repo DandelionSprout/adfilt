@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 26July2021v1-Alpha
+# Version: 30July2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -57,6 +57,7 @@ msFilterList
 # madridista.dk (21 04 2021)
 - banners casinotop
 # gnavergalleri.dk (along with ~60 affiliates sites)
+# https://github.com/DandelionSprout/adfilt/issues/233
 *galleri.dk content images fixed
 # sol.dk (25 04 2021)
 # bilgalleri.dk (25 04 2021)
@@ -346,6 +347,13 @@ msFilterList
 -d cms.sona.fo ads
 -d r7.fo lysing
 -d nocc.no System_Promoteringssaker
+-d s3-eu-west-1.amazonaws.com *-980x500-
+-d s3-eu-west-1.amazonaws.com *-toppannonse-
+-d s3-eu-west-1.amazonaws.com *nettannonse-
+-d s3-eu-west-1.amazonaws.com *.jpeg.jpg
+-d s3-eu-west-1.amazonaws.com *-annonse-*.gif
+-d s3-eu-west-1.amazonaws.com *.-jpg.jpg
+-d s3-eu-west-1.amazonaws.com nordbohus.gif
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
