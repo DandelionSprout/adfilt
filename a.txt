@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 26July2021v1-Personal
+! Version: 30July2021v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 ! /\/\ Supercompilations: /\/\
@@ -171,7 +171,7 @@ reddit.com#?#.Post,.Comment:-abp-contains(/Teen Titan/i):not(:-abp-contains(/six
 twitch.tv#?#.vod-message,.chat-line__message:-abp-contains(/Teen Titans/i)
 !#endif
 
-! Anti-'Filly Funtasia's fandom'
+! Anti-'Filly Funtasia'
 ||funtasiadaily.com^$all
 ||filly.fandom.com^$all
 ||fillywiki.com^$all
@@ -193,7 +193,6 @@ kisscartoon.*##.mb15
 artstation.com#?#.gallery-grid-item,.project:-abp-contains(Barkhat Gay Traveler)
 !#endif
 graphtreon.com##div.hotCreators-box.col-md-4
-tiermaker.com##.community-rank-button
 
 ! Anti-weeb
 osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Waifu)
@@ -211,6 +210,39 @@ pixiv.net#?#section:-abp-contains(Daily ranking)
 pixiv.net#?#section:-abp-contains(Popular tags)
 pixiv.net#?#section:-abp-contains(Ongoing contests)
 pixiv.net#?#section:-abp-contains(Contest results)
+
+! Anti-'Owl House'
+! Incompatible with AdGuard due to syntax issues
+!#if !adguard
+www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Owl ?House/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Owl ?House/i)
+artstation.com#?#.gallery-grid-item,.project:-abp-contains(/Owl ?House/i)
+tumblr.com#?#.post,div[tabindex],div[style^="opacity: "]:-abp-contains(/Owl ?House/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Owl ?House/i)
+!#endif
+! All adblockers
+m.youtube.com#?#.compact-media-item:-abp-contains(/Owl ?House/i)
+twitter.com#?#article:-abp-contains(/ TOH[ .,:;'-]/)
+twitter.com#?#article:-abp-contains(/Owl ?House/i)
+pinterest.*#?#div[class*=_brioPin]:-abp-contains(/Owl ?House/i)
+pixiv.net#?#li[class*=" "]:-abp-has(a[href*="/artworks/"] img[alt*=owl_house i])
+pixiv.net#?#li[class*=" "]:-abp-has(a[href*="/artworks/"] img[alt*=owlhouse i])
+pixiv.net#?#div[data-gtm-recommend-zone=discovery] > div:-abp-has(> figure[style] > figcaption > ul:-abp-contains(/Owl ?House/i))
+pixiv.net#?#.works-item:-abp-has(img[alt*=owl_house i])
+pixiv.net#?#.works-item:-abp-has(img[alt*=owlhouse i])
+rule34.xxx,gelbooru.com,booru.org,sankakucomplex.com,tbib.org,xbooru.com,rule34hentai.net,megabooru.com,zombooru.com,zumki.ru,kusubooru.com,tentaclerape.net,wh40kart.im#?#.thumb:-abp-has(img[title*=owl_house])
+e621.net,donmai.us,allthefallen.moe##article[data-tags*=owl_house]
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Owl ?House/i)
+furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*="Owl House" i])
+instagram.com#?#article > div > div[style^=flex-direction] > div[class] > div:-abp-has(img[alt*="Owl House" i])
+instagram.com#?#article > div > div[style^=flex-direction] > div[class] > div:-abp-has(img[alt*=OwlHouse i])
+hentai-foundry.com#?#.thumb_square:-abp-contains(/Owl ?House/i)
+osu.ppy.sh#?#.beatmapsets__item:-abp-contains(Owl House)
+tvtropes.org#?##main-article > ul > li, .folder > ul > li:-abp-contains(/Owl House/i)
+tvtropes.org###main-article .twikilink[href*=OwlHouse]
+twitch.tv#?#.vod-message:-abp-has(.chat-author__display-name:-abp-contains(/Owl House/i))
+twitch.tv#?#.chat-line__message:-abp-has(.chat-author__display-name:-abp-contains(/Owl House/i))
+fanfiction.net#?#.z-list:-abp-contains(/Owl House/i)
 
 ! Trading Card Game Remover for Steam
 store.steampowered.com##a[data-ds-tagids*="1666"]:not([href*=Ticket_to_Ride], [href*=Durak], [href*=UNO], [href*=Tabletop])
