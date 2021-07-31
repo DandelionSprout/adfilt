@@ -6,7 +6,7 @@ The main connection addresses are:
 * DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
 * DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853`
 * DNSCrypt: `sdns://AQEAAAAAAAAAEjg0LjIwMi40NC41Mzo1NjQwNCDsdKplWV-GlLOA-lEBpZ11QS381gnDyqpTXz5sSwTaeSwyLmRuc2NyeXB0LWNlcnQuZGFuZGVsaW9uc3Byb3V0LmFzdXNjb21tLmNvbQ`
-* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582` (As of 24th of July, I am completely unable to confirm or debunk whether QUIC functionality still works.)
+* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582` (Currently only works on IPv4-only connections due to https://github.com/AdguardTeam/AdguardForAndroid/issues/3927)
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
