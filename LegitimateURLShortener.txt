@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 31July2021v1-Beta
+! Version: 01August2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -509,7 +509,6 @@ $removeparam=acampID
 ||google.$removeparam=prds
 $removeparam=pj_creativeid
 $removeparam=pj_publisherid
-||boson.com^$removeparam=eid
 ||dustdeal.nl^$removeparam=tracker
 $removeparam=track_campaignid
 $removeparam=track_adgroupid
@@ -610,6 +609,8 @@ $removeparam=MID
 ||bbc.$removeparam=at_campaign
 ! https://homemcr.org/production/the-war-of-the-worlds/?dm_i=6OM7%2CA1RR%2C21FCIX%2C17EEV%2C1
 ||homemcr.org$removeparam=dm_i
+! https://www.greatrun.org/train-and-prepare/training-plans/?eid=AJ935930567982484926441023zzzzz64bccfd443fc61ff2c06e3cf8c7b889a2061064e5d5db55e171241354f241bed00
+$removeparam=eid
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
@@ -694,7 +695,6 @@ $~xmlhttprequest,removeparam=psc
 
 ! ——— Facebook ———
 ! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/157
-$removeparam=eid,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 $removeparam=hc_ref
 $removeparam=hc_location
 ! https://www.facebook.com/206669696035334/posts/3670522079650061/?sfnsn=mo (08/02/2021)
