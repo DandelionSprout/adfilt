@@ -17,7 +17,7 @@
 * `[href$="text"]`: Finds page elements whose value *ends* with the text.
 * `[href*="text"]`: Finds page elements whose value contains the text anywhere within it.
 * `[href~="text"]`: Finds page elements whose value contains the word (with spaces around it) anywhere within it.
-* `[href|="text"]`: Same as `[href="text"]`, but can also select text that is then followed by a dash.
+* `[href|="text"]`: Same as `[href="text"]`, but can also select text that is then followed by a hyphen `-`.
 * `:not(.element)`: Finds page elements that doesn't contain a specified element or text string.
 * `:-abp-contains(text)`: Finds page elements that contains such text within it.
 * `:-abp-has(.element)`: Finds page elements that contains such an element within it.
