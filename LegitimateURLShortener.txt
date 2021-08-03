@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 01August2021v1-Beta
+! Version: 03August2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -427,7 +427,7 @@ $removeparam=affTrack
 $removeparam=afftrack
 $removeparam=shrsl_analytics_sscid
 $removeparam=shrsl_analytics_sstid
-$removeparam=/^AFF_ID/
+$removeparam=/^AFF_ID/i
 ||photojobz.com^$removeparam=hop
 $removeparam=SSAID
 $removeparam=affsrc
@@ -611,6 +611,36 @@ $removeparam=MID
 ||homemcr.org$removeparam=dm_i
 ! https://www.greatrun.org/train-and-prepare/training-plans/?eid=AJ935930567982484926441023zzzzz64bccfd443fc61ff2c06e3cf8c7b889a2061064e5d5db55e171241354f241bed00
 $removeparam=eid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
+||simplelogin.io^$removeparam=slref
+||privateinternetaccess.com^$removeparam=channel
+||privateinternetaccess.com^$removeparam=aff_sub4
+||ledger.io^$removeparam=r
+$removeparam=cjevent
+$removeparam=cj_sid
+||eset.com^$removeparam=ref
+||roboform.com^$removeparam=rec
+$removeparam=wt_zmc
+$removeparam=nr_email_referer
+||hak5.org^$removeparam=rfsn
+$removeparam=cid,domain=bitdefender.*
+$removeparam=source,domain=boxboat.com
+$removeparam=src,domain=3cx.com
+! https://www.xbox.com/en-us/games/all-games?cat=onsale&epi=775ca3b8881c19ecd5bee1862d0276b0c18d37761d
+||xbox.com^$removeparam=epi
+! https://www.bing.com/search?pc=MOZI&q=ublock%20origin%20github
+||bing.com/search^$removeparam=pc
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1046231
+$removeparam=in_source
+$removeparam=srnd
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1061792
+$removeparam=as_src
+$removeparam=coid
+$removeparam=edsacid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1084659 (03/08/2021)
+$removeparam=index,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=pool,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=region,domain=nytimes.com|nytimes3xbfgragh.onion
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
@@ -713,7 +743,8 @@ $removeparam=settings_tracking
 $removeparam=/^zero_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 ||facebook.com/ads^$removeparam=session_id
 ! https://x.facebook.com/mylittlepony/videos/917830495715016/?refsrc=https%3A%2F%2Fx.facebook.com%2Fmylittlepony%2Fposts%2F4640468362637231&_rdr (09/04/2021)
-$removeparam=refsrc
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1047774 (03/08/2021)
+$removeparam=/refsrc/i
 $removeparam=_rdr
 ! https://m.facebook.com/groups/474038555978926/permalink/3971436826239064/?locale2=nb_NO&refid=18&_ft_=qid.-8161291356206974390%3Amf_story_key.3971436826239064%3Atop_level_post_id.3971436826239064%3Atl_objid.3971436826239064%3Acontent_owner_id_new.100000852462546%3Apage_id.474038555978926%3Asrc.22%3Astory_location.6%3Astory_attachment_style.photo%3Afilter.GroupStoriesByActivityEntQuery%3Atds_flgs.3%3Aott.AX85R38AvGqMKK58%3Apage_insights.%7B%22474038555978926%22%3A%7B%22page_id%22%3A474038555978926%2C%22page_id_type%22%3A%22group%22%2C%22actor_id%22%3A100000852462546%2C%22dm%22%3A%7B%22isShare%22%3A0%2C%22originalPostOwnerID%22%3A0%7D%2C%22psn%22%3A%22EntGroupMallPostCreationStory%22%2C%22post_context%22%3A%7B%22object_fbtype%22%3A657%2C%22publish_time%22%3A1626033323%2C%22story_name%22%3A%22EntGroupMallPostCreationStory%22%2C%22story_fbid%22%3A%5B3971436826239064%5D%7D%2C%22role%22%3A1%2C%22sl%22%3A6%7D%7D&__tn__=-R
 $removeparam=_ft_
@@ -787,6 +818,8 @@ $removeparam=ogbl
 ! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 ||www.google.$removeparam=btnG
 ||www.google.$removeparam=iflsig
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1093666
+||www.google.$removeparam=uact
 
 ! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
