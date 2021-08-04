@@ -755,8 +755,6 @@ msFilterList
 # https://www.datahjelperne.no/vipps-sms-svindel/
 # https://www.datahjelperne.no/hvit-bjorn-river-kvinne-i-stykker-facebook-spam-oppdatert/
 -d vidcopa.me
-# https://www.datahjelperne.no/netflix-korona-svindel/
--d luxshifting.com
 # https://www.adressa.no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
 -d smallrise.com
 # https://www.nrk.no/sorlandet/advarer-mot-nytt-svindelforsok-1.15197328
@@ -845,7 +843,6 @@ msFilterList
 -d lindseysopticians.com
 -d linkshe.com
 -d lrgst.com
--d manasporthorse.com
 -d mbtnorge.com
 -d meladermfacts.com
 -d moteshoes.com
@@ -873,7 +870,6 @@ msFilterList
 -d nodrakts.com
 -d dkfodboldstore.com
 -d vmfodboldtoj.com
--d minfodboldbutik.com
 -d 5.39.217.206
 -d 5.39.221.180
 -d 193.148.70.153
