@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 310720211
+! Version: 040820211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -315,6 +315,9 @@ skaunnytt.no##.sb-widget
 reiseplaneten.no###rt-sidebar-c
 reiseplaneten.no##.custom > p:nth-of-type(1n+2)
 froya.no##.annonse-plass
+samferdselinfra.no###mobil-toppboard
+samferdselinfra.no###top-banner-wrap
+politiken.dk##.js-sticky-container.col--overflow
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1192,7 +1195,7 @@ opn.no###sidebar_2 #sidebarelement_2
 ordtak.no##.boksmarg
 parcferme.no##.code-block > p
 parcferme.no#?#*:-abp-has(> * > ins[data-revive-zoneid])
-parcferme.no,rbkweb.no#?#*:-abp-has(> * > .adsbygoogle)
+parcferme.no#?#*:-abp-has(> * > .adsbygoogle)
 pengenytt.no#?#.entry-content > h4:-abp-has(script[src$="/adsbygoogle.js"])
 pengenytt.no#?#.entry-content > h6:-abp-has(script[src$="/adsbygoogle.js"])
 pengenytt.no#?#.so-widget-sow-editor:-abp-has(a[href^="https://online.adservicemedia.dk/"])
@@ -1553,7 +1556,7 @@ vafo.dk##.adform-flexblock
 ! bt.no, byas.no, aftenbladet.no (30/10/2020)
 ##.vertical-x1-ad > .column--big
 ! costume.no, costume.dk (09/11/2020)
-##div[class=flow-banner]
+##.grid > div[class=flow-banner]
 ! boligpluss.no (09/11/2020), women.dk
 ##.wg-banner
 ! ytresogn.no (16/12/2020)
@@ -4164,7 +4167,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 310720211
+! Version: 30820212
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4360,6 +4363,7 @@ dawn.fi#?#div[style="text-align: center; font-size: 0.7em;margin-bottom:15px"]:-
 deitti.net##.ad-article
 demokraatti.fi##div[class^="AdStyles__Wrapper"]
 demokraatti.fi##div[class^="OrderMagazinestyles__Container"]
+download.fi##.ni_holder
 download.fi##b[style="font-size:bigger;"] > a[class="download_link"][href$=".exe"]
 download.fi#?#div:-abp-has(> h3[style="font-size:20px;"])
 download.fi#?#div[class="splash_title"] + p + p:-abp-has(> a[href$=".exe"])
@@ -4476,6 +4480,8 @@ is.fi##a[href="https://www.startel.fi/?infront"]
 is.fi##article[class*="native-ad"]
 is.fi##div.sadblob-loading
 is.fi#?#article:-abp-has(> header > h2 span:-abp-contains(Alennuskoodit))
+jaatama.fi##.advert
+jaatama.fi#?#.box--transparent:-abp-has(.advert)
 jatkoaika.com##div[class="block block-block"]
 juoksufoorumi.fi##.noAdsCell
 kaksplus.fi##.placeholder
@@ -4551,8 +4557,12 @@ lapinkansa.fi#?#div[class="m-managedListing__column -ctx-index -level-1 -cols-2"
 lbaanijakuva.fi##.adremark
 leffatykki.com##div[class="ad230x90"]
 leijonat.com,suomikiekko.com,suomiurheilu.com##[href$="/pitkavetovihjeet/"]
+ls24.fi##.article-block__list-article:-abp-has(a[href^="https://ls24.fi/kaupallinen-yhteistyo/"])
+ls24.fi##.asuntorauma-promo
+ls24.fi##.palvelupankki-banner
 ls24.fi##aside[class="sidebar"] > [class^="advertisement ad advertisement"] + [class^="advertisement ad advertisement"] + section[class^="article-list"]:last-of-type
 ls24.fi##div[class^="advertisement"]
+ls24.fi#?#.article-list--article:-abp-contains(Kaupallinen yhteistyö)
 ls24.fi#?#section[class="page-section page-section--no-main-article"]:-abp-contains(Kaupallinen yhteistyö)
 luukku.com###banneri_yla
 luukku.com##.banner.content
@@ -4582,6 +4592,8 @@ mbnet.fi##div#tyopaikat-joblift--avainpaikat
 mediuutiset.fi##section > a[href^="https://www.mediuutiset.fi/kumppanisisallot"]
 mediuutiset.fi#?#div:-abp-has(> a[href="/kumppanisisaltoa"])
 mediuutiset.fi#?#div:-abp-has(> a[href^="https://www.mediuutiset.fi/kumppanisisallot/"]:not(a[class^="site-header"]))
+meillakotona.fi,terve.fi#?#div[class*="feed__adSlot"]
+meillakotona.fi#?#div[class^="transitionSlot__component"][class*="layout__container"]:-abp-contains(MAINOS)
 mesta.net##.gofollow
 metropoli.net##.ads-desktop
 metropoli.net##.ads-mobile
@@ -4637,6 +4649,7 @@ muropaketti.com#?#article.grid__item_1-2:-abp-has(> div.nativead)
 muropaketti.com#?#article.grid__item_md-1-5.grid__item_1:-abp-contains(Mainos)
 mvlehti.net##.content-center.header-nav-ad
 mvlehti.net##.premium_container
+mvlehti.net##.wp-block-image:-abp-has(a[href*="kasino"])
 mvlehti.net##[href="https://pikakasinoja.com"]
 mvlehti.net##[href="https://www.cbdtukku.fi/"]
 mvlehti.net##[href="https://www.halvinlaina.fi/"]
@@ -4731,7 +4744,7 @@ sportti.com##div[style="padding-bottom:10px;margin-bottom:6px;border-top:1px sol
 sportti.com##div[style="padding-bottom:10px;margin-bottom:6px;border-top:1px solid gray;margin-top:6px;"] + table[width="468"] + div
 sportti.com##table[width="468"]
 sportti.com#?#div[style="padding-bottom:10px;border-bottom:1px solid gray;margin-bottom:6px;"]:-abp-contains(Mainos:)
-sss.fi##[class="td_block_wrap td_block_instagram td_block_widget td_uid_24_5ed01647b9b3f_rand td-pb-border-top td_block_template_1"] ~ [class="td_block_template_1 widget widget_text"] > [class="textwidget"]
+sss.fi#?#aside.widget_text:-abp-contains(MAINOS)
 suomela.fi##.banner-boksi1
 suomela.fi#?#h2:-abp-contains(Remonttirahoitus)
 suomela.fi#?#hr:-abp-has(+ h2:-abp-contains(Remonttirahoitus))
@@ -4784,7 +4797,9 @@ tekniikkatalous.fi#?#div:-abp-has(> span:-abp-contains(KAUPALLINEN YHTEISTYÖ) +
 tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
 telsu.fi###pb_bottom2
 tennis.fi##.ad-blocks
+terve.fi##div[class|="ProductRecommendationCarousel__CarouselContainer"]
 terve.fi#?#div[class^="PageElementFeedItem__Container"]:-abp-contains(Mainos)
+terve.fi#?#div[class^="transitionSlot__component"][class*="layout__container"]:-abp-contains(KAUPALLINEN YHTEISTYÖ)
 ticketmaster.fi##div[id^="ad-slot-"]
 tiede.fi#?#.views-row:-abp-has(.is-commercial)
 tilt.fi##.lazyloading
@@ -4822,6 +4837,7 @@ vapaasana.swedishforum.net###p0
 vapaasana.swedishforum.net##div[id="main-content"] > div:first-of-type[style="overflow:visible"]
 vapaasana.swedishforum.net##ul[id="picture_legend"] + div[style="overflow:visible"]
 vapaavuoro.uusisuomi.fi##div[id="etuoviVVAdPrototype"]
+vasabladet.fi##.online-promotion-bar
 vau.fi##.sdaelem.td-block-span12
 vau.fi##.vausda
 vauva.fi##div.cts-row-wrapper
@@ -4881,6 +4897,7 @@ yrittajat.fi##div[class$="kaupallinen-yhteistyo"]
 ||affiliate.guts.com^$third-party
 ||alibi.fi/wp-content/uploads/2018/03/AL_sivupalkin_myyntiviesti2.jpg
 ||ap-online.media.fi/scripts/eneo*.dll$script,domain=aamuposti.fi|helsinginuutiset.fi|keski-uusimaa.fi|lansi-uusimaa.fi|lansivayla.fi|lappeenrannanuutiset.fi|loviisansanomat.fi|mantsalanuutiset.fi|nurmijarvenuutiset.fi|seinajoensanomat.fi|sipoonsanomat.fi|tamperelainen.fi|turkulainen.fi|uusimaa.fi|vantaansanomat.fi|vihdinuutiset.fi
+||asuntorauma.fi/iframe/uusimmat$subdocument,domain=ls24.fi
 ||auto1.fi^$third-party
 ||bittiraha.fi/app/themes/bittiraha-theme/assets/images/bittiraha_coinmotion_banner$image
 ||bittiraha.fi/app/uploads/*/bittimaatti*_banner$image
@@ -5088,11 +5105,8 @@ tjareborg.fi#@#.push-container
 ! https://github.com/easylist/easylist/pull/7022
 @@||cdn.almamedia.fi/almacmp/*.js$script,domain=kauppalehti.fi|tekniikkatalous.fi
 
-! https://github.com/easylist/easylist/pull/7040
-##.sponsored-article
-
 ! https://github.com/easylist/easylist/pull/8295
-@@||frosmo.com^$xmlhttprequest,domain=terve.fi
+@@||frosmo.com^$xmlhttprequest,domain=meillakotona.fi|terve.fi
 
 ! https://github.com/easylist/easylist/pull/8317
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/306
@@ -5100,3 +5114,16 @@ tjareborg.fi#@#.push-container
 
 ! https://github.com/easylist/easylist/pull/8449
 ##[id|="bunyad-widget-ads"]
+
+! https://github.com/easylist/easylist/pull/8508
+iltalehti.fi#@#.accept-cookies:not(html)
+@@||cdn.almamedia.fi/almacmp/$script,domain=iltalehti.fi
+
+! https://github.com/easylist/easylist/pull/8510
+@@||inpref.s3.amazonaws.com^$script,domain=kauppahalli24.fi
+
+! https://github.com/easylist/easylist/pull/8511
+@@||static.jaatama.fi/thumbs/images/fb-*$image
+
+! https://github.com/easylist/easylist/pull/8513
+@@||high.auriro.net/http/600x400/*$image,domain=hardware.fi
