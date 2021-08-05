@@ -145,7 +145,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r",domain=in-addr\.arpa", 
+           r",domain=~?in-addr\.arpa", 
            "", 
            line
         )
@@ -339,6 +339,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^\|\|canyoublockit\.com\^$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"/\^https\?:\\/\\/([0-9]{1,3})\\\.([0-9]{1,3})\\\.([0-9]{1,3})\\.\(\\d\)\{1,3\}\.\*\/", 
+           r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^", 
            line
         )
 
@@ -548,6 +554,42 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^/[a-zA-Z0-9-]{1,100}[|^]$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|cdn77\.org\^$", 
+           r"||cdn77.org^$dnstype=CNAME", 
+           line
+        )
+
+        line = re.sub(
+           r".*\.(png|jpe?g|gif|js|swf)($|\||\^)", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^#.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\..*=.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[:/].*[&?].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-z0-9./|-].*\^=.*", 
            r"", 
            line
         )
@@ -1091,8 +1133,14 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r",domain=in-addr\.arpa", 
+           r",domain=~?in-addr\.arpa", 
            "", 
+           line
+        )
+
+        line = re.sub(
+           r"/\^https\?:\\/\\/([0-9]{1,3})\\\.([0-9]{1,3})\\\.([0-9]{1,3})\\.\(\\d\)\{1,3\}\.\*\/", 
+           "\1.\2.\3.0/24", 
            line
         )
 
