@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 07August2021v2-Beta
+! Version: 08August2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -203,7 +203,7 @@ $removeparam=rlz
 $removeparam=pcampaignid
 $removeparam=igshid
 $removeparam=curator_clanid
-$~media,removeparam=ser
+||steampowered.com^$removeparam=ser
 $removeparam=snr
 ! https://www.bing.com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.com^$removeparam=sp
@@ -501,8 +501,6 @@ $removeparam=pid,domain=play.google.com|th.bing.com
 ||audible.$removeparam=source_code
 ||audible.$removeparam=ipRedirectFrom
 ||audible.$removeparam=ipRedirectOriginalURL
-! https://www.webhallen.com/se/product/290554-ASUS-TPM-M-R2-0-Module?ref=adtraction&epi=cyDowRclgCfa
-||audible.$removeparam=ref,domain=audible.*|webhallen.no
 $removeparam=refer_code
 $removeparam=loc
 $removeparam=acampID
@@ -623,9 +621,7 @@ $removeparam=cj_sid
 $removeparam=wt_zmc
 $removeparam=nr_email_referer
 ||hak5.org^$removeparam=rfsn
-$removeparam=cid,domain=bitdefender.*
 $removeparam=source,domain=boxboat.com
-$removeparam=src,domain=3cx.com
 ! https://www.xbox.com/en-us/games/all-games?cat=onsale&epi=775ca3b8881c19ecd5bee1862d0276b0c18d37761d
 ||xbox.com^$removeparam=epi
 ! https://www.bing.com/search?pc=MOZI&q=ublock%20origin%20github
@@ -647,20 +643,59 @@ $removeparam=region,domain=nytimes.com|nytimes3xbfgragh.onion
 ||gog.com^$removeparam=pp
 ! https://apkpure.com/google-play-services/com.google.android.gms/download/212621015-APK?from=popup%2Fversion
 ||apkpure.com^$removeparam=from
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1141831
+||roblox.com^$removeparam=refPageId
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1142244
+||imdb.com^$removeparam=/^pf_rd_/
+||taxscouts.$removeparam=referralSource
+||ting.com^$removeparam=lpn
+||bestbuy.com^$removeparam=nrtv_cid
+||bestbuy.com^$removeparam=/^subId/
+$removeparam=/^adjust_/
+||newegg.com^$removeparam=quicklink
+||newegg.com^$removeparam=nm_mc
+$removeparam=action_type_map
+$removeparam=/^bsft_/
+||slickdeals.net^$removeparam=bsencid
+||target.com^$removeparam=clkid
+||macys.com^$removeparam=LinkshareID
+||macys.com^$removeparam=m_sc
+||macys.com^$removeparam=PartnerID
+||macys.com^$removeparam=LSNSUBSITE
+||hp.com^$removeparam=source
+||hp.com^$removeparam=subacctid
+||hp.com^$removeparam=subacctname
+||hp.com^$removeparam=adcampaigngroup
+||chewy.com^$removeparam=clickref
+||dell.com^$removeparam=cjdata
+||dell.com^$removeparam=dgc
+||dell.com^$removeparam=VEN1
+||dell.com^$removeparam=nclid
+||dell.com^$removeparam=gacd
+||expedia.com^$removeparam=clickref
+||expedia.com^$removeparam=affcid
+||expedia.com^$removeparam=ref_id
+||expedia.com^$removeparam=my_ad
+||expedia.com^$removeparam=afflid
+||gamestop.com^$removeparam=affID
+||gamestop.com^$removeparam=sourceID
+$removeparam=/^dpg_/
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1143347
+||nytimes.com^$removeparam=rank
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com
+$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
 ||comixology.$removeparam=tid
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi
+$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
@@ -725,6 +760,9 @@ $~xmlhttprequest,removeparam=psc
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-978858
 ||amazon.$removeparam=visitId
 ||amazon.$removeparam=field-lbr_brands_browse-bin
+! https://www.amazon.com/dp/B08RNHCZ3K?maas=maas_adg_api_8014460300101_static_12_26&ref_=aa_maas&aa_campaignid=3361_LTT_OfficeTour_US-B08RNHCZ3K-inf&aa_adgroupid=youtube_&aa_creativeid=US-ZMAJjR9On (07/08/2021)
+||amazon.$removeparam=maas
+||amazon.$removeparam=/^aa_/
 ! Other
 ||amazon.$removeparam=ingress
 @@/b/ref=$removeparam=ie
@@ -750,7 +788,7 @@ $removeparam=/^zero_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 ||facebook.com/ads^$removeparam=session_id
 ! https://x.facebook.com/mylittlepony/videos/917830495715016/?refsrc=https%3A%2F%2Fx.facebook.com%2Fmylittlepony%2Fposts%2F4640468362637231&_rdr (09/04/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1047774 (03/08/2021)
-$removeparam=/refsrc/i
+$~xmlhttprequest,removeparam=/refsrc/i
 $removeparam=_rdr
 ! https://m.facebook.com/groups/474038555978926/permalink/3971436826239064/?locale2=nb_NO&refid=18&_ft_=qid.-8161291356206974390%3Amf_story_key.3971436826239064%3Atop_level_post_id.3971436826239064%3Atl_objid.3971436826239064%3Acontent_owner_id_new.100000852462546%3Apage_id.474038555978926%3Asrc.22%3Astory_location.6%3Astory_attachment_style.photo%3Afilter.GroupStoriesByActivityEntQuery%3Atds_flgs.3%3Aott.AX85R38AvGqMKK58%3Apage_insights.%7B%22474038555978926%22%3A%7B%22page_id%22%3A474038555978926%2C%22page_id_type%22%3A%22group%22%2C%22actor_id%22%3A100000852462546%2C%22dm%22%3A%7B%22isShare%22%3A0%2C%22originalPostOwnerID%22%3A0%7D%2C%22psn%22%3A%22EntGroupMallPostCreationStory%22%2C%22post_context%22%3A%7B%22object_fbtype%22%3A657%2C%22publish_time%22%3A1626033323%2C%22story_name%22%3A%22EntGroupMallPostCreationStory%22%2C%22story_fbid%22%3A%5B3971436826239064%5D%7D%2C%22role%22%3A1%2C%22sl%22%3A6%7D%7D&__tn__=-R
 $removeparam=_ft_
@@ -826,6 +864,10 @@ $removeparam=ogbl
 ||www.google.$removeparam=iflsig
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1093666
 ||www.google.$removeparam=uact
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1127765
+://www.google.*/search^$removeparam=kgs
+://www.google.*/search^$removeparam=shndl
+://www.google.*/search^$removeparam=entrypoint
 
 ! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
