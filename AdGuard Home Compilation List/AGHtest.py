@@ -356,7 +356,7 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$", 
-           r"://\1.\2.\n@@://\1.\2.*in-addr.arpa^", 
+           r"", 
            line
         )
 
@@ -590,6 +590,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^[a-z0-9./|-].*\^=.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^://[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.$", 
            r"", 
            line
         )
@@ -855,7 +861,7 @@ def prepare_ip(lines) -> str:
 
         line = re.sub(
            r"^([0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?)\.$", 
-           r"\1.0.0/16", 
+           r"", 
            line
         )
 
@@ -933,7 +939,7 @@ def prepare_ip(lines) -> str:
 
         line = re.sub(
            r"^/\(https\?:\\/\\/\)([0-9][0-9]?[0-9]?)\\.([0-9][0-9]?[0-9]?)\\.\..*/", 
-           r"\1.\2.0.0/16", 
+           r"", 
            line
         )
 
@@ -957,6 +963,12 @@ def prepare_ip(lines) -> str:
 
         line = re.sub(
            r"^[A-Za-z].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^ $", 
            r"", 
            line
         )
