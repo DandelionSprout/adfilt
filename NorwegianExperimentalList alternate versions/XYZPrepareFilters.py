@@ -1985,7 +1985,7 @@ import re
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/Swedish-List-for-Adblock-Plus/main/Swedish%20List%20for%20Adblock%20Plus.txt', 'https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app', ':not(:-abp-', '$csp=upgrade-insecure-requests', '$removeparam', 'badfilter']
+    ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app', ':not(:-abp-', ':not(:has','$csp=upgrade-insecure-requests', '$removeparam', 'badfilter']
 
 OUTPUT = 'xyzzyxeyeo.txt'
 OUTPUT_ABP = 'NordicFiltersABP-Inclusion.txt'

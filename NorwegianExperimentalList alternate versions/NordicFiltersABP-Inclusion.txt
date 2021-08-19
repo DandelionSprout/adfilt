@@ -188,6 +188,7 @@ margit-henriksen.dk,thura.dk#?#.blog-post:-abp-contains(/casino/i)
 marsteinen.no###horizontal-outer-widgets-1
 marsteinen.no###horizontal-outer-widgets-2
 marsteinen.no###text-14
+tek.no##main > div > section + div:last-of-type
 melkoghonning.no##.g
 mobilsiden.dk##.content-widget-HTML
 momondo.no,monondo.dk##.type-provider.clearfix.flights
@@ -1617,7 +1618,6 @@ tnt-tv.no,tnt-tv.dk##.desktop_element.promo
 tnt-tv.no,tnt-tv.dk##.logos
 tnt-tv.no,tnt-tv.dk##.tabs_placeholder
 foodora.no##.top-skinny-banner-container
-idag.no#?#.nf-o-moduleblock:not(:has(a))
 avvir.no###block-block-1 > p:nth-of-type(4)
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
@@ -4179,7 +4179,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 180820211
+! Version: 180820217
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4395,6 +4395,7 @@ esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuo
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##div[class^="ad"]
 etn.fi###annonsspalt
 etn.fi##.annonspekare
+etusuora.com#?#.pb30:-abp-has(.adsbygoogle)
 f1-forum.fi##a[href*="netb11.com"]
 f1-forum.fi##img[src*="banneri"]
 facebook.com##a[aria-label="Mainostajan linkki"]
@@ -4444,6 +4445,9 @@ hardelli.com#?#div[class="wpb_wrapper"][style^="width: 324px;"] > div[data-td-bl
 hardware.fi##.adsbygoogle + script + br
 hardware.fi#?#br:-abp-has(+ .adsbygoogle)
 hardware.fi,kaksplus.fi##.advertisement
+hattulaan.fi,reska.fi##.content.single-banner
+hattulaan.fi,reska.fi##.top.panorama.banner
+hattulaan.fi,reska.fi##a[rel="lightbox[palvelut]"]
 hbl.fi##ksf-adblockers
 heili.fi###sp-alabanneri
 heili.fi##.autoboksi.moduletable
@@ -4723,6 +4727,7 @@ pt-media.org##.theiaStickySidebar > .wpcnt
 pt-media.org##.wpcnt-header.wpcnt
 puheenaiheet.fi##.gofollow
 puheenaiheet.fi##div[class="wpb_wrapper"]
+puheenvuoro.uusisuomi.fi,vapaavuoro.uusisuomi.fi##.partner-blog-list
 puheenvuoro.uusisuomi.fi,vapaavuoro.uusisuomi.fi##.side-list.commercial-blog-studio
 puheenvuoro.uusisuomi.fi,vapaavuoro.uusisuomi.fi##a[class*="commercial-blog-card"]
 puskaradio.net##.all-adds
@@ -4856,7 +4861,6 @@ uudenkaupunginsanomat.fi###auto-grid-container-5c40764673d19
 uusisuomi.fi#?#.lazyload-wrapper + section:-abp-contains(Kaupallinen yhteistyö)
 uusisuomi.fi#?#div#skyscraper-height-div > div > aside > section > a:-abp-contains(Kaupallinen yhteistyö)
 uusisuomi.fi#?#div#skyscraper-height-div > div > main > div > a:-abp-contains(Kaupallinen yhteistyö)
-uusisuomi.fi#?#div:-abp-has(> a[href^="https://www.uusisuomi.fi/kumppanisisallot/"])
 uusisuomi.fi#?#p + div:-abp-has(> .LazyLoad.is-visible > [id|="almad"])
 uusiteknologia.fi###text-97
 uusiteknologia.fi###text-98
@@ -4918,14 +4922,14 @@ yrittajat.fi##div[class$="kaupallinen-yhteistyo"]
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
 
-/[.]io-tech\.fi/.*/[0-9a-f]{32}\./$image
+/[.]io-tech\.fi/.*/[0-9a-f]{32}\./$image,~third-party
 /prerolls/*.mp4,domain=gamereactor.fi
-||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg
+||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
 ||ad.citycdn.fi^$third-party
 ||ad.ilcdn.fi^$third-party
 ||adservicemedia.dk*sub=side*$image,domain=mobiili.fi
 ||affiliate.guts.com^$third-party
-||alibi.fi/wp-content/uploads/2018/03/AL_sivupalkin_myyntiviesti2.jpg
+||alibi.fi/wp-content/uploads/2018/03/AL_sivupalkin_myyntiviesti2.jpg$image
 ||ap-online.media.fi/scripts/eneo*.dll$script,domain=aamuposti.fi|helsinginuutiset.fi|keski-uusimaa.fi|lansi-uusimaa.fi|lansivayla.fi|lappeenrannanuutiset.fi|loviisansanomat.fi|mantsalanuutiset.fi|nurmijarvenuutiset.fi|seinajoensanomat.fi|sipoonsanomat.fi|tamperelainen.fi|turkulainen.fi|uusimaa.fi|vantaansanomat.fi|vihdinuutiset.fi
 ||asuntorauma.fi/iframe/uusimmat$subdocument,domain=ls24.fi
 ||auto1.fi^$third-party
@@ -4941,36 +4945,35 @@ yrittajat.fi##div[class$="kaupallinen-yhteistyo"]
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com^$media,domain=discoveryplus.fi
 ||etn.fi/images/banners/$image
 ||expekt.com^$third-party
-||fcdn.lauta.media^$third-party
+||fcdn.lauta.media^$subdocument,script
 ||feed.autotalli.com/bannerdata/html/*.html$subdocument
 ||feed.etuovi.com/etuovi/html/*.html$subdocument
-||gamereactor.*/lay/dfp_*.js
+||gamereactor.*/lay/dfp_*.js$script
 ||hinta.fi/a/img/$image
 ||hintaopas.fi^$third-party
 ||hintaseuranta.fi/*/tripsteri_boxes/$subdocument
 ||honestpartners.com^$third-party
-||hymy.fi/wp-content/uploads/2018/03/HY_sivupalkin_myyntiviesti2.jpg
-||ig.fi/bannerit/koronabanneri.png
+||hymy.fi/wp-content/uploads/2018/03/HY_sivupalkin_myyntiviesti2.jpg$image
+||ig.fi/bannerit/koronabanneri.png$image
 ||improveads.fi^$third-party
-||io-tech.fi/images/*_290x290px.png
-||is.fi/kampanjat/taloussanomat/startel_600x300px.jpg
+||io-tech.fi/images/*_290x290px.png$image
+||is.fi/kampanjat/taloussanomat/startel_600x300px.jpg$image
 ||kake.fi^$third-party
 ||kaksplus.fi/upotukset/hintaopas^
 ||kaksplus.fi/wp-json/feeds/ad-feed$xmlhttprequest,domain=keskustelu.kaksplus.fi
 ||karjalainen.fi/images/banners/kiinnostuitko$image
-||kelkkalehti.com/bannerit/
-||keskustelu.pakkotoisto.com/bannerit/*$image
-||kinuskikissa.fi/wp-content/uploads/*kumppani_*.gif
+||kelkkalehti.com/bannerit/$image
+||keskustelu.pakkotoisto.com/bannerit/$image
+||kinuskikissa.fi/wp-content/uploads/*kumppani_*.gif$image
 ||kuvake.net/js/ad-
 ||lbaanijakuva.fi/test/*?template=prisjakt$domain=lbaanijakuva.fi
 ||m.riemurasia.net/reklaami.php$subdocument
 ||matkaendurot.net/images/*banner
-||media.power-cdn.net/images/pages/orderpage/*-power-huippudiili-*.jpg
+||media.power-cdn.net/images/pages/orderpage/*-power-huippudiili-*.jpg$image
 ||media.vuokraovi.com^$third-party
-||mobiili.fi/wp-content/uploads/2019/08/bms_2019_980x120.jpg
-||monster.almamedia.fi/nostobannerit/
-||mvlehti.net/image/adv.jpg
-||mvlehti.net/uploads/2021/06/Halvinlaina-Otsikko.jpg
+||mobiili.fi/wp-content/uploads/2019/08/bms_2019_980x120.jpg$image
+||mvlehti.net/image/adv.jpg$image
+||mvlehti.net/uploads/2021/06/Halvinlaina-Otsikko.jpg$image
 ||nayadaya.com^$third-party
 ||nettiauto.com/en/ampparitBanner*.php$subdocument,domain=ampparit.com
 ||otavamedia.fi/ad/$script
@@ -4978,21 +4981,20 @@ yrittajat.fi##div[class$="kaupallinen-yhteistyo"]
 ||rantapallo.fi^$third-party
 ||revimages.motouutiset.fi^$third-party
 ||ridemedia.fi/aspbanner
-||riemurasia.net/js/ads.js
+||riemurasia.net/js/ads.js$script
 ||script.ilcdn.fi/etua-lainalaskuri/etua-lainalaskuri.min.js$script,domain=iltalehti.fi
 ||seksitreffit.fi/*popunder.js$script,domain=seksitreffit.fi
 ||seksitreffit.fi/banners/*$domain=seksitreffit.fi
 ||sf.nm-ovp.nelonenmedia.fi/player/games/ruutu-player-loader.js$script,domain=alypaa.com
 ||superskills.fi/fi*?isIframe=true$subdocument
-||testeri.fi/inc/museokortti.png
+||testeri.fi/inc/museokortti.png$image
 ||tohtorille.fi/Content/img/op-banners/$image
-||tokentube.net/f_scripts/shared/videojs/ads.vast.js
+||tokentube.net/f_scripts/shared/videojs/ads.vast.js$script
 ||tokentube.net/vast?t=vjs&v=*$xmlhttprequest
 ||ts.fi/adframe.js$script,domain=ts.fi
-||urbaanisanakirja.com/static/img/portsaad.png
+||urbaanisanakirja.com/static/img/portsaad.png$image
 ||vertaa.fi^*/showads.js$script,domain=vertaa.fi
 ||vg.is.fi/autotie-is-*/$subdocument
-||ylilauta.org/fcdn/
 
 ! -----NETWORK FILTERS END-----
 ! -----UNSORTED-----
@@ -5151,3 +5153,6 @@ tjareborg.fi#@#.push-container
 
 ! https://github.com/easylist/easylist/pull/8449
 ##[id|="bunyad-widget-ads"]
+
+! https://github.com/easylist/easylist/pull/8695
+@@||high.auriro.net/http/600x400/$image,domain=dawn.fi
