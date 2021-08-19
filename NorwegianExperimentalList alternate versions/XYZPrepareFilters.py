@@ -5830,3 +5830,127 @@ if __name__ == "__main__":
         text_file.write(domains_filter)
 
     print('The list versions have been generated.')
+
+#/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\
+#•X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X•
+#\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationListIPs.txt']
+
+OUTPUT = 'Anti-Malware List/xyzzyxips.txt'
+OUTPUT_DOMAINS = 'Anti-Malware List/Dandelion Sprout\'s and other adblocker lists\' IPs.ipset'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard Home
+def prepare_domains(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"^[a-zA-Z!_*/İ-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[0-9].*[a-zA-Z!_*-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# [—¤].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# [a-zA-Z0-9 ,.'\"()/→≥İ-]{1,}$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# (Translated title|Source|Note|Platform notes):.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# Title: 📔.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# Version: [a-zA-Z0-9]{1,}$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# For m.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*Nordic Filters.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*nordiske filtre.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# Title: .*", 
+           r"# Title: Dandelion Sprout's and other adblocker lists' IPs", 
+           line
+        )
+
+        line = re.sub(
+           r"^# Description: .*", 
+           r"# Description: This IP set combines IP and CIDR addresses from plentiful of major adblocker lists. It contains heavily altered content from Dandelion Sprout's Anti-Malware List, Dandelion Sprout's Nordic Filters, EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, and EasyList Spanish.\n# For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english", 
+           line
+        )
+
+        if not line == '':
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    domains_filter = prepare_domains(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_DOMAINS, "w") as text_file:
+        text_file.write(domains_filter)
+
+    print('The combined IP list has been generated.')
