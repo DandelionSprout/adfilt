@@ -3304,6 +3304,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\.(no|dk|is)\.$", 
+           r".\1.$dnstype=~CNAME", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
