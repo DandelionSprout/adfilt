@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21August2021v2-Beta
+! Version: 21August2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -686,6 +686,73 @@ $removeparam=/^dpg_/
 ||asahi.com^$removeparam=iref
 ! https://www.kickstarter.com/projects/tonyyotes/battle-gem-ponies-a-pony-wranglin-monster-tamer-rpg?ref=ksr_email_backer_project_update_registered_users_discover_project_similar_4
 ||kickstarter.com^$removeparam=ref
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1151326
+||malwarebytes.com^$removeparam=/x-source$/
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1155198
+$removeparam=sm12
+$removeparam=ts,domain=x-kom.pl|al.to|combat.pl
+$removeparam=token,domain=x-kom.pl|al.to|combat.pl
+$removeparam=partnerid,domain=x-kom.pl|al.to|combat.pl
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1159362
+||aws^$removeparam=did
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1169570
+||coursera.org^$removeparam=siteID
+||edx.org^$removeparam=source
+$removeparam=elq
+$removeparam=elqaid
+$removeparam=elqat
+$removeparam=elqah
+$removeparam=elqcst
+$removeparam=elqcsid
+||ozon.ru^$removeparam=advert
+||mediamarket.$removeparam=rbtc
+||sitepoint.com^$removeparam=fromBlog
+||sitepoint.com^$removeparam=campaign
+$removeparam=/^mtm_/
+$removeparam=pk_medium
+$removeparam=pk_source
+$removeparam=pk_content
+$removeparam=pk_kwd
+$removeparam=/^ga_/
+$removeparam=_hsenc
+$removeparam=_hsmi
+$removeparam=__hstc
+$removeparam=__hssc
+$removeparam=__hsfp
+$removeparam=dgcid
+$removeparam=/^hsa_/
+$removeparam=gws_rd
+||msn.com^$removeparam=ignorejs
+$removeparam=sr_share
+||forbes.com^$removeparam=sh
+$removeparam=twclid
+||yahoo.com^$removeparam=soc_src
+||yahoo.com^$removeparam=soc_trk
+$removeparam=/^WT\./i
+$removeparam=/^WT_/i
+$removeparam=/^WTmc_/i
+$removeparam=/^WTmc\./i
+||euronews.com^$removeparam=_ope
+$removeparam=/^ds_/
+$removeparam=Adgroup
+$removeparam=Adposition
+$removeparam=aff_track
+$removeparam=cj_pid
+$removeparam=cj_aid
+$removeparam=adposition
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1185036
+||qvc.com^$removeparam=sc
+||belk.com^$removeparam=start
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1185329
+||housing.com^$removeparam=source
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1203873
+||blue-tomato.com^$removeparam=/^(varid|campaign|ia-pkpmtrack|zanox|_)/
+||spartoo.*^$removeparam=/^(sx|track_id)/
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1206280
+||nytimes.com^$removeparam=impression_id|nytimes3xbfgragh.onion
+||microcenter.com^$removeparam=rf
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1212122
+$removeparam=name,domain=nytimes.com|nytimes3xbfgragh.onion
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
@@ -767,6 +834,10 @@ $~xmlhttprequest,removeparam=psc
 ! https://www.amazon.com/dp/B08RNHCZ3K?maas=maas_adg_api_8014460300101_static_12_26&ref_=aa_maas&aa_campaignid=3361_LTT_OfficeTour_US-B08RNHCZ3K-inf&aa_adgroupid=youtube_&aa_creativeid=US-ZMAJjR9On (07/08/2021)
 ||amazon.$removeparam=maas
 ||amazon.$removeparam=/^aa_/
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1206280
+||amazon.$removeparam=asc_item
+||amazon.$removeparam=m
+||amazon.$removeparam=refinements
 ! Other
 ||amazon.$removeparam=ingress
 @@/b/ref=$removeparam=ie
