@@ -5,7 +5,7 @@ After 1½ years of trial setups and tinkering until March 2021, I now offer my D
 The main connection addresses are:
 * DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
 * DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853`
-* DNSCrypt: `sdns://AQEAAAAAAAAAEjg0LjIwMi40NC41Mzo1NjQwNCDsdKplWV-GlLOA-lEBpZ11QS381gnDyqpTXz5sSwTaeSwyLmRuc2NyeXB0LWNlcnQuZGFuZGVsaW9uc3Byb3V0LmFzdXNjb21tLmNvbQ`
+* DNSCrypt: `sdns://AQEAAAAAAAAAEzg0LjIwMi40NS4xMDU6NTY0MDQg7HSqZVlfhpSzgPpRAaWddUEt_NYJw8qqU18-bEsE2nksMi5kbnNjcnlwdC1jZXJ0LmRhbmRlbGlvbnNwcm91dC5hc3VzY29tbS5jb20`
 * DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582`
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
