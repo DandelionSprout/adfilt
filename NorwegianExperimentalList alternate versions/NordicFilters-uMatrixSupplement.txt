@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
-! Version: 22August2021v1-Alpha
+! Version: 23August2021v2-Alpha
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -16,7 +16,6 @@
 ! 🇬🇧: Generic #-entries that have sources
 ! Exceptions: ballade.no
 ! Bet365 widget triggered for Norwegian audiences only
-*galleri.dk/content/images/fixed^$image
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
 third-party adnordics.com * block
@@ -56,8 +55,6 @@ third-party farm-no.plista.com * block
 ! Copied over from the New AdAway list
 third-party admob.no * block
 third-party admob.dk * block
-* fr135.net all block
-* static-dscn.net all block
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
 eniro.no akamai.net script block
@@ -109,7 +106,8 @@ discoveryplus.dk prod-adops-proxy.dnitv.net * block
 samiteahter.org api.instagram.com * allow
 gulesider.no cookieinformation.com * allow
 degulesider.dk cookieinformation.com * allow
-krak.dk|altibox.no cookieinformation.com * allow
+krak.dk cookieinformation.com * allow
+altibox.no cookieinformation.com * allow
 ! ★★★ Caused by «Fanboy's Annoyances List» and «EasyList Cookie List» ★★★
 third-party service.signalr.net * allow
 ! ★★★ Caused by «EasyList» ★★★
@@ -128,7 +126,8 @@ ekstrabladet.dk sp-prod.net xhr allow
 ! 🇮🇸: And-örgjörvislatrun
 ! 🇬🇧: Anti-'CPU slaughtering'
 tipster.no widget.tippebannere.no frame allow
-norsktipping.no|~tipster.no norsktippingpartner.no 3p allow
+norsktipping.no norsktippingpartner.no 3p allow
+tipster.no norsktippingpartner.no 3p allow
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 ! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
@@ -159,9 +158,6 @@ itavisen.no sixscissors.com 3p allow
 ! 🇮🇸: Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
 ! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
-* y6.no all block
-* havfruen4220.dk all block
-* bankid-sperret. all block
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 ! 🇬🇧: As mentioned in various news articles about fraud sites

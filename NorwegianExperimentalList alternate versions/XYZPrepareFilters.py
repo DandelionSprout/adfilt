@@ -1282,6 +1282,24 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^-d$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^- ://.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^-.*\\\..*", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
@@ -1930,6 +1948,24 @@ def prepare_umatrix(lines) -> str:
 
         line = re.sub(
            r"^@@/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\* .* all .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"(.*)\|~?([a-z0-9.-]{1,}) (.*)", 
+           r"\1 \3\n\2 \3", 
+           line
+        )
+
+        line = re.sub(
+           r"^\*[a-z0-9].*", 
            r"", 
            line
         )

@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 22August2021v1-Alpha
+# Version: 23August2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -292,7 +292,6 @@ msFilterList
 -d veitingageirinn.is haus20g.jpg
 -d utvarpsaga.is *-bordi.jpg
 -d utvarpsaga.is *_banner.png
-- utvarpsaga\.is file [0-9a-f]{32}\.png
 - wp-content uploads *bruktbilann*.jpg
 -d detailersclub.no *_banner.
 -d reavisa.blob.core.windows.net *_NETT.jpg
@@ -636,6 +635,7 @@ msFilterList
 -d boost-cdn.manatee.dk mboost
 # https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # jyllands-posten.dk (09 07 2020)
+# https://github.com/uBlockOrigin/uAssets/issues/9821
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
@@ -787,7 +787,6 @@ msFilterList
 - -sparebank1.*.net
 # https://www.datahjelperne.no/er-det-deg-facebook-video-spam/
 -d cinefique.com
-- ://[a-z]{10,12}\.easy\.co(/
 # https://www.datahjelperne.no/posten-sms-svindel/
 -d niupaiba.com
 # https://www.datahjelperne.no/det-ser-ut-som-deg-facebook-spam/
@@ -921,7 +920,6 @@ msFilterList
 # 🇬🇧: ——— Anti-anti-adblocking ———
 # Last updated: 25July2021v1-Extension
 -d elderlyscissors.com
--d
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
 # aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
