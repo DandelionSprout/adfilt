@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21August2021v3-Beta
+! Version: 26August2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -371,7 +371,7 @@ $removeparam=ggtgt
 ||thegay.com^$removeparam=/(promo|fw)/
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-770867
 $removeparam=ftag
-||gamesport.com^$removeparam=/(ServiceType|UniqueID|PostType|TheTime)/
+||gamespot.com^$removeparam=/(ServiceType|UniqueID|PostType|TheTime)/
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-771456
 $removeparam=/^__xts__/
 $removeparam=custlixnkid
@@ -431,7 +431,7 @@ $removeparam=/^AFF_ID/i
 ||photojobz.com^$removeparam=hop
 $removeparam=SSAID
 $removeparam=affsrc
-$removeparam=cm_mmc
+$removeparam=/^cm_mmc/
 $removeparam=aff_ref
 ||aliexpress.com^$removeparam=initiative_id
 $removeparam=hsCtaTracking
@@ -749,10 +749,26 @@ $removeparam=adposition
 ||blue-tomato.com^$removeparam=/^(varid|campaign|ia-pkpmtrack|zanox|_)/
 ||spartoo.*^$removeparam=/^(sx|track_id)/
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1206280
-||nytimes.com^$removeparam=impression_id|nytimes3xbfgragh.onion
+$removeparam=impression_id,domain=nytimes.com|nytimes3xbfgragh.onion
 ||microcenter.com^$removeparam=rf
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1212122
 $removeparam=name,domain=nytimes.com|nytimes3xbfgragh.onion
+! https://olympics.com/tokyo-2020/en/olympian-paralympian-experiences?gbraid=CjgKCAjwpf2IBhBIEigACfcQDju6R3TH1DL6Yi3-BaKiXeusYGTi1Q35AZa0I0iqhLV19OZrGgLEhw&wbraid=CjgKCAjwpf2IBhBIEigACfcQDju6R3TH1DL6Yi3-BaKiXeusYGTi1Q35AZa0I0iqhLV19OZrGgLEhw
+$removeparam=gbraid
+$removeparam=wbraid
+! https://www.wired.co.uk/article/google-chrome-browser-data?mbid=social_facebook
+$removeparam=mbid
+! https://business.udemy.com/resources/hybrid-workplace-webinar/?btn=ub-smartbar
+||udemy.com^$removeparam=btn
+! https://en.as.com/en/2021/08/23/soccer/1629727141_093723.html?omnil=resrelart
+! https://en.as.com/tag/lionel_messi/a?id_externo_noti=mod_ficha
+! https://as.com/futbol/2021/08/24/primera/1629781727_235298.html?m1=cG9ydGFkYV9wb3J0YWRh&m2=QUNUVUFMSURBRA%3D%3D&m3=NA%3D%3D&m4=bm9ybWFs&m5=MjI%3D&m1=cG9ydGFkYV9wb3J0YWRh&m2=QUNUVUFMSURBRA%3D%3D&m3=NQ%3D%3D&m4=bm9ybWFs&m5=MjI%3D
+||as.com^$removeparam=omnil
+||as.com^$removeparam=id_externo_noti
+||as.com^$removeparam=/^m[0-9]/
+! https://cloud.ibm.com/catalog/services/watson-studio?cm_mmca1=000026UJ&cm_mmca2=10006555&cm_mmca3=M12345678&cvosrc=email.Newsletter.M12345678&cvo_campaign=000026UJ&cvo_crid=522643131497
+$removeparam=cvosrc
+$removeparam=/^cvo_/
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
@@ -904,7 +920,7 @@ $removeparam=_sacat
 
 ! ——— Google Search ———
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
-$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com|thedailybeast.com|itnext.io|medium.com|awd-it.*|webhint.io
+$removeparam=source,domain=googleusercontent.com|contabo.com|wired.com|tiktok.com|thedailybeast.com|itnext.io|medium.com|awd-it.*|webhint.io|betterprogramming.pub
 $removeparam=cp_ksver
 ! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
 $removeparam=biw
