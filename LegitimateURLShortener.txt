@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 26August2021v1-Beta
+! Version: 28August2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -135,7 +135,8 @@ $~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com
 $removeparam=AID
 $removeparam=CJEVENT
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-969819
-$removeparam=aid,domain=adguard.com|booking.com
+! (Exception: booking.com in Firefox; see #256)
+$removeparam=aid,domain=adguard.com
 ! https://account.microsoft.com/?refd=www.microsoft.com
 $removeparam=refd
 ! https://www.humblebundle.com/?hmb_source=navbar (09/01/2021)
