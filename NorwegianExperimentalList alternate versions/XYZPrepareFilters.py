@@ -165,6 +165,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(#\??#)body(:| )", 
+           r"\1html[lang] > body\2", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -4041,6 +4047,12 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"\$doc(,|$)", 
            r"$document\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(#\??#)body(:| )", 
+           r"\1html[lang] > body\2", 
            line
         )
 
