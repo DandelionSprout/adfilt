@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 23August2021v2
+! Version: 30August2021v3
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -21,9 +21,9 @@
 ! ❄: ——— Reklámaid ———
 ! ❄🌳: ——— Reklaameidie ———
 ! 🇬🇧: ——— Advertisements ———
-##.annonselenker
-##.full-width.daily-offers
-##.sponset-innlegg
+##.annonselenker:not(html, body)
+##.full-width.daily-offers:not(html, body)
+##.sponset-innlegg:not(html, body)
 ##a[href*="sting.de17a.com"]
 ##a[title=LeoVegas]
 123nyheter.no##.visible-lg-block
@@ -348,11 +348,11 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! 🇬🇧: Generic #-entries that have sources
 ! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
 ! Exceptions: ballade.no
-##.gofollow:not([href*=nyhetsbrev], [href*=radio])
+##.gofollow:not([href*=nyhetsbrev], [href*=radio], html, body)
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
 ! arendalstidende.no
-##.ad-paied-cont-front
+##.ad-paied-cont-front:not(html, body)
 ! https://www.langrenn.com/cppage.6250314-1743.html
 ##.spklw-post-attr[data-recommendation-type=ad]
 ! bobilverden.no
@@ -367,50 +367,50 @@ tv2.no##.spklw-post-attr[data-pc]
 ! https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
 ##.spklw-post-attr[data-recommendation-type=sprinkleit]
 ! https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
-##.native-ad-kicker
-##.content-adunit
+##.native-ad-kicker:not(html, body)
+##.content-adunit:not(html, body)
 ! portal.fo (09/05/2020)
-##.multiple-vevlysingar
-##.full-width-vevlysingar
+##.multiple-vevlysingar:not(html, body)
+##.full-width-vevlysingar:not(html, body)
 ! jyllands-posten.dk
-##.annonceringBox
+##.annonceringBox:not(html, body)
 ! buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews.dk
-##.rotating-junglebogen
+##.rotating-junglebogen:not(html, body)
 ! retailnews.dk (11/09/2020)
 ###junglebogen-left
 ###junglebogen-right
 ! n247.no
-##.annonseheader
+##.annonseheader:not(html, body)
 ! healthtalk.no
-##.reklame-spot
+##.reklame-spot:not(html, body)
 ! appetitt.no
 ###ctl00_phMain_lnkAd
 ###ctl00_phMain_divParallax
 ! ekstrabladet.dk
 ##a[href^="https://click-dk.plista.com/csc?"]
 ! nab.no (Only shown if cookies are accepted; 18/08/2020)
-##.nf-o-annonse
-##.nf-c-adblock-title
+##.nf-o-annonse:not(html, body)
+##.nf-c-adblock-title:not(html, body)
 ! Bet365 widget triggered for Norwegian audiences only
 goal.com##.js-betting-widget.is-country-no:upward(2)
 ! doktor.frettabladid.is (18/09/2020)
-##.hringekja__wrapper
+##.hringekja__wrapper:not(html, body)
 ! borsen.no (08/10/2020)
-##.native-advertisement
+##.native-advertisement:not(html, body)
 ! https://www.nettavisen.no/3424050834.html (24/11/2020)
-##.commercial-teaser
+##.commercial-teaser:not(html, body)
 ! reavisa.no (06/12/2020)
 ###newswire-banner
 ~finn.no##a[href*="finn.no/realestate/newbuildings/ad.htm"]
 ! ytresogn.no (16/12/2020)
 ###reklamebolk1wrap
 ! nettavisen.no (25/12/2020)
-##.lp_p2_api_ad
+##.lp_p2_api_ad:not(html, body)
 ! ao.no (28/12/2020)
 ###art-pomimuko
 ! keldan.is (05/01/2021)
 ##div[id^=AdvPortlet]
-##.currencyaugl
+##.currencyaugl:not(html, body)
 ! madridista.dk (21/04/2021)
 ~casinotop.com##a[href*="casinotop.com"]
 /banners/casinotop$image
@@ -845,8 +845,8 @@ contentMarketing$app=no.sol
 ###ad_superboard
 ###ad_topp
 ###no-familieklubben-wde-front_topboard
-##.annonsetag
-##.jubii-adunit
+##.annonsetag:not(html, body)
+##.jubii-adunit:not(html, body)
 ##div[data-placeholder*=placeholder_ad]
 1001spill.no###footer
 1001spill.no##.layout-two-columns-aside
@@ -1522,31 +1522,31 @@ seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
 ! www.vtb.no
 ~rockefeller.no##.annonse:not(.article-entity)
 ! vafo.dk
-##.block-AnnonceBlocksAdform
-##.clearfix.top_banner_container
+##.block-AnnonceBlocksAdform:not(html, body)
+##.clearfix.top_banner_container:not(html, body)
 vafo.dk##.adform-flexblock
-##.adform__topbanner
+##.adform__topbanner:not(html, body)
 ! reelligestilling.dk
-##.googlepublisherpluginad
+##.googlepublisherpluginad:not(html, body)
 ! www.rbnett.no
-##.polarisMarketing
-##.sub.menu-primary.default.polarisMenu.widget
+##.polarisMarketing:not(html, body)
+##.sub.menu-primary.default.polarisMenu.widget:not(html, body)
 ! www.op.no
-##.bazaarSpinnerContainer
+##.bazaarSpinnerContainer:not(html, body)
 ! journalisten.dk
 ###jobads-topbanner
 ! www.altomfotball.no
-##.tv2-ad
+##.tv2-ad:not(html, body)
 ! dv.is
-##.auglysing_ticker
+##.auglysing_ticker:not(html, body)
 ! bt.no
-##.premium-spot
+##.premium-spot:not(html, body)
 ! latterkula.no/se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live/
-##.annonser
+##.annonser:not(html, body)
 ! www.latterkula.no/artikler/
-##.mh-loop-ad
+##.mh-loop-ad:not(html, body)
 ! www.mbl.is/frettir/
-##.ticker-ad
+##.ticker-ad:not(html, body)
 ! adressa.no
 ##div[data-contenttype=ad]
 ! https://nyheder.tv2.dk/2021-02-04-soennerne-saa-frem-til-en-arv-fra-deres-far-efter-mange-aars-lidelser-indtil-han-giftede (04/02/2021)
@@ -1554,16 +1554,16 @@ vafo.dk##.adform-flexblock
 ! kk.no, sol.no
 ! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/58527)
 ##[type=advertisement]
-~candidate.hr-manager.net##[class^=AdWrapper]
+~candidate.hr-manager.net##[class^=AdWrapper]:not(html, body)
 ! historienet.no, natgeo.no, komputer.no
 ##.wallpaper > .horseshoe
 ! qxl.no
 ###GoogleAdsensePanorama
 ###GoogleAdsenseFooter
 ! gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi.no
-##.poster-placeholder
+##.poster-placeholder:not(html, body)
 ! demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb.no
-##.banners.post_sticky
+##.banners.post_sticky:not(html, body)
 ##div[data-adtext]
 ! ba.no
 ! https://github.com/DandelionSprout/adfilt/pull/53
@@ -1573,13 +1573,13 @@ vafo.dk##.adform-flexblock
 ! aftenbladet.no
 ##.ad[data-config-name]
 ! avisalofoten.no
-##.ad.text-center
+##.ad.text-center:not(html, body)
 ! blv.no/nyheter/kan-bruke-23-millioner-pa-the-whale-undersokelsene
 ##div[id*=html-embedded-ad]
 ! https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
 ##.ad[id^=netboard_]
 ##.ad[id^=skyscraper]
-##.ad.topBanner
+##.ad.topBanner:not(html, body)
 ! https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
 ###sponsorstripe
 ! aftenposten.no (Mobile useragent)
@@ -1590,46 +1590,46 @@ vafo.dk##.adform-flexblock
 ! krs247.no
 ##div[id^=webbannernetboard]
 ! lsk.no
-##.ads__grid-item
+##.ads__grid-item:not(html, body)
 ! https://www.budstikka.no/
 ##div[data-placeholder=lokalnative]
 ! e24.no, aftenbladet.no, sysla.no
 ##div[id^=adPlacement_]
 ! https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi (15/04/2020)
-##.undirsidaad
+##.undirsidaad:not(html, body)
 ! https://fiskur.fo/gitte-henning-1-landar-i-maloy (09/05/2020)
 .fo/css/img/banner2x1.png$image
 ! https://www.dagsavisen.no/nyheter/verden/1.1731911 (18/06/2020)
 ##div[data-third-party-link*=".smartadserver.com/"]
 ! https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807 (10/07/2020)
-##.am-page-ad
+##.am-page-ad:not(html, body)
 ! advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668 (16/08/2020)
-##.adnuntius-ad
+##.adnuntius-ad:not(html, body)
 ! kimbino.no, kimbino.dk (13/09/2020)
-##.intersect-ads-load
+##.intersect-ads-load:not(html, body)
 ! fasteignir.frettabladid.is
 ||via.placeholder.com^$image
 ! hringbraut.frettabladid.is (18/09/2020)
-##.tag-page-ad-container
+##.tag-page-ad-container:not(html, body)
 ! https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/
-##.scrolling-side-ad-container
-##.ticker-ad-wrapper
+##.scrolling-side-ad-container:not(html, body)
+##.ticker-ad-wrapper:not(html, body)
 ! lokal-avisa.no, ringsakern.no (19/09/2020)
-##.mobile-banner-widget
-##.widgerFullWidth
+##.mobile-banner-widget:not(html, body)
+##.widgerFullWidth:not(html, body)
 ! gjoviksblad.no (19/09/2020)
-##.desktop-banner-widget
+##.desktop-banner-widget:not(html, body)
 ! midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt.dk (30/09/2020)
-##.featuresplash-container
-##.ad-cookie
+##.featuresplash-container:not(html, body)
+##.ad-cookie:not(html, body)
 ! godstart.dk, sol.dk (30/09/2020)
 ||ni.dk/ni-news/*feed/*-bottom.html^$third-party
 ! fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30/09/2020)
-##.adform__text
+##.adform__text:not(html, body)
 ! https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
-##.augl-container
+##.augl-container:not(html, body)
 ! dagsavisen.no (30/05/2021)
-##.hestesko-section
+##.hestesko-section:not(html, body)
 ! aftenposten.no, hockeymagasinet.dk, l-a.no, aftenbladet.no (30/10/2020)
 ###top-ads-container
 ! bt.no, byas.no, aftenbladet.no (30/10/2020)
@@ -1637,11 +1637,11 @@ vafo.dk##.adform-flexblock
 ! costume.no, costume.dk (09/11/2020)
 ##.grid > div[class=flow-banner]
 ! boligpluss.no (09/11/2020), women.dk
-##.wg-banner
+##.wg-banner:not(html, body)
 ! ytresogn.no (16/12/2020)
 _980banner_
 ! ambulanseforum.no (26/12/2020)
-##.navigation__advertisement
+##.navigation__advertisement:not(html, body)
 ! fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad.dk (02/01/2021)
 ##.article__content > .article__adblock
 ##.article__body > .article__adblock
@@ -1649,16 +1649,16 @@ _980banner_
 ##.splitblock__column--2 > .block > .adblock
 ! forum.doktoronline.no (06/01/2021), forum.klikk.no, forum.kvinneguiden.no
 ###toppbanner
-##.ehm-megaboard
+##.ehm-megaboard:not(html, body)
 ! nettavisen.no (20/01/2021)
-##.maelstrom-skyscraper
+##.maelstrom-skyscraper:not(html, body)
 ! https://www.helsenett.no/spor-oss/har-du-smabarn/50657-svstadig-tilbakevendende-forkjolelsehostefeber.html (10/02/2021)
-##.forum-ad-box
+##.forum-ad-box:not(html, body)
 ! https://www.tronderdebatt.no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453 (20/03/2021), ba.no
-##.maelstrom-topbanner
-##.skyscraper-ads-container
+##.maelstrom-topbanner:not(html, body)
+##.skyscraper-ads-container:not(html, body)
 ! https://viralefilmer.no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25/03/2021), eavisa.no
-##.adguru-modal-popup
+##.adguru-modal-popup:not(html, body)
 ! https://www.terrengsykkelforumet.no/ubbthreads.php?ubb=showflat&Number=2453543 (31/03/2021), terrengsykkel.no
 ###wallpaperAds
 ! nettavisen.no (04/04/2021)
@@ -1666,13 +1666,13 @@ _980banner_
 ! steinkjer-avisa.no (12/04/2021)
 ##optimus-element[linecount=undefined][width="280"]
 ! gnavergalleri.dk (along with ~60 affiliates sites; 21/04/2021)
-##.container.container-topbanner
+##.container.container-topbanner:not(html, body)
 ! nidaros.no
-##.ad-iframe-nt
+##.ad-iframe-nt:not(html, body)
 ! dagsavisen.no
-##.arcad-block-container
+##.arcad-block-container:not(html, body)
 ! elbil24.no, vi.no (21/06/2021)
-##.adunit-content-marketing
+##.adunit-content-marketing:not(html, body)
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -1680,7 +1680,7 @@ _980banner_
 ! 🇮🇸: ——— Tóma skilirammar ———
 ! 🇬🇧: ——— Empty divider spaces ———
 ! Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt, which has not been the case.
-##.skille
+##.skille:not(html, body)
 icelandreview.com,bir.no,medier24.no,knr.gl,nutiminn.is#?#p:has-text(/^\xA0$/)
 allers.no,steigan.no##.vc_empty_space
 byggebolig.no##.body-spacer
@@ -1776,9 +1776,6 @@ ni.dk#@#a[href*=".adform.net/"]
 ! ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 ! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 telenor.no##.global-overlay-background
-! ★★★ Caused by «AdGuard Russian» ★★★
-! https://github.com/AdguardTeam/AdguardFilters/issues/85331
-finn.no#@##ad-content
 ! ★★★ Unknown cause ★★★
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no

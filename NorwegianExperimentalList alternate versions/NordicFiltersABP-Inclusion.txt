@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 230820212
+! Version: 300820213
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -22,9 +22,9 @@
 ! ❄: ——— Reklámaid ———
 ! ❄🌳: ——— Reklaameidie ———
 ! 🇬🇧: ——— Advertisements ———
-##.annonselenker
-##.full-width.daily-offers
-##.sponset-innlegg
+##.annonselenker:not(html, body)
+##.full-width.daily-offers:not(html, body)
+##.sponset-innlegg:not(html, body)
 ##a[href*="sting.de17a.com"]
 ##a[title=LeoVegas]
 123nyheter.no##.visible-lg-block
@@ -337,11 +337,11 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! 🇬🇧: Generic #-entries that have sources
 ! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
 ! Exceptions: ballade.no
-##.gofollow:not([href*=nyhetsbrev], [href*=radio])
+##.gofollow:not([href*=nyhetsbrev], [href*=radio], html, body)
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
 ! arendalstidende.no
-##.ad-paied-cont-front
+##.ad-paied-cont-front:not(html, body)
 ! https://www.langrenn.com/cppage.6250314-1743.html
 ##.spklw-post-attr[data-recommendation-type=ad]
 ! bobilverden.no
@@ -356,50 +356,50 @@ tv2.no##.spklw-post-attr[data-pc]
 ! https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
 ##.spklw-post-attr[data-recommendation-type=sprinkleit]
 ! https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
-##.native-ad-kicker
-##.content-adunit
+##.native-ad-kicker:not(html, body)
+##.content-adunit:not(html, body)
 ! portal.fo (09/05/2020)
-##.multiple-vevlysingar
-##.full-width-vevlysingar
+##.multiple-vevlysingar:not(html, body)
+##.full-width-vevlysingar:not(html, body)
 ! jyllands-posten.dk
-##.annonceringBox
+##.annonceringBox:not(html, body)
 ! buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews.dk
-##.rotating-junglebogen
+##.rotating-junglebogen:not(html, body)
 ! retailnews.dk (11/09/2020)
 ###junglebogen-left
 ###junglebogen-right
 ! n247.no
-##.annonseheader
+##.annonseheader:not(html, body)
 ! healthtalk.no
-##.reklame-spot
+##.reklame-spot:not(html, body)
 ! appetitt.no
 ###ctl00_phMain_lnkAd
 ###ctl00_phMain_divParallax
 ! ekstrabladet.dk
 ##a[href^="https://click-dk.plista.com/csc?"]
 ! nab.no (Only shown if cookies are accepted; 18/08/2020)
-##.nf-o-annonse
-##.nf-c-adblock-title
+##.nf-o-annonse:not(html, body)
+##.nf-c-adblock-title:not(html, body)
 ! Bet365 widget triggered for Norwegian audiences only
 goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ! doktor.frettabladid.is (18/09/2020)
-##.hringekja__wrapper
+##.hringekja__wrapper:not(html, body)
 ! borsen.no (08/10/2020)
-##.native-advertisement
+##.native-advertisement:not(html, body)
 ! https://www.nettavisen.no/3424050834.html (24/11/2020)
-##.commercial-teaser
+##.commercial-teaser:not(html, body)
 ! reavisa.no (06/12/2020)
 ###newswire-banner
 ~finn.no##a[href*="finn.no/realestate/newbuildings/ad.htm"]
 ! ytresogn.no (16/12/2020)
 ###reklamebolk1wrap
 ! nettavisen.no (25/12/2020)
-##.lp_p2_api_ad
+##.lp_p2_api_ad:not(html, body)
 ! ao.no (28/12/2020)
 ###art-pomimuko
 ! keldan.is (05/01/2021)
 ##div[id^=AdvPortlet]
-##.currencyaugl
+##.currencyaugl:not(html, body)
 ! madridista.dk (21/04/2021)
 ~casinotop.com##a[href*="casinotop.com"]
 /banners/casinotop$image
@@ -811,8 +811,8 @@ _300x500pix$domain=rykindribe.dk,image
 ###ad_superboard
 ###ad_topp
 ###no-familieklubben-wde-front_topboard
-##.annonsetag
-##.jubii-adunit
+##.annonsetag:not(html, body)
+##.jubii-adunit:not(html, body)
 ##div[data-placeholder*=placeholder_ad]
 1001spill.no###footer
 1001spill.no##.layout-two-columns-aside
@@ -1447,31 +1447,31 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 ! www.vtb.no
 ~rockefeller.no##.annonse:not(.article-entity)
 ! vafo.dk
-##.block-AnnonceBlocksAdform
-##.clearfix.top_banner_container
+##.block-AnnonceBlocksAdform:not(html, body)
+##.clearfix.top_banner_container:not(html, body)
 vafo.dk##.adform-flexblock
-##.adform__topbanner
+##.adform__topbanner:not(html, body)
 ! reelligestilling.dk
-##.googlepublisherpluginad
+##.googlepublisherpluginad:not(html, body)
 ! www.rbnett.no
-##.polarisMarketing
-##.sub.menu-primary.default.polarisMenu.widget
+##.polarisMarketing:not(html, body)
+##.sub.menu-primary.default.polarisMenu.widget:not(html, body)
 ! www.op.no
-##.bazaarSpinnerContainer
+##.bazaarSpinnerContainer:not(html, body)
 ! journalisten.dk
 ###jobads-topbanner
 ! www.altomfotball.no
-##.tv2-ad
+##.tv2-ad:not(html, body)
 ! dv.is
-##.auglysing_ticker
+##.auglysing_ticker:not(html, body)
 ! bt.no
-##.premium-spot
+##.premium-spot:not(html, body)
 ! latterkula.no/se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live/
-##.annonser
+##.annonser:not(html, body)
 ! www.latterkula.no/artikler/
-##.mh-loop-ad
+##.mh-loop-ad:not(html, body)
 ! www.mbl.is/frettir/
-##.ticker-ad
+##.ticker-ad:not(html, body)
 ! adressa.no
 ##div[data-contenttype=ad]
 ! https://nyheder.tv2.dk/2021-02-04-soennerne-saa-frem-til-en-arv-fra-deres-far-efter-mange-aars-lidelser-indtil-han-giftede (04/02/2021)
@@ -1479,16 +1479,16 @@ vafo.dk##.adform-flexblock
 ! kk.no, sol.no
 ! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/58527)
 ##[type=advertisement]
-~candidate.hr-manager.net##[class^=AdWrapper]
+~candidate.hr-manager.net##[class^=AdWrapper]:not(html, body)
 ! historienet.no, natgeo.no, komputer.no
 ##.wallpaper > .horseshoe
 ! qxl.no
 ###GoogleAdsensePanorama
 ###GoogleAdsenseFooter
 ! gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi.no
-##.poster-placeholder
+##.poster-placeholder:not(html, body)
 ! demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb.no
-##.banners.post_sticky
+##.banners.post_sticky:not(html, body)
 ##div[data-adtext]
 ! ba.no
 ! https://github.com/DandelionSprout/adfilt/pull/53
@@ -1498,13 +1498,13 @@ vafo.dk##.adform-flexblock
 ! aftenbladet.no
 ##.ad[data-config-name]
 ! avisalofoten.no
-##.ad.text-center
+##.ad.text-center:not(html, body)
 ! blv.no/nyheter/kan-bruke-23-millioner-pa-the-whale-undersokelsene
 ##div[id*=html-embedded-ad]
 ! https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
 ##.ad[id^=netboard_]
 ##.ad[id^=skyscraper]
-##.ad.topBanner
+##.ad.topBanner:not(html, body)
 ! https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
 ###sponsorstripe
 ! aftenposten.no (Mobile useragent)
@@ -1515,46 +1515,46 @@ vafo.dk##.adform-flexblock
 ! krs247.no
 ##div[id^=webbannernetboard]
 ! lsk.no
-##.ads__grid-item
+##.ads__grid-item:not(html, body)
 ! https://www.budstikka.no/
 ##div[data-placeholder=lokalnative]
 ! e24.no, aftenbladet.no, sysla.no
 ##div[id^=adPlacement_]
 ! https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi (15/04/2020)
-##.undirsidaad
+##.undirsidaad:not(html, body)
 ! https://fiskur.fo/gitte-henning-1-landar-i-maloy (09/05/2020)
 .fo/css/img/banner2x1.png$image
 ! https://www.dagsavisen.no/nyheter/verden/1.1731911 (18/06/2020)
 ##div[data-third-party-link*=".smartadserver.com/"]
 ! https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807 (10/07/2020)
-##.am-page-ad
+##.am-page-ad:not(html, body)
 ! advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668 (16/08/2020)
-##.adnuntius-ad
+##.adnuntius-ad:not(html, body)
 ! kimbino.no, kimbino.dk (13/09/2020)
-##.intersect-ads-load
+##.intersect-ads-load:not(html, body)
 ! fasteignir.frettabladid.is
 ||via.placeholder.com^$image
 ! hringbraut.frettabladid.is (18/09/2020)
-##.tag-page-ad-container
+##.tag-page-ad-container:not(html, body)
 ! https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/
-##.scrolling-side-ad-container
-##.ticker-ad-wrapper
+##.scrolling-side-ad-container:not(html, body)
+##.ticker-ad-wrapper:not(html, body)
 ! lokal-avisa.no, ringsakern.no (19/09/2020)
-##.mobile-banner-widget
-##.widgerFullWidth
+##.mobile-banner-widget:not(html, body)
+##.widgerFullWidth:not(html, body)
 ! gjoviksblad.no (19/09/2020)
-##.desktop-banner-widget
+##.desktop-banner-widget:not(html, body)
 ! midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt.dk (30/09/2020)
-##.featuresplash-container
-##.ad-cookie
+##.featuresplash-container:not(html, body)
+##.ad-cookie:not(html, body)
 ! godstart.dk, sol.dk (30/09/2020)
 ||ni.dk/ni-news/*feed/*-bottom.html^$third-party
 ! fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30/09/2020)
-##.adform__text
+##.adform__text:not(html, body)
 ! https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
-##.augl-container
+##.augl-container:not(html, body)
 ! dagsavisen.no (30/05/2021)
-##.hestesko-section
+##.hestesko-section:not(html, body)
 ! aftenposten.no, hockeymagasinet.dk, l-a.no, aftenbladet.no (30/10/2020)
 ###top-ads-container
 ! bt.no, byas.no, aftenbladet.no (30/10/2020)
@@ -1562,11 +1562,11 @@ vafo.dk##.adform-flexblock
 ! costume.no, costume.dk (09/11/2020)
 ##.grid > div[class=flow-banner]
 ! boligpluss.no (09/11/2020), women.dk
-##.wg-banner
+##.wg-banner:not(html, body)
 ! ytresogn.no (16/12/2020)
 _980banner_
 ! ambulanseforum.no (26/12/2020)
-##.navigation__advertisement
+##.navigation__advertisement:not(html, body)
 ! fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad.dk (02/01/2021)
 ##.article__content > .article__adblock
 ##.article__body > .article__adblock
@@ -1574,16 +1574,16 @@ _980banner_
 ##.splitblock__column--2 > .block > .adblock
 ! forum.doktoronline.no (06/01/2021), forum.klikk.no, forum.kvinneguiden.no
 ###toppbanner
-##.ehm-megaboard
+##.ehm-megaboard:not(html, body)
 ! nettavisen.no (20/01/2021)
-##.maelstrom-skyscraper
+##.maelstrom-skyscraper:not(html, body)
 ! https://www.helsenett.no/spor-oss/har-du-smabarn/50657-svstadig-tilbakevendende-forkjolelsehostefeber.html (10/02/2021)
-##.forum-ad-box
+##.forum-ad-box:not(html, body)
 ! https://www.tronderdebatt.no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453 (20/03/2021), ba.no
-##.maelstrom-topbanner
-##.skyscraper-ads-container
+##.maelstrom-topbanner:not(html, body)
+##.skyscraper-ads-container:not(html, body)
 ! https://viralefilmer.no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25/03/2021), eavisa.no
-##.adguru-modal-popup
+##.adguru-modal-popup:not(html, body)
 ! https://www.terrengsykkelforumet.no/ubbthreads.php?ubb=showflat&Number=2453543 (31/03/2021), terrengsykkel.no
 ###wallpaperAds
 ! nettavisen.no (04/04/2021)
@@ -1591,13 +1591,13 @@ _980banner_
 ! steinkjer-avisa.no (12/04/2021)
 ##optimus-element[linecount=undefined][width="280"]
 ! gnavergalleri.dk (along with ~60 affiliates sites; 21/04/2021)
-##.container.container-topbanner
+##.container.container-topbanner:not(html, body)
 ! nidaros.no
-##.ad-iframe-nt
+##.ad-iframe-nt:not(html, body)
 ! dagsavisen.no
-##.arcad-block-container
+##.arcad-block-container:not(html, body)
 ! elbil24.no, vi.no (21/06/2021)
-##.adunit-content-marketing
+##.adunit-content-marketing:not(html, body)
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -1605,7 +1605,7 @@ _980banner_
 ! 🇮🇸: ——— Tóma skilirammar ———
 ! 🇬🇧: ——— Empty divider spaces ———
 ! Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt, which has not been the case.
-##.skille
+##.skille:not(html, body)
 icelandreview.com,bir.no,medier24.no,knr.gl,nutiminn.is#?#p:-abp-contains(/^\xA0$/)
 allers.no,steigan.no##.vc_empty_space
 byggebolig.no##.body-spacer
@@ -1692,9 +1692,6 @@ ni.dk#@#a[href*=".adform.net/"]
 ! ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 ! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 
-! ★★★ Caused by «AdGuard Russian» ★★★
-! https://github.com/AdguardTeam/AdguardFilters/issues/85331
-finn.no#@##ad-content
 ! ★★★ Unknown cause ★★★
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
@@ -4185,7 +4182,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 210820212
+! Version: 290820211
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4304,11 +4301,9 @@ _mainosnappi.
 ! -----GENERAL FILTERS END-----
 ! -----SPECIFIC FILTERS-----
 
-aamulehti.fi##div.adContainer
+aamulehti.fi#?#.lg\:hidden:-abp-contains(Lue myös:):-abp-has(a[href^="/mainos/"])
 aamulehti.fi#?#article:-abp-has(> header > h2 > span:-abp-contains(Mainokset))
-aamulehti.fi#?#div:-abp-has(> a > div > div > div > span:-abp-contains(Kaupallinen yhteistyö))
-aamulehti.fi#?#div[id*=pipe] > div > div:-abp-contains(Kaupallinen yhteistyö)
-aamulehti.fi#?#div[id^=morearticles_]:-abp-has(h2:-abp-has(span:-abp-contains(Kaupallinen yhteistyö)))
+aamulehti.fi#?#article[class]:-abp-has(> a[href^="https://tilaa.sanoma.fi/al-digi"][href$=etusivu_flash])
 aamulehti.fi,hs.fi###header ~ .xl\:pr-sideAdOffset.bg-softwall
 aamulehti.fi,hs.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,satakunnankansa.fi,suurkeuruu.fi,sydansatakunta.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi##article[class|=ticker-promo]
 aamulehti.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,satakunnankansa.fi,suurkeuruu.fi,sydansatakunta.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi###bottomBanner
@@ -4349,20 +4344,16 @@ arcticinsider.com##a[href*=bannerTrack]
 aromilehti.fi##.ad-paper-order
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com##div[class*=post] > hr, hr ~ *:not(aside)
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com#?#body.post-template-default * .td-main-content-wrap:-abp-has(.tdt-ad-wrap)
-arvopaperi.fi,marmai.fi,tekniikkatalous.fi##div#skyscraper-height-div > div > aside > div > div > a[href^="/kumppaniblogit/"]
-arvopaperi.fi##div#skyscraper-height-div > div > aside > div > div > a[href^="https://studio.arvopaperi.fi/"]
-arvopaperi.fi#?#div#skyscraper-height-div > aside > div > a:-abp-contains(Kaupallinen yhteistyö)
-arvopaperi.fi#?#div#skyscraper-height-div > aside > div > div:-abp-contains(Kaupallinen yhteistyö)
-arvopaperi.fi#?#div#skyscraper-height-div > div > aside > div > a:-abp-contains(Kaupallinen yhteistyö)
-arvopaperi.fi#?#div#skyscraper-height-div > div > div > div > div > div > a:-abp-contains(Kaupallinen yhteistyö)
+arvopaperi.fi#?#div#skyscraper-height-div > aside > div:-abp-has(a[href^="https://www.arvopaperi.fi/kumppanisisallot/"])
 arvopaperi.fi,uusisuomi.fi#?#[width]:-abp-has(.lazyload-wrapper):not(aside)
 asunnot.oikotie.fi##.customer-color-link.sahkovertailu-campaign__link
 audiovideo.fi##.head.the-wrap
 auto1.fi##.pb[lazied]
-auto1.fi,ilmainensanakirja.fi,nauris.fi,telsu.fi,testeri.fi###pb_bottom
-auto1.fi,ilmainensanakirja.fi,nauris.fi,telsu.fi,testeri.fi,blogit.fi###pb_top
-auto1.fi,ilmainensanakirja.fi,nauris.fi,telsu.fi,testeri.fi##.box_dt
-auto1.fi,ilmainensanakirja.fi,nauris.fi,telsu.fi,testeri.fi##[href^="/clk"]
+auto1.fi#?#[id^=pb_cont].pb:-abp-has(> a[href^="/clk2?"])
+auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi###pb_bottom
+auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi##.box_dt
+auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi##[href^="/clk"]
+auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi,blogit.fi###pb_top
 autotalli.com###topBanner
 basso.fi##div[id^=BannerBlock]
 bbs.io-tech.fi##[class~=structItem--thread][data-author=Mainos]
@@ -4403,8 +4394,8 @@ etusuora.com#?#.pb30:-abp-has(.adsbygoogle)
 f1-forum.fi##a[href*="netb11.com"]
 f1-forum.fi##img[src*=banneri]
 facebook.com##a[aria-label="Mainostajan linkki"]
-facebook.com#?#div[data-pagelet=RightRail] > div:-abp-has( div * h3 > span:-abp-contains(Sponsoroitu))
-facebook.com#?#div[data-pagelet^=FeedUnit_]:-abp-has(div[role=article] div[style^=border-radius] span[dir=auto] > span:-abp-contains(Sponsoroitu))
+facebook.com#?#div[data-pagelet=RightRail] > div:-abp-has( div h3 > span:-abp-contains(Sponsoroitu))
+facebook.com#?#div[data-pagelet^=FeedUnit_]:-abp-has(div[role=article] div[style^=border-radius] span[dir=auto] a[aria-label=Sponsoroitu])
 feissarimokat.com###billboard
 feissarimokat.com###logopal
 feissarimokat.com##.flexibox
@@ -4418,6 +4409,7 @@ finder.fi##.Advertisement__Box
 finder.fi##.Advertisement__Top
 finnkino.fi,fum.fi,tilt.fi,vuokraovi.com##.advertising
 fonecta.fi##.map-ad
+fonecta.fi##[class*=adBox]
 fonecta.fi##div[class^=AdBlock_adContainer]
 fontanka.fi##.widget_custom_html
 foreca.fi##div[id|=inline-banner-mobi]
@@ -4461,8 +4453,7 @@ helsinkitimes.fi##.banneritem
 herkkusuut.com,nainen.com,viikonloppu.com##.adcontainer
 high.fi###googlejs
 high.fi##div[class*=sub-container]
-hinta.fi###hv-wrapper-top
-hinta.fi###hv-wrapper-top-tiny
+hinta.fi##[id|=hv-wrapper-top]
 hinta.fi##a[href^="/ohjaus.php"]
 hinta.fi##div[class=hv-wrapper-left-item]
 hinta.fi##div[class=hv-wrapper-right-item]
@@ -4482,8 +4473,7 @@ hs.fi##div[class*=ad-container]
 hs.fi#?#.embedded:-abp-contains(Markkinapaikka)
 huoltovalikko.com##A[href="http://www.satshop.fi"]
 huonoaiti.fi#?#.col.article-card.item:-abp-contains(Kaupallinen yhteistyö, yhteistyössä)
-huuto.net##div.grid-element-container-hintaseuranta.grid-element-container
-huuto.net##div.search-grid-ad-container.ad
+huuto.net#?#.grid-element-container:-abp-has(.hise-link[href^="https://"])
 hymy.fi##.grid--dfp-slots
 hymy.fi##[href="http://www.finswingers.com/"]
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi###paraati-ad-grid
@@ -4560,7 +4550,7 @@ kokemaenjokilaakso.fi#?#p:-abp-has([alt^=Mainos])
 konekuriiri.fi,koneporssi.com##.banners
 koneviesti.fi###traktorpool-ad
 koneviesti.fi#?#.layout__article-area__text-content > p:-abp-contains(/^\xA0$/)
-koneviesti.fi,maaseuduntulevaisuus.fi#?#.row * .col-small-12.col-medium-12.col-large-12:-abp-contains(Mainos:)
+koneviesti.fi,maaseuduntulevaisuus.fi#?#.row .col-small-12.col-medium-12.col-large-12:-abp-contains(Mainos:)
 kotikokki.net###partners-container-big
 kotikokki.net##[id=content][class="content hrecipe"] ~ [style="float: left; width: 100%; height: 200px; padding-left:20px; padding-right:20px; box-sizing:border-box; background-color:#fff;"]
 kotiliesi.fi##.article-continues
@@ -4659,8 +4649,8 @@ moottoripyora.org##li[class="first cooperation nebula"]
 moottoripyora.org##li[id*=navbar_notice_]
 motot.net##div.centered.motot-well-inverse.well[style^=padding-]
 motouutiset.fi##a[href*=revads]
-motouutiset.fi##div[class*=ad-giant]
-motouutiset.fi##div[class*=ad-panorama]
+motouutiset.fi##.ad-panorama
+motouutiset.fi##div[class$=ad-giant]
 mtvuutiset.fi##.component-adincontent.component
 mtvuutiset.fi##.leaderboard
 murobbs.muropaketti.com###hintaopas_top_product_block
@@ -4688,14 +4678,6 @@ nainen.com##[href="https://www.kasinokaverit.com/ilmaiskierroksia-nettikasinoill
 nainen.com##[href="https://www.nainen.com/lainoja-kilpailuttamalla-saastat-aikaa-ja-rahaa/"]
 napsu.fi###banneriwrapper
 napsu.fi##.mobilead
-nyt.fi##div#javascript-disabled-error
-offroadpro.fi,mpmaailma.fi##div[class*=advertisement]
-offroadpro.fi,mpmaailma.fi##div[class*=bgBanner]
-offroadpro.fi,mpmaailma.fi##div[class*=blockads]
-offroadpro.fi,mpmaailma.fi##div[class*=pane-ad]
-offroadpro.fi,mpmaailma.fi##div[id=googlePlusOne]
-offroadpro.fi,mpmaailma.fi##div[id=logo-area]
-offroadpro.fi,mpmaailma.fi##div[id^=block-ad]
 olutposti.fi#?#.aside.widget:-abp-contains(Mainos)
 opensubtitles.org#?#fieldset:-abp-contains(Poista mainos)
 orivedensanomat.fi##.CMAC_AdChangerWidget.widget
@@ -4718,10 +4700,8 @@ pointti.fi##.jattiboksi
 pointti.fi##.paraati
 poliisiuutiset.fi##div.polii-widget.gridhub-widget-box.widget.gridhub-side-widget
 polttoaine.net##[href="http://www.vertaa.fi/lentoliput/"]
-pt-media.org###main > .wpcnt > .wpa
-pt-media.org##.entry-content > .wpcnt
-pt-media.org##.theiaStickySidebar > .wpcnt
-pt-media.org##.wpcnt-header.wpcnt
+pt-media.org##[href^="https://kasinopartio.com/"]
+pt-media.org#?#section:-abp-has(> a[href="https://nocompromiseclothing.com/"])
 puheenaiheet.fi##div[class=wpb_wrapper]
 puheenvuoro.uusisuomi.fi,vapaavuoro.uusisuomi.fi##.partner-blog-list
 puheenvuoro.uusisuomi.fi,vapaavuoro.uusisuomi.fi##.side-list.commercial-blog-studio
@@ -4907,6 +4887,7 @@ www.suomi24.fi##div[class^=Vaalikone__HeaderAdWrapper]
 www.suomi24.fi#?#p:-abp-has(+ p + .asp)
 www.uusisuomi.fi#?#.lazyload-wrapper:-abp-has(.at-embed-container)
 x2.fi##.mobile-top-ad
+xracing.fi##.adBanner
 ylilauta.org##.h.fcdn
 yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 
@@ -5076,9 +5057,6 @@ ruutu.fi##.RuutuPlayer__Error-sc-1o2b3la-0
 @@||adform.net^$~third-party
 @@||tradedoubler.com^$~third-party
 
-! Lowe's list rule blocks access to Youtube
-@@||doubleclick.net^$~third-party
-
 ! Lowe's list and Easyprivacy prevents opening thread replys via email
 @@||click.redditmail.com^$~third-party
 
@@ -5106,11 +5084,8 @@ kotiliesi.fi##.placeholder
 ! @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=gamereactor.fi
 @@||leiki.com$domain=etuovi.com|iltalehti.fi
 @@||pbs.twimg.com/ad_img/$image,domain=embed.is.fi
-@@||photour.net^$elemhide
 @@||power.fi/Umbraco/Api/Tracking/TrackOrder$xmlhttprequest,domain=power.fi
-@@||radiosun.fi/wp-content/uploads/2020/09/Ylojarven-keilahalli-300x250-1.jpg
 @@||tags.tiqcdn.com/utag/sanoma-fi/*/utag.js
-@@||telsu.fi/dyn2?setref=nauris$subdocument,domain=nauris.fi
 @@||uk.cdn-net.com/cc.js$script,domain=power.fi
 anna.fi#@#.sponsored-content
 etuovi.com#@#.rss-feed
@@ -5118,8 +5093,6 @@ hs.fi#@#.mainokset
 hs.fi#@#.mainos
 iltalehti.fi#@#.afs_ads
 kaksplus.fi#@#.sponsored-content
-studio55.fi#@#.column-ad
-tjareborg.fi#@#.push-container
 
 ! -----UNBREAK END-----
 
@@ -5147,3 +5120,10 @@ tjareborg.fi#@#.push-container
 
 ! https://github.com/easylist/easylist/pull/8695
 @@||high.auriro.net/http/600x400/$image,domain=dawn.fi
+
+! https://github.com/easylist/easylist/pull/8887
+@@||reactandshare.com/plugin/rns.js$script,third-party,domain=verkkouutiset.fi
+
+! https://github.com/easylist/easylist/pull/8898
+elo.fi#@##cookie-consent
+elo.fi#@#.cookie-consent:not(body):not(html)
