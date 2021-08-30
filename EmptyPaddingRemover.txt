@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: 🕳 Empty Padding Remover
-! Version: 11June2021v1-Alpha
+! Version: 30August2021v1-Alpha
 ! Expires: 4 days
 ! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -20,30 +20,30 @@
 ##p:-moz-only-whitespace
 !#endif
 ! lyricsmania.com,songtextemania.com
-##.spacer-20
+##.spacer-20:not(html, body)
 ! alrai.com
-##.space20
+##.space20:not(html, body)
 ! talkmore.no
 ! (Exception: Various US local newspaper sites)
-*##.spacer:not(:has-text(/\S/))
+*##.spacer:not(html, body):not(:has-text(/\S/))
 ! icelandreview.com
-##.mk-padding-divider
+##.mk-padding-divider:not(html, body)
 ! https://www.sat24.com/foreloop.aspx?type=0&continent=europa
 ###horizontalspace
 ! https://newrepublic.com/article/156829/happened-jordan-peterson
-##.section-break
+##.section-break:not(html, body)
 ! https://mobilabonnement.dk/mobiltesten
-##.wp-block-spacer
+##.wp-block-spacer:not(html, body)
 ! https://www.thetravelinspector.no/news/dobler-prisen-for-nye-pass-bestill-naa
-##.spacer-block
+##.spacer-block:not(html, body)
 ! doktor.frettabladid.is
-~gog.com##.footer-spacer
+~gog.com##.footer-spacer:not(html, body)
 ! https://thedroidguy.com/htc-u11-troubleshooting (25/10/2020)
-##.elementor-spacer
-! steigan.no, allers.no
-~schengenvisainfo.com##.vc_empty_space
+##.elementor-spacer:not(html, body)
+! allers.no
+~schengenvisainfo.com##.vc_empty_space:not(html, body)
 ! https://byggebolig.no/luft-luft-varmepumpe/erfaringer-med-mitsubishi-kirigamine-6-6/msg445542 (12/11/2020)
-##.body-spacer
+##.body-spacer:not(html, body)
 
 ! ——— Site-specific ———
 indiegogo.com#?#h3:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
