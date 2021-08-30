@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 💺 Anti-IMDB List
-! Version: 28July2021v2-Beta
+! Version: 30August2021v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically the hipsters that run around on IMDB? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -9,15 +9,15 @@
 ! ——— General entries ———
 ~imdb.com##.imdb-container
 ! tv.nu, sfanytime.com, watchsomuch.info, playpilot.com
-~imdb.com##.imdb
+~imdb.com##.imdb:not(html, body)
 ! fmovies.world (28/07/2020)
 ~imdb.com##.imdb + b
 ! Amazon
-~imdb.com##.imdb-rating
+~imdb.com##.imdb-rating:not(html, body)
 ! Rakuten TV
 ~imdb.com##.roundscore[data-sitename=IMDb]
 ! watchsomuch.info
-~imdb.com##.imdbRate
+~imdb.com##.imdbRate:not(html, body)
 ! Blockbuster Scandinavia
 ~imdb.com##div[title*="IMDB page"]
 ! letsdl.biz
@@ -29,7 +29,7 @@
 ! pantaflix.com
 ~imdb.com##div[class*=ImdbRating]
 ! kissanime.ru.com (Link working as of 13th of December 2019)
-~imdb.com##.top-imdb-list
+~imdb.com##.top-imdb-list:not(html, body)
 ! ww2.1movies.is (28/07/2020)
 ~imdb.com##a[href="/top-imdb"]
 ! movies2k.pro (28/07/2020)
@@ -38,7 +38,7 @@
 ! moviewatcher.is (28/07/2020)
 ~imdb.com##span[data-title="IMDB Rating"]
 ! watchfreemovies.ch (29/07/2020)
-~imdb.com##.mlink_imdb
+~imdb.com##.mlink_imdb:not(html, body)
 ! moviechat.org (29/07/2020)
 ~imdb.com##a[href*=".imdb."] > .rating
 ! www1.movie4u.live (29/07/2020)
@@ -46,15 +46,15 @@
 ! https://www.amazon.com/Ice-Princess-Lily-Mackenzie-Ziegler/dp/B07ZDHZWKT (10/08/2020)
 ~imdb.com##span[data-automation-id=imdb-rating-badge]
 ! 206.189.151.55 (01/10/2020)
-~imdb.com##.imdb_r
+~imdb.com##.imdb_r:not(html, body)
 ! f2movies.to (15/01/2021)
-~imdb.com##.btn-imdb
+~imdb.com##.btn-imdb:not(html, body)
 ! m4uhd.net (19/06/2021)
-~imdb.com##.jt-imdb
+~imdb.com##.jt-imdb:not(html, body)
 ! https://filmux.to/filmai/ (21/07/2021)
-~imdb.com##.shortstory__imdb
+~imdb.com##.shortstory__imdb:not(html, body)
 ! https://45.87.43.43/filmas/bajala-magiski-nuotykiai-online/ (28/07/2021)
-~imdb.com##.imdb2
+~imdb.com##.imdb2:not(html, body)
 
 ! International (All adblockers)
 bing.com#?#.b_algo:-abp-has(cite:-abp-contains(imdb.com)) .b_sritem
