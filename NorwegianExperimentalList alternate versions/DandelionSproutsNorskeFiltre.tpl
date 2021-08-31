@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 30August2021v3-Alpha
+# Version: 31August2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -652,12 +652,10 @@ msFilterList
 -d 102.112.2o7.net
 -d 52.216.146.90
 -d 92.42.104.146
--d beatsapple.top
 -d bizcashtrend.com
 -d djurs.com-*.
 -d fullbagcash.com
 -d hervelegeroutletusa.com
--d hot-rap-beats.top
 -d itunesconnect-*.no
 -d jimmychoostore.top
 -d look-like-star.myshopify.com
@@ -710,8 +708,6 @@ msFilterList
 -d legoland.com-*.
 # https://www.mm.dk/tjekdet/artikel/norwegian-billetter-til-valgfri-destination-er-snyd-og-bedrag
 -d bondiblue.co.uk
-# https://www.mm.dk/tjekdet/artikel/overrasket-bjarne-riis-kender-intet-til-investering-i-bitcoin-platform
--d ucrhealthyhearts.com
 # https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
 # https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
@@ -819,7 +815,6 @@ msFilterList
 -d allergyfl.com
 -d apvoc-ga.com
 -d assassinfitness.com
--d benshermanoslo.com
 -d billigesalg.com
 -d bostongrnhsflowers.com
 -d caperforaciones.com
