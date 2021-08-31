@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 28August2021v1-Beta
+! Version: 31August2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -949,8 +949,10 @@ $removeparam=fir
 $removeparam=ogbl
 ! https://www.google.com/webhp?client=firefox-b-m&channel=ts (06/05/2021)
 ||google.*/webhp$removeparam=channel
+!#if !adguard_app_android
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
 ||www.google.$removeparam=aqs
+!#endif
 ! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 ||www.google.$removeparam=btnG
 ||www.google.$removeparam=iflsig
