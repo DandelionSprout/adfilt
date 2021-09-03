@@ -22,12 +22,13 @@ This issue report form is intended for people who wish to contribute to help me 
 - [ ] Network-wide hosts file tools (Pi-hole, AdGuard Home, or Diversion)
 - [ ] Android faux-VPN hosts file tools (Blokada or DNS66)
 - [ ] Little Snitch
-- [ ] uMatrix
 - [ ] dnsmasq
 - [ ] Privoxy
 - [ ] Unbound
 - [ ] ISC BIND 9
 - [ ] Pfsense / PfBlockerNG
+- [ ] AdGuard for Samsung/Kiwi Android browsers
+- [ ] Brave Shield
 
 #### These can be selected regardless of your tools, as long as you can write entries for them and can see if they break anything of note.
 
@@ -38,8 +39,6 @@ This issue report form is intended for people who wish to contribute to help me 
 
 - [ ] Internet Explorer 11 - Tracking Protection List
 - [ ] Little Snitch
-- [ ] FireHOL
-- [ ] uMatrix (Rulesets)
 - [ ] Danish and/or Icelandic fake webstore scams
 - [ ] Danish geo-locked video sites (e.g. `tv3sport.dk`, among others)
 - [ ] Norwegian and Danish far-right newssite-esque blogs
@@ -47,8 +46,6 @@ This issue report form is intended for people who wish to contribute to help me 
 ## Performing lobbyism in order for:
 
 - [ ] Adblock Plus to [support wildcard asterisks in element rule domains](https://issues.adblockplus.org/ticket/6773)
-- [ ] AdGuard to support wildcard asterisks in element rule domains
-- [ ] *Dandelion Sprout's Nordic Filters* to be natively included in Adblock Plus (The process is already underway, but it's going very slowly)
 
 ## Translating section notes and text files to:
 
@@ -56,14 +53,10 @@ This issue report form is intended for people who wish to contribute to help me 
 - [ ] Icelandic
 - [ ] Faroese
 - [ ] Northern Sami
+- [ ] Southern Sami
 
 ## Things that concern the adblock community at large
 
-- [ ] Finding out who the current secretive owner of [uBlock LLC](https://chrome.google.com/webstore/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn) and [a fake namesake of AdBlock](https://chrome.google.com/webstore/detail/adblock/dgpfeomibahlpbobpnjpcobpechebadh) is
 - [ ] Lobbying for Chrome Extensions and/or Firefox Add-Ons to delist very-low-quality adblocker forks that don't have their disclaimers or distribution licences straight
 - [ ] Figuring out how many of my and other listmakers' lists that can be accessed from internet-censoring trigger-happy countries (e.g. Saudi Arabia, Iran, PR-China)
-
-## Other things:
-
-- [ ] Setting up file combination scripts like what EasyList and Frellwit are using
-- [ ] Create automatically generated MD5 hashes that are added to lists when they're edited
+- [ ] Lobbying for Pale Moon to support WebExtensions
