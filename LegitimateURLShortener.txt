@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 31August2021v1-Beta
+! Version: 03September2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -609,7 +609,7 @@ $removeparam=MID
 ! https://homemcr.org/production/the-war-of-the-worlds/?dm_i=6OM7%2CA1RR%2C21FCIX%2C17EEV%2C1
 ||homemcr.org$removeparam=dm_i
 ! https://www.greatrun.org/train-and-prepare/training-plans/?eid=AJ935930567982484926441023zzzzz64bccfd443fc61ff2c06e3cf8c7b889a2061064e5d5db55e171241354f241bed00
-$removeparam=eid
+$~xmlhttprequest,removeparam=eid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
 ||simplelogin.io^$removeparam=slref
 ||privateinternetaccess.com^$removeparam=channel
@@ -770,6 +770,16 @@ $removeparam=mbid
 ! https://cloud.ibm.com/catalog/services/watson-studio?cm_mmca1=000026UJ&cm_mmca2=10006555&cm_mmca3=M12345678&cvosrc=email.Newsletter.M12345678&cvo_campaign=000026UJ&cvo_crid=522643131497
 $removeparam=cvosrc
 $removeparam=/^cvo_/
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1239932
+$removeparam=ads_params
+! https://www.udemy.com/courses/search/?q=data+structures&kw=data+struc
+||udemy.com^$removeparam=kw
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1263630
+://surfshark.com^$removeparam=transaction_id
+||surfshark.com^$removeparam=offer_id
+||surfshark.com^$removeparam=affiliate_id
+$removeparam=aff_sub
+$removeparam=recurring_goal_id
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
@@ -777,7 +787,7 @@ $removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmo
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
 ||comixology.$removeparam=tid
