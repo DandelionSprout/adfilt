@@ -89,8 +89,8 @@
 * `!#include`: Embeds another filterlist that is hosted on the same domain (with a whole lot of restrictions). Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard.
 * `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph).
 * `:xpath`: An entry written with the very advanced Xpath syntax.
-* `##^.element`: Blocks page elements before they've even been loaded, based on their values in *View source* instead of their F12 ones. **Only** works in Firefox.
-* `##^script:has-text` (prev. `##script:contains`): Intends to prevent inline scripts from starting up, based on the content of the scripts in the F12 filetree. Also only works in Firefox.
+* `##^.element`: Blocks page elements before they've even been loaded, based on their values in *View source* instead of their F12 ones. **Only** works in Firefox and Tor Browser.
+* `##^script:has-text` (prev. `##script:contains`): Intends to prevent inline scripts from starting up, based on the content of the scripts in the F12 filetree. Also only works in Firefox and Tor Browser.
 * `:upward` (prev. `:nth-ancestor`): Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree. Equivalent to `:xpath(../..)`, but with normal numbers. Now also has the ability to look for specific element names at *any* indentation amount.
 * `:min-text-length`: Appears to select elements whose underlying source content has at least that amount of characters. Is completely disassociated from the actual on-page visible text by an order of several magnitudes.
 * `:watch-attr`: Claims to be able to reconsider a blocking if something new happens to the element (e.g. to its element types).
