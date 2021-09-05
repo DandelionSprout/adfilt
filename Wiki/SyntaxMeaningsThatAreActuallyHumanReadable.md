@@ -30,6 +30,7 @@
 * `+`: Blocks the element that is right below the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
 * `~`, as in `##.element ~ div`: Similar to `+`, but blocks *all* such `div` elements that are below it on the same floor in the filetree, and not just the one right below.
 * Spacing between elements, e.g. `##.element .element`: Similar to `>`, but can mean *any* number of floors between the elements, and not just those that are one floor apart.
+* `##element1,element2` (alt. `##element1, element2`): Combines two hiding entries into the same line of text.
 
 ##### Advanced examples:
 * The first two `##` of an element entry, are not used for elements written after e.g. `>`, `+` or `:-abp-has`. In those cases, the `##` in `##element` gets removed, `##.class` becomes `.class`, and `###id` becomes `#id`.
@@ -84,6 +85,9 @@
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
 * `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `$tracker=sitecampaignpage`. Supports RegEx, but with some differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`)
 
+## uBlock Origin, Adblock Plus and AdBlock only
+* `##element1,element2:has(-text)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where `element1` is instead blocked in its entirety.
+
 ## uBlock Origin only:
 #### Hiding
 * `!#include`: Embeds another filterlist that is hosted on the same domain (with a whole lot of restrictions). Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard.
@@ -107,7 +111,7 @@
 * `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Only applies to Firefox and Tor Browser.
 * `$denyallow` + `,domain=`: Allows choosing which third-party domain requests to allowlist, instead of which ones to block, while visiting specified domains.
 
-## Adblock Plus, Adblock and AdGuard only:
+## Adblock Plus, AdBlock and AdGuard only:
 * `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API. The uBO equivalent seems to be `##+js(nowebrtc)`, but conversion is not done automatically.
 
 ## Adblock Plus and AdBlock only:
