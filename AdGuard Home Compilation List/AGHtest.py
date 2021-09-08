@@ -600,6 +600,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^@@$", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\r\n'
 
