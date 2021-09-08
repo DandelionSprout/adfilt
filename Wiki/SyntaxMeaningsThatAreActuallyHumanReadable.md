@@ -86,7 +86,7 @@
 * `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `$tracker=sitecampaignpage`. Supports RegEx, but with some differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`)
 
 ## uBlock Origin, Adblock Plus and AdBlock only
-* `##element1,element2:has(-text)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where `element1` is instead blocked in its entirety.
+* `##element1,element2:-abp-(has/contains)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where `element1` is instead blocked in its entirety.
 
 ## uBlock Origin only:
 #### Hiding
@@ -105,7 +105,7 @@
 * `$1p` / `$first-party`: Same as `$~third-party`.
 * `$xhr`: Same as `$xmlhttprequest`.
 * `$doc`: Same as `$document`.
-* `$all`: Officially combines all other non-party `$` values. In practice it combines the use of no `$` values at all + `$popup` + `$document`.
+* `$all`: De facto combines all other `$` values. Officially combines the use of no `$` values at all + `$popup` + `$document` + `$inline-script` + `$inline-font`.
 * `$redirect-rule`: Similar to `$redirect`, but is only applied if it's already blocked by *another* entry or dynamic rule(set).
 * `@@||` + `$ghide`: Same as `@@||` + `$generichide`.
 * `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Only applies to Firefox and Tor Browser.
