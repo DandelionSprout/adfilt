@@ -4178,7 +4178,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 030920211
+! Version: 70920213
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4186,7 +4186,6 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues
-
 
 ! -----GENERAL FILTERS-----
 
@@ -4390,8 +4389,10 @@ etusuora.com#?#.pb30:-abp-has(.adsbygoogle)
 f1-forum.fi##a[href*="netb11.com"]
 f1-forum.fi##img[src*=banneri]
 facebook.com##a[aria-label="Mainostajan linkki"]
-facebook.com#?#div[data-pagelet=RightRail] > div:-abp-has( div h3 > span:-abp-contains(Sponsoroitu))
+facebook.com##a[aria-label=Mainostaja]
+facebook.com#?#div[data-pagelet=RightRail] > div:-abp-has(a[aria-label=Mainostaja])
 facebook.com#?#div[data-pagelet^=FeedUnit_]:-abp-has(div[role=article] div[style^=border-radius] span[dir=auto] a[aria-label=Sponsoroitu])
+facebook.com#?#div[data-pagelet^=FeedUnit_]:-abp-has(div[role=article] div[style^=border-radius] span[id]:-abp-contains(Sponsoroitu))
 feissarimokat.com###billboard
 feissarimokat.com###logopal
 feissarimokat.com##.flexibox
@@ -4573,6 +4574,7 @@ lapinkansa.fi#?#div[class="m-managedListing__column -ctx-index -level-1 -cols-2"
 lbaanijakuva.fi##.adremark
 leffatykki.com##div[class="ad230x90"]
 leijonat.com,suomikiekko.com,suomiurheilu.com##[href$="/pitkavetovihjeet/"]
+lily.fi##[class*=ad__component]
 ls24.fi##.article-block__list-article:-abp-has(a[href^="https://ls24.fi/kaupallinen-yhteistyo/"])
 ls24.fi##.asuntorauma-promo
 ls24.fi##.palvelupankki-banner
@@ -4629,6 +4631,7 @@ mobiili.fi##.headermob_ad
 mobiili.fi##.single-content-all > div[style^="float:left"][style*="width:100%"][style*="text-align:center"][style*="margin-bottom:17px"]
 mobiili.fi##.singlehinta.header_ad
 mobiili.fi##.textwidget > div[style="width:300px; height:600px;"]
+mobiili.fi##.tops-bar
 mobiili.fi##body.category > div .header_ad
 mobiili.fi##div[class^=article_ad]
 mobiili.fi##img[src^="https://impr.adservicemedia.dk/cgi-bin/Services/ImpressionService/Image.pl"]
@@ -4836,6 +4839,7 @@ uusiteknologia.fi###text-97
 uusiteknologia.fi###text-98
 uutissuora.fi##div[class=td-all-devices]
 valioliiga.com##[href$="/vedonlyonti/"]
+vanha.kaleva.fi#?#.event-list-item:-abp-has(.list-item-advertisement)
 vantaansanomat.fi##div.display-ad
 vapaasana.swedishforum.net###p0
 vapaasana.swedishforum.net##div[id=main-content] > div:first-of-type[style="overflow:visible"]
@@ -5009,8 +5013,8 @@ iltalehti.fi#?#div[class="card "]:-abp-has([class=alennuskoodi-column-embed])
 ! Sanoma Oyj video ads
 ||com-wakedynamite-production-publish.s3.amazonaws.com/publish/$media
 ||dwk14raokkwxv.cloudfront.net/sanomafi/media/*.mp4
-||freewheel-jitt.sanoma.fi/*.mp4
-||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media
+||freewheel-jitt.sanoma.fi^$media
+||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^$media
 
 ! General Media unbreakers
 @@||fwmrm.net/ad/g/*_Supla_Audio_HTML5_Live$script
@@ -5040,10 +5044,11 @@ mtvuutiset.fi,mtv.fi,suomiareena.fi,studio55.fi,msn.com##.mtv-player-ad-containe
 murha.info#@#.adsbygoogle
 murha.info#@#.adsbox
 
-||damoh.katsomo.fi/*$media,rewrite=abp-resource:blank-mp3,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
-||freewheel-jitt.sanoma.fi^/*.mp4$rewrite=abp-resource:blank-mp3,domain=ruutu.fi
-||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi
-||sanoma-prod.integration-x.com^/*.mp4$rewrite=abp-resource:blank-mp3,domain=ruutu.fi
+! Redirect resources
+||damoh.katsomo.fi^$media,rewrite=abp-resource:blank-mp3,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
+||freewheel-jitt.sanoma.fi^$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi
+||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi
+||sanoma-prod.integration-x.com^$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi
 
 ! appears when blocking ads:
 ||mobiili.fi/wp-content/themes/mobiilitheme/images/small-loading.gif
@@ -5068,6 +5073,7 @@ gamereactor.fi##[class^=ad_mobileLeader]
 gamereactor.fi##[class^=ad_smartphbig]
 gamereactor.fi##div[style$="color: lightgrey; font-size: 11px; text-transform: uppercase;"]
 kotiliesi.fi##.placeholder
+vanha.kaleva.fi##.event-detail-ad-mobile
 
 ! -----UNSORTED END-----
 ! -----UNBREAK-----
@@ -5104,7 +5110,7 @@ kaksplus.fi#@#.sponsored-content
 @@||cdn.almamedia.fi/almacmp/*.js$script,domain=kauppalehti.fi|tekniikkatalous.fi
 
 ! https://github.com/easylist/easylist/pull/8295
-@@||frosmo.com^$xmlhttprequest,domain=meillakotona.fi|terve.fi
+@@||frosmo.com/recoApi/$xmlhttprequest,domain=lily.fi|meillakotona.fi|terve.fi
 
 ! https://github.com/easylist/easylist/pull/8317
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/306
