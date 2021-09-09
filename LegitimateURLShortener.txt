@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 09September2021v1-Beta
+! Version: 09September2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -293,7 +293,7 @@ $removeparam=mc_cid
 $removeparam=mc_eid
 $removeparam=/^intgrtn_/
 $removeparam=afftag
-$removeparam=/^affid/i
+$removeparam=/^affid/i,domain=~redir.tradedoubler.com
 ! https://www.thedailybeast.com/russian-doctor-alexander-murakhovsky-who-lied-about-navalny-poisoning-disappeared-in-the-woods?source=articles&via=rss
 ||thedailybeast.com^$removeparam=via
 ! https://www.imdb.com/title/tt10048342/mediaviewer/rm2490882049/?context=default
@@ -323,7 +323,7 @@ $removeparam=CMP
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
 ||microsoft.com^$removeparam=epi
 $removeparam=OCID
-$removeparam=tduid
+$removeparam=tduid,domain=~redir.tradedoubler.com
 $removeparam=irclickid
 $removeparam=irclicid
 $removeparam=intcmp
