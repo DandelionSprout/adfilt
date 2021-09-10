@@ -4,9 +4,9 @@ After 1½ years of trial setups and tinkering until March 2021, I now offer my D
 
 The main connection addresses are:
 * DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
-* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853`
-* DNSCrypt: `sdns://AQEAAAAAAAAAEzg0LjIwMi40NS4xMDU6NTY0MDQg7HSqZVlfhpSzgPpRAaWddUEt_NYJw8qqU18-bEsE2nksMi5kbnNjcnlwdC1jZXJ0LmRhbmRlbGlvbnNwcm91dC5hc3VzY29tbS5jb20`
+* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
 * DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582`
+* DNSCrypt IPv4: `sdns://AQEAAAAAAAAAEzg0LjIwMi40NS4xMDU6NTY0MDQg7HSqZVlfhpSzgPpRAaWddUEt_NYJw8qqU18-bEsE2nksMi5kbnNjcnlwdC1jZXJ0LmRhbmRlbGlvbnNwcm91dC5hc3VzY29tbS5jb20` (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:56404 - ec74aa65595f8694b380fa5101a59d75412dfcd609c3caaa535f3e6c4b04da79 - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
@@ -18,7 +18,7 @@ The server attempts to block ads, malware, fake webshops, push notifications, an
 
 On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 6th of August 2021:
+Current list set as of 11th of September 2021:
 
 #### Lists against ads, against app notifications, and against a few trackers
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
@@ -115,3 +115,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 23rd of July 21:30~22:50 UTC: I decided to try to set up DNSCrypt, which took several attempts. And when I finally got it to work, substantial technical problems means I do not recommend using it until a future AGH beta build fix it.
 * 23rd of August 20:45~21:40 UTC: Had to look into https://github.com/AdguardTeam/AdGuardHome/issues/3465#issuecomment-904153260
 * 7th of September 01:01-01:30 UTC: One of my two Ethernet switches began bugging out for unknown reasons.
+* 9th of September 20:15~23:30 UTC, and intermittently on 10th of September: Replaced my old ASUS RT-AC68U, with an ASUS RT-AX89X.
