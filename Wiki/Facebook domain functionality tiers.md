@@ -10,7 +10,7 @@
 
 ## Tier 1 (Computers and laptops):
 
-![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/facebooktier1.png)
+![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/facebooktier1.webp)
 * https://www.facebook.com/StrawberryShortcake/
 * All currently known language-code versions of Facebook (e.g. https://en-gb.facebook.com/StrawberryShortcake/)
 * https://www.beta.facebook.com/StrawberryShortcake/ (Note that removing the `www.` part will cause it to redirect to facebook.com)
@@ -34,8 +34,7 @@
 
 ## Tier 2 (Phones and non-keyboard tablets):
 
-(I couldn't find any ways to remove the extreme banner image crust on the Tier 2 domains. My apologies in advance for your sore eyes.)
-![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/facebooktier2.png)
+![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/facebooktier2.webp)
 * https://touch.facebook.com/StrawberryShortcake/
 * https://mtouch.facebook.com/StrawberryShortcake/
 * https://x.facebook.com/StrawberryShortcake/
