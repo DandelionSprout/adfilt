@@ -39,3 +39,7 @@
 ### ArtStation (14/04/2021)
 * Search results: `.gallery-grid-item`
 * Artist art archive: `.project`
+
+### Pinterest (14/09/2021)
+* Individual pin pages, e.g. `https://www.pinterest.com/pin/457889487121162427/`: `div[data-grid-item]`
+* Term search result pages, e.g. `https://www.pinterest.com/search/pins/?q=disney%20fairies%20rani`: `div[class*=_brioPin]`
