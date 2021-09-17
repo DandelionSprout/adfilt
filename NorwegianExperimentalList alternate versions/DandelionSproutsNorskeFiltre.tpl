@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 15September2021v2-Alpha
+# Version: 17September2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -157,6 +157,10 @@ msFilterList
 # https://norges.online/produkt/nestle-viking-melk-410-g
 -d fr135.net
 -d static-dscn.net
+# skagensavis.dk
+- wp-content uploads i123_ads *.gif
+- wp-content uploads i123_ads *_460x196.jpg
+- wp-content uploads i123_ads 930x180_
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -353,6 +357,9 @@ msFilterList
 -d s3-eu-west-1.amazonaws.com *-annonse-*.gif
 -d s3-eu-west-1.amazonaws.com *.-jpg.jpg
 -d s3-eu-west-1.amazonaws.com nordbohus.gif
+-d skagensavis.dk skagennet
+-d skagensavis.dk annonceblok_baggrund.jpg
+-d mc-avisa.no Banner-*.jpg
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
@@ -542,6 +549,7 @@ msFilterList
 +d isdownorblocked.com
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 -d prod-adops-proxy.dnitv.net
+# Caused primarily by the site's tech incompetence, and merely secondarily by «uBlock Filters»
 # ★★★ Caused by «EasyPrivacy» ★★★
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
@@ -911,7 +919,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 25July2021v1-Extension
+# Last updated: 17September2021v1-Extension
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js

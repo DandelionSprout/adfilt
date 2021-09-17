@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 15September2021v2
+! Version: 17September2021v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -330,6 +330,12 @@ samferdselinfra.no###mobil-toppboard
 samferdselinfra.no###top-banner-wrap
 politiken.dk##.js-sticky-container.col--overflow
 roysni.fo###footer-adds
+skagensavis.dk##.auto_expandable:style(margin-top: 21px !important)
+skagensavis.dk##.ad
+skagensavis.dk#?#.gridster_grid:has(.adblock[style^="background:#32"])
+skagensavis.dk##.scroller
+skagensavis.dk##.auto_expandable[style$=";margin-top:172px"]
+mc-avisa.no##.avisa-widget
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -546,6 +552,10 @@ _visittkortannonse_$image
 ! https://norges.online/produkt/nestle-viking-melk-410-g
 ||fr135.net^$all
 ||static-dscn.net^$all
+! skagensavis.dk
+/wp-content/uploads/i123_ads/*.gif|
+/wp-content/uploads/i123_ads/*_460x196.jpg|
+/wp-content/uploads/i123_ads/930x180_
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -764,6 +774,9 @@ _300x500pix$domain=rykindribe.dk,image
 ||s3-eu-west-1.amazonaws.com/froya/*-annonse-*.gif|
 ||s3-eu-west-1.amazonaws.com/froya/*.-jpg.jpg|
 ||s3-eu-west-1.amazonaws.com/froya/bilder/nordbohus.gif|
+||skagensavis.dk/wp-content/uploads/i123_ads/skagennet
+||skagensavis.dk/annonceblok_baggrund.jpg^
+||mc-avisa.no/wp-content/uploads/*/Banner-*.jpg|
 !#if false
 @@||vgtv.no$ghide
 !#endif
@@ -1456,6 +1469,8 @@ vg.no##div[class$=" ad-container"]
 apningstider.org##.header_middle
 apningstider.org##div[id^=google_ad_]
 apningstider.org##.block_w3 + .block_w3
+ligeher.nu##.banner.ad
+123mc.dk##.dfp_front_special_ad
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1493,7 +1508,7 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder24.dk,tilbudsugen.dk,alletilbudsaviser.co.no,sedirekte.com,tilbudsuken.no,subjekt.no##.banner
 hsfo.dk,jv.dk,stiften.dk,viborg-folkeblad.dk,dagbladet-holstebro-struer.dk,ugeavisen.dk,fyens.dk,lydogbilde.no,lydogbillede.dk##.adblock
 komputer.no,natgeo.no,historienet.no,koplr.no,ing.dk,in.fo,kvennabladid.is##.top-banner
-bygg.no,mmm.dk,kino.no,connery.dk,golferen.no,spilcomputer.dk##.ad
+bygg.no,mmm.dk,kino.no,connery.dk,golferen.no,spilcomputer.dk,kystogfjord.no##.ad
 prisjakt.*,prisjagt.dk,dv.is,drm24.no##.adbox
 iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
 av-avis.no,bygdanytt.no,strilen.no,vestnytt.no##.carousel-ad
@@ -1731,6 +1746,8 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 !#if env_chromium
 ||prod-adops-proxy.dnitv.net^$empty,domain=discoveryplus.*
 !#endif
+! Caused primarily by the site's tech incompetence, and merely secondarily by «uBlock Filters»
+www.dr.dk#@#[href*=".smartadserver.com"]
 ! ★★★ Caused by «EasyPrivacy» ★★★
 ! Attempting to fix a problem with voting online on Idol Norway
 @@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
@@ -2330,6 +2347,7 @@ berlingske.dk##.paywall-wrapper:style(top: unset !important)
 intrafish.no##.preview-gradient
 lydogbilde.no,lydogbillede.dk##.lbplussinfo
 ||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
+information.dk###paywall:style(margin-top: 0px !important)
 ! dagbladet.no,elbil24.no
 ##.CTA-body-faded
 ! digi.no, tu.no, medier24.no, porten.no
@@ -2344,7 +2362,7 @@ vg.no##div[data-test-tag=timestamp] + p + div:before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 25July2021v1-Extension
+! Last updated: 17September2021v1-Extension
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
 techstart.dk##+js(set, adblock, false)

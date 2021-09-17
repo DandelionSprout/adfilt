@@ -1,7 +1,7 @@
 [Adblock Plus 3.6]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 150920212
+! Version: 170920212
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -324,6 +324,11 @@ samferdselinfra.no###mobil-toppboard
 samferdselinfra.no###top-banner-wrap
 politiken.dk##.js-sticky-container.col--overflow
 roysni.fo###footer-adds
+skagensavis.dk##.ad
+skagensavis.dk#?#.gridster_grid:-abp-has(.adblock[style^="background:#32"])
+skagensavis.dk##.scroller
+skagensavis.dk##.auto_expandable[style$=";margin-top:172px"]
+mc-avisa.no##.avisa-widget
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -540,6 +545,10 @@ _visittkortannonse_$image
 ||fr135.net^$popup
 ||static-dscn.net^
 ||static-dscn.net^$popup
+! skagensavis.dk
+/wp-content/uploads/i123_ads/*.gif|
+/wp-content/uploads/i123_ads/*_460x196.jpg|
+/wp-content/uploads/i123_ads/930x180_
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -758,6 +767,9 @@ _300x500pix$domain=rykindribe.dk,image
 ||s3-eu-west-1.amazonaws.com/froya/*-annonse-*.gif|
 ||s3-eu-west-1.amazonaws.com/froya/*.-jpg.jpg|
 ||s3-eu-west-1.amazonaws.com/froya/bilder/nordbohus.gif|
+||skagensavis.dk/wp-content/uploads/i123_ads/skagennet
+||skagensavis.dk/annonceblok_baggrund.jpg^
+||mc-avisa.no/wp-content/uploads/*/Banner-*.jpg|
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||bluesnews.no/Files/Images/video/Blues-promo-2021.mp4^$~third-party
@@ -1405,6 +1417,8 @@ vg.no##div[class$=" ad-container"]
 apningstider.org##.header_middle
 apningstider.org##div[id^=google_ad_]
 apningstider.org##.block_w3 + .block_w3
+ligeher.nu##.banner.ad
+123mc.dk##.dfp_front_special_ad
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1435,7 +1449,7 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder24.dk,tilbudsugen.dk,alletilbudsaviser.co.no,sedirekte.com,tilbudsuken.no,subjekt.no##.banner
 hsfo.dk,jv.dk,stiften.dk,viborg-folkeblad.dk,dagbladet-holstebro-struer.dk,ugeavisen.dk,fyens.dk,lydogbilde.no,lydogbillede.dk##.adblock
 komputer.no,natgeo.no,historienet.no,koplr.no,ing.dk,in.fo,kvennabladid.is##.top-banner
-bygg.no,mmm.dk,kino.no,connery.dk,golferen.no,spilcomputer.dk##.ad
+bygg.no,mmm.dk,kino.no,connery.dk,golferen.no,spilcomputer.dk,kystogfjord.no##.ad
 prisjakt.no,prisjagt.dk,dv.is,drm24.no##.adbox
 iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
 av-avis.no,bygdanytt.no,strilen.no,vestnytt.no##.carousel-ad
@@ -1666,6 +1680,8 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 @@.isdownorblocked.com^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 ||prod-adops-proxy.dnitv.net^$domain=discoveryplus.no|discoveryplus.dk
+! Caused primarily by the site's tech incompetence, and merely secondarily by «uBlock Filters»
+www.dr.dk#@#[href*=".smartadserver.com"]
 ! ★★★ Caused by «EasyPrivacy» ★★★
 ! Attempting to fix a problem with voting online on Idol Norway
 @@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
@@ -2238,7 +2254,7 @@ vg.no##div[data-test-tag=timestamp] + p + div::before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 25July2021v1-Extension
+! Last updated: 17September2021v1-Extension
 tv2.no#$#abort-current-inline-script adblockDetector
 ||elderlyscissors.com^
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
