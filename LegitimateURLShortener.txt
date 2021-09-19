@@ -450,7 +450,7 @@ $removeparam=wdorigin
 ||microsoft.com^$removeparam=destrt
 $removeparam=twitchReferral
 ! ||www.google.*/search?$removeparam=client (Breaks search-term suggestions)
-$removeparam=/^shared/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi
+$removeparam=/^shared/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi
 $removeparam=origin,denyallow=platform.twitter.com,domain=yle.fi|flaticon.com|drop.com|symbolab.com|archive.org
 $removeparam=elqTrackId
 ||discshop.fi^$removeparam=/^ad/
@@ -1072,6 +1072,13 @@ $removeparam=p_tok
 ||bing.com^$removeparam=pglt
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1342947
 ||mail.qq.com^$removeparam=r
+! https://tyopaikat.oikotie.fi/avoimet-tyopaikat/commercial-range-director/1498629?sRef=HSAvainpaikat&keyJobId=204734
+||oikotie.fi^$removeparam=sRef
+! https://sn.dk/Verden/Rumturister-er-tilbage-paa-Jorden-efter-historisk-mission/artikel/1472742?rss
+||sn.dk^$removeparam=rss
+! https://www.masku.com/tuotteet/382829-race-pelituoli/?refSrc=242869
+! https://www.masku.com/tuotteet/393766-smart-tyopoyta/?nosto=productpage-nosto-2&conf%5B1153%5D=10427&conf%5B2651%5D=10771
+||masku.com^$removeparam=/^(refSrc|nosto)/
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
@@ -1079,13 +1086,13 @@ $removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmo
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com|abebooks.com|eset.com|kickstarter.com
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com|abebooks.com|eset.com|kickstarter.com|oikotie.fi|sahkovertailu.fi
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
 $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com
+$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com
 ! No particular example
 $removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
