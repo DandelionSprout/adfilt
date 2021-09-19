@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 17September2021v2-Alpha
+# Version: 18September2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -902,6 +902,18 @@ msFilterList
 -d brigitteheilmann.dk
 -d storustovu.dk
 -d campingnews.dk
+# 🇬🇧://Copied/over/from/URLHaus/and/verified
+-d biopaten.no
+-d hagebakken.no
+-d forum.mdb.nu
+-d mdb.nu
+# 🇬🇧: Copied over from BlockListProject malware phishing and verified
+-d a1match.dk
+-d adminflex.dk
+-d asound.no
+-d aluminium.olbi.no
+-d ccbuus.dk
+-d artmusic.dk
 !
 !
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
