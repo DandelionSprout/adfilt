@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 12September2021v1
+! Version: 22September2021v1
 ! Expires: 6 days
 ! Description: This list removes even more distracting or uncomfortable things on YouTube.
 ! If you want to block even more things on top of these two lists, feel free to check out the anti-Autoplay (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt) and anti-Elsagate (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt) lists that I've made.
@@ -98,8 +98,17 @@ www.youtube.com#?##toast:-abp-has(#text-container:-abp-contains(/experiencing in
 www.youtube.com#?#ytd-compact-radio-renderer:-abp-has(ytd-thumbnail-overlay-bottom-panel-renderer)
 www.youtube.com#?#ytd-rich-item-renderer:-abp-has(ytd-thumbnail-overlay-bottom-panel-renderer)
 
-! This blocks the above also in the window after you finish a video. This does leave black squares where they were.
+! Same as above, but in the window after you finish a video. This does leave black squares where they were.
 www.youtube.com#?#a.ytp-suggestion-set.ytp-videowall-still:has(.ytp-videowall-still-listlabel-mix:not(:matches-css(display: none)))
+
+! Playlist recommendations under videos
+www.youtube.com##ytd-compact-playlist-renderer:-abp-has(ytd-thumbnail-overlay-side-panel-renderer)
+
+! Homepage info banners (despite my list discouraging users from using the homepage in the first place)
+www.youtube.com##.ytd-rich-section-renderer
+
+! The overlays that are visible when you hover over a video for «Watch later» and «Add to queue»
+www.youtube.com###hover-overlays
 
 ! ————————————————————————————————————————————————————————————————
 
