@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 220920211
+! Version: 220920212
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -773,6 +773,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||skagensavis.dk/annonceblok_baggrund.jpg^
 ||mc-avisa.no/wp-content/uploads/*/Banner-*.jpg|
 ||tv-kalundborg.dk/system_files/banner^
+||aa-cdn.mytaste.org/js/ad.js$script
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||bluesnews.no/Files/Images/video/Blues-promo-2021.mp4^$~third-party
@@ -1414,6 +1415,13 @@ apningstider.org##div[id^=google_ad_]
 apningstider.org##.block_w3 + .block_w3
 ligeher.nu##.banner.ad
 123mc.dk##.dfp_front_special_ad
+mytastednk.com,mytastenor.com##.recipe-modal[data-state=default] .modal-container.open
+mytastednk.com,mytastenor.com##.site-wrapper[data-state=panorama]
+mytastednk.com,mytastenor.com##[id^=Modal_plugin]
+mytastednk.com,mytastenor.com##body.modal-active.modal-open::before
+mytastednk.com,mytastenor.com##div[id*=panorama_]
+mytastednk.com,mytastenor.com##[class^=affiliate-container]
+mytastednk.com,mytastenor.com##.site-header__panorama
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -4256,7 +4264,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 210920214
+! Version: 220920211
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -5215,7 +5223,3 @@ vr.fi#@#div[data-testid="modal"]
 
 ! https://github.com/easylist/easylist/pull/9179
 iltalehti.fi#@#.ad-placement
-
-! https://github.com/easylist/easylist/pull/9180
-luhta.com#@##cookie-consent
-luhta.com#@#.cookie-consent:not(body):not(html)
