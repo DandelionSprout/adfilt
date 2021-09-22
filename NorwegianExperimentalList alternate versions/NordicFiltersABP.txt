@@ -1,7 +1,7 @@
 [Adblock Plus 3.6]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 180920211
+! Version: 220920211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -329,6 +329,9 @@ skagensavis.dk#?#.gridster_grid:-abp-has(.adblock[style^="background:#32"])
 skagensavis.dk##.scroller
 skagensavis.dk##.auto_expandable[style$=";margin-top:172px"]
 mc-avisa.no##.avisa-widget
+tv-kalundborg.dk##.flickity-viewport
+tv-kalundborg.dk##div.col-s-100.col-50:nth-of-type(2)
+sol.no#?#.xrow:-abp-has(> div[class*=" "] > span[class])
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -426,6 +429,8 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ##a[href*="&do=advertisement&"]
 ! tipsbladet.dk (15/06/2021)
 ~onlinecasinoer.com##a[href*="onlinecasinoer.com"]
+! sol.no (22/09/2021)
+##img[src^="https://storage.googleapis.com/ad-campaigns/"]
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -549,6 +554,8 @@ _visittkortannonse_$image
 /wp-content/uploads/i123_ads/*.gif|
 /wp-content/uploads/i123_ads/*_460x196.jpg|
 /wp-content/uploads/i123_ads/930x180_
+! tv-kalundborg.dk
+/system_files/banner/ckfinder^
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -770,6 +777,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||skagensavis.dk/wp-content/uploads/i123_ads/skagennet
 ||skagensavis.dk/annonceblok_baggrund.jpg^
 ||mc-avisa.no/wp-content/uploads/*/Banner-*.jpg|
+||tv-kalundborg.dk/system_files/banner^
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 ||bluesnews.no/Files/Images/video/Blues-promo-2021.mp4^$~third-party

@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 18September2021v1-Alpha
+# Version: 22September2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -63,6 +63,7 @@ msFilterList
 # bilgalleri.dk (25 04 2021)
 # forum.ipmsnorge.org (24 05 2021)
 # tipsbladet.dk (15 06 2021)
+# sol.no (22 09 2021)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -161,6 +162,8 @@ msFilterList
 - wp-content uploads i123_ads *.gif
 - wp-content uploads i123_ads *_460x196.jpg
 - wp-content uploads i123_ads 930x180_
+# tv-kalundborg.dk
+- system_files banner ckfinder
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -360,6 +363,7 @@ msFilterList
 -d skagensavis.dk skagennet
 -d skagensavis.dk annonceblok_baggrund.jpg
 -d mc-avisa.no Banner-*.jpg
+-d tv-kalundborg.dk banner
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
