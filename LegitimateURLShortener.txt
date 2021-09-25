@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 24September2021v1-Beta
+! Version: 25September2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1084,6 +1084,12 @@ $removeparam=_nc_vts_prog
 ||cdninstagram.com^$removeparam=efg
 ! https://play.anghami.com/album/1022338517?adj_adgroup=album&adj_t=dgl0aa8_64v1dnl&adj_campaign=android&adj_creative=109973055
 ||anghami.com^$removeparam=/^adj_/
+! https://www.barrons.com/articles/etf-giants-push-back-against-senate-democrat-who-wants-to-take-away-tax-break-51631753035?refsec=hp_INTERESTS_taxes
+$removeparam=refsec,domain=barrons.com
+! https://www.marketwatch.com/personal-finance/real-estate/rent/united-states/new-york/new-york?reloadLocationOnSearch=false&searchType=suggested&reflink=mc_wsj_search
+$removeparam=reflink,domain=marketwatch.com
+! https://edition.cnn.com/?hpt=header_edition-picker
+$removeparam=hpt,domain=cnn.com
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
