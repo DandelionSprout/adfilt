@@ -2069,8 +2069,14 @@ def prepare_xul(lines) -> str:
         )
 
         line = re.sub(
-           r"\$mp4", 
-           r"$redirect=noopmp4", 
+           r"(\$|,)mp4", 
+           r"\1redirect=noopmp4", 
+           line
+        )
+
+        line = re.sub(
+           r".*(\$|,)app=.*", 
+           r"", 
            line
         )
 
