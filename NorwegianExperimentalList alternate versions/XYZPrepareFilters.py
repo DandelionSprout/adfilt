@@ -16,7 +16,7 @@ OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
 OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
 OUTPUT_PRIVACY = 'NordicFiltersPrivacy.txt'
 OUTPUT_UMATRIX = 'NordicFilters-uMatrixSupplement.txt'
-OUTPUT_XUL = 'NordicFiltersXULuBO.txt'
+OUTPUT_XUL = 'NordicFilters-uBOLegacy.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -1992,7 +1992,7 @@ def prepare_xul(lines) -> str:
 
         line = re.sub(
            r"(itle:.*Dandelion Sprout.*)", 
-           r"\1 (for XUL uBlock Origin)", 
+           r"\1 (for «uBlock Origin Legacy»)", 
            line
         )
 
