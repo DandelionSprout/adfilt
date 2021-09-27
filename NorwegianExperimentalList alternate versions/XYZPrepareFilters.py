@@ -16,6 +16,7 @@ OUTPUT_TPL = 'DandelionSproutsNorskeFiltre.tpl'
 OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
 OUTPUT_PRIVACY = 'NordicFiltersPrivacy.txt'
 OUTPUT_UMATRIX = 'NordicFilters-uMatrixSupplement.txt'
+OUTPUT_XUL = 'NordicFiltersXULuBO.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -1981,6 +1982,66 @@ def prepare_umatrix(lines) -> str:
 
     return text
 
+# ——— XUL uBO version ———
+
+# function that prepares the filter list for AdGuard
+def prepare_xul(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"(itle:.*Dandelion Sprout.*)", 
+           r"\1 (for XUL uBlock Origin)", 
+           line
+        )
+
+        line = re.sub(
+           r":not\(html, body\)", 
+           r":not(html):not(body)", 
+           line
+        )
+
+        line = re.sub(
+           r".*\$removeparam.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"domain=([a-z0-9-]{1,})\.\*", 
+           r"domain=\1.no|\1.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"(^! Version: .*)", 
+           r"\1-Beta", 
+           line
+        )
+
+        line = re.sub(
+           r"(^! If you wish to remove cookie banners .*)", 
+           r"\1\n! #IStandWithJustOff", 
+           line
+        )
+
+        line = re.sub(
+           r"!#include NorwegianExperimentalList%20alternate%20versions/", 
+           r"!#include ", 
+           line
+        )
+
+        line = re.sub(
+           r"^!\+ NOT_OPTIMIZED$", 
+           r"", 
+           line
+        )
+
+        text += line + '\r\n'
+
+    return text
+
 
 if __name__ == "__main__":
     print('Starting the script')
@@ -1994,6 +2055,7 @@ if __name__ == "__main__":
     privoxy_filter = prepare_privoxy(lines)
     privacy_filter = prepare_privacy(lines)
     umatrix_filter = prepare_umatrix(lines)
+    xul_filter = prepare_xul(lines)
 
     with open(OUTPUT, "w") as text_file:
         text_file.write(text)
@@ -2015,6 +2077,9 @@ if __name__ == "__main__":
 
     with open(OUTPUT_UMATRIX, "w") as text_file:
         text_file.write(umatrix_filter)
+
+    with open(OUTPUT_XUL, "w") as text_file:
+        text_file.write(xul_filter)
 
     print('The adblocker-based list versions have been generated.')
 
