@@ -2080,6 +2080,18 @@ def prepare_xul(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*##\^.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!#include AntiAdblockEntries\.txt$", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
