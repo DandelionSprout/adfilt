@@ -243,7 +243,7 @@ skinnelangs.no###sponsor_frame_front_white
 skivefolkeblad.dk##.view-cf-skf-avisannoncer
 smis.no#?#.widget:-abp-contains(Annonse)
 sol.dk###linkbox
-sona.fo###__next > div:not([class], [id])
+sona.fo###__next > div:not([class]):not([id])
 sorlandsavisen.no#?#div:-abp-has(> span:-abp-contains(Annonse))
 spaniaidag.no##.row-si
 spanienidag.es###topbanner:style(height: 1px !important)
@@ -357,7 +357,7 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! 🇬🇧: Generic #-entries that have sources
 ! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
 ! Exceptions: ballade.no
-##.gofollow:not([href*=nyhetsbrev], [href*=radio], html, body)
+##.gofollow:not([href*=nyhetsbrev]):not([href*=radio]):not(html):not(body)
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
 ! arendalstidende.no
@@ -636,9 +636,9 @@ contentMarketing$xhr,domain=sol.no
 @@||storfjordnytt.no/wp-content/uploads/2*/2*.jpg^
 @@||storfjordnytt.no/wp-content/uploads/2*/3*.jpg^
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.no|eurosport.dk
-||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.*|vg.no
-||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.*
-||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.*|vg.no
+||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
+||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
+||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
 ||track.adform.net^$domain=118.dk
 ||track.adform.net/Banners/
 ||travservice.dk/wp-content^$image
@@ -663,7 +663,7 @@ contentMarketing$xhr,domain=sol.no
 /Bannere/*$image,domain=tek.no|gamer.no
 /bazaar/*$script,domain=nettavisen.no
 /bilder/erotikk1.jpg$domain=eavisa.com
-/entag.js$script,domain=eniro.no|eniro.dk|proff.*
+/entag.js$script,domain=eniro.no|eniro.dk|proff.no|proff.dk
 /js/smartbanner/*$domain=tvkampen.com|tvsporten.dk
 /liveodds-button_nordicbet$domain=tvkampen.com|tvsporten.dk
 /nordicbet_logo$domain=tvkampen.com|tvsporten.dk
@@ -1284,7 +1284,7 @@ politiken.dk##.ad--monster
 politiken.dk##.u-clearfix.row--justify-center.row > .js-sticky-container
 popidol.no,helsesjefen.no##.td-footer-ad
 presse-fotos.dk##div[data-is-absolute-layout][style^="top:;"]
-presse-fotos.dk##div[id^=comp-]:not([class], [style])
+presse-fotos.dk##div[id^=comp-]:not([class]):not([style])
 presse-fotos.dk##wix-iframe
 presse-fotos.dk#?#div[data-testid=richTextElement]:-abp-has(span[style="color:#A0A09F;"])
 pressfire.no##.ad-netboard-front
@@ -1456,7 +1456,7 @@ vl.no##.vlDesktopAd
 vredens-gnag.no##.ab-appnexus-ads-wrapper
 tvkampen.com,tvsporten.dk##.panorama-wrapper
 win-xp.no#?#tr > td > div:-abp-has(a[href*="clk.tradedoubler."])
-www.tv2.no##body:not(.broom, .lab):style(padding-top: 70px !important)
+www.tv2.no##body:not(.broom):not(.lab):style(padding-top: 70px !important)
 yrkesbil.no###side > div:nth-of-type(1)
 yrkesbil.no##.forside_adholder:upward(1)
 yrkesbil.no##td:empty
@@ -1907,8 +1907,8 @@ gamereactor.*##+js(ra, autoplay)
 ||gamereactor.*/lay/js/banners_config.$script
 ||gamereactor.*/lay/js/manageBanners.$script
 ||gamereactor.*/media/eventad/$image
-||media.gamereactor.dk/*Promo$mp4,domain=gamereactor.no|gamereactor.dk
-||media.gamereactor.dk/prerolls$mp4,domain=gamereactor.no|gamereactor.dk
+||media.gamereactor.dk/*Promo$redirect=noopmp4,domain=gamereactor.no|gamereactor.dk
+||media.gamereactor.dk/prerolls$redirect=noopmp4,domain=gamereactor.no|gamereactor.dk
 ||openx.gamereactor.dk/multi.php?$important,script
 /insert_grtv_stats.$xhr,domain=gamereactor.no|gamereactor.dk
 /prerolls/*$domain=gamereactor.no|gamereactor.dk
@@ -2402,7 +2402,7 @@ gamereactor.*##+js(set, adblockEnabled, noopFunc)
 gamereactor.*##+js(set, trackAdblock, noopFunc)
 gamereactor.*##+js(acis, AdsReloadConfig)
 !#if adguard
-gamereactor.*$$script[onError="adblockEnabled()"]
+
 !#endif
 !#if env_firefox
 gamereactor.*##^script[onError="adblockEnabled()"]

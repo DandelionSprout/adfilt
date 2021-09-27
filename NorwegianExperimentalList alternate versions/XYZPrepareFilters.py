@@ -2038,6 +2038,42 @@ def prepare_xul(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\|([a-z0-9.-]{1,})\.\*(\||$)", 
+           r"|\1.no|\1.dk\2", 
+           line
+        )
+
+        line = re.sub(
+           r".*\$\$script.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r":not\((([a-zA-Z0-9.*^~=-]|\[|\]|\"){1,}), (([a-zA-Z0-9.*^~=-]|\[|\]|\"){1,})\)", 
+           r":not(\1):not(\3)", 
+           line
+        )
+
+        line = re.sub(
+           r":not\((([a-zA-Z0-9.*^~=-]|\[|\]|\"){1,}), (([a-zA-Z0-9.*^~=-]|\[|\]|\"){1,}), (([a-zA-Z0-9.*^~=-]|\[|\]|\"){1,})\)", 
+           r":not(\1):not(\3):not(\5)", 
+           line
+        )
+
+        line = re.sub(
+           r":not\((([a-zA-Z0-9.*^~=-]|\[|\]|\"){1,}), (([a-zA-Z0-9.*^~=-]|\[|\]|\"){1,}), (([a-zA-Z0-9.*^~=-]|\[|\]|\"){1,}), (([a-zA-Z0-9.*^~=-]|\[|\]|\"){1,})\)", 
+           r":not(\1):not(\3):not(\5):not(\7)", 
+           line
+        )
+
+        line = re.sub(
+           r"\$mp4", 
+           r"$redirect=noopmp4", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
