@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 28September2021v1-Alpha
+# Version: 28September2021v3-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -766,7 +766,6 @@ msFilterList
 -d smallrise.com
 # https://www.nrk.no/sorlandet/advarer-mot-nytt-svindelforsok-1.15197328
 -d lepq.club
--d lampnatives.com
 # https://www.datahjelperne.no/coop-du-har-fatt-nye-kuponger-mail-svindel/
 -d offerleads.club
 - cop-no index.htm
@@ -819,8 +818,6 @@ msFilterList
 -d ditsunde.dk
 -d stichtingwittetulp.nl
 -d sunrisebar.it
--d lightersofsky.info
--d studio-degrees.com
 -d economywatch.com
 -d superbinvest.com
 -d bitcoinprofitrecensioni.com

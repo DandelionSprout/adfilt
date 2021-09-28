@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 280920211
+! Version: 280920213
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2048,7 +2048,6 @@ sofabold.dk##.centerMgfx
 ||smallrise.com^
 ! https://www.nrk.no/sorlandet/advarer-mot-nytt-svindelforsok-1.15197328
 ||lepq.club^
-||lampnatives.com^
 ! https://www.datahjelperne.no/coop-du-har-fatt-nye-kuponger-mail-svindel/
 ||offerleads.club^
 /cop-no/index.htm
@@ -2104,9 +2103,6 @@ sofabold.dk##.centerMgfx
 ||ditsunde.dk^
 ||stichtingwittetulp.nl^
 ||sunrisebar.it^
-||lightersofsky.info^
-||lightersofsky.info^$popup
-||studio-degrees.com^
 ||economywatch.com^
 ||superbinvest.com^
 ||bitcoinprofitrecensioni.com^
@@ -4292,7 +4288,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 280920211
+! Version: 2809202112
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4530,6 +4526,8 @@ fonecta.fi##div[class^=AdBlock_adContainer]
 fontanka.fi##.widget_custom_html
 foreca.fi##div[id|=inline-banner-mobi]
 foreigner.fi#?#article:-abp-contains(SPONSORED)
+forssanlehti.fi#?#.herald-sidebar > .widget_text:-abp-has(script)
+forssanlehti.fi#?#.herald_posts_widget:-abp-has(a[href^="https://www.forssanlehti.fi/kaupallinen-yhteistyo/"])
 funtampere.fi##.banner_container
 gamereactor.fi###adContainer
 gamereactor.fi###ad_topScroller
@@ -4702,6 +4700,8 @@ kymensanomat.fi,ess.fi##.page-notes > .note--highlight
 lapinkansa.fi###content1-container
 lapinkansa.fi#?#div[class="m-contentListItemThumb -ctx-frontpage-now -level-1"]:-abp-has(> div > div > [class^=m-contentListItemThumb__advertisement])
 lapinkansa.fi#?#div[class="m-managedListing__column -ctx-index -level-1 -cols-2"]:-abp-has(> div > div > div > div[class^=m-contentListItem__advertisement])
+lapuansanomat.fi##.tilaa-tasta
+lapuansanomat.fi##.ylabanner1
 lbaanijakuva.fi##.adremark
 leffatykki.com##div[class="ad230x90"]
 leijonat.com,suomikiekko.com,suomiurheilu.com##[href$="/pitkavetovihjeet/"]
@@ -4827,6 +4827,7 @@ pelikone.fi##.preroll-text
 pelit.fi##.eaf_wrap
 pelit.fi##a[href="/artikkelit/lataa-hatch-ja-voita-google-pixel-puhelin/"]
 pelit.fi##a[href="/category/mainos/"]
+pirkkalainen.com#?#.custom:-abp-has(img[src="/images/mainospaikat/3.jpg"])
 pkank.fi##.ad-assigned.panoraamabanneri
 pointti.fi##.after-ad
 pointti.fi##.before-ad
@@ -5029,6 +5030,9 @@ www.suomi24.fi#?#p:-abp-has(+ p + .asp)
 www.ts.fi##[class="tsv3-c-common-article__contentad notloaded"]
 www.ts.fi##div[class*="tsv3-c-common-smart noad-hideaction"]
 www.uusisuomi.fi#?#.lazyload-wrapper:-abp-has(.at-embed-container)
+www.uusisuomi.fi#?#aside > section:-abp-contains(Kaupallinen yhteistyö)
+www.uusisuomi.fi#?#div[width]:-abp-has(> [id|="almad-parade"])
+www.uusisuomi.fi#?#main > div[class]:-abp-contains(Kaupallinen yhteistyö)
 x2.fi##.mobile-top-ad
 xracing.fi##.adBanner
 ylilauta.org##.h.fcdn
@@ -5038,6 +5042,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ! -----NETWORK FILTERS-----
 
 /[.]io-tech\.fi/.*/[0-9a-f]{32}\./$image,~third-party
+/neoproxy.dll$xmlhttprequest,domain=pkank.fi
 /prerolls/*.mp4,domain=gamereactor.fi
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
 ||ad.citycdn.fi^$third-party
@@ -5095,7 +5100,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||nayadaya.com^$third-party
 ||nettiauto.com/en/ampparitBanner*.php$subdocument,domain=ampparit.com
 ||otavamedia.fi/ad/$script
-||pkank.fi/direct/neoproxy/neo/neoproxy.dll$xmlhttprequest,domain=pkank.fi
+||pirkkalainen.com/images/mainospaikat/3.jpg$image,domain=pirkkalainen.com
 ||rantapallo.fi^$third-party
 ||revimages.motouutiset.fi^$third-party
 ||ridemedia.fi/aspbanner
@@ -5292,3 +5297,6 @@ iltalehti.fi#@#.ad-placement
 ! https://github.com/easylist/easylist/pull/9204
 luhta.com#@##cookie-consent
 luhta.com#@#.cookie-consent:not(body):not(html)
+
+! https://github.com/easylist/easylist/pull/9253
+@@||reactandshare.com/plugin/rns.js$domain=forssanlehti.fi
