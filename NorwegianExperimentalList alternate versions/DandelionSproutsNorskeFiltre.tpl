@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 26September2021v1-Alpha
+# Version: 28September2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -808,6 +808,25 @@ msFilterList
 -d nordeninterior.weebly.com
 # Googling Aksel Hennie (Results for prior week) in late July 2021
 - com vg.no
+# Various Google results for 'jesper buch bitcoin'
+-d fartuelt.dk
+-d fancywoman.dk
+-d privatedagplejere.dk
+-d mxdesign.dk
+-d qteck.io
+-d bitcoinevolutionaustraliareview.com
+-d irb.dk
+-d ditsunde.dk
+-d stichtingwittetulp.nl
+-d sunrisebar.it
+-d lightersofsky.info
+-d studio-degrees.com
+-d economywatch.com
+-d superbinvest.com
+-d bitcoinprofitrecensioni.com
+-d marvelouskaunas.club
+-d aktienboard.com
+-d minklubshop.dk dk
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
