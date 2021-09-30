@@ -4181,6 +4181,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^!#include uBO%20list%20extensions/.*", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -4388,6 +4394,18 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^\*#.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!if .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!#include .*", 
            r"", 
            line
         )
@@ -4727,6 +4745,18 @@ def prepare_tpl(lines) -> str:
 
         line = re.sub(
            r"^\*$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!if .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!#include .*", 
            r"", 
            line
         )
@@ -5344,6 +5374,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"\^popup", 
            r"^", 
+           line
+        )
+
+        line = re.sub(
+           r"^!if .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!#include .*", 
+           r"", 
            line
         )
 
