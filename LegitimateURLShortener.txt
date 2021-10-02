@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 02October2021v2-Beta
+! Version: 02October2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -134,7 +134,7 @@ $removeparam=eblink
 $~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com
 ! https://contabo.com/?show=vps&utm_source=cj&utm_medium=affiliate&utm_campaign=vps&source=affiliate&AID=12454632&PID=8533995&SID=&CJEVENT=1999e98a465411eb825b03900a180510 (25/12/2020)
 $removeparam=AID
-$removeparam=/CJEVENT/i
+$removeparam=/^CJEVENT=/i
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-969819
 ! (Exception: booking.com in Firefox; see #256)
 $removeparam=aid,domain=adguard.com
@@ -179,7 +179,7 @@ $removeparam=hashb
 $removeparam=hashc
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 $removeparam=irgwc
-$removeparam=/clickid/i
+$removeparam=/^clickid=/i
 ! https://www.alibaba.com/toprankedsellers/index.html?spm=a2700.8293689.0.0.2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
 $removeparam=spm
 ||alibaba.com^$removeparam=categoryIds
@@ -313,14 +313,14 @@ $removeparam=cmpid
 ! https://www.theguardian.com/technology/2021/may/11/apple-accused-of-breaking-uk-competition-law-by-overcharging-for-apps?CMP=Share_AndroidApp_Other
 $removeparam=CMP
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
-$removeparam=/OCID/i,domain=~youtube.com
+$removeparam=/^OCID=/i,domain=~youtube.com
 $removeparam=tduid,domain=~redir.tradedoubler.com
 $removeparam=irclickid
 $removeparam=irclicid
 $removeparam=intcmp
 ||xbox.com^$removeparam=xr
 $removeparam=sourceid,domain=~google.*
-$removeparam=/sharedid/i
+$removeparam=/^sharedid=/i
 $removeparam=affiliates_ad_id
 $removeparam=campaign_id,domain=~kochava.com
 $removeparam=wmlspartner
@@ -432,7 +432,7 @@ $removeparam=hsCtaTracking
 $removeparam=tblci
 $removeparam=tcid
 $removeparam=/^dv_adwords_/
-$~xmlhttprequest,removeparam=/adid/i
+$~xmlhttprequest,removeparam=/^adid=/i
 $removeparam=wdorigin
 ||microsoft.com^$removeparam=ru
 ||microsoft.com^$removeparam=destrt
@@ -452,7 +452,7 @@ $removeparam=ad_medium
 ||malwarebytes.com^$removeparam=guard
 ||malwarebytes.com^$removeparam=x-source
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
-$removeparam=/adgroup/i
+$removeparam=/^adgroup=/i
 $removeparam=ads_name
 $removeparam=ad_type
 $removeparam=CAWELAID
@@ -640,7 +640,8 @@ $removeparam=/^dpg_/
 ! https://www.asahi.com/sp/articles/ASP8K5CZ3P8KUTFK011.html?iref=comtop_7_01
 ||asahi.com^$removeparam=iref
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1151326
-||malwarebytes.com^$removeparam=/x-source$/
+||malwarebytes.com^$removeparam=x-source
+||malwarebytes.com^$removeparam=ADDITIONAL_x-source
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1155198
 $removeparam=sm12
 $removeparam=ts,domain=x-kom.pl|al.to|combat.pl
@@ -753,7 +754,7 @@ $removeparam=/^srcCode/i,domain=jcrew.com|magellans.com|teleflora.com|tigerdirec
 $removeparam=scd,domain=ashleystewart.com
 $removeparam=CJPIXEL
 $removeparam=LSNPUBNAME
-$removeparam=/affiliateID/i
+$removeparam=/^affiliateID=/i
 $removeparam=affiliate_id
 $removeparam=affiliate_location_id
 $removeparam=afn_sr
@@ -1162,7 +1163,7 @@ $removeparam=/^zero_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 ||facebook.com/ads^$removeparam=session_id
 ! https://x.facebook.com/mylittlepony/videos/917830495715016/?refsrc=https%3A%2F%2Fx.facebook.com%2Fmylittlepony%2Fposts%2F4640468362637231&_rdr (09/04/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1047774 (03/08/2021)
-$~xmlhttprequest,removeparam=/refsrc/i
+$~xmlhttprequest,removeparam=/^refsrc=/i
 $removeparam=_rdr
 ! https://m.facebook.com/groups/474038555978926/permalink/3971436826239064/?locale2=nb_NO&refid=18&_ft_=qid.-8161291356206974390%3Amf_story_key.3971436826239064%3Atop_level_post_id.3971436826239064%3Atl_objid.3971436826239064%3Acontent_owner_id_new.100000852462546%3Apage_id.474038555978926%3Asrc.22%3Astory_location.6%3Astory_attachment_style.photo%3Afilter.GroupStoriesByActivityEntQuery%3Atds_flgs.3%3Aott.AX85R38AvGqMKK58%3Apage_insights.%7B%22474038555978926%22%3A%7B%22page_id%22%3A474038555978926%2C%22page_id_type%22%3A%22group%22%2C%22actor_id%22%3A100000852462546%2C%22dm%22%3A%7B%22isShare%22%3A0%2C%22originalPostOwnerID%22%3A0%7D%2C%22psn%22%3A%22EntGroupMallPostCreationStory%22%2C%22post_context%22%3A%7B%22object_fbtype%22%3A657%2C%22publish_time%22%3A1626033323%2C%22story_name%22%3A%22EntGroupMallPostCreationStory%22%2C%22story_fbid%22%3A%5B3971436826239064%5D%7D%2C%22role%22%3A1%2C%22sl%22%3A6%7D%7D&__tn__=-R
 $removeparam=_ft_
