@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 01October2021v1-Alpha
+# Version: 02October2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -719,8 +719,6 @@ msFilterList
 -d com-dk.com
 # https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
 -d legoland.com-*.
-# https://www.mm.dk/tjekdet/artikel/norwegian-billetter-til-valgfri-destination-er-snyd-og-bedrag
--d bondiblue.co.uk
 # https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
 # https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
@@ -745,8 +743,6 @@ msFilterList
 # https://www.tv2.no/nyheter/11516670/
 -d fintechnow*.buzz
 -d wealthnews*.xyz
-# https://sol.no/nyheter/pass-deg-for-solbrillesvindlere/72639445
--d rbono.net
 # https://www.datahjelperne.no/dnb-sms-svindel/
 -d no-personal.com
 # https://www.datahjelperne.no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
@@ -770,7 +766,6 @@ msFilterList
 -d offerleads.club
 - cop-no index.htm
 # https://www.datahjelperne.no/elkjop-kontaktforsok-mail-svindel/
--d ninjaschools.org
 -d bamboobotanica.com
 - survey heldige
 # https://www.datahjelperne.no/sparebank-1-din-tilganger-er-blokkert-svindel/
@@ -795,10 +790,6 @@ msFilterList
 -d cinefique.com
 # https://www.datahjelperne.no/posten-sms-svindel/
 -d niupaiba.com
-# https://www.datahjelperne.no/det-ser-ut-som-deg-facebook-spam/
--d straightbeforemeat14.live
-# https://www.dinside.no/mobil/vipps-advarer-mot-falsk-sms/73149894
--d cool-tech.store
 # https://www.nrk.no/osloogviken/slik-prover-sms-svindlerne-a-lure-deg-1.15397367
 -d m-dnbnorge.com
 # https://www.adressa.no/pluss/nyheter/2021/03/20/Politiet-advarer-Dette-er-ikke-et-jobbintervju.-Det-er-et-svindelfors%C3%B8k-23687158.ece/(21 03 2021)
@@ -853,9 +844,7 @@ msFilterList
 -d drakternorge.com
 -d drcarolyngroff.com
 -d dunjakke-no.com
--d eurosko.net
 -d fotballsko-salg.com
--d godeskonettbutikk.com
 -d gsport.com
 -d hernoclothing.com
 -d hollisternorge.com
@@ -863,13 +852,11 @@ msFilterList
 -d jakkesnorge.com
 -d lindseysopticians.com
 -d linkshe.com
--d lrgst.com
 -d mbtnorge.com
 -d meladermfacts.com
 -d moteshoes.com
 -d museuw.com
 -d mycraftypad.com
--d nikebutikks.com
 -d norfotball.com
 -d norgefotball.com
 -d norgejakke.com
@@ -900,7 +887,6 @@ msFilterList
 -d *medisin*.over-blog.com
 -d alphaapotek.com
 -d bedsteapoteksverige.com
--d garantere-apotek.com
 -d godtdsamaritansk.com
 -d helsehjelp.over-blog.com
 -d jensapoteker.com

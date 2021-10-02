@@ -4187,6 +4187,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|.*\.(tk|ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -4406,6 +4412,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^!#include .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|.*\.(tk|ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
            r"", 
            line
         )
@@ -5385,6 +5397,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^!#include .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|.*\.(tk|ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
            r"", 
            line
         )
