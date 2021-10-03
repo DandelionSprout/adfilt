@@ -559,8 +559,8 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|cdn77\.org\^$", 
-           r"||cdn77.org^$dnstype=CNAME", 
+           r"^\|\|(cdn77\.org|non\.li)\^$", 
+           r"||\1^$dnstype=~CNAME", 
            line
         )
 
