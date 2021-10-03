@@ -1,4 +1,4 @@
-(Last updated: 6th of October 2020)
+(Last updated: 3rd of October 2021)
 
 ## Notes on how to contribute:
 
@@ -34,17 +34,21 @@ I will refuse to write, double-check or fix entries for the following sites, and
 * Any websites listed in [Anti-'Steven Universe' List](https://github.com/DandelionSprout/adfilt/blob/master/Other%20domains%20versions/AntiStevenUniverseListDomains.txt)
 * Any websites listed in [Anti-'Hivemind cartoon trashing' List](https://github.com/DandelionSprout/adfilt/blob/master/Other%20domains%20versions/AntiHivemindCartoonTrashingListDomains.txt)
 * deviantART
-* Inkbunny
 * LatexStories.net
 * answers.microsoft.com
 * Any imageboards of any variety whatsoever
 
-Additionally, I'll only write and test fixes for these sites and not brand new entries:
-* The Verge
-
 ### Version dates in pull requests
 
 If possible, change the `! Version:` date if you're making a pull request, into the date where the pull request is submitted to me. If the existing date is the same as the submission date, increase its `v` number by one instead.
+
+### Syntaxes
+
+For entries that start with `||` or `@@||`, the following applies (Note the use of or absense of `^`):
+
+* For normal domains like `example.org`: Write the domain as `||example.org^`
+* For multi-TLD domains like `example.*`: Write the domain as `||example.`
+* For entire TLDs like `org`: Write it as `||org^`
 
 ### Other
 
