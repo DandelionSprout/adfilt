@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 02October2021v1
+! Version: 04October2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2089,6 +2089,9 @@ sofabold.dk##.centerMgfx
 ||bankid-sperret.$all
 !+ NOT_OPTIMIZED
 /?finn.no/login$doc
+! copied over from Dandelion Sprout antimalware
+||fredfiber.no^$doc
+||gogle.net^$all
 
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
@@ -2322,10 +2325,13 @@ sofabold.dk##.centerMgfx
 ||campingnews.dk^
 
 ! 🇬🇧:  Copied over from URLHaus and verified
-||biopaten.no^$all
-||hagebakken.no^$all
-||forum.mdb.nu^$all
-||mdb.nu^$all
+||biopaten.no^
+||hagebakken.no^
+||forum.mdb.nu^
+||mdb.nu^
+||idj.no^
+||1.14.61.188^
+||smarthouseforum.ru^
 
 ! 🇬🇧: Copied over from BlockListProject malware/phishing and verified
 ||a1match.dk^
@@ -2335,12 +2341,12 @@ sofabold.dk##.centerMgfx
 ||ccbuus.dk^
 ||artmusic.dk^
 
-!
+
 !#if env_mobile
 !#include NorwegianExperimentalList%20alternate%20versions/NordicFilters-FirefoxAndroidUBOWorkaround.txt
 !#endif
 
-!
+
 !#if !env_firefox
 !+ NOT_OPTIMIZED
 !#include NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotFirefox.txt
