@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: 🐥 Twitter: Pure Reading Experience
-! Version: 21April2021v1-Alpha
+! Version: 05October2021v1-Alpha
 ! Expires: 5 days
 ! Description: Twitter is a place full of distractions, strange things, and people you'd want to stay 200km away from at all times. If you wish to focus strictly on the 2% of Twitter that is actually any good nowadays, here's a list for you.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -31,8 +31,10 @@ twitter.com#?#nav[aria-label][role=navigation] + div > section > div[aria-label^
 
 ! Removes login nags
 twitter.com#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
+!#if !adguard
 ! https://mobile.twitter.com/nasuno_Posi
 twitter.com##div[data-testid=sidebarColumn] section[aria-label][role=region]
+!#endif
 
 ! Removes the cookie sticky on bottom
 twitter.com###layers > div > div:nth-of-type(2):last-of-type
