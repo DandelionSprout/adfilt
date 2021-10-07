@@ -60,7 +60,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome) - Includes Dandelion Sprout's Nordic Filters and Game Console Adblock List.<br>
 • [uBlock Origin](https://github.com/gorhill/uBlock), [Adblock Plus](https://adblockplus.org/), AdNauseam, Brave Browser, AdBlock, pfBlockerNG, and Vivaldi - Includes various versions of Dandelion Sprout's Nordic Filters.<br>
 • [OISD.nl](https://oisd.nl/) - Incorporates Dandelion Sprout's Nordic Filters and Dandelion Sprout's Anti-Malware List.<br>
-• [1Hosts](https://github.com/badmojr/1Hosts), [T145's The Blacklist](https://github.com/T145/the-blacklist) - Incorporates Dandelion Sprout's Anti-Malware List.<br>
+• [1Hosts](https://github.com/badmojr/1Hosts), [T145's Black Mirror](https://github.com/T145/black-mirror) - Incorporates Dandelion Sprout's Anti-Malware List.<br>
 • Energized Regional Protection - Incorporates Dandelion Sprout's Nordic Filters.<br>
 • [Developer Dan](https://blocklist-tools.developerdan.com/blocklists), Bajins, [jgdye](https://git.ovalwonder.com/jgdye/samwiseetc/src/branch/master/pihole), [Molinero](https://hmirror.molinero.dev/) - Stores third-party mirrors of at least one of my lists.
 
