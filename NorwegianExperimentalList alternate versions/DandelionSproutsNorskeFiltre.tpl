@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 02October2021v1-Alpha
+# Version: 10October2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -694,6 +694,13 @@ msFilterList
 -d havfruen4220.dk
 -d bankid-sperret.
 - ?finn.no login
+# 🇬🇧: Copied over from «Dandelion Sprout's Anti-Malware List»
+-d fredfiber.no
+-d gogle.net
+# 🇬🇧: Domains related to thehotelshowdev[.]bitkit[.]dk
+-d big5constructnigeria-staging.bitkit.dk
+-d big5-nigeria.bitkit.dk
+-d bromic-staging.bitkit.dk
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
@@ -909,11 +916,15 @@ msFilterList
 -d brigitteheilmann.dk
 -d storustovu.dk
 -d campingnews.dk
-# 🇬🇧://Copied/over/from/URLHaus/and/verified
+# 🇬🇧: Copied over from URLHaus and verified
 -d biopaten.no
 -d hagebakken.no
 -d forum.mdb.nu
 -d mdb.nu
+-d idj.no
+-d 1.14.61.188
+-d smarthouseforum.ru
+-d thehotelshowdev.bitkit.dk
 # 🇬🇧: Copied over from BlockListProject malware phishing and verified
 -d a1match.dk
 -d adminflex.dk
@@ -921,8 +932,6 @@ msFilterList
 -d aluminium.olbi.no
 -d ccbuus.dk
 -d artmusic.dk
-!
-!
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
