@@ -92,7 +92,7 @@
 
 ## uBlock Origin only:
 #### Hiding
-* `!#include`: Embeds another filterlist that is hosted on the same domain (with a whole lot of restrictions). Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard.
+* `!#include`: Embeds another filterlist that is hosted on the same domain. Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard. Tonnes of restrictions apply, such as refusing to embed lists from another domain / repository / parent-folder.
 * `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph).
 * * `##+js(ra, class, .element)`: Removes the specified element class name from all elements on the page, without removing the elements themselves.
 * `:xpath`: An entry written with the very advanced Xpath syntax.
