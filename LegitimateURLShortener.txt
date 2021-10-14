@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 12October2021v1-Beta
+! Version: 14October2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -546,8 +546,6 @@ $removeparam=ncid
 ! https://www.f-secure.com/en/home/products/freedome?ecid=10588&adcid=10588
 $removeparam=ecid
 $removeparam=adcid
-! https://www.gamereactor.fi/?sid=39feac60637556f2d1f67482abf2b1ea
-$~xmlhttprequest,~script,~websocket,removeparam=sid,domain=~mail.qq.com|~high.fi
 ! https://spreadprivacy.com/duckduckgrowing/?s=pr-hd
 ||spreadprivacy.com^$removeparam=s
 ! https://www.marvel.com/insider?Osocial=YT&CID=MarvelInsider
@@ -1118,6 +1116,9 @@ $removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|a
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjones.com|mansionglobal.com|penews.com
 @@^mod=djemalertNEWS^$removeparam=mod
+! https://www.gamereactor.fi/?sid=39feac60637556f2d1f67482abf2b1ea
+! (Exceptions: mail.qq.com, high.fi, phpBB forums, various other sites)
+$removeparam=sid,domain=gamereactor.*
 
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
