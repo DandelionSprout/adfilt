@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 15October2021v1-Alpha
+# Version: 16October2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -822,6 +822,8 @@ msFilterList
 -d marvelouskaunas.club
 -d aktienboard.com
 -d minklubshop.dk dk
+# https://dinside.dagbladet.no/okonomi/ligg-unna-denne-nettbutikken/74392579
+-d kjokkenbutikk.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
@@ -926,6 +928,7 @@ msFilterList
 -d 1.14.61.188
 -d smarthouseforum.ru
 -d thehotelshowdev.bitkit.dk
+-d trafikkskoleapp.no
 # 🇬🇧: Copied over from BlockListProject malware phishing and verified
 -d a1match.dk
 -d adminflex.dk
@@ -933,6 +936,7 @@ msFilterList
 -d aluminium.olbi.no
 -d ccbuus.dk
 -d artmusic.dk
+-d 336.linux1.testsider.dk
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
