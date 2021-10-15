@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 10October2021v3
+! Version: 15October2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -341,6 +341,11 @@ mc-avisa.no##.avisa-widget
 tv-kalundborg.dk##.flickity-viewport
 tv-kalundborg.dk##div.col-s-100.col-50:nth-of-type(2)
 sol.no#?#.xrow:-abp-has(> div[class*=" "] > span[class])
+onlineaviser.no#?#table[width^="7"]:first-of-type:-abp-has(a[href*=tradedoubler])
+onlineaviser.no##body > div > table > tbody > tr > td > table > tbody > tr > td:nth-of-type(2):last-of-type
+onlineaviser.no##body > table > tbody > tr > td:nth-of-type(2):last-of-type
+onlineaviser.no#?#tr:-abp-has(a[href="./index.html"]) + tr + tr
+onlineaviser.no##a[href="../html/gratis_no.html"]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1735,6 +1740,7 @@ yrkesbil.no#?#tr:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has
 foodora.no##.top-skinny-banner-container
 check-in.dk#?#p:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
 idag.no#?#.nf-o-moduleblock:not(:has(a))
+mediavejviseren.dk###sectionBeforeBottom
 !+ NOT_OPTIMIZED
 avvir.no###block-block-1 > p:nth-of-type(4)
 
@@ -2318,6 +2324,7 @@ sofabold.dk##.centerMgfx
 ||tvaalborg.dk^$doc
 ||informationer.nu^$doc
 ||cphspaogwellness.dk^$doc
+||webavisen.gl^$doc
 
 ! 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 ||desidert.no^
