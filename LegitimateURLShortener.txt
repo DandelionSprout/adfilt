@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 16October2021v2-Beta
+! Version: 16October2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -188,7 +188,7 @@ $removeparam=cardId
 ! https://metro.co.uk/2017/04/11/hubble-just-spotted-something-massive-coming-out-of-uranus-6567896/?ito=article.desktop.share.top.facebook
 $removeparam=ito
 ! https://es.aliexpress.com/item/4000672272353.html?pvid=c4cdc770-f05a-4b7b-8a50-d8b81efff6c9&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:c4cdc770-f05a-4b7b-8a50-d8b81efff6c9,tpp_buckets:668%230%23131923%230_668%23808%234094%23200_668%23888%233325%231_668%232846%238113%23646_668%232717%237558%23188_668%231000022185%231000066059%230_668%233468%2315617%23897
-$removeparam=pvid
+||aliexpress.com/item/$removeparam=pvid
 ||aliexpress.com^$removeparam=_t
 ! https://es.aliexpress.com/item/4001349152860.html?gps-id=5547572&scm_id=1007.19201.130907.0&scm=1007.19201.130907.0&scm-url=1007.19201.130907.0
 ||aliexpress.$removeparam=gps-id
@@ -417,7 +417,7 @@ $removeparam=afftrack
 $removeparam=shrsl_analytics_sscid
 $removeparam=shrsl_analytics_sstid
 ! https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
-$removeparam=/^AFF_ID/i,domain=~nordvpn.net
+$removeparam=/^AFF_ID/i,domain=~nordvpn.net|~getproton.me
 $removeparam=/^aff_/
 ||photojobz.com^$removeparam=hop
 $removeparam=SSAID
@@ -1096,10 +1096,100 @@ $removeparam=adg_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-541044
 ||bing.com^$removeparam=cvid
 @@||bing.com/AS/Suggestions?$removeparam=cvid
+! https://www.jetbrains.com/?from=Komga
+||jetbrains.com^$removeparam=from
+! https://blog.myfitnesspal.com/essential-guide-to-fat/?os_ehash=55@sfmc:33608078
+$removeparam=os_ehash
+! https://nerdrooted.com/2020/01/06/how-to-install-wow-in-arch-manjaro-linux/?sfw=pass1693248042
+||nerdrooted.com^$removeparam=sfw
+! https://www.toshin-online.com/?ldtag_cl=8UWK33VzT3qqcRwOlcoPPwAA
+$removeparam=ldtag_cl
+! https://canberrafunrun2021.grassrootz.com/leukaemia?vero_id=campaign-3150-event-50-account-203189&vero_conv=RPXTW_rFPukmw3Xjk2CY2ENhTFg0V0Ju_scFfwnUHhjpHSMzUPquo3CmWb9XTcM6QTvwslcumT5a-4rk_S1L5GMRt209re12myDvly9EpcE=
+$removeparam=vero_conv
+! https://help.getvero.com/articles/what-is-vero-id
+$removeparam=vero_id
+! https://www.evga.com/products/product.aspx?pn=220-B5-0550-V1&Source=PCPartPicker
+||evga.com^$removeparam=Source
+! https://support.google.com/websearch/answer/9351707?p=featured_snippets&hl=en&visit_id=637669631265857080-3305857145&rd=1
+||google.$removeparam=visit_id
+! https://vpnarea.com/front/member/signup?a_aid=torrentgalaxy
+$removeparam=a_aid
+! https://www.infoq.com/articles/kotlin-ten-years-qa/?topicPageSponsorship=9df7746f-b196-415b-964e-bc8483319fd9
+||infoq.com^$removeparam=topicPageSponsorship
+! https://www.eneba.com/es/marketplace?af_id=nate
+||eneba.com^$removeparam=af_id
+! https://manga.bilibili.com/detail/mc25717?refer_from=bili_main_nav
+||bilibili.com^$removeparam=refer_from
+! https://show.bilibili.com/platform/home.html?msource=pc_web
+||bilibili.com^$removeparam=msource
+! https://disq.us/url?url=https%3A%2F%2Farstechnica.co.uk%2Finformation-technology%2F2017%2F01%2Fantivirus-is-bad%2F%3Av0Er-2ea1-t4FcbndbRV_9xv5-4&cuid=977864
+||disq.us^$removeparam=cuid
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/58
+||eonline.com^$removeparam=/^(source|medium|content)=/
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/53
+||tokopedia.com^$removeparam=/^(source|trkid|whid)=/
+! https://github.com/ClearURLs/Rules/issues/13
+||mp.weixin.qq.com^$removeparam=/^(chksm|scene|xtrack|key|ascene|uin|devicetype|version|exportkey|pass_ticket)=/
+! https://campaign.aliexpress.com/wow/gcp/ae/channel/ae/accelerate/tupr?wh_weex=true&_immersiveMode=true&wx_navbar_hidden=true&wx_navbar_transparent=true&ignoreNavigationBar=true&wx_statusbar_hidden=true&wh_pid=ae/daily/ae/3c_daily/phones_accessories
+$removeparam=wx_header
+$removeparam=wx_navbar_hidden
+$removeparam=wx_navbar_transparent
+$removeparam=ignoreNavigationBar
+$removeparam=wx_statusbar_hidden
+! https://aliexpress.com/item/1005002402123565.html?fromRankId=3141134
+$removeparam=fromRankId
+! https://aliexpress.com/item/33014052863.html?pdp_ext_f=%7B%22ship_from%22:%22%22,%22sku_id%22:%2267107423525%22%7D&utparam=%7B%22process_id%22:%22401%22,%22x_object_type%22:%22product%22,%22pvid%22:%22df54ce03-45d0-42f5-a661-634290fe5f03%22,%22belongs%22:[%7B%22floor_id%22:%2222234693%22,%22id%22:%22782032%22,%22type%22:%22dataset%22%7D,%7B%22id_list%22:[%221000094891%22],%22type%22:%22gbrain%22%7D],%22scm%22:%221007.34914.242271.0%22,%22tpp_buckets%22:%2221669%230%23186385%230_21669%234190%2319162%23485_24914%230%23242271%238%22,%22x_object_id%22:%2233014052863%22%7D&__tppBottom=true
+||aliexpress.com^$removeparam=pdp_ext_f
+||aliexpress.com^$removeparam=utparam
+||aliexpress.com^$removeparam=__tppBottom
+! https://www.flipkart.com/wildcraft-knight-mel-17-5-l-laptop-backpack/p/itmfejkcj45hnsdw?pid=BKPFEJKCFU49PCDE&lid=LSTBKPFEJKCFU49PCDEKYMJX4&marketplace=FLIPKART&store=reh%2F4d7%2Fak9&srno=b_1_1&otracker=hp_omu_Top%2BOffers%2BOn_3_13.dealCard.OMU_6NBH6T8TFQ5H_6&otracker1=hp_omu_WHITELISTED_neon%2Fmerchandising_Top%2BOffers%2BOn_NA_dealCard_cc_3_NA_view-all_6&fm=organic&iid=en_JRTu6S3VTYUNswfx2Vf%2BIxSVpVqAn%2BgBL%2F4egSHBpmeZwysjg95tdc%2B0VNBUu1uuBVLsn39nQeqsYzc7%2BsLNkQ%3D%3D&ppt=None&ppn=None&ssid=ooc70jk6kg0000001634312695177&cid=6NBH6T8TFQ5H
+$removeparam=otracker
+$removeparam=otracker1
+||flipkart.com^$removeparam=/^[cilp]id=/
+||flipkart.com^$removeparam=fm
+||flipkart.com^$removeparam=ppn
+||flipkart.com^$removeparam=ppt
+||flipkart.com^$removeparam=srno
+||flipkart.com^$removeparam=ssid
+||flipkart.com^$removeparam=store
+||flipkart.com^$removeparam=marketplace
+! https://www.w3schools.com/?ft_source=4916&ft_medium=7689
+$removeparam=ft_source
+$removeparam=ft_medium
+! https://www.bbc.com/?ref_medium=Desktop&ref_source=OI-TA&ref_campaign=menu-header
+$removeparam=ref_source
+$removeparam=ref_medium
+$removeparam=ref_campaign
+! https://www.mozilla.org/en-US/firefox/new/?redirect_source=getfirefox-com
+||mozilla.org^$removeparam=redirect_source
+! https://www.mozilla.org/en-US/firefox/new/?src=amo
+||mozilla.org^$removeparam=src
+! https://worldrugbymuseum.com/education?spMailingID=11883824&spUserID=MjY5ODA2ODEzMTk4S0&spJobID=1673999048&spReportId=MTY3Mzk5OTA0OAS2
+$removeparam=spMailingID
+$removeparam=spUserID
+$removeparam=spJobID
+$removeparam=spReportId
+! https://www.gog.com/news/interview_looking_back_at_the_witcher_3_wild_hunt_with_its_creators?track_click=1
+$removeparam=track_click
+! https://www.fiverr.com/mountdesign/design-3-professional-logo-for-you-in-24-hours?pos=1&funnel=c2c7cf95edaaf02368858291d8f4f9b2
+||fiverr.com^$removeparam=funnel
+! https://www.nbc.com/networks/e?_branch_match_id=977608396495687816
+||nbc.com^$removeparam=_branch_match_id
+! https://www.purepeople.com/article/sebastien-chabal-sans-sa-barbe-le-rugbyman-meconnaissable_a447301/1?actId=ebwp0YMB8s0Y9O2l_QRyx3V1qzzpVLXuLyr5FYI13OrFPXIXgMzQrwaYyENrH16E&actCampaignType=MAIL&actSource=7307
+$removeparam=actId
+$removeparam=actCampaignType
+$removeparam=actSource
+! https://www.epicgames.com/store/en-US/p/humankind?epic_affiliate=raptoria&epic_gameId=02c14a01b7044db98de3f3a10813a42e
+||epicgames.com^$removeparam=/^(epic_affiliate|epic_gameId)=/
+! https://adele.lnk.to/EOM
+$removeparam=/^(cId|lId|src)=/,domain=apple.com|youtube.com
+||music.apple.com^$removeparam=/^(ct|itsct|itscg|app)=/
+! https://tv.apple.com/?ign-itscg=10000&ign-itsct=atv-0-tv_ovp-nav_stm-apl-avl-191111
+||apple.com^$removeparam=/^ign-/
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com
+$removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
@@ -1185,6 +1275,10 @@ $~xmlhttprequest,removeparam=psc
 ||amazon.$removeparam=asc_item
 ||amazon.$removeparam=m
 ||amazon.$removeparam=refinements
+! https://www.amazon.com/Razer-Kraken-Ultimate-Gaming-Headset/dp/B07ZK6R8JF/ref=pd_sbs_5/137-2432372-2577703?keywords=headphone&qsid=259-8119744-7604032&sres=B00NBR7962%2CB07YT122DS%2CB07WD58H6R%2CB00NBR70A2%2CB07Q1YXVWH%2CB07MTXLFXV%2CB06XT8L1YF%2CB09FSB6DHJ%2CB0876ZJ78K%2CB085NW5M9S%2CB07SCKVB54%2CB07GGYPWPZ%2CB07HGG85HL%2CB091GHJ7FN%2CB082K726CK%2CB073XDK6ZW%2CB08CVDPQ9P%2CB07QZVSJZS%2CB07QYV5Z1G%2CB09BVFWPMZ&srpt=HEADPHONES
+||amazon.$removeparam=qsid
+||amazon.$removeparam=sres
+||amazon.$removeparam=srpt
 ! Other
 ||amazon.$removeparam=ingress
 @@/b/ref=$removeparam=ie
@@ -1219,6 +1313,10 @@ $removeparam=Source,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 $removeparam=Medium,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 ! https://m.facebook.com/story.php?story_fbid=2953962358150955&id=2029436133936920&m_entstream_source=timeline&__tn__=%2As%2As-R
 $removeparam=m_entstream_source
+! https://github.com/ClearURLs/Rules/issues/23
+$removeparam=referral_code,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=referral_story_type,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=tracking,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 
 ! ——— eBay ———
 ! https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1 (31/10/2020)
@@ -1298,6 +1396,8 @@ $removeparam=ogbl
 ://www.google.*/search^$removeparam=entrypoint
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1299693
 ||google.*/search$removeparam=sqi
+! https://www.google.com/search?gs_ssp=eJzj4tTP1TcwSssoSVZgNGB0YPASS0otKUktUkgqLc7MSy0uBjKKUhNLAeDcDI4&q=better+business+bureau&oq=better&sourceid=chrome&ie=UTF-8
+||google.$removeparam=gs_ssp
 
 ! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
