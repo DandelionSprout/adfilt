@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 16October2021v3-Beta
+! Version: 16October2021v4-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1014,30 +1014,6 @@ $removeparam=p_tok
 ||fiverr.com^$removeparam=context_type
 ! https://www.deviantart.com/emeraldblast63/art/The-Tale-of-Two-Sunsets-Cover-Art-891919440?ga_submit_new=10%3A1631669334
 ||deviantart.com^$removeparam=ga_submit_new
-! https://github.com/uBlockOrigin/uAssets/pull/10010
-||bilibili.com^$removeparam=/^current/
-||bilibili.com^$removeparam=/^from/
-||bilibili.com^$removeparam=/^network/
-||bilibili.com^$removeparam=/^playurl/
-||bilibili.com^$removeparam=/^share/
-||bilibili.com^$removeparam=accept_quality
-||bilibili.com^$removeparam=bbid
-||bilibili.com^$removeparam=broadcast_type
-||bilibili.com^$removeparam=bsource
-||bilibili.com^$removeparam=hotRank
-||bilibili.com^$removeparam=p2p_type
-||bilibili.com^$removeparam=platform_network_status
-||bilibili.com^$removeparam=quality_description
-||bilibili.com^$removeparam=referfrom
-||bilibili.com^$removeparam=rt
-||bilibili.com^$removeparam=seid
-||bilibili.com^$removeparam=spm_id_from
-||bilibili.com^$removeparam=tdsourcetag
-||bilibili.com^$removeparam=timestamp
-||bilibili.com^$removeparam=ts
-@@||api.bilibili.com^$removeparam=ts
-||bilibili.com^$removeparam=unique_k
-||bilibili.com^$removeparam=visit_id
 ! https://www.virustotal.com/gui/file/cdecce5824e901bbbd97c0f933c15a14a4f2c1b260da17d8081b6b87cf306c2f/community
 ||ccleaner.com^$removeparam=x-acqsource
 ! https://us.norton.com/?displocale=iso3%3ausa&displang=iso3%3aeng&ssdcat=266&origin=safew&env=prod&version=1.0
@@ -1066,27 +1042,8 @@ $removeparam=refsec,domain=barrons.com
 $removeparam=reflink,domain=marketwatch.com|mansionglobal.com
 ! https://edition.cnn.com/?hpt=header_edition-picker
 $removeparam=hpt,domain=cnn.com
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1421356
-||sogou.com^$removeparam=_asf
-||sogou.com^$removeparam=_ast
-||sogou.com^$removeparam=from
-||sogou.com^$removeparam=lkt
-||sogou.com^$removeparam=p
-||sogou.com^$removeparam=s_from
-||sogou.com^$removeparam=sst0
-||sogou.com^$removeparam=sugsuv
-||sogou.com^$removeparam=sugtime
-||sogou.com^$removeparam=sut
-||sogou.com^$removeparam=w
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1424772
 $removeparam=depth_1-utm_source
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
-||baidu.com^$removeparam=/^rsv/
-||baidu.com^$removeparam=f
-||baidu.com^$removeparam=inputT
-||baidu.com^$removeparam=issp
-||baidu.com^$removeparam=oq
-||baidu.com^$removeparam=tn
 ! https://www.frisktpust.no/collections/interior/products/umi-ergonomisk-kontorstol?cmp_id=14758715696&adg_id=128927650218&kwd=ergonomisk%20kontorstol&device=m
 $removeparam=cmp_id
 $removeparam=adg_id
@@ -1118,10 +1075,6 @@ $removeparam=a_aid
 ||infoq.com^$removeparam=topicPageSponsorship
 ! https://www.eneba.com/es/marketplace?af_id=nate
 ||eneba.com^$removeparam=af_id
-! https://manga.bilibili.com/detail/mc25717?refer_from=bili_main_nav
-||bilibili.com^$removeparam=refer_from
-! https://show.bilibili.com/platform/home.html?msource=pc_web
-||bilibili.com^$removeparam=msource
 ! https://disq.us/url?url=https%3A%2F%2Farstechnica.co.uk%2Finformation-technology%2F2017%2F01%2Fantivirus-is-bad%2F%3Av0Er-2ea1-t4FcbndbRV_9xv5-4&cuid=977864
 ||disq.us^$removeparam=cuid
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/58
@@ -1435,3 +1388,64 @@ $removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|
 $removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
 $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
 !#endif
+
+! —————————————————————
+! ——— International ———
+! —————————————————————
+
+!
+! ——— Chinese ———
+!
+
+! ——— Baidu ———
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
+||baidu.com^$removeparam=/^rsv/
+||baidu.com^$removeparam=f
+||baidu.com^$removeparam=inputT
+||baidu.com^$removeparam=issp
+||baidu.com^$removeparam=oq
+||baidu.com^$removeparam=tn
+
+! ——— Bilibili ———
+! https://github.com/uBlockOrigin/uAssets/pull/10010
+||bilibili.com^$removeparam=/^current/
+||bilibili.com^$removeparam=/^from/
+||bilibili.com^$removeparam=/^network/
+||bilibili.com^$removeparam=/^playurl/
+||bilibili.com^$removeparam=/^share/
+||bilibili.com^$removeparam=accept_quality
+||bilibili.com^$removeparam=bbid
+||bilibili.com^$removeparam=broadcast_type
+||bilibili.com^$removeparam=bsource
+||bilibili.com^$removeparam=hotRank
+||bilibili.com^$removeparam=p2p_type
+||bilibili.com^$removeparam=platform_network_status
+||bilibili.com^$removeparam=quality_description
+||bilibili.com^$removeparam=referfrom
+||bilibili.com^$removeparam=rt
+||bilibili.com^$removeparam=seid
+||bilibili.com^$removeparam=spm_id_from
+||bilibili.com^$removeparam=tdsourcetag
+||bilibili.com^$removeparam=timestamp
+||bilibili.com^$removeparam=ts
+@@||api.bilibili.com^$removeparam=ts
+||bilibili.com^$removeparam=unique_k
+||bilibili.com^$removeparam=visit_id
+! https://manga.bilibili.com/detail/mc25717?refer_from=bili_main_nav
+||bilibili.com^$removeparam=refer_from
+! https://show.bilibili.com/platform/home.html?msource=pc_web
+||bilibili.com^$removeparam=msource
+
+! ——— Sogou ———
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1421356
+||sogou.com^$removeparam=_asf
+||sogou.com^$removeparam=_ast
+||sogou.com^$removeparam=from
+||sogou.com^$removeparam=lkt
+||sogou.com^$removeparam=p
+||sogou.com^$removeparam=s_from
+||sogou.com^$removeparam=sst0
+||sogou.com^$removeparam=sugsuv
+||sogou.com^$removeparam=sugtime
+||sogou.com^$removeparam=sut
+||sogou.com^$removeparam=w
