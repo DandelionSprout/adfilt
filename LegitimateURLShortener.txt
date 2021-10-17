@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 17October2021v2-Beta
+! Version: 17October2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1426,6 +1426,21 @@ $removeparam=share_link_id
 ||sogou.com^$removeparam=w
 
 !!! ——— AliExpress ———
+! https://es.aliexpress.com/item/4000672272353.html?pvid=c4cdc770-f05a-4b7b-8a50-d8b81efff6c9&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:c4cdc770-f05a-4b7b-8a50-d8b81efff6c9,tpp_buckets:668%230%23131923%230_668%23808%234094%23200_668%23888%233325%231_668%232846%238113%23646_668%232717%237558%23188_668%231000022185%231000066059%230_668%233468%2315617%23897
+||aliexpress.com/item/$removeparam=pvid
+||aliexpress.com^$removeparam=_t
+! https://es.aliexpress.com/item/4001349152860.html?gps-id=5547572&scm_id=1007.19201.130907.0&scm=1007.19201.130907.0&scm-url=1007.19201.130907.0
+||aliexpress.$removeparam=gps-id
+$removeparam=scm_id
+$removeparam=scm
+$removeparam=scm-url
+||aliexpress.com^$removeparam=initiative_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
+||aliexpress.$removeparam=tt
+||aliexpress.$removeparam=terminal_id
+$removeparam=tmLog
+$removeparam=aem_p4p_detail
+$removeparam=algo_exp_id
 ! https://campaign.aliexpress.com/wow/gcp/ae/channel/ae/accelerate/tupr?wh_weex=true&_immersiveMode=true&wx_navbar_hidden=true&wx_navbar_transparent=true&ignoreNavigationBar=true&wx_statusbar_hidden=true&wh_pid=ae/daily/ae/3c_daily/phones_accessories
 $removeparam=wx_header
 $removeparam=wx_navbar_hidden
