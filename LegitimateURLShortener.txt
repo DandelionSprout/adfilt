@@ -1163,6 +1163,9 @@ $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjone
 ! (Exceptions: mail.qq.com, high.fi, phpBB forums, various other sites)
 $removeparam=sid,domain=gamereactor.*
 
+! —————————————————————
+! ——— SpecificPages ———
+! —————————————————————
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 ||amazon.$removeparam=th
@@ -1379,16 +1382,6 @@ $removeparam=share_link_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-974118
 ||tiktok.com^$removeparam=checksum
 
-!#if !env_mobile
-! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
-! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
-$removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com
-$removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com
-! https://i-viaplay-com.akamaized.net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d.jpg?width=400&height=600 (02/03/2021)
-$removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
-$removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
-!#endif
-
 ! —————————————————————
 ! ——— International ———
 ! —————————————————————
@@ -1456,3 +1449,16 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ||sogou.com^$removeparam=sugtime
 ||sogou.com^$removeparam=sut
 ||sogou.com^$removeparam=w
+
+! ——————————————
+! ——— Mobile ———
+! ——————————————
+!#if !env_mobile
+! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
+! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
+$removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com
+$removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com
+! https://i-viaplay-com.akamaized.net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d.jpg?width=400&height=600 (02/03/2021)
+$removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
+$removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
+!#endif
