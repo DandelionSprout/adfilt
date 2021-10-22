@@ -116,3 +116,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 23rd of August 20:45~21:40 UTC: Had to look into https://github.com/AdguardTeam/AdGuardHome/issues/3465#issuecomment-904153260
 * 7th of September 01:01-01:30 UTC: One of my two Ethernet switches began bugging out for unknown reasons.
 * 9th of September 20:15~23:30 UTC, and intermittently on 10th of September: Replaced my old ASUS RT-AC68U, with an ASUS RT-AX89X.
+* 22th of October 09:08-09:14 UTC: What seemed like a Special K flake, had managed to cram its way into the fan of my 400€ network switch, and I had to get it out with an *Anna & Clara* butter knife without destroying the switch.
