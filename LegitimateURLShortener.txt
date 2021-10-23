@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 17October2021v4-Beta
+! Version: 23October2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -664,7 +664,8 @@ $removeparam=twclid
 ||yahoo.com^$removeparam=soc_src
 ||yahoo.com^$removeparam=soc_trk
 ||euronews.com^$removeparam=_ope
-$removeparam=/^ds_/
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1524659
+$removeparam=/^ds_/,domain=~clickserve.dartsearch.net
 $removeparam=Adposition
 $removeparam=adposition
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1185036
@@ -1116,6 +1117,16 @@ $removeparam=/^(cId|lId|src)=/,domain=apple.com|youtube.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1490207
 ! i.e. https://go.skimresources.com/?id=160612X1627478&xcust=adm2_841947&xs=1&url=https%3A%2F%2Fwalmart.com%2Fip%2F204105463
 ||go.skimresources.com^$removeparam=/^id|xcust|xs$/
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1524659
+$removeparam=ds_s_kwgid,domain=clickserve.dartsearch.net
+$removeparam=ds_a_cid,domain=clickserve.dartsearch.net
+$removeparam=ds_a_caid,domain=clickserve.dartsearch.net
+$removeparam=ds_a_agid,domain=clickserve.dartsearch.net
+$removeparam=ds_a_lid,domain=clickserve.dartsearch.net
+$removeparam=ds_e_adid,domain=clickserve.dartsearch.net
+$removeparam=ds_e_target_id,domain=clickserve.dartsearch.net
+$removeparam=ds_e_network,domain=clickserve.dartsearch.net
+$removeparam=ds_url_v,domain=clickserve.dartsearch.net
 
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
