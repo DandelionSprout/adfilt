@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 23October2021v2-Beta
+! Version: 24October2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -712,7 +712,6 @@ $removeparam=cm_type
 ! https://www.forever21.com/?$3p=a_cj_affiliate&~click_id=b8c806cf0cad11ec806d4d010a18050d&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=http%3A%2F%2Fwww.forever21.com&cj_pub_sid=06gtKjdPmfBs463ojiL8awp&_branch_match_id=962306946010631351
 $removeparam=/^\$/,domain=boohoo.com|forever21.com
 $removeparam=/^\~/,domain=boohoo.com|forever21.com
-$removeparam=_branch_match_id,domain=boohoo.com|forever21.com
 
 ! https://www.lightinthebox.com/c/robot-vacuums-cleaners_113104?p.litb_from=SAS&p.utm_source=sas&p.utm_medium=affiliate&p.utm_campaign=136482&url=http%3A%2F%2Fwww.lightinthebox.com%2Fc%2Frobot-vacuums-cleaners_113104
 $removeparam=/^p\.utm_/
@@ -889,6 +888,30 @@ $removeparam=actId
 $removeparam=actCampaignType
 $removeparam=actSource
 
+! https://github.com/brave/brave-browser/issues/13644
+$removeparam=oly_anon_id
+$removeparam=oly_enc_id
+
+! https://github.com/brave/brave-browser/issues/13647
+$removeparam=/^wickedid=/i
+$removeparam=/^wickedsource=/i
+$removeparam=/^wickedplacement=/i
+$removeparam=/^wickedkeyword=/i
+$removeparam=/^wtm_/
+
+! https://github.com/brave/brave-browser/issues/17451
+$removeparam=rb_clickid
+
+! https://github.com/brave/brave-browser/issues/17452
+$removeparam=s_cid
+
+! https://github.com/brave/brave-browser/issues/17507
+$removeparam=ml_subscriber
+$removeparam=ml_subscriber_hash
+
+! https://stackoverflow.com/questions/37882810/what-is-meaning-of-branch-match-id
+$removeparam=_branch_match_id
+
 ! ——— Specific rules ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
@@ -902,7 +925,7 @@ $removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|
 $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com
+$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com|mozilla.org
 ! No particular example
 $removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
@@ -1666,20 +1689,15 @@ $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ! https://www.mozilla.org/en-US/firefox/new/?redirect_source=getfirefox-com
 ||mozilla.org^$removeparam=redirect_source
 
-! https://www.mozilla.org/en-US/firefox/new/?src=amo
-||mozilla.org^$removeparam=src
-
 ! https://www.fiverr.com/mountdesign/design-3-professional-logo-for-you-in-24-hours?pos=1&funnel=c2c7cf95edaaf02368858291d8f4f9b2
 ||fiverr.com^$removeparam=funnel
-
-! https://www.nbc.com/networks/e?_branch_match_id=977608396495687816
-||nbc.com^$removeparam=_branch_match_id
 
 ! https://www.epicgames.com/store/en-US/p/humankind?epic_affiliate=raptoria&epic_gameId=02c14a01b7044db98de3f3a10813a42e
 ||epicgames.com^$removeparam=/^(epic_affiliate|epic_gameId)=/
 
 ! https://adele.lnk.to/EOM
-$removeparam=/^(cId|lId|src)=/,domain=apple.com|youtube.com
+$removeparam=/^(cId|lId)=/,domain=apple.com|youtube.com
+&src=Linkfire^$removeparam=src,domain=apple.com|youtube.com
 ||music.apple.com^$removeparam=/^(ct|itsct|itscg|app)=/
 
 ! https://tv.apple.com/?ign-itscg=10000&ign-itsct=atv-0-tv_ovp-nav_stm-apl-avl-191111
@@ -1719,7 +1737,7 @@ $removeparam=ds_e_network,domain=clickserve.dartsearch.net
 $removeparam=ds_url_v,domain=clickserve.dartsearch.net
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97935
-jasonsavard.com$removeparam=cUrl
+||jasonsavard.com^$removeparam=cUrl
 
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
