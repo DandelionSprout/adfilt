@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 19October2021v1-Alpha
+# Version: 20October2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -578,6 +578,7 @@ msFilterList
 # Makes 1p info banners show up correctly
 +d _980x100.
 # Makes most links show up correctly (Fixed in AdGuard Base)
+# https://github.com/easylist/easylist/issues/9444
 # ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 # ★★★ Unknown cause ★★★
