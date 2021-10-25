@@ -112,8 +112,9 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 12th of July 2021 00:01-01:35 UTC: The AdGuard Home installation was stuck at a "The DNS server is starting" error screen, until I noticed the error by pure coincidence and powercycled the RaspPi.
 * 18th of July 2021 17:51-19:10 UTC: My ASUS router's TrendMicro anti-botnet function had a total meltdown. Moreover, attempting to grab the chance to run a Fedora dnf update, took much longer than expected.
 * 19th of July 2021 16:??-20:40 UTC: Near-total server failure in general. Shoutout to https://community.home-assistant.io/t/home-assistant-community-add-on-adguard-home/90684/13 for a fix that returned the server to basic functionality; alongside other network fixes and AGH settings tinkering.
-* 23rd of July 21:30~22:50 UTC: I decided to try to set up DNSCrypt, which took several attempts. And when I finally got it to work, substantial technical problems means I do not recommend using it until a future AGH beta build fix it.
+* 23rd of July 21:30~22:50 UTC: I decided to try to set up DNSCrypt, which took several attempts.
 * 23rd of August 20:45~21:40 UTC: Had to look into https://github.com/AdguardTeam/AdGuardHome/issues/3465#issuecomment-904153260
 * 7th of September 01:01-01:30 UTC: One of my two Ethernet switches began bugging out for unknown reasons.
 * 9th of September 20:15~23:30 UTC, and intermittently on 10th of September: Replaced my old ASUS RT-AC68U, with an ASUS RT-AX89X.
 * 22th of October 09:08-09:14 UTC: What seemed like a Special K flake, had managed to cram its way into the fan of my 400€ network switch, and I had to get it out with an *Anna & Clara* butter knife without destroying the switch.
+* 25th of October 14:00~15:45 UTC: I swear to Queen Clarion that the RaspPi just randomly froze with no input, while I was sitting in the couch playing New Super Mario Bros. 2. I need to look into *some* sort of failover server in the near future.
