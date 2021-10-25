@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 201020211
+! Version: 251020211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -276,6 +276,7 @@ tvkampen.com,tvsporten.dk##.partners-section
 tvkampen.com,tvsporten.dk##a.p-icon.partner
 utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
 utvarpsaga.is##.textwidget > center
+utvarpsaga.is##.g-dyn
 vaktin.is###banners
 vb.is##.spons
 veitingageirinn.is###mvp-leader-wrap
@@ -713,7 +714,6 @@ _300x250px-*.gif^$domain=ilaks.no
 ||veitingageirinn.is/haus20g.jpg^
 ||utvarpsaga.is/file/*-bordi.jpg^
 ||utvarpsaga.is/file/*_banner.png^
-/utvarpsaga\.is/file/[0-9a-f]{32}\.png/
 /wp-content/uploads/*bruktbilann*.jpg^$domain=alvdalmiv.no|tynsetingen.no
 ||detailersclub.no/uploads/*_banner.$image
 ||reavisa.blob.core.windows.net/*_NETT.jpg^
@@ -2095,7 +2095,7 @@ sofabold.dk##.centerMgfx
 -sparebank1.*.net^
 ! https://www.datahjelperne.no/er-det-deg-facebook-video-spam/
 ||cinefique.com^
-/://[a-z]{10,12}\.easy\.co(/|$)/
+/^(https?://)?[a-z]{10,12}\.easy\.co($|/.*$)/
 ! https://www.datahjelperne.no/posten-sms-svindel/
 ||niupaiba.com^
 ! https://www.nrk.no/osloogviken/slik-prover-sms-svindlerne-a-lure-deg-1.15397367
@@ -4321,7 +4321,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 231020211
+! Version: 251020212
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4768,7 +4768,7 @@ m.jaatama.fi##li:-abp-has(div[id|=div-gpt-ad])
 m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com###banner_area
 m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##.lazyLoadInhouseBanner
 m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##.topBannerMinHeight
-m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##[style^="border-top:1px solid #b3b3b3"]
+m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##[class*=pt][class*=pb][style*="border-top:1px solid #b3b3b3"]
 maalampofoorumi.fi##div[id=sponsor]
 maaseuduntulevaisuus.fi##.ads__native-tall-teaser
 maaseuduntulevaisuus.fi##.banners__suomen-parhaat
@@ -5356,3 +5356,6 @@ iltalehti.fi#@#.ad-placement
 gamemonkey.fi#@#.cookie-consent:not(body):not(html)
 gamemonkey.fi#@#.cookie-consent-header
 gamemonkey.fi#@#.cookie-consent-content
+
+! https://github.com/easylist/easylist/pull/9489
+@@||atlas.playpilot.com/api/v1/ads/browse/$xmlhttprequest,domain=playpilot.com
