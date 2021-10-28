@@ -5240,6 +5240,24 @@ def prepare_agh(lines) -> str:
     for line in lines:
 
         line = re.sub(
+           r"\$doc,domain=(.*)", 
+           r"$denyallow=\1", 
+           line
+        )
+
+        line = re.sub(
+           r"\$denyallow=~", 
+           r"$denyallow=", 
+           line
+        )
+
+        line = re.sub(
+           r"\|~", 
+           r"|", 
+           line
+        )
+
+        line = re.sub(
            "\$doc,", 
            "", 
            line
@@ -5276,20 +5294,8 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"~(.*?)\|", 
-           r"\n@@||\1^", 
-           line
-        )
-
-        line = re.sub(
            r"~ Warning.*", 
            r"", 
-           line
-        )
-
-        line = re.sub(
-           r"\$doc,domain=.*", 
-           "", 
            line
         )
 
@@ -5320,12 +5326,6 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"\|\|\.", 
            r"||*.", 
-           line
-        )
-
-        line = re.sub(
-           r"@@.*pokeacer\.tk\^", 
-           r"", 
            line
         )
 
