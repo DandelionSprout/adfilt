@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 251020211
+! Version: 271020212
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -782,7 +782,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||mc-avisa.no/wp-content/uploads/*/Banner-*.jpg|
 ||tv-kalundborg.dk/system_files/banner^
 ||aa-cdn.mytaste.org/js/ad.js$script
-@@||vgtv.no$generichide
+@@||vgtv.no^$generichide
 ||adnxs.com^$domain=vgtv.no
 ||bluesnews.no/Files/Images/video/Blues-promo-2021.mp4^$~third-party
 ||samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png^
@@ -971,6 +971,7 @@ e24.no###main > div:nth-of-type(3)
 e24.no##div[data-ad-subtype]
 eavisa.com##.custom-a-ds
 eavisa.com##.post-content > .items-container
+tek.no##div[class^=adStyles_]
 ebcontent.dk###ebcontentMegaboard
 edbpriser.dk##.inlist-ad-block
 edbpriser.dk#?#*:-abp-has(> * > div[id^=leftAdSpotAdcontainer])
@@ -4321,7 +4322,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 251020212
+! Version: 261020213
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -5029,6 +5030,7 @@ urjalansanomat.fi#?#.urjal-widget.main:-abp-has(a[href="https://urjalansanomat.f
 urjalansanomat.fi#?#.urjal-widget.main:-abp-has(a[href="https://ysiauto.fi/"])
 urjalansanomat.fi#?#.widget:-abp-has(> a[href="/lounaat"])
 uudenkaupunginsanomat.fi###auto-grid-container-5c40764673d19
+uusisuomi.fi##[data-test=mainTeaserColumn][href^="https://www.uusisuomi.fi/kumppanisisallot/"]
 uusisuomi.fi#?#.lazyload-wrapper + section:-abp-contains(Kaupallinen yhteistyö)
 uusisuomi.fi#?#div#skyscraper-height-div > div > aside > section > a:-abp-contains(Kaupallinen yhteistyö)
 uusisuomi.fi#?#div#skyscraper-height-div > div > main > div > a:-abp-contains(Kaupallinen yhteistyö)
@@ -5340,9 +5342,6 @@ kaksplus.fi#@#.sponsored-content
 
 ! Will be removed after PR's accepted (whitelistings for issues caused by other lists or additions to the main Easylist)
 
-! https://github.com/easylist/easylist/pull/6887
-##[data-template-type=nativead]
-
 ! https://github.com/easylist/easylist/pull/8449
 ##[id|=bunyad-widget-ads]
 
@@ -5351,11 +5350,6 @@ iltalehti.fi#@#.ad-placement
 
 ! https://github.com/easylist/easylist/pull/9343
 @@||almamedia.fi/almacmp/$script
-
-! https://github.com/easylist/easylist/pull/9419
-gamemonkey.fi#@#.cookie-consent:not(body):not(html)
-gamemonkey.fi#@#.cookie-consent-header
-gamemonkey.fi#@#.cookie-consent-content
 
 ! https://github.com/easylist/easylist/pull/9489
 @@||atlas.playpilot.com/api/v1/ads/browse/$xmlhttprequest,domain=playpilot.com
