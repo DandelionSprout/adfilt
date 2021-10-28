@@ -18,7 +18,7 @@ The server attempts to block ads, malware, fake webshops, push notifications, an
 
 On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 11th of September 2021:
+Current list set as of 28th of October 2021:
 
 #### Lists against ads, against app notifications, and against a few trackers
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
@@ -52,7 +52,7 @@ Current list set as of 11th of September 2021:
 * 🚸 Anti-'Anthro combat-equipment gacha waifu' List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiAnthroCombatWaifuList.txt
 
 #### Lists against alt-right
-* 🏗 Remover for Mainstream Tabloid and Alt-Right Sites — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/TabloidRemover.txt
+* 🏗 Remover for Mainstream Tabloid and Alt-Right Sites — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/TabloidRemover.txt + https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/TabloidRemover-MastodonCategoryForImports.csv
 * 💸 Anti-'Insane religious preachers' List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/AntiPreacherList.txt
 * Fake-Local-Journals-List — https://raw.githubusercontent.com/MassMove/AttackVectors/master/LocalJournals/fake-local-journals-list.txt
 * Windscribe Clickbait — https://assets.windscribe.com/custom_blocklists/clickbait.txt
