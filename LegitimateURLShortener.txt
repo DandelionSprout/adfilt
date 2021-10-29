@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 29October2021v1-Beta
+! Version: 29October2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -935,6 +935,8 @@ $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjone
 $removeparam=sid,domain=gamereactor.*
 ! No particular example
 $removeparam=from,domain=sogou.com|baidu.com|jetbrains.com|bandcamp.com|apkpure.com
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915 and https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864
+$removeparam=keyword,domain=ebay.com|bindright.com|lendgo.com
 
 !! ——— Rules for heavily covered sites ———
 !!! ——— Amazon ———
@@ -1061,6 +1063,12 @@ $removeparam=googleloc
 $removeparam=_sacat
 ||ebay.$removeparam=campid
 ||ebay.$removeparam=toolid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864
+$removeparam=crlp,domain=ebay.com
+$removeparam=MT_ID,domain=ebay.com
+$removeparam=geo_id,domain=ebay.com
+$removeparam=device,domain=ebay.com
+$removeparam=cmpgn,domain=ebay.com
 
 !!! ——— Facebook ———
 ! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/157
@@ -1752,6 +1760,21 @@ $removeparam=vc_lpp
 
 ! https://store.wsj.com/shop/apac/jp/jwsjss21/?inttrackingCode=aaqwimzi&icid=JJ_ON_JHP_ACQ_NA
 ||wsj.com^$removeparam=inttrackingcode
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915
+$removeparam=tg_ref
+||bindright.com^$removeparam=camp_id
+||bindright.com^$removeparam=sub2
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559940
+||lendgo.com^$removeparam=rate
+||lendgo.com^$removeparam=apr
+||lendgo.com^$removeparam=rt
+||lendgo.com^$removeparam=lt
+||lendgo.com^$removeparam=_offer_super-low_rates.
+
+! https://github.com/uBlockOrigin/uBlock-issues/issues/1784
+||clickserve.dartsearch.net^$removeparam=lid
 
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
