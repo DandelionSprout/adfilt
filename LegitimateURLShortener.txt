@@ -644,8 +644,6 @@ $removeparam=impradname
 ! https://stackoverflow.com/?cm_type=gnav
 $removeparam=cm_type
 
-! https://www.monoprice.com/?ref=cj
-! http://www.ticketnetwork.com/?ref=cj
 ! https://www.roku.com/products/roku-ultra?Ref=CJ
 ^ref=cj^$removeparam=/^ref=/i
 
@@ -872,6 +870,11 @@ $removeparam=adj_creative
 ! https://www.cpumedics.com/nvidia-900-22080-0000-000-nvidia-tesla-k80-24gb-kepler-gddr5-pci-e-gpu-accelerator/?_vsrefdom=adwords
 $removeparam=_vsrefdom
 
+! https://github.com/ClearURLs/Addon/issues/108
+$removeparam=ceneo_spo
+^from=ceneo^$removeparam=from
+^ref=ceneo^$removeparam=ref
+
 ! ——— Specific rules ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
@@ -988,6 +991,8 @@ $removeparam=hvbmt
 $removeparam=hvexid
 ! https://www.amazon.com/dp/B09BTKN7ZV/?language=en_US&cstrackid=15a3d919-f0f7a-4137-92ad-3f06f83235a2
 $removeparam=cstrackid
+! https://github.com/ClearURLs/Addon/issues/116
+||amazon.$removeparam=SubscriptionId
 ! Other
 @@/b/ref=$removeparam=ie
 
@@ -1835,6 +1840,12 @@ $removeparam=iv_,domain=allbirds.com
 ||apple.com^$removeparam=mttnsubkw
 ||apple.com^$removeparam=mttnsubplmnt
 ||apple.com^$removeparam=mttnpid
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/97108
+||weidian.com^$removeparam=distributorid
+||weidian.com^$removeparam=wfr
+||weidian.com^$removeparam=ifr
+||weidian.com^$removeparam=share_relation
 
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
