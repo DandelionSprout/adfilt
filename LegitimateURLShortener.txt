@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 29October2021v2-Beta
+! Version: 30October2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -79,7 +79,14 @@ $removeparam=awc
 $removeparam=exta
 
 ! https://www.go2games.com/switch/nintendo-switch-console-fortnite-edition?ranMID=42957&ranEAID=ORHQW7E8X5A&ranSiteID=ORHQW7E8X5A-JzvoI1XaPNAAx901cYMaQw (28/11/2020)
-$removeparam=/^ran[A-Z]/
+! https://www.bloomingdales.com/index.ognc?LinkshareID=qpF0HYnRugA-gCA2Oa9Rs9NdZb7l4Vb_RA&m_sc=aff&PartnerID=LINKSHARE&cm_mmc=LINKSHARE-_-n-_-n-_-n&ranPublisherID=qpF0HYnRugA&ranLinkID=1&ranLinkTypeID=10&pubNAME=Offers.com+%28Offers.com%2C+LLC%29
+$removeparam=ranMID
+$removeparam=ranEAID
+$removeparam=ranSiteID
+$removeparam=ranPublisherID
+$removeparam=ranLinkID
+$removeparam=ranLinkTypeID
+$removeparam=ransiteID
 
 ! https://www.jdwilliams.co.uk/shop/switch-neon-inc-rayman-and-spongebob/bm593/product/details/show.action?pdBoUid=3156&pdpClick=true (28/11/2020)
 $removeparam=pdBoUid
@@ -346,19 +353,6 @@ $removeparam=ns_campaign
 $removeparam=ns_linkname
 $removeparam=ns_fee
 $removeparam=zanpid
-$removeparam=hvadid
-$removeparam=hvpos
-$removeparam=hvnetw
-$removeparam=hvrand
-$removeparam=hvpone
-$removeparam=hvptwo
-$removeparam=hvqmt
-$removeparam=hvdev
-$removeparam=hvdvcmdl
-$removeparam=hvlocint
-$removeparam=hvlocphy
-$removeparam=hvtargid
-$removeparam=adgrpid
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-783185
 $removeparam=wgu
@@ -375,10 +369,6 @@ $removeparam=affTrack
 $removeparam=afftrack
 $removeparam=shrsl_analytics_sscid
 $removeparam=shrsl_analytics_sstid
-
-! https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
-$removeparam=/^AFF_ID/i,domain=~nordvpn.net|~getproton.me
-$removeparam=/^aff_/
 $removeparam=SSAID
 $removeparam=affsrc
 $removeparam=/^cm_mmc/
@@ -388,9 +378,15 @@ $removeparam=tcid
 $removeparam=/^dv_adwords_/
 $~xmlhttprequest,removeparam=/^adid=/i,domain=~finn.no
 $removeparam=wdorigin
+
+! https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
+$removeparam=/^AFF_ID/i,domain=~nordvpn.net|~getproton.me
+$removeparam=/^aff_/
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-773756
 $removeparam=twitchReferral
-$removeparam=/^shared/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi
-$removeparam=origin,denyallow=platform.twitter.com,domain=yle.fi|flaticon.com|drop.com|symbolab.com|archive.org|norton.com
+
+! https://www.chancellors.co.uk/properties/r/3714620?elqTrackId=9829ww2ws92q56sfe2sqqqq81525lsw8a
 $removeparam=elqTrackId
 
 ! https://www.netflix.com/watch/80057171?trackId=14170056&tctx=2%2C0%2Cad3cd321-a42b-461e-81d3-b18c51559559-25047246%2Ce7fede3c-e54d-4941-9849-8fb5d51dbada_37683809X10XX1622546150880%2Ce7fede3c-e54d-4941-9849-8fb5d51dbada_ROOT%2C
@@ -443,9 +439,6 @@ $removeparam=extcmp
 ! https://www.staypro.no/?at_gd=2B9E397233E3B6D5EF466E3BC0AC42F1885D8A50
 $removeparam=at_gd
 
-! https://fernerjacobsen.no/?epi=STS-SHP--FernerJacobsen-Logo%7Cxid%3Afr1624121412114eah
-$removeparam=epi,domain=fernerjacobsen.no|webhallen.com|microsoft.com|xbox.com
-
 ! https://www.gamerevolution.com/guides/685650-windows-11-tpm-2-0-pc-cant-run-install?amp (No one on fast networks really likes AMP, least of all uBlock Origin + 'Firefox for Android' users; 25/06/2021)
 $removeparam=amp
 
@@ -454,9 +447,6 @@ $removeparam=_gl
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-895430
 $removeparam=gtmtrack
-
-! https://www.hs.fi/talous/art-2000006474289.html?share=095cb51bfd3619323ff183dd633ae8ab
-$removeparam=share,domain=hs.fi|oerproject.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-899565
 $removeparam=vifAdCount
@@ -480,9 +470,6 @@ $removeparam=orig_referrer
 ! https://www.detur.fi/?AgentCode=NAPSU
 $removeparam=AgentCode
 
-! https://www.loistoristeilyt.fi/?agency=napsu
-$removeparam=agency,domain=loistoristeilyt.fi
-
 ! https://www.nazar.fi/?AgencyNbr=1233
 $removeparam=AgencyNbr
 
@@ -493,14 +480,15 @@ $removeparam=agentcodeweblink
 $removeparam=ncid
 
 ! https://www.f-secure.com/en/home/products/freedome?ecid=10588&adcid=10588
-$removeparam=ecid
+$removeparam=/^ecid=/i
 $removeparam=adcid
 
 ! https://www.marvel.com/insider?Osocial=YT&CID=MarvelInsider
 $removeparam=Osocial
 
 ! https://www.nytimes.com/2008/12/16/sports/othersports/16beckey.html?adxnnl=1&adxnnlx=1257549224-XSk5v9i4LDrKlVwQmlgO8A&
-$removeparam=/^adxnnl/
+$removeparam=adxnnl
+$removeparam=adxnnlx
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
 $removeparam=mkt_tok
@@ -527,21 +515,11 @@ $removeparam=as_src
 $removeparam=coid
 $removeparam=edsacid
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1084659 (03/08/2021)
-$removeparam=index,domain=nytimes.com|nytimes3xbfgragh.onion
-$removeparam=pool,domain=nytimes.com|nytimes3xbfgragh.onion
-$removeparam=region,domain=nytimes.com|nytimes3xbfgragh.onion
-
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1142244
 $removeparam=/^adjust_/
 $removeparam=action_type_map
 $removeparam=/^bsft_/
 $removeparam=/^dpg_/
-
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1155198
-$removeparam=sm12
-$removeparam=ts,domain=x-kom.pl|al.to|combat.pl|baidu.com|bilibili.com|~api.bilibili.com
-$removeparam=token,domain=x-kom.pl|al.to|combat.pl|substack.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1169570
 $removeparam=elq
@@ -570,9 +548,6 @@ $removeparam=/^ds_/,domain=~clickserve.dartsearch.net
 $removeparam=Adposition
 $removeparam=adposition
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1212122
-$removeparam=name,domain=nytimes.com|nytimes3xbfgragh.onion
-
 ! https://olympics.com/tokyo-2020/en/olympian-paralympian-experiences?gbraid=CjgKCAjwpf2IBhBIEigACfcQDju6R3TH1DL6Yi3-BaKiXeusYGTi1Q35AZa0I0iqhLV19OZrGgLEhw&wbraid=CjgKCAjwpf2IBhBIEigACfcQDju6R3TH1DL6Yi3-BaKiXeusYGTi1Q35AZa0I0iqhLV19OZrGgLEhw
 $removeparam=gbraid
 $removeparam=wbraid
@@ -600,9 +575,6 @@ $removeparam=cm_soc
 $removeparam=o_lid
 $removeparam=o_sch
 $removeparam=o_xid
-
-! http://www.bodenusa.com/?tc_ch=affs&tc_ve=ppj&code=X3W6&tc_so=8439&tc_me=cr&tc_ca=na&tc_au=na&tc_cr=2-420132&tc_campid=na&tc_adgroupid=na&tc_kwid=na&tc_matchid=na
-$removeparam=/^tc_/,domain=bodenusa.com
 
 ! https://www.att.com/wireless/?wtExtndSource=8807380
 $removeparam=wtExtndSource
@@ -634,9 +606,7 @@ $removeparam=usource
 ! http://www.bitdefender.com/?MPid=75107
 $removeparam=/^mpid=/i
 
-! https://www.mcafee.com/consumer/en-us/landing-page/direct/aff/mtp-family/desktop/mcafee-total-protection.html?pkg_id=521&culture=en-us&csrc=cj&csrcl2=Black+Friday%2C+Ziff+Davis+LLC&ccoe=direct&ccoel2=am&ccstype=partnerlinks_412446610cc511ec82da00f00a180510&cctype=desktop&prgt=a
 ! https://www.vitacost.com/?csrc=SITEREF-CJ&cjbatcheventid=8807380&cjpid=8807380
-$removeparam=csrc,domain=mcafee.com|vitacost.com
 $removeparam=cjbatcheventid
 $removeparam=cjpid
 
@@ -644,12 +614,6 @@ $removeparam=cjpid
 $removeparam=c3ch
 $removeparam=c3nid
 $removeparam=om_mmc
-
-! http://www.thenorthface.com/?ransiteID=qpF0HYnRugA-GVtDt3hThISaN_khzy00EQ
-$removeparam=ransiteID
-
-! https://www.bloomingdales.com/?m_sc=aff&ranPublisherID=qpF0HYnRugA&ranLinkTypeID=10
-$removeparam=m_sc,domain=bloomingdales.com|macys.com
 
 ! https://store.wsj.com/shop/emea/wsjsseur21/?trackingCode=aaqwghtc
 $removeparam=trackingCode
@@ -680,36 +644,23 @@ $removeparam=impradname
 ! https://stackoverflow.com/?cm_type=gnav
 $removeparam=cm_type
 
-! https://www.monoprice.com/?ref=cj
-! http://www.ticketnetwork.com/?ref=cj
 ! https://www.roku.com/products/roku-ultra?Ref=CJ
-?ref=cj^$removeparam=/^ref/i
-&ref=cj^$removeparam=/^ref/i
+^ref=cj^$removeparam=/^ref=/i
 
 ! https://newyorkcomedyclub.com/?ref=awin
-?ref=awin^$removeparam=ref
-&ref=awin^$removeparam=ref
+^ref=awin^$removeparam=ref
 
 ! https://untilgone.com/products/usps-forever-stamps-2018-or-2019-u-s-flag-100-pack.html?source=pepperjam
-?source=pepperjam^$removeparam=source
-&source=pepperjam^$removeparam=source
+^source=pepperjam^$removeparam=source
 
 ! https://www.vitaminshoppe.com/?sourceType=af&source=cj
-?source=cj^$removeparam=source
-&source=cj^$removeparam=source
+^source=cj^$removeparam=source
 
 ! https://www.jet2holidays.com/?source=AWIN
-?source=awin^$removeparam=source
-&source=awin^$removeparam=source
+^source=awin^$removeparam=source
 
 ! https://us.myprotein.com/?affil=awin
-?affil=awin^$removeparam=affil
-&affil=awin^$removeparam=affil
-
-! https://us.boohoo.com/?$3p=a_cj_affiliate&~click_id=8c77e9c00c1e11ec82da00790a180510&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=https%3A%2F%2Fus.boohoo.com%2F&~keyword=8807380&cj_linkd=12344165&cj_webid=8807380&cj_affid=1397064&cj_affname=Offers.com%20-%20Vertive%2C%20LLC&_branch_match_id=962049055156509358
-! https://www.forever21.com/?$3p=a_cj_affiliate&~click_id=b8c806cf0cad11ec806d4d010a18050d&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=http%3A%2F%2Fwww.forever21.com&cj_pub_sid=06gtKjdPmfBs463ojiL8awp&_branch_match_id=962306946010631351
-$removeparam=/^\$/,domain=boohoo.com|forever21.com
-$removeparam=/^\~/,domain=boohoo.com|forever21.com
+^affil=awin^$removeparam=affil
 
 ! https://www.lightinthebox.com/c/robot-vacuums-cleaners_113104?p.litb_from=SAS&p.utm_source=sas&p.utm_medium=affiliate&p.utm_campaign=136482&url=http%3A%2F%2Fwww.lightinthebox.com%2Fc%2Frobot-vacuums-cleaners_113104
 $removeparam=/^p\.utm_/
@@ -789,16 +740,14 @@ $removeparam=sp_source
 $removeparam=sp_medium
 $removeparam=sp_campaign
 
-! https://www.newbalance.com/?Ecid=af_qpF0HYnRugA
-$removeparam=Ecid,domain=newbalance.com
+! https://www.moosejaw.com/?ad=63723&ad_id=IR
 $removeparam=ad_id
 
 ! https://www.michaels.com/home?affSource=1397064_14079089
 $removeparam=affSource
 
 ! https://www.nflshop.com/?_s=afl_impact
-?_s=afl_impact^$removeparam=_s
-&_s=afl_impact^$removeparam=_s
+^_s=afl_impact^$removeparam=_s
 
 ! https://www.la-z-boy.com/?cid_medium=affiliate&cid_campaign=8807380
 $removeparam=/^cid_/
@@ -815,10 +764,6 @@ $removeparam=ir_cid
 ! https://www.elfcosmetics.com/?rmtsref=LinkShare
 $removeparam=rmtsref
 
-! https://www.columbia.com/?uid=10728209&nid=8807380
-$removeparam=nid,domain=columbia.com|sorel.com
-$removeparam=uid,domain=columbia.com|sorel.com
-
 ! https://www.tunabellysoftware.com/tgpro/?status=accepted&expires=1631129825&p_sid=36603&p_aid=124903&p_link=2172&p_tok=7195fd0d-1dd3-47b8-8348-ffb524dbfc4a
 $removeparam=p_aid
 $removeparam=p_sid
@@ -827,15 +772,6 @@ $removeparam=p_tok
 
 ! https://scontent.cdninstagram.com/v/t50.2886-16/228280186_4462339507137399_6165083647713647040_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5zdG9yeS5kZWZhdWx0In0&_nc_ht=scontent-iev1-1.cdninstagram.com&_nc_ohc=nL_7kCFHgrcAX-HT6F1&edm=AOVtZ6oBAAAA&vs=17895914579221456_1489520608&_nc_vs=HBksFQAYJEdIcEhtdzEzcXpCaGVkb1BBTUNaaXVEcHhvNVZidXFIQUFBQRUAAsgBABUAGCRHTVdiZFE2Z2ZIa3dVWFVBQUtNZXdSNFhTQ2NSYnBrd0FBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACbCkMnRj5zWPxUCKAJDMywXQCREGJN0vGoYEmRhc2hfYmFzZWxpbmVfM192MREAdegHAA%3D%3D&ccb=7-4&oe=614B0BE1&oh=22849edcbcdb1949e3f0cbde56ddd89b&_nc_vts_prog=1&dl=1
 $removeparam=_nc_vts_prog
-
-! https://www.barrons.com/articles/etf-giants-push-back-against-senate-democrat-who-wants-to-take-away-tax-break-51631753035?refsec=hp_INTERESTS_taxes
-$removeparam=refsec,domain=barrons.com
-
-! https://www.marketwatch.com/personal-finance/real-estate/rent/united-states/new-york/new-york?reloadLocationOnSearch=false&searchType=suggested&reflink=mc_wsj_search
-$removeparam=reflink,domain=marketwatch.com|mansionglobal.com
-
-! https://edition.cnn.com/?hpt=header_edition-picker
-$removeparam=hpt,domain=cnn.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1424772
 $removeparam=depth_1-utm_source
@@ -909,6 +845,35 @@ $removeparam=ml_subscriber_hash
 
 ! https://stackoverflow.com/questions/37882810/what-is-meaning-of-branch-match-id
 $removeparam=_branch_match_id
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1533793
+$removeparam=vc_lpp
+
+! https://www.tanga.com/?aff_network=cj&cj_cid=1397064&cj_publisher=Offers.com%20-%20Vertive%2C%20LLC&cj_link_id=11115853&cj_link_name=Tanga.com&cj_event=fa525e9a0cd011ec831185290a180511
+$removeparam=cj_affid
+$removeparam=cj_affiliate
+$removeparam=cj_affname
+$removeparam=cj_cid
+$removeparam=cj_event
+$removeparam=cj_link_id
+$removeparam=cj_link_name
+$removeparam=cj_linkd
+$removeparam=cj_pub_sid
+$removeparam=cj_publisher
+$removeparam=cj_webid
+
+! https://docs.voiscooters.com/deeplinks/
+$removeparam=adj_campaign
+$removeparam=adj_adgroup
+$removeparam=adj_creative
+
+! https://www.cpumedics.com/nvidia-900-22080-0000-000-nvidia-tesla-k80-24gb-kepler-gddr5-pci-e-gpu-accelerator/?_vsrefdom=adwords
+$removeparam=_vsrefdom
+
+! https://github.com/ClearURLs/Addon/issues/108
+$removeparam=ceneo_spo
+^from=ceneo^$removeparam=from
+^ref=ceneo^$removeparam=ref
 
 ! ——— Specific rules ——— !
 !! ——— Can never be made generic ———
@@ -1005,8 +970,30 @@ $~xmlhttprequest,removeparam=psc
 ||amazon.$removeparam=qsid
 ||amazon.$removeparam=sres
 ||amazon.$removeparam=srpt
-! Other
+! https://gaming.amazon.com/intro?ingress=twch&twitchReferral=fd620d6bcd9613dd208636ad8b18c3b3
 ||amazon.$removeparam=ingress
+! https://www.amazon.de/Logitech-Mechanische-Gaming-Tastatur-GL-Tasten-Switch-Unterst%C3%BCtzung/dp/B07VZLMQN7/ref=asc_df_B07VZLMQN7/?hvadid=380194285389&hvpos&hvnetw=g&hvrand=829567778685238150&hvpone&hvptwo&hvqmt&hvdev=c&hvdvcmdl&hvlocint&hvlocphy=9043042&hvtargid=pla-815390482707&adgrpid=79218802204
+$removeparam=hvadid
+$removeparam=hvpos
+$removeparam=hvnetw
+$removeparam=hvrand
+$removeparam=hvpone
+$removeparam=hvptwo
+$removeparam=hvqmt
+$removeparam=hvdev
+$removeparam=hvdvcmdl
+$removeparam=hvlocint
+$removeparam=hvlocphy
+$removeparam=hvtargid
+$removeparam=adgrpid
+! https://www.amazon.ca/amazonprime?hvbmt=be&hvexid
+$removeparam=hvbmt
+$removeparam=hvexid
+! https://www.amazon.com/dp/B09BTKN7ZV/?language=en_US&cstrackid=15a3d919-f0f7a-4137-92ad-3f06f83235a2
+$removeparam=cstrackid
+! https://github.com/ClearURLs/Addon/issues/116
+||amazon.$removeparam=SubscriptionId
+! Other
 @@/b/ref=$removeparam=ie
 
 !!! ——— Bing ———
@@ -1190,13 +1177,63 @@ $removeparam=/^pf_rd_/,domain=shopbop.com|amazon.*|imdb.com
 $removeparam=Source,domain=facebook.com|facebookcorewwwi.onion|messenger.com|evga.com
 $removeparam=visit_id,domain=bilibili.com|google.*
 $removeparam=version,domain=mp.weixin.qq.com|us.norton.com
-$removeparam=p,domain=banggood.com|sogou.com^
+$removeparam=p,domain=banggood.com|sogou.com
 $removeparam=linkId,domain=amazon.*|disneyplus.com
 $removeparam=trkid,domain=netflix.com|tokopedia.com
 $removeparam=channel,domain=rei.com|squarespace.com|privateinternetaccess.com
 $removeparam=fr,domain=baidu.com|thegay.com
 $removeparam=promo,domain=thegay.com|hammacher.com
 $removeparam=sref,domain=bloomberg.com|go.skimresources.com
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-782437
+$removeparam=/^shared/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi
+$removeparam=origin,denyallow=platform.twitter.com,domain=yle.fi|flaticon.com|drop.com|symbolab.com|archive.org|norton.com|philips.*
+
+! https://fernerjacobsen.no/?epi=STS-SHP--FernerJacobsen-Logo%7Cxid%3Afr1624121412114eah
+$removeparam=epi,domain=fernerjacobsen.no|webhallen.com|microsoft.com|xbox.com
+
+! https://www.hs.fi/talous/art-2000006474289.html?share=095cb51bfd3619323ff183dd633ae8ab
+$removeparam=share,domain=hs.fi|oerproject.com
+
+! https://www.loistoristeilyt.fi/?agency=napsu
+$removeparam=agency,domain=loistoristeilyt.fi
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1084659 (03/08/2021)
+$removeparam=index,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=pool,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=region,domain=nytimes.com|nytimes3xbfgragh.onion
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1155198
+$removeparam=sm12
+$removeparam=ts,domain=x-kom.pl|al.to|combat.pl|baidu.com|bilibili.com|~api.bilibili.com
+$removeparam=token,domain=x-kom.pl|al.to|combat.pl|substack.com
+
+! http://www.bodenusa.com/?tc_ch=affs&tc_ve=ppj&code=X3W6&tc_so=8439&tc_me=cr&tc_ca=na&tc_au=na&tc_cr=2-420132&tc_campid=na&tc_adgroupid=na&tc_kwid=na&tc_matchid=na
+$removeparam=/^tc_/,domain=bodenusa.com
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1212122
+$removeparam=name,domain=nytimes.com|nytimes3xbfgragh.onion
+
+! https://www.bloomingdales.com/?m_sc=aff&ranPublisherID=qpF0HYnRugA&ranLinkTypeID=10
+$removeparam=m_sc,domain=bloomingdales.com
+
+! https://us.boohoo.com/?$3p=a_cj_affiliate&~click_id=8c77e9c00c1e11ec82da00790a180510&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=https%3A%2F%2Fus.boohoo.com%2F&~keyword=8807380&cj_linkd=12344165&cj_webid=8807380&cj_affid=1397064&cj_affname=Offers.com%20-%20Vertive%2C%20LLC&_branch_match_id=962049055156509358
+! https://www.forever21.com/?$3p=a_cj_affiliate&~click_id=b8c806cf0cad11ec806d4d010a18050d&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=http%3A%2F%2Fwww.forever21.com&cj_pub_sid=06gtKjdPmfBs463ojiL8awp&_branch_match_id=962306946010631351
+$removeparam=/^\$/,domain=boohoo.com|forever21.com
+$removeparam=/^\~/,domain=boohoo.com|forever21.com
+
+! https://www.columbia.com/?uid=10728209&nid=8807380
+$removeparam=nid,domain=columbia.com|sorel.com
+$removeparam=uid,domain=columbia.com|sorel.com
+
+! https://www.barrons.com/articles/etf-giants-push-back-against-senate-democrat-who-wants-to-take-away-tax-break-51631753035?refsec=hp_INTERESTS_taxes
+$removeparam=refsec,domain=barrons.com
+
+! https://www.marketwatch.com/personal-finance/real-estate/rent/united-states/new-york/new-york?reloadLocationOnSearch=false&searchType=suggested&reflink=mc_wsj_search
+$removeparam=reflink,domain=marketwatch.com|mansionglobal.com
+
+! https://edition.cnn.com/?hpt=header_edition-picker
+$removeparam=hpt,domain=cnn.com
 
 ! https://blog.archive.org/matching-gifts/?iax=typage
 ||archive.org^$removeparam=iax
@@ -1327,7 +1364,12 @@ $removeparam=rid,domain=giphy.com
 ||babbel.com^$removeparam=btp
 ||microsoft.com^$removeparam=ru
 ||microsoft.com^$removeparam=destrt
-||discshop.fi^$removeparam=/^ad/
+
+! http://www.discshop.fi/?id=116426&ad=hintaseuranta&ad_src=hintaseuranta.fi&ad_content=Nintendo+Switch+Pro+Controller%2c+Nintendo+Switch+-peliohjain&ad_prodid=5179300
+$removeparam=ad,domain=discshop.fi|moosejaw.com
+$removeparam=ad_src,domain=discshop.fi
+$removeparam=ad_content,domain=discshop.fi
+$removeparam=ad_prodid,domain=discshop.fi
 
 ! https://www.netflix.com/watch/80057171?trackId=14170056&tctx=2%2C0%2Cad3cd321-a42b-461e-81d3-b18c51559559-25047246%2Ce7fede3c-e54d-4941-9849-8fb5d51dbada_37683809X10XX1622546150880%2Ce7fede3c-e54d-4941-9849-8fb5d51dbada_ROOT%2C
 ||netflix.com^$removeparam=trackId
@@ -1464,7 +1506,11 @@ $removeparam=impression_id,domain=nytimes.com|nytimes3xbfgragh.onion
 ! https://as.com/futbol/2021/08/24/primera/1629781727_235298.html?m1=cG9ydGFkYV9wb3J0YWRh&m2=QUNUVUFMSURBRA%3D%3D&m3=NA%3D%3D&m4=bm9ybWFs&m5=MjI%3D&m1=cG9ydGFkYV9wb3J0YWRh&m2=QUNUVUFMSURBRA%3D%3D&m3=NQ%3D%3D&m4=bm9ybWFs&m5=MjI%3D
 ||as.com^$removeparam=omnil
 ||as.com^$removeparam=id_externo_noti
-||as.com^$removeparam=/^m[0-9]/
+||as.com^$removeparam=m1
+||as.com^$removeparam=m2
+||as.com^$removeparam=m3
+||as.com^$removeparam=m4
+||as.com^$removeparam=m5
 
 ! https://www.udemy.com/courses/search/?q=data+structures&kw=data+struc
 ||udemy.com^$removeparam=kw
@@ -1476,7 +1522,6 @@ $removeparam=impression_id,domain=nytimes.com|nytimes3xbfgragh.onion
 ! https://blackfriday.com/stores/black-friday
 $removeparam=CID,domain=burpee.com|chegg.com|express.com|farmandfleet.com|marvel.com|mcafee.com|overstock.com|pepboys.com|puritan.com|rosettastone.com|samsung.com|shutterfly.com|staples.com|teleflora.com|ulta.com|virginatlantic.com|vrbo.com|walgreens.com
 $removeparam=DZID,domain=autoanything.com
-$removeparam=ECID,domain=boostmobile.com
 $removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|ashford.com|autoanything.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|boscovs.com|buschgardens.com|cheapcaribbean.com|chicos.com|choicehotels.com|ecampus.com|expedia.com|express.com|factoryoutletstore.com|farmandfleet.com|hammacher.com|intuit.com|jockey.com|kennethcole.com|landsend.com|lenovo.com|lens.com|mcafee.com|monoprice.com|overstock.com|perfumania.com|samsung.com|sears.com|sierra.com|soma.com|staples.com|teleflora.com|ulta.com|verizon.com|virginatlantic.com|vistaprint.com|walgreens.com|wayfair.com|whitehouseblackmarket.com|wwe.com|yahoo.com|zchocolat.com
 $removeparam=SID,domain=ae.com|anntaylor.com|applevacations.com|ashford.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|cheapcaribbean.com|chegg.com|chggtrx.com|ecampus.com|expedia.com|express.com|intuit.com|jockey.com|loft.com|mcafee.com|norton.com|overstock.com|perfumania.com|samsung.com|sierra.com|staples.com|taskrabbit.com|teleflora.com|verizon.com|vistaprint.com|walgreens.com|wwe.com|yahoo.com|zchocolat.com|zulily.com
 $removeparam=adref,domain=ancestry.*
@@ -1489,7 +1534,7 @@ $removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com
 $removeparam=cp,domain=converse.com|nike.com
 $removeparam=ecmp,domain=4wheelparts.com
 $removeparam=kc,domain=autoanything.com
-$removeparam=/^linkshareid/i,domain=bloomingdales.com|macys.com
+$removeparam=/^linkshareid=/i,domain=bloomingdales.com|macys.com
 $removeparam=mc,domain=bose.*
 $removeparam=mid,domain=agentprovocateur.com|columbia.com|dxl.com|hanes.com|josbank.com|onehanesplace.com|saksfifthavenue.com|saksoff5th.com|sorel.com|verabradley.com
 $removeparam=mktvar002,domain=autodesk.com
@@ -1497,17 +1542,19 @@ $removeparam=mp_id,domain=blinds.com
 $removeparam=ogmap,domain=coach.com|loft.com
 $removeparam=ogmeas,domain=lanebryant.com
 $removeparam=partid,domain=bellacor.com
-$removeparam=/^partnerid/i,domain=1800contacts.com|al.to|allenedmonds.com|bloomingdales.com|combat.pl|famousfootwear.com|macys.com|naturalizer.com|shoes.com|x-kom.pl
+$removeparam=/^partnerid=/i,domain=1800contacts.com|al.to|allenedmonds.com|bloomingdales.com|combat.pl|famousfootwear.com|macys.com|naturalizer.com|shoes.com|x-kom.pl
 $removeparam=pid,domain=123inkjets.com|bergfreunde.*|play.google.com|samsclub.com|th.bing.com|flipkart.com
-$removeparam=/^pubcid/i,domain=ashford.com
-$removeparam=/^pubid/i,domain=conrad.de|express.com|ftd.com|verizon.com|vineyardvines.com
-$removeparam=/^pubname/i,domain=anntaylor.com|ashford.com|bloomingdales.com|express.com|famousfootwear.com|farmandfleet.com|hottopic.com|loft.com|naturalizer.com|samsclub.com
-$removeparam=/^publisher/i,domain=asos.com|blissworld.com|bose.*|burkesoutlet.com|josbank.com|kipling-usa.com|lensrentals.com|metmuseum.org|petsupplies.com|phonesoap.com|riteaid.com|shutterfly.com|tous.com|untilgone.com|virginatlantic.com
+$removeparam=/^pubcid=/i,domain=ashford.com
+$removeparam=/^pubid=/i,domain=conrad.de|express.com|ftd.com|verizon.com|vineyardvines.com
+$removeparam=/^pubname=/i,domain=anntaylor.com|ashford.com|bloomingdales.com|express.com|famousfootwear.com|farmandfleet.com|hottopic.com|loft.com|naturalizer.com|samsclub.com
+$removeparam=/^publisher=/i,domain=asos.com|bose.*|josbank.com|metmuseum.org|riteaid.com|shutterfly.com|tous.com|untilgone.com
+$removeparam=/^publisherId=/i,domain=blissworld.com|burkesoutlet.com|kipling-usa.com|lensrentals.com|petsupplies.com|phonesoap.com
+$removeparam=Publisher_Name,domain=shudders.com|virginatlantic.com
 $removeparam=pubref,domain=asos.com
 $removeparam=pzid,domain=emirates.com
-$removeparam=/^refID/i,domain=allmodern.com|calphalon.com|priceline.com|wayfair.com|yankeecandle.com
-$removeparam=/^siteid/i,domain=agentprovocateur.com|amerimark.com|anntaylor.com|asos.com|awd-it.*|gap.com|barenecessities.com|beautyencounter.com|buckle.com|burpee.com|chacos.com|coursera.org|dxl.com|dyson.com|elfcosmetics.*|famousfootwear.com|finishline.com|freetaxusa.com|gapcanada.ca|hanes.com|hotwire.com|hulu.com|jcrew.com|josbank.com|kobo.com|lanebryant.com|loft.com|magazines.com|maurices.com|merrell.com|newbalance.com|nordstrom.com|officedepot.com|onehanesplace.com|radissonhotelsamericas.com|saksfifthavenue.com|saksoff5th.com|samash.com|samsclub.com|saucony.com|sharperimage.com|thingsremembered.com|thrifty.*|timeformecatalog.com|verabradley.com|vivaterra.com|wine.com|yoox.com|barrons.com|marketwatch.com
-$removeparam=/^srcCode/i,domain=jcrew.com|magellans.com|teleflora.com|tigerdirect.com
+$removeparam=/^refID=/i,domain=allmodern.com|calphalon.com|priceline.com|wayfair.com|yankeecandle.com
+$removeparam=/^siteid=/i,domain=agentprovocateur.com|amerimark.com|anntaylor.com|asos.com|awd-it.*|gap.com|barenecessities.com|beautyencounter.com|buckle.com|burpee.com|chacos.com|coursera.org|dxl.com|dyson.com|elfcosmetics.*|famousfootwear.com|finishline.com|freetaxusa.com|gapcanada.ca|hanes.com|hotwire.com|hulu.com|jcrew.com|josbank.com|kobo.com|lanebryant.com|loft.com|magazines.com|maurices.com|merrell.com|newbalance.com|nordstrom.com|officedepot.com|onehanesplace.com|radissonhotelsamericas.com|saksfifthavenue.com|saksoff5th.com|samash.com|samsclub.com|saucony.com|sharperimage.com|thingsremembered.com|thrifty.*|timeformecatalog.com|verabradley.com|vivaterra.com|wine.com|yoox.com|barrons.com|marketwatch.com
+$removeparam=/^srcCode=/i,domain=jcrew.com|magellans.com|teleflora.com|tigerdirect.com
 $removeparam=scd,domain=ashleystewart.com
 
 ! https://casper.com/?coupon_code_amount=50&coupon_code&partner_hero_name&promo_code&gwlurl=https%3A%2F%2Fcasper.com%2F%3Fclickid%3DwVS0-ry5EV79w7lVgyz7gRQMUkg3cwUdzw4SWQ0%26irgwc%3D1%26utm_medium%3Daffiliate%26utm_source%3Dap_ir%26cvo_placement%3Dlandingpage%26coupon_code_amount%3D50%26cvosrc%3Daffiliate.-ap_ir.COU_OFFERS50%26utm_campaign%3Dnano%26coupon_code%3DOFFERS50%26partner_hero_name%3DOFFERS50%26utm_content%3DCOU_OFFERS50%26cvo_campaign%3DCOU%26cvo_creative%3DOnline%2520Tracking%2520Link%26utm_term%3D%26promo_code%3DOFFERS50%26cvo_country%3DNAM%26cvo_product%3DMAT%26clickid%3DS2JWRT0fsxyIRwNxiAS6PRWLUkBTve0%253A4xL1Ws0%26irgwc%3D1%26utm_medium%3Daffiliate%26utm_source%3DZiff%2520Davis%2520-%2520Black%2520Friday%26utm_campaign%3Dap_ir%26coupon_code%3D%26partner_hero_name%3D%26utm_content%3DB22723142.275269922%253Bdc_trk_aid%253D469817975%253Bdc_trk_cid%253D133608354_%26utm_term%3Dlower%26promo_code%3D
@@ -1536,12 +1583,10 @@ $removeparam=scd,domain=ashleystewart.com
 ||kohls.com^$removeparam=prdPV
 
 ! https://www.mcafee.com/consumer/en-us/landing-page/direct/aff/mtp-family/desktop/mcafee-total-protection.html?pkg_id=521&culture=en-us&csrc=cj&csrcl2=Black+Friday%2C+Ziff+Davis+LLC&ccoe=direct&ccoel2=am&ccstype=partnerlinks_412446610cc511ec82da00f00a180510&cctype=desktop&prgt=a
+$removeparam=csrc,domain=mcafee.com|vitacost.com
 ||mcafee.com^$removeparam=csrcl2
 ||mcafee.com^$removeparam=cctype
 ||mcafee.com^$removeparam=ccstype
-
-! https://www.tanga.com/?aff_network=cj&cj_cid=1397064&cj_publisher=Offers.com%20-%20Vertive%2C%20LLC&cj_link_id=11115853&cj_link_name=Tanga.com&cj_event=fa525e9a0cd011ec831185290a180511
-||tanga.com^$removeparam=/^cj_/
 
 ! https://www.lightinthebox.com/c/robot-vacuums-cleaners_113104?p.litb_from=SAS&p.utm_source=sas&p.utm_medium=affiliate&p.utm_campaign=136482&url=http%3A%2F%2Fwww.lightinthebox.com%2Fc%2Frobot-vacuums-cleaners_113104
 ||lightinthebox.com^$removeparam=url
@@ -1574,7 +1619,9 @@ $removeparam=site_id,domain=taskrabbit.com|kochava.com
 ||kochava.com^$removeparam=device_id
 
 ! https://sunbasket.com/try/90off-healthy-delivered/?offer=AFFMKSPRING90&mclk=VrJ0FZ0boxyIRwNxiAS6PRWLUkBTp4Vn4xL1Ws0&mrnd=5967574&maid=466145&mcid=8078&mpid=10098&msid&mpty=mediapartner&msb1&msb2&msb3&muts=1630695381206
-||sunbasket.com^$removeparam=/^msb/
+||sunbasket.com^$removeparam=msb1
+||sunbasket.com^$removeparam=msb2
+||sunbasket.com^$removeparam=msb3
 ||sunbasket.com^$removeparam=muts
 
 ! https://www.skyscanner.de/?previousCultureSource=GEO_LOCATION&redirectedFrom=www.skyscanner.com
@@ -1596,9 +1643,6 @@ $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ||saksfifthavenue.com^$removeparam=LSoid
 ||saksfifthavenue.com^$removeparam=LSlinkid
 ||saksfifthavenue.com^$removeparam=LScreativeid
-
-! https://www.moosejaw.com/?ad=63723&ad_id=IR
-||moosejaw.com^$removeparam=ad
 
 ! https://www.humblebundle.com/?zmg_code=047w7nLoOX7W0gtuuWl9c6u
 ||humblebundle.com^$removeparam=zmg_code
@@ -1642,9 +1686,6 @@ $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ! https://scontent.cdninstagram.com/v/t50.2886-16/228280186_4462339507137399_6165083647713647040_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5zdG9yeS5kZWZhdWx0In0&_nc_ht=scontent-iev1-1.cdninstagram.com&_nc_ohc=nL_7kCFHgrcAX-HT6F1&edm=AOVtZ6oBAAAA&vs=17895914579221456_1489520608&_nc_vs=HBksFQAYJEdIcEhtdzEzcXpCaGVkb1BBTUNaaXVEcHhvNVZidXFIQUFBQRUAAsgBABUAGCRHTVdiZFE2Z2ZIa3dVWFVBQUtNZXdSNFhTQ2NSYnBrd0FBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACbCkMnRj5zWPxUCKAJDMywXQCREGJN0vGoYEmRhc2hfYmFzZWxpbmVfM192MREAdegHAA%3D%3D&ccb=7-4&oe=614B0BE1&oh=22849edcbcdb1949e3f0cbde56ddd89b&_nc_vts_prog=1&dl=1
 ||cdninstagram.com^$removeparam=ccb
 ||cdninstagram.com^$removeparam=efg
-
-! https://play.anghami.com/album/1022338517?adj_adgroup=album&adj_t=dgl0aa8_64v1dnl&adj_campaign=android&adj_creative=109973055
-||anghami.com^$removeparam=/^adj_/
 
 ! https://nerdrooted.com/2020/01/06/how-to-install-wow-in-arch-manjaro-linux/?sfw=pass1693248042
 ||nerdrooted.com^$removeparam=sfw
@@ -1742,9 +1783,6 @@ $removeparam=ds_url_v,domain=clickserve.dartsearch.net
 ||fanatics.com^$removeparam=ab
 ||fanatics.com^$removeparam=_ref
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1533793
-$removeparam=vc_lpp
-
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1493321
 ||xg4ken.com^$removeparam=prof
 ||xg4ken.com^$removeparam=affcode
@@ -1775,6 +1813,39 @@ $removeparam=tg_ref
 
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/1784
 ||clickserve.dartsearch.net^$removeparam=lid
+
+! https://www.microcenter.com/site/content/specialofferssd240inf.aspx?referaldomain=youtube.com&web=EMAIL%20OPT%20IN%20-%20DLA_INFLUENCER_LinusTechTips_10252021
+$removeparam=referaldomain,domain=microcenter.com
+$removeparam=web,domain=microcenter.com
+
+! https://www.unieuro.it/online/Smartphone/OPPO-A54-Smartphone-5G-193g-Display-6-5-FHD-90Hz-4-Fotocamere-48MP-RAM-4GBROM-64GB-Batteria-5000mAh-Ricarica-rapida-Dual-Sim-Versione-Italiana-Fantastic-Purple-pidOOPA54P?dedup=trovaprezzi
+||unieuro.it^$removeparam=dedup
+
+! https://www.gearbest.com/?affi_id=103504
+$removeparam=affi_id,domain=gearbest.com
+
+! https://www.usa.philips.com/c-m-so/headphones?linkname=hero-1473-logo&origin=3_us_us_1343__SFMC_non_DENO_1342_g2&uuid=5c6a865d670ab781af66fd7c827ae733b1a00239bc26d81132e4337d641542d119d
+||philips.$removeparam=linkname
+||philips.$removeparam=uuid
+
+! https://www.allbirds.com/products/womens-tree-dashers-geyser?iv_=__iv_p_1_g_1136895783222272_c__w_pla-4574655572473803_n_s_d_c_v__l__t__r__x__y_76394_f_Online_o_TD1WGYS055_z_US_i_EN_j_4574655572473803_s__e__h__ii__vi__utm_source=bing
+$removeparam=iv_,domain=allbirds.com
+
+! https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-518881866941-c&mttnsubkw=75222244984__EcxXHbWp_&mttnsubplmnt=true&mttnpid=305109
+||apple.com^$removeparam=mttn3pid
+||apple.com^$removeparam=mttnagencyid
+||apple.com^$removeparam=mttncc
+||apple.com^$removeparam=mttnsiteid
+||apple.com^$removeparam=mttnsubad
+||apple.com^$removeparam=mttnsubkw
+||apple.com^$removeparam=mttnsubplmnt
+||apple.com^$removeparam=mttnpid
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/97108
+||weidian.com^$removeparam=distributorid
+||weidian.com^$removeparam=wfr
+||weidian.com^$removeparam=ifr
+||weidian.com^$removeparam=share_relation
 
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
