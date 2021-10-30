@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30October2021v2-Beta
+! Version: 30October2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -901,7 +901,7 @@ $removeparam=sid,domain=gamereactor.*
 ! No particular example
 $removeparam=from,domain=sogou.com|baidu.com|jetbrains.com|bandcamp.com|apkpure.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915 and https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864
-$removeparam=keyword,domain=ebay.com|bindright.com|lendgo.com
+$removeparam=keyword,domain=ebay.*|bindright.com|lendgo.com
 
 !! ——— Rules for heavily covered sites ———
 !!! ——— Amazon ———
@@ -1051,11 +1051,11 @@ $removeparam=_sacat
 ||ebay.$removeparam=campid
 ||ebay.$removeparam=toolid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864
-$removeparam=crlp,domain=ebay.com
-$removeparam=MT_ID,domain=ebay.com
-$removeparam=geo_id,domain=ebay.com
-$removeparam=device,domain=ebay.com
-$removeparam=cmpgn,domain=ebay.com
+$removeparam=crlp,domain=ebay.*
+$removeparam=MT_ID,domain=ebay.*
+$removeparam=geo_id,domain=ebay.*
+$removeparam=device,domain=ebay.*
+$removeparam=cmpgn,domain=ebay.*
 
 !!! ——— Facebook ———
 ! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/157
@@ -1069,12 +1069,12 @@ $removeparam=sfnsn
 $removeparam=acontext
 $removeparam=dti
 $removeparam=fref
-$removeparam=/^hc_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
-$removeparam=lst,domain=facebook.com|facebookcorewwwi.onion|messenger.com
-$removeparam=/^pn_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=/^hc_/,domain=facebook.*|facebookcorewwwi.onion|messenger.com
+$removeparam=lst,domain=facebook.*|facebookcorewwwi.onion|messenger.com
+$removeparam=/^pn_/,domain=facebook.*|facebookcorewwwi.onion|messenger.com
 $removeparam=privacy_mutation_token
 $removeparam=settings_tracking
-$removeparam=/^zero_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=/^zero_/,domain=facebook.*|facebookcorewwwi.onion|messenger.com
 ||facebook.com/ads^$removeparam=session_id
 ! https://x.facebook.com/mylittlepony/videos/917830495715016/?refsrc=https%3A%2F%2Fx.facebook.com%2Fmylittlepony%2Fposts%2F4640468362637231&_rdr (09/04/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1047774 (03/08/2021)
@@ -1087,9 +1087,9 @@ $removeparam=Medium,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 ! https://m.facebook.com/story.php?story_fbid=2953962358150955&id=2029436133936920&m_entstream_source=timeline&__tn__=%2As%2As-R
 $removeparam=m_entstream_source
 ! https://github.com/ClearURLs/Rules/issues/23
-$removeparam=referral_code,domain=facebook.com|facebookcorewwwi.onion|messenger.com
-$removeparam=referral_story_type,domain=facebook.com|facebookcorewwwi.onion|messenger.com
-$removeparam=tracking,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=referral_code,domain=facebook.*|facebookcorewwwi.onion|messenger.com
+$removeparam=referral_story_type,domain=facebook.*|facebookcorewwwi.onion|messenger.com
+$removeparam=tracking,domain=facebook.*|facebookcorewwwi.onion|messenger.com
 
 !!! ——— Google Search ———
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
@@ -1170,7 +1170,7 @@ $removeparam=share_link_id
 
 !! ——— Miscellaneous ———
 ! No particular examples
-$removeparam=app,domain=tiktok.com|music.apple.com
+$removeparam=app,domain=tiktok.com|music.apple.*
 $removeparam=c,domain=tiktok.com|norton.com
 $removeparam=campaign,domain=blue-tomato.com|sitepoint.com
 $removeparam=/^pf_rd_/,domain=shopbop.com|amazon.*|imdb.com
