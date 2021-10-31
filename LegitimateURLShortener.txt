@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30October2021v4-Beta
+! Version: 31October2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1846,6 +1846,17 @@ $removeparam=iv_,domain=allbirds.com
 ||weidian.com^$removeparam=wfr
 ||weidian.com^$removeparam=ifr
 ||weidian.com^$removeparam=share_relation
+
+! https://www.etsy.com/listing/655283263/docking-stationgift-for-men-for?organic_search_click=1&pop=1
+! https://www.etsy.com/listing/984664013/personalized-leather-walletmens?plkey=e61127eaa78c1a3d517e415d3e2014db7e43e6f5%3A984664013&pro=1&frs=1
+$removeparam=organic_search_click,domain=etsy.com
+$removeparam=pop,domain=etsy.com
+$removeparam=plkey,domain=etsy.com
+$removeparam=pro,domain=etsy.com
+$removeparam=frs,domain=etsy.com
+
+! https://linkvertise.com/8062/TS3StoreMagnet?o=sharing
+||linkvertise.com^$removeparam=o
 
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
