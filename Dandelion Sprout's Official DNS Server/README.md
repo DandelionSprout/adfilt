@@ -6,7 +6,7 @@ The main connection addresses are:
 * DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
 * DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
 * DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582`
-* DNSCrypt IPv4: `sdns://AQEAAAAAAAAAFTIxMi4yNTEuMTUxLjI0OTo1NjQwNCDsdKplWV-GlLOA-lEBpZ11QS381gnDyqpTXz5sSwTaeSwyLmRuc2NyeXB0LWNlcnQuZGFuZGVsaW9uc3Byb3V0LmFzdXNjb21tLmNvbQ` (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:56404 - ec74aa65595f8694b380fa5101a59d75412dfcd609c3caaa535f3e6c4b04da79 - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
+* DNSCrypt IPv4: `sdns://AQEAAAAAAAAAEjQ2LjkuMjIwLjI0NTo1NjQwNCDsdKplWV-GlLOA-lEBpZ11QS381gnDyqpTXz5sSwTaeSwyLmRuc2NyeXB0LWNlcnQuZGFuZGVsaW9uc3Byb3V0LmFzdXNjb21tLmNvbQ` (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:56404 - ec74aa65595f8694b380fa5101a59d75412dfcd609c3caaa535f3e6c4b04da79 - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
