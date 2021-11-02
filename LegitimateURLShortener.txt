@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 31October2021v1-Beta
+! Version: 02November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -20,6 +20,9 @@ $removeparam=fb_ref
 $removeparam=fb_source
 $removeparam=action_object_map
 $removeparam=action_ref_map
+! Scripts that solely exist to make URLs longer
+!! https://github.com/the1812/Bilibili-Evolved/issues/2247
+/auto-append-spmid.js
 
 ! https://www.elkjop.no/product/data/kabler-og-tilkobling-pc-og-nettverk/APPLEMD463ZA/thunderbolt-til-gigabit-ethernet-adapter?utm_id=Pricecomparison2989_5_False&utm_medium=Pricecomparison (14/11/2020)
 ! https://www.ikea.com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
@@ -1906,7 +1909,7 @@ $removeparam=fromRankId
 ||baidu.com^$removeparam=rsp
 ||baidu.com^$removeparam=usm
 ||baidu.com^$removeparam=wfr
-||baidu.com/s?^$removeparam=tn
+||baidu.com/s?$removeparam=tn
 ! https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9897086216107820920%22%7D&n_type=0&p_from=1
 ||baidu.com^$removeparam=n_type
 ||baidu.com^$removeparam=p_from
@@ -1927,7 +1930,7 @@ $removeparam=fromRankId
 ||baidu.com^$removeparam=od
 ||baidu.com^$removeparam=dyTabStr
 ! http://zhidao.baidu.com/search?&ct=17&pn=0&tn=ikaslist&rn=10&word=test
-||baidu.com/search?^$removeparam=ct
+||baidu.com/search?$removeparam=ct
 ! https://github.com/DandelionSprout/adfilt/pull/319
 ||baidu.com^$removeparam=asctag
 ||baidu.com^$removeparam=lid
