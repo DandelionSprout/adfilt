@@ -1,16 +1,11 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 02November2021v2-Beta
+! Version: 03November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Homepage for the repository: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
 ! Special thanks to https://github.com/git-101-collab for providing a 3-digit amount of new entries to this list, and to https://github.com/iam-py-test for volunteering to speed up the addition of user-submitted entries.
-
-! ——— General block rules ——— !
-!! Scripts that solely exist to make URLs longer
-! https://github.com/the1812/Bilibili-Evolved/issues/2247
-/auto-append-spmid.js
 
 ! ——— General remove rules ——— !
 ! From AdGuard CoreLibs (11/11/2020)
@@ -879,6 +874,12 @@ $removeparam=_vsrefdom
 $removeparam=ceneo_spo
 ^from=ceneo^$removeparam=from
 ^ref=ceneo^$removeparam=ref
+
+! ——— General blocking rules ——— !
+!! Scripts that solely exist to make URLs longer
+! https://github.com/DandelionSprout/adfilt/pull/320
+! https://github.com/the1812/Bilibili-Evolved/issues/2247
+/auto-append-spmid.js
 
 ! ——— Specific remove rules ——— !
 !! ——— Can never be made generic ———
