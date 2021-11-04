@@ -183,7 +183,6 @@ msFilterList
 -d bobilverden.no Banner-1200x300px.jpg
 -d bornholm.nu banner
 -d cdn.rikstoto.no GameShop
--d damoh.vgtv.no hic_qos
 -d deals.innocode.no api
 -d dust2.dk banners
 -d export.prisguide.no

@@ -1278,7 +1278,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^-d ([a-z0-9-]{1,}\.)?(aftenbladet|aftenposten|av-avis|bt|bygdanytt|dinepenger|e24|finn|godt|minmote|strilen|tek|vestnytt|vg|vgc|vglab|vglive)\.no( .*|$)", 
+           r"^-d ([a-z0-9-]{1,}\.)?(aftenbladet\.no|aftenposten\.no|aksjelive\.no|app\.bankid\.no|av-avis\.no|bergzeit\.dk|bergzeit\.no|billigvvs\.dk|billigvvs\.no|binabnordic\.no|blog\.ncc\.dk|blog\.ncc\.no|bolighed\.dk|broca\.dk|bt\.no|bygdanytt\.no|chevrolet\.dk|chevrolet\.is|chevrolet\.no|completvvs\.dk|computerworld\.dk|cpot\.dk|cpot\.no|cw\.dk|dantonit\.dk|dimensiondesign\.dk|dinepenger\.no|dnbforsikring\.no|e24\.no|ecreo\.dk|fargerike\.no|ferde\.no|finn\.no|flyingblue\.is|flyingblue\.no|flytpass\.no|forsikring-bedrift\.sparebank1\.no|fotoknudsen\.no|fredensgaard-silkeborg\.dk|freelancer\.is|freelancer\.no|godt\.no|greenline\.dk|hammersborg\.no|hansgrohe\.dk|hansgrohe\.no|havnebryggenstigsborg\.dk|helse\.fremtind\.no|hercules\.dk|herculesfundamentering\.no|interhome\.dk|interhome\.no|it-jobbank\.dk|itegra\.no|jabra\.dk|jabra\.no|jobbsafari\.no|jobindex\.dk|jysk\.dk|jysk\.no|komplett\.dk|komplett\.no|komplettbedrift\.no|kontorvaerket\.dk|kundeforsikring\.sparebank1\.no|lampeguru\.dk|lampeguru\.no|lavprisarbejdstoej\.dk|lavprisel\.dk|lavprisvaerktoej\.dk|lavprisvvs\.dk|ledertalentene\.no|live\.bible\.is|machineseeker\.dk|machineseeker\.is|machineseeker\.no|mine24\.no|minmote\.no|minnebanken\.no|nuento\.dk|obos\.no|obosblockwatne\.no|obosopennet\.no|papiroeen-boliger\.dk|pricerunner\.dk|radio\.dk|skovhaven-hadsund\.dk|stepstone\.dk|stigsborg\.dk|storebrand\.no|strilen\.no|teglgaardenaarhus\.dk|tek\.no|tv\.nrk\.no|vestnytt\.no|vg\.no|vgc\.no|vglab\.no|vglive\.no|vgtv\.no|viagogo\.dk|vilmer\.no|wiggle\.dk|airbnb\.dk|airbnb\.is|airbnb\.no|bnbank\.no|lyse\.no|ncc\.dk|ncc\.no|yr\.no|yelp\.dk|yelp\.no)( .*|$)", 
            r"", 
            line
         )
@@ -5240,8 +5240,8 @@ def prepare_agh(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"\$doc,domain=(.*)", 
-           r"$denyallow=\1", 
+           r"^(\||:)(.*)\$doc,domain=(.*)", 
+           r"\1\2$denyallow=\3", 
            line
         )
 
