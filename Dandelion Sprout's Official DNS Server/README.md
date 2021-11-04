@@ -66,6 +66,8 @@ Current list set as of 28th of October 2021:
 * 🌭 Falukorv List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/FalukorvList.txt
 * AdGuard DNS Filter - Extra Exclusions — https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exceptions.txt
 
+Are you curious about **which** exact list that is blocking a site, without having to do extensive searching? Load [this configuration file](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Wiki/Dandelion%20Sprout's%20Official%20DNS%20Server's%20quick-lookup%20uBO%20config%204th%20of%20November%202021.txt) into uBlock Origin in a secondary web browser, try to visit a site, and see which list is shown as having the entry.
+
 ### Who can use the server
 
 Users from PR-China will not have their queries processed by the server, due to considerable amounts of query spam from that country, some of which even came from residential networks.
@@ -93,9 +95,9 @@ Since the server is based on AdGuard Home, the user's IP addresses and the domai
 
 No query or IP data are shared or sold to third-parties, especially so because I dislike user data buyers, and because Linux does not support OneDrive.
 
-Current non-LAN upstreams as of 16th of June 2021:
+Current non-LAN upstreams as of 4th of November 2021:
 
-* `https://mozilla.cloudflare-dns.com/dns-query`
+* `quic://dns-unfiltered.adguard.com`
 * `https://dns.google/dns-query`
 * `tls://unicast.censurfridns.dk`
 
