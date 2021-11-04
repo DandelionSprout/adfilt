@@ -120,3 +120,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 9th of September 20:15~23:30 UTC, and intermittently on 10th of September: Replaced my old ASUS RT-AC68U, with an ASUS RT-AX89X.
 * 22th of October 09:08-09:14 UTC: What seemed like a Special K flake, had managed to cram its way into the fan of my 400€ network switch, and I had to get it out with an *Anna & Clara* butter knife without destroying the switch.
 * 25th of October 14:00~15:45 UTC: I swear to Queen Clarion that the RaspPi just randomly froze with no input, while I was sitting in the couch playing New Super Mario Bros. 2. I need to look into *some* sort of failover server in the near future.
+* 4th of November 10:05~11:28 UTC: I did not expect Fedora to need 1 hour 18 minutes to upgrade from Workstation 34 to 35.
