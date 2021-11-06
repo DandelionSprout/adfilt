@@ -98,9 +98,9 @@ def print_rules(
 ) -> None:
     for rule in rules:
         if is_regex(rule):
-            print(regex_fromat.format(rule, url_pattern))
+            endrules.write(regex_fromat.format(rule, url_pattern) + "\n")
         else:
-            print(plain_format.format(rule, url_pattern))
+            endrules.write(plain_format.format(rule, url_pattern) + "\n")
 
 def getrules():
   import requests
@@ -149,11 +149,11 @@ def main() -> int:
     for exception in exceptions:
         kind, exception = normalize_exception(exception.replace("\\\\", "\\"))
         if kind == "regex":
-            endrules.write("@@/{0}/$removeparam".format(exception))
+            endrules.write("@@/{0}/$removeparam".format(exception) + "\n")
         elif kind == "path":
-            endrules.write("@@{0}$removeparam".format(exception))
+            endrules.write("@@{0}$removeparam".format(exception) + "\n")
         elif kind == "domain":
-            endrules.write("@@$removeparam,domain={0}".format(exception))
+            endrules.write("@@$removeparam,domain={0}".format(exception) + "\n")
         else:
             raise ValueError
 
