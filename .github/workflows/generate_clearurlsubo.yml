@@ -23,5 +23,14 @@ jobs:
       with:
           email: updatebot@github.com
           name: Update bot
-          branch: master
+          branch: bot
           message: Update the list ClearURLs uBo list
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update the list ClearURLs uBo list
+          title: '[Bot] Update the list ClearURLs uBo list'
+          body: >
+            Updating ClearURLs for uBo list
+          labels: bot
