@@ -1,0 +1,27 @@
+name: Update the ClearURLs uBo list
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '16 20,2 * * *'
+  workflow_dispatch:
+jobs:
+  mkcombo:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Build list
+      run: |
+        pip3 install requests
+        python scripts/compile.py
+    - name: Commit & Push
+      uses: actions-x/commit@v2
+      with:
+          email: updatebot@github.com
+          name: Update bot
+          branch: main
+          message: Update the list ClearURLs uBo list
