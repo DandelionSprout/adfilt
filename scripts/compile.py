@@ -111,6 +111,7 @@ def main() -> int:
     endrules = open("uBO list extensions/clear_urls_uboified.txt","w")
     endrules.write("! Title: ClearURLs for uBlock Origin\n")
     endrules.write("! Homepage: https://github.com/DandelionSprout/adfilt\n")
+    endrules.write("! Expires: 1 day\n\n")
 
     # TODO: referralMarketing
     providers = {
