@@ -109,6 +109,8 @@ def main() -> int:
     global endrules
     data_min_json = json.loads(getrules())
     endrules = open("uBO list extensions/clear_urls_uboified.txt","w")
+    endrules.write("! Title: ClearURLs for uBlock Origin\n")
+    endrules.write("! Homepage: https://github.com/DandelionSprout/adfilt\n")
 
     # TODO: referralMarketing
     providers = {
