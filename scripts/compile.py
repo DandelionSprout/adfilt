@@ -24,6 +24,7 @@
 import json
 import sys
 
+endrules = None
 
 def normalize_url_pattern(url_pattern: str) -> str:
     # No need for protocol and subdomain
@@ -105,8 +106,9 @@ def getrules():
   import requests
   return requests.get("https://raw.githubusercontent.com/ClearURLs/Rules/master/data.min.json").text
 def main() -> int:
-    
+    global endrules
     data_min_json = json.loads(getrules())
+    endrules = open("uBO list extensions/clear_urls_uboified.txt","w")
 
     # TODO: referralMarketing
     providers = {
@@ -147,11 +149,11 @@ def main() -> int:
     for exception in exceptions:
         kind, exception = normalize_exception(exception.replace("\\\\", "\\"))
         if kind == "regex":
-            print("@@/{0}/$removeparam".format(exception))
+            endrules.write("@@/{0}/$removeparam".format(exception))
         elif kind == "path":
-            print("@@{0}$removeparam".format(exception))
+            endrules.write("@@{0}$removeparam".format(exception))
         elif kind == "domain":
-            print("@@$removeparam,domain={0}".format(exception))
+            endrules.write("@@$removeparam,domain={0}".format(exception))
         else:
             raise ValueError
 
