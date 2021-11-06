@@ -24,6 +24,8 @@
 import json
 import sys
 
+import requests
+
 endrules = None
 
 
