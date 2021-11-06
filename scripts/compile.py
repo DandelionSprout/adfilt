@@ -26,6 +26,7 @@ import sys
 
 endrules = None
 
+
 def normalize_url_pattern(url_pattern: str) -> str:
     # No need for protocol and subdomain
     url_pattern = url_pattern.replace(r"^https?:\/\/(?:[a-z0-9-]+\.)*?", "", 1)
