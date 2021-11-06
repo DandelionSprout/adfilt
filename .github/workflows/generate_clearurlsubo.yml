@@ -6,7 +6,7 @@ on:
     - cron: '16 20,2 * * *'
   workflow_dispatch:
 jobs:
-  mkcombo:
+  mklist:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -18,13 +18,6 @@ jobs:
       run: |
         pip3 install requests
         python scripts/compile.py
-    - name: Commit & Push
-      uses: actions-x/commit@v2
-      with:
-          email: updatebot@github.com
-          name: Update bot
-          branch: bot
-          message: Update the list ClearURLs uBo list
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
       with:
