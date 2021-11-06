@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 06November2021v1-Beta-Compilation
+! Version: 06November2021v2-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -51,6 +51,9 @@
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 !#include Dandelion%20Sprout's%20Website%20Stretcher.txt
 !#endif
+!#if adguard_app_windows
+!#include DeadServerGamePingList.txt
+!#endif
 
 ! ————— Entries that are currently specific to this compilation —————
 
@@ -79,37 +82,6 @@ foodora.*##.user-wrapper + .order-components:style(top: 64px !important)
 bloombergquint.com##+js(acis, document.oncopy)
 bloombergquint.com##+js(aopr, getSelection)
 ||deepl.com/js/docTrans-react.chunk.
-
-!#if adguard_app_windows
-! Assassin's Creed 1 (and other known Ubisoft games) PC stuttering
-! Inspired by https://steamcommunity.com/app/15100/discussions/0/864949037837351686/
-*$app=AssassinsCreed_Game.exe
-*$app=AssassinsCreed_Dx10.exe
-*$app=AssassinsCreed_Dx9.exe
-*$app=fc3_blooddragon.exe
-*$app=fc3_blooddragon_d3d11.exe
-! https://www.pcgamingwiki.com/wiki/Tom_Clancy%27s_Ghost_Recon_Advanced_Warfighter#Temporary_freeze_at_startup
-||greconawf.available.gamespy.com^$app=graw-standalone.exe|graw.exe
-||key.gamespy.com^$app=graw-standalone.exe|graw.exe
-||greconawf.ms0.gamespy.com^$app=graw-standalone.exe|graw.exe
-! https://www.pcgamingwiki.com/wiki/No_Man%27s_Sky#Long_pauses.2Ffreezing_during_starfield_intro_and_during_gameplay
-||a247c.playfabapi.com^
-||p-a247c-mainserver-800395549.us-west-2.elb.amazonaws.com^
-||api.gameanalytics.com^
-||ec2-54-156-235-193.compute-1.amazonaws.com^
-||ec2-3-230-190-87.compute-1.amazonaws.com^
-! https://www.pcgamingwiki.com/wiki/Test_Drive_Unlimited_2#Playing_offline_with_online_profile_after_official_servers_were_shut_down
-||clientstats.testdriveunlimited2.com^
-||patchserver.testdriveunlimited2.com^
-||www.testdriveunlimited2.com^
-! https://www.pcgamingwiki.com/wiki/Saints_Row_IV#Stuttering_caused_by_My_Steelport_service_shutdown
-||sr3.hydra.agoragames.com^
-||sr4.hydra.agoragames.com^
-! https://www.pcgamingwiki.com/wiki/Tropico_4#Will_not_run_on_Windows_10_64bit
-||launcher01.kalypsomedia.com^
-! https://www.pcgamingwiki.com/wiki/Kane_%26_Lynch_2:_Dog_Days
-||kl2-pc-game-content.eidos.co.uk^
-!#endif
 
 ! Fake screen smudge
 ||dinreisevaksine.no/wp-content/themes/dbh/assets/images/background.jpg^
