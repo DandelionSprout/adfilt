@@ -102,9 +102,11 @@ def print_rules(
         else:
             endrules.write(plain_format.format(rule, url_pattern) + "\n")
 
-def getrules():
-  import requests
-  return requests.get("https://raw.githubusercontent.com/ClearURLs/Rules/master/data.min.json").text
+def getrules() -> str:
+  RULES = "https://raw.githubusercontent.com/ClearURLs/Rules/master/data.min.json"
+  return requests.get(RULES).text
+
+
 def main() -> int:
     global endrules
     data_min_json = json.loads(getrules())
