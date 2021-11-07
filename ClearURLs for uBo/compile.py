@@ -144,15 +144,16 @@ def main() -> int:
     }
 
     # TODO:
-    # - Dollars
-    # $removeparam=\$original_url,domain=reddit.co
     # - URL encoded
     # $removeparam=%24deep_link,domain=reddit.com
     # - Better is_regex
     # $removeparam=/^p\[\]=/,domain=flipkart.com
     for url_pattern, rules in providers.items():
         url_pattern = normalize_url_pattern(url_pattern)
-        rules = [rule.replace("(?:%3F)?", "", 1).replace("(?:", "(") for rule in rules]
+        rules = [
+            rule.replace("(?:%3F)?", "", 1).replace("(?:", "(").replace(r"\$", r"\x24")
+            for rule in rules
+        ]
         if url_pattern == ".*":
             write_rules(
                 url_pattern,
