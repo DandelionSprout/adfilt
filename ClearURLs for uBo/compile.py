@@ -130,7 +130,7 @@ def getrules() -> str:
 
 def main() -> int:
     data_min_json = json.loads(getrules())
-    filterlist = open("ClearURLs for uBo/clear_urls_uboified.txt", "w")
+    filterlist = open("clear_urls_uboified.txt", "w")
     filterlist.write(HEAD.format(date=date.today().strftime("%d/%m/%Y")))
 
     # TODO: referralMarketing
