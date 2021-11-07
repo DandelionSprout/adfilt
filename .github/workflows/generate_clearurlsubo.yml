@@ -17,7 +17,8 @@ jobs:
     - name: Build list
       run: |
         pip install requests
-        python ClearURLs for uBo/compile.py
+        cd "ClearURLs for uBo"
+        python compile.py
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
       with:
