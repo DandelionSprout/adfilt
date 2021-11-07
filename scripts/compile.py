@@ -23,8 +23,20 @@
 
 import json
 import sys
+from datetime import date
+
+import requests
+
+HEAD = """\
+! Title: ClearURLs for uBo - List extension
+! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
+! Last updated: {date}
+! Note: This was forked from https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues
+
+"""
 
 endrules = None
+
 
 def normalize_url_pattern(url_pattern: str) -> str:
     # No need for protocol and subdomain
@@ -102,16 +114,16 @@ def print_rules(
         else:
             endrules.write(plain_format.format(rule, url_pattern) + "\n")
 
-def getrules():
-  import requests
-  return requests.get("https://raw.githubusercontent.com/ClearURLs/Rules/master/data.min.json").text
+def getrules() -> str:
+  RULES = "https://raw.githubusercontent.com/ClearURLs/Rules/master/data.min.json"
+  return requests.get(RULES).text
+
+
 def main() -> int:
     global endrules
     data_min_json = json.loads(getrules())
-    endrules = open("uBO list extensions/clear_urls_uboified.txt","w")
-    endrules.write("! Title: ClearURLs for uBlock Origin\n")
-    endrules.write("! Homepage: https://github.com/DandelionSprout/adfilt\n")
-    endrules.write("! Expires: 1 day\n\n")
+    endrules = open("uBO list extensions/clear_urls_uboified.txt", "w")
+    endrules.write(HEAD.format(date=date.today().strftime("%d/%m/%Y")))
 
     # TODO: referralMarketing
     providers = {
