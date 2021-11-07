@@ -122,7 +122,7 @@ def getrules() -> str:
 def main() -> int:
     global endrules
     data_min_json = json.loads(getrules())
-    endrules = open("uBO list extensions/clear_urls_uboified.txt", "w")
+    endrules = open("clear_urls_uboified.txt", "w")
     endrules.write(HEAD.format(date=date.today().strftime("%d/%m/%Y")))
 
     # TODO: referralMarketing
