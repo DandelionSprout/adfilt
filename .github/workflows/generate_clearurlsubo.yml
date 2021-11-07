@@ -1,12 +1,12 @@
 name: Update the ClearURLs uBo list
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   schedule:
     - cron: '16 20,2 * * *'
   workflow_dispatch:
 jobs:
-  mkcombo:
+  mklist:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -18,10 +18,13 @@ jobs:
       run: |
         pip3 install requests
         python scripts/compile.py
-    - name: Commit & Push
-      uses: actions-x/commit@v2
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
       with:
-          email: updatebot@github.com
-          name: Update bot
-          branch: main
-          message: Update the list ClearURLs uBo list
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update the list ClearURLs uBo list
+          title: '[Bot] Update the list ClearURLs uBo list'
+          body: >
+            **Note: This is a bot. It's creator - iam-py-test - is not responsable for its actions**
+            Updating ClearURLs for uBo list
+          labels: bot
