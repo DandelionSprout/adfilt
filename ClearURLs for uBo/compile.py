@@ -38,6 +38,8 @@ HEAD = """\
 """
 KNOWN_BAD_FILTERS = [
     "$removeparam=/^ref_?=/",
+    "$removeparam=sa,domain=google.*",
+    "$removeparam=usg,domain=google.*",
 ]
 
 
