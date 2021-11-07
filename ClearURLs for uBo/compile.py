@@ -24,8 +24,9 @@
 import json
 import sys
 from datetime import date
+from typing import IO
 
-import requests
+import requests  # type: ignore
 
 HEAD = """\
 ! Title: ClearURLs for uBo - List extension
@@ -35,8 +36,9 @@ HEAD = """\
 ! Note: This was based off of https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues
 
 """
-
-endrules = None
+KNOWN_BAD_FILTERS = [
+    "$removeparam=/^ref_?=/",
+]
 
 
 def normalize_url_pattern(url_pattern: str) -> str:
@@ -57,7 +59,7 @@ def normalize_url_pattern(url_pattern: str) -> str:
     return url_pattern
 
 
-def normalize_exception(exception: str) -> str:
+def normalize_exception(exception: str) -> tuple[str, str]:
     orig_exception = exception
 
     exception = exception.replace(r"^https?:\/\/(?:[a-z0-9-]+\.)*?", "||", 1)
@@ -91,7 +93,7 @@ def normalize_exception(exception: str) -> str:
         return "domain", exception
 
 
-def expand_se(rule: str) -> [str]:
+def expand_se(rule: str) -> list[str]:
     # https://stackoverflow.com/questions/20061268/python-regex-string-expansion
     # Is there a lib for that?
     #
@@ -106,25 +108,30 @@ def is_regex(rule: str) -> bool:
     return any(c in r".^$*+?{}[]\|()" for c in rule)
 
 
-def print_rules(
-    url_pattern: str, rules: [str], regex_fromat: str, plain_format: str
+def write_rules(
+    url_pattern: str,
+    rules: list[str],
+    regex_fromat: str,
+    plain_format: str,
+    filterlist: IO[str],
 ) -> None:
     for rule in rules:
-        if is_regex(rule):
-            endrules.write(regex_fromat.format(rule, url_pattern) + "\n")
-        else:
-            endrules.write(plain_format.format(rule, url_pattern) + "\n")
+        filter_ = (regex_fromat if is_regex(rule) else plain_format).format(
+            rule, url_pattern
+        )
+        if filter_ not in KNOWN_BAD_FILTERS:
+            filterlist.write(filter_ + "\n")
+
 
 def getrules() -> str:
-  RULES = "https://raw.githubusercontent.com/ClearURLs/Rules/master/data.min.json"
-  return requests.get(RULES).text
+    RULES = "https://raw.githubusercontent.com/ClearURLs/Rules/master/data.min.json"
+    return requests.get(RULES).text
 
 
 def main() -> int:
-    global endrules
     data_min_json = json.loads(getrules())
-    endrules = open("clear_urls_uboified.txt", "w")
-    endrules.write(HEAD.format(date=date.today().strftime("%d/%m/%Y")))
+    filterlist = open("uBO list extensions/clear_urls_uboified.txt", "w")
+    filterlist.write(HEAD.format(date=date.today().strftime("%d/%m/%Y")))
 
     # TODO: referralMarketing
     providers = {
@@ -144,17 +151,28 @@ def main() -> int:
         url_pattern = normalize_url_pattern(url_pattern)
         rules = [rule.replace("(?:%3F)?", "", 1).replace("(?:", "(") for rule in rules]
         if url_pattern == ".*":
-            print_rules(url_pattern, rules, "$removeparam=/^{0}=/", "$removeparam={0}")
+            write_rules(
+                url_pattern,
+                rules,
+                "$removeparam=/^{0}=/",
+                "$removeparam={0}",
+                filterlist,
+            )
         elif "/" in url_pattern:
-            print_rules(
-                url_pattern, rules, "||{1}$removeparam=/^{0}=/", "||{1}$removeparam={0}"
+            write_rules(
+                url_pattern,
+                rules,
+                "||{1}$removeparam=/^{0}=/",
+                "||{1}$removeparam={0}",
+                filterlist,
             )
         else:
-            print_rules(
+            write_rules(
                 url_pattern,
                 rules,
                 "$removeparam=/^{0}=/,domain={1}",
                 "$removeparam={0},domain={1}",
+                filterlist,
             )
 
     exceptions = [
@@ -165,11 +183,11 @@ def main() -> int:
     for exception in exceptions:
         kind, exception = normalize_exception(exception.replace("\\\\", "\\"))
         if kind == "regex":
-            endrules.write("@@/{0}/$removeparam".format(exception) + "\n")
+            filterlist.write("@@/{0}/$removeparam".format(exception) + "\n")
         elif kind == "path":
-            endrules.write("@@{0}$removeparam".format(exception) + "\n")
+            filterlist.write("@@{0}$removeparam".format(exception) + "\n")
         elif kind == "domain":
-            endrules.write("@@$removeparam,domain={0}".format(exception) + "\n")
+            filterlist.write("@@$removeparam,domain={0}".format(exception) + "\n")
         else:
             raise ValueError
 
