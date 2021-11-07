@@ -37,9 +37,12 @@ HEAD = """\
 
 """
 KNOWN_BAD_FILTERS = [
+    # Conflicts with can never be made generic in LegitimateURLShortener
     "$removeparam=/^ref_?=/",
+    # Break google search links (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1598337)
     "$removeparam=sa,domain=google.*",
     "$removeparam=usg,domain=google.*",
+    # This looks like it could break things 
     "$removeparam=referrer",
 ]
 
