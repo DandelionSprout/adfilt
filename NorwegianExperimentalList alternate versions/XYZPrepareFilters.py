@@ -5086,6 +5086,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\?.*", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\r\n'
 
@@ -5216,6 +5222,12 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^&.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\?.*", 
            r"", 
            line
         )
