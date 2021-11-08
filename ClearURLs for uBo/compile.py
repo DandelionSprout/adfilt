@@ -23,6 +23,7 @@
 
 import json
 import sys
+import hashlib
 from datetime import date
 from typing import IO
 
@@ -135,6 +136,12 @@ def getrules() -> str:
     RULES = "https://raw.githubusercontent.com/ClearURLs/Rules/master/data.min.json"
     return requests.get(RULES).text
 
+def haschanged() -> bool:
+    try:
+        hashes = json.loads(open("hash.txt").read()
+    except:
+        hashes = []
+    toph = hashlib.sha256("")
 
 def main() -> int:
     data_min_json = json.loads(getrules())
