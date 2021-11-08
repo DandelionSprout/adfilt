@@ -3,10 +3,12 @@ After 1½ years of trial setups and tinkering until March 2021, I now offer my D
 ### DNS IP addresses
 
 The main connection addresses are:
-* DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
-* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
-* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582`
+* DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query` + `https://dandelionsprout.asuscomm.com:2601/dns-query`
+* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` + `tls://dandelionsprout.asuscomm.com:863` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
+* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582` + `quic://dandelionsprout.asuscomm.com:863`
 * DNSCrypt IPv4: `sdns://AQEAAAAAAAAAEjQ2LjkuMjIwLjI0NTo1NjQwNCDsdKplWV-GlLOA-lEBpZ11QS381gnDyqpTXz5sSwTaeSwyLmRuc2NyeXB0LWNlcnQuZGFuZGVsaW9uc3Byb3V0LmFzdXNjb21tLmNvbQ` (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:56404 - ec74aa65595f8694b380fa5101a59d75412dfcd609c3caaa535f3e6c4b04da79 - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
+
+The 2nd address in each row are for failover **only**, i.e. for apps that allow setting two encrypted DNS addresses at the same time.
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
@@ -84,6 +86,8 @@ The AdGuard Home update channel in use is the Beta channel (As opposed to Stable
 
 Average uptime is more than 23h55min per day, but is not close enough to 24h00min00sec to be suited for life-or-death scenarios.
 
+The secondary/failover addresses' uptime (which run on Windows 11 x64) is around 16h00min per day, and should **only** be used in a duo with the regular server.
+
 ### Known problems
 
 * Many (but not all) redirection/affiliation links on e.g. price comparison sites, may be blocked too. This is a known problem inherent to all major DNS adblocker servers, incl. AdGuard DNS.
@@ -121,3 +125,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 22th of October 09:08-09:14 UTC: What seemed like a Special K flake, had managed to cram its way into the fan of my 400€ network switch, and I had to get it out with an *Anna & Clara* butter knife without destroying the switch.
 * 25th of October 14:00~15:45 UTC: I swear to Queen Clarion that the RaspPi just randomly froze with no input, while I was sitting in the couch playing New Super Mario Bros. 2. I need to look into *some* sort of failover server in the near future.
 * 4th of November 10:05~11:28 UTC: I did not expect Fedora to need 1 hour 18 minutes to upgrade from Workstation 34 to 35.
+* 8th of November 09:30~11:50 UTC: Turns out that clones of Linux disks are *not* able to boot, in sharp contrast to clones of Windows disks. So I figured "Screw this" in regards to setting up a 2nd RaspPi at my parents' house, and hereby open up my Windows 11 AGH installation to the world too.
