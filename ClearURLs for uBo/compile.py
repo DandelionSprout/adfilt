@@ -139,7 +139,7 @@ def getrules() -> str:
 def haschanged() -> bool:
     c = False
     try:
-        hashes = json.loads(open("hash.txt").read()
+        hashes = json.loads(open("hash.txt").read())
     except:
         hashes = []
     toph = hashlib.sha256(HEAD.encode()).hexdigest()
