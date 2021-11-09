@@ -145,12 +145,12 @@ def haschanged() -> bool:
     toph = hashlib.sha256(HEAD.encode()).hexdigest()
     if toph not in hashes:
         c = True
-    ruleshash = hashlib.sha256(json.loads(getrules()))
+    ruleshash = hashlib.sha256(json.loads(getrules()).encode()).hexdigest()
     if ruleshash not in hashes:
         c = True
-    with open("hash.txt","w") as f:
-        f.write(json.dumps([toph,ruleshash]))
-        f.close()
+    with open("hash.txt","w") as rulesf:
+        rulesf.write(json.dumps([toph,ruleshash]))
+        rulesf.close()
     return c
 
 def main() -> int:
