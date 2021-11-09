@@ -137,14 +137,27 @@ def getrules() -> str:
     return requests.get(RULES).text
 
 def haschanged() -> bool:
+    c = False
     try:
         hashes = json.loads(open("hash.txt").read()
     except:
         hashes = []
-    toph = hashlib.sha256("")
+    toph = hashlib.sha256(HEAD.encode()).hexdigest()
+    if toph not in hashes:
+        c = True
+    ruleshash = hashlib.sha256(json.loads(getrules()))
+    if ruleshash not in hashes:
+        c = True
+    with open("hash.txt","w") as f:
+        f.write(json.dumps([toph,ruleshash]))
+        f.close()
+    return c
 
 def main() -> int:
     data_min_json = json.loads(getrules())
+    if haschanged() == False:
+        print("No change in rules. Exiting...")
+        sys.exit()
     filterlist = open("clear_urls_uboified.txt", "w")
     filterlist.write(HEAD.format(date=date.today().strftime("%d/%m/%Y")))
 
