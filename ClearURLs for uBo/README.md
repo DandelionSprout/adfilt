@@ -1,0 +1,1 @@
+This folder is a passion project of Adfilt team member [iam-py-test](https://github.com/iam-py-test), based on [ClearURL's extension rules](https://gitlab.com/anti-tracking/ClearURLs/rules/-/raw/master/data.min.json).
