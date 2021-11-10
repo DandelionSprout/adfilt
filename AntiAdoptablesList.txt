@@ -1,8 +1,8 @@
 [Adblock Plus 3.6]
-! Title: 🛃 Anti-Adoptables List
-! Version: 18October2021v1-Alpha
+! Title: 🛃 Anti-'Adoptables and Artsite NFTs' List
+! Version: 10November2021v1-Alpha
 ! Expires: 7 days
-! Description: The concept of adoptables (and to some extent also closed species) on artsites is bewilderingly ludicrous, and goes against every known measure of good-practice capitalism. It denies the freedom to make transformative fan art, does not check if the seller has the skills to make art based on the purchase (s)he bought, and implies litigation threats that'd make Disney want the sellers' autographs. Here's how to avoid that shameful hateful culture.
+! Description: The concept of adoptables (and NFTs + to some extent closed species) on artsites is bewilderingly ludicrous, and goes against every known measure of good-practice capitalism. It denies the freedom to make transformative fan art, does not check if the seller has the skills to make art based on the purchase (s)he bought, and implies litigation threats that'd make Disney want the sellers' autographs. Here's how to avoid that shameful hateful culture.
 ! Note: Due to me (The list maintainer) running into mental health problems after looking through heaps of horrendous "artpieces", my lists can no longer deal with deviantART.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
@@ -33,6 +33,8 @@ furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*=Auction i])
 furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*=Abopt i])
 furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*=reminder i])
 furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*="for sale" i])
+furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*=OpenSea i])
+furaffinity.net#?#figure:-abp-has(> figcaption > p > a[title*=NFT][title*=available i])
 
 ! ——— ArtStation ———
 !#if !adguard
@@ -43,6 +45,14 @@ artstation.com#?#.gallery-grid-item,.project:-abp-contains(/video slot/i)
 artstation.com#?#.gallery-grid-item,.project:-abp-contains(/slot symbol/i)
 artstation.com#?#.gallery-grid-item,.project:-abp-contains(/Keno[ .]/)
 artstation.com#?#.gallery-grid-item,.project:-abp-contains(/slot game/i)
+artstation.com#?#.gallery-grid-item,.project:-abp-contains(/NF\.?T/)
+artstation.com#?#.gallery-grid-item,.project:-abp-contains(Andre-Lang Huynh)
+artstation.com#?#.gallery-grid-item,.project:-abp-contains(/rare/i):-abp-contains(/Pepe/i)
+artstation.com#?#.gallery-grid-item,.project:-abp-contains(Ether)
+artstation.com#?#.gallery-grid-item,.project:-abp-contains(Manolov)
+artstation.com#?#.gallery-grid-item,.project:-abp-contains(Noah's Ark)
+artstation.com#?#.gallery-grid-item,.project:-abp-contains(/Crypto[c ]/)
+artstation.com#?#.gallery-grid-item,.project:-abp-contains(Ξ)
 !#endif
 
 ! ——— Pixiv ———
@@ -89,6 +99,15 @@ inkbunny.net#?#.widget_thumbnailLargeCompleteFromSubmission:-abp-has(img[title*=
 !#if !adguard
 tumblr.com#?#.post,div[tabindex]:-abp-contains(/adoptable/i)
 tumblr.com#?#.post,div[tabindex]:-abp-contains(/adopts/i)
+tumblr.com#?#.post,div[tabindex]:-abp-contains(/cryptoart/i)
+tumblr.com#?#.post,div[tabindex]:-abp-contains(NFT project)
+tumblr.com#?#.post,div[tabindex]:-abp-has(a[href*="foundation.app"])
+tumblr.com#?#.post,div[tabindex]:-abp-contains(/nftcommunity/i)
+tumblr.com#?#.post,div[tabindex]:-abp-has(a[href*="opensea.io"])
+tumblr.com#?#.post,div[tabindex]:-abp-contains(/nft ?collection/i)
+tumblr.com#?#.post,div[tabindex]:-abp-contains(/nft ?marketplace/i)
+tumblr.com#?#.post,div[tabindex]:-abp-contains(/nft ?art/)
+tumblr.com#?#.post,div[tabindex]:-abp-contains(/OpenSea/i)
 !#endif
 
 ! ——— Furry Network ———
@@ -97,3 +116,10 @@ furrynetwork.com#?#.media-grid__item:-abp-contains(/Adoptable/i)
 ! ——— Instagram ———
 instagram.com#?#article > div > div[style^=flex-direction] > div[class] > div:-abp-has(img[alt*=" adops " i])
 instagram.com#?#article > div > div[style^=flex-direction] > div[class] > div:-abp-has(img[alt*=" adopt " i])
+instagram.com#?#article > div > div[style^=flex-direction] > div[class] > div,ul > div[role=button]:first-of-type ~ ul[class$=" "]:-abp-has(img[alt*=NFT i])
+
+! ——— NFT trading sites ———
+||opensea.io^$document
+||foundation.app^$document
+||rarible.com^$document
+||makersplace.com^$document
