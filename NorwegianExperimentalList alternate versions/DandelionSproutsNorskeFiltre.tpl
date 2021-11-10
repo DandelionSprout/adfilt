@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 27October2021v2-Alpha
+# Version: 10November2021v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -921,7 +921,6 @@ msFilterList
 # 🇬🇧: Copied over from URLHaus and verified
 -d biopaten.no
 -d hagebakken.no
--d forum.mdb.nu
 -d mdb.nu
 -d idj.no
 -d 1.14.61.188
@@ -951,10 +950,11 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 17September2021v1-Extension
+# Last updated: 10November2021v2-Extension
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
 # aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
 # https://github.com/uBlockOrigin/uAssets/issues/8648
 # https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
+# 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
