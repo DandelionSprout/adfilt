@@ -48,7 +48,7 @@ KNOWN_BAD_FILTERS = [
     # This looks like it could break things 
     "$removeparam=referrer",
     # I remember this breaking something
-    "||google.*/search?$removeparam=client",
+    #"||google.*/search?$removeparam=client",
 ]
 
 
