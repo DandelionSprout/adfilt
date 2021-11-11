@@ -150,6 +150,9 @@ def haschanged() -> bool:
     ruleshash = hashlib.sha256(getrules().encode()).hexdigest()
     if ruleshash not in hashes:
         c = True
+    exchash = hashlib.sha256(",".join(KNOWN_BAD_FILTERS).encode()).hexdigest()
+    if exchash not in hashes:
+        c = True
     with open("hash.txt","w") as rulesf:
         rulesf.write(json.dumps([toph,ruleshash]))
         rulesf.close()
