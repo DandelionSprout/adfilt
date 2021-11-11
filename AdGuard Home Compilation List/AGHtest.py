@@ -343,6 +343,12 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
+           r"^\|\|overclockers\.co\.uk\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"/\^https\?:\\/\\/([0-9]{1,3})\\\.([0-9]{1,3})\\\.([0-9]{1,3})\\.\(\\d\)\{1,3\}\.\*\/", 
            r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^", 
            line
