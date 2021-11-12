@@ -154,7 +154,7 @@ def haschanged() -> bool:
     if exchash not in hashes:
         c = True
     with open("hash.txt","w") as rulesf:
-        rulesf.write(json.dumps([toph,ruleshash]))
+        rulesf.write(json.dumps([toph,ruleshash,exchash]))
         rulesf.close()
     print(hashes,toph,exchash,ruleshash,c)
     return c
