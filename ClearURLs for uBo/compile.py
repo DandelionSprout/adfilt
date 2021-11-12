@@ -156,6 +156,7 @@ def haschanged() -> bool:
     with open("hash.txt","w") as rulesf:
         rulesf.write(json.dumps([toph,ruleshash]))
         rulesf.close()
+    print(hashes,toph,exchash,ruleshash,c)
     return c
 
 def main() -> int:
