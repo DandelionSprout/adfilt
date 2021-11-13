@@ -2867,6 +2867,24 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(! 🇳🇴🏞: Denne lista .*)", 
+           r"\1\n! 🇸🇪: Listan omfattar webbplatser för Norge, Danmark, Island, danska territorier, Schleswig-Holsteins danska minoritet, den samiska ursprungsbefolkningen, Sverige och Finland. Denna versionen av listan innehåller inte anti-anti-reklamblockering, eftersom sådana poster inte är tillåtna i listor som ingår i Adblock Plus. För mer information, detaljer, hjälpmedel och andra listor som jag har gjort, besök https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english", 
+           line
+        )
+
+        line = re.sub(
+           r"^(! 🇳🇴: Generelle #-oppføringer.*)", 
+           r"\1\n! 🇸🇪: Generella #-poster med källor", 
+           line
+        )
+
+        line = re.sub(
+           r"^(! 🇳🇴: Generelle oppføringer.*)", 
+           r"\1\n! 🇸🇪: Generella poster med källor", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
