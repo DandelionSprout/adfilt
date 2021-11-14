@@ -89,7 +89,6 @@ $removeparam=ranLinkTypeID
 $removeparam=ransiteID
 
 ! https://www.jdwilliams.co.uk/shop/switch-neon-inc-rayman-and-spongebob/bm593/product/details/show.action?pdBoUid=3156&pdpClick=true (28/11/2020)
-$removeparam=pdBoUid
 $removeparam=pdpClick
 
 ! https://www.electrodepot.fr/ecouteurs-apple-airpods-2-boitier-de-charge.html?LGWCODE=17449%3B96175%3B2865 (28/11/2020)
@@ -366,7 +365,6 @@ $removeparam=btsid
 $removeparam=ws_ab_test
 $removeparam=spLa
 $removeparam=affTrack
-$removeparam=afftrack
 $removeparam=shrsl_analytics_sscid
 $removeparam=shrsl_analytics_sstid
 $removeparam=SSAID
@@ -381,7 +379,6 @@ $removeparam=wdorigin
 
 ! https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
 $removeparam=/^AFF_ID/i,domain=~nordvpn.net|~getproton.me
-$removeparam=/^aff_/
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-773756
 $removeparam=twitchReferral
@@ -660,7 +657,7 @@ $removeparam=cm_type
 ^source=awin^$removeparam=source
 
 ! https://us.myprotein.com/?affil=awin
-^affil=awin^$removeparam=affil
+$removeparam=affil
 
 ! https://www.lightinthebox.com/c/robot-vacuums-cleaners_113104?p.litb_from=SAS&p.utm_source=sas&p.utm_medium=affiliate&p.utm_campaign=136482&url=http%3A%2F%2Fwww.lightinthebox.com%2Fc%2Frobot-vacuums-cleaners_113104
 $removeparam=/^p\.utm_/
@@ -846,10 +843,14 @@ $removeparam=ml_subscriber_hash
 ! https://stackoverflow.com/questions/37882810/what-is-meaning-of-branch-match-id
 $removeparam=_branch_match_id
 
+! https://apps.apple.com/us/app/id342792525?_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL86pTNJLLCjQy8nMy9YP9k6pDDRzNDGxBABVqlN1IAAAAA%3D%3D
+$removeparam=_branch_referrer
+
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1533793
 $removeparam=vc_lpp
 
 ! https://www.tanga.com/?aff_network=cj&cj_cid=1397064&cj_publisher=Offers.com%20-%20Vertive%2C%20LLC&cj_link_id=11115853&cj_link_name=Tanga.com&cj_event=fa525e9a0cd011ec831185290a180511
+$removeparam=aff_network
 $removeparam=cj_affid
 $removeparam=cj_affiliate
 $removeparam=cj_affname
@@ -875,6 +876,225 @@ $removeparam=ceneo_spo
 ^from=ceneo^$removeparam=from
 ^ref=ceneo^$removeparam=ref
 
+! https://www.drip.com/learn/docs/manual/email-builder/suppress-__s-from-rendered-links
+$removeparam=__s
+
+! https://help.klaviyo.com/hc/en-us/articles/115005076767
+$removeparam=_kx
+
+! https://www.affluent.io/affiliate-marketing-blog/affiliate-sub-campaign-sid-tracking-guide/
+! https://strackr.com/subid
+$removeparam=AFFSRC
+$removeparam=aff_sub
+$removeparam=aff_sub2
+$removeparam=aff_sub3
+$removeparam=aff_sub4
+$removeparam=aff_sub5
+$removeparam=afftrack
+$removeparam=atid
+$removeparam=clickref
+$removeparam=clickref2
+$removeparam=clickref3
+$removeparam=clickref4
+$removeparam=clickref5
+$removeparam=clickref6
+$removeparam=cuid
+$removeparam=data1
+$removeparam=data2
+$removeparam=effi_id
+$removeparam=effi_id2
+$removeparam=fobs
+$removeparam=pubref
+$removeparam=sub1
+$removeparam=sub2
+$removeparam=sub3
+$removeparam=sub4
+$removeparam=sub5
+$removeparam=subId1
+$removeparam=subId2
+$removeparam=subId3
+$removeparam=subId4
+$removeparam=subid1
+$removeparam=subid2
+$removeparam=subid3
+$removeparam=subid4
+$removeparam=subid5
+$removeparam=tid1
+$removeparam=tid2
+$removeparam=tid3
+$removeparam=tid4
+
+! http://www.avantlink.com/?avad=192617_f24ceb9c5
+$removeparam=avad
+
+! https://support.getcake.com/support/solutions/articles/13000081927-how-to-use-direct-linking-when-tracking-links-are-not-allowed
+$removeparam=ckmc
+$removeparam=ckmsc
+$removeparam=s1
+$removeparam=s2
+$removeparam=s3
+$removeparam=s4
+$removeparam=s5
+
+! https://t.me/joinchat/AAAAAESA_FywGOtsnzfvMw?__cn_tracker=328a2d9c82a924cf79822a1b
+$removeparam=__cn_tracker
+
+! https://www.lidl.cz/?mktc=crm&sfmc_id=185629557
+! https://help.salesforce.com/s/articleView?id=sf.mc_gai_utm_parameters.htm&type=5
+$removeparam=/^sfmc_/
+$removeparam=mktc
+
+! https://www.brettonwoods.com/?cm_ven=exacttarget&cm_cat=mtwasb-fell-into-october-18&cm_pla=vpl+9806+for+list+360&cm_ite=learn+more+and+register+for+races+today&sfmc_sub=70015724&cm_ainfo=
+! https://help.salesforce.com/s/articleView?id=sf.mc_ss_web_analytics_profiles_parameters.htm&type=5
+$removeparam=cm_ven
+$removeparam=cm_cat
+$removeparam=cm_pla
+$removeparam=cm_ite
+$removeparam=cm_lm
+$removeparam=cm_ainfo
+
+! https://www.bodum.com/us/en/?Offers.com+%28Offers.com%2C+LLC%29=Offers.com+%28Offers.com%2C+LLC%29
+$removeparam=/^Offers\.com/
+
+! https://www.hunterboots.com/us/en_us/sale-womens-sale-footwear#esp_sort=price&esp_order=asc?CSID=AFF||||&siteID=qpF0HYnRugA-S5yfZifcN54MdPsE4Cewzw
+$removeparam=CSID
+
+! https://www.dx.com/p/sliding-camera-protective-cover-for-smartphones-laptops-tablets-2729311.html?Utm_rid=91262049&Utm_source=affiliatewindow
+$removeparam=/^Utm_/
+
+! https://www.kelkoo.com/?kpartnerid=1938479021
+$removeparam=kpartnerid
+
+! https://www.lifeextension.com/lab-testing/itemlc167015/apolipoprotein-b-blood-test?source=connexity&cnxclid=16357131459502835009610090302008005
+^source=connexity^$removeparam=source
+$removeparam=cnxclid
+
+! https://www.laptopsdirect.co.uk/dji-pocket-2-phone-clip-cp.os.00000128.01/version.asp?refsource=webgains
+^refsource=webgains^$removeparam=refsource
+
+! https://www.picstop.co.uk/all-celestron-telescopes/celestron-astromaster-70az-refractor-with-phone-adapter-moon-filter.html?source=webgains&siteid=57172
+^source=webgains^$removeparam=source
+
+! https://www.kids-world.dk/fila-skuldertaske-phone-pods-wallet-sort-p-228122.html?source=tradedoubler
+^source=tradedoubler^$removeparam=source
+
+! https://www.online4baby.com/hauck-sit-n-relax-3-in-1-highchair-stretch-grey?siteid=57172&network=Webgains
+^network=Webgains^$removeparam=network
+
+! https://www.ssense.com/en-gb/women/product/balenciaga/blue-shopping-phone-holder-bag/6754521?clickref=1100liwW6M5R&ref=kelkoogb
+! https://www.peterhahn.dk/peter-hahn-buks-i-100-bomuld-sort-265728.html?campaign=Preissuchmaschinen/kelkoo (DK)/265728/265728360&ref=kelkoodk
+^ref=kelkoo$removeparam=ref
+
+! https://www.myprotein.es/sports-accessories/brazalete-smartphone-gym-essentials-negro/12591033.html?kk=a4c6368-17cd7f25ed7-10120a&affil=thgppc&from=kelkooes
+! https://www.overly.it/tv-led/21225-nikkei-ni24hd6c-tvc-24-hd-sat-8022625024065.html?kk=a4c6361-17d0fd13439-d1022&from=kelkoo
+/(\?|&)kk=\w{6,}-\w{10,}-\w{5,}/$removeparam=kk
+^from=kelkoo$removeparam=from
+
+! https://www.shopping4net.dk/Legetoej/Leg-Laer/Paedagogisk-legetoej/Paw-Patrol-Smart-Phone-DK-SE-NO.htm?sClickID=Kelkoo-8-2
+$removeparam=sClickID
+
+! https://www.cykelpartner.dk/mobilholder-telefonholder-mm/lifeventure-waterproof-phone-pouch---vandtaet-pose-til-mobil---blaa?source=partnerads&paid=22947&pa-partnerid=22947&pacid=617fcb66eb3c23.08348327
+^source=partnerads^$removeparam=source
+$removeparam=paid
+$removeparam=pacid
+$removeparam=pa-partnerid
+
+! https://prispresseren.dk/shop/mobiltilbehoer/mobilholder/samdi-universal-wood-phone-holder-kaffefarve/?amp;utm_campaign=Google%20Feed&amp;utm_medium=cpc&amp;utm_term=29379
+$removeparam=/^amp;/
+
+! https://www.fashiondays.ro/p/pantofi-sport-cu-aspect-colorblock-cell-omega-manga-cult-femei-puma-p2750164-1/?2p_affiliate_id=15adef88&2p_click_token=e64efe01d03493852f8fc609
+$removeparam=2p_affiliate_id
+$removeparam=2p_click_token
+
+! https://www.monclick.it/prodotti/1/NBO/microsoft/MK_000000190110.htm?mktgcampaignp=KELKOO
+$removeparam=mktgcampaignp
+
+! https://www.myprotein.es/nutricion-deportiva/clear-whey-isolate/12081395.html?thg_ppc_campaign=71700000079726222&adtype
+$removeparam=thg_ppc_campaign
+$removeparam=adtype
+
+! https://www.jurysinns.com/?tmad=c&tmcampid=40&tmplaceref=e&tmclickref=jurys%20inn
+$removeparam=tmad
+$removeparam=tmcampid
+$removeparam=tmplaceref
+$removeparam=tmclickref
+
+! https://www.johnlewis.com/logitech-slim-combo-folio-backlit-keyboard-for-ipad-pro-12-9-inch-3rd-and-4th-gen-graphite/p5175708?sku=238774173&tmcampid=99&s_afcid=af_1451575
+$removeparam=s_afcid
+
+! https://www.blizzard.com/en-us/?n_cid=DSNKD003
+$removeparam=n_cid
+
+! https://www.tedbaker.com/uk/Womens/Outlet/Accessories/Shoes/c/category_womens_outlet_footwear?int_cmpid=ww_lp_hero_sale-shoes_cta3
+$removeparam=int_cmpid
+
+! https://flipsy.com/sell/iPhone-8?awid=04580
+$removeparam=awid
+
+! https://www.belk.com/p/rightline-gear-car-top-cargo-bag-/0438687329167.html?szredirectid=16357094601782801904610080302008005&cnxclid=16357094601782801904610080302008005
+$removeparam=szredirectid
+
+! https://www.mowdirect.co.uk/zomax-58v-4ah-lithium-ion-battery.html?porc=qnCovckEfCEbbxHloAklCyDejGcukwj
+$removeparam=porc
+
+! https://www.beautycarechoices.com/?src=aff
+^src=aff^$removeparam=src
+
+! https://www.nfaap.org/sso/sso.aspx?nfredirect=https://example.com/
+$removeparam=nfstatus
+$removeparam=nftoken
+$removeparam=nfstatusdescription
+
+! https://support.appsflyer.com/hc/en-us/articles/207447163
+! https://www.farfetch.com/uk/shopping/kids/boss-kidswear-logo-print-pacifier-item-14954919.aspx?clickref=1100liwZjcmH&c=kelkoo_uk&af_siteid=1100l62250&af_sub_siteid=1011l271&af_cost_model=CPA&af_channel=affiliate&is_retargeting=true
+! https://www.hepsiburada.com/kampanyalar/roborock-robot-supurgelerde-efsane-kasim-firsati?is_retargeting=true&shortlink=19167f45&c=affiliate&af_ad=roborock_robot_supurgelerde_efsane_kasim_firsati&pid=sosyal_medya&af_adset=ozlem_aras&af_force_deeplink=true
+$removeparam=af_ad
+$removeparam=af_ad_id
+$removeparam=af_ad_type
+$removeparam=af_adset
+$removeparam=af_adset_id
+$removeparam=af_c_id
+$removeparam=af_channel
+$removeparam=af_click_lookback
+$removeparam=af_cost_model
+$removeparam=af_force_deeplink
+$removeparam=af_keyword
+$removeparam=af_keywords
+$removeparam=af_prt
+$removeparam=af_referral_type
+$removeparam=af_referrer_customer_id
+$removeparam=af_referrer_name
+$removeparam=af_referrer_uid
+$removeparam=af_siteid
+$removeparam=af_sub1
+$removeparam=af_sub2
+$removeparam=af_sub3
+$removeparam=af_sub4
+$removeparam=af_sub5
+$removeparam=af_sub_siteid
+$removeparam=is_retargeting
+$removeparam=shortlink
+
+! https://support.appsflyer.com/hc/en-us/articles/207447163#partner-id-pid-parameter
+! https://playwsop.com/play?pid=googleadwords_int&af_prt=yellowhead&lv=1&clickid=CjwKCAiAxKv_BRBdEiwAyd40N7UPnJYsvWlbP736d2pr8dX0KrtpLAlg3LTef2AVqIju98ciYBEmwxoCYuUQAvD_BwE&c=US_Brand-exact&af_c_id=631735899&af_adset_id=41062900269&af_ad_id=477184005272&af_siteid=&af_ad_type=Search&af_sub1=kwd-297535807811&af_sub2=playwsop&af_sub3=e&af_sub4=9029028&af_sub5=&af_keywords=playwsop
+^pid=*_int^$removeparam=pid
+
+! https://www.chelseafc.com/en/news/2021/09/02/tuchel-shortlisted-for-august-s-manager-of-the-month-award?deep_link_sub1=cfcapp://page/content/chelseafc/en/news/2021/09/02/tuchel-shortlisted-for-august-s-manager-of-the-month-award&shortlink=563e154b
+! https://abra.onelink.me/paN3/referral?deep_link_sub1=RCVGBRB8X
+$removeparam=deep_link_sub1
+
+! https://totalstore.alamode.com/product/total-1004mc-worksheet-template?ClickThruEmail&ClickThruCustomerNumber=0
+$removeparam=ClickThruEmail
+$removeparam=ClickThruCustomerNumber
+
+! https://scripts.affiliatefuture.com/AFClick.asp?affiliateID=29219&merchantID=2543&programmeID=6678&mediaID=0&tracking=&url=https://example.com/
+^tracker=AFFILIATEFUTURE^$removeparam=tracker
+^tracker=affiliatefuture^$removeparam=tracker
+$removeparam=affc
+
+! https://www.kichink.com/home/issafari?uri=https://example.com
+$removeparam=byp455
+
 ! https://github.com/DandelionSprout/adfilt/pull/340
 ! https://www.uemeds.cn/info/infodetail/26511?detail_from=industry_hot (14/11/2021)
 $removeparam=detail_from
@@ -888,26 +1108,27 @@ $removeparam=detail_from
 ! ——— Specific remove rules ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com|xg4ken.com|flipkart.com
+$removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com|xg4ken.com|flipkart.com|glasses.com
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
 $removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com|abebooks.com|eset.com|kickstarter.com|oikotie.fi|sahkovertailu.fi|jasonsavard.com|adobe.com|wormhole.app|coop.no|buzzfeed.com
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
-$removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com
+$removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com|clickbank.net
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com|mozilla.org
+$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com|mozilla.org|viking-direct.co.uk
 ! No particular example
-$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com
+$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com|despegar.*
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjones.com|mansionglobal.com|penews.com
 @@^mod=djemalertNEWS^$removeparam=mod
 ! https://www.gamereactor.fi/?sid=39feac60637556f2d1f67482abf2b1ea
+! https://www.anrdoezrs.net/click-8900246-13502820?url=https%3A%2F%2Fwww.dell.com%2Fen-us%2Fshop%2Fsamsung-870-evo-mz-77e1t0b-solid-state-drive-1-tb-sata-6gb-s%2Fapd%2Fab481426%2Fstorage-drives-media&sid=tomshardware-us-6016433087443645000
 ! (Exceptions: mail.qq.com, high.fi, phpBB forums, various other sites)
-$removeparam=sid,domain=gamereactor.*
+$removeparam=sid,domain=gamereactor.*|anrdoezrs.net|gopjn.com|jdoqocy.com|kqzyfj.com|pepperjamnetwork.com|tkqlhce.com
 ! No particular example
 $removeparam=from,domain=sogou.com|baidu.com|jetbrains.com|bandcamp.com|apkpure.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915 and https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864
@@ -1101,7 +1322,6 @@ $removeparam=m_entstream_source
 ! https://github.com/ClearURLs/Rules/issues/23
 $removeparam=referral_code,domain=facebook.*|facebookcorewwwi.onion|messenger.com
 $removeparam=referral_story_type,domain=facebook.*|facebookcorewwwi.onion|messenger.com
-$removeparam=tracking,domain=facebook.*|facebookcorewwwi.onion|messenger.com
 
 !!! ——— Google Search ———
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
@@ -1176,15 +1396,14 @@ $removeparam=share_link_id
 ||tiktok.com^$~xmlhttprequest,removeparam=referer_video_id
 ||tiktok.com^$~xmlhttprequest,removeparam=refer
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
-||tiktok.com^$removeparam=is_retargeting
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-974118
 ||tiktok.com^$removeparam=checksum
 
 !! ——— Miscellaneous ———
 ! No particular examples
 $removeparam=app,domain=tiktok.com|music.apple.*
-$removeparam=c,domain=tiktok.com|norton.com
-$removeparam=campaign,domain=blue-tomato.com|sitepoint.com
+$removeparam=c,domain=tiktok.com|norton.com|farfetch.com|hepsiburada.com|appsflyer.com|onelink.me|play.google.com
+$removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*
 $removeparam=/^pf_rd_/,domain=shopbop.com|amazon.*|imdb.com
 $removeparam=Source,domain=facebook.com|facebookcorewwwi.onion|messenger.com|evga.com
 $removeparam=visit_id,domain=bilibili.com|google.*
@@ -1196,13 +1415,29 @@ $removeparam=channel,domain=rei.com|squarespace.com|privateinternetaccess.com
 $removeparam=fr,domain=baidu.com|thegay.com
 $removeparam=promo,domain=thegay.com|hammacher.com
 $removeparam=sref,domain=bloomberg.com|go.skimresources.com
+$removeparam=argsite,domain=metaffiliation.com
+$removeparam=ctc,domain=avantlink.com
+$removeparam=pid,domain=123inkjets.com|bergfreunde.*|play.google.com|samsclub.com|th.bing.com|flipkart.com|hepsiburada.com|appsflyer.com|tiktok.com|onelink.me
+$removeparam=subid,domain=webmasterplan.com
+$removeparam=tracking,domain=facebook.*|facebookcorewwwi.onion|messenger.com|affiliatefuture.com|gtomega.*
+$removeparam=ws,domain=ds1.nl
+
+! https://click.linksynergy.com/deeplink?id=kXQk6%2AivFEQ&mid=44583&u1=tomshardware-us-4362736165889510400&murl=https%3A%2F%2Fwww.newegg.com%2Fintel-core-i7-11700k-core-i7-11th-gen%2Fp%2FN82E16819118233
+! https://shop-links.co/link/?publisher_slug=future&u1=tomshardware-us-1320336574459533300&exclusive=1&url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6425639%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6425639.p%253Fcmp%253DRMX&article_name=Best%20SSDs%202021%3A%20From%20Budget%20SATA%20to%20Blazing-Fast%20NVMe&article_url=https%3A%2F%2Fwww.tomshardware.com%2Freviews%2Fbest-ssds%2C3891.html%2F%2Freviews%2Fbest-ssds%2C3891.html
+$removeparam=u1,domain=linksynergy.com|shop-links.co
+$removeparam=article_name,domain=shop-links.com
+$removeparam=article_url,domain=shop-links.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-782437
-$removeparam=/^shared/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-931912
+$removeparam=/^shared%3D/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi
+$removeparam=shared,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi
 $removeparam=origin,denyallow=platform.twitter.com,domain=yle.fi|flaticon.com|drop.com|symbolab.com|archive.org|norton.com|philips.*
 
+! https://adtraction.com/blog/what-is-epi-and-how-does-it-work
 ! https://fernerjacobsen.no/?epi=STS-SHP--FernerJacobsen-Logo%7Cxid%3Afr1624121412114eah
-$removeparam=epi,domain=fernerjacobsen.no|webhallen.com|microsoft.com|xbox.com
+$removeparam=epi,domain=fernerjacobsen.no|webhallen.com|microsoft.com|xbox.com|adtraction.com|tradedoubler.com
+$removeparam=epi2,domain=tradedoubler.com
 
 ! https://www.hs.fi/talous/art-2000006474289.html?share=095cb51bfd3619323ff183dd633ae8ab
 $removeparam=share,domain=hs.fi|oerproject.com
@@ -1393,13 +1628,12 @@ $removeparam=ad_prodid,domain=discshop.fi
 ! https://chggtrx.com/clk.trk?CID=267627&AFID=304351
 ||humblebundle.com^$removeparam=partner
 ||mechanicalkeyboards.com^$removeparam=creator
-||play.google.com^$removeparam=shortlink
 ||audible.$removeparam=source_code
 ||audible.$removeparam=ipRedirectFrom
 ||audible.$removeparam=ipRedirectOriginalURL
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1412160
-||dustdeal.nl^$removeparam=tracker
+$removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ! ||booking.com^$removeparam=label (Breaks slide-in hotel review feeds)
 
 ! https://www.verizon.com/deals/?SID=908A84AE-9041-433A-8EC7-CD9AB19B08F4&vendorid=CJM&PUBID=746431&cjevent=fb375adac6a811eb838200b20a18050d&cjdata=MXxZfDB8WXww
@@ -1453,7 +1687,6 @@ $removeparam=r,domain=ledger.io|mail.qq.com
 ||roblox.com^$removeparam=refPageId
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1142244
-$removeparam=/^subId/i,domain=bestbuy.com|ftd.com|mintmobile.com|secretlab.*|shopbop.com
 ||taxscouts.$removeparam=referralSource
 ||ting.com^$removeparam=lpn
 ||bestbuy.com^$removeparam=nrtv_cid
@@ -1535,37 +1768,36 @@ $removeparam=impression_id,domain=nytimes.com|nytimes3xbfgragh.onion
 $removeparam=CID,domain=burpee.com|chegg.com|express.com|farmandfleet.com|marvel.com|mcafee.com|overstock.com|pepboys.com|puritan.com|rosettastone.com|samsung.com|shutterfly.com|staples.com|teleflora.com|ulta.com|virginatlantic.com|vrbo.com|walgreens.com
 $removeparam=DZID,domain=autoanything.com
 $removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|ashford.com|autoanything.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|boscovs.com|buschgardens.com|cheapcaribbean.com|chicos.com|choicehotels.com|ecampus.com|expedia.com|express.com|factoryoutletstore.com|farmandfleet.com|hammacher.com|intuit.com|jockey.com|kennethcole.com|landsend.com|lenovo.com|lens.com|mcafee.com|monoprice.com|overstock.com|perfumania.com|samsung.com|sears.com|sierra.com|soma.com|staples.com|teleflora.com|ulta.com|verizon.com|virginatlantic.com|vistaprint.com|walgreens.com|wayfair.com|whitehouseblackmarket.com|wwe.com|yahoo.com|zchocolat.com
-$removeparam=SID,domain=ae.com|anntaylor.com|applevacations.com|ashford.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|cheapcaribbean.com|chegg.com|chggtrx.com|ecampus.com|expedia.com|express.com|intuit.com|jockey.com|loft.com|mcafee.com|norton.com|overstock.com|perfumania.com|samsung.com|sierra.com|staples.com|taskrabbit.com|teleflora.com|verizon.com|vistaprint.com|walgreens.com|wwe.com|yahoo.com|zchocolat.com|zulily.com
+$removeparam=SID,domain=ae.com|anntaylor.com|applevacations.com|ashford.com|autodesk.com|bedbathandbeyond.com|bhphotovideo.com|booksamillion.com|cheapcaribbean.com|chegg.com|chggtrx.com|ecampus.com|expedia.com|express.com|intuit.com|jockey.com|loft.com|mcafee.com|norton.com|overstock.com|perfumania.com|samsung.com|sierra.com|staples.com|taskrabbit.com|teleflora.com|verizon.com|vistaprint.com|walgreens.com|wwe.com|yahoo.com|zchocolat.com|zulily.com
 $removeparam=adref,domain=ancestry.*
 $removeparam=acid,domain=lenovo.com
 $removeparam=aid,domain=brownells.*|viator.com|adguard.com
 $removeparam=camp,domain=calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com|amazon.*
 $removeparam=channelref,domain=asos.com
-$removeparam=clickref,domain=ancestry.*|chewy.com|expedia.com
 $removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com
 $removeparam=cp,domain=converse.com|nike.com
 $removeparam=ecmp,domain=4wheelparts.com
 $removeparam=kc,domain=autoanything.com
 $removeparam=/^linkshareid=/i,domain=bloomingdales.com|macys.com
 $removeparam=mc,domain=bose.*
-$removeparam=mid,domain=agentprovocateur.com|columbia.com|dxl.com|hanes.com|josbank.com|onehanesplace.com|saksfifthavenue.com|saksoff5th.com|sorel.com|verabradley.com
+$removeparam=mid,domain=agentprovocateur.com|columbia.com|dxl.com|hanes.com|josbank.com|onehanesplace.com|saksfifthavenue.com|saksoff5th.com|sorel.com|verabradley.com|change.org
 $removeparam=mktvar002,domain=autodesk.com
 $removeparam=mp_id,domain=blinds.com
 $removeparam=ogmap,domain=coach.com|loft.com
 $removeparam=ogmeas,domain=lanebryant.com
 $removeparam=partid,domain=bellacor.com
-$removeparam=/^partnerid=/i,domain=1800contacts.com|al.to|allenedmonds.com|bloomingdales.com|combat.pl|famousfootwear.com|macys.com|naturalizer.com|shoes.com|x-kom.pl
-$removeparam=pid,domain=123inkjets.com|bergfreunde.*|play.google.com|samsclub.com|th.bing.com|flipkart.com
+$removeparam=/^partnerid=/i,domain=1800contacts.com|al.to|allenedmonds.com|bloomingdales.com|combat.pl|famousfootwear.com|macys.com|naturalizer.com|shoes.com|x-kom.pl|johnstonprams.com|sportler.com
 $removeparam=/^pubcid=/i,domain=ashford.com
 $removeparam=/^pubid=/i,domain=conrad.de|express.com|ftd.com|verizon.com|vineyardvines.com
-$removeparam=/^pubname=/i,domain=anntaylor.com|ashford.com|bloomingdales.com|express.com|famousfootwear.com|farmandfleet.com|hottopic.com|loft.com|naturalizer.com|samsclub.com
-$removeparam=/^publisher=/i,domain=asos.com|bose.*|josbank.com|metmuseum.org|riteaid.com|shutterfly.com|tous.com|untilgone.com
-$removeparam=/^publisherId=/i,domain=blissworld.com|burkesoutlet.com|kipling-usa.com|lensrentals.com|petsupplies.com|phonesoap.com
+$removeparam=/^pubname=/i,domain=anntaylor.com|ashford.com|bloomingdales.com|express.com|famousfootwear.com|farmandfleet.com|hottopic.com|loft.com|naturalizer.com|samsclub.com|gucci.com
+$removeparam=/^publisher=/i,domain=asos.com|bose.*|josbank.com|metmuseum.org|riteaid.com|shutterfly.com|tous.com|untilgone.com|dell.com
+$removeparam=/^publisherId=/i,domain=blissworld.com|burkesoutlet.com|kipling-usa.com|lensrentals.com|petsupplies.com|phonesoap.com|dell.com
 $removeparam=Publisher_Name,domain=shudders.com|virginatlantic.com
-$removeparam=pubref,domain=asos.com
+$removeparam=publishername,domain=vistaprint.com
+$removeparam=PublisherSID,domain=gucci.com
 $removeparam=pzid,domain=emirates.com
-$removeparam=/^refID=/i,domain=allmodern.com|calphalon.com|priceline.com|wayfair.com|yankeecandle.com
-$removeparam=/^siteid=/i,domain=agentprovocateur.com|amerimark.com|anntaylor.com|asos.com|awd-it.*|gap.com|barenecessities.com|beautyencounter.com|buckle.com|burpee.com|chacos.com|coursera.org|dxl.com|dyson.com|elfcosmetics.*|famousfootwear.com|finishline.com|freetaxusa.com|gapcanada.ca|hanes.com|hotwire.com|hulu.com|jcrew.com|josbank.com|kobo.com|lanebryant.com|loft.com|magazines.com|maurices.com|merrell.com|newbalance.com|nordstrom.com|officedepot.com|onehanesplace.com|radissonhotelsamericas.com|saksfifthavenue.com|saksoff5th.com|samash.com|samsclub.com|saucony.com|sharperimage.com|thingsremembered.com|thrifty.*|timeformecatalog.com|verabradley.com|vivaterra.com|wine.com|yoox.com|barrons.com|marketwatch.com
+$removeparam=/^refID=/i,domain=allmodern.com|calphalon.com|priceline.com|wayfair.*|yankeecandle.com
+$removeparam=/^siteid=/i,domain=agentprovocateur.com|amerimark.com|anntaylor.com|asos.com|awd-it.*|gap.com|barenecessities.com|beautyencounter.com|buckle.com|burpee.com|chacos.com|coursera.org|dxl.com|dyson.com|elfcosmetics.*|famousfootwear.com|finishline.com|freetaxusa.com|gapcanada.ca|hanes.com|hotwire.com|hulu.com|jcrew.com|josbank.com|kobo.com|lanebryant.com|loft.com|magazines.com|maurices.com|merrell.com|newbalance.com|nordstrom.com|officedepot.com|onehanesplace.com|radissonhotelsamericas.com|saksfifthavenue.com|saksoff5th.com|samash.com|samsclub.com|saucony.com|sharperimage.com|thingsremembered.com|thrifty.*|timeformecatalog.com|verabradley.com|vivaterra.com|wine.com|yoox.com|barrons.com|marketwatch.com|hunterboots.com|gucci.com|online4baby.com
 $removeparam=/^srcCode=/i,domain=jcrew.com|magellans.com|teleflora.com|tigerdirect.com
 $removeparam=scd,domain=ashleystewart.com
 
@@ -1576,7 +1808,7 @@ $removeparam=scd,domain=ashleystewart.com
 ||ifixit.com^$removeparam=sponsor
 
 ! https://ddos-guard.net/?affiliate=119953
-||ddos-guard.net^$removeparam=affiliate
+$removeparam=affiliate
 
 ! https://www.greenmangaming.com/?tap_a=1964-996bbb&tap_s=2041734-c9a23b
 ||greenmangaming.com^$removeparam=/^tap_/
@@ -1708,9 +1940,6 @@ $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ! https://www.eneba.com/es/marketplace?af_id=nate
 ||eneba.com^$removeparam=af_id
 
-! https://disq.us/url?url=https%3A%2F%2Farstechnica.co.uk%2Finformation-technology%2F2017%2F01%2Fantivirus-is-bad%2F%3Av0Er-2ea1-t4FcbndbRV_9xv5-4&cuid=977864
-||disq.us^$removeparam=cuid
-
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/58
 ||eonline.com^$removeparam=content
 
@@ -1793,7 +2022,7 @@ $removeparam=ds_url_v,domain=clickserve.dartsearch.net
 ||xg4ken.com^$removeparam=criteriaid
 ||xg4ken.com^$removeparam=locphy
 ||macys.com^$removeparam=trackingid
-||macys.com^$removeparam=/^m_/
+$removeparam=/^m_/,domain=macys.com|macysinc.com
 ||macys.com^$removeparam=CAGPSPN
 
 ! https://store.wsj.com/shop/apac/jp/jwsjss21/?inttrackingCode=aaqwimzi&icid=JJ_ON_JHP_ACQ_NA
@@ -1897,6 +2126,45 @@ $removeparam=e,domain=clockks.com|tellywebnews.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1634094
 $removeparam=d_id,domain=buzzfeed.com
+
+! https://www.change.org/p/bethesda-petition-to-have-bethesda-abolish-the-creation-club?j=124054&sfmc_sub=544588942&l=32_HTML&u=24084311&mid=7233052&jb=356516
+! https://help.salesforce.com/s/articleView?id=000315098&type=1
+$removeparam=j,domain=change.org
+$removeparam=l,domain=change.org
+$removeparam=u,domain=change.org
+$removeparam=jb,domain=change.org
+
+! https://www.cellularcountry.com/used-cell-phones/verizon?zenid=99a49d91264c60e89d18a29cb168435c
+||cellularcountry.com^$removeparam=zenid
+
+! https://www.onbuy.com/gb/newstar-apple-imac-pre-2012-vesa-mount-adapter-plate~c16172~p5416812/?stat=eyJpcCI6IjI5LjAwMDAiLCJkcCI6IjAuMDAwMCIsImxpZCI6MzM0MjEzMTcsInMiOiI2IiwidCI6MTYzNTc0NDg3NCwiYm1jIjowfQ==
+||onbuy.com^$removeparam=stat
+
+! https://www.allbeauty.com/gb/en/1168797-salcura-bioskin-junior-daily-nourishing-spray-100ml?abref=KelkooCsGoogleUkSandgoogleUkB&ref=kelkoogb
+||allbeauty.com^$removeparam=abref
+
+! https://www.endesa.com/en/advice/app-endesa-en?eml=end:newscar:own:eenn:cdg:eng:::web:::imt:otc:::mtd:::
+$removeparam=eml,domain=endesa.com
+
+! https://www.despegar.com.mx/hoteles/h-233023/las-brisas-ixtapa-ixtapa+zihuatanejo?clt_c=MX_12072021_CONCURSO-ACT&clt_emsgid=01dcee7d48504585acfcf91bf4ce0957071221&clt_n=e&mktdata=key%3DUT81AK9JAFEGJ4D69OVO6J673E%26ltype%3Dsell%26clt_n%3De%26clt_c%3DMX_12072021_CONCURSO-ACT%26pr%3DG%26cc%3DMX%26cm%3DMX_12072021_CONCURSO-ACT%26etype%3Dmanual%26clt_emsgid%3D01dcee7d48504585acfcf91bf4ce0957071221%26id%3D20210712232146134443099767584773%26trackeame_user_id%3D12C019D917BD1623430638441402f5dec-a37b-420c-8e2c-abf195b0d28625916425
+||despegar.$removeparam=/^clt_/
+||despegar.$removeparam=mktdata
+
+! https://www.entradas.com/campaign/regala-entradas?affiliate=AD7&referer_info=CN-TGP-EDIT-ES_24982&uid=a9fa960288498dd5b189230435422eeb&cHash=c2a9920cad0995b06e8c9504b2bd8e0e
+||entradas.com^$removeparam=referer_info
+||entradas.com^$removeparam=uid
+
+! https://www.bodykind.com/product/4113-a-vogel-tormentil-complex-50ml.aspx?referer=paidonresults&porc=tcilEtxEdidBqupqwrBudkHsGgmyqdj
+$removeparam=referer,domain=bodykind.com
+
+! https://www.officemonster.co.uk/laptop-monitor-risers/fellowes-hana-monitor-support-230v-usb-eu-uk-metal-base-black-8060501--6?fo_c=3748&fo_k=c3102c618ef75aa5e461355397178cad&fo_s=awin
+||officemonster.co.uk^$removeparam=/^fo_/
+
+! https://www.viglink.com/?vgref=352353
+||viglink.com^$removeparam=vgref
+
+! https://analytics.bluekai.com/site/16231?phint=event=click&phint=campaign=BRAND-TAB&phint=platform=search&done=https://example.com/
+||analytics.bluekai.com^$removeparam=phint
 
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
