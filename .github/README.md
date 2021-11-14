@@ -74,7 +74,7 @@ Occasionally, [this link](https://www.google.no/search?q=%22if-a-large-hosts-fil
 • [krystian3w](https://github.com/krystian3w) for teaching me that using `:style` entries completely breaks a list *and* its entries in ABP. <br>
 • [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *[Browse Websites Without Logging In](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt)*) to *uBlock Filters - Annoyances*.<br>
 • [Andrey Meshkov](https://github.com/ameshkov) for invaluable push-start assistance in creating [the conversion script](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/XYZPrepareFilters.py) for *Dandelion Sprouts nordiske filtre* that eventually became a very important backbone in my adblocker activities. <br>
-• [HankAviator](https://github.com/HankAviator) for adding significant support for PR-Chinese websites in ≥3 of my lists.
+• [HankAviator](https://github.com/HankAviator) for adding significant support for PR-Chinese websites in ≥3 of my lists. <br>
 • [iam-py-test](https://github.com/iam-py-test) for being the day-to-day maintainer of Legitimate URL Shortener as of November 2021, and for contributing to several more of my lists.
 
 If you've contributed to or helped me and you aren't on the above list, don't feel bad about it. I still give my regular thanks to you.
