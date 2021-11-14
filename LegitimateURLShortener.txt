@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 13November2021v1-Beta
+! Version: 14November2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1095,6 +1095,10 @@ $removeparam=affc
 ! https://www.kichink.com/home/issafari?uri=https://example.com
 $removeparam=byp455
 
+! https://github.com/DandelionSprout/adfilt/pull/340
+! https://www.uemeds.cn/info/infodetail/26511?detail_from=industry_hot (14/11/2021)
+$removeparam=detail_from
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1333,7 +1337,7 @@ $removeparam=usg,domain=~translate.googleusercontent.com|~translate.google.*
 ! https://www.google.no/search?ei=rKq_X621OYCHwPAP5YCiuA0&q=penli.fi&oq=penli.fi&gs_lcp=CgZwc3ktYWIQAzIECAAQEzIGCAAQHhATMgYIABAeEBNQw2VYw2Vg-2ZoAHAAeACAAWGIAacBkgEBMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&uact=5 (26/11/2020)
 $removeparam=gs_lcp
 $removeparam=cshid
-||google.$~xmlhttprequest,removeparam=ei
+||google.*/search?$~xmlhttprequest,removeparam=ei
 ! https://www.google.com/search?q=%22The%20Butterfly%20Fairy%20Friends%22%20little%20airplane&newwindow=1&sxsrf=ALeKk011aAibMJ9b29iUUQWPxzOfWhZZJA%3A1606560888505&tbas=0&source=lnt&sa=X (28/11/2020)
 $removeparam=sxsrf
 $removeparam=tbas
@@ -1942,18 +1946,6 @@ $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/53
 ||tokopedia.com^$removeparam=whid
 
-! https://github.com/ClearURLs/Rules/issues/13
-||mp.weixin.qq.com^$removeparam=ckhsm
-||mp.weixin.qq.com^$removeparam=scene
-||mp.weixin.qq.com^$removeparam=xtrack
-||mp.weixin.qq.com^$removeparam=key
-||mp.weixin.qq.com^$removeparam=ascene
-||mp.weixin.qq.com^$removeparam=uin
-||mp.weixin.qq.com^$removeparam=devicetype
-||mp.weixin.qq.com^$removeparam=version
-||mp.weixin.qq.com^$removeparam=exportkey
-||mp.weixin.qq.com^$removeparam=pass_ticket
-
 ! https://www.flipkart.com/wildcraft-knight-mel-17-5-l-laptop-backpack/p/itmfejkcj45hnsdw?pid=BKPFEJKCFU49PCDE&lid=LSTBKPFEJKCFU49PCDEKYMJX4&marketplace=FLIPKART&store=reh%2F4d7%2Fak9&srno=b_1_1&otracker=hp_omu_Top%2BOffers%2BOn_3_13.dealCard.OMU_6NBH6T8TFQ5H_6&otracker1=hp_omu_WHITELISTED_neon%2Fmerchandising_Top%2BOffers%2BOn_NA_dealCard_cc_3_NA_view-all_6&fm=organic&iid=en_JRTu6S3VTYUNswfx2Vf%2BIxSVpVqAn%2BgBL%2F4egSHBpmeZwysjg95tdc%2B0VNBUu1uuBVLsn39nQeqsYzc7%2BsLNkQ%3D%3D&ppt=None&ppn=None&ssid=ooc70jk6kg0000001634312695177&cid=6NBH6T8TFQ5H
 ||flipkart.com^$removeparam=lid
 ||flipkart.com^$removeparam=fm
@@ -2307,6 +2299,21 @@ $removeparam=fromRankId
 ||sogou.com^$removeparam=interation
 ||sogou.com^$removeparam=interV
 ||sogou.com^$removeparam=user_ip
+
+!!! ——— Tencent ———
+! https://github.com/ClearURLs/Rules/issues/13
+||mp.weixin.qq.com^$removeparam=ckhsm
+||mp.weixin.qq.com^$removeparam=scene
+||mp.weixin.qq.com^$removeparam=xtrack
+||mp.weixin.qq.com^$removeparam=key
+||mp.weixin.qq.com^$removeparam=ascene
+||mp.weixin.qq.com^$removeparam=uin
+||mp.weixin.qq.com^$removeparam=devicetype
+||mp.weixin.qq.com^$removeparam=version
+||mp.weixin.qq.com^$removeparam=exportkey
+||mp.weixin.qq.com^$removeparam=pass_ticket
+! https://github.com/DandelionSprout/adfilt/pull/341
+||qq.com^$removeparam=report_recomm_player
 
 !#if !env_mobile
 ! ——— Mobile ——— !
