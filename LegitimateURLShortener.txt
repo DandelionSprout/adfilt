@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 14November2021v8-Beta
+! Version: 15November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2319,6 +2319,17 @@ $removeparam=aff_trace_key
 ||mp.weixin.qq.com^$removeparam=version
 ||mp.weixin.qq.com^$removeparam=exportkey
 ||mp.weixin.qq.com^$removeparam=pass_ticket
+! https://github.com/DandelionSprout/adfilt/pull/349
+$removeparam=clicktime
+$removeparam=nettype
+||mp.weixin.qq.com^$removeparam=abtest_cookie
+||mp.weixin.qq.com^$removeparam=chksm
+||mp.weixin.qq.com^$removeparam=count
+||mp.weixin.qq.com^$removeparam=enterid
+||mp.weixin.qq.com^$removeparam=from_msgid
+||mp.weixin.qq.com^$removeparam=from_itemidx
+||mp.weixin.qq.com^$removeparam=sessionid
+||mp.weixin.qq.com^$removeparam=subscene
 ! https://github.com/DandelionSprout/adfilt/pull/341
 ||qq.com^$removeparam=report_recomm_player
 
