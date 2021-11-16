@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 15November2021v1-Beta
+! Version: 16November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2263,6 +2263,7 @@ $removeparam=aff_trace_key
 ||baidu.com^$removeparam=pageFrom
 ||baidu.com^$removeparam=sids
 ||baidu.com^$removeparam=srcp
+! https://github.com/DandelionSprout/adfilt/pull/350
 ! https://baike.baidu.com/item/test/16103773?ivk_sa=1024630g (15/11/2021)
 ||baidu.com^$removeparam=ivk_sa
 
@@ -2299,6 +2300,10 @@ $removeparam=aff_trace_key
 ! https://github.com/the1812/Bilibili-Evolved/issues/913
 ||bilibili.com/audio/au*?$removeparam=type
 ||bilibili.com/audio/mycollection?$removeparam=type
+! https://github.com/DandelionSprout/adfilt/pull/353
+! https://github.com/the1812/Bilibili-Evolved/issues/1574
+^p=1^$removeparam=p,domain=bilibili.com
+^t=0^$removeparam=t,domain=bilibili.com
 
 !!! ——— Sogou ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1421356
