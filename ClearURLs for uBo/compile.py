@@ -32,7 +32,9 @@ import requests  # type: ignore
 HEAD = """\
 ! Title: ClearURLs for uBo - List extension
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
+! Description: Want to use ClearURLs without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
 ! Last updated: {date}
+! Script last updated: 16/11/2021
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Note: This was based off of https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues
