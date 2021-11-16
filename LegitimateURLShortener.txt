@@ -910,15 +910,11 @@ $removeparam=sub2
 $removeparam=sub3
 $removeparam=sub4
 $removeparam=sub5
-$removeparam=subId1
-$removeparam=subId2
-$removeparam=subId3
-$removeparam=subId4
-$removeparam=subid1
-$removeparam=subid2
-$removeparam=subid3
-$removeparam=subid4
-$removeparam=subid5
+$removeparam=/^subid1=/i
+$removeparam=/^subid2=/i
+$removeparam=/^subid3=/i
+$removeparam=/^subid4=/i
+$removeparam=/^subid5=/i
 $removeparam=tid1
 $removeparam=tid2
 $removeparam=tid3
@@ -1097,6 +1093,15 @@ $removeparam=byp455
 ! https://github.com/DandelionSprout/adfilt/pull/340
 ! https://www.uemeds.cn/info/infodetail/26511?detail_from=industry_hot (14/11/2021)
 $removeparam=detail_from
+
+! https://s.lazada.sg/s.ZIugg
+$removeparam=sub_aff_id
+$removeparam=sub_id1
+$removeparam=sub_id2
+$removeparam=sub_id3
+$removeparam=sub_id4
+$removeparam=sub_id5
+$removeparam=sub_id6
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer
@@ -2172,6 +2177,17 @@ $removeparam=referer,domain=bodykind.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1646225
 ||wsj.com^$removeparam=reflink
+
+! https://s.lazada.com.ph/s.3LwM6
+||lazada.$removeparam=dsource
+||lazada.$removeparam=laz_share_info
+||lazada.$removeparam=laz_token
+||lazada.$removeparam=exlaz
+
+! https://www.target.com/c/home-decor-deals/-/N-vxtra?lnm=1171879&marketing_id=EMAIL-104207-header&lnk=C_HomeDecorDeals_EMAIL-104207
+||target.com^$removeparam=lnm
+||target.com^$removeparam=lnk
+||target.com^$removeparam=marketing_id
 
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
