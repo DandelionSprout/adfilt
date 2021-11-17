@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 16November2021v1-Beta
+! Version: 17November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -25,10 +25,9 @@ $removeparam=action_ref_map
 ! https://www.ikea.com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
 ! https://www.infoq.com/containers/?itm_source=infoq&itm_medium=header_graybar&itm_campaign=topic_clk (28/02/2021)
 ! https://app.sheetgo.com/workflows/1606149317012600L5SS/connections?stm_source=sheetgo-webapp-workflow-invite&stm_medium=email&stm_campaign=on-demand-invitation (28/02/2021)
+! https://www.dx.com/p/sliding-camera-protective-cover-for-smartphones-laptops-tablets-2729311.html?Utm_rid=91262049&Utm_source=affiliatewindow
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488307
-$removeparam=/^utm_/,domain=~redir.tradedoubler.com
-$removeparam=/^itm_/,domain=~redir.tradedoubler.com
-$removeparam=/^stm_/,domain=~redir.tradedoubler.com
+$removeparam=/^[uis]tm[_-]/i,domain=~redir.tradedoubler.com
 
 ! https://www.ixigua.com/6888869154099629319?logTag=Y8JlCALntSDuDesMiPno8 (31/10/2020)
 $removeparam=logTag
@@ -264,7 +263,6 @@ $removeparam=itid
 $removeparam=full_trSrc
 $removeparam=cmpg_for_af
 $removeparam=/^ICID=/i,domain=~api.mapbox.com
-$removeparam=/^utm-/
 $removeparam=aff
 $removeparam=mc_cid
 $removeparam=mc_eid
@@ -886,18 +884,11 @@ $removeparam=_kx
 ! https://strackr.com/subid
 $removeparam=AFFSRC
 $removeparam=aff_sub
-$removeparam=aff_sub2
-$removeparam=aff_sub3
-$removeparam=aff_sub4
-$removeparam=aff_sub5
+$removeparam=/^aff_sub[0-9]=/i
 $removeparam=afftrack
 $removeparam=atid
 $removeparam=clickref
-$removeparam=clickref2
-$removeparam=clickref3
-$removeparam=clickref4
-$removeparam=clickref5
-$removeparam=clickref6
+$removeparam=/^clickref[0-9]=/i
 $removeparam=cuid
 $removeparam=data1
 $removeparam=data2
@@ -905,20 +896,9 @@ $removeparam=effi_id
 $removeparam=effi_id2
 $removeparam=fobs
 $removeparam=pubref
-$removeparam=sub1
-$removeparam=sub2
-$removeparam=sub3
-$removeparam=sub4
-$removeparam=sub5
-$removeparam=/^subid1=/i
-$removeparam=/^subid2=/i
-$removeparam=/^subid3=/i
-$removeparam=/^subid4=/i
-$removeparam=/^subid5=/i
-$removeparam=tid1
-$removeparam=tid2
-$removeparam=tid3
-$removeparam=tid4
+$removeparam=/^sub[0-9]=/i
+$removeparam=/^subid[0-9]=/i
+$removeparam=/^tid[0-9]=/i
 
 ! http://www.avantlink.com/?avad=192617_f24ceb9c5
 $removeparam=avad
@@ -926,11 +906,7 @@ $removeparam=avad
 ! https://support.getcake.com/support/solutions/articles/13000081927-how-to-use-direct-linking-when-tracking-links-are-not-allowed
 $removeparam=ckmc
 $removeparam=ckmsc
-$removeparam=s1
-$removeparam=s2
-$removeparam=s3
-$removeparam=s4
-$removeparam=s5
+$removeparam=/^s[0-9]=/i
 
 ! https://t.me/joinchat/AAAAAESA_FywGOtsnzfvMw?__cn_tracker=328a2d9c82a924cf79822a1b
 $removeparam=__cn_tracker
@@ -954,9 +930,6 @@ $removeparam=/^Offers\.com/
 
 ! https://www.hunterboots.com/us/en_us/sale-womens-sale-footwear#esp_sort=price&esp_order=asc?CSID=AFF||||&siteID=qpF0HYnRugA-S5yfZifcN54MdPsE4Cewzw
 $removeparam=CSID
-
-! https://www.dx.com/p/sliding-camera-protective-cover-for-smartphones-laptops-tablets-2729311.html?Utm_rid=91262049&Utm_source=affiliatewindow
-$removeparam=/^Utm_/
 
 ! https://www.kelkoo.com/?kpartnerid=1938479021
 $removeparam=kpartnerid
@@ -1062,11 +1035,7 @@ $removeparam=af_referrer_customer_id
 $removeparam=af_referrer_name
 $removeparam=af_referrer_uid
 $removeparam=af_siteid
-$removeparam=af_sub1
-$removeparam=af_sub2
-$removeparam=af_sub3
-$removeparam=af_sub4
-$removeparam=af_sub5
+$removeparam=/^af_sub[0-9]=/i
 $removeparam=af_sub_siteid
 $removeparam=is_retargeting
 $removeparam=shortlink
@@ -1096,12 +1065,10 @@ $removeparam=detail_from
 
 ! https://s.lazada.sg/s.ZIugg
 $removeparam=sub_aff_id
-$removeparam=sub_id1
-$removeparam=sub_id2
-$removeparam=sub_id3
-$removeparam=sub_id4
-$removeparam=sub_id5
-$removeparam=sub_id6
+$removeparam=/^sub_id[0-9]=/i
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915
+$removeparam=tg_ref
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer
@@ -2034,9 +2001,7 @@ $removeparam=/^m_/,domain=macys.com|macysinc.com
 ||wsj.com^$removeparam=inttrackingcode
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915
-$removeparam=tg_ref
 ||bindright.com^$removeparam=camp_id
-||bindright.com^$removeparam=sub2
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559940
 ||lendgo.com^$removeparam=rate
@@ -2386,9 +2351,12 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ! ——— Allowlist ——— !
 ! https://github.com/DandelionSprout/adfilt/commit/6dd010c70438a84cae7cf6b683d0d99dc56794ad
 @@mailinglist$removeparam=/^utm_/
+
 ! Block users from uploading images - https://github.com/DandelionSprout/adfilt/pull/325
 @@||graph.baidu.com/upload?$removeparam=from
+
 ! Prevent rules from applying the internet Archive, and thus breaking it
 @@||web.archive.org/*_/http$removeparam
+
 ! Block users from saving files in `BaiduNetdisk` - https://github.com/DandelionSprout/adfilt/pull/343
 @@||pan.baidu.com/share/transfer?$removeparam=from
