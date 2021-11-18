@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 161120211
+! Version: 181120211
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -466,7 +466,6 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 ||vefbordar.*.is^$third-party
 ||vevlysingar.*.com^$third-party
 ||ad.no.doubleclick.net^
-||ad.primetime.net^
 ||ad.shareholders.dk^
 ||adext.inkclub.com^
 ||adnordics.com^$third-party
@@ -984,6 +983,7 @@ edbpriser.dk#?#*:-abp-has(> * > div[id^=leftAdSpotAdcontainer])
 ehandel.com##aside
 eidfaxi.is#?#*:-abp-has(> .ad-banner)
 ekstrabladet.dk###manipulate_monster
+ekstrabladet.dk##.scrb-posts > .flex-column
 elmagasinet.no##.RightBoxWrapper
 elmagasinet.no##.SkyskraperWrapper
 euroinvestor.dk,valutakurser.dk###ctl00_BannerContainerTop
@@ -4349,7 +4349,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ! Språknöjtral test för at kolla om ABP-brukarrapporter för YouTube går ner til 0 med den här uppförning / Language-neutral test to see if ABP user reports for YouTube plunge down to 0 with this entry
 ||googlevideo.com/*&ctier=
 
-! Version: 151120211
+! Version: 161120215
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4512,6 +4512,8 @@ arcticinsider.com##a[href*=bannerTrack]
 aromilehti.fi##.ad-paper-order
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com##div[class*=post] > hr, hr ~ *:not(aside)
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com#?#body.post-template-default * .td-main-content-wrap:-abp-has(.tdt-ad-wrap)
+arvopaperi.fi##.ads-parade-wrapper
+arvopaperi.fi##a[href^="https://www.arvopaperi.fi/kumppanisisallot/"][target="_self"]
 arvopaperi.fi#?#div#skyscraper-height-div > aside > div:-abp-has(a[href^="https://www.arvopaperi.fi/kumppanisisallot/"])
 arvopaperi.fi,uusisuomi.fi#?#[width]:-abp-has(.lazyload-wrapper):not(aside)
 asunnot.oikotie.fi##.customer-color-link.sahkovertailu-campaign__link
@@ -4720,9 +4722,9 @@ karjalainen.fi##a[href="https://punamustamedia.portal.worldoftulo.com/v2/shop/dt
 karjalainen.fi#?#.breaking-news-container:-abp-contains(mainos:)
 karjalainen.fi#?#a[href*=kiinnostuitko]:-abp-has([alt=banneri])
 karjalainen.fi,sammysatv.com##center
+kauppalehti.fi##a[href^="https://www.kauppalehti.fi/kumppanisisallot/"][target="_self"]
 kauppalehti.fi#?##coral-talk + div[class]:-abp-has(a[href^="https://www.kauppalehti.fi/kumppanisisallot/"])
 kauppalehti.fi#?#[class][data-test] ~ div[class]:-abp-has(> a[href^="https://www.kauppalehti.fi/kumppanisisallot/"])
-kauppalehti.fi#?#div[class]:not(#article-content):-abp-has(> div[class][width] > .ad)
 kauppalehti.fi#?#div[class][width]:-abp-has(> .ad)
 kauppalehti.fi,talouselama.fi#?#div[class]:-abp-has(> .lazyload-wrapper > .etua-react-embed)
 keskipohjanmaa.fi#?#.col-xs-12.col-sm-6.col-md-12:-abp-contains(mainosartikkelit)
@@ -5245,6 +5247,7 @@ iltalehti.fi##.leiki-container-markkinapaikka2.leiki-container
 iltalehti.fi##.parade-ad-container
 iltalehti.fi##.slider-content
 iltalehti.fi##.telkku-ads
+iltalehti.fi##[class|="almad-mobile-parade"]
 iltalehti.fi##div.footer-wrapper__item.is-visible.LazyLoad
 iltalehti.fi##div[class=iframe-container]
 iltalehti.fi#?#.card:-abp-has(#il-rantapallo-right-column-box)
