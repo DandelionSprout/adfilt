@@ -1390,6 +1390,189 @@ $removeparam=share_link_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-974118
 ||tiktok.com^$removeparam=checksum
 
+!! ——— Rules for heavily covered international sites ———
+!!! ——— PR-China ———
+!!! Special thanks to https://github.com/shenzhiming88 for helping with this section.
+!!!! ——— AliExpress ———
+! https://es.aliexpress.com/item/4000672272353.html?pvid=c4cdc770-f05a-4b7b-8a50-d8b81efff6c9&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:c4cdc770-f05a-4b7b-8a50-d8b81efff6c9,tpp_buckets:668%230%23131923%230_668%23808%234094%23200_668%23888%233325%231_668%232846%238113%23646_668%232717%237558%23188_668%231000022185%231000066059%230_668%233468%2315617%23897
+||aliexpress.com/item/$removeparam=pvid
+||aliexpress.com^$removeparam=_t
+! https://es.aliexpress.com/item/4001349152860.html?gps-id=5547572&scm_id=1007.19201.130907.0&scm=1007.19201.130907.0&scm-url=1007.19201.130907.0
+||aliexpress.$removeparam=gps-id
+$removeparam=scm_id
+$removeparam=scm
+$removeparam=scm-url
+||aliexpress.com^$removeparam=initiative_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
+||aliexpress.$removeparam=tt
+||aliexpress.$removeparam=terminal_id
+$removeparam=tmLog
+$removeparam=aem_p4p_detail
+$removeparam=algo_exp_id
+! https://campaign.aliexpress.com/wow/gcp/ae/channel/ae/accelerate/tupr?wh_weex=true&_immersiveMode=true&wx_navbar_hidden=true&wx_navbar_transparent=true&ignoreNavigationBar=true&wx_statusbar_hidden=true&wh_pid=ae/daily/ae/3c_daily/phones_accessories
+$removeparam=wx_header
+$removeparam=wx_navbar_hidden
+$removeparam=wx_navbar_transparent
+$removeparam=ignoreNavigationBar
+$removeparam=wx_statusbar_hidden
+! https://aliexpress.com/item/1005002402123565.html?fromRankId=3141134
+$removeparam=fromRankId
+! https://aliexpress.com/item/33014052863.html?pdp_ext_f=%7B%22ship_from%22:%22%22,%22sku_id%22:%2267107423525%22%7D&utparam=%7B%22process_id%22:%22401%22,%22x_object_type%22:%22product%22,%22pvid%22:%22df54ce03-45d0-42f5-a661-634290fe5f03%22,%22belongs%22:[%7B%22floor_id%22:%2222234693%22,%22id%22:%22782032%22,%22type%22:%22dataset%22%7D,%7B%22id_list%22:[%221000094891%22],%22type%22:%22gbrain%22%7D],%22scm%22:%221007.34914.242271.0%22,%22tpp_buckets%22:%2221669%230%23186385%230_21669%234190%2319162%23485_24914%230%23242271%238%22,%22x_object_id%22:%2233014052863%22%7D&__tppBottom=true
+||aliexpress.com^$removeparam=pdp_ext_f
+||aliexpress.com^$removeparam=utparam
+||aliexpress.com^$removeparam=__tppBottom
+! https://s.click.aliexpress.com/e/_pQN242z?dp=p12840043004615122514&cv=21876
+$removeparam=aff_fcid
+$removeparam=aff_fsk
+$removeparam=aff_platform
+$removeparam=aff_trace_key
+||aliexpress.com^$removeparam=dp
+||aliexpress.com^$removeparam=cv
+
+!!!! ——— Baidu ———
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
+||baidu.com^$removeparam=/^rsv/
+||baidu.com^$removeparam=euri
+||baidu.com^$removeparam=f
+||baidu.com^$removeparam=for
+||baidu.com^$removeparam=inputT
+||baidu.com^$removeparam=issp
+||baidu.com^$removeparam=oq
+||baidu.com^$removeparam=prefixsug
+||baidu.com^$removeparam=rqid
+||baidu.com^$removeparam=rs_src
+||baidu.com^$removeparam=rsf
+||baidu.com^$removeparam=rsp
+||baidu.com^$removeparam=usm
+||baidu.com^$removeparam=wfr
+||baidu.com/s?$removeparam=tn
+! https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9897086216107820920%22%7D&n_type=0&p_from=1
+||baidu.com^$removeparam=n_type
+||baidu.com^$removeparam=p_from
+! https://www.baidu.com/s?cl=3&fr=top1000&wd=%E8%88%AA%E5%A4%A9%E5%91%98%E5%A4%AA%E7%A9%BA%E8%BF%87%E5%B9%B4%E5%90%83%E5%95%A5%E9%A6%85%E9%A5%BA%E5%AD%90%3F&hisfilter=1
+||baidu.com^$removeparam=cl
+||baidu.com^$removeparam=hisfilter
+! https://github.com/DandelionSprout/adfilt/pull/310
+||baidu.com^$removeparam=platform
+||baidu.com^$removeparam=sa
+! https://m.baidu.com/ssid=3aed7368656e7a68696d696e673434e940/s?word=test&ts=4303890&t_kt=0&ie=utf-8&tj=1&params_ssrt=node-san&
+||baidu.com^$removeparam=params_ssrt
+||baidu.com^$removeparam=t_kt
+||baidu.com^$removeparam=tj
+! https://m.baidu.com/?from=844b&vit=fps#
+||baidu.com^$removeparam=vit
+! https://wenku.baidu.com/search?lm=0&od=0&ie=utf-8&dyTabStr=MCwxLDYsNCw1LDMsMiw3LDgsOQ%3D%3D&word=test&ie=utf-8
+||baidu.com^$removeparam=lm
+||baidu.com^$removeparam=od
+||baidu.com^$removeparam=dyTabStr
+! http://zhidao.baidu.com/search?&ct=17&pn=0&tn=ikaslist&rn=10&word=test
+||baidu.com/search?$removeparam=ct
+! https://github.com/DandelionSprout/adfilt/pull/319
+||baidu.com^$removeparam=asctag
+||baidu.com^$removeparam=lid
+||baidu.com^$removeparam=ref
+||baidu.com^$removeparam=rq
+||baidu.com^$removeparam=vslid
+! https://github.com/DandelionSprout/adfilt/pull/325
+||baidu.com^$removeparam=gsid
+||baidu.com^$removeparam=idctag
+||baidu.com^$removeparam=logid
+||baidu.com^$removeparam=pageFrom
+||baidu.com^$removeparam=sids
+||baidu.com^$removeparam=srcp
+! https://github.com/DandelionSprout/adfilt/pull/350
+! https://baike.baidu.com/item/test/16103773?ivk_sa=1024630g (15/11/2021)
+||baidu.com^$removeparam=ivk_sa
+
+!!!! ——— Bilibili ———
+! https://github.com/uBlockOrigin/uAssets/pull/10010
+||bilibili.com^$removeparam=/^current/
+||bilibili.com^$removeparam=/^from/
+||bilibili.com^$removeparam=/^network/
+||bilibili.com^$removeparam=/^playurl/
+||bilibili.com^$removeparam=/^share_/
+||bilibili.com^$removeparam=accept_quality
+||bilibili.com^$removeparam=bbid
+||bilibili.com^$removeparam=broadcast_type
+||bilibili.com^$removeparam=bsource
+||bilibili.com^$removeparam=hotRank
+||bilibili.com^$removeparam=p2p_type
+||bilibili.com^$removeparam=platform_network_status
+||bilibili.com^$removeparam=quality_description
+||bilibili.com^$removeparam=referfrom
+||bilibili.com^$removeparam=rt
+||bilibili.com^$removeparam=seid
+||bilibili.com^$removeparam=spm_id_from
+||bilibili.com^$removeparam=tdsourcetag
+||bilibili.com^$removeparam=timestamp
+||bilibili.com^$removeparam=unique_k
+! https://manga.bilibili.com/detail/mc25717?refer_from=bili_main_nav
+||bilibili.com^$removeparam=refer_from
+! https://show.bilibili.com/platform/home.html?msource=pc_web
+||bilibili.com^$removeparam=msource
+! https://github.com/DandelionSprout/adfilt/pull/355
+! https://github.com/the1812/Bilibili-Evolved/issues/974
+||bilibili.com/bangumi$removeparam=theme
+! https://github.com/DandelionSprout/adfilt/pull/354
+! https://github.com/the1812/Bilibili-Evolved/issues/1207
+||live.bilibili.com^$removeparam=visit_id
+! https://github.com/DandelionSprout/adfilt/pull/354
+! https://github.com/the1812/Bilibili-Evolved/issues/913
+||bilibili.com/audio/au*?$removeparam=type
+||bilibili.com/audio/mycollection?$removeparam=type
+! https://github.com/DandelionSprout/adfilt/pull/353
+! https://github.com/the1812/Bilibili-Evolved/issues/1574
+^p=1^$removeparam=p,domain=bilibili.com
+^t=0^$removeparam=t,domain=bilibili.com
+
+!!!! ——— Sogou ———
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1421356
+||sogou.com^$removeparam=_asf
+||sogou.com^$removeparam=_ast
+||sogou.com^$removeparam=lkt
+||sogou.com^$removeparam=s_from
+||sogou.com^$removeparam=sst0
+||sogou.com^$removeparam=sugsuv
+||sogou.com^$removeparam=sugtime
+||sogou.com^$removeparam=sut
+||sogou.com^$removeparam=w
+! https://github.com/DandelionSprout/adfilt/pull/310
+||sogou.com^$removeparam=bh
+||sogou.com^$removeparam=clickArea
+||sogou.com^$removeparam=entityid
+||sogou.com^$removeparam=hintidx
+||sogou.com^$removeparam=htdbg
+||sogou.com^$removeparam=innerid
+||sogou.com^$removeparam=interation
+||sogou.com^$removeparam=interV
+||sogou.com^$removeparam=user_ip
+
+!!!! ——— Tencent ———
+! https://github.com/ClearURLs/Rules/issues/13
+||mp.weixin.qq.com^$removeparam=ckhsm
+||mp.weixin.qq.com^$removeparam=scene
+||mp.weixin.qq.com^$removeparam=xtrack
+||mp.weixin.qq.com^$removeparam=key
+||mp.weixin.qq.com^$removeparam=ascene
+||mp.weixin.qq.com^$removeparam=uin
+||mp.weixin.qq.com^$removeparam=devicetype
+||mp.weixin.qq.com^$removeparam=version
+||mp.weixin.qq.com^$removeparam=exportkey
+||mp.weixin.qq.com^$removeparam=pass_ticket
+! https://github.com/DandelionSprout/adfilt/pull/349
+$removeparam=clicktime
+$removeparam=nettype
+||mp.weixin.qq.com^$removeparam=abtest_cookie
+||mp.weixin.qq.com^$removeparam=chksm
+||mp.weixin.qq.com^$removeparam=count
+||mp.weixin.qq.com^$removeparam=enterid
+||mp.weixin.qq.com^$removeparam=from_msgid
+||mp.weixin.qq.com^$removeparam=from_itemidx
+||mp.weixin.qq.com^$removeparam=sessionid
+||mp.weixin.qq.com^$removeparam=subscene
+! https://github.com/DandelionSprout/adfilt/pull/341
+||qq.com^$removeparam=report_recomm_player
+
 !! ——— Miscellaneous ———
 ! No particular examples
 $removeparam=app,domain=tiktok.com|music.apple.*
@@ -2384,9 +2567,12 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ! ——— Allowlist ——— !
 ! https://github.com/DandelionSprout/adfilt/commit/6dd010c70438a84cae7cf6b683d0d99dc56794ad
 @@mailinglist$removeparam=/^utm_/
+
 ! Block users from uploading images - https://github.com/DandelionSprout/adfilt/pull/325
 @@||graph.baidu.com/upload?$removeparam=from
+
 ! Prevent rules from applying the internet Archive, and thus breaking it
 @@||web.archive.org/*_/http$removeparam
+
 ! Block users from saving files in `BaiduNetdisk` - https://github.com/DandelionSprout/adfilt/pull/343
 @@||pan.baidu.com/share/transfer?$removeparam=from
