@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 16November2021v1-Beta
+! Version: 18November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -885,19 +885,10 @@ $removeparam=_kx
 ! https://www.affluent.io/affiliate-marketing-blog/affiliate-sub-campaign-sid-tracking-guide/
 ! https://strackr.com/subid
 $removeparam=AFFSRC
-$removeparam=aff_sub
-$removeparam=aff_sub2
-$removeparam=aff_sub3
-$removeparam=aff_sub4
-$removeparam=aff_sub5
+$removeparam=/^aff_sub[0-9]?=/
 $removeparam=afftrack
 $removeparam=atid
-$removeparam=clickref
-$removeparam=clickref2
-$removeparam=clickref3
-$removeparam=clickref4
-$removeparam=clickref5
-$removeparam=clickref6
+$removeparam=/^clickref[0-9]?=/
 $removeparam=cuid
 $removeparam=data1
 $removeparam=data2
@@ -1062,11 +1053,7 @@ $removeparam=af_referrer_customer_id
 $removeparam=af_referrer_name
 $removeparam=af_referrer_uid
 $removeparam=af_siteid
-$removeparam=af_sub1
-$removeparam=af_sub2
-$removeparam=af_sub3
-$removeparam=af_sub4
-$removeparam=af_sub5
+$removeparam=/^af_sub[0-9]=/
 $removeparam=af_sub_siteid
 $removeparam=is_retargeting
 $removeparam=shortlink
@@ -1102,6 +1089,10 @@ $removeparam=sub_id3
 $removeparam=sub_id4
 $removeparam=sub_id5
 $removeparam=sub_id6
+$removeparam=/^sub_id[0-9]=/
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915
+$removeparam=tg_ref
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer
@@ -2034,9 +2025,7 @@ $removeparam=/^m_/,domain=macys.com|macysinc.com
 ||wsj.com^$removeparam=inttrackingcode
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915
-$removeparam=tg_ref
 ||bindright.com^$removeparam=camp_id
-||bindright.com^$removeparam=sub2
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559940
 ||lendgo.com^$removeparam=rate
