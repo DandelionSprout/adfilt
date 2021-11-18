@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 18November2021v1-Beta
+! Version: 18November2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -987,7 +987,8 @@ $removeparam=pacid
 $removeparam=pa-partnerid
 
 ! https://prispresseren.dk/shop/mobiltilbehoer/mobilholder/samdi-universal-wood-phone-holder-kaffefarve/?amp;utm_campaign=Google%20Feed&amp;utm_medium=cpc&amp;utm_term=29379
-$removeparam=/^amp;/
+! ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
+$removeparam=/^amp;/,domain=~avira.com
 
 ! https://www.fashiondays.ro/p/pantofi-sport-cu-aspect-colorblock-cell-omega-manga-cult-femei-puma-p2750164-1/?2p_affiliate_id=15adef88&2p_click_token=e64efe01d03493852f8fc609
 $removeparam=2p_affiliate_id
@@ -1083,12 +1084,6 @@ $removeparam=detail_from
 
 ! https://s.lazada.sg/s.ZIugg
 $removeparam=sub_aff_id
-$removeparam=sub_id1
-$removeparam=sub_id2
-$removeparam=sub_id3
-$removeparam=sub_id4
-$removeparam=sub_id5
-$removeparam=sub_id6
 $removeparam=/^sub_id[0-9]=/
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915
@@ -1646,9 +1641,6 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ||spreadprivacy.com^$removeparam=s
 ! https://www.hp.com/us-en/shop/slp/weekly-deals?jumpid=ma_home_hero_na_1_210623
 ||hp.com^$removeparam=jumpid
-
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
-||digikey.com^$removeparam=/^amp;/
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1015504
 ||walmart.com^$removeparam=veh
