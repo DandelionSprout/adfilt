@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19November2021v1-Beta
+! Version: 19November2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -180,6 +180,8 @@ $removeparam=source_location
 $removeparam=psf_variant
 
 ! https://accelerateworkshopserverless.splashthat.com/?sc_channel=sm&sc_campaign=startupaccelerate_q3_serverless&sc_geo=emea&sc_country=mult&sc_outcome=reg&trkCampaign=bnl20_accelerate_q3_serverless&trk=bnl20_accelerate_q3_serverless_e&es_id=9ee9c1a102 (28/02/2021)
+$removeparam=es_id
+
 ! https://open.hpi.de/courses/malware2021?tracking_user=74v365zif700sQKXlqj020vyd&tracking_type=news&tracking_id=5ED4ZiWEw48Lft3MGkAag (28/02/2021)
 $removeparam=tracking_type
 $removeparam=tracking_user
@@ -650,8 +652,9 @@ $removeparam=cm_type
 ! https://untilgone.com/products/usps-forever-stamps-2018-or-2019-u-s-flag-100-pack.html?source=pepperjam
 ^source=pepperjam^$removeparam=source
 
-! https://www.vitaminshoppe.com/?sourceType=af&source=cj
+! https://www.hawaiianairlines.com/?AID=11302693&PID=8905582&source=cj&HACMP=CJ_8905582FlexOffers.com%2C+LLC
 ^source=cj^$removeparam=source
+$removeparam=HACMP
 
 ! https://www.jet2holidays.com/?source=AWIN
 ^source=awin^$removeparam=source
@@ -1143,7 +1146,6 @@ $removeparam=creativeASIN
 $removeparam=/^sc_/
 $removeparam=trkCampaign
 $removeparam=trk,domain=splashthat.com|aws.amazon.com|aws
-$removeparam=es_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700946
 ||amazon.$removeparam=/^__mk_*_/
 ||amazon.$removeparam=ascsubtag
@@ -1606,8 +1608,8 @@ $removeparam=ws,domain=ds1.nl
 ! https://click.linksynergy.com/deeplink?id=kXQk6%2AivFEQ&mid=44583&u1=tomshardware-us-4362736165889510400&murl=https%3A%2F%2Fwww.newegg.com%2Fintel-core-i7-11700k-core-i7-11th-gen%2Fp%2FN82E16819118233
 ! https://shop-links.co/link/?publisher_slug=future&u1=tomshardware-us-1320336574459533300&exclusive=1&url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6425639%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6425639.p%253Fcmp%253DRMX&article_name=Best%20SSDs%202021%3A%20From%20Budget%20SATA%20to%20Blazing-Fast%20NVMe&article_url=https%3A%2F%2Fwww.tomshardware.com%2Freviews%2Fbest-ssds%2C3891.html%2F%2Freviews%2Fbest-ssds%2C3891.html
 $removeparam=u1,domain=linksynergy.com|shop-links.co
-$removeparam=article_name,domain=shop-links.com
-$removeparam=article_url,domain=shop-links.com
+$removeparam=article_name,domain=shop-links.co
+$removeparam=article_url,domain=shop-links.co
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-782437
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-931912
@@ -1827,8 +1829,6 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ! https://www.tui.fi/?agent=napsu
 ||tui.$removeparam=agent
 
-! https://spreadprivacy.com/duckduckgrowing/?s=pr-hd
-||spreadprivacy.com^$removeparam=s
 ! https://www.hp.com/us-en/shop/slp/weekly-deals?jumpid=ma_home_hero_na_1_210623
 ||hp.com^$removeparam=jumpid
 
@@ -1945,7 +1945,7 @@ $removeparam=impression_id,domain=nytimes.com|nytimes3xbfgragh.onion
 ! https://blackfriday.com/stores/black-friday
 $removeparam=CID,domain=burpee.com|chegg.com|express.com|farmandfleet.com|marvel.com|mcafee.com|overstock.com|pepboys.com|puritan.com|rosettastone.com|samsung.com|shutterfly.com|staples.com|teleflora.com|ulta.com|virginatlantic.com|vrbo.com|walgreens.com
 $removeparam=DZID,domain=autoanything.com
-$removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|ashford.com|autoanything.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|boscovs.com|buschgardens.com|cheapcaribbean.com|chicos.com|choicehotels.com|ecampus.com|expedia.com|express.com|factoryoutletstore.com|farmandfleet.com|hammacher.com|intuit.com|jockey.com|kennethcole.com|landsend.com|lenovo.com|lens.com|mcafee.com|monoprice.com|overstock.com|perfumania.com|samsung.com|sears.com|sierra.com|soma.com|staples.com|teleflora.com|ulta.com|verizon.com|virginatlantic.com|vistaprint.com|walgreens.com|wayfair.com|whitehouseblackmarket.com|wwe.com|yahoo.com|zchocolat.com
+$removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|ashford.com|autoanything.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|boscovs.com|buschgardens.com|cheapcaribbean.com|chicos.com|choicehotels.com|ecampus.com|expedia.com|express.com|factoryoutletstore.com|farmandfleet.com|hammacher.com|intuit.com|jockey.com|kennethcole.com|landsend.com|lenovo.com|lens.com|mcafee.com|monoprice.com|overstock.com|perfumania.com|samsung.com|sears.com|sierra.com|soma.com|staples.com|teleflora.com|ulta.com|verizon.com|virginatlantic.com|vistaprint.com|walgreens.com|wayfair.com|whitehouseblackmarket.com|wwe.com|yahoo.com|zchocolat.com|hawaiianairlines.com
 $removeparam=SID,domain=ae.com|anntaylor.com|applevacations.com|ashford.com|autodesk.com|bedbathandbeyond.com|bhphotovideo.com|booksamillion.com|cheapcaribbean.com|chegg.com|chggtrx.com|ecampus.com|expedia.com|express.com|intuit.com|jockey.com|loft.com|mcafee.com|norton.com|overstock.com|perfumania.com|samsung.com|sierra.com|staples.com|taskrabbit.com|teleflora.com|verizon.com|vistaprint.com|walgreens.com|wwe.com|yahoo.com|zchocolat.com|zulily.com
 $removeparam=adref,domain=ancestry.*
 $removeparam=acid,domain=lenovo.com
@@ -2166,9 +2166,13 @@ $removeparam=fellback,domain=nytimes.com|nytimes3xbfgragh.onion
 $removeparam=req_id,domain=nytimes.com|nytimes3xbfgragh.onion
 $removeparam=variant,domain=nytimes.com|nytimes3xbfgragh.onion
 
-$removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com
+! https://open.hpi.de/courses/blockchain2021?tracking_user=4ZwXmvv7FLG8WhY4yKXysh&tracking_type=news&tracking_id=5zEP2RzB50kuwZRBjDJyiQ
 ||hpi.de^$removeparam=tracking_id
+
+! https://store.steampowered.com/agecheck/app/377160/?ser=1_0_
 ||steampowered.com^$removeparam=ser
+
+! https://www.vitaminshoppe.com/?sourceType=af&source=cj
 ||vitaminshoppe.com^$removeparam=sourceType
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1524659
@@ -2284,9 +2288,6 @@ $removeparam=iid,domain=cnn.com
 $removeparam=cmp,domain=bestbuy.com
 $removeparam=nrtv_as_src,domain=bestbuy.com
 
-! https://www.npr.org/2021/11/09/1053895250/an-original-apple-1-computer-sells-for-400-000?t=1636632418327
-||npr.org^$removeparam=t
-
 ! https://github.com/easylist/easylist/issues/9625
 ||weibo.com/ajax/log$removeparam=uicode
 ||weibo.com/ajax/log$removeparam=act_code
@@ -2360,7 +2361,10 @@ $removeparam=referer,domain=bodykind.com
 ||target.com^$removeparam=marketing_id
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1666311
-$removeparam=s,domain=twitter.com
+$removeparam=s,domain=twitter.com|spreadprivacy.com
+
+! https://twitter.com/chrissteinplays/status/1461003062936547331?t=CXBXxSiUKI8wPAkoGMH7zg
+$removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org|twitter.com
 
 ! https://market.yandex.ru/promo/hasbro_special?clid=602&cpa-perf=1#c
 ||yandex.$removeparam=clid
