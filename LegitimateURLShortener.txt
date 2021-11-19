@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19November2021v1-Beta
+! Version: 19November2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1445,26 +1445,29 @@ $removeparam=aff_trace_key
 ||baidu.com^$removeparam=rsp
 ||baidu.com^$removeparam=usm
 ||baidu.com/s?$removeparam=tn
-! https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9897086216107820920%22%7D&n_type=0&p_from=1
+! https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9897086216107820920%22%7D&n_type=0&p_from=1 (16/10/2021)
 ||baidu.com^$removeparam=n_type
 ||baidu.com^$removeparam=p_from
-! https://www.baidu.com/s?cl=3&fr=top1000&wd=%E8%88%AA%E5%A4%A9%E5%91%98%E5%A4%AA%E7%A9%BA%E8%BF%87%E5%B9%B4%E5%90%83%E5%95%A5%E9%A6%85%E9%A5%BA%E5%AD%90%3F&hisfilter=1
+! https://www.baidu.com/s?cl=3&fr=top1000&wd=%E8%88%AA%E5%A4%A9%E5%91%98%E5%A4%AA%E7%A9%BA%E8%BF%87%E5%B9%B4%E5%90%83%E5%95%A5%E9%A6%85%E9%A5%BA%E5%AD%90%3F&hisfilter=1 (16/10/2021)
 ||baidu.com^$removeparam=cl
 ||baidu.com^$removeparam=hisfilter
 ! https://github.com/DandelionSprout/adfilt/pull/310
+! https://top.baidu.com/board?platform=pc&sa=pcindex_a_right (23/10/2021)
 ||baidu.com^$removeparam=platform
 ||baidu.com^$removeparam=sa
-! https://m.baidu.com/ssid=3aed7368656e7a68696d696e673434e940/s?word=test&ts=4303890&t_kt=0&ie=utf-8&tj=1&params_ssrt=node-san&
+! https://github.com/DandelionSprout/adfilt/pull/312
+! https://m.baidu.com/ssid=3aed7368656e7a68696d696e673434e940/s?word=test&ts=4303890&t_kt=0&ie=utf-8&tj=1&params_ssrt=node-san& (25/10/2021)
 ||baidu.com^$removeparam=params_ssrt
 ||baidu.com^$removeparam=t_kt
 ||baidu.com^$removeparam=tj
-! https://m.baidu.com/?from=844b&vit=fps#
+! https://m.baidu.com/?from=844b&vit=fps# (25/10/2021)
 ||baidu.com^$removeparam=vit
-! https://wenku.baidu.com/search?lm=0&od=0&ie=utf-8&dyTabStr=MCwxLDYsNCw1LDMsMiw3LDgsOQ%3D%3D&word=test&ie=utf-8
+! https://github.com/DandelionSprout/adfilt/pull/317
+! https://wenku.baidu.com/search?lm=0&od=0&ie=utf-8&dyTabStr=MCwxLDYsNCw1LDMsMiw3LDgsOQ%3D%3D&word=test&ie=utf-8 (29/10/2021)
 ||baidu.com^$removeparam=lm
 ||baidu.com^$removeparam=od
 ||baidu.com^$removeparam=dyTabStr
-! http://zhidao.baidu.com/search?&ct=17&pn=0&tn=ikaslist&rn=10&word=test
+! http://zhidao.baidu.com/search?&ct=17&pn=0&tn=ikaslist&rn=10&word=test (29/10/2021)
 ||baidu.com/search?$removeparam=ct
 ! https://github.com/DandelionSprout/adfilt/pull/319
 ||baidu.com^$removeparam=asctag
@@ -1544,8 +1547,8 @@ $removeparam=aff_trace_key
 ||sogou.com^$removeparam=sut
 ||sogou.com^$removeparam=w
 ! https://github.com/DandelionSprout/adfilt/pull/310
+$removeparam=clickArea
 ||sogou.com^$removeparam=bh
-||sogou.com^$removeparam=clickArea
 ||sogou.com^$removeparam=entityid
 ||sogou.com^$removeparam=hintidx
 ||sogou.com^$removeparam=htdbg
@@ -1578,7 +1581,7 @@ $removeparam=nettype
 ||mp.weixin.qq.com^$removeparam=sessionid
 ||mp.weixin.qq.com^$removeparam=subscene
 ! https://github.com/DandelionSprout/adfilt/pull/341
-||qq.com^$removeparam=report_recomm_player
+$removeparam=report_recomm_player
 
 !! ——— Miscellaneous ———
 ! No particular examples
