@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 20November2021v1-Beta
+! Version: 20November2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2407,6 +2407,21 @@ $removeparam=cpa-perf
 ! https://github.com/DandelionSprout/adfilt/pull/354
 ! https://github.com/the1812/Bilibili-Evolved/issues/1207
 $removeparam=visit_id,domain=live.bilibili.com|google.*
+
+! https://github.com/AdguardTeam/AdguardFilters/pull/100181
+||cc.loginfra.com/cc$removeparam=a
+||cc.loginfra.com/cc$removeparam=bw
+||cc.loginfra.com/cc$removeparam=px
+||cc.loginfra.com/cc$removeparam=py
+||cc.loginfra.com/cc$removeparam=sx
+||cc.loginfra.com/cc$removeparam=sy
+||cc.loginfra.com/cc$removeparam=nsc
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1674964
+||pb.sogou.com^$removeparam=scrnwi
+||pb.sogou.com^$removeparam=scrnhi
+||pb.sogou.com^$removeparam=uigs_cookie
+||pb.sogou.com^$removeparam=uigs_t
 
 !#if !env_mobile
 ! ——— Mobile ——— !
