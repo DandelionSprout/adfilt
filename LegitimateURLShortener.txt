@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19November2021v3-Beta
+! Version: 20November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1470,7 +1470,9 @@ $removeparam=aff_trace_key
 ||baidu.com^$removeparam=od
 ||baidu.com^$removeparam=dyTabStr
 ! http://zhidao.baidu.com/search?&ct=17&pn=0&tn=ikaslist&rn=10&word=test (29/10/2021)
+! https://image.baidu.com/search/index?tn=baiduimage&ct=201326592&word=2020%C4%EA%B6%C8%D6%D0%B9%FA%D2%BD%D4%BA%C5%C5%D0%D0%B0%F1&t=3&ie=gbk (20/11/2021)
 ||baidu.com/search?$removeparam=ct
+||baidu.com/search/index?$removeparam=ct
 ! https://github.com/DandelionSprout/adfilt/pull/319
 ||baidu.com^$removeparam=asctag
 ||baidu.com^$removeparam=rq
@@ -1496,6 +1498,27 @@ $removeparam=aff_trace_key
 ||baidu.com^$removeparam=lemmaTitle
 ! https://baike.baidu.com/tashuo/browse/content?id=84d19be0ff2608324a4bdf94&fromModule=pcArticleMoreRecommend (18/11/2021)
 ||baidu.com^$removeparam=fromModule
+! https://github.com/DandelionSprout/adfilt/pull/364
+! https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5624822534906982005&sourceFrom=homepage (20/11/2021)
+||baidu.com^$removeparam=sourceFrom
+! https://tieba.baidu.com/f?kw=%E6%98%93%E8%AF%AD%E8%A8%80&frs=yqtb (20/11/2021)
+||baidu.com^$removeparam=frs
+! https://www.baidu.com/link?url=DypBAruKxuzkAvWXFHq_rxxT5MydC8DJ4NHQl_AF1S68iPgkIzz25jieqDZlF0QuyudS5uWFCIoQjZQDNT73j_&wd=&eqid=bbdd7ac30001f6b30000000661990cd3 (20/11/2021)
+! It is a redirect link.
+||baidu.com/link?$removeparam=eqid
+||baidu.com/link?$removeparam=wd
+! https://map.baidu.com/poi/SeasonTest%E5%AD%A3%E7%84%B6%E9%A4%90%E5%8E%85/@13540616.122963477,3641295.0502960454,12.83z?uid=3a7516a5c9d09cb6fda778d0&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&newfrom=zhuzhan_webmap&querytype=detailConInfo&da_src=shareurl (20/11/2021)
+||baidu.com^$removeparam=compat
+||baidu.com^$removeparam=da_src
+||baidu.com^$removeparam=device_ratio
+||baidu.com^$removeparam=newfrom
+||baidu.com^$removeparam=pcevaname
+||baidu.com^$removeparam=ugc_type
+||baidu.com^$removeparam=ugc_ver
+! https://wenku.baidu.com/view/1fab21892a160b4e767f5acfa1c7aa00b42a9de8.html?fixfr=nCtMIYeqlpHMQxJ6JQTzXA%253D%253D&rec_flag=default&sxts=1637422043101 (20/11/2021)
+||baidu.com^$removeparam=fixfr
+||baidu.com^$removeparam=rec_flag
+||baidu.com^$removeparam=sxts
 
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
@@ -1550,6 +1573,7 @@ $removeparam=aff_trace_key
 ||sogou.com^$removeparam=w
 ! https://github.com/DandelionSprout/adfilt/pull/310
 $removeparam=clickArea
+$removeparam=user_ip
 ||sogou.com^$removeparam=bh
 ||sogou.com^$removeparam=entityid
 ||sogou.com^$removeparam=hintidx
@@ -1557,7 +1581,17 @@ $removeparam=clickArea
 ||sogou.com^$removeparam=innerid
 ||sogou.com^$removeparam=interation
 ||sogou.com^$removeparam=interV
-||sogou.com^$removeparam=user_ip
+! https://github.com/DandelionSprout/adfilt/pull/364
+! https://www.sogou.com/web?query=Test&ie=utf8&oq&ri=0&suguuid=0caa7aac-2827-472b-942c-a5f03b0704ce&stj=0%3B4%3B0%3B0&stj2=0&stj0=0&stj1=4&hp=48&hp1&suglabid=suglabId_1 (20/11/2021)
+||sogou.com^$removeparam=/^hp/
+||sogou.com^$removeparam=/^stj/
+||sogou.com^$removeparam=oq
+||sogou.com^$removeparam=ri
+||sogou.com^$removeparam=suglabid
+||sogou.com^$removeparam=suguuid
+! https://baike.sogou.com/v64825130.htm?ch=ch.bk.amb&fromTitle=test (20/11/2021)
+||baike.sogou.com^$removeparam=ch
+||sogou.com^$removeparam=fromTitle
 
 !!!! ——— Tencent ———
 ! https://github.com/ClearURLs/Rules/issues/13
@@ -2396,3 +2430,7 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 
 ! Block users from saving files in `BaiduNetdisk` - https://github.com/DandelionSprout/adfilt/pull/343
 @@||pan.baidu.com/share/transfer?$removeparam=from
+
+! https://github.com/DandelionSprout/adfilt/pull/364
+! Prevent the user from selecting the product type normally - test address: https://b2b.baidu.com/s?q=Test
+@@||b2b.baidu.com/s/a?$removeparam=f
