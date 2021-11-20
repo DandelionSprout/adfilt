@@ -1526,9 +1526,6 @@ $removeparam=aff_trace_key
 ! https://github.com/the1812/Bilibili-Evolved/issues/974
 ||bilibili.com/bangumi$removeparam=theme
 ! https://github.com/DandelionSprout/adfilt/pull/354
-! https://github.com/the1812/Bilibili-Evolved/issues/1207
-||live.bilibili.com^$removeparam=visit_id
-! https://github.com/DandelionSprout/adfilt/pull/354
 ! https://github.com/the1812/Bilibili-Evolved/issues/913
 ||bilibili.com/audio/au*?$removeparam=type
 ||bilibili.com/audio/mycollection?$removeparam=type
@@ -1592,7 +1589,6 @@ $removeparam=c,domain=tiktok.com|norton.com|farfetch.com|hepsiburada.com|appsfly
 $removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*
 $removeparam=/^pf_rd_/,domain=shopbop.com|amazon.*|imdb.com
 $removeparam=Source,domain=facebook.com|facebookcorewwwi.onion|messenger.com|evga.com
-$removeparam=visit_id,domain=bilibili.com|google.*
 $removeparam=version,domain=mp.weixin.qq.com|us.norton.com
 $removeparam=p,domain=banggood.com|sogou.com
 $removeparam=linkId,domain=amazon.*|disneyplus.com
@@ -2372,6 +2368,11 @@ $removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org
 ! https://market.yandex.ru/promo/hasbro_special?clid=602&cpa-perf=1#c
 ||yandex.$removeparam=clid
 $removeparam=cpa-perf
+
+! https://support.google.com/websearch/answer/9351707?p=featured_snippets&hl=en&visit_id=637669631265857080-3305857145&rd=1
+! https://github.com/DandelionSprout/adfilt/pull/354
+! https://github.com/the1812/Bilibili-Evolved/issues/1207
+$removeparam=visit_id,domain=live.bilibili.com|google.*
 
 !#if !env_mobile
 ! ——— Mobile ——— !
