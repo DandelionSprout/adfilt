@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 20November2021v2-Beta
+! Version: 20November2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1589,6 +1589,11 @@ $removeparam=user_ip
 ! https://baike.sogou.com/v64825130.htm?ch=ch.bk.amb&fromTitle=test (20/11/2021)
 ||baike.sogou.com^$removeparam=ch
 ||sogou.com^$removeparam=fromTitle
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1674964
+||pb.sogou.com^$removeparam=scrnwi
+||pb.sogou.com^$removeparam=scrnhi
+||pb.sogou.com^$removeparam=uigs_cookie
+||pb.sogou.com^$removeparam=uigs_t
 
 !!!! ——— Tencent ———
 ! https://github.com/ClearURLs/Rules/issues/13
@@ -2416,12 +2421,6 @@ $removeparam=visit_id,domain=live.bilibili.com|google.*
 ||cc.loginfra.com/cc$removeparam=sx
 ||cc.loginfra.com/cc$removeparam=sy
 ||cc.loginfra.com/cc$removeparam=nsc
-
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1674964
-||pb.sogou.com^$removeparam=scrnwi
-||pb.sogou.com^$removeparam=scrnhi
-||pb.sogou.com^$removeparam=uigs_cookie
-||pb.sogou.com^$removeparam=uigs_t
 
 !#if !env_mobile
 ! ——— Mobile ——— !
