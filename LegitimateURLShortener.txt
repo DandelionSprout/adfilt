@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21November2021v1-Beta
+! Version: 21November2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -26,7 +26,8 @@ $removeparam=action_ref_map
 ! https://www.infoq.com/containers/?itm_source=infoq&itm_medium=header_graybar&itm_campaign=topic_clk (28/02/2021)
 ! https://app.sheetgo.com/workflows/1606149317012600L5SS/connections?stm_source=sheetgo-webapp-workflow-invite&stm_medium=email&stm_campaign=on-demand-invitation (28/02/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488307
-$removeparam=/^utm_/,domain=~redir.tradedoubler.com
+! Exclude sendgb.com - https://github.com/AdguardTeam/AdguardFilters/issues/100285
+$removeparam=/^utm_/,domain=~redir.tradedoubler.com|~sendgb.com
 $removeparam=/^itm_/,domain=~redir.tradedoubler.com
 $removeparam=/^stm_/,domain=~redir.tradedoubler.com
 
