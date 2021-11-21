@@ -34,7 +34,7 @@ HEAD = """\
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
 ! Last updated: {date}
-! Script last updated: 19/11/2021
+! Script last updated: 21/11/2021
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Note: This was based off of https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues
@@ -53,6 +53,8 @@ KNOWN_BAD_FILTERS = [
     "||google.*/search?$removeparam=client",
     # breaks Google redirect links - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1666162
     "$removeparam=source,domain=google.*",
+    # breaks Twitter - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1677828
+    "$removeparam=s,domain=twitter.com",
 ]
 
 
