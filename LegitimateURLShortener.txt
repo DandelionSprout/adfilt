@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21November2021v5-Beta
+! Version: 22November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -374,11 +374,10 @@ $removeparam=tblci
 $removeparam=tcid
 $removeparam=/^dv_adwords_/
 $removeparam=wdorigin
+$removeparam=/^aff_id[0-9]?=/i
+
 ! https://tenshoku.nikkei.co.jp/lp/15002/?n_cid=TPRN0002&waad=Ujim9yQ8&adid=NK_L2_T_shortlink_Sun_diagnosis&utm_source=NKdenshiban&utm_medium=content-text&utm_content=text&utm_campaign=shortlink_Sun_diagnosis
 $~xmlhttprequest,removeparam=/^adid=/i,domain=~finn.no
-
-! https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
-$removeparam=/^AFF_ID/i,domain=~nordvpn.net|~getproton.me
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-773756
 $removeparam=twitchReferral
@@ -1444,6 +1443,8 @@ $removeparam=aff_trace_key
 $removeparam=spm
 $removeparam=tracelog
 $removeparam=cardId
+! http://m.aliexpress.com/item/32475192128.html?aff_click_id=2c7754c8f1174236b64f3b364bfd24a3-1470106049987-05070-eub6yrrBy
+$removeparam=aff_click_id
 
 !!!! ——— Baidu ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
@@ -2478,3 +2479,6 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 
 ! Cause image upload failure on the forum `bbs.nga.cn` - https://github.com/AdguardTeam/AdguardFilters/issues/96952
 @@||img*.nga$removeparam=cmpid
+
+! Fix '404 Not Found' on pages with path /aff_c - https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
+@@/aff_c?$removeparam=/^aff_id[0-9]?=/i
