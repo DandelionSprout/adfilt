@@ -1,21 +1,24 @@
 ---
-name: (Dansk) Listeregelsforslag
-about: For de, der ønsker at sende ind nye regler til mine lister
+name: (Dansk) Forslag til blokering
+about: Bruges til forslag af nye blokerings regler
 title: ''
 labels: Submission
 assignees: ''
 
 ---
 
-## Hvilke(n) regel/regler sender du ind?
-<!-- `text`-kodetekstfunksjonen kan komme til nytte, hvis du ikke ønsker at lave en link til webstedet som reglen er for ved et uheld. -->
+## forslag til regel(er)?
+<!-- `text`-kodetekstfunktionen kan være nyttig, hvis du ikke ønsker at oprette link til webstedet; som regle ved et uheld. -->
 
-## Hvilke ting blokerer, skjuler, eller fikser de(n)?
-<!-- Skærmbilleder er særdeles nyttige, men valgfrie. -->
+## Hvad blokerer, skjuler, eller fikser regel(erne)?
+<!-- Skærmbilleder kan være særdeles nyttige; valgfrit. -->
 
-## Hvilke av mine lister sender du den/dem ind til?
+## Hvilke af mine lister er foreslager retted mod?
 
-## Hvilken reklameblokkerer og version brugte du da du skrev og testet reglen(e)?
+Her kunne en liste være praktist, da jeg ikke kan gennemskue den mode du administrerer dine lister på.
+Mit første indtryk er, at de umidelbart virker meget rodet.
+
+## Hvilken adblokker brugte da du skrev og testede regle(n|erne)?
 - [ ] uBlock Origin
 - [ ] AdGuard (Betalt skrivebordsversion)
 - [ ] AdGuard (Webbrowser-udvidelse)
@@ -27,10 +30,11 @@ assignees: ''
 
 Andre:
 
-Reklameblokerer-version(er):
+adblokker-version(er):
 
-## Hvilke filterlister brugte du? At ikke fortælle dette, vil føre til at sagen bliver midlertidigt lukket frem til dette bliver fortalt.
-<!-- Hvis du vil spare tid, kan du ta et skærmbillede af listeindstillingerne til reklameblokereren din. -->
+## Hvilke andre filtrerings lister brugte du?
+<!-- Dette kræves oplyst. Undladelse vil medføre at sagen uden yderligere bliver midlertidigt lukket, indtil dette er oplyst. -->
+<!-- Du kan for eksemple tage et skærmbillede af listeindstillingerne. -->
 
-## (Valgfrit) Hvilke(n) webbrowser(e) og version(er) brugte du?
-<!-- Hvis du er i tvivl, se i *Om*-siden til webbrowseren din. -->
+## Hvilke(n) webbrowser(e) og version(er) brugte du?
+<!-- Valgfrit: Hvis du er i tvivl tag og kig i hjælp -> *Om*-browseranavn i menuen. -->
