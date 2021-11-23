@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 23November2021v3-Beta
+! Version: 23November2021v4-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -892,6 +892,7 @@ $removeparam=/^clickref[0-9]?=/
 $removeparam=cuid
 $removeparam=data1
 $removeparam=data2
+$removeparam=data3
 $removeparam=effi_id
 $removeparam=effi_id2
 $removeparam=fobs
@@ -1100,6 +1101,32 @@ $removeparam=dt_platform
 $removeparam=i_cid
 $removeparam=waad
 
+! https://www.hotspotshield.com/vpn/vpn-for-android/?af-campaign=android-banner-click
+$removeparam=af-campaign
+
+! https://order.hotspotshield.com/family?af_medium=serp&af_source=bing&af_campaign=seo-organic
+! https://order.hotspotshield.com/vpn-promo/?vh=ext04fae190-e9af-11e9-b31a-4d7319e9701c&tvh=ext04fae190-e9af-11e9-b31a-4d7319e9701c&effect_medium=cpc&effect_source=google-web-ppc&effect_campaign=Future%2BPublishing&af_medium=serp&af_source=google&af_campaign=seo-organic&_gac=1.18273739.1634233996.Cj0KCQjwqp-LBhDQARIsAO0a6aKU1kScqFgz3watEC3Aj6PCdb37kc1VkKG7v2q4ovxldh13ZGdsMTgaAs12EALw_wcB
+$removeparam=_gac
+$removeparam=af_medium
+$removeparam=af_source
+$removeparam=af_campaign
+$removeparam=effect_medium
+$removeparam=effect_source
+$removeparam=effect_campaign
+
+! https://control.kochava.com/v1/cpi/click?campaign_id=kohotspot-shield-2oo5a11d43d86192b9&aftr=%7B%22vh%22%3A%22exte85632c0-4c84-11ec-8d5e-93e692fa5d20%22%2C%22referrer%22%3A%22https%3A%2F%2Fwww.hotspotshield.com%2Fvpn%2Fvpn-for-router%2F%22%7D&aftr_source=%2Fvpn%2Fvpn-for-windows%2F
+$removeparam=aftr
+$removeparam=aftr_source
+$removeparam=ko_click_id
+
+! https://www.roblox.com/?rbx_source=42&rbx_medium=cpa&rbx_campaign=145
+$removeparam=rbx_source
+$removeparam=rbx_medium
+$removeparam=rbx_campaign
+
+! https://www.iyuigjo.com/vpnMentor1?offer=3monthsfree&a_fid=vpnMentor&data3=https%253A%252F%252Fwww.vpnmentor.com%252Fvpn-comparison%252Fhotspot-shield-vs-surfeasy-vpn%252F
+$removeparam=a_fid
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1121,7 +1148,7 @@ $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
 $removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com|mozilla.org|viking-direct.co.uk
 ! No particular example
-$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com|despegar.*
+$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com|despegar.*|hotspotshield.com|gethotspotshield.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjones.com|mansionglobal.com|penews.com
@@ -2068,9 +2095,6 @@ $removeparam=csrc,domain=mcafee.com|vitacost.com
 ! https://www.lightinthebox.com/c/robot-vacuums-cleaners_113104?p.litb_from=SAS&p.utm_source=sas&p.utm_medium=affiliate&p.utm_campaign=136482&url=http%3A%2F%2Fwww.lightinthebox.com%2Fc%2Frobot-vacuums-cleaners_113104
 ||lightinthebox.com^$removeparam=url
 
-! https://norton.com/products?cjid=8807380&af_sub4=aff&af_sub5=CJ&c=CJ
-||norton.com^$removeparam=/^af_/
-
 ! https://hoteles.com/?tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&rffrid=aff.hcom.us.002.003.8807380.cjaff.kwrd=886b4ff00cb611ec806d4d080a18050d&wapa6=00aLOkbcDwTPhG5y3pNOVi2&sub_publisher=1397064&sub_site=8807380&sub_ad=10780389
 ||hoteles.com^$removeparam=PSRC
 ||hoteles.com^$removeparam=rffrid
@@ -2458,6 +2482,21 @@ $removeparam=visit_id,domain=bilibili.com|google.*
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94662#issuecomment-946949031
 ||reddit.com^$removeparam=correlation_id
+
+! https://www.hotspotshield.com/free-vpn/?hotid=102aba12b5e1c48445f9112c0e4ea8&hoaid=1024&hoan=Future+Publishing&hooid=79&hoas&hoaci
+$removeparam=hotid,domain=hotspotshield.com|gethotspotshield.com
+$removeparam=hoaid,domain=hotspotshield.com|gethotspotshield.com
+$removeparam=hoan,domain=hotspotshield.com|gethotspotshield.com
+$removeparam=hooid,domain=hotspotshield.com|gethotspotshield.com
+$removeparam=hoas,domain=hotspotshield.com|gethotspotshield.com
+$removeparam=hoaci,domain=hotspotshield.com|gethotspotshield.com
+
+! https://order.hotspotshield.com/vpn-promo?source=ir&tvh=ext9d713210-2fff-11ec-b0d5-230ac75fa440&vh=ext9d713210-2fff-11ec-b0d5-230ac75fa440&effect_medium=Affiliate&effect_source=IR&effect_campaign=VPNCoffee
+$removeparam=tvh,domain=hotspotshield.com|gethotspotshield.com
+$removeparam=vh,domain=hotspotshield.com|gethotspotshield.com
+
+! https://www.tkqlhce.com/click-100130848-15032659?sdate=D202111231126_o
+||tkqlhce.com^$removeparam=sdate
 
 !#if !env_mobile
 ! ——— Mobile ——— !
