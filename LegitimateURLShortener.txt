@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 23November2021v2-Beta
+! Version: 23November2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2451,6 +2451,14 @@ $removeparam=visit_id,domain=bilibili.com|google.*
 ||coupang.com^$removeparam=wTime
 ||coupang.com^$removeparam=wPcid
 
+! https://github.com/AdguardTeam/AdguardFilters/issues/99645
+||trendyol.com^$removeparam=tyutm_source
+||trendyol.com^$removeparam=tyutm_medium
+||trendyol.com^$removeparam=tyutm_campaign
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/94662#issuecomment-946949031
+||reddit.com^$removeparam=correlation_id
+
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
@@ -2489,8 +2497,7 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 @@||hitta.se^$removeparam=ad_id
 
 ! Email verification for 'MyWOT' - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1683830
-@@||mywot.com/user/*/confirmNewEmail$removeparam=utm_source
-@@||mywot.com/user/*/confirmNewEmail$removeparam=utm_medium
+@@||mywot.com/user/*/confirmNewEmail$removeparam=/^utm_/i
 
 !#if adguard_ext_firefox
 ! https://github.com/DandelionSprout/adfilt/issues/376
