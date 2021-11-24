@@ -1,5 +1,5 @@
 ---
-name: (Dansk) Listeregelsforslag
+name: (Dansk) Listeregleforslag
 about: For de, der ønsker at sende ind nye regler til mine lister
 title: ''
 labels: Submission
@@ -7,18 +7,18 @@ assignees: ''
 
 ---
 
-## Hvilke(n) regel/regler sender du ind?
-<!-- `text`-kodetekstfunksjonen kan komme til nytte, hvis du ikke ønsker at lave en link til webstedet som reglen er for ved et uheld. -->
+## Hvilke(n) regle(r) sender du ind?
+<!-- `text`-kodetekstfunktionen kan komme til nytte, hvis du ikke ønsker at lave en link til webstedet som reglen er for ved et uheld. -->
 
 ## Hvilke ting blokerer, skjuler, eller fikser de(n)?
 <!-- Skærmbilleder er særdeles nyttige, men valgfrie. -->
 
-## Hvilke av mine lister sender du den/dem ind til?
+## Hvilke af mine lister sender du den/dem ind til?
 
 ## Hvilken reklameblokkerer og version brugte du da du skrev og testet reglen(e)?
 - [ ] uBlock Origin
 - [ ] AdGuard (Betalt skrivebordsversion)
-- [ ] AdGuard (Webbrowser-udvidelse)
+- [ ] AdGuard (Webbrowserudvidelse)
 - [ ] AdBlock
 - [ ] Adblock Plus
 - [ ] AdGuard Home
@@ -33,4 +33,4 @@ Reklameblokerer-version(er):
 <!-- Hvis du vil spare tid, kan du ta et skærmbillede af listeindstillingerne til reklameblokereren din. -->
 
 ## (Valgfrit) Hvilke(n) webbrowser(e) og version(er) brugte du?
-<!-- Hvis du er i tvivl, se i *Om*-siden til webbrowseren din. -->
+<!-- Hvis du er i tvivl, se i *Om*-siden til din webbrowser. -->
