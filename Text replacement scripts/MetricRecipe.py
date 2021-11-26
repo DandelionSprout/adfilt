@@ -2,7 +2,7 @@ import requests
 import re
 
 # Paste the webpage you want to translate into this
-SOURCES = ['https://keviniscooking.com/the-ultimate-chicken-poutine/']
+SOURCES = ['https://natashaskitchen.com/creamy-chicken-and-rice-recipe/']
 
 OUTPUT = 'xyzzyx.html'
 OUTPUT_METRIC = 'MetricRecipe.html'
@@ -22,135 +22,153 @@ def prepare_metric(lines) -> str:
 
         # Cups → Deciliter
         line = re.sub(
-           r"1 - 1 1[/⁄]2 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"1 - 1 1[/⁄]2 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"2.5-3.5dl", 
            line
         )
 
         line = re.sub(
-           r"(1[/⁄]4|¼|<sup>1</sup>⁄<sub>4</sub>)-(1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"(1[/⁄]4|¼|<sup>1</sup>⁄<sub>4</sub>)-(1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"0.6-1.2dl", 
            line
         )
 
         line = re.sub(
-           r"1 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"1 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c[. ])", 
            r"2.5dl", 
            line
         )
 
         line = re.sub(
-           r"1 (1[/⁄]4|¼|<sup>1</sup>⁄<sub>4</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"1 (1[/⁄]4|¼|<sup>1</sup>⁄<sub>4</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"3dl", 
            line
         )
 
         line = re.sub(
-           r"1 (1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ? (cups?|c\.)", 
+           r"1 (1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ? (cups?|c\.)", 
            r"3.5dl", 
            line
         )
 
         line = re.sub(
-           r"1 (3[/⁄]4|¾|<sup>3</sup>⁄<sub>4</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"1 (3[/⁄]4|¾|<sup>3</sup>⁄<sub>4</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"4dl", 
            line
         )
 
         line = re.sub(
-           r"2 (1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"2 (1[/⁄]4|¼|<sup>1</sup>⁄<sub>2</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"5.5dl", 
+           line
+        )
+
+        line = re.sub(
+           r"2 (1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"6dl", 
            line
         )
 
         line = re.sub(
-           r"3 (1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?cups?", 
+           r"3 (1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?cups?", 
            r"8.5dl", 
            line
         )
 
         line = re.sub(
-           r"(1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"(1[/⁄]2|½|<sup>1</sup>⁄<sub>2</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"1.2dl", 
            line
         )
 
         line = re.sub(
-           r"(1[/⁄]3|⅓|<sup>1</sup>⁄<sub>3</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"(1[/⁄]3|⅓|<sup>1</sup>⁄<sub>3</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"1.6dl", 
            line
         )
 
         line = re.sub(
-           r"(3[/⁄]4|¾|<sup>3</sup>⁄<sub>4</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"(3[/⁄]4|¾|<sup>3</sup>⁄<sub>4</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"1.8dl", 
            line
         )
 
         line = re.sub(
-           r"(1[/⁄]4|¼|<sup>1</sup>⁄<sub>4</sub>) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"(1[/⁄]4|¼|<sup>1</sup>⁄<sub>4</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"0.6dl", 
            line
         )
 
         line = re.sub(
-           r"2 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"(1[/⁄]3|⅓|<sup>1</sup>⁄<sub>3</sub>) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c[. ])", 
+           r"0.8dl", 
+           line
+        )
+
+        line = re.sub(
+           r"2 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"4.5dl", 
            line
         )
 
         line = re.sub(
-           r"3 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"3 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"7dl", 
            line
         )
 
         line = re.sub(
-           r"4 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"4 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
            r"9.5dl", 
+           line
+        )
+
+        line = re.sub(
+           r"5 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(cups?|c\.)", 
+           r"1.2L", 
            line
         )
 
         # Pounds → Grams
 
         line = re.sub(
-           r"1 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(lb|pound)", 
+           r"1 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(lb|pound)", 
            r"450g", 
            line
         )
 
         line = re.sub(
-           r"1 (1[/⁄]2|½) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
+           r"1 (1[/⁄]2|½) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
            r"675g", 
            line
         )
 
         line = re.sub(
-           r"2 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
+           r"2 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
            r"900g", 
            line
         )
 
         line = re.sub(
-           r"2 (1[/⁄]2|½) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
+           r"2 (1[/⁄]2|½) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
            r"1.15kg", 
            line
         )
 
         line = re.sub(
-           r"3 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
+           r"3 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
            r"1.35kg", 
            line
         )
 
         line = re.sub(
-           r"3 (1[/⁄]2|½) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
+           r"3 (1[/⁄]2|½) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
            r"1.6kg", 
            line
         )
 
         line = re.sub(
-           r"4 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
+           r"4 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(lb[s.]|pounds)", 
            r"1.8kg", 
            line
         )
@@ -158,73 +176,73 @@ def prepare_metric(lines) -> str:
         # Ounce → Deciliter
 
         line = re.sub(
-           r"5 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"5 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"1.5dl", 
            line
         )
 
         line = re.sub(
-           r"6 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"6 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"1.75dl", 
            line
         )
 
         line = re.sub(
-           r"7 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"7 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"2dl", 
            line
         )
 
         line = re.sub(
-           r"8 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"8 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"2.25dl", 
            line
         )
 
         line = re.sub(
-           r"9 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"9 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"2.5dl", 
            line
         )
 
         line = re.sub(
-           r"10 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"10 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"3dl", 
            line
         )
 
         line = re.sub(
-           r"10(\.25| 1[/⁄]4) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"10(\.25| 1[/⁄]4) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"3dl", 
            line
         )
 
         line = re.sub(
-           r"12 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"12 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"3.5dl", 
            line
         )
 
         line = re.sub(
-           r"14(\.5| 1[/⁄]2) ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"14(\.5| 1[/⁄]2) ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"3dl", 
            line
         )
 
         line = re.sub(
-           r"15 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"15 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"3dl", 
            line
         )
 
         line = re.sub(
-           r"20 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"20 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"6dl", 
            line
         )
 
         line = re.sub(
-           r"28 ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
+           r"28 ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?(oz|ounces?)", 
            r"8.5dl", 
            line
         )
@@ -232,19 +250,19 @@ def prepare_metric(lines) -> str:
         # Fahrenheit → Celsius
 
         line = re.sub(
-           r"200 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"200 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"90°C", 
            line
         )
 
         line = re.sub(
-           r"250 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"250 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"120°C", 
            line
         )
 
         line = re.sub(
-           r"300 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"300 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"150°C", 
            line
         )
@@ -262,7 +280,7 @@ def prepare_metric(lines) -> str:
         )
 
         line = re.sub(
-           r"325 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"325 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"165°C", 
            line
         )
@@ -280,7 +298,7 @@ def prepare_metric(lines) -> str:
         )
 
         line = re.sub(
-           r"350 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"350 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"175°C", 
            line
         )
@@ -298,7 +316,7 @@ def prepare_metric(lines) -> str:
         )
 
         line = re.sub(
-           r"365 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"365 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"185°C", 
            line
         )
@@ -322,7 +340,7 @@ def prepare_metric(lines) -> str:
         )
 
         line = re.sub(
-           r"375 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"375 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"190°C", 
            line
         )
@@ -346,7 +364,7 @@ def prepare_metric(lines) -> str:
         )
 
         line = re.sub(
-           r"400 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"400 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"205°C", 
            line
         )
@@ -370,7 +388,7 @@ def prepare_metric(lines) -> str:
         )
 
         line = re.sub(
-           r"425 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"425 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"220°C", 
            line
         )
@@ -394,7 +412,7 @@ def prepare_metric(lines) -> str:
         )
 
         line = re.sub(
-           r"450 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span> <span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
+           r"450 ?([°˚]|degrees?|&deg;|\\u00b0F)? ?(</span>(&#32;)?<span class=\"wprm-recipe-ingredient-unit\">)? ?F(ahrenheit)?", 
            r"230°C", 
            line
         )
