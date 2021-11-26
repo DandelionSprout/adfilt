@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 24November2021v3-Beta
+! Version: 26November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -367,7 +367,6 @@ $removeparam=affTrack
 $removeparam=shrsl_analytics_sscid
 $removeparam=shrsl_analytics_sstid
 $removeparam=SSAID
-$removeparam=affsrc
 $removeparam=/^cm_mmc/
 $removeparam=hsCtaTracking
 $removeparam=tblci
@@ -884,7 +883,7 @@ $removeparam=_kx
 
 ! https://www.affluent.io/affiliate-marketing-blog/affiliate-sub-campaign-sid-tracking-guide/
 ! https://strackr.com/subid
-$removeparam=AFFSRC
+$removeparam=/^affsrc=/i
 $removeparam=/^aff_sub[0-9]?=/
 $removeparam=afftrack
 $removeparam=atid
@@ -1127,6 +1126,46 @@ $removeparam=rbx_campaign
 ! https://www.iyuigjo.com/vpnMentor1?offer=3monthsfree&a_fid=vpnMentor&data3=https%253A%252F%252Fwww.vpnmentor.com%252Fvpn-comparison%252Fhotspot-shield-vs-surfeasy-vpn%252F
 $removeparam=a_fid
 
+! https://www.backcountry.com/7-protection-m1-helmet?mr%3AtrackingCode=F31EAD0D-557E-E711-8100-005056944E17&mr%3AreferralID=NA&mr%3Adevice=c&mr%3AadType=plaonline
+! https://www.llbean.com/llb/shop/1098?originalProduct=126140&pla1=0&mr%3AtrackingCode=DAFDEDC8-63D3-EB11-8114-00505694403D&mr%3AreferralID=NA&mr%3Adevice=c&mr%3AadType=dynonline
+$removeparam=mr%3AtrackingCode
+$removeparam=mr%3AreferralID
+$removeparam=mr%3Adevice
+$removeparam=mr%3AadType
+
+! https://www.boxlunch.com/product/disney-pixar-up-adventure-book-journal---boxlunch-exclusive/11845882.html?mr:trackingCode=D01F949C-AE99-E911-8102-0050569428E8&mr:referralID=NA&mr:device=c&mr:adType=pla_with_promotiononline&mr:ad=418189350446&mr:keyword=&mr:match=&mr:tid=aud-877184207012:pla-521866665097&mr:ploc=9061104&mr:iloc=&mr:store=&mr:filter=521866665097&mr:adGroup=0&mr:placement=%7Bplacement%7D&mr:ext
+$removeparam=mr:trackingCode
+$removeparam=mr:referralID
+$removeparam=mr:device
+$removeparam=mr:adType
+$removeparam=mr:ad
+$removeparam=mr:keyword
+$removeparam=mr:match
+$removeparam=mr:tid
+$removeparam=mr:ploc
+$removeparam=mr:iloc
+$removeparam=mr:store
+$removeparam=mr:filter
+$removeparam=mr:adGroup
+$removeparam=mr:placement
+$removeparam=mr:ext
+
+! https://www.staples.com/asus-rog-maximus-xiii-hero-socket-lga1200-atx-intel-gaming-motherboard-rogmaximusxiiihero/product_IM18PZ144?cid=NAR%3AIM18PZ144&nrtv_cid=27f8ed66fd062e2af2b425293ca49ed8f944481d16abd12fb5ca071b82caee44&nrtv_as_src=1
+$removeparam=nrtv_cid
+$removeparam=nrtv_as_src
+
+! https://www.coursera.org/career-academy/?trk_ref=globalnav
+$removeparam=trk_ref
+
+! https://www.backcountry.com/?ircid=5311
+$removeparam=ircid
+
+! https://5dayleadchallenge.com/register-5dlc-1?cf_affiliate_id=3274849
+$removeparam=cf_affiliate_id
+
+! http://usfinf.net/-89906OKEM/1NV6?rndad=3155871133-1637879802
+$removeparam=rndad
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1136,11 +1175,11 @@ $removeparam=a_fid
 ! ——— Specific remove rules ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com|xg4ken.com|flipkart.com|glasses.com
+$removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com|xg4ken.com|flipkart.com|glasses.com|staples.com
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com|abebooks.com|eset.com|kickstarter.com|oikotie.fi|sahkovertailu.fi|jasonsavard.com|adobe.com|wormhole.app|coop.no|buzzfeed.com|megapornfreehd.com|baidu.com
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com|abebooks.com|eset.com|kickstarter.com|oikotie.fi|sahkovertailu.fi|jasonsavard.com|adobe.com|wormhole.app|coop.no|buzzfeed.com|megapornfreehd.com|baidu.com|semrush.com|protonvpn.com|altcustoms.com
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
 $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com|clickbank.net
@@ -1148,7 +1187,7 @@ $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
 $removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com|mozilla.org|viking-direct.co.uk
 ! No particular example
-$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com|despegar.*|hotspotshield.com|gethotspotshield.com
+$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com|despegar.*|hotspotshield.com|gethotspotshield.com|subscribe.gq.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjones.com|mansionglobal.com|penews.com
@@ -1683,7 +1722,7 @@ $removeparam=sref,domain=bloomberg.com|go.skimresources.com
 $removeparam=argsite,domain=metaffiliation.com
 $removeparam=ctc,domain=avantlink.com
 $removeparam=pid,domain=123inkjets.com|bergfreunde.*|play.google.com|samsclub.com|th.bing.com|flipkart.com|hepsiburada.com|appsflyer.com|tiktok.com|onelink.me
-$removeparam=subid,domain=webmasterplan.com
+$removeparam=subid,domain=webmasterplan.com|admitad.com|mintmobile.com
 $removeparam=tracking,domain=facebook.*|facebookcorewwwi.onion|messenger.com|affiliatefuture.com|gtomega.*
 $removeparam=ws,domain=ds1.nl
 
@@ -1736,7 +1775,7 @@ $removeparam=/^\~/,domain=boohoo.com|forever21.com
 
 ! https://www.columbia.com/?uid=10728209&nid=8807380
 $removeparam=nid,domain=columbia.com|sorel.com
-$removeparam=uid,domain=columbia.com|sorel.com
+$removeparam=uid,domain=columbia.com|sorel.com|entradas.com|tomtop.com
 
 ! https://www.barrons.com/articles/etf-giants-push-back-against-senate-democrat-who-wants-to-take-away-tax-break-51631753035?refsec=hp_INTERESTS_taxes
 $removeparam=refsec,domain=barrons.com
@@ -1949,7 +1988,6 @@ $removeparam=r,domain=ledger.io|mail.qq.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1142244
 ||taxscouts.$removeparam=referralSource
 ||ting.com^$removeparam=lpn
-||bestbuy.com^$removeparam=nrtv_cid
 ||newegg.com^$removeparam=quicklink
 ||newegg.com^$removeparam=nm_mc
 ||slickdeals.net^$removeparam=bsencid
@@ -2048,8 +2086,8 @@ $removeparam=ogmeas,domain=lanebryant.com
 $removeparam=partid,domain=bellacor.com
 $removeparam=/^partnerid=/i,domain=1800contacts.com|al.to|allenedmonds.com|bloomingdales.com|combat.pl|famousfootwear.com|macys.com|naturalizer.com|shoes.com|x-kom.pl|johnstonprams.com|sportler.com
 $removeparam=/^pubcid=/i,domain=ashford.com
-$removeparam=/^pubid=/i,domain=conrad.de|express.com|ftd.com|verizon.com|vineyardvines.com
-$removeparam=/^pubname=/i,domain=anntaylor.com|ashford.com|bloomingdales.com|express.com|famousfootwear.com|farmandfleet.com|hottopic.com|loft.com|naturalizer.com|samsclub.com|gucci.com
+$removeparam=/^pubid=/i,domain=conrad.de|express.com|ftd.com|verizon.com|vineyardvines.com|backcountry.com
+$removeparam=/^pubname=/i,domain=anntaylor.com|ashford.com|bloomingdales.com|express.com|famousfootwear.com|farmandfleet.com|hottopic.com|loft.com|naturalizer.com|samsclub.com|gucci.com|backcountry.com
 $removeparam=/^publisher=/i,domain=asos.com|bose.*|josbank.com|metmuseum.org|riteaid.com|shutterfly.com|tous.com|untilgone.com|dell.com
 $removeparam=/^publisherId=/i,domain=blissworld.com|burkesoutlet.com|kipling-usa.com|lensrentals.com|petsupplies.com|phonesoap.com|dell.com
 $removeparam=Publisher_Name,domain=shudders.com|virginatlantic.com
@@ -2303,7 +2341,7 @@ $removeparam=lid,domain=clickserve.dartsearch.net|flipkart.com|baidu.com
 
 ! https://www.microcenter.com/site/content/specialofferssd240inf.aspx?referaldomain=youtube.com&web=EMAIL%20OPT%20IN%20-%20DLA_INFLUENCER_LinusTechTips_10252021
 $removeparam=referaldomain,domain=microcenter.com
-$removeparam=web,domain=microcenter.com
+$removeparam=web,domain=microcenter.com|tomtop.com
 
 ! https://www.unieuro.it/online/Smartphone/OPPO-A54-Smartphone-5G-193g-Display-6-5-FHD-90Hz-4-Fotocamere-48MP-RAM-4GBROM-64GB-Batteria-5000mAh-Ricarica-rapida-Dual-Sim-Versione-Italiana-Fantastic-Purple-pidOOPA54P?dedup=trovaprezzi
 ||unieuro.it^$removeparam=dedup
@@ -2316,7 +2354,7 @@ $removeparam=affi_id,domain=gearbest.com
 ||philips.$removeparam=uuid
 
 ! https://www.allbirds.com/products/womens-tree-dashers-geyser?iv_=__iv_p_1_g_1136895783222272_c__w_pla-4574655572473803_n_s_d_c_v__l__t__r__x__y_76394_f_Online_o_TD1WGYS055_z_US_i_EN_j_4574655572473803_s__e__h__ii__vi__utm_source=bing
-$removeparam=iv_,domain=allbirds.com
+$removeparam=iv_,domain=allbirds.com|backcountry.com
 
 ! https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-518881866941-c&mttnsubkw=75222244984__EcxXHbWp_&mttnsubplmnt=true&mttnpid=305109
 ||apple.com^$removeparam=mttn3pid
@@ -2407,7 +2445,6 @@ $removeparam=eml,domain=endesa.com
 
 ! https://www.entradas.com/campaign/regala-entradas?affiliate=AD7&referer_info=CN-TGP-EDIT-ES_24982&uid=a9fa960288498dd5b189230435422eeb&cHash=c2a9920cad0995b06e8c9504b2bd8e0e
 ||entradas.com^$removeparam=referer_info
-||entradas.com^$removeparam=uid
 
 ! https://www.bodykind.com/product/4113-a-vogel-tormentil-complex-50ml.aspx?referer=paidonresults&porc=tcilEtxEdidBqupqwrBudkHsGgmyqdj
 $removeparam=referer,domain=bodykind.com
@@ -2497,6 +2534,40 @@ $removeparam=vh,domain=hotspotshield.com|gethotspotshield.com
 
 ! https://www.tkqlhce.com/click-100130848-15032659?sdate=D202111231126_o
 ||tkqlhce.com^$removeparam=sdate
+
+! https://ad.admitad.com/g/xljorca896cf955d81ea4bf89f6ddb/?i=5&f_id=14723&ulp=https%3A%2F%2Fwww.tomtop.com%2Fp-os1622au.html&subid=tomshardware-us-5867704010115023000
+$removeparam=f_id,domain=admitad.com
+
+! https://www.tomtop.com/p-os1622au.html?uid=9ee14327acab62fc69945550c22ae6bd&web=565276&tagtag_uid=9ee14327acab62fc69945550c22ae6bd
+||tomtop.com^$removeparam=tagtag_uid
+
+! https://www.pulseway.com/land/linus?rfid=linus2021
+||pulseway.com^$removeparam=rfid
+
+! https://github.com/ClearURLs/Homepage/issues/3
+||dw.com^$removeparam=maca
+||reuters.com^$removeparam=edition-redirect
+
+! https://www.backcountry.com/mountainsmith-upland-tent-2-person-3-season?CMP_SKU=MOU004K&MER=0406&skid=MOU004K-CIGN-ONESIZ&mr:trackingCode=E0A9CA92-7D40-E711-8100-005056944E17&mr:referralID=NA&mr:device=m&mr:adType=plaonline&CMP_ID=PLA_GMm001&rmatt=tsid:1042790|cid:213414877|agid:45770983886|tid:pla-391109883354|crid:224538011675|nw:g|rnd:958514882087759869|dvc:m|adp:1o1|mt:|loc:9005959
+||backcountry.com^$removeparam=CMP_SKU
+||backcountry.com^$removeparam=CMP_ID
+||backcountry.com^$removeparam=MER
+||backcountry.com^$removeparam=rmatt
+
+! https://www.backcountry.com/patagonia-micro-puff-hooded-jacket-mens?skid=PAT029Y-FIR-M&INT_ID=AP_home%7Chome_NA-NA_0_Best-Sellers_SKU-PAT029Y_1_20211028&ti=QVBfaG9tZXxob21lX05BLU5BXzBfQmVzdC1TZWxsZXJzX1NLVS1QQVQwMjlZXzFfMjAyMTEwMjg=
+||backcountry.com^$removeparam=INT_ID
+||backcountry.com^$removeparam=ti
+
+! https://go.fiverr.com/visit/?bta=[your_affiliate_ID]&brand=fiverrlearn
+||fiverr.com^$removeparam=bta
+||fiverr.com^$removeparam=afp
+||fiverr.com^$removeparam=cxd_token
+
+! https://www.sporcle.com/memberships/?rp=main_adhesion_go_orange_link
+||sporcle.com^$removeparam=rp
+
+! https://localmonero.co/?rc=zfot
+||localmonero.co^$removeparam=rc
 
 !#if !env_mobile
 ! ——— Mobile ——— !
