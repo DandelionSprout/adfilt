@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 27November2021v1-Beta
+! Version: 28November2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2574,6 +2574,15 @@ $removeparam=f_id,domain=admitad.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1710177
 $removeparam=mv_pc,domain=fragrancenet.com
+
+! https://www.walmart.com/ip/My-Little-Pony-GWP-Kick-Scooter/298640635?selectedSellerId=0&wl13=2708&&wl0&wl1=g&wl2=m&wl3=526807706123&wl4=pla-1303781078790&wl5=9031484&wl6&wl7&wl8&wl9=pla&wl10=8175035&wl11=local&wl12=298640635
+||walmart.$removeparam=/^wl[0-9]=/
+||walmart.$removeparam=wl10
+||walmart.$removeparam=wl11
+||walmart.$removeparam=wl12
+!!!||walmart.$removeparam=wl13 (Decides pickup location)
+! https://www.walmart.com/ip/Old-El-Paso-Stand-N-Stuff-Bold-Nacho-Cheese-Flavored-Taco-Dinner-Kit-9-5-oz/38260506?athcpid=38260506&athpgid=AthenaItempage&athcgid=null&athznid=siext&athieid=v0&athstid=CS056&athguid=egnNrMG_5XOxTB0tFsuPZlPSj01v5EdpAUIb&athancid=null&athena=true
+||walmart.$removeparam=/^ath/
 
 !#if !env_mobile
 ! ——— Mobile ——— !
