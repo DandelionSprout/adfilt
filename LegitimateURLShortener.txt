@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 29November2021v2-Beta
+! Version: 1December2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1187,7 +1187,7 @@ $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
 $removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com|mozilla.org|viking-direct.co.uk
 ! No particular example
-$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com|despegar.*|hotspotshield.com|gethotspotshield.com|subscribe.gq.com|bankofamerica.com
+$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com|despegar.*|hotspotshield.com|gethotspotshield.com|subscribe.gq.com|bankofamerica.com|outnorth.fi
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjones.com|mansionglobal.com|penews.com
@@ -1734,12 +1734,15 @@ $removeparam=nettype
 $removeparam=report_recomm_player
 ! https://github.com/DandelionSprout/adfilt/pull/386
 ||mail.qq.com/cgi-bin/frame_html?$removeparam=r
+! https://github.com/DandelionSprout/adfilt/pull/394
+! https://m.v.qq.com/x/m/play?cid=mzc00200prv7r23&vid=&ptag=cn.bing.com%23v.index.adaptor%232
+||qq.com^$removeparam=ptag
 
 !! ——— Miscellaneous ———
 ! No particular examples
 $removeparam=app,domain=tiktok.com|music.apple.*
 $removeparam=c,domain=tiktok.com|norton.com|farfetch.com|hepsiburada.com|appsflyer.com|onelink.me|play.google.com
-$removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*
+$removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*|outnorth.fi
 $removeparam=/^pf_rd_/,domain=shopbop.com|amazon.*|imdb.com
 $removeparam=Source,domain=facebook.com|facebookcorewwwi.onion|messenger.com|evga.com
 $removeparam=version,domain=mp.weixin.qq.com|us.norton.com
@@ -1914,7 +1917,7 @@ $removeparam=tag,domain=amazon.*|argos.co.uk|tv2.no
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
 ||xbox.com^$removeparam=xr
 ||deepdiscount.com^$removeparam=bid
-$removeparam=medium,domain=deepdiscount.com|eonline.com
+$removeparam=medium,domain=deepdiscount.com|eonline.com|outnorth.fi
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750307
 $removeparam=rid,domain=giphy.com
@@ -1944,7 +1947,6 @@ $removeparam=rid,domain=giphy.com
 ||microsoft.com^$removeparam=/^AAAA/
 ||babbel.com^$removeparam=bsc
 ||babbel.com^$removeparam=btp
-||microsoft.com^$removeparam=ru
 ||microsoft.com^$removeparam=destrt
 
 ! http://www.discshop.fi/?id=116426&ad=hintaseuranta&ad_src=hintaseuranta.fi&ad_content=Nintendo+Switch+Pro+Controller%2c+Nintendo+Switch+-peliohjain&ad_prodid=5179300
@@ -2613,6 +2615,10 @@ $removeparam=mv_pc,domain=fragrancenet.com
 !!!||walmart.$removeparam=wl13 (Decides pickup location)
 ! https://www.walmart.com/ip/Old-El-Paso-Stand-N-Stuff-Bold-Nacho-Cheese-Flavored-Taco-Dinner-Kit-9-5-oz/38260506?athcpid=38260506&athpgid=AthenaItempage&athcgid=null&athznid=siext&athieid=v0&athstid=CS056&athguid=egnNrMG_5XOxTB0tFsuPZlPSj01v5EdpAUIb&athancid=null&athena=true
 ||walmart.$removeparam=/^ath/
+
+! https://www.outnorth.fi/timberland/women-s-premium-6-waterproof-boot?source=hintaopas.fi&medium=productlinks&campaign=varmfodrade+k%C3%A4ngor&term=Women%27s+Premium+6&quot;+Waterproof+Boot#Black
+$removeparam=term,domain=outnorth.fi
+$removeparam=/^quot;/,domain=outnorth.fi
 
 !#if !env_mobile
 ! ——— Mobile ——— !
