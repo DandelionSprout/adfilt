@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 1December2021v4-Beta
+! Version: 2December2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1773,8 +1773,8 @@ $removeparam=article_url,domain=shop-links.co
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-782437
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-931912
-$removeparam=/^shared%3D/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi
-$removeparam=shared,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi
+$removeparam=/^shared%3D/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi|eralehti.fi
+$removeparam=shared,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi|eralehti.fi
 $removeparam=origin,denyallow=platform.twitter.com,domain=yle.fi|flaticon.com|drop.com|symbolab.com|archive.org|norton.com|philips.*
 
 ! https://adtraction.com/blog/what-is-epi-and-how-does-it-work
@@ -2626,6 +2626,9 @@ $removeparam=/^quot;/,domain=outnorth.fi
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726383
 ||catch.com.au^$removeparam=iv_
+
+https://www.coolshop.co.uk/product/don-one-lifestyle-tws120-black-in-ear-true-wireless-stereo-earbuds-with-charging-case/235AS7/?retailAttributionToken=ChM1OTEyOTM2MDQyNjAyNDQwOTgwEA0aI2Nvb2wtLS1yZWNfcmVjb21tZW5kZV8xNjI1MTM0MTA5NDY5Ihxjb29sdWstLS1yZWNvbW1lbmRlZC1mb3IteW91KAA
+$removeparam=retailAttributionToken,domain=coolshop.*
 
 !#if !env_mobile
 ! ——— Mobile ——— !
