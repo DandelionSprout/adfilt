@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 26November2021v1-Alpha
+# Version: 02December2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -825,6 +825,9 @@ msFilterList
 -d minklubshop.dk dk
 # https://dinside.dagbladet.no/okonomi/ligg-unna-denne-nettbutikken/74392579
 -d kjokkenbutikk.com
+# https://www.nrk.no/vestfoldogtelemark/1.15750360
+-d cargo.site
+-d dundeehills.group
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
@@ -836,6 +839,7 @@ msFilterList
 -d 167.71.49.177
 -d 134.209.82.119
 -d 154.213.16.136
+-d 132.148.220.142
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
