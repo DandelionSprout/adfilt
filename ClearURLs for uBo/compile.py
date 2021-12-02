@@ -55,6 +55,8 @@ KNOWN_BAD_FILTERS = [
     "$removeparam=source,domain=google.*",
     # breaks Twitter - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1677828
     "$removeparam=s,domain=twitter.com",
+    # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726673
+    "||microsoft.com^$removeparam=ru"
 ]
 
 
