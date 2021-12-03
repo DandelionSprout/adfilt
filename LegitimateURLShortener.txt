@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 3December2021v1-Beta
+! Version: 3December2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2632,6 +2632,13 @@ $removeparam=retailAttributionToken,domain=coolshop.*
 
 ! https://www.bostonglobe.com/business/technology/?p1=BGHeader_MainNav
 $removeparam=p1,domain=bostonglobe.com
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1740327
+||verkkokauppa.com^$removeparam=list
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1740689
+||open.spotify.com^$removeparam=/\~advertising_partner_name=/i
+
 
 !#if !env_mobile
 ! ——— Mobile ——— !
