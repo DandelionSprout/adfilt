@@ -6,7 +6,9 @@
 ! Homepage for the repository: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
 ! Special thanks to https://github.com/git-101-collab for providing a 3-digit amount of new entries to this list, and to https://github.com/iam-py-test for volunteering to speed up the addition of user-submitted entries.
-! Important note: this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view params on the strict-block page to bypass it
+! Important notes: 
+! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view params on the strict-block page to bypass it
+! - this list can not remove anything after the # in urls. This is impossible in uBlock Origin and AdGuard
 
 ! ——— General remove rules ——— !
 ! From AdGuard CoreLibs (11/11/2020)
@@ -1301,6 +1303,8 @@ $removeparam=cstrackid
 ||amazon.$removeparam=SubscriptionId
 ! https://www.amazon.co.uk/Food-Grade-Silicone-Non-Stick-Birthday-Chocolate/dp/B079KF8F1Y/ref=sr_1_6?hydadcr=18732_1816696&keywords=train+cake+mould
 ||amazon.$removeparam=hydadcr
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1749912
+$removeparam=type,domain=amazon.com
 ! Other
 @@/b/ref=$removeparam=ie
 
