@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 02December2021v2-Alpha
+# Version: 04December2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -829,6 +829,9 @@ msFilterList
 # https://www.nrk.no/vestfoldogtelemark/1.15750360
 -d cargo.site
 -d dundeehills.group
+# https://www.adressa.no/pluss/nyheter/2021/12/04/Posten-advarer-Vi-sender-ikke-slike-tekstmeldinger-24894483.ece
+-d ozarkvillage.net
+-d channawars.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
