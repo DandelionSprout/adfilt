@@ -62,6 +62,8 @@ KNOWN_BAD_FILTERS = [
     "$removeparam=type,domain=amazon.com",
     # unknown breakage
     "||google.com^$removeparam=dpr",
+    "$~xmlhttprequest,removeparam=psc",
+    "||walmart.$removeparam=wl13",
 ]
 
 
