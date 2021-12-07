@@ -58,6 +58,8 @@ KNOWN_BAD_FILTERS = [
     "$removeparam=s,domain=twitter.com",
     # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726673
     "||microsoft.com^$removeparam=ru",
+    # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1749912
+    "$removeparam=type,domain=amazon.com",
     # unknown breakage
     "||google.com^$removeparam=dpr",
 ]
