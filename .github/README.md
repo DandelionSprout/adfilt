@@ -5,13 +5,17 @@
 
 ———————————————————————————
 
-<b>IMPORTANT NOTE:</b> My lists does not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions, or Chrome versions released after December 2022, will <b>not</b> be accepted, and if you do submit one, you would be asked to use an alternate web browser instead.
+**IMPORTANT NOTE:** My lists does not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions, or Chrome versions released after December 2022, will **not** be accepted, and if you do submit one, you would be asked to use an alternate web browser instead.
 
-And just in case anyone thinks I'm not serious about it, <b>I do no longer offer support to Safari ≥13 users</b> (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
+And just in case anyone thinks I'm not serious about it, **I do no longer offer support to Safari ≥13 users** (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
 
 ———————————————————————————
 
 Note for UXP browser users: Due to the Pale Moon community being protective of consistent abusive hate speech and grave insultments, I will no longer use Pale Moon, Basilisk or Borealis to test any entries or for anything else. PC browser entries that can't be reproduced by Chrome, Firefox, Vivaldi or Tor Browser, will be delegated to [uAssets](https://github.com/uBlockOrigin/uAssets/blob/master/filters/legacy.txt) instead.
+
+———————————————————————————
+
+**To subscribe to lists from this repo**, go to [FilterLists.com](https://filterlists.com/), click on the **Maintainers** button in the upper right, and choose **Imre Kristoffer Eilertsen** in the Maintainers dropdown menu. It is generally not recommended to subscribe to lists directly from this repo, as the mostly unsorted lists [can be unsuitable for your software(s)](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Pok%C3%A9monNoGOZone.txt), [block things you may not have intended to block at all](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/Twitter%20De-Politificator.txt), or [otherwise cause confusion in general](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/EkstraBladetEroticContentRemover.txt) if they aren't vetted properly before use on hardware.
 
 ———————————————————————————
 
@@ -23,8 +27,6 @@ This is a hobby project of mine, in which I work just as much on these lists and
 * [Official donation links](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations)
 * [Category title translation project](https://crwd.in/dandelion-sprout-nordic-filter)
 * [Paid bounty missions for superskilled filter writers](https://github.com/DandelionSprout/adfilt/search?q=bounty&type=code)
-
-For an overview of the lists in this repo, go to [FilterLists.com](https://filterlists.com/), click on the <b>Maintainers</b> button in the upper right, and choose <b>Imre Kristoffer Eilertsen</b> in the Maintainers dropdown menu. It became too much work for me to have a GitHub spreadsheet for my lists, unfortunately. It is generally not recommended to subscribe to lists directly from this repo, as the mostly unsorted lists [can be unsuitable for your tool(s)](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Pok%C3%A9monNoGOZone.txt), [block things you may not have intended to block at all](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/Twitter%20De-Politificator.txt), or [otherwise cause confusion in general](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/EkstraBladetEroticContentRemover.txt) if they aren't vetted properly before use on tech units.
 
 However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits. Various modified versions of it are included in uBlock Origin, AdGuard, AdNauseam, AdBlock, Adblock Plus, AdGuard Home, pfBlockerNG, Brave Browser, and Vivaldi's privacy settings.
 
