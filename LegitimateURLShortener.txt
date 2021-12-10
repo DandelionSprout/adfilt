@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 09December2021v1-Beta
+! Version: 10December2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -344,7 +344,6 @@ $removeparam=ftag
 $removeparam=/^__xts__/
 $removeparam=custlixnkid
 $removeparam=akmClientCountry
-$removeparam=pk_campaign
 $removeparam=hss_channel
 $removeparam=mktids
 $removeparam=mc_tc
@@ -526,11 +525,6 @@ $removeparam=elqat
 $removeparam=elqah
 $removeparam=elqcst
 $removeparam=elqcsid
-$removeparam=/^mtm_/
-$removeparam=pk_medium
-$removeparam=pk_source
-$removeparam=pk_content
-$removeparam=pk_kwd
 $removeparam=/^ga_/
 $removeparam=_hsenc
 $removeparam=_hsmi
@@ -900,7 +894,7 @@ $removeparam=effi_id2
 $removeparam=fobs
 $removeparam=pubref
 $removeparam=sub1
-$removeparam=sub2
+$removeparam=sub2,domain=~go.dgdp.net
 $removeparam=sub3
 $removeparam=sub4
 $removeparam=sub5
@@ -1171,6 +1165,55 @@ $removeparam=ad_config_id
 $removeparam=dfw_tracker
 $removeparam=/^src=rss$/
 
+! https://www.geico.com/living/driving/page/2/?otm_click_id=7cc576a6-ae8c-4002-83f0-8c0ce75178c8&otm_content=article-pages%3Aarticle-page-right-rail-recent-posts&otm_medium=onespot&otm_source=onsite
+$removeparam=/^otm_/
+
+! https://developers.amplitude.com/docs/advanced-settings#cross-domain-tracking-javascript
+$removeparam=amp_device_id
+
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/205
+$removeparam=awinaffid
+
+! https://www.volotea.com/es/ofertas-vuelos/?cje=1ff9a22e4c5c11ec81ce02f50a180514
+$removeparam=cje
+
+! https://www.myprotein.es/?removedParams=utm_content
+$removeparam=removedParams
+
+! https://go.dgdp.net/CRJ71H/3HS2HZ/?sub1=0k00qpdi2i95&sub3=chollometro&sub2=https%3A%2F%2Fwww.tuimeilibre.com%2Fxiaomi-pocophone-x3-pro-8gb256gb-azul-helado-libre.html%3Fclick_id%3D%7Btransaction_id%7D
+$removeparam=iclid
+
+! https://maxchadwick.xyz/tracking-query-params-registry/
+$removeparam=_bta_tid
+$removeparam=_bta_c
+$removeparam=trk_contact
+$removeparam=trk_msg
+$removeparam=trk_module
+$removeparam=trk_sid
+$removeparam=gdfms
+$removeparam=gdftrk
+$removeparam=gdffi
+$removeparam=redirect_log_mongo_id
+$removeparam=redirect_mongo_id
+$removeparam=sb_referer_host
+$removeparam=mkwid
+$removeparam=pcrid
+$removeparam=ef_id
+$removeparam=s_kwcid
+$removeparam=dm_i
+$removeparam=epik
+
+! https://matomo.org/docs/tracking-campaigns/
+$removeparam=/^mtm_/
+$removeparam=/^matomo_/
+$removeparam=/^piwik_/
+$removeparam=pk_campaign
+$removeparam=pk_medium
+$removeparam=pk_source
+$removeparam=pk_content
+$removeparam=pk_kwd
+$removeparam=pk_keyword
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1180,11 +1223,11 @@ $removeparam=/^src=rss$/
 ! ——— Specific remove rules ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com|xg4ken.com|flipkart.com|glasses.com|staples.com|stadium.fi|persol.com
+$removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com|xg4ken.com|flipkart.com|glasses.com|staples.com|stadium.fi|persol.com|samsung.com
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com|abebooks.com|eset.com|kickstarter.com|oikotie.fi|sahkovertailu.fi|jasonsavard.com|adobe.com|wormhole.app|coop.no|buzzfeed.com|megapornfreehd.com|baidu.com|semrush.com|protonvpn.com|altcustoms.com|hintaseuranta.fi|catch.com.au|zappos.com
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com|abebooks.com|eset.com|kickstarter.com|oikotie.fi|sahkovertailu.fi|jasonsavard.com|adobe.com|wormhole.app|coop.no|buzzfeed.com|megapornfreehd.com|baidu.com|semrush.com|protonvpn.com|altcustoms.com|hintaseuranta.fi|catch.com.au|zappos.com|mastermind.ac|digidip.net
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
 $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com|clickbank.net
@@ -1192,7 +1235,7 @@ $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
 $removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com|mozilla.org|viking-direct.co.uk|wuzhuiso.com
 ! No particular example
-$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com|despegar.*|hotspotshield.com|gethotspotshield.com|subscribe.gq.com|bankofamerica.com|outnorth.fi
+$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com|despegar.*|hotspotshield.com|gethotspotshield.com|subscribe.gq.com|bankofamerica.com|outnorth.fi|yubo.live|chollometro.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjones.com|mansionglobal.com|penews.com
@@ -1206,7 +1249,7 @@ $removeparam=from,domain=sogou.com|baidu.com|jetbrains.com|bandcamp.com|apkpure.
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915 and https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864
 $removeparam=keyword,domain=ebay.*|bindright.com|lendgo.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1707764
-$removeparam=id,domain=go.skimresources.com|karkkainen.com
+$removeparam=id,domain=go.skimresources.com|karkkainen.com|go.skimlinks.com|go.redirectingat.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726383
 $removeparam=offer_id,domain=surfshark.com|catch.com.au
 
@@ -1245,7 +1288,6 @@ $removeparam=coliid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
 $removeparam=geniuslink
 ||amazon.$removeparam=aaxitk
-||amazon.$removeparam=hsa_cr_id
 ||amazon.$removeparam=/^pd_rd_/
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 !!!$~xmlhttprequest,removeparam=psc (Breaks cloth size selection)
@@ -1748,8 +1790,8 @@ $removeparam=report_recomm_player
 !! ——— Miscellaneous ———
 ! No particular examples
 $removeparam=app,domain=tiktok.com|music.apple.*
-$removeparam=c,domain=tiktok.com|norton.com|farfetch.com|hepsiburada.com|appsflyer.com|onelink.me|play.google.com
-$removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*|outnorth.fi
+$removeparam=c,domain=tiktok.com|norton.com|farfetch.com|hepsiburada.com|appsflyer.com|onelink.me|play.google.com|shopee.*
+$removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*|outnorth.fi|shopee.*
 $removeparam=/^pf_rd_/,domain=shopbop.com|amazon.*|imdb.com|zappos.com
 $removeparam=Source,domain=facebook.com|facebookcorewwwi.onion|messenger.com|evga.com
 $removeparam=version,domain=mp.weixin.qq.com|us.norton.com
@@ -1759,11 +1801,11 @@ $removeparam=trkid,domain=netflix.com|tokopedia.com
 $removeparam=channel,domain=rei.com|squarespace.com|privateinternetaccess.com
 $removeparam=fr,domain=baidu.com|thegay.com
 $removeparam=promo,domain=thegay.com|hammacher.com
-$removeparam=sref,domain=bloomberg.com|go.skimresources.com
+$removeparam=sref,domain=bloomberg.com|go.skimresources.com|go.skimlinks.com|go.redirectingat.com
 $removeparam=argsite,domain=metaffiliation.com
 $removeparam=ctc,domain=avantlink.com
-$removeparam=pid,domain=123inkjets.com|bergfreunde.*|play.google.com|samsclub.com|th.bing.com|flipkart.com|hepsiburada.com|appsflyer.com|tiktok.com|onelink.me
-$removeparam=subid,domain=webmasterplan.com|admitad.com|mintmobile.com
+$removeparam=pid,domain=123inkjets.com|bergfreunde.*|play.google.com|samsclub.com|th.bing.com|flipkart.com|hepsiburada.com|appsflyer.com|tiktok.com|onelink.me|shopee.*
+$removeparam=subid,domain=webmasterplan.com|admitad.com|mintmobile.com|secretlab.*
 $removeparam=tracking,domain=facebook.*|facebookcorewwwi.onion|messenger.com|affiliatefuture.com|gtomega.*
 $removeparam=ws,domain=ds1.nl
 
@@ -1842,8 +1884,8 @@ $removeparam=hpt,domain=cnn.com
 ! https://www.son-video.com/article/ecouteurs-true-wireless/apple/airpods-avec-boitier-de-charge?ae=12 (28/11/2020)
 ||son-video.com^$removeparam=ae
 
-! https://www.fnac.com/Apple-AirPods-2-avec-boitier-de-charge-Ecouteurs-sans-fil-True-Wireless/a10086709/w-4?ectrans=1&Origin=Awin295295&awc=12665_1606583916_a0dffc62f7c4e34914d0e5660e0c6dcf (28/11/2020)
-||fnac.com^$removeparam=Origin
+! https://www.fnac.es/mp9080323/TV-OLED-LG-UltraHD-4K-55-OLED55A13LA-negro/w-4?Origin=AFF_TRDB_2434087&ptd=70431#omnsearchpos=10
+||fnac.$removeparam=Origin
 
 ! https://www.paypal.com/myaccount/transaction/details/7CY16898V3123435J?v=1&utm_unptid=&ppid=RT000016&cnac=NO&rsta=no_NO(nb-NO)&cust=&unptid=&calc=24c08e54728d&unp_tpcid=null&page=main%3Aemail%3ART000016&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.26.0&xt=
 ||paypal.com^$removeparam=calc
@@ -1907,7 +1949,7 @@ $removeparam=section,domain=nytimes.com|nytimes3xbfgragh.onion
 $~xmlhttprequest,removeparam=ref_,domain=imdb.com|amazon.*|primevideo.com|shopbop.com|awesomeopensource.com
 
 ! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
-$removeparam=referral,domain=tv2.no|spotify.com
+$removeparam=referral,domain=tv2.no|spotify.com|yubo.live
 
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 $removeparam=tag,domain=amazon.*|argos.co.uk|tv2.no
@@ -2011,9 +2053,6 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ||bbc.$removeparam=at_custom4
 ||bbc.$removeparam=at_campaign
 
-! https://homemcr.org/production/the-war-of-the-worlds/?dm_i=6OM7%2CA1RR%2C21FCIX%2C17EEV%2C1
-||homemcr.org^$removeparam=dm_i
-
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
 ||simplelogin.io^$removeparam=slref
 ||ledger.io^$removeparam=r
@@ -2109,7 +2148,7 @@ $removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|
 $removeparam=SID,domain=ae.com|anntaylor.com|applevacations.com|ashford.com|autodesk.com|bedbathandbeyond.com|bhphotovideo.com|booksamillion.com|cheapcaribbean.com|chegg.com|chggtrx.com|ecampus.com|expedia.com|express.com|intuit.com|jockey.com|loft.com|mcafee.com|norton.com|overstock.com|perfumania.com|samsung.com|sierra.com|staples.com|taskrabbit.com|teleflora.com|verizon.com|vistaprint.com|walgreens.com|wwe.com|yahoo.com|zchocolat.com|zulily.com
 $removeparam=adref,domain=ancestry.*
 $removeparam=acid,domain=lenovo.com
-$removeparam=aid,domain=brownells.*|viator.com|adguard.com
+$removeparam=aid,domain=brownells.*|viator.com|adguard.com|adguard-vpn.com|adguard-dns.com|get.protonvpn.com|get.protonmail.com|wevpn.com
 $removeparam=camp,domain=calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com|amazon.*
 $removeparam=channelref,domain=asos.com
 $removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com
@@ -2118,7 +2157,7 @@ $removeparam=ecmp,domain=4wheelparts.com
 $removeparam=kc,domain=autoanything.com
 $removeparam=/^linkshareid=/i,domain=bloomingdales.com|macys.com
 $removeparam=mc,domain=bose.*
-$removeparam=mid,domain=agentprovocateur.com|columbia.com|dxl.com|hanes.com|josbank.com|onehanesplace.com|saksfifthavenue.com|saksoff5th.com|sorel.com|verabradley.com|change.org
+$removeparam=mid,domain=agentprovocateur.com|columbia.com|dxl.com|hanes.com|josbank.com|onehanesplace.com|saksfifthavenue.com|saksoff5th.com|sorel.com|verabradley.com|change.org|productshopper.*
 $removeparam=mktvar002,domain=autodesk.com
 $removeparam=mp_id,domain=blinds.com
 $removeparam=ogmap,domain=coach.com|loft.com
@@ -2313,8 +2352,8 @@ $removeparam=lId,domain=apple.com|youtube.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1490207
 ! i.e. https://go.skimresources.com/?id=160612X1627478&xcust=adm2_841947&xs=1&url=https%3A%2F%2Fwalmart.com%2Fip%2F204105463
-||go.skimresources.com^$removeparam=xcust
-||go.skimresources.com^$removeparam=xs
+$removeparam=xcust,domain=go.skimresources.com|go.skimlinks.com|go.redirectingat.com
+$removeparam=xs,domain=go.skimresources.com|go.skimlinks.com|go.redirectingat.com
 
 ! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
 $removeparam=surface,domain=nytimes.com|nytimes3xbfgragh.onion
@@ -2329,7 +2368,7 @@ $removeparam=variant,domain=nytimes.com|nytimes3xbfgragh.onion
 ||steampowered.com^$removeparam=ser
 
 ! https://www.vitaminshoppe.com/?sourceType=af&source=cj
-||vitaminshoppe.com^$removeparam=sourceType
+$removeparam=sourceType,domain=vitaminshoppe.com|aliexpress.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1524659
 $removeparam=ds_s_kwgid,domain=clickserve.dartsearch.net
@@ -2346,8 +2385,8 @@ $removeparam=ds_url_v,domain=clickserve.dartsearch.net
 ||jasonsavard.com^$removeparam=cUrl
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1527502
-||fanatics.com^$removeparam=ab
-||fanatics.com^$removeparam=_ref
+$removeparam=ab,domain=fanatics.com|nhl.com
+$removeparam=_ref,domain=fanatics.com|nhl.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1493321
 ||xg4ken.com^$removeparam=prof
@@ -2393,7 +2432,7 @@ $removeparam=affi_id,domain=gearbest.com
 ||philips.$removeparam=uuid
 
 ! https://www.allbirds.com/products/womens-tree-dashers-geyser?iv_=__iv_p_1_g_1136895783222272_c__w_pla-4574655572473803_n_s_d_c_v__l__t__r__x__y_76394_f_Online_o_TD1WGYS055_z_US_i_EN_j_4574655572473803_s__e__h__ii__vi__utm_source=bing
-$removeparam=iv_,domain=allbirds.com|backcountry.com
+$removeparam=iv_,domain=allbirds.com|backcountry.com|catch.com.au
 
 ! https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-518881866941-c&mttnsubkw=75222244984__EcxXHbWp_&mttnsubplmnt=true&mttnpid=305109
 ||apple.com^$removeparam=mttn3pid
@@ -2521,7 +2560,7 @@ $removeparam=referer,domain=bodykind.com
 $removeparam=s,domain=spreadprivacy.com|youku.com
 
 ! https://twitter.com/chrissteinplays/status/1461003062936547331?t=CXBXxSiUKI8wPAkoGMH7zg
-$removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org|twitter.com
+$removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org|twitter.com|elprecio.es
 
 ! https://market.yandex.ru/promo/hasbro_special?clid=602&cpa-perf=1#c
 ||yandex.$removeparam=clid
@@ -2626,9 +2665,6 @@ $removeparam=mv_pc,domain=fragrancenet.com
 $removeparam=term,domain=outnorth.fi
 $removeparam=/^quot;/,domain=outnorth.fi
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726383
-||catch.com.au^$removeparam=iv_
-
 ! https://www.coolshop.co.uk/product/don-one-lifestyle-tws120-black-in-ear-true-wireless-stereo-earbuds-with-charging-case/235AS7/?retailAttributionToken=ChM1OTEyOTM2MDQyNjAyNDQwOTgwEA0aI2Nvb2wtLS1yZWNfcmVjb21tZW5kZV8xNjI1MTM0MTA5NDY5Ihxjb29sdWstLS1yZWNvbW1lbmRlZC1mb3IteW91KAA
 $removeparam=retailAttributionToken,domain=coolshop.*
 
@@ -2673,6 +2709,41 @@ $removeparam=psrc,domain=savagex.com
 
 ! https://www.voosestore.com/fi/drones/dji/dji-mavic/dji-mavic-mini/dji-mini-2-fly-more-combo?ref_lp=prisjakt
 $removeparam=ref_lp,domain=voosestore.com
+
+! https://shopee.es/?c=install_homepage01_211109&deep_and_deferred=1&smtt=9&pid=affiliates_planning_chollometro
+||shopee.$removeparam=deep_and_deferred
+
+! https://www.gamivo.com/product/windows-10-professional?glv=geyuy8q7
+||gamivo.com^$removeparam=glv
+
+! https://www.gearbest.com/?lkid=10825469
+||gearbest.$removeparam=lkid
+
+! https://www.banggood.com/custlink/mD3KCmUISV
+||banggood.com^$removeparam=custlinkid
+
+! https://www.newark.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/02AH3164?COM=ref_hackster
+||newark.com^$removeparam=COM
+
+! https://github.com/ClearURLs/Addon/issues/161
+||soundcloud.com^$removeparam=si
+
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/192
+||market.yandex.ru^$removeparam=cpc
+
+! http://pixel.everesttech.net/1325/cq?ev_sid=3&ev_ln%E2%80%8B=bankrate+com&ev_crx=277142460%E2%80%8B08&ev_mt=p&ev_n=g&ev_ltx=&ev_pl=&ev_pos=1t1&ev_dvc=c&ev_dvm=&url=http://www.example.com
+||everesttech.net^$removeparam=/^ev_/
+
+! https://pp.promofarma.com/dynclick/promocionesfarma/?etf-publisher=kelkoo&etf-name=kelkoo&etf-prdref=451760&eurl=https%3A%2F%2Fwww.promofarma.com%2Fes%2Fksix-fitness-band-thermometer-hr-negro-1ud%2Fp-451760%3Fkk%3Da4c6365-17d6c2e951c-309d81%26utm_medium%3Daffiliation%26utm_source%3Dkelkoo%26utm_campaign%3DES-Feed%26utm_content%3Dfeed%26utm_term%3Dfeed
+||promofarma.com^$removeparam=etf-name
+||promofarma.com^$removeparam=etf-prdref
+||promofarma.com^$removeparam=etf-publisher
+
+! https://es-go.kelkoogroup.net/ctl/go/sitesearchGo?.ts=1638197043475&.sig=h2ZCyx5n69Y26ez.wIm2fEV1QiA-&affiliationId=96977405&comId=100523372&country=es&offerId=e61223a9f4eeae9326e47fee39a60b17&searchId=1076100361196477_1638197043372_23360860&service=36&tokenId=5e68aee4-67a5-4cf7-98a3-48a58ebc9021&custom1=elprecio_es_organic
+||kelkoogroup.net^$removeparam=custom1
+
+! https://abo.welt.de/?wtrid=displayperformance.onsite.abo.vertrieb.abo-button.amp_header
+||welt.de^$removeparam=wtrid
 
 !#if !env_mobile
 ! ——— Mobile ——— !
