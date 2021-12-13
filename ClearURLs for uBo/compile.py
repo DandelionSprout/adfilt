@@ -63,6 +63,8 @@ KNOWN_BAD_FILTERS = [
     # https://github.com/DandelionSprout/adfilt/commit/e5894c3b70c028cd47235457fbf13fc8617d989a
     "$removeparam=sa,domain=google.*",
     "$removeparam=usg,domain=google.*",
+    # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1796961
+    "*$removeparam=ved,domain=google.*",
     # unknown breakage
     "||google.com^$removeparam=dpr",
     "$~xmlhttprequest,removeparam=psc",
