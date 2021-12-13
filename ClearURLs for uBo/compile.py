@@ -64,7 +64,7 @@ KNOWN_BAD_FILTERS = [
     "$removeparam=sa,domain=google.*",
     "$removeparam=usg,domain=google.*",
     # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1796961
-    "*$removeparam=ved,domain=google.*",
+    "$removeparam=ved,domain=google.*",
     # unknown breakage
     "||google.com^$removeparam=dpr",
     "$~xmlhttprequest,removeparam=psc",
