@@ -126,3 +126,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 25th of October 14:00~15:45 UTC: I swear to Queen Clarion that the RaspPi just randomly froze with no input, while I was sitting in the couch playing New Super Mario Bros. 2. I need to look into *some* sort of failover server in the near future.
 * 4th of November 10:05~11:28 UTC: I did not expect Fedora to need 1 hour 18 minutes to upgrade from Workstation 34 to 35.
 * 8th of November 09:30~11:50 UTC: Turns out that clones of Linux disks are *not* able to boot, in sharp contrast to clones of Windows disks. So I figured "Screw this" in regards to setting up a 2nd RaspPi at my parents' house, and hereby open up my Windows 11 AGH installation to the world too.
+* 13th of December 03:00-03:30 UTC: My ISP went down, and the ASUS router's failover triggers didn't want to work properly.
