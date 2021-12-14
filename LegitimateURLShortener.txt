@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 13December2021v1-Beta
+! Version: 14December2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1216,6 +1216,9 @@ $removeparam=pk_keyword
 
 ! https://www.instagram.com/alfaromeoracingorlen/?utm_source=ig_embed&ig_mid=B8140AA4-03F3-45BD-8B9E-4825D1ABE6C6
 $removeparam=ig_mid
+
+! https://elisa.fi/elisaviihdeviaplay_tarjous_special/?as_src=Adservice&coid=1699175824&asclid=MTAwX1NhbHRlZF9fLXpGmTHfwbt11Fsdn-leYukWwL1d9ffZGFyb0VCyataePmmqf_jm6w
+$removeparam=asclid
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
@@ -2750,6 +2753,9 @@ $removeparam=ref_lp,domain=voosestore.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1793055
 ||vimeo.com^$removeparam=owner
+
+! https://www.lenovo.com/us/en/c/laptops/thinkpad?orgRef=https%253A%252F%252Fduckduckgo.com%252F
+$removeparam=orgRef,domain=lenovo.com
 
 !#if !env_mobile
 ! ——— Mobile ——— !
