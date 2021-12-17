@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 17December2021v1-Beta
+! Version: 17December2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1224,6 +1224,14 @@ $removeparam=asclid
 $removeparam=au_advert_id
 $removeparam=au_car_id
 
+! https://www.therapynotes.com/?ads_adid=1265538169813845&ads_cmpid=61629691&ads_creative=&ads_matchtype=b&ads_network=a&ads_targetid=kwd-79096310709876%3Aloc-190&ttv=2
+$removeparam=ads_adid
+$removeparam=ads_cmpid
+$removeparam=ads_creative
+$removeparam=ads_matchtype
+$removeparam=ads_network
+$removeparam=ads_targetid
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1419,6 +1427,8 @@ $removeparam=device,domain=ebay.*
 $removeparam=cmpgn,domain=ebay.*
 ! https://www.ebay.com/itm/265272975304?LH_BIN=1
 ||ebay.*/itm/$removeparam=LH_BIN
+! https://www.ebay.es/itm/313545659728?rpp_cid=61a98c608d080d0465e9035f&siteid=186
+$removeparam=rpp_cid
 
 !!! ——— Facebook ———
 ! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/157
@@ -2087,7 +2097,7 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ||dell.com^$removeparam=VEN1
 ||dell.com^$removeparam=nclid
 ||dell.com^$removeparam=gacd
-$removeparam=ref_id,domain=expedia.com|intuit.com
+$removeparam=ref_id,domain=expedia.com|intuit.com|tunnelbear.com
 ||expedia.com^$removeparam=my_ad
 ||gamestop.com^$removeparam=sourceID
 
@@ -2184,7 +2194,7 @@ $removeparam=publishername,domain=vistaprint.com
 $removeparam=PublisherSID,domain=gucci.com
 $removeparam=pzid,domain=emirates.com
 $removeparam=/^refID=/i,domain=allmodern.com|calphalon.com|priceline.com|wayfair.*|yankeecandle.com
-$removeparam=/^siteid=/i,domain=agentprovocateur.com|amerimark.com|anntaylor.com|asos.com|awd-it.*|gap.com|barenecessities.com|beautyencounter.com|buckle.com|burpee.com|chacos.com|coursera.org|dxl.com|dyson.com|elfcosmetics.*|famousfootwear.com|finishline.com|freetaxusa.com|gapcanada.ca|hanes.com|hotwire.com|hulu.com|jcrew.com|josbank.com|kobo.com|lanebryant.com|loft.com|magazines.com|maurices.com|merrell.com|newbalance.com|nordstrom.com|officedepot.com|onehanesplace.com|radissonhotelsamericas.com|saksfifthavenue.com|saksoff5th.com|samash.com|samsclub.com|saucony.com|sharperimage.com|thingsremembered.com|thrifty.*|timeformecatalog.com|verabradley.com|vivaterra.com|wine.com|yoox.com|barrons.com|marketwatch.com|hunterboots.com|gucci.com|online4baby.com
+$removeparam=/^siteid=/i,domain=agentprovocateur.com|amerimark.com|anntaylor.com|asos.com|awd-it.*|gap.com|barenecessities.com|beautyencounter.com|buckle.com|burpee.com|chacos.com|coursera.org|dxl.com|dyson.com|elfcosmetics.*|famousfootwear.com|finishline.com|freetaxusa.com|gapcanada.ca|hanes.com|hotwire.com|hulu.com|jcrew.com|josbank.com|kobo.com|lanebryant.com|loft.com|magazines.com|maurices.com|merrell.com|newbalance.com|nordstrom.com|officedepot.com|onehanesplace.com|radissonhotelsamericas.com|saksfifthavenue.com|saksoff5th.com|samash.com|samsclub.com|saucony.com|sharperimage.com|thingsremembered.com|thrifty.*|timeformecatalog.com|verabradley.com|vivaterra.com|wine.com|yoox.com|barrons.com|marketwatch.com|hunterboots.com|gucci.com|online4baby.com|ebay.*
 $removeparam=/^srcCode=/i,domain=jcrew.com|magellans.com|teleflora.com|tigerdirect.com
 $removeparam=scd,domain=ashleystewart.com
 
@@ -2760,6 +2770,17 @@ $removeparam=ref_lp,domain=voosestore.com
 
 ! https://www.lenovo.com/us/en/c/laptops/thinkpad?orgRef=https%253A%252F%252Fduckduckgo.com%252F
 $removeparam=orgRef,domain=lenovo.com
+
+! https://chollometro.digidip.net/visit?url=https%3A%2F%2Fwww.ebay.es%2Fitm%2F313545659728%3Fhash%3Ditem4900c71550%25253Ag%25253AefQAAOSwM%25257EBhkcpH%26_trkparms%3D%26rpp_cid%3D61a98c608d080d0465e9035f&ppref=https%3A%2F%2Fwww.chollometro.com%2Fcupones%2Febay.es
+$removeparam=ppref,domain=digidip.net
+
+! https://www.dhgate.com/product/global-version-xiaomi-mi-11t-4g-8gb-128gb/740400510.html?f=bda%7Ccontent%7Cchollometro%7Cdeals
+$removeparam=f,domain=dhgate.com
+
+! https://www.cyberghostvpn.com/en_US/offer/xmas?brand=vpnMentor&coupon=3Y3M
+! https://safe.cyberghostvpn.com/en_US/xmas?lp=flashdevices&coupon=3Y3M&media_source=CJ_affiliates&channel=External LPs
+$removeparam=brand,domain=cyberghostvpn.com|privateinternetaccess.com
+$removeparam=media_source,domain=cyberghostvpn.com
 
 !#if !env_mobile
 ! ——— Mobile ——— !
