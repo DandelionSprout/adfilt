@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 14December2021v1-Alpha
+# Version: 17December2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -837,7 +837,6 @@ msFilterList
 # https://dinside.dagbladet.no/okonomi/ligg-unna-denne-nettbutikken/74392579
 -d kjokkenbutikk.com
 # https://www.nrk.no/vestfoldogtelemark/1.15750360
--d cargo.site
 -d dundeehills.group
 # https://www.adressa.no/pluss/nyheter/2021/12/04/Posten-advarer-Vi-sender-ikke-slike-tekstmeldinger-24894483.ece
 -d ozarkvillage.net
