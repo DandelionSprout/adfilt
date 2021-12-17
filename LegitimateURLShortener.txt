@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 16December2021v2-Beta
+! Version: 17December2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -7,8 +7,8 @@
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
 ! Special thanks to https://github.com/git-101-collab for providing a 3-digit amount of new entries to this list, and to https://github.com/iam-py-test for volunteering to speed up the addition of user-submitted entries.
 ! Important notes: 
-! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view params on the strict-block page to bypass it
-! - this list can not remove anything after the # in urls. This is impossible in uBlock Origin and AdGuard
+! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view params on the strict-block page to bypass it.
+! - this list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
 
 ! ——— General remove rules ——— !
 ! From AdGuard CoreLibs (11/11/2020)
@@ -1219,6 +1219,10 @@ $removeparam=ig_mid
 
 ! https://elisa.fi/elisaviihdeviaplay_tarjous_special/?as_src=Adservice&coid=1699175824&asclid=MTAwX1NhbHRlZF9fLXpGmTHfwbt11Fsdn-leYukWwL1d9ffZGFyb0VCyataePmmqf_jm6w
 $removeparam=asclid
+
+! https://www.bilhusnord.dk/biler/mazda-6-22-skyactiv-d-150-core-stc-5d/?au_advert_id=5929935&au_car_id=3714165
+$removeparam=au_advert_id
+$removeparam=au_car_id
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
