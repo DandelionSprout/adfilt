@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 17December2021v2
+! Version: 18December2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -469,7 +469,7 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 /auglysing/*
 /auglysingar/*
 /vefauglysingar/*
-||ad.*.no^$domain=~ad.dep.no|~ad.hem.no
+||ad.*.no^$domain=~ad.dep.no|~ad.hem.no|~ad.amediakreativ.no|~ba.no
 ||ad1.*.dk^
 ||ad1.*.no^
 ||ads.*.dk^$domain=~ads.mst.dk
@@ -2463,7 +2463,7 @@ vg.no##div[data-test-tag=timestamp] + p + div:before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 01December2021v1-Extension
+! Last updated: 17December2021v1-Extension
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
 techstart.dk##+js(set, adblock, false)
@@ -2488,6 +2488,8 @@ gamereactor.*##^script[onError="adblockEnabled()"]
 connery.dk##+js(set, adblockerAlert, noopFunc)
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
 no##+js(ra, class, .dfp-loaded)
+! https://www.findroommate.dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum (17/12/2021)
+findroommate.dk###frm-ablo-message
 
 ! 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 playpilot.com##.takeover.modals
