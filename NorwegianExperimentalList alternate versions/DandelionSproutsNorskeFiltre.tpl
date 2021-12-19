@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 18December2021v1-Alpha
+# Version: 20December2021v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -711,10 +711,7 @@ msFilterList
 # https://www.nkom.no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
 -d eccolabgroup.com
 -d galerijajava.ba
--d hfyjbk.ml
 -d p-stn.net
-# https://borsen.dagbladet.no/74020239/
--d poetic-selection.flywheelsites.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
