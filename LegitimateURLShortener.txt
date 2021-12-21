@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 20December2021v1-Beta
+! Version: 21December2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -459,7 +459,8 @@ $removeparam=_source_page
 $removeparam=vfadid
 
 ! https://www.washingtonpost.com/gdpr-consent/?next_url=https%3a%2f%2fwww.washingtonpost.com%2fworld%2f2021%2f06%2f29%2fcanada-heat-dome-deaths%2f%3foutputType%3damp&outputType=amp
-&outputType=amp^$removeparam=outputType
+! https://www.boston25news.com/news/local/new-england-lab-finds-cancer-causing-chemical-hand-sanitizer/BUZA6F54ZFBQ5MMG2JV2VLFY3Y/?outputType=amp
+$removeparam=/^outputType=amp$/
 
 ! https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fduckduckgo.com%2F
 $removeparam=orig_referrer
@@ -637,20 +638,20 @@ $removeparam=impradname
 $removeparam=cm_type
 
 ! https://www.roku.com/products/roku-ultra?Ref=CJ
-^ref=cj^$removeparam=/^ref=/i
+$removeparam=/^ref=cj$/i
 
 ! https://newyorkcomedyclub.com/?ref=awin
-^ref=awin^$removeparam=ref
+$removeparam=/^ref=awin$/
 
 ! https://untilgone.com/products/usps-forever-stamps-2018-or-2019-u-s-flag-100-pack.html?source=pepperjam
-^source=pepperjam^$removeparam=source
+$removeparam=/^source=pepperjam$/
 
 ! https://www.hawaiianairlines.com/?AID=11302693&PID=8905582&source=cj&HACMP=CJ_8905582FlexOffers.com%2C+LLC
-^source=cj^$removeparam=source
+$removeparam=/^source=cj$/
 $removeparam=HACMP
 
 ! https://www.jet2holidays.com/?source=AWIN
-^source=awin^$removeparam=source
+$removeparam=/^source=awin$/i
 
 ! https://us.myprotein.com/?affil=awin
 $removeparam=affil
@@ -740,7 +741,7 @@ $removeparam=ad_id
 $removeparam=affSource
 
 ! https://www.nflshop.com/?_s=afl_impact
-^_s=afl_impact^$removeparam=_s
+$removeparam=/^_s=afl_impact$/
 
 ! https://www.la-z-boy.com/?cid_medium=affiliate&cid_campaign=8807380
 $removeparam=/^cid_/
@@ -869,8 +870,8 @@ $removeparam=_vsrefdom
 
 ! https://github.com/ClearURLs/Addon/issues/108
 $removeparam=ceneo_spo
-^from=ceneo^$removeparam=from
-^ref=ceneo^$removeparam=ref
+$removeparam=/^from=ceneo$/
+$removeparam=/^ref=ceneo$/
 
 ! https://www.drip.com/learn/docs/manual/email-builder/suppress-__s-from-rendered-links
 $removeparam=__s
@@ -947,35 +948,35 @@ $removeparam=CSID
 $removeparam=kpartnerid
 
 ! https://www.lifeextension.com/lab-testing/itemlc167015/apolipoprotein-b-blood-test?source=connexity&cnxclid=16357131459502835009610090302008005
-^source=connexity^$removeparam=source
+$removeparam=/^source=connexity$/
 $removeparam=cnxclid
 
 ! https://www.laptopsdirect.co.uk/dji-pocket-2-phone-clip-cp.os.00000128.01/version.asp?refsource=webgains
-^refsource=webgains^$removeparam=refsource
+$removeparam=/^refsource=webgains$/
 
 ! https://www.picstop.co.uk/all-celestron-telescopes/celestron-astromaster-70az-refractor-with-phone-adapter-moon-filter.html?source=webgains&siteid=57172
-^source=webgains^$removeparam=source
+$removeparam=/^source=webgains$/
 
 ! https://www.kids-world.dk/fila-skuldertaske-phone-pods-wallet-sort-p-228122.html?source=tradedoubler
-^source=tradedoubler^$removeparam=source
+$removeparam=/^source=tradedoubler$/
 
 ! https://www.online4baby.com/hauck-sit-n-relax-3-in-1-highchair-stretch-grey?siteid=57172&network=Webgains
-^network=Webgains^$removeparam=network
+$removeparam=/^network=webgains$/i
 
 ! https://www.ssense.com/en-gb/women/product/balenciaga/blue-shopping-phone-holder-bag/6754521?clickref=1100liwW6M5R&ref=kelkoogb
 ! https://www.peterhahn.dk/peter-hahn-buks-i-100-bomuld-sort-265728.html?campaign=Preissuchmaschinen/kelkoo (DK)/265728/265728360&ref=kelkoodk
-^ref=kelkoo$removeparam=ref
+$removeparam=/^ref=kelkoo/
 
 ! https://www.myprotein.es/sports-accessories/brazalete-smartphone-gym-essentials-negro/12591033.html?kk=a4c6368-17cd7f25ed7-10120a&affil=thgppc&from=kelkooes
 ! https://www.overly.it/tv-led/21225-nikkei-ni24hd6c-tvc-24-hd-sat-8022625024065.html?kk=a4c6361-17d0fd13439-d1022&from=kelkoo
-/(\?|&)kk=\w{6,}-\w{10,}-\w{5,}/$removeparam=kk
-^from=kelkoo$removeparam=from
+$removeparam=/^kk=\w{6,}-\w{10,}-\w{5,}$/
+$removeparam=/^from=kelkoo/
 
 ! https://www.shopping4net.dk/Legetoej/Leg-Laer/Paedagogisk-legetoej/Paw-Patrol-Smart-Phone-DK-SE-NO.htm?sClickID=Kelkoo-8-2
 $removeparam=sClickID
 
 ! https://www.cykelpartner.dk/mobilholder-telefonholder-mm/lifeventure-waterproof-phone-pouch---vandtaet-pose-til-mobil---blaa?source=partnerads&paid=22947&pa-partnerid=22947&pacid=617fcb66eb3c23.08348327
-^source=partnerads^$removeparam=source
+$removeparam=/^source=partnerads$/
 $removeparam=paid
 $removeparam=pacid
 $removeparam=pa-partnerid
@@ -1021,7 +1022,7 @@ $removeparam=szredirectid
 $removeparam=porc
 
 ! https://www.beautycarechoices.com/?src=aff
-^src=aff^$removeparam=src
+$removeparam=/^src=aff$/
 
 ! https://support.appsflyer.com/hc/en-us/articles/207447163
 ! https://www.farfetch.com/uk/shopping/kids/boss-kidswear-logo-print-pacifier-item-14954919.aspx?clickref=1100liwZjcmH&c=kelkoo_uk&af_siteid=1100l62250&af_sub_siteid=1011l271&af_cost_model=CPA&af_channel=affiliate&is_retargeting=true
@@ -1051,7 +1052,7 @@ $removeparam=shortlink
 
 ! https://support.appsflyer.com/hc/en-us/articles/207447163#partner-id-pid-parameter
 ! https://playwsop.com/play?pid=googleadwords_int&af_prt=yellowhead&lv=1&clickid=CjwKCAiAxKv_BRBdEiwAyd40N7UPnJYsvWlbP736d2pr8dX0KrtpLAlg3LTef2AVqIju98ciYBEmwxoCYuUQAvD_BwE&c=US_Brand-exact&af_c_id=631735899&af_adset_id=41062900269&af_ad_id=477184005272&af_siteid=&af_ad_type=Search&af_sub1=kwd-297535807811&af_sub2=playwsop&af_sub3=e&af_sub4=9029028&af_sub5=&af_keywords=playwsop
-^pid=*_int^$removeparam=pid
+$removeparam=/^pid=.*_int$/
 
 ! https://www.chelseafc.com/en/news/2021/09/02/tuchel-shortlisted-for-august-s-manager-of-the-month-award?deep_link_sub1=cfcapp://page/content/chelseafc/en/news/2021/09/02/tuchel-shortlisted-for-august-s-manager-of-the-month-award&shortlink=563e154b
 ! https://abra.onelink.me/paN3/referral?deep_link_sub1=RCVGBRB8X
@@ -1062,7 +1063,7 @@ $removeparam=ClickThruEmail
 $removeparam=ClickThruCustomerNumber
 
 ! https://scripts.affiliatefuture.com/AFClick.asp?affiliateID=29219&merchantID=2543&programmeID=6678&mediaID=0&tracking=&url=https://example.com/
-^tracker=affiliatefuture^$removeparam=tracker
+$removeparam=/^tracker=affiliatefuture$/i
 $removeparam=affc
 
 ! https://www.kichink.com/home/issafari?uri=https://example.com
@@ -1235,6 +1236,15 @@ $removeparam=ads_targetid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1831538
 $removeparam=elqTrack
 
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/208
+$removeparam=/^from=rss$/
+
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/209
+$removeparam=/^source=rss$/
+
+! https://www.smh.com.au/world/europe/i-really-want-to-be-free-dubai-ruler-s-ex-wife-awarded-1b-to-settle-uk-custody-case-20211221-p59jf7.html?ref=rss
+$removeparam=/^ref=rss$/
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1264,7 +1274,7 @@ $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjone
 ! https://www.gamereactor.fi/?sid=39feac60637556f2d1f67482abf2b1ea
 ! https://www.anrdoezrs.net/click-8900246-13502820?url=https%3A%2F%2Fwww.dell.com%2Fen-us%2Fshop%2Fsamsung-870-evo-mz-77e1t0b-solid-state-drive-1-tb-sata-6gb-s%2Fapd%2Fab481426%2Fstorage-drives-media&sid=tomshardware-us-6016433087443645000
 ! (Exceptions: mail.qq.com, high.fi, phpBB forums, various other sites)
-$removeparam=sid,domain=gamereactor.*|anrdoezrs.net|gopjn.com|jdoqocy.com|kqzyfj.com|pepperjamnetwork.com|tkqlhce.com
+$removeparam=sid,domain=gamereactor.*|anrdoezrs.net|gopjn.com|jdoqocy.com|kqzyfj.com|pepperjamnetwork.com|tkqlhce.com|dpbolvw.net
 ! No particular example
 $removeparam=from,domain=sogou.com|baidu.com|jetbrains.com|bandcamp.com|apkpure.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915 and https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864
@@ -2365,7 +2375,7 @@ $removeparam=nosto,domain=masku.com|staypro.fi|happyangler.fi
 ! https://adele.lnk.to/EOM
 $removeparam=cId,domain=apple.com|youtube.com
 $removeparam=lId,domain=apple.com|youtube.com
-&src=Linkfire^$removeparam=src,domain=apple.com|youtube.com
+$removeparam=/^src=Linkfire$/,domain=apple.com|youtube.com
 ||music.apple.com^$removeparam=ct
 ||music.apple.com^$removeparam=itsct
 ||music.apple.com^$removeparam=itscg
@@ -2781,14 +2791,24 @@ $removeparam=ppref,domain=digidip.net
 $removeparam=f,domain=dhgate.com
 
 ! https://www.cyberghostvpn.com/en_US/offer/xmas?brand=vpnMentor&coupon=3Y3M
-! https://safe.cyberghostvpn.com/en_US/xmas?lp=flashdevices&coupon=3Y3M&media_source=CJ_affiliates&channel=External LPs
 $removeparam=brand,domain=cyberghostvpn.com|privateinternetaccess.com
+
+! https://safe.cyberghostvpn.com/en_US/xmas?lp=flashdevices&coupon=3Y3M&media_source=CJ_affiliates&channel=External LPs
 $removeparam=media_source,domain=cyberghostvpn.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/10995
 !!! ||zhihu.com^$removeparam=search_source
 ||zhihu.com^$removeparam=hybrid_search_source
 ||zhihu.com^$removeparam=hybrid_search_extra
+
+! https://www.theregister.com/2021/12/20/linux_5_16_rc6/?td=keepreading-btm
+$removeparam=td,domain=theregister.com
+
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/210
+$removeparam=fromrel,domain=dzone.com
+
+! https://blog.feedspot.com/?_src=footer
+$removeparam=_src,domain=feedspot.com
 
 !#if !env_mobile
 ! ——— Mobile ——— !
