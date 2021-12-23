@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
-! Last updated: 13/12/2021
+! Last updated: 22/12/2021
 ! Script last updated: 13/12/2021
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -342,6 +342,7 @@ $removeparam=impid,domain=taobao.com
 $removeparam=bftTag,domain=taobao.com
 $removeparam=bftRwd,domain=taobao.com
 $removeparam=spm,domain=taobao.com
+$removeparam=_u,domain=taobao.com
 $removeparam=price,domain=tmall.com
 $removeparam=sourceType,domain=tmall.com
 $removeparam=suid,domain=tmall.com
@@ -517,6 +518,43 @@ $removeparam=psf_variant,domain=change.org
 $removeparam=share_intent,domain=change.org
 $removeparam=tag,domain=ceneo.pl
 $removeparam=intcid,domain=wired.com
+$removeparam=pid,domain=arms-retcode.aliyuncs.com
+$removeparam=uid,domain=arms-retcode.aliyuncs.com
+$removeparam=tag,domain=arms-retcode.aliyuncs.com
+$removeparam=release,domain=arms-retcode.aliyuncs.com
+$removeparam=environment,domain=arms-retcode.aliyuncs.com
+$removeparam=sample,domain=arms-retcode.aliyuncs.com
+$removeparam=behavior,domain=arms-retcode.aliyuncs.com
+$removeparam=enableSPA,domain=arms-retcode.aliyuncs.com
+$removeparam=enableLinkTrace,domain=arms-retcode.aliyuncs.com
+$removeparam=page,domain=arms-retcode.aliyuncs.com
+$removeparam=begin,domain=arms-retcode.aliyuncs.com
+$removeparam=c2,domain=arms-retcode.aliyuncs.com
+$removeparam=c3,domain=arms-retcode.aliyuncs.com
+$removeparam=success,domain=arms-retcode.aliyuncs.com
+$removeparam=code,domain=arms-retcode.aliyuncs.com
+$removeparam=msg,domain=arms-retcode.aliyuncs.com
+$removeparam=api,domain=arms-retcode.aliyuncs.com
+$removeparam=traceId,domain=arms-retcode.aliyuncs.com
+$removeparam=pv_id,domain=arms-retcode.aliyuncs.com
+$removeparam=flag,domain=arms-retcode.aliyuncs.com
+$removeparam=sr,domain=arms-retcode.aliyuncs.com
+$removeparam=vp,domain=arms-retcode.aliyuncs.com
+$removeparam=ct,domain=arms-retcode.aliyuncs.com
+$removeparam=_v,domain=arms-retcode.aliyuncs.com
+$removeparam=sampling,domain=arms-retcode.aliyuncs.com
+$removeparam=dl,domain=arms-retcode.aliyuncs.com
+$removeparam=post_res,domain=arms-retcode.aliyuncs.com
+||^https?://(?:[a-z0-9-]+.)*?nikkei.co(?:m|.jp)$removeparam=adid
+||^https?://(?:[a-z0-9-]+.)*?nikkei.co(?:m|.jp)$removeparam=i_cid
+||^https?://(?:[a-z0-9-]+.)*?nikkei.co(?:m|.jp)$removeparam=n_cid
+||^https?://(?:[a-z0-9-]+.)*?nikkei.co(?:m|.jp)$removeparam=waad
+$removeparam=weibo_id,domain=weibo.(cn|com)
+$removeparam=dt_dapp,domain=weibo.(cn|com)
+$removeparam=context_referrer,domain=fiverr.com
+$removeparam=source,domain=fiverr.com
+$removeparam=ref_ctx_id,domain=fiverr.com
+$removeparam=funnel,domain=fiverr.com
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
@@ -563,6 +601,8 @@ $removeparam=intcid,domain=wired.com
 @@||onet.pl/*?*utm_campaign=$removeparam
 @@||stripe.com/*?*referrer=$removeparam
 @@||lichess.org/login*referrer=$removeparam
+@@||like.co/api/like/likebutton/*?*referrer=$removeparam
+@@||button.like.co/in/*referrer=$removeparam
 @@||amazon-adsystem.*/v3/oor?$removeparam
 @@||youtube.com/signin?$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?facebook\.com\/.*?(plugins|ajax)\//$removeparam
