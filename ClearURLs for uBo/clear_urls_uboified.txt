@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
-! Last updated: 22/12/2021
+! Last updated: 23/12/2021
 ! Script last updated: 13/12/2021
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -144,6 +144,7 @@ $removeparam=padding,domain=facebook.com
 $removeparam=ls_ref,domain=facebook.com
 $removeparam=action_history,domain=facebook.com
 $removeparam=/^(ref_?)?src=/,domain=twitter.com
+$removeparam=t,domain=twitter.com
 $removeparam=cn,domain=twitter.com
 $removeparam=ref_url,domain=twitter.com
 $removeparam=%24deep_link,domain=reddit.com
@@ -559,7 +560,7 @@ $removeparam=funnel,domain=fiverr.com
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
 @@/^https?:\/\/(docs|accounts)\.google(\.[a-z]{2,}){1,}/$removeparam
-@@||drive.google.com/videoplayback$removeparam
+@@/^https?:\/\/([a-z0-9-\.])*drive\.google\.com\/videoplayback/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}(\/upload)?\/drive\//$removeparam
 @@||news.google.com.*?hl=$removeparam
 @@||hangouts.google.com/webchat*zx=$removeparam
