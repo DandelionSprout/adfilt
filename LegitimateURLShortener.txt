@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 23December2021v1-Beta
+! Version: 24December2021v1-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1244,6 +1244,19 @@ $removeparam=/^source=rss$/
 
 ! https://www.smh.com.au/world/europe/i-really-want-to-be-free-dubai-ruler-s-ex-wife-awarded-1b-to-settle-uk-custody-case-20211221-p59jf7.html?ref=rss
 $removeparam=/^ref=rss$/
+
+! https://github.com/uBlockOrigin/uAssets/issues/11051
+/upgcxcode^$removeparam=uparams
+/upgcxcode^$removeparam=upsig
+/upgcxcode^$removeparam=platform
+/upgcxcode^$removeparam=trid
+/upgcxcode^$removeparam=oi
+/upgcxcode^$removeparam=os
+/upgcxcode^$removeparam=gen
+/upgcxcode^$removeparam=deadline
+/upgcxcode^$removeparam=nbs
+/upgcxcode^$removeparam=uipk
+/upgcxcode^$removeparam=e
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
