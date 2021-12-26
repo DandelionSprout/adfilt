@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 23December2021v1-Personal
+! Version: 26December2021v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 ! /\/\ Supercompilations: /\/\
@@ -208,6 +208,22 @@ store.steampowered.com##a[data-ds-tagids*="1666"]:not([href*=Ticket_to_Ride], [h
 ! Anti-Amphibia
 twitter.com#?#article:-abp-contains(/Amph\ibia[ .,;'_-]/i)
 
+! Anti-'2022 Beijing Olympics'
+adressa.no,nidaros.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=-ol-]
+adressa.no,nidaros.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="-ol/"]
+adressa.no,nidaros.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="/ol-"]
+adressa.no,nidaros.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*=beijing]
+adressa.no,nidaros.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*=olympi]
+adressa.no,nidaros.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=medalje]
+!#if !adguard
+tv2.no#?#.article,.lp-a,.col-sm-12,article.column:-abp-contains(OL)
+tv2.no#?#.article,.lp-a,.col-sm-12,article.column:-abp-contains(Beijing)
+tv2.no#?#.article,.lp-a,.col-sm-12,article.column:-abp-contains(/Olympi/i)
+tv2.no#?#.article,.lp-a,.col-sm-12,article.column:-abp-contains(/Medalje/i)
+!#endif
+||discoveryplus.$doc
+||eurosport.$doc,frame,media
+
 ! ———————————————————————————————————————————————————————————————————————————————————————————————
 
 ! Dumb news topics
@@ -224,13 +240,11 @@ www.nrk.no#?#div.relation:-abp-contains(«Skam»)
 ekstrabladet.dk##a[href*="/opinionen/pernillevermund/"]
 
 ! Depressing winter stuff
-!#if !adguard
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=-jule]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="/jule"]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=advent]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*=-nisse]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[href*="/nisse"]
-!#endif
 nrk.no##a[href*="/stjernestoev"]
 nrk.no##a[href*="/snoefall"]
 nrk.no##a[href*=askepott]
