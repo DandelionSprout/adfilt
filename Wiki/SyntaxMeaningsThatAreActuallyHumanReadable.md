@@ -81,11 +81,11 @@
 * `#$?#` + `{ remove: true; }`: Same as above.
 #### Blocking
 * `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
-* `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list. Requires the bad entry to be written verbatim; except for removing Hosts prefix IPs.
+* `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list. Requires the bad entry to be written verbatim; except for removing Hosts prefix IPs. You can not `badfilter` a `badfilter` rule.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
-* `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `$tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, and that a lack of `/^` will make it search *anywhere* in that string.
+* `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `?tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, and that a lack of `/^` will make it search *anywhere* in that string.
 
 ## uBlock Origin, Adblock Plus and AdBlock only
 * `##element1,element2:-abp-(has/contains)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where `element1` is instead blocked in its entirety.
@@ -107,7 +107,7 @@
 * `$3p`: Same as `$third-party`.
 * `$1p` / `$first-party`: Same as `$~third-party`.
 * `$xhr`: Same as `$xmlhttprequest`.
-* `$doc`: Same as `$document`.
+* `$doc`: Same as `$document`. May cause problems in some versions of AdGuard.
 * `$all`: De facto combines all other `$` values. Officially combines the use of no `$` values at all + `$popup` + `$document` + `$inline-script` + `$inline-font`.
 * `$redirect-rule`: Similar to `$redirect`, but is only applied if it's already blocked by *another* entry or dynamic rule(set).
 * `@@||` + `$ghide`: Same as `@@||` + `$generichide`.
