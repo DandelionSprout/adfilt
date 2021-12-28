@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 28December2021v1-Beta
+! Version: 29December2021v1-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2826,6 +2826,10 @@ $removeparam=plink,domain=audible.*
 
 ! https://github.com/easylist/easylist/issues/10288
 ||startpage.com^$removeparam=segment
+
+! https://www.netflix.com/watch/81110875?trackId=254794450&tctx=2%2C1%2C96c1d619-68cd-4cad-ba6c-7e473d76dd30-24305116%2C%2Cunknown%2C%2C%2C (29/12/2021)
+||netflix.com^$removeparam=trackId
+||netflix.com^$removeparam=tctx
 
 !#if !env_mobile
 ! ——— Mobile ——— !
