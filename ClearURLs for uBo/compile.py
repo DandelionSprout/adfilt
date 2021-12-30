@@ -34,7 +34,7 @@ HEAD = """\
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
 ! Last updated: {date}
-! Script last updated: 13/12/2021
+! Script last updated: 30/12/2021
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Note: This was based off of https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues
@@ -94,7 +94,6 @@ def normalize_url_pattern(url_pattern: str) -> str:
     if "(" in url_pattern and ")" in url_pattern:
     	# something went wrong
     	print("Something went wrong. Error code WEIRDDOMAINPATTERN. Please see https://github.com/DandelionSprout/adfilt/commit/9dfcd0c3d3bb5a880a4c473c0b9ad5579e963a3f#r62692350")
-    	return ""
 
     return url_pattern
 
