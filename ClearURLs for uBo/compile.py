@@ -77,6 +77,7 @@ def normalize_url_pattern(url_pattern: str) -> str:
     url_pattern = url_pattern.replace(r"^https?:\/\/(?:[a-z0-9-]+\.)*?", "", 1)
     url_pattern = url_pattern.replace(r"https?:\/\/([a-z0-9-.]*\.)", "", 1)
     url_pattern = url_pattern.replace(r"^https?:\/\/", "", 1)
+    url_pattern = url_pattern.replace(r"^https?:\/\/(?:[a-z0-9-]+\.)*?", "", 1)
     # domain= style TLD globbing
     url_pattern = url_pattern.replace(r"(?:\.[a-z]{2,}){1,}", ".*", 1)
     # Remove backslashes
@@ -86,7 +87,14 @@ def normalize_url_pattern(url_pattern: str) -> str:
     url_pattern = url_pattern.replace("(?:accounts.)?", "", 1)
     url_pattern = url_pattern.replace("(?:support.)?", "", 1)
     url_pattern = url_pattern.replace("(?:yandex.*|ya.ru)", "yandex.*", 1)
-    url_pattern = url_pattern.replace("weibo.(cn|com)", "weibo.*", 1) #https://github.com/DandelionSprout/adfilt/commit/9dfcd0c3d3bb5a880a4c473c0b9ad5579e963a3f#r62388808
+    #https://github.com/DandelionSprout/adfilt/commit/9dfcd0c3d3bb5a880a4c473c0b9ad5579e963a3f#r62388808
+    url_pattern = url_pattern.replace("weibo.(cn|com)", "weibo.*", 1) 
+    url_pattern = url_pattern.replace("nikkei.co(?:m|.jp)", "nikkei.com", 1)
+    
+    if "(" in url_pattern and ")" in url_pattern:
+    	# something went wrong
+    	print("Something went wrong. Error code WEIRDDOMAINPATTERN. Please see https://github.com/DandelionSprout/adfilt/commit/9dfcd0c3d3bb5a880a4c473c0b9ad5579e963a3f#r62692350")
+    	return ""
 
     return url_pattern
 
