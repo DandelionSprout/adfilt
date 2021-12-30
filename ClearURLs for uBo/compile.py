@@ -77,6 +77,7 @@ def normalize_url_pattern(url_pattern: str) -> str:
     url_pattern = url_pattern.replace(r"^https?:\/\/(?:[a-z0-9-]+\.)*?", "", 1)
     url_pattern = url_pattern.replace(r"https?:\/\/([a-z0-9-.]*\.)", "", 1)
     url_pattern = url_pattern.replace(r"^https?:\/\/", "", 1)
+    url_pattern = url_pattern.replace(r"^https?://(?:[a-z0-9-]+\.)*?", "", 1)
     url_pattern = url_pattern.replace(r"^https?:\/\/(?:[a-z0-9-]+\.)*?", "", 1)
     # domain= style TLD globbing
     url_pattern = url_pattern.replace(r"(?:\.[a-z]{2,}){1,}", ".*", 1)
