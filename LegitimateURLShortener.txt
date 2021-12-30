@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30December2021v5-Beta
+! Version: 30December2021v6-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2841,6 +2841,10 @@ $removeparam=rx_job,domain=cvshealth.*
 $removeparam=rx_source,domain=cvshealth.*
 $removeparam=rx_ts,domain=cvshealth.*
 $removeparam=rx_p,domain=cvshealth.*
+
+! https://www.paramountplus.com/fi/?cbsclick=QHSXuQw7WxyIWrPQHcWEzT3UUkG2eTztlwcSQ00&vndid=395495
+$removeparam=cbsclick,domain=paramountplus.com|cbs.com
+$removeparam=vndid,domain=paramountplus.com|cbs.com
 
 !#if !env_mobile
 ! ——— Mobile ——— !
