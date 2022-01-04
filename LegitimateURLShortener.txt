@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 03January2022v4-Beta
+! Version: 03January2022v5-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1254,6 +1254,11 @@ $removeparam=mindbox-click-id
 ! https://blog.bybit.com/en-US/post/buy-300-worth-of-crypto-on-fiat-gateway-share-50k-usdt-in-rewards-blt3dc1870b5f78eeb5/?medium=organic_social&source=reddit&channel=mkt_&campaign=buy300&content=en_1&dtpid=1640937789493&%24web_only=true
 $removeparam=dtpid
 
+! https://github.com/DandelionSprout/adfilt/pull/448
+! https://m.baidu.com/ssid=3aed7368656e7a68696d696e673434e940/s?word=test&ts=4303890&t_kt=0&ie=utf-8&tj=1&params_ssrt=node-san& (25/10/2021)
+! http://blog.sina.com.cn/s/blog_635c86d50102zvmo.html?tj=1 (4/1/2022)
+$removeparam=tj
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1292,7 +1297,6 @@ $removeparam=keyword,domain=ebay.*|bindright.com|lendgo.com
 $removeparam=id,domain=go.skimresources.com|karkkainen.com|go.skimlinks.com|go.redirectingat.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726383
 $removeparam=offer_id,domain=surfshark.com|catch.com.au
-
 
 !! ——— Rules for heavily covered sites ———
 !!! ——— Amazon ———
@@ -1642,7 +1646,6 @@ $removeparam=aff_click_id
 ! https://m.baidu.com/ssid=3aed7368656e7a68696d696e673434e940/s?word=test&ts=4303890&t_kt=0&ie=utf-8&tj=1&params_ssrt=node-san& (25/10/2021)
 ||baidu.com^$removeparam=params_ssrt
 ||baidu.com^$removeparam=t_kt
-||baidu.com^$removeparam=tj
 ! https://m.baidu.com/?from=844b&vit=fps# (25/10/2021)
 ||baidu.com^$removeparam=vit
 ! https://github.com/DandelionSprout/adfilt/pull/317
