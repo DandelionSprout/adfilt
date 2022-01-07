@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 07January2022v1-Beta
+! Version: 07January2022v2-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2908,7 +2908,7 @@ $removeparam=mweb_user_name,domain=reddit.app.link
 $removeparam=tags,domain=reddit.app.link
 
 ! https://www.marketwatch.com/story/immix-biopharmas-stock-rockets-after-pediatric-cancer-treatment-granted-rpd-by-the-fda-2022-01-03?siteid=yhoof2&yptr=yahoo
-$removeparam=yptr,domain=marketwatch.com
+$removeparam=yptr,domain=marketwatch.com|barrons.com|investors.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1920124
 ! https://github.com/AdguardTeam/AdguardFilters/commit/920d973db052ded91b48fbb8c7ca3fe2fdeda237
@@ -2918,6 +2918,11 @@ $removeparam=unicorn_click_id
 $removeparam=ebisAdID
 ! https://github.com/AdguardTeam/AdguardFilters/commit/bfcd89f013fa810ba1f2c959a7e8757deb9d3dce
 ||adjust.com^$removeparam=adgroup
+
+! https://www.shopbop.com/areaware-aelfie-pillow-gift-boutique/vp/v=1/1574808756.htm?fm=search-viewall-shopbysize&os=false&colorId=1A926&searchClick=true&searchResultClicked=Areaware+Aelfie+Pillow&breadcrumb=undefined
+$removeparam=searchClick,domain=shopbop.com
+$removeparam=searchResultClicked,domain=shopbop.com
+$removeparam=breadcrumb,domain=shopbop.com
 
 ! ——— NSFW websites ———
 
