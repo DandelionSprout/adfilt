@@ -7,7 +7,7 @@
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
 ! Special thanks to https://github.com/git-101-collab for providing a 3-digit amount of new entries to this list, and to https://github.com/iam-py-test for volunteering to speed up the addition of user-submitted entries.
 ! Important notes: 
-! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view params on the strict-block page to bypass it.
+! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view parameters on the strict-block page or tools to bypass it.
 ! - this list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
 
 ! ——— General remove rules ——— !
@@ -2929,6 +2929,26 @@ $removeparam=breadcrumb,domain=shopbop.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1914216
 $removeparam=r,domain=mrgay.com
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1935694
+! https://go.skimresources.com/?id=76112X1604401&xs=1&xcreo=500004&url=https://www.matchesfashion.com/us/products/Raf-Simons-Children-of-the-Revolution-roll-neck-jersey-top-1414525&xed=1&xcust=julydigitalcover
+||go.skimresources.com^$removeparam=id
+||go.skimresources.com^$removeparam=xs
+||go.skimresources.com^$removeparam=xcreo
+||go.skimresources.com^$removeparam=xed
+||go.skimresources.com^$removeparam=xcust
+$removeparam=rffrid
+! https://bit.ly/3xMwzGy?cc=8f8d85334707b66b55e73dabddab4672
+||bit.ly^$removeparam=cc
+! https://www.matchesfashion.com/us/womens/designers/raf-simons?qxjkl=tsid:38929|cgn:TnL5HPStwNw
+$removeparam=/qxjkl=tsid:/
+! https://www.skinceuticals.com/triple-lipid-restore-2%3A4%3A2-3606000434967.html?siteID=TnL5HPStwNw-_YX_g16Y0ksf95olDKBAvw
+||skinceuticals.com^$removeparam=siteID
+$removeparam=ad_name
+||kqzyfj.com^$removeparam=sid
+||dermstore.com^$removeparam=PID
+||dermstore.com^$removeparam=URL
+||dermstore.com^$removeparam=pubname
 
 !#if !env_mobile
 ! ——— Mobile ——— !
