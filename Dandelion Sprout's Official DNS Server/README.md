@@ -1,3 +1,7 @@
+***IMPORTANT:*** Due to baffling and incomprehensible network problems on my Raspberry Pi, the server has been stopped indefinitely. All of the below info can be disregarded.
+
+——————————————————————————————————————————————————————
+
 After 1½ years of trial setups and tinkering until March 2021, I now offer my DNS server to be used by the public! That being said, there are a considerable number of drawbacks with it that means that it should ***NOT*** be used in setups where uptime, privacy, or impartiality is important. By using this server, you agree to at least having *read* and being aware of all the info written below.
 
 ### DNS IP addresses
