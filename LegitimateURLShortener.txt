@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 10January2022v3-Beta
+! Version: 11January2022v1-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1272,7 +1272,7 @@ $removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|pros
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com|abebooks.com|eset.com|kickstarter.com|oikotie.fi|sahkovertailu.fi|jasonsavard.com|adobe.com|wormhole.app|coop.no|buzzfeed.com|megapornfreehd.com|baidu.com|semrush.com|protonvpn.com|altcustoms.com|hintaseuranta.fi|catch.com.au|zappos.com|mastermind.ac|digidip.net|merrell.com|woot.com|goodreads.com|comixology.*|bookdepository.com|shein.com|kesaduuni.org|omataloyhtio.fi|puutarha.net|rakentaja.fi|yle.fi|iltapulu.fi|bybit.com|albiononline.com|vultr.com|accounts.binance.com|bitlox.com
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com|audible.*|webhallen.no|imdb.com|abebooks.com|eset.com|kickstarter.com|oikotie.fi|sahkovertailu.fi|jasonsavard.com|adobe.com|wormhole.app|coop.no|buzzfeed.com|megapornfreehd.com|baidu.com|semrush.com|protonvpn.com|altcustoms.com|hintaseuranta.fi|catch.com.au|zappos.com|mastermind.ac|digidip.net|merrell.com|woot.com|goodreads.com|comixology.*|bookdepository.com|shein.com|kesaduuni.org|omataloyhtio.fi|puutarha.net|rakentaja.fi|yle.fi|iltapulu.fi|bybit.com|albiononline.com|vultr.com|accounts.binance.com|bitlox.com|domains.ch
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
 $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com|clickbank.net
@@ -1390,6 +1390,12 @@ $removeparam=cstrackid
 ||amazon.$removeparam=hydadcr
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1854203
 ||amazon.*^$removeparam=orig
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1949267
+$removeparam=%2AVersion%2A,domain=amazon.com
+$removeparam=%2Aentries%2A,domain=amazon.com
+$removeparam=pldnSite,domain=amazon.com
+$removeparam=newts,domain=amazon.com
+$removeparam=returnFromLogin,domain=amazon.com
 ! Other
 @@/b/ref=$removeparam=ie
 
@@ -2932,8 +2938,9 @@ $removeparam=r,domain=mrgay.com
 ||go.skimresources.com^$removeparam=xcreo
 ||go.skimresources.com^$removeparam=xed
 $removeparam=rffrid
+||bottegaveneta.com^$removeparam=tp
 ! https://bit.ly/3xMwzGy?cc=8f8d85334707b66b55e73dabddab4672
-||bit.ly^$removeparam=cc
+!!! ||bit.ly^$removeparam=cc (until https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1950056 is resolved)
 ! https://www.matchesfashion.com/us/womens/designers/raf-simons?qxjkl=tsid:38929|cgn:TnL5HPStwNw
 $removeparam=/^qxjkl=tsid:/
 $removeparam=ad_name
@@ -2945,6 +2952,13 @@ $removeparam=ad_name
 
 ! https://www.gamereactor.fi/uutiset/914423/JBL+esitteli+aanekkaan+BoomBox+3n+ja+samalla+uuden+mikrofonin+ja+nappikuulokkeet+pelaamiseen/?rs=rss
 $removeparam=rs,domain=gamereactor.*
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1949473
+$removeparam=alpha,domain=nytimes.com
+$removeparam=block,domain=nytimes.com
+
+! https://www.domains.ch/en/Search/Index?domain=iam-py-test.xyz&REF=2469
+||domains.ch^$removeparam=REF
 
 !#if !env_mobile
 ! ——— Mobile ——— !
