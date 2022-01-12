@@ -1,4 +1,4 @@
-***IMPORTANT:*** Due to baffling and incomprehensible network problems on my Raspberry Pi, the server has been stopped indefinitely. All of the below info can be disregarded.
+***IMPORTANT:*** Due to baffling and incomprehensible network problems on my Raspberry Pi, the old main server has been stopped indefinitely. The secondary addresses remain online and has become the new main, with an uptime estimate of 23h35min per day. A new secondary server is a very high priority and is planned for later in January, hopefully by the 19th.
 
 ——————————————————————————————————————————————————————
 
@@ -7,16 +7,14 @@ After 1½ years of trial setups and tinkering until March 2021, I now offer my D
 ### DNS IP addresses
 
 The main connection addresses are:
-* DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query` + `https://dandelionsprout.asuscomm.com:2601/dns-query`
-* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` + `tls://dandelionsprout.asuscomm.com:863` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
-* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582` + `quic://dandelionsprout.asuscomm.com:863`
-* DNSCrypt IPv4: `sdns://AQEAAAAAAAAAEjQ2LjkuMjIwLjI0NTo1NjQwNCDsdKplWV-GlLOA-lEBpZ11QS381gnDyqpTXz5sSwTaeSwyLmRuc2NyeXB0LWNlcnQuZGFuZGVsaW9uc3Byb3V0LmFzdXNjb21tLmNvbQ` (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:56404 - ec74aa65595f8694b380fa5101a59d75412dfcd609c3caaa535f3e6c4b04da79 - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
-
-The 2nd address in each row are for failover **only**, i.e. for apps that allow setting two encrypted DNS addresses at the same time.
+* DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2601/dns-query`
+* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:863` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
+* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:863`
+* DNSCrypt IPv4: Not currently in use. Resumption is planned for early February 2022. (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:56404 - ec74aa65595f8694b380fa5101a59d75412dfcd609c3caaa535f3e6c4b04da79 - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
 
 Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
-The encrypted addresses may also go down during rare Raspberry Pi restarts, or if ASUS' lookup servers for Asuscomm are acting wonky.
+The encrypted addresses may also go down during Windows restarts, or if ASUS' lookup servers for Asuscomm are acting wonky.
 
 ### What is being blocked
 
