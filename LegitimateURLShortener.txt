@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 11January2022v1-Beta
+! Version: 12January2022v1-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1259,6 +1259,20 @@ $removeparam=dtpid
 ! http://blog.sina.com.cn/s/blog_635c86d50102zvmo.html?tj=1 (4/1/2022)
 $removeparam=tj
 
+! https://ad.admitad.com/g/xrzqqr83azcf955d81ea0789458fbf/?i=5&ulp=https%3A%2F%2Fwww.cafago.com%2Fp-c11231b.html
+! https://ad.admitad.com/g/xljorca896e18d2252e34bf89f6ddb/
+$removeparam=tagtag_uid
+
+! https://go.shopyourlikes.com/pi/96e08a288d05cb3bf7f8034ddc45d33da77bb090?afId=614548&afCampaignId=cn-___COM_CLICK_ID___-dtp&afCreativeId=2993
+$removeparam=afCampaignId
+$removeparam=afCreativeId
+
+! https://www.m1finance.com/?affiliateCode=3HO3ny3%3AixyIToKUQ7X4Nz5IUkG1ZCzf4xL1Us0
+$removeparam=affiliateCode
+
+! https://learn.nateliason.com/?affcode=497128_mjoh3wmi
+$removeparam=affcode
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -2109,7 +2123,7 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
 ||simplelogin.io^$removeparam=slref
-||ledger.io^$removeparam=r
+||ledger.$removeparam=r
 ||roboform.com^$removeparam=rec
 
 ! https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTQ_thTIPr-4kGYMHEyfPeD9YN_0fwvx4-fQ&usqp=CAU
@@ -2202,7 +2216,7 @@ $removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|
 $removeparam=SID,domain=ae.com|anntaylor.com|applevacations.com|ashford.com|autodesk.com|bedbathandbeyond.com|bhphotovideo.com|booksamillion.com|cheapcaribbean.com|chegg.com|chggtrx.com|ecampus.com|expedia.com|express.com|intuit.com|jockey.com|loft.com|mcafee.com|norton.com|overstock.com|perfumania.com|samsung.com|sierra.com|staples.com|taskrabbit.com|teleflora.com|verizon.com|vistaprint.com|walgreens.com|wwe.com|yahoo.com|zchocolat.com|zulily.com
 $removeparam=adref,domain=ancestry.*
 $removeparam=acid,domain=lenovo.com
-$removeparam=aid,domain=brownells.*|viator.com|adguard.com|adguard-vpn.com|adguard-dns.com|get.protonvpn.com|get.protonmail.com|wevpn.com
+$removeparam=aid,domain=brownells.*|viator.com|adguard.com|adguard-vpn.com|adguard-dns.com|get.protonvpn.com|get.protonmail.com|wevpn.com|cafago.com|tomtop.com
 $removeparam=camp,domain=calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com|amazon.*
 $removeparam=channelref,domain=asos.com
 $removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com
@@ -2444,7 +2458,6 @@ $removeparam=_ref,domain=fanatics.com|nhl.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1493321
 ||xg4ken.com^$removeparam=prof
-||xg4ken.com^$removeparam=affcode
 ||xg4ken.com^$removeparam=kct
 ||xg4ken.com^$removeparam=kchid
 ||xg4ken.com^$removeparam=kdv
@@ -2671,9 +2684,6 @@ $removeparam=vh,domain=hotspotshield.com|gethotspotshield.com
 
 ! https://ad.admitad.com/g/xljorca896cf955d81ea4bf89f6ddb/?i=5&f_id=14723&ulp=https%3A%2F%2Fwww.tomtop.com%2Fp-os1622au.html&subid=tomshardware-us-5867704010115023000
 $removeparam=f_id,domain=admitad.com
-
-! https://www.tomtop.com/p-os1622au.html?uid=9ee14327acab62fc69945550c22ae6bd&web=565276&tagtag_uid=9ee14327acab62fc69945550c22ae6bd
-||tomtop.com^$removeparam=tagtag_uid
 
 ! https://www.pulseway.com/land/linus?rfid=linus2021
 ||pulseway.com^$removeparam=rfid
@@ -2959,6 +2969,11 @@ $removeparam=block,domain=nytimes.com
 
 ! https://www.domains.ch/en/Search/Index?domain=iam-py-test.xyz&REF=2469
 ||domains.ch^$removeparam=REF
+
+! https://ad.admitad.com/g/ca265zafmkbc8f6d165a9f466608b0
+! https://www.milanoo.com/?Promotion=AF_Admitad&deduplication_channel=admitad
+||milanoo.com^$removeparam=Promotion
+||milanoo.com^$removeparam=deduplication_channel
 
 !#if !env_mobile
 ! ——— Mobile ——— !
