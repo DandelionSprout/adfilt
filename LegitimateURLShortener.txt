@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 16January2022v2-Beta
+! Version: 16January2022v4-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -9,6 +9,7 @@
 ! Important notes: 
 ! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view parameters on the strict-block page or tools to bypass it.
 ! - this list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
+! - this list can not remove paramters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
 
 ! ——— General remove rules ——— !
 ! From AdGuard CoreLibs (11/11/2020)
@@ -1602,7 +1603,7 @@ $removeparam=share_link_id
 ||tiktok.com^$removeparam=sec_uid
 ||tiktok.com^$removeparam=share_author_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1979025
-||tiktok.com^$removeparam=web_id
+$removeparam=/^web_id([0-9]{1,})/,domain=tiktok.com
 
 !! ——— Rules for heavily covered international sites ———
 !!! ——— PR-China ———
