@@ -137,7 +137,7 @@
 * `#%#AG_`: A few extra scriptlets for whom documentation appears to be non-existent.
 * `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file. Requires heavy privileges.
 * `!+ PLATFORM`: Similar to `!#if`, but is only used during the AdGuard team's compiling of included lists. It has no effect on custom lists.
-* `:matches-property`: I'm honestly not sure about this one.
+* `:matches-property`: Selects an HTML element by using a CSS identifier, as detailed under AdGuard's [ExtendedCSS](https://github.com/AdguardTeam/ExtendedCss#extended-css-matches-property) project.
 #### Blocking
 * `$match-case`: Makes the criteria case-sensitive.
 * `$$script`: Uses very advanced criteria to block scripts that meet them.
