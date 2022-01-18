@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 11November2021v1-Alpha
+! Version: 18November2021v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -41,8 +41,8 @@
 ##.addtoany_list:not(html, body)
 ##.addtoany_share:not(html, body)
 ##.album-dialog__image-share:not(html, body)
-##.ArevicoModal:not(html, body)
 ##.ArevicoModal-bg:not(html, body)
+##.ArevicoModal:not(html, body)
 ##.article__share:not(html, body)
 ##.basicsSocialActions-socialIcons:not(html, body)
 ##.blog-post-single-share:not(html, body)
@@ -65,6 +65,7 @@
 ##.face-share:not(html, body)
 ##.facebook-like-box:not(html, body)
 ##.facebook-messenger-share:not(html, body)
+##.facebook-page-plugin:not(html, body)
 ##.facebook-share:not(html, body)
 ##.facebook[href*="/sharer/"]:not(html, body)
 ##.facebook_share:not(html, body)
@@ -84,6 +85,9 @@
 ##.icon--facebook:not(html, body)
 ##.icon--twitter:not(html, body)
 ##.js-share-btn:not(html, body)
+##.js-share-pinterest:not(html, body)
+##.js-share-stumble:not(html, body)
+##.js-share-twitter:not(html, body)
 ##.jw-sharing-icon:not(html, body)
 ##.like_facebook:not(html, body)
 ##.linkedinShare:not(html, body)
@@ -92,6 +96,7 @@
 ##.news-share-link:not(html, body)
 ##.news_share:not(html, body)
 ##.pinterest-share:not(html, body)
+##.post-social-goog:not(html, body)
 ##.post_social:not(html, body)
 ##.product-sharing:not(html, body)
 ##.recentsocial:not(html, body)
@@ -146,12 +151,12 @@
 ##.shareToggle:not(html, body)
 ##.sharetools:not(html, body)
 ##.shariff-button:not(html, body)
-##.sharing:not(html, body)
 ##.sharing-btn:not(html, body)
 ##.sharing-container:not(html, body)
 ##.sharing-item:not(html, body)
 ##.sharing-links:not(html, body)
 ##.sharing-tools:not(html, body)
+##.sharing:not(html, body)
 ##.shr-badge__button:not(html, body)
 ##.shr-opn:not(html, body)
 ##.shr.btn:not(html, body)
@@ -164,43 +169,48 @@
 ##.social-icon:not(html, body)
 ##.social-likes:not(html, body)
 ##.social-share-sidebar-component:not(html, body)
-##.social-sharing:not(html, body)
 ##.social-sharing-buttons:not(html, body)
+##.social-sharing:not(html, body)
 ##.social-widget:not(html, body)
 ##.social-wrap:not(html, body)
 ##.social.shares:not(html, body)
 ##.social_buttons:not(html, body)
 ##.social_media:not(html, body)
+##.social_widget__reactions_icons
 ##.SocialArticleIcons:not(html, body)
 ##.socialbuttons:not(html, body)
-##.socialmedia:not(html, body)
 ##.socialmedia-btns:not(html, body)
+##.socialmedia:not(html, body)
 ##.spotheader__sharing:not(html, body)
 ##.ssba:not(html, body)
 ##.ssk-group:not(html, body)
+##.swp-hover-pin-button:not(html, body)
 ##.swp_social_panel:not(html, body)
 ##.twit_share_button:not(html, body)
 ##.twitter-share:not(html, body)
 ##.twitter[href*="/share?"]:not(html, body)
 ##.twitter_share:not(html, body)
+##.wpusb:not(html, body)
 ##[app=addtoany]
 ##[class*=facebookShare i]:not(html, body)
 ##[class*=fb-share]:not(html, body)
 ##[class*=share-facebook]:not(html, body)
+##[class*=share-toolbar]:not(html, body)
 ##[class*=social-share]:not(article, html, body, [preload])
+##[class*=social_share]:not(article, html, body)
 ##[class*=socialshare i]:not(html, body)
 ##[data-flip-widget=shareflip]
 ##[socialshare]
+##a[appshareclick]
 ##a[class$=-sharing-button__link]
 ##a[class$=sharebtn]
-##[class*=social_share]:not(article, html, body)
 ##a[class*=-sharing-popup]
 ##a[class*=-socials__item]
+##a[class*=addthis_button]
 ##a[class*=BtnShare]
 ##a[class*=google_plus_share]
 ##a[class*=share__button]
 ##a[class=facebook i][title="Share this"]
-##a[class*=addthis_button]
 ##a[class^=pagetools][class*=icon--twitter]
 ##a[class^=pinterest-save]
 ##a[class^=share_btn]
@@ -222,6 +232,7 @@
 ##a[href*="/social_plugins/share"]
 ##a[href*="://plus.google.com/share?url="]
 ##a[href*="addtoany.com/add_to/"]
+##a[href*="api.addthis.com"]:not([href*="/email/"])
 ##a[href*="plusone.google.com"]
 ##a[href*="telegram.me/share/url?"]
 ##a[href*=share-tools]
@@ -298,7 +309,6 @@
 ##div[class^=fbshare i]
 ##div[class^=icon-share-]
 ##div[class^=share-options]
-##[class*=share-toolbar]:not(html, body)
 ##div[class^=shareLinks]
 ##div[class^=social-like]
 ##div[class^=social-media-container]
@@ -337,6 +347,9 @@
 */images/social-share/
 */share-newsletter/
 /addthis_widget.js^
+/btn_share_fb.
+/btn_share_ln.
+/btn_share_tw.
 /mixx_share.gif$image
 /pinitbtn.$image
 /share-icons_$image
@@ -345,6 +358,7 @@
 /sharing/reddit.$image
 /sharing/stumbleupon.$image
 /sharing/twitter.$image
+condoblues.com###milotree_box_wrap
 |whatsapp://send$domain=~whatsapp.com
 ||addthis.com/static/btn/sm-share*.gif^
 ||apis.google.com/*/+1/*button$subdocument
@@ -375,8 +389,8 @@
 ~facebook.com,~facebookcorewwwi.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.btn[href*="facebook.com/sharer/"]
 ~facebook.com,~facebookcorewwwi.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[data-popup-url*="facebook.com/dialog/share?"]
 ~facebook.com,~facebookcorewwwi.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/feed"]
-~facebook.com,~facebookcorewwwi.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/share?"]
 ~facebook.com,~facebookcorewwwi.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/send?"]
+~facebook.com,~facebookcorewwwi.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/share?"]
 ~facebook.com,~facebookcorewwwi.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/share.php?u=http"]
 ~facebook.com,~facebookcorewwwi.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/sharer.php"]
 ~facebook.com,~facebookcorewwwi.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/sharer/sharer.php"]
@@ -389,8 +403,8 @@
 ~linkedin.com##a[href*="linkedin.com/cws/share?"]
 ~linkedin.com##a[href*="linkedin.com/shareArticle?"]
 ~linkedin.com##a[href*="linkedin.com/sharing/share-offsite/"]
-~mewe.com,~www.nrk.no##[class*=share-button i]:not(body, html)
 ~mewe.com##div[class*=share-link]
+~mewe.com,~www.nrk.no##[class*=share-button i]:not(body, html)
 ~mixi.jp##a[href*="mixi.jp/simplepost/voice?status="]
 ~ne.jp##a[href*="b.hatena.ne.jp/add?url="]
 ~ne.jp##iframe[class^=hatena-bookmark]
@@ -424,25 +438,11 @@
 ~twitter.com,~feedly.com##.follow
 ~viber.com##a[href^="viber://forward?text"]
 ~vk.com##a[href*="/vk.com/share.php"]
+~vk.com##iframe[src^="https://vk.com/widget_like.php?"]
 ~whatsapp.com##[href^="whatsapp://send"]
 ~whatsapp.com##a[href*="whatsapp.com/send?"]
-~xing.com###xing-share
-##a[href*="api.addthis.com"]:not([href*="/email/"])
-##.post-social-goog:not(html, body)
-##.wpusb:not(html, body)
 ~whatsapp.com,~wa.me##a[href*="://wa.me/?text="]
-##.social_widget__reactions_icons
-##a[appshareclick]
-/btn_share_fb.
-/btn_share_tw.
-/btn_share_ln.
-##.js-share-twitter:not(html, body)
-##.js-share-stumble:not(html, body)
-##.js-share-pinterest:not(html, body)
-condoblues.com###milotree_box_wrap
-##.swp-hover-pin-button:not(html, body)
-##.facebook-page-plugin:not(html, body)
-~vk.com##iframe[src^="https://vk.com/widget_like.php?"]
+~xing.com###xing-share
 
 ! NOT allowed to be generic
 pastebin.com##.h_800.tweet
