@@ -1,4 +1,4 @@
-***IMPORTANT:*** Due to baffling and incomprehensible network problems on my Raspberry Pi, the old main server has been stopped indefinitely. The secondary addresses remain online and has become the new main, with an uptime estimate of 23h35min per day. A new secondary server is a very high priority and is planned for later in January, hopefully by the 19th.
+***IMPORTANT:*** Due to baffling and incomprehensible network problems on my Raspberry Pi, the old main server has been stopped indefinitely. The secondary addresses remain online and has become the new main, with an uptime estimate of 23h35min per day. A new secondary server is a very high priority and is planned for later in January, hopefully by the 25th.
 
 *Further update (15/01/2022):* The Windows server uptime is now high enough that I can make it use the old main connection addresses. No more `:2601`, back to `:2501`.
 
