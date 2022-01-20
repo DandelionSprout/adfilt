@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 19January2022v1
+! Version: 20January2022v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -127,6 +127,8 @@ foredragstjenesten.dk#?#p:-abp-contains(/casino/i)
 fotbolti.net##div[id^=banner]
 frisms.nu##.numbered-phones
 frisms.nu,mobilsiden.dk##.side-block-products
+fjellforum.no#?#.ipsWidget:-abp-has([src*="amazonaws.com"])
+fjellforum.no#?#.ipsWidget:-abp-has([style*="width:300px;height:90px"])
 gaffa.no##.ad-continues-txt
 gaffa.no##.single-post > .wrapper-2
 gamer.no##.mkdsk-placeholder
@@ -1894,15 +1896,15 @@ spleis.no##+js(set, __INITIAL_STATE__.features.should-show-snow, false)
 vglive.no##.tipster-liveodds-embed
 ba.no##.sportspill
 ! https://www.nettavisen.no/
-~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/vikinglotto"]
-~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/lotto"]
-~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/eurojackpot"]
-~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/extra"]
-~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/flax"]
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="norsk-tipping.no/lotteri/vikinglotto"]
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="norsk-tipping.no/lotteri/lotto"]
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="norsk-tipping.no/lotteri/eurojackpot"]
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="norsk-tipping.no/lotteri/extra"]
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="norsk-tipping.no/flax"]
 ! https://www.ba.no/s/5-8-1221171
-~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/viking-lotto"]
-~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/sales/validateCouponAndStoreToSession.json"]
-~norsk-tipping.no,~tipster.no##a[href*="nettavisen.no/sportspill/tipping/blir-du-mangemillionr-pa-onsdag"]
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="norsk-tipping.no/lotteri/viking-lotto"]
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="norsk-tipping.no/sales/validateCouponAndStoreToSession.json"]
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="nettavisen.no/sportspill/tipping/blir-du-mangemillionr-pa-onsdag"]
 nettavisen.no##a[href*=lotto-million]
 nettavisen.no#?#.front optimus-element:-abp-contains(Eurojackpot)
 dagsavisen.no##a[href*="norsk-tipping.no/artikler/"]
@@ -1913,6 +1915,7 @@ nettavisen.no#?#article[data-lp-section=sportspill]:-abp-has(.slotHeader):-abp-c
 /pustehullet/betting-header.png^$image
 startsiden.no###consumer_service_tipping
 ||norsktippingpartner.no^$3p,domain=~norsktipping.no|~tipster.no
+@@||oddstips.norsktippingpartner.no^
 startsiden.no##div[class^=nyttig__tippingHeader__]
 ! nidaros.no (02/12/2021)
 ##.sportspill-container[href*=lotto]
