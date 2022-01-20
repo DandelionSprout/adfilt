@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19January2022v1-Beta
+! Version: 20January2022v1-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1961,9 +1961,6 @@ $removeparam=hpt,domain=cnn.com
 ! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
 ||cdon.$removeparam=g
 
-! https://www.youtube.com/watch?v=7yk3WDZRcTM&feature=youtu.be (28/11/2020)
-||youtube.com^$removeparam=feature
-
 ! https://www.pbtech.co.nz/product/MPHSAM00510/Samsung-Galaxy-A51-2020-Dual-SIM-Smartphone-6GB128?qr=pspy (28/11/2020)
 ||pbtech.$removeparam=qr
 
@@ -2155,7 +2152,7 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ||newegg.com^$removeparam=nm_mc
 ||slickdeals.net^$removeparam=bsencid
 ||target.com^$removeparam=clkid
-||hp.com^$removeparam=adcampaigngroup
+$removeparam=adcampaigngroup
 ||dell.com^$removeparam=dgc
 ||dell.com^$removeparam=VEN1
 ||dell.com^$removeparam=nclid
@@ -2185,8 +2182,8 @@ $removeparam=ref_id,domain=expedia.com|intuit.com|tunnelbear.com
 ||sitepoint.com^$removeparam=fromBlog
 ||msn.com^$removeparam=ignorejs
 ||forbes.com^$removeparam=sh
-||yahoo.com^$removeparam=soc_src
-||yahoo.com^$removeparam=soc_trk
+$removeparam=soc_src
+$removeparam=soc_trk
 ||euronews.com^$removeparam=_ope
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1185036
@@ -2194,7 +2191,7 @@ $removeparam=ref_id,domain=expedia.com|intuit.com|tunnelbear.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1203873
 ||blue-tomato.com^$removeparam=varid
-||blue-tomato.com^$removeparam=ia-pkpmtrack
+$removeparam=ia-pkpmtrack
 ||blue-tomato.com^$removeparam=zanox
 ||blue-tomato.com^$removeparam=/_[$]ja/
 ||spartoo.$removeparam=sx
@@ -2336,7 +2333,7 @@ $removeparam=site_id,domain=taskrabbit.com|kochava.com
 ||shopbop.com^$removeparam=extid
 
 ! https://www.sears.com/?trco_id=5411901
-||sears.com^$removeparam=trco_id
+$removeparam=trco_id
 
 ! https://www.saksfifthavenue.com/?site_refer=AFF001&LSoid=778432&LSlinkid=10&LScreativeid=1
 $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
@@ -2361,8 +2358,8 @@ $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ||imobiliare.ro^$removeparam=imoidviz
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1307231
-||fiverr.com^$removeparam=context_referrer
-||fiverr.com^$removeparam=ref_ctx_id
+$removeparam=context_referrer
+$removeparam=ref_ctx_id
 ||fiverr.com^$removeparam=pckg_id
 ||fiverr.com^$removeparam=is_pro
 ||fiverr.com^$removeparam=context_alg
@@ -2394,7 +2391,7 @@ $removeparam=nosto,domain=masku.com|staypro.fi|happyangler.fi
 ||infoq.com^$removeparam=topicPageSponsorship
 
 ! https://www.eneba.com/es/marketplace?af_id=nate
-||eneba.com^$removeparam=af_id
+$removeparam=af_id
 
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/58
 ! (Exception: discord.*; see #445)
@@ -2507,7 +2504,7 @@ $removeparam=web,domain=microcenter.com|tomtop.com
 ||unieuro.it^$removeparam=dedup
 
 ! https://www.gearbest.com/?affi_id=103504
-$removeparam=affi_id,domain=gearbest.com
+$removeparam=affi_id
 
 ! https://www.usa.philips.com/c-m-so/headphones?linkname=hero-1473-logo&origin=3_us_us_1343__SFMC_non_DENO_1342_g2&uuid=5c6a865d670ab781af66fd7c827ae733b1a00239bc26d81132e4337d641542d119d
 ||philips.$removeparam=linkname
@@ -2535,7 +2532,7 @@ $removeparam=wfr,domain=weidian.com|baidu.com
 ! https://www.etsy.com/listing/655283263/docking-stationgift-for-men-for?organic_search_click=1&pop=1
 ! https://www.etsy.com/listing/984664013/personalized-leather-walletmens?plkey=e61127eaa78c1a3d517e415d3e2014db7e43e6f5%3A984664013&pro=1&frs=1
 ! https://www.etsy.com/listing/667282692/valentines-day-gift-for-himpersonalized?click_key=bf6cbe7aaa7a516aca264c505f4a8f1787758226%3A667282692&click_sum=a31c16d4
-$removeparam=organic_search_click,domain=etsy.com
+$removeparam=organic_search_click
 $removeparam=pop,domain=etsy.com
 $removeparam=plkey,domain=etsy.com
 $removeparam=pro,domain=etsy.com
@@ -2637,7 +2634,7 @@ $removeparam=referer,domain=bodykind.com
 ! https://www.target.com/c/home-decor-deals/-/N-vxtra?lnm=1171879&marketing_id=EMAIL-104207-header&lnk=C_HomeDecorDeals_EMAIL-104207
 ||target.com^$removeparam=lnm
 ||target.com^$removeparam=lnk
-||target.com^$removeparam=marketing_id
+$removeparam=marketing_id
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1666311
 ! https://github.com/DandelionSprout/adfilt/pull/390
@@ -2678,9 +2675,7 @@ $removeparam=visit_id,domain=bilibili.com|google.*
 ||coupang.com^$removeparam=wPcid
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/99645
-||trendyol.com^$removeparam=tyutm_source
-||trendyol.com^$removeparam=tyutm_medium
-||trendyol.com^$removeparam=tyutm_campaign
+||trendyol.com^$removeparam=/^tyutm_/
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94662#issuecomment-946949031
 ||reddit.com^$removeparam=correlation_id
@@ -2748,7 +2743,7 @@ $removeparam=term,domain=outnorth.fi|bybit.com
 $removeparam=/^quot;/,domain=outnorth.fi
 
 ! https://www.coolshop.co.uk/product/don-one-lifestyle-tws120-black-in-ear-true-wireless-stereo-earbuds-with-charging-case/235AS7/?retailAttributionToken=ChM1OTEyOTM2MDQyNjAyNDQwOTgwEA0aI2Nvb2wtLS1yZWNfcmVjb21tZW5kZV8xNjI1MTM0MTA5NDY5Ihxjb29sdWstLS1yZWNvbW1lbmRlZC1mb3IteW91KAA
-$removeparam=retailAttributionToken,domain=coolshop.*
+$removeparam=retailAttributionToken
 
 ! https://www.bostonglobe.com/business/technology/?p1=BGHeader_MainNav
 $removeparam=p1,domain=bostonglobe.com
@@ -2768,7 +2763,7 @@ $removeparam=refdomain,domain=bestbuy.com
 $removeparam=CP,domain=nike.com
 
 ! https://www.uncommongoods.com/product/baseball-park-map-mug?trafficSource=Impact
-$removeparam=trafficSource,domain=uncommongoods.com
+$removeparam=trafficSource
 
 ! https://www.jwanderson.com/us/?LSNSID=2116208
 $removeparam=LSNSID,domain=jwanderson.com
@@ -2776,7 +2771,7 @@ $removeparam=LSNSID,domain=jwanderson.com
 ! https://www.nordstrom.com/s/hydro-flask-24-ounce-standard-mouth-bottle/4585433?origin=coordinating-4585433-0-3-PDP_2_OOS-recbot-also_viewed_graph&recs_placement=PDP_2_OOS&recs_strategy=also_viewed_graph&recs_source=recbot&recs_page_type=product&recs_seed=5955535&color=WHITE
 $removeparam=recs_placement,domain=nordstrom.com
 $removeparam=recs_strategy,domain=nordstrom.com
-$removeparam=recs_source,domain=nordstrom.com
+$removeparam=recs_source
 $removeparam=recs_page_type,domain=nordstrom.com
 $removeparam=recs_seed,domain=nordstrom.com
 
@@ -2912,6 +2907,7 @@ $removeparam=_t,domain=shein.com
 $removeparam=referrer_code,domain=hodlhodl.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1899731
+! https://www.youtube.com/watch?v=7yk3WDZRcTM&feature=youtu.be
 $removeparam=sr_id,domain=reddit.app.link
 $removeparam=sr_name,domain=reddit.app.link
 $removeparam=domain,domain=reddit.app.link
@@ -2929,7 +2925,7 @@ $removeparam=loid_created,domain=reddit.app.link
 $removeparam=reddaid,domain=reddit.app.link
 $removeparam=campaign,domain=reddit.app.link
 $removeparam=channel,domain=reddit.app.link
-$removeparam=feature,domain=reddit.app.link
+$removeparam=feature,domain=reddit.app.link|youtube.com
 $removeparam=keyword,domain=reddit.app.link
 $removeparam=mweb_subreddit_ids,domain=reddit.app.link
 $removeparam=mweb_loid,domain=reddit.app.link
@@ -3006,6 +3002,10 @@ $removeparam=Bibblio_source,domain=macrumors.com
 
 ! https://www.goodeeworld.com/products/pluviophile-rain-candle?pr_prod_strat=copurchase&pr_rec_pid=4780770132108&pr_ref_pid=5263231090828&pr_seq=uniform
 $removeparam=/^pr_/,domain=goodeeworld.com|lacemade.com|lifamasks.shop|willi.fi
+$removeparam=pr_prod_strat
+$removeparam=pr_rec_pid
+$removeparam=pr_ref_pid
+$removeparam=pr_seq
 
 ! https://lifamasks.shop/products/lifa-air-kuvioitu-kirurginen-suu-nenasuojus-type-iir?rpcid=5ccad8f5-b75b-4132-82b7-c6c1ac333dddI363836303a3435373a3336363135
 $removeparam=rpcid,domain=lifamasks.shop
