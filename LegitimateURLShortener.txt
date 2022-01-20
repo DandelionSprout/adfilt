@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 20January2022v1-Beta
+! Version: 21January2022v1-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -9,7 +9,7 @@
 ! Important notes: 
 ! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view parameters on the strict-block page or tools to bypass it.
 ! - this list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
-! - this list can not remove paramters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
+! - this list can not remove parameters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
 
 ! ——— General remove rules ——— !
 ! From AdGuard CoreLibs (11/11/2020)
@@ -224,10 +224,6 @@ $removeparam=irpid
 $removeparam=iradtype
 $removeparam=irmptype
 $removeparam=mp_value1
-
-! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
-$removeparam=algo
-$removeparam=imp_id
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-526736 (25/03/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-873926
@@ -1605,6 +1601,21 @@ $removeparam=share_link_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1979025
 $removeparam=/^web_id\d+/,domain=tiktok.com
 
+!!! ———Spotify———
+! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
+$removeparam=algo
+$removeparam=imp_id
+! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
+$removeparam=si,domain=open.spotify.com|zappos.com
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1740689
+||open.spotify.com^$removeparam=/advertising_partner_name=/i
+||open.spotify.com^$removeparam=%243p
+$removeparam=gtm
+! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
+$removeparam=referral,domain=tv2.no|spotify.com|yubo.live
+! https://open.spotify.com/album/7D2NdGvBHIavgLhmcwhluK?nd=1
+||spotify.com^$removeparam=nd
+
 !! ——— Rules for heavily covered international sites ———
 !!! ——— PR-China ———
 !!! Special thanks to https://github.com/shenzhiming88 for helping with this section.
@@ -2001,9 +2012,6 @@ $~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com
 ||pinterest.*mt=signup$removeparam=d
 ||pinterest.*mt=signup$removeparam=mt
 
-! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
-$removeparam=si,domain=open.spotify.com|zappos.com
-
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-526736 (25/03/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-873926
 ||tcgplayer.com^$removeparam=productLineName
@@ -2030,9 +2038,6 @@ $removeparam=section,domain=nytimes.com|nytimes3xbfgragh.onion
 
 ! https://www.imdb.com/title/tt7826036/?ref_=ttep_ep5
 $~xmlhttprequest,removeparam=ref_,domain=imdb.com|amazon.*|primevideo.com|shopbop.com|awesomeopensource.com
-
-! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
-$removeparam=referral,domain=tv2.no|spotify.com|yubo.live
 
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 $removeparam=tag,domain=amazon.*|argos.co.uk|tv2.no
@@ -2750,11 +2755,6 @@ $removeparam=p1,domain=bostonglobe.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1740327
 ||verkkokauppa.com^$removeparam=list
-
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1740689
-||open.spotify.com^$removeparam=/advertising_partner_name=/i
-||open.spotify.com^$removeparam=%243p
-$removeparam=gtm
 
 ! https://www.bestbuy.com/site/acer-nitro-xf243y-pbmiiprx-23-8-full-hd-monitor-hdmi/6425559.p?refdomain=rtings.com&skuId=6425559
 $removeparam=refdomain,domain=bestbuy.com
