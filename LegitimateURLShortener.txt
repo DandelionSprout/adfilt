@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21January2022v2-Beta
+! Version: 21January2022v3-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1278,6 +1278,12 @@ $removeparam=/^source=admitad$/
 
 ! https://horace.co/en/?target=admitad&tagtag_uid=b3c1717ba8405d217dcc71ac3957989a
 $removeparam=/^target=admitad$/
+
+! https://www.inredningsvaruhuset.se/ios/63223-apple-iphone-13-128gb-midnight-0194252707203.html?referer=prisjakt
+$removeparam=/^referer=prisjakt/i
+
+! https://digicom.nu/sv/produkter/xiaomi-box-s-4k-hdr.html?ref_lp=prisjakt 
+$removeparam=ref_lp
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
@@ -2781,9 +2787,6 @@ $removeparam=ct,domain=bumble.com
 ! https://www.savagex.com/shop/savage-x-smoking-jacket-sq2149163-6212-12096199?psrc=browse_men_sleep
 $removeparam=psrc,domain=savagex.com
 
-! https://www.voosestore.com/fi/drones/dji/dji-mavic/dji-mavic-mini/dji-mini-2-fly-more-combo?ref_lp=prisjakt
-$removeparam=ref_lp,domain=voosestore.com
-
 ! https://shopee.es/?c=install_homepage01_211109&deep_and_deferred=1&smtt=9&pid=affiliates_planning_chollometro
 ||shopee.$removeparam=deep_and_deferred
 
@@ -3013,6 +3016,15 @@ $removeparam=rpcid,domain=lifamasks.shop
 ! https://www.bleepingcomputer.com/news/security/mcafee-agent-bug-lets-hackers-run-code-with-windows-system-privileges/?traffic_source=Connatix
 ||bleepingcomputer.com^$removeparam=traffic_source
 $removeparam=/traffic_source=Connatix/i
+
+! https://www.alina.se/Produkt.aspx?site=prisjakt&T2=0045496453435
+$removeparam=site,domain=alina.se
+
+! https://www.motardinn.com/motorcykel-utrustning/ctek-mxs-5.0/77878/p?belboon=2201192236054280583
+$removeparam=belboon,domain=motardinn.com
+
+! https://www.davids.se/produkt/mlpg3qn-a?variant=15818&prisjakt=1
+$removeparam=prisjakt,domain=davids.se|poradio.se|teleradio.nu
 
 !#if !env_mobile
 ! ——— Mobile ——— !
