@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21January2022v1-Beta
+! Version: 21January2022v2-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3009,6 +3009,10 @@ $removeparam=pr_seq
 
 ! https://lifamasks.shop/products/lifa-air-kuvioitu-kirurginen-suu-nenasuojus-type-iir?rpcid=5ccad8f5-b75b-4132-82b7-c6c1ac333dddI363836303a3435373a3336363135
 $removeparam=rpcid,domain=lifamasks.shop
+
+! https://www.bleepingcomputer.com/news/security/mcafee-agent-bug-lets-hackers-run-code-with-windows-system-privileges/?traffic_source=Connatix
+||bleepingcomputer.com^$removeparam=traffic_source
+$removeparam=/traffic_source=Connatix/i
 
 !#if !env_mobile
 ! ——— Mobile ——— !
