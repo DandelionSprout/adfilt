@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 200120221
+! Version: 240120221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1741,8 +1741,6 @@ altibox.no#@##coiOverlay[role="banner"][style*="flex"]
 dagbladet.no,elbil24.no#@#.subscription-box
 ! https://github.com/ryanbr/fanboy-adblock/issues/1243
 ||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
-! https://github.com/easylist/easylist/issues/10513
-@@||intersport.*/cookiewall?
 ! ★★★ Caused by «EasyList» ★★★
 @@_prebid_$domain=seher.no
 @@/images/ads-db/right-tower/vipps-sponsor-$domain=canariajournalen.no
@@ -1765,8 +1763,6 @@ babyklar.dk#@#.ads300_250-widget
 @@_980x100.$domain=ruijan-kaiku.no
 ! Makes most links show up correctly (Fixed in AdGuard Base)
 ni.dk#@#a[href*=".adform.net/"]
-! https://github.com/easylist/easylist/issues/9985
-@@||wp.com/www.datahjelperne.no/wp-content/uploads/*annonse$image,domain=datahjelperne.no
 ! ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 ! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 
@@ -4422,7 +4418,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 160120221
+! Version: 230120222
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4531,7 +4527,6 @@ _mainosnappi.
 ##div[class="ad partners box"]
 ##div[class=AgAdCarousel_Container]
 ##div[class=AgAdCarousel_LightBox]
-##div[class=ad-banner]
 ##div[class=ad-wrapper]
 ##div[class=block-ad]
 ##div[id=commercial-carousel]
@@ -4875,7 +4870,7 @@ lauttakyla.fi##.mainbanner
 lauttakyla.fi#?#.fullwidth-banner:-abp-has(> a[href="https://www.lauttakyla.fi/tilaa/"])
 lbaanijakuva.fi##.adremark
 leffatykki.com##div[class="ad230x90"]
-leijonat.com,suomikiekko.com,suomiurheilu.com##[href$="/pitkavetovihjeet/"]
+leijonat.com,suomiurheilu.com##[href$="/pitkavetovihjeet/"]
 lily.fi,meillakotona.fi,terve.fi##[class*=ad__component]
 ls24.fi##.asuntorauma-promo
 ls24.fi##.palvelupankki-banner
@@ -5098,6 +5093,8 @@ suomi24.fi##div[class^=HomePage__HeaderAd]
 suomi24.fi#?#div[class^=ThreadGridItemWrapper__CardCol]:-abp-has([class^=AdLivewrapped__AdWrapper])
 suomif1.com,suomifutis.com,suomikiekko.com,valioliiga.com##[data-bottom-floater]
 suomifutis.com##[href$="/nettikasinot/"]
+suomifutis.com#?#.menu-item:-abp-has([href*="/veikkausvihjeet"])
+suomikiekko.com#?#.menu-item:-abp-has([href$="/pitkavetovihjeet/"])
 suomimobiili.fi##.artikkelimainos
 suomimobiili.fi##.sbmainos
 suomimobiili.fi#?#.article-content > p:-abp-contains(MAINOS)
@@ -5123,15 +5120,15 @@ teknavi.fi##.ad
 teknavi.fi##[class|=adform]
 tekniikanmaailma.fi##.in-text-ad-slot-wrapper
 tekniikanmaailma.fi##div.Article_nettix-embed-container
-tekniikkatalous.fi##div#skyscraper-height-div > div > aside > div > div > a[href^="https://studio.tekniikkatalous.fi/"]
-tekniikkatalous.fi##section > div > a[href^="https://www.tekniikkatalous.fi/kumppanisisallot/"]
-tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:-abp-contains(Kaupallinen yhteistyö)
-tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:-abp-contains(Kaupallinen yhteistyö)
-tekniikkatalous.fi#?#.article-body > div[class]:-abp-has(> span:-abp-contains(KAUPALLINEN YHTEISTYÖ) + a[href^="https://koulutus.almatalent.fi/"])
-tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
 tekniikkatalous.fi##a[href^="/tyopaikat/kumppanisisalto-tyopaikat/"]
 tekniikkatalous.fi##aside > div[class] > a[href^="https://www.tekniikkatalous.fi/kumppanisisallot"]
+tekniikkatalous.fi##div#skyscraper-height-div > div > aside > div > div > a[href^="https://studio.tekniikkatalous.fi/"]
 tekniikkatalous.fi##div[class][width="980"]
+tekniikkatalous.fi##section > div > a[href^="https://www.tekniikkatalous.fi/kumppanisisallot/"]
+tekniikkatalous.fi#?#.article-body > div[class]:-abp-has(> span:-abp-contains(KAUPALLINEN YHTEISTYÖ) + a[href^="https://koulutus.almatalent.fi/"])
+tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:-abp-contains(Kaupallinen yhteistyö)
+tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:-abp-contains(Kaupallinen yhteistyö)
+tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
 telsu.fi###pb_bottom2
 telsu.fi###pb_bottom3
 telsu.fi##.cmore.ch
@@ -5181,7 +5178,7 @@ uusisuomi.fi#?#div#skyscraper-height-div > div > main > div > a:-abp-contains(Ka
 uusiteknologia.fi##.widget_block
 uutissuora.fi##div[class=td-all-devices]
 vagarena.fi###bodyarea td[width="100%"][valign="top"] + td[valign="top"]
-valioliiga.com##[href$="/vedonlyonti/"]
+valioliiga.com#?#.menu-item:-abp-has([href$="/vedonlyonti/"])
 vantaansanomat.fi##div.display-ad
 vapaasana.swedishforum.net###p0
 vapaasana.swedishforum.net##div[id=main-content] > div:first-of-type[style="overflow:visible"]
@@ -5212,6 +5209,7 @@ voice.fi##section[class^=sbsads] + section[class^="sbs-articleitems full-size-li
 voice.fi#?#.sbs-articleitems.list-right-column:-abp-has(span.sponsored)
 voice.fi#?#div.item:-abp-has(.sponsored)
 voima.fi##.voima-banneri-etusivulla
+voima.fi##.voima-jutun-sisalla-mobiili
 voima.fi#?#.voima-jutun-sisalla:-abp-has(.voima-adlabel)
 vuodatus.net###fb-root + div > div[style="background-color: #fff; margin: 0 auto; padding: 20px; display: table; min-width: 300px; max-width: 100%; font-family: 'Open Sans', sans-serif; font-size: 14px;"]
 wizhdsports.fi##.widget_media_image
@@ -5515,6 +5513,3 @@ mustijamirri.fi#@#.cookie_check
 
 ! https://github.com/easylist/easylist/pull/10167
 valotehdas.fi#@##cookie-law-info-bar
-
-! https://github.com/easylist/easylist/pull/8100
-||madmen2.alastonsuomi.com^
