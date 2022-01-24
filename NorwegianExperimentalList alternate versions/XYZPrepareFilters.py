@@ -783,6 +783,12 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"([a-z*][=|])blaklader\.\*", 
+           r"\1blaklader.no|blaklader.dk", 
+           line
+        )
+
+        line = re.sub(
            r"\$ghide", 
            r"$generichide", 
            line
@@ -2792,6 +2798,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"([a-z*][=|])partyking\.\*", 
            r"\1partyking.no|partyking.dk", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z*][=|])blaklader\.\*", 
+           r"\1blaklader.no|blaklader.dk", 
            line
         )
 
