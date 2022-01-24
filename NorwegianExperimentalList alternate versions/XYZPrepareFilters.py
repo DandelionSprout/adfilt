@@ -357,6 +357,12 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"(^|,)blaklader.\*(#|,)", 
+           r"\1blaklader.no,blaklader.dk\2", 
+           line
+        )
+
+        line = re.sub(
            "^,", 
            "^$", 
            line
@@ -2336,6 +2342,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"(^|,)intrafish.\*(#|,)", 
            r"\1intrafish.no\2", 
+           line
+        )
+
+        line = re.sub(
+           r"(^|,)blaklader.\*(#|,)", 
+           r"\1blaklader.no,blaklader.dk\2", 
            line
         )
 
