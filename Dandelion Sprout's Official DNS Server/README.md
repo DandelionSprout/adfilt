@@ -70,7 +70,7 @@ Are you curious about **which** exact list that is blocking a site, without havi
 
 ### Who can use the server
 
-Users from PR-China will not have their queries processed by the server, due to considerable amounts of query spam from that country, some of which even came from residential networks.
+Users from PR-China were originally unsupported, due to considerable amounts of query spam from that country that preceded the server's cataloging by AdGuard; but are being allowed on a trial basis as of February 2022 in an attempt to appeal to anti-GFW audiences.
 
 Additionally, company networks from The Netherlands, Romania, Russia and Ukraine will usually be prohibited as well. Residential networks from those countries are fine.
 
