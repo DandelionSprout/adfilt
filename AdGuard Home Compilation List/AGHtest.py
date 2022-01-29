@@ -612,6 +612,18 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\^,~", 
+           r"^$~", 
+           line
+        )
+
+        line = re.sub(
+           r"\.,badfilter$", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\r\n'
 
@@ -1487,7 +1499,19 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^/.*[_?=/;~@%#+].*", 
+           r"^/.*[_?=/;~@%#+,].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\^,~", 
+           r"^$~", 
+           line
+        )
+
+        line = re.sub(
+           r"\.,badfilter$", 
            r"", 
            line
         )
