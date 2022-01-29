@@ -1,20 +1,14 @@
-***IMPORTANT:*** Due to baffling and incomprehensible network problems on my Raspberry Pi, the old main server has been stopped indefinitely. The secondary addresses remain online and has become the new main, with an uptime estimate of 23h35min per day. A new secondary server is a very high priority and is planned for later in January, hopefully by the 25th.
-
-*Further update (15/01/2022):* The Windows server uptime is now high enough that I can make it use the old main connection addresses. No more `:2601`, back to `:2501`.
-
-——————————————————————————————————————————————————————
-
 After 1½ years of trial setups and tinkering until March 2021, I now offer my DNS server to be used by the public! That being said, there are a considerable number of drawbacks with it that means that it should ***NOT*** be used in setups where uptime, privacy, or impartiality is important. By using this server, you agree to at least having *read* and being aware of all the info written below.
 
 ### DNS IP addresses
 
 The main connection addresses are:
-* DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query`
-* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
-* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582`
+* DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query` + `https://dandelionsprout2.asuscomm.com:2501/dns-query`
+* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` + `tls://dandelionsprout2.asuscomm.com:853` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
+* DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582` + `quic://dandelionsprout2.asuscomm.com:48582`
 * DNSCrypt IPv4: Not currently in use. Resumption time is unclear. (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:56404 - ec74aa65595f8694b380fa5101a59d75412dfcd609c3caaa535f3e6c4b04da79 - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
 
-Although I do also offer standard IPv4 and IPv6 addresses, they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
+Although I do also offer standard IPv4 and IPv6 addresses (both regular and `tcp://`), they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
 The encrypted addresses may also go down during Windows restarts, or if ASUS' lookup servers for Asuscomm are acting wonky.
 
@@ -84,13 +78,11 @@ Many companies known to look through the fingers with port-scanners and spammers
 
 ### Other technical aspects
 
-The server runs on a Raspberry Pi 4 8GB, with Fedora Workstation aarch64 (ARM64).
+The servers run on workstation multimedia Windows 11 PCs.
 
 The AdGuard Home update channel in use is the Beta channel (As opposed to Stable or Nightly).
 
-Average uptime is more than 23h55min per day, but is not close enough to 24h00min00sec to be suited for life-or-death scenarios.
-
-The secondary/failover addresses' uptime (which run on Windows 11 x64) is around 16h00min per day, and should **only** be used in a duo with the regular server.
+Average uptime for `dandelionsprout.` is more than 23h55min per day, but is not close enough to 24h00min00sec to be suited for life-or-death scenarios. The uptime for `dandelionsprout2.` has not been calculated yet.
 
 ### Known problems
 
@@ -101,13 +93,15 @@ The secondary/failover addresses' uptime (which run on Windows 11 x64) is around
 
 Since the server is based on AdGuard Home, the user's IP addresses and the domains they query, are stored on the server, and I reserve the right to browse through the queries if I feel bored for some reason. Additionally, the query log will occasionally help improve the lists that are used ([Example](https://github.com/DandelionSprout/adfilt/commit/cd222a03bf37ee133604008227238bc52d5932b2#diff-4f9e07c6df3e782fd76b51a2dcbe332049dcc066bad61fa0997b737dfe62e22a)), and to determine the (hopefully) least interruptive times to run updates for AdGuard Home or apt-get.
 
-No query or IP data are shared or sold to third-parties, especially so because I dislike user data buyers, and because Linux does not support OneDrive.
+No query or IP data are shared or sold to third-parties, especially so because I dislike user data buyers.
 
 Current non-LAN upstreams as of 4th of November 2021:
 
-* `quic://dns-unfiltered.adguard.com`
-* `https://dns.google/dns-query`
-* `tls://unicast.censurfridns.dk`
+```
+quic://dns-unfiltered.adguard.com
+https://dns.google/dns-query
+tls://unicast.censurfridns.dk
+```
 
 The DNS server has one server-PC and location, in Norway. This (most likely) makes the server more suited for European users than for users elsewhere.
 
@@ -131,4 +125,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 4th of November 10:05~11:28 UTC: I did not expect Fedora to need 1 hour 18 minutes to upgrade from Workstation 34 to 35.
 * 8th of November 09:30~11:50 UTC: Turns out that clones of Linux disks are *not* able to boot, in sharp contrast to clones of Windows disks. So I figured "Screw this" in regards to setting up a 2nd RaspPi at my parents' house, and hereby open up my Windows 11 AGH installation to the world too.
 * 13th of December 03:00-03:30 UTC: My ISP went down, and the ASUS router's failover triggers didn't want to work properly.
-* 9th of January 15:00 UTC - indefinite: All I did was enable Flathub and play Space Cadet Pinball, then the Raspberry Pi froze, and when I restarted it had become permanently unable to connect to public IPs and addresses. I hate Linux more than ever before.
+* 9th of January 15:00 UTC - 28th of October: All I did was enable Flathub and play Space Cadet Pinball, then the Raspberry Pi froze, and when I restarted it had become permanently unable to connect to public IPs and addresses. I hate Linux more than ever before.
