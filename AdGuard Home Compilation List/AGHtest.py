@@ -619,7 +619,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"\.,badfilter$", 
+           r".*\.,badfilter$", 
            r"", 
            line
         )
@@ -994,6 +994,12 @@ def prepare_ip(lines) -> str:
         line = re.sub(
            r"^ $", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^#[a-z0-9#]", 
+           "", 
            line
         )
 
@@ -1511,7 +1517,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"\.,badfilter$", 
+           r".*\.,badfilter$", 
            r"", 
            line
         )
