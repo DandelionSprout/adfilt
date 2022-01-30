@@ -34,7 +34,7 @@ HEAD = """\
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
 ! Last updated: {date}
-! Script last updated: 2/1/2021
+! Script last updated: 30/1/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Note: This was based off of https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues
@@ -71,6 +71,15 @@ KNOWN_BAD_FILTERS = [
     "$~xmlhttprequest,removeparam=psc",
     "||walmart.$removeparam=wl13",
 ]
+
+ALLOWLIST = """
+! This is an allowlist added by the adflit maintainers
+@@||tix.axs.com^$removeparam=utm_campaign
+@@||tix.axs.com^$removeparam=utm_content
+@@||tix.axs.com^$removeparam=utm_medium
+@@||tix.axs.com^$removeparam=utm_source
+@@||tix.axs.com^$removeparam=utm_term
+"""
 
 
 def normalize_url_pattern(url_pattern: str) -> str:
@@ -255,7 +264,7 @@ def main() -> int:
             filterlist.write("@@$removeparam,domain={0}".format(exception) + "\n")
         else:
             raise ValueError
-
+    filterlist.write(ALLOWLIST)
     return 0
 
 
