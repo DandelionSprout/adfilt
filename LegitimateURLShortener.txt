@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 01February2022v4
+! Version: 02February2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1329,7 +1329,7 @@ $removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|
 ! (Exceptions: mail.qq.com, high.fi, phpBB forums, various other sites)
 $removeparam=sid,domain=anrdoezrs.net|dpbolvw.net|gopjn.com|jdoqocy.com|kqzyfj.com|pepperjamnetwork.com|tkqlhce.com|gamereactor.*
 ! No particular example
-$removeparam=from,domain=apkpure.com|baidu.com|bandcamp.com|jetbrains.com|luisaviaroma.com|sogou.com
+$removeparam=from,domain=apkpure.com|bandcamp.com|jetbrains.com|luisaviaroma.com|sogou.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915 and https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864
 $removeparam=keyword,domain=bindright.com|ebay.*|lendgo.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1707764
@@ -1685,7 +1685,7 @@ $removeparam=aff_click_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
 ||baidu.com^$removeparam=/^rsv/
 ||baidu.com^$removeparam=euri
-||baidu.com^$removeparam=f
+||baidu.com/s?$removeparam=f
 ||baidu.com^$removeparam=for
 ||baidu.com^$removeparam=inputT
 ||baidu.com^$removeparam=issp
@@ -1712,6 +1712,7 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=params_ssrt
 ||baidu.com^$removeparam=t_kt
 ! https://m.baidu.com/?from=844b&vit=fps# (25/10/2021)
+||m.baidu.com^$removeparam=from
 ||baidu.com^$removeparam=vit
 ! https://github.com/DandelionSprout/adfilt/pull/317
 ! https://wenku.baidu.com/search?lm=0&od=0&ie=utf-8&dyTabStr=MCwxLDYsNCw1LDMsMiw3LDgsOQ%3D%3D&word=test&ie=utf-8 (29/10/2021)
@@ -1742,11 +1743,11 @@ $removeparam=aff_click_id
 ! https://haokan.baidu.com/v?pd=wisenatural&vid=15466131782701772528 (18/11/2021)
 ||haokan.baidu.com/v?$removeparam=pd
 ! https://baike.baidu.com/tashuo/browse/content?id=90920d34ee1ab7d8f0531794&lemmaId=554903&fromLemmaModule=pcBottom&lemmaTitle=%E8%96%9B%E5%AE%9A%E8%B0%94%E7%9A%84%E7%8C%AB (18/11/2021)
-||baidu.com^$removeparam=fromLemmaModule
-||baidu.com/tashuo/browse/content?$removeparam=lemmaId
-||baidu.com^$removeparam=lemmaTitle
+||baike.baidu.com^$removeparam=fromLemmaModule
+||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaId
+||baike.baidu.com^$removeparam=lemmaTitle
 ! https://baike.baidu.com/tashuo/browse/content?id=84d19be0ff2608324a4bdf94&fromModule=pcArticleMoreRecommend (18/11/2021)
-||baidu.com^$removeparam=fromModule
+||baike.baidu.com^$removeparam=fromModule
 ! https://github.com/DandelionSprout/adfilt/pull/364
 ! https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5624822534906982005&sourceFrom=homepage (20/11/2021)
 ||baidu.com^$removeparam=sourceFrom
@@ -1757,17 +1758,24 @@ $removeparam=aff_click_id
 ||baidu.com/link?$removeparam=eqid
 ||baidu.com/link?$removeparam=wd
 ! https://map.baidu.com/poi/SeasonTest%E5%AD%A3%E7%84%B6%E9%A4%90%E5%8E%85/@13540616.122963477,3641295.0502960454,12.83z?uid=3a7516a5c9d09cb6fda778d0&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&newfrom=zhuzhan_webmap&querytype=detailConInfo&da_src=shareurl (20/11/2021)
-||baidu.com^$removeparam=compat
-||baidu.com^$removeparam=da_src
-||baidu.com^$removeparam=device_ratio
-||baidu.com^$removeparam=newfrom
-||baidu.com^$removeparam=pcevaname
-||baidu.com^$removeparam=ugc_type
-||baidu.com^$removeparam=ugc_ver
+||map.baidu.com^$removeparam=compat
+||map.baidu.com^$removeparam=da_src
+||map.baidu.com^$removeparam=device_ratio
+||map.baidu.com^$removeparam=newfrom
+||map.baidu.com^$removeparam=pcevaname
+||map.baidu.com^$removeparam=ugc_type
+||map.baidu.com^$removeparam=ugc_ver
 ! https://wenku.baidu.com/view/1fab21892a160b4e767f5acfa1c7aa00b42a9de8.html?fixfr=nCtMIYeqlpHMQxJ6JQTzXA%253D%253D&rec_flag=default&sxts=1637422043101 (20/11/2021)
-||baidu.com^$removeparam=fixfr
-||baidu.com^$removeparam=rec_flag
-||baidu.com^$removeparam=sxts
+||wenku.baidu.com^$removeparam=fixfr
+||wenku.baidu.com^$removeparam=rec_flag
+||wenku.baidu.com^$removeparam=sxts
+! https://github.com/DandelionSprout/adfilt/pull/480
+! https://www.baidu.com/s?wd=Test&ie=utf-8&hl_tag=flayer (02/02/2022)
+||baidu.com^$removeparam=hl_tag
+! https://zhidao.baidu.com/question/30703157.html?qbl=relate_question_0 (02/02/2022)
+||zhidao.baidu.com^$removeparam=qbl
+! https://wenku.baidu.com/search?word=Test&cc=SearchFloatBtn (02/02/2022)
+||wenku.baidu.com/search?$removeparam=cc
 
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
@@ -3070,18 +3078,8 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ! https://github.com/DandelionSprout/adfilt/commit/6dd010c70438a84cae7cf6b683d0d99dc56794ad
 @@mailinglist$removeparam=/^utm_/i
 
-! Block users from uploading images - https://github.com/DandelionSprout/adfilt/pull/325
-@@||graph.baidu.com/upload?$removeparam=from
-
 ! Prevent rules from applying the internet Archive, and thus breaking it
 @@||web.archive.org/*_/http$removeparam
-
-! Block users from saving files in `BaiduNetdisk` - https://github.com/DandelionSprout/adfilt/pull/343
-@@||pan.baidu.com/share/transfer?$removeparam=from
-
-! https://github.com/DandelionSprout/adfilt/pull/364
-! Prevent the user from selecting the product type normally - test address: https://b2b.baidu.com/s?q=Test
-@@||b2b.baidu.com/s/a?$removeparam=f
 
 ! Cause image upload failure on the forum `bbs.nga.cn` - https://github.com/AdguardTeam/AdguardFilters/issues/96952
 @@||img*.nga$removeparam=cmpid
