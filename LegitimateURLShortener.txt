@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 03February2022v2
+! Version: 03February2022v3
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -594,7 +594,7 @@ $removeparam=lcid
 $removeparam=usource
 
 ! http://www.bitdefender.com/?MPid=75107
-$removeparam=/^mpid=/i
+$removeparam=/^mpid=/i,domain=~miguvideo.*
 
 ! https://www.vitacost.com/?csrc=SITEREF-CJ&cjbatcheventid=8807380&cjpid=8807380
 $removeparam=cjbatcheventid
@@ -700,7 +700,7 @@ $removeparam=fcref
 $removeparam=mclk
 $removeparam=mrnd
 $removeparam=maid
-$removeparam=mcid
+$~xmlhttprequest,removeparam=mcid,domain=~miguvideo.*
 $~xmlhttprequest,removeparam=msid
 $removeparam=mpty
 
