@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 03February2022v5
+! Version: 03February2022v6
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3114,6 +3114,9 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 
 ! Supposedly breaks some YouTube videos - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2026338
 @@||youtube.com/videoplayback$removeparam=source
+
+! Temp fix for Facebook - https://github.com/DandelionSprout/adfilt/issues/473
+@@||facebook.com^$removeparam=__s
 
 !#if adguard
 !#if adguard_ext_firefox
