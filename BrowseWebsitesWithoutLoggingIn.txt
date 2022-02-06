@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 🚪 Browse websites without logging in
-! Version: 22January2022v1
+! Version: 06February2022v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -13,11 +13,11 @@
 ! 📠 = Rejected from "uBlock Filters - Annoyances" and similar lists due to their content or dependencies.
 
 ! ——— Multi-domain ———
-##.onp-sl-inner-wrap
-##.onp-sl-outer-wrap
-##.onp-sl-social-buttons
-##.onp-sl-overlap-background
-##.onp-sl-overlap-box
+##.onp-sl-inner-wrap:not(html, body)
+##.onp-sl-outer-wrap:not(html, body)
+##.onp-sl-social-buttons:not(html, body)
+##.onp-sl-overlap-background:not(html, body)
+##.onp-sl-overlap-box:not(html, body)
 ! Pinterest (🔨?)
 ||smartlock.google.com/iframe/request?client=http$subdocument
 ! Autosport 📠
@@ -31,14 +31,14 @@ linustechtips.com,forum.malwarebytes.com,community.ccleaner.com#?#.cTopicPostAre
 
 ! Aims to remove blurs of article previews
 ##.Article-header-body:before
-##.paywall-fade
+##.paywall-fade:not(html, body)
 ##.article-container.locked:after
 ##.card.stopsign__article.stopsign:before
 ##.faded-article-content:after
-##.paywall-gradient
+##.paywall-gradient:not(html, body)
 ##.fade-out-article.art_content::before
 ! vaterland.li (11/11/2020)
-##.epayPaywall__fadeOut
+##.epayPaywall__fadeOut:not(html, body)
 
 ! Facebook 🌇
 ! https://touch.facebook.com/Sonic/
