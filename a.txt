@@ -1,10 +1,11 @@
 [Adblock Plus 3.4]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 09February2022v1-Personal
+! Version: 09February2022v2-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 ! /\/\ Supercompilations: /\/\
 !#include AnnoyancesList
+!#include AnnoyancesList-2ndDivision.txt
 !#include AntiRacismList.txt
 !#include AntiSubmissiveEroticaList.txt
 !#include VeryThoroughWebsiteCleaner.txt
@@ -25,7 +26,6 @@
 !#include AntiPorkMeatOnRestaurantMenusList.txt
 !#include Sensitive%20lists/AntiWeebBoobGamesList.txt
 !#include Anti-'Google%20Hangouts'%20List.txt
-!#include SerboCroatianList.txt
 !#if !adguard
 !#include UndertaleRemoverForSoundCloud.txt
 !#endif
@@ -72,16 +72,11 @@ rule34.xxx###pfd
 twe.no#?#.is-10-fullhd.column:-abp-has(img[src*="/Jul-"])
 twe.no#?#div[data-id^=home-asset-tile-]:-abp-has(img[alt*=christmas i])
 finn.no##.information-container > .flex-align
-tjenester.helsenorge.no#?#.legemiddel__block:-abp-contains(/Utekspedert|Utløpt|seponert/) .legemiddel__container__block:style(background-color: #ea7b7b !important)
-tjenester.helsenorge.no#?#.legemiddel__block:-abp-contains(/Utekspedert|Utløpt|seponert/) .legemiddel__delivery:style(background-color: #ea7b7b !important)
 pcgamingwiki.com##.mw-spcontent h3
 pcgamingwiki.com##body.page-User_Dandelion_Sprout .new
 github.com#?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/I have fixed it in |This has been fixed in /) .timeline-comment:style(background-color: #cee4c5 !important)
 github.com#?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/I have fixed it in |This has been fixed in /) .timeline-comment > div:style(background-color: #cee4c5 !important)
 github.com#?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/I have fixed it in |This has been fixed in /) .timeline-comment > div > div:style(background-color: #cee4c5 !important)
-!#if env_chromium
-discord.com#?#span[id^=message-username-] > span[class^=username-]:style(font-weight: 599.9999 !important)
-!#endif
 
 ! People I just really don't like, without it being deserving of going on public lists
 github.com#?#div[id^=issue_]:-abp-contains(/\skulf\o\on/)
@@ -148,11 +143,6 @@ crowdin.com##.untranslated_phrase:has-text(/^[ァ-ンー]{4}$/)
 twitter.com#?#article:-abp-contains(/Bel\iev(e|ing) all vict\im/i)
 twitter.com#?#article:-abp-contains(/Always bel\ieve (the )?vict\im/i)
 ||resetera.com^
-
-!#if !env_mobile
-! 3-year old item trade DMs are kinda scary
-finn.no##div[msg-test]:style(max-height: 700px !important)
-!#endif
 
 ! ↓ Below are categories that may or may not get independent lists for public use one day. ↓
 ! And yes, there's a reason why a.txt is for private use only: It shows the seething despisement I have against large chunks of planet Earth.
@@ -306,11 +296,6 @@ nrk.no#?#.kur-floor--apartment:-abp-contains(God jul)
 ||instant-gaming.com^$document
 ||wingamestore.com^$document
 ||offgamers.com^$document
-
-! Pixiv presumably counts as social media, and thus shouldn't have its notifications be blocked
-@@||onesignal.com^$domain=pixiv.net
-@@/onesignalsdkworker.$domain=pixiv.net
-@@/webpush/*$domain=pixiv.net
 
 ! Removes video suggestions on whatever sites
 open.tube##.other-videos
