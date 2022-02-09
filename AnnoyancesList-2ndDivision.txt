@@ -1,0 +1,32 @@
+! Title: 👨‍👨‍👧‍👦 Dandelion Sprout's Annoyances List 2nd Division Bachelors
+! Version: 09February2022v1-Alpha-Compilation
+! Expires: 3 days
+! Description: This compilation include lists that are maintained as properly and proudly as those in the main Annoyances List, but which have unresolved matters about overblocking, unusual topics, or potential regional legal issues (primarily in the Middle East), that would've caused the AdGuard Filters Registry team to raise eyebrows until resolvements have been agreed on.
+! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+!#include RickrollLinkIdentifier.txt
+!#include Anti-Elsagate List.txt
+!#include IHateOverpromotedGames.txt
+!#include SerboCroatianList.txt
+!#include YouTubeEvenMorePureVideoExperience.txt
+!#include Sensitive%20lists/AntiPrayerTimesList.txt
+
+! ————— Entries that are currently specific to this compilation —————
+
+!#if env_chromium
+! Makes Windows 11 emotes show up correctly when used in Discord usernames
+discord.com#?#span[id^=message-username-] > span[class^=username-]:style(font-weight: 599.9999 !important)
+!#endif
+
+! Marks prescriptions on Norway's official prescription info site as all-red if they're expired
+tjenester.helsenorge.no#?#.legemiddel__block:-abp-contains(/Utekspedert|Utløpt|seponert/) .legemiddel__container__block:style(background-color: #ea7b7b !important)
+tjenester.helsenorge.no#?#.legemiddel__block:-abp-contains(/Utekspedert|Utløpt|seponert/) .legemiddel__delivery:style(background-color: #ea7b7b !important)
+
+!#if !env_mobile
+! 3-year old item trade DMs are kinda scary, especially on 2560px tall monitors where they're normally shown for many years
+finn.no##div[msg-test]:style(max-height: 700px !important)
+!#endif
+
+! Pixiv presumably counts as social media, and thus shouldn't have its notifications be blocked by anti-notification lists
+@@||onesignal.com^$domain=pixiv.net
+@@/onesignalsdkworker.$domain=pixiv.net
+@@/webpush/*$domain=pixiv.net
