@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 06February2022v1-Alpha
+# Version: 09February2022v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -164,6 +164,19 @@ msFilterList
 - wp-content uploads i123_ads 930x180_
 # tv-kalundborg.dk
 - system_files banner ckfinder
+# keldan.is (05 01 2021)
+- images augl
+-d tac.is kunnar
+# isolor.no (16 01 2021)
+- -skyskraper-annonse.
+# norskemagasinet.com (24 01 2021)
+-d img.norrbom.com *-300x60.png
+# vg.no (14 04 2021)
+- gfx fishfingers
+# xpresstryk.dk
+-d images.staticjw.com casino24.jpg
+# https://www.diabetes.no/mer/nyheter-om-diabetes/nyheter-2021/sporsmal-og-svar-om-koronavaksinen-og-diabetes/ (16 11 2021)
+- globalassets banner_
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -365,9 +378,13 @@ msFilterList
 -d tv-kalundborg.dk banner
 -d aa-cdn.mytaste.org ad.js
 -d bilbasen.dk GetVipFinanceBanner
+# — — — — — — —
+# 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
+# — — — — — — —
+# 🇬🇧: Fileserver or site-specific blocking rules with sources
 # bilasolur.is (03 05 2020)
 - lykill_banner
 # bt.no
@@ -386,19 +403,6 @@ msFilterList
 -d bcm.interactives.dk script
 # adressa.no (10 11 2020)
 -d static.polarismedia.no cxense.js
-# keldan.is (05 01 2021)
-- images augl
--d tac.is kunnar
-# isolor.no (16 01 2021)
-- -skyskraper-annonse.
-# norskemagasinet.com (24 01 2021)
--d img.norrbom.com *-300x60.png
-# vg.no (14 04 2021)
-- gfx fishfingers
-# xpresstryk.dk
--d images.staticjw.com casino24.jpg
-# https://www.diabetes.no/mer/nyheter-om-diabetes/nyheter-2021/sporsmal-og-svar-om-koronavaksinen-og-diabetes/ (16 11 2021)
-- globalassets banner_
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -972,7 +976,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 06February2022v1-Extension
+# Last updated: 08February2022v2-Extension
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
@@ -981,3 +985,7 @@ msFilterList
 # https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
 # https://www.findroommate.dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum/(17/12/2021)
 # 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
+# 🇳🇴 🇩🇰: ——— Ikke for Brave Browser ———
+# 🇬🇧: ——— Not for Brave Browser ———
+# Last updated: 09February2022v1-Extension
+# https://github.com/brave/adblock-lists/issues/768/(Remove/when/Shield Standard Mode adds support for cosmetic filtering in default lists)
