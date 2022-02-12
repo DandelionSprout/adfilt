@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
-! Last updated: 30/01/2022
+! Last updated: 12/02/2022
 ! Script last updated: 30/1/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -556,6 +556,9 @@ $removeparam=context_referrer,domain=fiverr.com
 $removeparam=source,domain=fiverr.com
 $removeparam=ref_ctx_id,domain=fiverr.com
 $removeparam=funnel,domain=fiverr.com
+$removeparam=click_key,domain=etsy.com
+$removeparam=click_sum,domain=etsy.com
+$removeparam=organic_search_click,domain=etsy.com
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
@@ -604,6 +607,8 @@ $removeparam=funnel,domain=fiverr.com
 @@||lichess.org/login*referrer=$removeparam
 @@||like.co/api/like/likebutton/*?*referrer=$removeparam
 @@||button.like.co/in/*referrer=$removeparam
+@@$removeparam,domain=www.mma.go.kr
+@@$removeparam,domain=github.com
 @@||amazon-adsystem.*/v3/oor?$removeparam
 @@||youtube.com/signin?$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?facebook\.com\/.*?(plugins|ajax)\//$removeparam
