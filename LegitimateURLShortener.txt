@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 14February2022v1
+! Version: 15February2022v4
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1323,7 +1323,7 @@ $removeparam=sudaref
 ! ——— Specific remove rules ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=adguard.com|adshares.net|ae.com|anntaylor.com|apple.com|bitdefender.*|blair.com|childrensplace.com|disneyplus.com|emirates.com|factoryoutletstore.com|flipkart.com|gamestop.com|giphy.com|glasses.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|lenovo.com|loft.com|nbcnews.com|nike.com|nyandcompany.com|overstock.com|persol.com|proshop.*|radissonhotelsamericas.com|ray-ban.com|rei.com|rightmove.co.uk|samsung.com|stadium.*|staples.com|telenor.no|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|voxi.co.uk|wine.com|wsj.com|microsoft.com|xg4ken.com|zales.com
+$removeparam=cid,domain=adguard.com|adshares.net|ae.com|anntaylor.com|apple.com|bitdefender.*|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|flipkart.com|gamestop.com|giphy.com|glasses.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|lenovo.com|loft.com|nbcnews.com|nike.com|nyandcompany.com|overstock.com|persol.com|proshop.*|radissonhotelsamericas.com|ray-ban.com|rei.com|rightmove.co.uk|samsung.com|stadium.*|staples.com|telenor.no|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|voxi.co.uk|wine.com|wsj.com|microsoft.com|xg4ken.com|zales.com
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
@@ -1770,6 +1770,9 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=sfrom
 ! https://haokan.baidu.com/v?pd=wisenatural&vid=15466131782701772528 (18/11/2021)
 ||haokan.baidu.com/v?$removeparam=pd
+! https://haokan.hao123.com/v?vid=9319456073071181602&pd=haokan_share&context=%7B%22cuid%22%3A%22_iv9ag8c28gHOHuhYaBjilulH800a2iW_aB_8_u62ujPaB8Olu29agfJWO5kfSMSw0bmA%22%7D (14/02/2022)
+||haokan.hao123.com/v?$removeparam=pd
+||haokan.hao123.com/v?$removeparam=context
 ! https://baike.baidu.com/tashuo/browse/content?id=90920d34ee1ab7d8f0531794&lemmaId=554903&fromLemmaModule=pcBottom&lemmaTitle=%E8%96%9B%E5%AE%9A%E8%B0%94%E7%9A%84%E7%8C%AB (18/11/2021)
 ||baike.baidu.com^$removeparam=fromLemmaModule
 ||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaId
@@ -1974,7 +1977,8 @@ $removeparam=version,domain=mp.weixin.qq.com|us.norton.com
 $removeparam=p,domain=banggood.com|sogou.com
 $removeparam=linkId,domain=amazon.*|disneyplus.com
 $removeparam=trkid,domain=netflix.com|tokopedia.com
-$removeparam=channel,domain=rei.com|squarespace.com|privateinternetaccess.com|bybit.com|t.me|twitter.com|docs.google.com|instagram.com|forms.gle|goodcrypto.app|discord.*|eventbrite.*|youtube.com|coinpanel.com|docsend.com|kasta.io|runnode.com|gleam.io|1sol.io
+! (Exceptions: Discord's app download buttons)
+$removeparam=channel,domain=rei.com|squarespace.com|privateinternetaccess.com|bybit.com|t.me|twitter.com|docs.google.com|instagram.com|forms.gle|goodcrypto.app|eventbrite.*|youtube.com|coinpanel.com|docsend.com|kasta.io|runnode.com|gleam.io|1sol.io
 $removeparam=fr,domain=baidu.com|thegay.com
 $removeparam=promo,domain=thegay.com|hammacher.com
 $removeparam=sref,domain=bloomberg.com|go.skimresources.com|go.skimlinks.com|go.redirectingat.com
@@ -2462,7 +2466,8 @@ $removeparam=ref_ctx_id
 ! https://sn.dk/Verden/Rumturister-er-tilbage-paa-Jorden-efter-historisk-mission/artikel/1472742?rss
 $removeparam=rss,domain=sn.dk|ted.com
 
-! https://www.masku.com/tuotteet/393766-smart-tyopoyta/?nosto=productpage-nosto-2&conf%5B1153%5D=10427&conf%5B2651%5D=10771
+! https://www.hurley.com/collections/mens-sale-a4e97b/products/explore-h2o-dri-trek-shorts-17-5-mws0006490-khaki?nosto_source=cmp&nosto=61fcad80db653e1833874019
+$removeparam=nosto_source
 $removeparam=nosto
 
 ! https://scontent.cdninstagram.com/v/t50.2886-16/228280186_4462339507137399_6165083647713647040_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5zdG9yeS5kZWZhdWx0In0&_nc_ht=scontent-iev1-1.cdninstagram.com&_nc_ohc=nL_7kCFHgrcAX-HT6F1&edm=AOVtZ6oBAAAA&vs=17895914579221456_1489520608&_nc_vs=HBksFQAYJEdIcEhtdzEzcXpCaGVkb1BBTUNaaXVEcHhvNVZidXFIQUFBQRUAAsgBABUAGCRHTVdiZFE2Z2ZIa3dVWFVBQUtNZXdSNFhTQ2NSYnBrd0FBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACbCkMnRj5zWPxUCKAJDMywXQCREGJN0vGoYEmRhc2hfYmFzZWxpbmVfM192MREAdegHAA%3D%3D&ccb=7-4&oe=614B0BE1&oh=22849edcbcdb1949e3f0cbde56ddd89b&_nc_vts_prog=1&dl=1
@@ -3143,6 +3148,9 @@ $removeparam=article-trending,domain=sportskeeda.com
 
 ! https://www.latimes.com/sports/story/2022-01-30/super-bowl-2022-start-time-teams-location-channel-halftime-show?_amp=true
 $removeparam=_amp,domain=latimes.com
+
+! https://metro.co.uk/2022/02/07/facebook-and-insta-may-drop-europe-if-they-cant-target-users-with-ads-16062662/?ico=related-posts
+$removeparam=ico,domain=metro.co.uk
 
 !#if !env_mobile
 ! ——— Mobile ——— !
