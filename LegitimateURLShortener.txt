@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 15February2022v4
+! Version: 16February2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1313,6 +1313,11 @@ $removeparam=sudaref
 ! http://edu.sina.com.cn/y/bbs/2005/1020/1017979.html?presentid=webnews (14/02/2022)
 ! This extra parameter appears when opening news from widgets in Windows 11.
 ^presentid=webnews^$removeparam=presentid
+
+! https://www.dailykos.com/stories/2022/2/14/2080215/-From-the-GNR-Newsroom-The-Monday-Good-News-Roundup?pm_source=story_sidebar&pm_medium=web&pm_campaign=recommended
+$removeparam=pm_source
+$removeparam=pm_medium
+$removeparam=pm_campaign
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
@@ -3151,6 +3156,9 @@ $removeparam=_amp,domain=latimes.com
 
 ! https://metro.co.uk/2022/02/07/facebook-and-insta-may-drop-europe-if-they-cant-target-users-with-ads-16062662/?ico=related-posts
 $removeparam=ico,domain=metro.co.uk
+
+! https://www.disneyplus.com/en-fi?cid=DSS-Affiliate-Impact-Content-Future%20PLC.-564546
+$removeparam=/^cid=DSS-Affiliate/,domain=disneyplus.com
 
 !#if !env_mobile
 ! ——— Mobile ——— !
