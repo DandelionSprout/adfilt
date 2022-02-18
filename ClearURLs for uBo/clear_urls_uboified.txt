@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
-! Last updated: 12/02/2022
+! Last updated: 18/02/2022
 ! Script last updated: 30/1/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -117,6 +117,7 @@ $removeparam=/^otm_[a-z_]*=/
 $removeparam=cmpid
 $removeparam=os_ehash
 $removeparam=_ga
+$removeparam=_gl
 $removeparam=__twitter_impression
 $removeparam=/^wt_?z?mc=/
 $removeparam=wtrid
@@ -134,7 +135,7 @@ $removeparam=/^hc_[a-z_%\[\]0-9]*=/,domain=facebook.com
 $removeparam=/^[a-z]*ref[a-z]*=/,domain=facebook.com
 $removeparam=__tn__,domain=facebook.com
 $removeparam=eid,domain=facebook.com
-$removeparam=/^__xts__(\[|%5B)\d(\]|%5D)=/,domain=facebook.com
+$removeparam=/^__(xts|cft)__(\[|%5B)\d(\]|%5D)=/,domain=facebook.com
 $removeparam=comment_tracking,domain=facebook.com
 $removeparam=dti,domain=facebook.com
 $removeparam=app,domain=facebook.com
@@ -144,6 +145,9 @@ $removeparam=pageid,domain=facebook.com
 $removeparam=padding,domain=facebook.com
 $removeparam=ls_ref,domain=facebook.com
 $removeparam=action_history,domain=facebook.com
+$removeparam=tracking,domain=facebook.com
+$removeparam=referral_code,domain=facebook.com
+$removeparam=referral_story_type,domain=facebook.com
 $removeparam=/^(ref_?)?src=/,domain=twitter.com
 $removeparam=cn,domain=twitter.com
 $removeparam=ref_url,domain=twitter.com
@@ -573,6 +577,14 @@ $removeparam=dop_ab_variant,domain=aktualne.cz
 $removeparam=dop_source_zone_name,domain=aktualne.cz
 $removeparam=dop_req_id,domain=aktualne.cz
 $removeparam=dop_id,domain=aktualne.cz
+$removeparam=dop_ab_variant,domain=seznamzpravy.cz
+$removeparam=dop_source_zone_name,domain=seznamzpravy.cz
+$removeparam=dop_req_id,domain=seznamzpravy.cz
+$removeparam=dop_id,domain=seznamzpravy.cz
+$removeparam=source,domain=seznamzpravy.cz
+$removeparam=seq_no,domain=seznamzpravy.cz
+$removeparam=log,domain=billiger.de
+$removeparam=p,domain=billiger.de
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
@@ -623,6 +635,7 @@ $removeparam=dop_id,domain=aktualne.cz
 @@||button.like.co/in/*referrer=$removeparam
 @@$removeparam,domain=www.mma.go.kr
 @@$removeparam,domain=github.com
+@@||billiger.de/*mc=$removeparam
 @@||amazon-adsystem.*/v3/oor?$removeparam
 @@||youtube.com/signin?$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?facebook\.com\/.*?(plugins|ajax)\//$removeparam
