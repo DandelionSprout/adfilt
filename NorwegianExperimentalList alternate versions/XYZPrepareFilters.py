@@ -4470,6 +4470,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"([a-z])##([#.]?[a-z_].*:-abp-)", 
+           r"\1#?#\2", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
