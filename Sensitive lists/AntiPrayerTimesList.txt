@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: ⏰ Anti-'Prayer times' List
-! Version: 26February2022v4
+! Version: 28February2022v1
 ! Expires: 7 days
 ! Description: So you're sitting there reading a newssite, and then you find big banners that try to tell you the exact points in time you're supposed to pray? If you want to feel less stressed and less like a slave of the clock, then this list is for you.
 ! If you know of any other general websites that tend to display prayer times, give me a heads-up about it. I am also willing to add entries for non-Islamic prayer times, such as for e.g. Evangelical Christian movements.
@@ -74,30 +74,32 @@
 ! https://www.burdurweb.com/web/
 ! herihaber.com.tr
 ###namazVakitleri
-! gunisigigazetesi.net
-! eskisehirhaber.com
+! gunisigigazetesi.net, eskisehirhaber.com
 ###prayer-times
-! bingolgazetesi.com.tr
-! bingolkenthaber.com
-! burdurilkadim.com
+! bingolgazetesi.com.tr, bingolkenthaber.com, burdurilkadim.com
 ##.namaz:not(html, body)
 ! cagdasburdur.com
 ||vakitci.com^$subdocument,third-party
-! mersinistikbal.net
-! tarsusekspres.com.tr
+! mersinistikbal.net, tarsusekspres.com.tr
 ##.namaz-saatleri:not(html, body)
 ! esgundem26.com
 ##.panel-namaz:not(html, body)
 ! asigazetesi.com
 ##.header2-vakit:not(html, body)
 ! analizmerkezi.com
-##.namazvakityeni
+##.namazvakityeni:not(html, body)
 ! guncelgazete.com
-##.praying-content
+##.praying-content:not(html, body)
 ! giresungazete.net
-##.namazWidget
+##.namazWidget:not(html, body)
 ! batmancagdas.com
-##.hs-panel-namaz
+##.hs-panel-namaz:not(html, body)
+! nigdehaber.com.tr
+###module_namaz_vakit
+! yozgatgazetesi.com
+##.namaz-vakitleri:not(html, body)
+! gazeteguncel.com, gaziantep27.net, hakimiyet.com
+##.prayer-side :not(html, body)
 
 ! Site-specific
 yenisafak.com,yeniakit.com.tr,haber7.com##.prayer
@@ -143,11 +145,13 @@ yeniakit.com.tr##.info-bar > li:not([class], [title])
 takvim.com.tr##.dualTabWidget > .tabs > li:nth-of-type(2):last-of-type
 star.com.tr##.pray
 istiklal.com.tr##.nv-main
-gazeteguncel.com,gaziantep27.net##.prayer-side
 agridogruhaber.com##.BlokNamazRenk
 agridogruhaber.com##.namazbg
 cagdasburdur.com#?#div[id^=custom_html-]:-abp-contains(NAMAZ VAKİTLERİ)
 dogruhaber.com.tr##.col-md-4 > .panel-success
 haberantalya.com#?#.col-md-12:-abp-has(> .BlokNamazRenk)
+kuzeyanadolugazetesi.com#?#.blok-baslik:-abp-contains(BURÇ)
+kuzeyanadolugazetesi.com#?#.cerceve-anket:-abp-has(> #burc)
+yenisalpazari.com#?##sidebar .kanews-section:-abp-has(.table-prayer)
 ||icdn.tgrthaber.com.tr/*/cami_icon_*.png^$image
 ||img.piri.net/*imsakiye.jpg^$domain=yenisafak.com
