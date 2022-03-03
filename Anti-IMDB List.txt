@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! Version: 03February2022v1-Beta
+! Version: 03March2022v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -60,11 +60,15 @@
 ~imdb.com##a[data-testhook=imdb-link i]
 ! https://www.sfanytime.com/da/search?query=herbie&cursor=20 (03/02/2022)
 ~imdb.com##div[class*=_ImdbLabelWrapper-]
+! https://blockbuster.no/filmer/en-muppet-julefortelling (2022-03-03)
+~imdb.com##.imdb-score:not(html, body)
 
 ! International (All adblockers)
 bing.com#?#.b_algo:-abp-has(cite:-abp-contains(imdb.com)) .b_sritem
 newonnetflix.info#?#p:-abp-has(a[target=_imdb])
 rakuten.tv##.score
+rakuten.tv##a[href*=".imdb.com/title/"]
+rakuten.tv##div[type=scores]
 sfanytime.com#?#div:-abp-has(> img[alt^=IMDB])
 sfanytime.com#?#li:-abp-contains(/^imdb$/)
 playpilot.com##.ratings
