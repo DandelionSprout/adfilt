@@ -20,3 +20,15 @@ Recommended adblockers for the various list versions:
 • Shadowrocket, Shadowsocks (all versions), Surge: **NordicFiltersSocks5.list**<br>
 • Unbound: **NordicFiltersUnbound.conf**<br>
 • minerBlock: **NordicFiltersForMinerBlock.txt**
+
+—————————————————————————
+
+### How to run the list generation script
+
+This is only recommended for Adfilt team members or those who want to test the script, and is not recommended for pull requests.
+
+1) Right-click on https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/XYZPrepareFilters.py and save it on your PC, preferably in its own folder.
+2) If you're on Windows, install [Cygwin 64-bit](https://www.cygwin.com/), and pick the <i>python38</i> package when you're prompted to install any packages.
+3) In the folder where you placed `XYZPrepareFilters.py`, create two new subfolders with the names of `Anti-Malware List` and `Domeneversjoner`.
+4) Open Cygwin (on Windows) or the default terminal (on macOS or Linux), use `cd` to navigate to the folder that contains `XYZPrepareFilters.py`, and run `python3 XYZPrepareFilters.py`. Due to GitHub line end conflicts, avoid using PowerShell for this if at all physically possible.
+5) If it worked, it'll lead to a few lines with text along the lines of "The list versions have been generated."
