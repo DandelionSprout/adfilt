@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 01March2022v4
+! Version: 07March2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2372,7 +2372,8 @@ $removeparam=affiliate
 ||greenmangaming.com^$removeparam=/^tap_/
 
 ! https://icedrive.net/?pt=lojxagugwf
-||icedrive.net^$removeparam=pt
+! https://github.com/AdguardTeam/AdguardFilters/issues/112128
+$removeparam=pt,domain=icedrive.net|apple.com
 
 ! https://www.adorama.com/?sterm=VWlWgE0K8xyIRwNxiAS6PRWLUkBTDLT34xL1Ws0
 ||adorama.com^$removeparam=sterm
@@ -2525,7 +2526,7 @@ $removeparam=content,domain=eonline.com|bybit.com|t.me|twitter.com|docs.google.c
 $removeparam=cId,domain=apple.com|youtube.com
 $removeparam=lId,domain=apple.com|youtube.com
 $removeparam=/^src=Linkfire$/,domain=apple.com|youtube.com
-||music.apple.com^$removeparam=ct
+||apple.com^$removeparam=ct
 ||music.apple.com^$removeparam=itsct
 ||music.apple.com^$removeparam=itscg
 
