@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 07March2022v1
+! Version: 08March2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1982,7 +1982,7 @@ $removeparam=report_recomm_player
 $removeparam=app,domain=tiktok.com|music.apple.*
 ! (Do not add to the below entry: play.google.com; see https://github.com/DandelionSprout/adfilt/issues/475)
 $removeparam=c,domain=tiktok.com|norton.com|farfetch.com|hepsiburada.com|appsflyer.com|onelink.me|shopee.*
-$removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*|outnorth.fi|shopee.*|bybit.com|t.me|twitter.com|docs.google.com|instagram.com|forms.gle|goodcrypto.app|discord.*|eventbrite.*|youtube.com|coinpanel.com|docsend.com|kasta.io|runnode.com|gleam.io|1sol.io
+$removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*|outnorth.fi|shopee.*|bybit.com|t.me|twitter.com|docs.google.com|instagram.com|forms.gle|goodcrypto.app|discord.*|eventbrite.*|youtube.com|coinpanel.com|docsend.com|kasta.io|runnode.com|gleam.io|1sol.io|scmp.com
 $removeparam=/^pf_rd_/,domain=shopbop.com|amazon.*|imdb.com|zappos.com|audible.*|6pm.com
 $removeparam=Source,domain=facebook.com|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|messenger.com|evga.com
 $removeparam=version,domain=mp.weixin.qq.com|us.norton.com
@@ -2128,8 +2128,8 @@ $removeparam=context,domain=imdb.com|fiverr.com
 
 ! https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=https%3A%2F%2Fwww.nytimes.com%2F2021%2F01%2F21%2Fopinion%2Fpublic-transit-funding.html%3Faction%3Dclick%26module%3DWell%26pgtype%3DHomepage%26section%3DEditorials (24/01/2021)
 $removeparam=action,domain=nytimes.com|nytimes3xbfgragh.onion
-$removeparam=module,domain=nytimes.com|nytimes3xbfgragh.onion
-$removeparam=pgtype,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=module,domain=nytimes.com|nytimes3xbfgragh.onion|scmp.com
+$removeparam=pgtype,domain=nytimes.com|nytimes3xbfgragh.onion|scmp.com
 $removeparam=section,domain=nytimes.com|nytimes3xbfgragh.onion
 
 ! https://www.imdb.com/title/tt7826036/?ref_=ttep_ep5
@@ -3209,6 +3209,9 @@ $removeparam=mrn_rm,domain=dailymail.co.uk|thisismoney.co.uk
 ! https://www.comodo.com/home/browsers-toolbars/browser.php?track=14596&af=14596
 ||comodo.com^$removeparam=track 
 ||comodo.com^$removeparam=af
+
+! https://fortune.com/2021/03/11/amazon-fresh-retail-stores-vacant-plan/?queryly=related_article
+$removeparam=queryly,domain=fortune.com
 
 !#if !env_mobile
 ! ——— Mobile ——— !
