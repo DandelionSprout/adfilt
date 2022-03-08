@@ -4236,7 +4236,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|.*\.(tk|ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
+           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
            r"", 
            line
         )
@@ -4465,7 +4465,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|.*\.(tk|ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
+           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
            r"", 
            line
         )
@@ -5504,7 +5504,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|.*\.(tk|ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
+           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
            r"", 
            line
         )
