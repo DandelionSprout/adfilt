@@ -86,6 +86,7 @@
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
 * `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `?tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, and that a lack of `/^` will make it search *anywhere* in that string.
+* `$match-case`: Makes the criteria case-sensitive. uBO only supports it in RegEx entries.
 
 ## uBlock Origin, Adblock Plus and AdBlock only
 * `##element1,element2:-abp-(has/contains)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where `element1` is instead blocked in its entirety.
@@ -139,7 +140,6 @@
 * `!+ PLATFORM`: Similar to `!#if`, but is only used during the AdGuard team's compiling of included lists. It has no effect on custom lists.
 * `:matches-property`: Selects an HTML element by using a CSS identifier, as detailed under AdGuard's [ExtendedCSS](https://github.com/AdguardTeam/ExtendedCss#extended-css-matches-property) project.
 #### Blocking
-* `$match-case`: Makes the criteria case-sensitive.
 * `$$script`: Uses very advanced criteria to block scripts that meet them.
 * `$cookie`: Blocks cookies.
 * `$cookie=`: Blocks cookies with specific names.
