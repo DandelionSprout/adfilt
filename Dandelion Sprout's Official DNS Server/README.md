@@ -127,3 +127,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 13th of December 03:00-03:30 UTC: My ISP went down, and the ASUS router's failover triggers didn't want to work properly.
 * 9th of January 15:00 UTC - 28th of January: All I did was enable Flathub and play Space Cadet Pinball, then the Raspberry Pi froze, and when I restarted it had become permanently unable to connect to public IPs and addresses. I hate Linux more than ever before.
 * 15th of February 20:09-20:16 UTC: An ASUS router update caused problems with IPv6, so I had to scramble real quick to fix it.
+* 12th of March 13:35 UTC: Some 4 weeks after scheduled, the `dandelionsprout2.` secondary server is back online.
