@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 090320221
+! Version: 130320221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -325,6 +325,7 @@ skaunnytt.no##.sb-widget
 reiseplaneten.no###rt-sidebar-c
 reiseplaneten.no##.custom > p:nth-of-type(1n+2)
 froya.no##.annonse-plass
+tvkampen.com##.odds
 samferdselinfra.no###mobil-toppboard
 samferdselinfra.no###top-banner-wrap
 politiken.dk##.js-sticky-container.col--overflow
@@ -1462,6 +1463,7 @@ handyhand.dk##.main-content > .row
 flatpanels.dk###content > .container[style*=padding-bottom][style*=text-align]
 gulesider.no##.ResultListBanner
 nyheder24.dk##div[id^=taboola-right-rail-thumbnails-]
+tvkampen.com,tvsporten.dk##.tvg-manager-tracking-event
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -4447,7 +4449,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 050320221
+! Version: 090320221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4717,8 +4719,8 @@ forssanlehti.fi#?#.herald_posts_widget:-abp-has(a[href^="https://www.forssanleht
 fuengirola.fi#?#.elementor-widget-divider.elementor-widget.elementor-widget-divider--element-align-center.elementor-widget-divider--view-line_text.elementor-element:-abp-contains(Mainos)
 fuengirola.fi,mesta.net,paakallo.fi,puheenaiheet.fi##.gofollow
 funtampere.fi##.banner_container
-futisfani.com,kiekkofani.com,penkkiurheilu.com##[class^=top-banner-]
-futisfani.com,kiekkofani.com,penkkiurheilu.com##.mvp-side-widget.widget_text
+futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##[class^=top-banner-]
+futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##.mvp-side-widget.widget_text
 gamereactor.fi###adContainer
 gamereactor.fi###ad_topScroller
 gamereactor.fi###bigVideoAd_content
@@ -4760,6 +4762,7 @@ helsinginuutiset.fi,vihdinuutiset.fi##div[class*=lyads]
 helsinkitimes.fi##.banneritem
 herkkusuut.com,laliiga.com,nainen.com,sketsi.net,viikonloppu.com##.pnad-container
 hidastaelamaa.fi###banner-top
+hidastaelamaa.fi#?#.feature:-abp-has([href$="/mainosyhteistyo/"])
 high.fi###googlejs
 high.fi##div[class*=sub-container]
 hinta.fi##[id|=hv-wrapper-top]
@@ -4812,7 +4815,7 @@ is.fi##a[href="https://www.startel.fi/?infront"]
 is.fi##article[class*=native-ad]
 is.fi##div.sadblob-loading
 is.fi#?#article:-abp-has(> header > h2 span:-abp-contains(Alennuskoodit))
-jaatama.fi##.advert
+jaatama.fi,maastohiihto.com##.advert
 jaatama.fi#?#.box--transparent:-abp-has(.advert)
 jatkoaika.com##div[class="block block-block"]
 juoksufoorumi.fi##.noAdsCell
@@ -4871,6 +4874,7 @@ kiinteistolehti.fi##.mpc-row.vc_custom_1515749959295.vc_row-fluid.wpb_row.vc_row
 kiinteistolehti.fi##.mpc-row.vc_custom_1515750168978.vc_row-fluid.wpb_row.vc_row
 kilipailut.fi##.bannerlink
 kinuskikissa.fi##app-ad
+klangi.fi##.banner
 kodinviilennys.fi#?#.wp-block-image:-abp-contains(mainos)
 kokemaenjokilaakso.fi#?#.ai-attributes:-abp-contains(Mainos)
 kokemaenjokilaakso.fi#?#p:-abp-has([alt^=Mainos])
@@ -5157,6 +5161,7 @@ talouselama.fi#?#[class]:-abp-has(> a[href^="https://www.talouselama.fi/kumppani
 talouselama.fi#?#[id|=podcasti]:-abp-contains(Kaupallinen Yhteistyö)
 talouselama.fi#?#div.article-body > div:-abp-has(> div.LazyLoad.is-visible)
 talouselama.fi#?#div[width]:-abp-has(.lazyload-wrapper)
+taloustaito.fi##.bannerarea
 talviopas.fi,turisti-info.fi##.sidebar-banners
 tanssiin.fi##.alp-advert
 tanssiin.fi##a[href="https://sinitaivas.com/kauppa/"]
@@ -5305,7 +5310,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ! -----NETWORK FILTERS-----
 
 /[.]io-tech\.fi/.*/[0-9a-f]{32}\./$image,~third-party
-/*-mainos-$image,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com
+/*-mainos-$image,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
 /prerolls/*.mp4$domain=gamereactor.fi
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
