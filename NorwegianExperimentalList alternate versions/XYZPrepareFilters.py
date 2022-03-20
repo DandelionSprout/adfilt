@@ -4476,6 +4476,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\$match-case,", 
+           r"$", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -5505,6 +5511,30 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[/|].*\.php[/^?].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"/match-case,", 
+           r"$match-case,", 
+           line
+        )
+
+        line = re.sub(
+           r"^@?@?\|\|[a-z0-9.-]{1,}\|[a-z0-9.-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\.png\^.*", 
            r"", 
            line
         )

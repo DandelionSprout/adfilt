@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 13March2022v1-Alpha
+# Version: 20March2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -378,6 +378,8 @@ msFilterList
 -d tv-kalundborg.dk banner
 -d aa-cdn.mytaste.org ad.js
 -d bilbasen.dk GetVipFinanceBanner
+-d smakmagasinet.no 970x250-
+-d smakmagasinet.no 170x500-
 # — — — — — — —
 # 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 +d vgtv.no
@@ -575,7 +577,6 @@ msFilterList
 # ★★★ Caused by «Fanboy's Annoyances List» and «EasyList Cookie List» ★★★
 # https://github.com/ryanbr/fanboy-adblock/issues/1243
 -d ktg-content.cdn.prismic.io *(my.newsletter_popup.uid
-# https://github.com/easylist/easylist/issues/10757/#issuecomment-1053603292
 # https://github.com/ryanbr/fanboy-adblock/issues/1339
 # https://github.com/ryanbr/fanboy-adblock/issues/1468
 # ★★★ Caused by «EasyList» ★★★
@@ -852,6 +853,9 @@ msFilterList
 -d channawars.com
 # https://www.dr.dk/nyheder/penge/kontant/kommissionsbilerdk-saelger-kundernes-biler-og-beholder-deres-penge
 -d kommissionsbiler.dk
+# https://dinside.dagbladet.no/data/varsellampene-lyser/75613329
+# https://itavisen.no/2022/03/16/dette-skjedde-da-de-handlet-fra-spillweb-com/
+-d spillweb.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34

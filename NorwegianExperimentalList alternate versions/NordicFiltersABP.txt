@@ -1,7 +1,7 @@
 [Adblock Plus 3.6]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 130320221
+! Version: 200320221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -356,6 +356,7 @@ norskemagasinet.com##a[href*=nett][href*=spill]
 norskemagasinet.com##a[href*=gambling]
 gulesider.no##.PartnerLinks
 leinstrand-il.no#?#.latestnews-box:-abp-contains(/casino/i)
+smakmagasinet.no##.ad
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -820,6 +821,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||tv-kalundborg.dk/system_files/banner^
 ||aa-cdn.mytaste.org/js/ad.js$script
 ||bilbasen.dk/Vip/GetVipFinanceBanner^
+||smakmagasinet.no/contentassets/*/970x250-
+||smakmagasinet.no/contentassets/*/170x500-
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 @@||vgtv.no^$generichide
@@ -1766,8 +1769,6 @@ altibox.no#@##coiOverlay[role="banner"][style*="flex"]
 dagbladet.no,elbil24.no#@#.subscription-box
 ! https://github.com/ryanbr/fanboy-adblock/issues/1243
 ||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
-! https://github.com/easylist/easylist/issues/10757/#issuecomment-1053603292
-skousen.no,skousen.dk#@##cookie-information-template-wrapper
 ! https://github.com/ryanbr/fanboy-adblock/issues/1339
 @@/obj/global/feature/tagCommander/$script,domain=billetlugen.dk|eventim.no
 ! https://github.com/ryanbr/fanboy-adblock/issues/1468
@@ -2224,6 +2225,9 @@ triplx.dk##.aff-inner-col
 ||channawars.com^$popup
 ! https://www.dr.dk/nyheder/penge/kontant/kommissionsbilerdk-saelger-kundernes-biler-og-beholder-deres-penge
 ||kommissionsbiler.dk^
+! https://dinside.dagbladet.no/data/varsellampene-lyser/75613329
+! https://itavisen.no/2022/03/16/dette-skjedde-da-de-handlet-fra-spillweb-com/
+||spillweb.com^
 ! IP addresses of servers notorious for hosting many of the sites above
 ||51.195.133.131^$domain=~in-addr.arpa
 ||66.206.3.34^$domain=~in-addr.arpa
