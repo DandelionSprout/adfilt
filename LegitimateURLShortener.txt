@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 18March2022v1
+! Version: 21March2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1321,6 +1321,9 @@ $removeparam=pm_campaign
 
 ! https://egon-no.translate.goog/ledige-stillinger/204bd5b2-6f9b-45bf-893d-1c0b21f9dc8a?_x_tr_sl=no&_x_tr_tl=en&_x_tr_hl=no&_x_tr_pto=wapp
 $removeparam=x_tr_pto
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2381922
+$removeparam=oref
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
@@ -3218,9 +3221,6 @@ $removeparam=subref,domain=newsweek.com
 
 ! https://www.cbsnews.com/news/gas-prices-high-expensive-come-down-cbs-news-explains/?intcid=CNI-00-10aaa3b
 $removeparam=intcid,domain=cbsnews.com
-
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2381922
-||defenseone.com^$removeparam=oref
 
 ! https://articulo.mercadolibre.com.mx/MLM-1389627545-nuevo-buzz-lightyear-2022-disney-mattel-_JM?matt_tool=99486937&matt_word=&matt_source=google&matt_campaign_id=15693562203&matt_ad_group_id=132817878898&matt_match_type=&matt_network=g&matt_device=c&matt_creative=571796003518&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=537786473&matt_product_id=MLM1389627545&matt_product_partition_id=1418803903092&matt_target_id=aud-1575562103163:pla-1418803903092&gclid=CjwKCAjwlcaRBhBYEiwAK341jU8MwyPwPy3nth_2S9WH97rxtxl7eVQXNSLl-oGgg8w0rVrXlMSXcxoC3qAQAvD_BwE (18/03/2022)
 ||mercadolibre.com.mx^$removeparam=/^matt_/
