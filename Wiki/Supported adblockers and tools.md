@@ -3,14 +3,13 @@
 ### Regular adblockers, with the most recommended adblockers listed highest
 
 * uBlock Origin (for Chrome and Firefox)
-* AdGuard (for Windows, Android, Chrome, Firefox, and Mac)
-* AdBlock
-* Adblock Plus (incl. Adblock Browser)
+* AdGuard (for Windows, Android, Chrome Manifest V2, Firefox, and Mac)
+* AdBlock (Firefox or Manifest V2)
+* Adblock Plus (Firefox, Manifest V2, or Adblock Browser)
 * AdNauseam
 
 ### Hardeners for regular adblockers
 
-* uBlock Origin Extra
 * AdGuard Extra
 
 ### Other programs and tools
@@ -23,6 +22,7 @@
 * uMatrix
 * Internet Explorer Tracking Protection List (if your workplace doesn't allow you to install and pay for *AdGuard for Windows*)
 * Little Snitch
+* Brave Browser
 
 # Limited support
 
@@ -30,17 +30,25 @@ Issue reports will be processed, but issues that are exclusive to these adblocke
 
 | Affected tool | Reason for its support being limited | Fully supported substitute |
 | - | - | - |
-| uBlock Origin's Thunderbird branch | I've never been able to get it to block all that many things in E-mails. | AdGuard for Windows |
+| uBlock Origin's Thunderbird branch | Doesn't seem to work properly in E-mail view mode. | AdGuard for Windows |
 | AdGuard for iOS | I do not have such units to test it with. | |
-| Pi-hole | It would've taken me considerable effort to set up Pi-Hole at the moment. | AdGuard Home |
+| Pi-hole | Linux is far too complicated to set up and keep up to date. | AdGuard Home |
 | 1blocker for iOS | I do not have an iOS unit to test it with. | Adblock Browser for iOS | |
 | Pale Moon / Basilisk with uBlock Origin | Very hostile behaviour by a high-ranking Pale Moon dev. | Waterfox Classic with uBlock Origin | 
-| Brave Browser | Did not support adding custom lists, meaning that support can only be provided for Nordic Filters | Google Chrome with uBlock Origin |
 | AdGuard Content Blocker for Samsung/Yandex | I'd need to set up those browsers on request. It also has pretty limited syntax support. | Firefox for Android with uBlock Origin |
 
 # No support
 
-If you use an adblocker from this section, you will be asked to change to a more frequently updated adblocker before an issue report would be processed.
+If you use an adblocker from this section, you will be asked to change to another updated adblocker before an issue report would be processed.
+
+### Problematic web browsers
+
+| Affected setup | Reason for it having no support | Approximate supported replacement |
+| - | - | - |
+| **Chrome Manifest V3** | It will absolutely annihilate independent listmaking. If Google wants war, I'll be fighting back. | Manifest V2 or Firefox |
+| uBlock Origin's Microsoft Edge legacy branch | Seemed to have severe problems with list syncing in mid-2018. | AdGuard for Windows (Paid version) |
+| Borealis with uBlock Origin | Very hostile behaviour by Borealis' main developer. | Waterfox Classic with uBlock Origin |
+| AdGuard for Safari ≥13 | No support is offered to Safari ≥13 in protest against Manifest V3-like extension systems. | Google Chrome with uBlock Origin |
 
 ### Forked from uBlock Origin ca. 2016-17, and has seen no real work on it since
 
@@ -64,14 +72,6 @@ If you use an adblocker from this section, you will be asked to change to a more
 
 * [AdBlock (the Germany-registered one with the rounded logo)](https://chrome.google.com/webstore/detail/adblock/dgpfeomibahlpbobpnjpcobpechebadh)
 * uBlocker
-
-### Problematic web browsers
-
-| Affected setup | Reason for it having no support | Approximate supported replacement |
-| - | - | - |
-| uBlock Origin's Microsoft Edge legacy branch | Seemed to have severe problems with list syncing in mid-2018. | |
-| Borealis with uBlock Origin | Very hostile behaviour by Borealis' main developer. | Waterfox Classic with uBlock Origin |
-| AdGuard for Safari ≥13 | No support is offered to Safari ≥13 in protest against Manifest V3-like extension systems. | Google Chrome with uBlock Origin |
 
 ### Other reasons
 
