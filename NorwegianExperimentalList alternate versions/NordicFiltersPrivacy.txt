@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 20March2022v1
+! Version: 26March2022v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -365,6 +365,7 @@ norskemagasinet.com##a[href*=gambling]
 gulesider.no##.PartnerLinks
 leinstrand-il.no#?#.latestnews-box:-abp-contains(/casino/i)
 smakmagasinet.no##.ad
+seksualitet24.no##a[href*="partner-ads."]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -831,6 +832,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||bilbasen.dk/Vip/GetVipFinanceBanner^
 ||smakmagasinet.no/contentassets/*/970x250-
 ||smakmagasinet.no/contentassets/*/170x500-
+||seksualitet24.no/wp-content/uploads/*/sinful_$image
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 !#if false
@@ -1046,7 +1048,6 @@ ebcontent.dk###ebcontentMegaboard
 edbpriser.dk##.inlist-ad-block
 edbpriser.dk##.product-list-row .description:style(position: static !important; word-break: break-word !important)
 edbpriser.dk##div[id^=leftAdSpotAdcontainer]:upward(2)
-ehandel.com##aside
 eidfaxi.is##.ad-banner:upward(1)
 ekstrabladet.dk###manipulate_monster
 ekstrabladet.dk##.scrb-posts > .flex-column
@@ -1533,6 +1534,8 @@ flatpanels.dk###content > .container[style*=padding-bottom][style*=text-align]
 gulesider.no##.ResultListBanner
 nyheder24.dk##div[id^=taboola-right-rail-thumbnails-]
 tvkampen.com,tvsporten.dk##.tvg-manager-tracking-event
+ehandel.*##.article-ad-container
+ehandel.*##.annons
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2315,6 +2318,8 @@ triplx.dk##.aff-inner-col
 ! https://dinside.dagbladet.no/data/varsellampene-lyser/75613329
 ! https://itavisen.no/2022/03/16/dette-skjedde-da-de-handlet-fra-spillweb-com/
 ||spillweb.com^$doc
+! https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
+||melding.link^$doc
 ! IP addresses of servers notorious for hosting many of the sites above
 ||51.195.133.131^$domain=~in-addr.arpa
 ||66.206.3.34^$domain=~in-addr.arpa

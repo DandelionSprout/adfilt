@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 200320221
+! Version: 260320221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -354,6 +354,7 @@ norskemagasinet.com##a[href*=gambling]
 gulesider.no##.PartnerLinks
 leinstrand-il.no#?#.latestnews-box:-abp-contains(/casino/i)
 smakmagasinet.no##.ad
+seksualitet24.no##a[href*="partner-ads."]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -820,6 +821,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||bilbasen.dk/Vip/GetVipFinanceBanner^
 ||smakmagasinet.no/contentassets/*/970x250-
 ||smakmagasinet.no/contentassets/*/170x500-
+||seksualitet24.no/wp-content/uploads/*/sinful_$image
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 @@||vgtv.no^$generichide
@@ -1006,7 +1008,6 @@ tek.no##div[class^=adStyles_]
 ebcontent.dk###ebcontentMegaboard
 edbpriser.dk##.inlist-ad-block
 edbpriser.dk#?#*:-abp-has(> * > div[id^=leftAdSpotAdcontainer])
-ehandel.com##aside
 eidfaxi.is#?#*:-abp-has(> .ad-banner)
 ekstrabladet.dk###manipulate_monster
 ekstrabladet.dk##.scrb-posts > .flex-column
@@ -1467,6 +1468,8 @@ flatpanels.dk###content > .container[style*=padding-bottom][style*=text-align]
 gulesider.no##.ResultListBanner
 nyheder24.dk##div[id^=taboola-right-rail-thumbnails-]
 tvkampen.com,tvsporten.dk##.tvg-manager-tracking-event
+ehandel.com,ehandel.dk,ehandel.se,ehandel.fi##.article-ad-container
+ehandel.com,ehandel.dk,ehandel.se,ehandel.fi##.annons
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2212,6 +2215,8 @@ triplx.dk##.aff-inner-col
 ! https://dinside.dagbladet.no/data/varsellampene-lyser/75613329
 ! https://itavisen.no/2022/03/16/dette-skjedde-da-de-handlet-fra-spillweb-com/
 ||spillweb.com^
+! https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
+||melding.link^
 ! IP addresses of servers notorious for hosting many of the sites above
 ||51.195.133.131^$domain=~in-addr.arpa
 ||66.206.3.34^$domain=~in-addr.arpa
@@ -4453,7 +4458,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 180320222
+! Version: 250320221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4764,7 +4769,7 @@ heili.fi##.autoboksi.moduletable
 heili.fi,outokummunseutu.fi,pielisjokiseutu.fi,pogostansanomat.fi,prsanomat.fi,ylakarjala.fi##.jattiboksi.moduletable
 helsinginuutiset.fi,vihdinuutiset.fi##div[class*=lyads]
 helsinkitimes.fi##.banneritem
-herkkusuut.com,laliiga.com,nainen.com,sketsi.net,tinderinparhaat.com,viikonloppu.com##.pnad-container
+herkkusuut.com,laliiga.com,nainen.com,sketsi.net,suomif1.com,tinderinparhaat.com,viikonloppu.com##.pnad-container
 hidastaelamaa.fi###banner-top
 hidastaelamaa.fi#?#.feature:-abp-has([href$="/mainosyhteistyo/"])
 high.fi###googlejs
@@ -4795,7 +4800,7 @@ huuto.net#?#.grid-element-container:-abp-has(.hise-link[href^="https://"])
 hymy.fi##.grid--dfp-slots
 hymy.fi##[href="http://www.finswingers.com/"]
 hyvaterveys.fi##.pane-sbase-cts-native-native-front
-hyvaterveys.fi#?#.views-row:-abp-has(.is-commercial)
+hyvaterveys.fi,soppa365.fi,tiede.fi#?#.views-row:-abp-has(.is-commercial)
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi###paraati-ad-grid
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.-ad1.-ad.sidebar__column-item
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.right-now-widget__item--commercial
@@ -5153,9 +5158,10 @@ suomifutis.com##[href$="/nettikasinot/"]
 suomifutis.com#?#.menu-item:-abp-has([href*="/veikkausvihjeet"])
 suomikiekko.com#?#.menu-item:-abp-has([href$="/pitkavetovihjeet/"])
 suomimobiili.fi##.artikkelimainos
-suomimobiili.fi##.sbmainos
+suomimobiili.fi##.headermainos
 suomimobiili.fi#?#.article-content > p:-abp-contains(MAINOS)
-suomimobiili.fi#?#.content-wrap > .bkmodule:-abp-contains(Sponsoroitu)
+suomimobiili.fi#?#.posts-listing-list-alt-b:-abp-contains(Artikkeleita kumppaneilta)
+suomimobiili.fi#?#.posts-list > .list-item:-abp-has([href="https://suomimobiili.fi/kategoria/sponsoroitu/"])
 superlehti.fi##.ad-banner-lift__article.ad-banner-lift
 supersaa.fi##div[class^=supers-app-promo-container]
 taisto.org###mw-data-after-content > div
@@ -5201,7 +5207,6 @@ terveydenasialla.com##p a[href^="https://related.iittala.com/"]
 terveydenasialla.com#?#p:-abp-has(strong):-abp-has(a[href="http://www.curaofsweden.com/fi"])
 ticketmaster.fi##div[id^=ad-slot-]
 ticketmaster.fi#?#div:-abp-has(> [id|=ad-slot])
-tiede.fi#?#.views-row:-abp-has(.is-commercial)
 tiedonantaja.fi##[class*="block-boxes-ad-300x250"]
 tilt.fi##.lazyloading
 tinderinparhaat.com##.adf-placement-top
@@ -5578,5 +5583,8 @@ mustijamirri.fi#@##cookieform
 mustijamirri.fi#@#.cookie_info
 mustijamirri.fi#@#.cookie_check
 
-! https://github.com/easylist/easylist/pull/10167
+! https://github.com/easylist/easylist/pull/11414
 valotehdas.fi#@##cookie-law-info-bar
+
+! https://github.com/easylist/easylist/pull/11412
+vaasa.fi#@#.pum[data-popmake*="cookies"]

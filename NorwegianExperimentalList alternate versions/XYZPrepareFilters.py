@@ -279,92 +279,92 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"(^|,)google.\*(#|,)", 
-           r"\1google.no,google.dk,google.is\2", 
-           line
-        )
-
-        line = re.sub(
-           r"(^|,)ticketmaster.\*(#|,)", 
+           r"(^|,)ticketmaster\.\*(#|,)", 
            r"\1ticketmaster.no,ticketmaster.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)qxl.\*(#|,)", 
+           r"(^|,)qxl\.\*(#|,)", 
            r"\1qxl.no,qxl.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)expedia.\*(#|,)", 
+           r"(^|,)expedia\.\*(#|,)", 
            r"\1expedia.no,expedia.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)gamereactor.\*(#|,)", 
+           r"(^|,)gamereactor\.\*(#|,)", 
            r"\1gamereactor.no,gamereactor.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)viafree.\*(#|,)", 
+           r"(^|,)viafree\.\*(#|,)", 
            r"\1viafree.no,viafree.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)momondo.\*(#|,)", 
+           r"(^|,)momondo\.\*(#|,)", 
            r"\1momondo.no,monondo.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)eurosport.\*(#|,)", 
+           r"(^|,)eurosport\.\*(#|,)", 
            r"\1eurosport.no,eurosport.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)prisjakt.\*(#|,)", 
+           r"(^|,)prisjakt\.\*(#|,)", 
            r"\1prisjakt.no\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)180.\*(#|,)", 
+           r"(^|,)180\.\*(#|,)", 
            r"\g<1>180.no,180.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)kimbino.\*(#|,)", 
+           r"(^|,)kimbino\.\*(#|,)", 
            r"\1kimbino.no,kimbino.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)costume.\*(#|,)", 
+           r"(^|,)costume\.\*(#|,)", 
            r"\1costume.no,costume.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)manuall.\*(#|,)", 
+           r"(^|,)manuall\.\*(#|,)", 
            r"\1manuall.no,manuall.dk\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)intrafish.\*(#|,)", 
+           r"(^|,)intrafish\.\*(#|,)", 
            r"\1intrafish.no\2", 
            line
         )
 
         line = re.sub(
-           r"(^|,)blaklader.\*(#|,)", 
+           r"(^|,)blaklader\.\*(#|,)", 
            r"\1blaklader.no,blaklader.dk\2", 
+           line
+        )
+
+        line = re.sub(
+           r"(^|,)ehandel\.\*(#|,)", 
+           r"\1ehandel.com,ehandel.dk,ehandel.se,ehandel.fi\2", 
            line
         )
 
@@ -2360,6 +2360,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"(^|,)blaklader.\*(#|,)", 
            r"\1blaklader.no,blaklader.dk\2", 
+           line
+        )
+
+        line = re.sub(
+           r"(^|,)ehandel\.\*(#|,)", 
+           r"\1ehandel.com,ehandel.dk,ehandel.se,ehandel.fi\2", 
            line
         )
 

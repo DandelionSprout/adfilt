@@ -1,7 +1,7 @@
 [Adblock Plus 3.6]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 200320221
+! Version: 260320221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -357,6 +357,7 @@ norskemagasinet.com##a[href*=gambling]
 gulesider.no##.PartnerLinks
 leinstrand-il.no#?#.latestnews-box:-abp-contains(/casino/i)
 smakmagasinet.no##.ad
+seksualitet24.no##a[href*="partner-ads."]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -823,6 +824,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||bilbasen.dk/Vip/GetVipFinanceBanner^
 ||smakmagasinet.no/contentassets/*/970x250-
 ||smakmagasinet.no/contentassets/*/170x500-
+||seksualitet24.no/wp-content/uploads/*/sinful_$image
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 @@||vgtv.no^$generichide
@@ -1009,7 +1011,6 @@ tek.no##div[class^=adStyles_]
 ebcontent.dk###ebcontentMegaboard
 edbpriser.dk##.inlist-ad-block
 edbpriser.dk#?#*:-abp-has(> * > div[id^=leftAdSpotAdcontainer])
-ehandel.com##aside
 eidfaxi.is#?#*:-abp-has(> .ad-banner)
 ekstrabladet.dk###manipulate_monster
 ekstrabladet.dk##.scrb-posts > .flex-column
@@ -1097,7 +1098,6 @@ goerdetselv.dk##div[id^=cx_]
 golferen.no###os_ad_beam
 golferen.no###smallboard
 golferen.no##.os_big_board_box
-google.no,google.dk,google.is###cnsi ~ [jsaction*=dismiss]
 gratiskryssord.no###adSign
 gratiskryssord.no##.adSign
 gratisspil.dk###amLargeLeaderboard
@@ -1478,6 +1478,8 @@ flatpanels.dk###content > .container[style*=padding-bottom][style*=text-align]
 gulesider.no##.ResultListBanner
 nyheder24.dk##div[id^=taboola-right-rail-thumbnails-]
 tvkampen.com,tvsporten.dk##.tvg-manager-tracking-event
+ehandel.com,ehandel.dk,ehandel.se,ehandel.fi##.article-ad-container
+ehandel.com,ehandel.dk,ehandel.se,ehandel.fi##.annons
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2228,6 +2230,8 @@ triplx.dk##.aff-inner-col
 ! https://dinside.dagbladet.no/data/varsellampene-lyser/75613329
 ! https://itavisen.no/2022/03/16/dette-skjedde-da-de-handlet-fra-spillweb-com/
 ||spillweb.com^
+! https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
+||melding.link^
 ! IP addresses of servers notorious for hosting many of the sites above
 ||51.195.133.131^$domain=~in-addr.arpa
 ||66.206.3.34^$domain=~in-addr.arpa

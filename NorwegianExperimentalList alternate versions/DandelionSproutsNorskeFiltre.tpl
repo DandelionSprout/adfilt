@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 20March2022v1-Alpha
+# Version: 26March2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -380,6 +380,7 @@ msFilterList
 -d bilbasen.dk GetVipFinanceBanner
 -d smakmagasinet.no 970x250-
 -d smakmagasinet.no 170x500-
+-d seksualitet24.no sinful_
 # — — — — — — —
 # 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 +d vgtv.no
@@ -856,6 +857,8 @@ msFilterList
 # https://dinside.dagbladet.no/data/varsellampene-lyser/75613329
 # https://itavisen.no/2022/03/16/dette-skjedde-da-de-handlet-fra-spillweb-com/
 -d spillweb.com
+# https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
+-d melding.link
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
