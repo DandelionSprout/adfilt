@@ -82,7 +82,7 @@ The servers run on workstation multimedia Windows 11 PCs.
 
 The AdGuard Home update channel in use is the Beta channel (As opposed to Stable or Nightly).
 
-Average uptime for `dandelionsprout.` is more than 23h55min per day, but is not close enough to 24h00min00sec to be suited for life-or-death scenarios. The uptime for `dandelionsprout2.` has not been calculated yet.
+Average uptime for `dandelionsprout.` is more than 23h55min per day, but is not close enough to 24h00min00sec to be suited for life-or-death scenarios. The uptime for `dandelionsprout2.` varies heavily, depending on whether and when its computer's owners turn it on or off, for instance when going to bed.
 
 ### Known problems
 
