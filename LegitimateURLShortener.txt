@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30March2022v2
+! Version: 30March2022v3
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1331,6 +1331,12 @@ $removeparam=gaa_n
 $removeparam=gaa_ts
 $removeparam=gaa_sig
 
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2466789
+$removeparam=amp_gsa
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2447274
+$removeparam=vgo_ee
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1513,6 +1519,9 @@ $removeparam=cvid,domain=bing.com|msn.com
 ||bing.com^$removeparam=rnoreward
 ||bing.com^$removeparam=rqpiodemo
 ||bing.com^$removeparam=skipopalnative
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2465439
+||bing.com^$removeparam=toWww
+||bing.com^$removeparam=redig
 
 !!! ——— eBay ———
 ! https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1 (31/10/2020)
@@ -2260,9 +2269,12 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ||roboform.com^$removeparam=rec
 
 ! https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTQ_thTIPr-4kGYMHEyfPeD9YN_0fwvx4-fQ&usqp=CAU
-||gstatic.com^$removeparam=usqp
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2466789
+$removeparam=usqp,domain=gstatic.com|cdn.ampproject.org
+
 ! https://www.gog.com/promo/rerelease_ultima_underworld_and_syndicate?pp=b2a10a6c3dcadb10c8ffd734c1bab896d55cf0ec (06/08/2021)
 ||gog.com^$removeparam=pp
+
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1141831
 ||roblox.com^$removeparam=refPageId
 
