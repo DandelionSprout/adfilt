@@ -998,8 +998,20 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"^#[a-z0-9#]", 
+           r"^#[a-z0-9#].*", 
            "", 
+           line
+        )
+
+        line = re.sub(
+           r".*dmcdn\..*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-z.#%$[].*", 
+           r"", 
            line
         )
 
@@ -1518,6 +1530,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r".*\.,badfilter$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*dmcdn\..*", 
            r"", 
            line
         )
