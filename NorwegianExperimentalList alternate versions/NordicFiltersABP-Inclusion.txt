@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 010420222
+! Version: 050420221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1476,6 +1476,7 @@ nyheder24.dk##div[id^=taboola-right-rail-thumbnails-]
 tvkampen.com,tvsporten.dk##.tvg-manager-tracking-event
 ehandel.com,ehandel.dk,ehandel.se,ehandel.fi##.article-ad-container
 ehandel.com,ehandel.dk,ehandel.se,ehandel.fi##.annons
+e24.no##div[data-placement^=native_in_text_]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -4460,7 +4461,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 310320225
+! Version: 050420225
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4625,8 +4626,7 @@ anna.fi#?#article[class^="grid__item_"]:-abp-has(> .nativead)
 anna.fi,kaksplus.fi##.widget_nativearticles
 anna.fi,keskustelu.kaksplus.fi###native_text_wrapper
 app.mtvuutiset.fi##.ppas
-app.mtvuutiset.fi##div[class^="Frame-"][data-testid^="in-content-"]
-app.mtvuutiset.fi##div[class^="Frame-"][data-testid="leaderboard"]
+app.mtvuutiset.fi##div[data-testid="endorsement"]
 apteekkari.fi##.native-comms
 apteekkari.fi#?#.container:-abp-contains(MAINOS (TEKSTI JATKUU ALLA))
 apu.fi,lily.fi,meillakotona.fi,terve.fi##[class*=ad__component]
@@ -5335,6 +5335,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 /*-mainos-$image,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
 /prerolls/*.mp4$domain=gamereactor.fi
+/wp-content/uploads/2022/04/HymyAlibi2022_300x300_pupu.jpg$image,domain=alibi.fi|hymy.fi
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
 ||ad.citycdn.fi^$third-party
 ||ad.ilcdn.fi^$third-party
@@ -5356,10 +5357,8 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||cloudfront.net/images/backgroundimages/backgroundimage^$third-party
 ||cloudfront.net/poppartners/$script
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com^$media,domain=discoveryplus.fi
-||es.ylilauta.org/view?placement_id=
 ||etn.fi/images/banners/$image
 ||expekt.com^$third-party
-||fcdn.lauta.media^$subdocument,script
 ||feed.autotalli.com/bannerdata/html/*.html$subdocument
 ||feed.etuovi.com/etuovi/html/*.html$subdocument
 ||gamereactor.*/lay/dfp_*.js$script
@@ -5415,6 +5414,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||vertaa.fi^*/showads.js$script,domain=vertaa.fi
 ||vg.is.fi/autotie-is-*/$subdocument
 ||ylilauta.org/*/11-12^$subdocument
+||fcdn.lauta.media/adform.js$~third-party
 
 ! -----NETWORK FILTERS END-----
 ! -----UNSORTED-----
@@ -5538,7 +5538,7 @@ kotiliesi.fi##.placeholder
 ! Sending a product review won't work, Lowe's list
 @@||mpsnare.iesnare.com/snare.js$script,domain=power.fi
 
-! Lowe's list and Easyprivacy prevents opening thread replys via email
+! Lowe's list and Easyprivacy prevent opening thread replys via email
 @@||click.redditmail.com^$~third-party
 
 ! Lowe's list exception, cookie dialog won't open
@@ -5556,6 +5556,10 @@ kotiliesi.fi##.placeholder
 
 ! Unbreak netstat.ayy.fi
 @@||netstat.ayy.fi^
+
+! Content can't be loaded notification
+@@/AdsLoad.js$script,domain=ylilauta.org
+@@||s1.adform.net/banners/scripts/adx.js$xmlhttprequest,domain=ylilauta.org
 
 @@leiki.com/mtv3/mwidget$domain=mtvuutiset.fi
 @@leiki.com/mtv3/widgets/loader/$domain=mtvuutiset.fi
@@ -5595,3 +5599,6 @@ mustijamirri.fi#@#.cookie_check
 
 ! https://github.com/easylist/easylist/pull/11414
 valotehdas.fi#@##cookie-law-info-bar
+
+! https://github.com/finnish-easylist-addition/finnish-easylist-addition/commit/8bf469a005a552a6c6819ed8daa92aa1aa72da42
+! https://github.com/easylist/easylist/pull/11542
