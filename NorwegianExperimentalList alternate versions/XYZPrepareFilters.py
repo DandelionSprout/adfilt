@@ -3531,6 +3531,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^!\*\.([a-z0-9].*)", 
+           r"@@||\1^", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
