@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 11April2022v1-Alpha
+# Version: 16April2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -382,6 +382,8 @@ msFilterList
 -d smakmagasinet.no 970x250-
 -d smakmagasinet.no 170x500-
 -d seksualitet24.no sinful_
+-d verktoy24.no Banner-*px.jpg
+-d verktoy24.no *_300px-scaled.jpg
 # — — — — — — —
 # 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 +d vgtv.no
