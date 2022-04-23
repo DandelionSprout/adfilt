@@ -4845,6 +4845,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(\+d .*[a-z0-9.-])~([a-z0-9.-].*)", 
+           r"\1\n+d \2", 
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\r\n'
 
