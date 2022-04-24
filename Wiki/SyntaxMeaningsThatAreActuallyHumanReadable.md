@@ -151,7 +151,7 @@
 ## AdGuard for [Windows/Mac/Android] only:
 
 * `$app`: Ensures the entry is only applied to a specific phone app(s) or PC executable(s).
-* `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Individual ports can be specified with `:`. IPv6 addresses must be surrounded by square brackets. Can very easily break legitimate sites as collateral damage, and should be used very sparingly.
+* `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Individual ports can be specified with `:`. IPv6 addresses must be surrounded by square brackets. Can very easily break legitimate sites as collateral damage, and should be used very sparingly. Despite what AdGuard's syntax guide indicates, it does in fact support wildcarding both with and without RegEx.
 * `@@` + `$jsinject`: Prevents `#%#` entries from working on that site.
 * `@@` + `$extension`: Prevents AdGuard userscripts from working on that site.
 * `@@` + `$content`: Prevents `$$script` entries from working on that site.
