@@ -77,7 +77,7 @@ KNOWN_BAD_FILTERS = [
 ]
 
 ALLOWLIST = """
-! This is an allowlist added by the adfilt maintainers
+! This is an allowlist added by the Adfilt maintainers
 @@||tix.axs.com^$removeparam=utm_campaign
 @@||tix.axs.com^$removeparam=utm_content
 @@||tix.axs.com^$removeparam=utm_medium
