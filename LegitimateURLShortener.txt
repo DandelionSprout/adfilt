@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 23April2022v1
+! Version: 26April2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -687,7 +687,7 @@ $removeparam=subacctid
 $removeparam=subacctname
 
 ! https://www.travelocity.com/?affcid=travelocity-US.network.cj.8807380.10410828&afflid=02TQG4DUCgWzc1pM8DrkmVg
-$removeparam=affcid
+$removeparam=/affcid/i
 $removeparam=afflid
 
 ! https://www.thingsremembered.com/?fcref=afl%3AOffers.com%20(Offers.com%2C%20LLC)
@@ -3338,6 +3338,18 @@ $removeparam=response_type,domain=udemy.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2597385
 $document,removeparam=_clde
 $document,removeparam=_cldee
+
+! https://fi.hotels.com/ho134443/?wapa6=&sub_publisher=5350479&sub_site=100415378&sub_ad=13951578
+! http://no.grupper.hotels.com/GroupForm.cfm?locale=no_NO&intlid=OTHER+%3A%3A+header_main_section&kw=header
+$removeparam=intlid,domain=hotels.com
+$removeparam=kw,domain=hotels.com
+$removeparam=sub_ad,domain=hotels.com
+$removeparam=sub_site,domain=hotels.com
+$removeparam=sub_publisher,domain=hotels.com
+$removeparam=wapa6,domain=hotels.com
+
+! https://www.ebookers.com/lp/deals/sun-and-beach?rfrr=editorial.Sun_&%20beach.click
+$removeparam=rfrr,domain=ebookers.*
 
 !#if !env_mobile
 ! ——— Mobile ——— !
