@@ -5,13 +5,13 @@
 
 ———————————————————————————
 
-**IMPORTANT NOTE:** My lists does not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions, or Chrome versions released after December 2022, will **not** be accepted, and if you do submit one, you would be asked to use an alternate web browser instead.
+**IMPORTANT NOTE:** My lists do not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and the removal of `-abp-has` and `-abp-contains`. Issue reports for Manifest v3-based extension versions, or Chrome versions released after December 2022, will **not** be accepted, and if you do submit one, you would be asked to use an alternate web browser instead.
 
-And just in case anyone thinks I'm not serious about it, **I do no longer offer support to Safari ≥13 users** (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
+And just in case anyone thinks I'm not serious about it, **I no longer offer support to Safari ≥13 users** (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
 
 ———————————————————————————
 
-Note for UXP browser users: Due to the Pale Moon community being protective of consistent abusive hate speech and grave insultments, I will no longer use Pale Moon, Basilisk or Borealis to test any entries or for anything else. PC browser entries that can't be reproduced by Chrome, Firefox, Vivaldi or Tor Browser, will be delegated to [uAssets](https://github.com/uBlockOrigin/uAssets/blob/master/filters/legacy.txt) instead.
+Note for UXP browser users: Due to the Pale Moon community being protective of consistent abusive hate speech and grave insults, I will no longer use Pale Moon, Basilisk or Borealis to test any entries or for anything else. PC browser entries that can't be reproduced in Chrome, Firefox, Vivaldi or Tor Browser, will be delegated to [uAssets](https://github.com/uBlockOrigin/uAssets/blob/master/filters/legacy.txt) instead.
 
 ———————————————————————————
 
@@ -19,7 +19,7 @@ Note for UXP browser users: Due to the Pale Moon community being protective of c
 
 ———————————————————————————
 
-This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists for countless different topics, for use in adblock tools and the likes. GitHub was in mid-2017 by far the easiest way for laymen like me to store pure text files, which is a necessity to create subscribable lists.
+This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists for countless different topics, for use in adblock tools and the like. GitHub was in mid-2017 by far the easiest way for laymen like me to store pure text files, which is a necessity to create subscribable lists.
 
 This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed lots of energy and effort into, for the enjoyment of all of us.
 
@@ -30,7 +30,7 @@ This is a hobby project of mine, in which I work just as much on these lists and
 
 However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits. Various modified versions of it are included in uBlock Origin, AdGuard, AdNauseam, AdBlock, Adblock Plus, AdGuard Home, pfBlockerNG, Brave Browser, and Vivaldi's privacy settings.
 
-If you have any problems, suggestions, or a desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things for the time being. Don't be shy to ask/tell me.
+If you have any problems, suggestions, or the desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things for the time being. Don't be shy to ask/tell me.
 
 Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listene på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. Man er ikke nødt til å bruke engelsk hele tiden.
 
@@ -40,7 +40,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 • [Checker for redundant filter entries and for ABP syntaxes](https://abpvn.com/ruleChecker/redundantRuleChecker.html), made by Famlam. It does however not account for uBO-syntax-specific entries, nor for ABP syntaxes newer than 2017. <br>
 • [Recentmost tool I've used to test IP server availability](https://github.com/funilrys/PyFunceble), made by [Funilrys](https://github.com/funilrys). <br>
-• To easily create GitCDN links to the lists, in case anyone have list connection problems: [GitHub GitCDN Button](https://greasyfork.org/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul) <br>
+• To easily create GitCDN links to the lists, in case anyone has list connection problems: [GitHub GitCDN Button](https://greasyfork.org/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul) <br>
 • To find very similar domains for Hosts files, or to find all domains hosted by specific IP addresses (both IPv4 and IPv6): [SecurityTrails](https://securitytrails.com/) <br>
 • To look for invalidly written entries according to uBO's syntax: Use uBlock Origin, set logger to *All*, and resync the lists. <br>
 • To correctly sort IP addresses (which Sublime Text cannot do): [Browserling IP Sort](https://www.browserling.com/tools/ip-sort)<br>
