@@ -48,7 +48,7 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 • To find lists of the biggest newssites of most countries: [DomainTyper](https://domaintyper.com/top-websites/most-popular-websites-with-no-domain)<br>
 • To search with wildcards for domains, e.g. `ads.*.no`: [SecurityTrails API Free](https://docs.securitytrails.com/reference#domain-search)
 
-### Ways one can use [Sublime Text](https://www.sublimetext.com/) (made by Jon Skinner and Will Bond) to improve his/her filter lists:
+### Ways one can use [Sublime Text](https://www.sublimetext.com/) (made by Jon Skinner and Will Bond) to improve their filter lists:
 
 • To sort filter entries in alphabetic order: F9 / Edit → Sort Lines <br>
 • To remove `www.` from most entries: Ctrl+H / Find → Replace… <br>
