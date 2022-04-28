@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 27April2022v2
+! Version: 28April2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -223,7 +223,7 @@ $removeparam=mp_value1
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-526736 (25/03/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-873926
-$removeparam=xid,domain=tcgplayer.com
+$removeparam=xid,domain=fortune.com|tcgplayer.com
 
 ! https://www.pcgamer.com/hackers-are-exploiting-call-of-duty-warzone-cheaters-with-malware/?__twitter_impression=true (01/04/2021)
 $removeparam=__twitter_impression
@@ -2563,7 +2563,7 @@ $removeparam=content,domain=eonline.com|bybit.com|t.me|twitter.com|docs.google.c
 $removeparam=cId,domain=apple.com|youtube.com
 $removeparam=lId,domain=apple.com|youtube.com
 $removeparam=/^src=Linkfire$/,domain=apple.com|youtube.com
-||apple.com^$removeparam=ct
+$removeparam=ct,domain=apple.com|bumble.com|newsroom.co.nz
 ||music.apple.com^$removeparam=itsct
 ||music.apple.com^$removeparam=itscg
 
@@ -2911,9 +2911,6 @@ $removeparam=recs_strategy,domain=nordstrom.com
 $removeparam=recs_source
 $removeparam=recs_page_type,domain=nordstrom.com
 $removeparam=recs_seed,domain=nordstrom.com
-
-! https://bumble.com/?ct=HearstSponLogo
-$removeparam=ct,domain=bumble.com
 
 ! https://www.savagex.com/shop/savage-x-smoking-jacket-sq2149163-6212-12096199?psrc=browse_men_sleep
 $removeparam=psrc,domain=savagex.com
@@ -3351,6 +3348,9 @@ $removeparam=wapa6,domain=hotels.com
 
 ! https://www.ebookers.com/lp/deals/sun-and-beach?rfrr=editorial.Sun_&%20beach.click
 $removeparam=rfrr,domain=ebookers.*
+
+! https://gitlab.com/ClearURLs/rules/-/issues/222
+$removeparam=fbid,domain=festo-didactic.com
 
 !#if !env_mobile
 ! ——— Mobile ——— !
