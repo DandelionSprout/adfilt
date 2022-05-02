@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 23April2022v2-Alpha
+# Version: 02May2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -862,6 +862,10 @@ msFilterList
 -d spillweb.com
 # https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
 -d melding.link
+# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1114669106
+- cx nordea
+- cx sparebank
+- cx sbanken
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34

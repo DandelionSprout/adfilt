@@ -5557,6 +5557,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})\.\*\$network$", 
+           r"\1.0/24", 
+           line
+        )
+
         if is_supported_agh(line):
             text += line + '\r\n'
 
