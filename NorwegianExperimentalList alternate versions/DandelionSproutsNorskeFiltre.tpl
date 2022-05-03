@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 02May2022v1-Alpha
+# Version: 03May2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -866,6 +866,13 @@ msFilterList
 - cx nordea
 - cx sparebank
 - cx sbanken
+# https://www.kode24.no/artikkel/75980495
+-d campbell-living.com
+# https://www.telia.no/kundeservice/mobil/malware-flubot-android/
+-d destinyrealty.in
+-d p-stn.net
+-d wxqgx123.com
+-d kikuchitadahisa.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
