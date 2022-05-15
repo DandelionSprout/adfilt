@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for «uBlock Origin Legacy»)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for «uBlock Origin Legacy»)
-! Version: 04May2022v1-Beta
+! Version: 15May2022v1-Beta
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -477,6 +477,8 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ! vesterbroliv.dk, vafo.dk, amagerliv.dk
 ##.splitblock__column > .block > .adblock
 dk##section.article__adblock
+! https://github.com/uBlockOrigin/uAssets/issues/13224
+##a[data-bid="1"][href*="/linkout"]
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -843,6 +845,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||seksualitet24.no/wp-content/uploads/*/sinful_$image
 ||verktoy24.no/wp-content/uploads/*/Banner-*px.jpg^
 ||verktoy24.no/wp-content/uploads/*_300px-scaled.jpg^
+||levmeddiabetes.no/content/uploads/*/Accu-$image
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 !#if false
@@ -1549,6 +1552,7 @@ ehandel.*##.annons
 e24.no##div[data-placement^=native_in_text_]
 vg.no##div[class^=article-wrapper-] > div[class^=" css-"]
 isabellas.dk##div[data-type=ad]
+jyllands-posten.dk##div[class*=" jp-banner--"]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances

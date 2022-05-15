@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 04May2022v1-Alpha
+# Version: 15May2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -65,6 +65,7 @@ msFilterList
 # tipsbladet.dk (15 06 2021)
 # sol.no (22 09 2021)
 # vesterbroliv.dk, vafo.dk, amagerliv.dk
+# https://github.com/uBlockOrigin/uAssets/issues/13224
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -384,6 +385,7 @@ msFilterList
 -d seksualitet24.no sinful_
 -d verktoy24.no Banner-*px.jpg
 -d verktoy24.no *_300px-scaled.jpg
+-d levmeddiabetes.no Accu-
 # — — — — — — —
 # 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 +d vgtv.no
