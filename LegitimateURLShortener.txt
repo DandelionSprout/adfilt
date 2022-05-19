@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19May2022v1
+! Version: 19May2022v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -734,7 +734,7 @@ $removeparam=sp_campaign
 $removeparam=ad_id
 
 ! https://www.michaels.com/home?affSource=1397064_14079089
-$removeparam=affSource
+$removeparam=/^affSource/i
 
 ! https://www.nflshop.com/?_s=afl_impact
 $removeparam=/^_s=afl_impact$/
@@ -1339,6 +1339,15 @@ $removeparam=vgo_ee
 ! https://www.readpeak.com/best-practice/4-4-server-to-server-tracking
 $removeparam=rpcid
 
+! https://www.spelbutiken.se/produkt/oculus-quest-2-128gb/238WU6/?ref=prisjakt
+$removeparam=/^ref=prisjakt/i
+
+! https://www.onbuy.com/gb/sony-wh-1000xm4-wireless-noise-canceling-over-ear-headphones-blue~c3241~p48721262/?ref=pricespy
+$removeparam=/^ref=pricespy/i
+
+! https://www.printerinks.com/16936/2p-n-014/inkjet-cartridges/canon/canon-pg-540xl_cl-541xl-original-high-capacity-ink-cartridge-multipack/?pgid=8449ff20-72de-4233-b817-37a1f4bcda5f&amp;utm_medium=awin&amp;utm_source=cse
+$removeparam=/^amp;utm_/
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1358,11 +1367,11 @@ $removeparam=ref,domain=abebooks.com|accounts.binance.com|adobe.com|albiononline
 $removeparam=tid,domain=clickbank.net|comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|brave.com|buyzero.de|cytron.io|digikey.*|elastix.org|engadget.com|hinta.fi|investors.com|kennethcole.com|kipling-usa.com|kubii.*|melopero.com|mozilla.org|newbalance.com|nexo.io|okdo.com|raspipc.es|reichelt.*|thepihut.com|thunderbird.net|tiendatec.es|tokopedia.com|twitter.com|udemy.com|viking-direct.co.uk|webmd.com|welectron.com|wondershare.*|wuzhuiso.com|yahoo.com
+$removeparam=src,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|brave.com|buyzero.de|cytron.io|digikey.*|elastix.org|engadget.com|hinta.fi|investors.com|kennethcole.com|kipling-usa.com|kubii.*|melopero.com|mozilla.org|newbalance.com|nexo.io|officestationery.co.uk|okdo.com|raspipc.es|reichelt.*|thepihut.com|thunderbird.net|tiendatec.es|tokopedia.com|twitter.com|udemy.com|viking-direct.co.uk|webmd.com|welectron.com|wondershare.*|wuzhuiso.com|yahoo.com
 ! No particular example
 ! https://github.com/DandelionSprout/adfilt/pull/474
 ! https://user.qzone.qq.com/1250252459?source=aiostar (01/02/2022)
-$document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|blog.getadblock.com|blogs.oracle.com|boscovs.com|boxboat.com|brownells.*|britishcornershop.co.uk|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|edx.org|educba.com|eonline.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|instagram.com|itnext.io|jacquielawson.com|just-eat.co.uk|kasta.io|medium.com|microsoftedgewelcome.microsoft.com|nautica.com|nortonsafe.search.ask.com|onehanesplace.com|outnorth.fi|petsupplies.com|phonesoap.com|riteaid.com|runnode.com|search.brave.com|sonos.com|spiceworks.com|squarespace.com|subscribe.gq.com|t.me|thedailybeast.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|youtube.com|yubo.live
+$document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|blog.getadblock.com|blogs.oracle.com|boscovs.com|boxboat.com|brownells.*|britishcornershop.co.uk|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|edx.org|educba.com|eonline.com|escentual.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|instagram.com|itnext.io|jacquielawson.com|just-eat.co.uk|kasta.io|medium.com|microsoftedgewelcome.microsoft.com|nautica.com|nortonsafe.search.ask.com|onehanesplace.com|outnorth.fi|petsupplies.com|phonesoap.com|riteaid.com|runnode.com|search.brave.com|sonos.com|spiceworks.com|squarespace.com|studio.co.uk|subscribe.gq.com|t.me|thedailybeast.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|youtube.com|yubo.live
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|marketwatch.com|penews.com|wsj.com
@@ -3023,7 +3032,7 @@ $removeparam=cbsclick,domain=paramountplus.com|cbs.com
 $removeparam=vndid,domain=paramountplus.com|cbs.com
 
 ! https://www.bikester.fi/cube-aim-pro-M894786.html?vgid=G1281243&_cid=22_-2859_90206_90207_281846_3688119_0_Hintaopas.fi
-$removeparam=_cid,domain=addnature.*|bikester.fi
+$removeparam=_cid,domain=addnature.*|bikester.*
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1892152
 $removeparam=rep,domain=shein.com
@@ -3148,7 +3157,7 @@ $removeparam=/traffic_source=Connatix/i
 $removeparam=site,domain=alina.se
 
 ! https://www.davids.se/produkt/mlpg3qn-a?variant=15818&prisjakt=1
-$removeparam=prisjakt,domain=davids.se|poradio.se|teleradio.nu
+$removeparam=prisjakt,domain=davids.se|larsbengtsson.se|poradio.se|teleradio.nu
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2043678
 $removeparam=refresh,domain=cnn.com
@@ -3393,6 +3402,12 @@ $removeparam=__vfz,domain=venturebeat.com
 ||amazon.*^$removeparam=visitId
 ||amazon.*^$removeparam=maas
 ||amazon.*^$removeparam=channel
+
+! https://www.boots.com/dior-sauvage-eau-de-toilette-100ml-gift-box-10300220?affwin
+$removeparam=affwin,domain=boots.com
+
+! https://www.studio.co.uk/shop/health---beauty/dental-care/oral-b-pro3-black-edition-cross-action-electric-toothbrush-with-travel-case?source=TQ45&ch=aw
+$removeparam=ch,domain=studio.co.uk
 
 !#if !env_mobile
 ! ——— Mobile ——— !
