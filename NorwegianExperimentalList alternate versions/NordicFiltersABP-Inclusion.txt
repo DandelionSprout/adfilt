@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 150520221
+! Version: 180520221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1486,6 +1486,7 @@ e24.no##div[data-placement^=native_in_text_]
 vg.no##div[class^=article-wrapper-] > div[class^=" css-"]
 isabellas.dk##div[data-type=ad]
 jyllands-posten.dk##div[class*=" jp-banner--"]
+dagbladet.no,sol.no#?#*:-abp-has(> .adunit)
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -4433,7 +4434,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 140520221
+! Version: 180520222
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4885,9 +4886,6 @@ keskustelu.suomi24.fi##div[class*=FooterAdWrapper]
 keskustelu.suomi24.fi##div[class*=HeaderAdWrapper]
 keskustelu.suomi24.fi##div[class*=__AdWrapper]
 keskustelu.suomi24.fi##div[class^=RightSidePanel__AdContainer]
-kestavyysurheilu.fi###precont
-kestavyysurheilu.fi##.middleads
-kestavyysurheilu.fi#?#.moduleBox:-abp-contains(Kaupalliset yhteistyöt)
 kiinteistolehti.fi###new-post-list-headings-17
 kiinteistolehti.fi##.mpc-row.vc_custom_1515749959295.vc_row-fluid.wpb_row.vc_row
 kiinteistolehti.fi##.mpc-row.vc_custom_1515750168978.vc_row-fluid.wpb_row.vc_row
@@ -4946,6 +4944,7 @@ leijonat.com,suomiurheilu.com##[href$="/pitkavetovihjeet/"]
 lentopallo.info,murtopallo.net#?#li:-abp-has([href^="https://track.adtraction.com/"])
 liberolehti.fi#?#[id|=etusivu-bottom-full]:-abp-has(.mainos)
 listafriikki.com#?#.widget_custom_html:-abp-has([data-ad-unit])
+livetaajuus.fi##.middle-ad-container
 ls24.fi##.asuntorauma-promo
 ls24.fi##.palvelupankki-banner
 ls24.fi##aside[class=sidebar] > [class^="advertisement ad advertisement"] + [class^="advertisement ad advertisement"] + section[class^=article-list]:last-of-type
@@ -4972,6 +4971,7 @@ maaseuduntulevaisuus.fi##div[class*="ArticleTeaserGroup_nativeAd"]
 maaseuduntulevaisuus.fi#?#div[class^=MainLane_laneItem]:-abp-has(div[class^=ArticleBanner_advertorial])
 maaseutumedia.fi##.header_banner
 maaseutumedia.fi##.textwidget
+maastohiihto.com##.paid-content-wrapper
 markkinointiuutiset.fi##div[class|="ad-section"]
 marmai.fi##div#skyscraper-height-div > aside > div > div > a[href^="/kumppaniblogit/"]
 marmai.fi##div#skyscraper-height-div > section > div > a[href^="/kumppaniblogit/"]
@@ -5220,14 +5220,12 @@ tekniikkatalous.fi#?#.article-body > div[class]:-abp-has(> span:-abp-contains(KA
 tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:-abp-contains(Kaupallinen yhteistyö)
 tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:-abp-contains(Kaupallinen yhteistyö)
 tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
-telsu.fi###paab_pot
-telsu.fi###paaab_pot
-telsu.fi##.paab
-telsu.fi##.paaab
-telsu.fi#?#.ch:-abp-has(+ [data-src*=adform])
-telsu.fi#?#.ch:-abp-contains(SPON)
+telsu.fi###page > div[id^="paa"]
+telsu.fi##.footer > div[id^="paa"]
 telsu.fi##a[href^="/cclk"]
 telsu.fi##div[class*=cmore]
+telsu.fi#?#.ch:-abp-contains(SPON)
+telsu.fi#?#.ch:-abp-has(+ [data-src*=adform])
 tennis.fi##.ad-blocks
 tervareitti.fi##.advertisement-banner-row
 tervareitti.fi#?#.article-container.shadow-sm.col:-abp-has(img[alt^="Oma tilausmainos"])
@@ -5440,6 +5438,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||seksitreffit.fi/banners/*$domain=seksitreffit.fi
 ||sf.nm-ovp.nelonenmedia.fi/player/games/ruutu-player-loader.js$script,domain=alypaa.com
 ||superskills.fi/fi*?isIframe=true$subdocument
+||telsu.fi/telsu_top
 ||testeri.fi/inc/museokortti.png$image
 ||tohtorille.fi/Content/img/op-banners/$image
 ||tokentube.net/f_scripts/shared/videojs/ads.vast.js$script
