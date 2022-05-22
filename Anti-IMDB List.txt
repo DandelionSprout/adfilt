@@ -1,6 +1,6 @@
-[Adblock Plus 3.4]
+[Adblock Plus 3.13]
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! Version: 19May2022v1-Beta
+! Version: 22May2022v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -66,17 +66,17 @@
 ~imdb.com##.imdb-ic:not(html, body)
 
 ! International (All adblockers)
-bing.com#?#.b_algo:-abp-has(cite:-abp-contains(imdb.com)) .b_sritem
-newonnetflix.info#?#p:-abp-has(a[target=_imdb])
+bing.com#?#.b_algo:has(cite:has-text(imdb.com)) .b_sritem
+newonnetflix.info#?#p:has(a[target=_imdb])
 rakuten.tv##.score
 rakuten.tv##a[href*=".imdb.com/title/"]
 rakuten.tv##div[type=scores]
-sfanytime.com#?#div:-abp-has(> img[alt^=IMDB])
-sfanytime.com#?#li:-abp-contains(/^imdb$/)
+sfanytime.com#?#div:has(> img[alt^=IMDB])
+sfanytime.com#?#li:has-text(/^imdb$/)
 playpilot.com##.ratings
-whatsondisneyplus.com#?#li:-abp-contains(Imdb)
+whatsondisneyplus.com#?#li:has-text(Imdb)
 sfanytime.com##a[href*="?imdb="]
-sfanytime.com#?#span[data-testid^=search_hit__] + div > span:not([color]):-abp-has(span[color=black])
+sfanytime.com#?#span[data-testid^=search_hit__] + div > span:not([color]):has(span[color=black])
 
 ! International (uBlock Origin or AdGuard only)
 amazon.*##span.av-badge-text:has(.av-imdb-logo)
@@ -85,7 +85,7 @@ google.*##:xpath(//*[text()[contains(., 'IMDb')]]/parent::*/parent::div/parent::
 !!!google.*##div[data-hveid]:has(> div > div > a[href*="imdb.com"]) div:has(> div[class] > span)
 google.*##.g .r:has(a[href*=".imdb.com"]) + .s > div > div:first-of-type
 google.*##div[data-async-context^="query:"] > .g > div:has(a[href*=".imdb.com"]) g-review-stars:upward(1)
-google.*##div[data-async-context^="query:"] > .g:-abp-has(a[href*=".imdb.com/"]) div:-abp-has(> g-review-stars)
+google.*##div[data-async-context^="query:"] > .g:has(a[href*=".imdb.com/"]) div:has(> g-review-stars)
 google.*##.g:has(a[href*="imdb.com"]) g-review-stars:upward(1)
 google.*##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
 viaplay.*##.Imdb-link-slSbv
@@ -96,18 +96,18 @@ viaplay.*##div[id*=imdb][data-testhook=carousel-header] + section
 yandex.*##li.serp-item:has(a[href*="imdb.com"]) .rating
 
 ! Norway
-filmweb.no#?#.Ratings:-abp-has(img[alt=IMDb])
+filmweb.no#?#.Ratings:has(img[alt=IMDb])
 tvguide.vg.no##._3_ZF3
-tvguide.vg.no#?#span:-abp-has(span:-abp-contains(IMDb)):-abp-contains(/, $/)
-twe.no#?#div.content-list:-abp-has(a[href*=imdb])
-serienytt.no#?#strong:-abp-contains(/^IMDb:$/)
-serienytt.no#?#strong:-abp-contains(/^IMDb:$/) + strong
+tvguide.vg.no#?#span:has(span:has-text(IMDb)):has-text(/, $/)
+twe.no#?#div.content-list:has(a[href*=imdb])
+serienytt.no#?#strong:has-text(/^IMDb:$/)
+serienytt.no#?#strong:has-text(/^IMDb:$/) + strong
 serienytt.no##div[class^=wpgb-block-][class$=wpgb-idle-scheme-1] + div[class^=wpgb-block-][class$=wpgb-idle-scheme-1]
 
 ! Sweden
 tv.nu##a[href*="imdb.com"]
 tv.nu##._1bnN4
-tv.nu#?#a[title] span:-abp-contains(IMDb)
+tv.nu#?#a[title] span:has-text(IMDb)
 
 ! Denmark
 tvguide.dk##.zk-poster-badges
@@ -118,39 +118,39 @@ telsu.fi##[title*=IMDb i]
 telsu.fi##em[class*=" "]
 
 ! Germany
-netzkino.de#?#.list-inline > li:-abp-contains(Bewertung)
+netzkino.de#?#.list-inline > li:has-text(Bewertung)
 
 ! United States
 kissanime.*##.rating
 kissanime.*##a[href*="kissanime."][href$="/imdb/"]
 
 ! Australia
-binge.com.au#?#h3 + p + ul > li:-abp-has(svg[class$=Imdb])
+binge.com.au#?#h3 + p + ul > li:has(svg[class$=Imdb])
 
 ! Iran
 gapfilm.ir##a[href^="/movie/"] + div:not([class*=" "]):last-of-type > a[href^="/movie/"] ~ div:not([class*=" "]):last-of-type
 gapfilm.ir##a[href^="/serial/"] + div:not([class*=" "]):last-of-type > a[href^="/serial/"] ~ div:not([class*=" "]):last-of-type
-gapfilm.ir#?#.no-gutters div:not([class*=" "]):last-of-type:-abp-has(> span:-abp-contains(:IMDB))
-gapfilm.ir#?#div.col-lg-2.col-6:-abp-contains(IMDB)
+gapfilm.ir#?#.no-gutters div:not([class*=" "]):last-of-type:has(> span:has-text(:IMDB))
+gapfilm.ir#?#div.col-lg-2.col-6:has-text(IMDB)
 gapfilm.ir##.progress-drs
 
 ! Various movie sites
-ddl-warez.to#?#td:-abp-has(.btn[data-original-title^=IMDb])
-myfriendspizza.com#?#a:-abp-contains(IMDb)
-yts.am#?#div.rating-row:-abp-has(a[title="IMDb Rating"])
-yuptorrents.com#?#div.row:-abp-contains(IMDB Rating)
-movies2k.pro,mmsubtitles.co#?#.custom_fields:-abp-contains(IMDb)
+ddl-warez.to#?#td:has(.btn[data-original-title^=IMDb])
+myfriendspizza.com#?#a:has-text(IMDb)
+yts.am#?#div.rating-row:has(a[title="IMDb Rating"])
+yuptorrents.com#?#div.row:has-text(IMDB Rating)
+movies2k.pro,mmsubtitles.co#?#.custom_fields:has-text(IMDb)
 moviewatcher.is#?#img[alt="Movie rating"]:upward(2)
-c123movies.com#?#p:-abp-contains(IMDb: )
+c123movies.com#?#p:has-text(IMDb: )
 watchfreemovies.ch##.movie_ratings:nth-of-type(2)
-watchfreemovies.ch#?#.movie_info tr:-abp-contains(IMDB)
+watchfreemovies.ch#?#.movie_info tr:has-text(IMDB)
 watchfreemovies.ch##.index_ratings
-tornadomovies.co#?#.first > div:-abp-contains(IMDb)
+tornadomovies.co#?#.first > div:has-text(IMDb)
 primewire.*##div:has(> span:has-text(IMDb))
 ganool21.link##.rating
-ganool21.link#?#.col-md-12 tr:-abp-contains(IMDb)
+ganool21.link#?#.col-md-12 tr:has-text(IMDb)
 m4uhd.net##.quality
 45.87.43.43##.rating
-filmux.to#?#.frating:-abp-contains(IMDB)
-fullhdfilmizlesene.pw#?#span:-abp-contains(/^IMDB: /)
+filmux.to#?#.frating:has-text(IMDB)
+fullhdfilmizlesene.pw#?#span:has-text(/^IMDB: /)
 hdfilmcehennemi.film##.poster-imdb
