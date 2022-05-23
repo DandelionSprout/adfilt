@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 29November2021v2-Beta
+! Version: 23May2022v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8kun. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
@@ -18,11 +18,11 @@ reddit.com###header-quicklinks-popular
 reddit.com###header-quicklinks-all
 reddit.com##div[role=navigation]
 ! The user feed, if I don't remember completely wrong
-reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/all/"])
-reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/popular/"])
-reddit.com#?#ul.hover.sr-bar.flat-list > li:-abp-has(a[href*="/r/random/"])
+reddit.com#?#ul.hover.sr-bar.flat-list > li:has(a[href*="/r/all/"])
+reddit.com#?#ul.hover.sr-bar.flat-list > li:has(a[href*="/r/popular/"])
+reddit.com#?#ul.hover.sr-bar.flat-list > li:has(a[href*="/r/random/"])
 ! Search bar
-reddit.com#?#a[id^=SearchDropdown]:-abp-has(.icon-popular)
+reddit.com#?#a[id^=SearchDropdown]:has(.icon-popular)
 
 ! Removes hard-to-close cookie banners on Imgur embeds
 ||quantcast.mgr.consensu.org$domain=reddit.com|imgur.com
@@ -38,7 +38,6 @@ reddit.com#?#a[id^=SearchDropdown]:-abp-has(.icon-popular)
 ||reddit.com/r/antifurry_irl^$document
 ||reddit.com/r/yiffinhell^$document
 ! Known to ban all men:
-||reddit.com/r/FemaleDatingStrategy^$document
 ||reddit.com/r/PinkpillFeminism^$document
 ! Known to ban all Europeans:
 ||reddit.com/r/dankmemes^$document
@@ -47,7 +46,6 @@ reddit.com#?#a[id^=SearchDropdown]:-abp-has(.icon-popular)
 ||reddit.com/r/CurlyHair^$document
 ! https://www.reddit.com/r/PowertrippingMods/comments/r3fhvd/dont_know_if_anyone_has_thanked_this_mod_for/
 ||reddit.com/r/trueoffmychest^$document
-||reddit.com/r/cringetopia^$document
 ||reddit.com/r/technicallythetruth^$document
 ||reddit.com/r/iamatotalpieceofshit^$document
 ||reddit.com/r/CODWarzone^$document
@@ -93,71 +91,71 @@ reddit.com#?#a[id^=SearchDropdown]:-abp-has(.icon-popular)
 
 ! Posts whose scores are lower than a certain amount (New Reddit)
 ! The default for all subreddits is 10 points, although this can be adjusted for a handful of subreddits whose quality levels are deemed to sharply increase with a higher or lower limit.
-reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp]:not([href*="/mapswithoutnz/"])):-abp-has(div[style^="width: 40px"] button + div:-abp-contains(/^[0-9]$|^[A-Z]/))
+reddit.com#?#.Post:has(a[data-click-id=timestamp]:not([href*="/mapswithoutnz/"])):has(div[style^="width: 40px"] button + div:has-text(/^[0-9]$|^[A-Z]/))
 ! 5 points
-reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/mapswithoutnz/"]):-abp-has(div[style^="width: 40px"] button + div:-abp-contains(/^[0-4]$|^[A-Z]/))
+reddit.com#?#.Post:has(a[data-click-id=timestamp][href*="/mapswithoutnz/"]):has(div[style^="width: 40px"] button + div:has-text(/^[0-4]$|^[A-Z]/))
 ! 15 points
-reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/dontdeadopeninside/"]):-abp-has(div[style^="width: 40px"] button + div:-abp-contains(/^[0-9]$|^1[0-4]$|^[A-Z]/))
-reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/assholedesign/"]):-abp-has(div[style^="width: 40px"] button + div:-abp-contains(/^[0-9]$|^1[0-4]$|^[A-Z]/))
+reddit.com#?#.Post:has(a[data-click-id=timestamp][href*="/dontdeadopeninside/"]):has(div[style^="width: 40px"] button + div:has-text(/^[0-9]$|^1[0-4]$|^[A-Z]/))
+reddit.com#?#.Post:has(a[data-click-id=timestamp][href*="/assholedesign/"]):has(div[style^="width: 40px"] button + div:has-text(/^[0-9]$|^1[0-4]$|^[A-Z]/))
 ! 20 points
-reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/ihadastroke/"]):-abp-has(div[style^="width: 40px"] button + div:-abp-contains(/^[0-9]$|^1[0-9]$|^[A-Z]/))
-reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/BoneAppleTea/"]):-abp-has(div[style^="width: 40px"] button + div:-abp-contains(/^[0-9]$|^1[0-9]$|^[A-Z]/))
-reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/BestOfReports/"]):-abp-has(div[style^="width: 40px"] button + div:-abp-contains(/^[0-9]$|^1[0-9]$|^[A-Z]/))
-reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/showerthoughts/"]):-abp-has(div[style^="width: 40px"] button + div:-abp-contains(/^[0-9]$|^1[0-9]$|^[A-Z]/))
+reddit.com#?#.Post:has(a[data-click-id=timestamp][href*="/ihadastroke/"]):has(div[style^="width: 40px"] button + div:has-text(/^1?[0-9]$|^[A-Z]/))
+reddit.com#?#.Post:has(a[data-click-id=timestamp][href*="/BoneAppleTea/"]):has(div[style^="width: 40px"] button + div:has-text(/^1?[0-9]$|^[A-Z]/))
+reddit.com#?#.Post:has(a[data-click-id=timestamp][href*="/BestOfReports/"]):has(div[style^="width: 40px"] button + div:has-text(/^1?[0-9]$|^[A-Z]/))
+reddit.com#?#.Post:has(a[data-click-id=timestamp][href*="/showerthoughts/"]):has(div[style^="width: 40px"] button + div:has-text(/^1?[0-9]$|^[A-Z]/))
 ! 25 points
-reddit.com#?#.Post:-abp-has(a[data-click-id=timestamp][href*="/europe/"]):-abp-has(div[style^="width: 40px"] button + div:-abp-contains(/^[0-9]$|^1[0-9]$|^2[0-4]$|^[A-Z]/))
+reddit.com#?#.Post:has(a[data-click-id=timestamp][href*="/europe/"]):has(div[style^="width: 40px"] button + div:has-text(/^1?[0-9]$|^2[0-4]$|^[A-Z]/))
 
 ! Posts whose scores are lower than a certain amount (Mobile Reddit; experimental)
-reddit.com#?#.Post:-abp-has(.postHeader__subreddit-link:not([href="/r/mapswithoutnz"])):-abp-has(.VotingBox__score:-abp-contains(/●|^[0-9]$/))
-reddit.com#?#.Post:-abp-has(.postHeader__subreddit-link[href="/r/mapswithoutnz"]):-abp-has(.VotingBox__score:-abp-contains(/●|^[0-4]$/))
+reddit.com#?#.Post:has(.postHeader__subreddit-link:not([href="/r/mapswithoutnz"])):has(.VotingBox__score:has-text(/●|^[0-9]$/))
+reddit.com#?#.Post:has(.postHeader__subreddit-link[href="/r/mapswithoutnz"]):has(.VotingBox__score:has-text(/●|^[0-4]$/))
 
 ! Posts that are too new to have been given a points score
-reddit.com#?#.Post:-abp-has(div[style^="color:"]:-abp-contains(•):not(:-abp-contains(/[a-z]/i)))
-reddit.com#?#.Post:-abp-has(span[data-click-id=metadata_comments]):not(:-abp-has(span[data-click-id=metadata_votes]))
-reddit.com#?#.Post:-abp-has(div[style*=-postfooter-]):not(:-abp-has(span[data-click-id=metadata_votes]))
+reddit.com#?#.Post:has(div[style^="color:"]:has-text(•):not(:has-text(/[a-z]/i)))
+reddit.com#?#.Post:has(span[data-click-id=metadata_comments]):not(:has(span[data-click-id=metadata_votes]))
+reddit.com#?#.Post:has(div[style*=-postfooter-]):not(:has(span[data-click-id=metadata_votes]))
 
 ! Usernames that are 139% guaranteed to be trolls
 !#if !adguard
-reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/p[e3]p[e3]/i):-abp-contains(/fr[o0]g/i))
-reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/kekistan/i))
-reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/RedditAdmins/i))
-reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/j[eou][owi]w?[sz]?/i):-abp-contains(/white/i))
-reddit.com#?#.Post,.Comment:-abp-has(a[href^="/user"]:-abp-contains(/g[o0]y/i):-abp-contains(/wh[i1]te/i))
+reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
+reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/kekistan/i))
+reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/RedditAdmins/i))
+reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/j[eou][owi]w?[sz]?/i):has-text(/white/i))
+reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/g[o0]y/i):has-text(/wh[i1]te/i))
 !#endif
 
 ! Removes the "n new posts for you" banner
-reddit.com#?#div:-abp-has(> svg[viewbox="0 0 34 16"])
-reddit.com#?#div[class^=SubredditVars-r-] > div:-abp-has(> svg)
+reddit.com#?#div:has(> svg[viewbox="0 0 34 16"])
+reddit.com#?#div[class^=SubredditVars-r-] > div:has(> svg)
 
 ! Attempts to remove the "Recommended posts" feed on the bottom of almost all posts
-reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):-abp-has(> div[data-redditstyle])
-reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(> div[data-redditstyle])
-reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):-abp-has(div[data-redditstyle])
-reddit.com#?#div[tabindex] > div > div:nth-of-type(2):-abp-has(> div > div[data-redditstyle])
+reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):has(> div[data-redditstyle])
+reddit.com#?#div[tabindex] > div > div:nth-of-type(2):has(> div[data-redditstyle])
+reddit.com#?#div[style^="max-width:"][style*="1600px"] > div > div:nth-of-type(2):has(div[data-redditstyle])
+reddit.com#?#div[tabindex] > div > div:nth-of-type(2):has(> div > div[data-redditstyle])
 
 ! Removes three specific types of comments that offer nothing to a thread apart from vapid far-out-of-place greetings
 !#if !adguard
-reddit.com#?#.Comment,.entry:-abp-contains(/Happy Cake ?Day/i)
-reddit.com#?#.Comment,.entry:-abp-contains(/charge your phone/i)
-reddit.com#?#.Comment,.entry:-abp-has(a:-abp-contains(/^r/chargeyourphone$/))
+reddit.com#?#.Comment,.entry:has-text(/Happy Cake ?Day/i)
+reddit.com#?#.Comment,.entry:has-text(/charge your phone/i)
+reddit.com#?#.Comment,.entry:has(a:has-text(/^r/chargeyourphone$/))
 !#endif
-reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/first gold/i)
-reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/first silver/i)
-reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/first platinum/i)
-reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/first award/i)
-reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/Thank/i):-abp-contains(/gold/i)
-reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/Thank/i):-abp-contains(/silver/i)
-reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/Thank/i):-abp-contains(/platinum/i)
-reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/Thank/i):-abp-contains(/award/i)
-reddit.com#?#p:-abp-contains(/^Edit/i):-abp-contains(/Thank/i):-abp-contains(/stranger/i)
+reddit.com#?#p:has-text(/^Edit/i):has-text(/first gold/i)
+reddit.com#?#p:has-text(/^Edit/i):has-text(/first silver/i)
+reddit.com#?#p:has-text(/^Edit/i):has-text(/first platinum/i)
+reddit.com#?#p:has-text(/^Edit/i):has-text(/first award/i)
+reddit.com#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/gold/i)
+reddit.com#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/silver/i)
+reddit.com#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/platinum/i)
+reddit.com#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/award/i)
+reddit.com#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/stranger/i)
 
 ! Attempts to remove the "Recommended posts" feed on the right of most posts
-reddit.com#?#div[data-redditstyle=false] + div:-abp-has(> div[data-redditstyle=true])
+reddit.com#?#div[data-redditstyle=false] + div:has(> div[data-redditstyle=true])
 
 ! Let's give people a more free choice on whether to use New or Old Reddit, okay?
 ||styles.redditmedia.com/t5_2qimj/styles/image_widget_hosy9x86gxv11.png$image
-reddit.com#?#div[data-redditstyle=false][style]:-abp-contains(/Old Reddit/i)
-reddit.com#?#div[data-redditstyle=false][style]:-abp-contains(/New Reddit/i):-abp-contains(/Trash/i)
+reddit.com#?#div[data-redditstyle=false][style]:has-text(/Old Reddit/i)
+reddit.com#?#div[data-redditstyle=false][style]:has-text(/New Reddit/i):has-text(/Trash/i)
 
 ! Aims to prevent Imgur embeds from cutting off half the preview
 imgur.com#?#img[id=image-element][src*=imgur]:style(margin-top: 0 !important)
@@ -172,31 +170,31 @@ reddit.com##div[style^="color:"] + div div:not([class*=" "]) > div[class*="  Pos
 
 ! Comments and Posts on New Reddit
 !#if !adguard
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/GallowBoob"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/pepsi_next"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/TooShiftyForYou"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/mvea"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/SlimJones123"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/BunyipPouch"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/iBleeedorange"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/KevlarYarmulke"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/maxwellhill"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/bubblr"])
-reddit.com#?#.Comment,.Post:-abp-has(a[href="/user/PowerModerator"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/GallowBoob"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/pepsi_next"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/TooShiftyForYou"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/mvea"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/SlimJones123"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/BunyipPouch"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/iBleeedorange"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/KevlarYarmulke"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/maxwellhill"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/bubblr"])
+reddit.com#?#.Comment,.Post:has(a[href="/user/PowerModerator"])
 !#endif
 
 ! Comments on Old Reddit
-reddit.com#?#.entry:-abp-has(a[href*="/user/GallowBoob"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/pepsi_next"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/TooShiftyForYou"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/mvea"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/SlimJones123"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/BunyipPouch"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/iBleeedorange"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/KevlarYarmulke"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/maxwellhill"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/bubblr"])
-reddit.com#?#.entry:-abp-has(a[href*="/user/PowerModerator"])
+reddit.com#?#.entry:has(a[href*="/user/GallowBoob"])
+reddit.com#?#.entry:has(a[href*="/user/pepsi_next"])
+reddit.com#?#.entry:has(a[href*="/user/TooShiftyForYou"])
+reddit.com#?#.entry:has(a[href*="/user/mvea"])
+reddit.com#?#.entry:has(a[href*="/user/SlimJones123"])
+reddit.com#?#.entry:has(a[href*="/user/BunyipPouch"])
+reddit.com#?#.entry:has(a[href*="/user/iBleeedorange"])
+reddit.com#?#.entry:has(a[href*="/user/KevlarYarmulke"])
+reddit.com#?#.entry:has(a[href*="/user/maxwellhill"])
+reddit.com#?#.entry:has(a[href*="/user/bubblr"])
+reddit.com#?#.entry:has(a[href*="/user/PowerModerator"])
 
 ! Posts on Old Reddit
 reddit.com#?#.thing[data-author=GallowBoob]
