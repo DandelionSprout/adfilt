@@ -4438,7 +4438,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 240520225
+! Version: 250520224
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4698,9 +4698,8 @@ f1-forum.fi##a[href*="netb11.com"]
 f1-forum.fi##img[src*=banneri]
 facebook.com##a[aria-label="Mainostajan linkki"]
 facebook.com##a[aria-label=Mainostaja]
-facebook.com#?#div[data-pagelet=RightRail] > div:-abp-has(a[aria-label=Mainostaja])
-facebook.com#?#div[data-pagelet^=FeedUnit_]:-abp-has(div[role=article] div[style^=border-radius] span[dir=auto] a[aria-label=Sponsoroitu])
-facebook.com#?#div[data-pagelet^=FeedUnit_]:-abp-has(div[role=article] div[style^=border-radius] span[id]:-abp-contains(Sponsoroitu))
+facebook.com#?#div[role=complementary] > div > div > div > div > div:not([class], [data-visualcompletion]):-abp-has([aria-label=Mainostaja])
+facebook.com#?#div[role=feed] > div:not([class]):-abp-has(b[class]:-abp-contains(Sponsoroitu))
 feissarimokat.com###billboard
 feissarimokat.com###logopal
 feissarimokat.com##.flexibox
@@ -5229,8 +5228,8 @@ tekniikkatalous.fi#?#.article-body > div[class]:-abp-has(> span:-abp-contains(KA
 tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:-abp-contains(Kaupallinen yhteistyö)
 tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:-abp-contains(Kaupallinen yhteistyö)
 tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
-telsu.fi###prg > div:not([class$="ch"])
-telsu.fi##img[width][height]:not(#foot1 img, #foot2 img)
+telsu.fi##a[href^="/"][target=blank] > img[src^="/"]
+telsu.fi#?##prg > .ch:-abp-has(> a[href$="cmore"])
 tennis.fi##.ad-blocks
 tervareitti.fi##.advertisement-banner-row
 tervareitti.fi#?#.article-container.shadow-sm.col:-abp-has(img[alt^="Oma tilausmainos"])
@@ -5373,7 +5372,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 /*-mainos-$image,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
 /prerolls/*.mp4$domain=gamereactor.fi
-/telsu\.fi\/[a-z]+\/[a-z\d]{20,31}$/$image,domain=telsu.fi
+/telsu\.fi\/[a-z\d]+\/[a-z\d]{20,31}$/$image,domain=telsu.fi
 /wp-content/uploads/2022/04/HymyAlibi2022_300x300_pupu.jpg$image,domain=alibi.fi|hymy.fi
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
 ||ad.citycdn.fi^$third-party
@@ -5449,6 +5448,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||sf.nm-ovp.nelonenmedia.fi/player/games/ruutu-player-loader.js$script,domain=alypaa.com
 ||superskills.fi/fi*?isIframe=true$subdocument
 ||telsu.fi/telsu_top
+||testeri.fi/ext_telsu$subdocument
 ||testeri.fi/inc/museokortti.png$image
 ||tohtorille.fi/Content/img/op-banners/$image
 ||tokentube.net/f_scripts/shared/videojs/ads.vast.js$script
