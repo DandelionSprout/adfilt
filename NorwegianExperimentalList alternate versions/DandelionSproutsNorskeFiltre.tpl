@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 27May2022v1-Alpha
+# Version: 31May2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -723,9 +723,7 @@ msFilterList
 -d fredfiber.no
 -d gogle.net
 # 🇬🇧: Domains related to thehotelshowdev[.]bitkit[.]dk
--d big5constructnigeria-staging.bitkit.dk
 -d big5-nigeria.bitkit.dk
--d bromic-staging.bitkit.dk
 # 🇬🇧: Scam domains as reported in https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-988127908
 # https://www.tek.no/i/lVeQAe/
 # https://www.nkom.no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
@@ -982,7 +980,6 @@ msFilterList
 -d idj.no
 -d 1.14.61.188
 -d smarthouseforum.ru
--d thehotelshowdev.bitkit.dk
 -d trafikkskoleapp.no
 # 🇬🇧: Copied over from BlockListProject malware phishing and verified
 -d a1match.dk
