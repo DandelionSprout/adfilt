@@ -55,7 +55,7 @@ vg.no##div[data-test-tag=timestamp] + p + div:before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 01June2022v1-Extension
+! Last updated: 01June2022v2-Extension
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
 techstart.dk##+js(set, adblock, false)
@@ -82,9 +82,11 @@ connery.dk##+js(set, adblockerAlert, noopFunc)
 no##+js(ra, class, .dfp-loaded)
 ! https://www.findroommate.dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum (17/12/2021)
 findroommate.dk###frm-ablo-message
+!#if !adguard
 ! https://github.com/uBlockOrigin/uAssets/issues/13495
 bold.dk##+js(acs, EventTarget.prototype.addEventListener, window.TextDecoder)
 bold.dk##+js(nofab)
+!#endif
 
 ! 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 playpilot.com##.takeover.modals
