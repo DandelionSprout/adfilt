@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 31May2022v1-Alpha
+# Version: 01June2022v4-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1004,7 +1004,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 28February2022v1-Extension
+# Last updated: 01June2022v2-Extension
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
@@ -1012,6 +1012,7 @@ msFilterList
 # https://github.com/uBlockOrigin/uAssets/issues/8648
 # https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
 # https://www.findroommate.dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum/(17/12/2021)
+# https://github.com/uBlockOrigin/uAssets/issues/13495
 # 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 # 🇳🇴 🇩🇰: ——— Ikke for Brave Browser ———
 # 🇬🇧: ——— Not for Brave Browser ———

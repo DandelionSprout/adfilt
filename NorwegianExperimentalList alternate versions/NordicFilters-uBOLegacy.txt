@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for «uBlock Origin Legacy»)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for «uBlock Origin Legacy»)
-! Version: 31May2022v1-Beta
+! Version: 01June2022v4-Beta
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1556,6 +1556,7 @@ isabellas.dk##div[data-type=ad]
 jyllands-posten.dk##div[class*=" jp-banner--"]
 dagbladet.no,sol.no##.adunit:upward(1)
 nhi.no,langrenn.com##.advert
+startsiden.no##div[class*=" adStyles__"]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2091,6 +2092,7 @@ csp.screen9.com#@#.adsbox
 @@/js/ads.js$1p,domain=tvkampen.com|tvsporten.dk
 @@||sixscissors.com^$3p,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,1p
+@@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 
 !#if !adguard
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
@@ -2550,7 +2552,7 @@ vg.no##div[data-test-tag=timestamp] + p + div:before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 28February2022v1-Extension
+! Last updated: 01June2022v2-Extension
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
 techstart.dk##+js(set, adblock, false)
@@ -2577,6 +2579,11 @@ connery.dk##+js(set, adblockerAlert, noopFunc)
 no##+js(ra, class, .dfp-loaded)
 ! https://www.findroommate.dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum (17/12/2021)
 findroommate.dk###frm-ablo-message
+!#if !adguard
+! https://github.com/uBlockOrigin/uAssets/issues/13495
+bold.dk##+js(acs, EventTarget.prototype.addEventListener, window.TextDecoder)
+bold.dk##+js(nofab)
+!#endif
 
 ! 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 playpilot.com##.takeover.modals

@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 310520221
+! Version: 010620224
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1489,6 +1489,7 @@ isabellas.dk##div[data-type=ad]
 jyllands-posten.dk##div[class*=" jp-banner--"]
 dagbladet.no,sol.no#?#*:-abp-has(> .adunit)
 nhi.no,langrenn.com##.advert
+startsiden.no##div[class*=" adStyles__"]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1976,6 +1977,7 @@ csp.screen9.com#@#.adsbox
 @@/js/ads.js$~third-party,domain=tvkampen.com|tvsporten.dk
 @@||sixscissors.com^$third-party,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,~third-party
+@@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
@@ -4465,7 +4467,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 300520223
+! Version: 310520224
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -5265,7 +5267,7 @@ tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:-abp-cont
 tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:-abp-contains(Kaupallinen yhteistyö)
 tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
 telsu.fi##a[href^="/"][target=blank] > img[src^="/"]
-telsu.fi#?#.ch:-abp-contains(/S[\s\w.,:;\-*%åäö${]*P[\s\w.,:;\-*%åäö${]*O[\s\w.,:;\-*%åäö${]*N[\s\w.,:;\-*%åäö${]*S[\s\w.,:;\-*%åäö${]*O[\s\w.,:;\-*%åäö${]*R[\s\w.,:;\-*%åäö${]*O[\s\w.,:;\-*%åäö${]*I[\s\w.,:;\-*%åäö${]*T[\s\w.,:;\-*%åäö${]*U/)
+telsu.fi#?#.ch:-abp-contains(/S[\s\w.,:;\-*%åäö${@€|]*P[\s\w.,:;\-*%åäö${@€|]*O[\s\w.,:;\-*%åäö${@€|]*N[\s\w.,:;\-*%åäö${@€|]*S[\s\w.,:;\-*%åäö${@€|]*O[\s\w.,:;\-*%åäö${@€|]*R[\s\w.,:;\-*%åäö${@€|]*O[\s\w.,:;\-*%åäö${@€|]*I[\s\w.,:;\-*%åäö${@€|]*T[\s\w.,:;\-*%åäö${@€|]*U/)
 tennis.fi##.ad-blocks
 tervareitti.fi##.advertisement-banner-row
 tervareitti.fi#?#.article-container.shadow-sm.col:-abp-has(img[alt^="Oma tilausmainos"])
@@ -5408,7 +5410,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 /*-mainos-$image,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
 /prerolls/*.mp4$domain=gamereactor.fi
-/telsu\.fi\/[\w!.,:;\-*%åäö${]{20,44}$/$image,domain=telsu.fi
+/telsu\.fi\/[\w!.,:;\-*%åäö${@€|]{20,}$/$image,domain=telsu.fi
 /wp-content/uploads/2022/04/HymyAlibi2022_300x300_pupu.jpg$image,domain=alibi.fi|hymy.fi
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
 ||ad.citycdn.fi^$third-party
@@ -5569,13 +5571,6 @@ mtvuutiset.fi,mtv.fi,suomiareena.fi,studio55.fi,msn.com##.mtv-player-ad-containe
 ||damoh.katsomo.fi/*$image,domain=mtvuutiset.fi|mtv.fi|suomiareena.fi|studio55.fi|msn.com
 ||cloudfront.net/creatives/assets/$image,domain=mtvuutiset.fi
 @@||fi-mtv3.videoplaza.tv/proxy/pulse-sdk-html5/*/latest.min.js
-
-! viafree.fi video adblock
-@@||fwmrm.net/ad/$xmlhttprequest,domain=viafree.fi
-@@||fwmrm.net/ad/$script,domain=viafree.fi
-@@||fwmrm.net/ad/$image,domain=viafree.fi
-@@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.fi
-||freewheel-mtgx-tv.akamaized.net/m/1/*.mp4$media,domain=viafree.fi
 
 ! Tori.fi ads
 ##[src*="://ad.doubleclick.net/"]
