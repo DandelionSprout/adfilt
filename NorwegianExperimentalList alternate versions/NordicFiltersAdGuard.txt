@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 01June2022v4
+! Version: 07June2022v3
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2083,6 +2083,43 @@ $removeparam=utm_id,domain=elkjop.no|elgiganten.dk
 ||norsktipping.no$removeparam=WT.mc_id
 ||p3.no^$removeparam=draftsforfriends
 ||tv2.no^$removeparam=r
+$removeparam=afid,domain=proshop.dk|proshop.no
+$removeparam=scid,domain=elgiganten.dk|elkjop.no
+||adressa.no^$removeparam=/^rs[0-9]/
+||adressa.no^$removeparam=t
+||bilhusnord.dk^$removeparam=au_advert_id
+||bilhusnord.dk^$removeparam=au_car_id
+||cdon.$removeparam=g
+||cykelpartner.dk^$removeparam=/^source=partnerads$/
+||cykelpartner.dk^$removeparam=pa-partnerid
+||cykelpartner.dk^$removeparam=pacid
+||cykelpartner.dk^$removeparam=paid
+||dagligvarehandelen.no^$removeparam=itok
+||ekstrabladet.dk^$removeparam=ilc
+||ellos.no^$removeparam=extcmp
+||ericgown.no^$removeparam=ggcid
+||ericgown.no^$removeparam=ggdev
+||ericgown.no^$removeparam=ggdevm
+||ericgown.no^$removeparam=ggkey
+||ericgown.no^$removeparam=ggntk
+||ericgown.no^$removeparam=ggplm
+||ericgown.no^$removeparam=ggpos
+||ericgown.no^$removeparam=ggsub
+||ericgown.no^$removeparam=ggtgt
+||fernerjacobsen.no^$removeparam=epi
+||frisktpust.no^$removeparam=adg_id
+||frisktpust.no^$removeparam=cmp_id
+||kids-world.dk^$removeparam=/^source=tradedoubler$/
+||postnord.$removeparam=mobile
+||postnord.$removeparam=signed
+||prispresseren.dk^$removeparam=/^amp;/
+||productkeys.dk^$removeparam=dTribesID
+||shopping4net.dk^$removeparam=sClickID
+||sn.dk^$removeparam=rss
+||staypro.no^$removeparam=at_gd
+||tipsbladet.dk^$removeparam=eblink
+||tv2.no^$removeparam=r
+||tv2.no^$removeparam=tag
 
 ! 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
 ! 🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
@@ -2117,7 +2154,7 @@ sofabold.dk##.centerMgfx
 @@||v.fwmrm.net/ad/g/1$domain=viafree.dk|viafree.fi|viafree.no|viafree.se
 !#endif
 
-!#if ext_ublock
+!#if !ext_ublock
 ! 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 triplx.dk##.aff-inner-col
 !#endif
