@@ -6,7 +6,7 @@ The main connection addresses are:
 * DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query` + `https://dandelionsprout2.asuscomm.com:2501/dns-query`
 * DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` + `tls://dandelionsprout2.asuscomm.com:853` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
 * DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582` + `quic://dandelionsprout2.asuscomm.com:48582`
-* DNSCrypt IPv4: Not currently in use. Resumption time is unclear. (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:56404 - ec74aa65595f8694b380fa5101a59d75412dfcd609c3caaa535f3e6c4b04da79 - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
+* DNSCrypt IPv4: `sdns://AQEAAAAAAAAAEzg0LjIwMi4xNTUuMjE3OjU0NDMgOKEL1WhWlPWX9yILXMmWEzM6KWDYVv7vFEJQ8UxkUmwsMi5kbnNjcnlwdC1jZXJ0LmRhbmRlbGlvbnNwcm91dC5hc3VzY29tbS5jb20` (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:5443 - 38A10BD5685694F597F7220B5CC99613333A2960D856FEEF144250F14C64526C - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
 
 Although I do also offer standard IPv4 and IPv6 addresses (both regular and `tcp://`), they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
@@ -128,3 +128,4 @@ Contacting me about the server, should be done at https://github.com/DandelionSp
 * 9th of January 15:00 UTC - 28th of January: All I did was enable Flathub and play Space Cadet Pinball, then the Raspberry Pi froze, and when I restarted it had become permanently unable to connect to public IPs and addresses. I hate Linux more than ever before.
 * 15th of February 20:09-20:16 UTC: An ASUS router update caused problems with IPv6, so I had to scramble real quick to fix it.
 * 12th of March 13:35 UTC: Some 4 weeks after scheduled, the `dandelionsprout2.` secondary server is back online.
+* Early June 2022: Increasingly severe muscle movement problems, coupled with me forgetting to add the SSL certificate expiry dates in my Thunderbird calendar, and the total lack of feedback from server users, resulted in a 3-day outage. I'm hoping to make up for it by attempting to re-enable DNSCrypt.
