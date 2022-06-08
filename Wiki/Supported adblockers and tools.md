@@ -34,7 +34,7 @@ Issue reports will be processed, but issues that are exclusive to these adblocke
 | AdGuard for iOS | I do not have such units to test it with. | |
 | Pi-hole | Linux is far too complicated to set up and keep up to date. | AdGuard Home |
 | 1blocker for iOS | I do not have an iOS unit to test it with. | Adblock Browser for iOS | |
-| Pale Moon / Basilisk with uBlock Origin | Very hostile behaviour by a high-ranking Pale Moon dev. | Waterfox Classic with uBlock Origin | 
+| Pale Moon / Basilisk with uBlock Origin | Very hostile behaviour by a high-ranking Pale Moon dev. | Waterfox Classic with uBlock Origin |
 | AdGuard Content Blocker for Samsung/Yandex | I'd need to set up those browsers on request. It also has pretty limited syntax support. | Firefox for Android with uBlock Origin |
 
 # No support
