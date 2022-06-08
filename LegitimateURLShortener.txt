@@ -1,12 +1,12 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 01June2022v2
+! Version: 08June2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Homepage for the repository: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
 ! Special thanks to https://github.com/git-101-collab for providing a 3-digit amount of new entries to this list, and to https://github.com/iam-py-test for volunteering to speed up the addition of user-submitted entries.
-! Important notes: 
+! Important notes:
 ! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view parameters on the strict-block page or tools to bypass it.
 ! - this list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
 ! - this list can not remove parameters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
@@ -1278,7 +1278,7 @@ $removeparam=/^target=admitad$/
 ! https://www.inredningsvaruhuset.se/ios/63223-apple-iphone-13-128gb-midnight-0194252707203.html?referer=prisjakt
 $removeparam=/^referer=prisjakt/i
 
-! https://digicom.nu/sv/produkter/xiaomi-box-s-4k-hdr.html?ref_lp=prisjakt 
+! https://digicom.nu/sv/produkter/xiaomi-box-s-4k-hdr.html?ref_lp=prisjakt
 $removeparam=ref_lp
 
 ! https://www.wsj.com/articles/what-the-metaverse-has-to-do-with-microsofts-deal-for-activision-11642674603?cx_testId=3&cx_testVariant=cx_2&cx_artPos=5#cxrecs_s
@@ -1347,6 +1347,9 @@ $removeparam=/^amp;utm_/
 
 ! https://www.gigantti.fi/product/tietokoneet-ja-toimistotarvikkeet/naytot-ja-tarvikkeet/naytot/msi-optix-g271-27-pelinaytto/357445?sap-outbound-id=FDF2695F7CA22FD871A6CCE768E64005CDAE4D30
 $removeparam=sap-outbound-id
+
+! https://www.canva.com/design/play?locale=en&analyticsCorrelationId=8681c886-a258-4cf6-9de4-b3d86c2781ab
+$removeparam=analyticsCorrelationId
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
@@ -3259,7 +3262,7 @@ $removeparam=mwv_rm,domain=dailymail.co.uk|thisismoney.co.uk
 $removeparam=mrn_rm,domain=dailymail.co.uk|thisismoney.co.uk
 
 ! https://www.comodo.com/home/browsers-toolbars/browser.php?track=14596&af=14596
-||comodo.com^$removeparam=track 
+||comodo.com^$removeparam=track
 ||comodo.com^$removeparam=af
 
 ! https://fortune.com/2021/03/11/amazon-fresh-retail-stores-vacant-plan/?queryly=related_article
@@ -3485,7 +3488,7 @@ actionewz.com,animemojo.com,comicbookmovie.com,fearhq.com,gamefragger.com,mtvuut
 ! Temp fix for Bing - https://github.com/DandelionSprout/adfilt/issues/508
 @@||bing.*/ws/redirect/$removeparam
 
-! Fix the video player 'Invalid signature' - https://www.fox.com/watch/ffae8bb93256fb0d0b3a4b30f00e0ada/ 
+! Fix the video player 'Invalid signature' - https://www.fox.com/watch/ffae8bb93256fb0d0b3a4b30f00e0ada/
 @@||link.theplatform.com/s/fox-dcg/media/$removeparam
 
 !#if adguard
