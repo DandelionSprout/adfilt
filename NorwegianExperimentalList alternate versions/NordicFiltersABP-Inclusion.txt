@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 070620223
+! Version: 100620221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1978,6 +1978,8 @@ csp.screen9.com#@#.adsbox
 @@||sixscissors.com^$third-party,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,~third-party
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/121422
+@@.v.fwmrm.net/ad/g^*:MTG_Play_
 
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
@@ -4467,7 +4469,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 50620221
+! Version: 100620221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -5277,7 +5279,12 @@ tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:-abp-cont
 tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:-abp-contains(Kaupallinen yhteistyö)
 tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
 telsu.fi##a[href^="/"][target=blank] > img[src^="/"]
-telsu.fi#?#.ch:-abp-contains(/S[\s\w.,:;\-*%åäö${@€|]*P[\s\w.,:;\-*%åäö${@€|]*O[\s\w.,:;\-*%åäö${@€|]*N[\s\w.,:;\-*%åäö${@€|]*S[\s\w.,:;\-*%åäö${@€|]*O[\s\w.,:;\-*%åäö${@€|]*R[\s\w.,:;\-*%åäö${@€|]*O[\s\w.,:;\-*%åäö${@€|]*I[\s\w.,:;\-*%åäö${@€|]*T[\s\w.,:;\-*%åäö${@€|]*U/)
+telsu.fi##img:not(#foot1 img, #foot2 img, #prg img, .data img, .pop img, .stat img, img[src^="/img/"])
+telsu.fi###prg img:not(.ch img)
+telsu.fi##.pop img:not(.cd img)
+telsu.fi#?#.ch:-abp-contains(/S.*P.*(?:0|O).*N.*S.*(?:0|O).*R.*(?:0|O).*I.*T.*U/)
+telsu.fi#?#.ch:-abp-contains(/SPON|SPONS|SPONSO|SPONSOR|SPONSORO|SPONSOROI|SPONSOROIT|SPONSOROITU/)
+telsu.fi#?#.ch:-abp-has(em>a)
 tennis.fi##.ad-blocks
 tervareitti.fi##.advertisement-banner-row
 tervareitti.fi#?#.article-container.shadow-sm.col:-abp-has(img[alt^="Oma tilausmainos"])
@@ -5419,6 +5426,10 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
 /prerolls/*.mp4$domain=gamereactor.fi
 /telsu\.fi\/[\w!.,:;\-*%åäö${@€|]{20,}$/$image,domain=telsu.fi
+/telsu\.fi\/s\/[\w\d]{30,40}$/$image,domain=telsu.fi
+/telsu\.fi\/(?![^>]*\.\w{3}$).+/$image,domain=telsu.fi
+/telsu\.fi\/(?![^>].*\.(jpg|png|svg|ico)$).+/$image,domain=www.telsu.fi
+/telsu\.fi\/img\/(?!cloudcity|mindmax|navibg|prg|tvohjelmat)/$image,domain=telsu.fi
 /wp-content/uploads/2022/04/HymyAlibi2022_300x300_pupu.jpg$image,domain=alibi.fi|hymy.fi
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
 ||ad.citycdn.fi^$third-party
