@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 11June2022v1
+! Version: 13June2022v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -371,6 +371,7 @@ gamer.no##[class^=ad-placeholder]
 gamer.no##div[data-name=gamer_toppbanner]:upward(1)
 gamer.no#?#.entrance:-abp-has(.entrance__mark__text:-abp-contains(Annonse:))
 verktoy24.no##.stream-item
+topp.no##a[href*="/annonse/"]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -478,6 +479,8 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 dk##section.article__adblock
 ! https://github.com/uBlockOrigin/uAssets/issues/13224
 ##a[data-bid="1"][href*="/linkout"]
+! rett24.no (13/06/2022)
+##.bannerizor-banner
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -846,6 +849,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||verktoy24.no/wp-content/uploads/*_300px-scaled.jpg^
 ||levmeddiabetes.no/content/uploads/*/Accu-$image
 ||tv2.no/prod/sponsor^$image
+||rett24.no^*bannerizor.js
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 !#if false
