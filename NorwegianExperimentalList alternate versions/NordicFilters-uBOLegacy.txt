@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for «uBlock Origin Legacy»)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for «uBlock Origin Legacy»)
-! Version: 10June2022v1-Beta
+! Version: 14June2022v1-Beta
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -162,6 +162,8 @@ hytteavisen.no##.prodlist > .row > .small-12
 indblik.net##div[id^=adni_widgets-]
 iphoneluppen.dk##a[href*=bingo]
 ipmsnorge.org#?#.col-md-3 .block:-abp-contains(ponsor)
+gamer.no##.netboard-wrap
+gamer.no##.article__articleboard
 itavisen.no##.article-ad-video
 itavisen.no##.itavi-homepage-video-player-instream
 itavisen.no##.sponsored
@@ -372,6 +374,7 @@ gamer.no##[class^=ad-placeholder]
 gamer.no##div[data-name=gamer_toppbanner]:upward(1)
 gamer.no#?#.entrance:-abp-has(.entrance__mark__text:-abp-contains(Annonse:))
 verktoy24.no##.stream-item
+topp.no##a[href*="/annonse/"]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -479,6 +482,8 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 dk##section.article__adblock
 ! https://github.com/uBlockOrigin/uAssets/issues/13224
 ##a[data-bid="1"][href*="/linkout"]
+! rett24.no (13/06/2022)
+##.bannerizor-banner
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -847,6 +852,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||verktoy24.no/wp-content/uploads/*_300px-scaled.jpg^
 ||levmeddiabetes.no/content/uploads/*/Accu-$image
 ||tv2.no/prod/sponsor^$image
+||rett24.no^*bannerizor.js
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 !#if false
@@ -881,6 +887,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||bcm.interactives.dk/script^$3p
 ! adressa.no (10/11/2020)
 ||static.polarismedia.no/*/cxense.js
+! https://github.com/uBlockOrigin/uAssets/issues/13661 (11/06/2022)
+||freewheel-mtgx-tv.akamaized.net^$media,domain=embed.viaplay.com,redirect=noopmp3-0.1s
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -1224,6 +1232,7 @@ kjarninn.is#?#.boxlist:-abp-has(.adspot-article-wrapper)
 klikk.no##.floatRight.columns
 klikk.no##div[id^=lpc_belowArticle]
 klikk.no,side2.no##div[style$=" padding-top: 31%;"]:upward(2)
+gamer.no##.site__sticky__ads + div[class*=" "]
 kommunikationsforum.dk##.banner-top
 kommunikationsforum.dk##.col-xs-12[style]
 kommunikationsforum.dk##div[style="padding-top: 20px; padding-bottom: 20px; "]

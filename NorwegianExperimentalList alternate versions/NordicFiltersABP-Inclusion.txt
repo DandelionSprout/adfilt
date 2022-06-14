@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 100620221
+! Version: 140620221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -160,6 +160,8 @@ hytteavisen.no##.prodlist > .row > .small-12
 indblik.net##div[id^=adni_widgets-]
 iphoneluppen.dk##a[href*=bingo]
 ipmsnorge.org#?#.col-md-3 .block:-abp-contains(ponsor)
+gamer.no##.netboard-wrap
+gamer.no##.article__articleboard
 itavisen.no##.article-ad-video
 itavisen.no##.itavi-homepage-video-player-instream
 itavisen.no##.sponsored
@@ -360,6 +362,7 @@ gamer.no##[class^=ad-placeholder]
 gamer.no#?#*:-abp-has(> div[data-name=gamer_toppbanner])
 gamer.no#?#.entrance:-abp-has(.entrance__mark__text:-abp-contains(Annonse:))
 verktoy24.no##.stream-item
+topp.no##a[href*="/annonse/"]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -467,6 +470,8 @@ goal.com#?#*:-abp-has(> * > .js-betting-widget.is-country-no)
 dk##section.article__adblock
 ! https://github.com/uBlockOrigin/uAssets/issues/13224
 ##a[data-bid="1"][href*="/linkout"]
+! rett24.no (13/06/2022)
+##.bannerizor-banner
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -835,6 +840,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||verktoy24.no/wp-content/uploads/*_300px-scaled.jpg^
 ||levmeddiabetes.no/content/uploads/*/Accu-$image
 ||tv2.no/prod/sponsor^$image
+||rett24.no^*bannerizor.js
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 @@||vgtv.no^$generichide
@@ -862,6 +868,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||bcm.interactives.dk/script^$third-party
 ! adressa.no (10/11/2020)
 ||static.polarismedia.no/*/cxense.js
+! https://github.com/uBlockOrigin/uAssets/issues/13661 (11/06/2022)
+||freewheel-mtgx-tv.akamaized.net^$media,domain=embed.viaplay.com,rewrite=abp-resource:blank-mp3
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -1181,6 +1189,7 @@ kjarninn.is#?#.boxlist:-abp-has(.adspot-article-wrapper)
 klikk.no##.floatRight.columns
 klikk.no##div[id^=lpc_belowArticle]
 klikk.no,side2.no#?#*:-abp-has(> * > div[style$=" padding-top: 31%;"])
+gamer.no##.site__sticky__ads + div[class*=" "]
 kommunikationsforum.dk##.banner-top
 kommunikationsforum.dk##.col-xs-12[style]
 kommunikationsforum.dk##div[style="padding-top: 20px; padding-bottom: 20px; "]
@@ -4468,7 +4477,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 100620221
+! Version: 140620221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4733,6 +4742,7 @@ facebook.com##a[aria-label="Mainostajan linkki"]
 facebook.com##a[aria-label=Mainostaja]
 facebook.com#?#div[role=complementary] > div > div > div > div > div:not([class], [data-visualcompletion]):-abp-has([aria-label=Mainostaja])
 facebook.com#?#div[role=feed] > div:not([class]):-abp-has(b[class]:-abp-contains(Sponsoroitu))
+facebook.com#?#div[role=feed] > div:not([class]):-abp-has(div[class][role="button"]:-abp-contains(Sponsoroitu))
 feissarimokat.com###billboard
 feissarimokat.com###logopal
 feissarimokat.com##.flexibox
@@ -4760,7 +4770,10 @@ futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##[class^=top-banne
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##[data-advadstrackid]
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##[href="https://casinogorilla.com/fi/nettikasinot/"]
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##[href="https://bonuspanda.com/fi/"]
+futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##[href="https://pussit.com"]
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##.mvp-side-widget.widget_text
+futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com#?#.wp_rss_retriever:-abp-contains(/BONUSPANDA.COM|CASINOGORILLA.COM/)
+futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com#?#.wp_rss_retriever ~ div:-abp-contains(/BONUSPANDA.COM|CASINOGORILLA.COM/)
 gamereactor.fi###adContainer
 gamereactor.fi###ad_topScroller
 gamereactor.fi###bigVideoAd_content
@@ -4768,10 +4781,12 @@ gamereactor.fi###eventad
 gamereactor.fi###sky2_1
 gamereactor.fi###sky2_2
 gamereactor.fi##.ad_video
+gamereactor.fi##.itsanad
 gamereactor.fi##.rwd.colthin > div
 gamereactor.fi##.sponsor
 gamereactor.fi##.videoAd
 gamereactor.fi#?#article.areview:-abp-contains(Sponsoroitua sisältöä)
+gamereactor.fi##div[class^=ad_Bumper]
 gamereactor.fi##section.artistyle3.rightbox:nth-of-type(1)
 gekkonen.net##.tdm-pricing-wrap
 gekkonen.net##.tdm_block_pricing
@@ -4927,6 +4942,7 @@ keskustelu.suomi24.fi##div[class*=FooterAdWrapper]
 keskustelu.suomi24.fi##div[class*=HeaderAdWrapper]
 keskustelu.suomi24.fi##div[class*=__AdWrapper]
 keskustelu.suomi24.fi##div[class^=RightSidePanel__AdContainer]
+kiekkofani.com,penkkiurheilu.com##[style^="text-align:center;margin-left:auto !important;margin-right:auto !important;height: 420px; margin-top:60px"]
 kiinteistolehti.fi###new-post-list-headings-17
 kiinteistolehti.fi##.mpc-row.vc_custom_1515749959295.vc_row-fluid.wpb_row.vc_row
 kiinteistolehti.fi##.mpc-row.vc_custom_1515750168978.vc_row-fluid.wpb_row.vc_row
@@ -4990,7 +5006,9 @@ lentopallo.info,murtopallo.net#?#li:-abp-has([href^="https://track.adtraction.co
 liberolehti.fi#?#[id|=etusivu-bottom-full]:-abp-has(.mainos)
 listafriikki.com#?#.widget_custom_html:-abp-has([data-ad-unit])
 livetaajuus.fi##.middle-ad-container
+ls24.fi##.article-blocks-2022-divider:not(.article-block--2022 + .article-blocks-2022-divider)
 ls24.fi##.asuntorauma-promo
+ls24.fi##.page-section--commercial
 ls24.fi##.palvelupankki-banner
 ls24.fi##aside[class=sidebar] > [class^="advertisement ad advertisement"] + [class^="advertisement ad advertisement"] + section[class^=article-list]:last-of-type
 ls24.fi##div[class^=advertisement]
@@ -5371,6 +5389,7 @@ viisasraha.fi##div[class*=native-article] > div[class=ezrichtext-field] > p > a[
 viisasraha.fi##div[class^=banner] > a[href="https://www.viisasraha.fi/Taloushaltuun"]
 viranomaisuutiset.fi##[href^="https://track.adtraction.com/"]
 voice.fi##.article-sponsored
+voice.fi##a[class="article-item articlestream-item unloaded"][data-sponsored="1"]
 voice.fi##section[class^=sbsads] + section[class^="sbs-articleitems full-size-list"][data-module_position_id="612"]
 voice.fi#?#.sbs-articleitems.list-right-column:-abp-has(span.sponsored)
 voice.fi#?#div.item:-abp-has(.sponsored)
@@ -5534,6 +5553,7 @@ iltalehti.fi##div.footer-wrapper__item.is-visible.LazyLoad
 iltalehti.fi##div[class=iframe-container]
 iltalehti.fi#?#.card:-abp-has(#il-rantapallo-right-column-box)
 iltalehti.fi#?#.embed-placeholder:-abp-has(> div > .eo-embed-announcements-container.card)
+iltalehti.fi#?#.side-column-content .card:-abp-has(.nettiauto-sponsored-content-text)
 iltalehti.fi#?#a.small-article:-abp-contains(Kaupallinen yhteistyö)
 iltalehti.fi#?#div.card:-abp-contains(Mainos:)
 iltalehti.fi#?#div.fp-container.card:-abp-contains(Kaupallinen yhteistyö)

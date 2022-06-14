@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 10June2022v1-Alpha
+# Version: 14June2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -66,6 +66,7 @@ msFilterList
 # sol.no (22 09 2021)
 # vesterbroliv.dk, vafo.dk, amagerliv.dk
 # https://github.com/uBlockOrigin/uAssets/issues/13224
+# rett24.no (13 06 2022)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -387,6 +388,7 @@ msFilterList
 -d verktoy24.no *_300px-scaled.jpg
 -d levmeddiabetes.no Accu-
 -d tv2.no sponsor
+-d rett24.no*bannerizor.js
 # — — — — — — —
 # 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 +d vgtv.no
@@ -411,6 +413,8 @@ msFilterList
 -d bcm.interactives.dk script
 # adressa.no (10 11 2020)
 -d static.polarismedia.no cxense.js
+# https://github.com/uBlockOrigin/uAssets/issues/13661/(11/06/2022)
+-d freewheel-mtgx-tv.akamaized.net
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
