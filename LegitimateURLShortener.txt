@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 14June2022v1
+! Version: 15June2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1493,10 +1493,14 @@ $removeparam=newts,domain=amazon.com
 $removeparam=returnFromLogin,domain=amazon.com
 ! Other
 @@/b/ref=$removeparam=ie
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2751033
+||amazon.*^$removeparam=tag
+||amazon.*^$removeparam=channel
 
 !!! ——— Bing ———
 ! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
-$removeparam=/^form=/i,domain=bing.com
+! Please do not add for the entire domain name or the image will not load, see https://github.com/DandelionSprout/adfilt/pull/608
+||bing.com/search?$removeparam=/^form=/i
 ! https://www.bing.com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.com^$removeparam=sp
 $removeparam=sc,domain=bing.com|qvc.com|startpage.com
@@ -1925,6 +1929,7 @@ $removeparam=aff_click_id
 ||b23.tv^$removeparam=/^share_/
 ||b23.tv^$removeparam=bbid
 ||b23.tv^$removeparam=ts
+! https://github.com/DandelionSprout/adfilt/pull/605
 ! https://www.bilibili.com/video/BV1DY4y1G7tc?vd_source=33a986dae9358e2f068c82adcd1688e4 (13/06/2022)
 ||bilibili.com^$removeparam=vd_source
 
@@ -3412,12 +3417,6 @@ $removeparam=textadID,domain=media-cdn.costco.ca|media-cdn.costco.com
 
 ! https://venturebeat.com/2022/05/05/google-goes-passwordless/?__vfz=medium%3Dconversations_top_pages
 $removeparam=__vfz,domain=venturebeat.com
-
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2751033
-||amazon.*^$removeparam=tag
-||amazon.*^$removeparam=visitId
-||amazon.*^$removeparam=maas
-||amazon.*^$removeparam=channel
 
 ! https://www.boots.com/dior-sauvage-eau-de-toilette-100ml-gift-box-10300220?affwin
 $removeparam=affwin,domain=boots.com
