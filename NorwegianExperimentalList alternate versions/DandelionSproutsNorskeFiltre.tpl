@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 14June2022v1-Alpha
+# Version: 19June2022v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -541,13 +541,13 @@ msFilterList
 # https://viralefilmer.no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25 03 2021), eavisa.no
 # https://www.terrengsykkelforumet.no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021),/terrengsykkel.no
 # nettavisen.no (04 04 2021)
-# steinkjer-avisa.no (12 04 2021)
 # gnavergalleri.dk (along with ~60 affiliates sites; 21 04 2021)
 # nidaros.no
 # dagsavisen.no
 # elbil24.no, vi.no (21 06 2021)
 # farmatid.no (16 11 2021)
 # https://radioh.no/norsk-opphenting-mot-nederland-sikret-vm-kvartfinale-storm-i-kastene/ (14 12 2021)
+# nordlys.no, an.no (19 06 2022)
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -632,6 +632,7 @@ msFilterList
 - pustehullet betting-header.png
 -d norsktippingpartner.no
 +d oddstips.norsktippingpartner.no
+-d cloudfront.net Liveoddsen.aspx
 # nidaros.no (02 12 2021)
 # ——— Gamereactor + Viafree PC ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.

@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 140620221
+! Version: 190620222
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1213,6 +1213,7 @@ localeyes.dk##.td-header-rec-wrap
 lokal-avisen.no#?#.title:-abp-contains(/ANNONSE/i)
 lydogbilde.no,lydogbillede.dk##.adremark
 lydogbilde.no,lydogbillede.dk##.hidead
+lydogbilde.no,lydogbillede.dk#?#.newsbox:-abp-has(.adunit-lazy)
 m.feltet.dk##.banner_mobile
 m.kanalfrederikshavn.dk##.OA
 m.kanalfrederikshavn.dk##.OX
@@ -1704,8 +1705,6 @@ _980banner_
 ###wallpaperAds
 ! nettavisen.no (04/04/2021)
 ##amedia-include[src*="services.api.no/api/bazaar/"]
-! steinkjer-avisa.no (12/04/2021)
-##optimus-element[linecount=undefined][width="280"]
 ! gnavergalleri.dk (along with ~60 affiliates sites; 21/04/2021)
 ##.container.container-topbanner:not(html, body)
 ! nidaros.no
@@ -1718,6 +1717,9 @@ _980banner_
 ##.nf-adholder:not(html, body)
 ! https://radioh.no/norsk-opphenting-mot-nederland-sikret-vm-kvartfinale-storm-i-kastene/ (14/12/2021)
 ##.single-adrotate:not(html, body)
+! nordlys.no, an.no (19/06/2022)
+##optimus-element[linecount=undefined][width="980"]
+##optimus-element[linecount=undefined][width="480"]:first-of-type:nth-last-of-type(2)
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -1887,6 +1889,7 @@ startsiden.no###consumer_service_tipping
 ||norsktippingpartner.no^$third-party,domain=~norsktipping.no|~tipster.no
 @@||oddstips.norsktippingpartner.no^
 startsiden.no##div[class^=nyttig__tippingHeader__]
+||cloudfront.net/v*/Liveoddsen.aspx^$domain=vglive.no
 ! nidaros.no (02/12/2021)
 ##.sportspill-container[href*=lotto]
 
@@ -4477,7 +4480,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 140620221
+! Version: 170620222
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4669,6 +4672,8 @@ auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi###pb_bottom
 auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi##.box_dt
 auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi##[href^="/clk"]
 auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi,blogit.fi###pb_top
+autobild.fi#?#.red-the-latest-issue:-abp-contains(Kaupallinen yhteistyö)
+autobild.fi##div[class*=advertorial]
 autot.tori.fi##div[class*="adViewPage_maxWidthWrap"]:not(div[class^="adViewPage_adWrap"])
 autot.tori.fi#?#div[class="w-full py-2 px-2"]:-abp-has([class^="bannerAd"])
 autotalli.com###topBanner
@@ -4801,6 +4806,7 @@ golfpiste.com##.main-native
 golfpiste.com##.native-carousel
 golfpiste.com##.section--ad__rectangle
 golfpiste.com##.section-native-list
+gti.fi#?#.wall-item__container:-abp-contains(Mainos)
 haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi##.ad-list
 haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi##.newslink-ad
 haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi#?#div[class="col-xs-12 col-sm-12 col-md-12 pad-0 hidden-xs"]:-abp-has(> #lunch-widget)
@@ -5439,7 +5445,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
 
-/[.]io-tech\.fi/.*/[0-9a-f]{32}\./$image,~third-party
+/io-tech\.fi\/.*\/[0-9a-f]{32}\./$image,domain=io-tech.fi
 /*-mainos-$image,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
 /prerolls/*.mp4$domain=gamereactor.fi
