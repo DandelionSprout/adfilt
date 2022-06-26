@@ -1,7 +1,7 @@
 [Adblock Plus 3.7]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 190620222
+! Version: 260620222
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1500,6 +1500,11 @@ jyllands-posten.dk##div[class*=" jp-banner--"]
 dagbladet.no,sol.no#?#*:-abp-has(> .adunit)
 nhi.no,langrenn.com##.advert
 startsiden.no##div[class*=" adStyles__"]
+diskusjon.no##.skyskraper
+forum.kvinneguiden.no##.ehm-megaboard
+tu.no##.carpet
+tu.no##.undefined.hidden
+tu.no##[id^=adContainer-]:not([id$=-afterBody])
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1529,8 +1534,8 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! 🇬🇧: Entries for at least 3 websites
 dagens.dk,dust2.dk,kanalfrederikshavn.dk,videnskab.dk,politirapporten.dk,nyheder24.dk,tilbudsugen.dk,alletilbudsaviser.co.no,sedirekte.com,tilbudsuken.no,subjekt.no##.banner
 hsfo.dk,jv.dk,stiften.dk,viborg-folkeblad.dk,dagbladet-holstebro-struer.dk,ugeavisen.dk,fyens.dk,lydogbilde.no,lydogbillede.dk##.adblock
+bygg.no,mmm.dk,kino.no,connery.dk,golferen.no,spilcomputer.dk,kystogfjord.no,ut.no##.ad
 komputer.no,natgeo.no,historienet.no,koplr.no,ing.dk,in.fo,kvennabladid.is##.top-banner
-bygg.no,mmm.dk,kino.no,connery.dk,golferen.no,spilcomputer.dk,kystogfjord.no##.ad
 dagbladet.no,elbil24.no,kk.no,seher.no,sol.no,vi.no#?#[data-cy=video-page-horisontal] > div:-abp-contains(Annonse)
 prisjakt.no,prisjagt.dk,dv.is,drm24.no,flatpanels.dk##.adbox
 iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
@@ -1552,7 +1557,7 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 ! 🇸🇪: Generella poster med källor
 ! 🇬🇧: Generic entries that have sources
 ! sol.no
-~basketnews.lt,~hero-magazine.com##.advertisement
+~basketnews.lt,~hero-magazine.com,~ut.no##.advertisement
 ##div[itemtype$=WPAdBlock]
 ! www.qxl.no
 ###BannerEniro
@@ -4480,7 +4485,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 
-! Version: 170620222
+! Version: 230620221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4745,7 +4750,7 @@ f1-forum.fi##a[href*="netb11.com"]
 f1-forum.fi##img[src*=banneri]
 facebook.com##a[aria-label="Mainostajan linkki"]
 facebook.com##a[aria-label=Mainostaja]
-facebook.com#?#div[role=complementary] > div > div > div > div > div:not([class], [data-visualcompletion]):-abp-has([aria-label=Mainostaja])
+facebook.com#?#div[role=complementary] > div > div > div > div > div:not([class], [data-visualcompletion]) > span:-abp-has([aria-label=Mainostaja])
 facebook.com#?#div[role=feed] > div:not([class]):-abp-has(b[class]:-abp-contains(Sponsoroitu))
 facebook.com#?#div[role=feed] > div:not([class]):-abp-has(div[class][role="button"]:-abp-contains(Sponsoroitu))
 feissarimokat.com###billboard
@@ -5188,6 +5193,9 @@ rantapallo.fi###lomakone-results-horizontal-ads-3
 rantapallo.fi##.ad-empty
 rantapallo.fi##.recommended.lomakone-results-row
 rantapallo.fi##div[class=optin-monster-saas-overlay]
+ratkojat.fi###adslot_search
+ratkojat.fi###topslot
+ratkojat.fi##[href="https://www.suomi24.fi/lainaa/yhdista-lainat/"]
 riemurasia.net###PowerRectangle
 riemurasia.net###PowerSkyscraper
 riemurasia.net##[href^="https://tc.tradetracker%2Enet/"]
@@ -5427,7 +5435,9 @@ www.suomi24.fi#?#div[class^="HomePage__RightColItem"]:-abp-has(> div[class^="AdL
 www.suomi24.fi#?#div[class^="HomePage__RightColItem"]:-abp-has(> div[class^="Lainavertailu__Container"])
 www.suomi24.fi#?#p:-abp-has(+ p + .asp)
 www.ts.fi##[class="tsv3-c-common-article__contentad notloaded"]
+www.ts.fi##[data-readpeakurl^="https://app.readpeak.com/ads/"]
 www.ts.fi##div[class*="tsv3-c-common-smart noad-hideaction"]
+www.ts.fi#?#.tsv3-c-common-forum-threadviewer__messages__item:-abp-has(.smartad)
 www.ts.fi#?#.tsv3-c-common-twocolumnslayout:-abp-has(div[class*=element--nativead])
 www.uusisuomi.fi#?#.lazyload-wrapper:-abp-has(.at-embed-container)
 www.uusisuomi.fi#?#aside > section:-abp-contains(Kaupallinen yhteistyö)
@@ -5558,6 +5568,8 @@ iltalehti.fi##[class|="almad-mobile-parade"]
 iltalehti.fi##div.footer-wrapper__item.is-visible.LazyLoad
 iltalehti.fi##div[class=iframe-container]
 iltalehti.fi#?#.card:-abp-has(#il-rantapallo-right-column-box)
+iltalehti.fi#?#.card:-abp-has(.etua-widget-container)
+iltalehti.fi#?#.category-double-article-container:-abp-has(.half-article:nth-child(1):-abp-contains(Kaupallinen yhteistyö) + .half-article:nth-child(2):-abp-contains(Kaupallinen yhteistyö))
 iltalehti.fi#?#.embed-placeholder:-abp-has(> div > .eo-embed-announcements-container.card)
 iltalehti.fi#?#.side-column-content .card:-abp-has(.nettiauto-sponsored-content-text)
 iltalehti.fi#?#a.small-article:-abp-contains(Kaupallinen yhteistyö)
