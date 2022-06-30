@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
-! Last updated: 26/03/2022
+! Last updated: 30/06/2022
 ! Script last updated: 26/3/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -150,6 +150,7 @@ $removeparam=referral_story_type,domain=facebook.com
 $removeparam=/^(ref_?)?src=/,domain=twitter.com
 $removeparam=cn,domain=twitter.com
 $removeparam=ref_url,domain=twitter.com
+$removeparam=t,domain=twitter.com
 $removeparam=%24deep_link,domain=reddit.com
 $removeparam=/^\x24deep_link=/,domain=reddit.com
 $removeparam=correlation_id,domain=reddit.com
@@ -584,6 +585,26 @@ $removeparam=source,domain=seznamzpravy.cz
 $removeparam=seq_no,domain=seznamzpravy.cz
 $removeparam=log,domain=billiger.de
 $removeparam=p,domain=billiger.de
+$removeparam=sznclid,domain=respekt.cz
+$removeparam=dop_ab_variant,domain=respekt.cz
+$removeparam=dop_source_zone_name,domain=respekt.cz
+$removeparam=dop_req_id,domain=respekt.cz
+$removeparam=dop_id,domain=respekt.cz
+$removeparam=sznclid,domain=faei.cz
+$removeparam=dop_ab_variant,domain=faei.cz
+$removeparam=dop_source_zone_name,domain=faei.cz
+$removeparam=dop_req_id,domain=faei.cz
+$removeparam=dop_id,domain=faei.cz
+$removeparam=sznclid,domain=iprima.cz
+$removeparam=dop_ab_variant,domain=iprima.cz
+$removeparam=dop_source_zone_name,domain=iprima.cz
+$removeparam=dop_req_id,domain=iprima.cz
+$removeparam=dop_id,domain=iprima.cz
+$removeparam=sznclid,domain=nova.cz
+$removeparam=dop_ab_variant,domain=nova.cz
+$removeparam=dop_source_zone_name,domain=nova.cz
+$removeparam=dop_req_id,domain=nova.cz
+$removeparam=dop_id,domain=nova.cz
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
@@ -643,6 +664,7 @@ $removeparam=p,domain=billiger.de
 @@||facebook.com/photo.php?$removeparam
 @@||facebook.com/privacy/specific_audience_selector_dialog/$removeparam
 @@||facebook.com/photo/download/$removeparam
+@@||twitter.com/i/redirect$removeparam
 @@||bing.*/WS/redirect/$removeparam
 @@||indeed.com/rc/clk$removeparam
 @@||mozilla.org/api$removeparam
@@ -650,7 +672,7 @@ $removeparam=p,domain=billiger.de
 @@$removeparam,domain=api.bilibili.com
 @@||marketscreener.com/search/?$removeparam
 
-! This is an allowlist added by the adflit maintainers
+! This is an allowlist added by the Adfilt maintainers
 @@||tix.axs.com^$removeparam=utm_campaign
 @@||tix.axs.com^$removeparam=utm_content
 @@||tix.axs.com^$removeparam=utm_medium
