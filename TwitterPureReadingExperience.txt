@@ -1,4 +1,4 @@
-[Adblock Plus 3.6]
+[Adblock Plus 3.13]
 ! Title: 🐥 Twitter: Pure Reading Experience
 ! Version: 05October2021v1-Alpha
 ! Expires: 5 days
@@ -18,19 +18,19 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##.r-1
 
 ! Removes the "You might like" section
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type aside
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type > div > div > div > div:-abp-has(> aside[role])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type > div > div > div > div:has(> aside[role])
 
 ! Removes "Who to follow" box headers and footers from user timelines
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=primaryColumn] div:-abp-has(> div > div > h2[role=heading] > div[dir=auto] > span)
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div:-abp-has(> div > a[href^="/i/connect_people"])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=primaryColumn] div:has(> div > div > h2[role=heading] > div[dir=auto] > span)
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div:has(> div > a[href^="/i/connect_people"])
 ! https://github.com/DandelionSprout/adfilt/issues/122
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#nav[aria-label][role=navigation] + div > section > div[aria-label^=Timeline] > div[style] > div[style]:-abp-has([data-testid$=-follow])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#nav[aria-label][role=navigation] + div > section > div[aria-label^=Timeline] > div[style] > div[style]:has([data-testid$=-follow])
 
 ! Removes the topics-group carousel in user timelines
 !!! twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##section[aria-labelledby=accessible-list-1]
 
 ! Removes login nags
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:has(a[href="/i/flow/signup"])
 !#if !adguard
 ! https://mobile.twitter.com/nasuno_Posi
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid=sidebarColumn] section[aria-label][role=region]

@@ -1,4 +1,4 @@
-[Adblock Plus 3.6]
+[Adblock Plus 3.13]
 ! Title: 🎫 Ad Removal List for Unusual Ads
 ! Version: 16March2022v1-Alpha
 ! Expires: 4 days
@@ -8,17 +8,17 @@
 ! ——— Webstore coupon aggregator listings that are not actually coupons ———
 aftenposten.no##.offer
 cuponation.*##.first .d.v
-e-rabattkode.no#?#.er-offer-item:-abp-has(.coupon-button:not([data-clip-code]))
+e-rabattkode.no#?#.er-offer-item:has(.coupon-button:not([data-clip-code]))
 kupongkode.com##.promotionCouponPopup
 nettavisen.no##.type-tilbud
-nyerabattkoder.no#?#.item-holder:-abp-contains(Klikk for å løse inn)
-rabattkalas.se#?#.voucher:-abp-contains(Använd erbjudandet nu)
-rabattkod.nyheter24.se,rabattkod.gp.se#?#.card:-abp-contains(Till rabatt)
+nyerabattkoder.no#?#.item-holder:has-text(Klikk for å løse inn)
+rabattkalas.se#?#.voucher:has-text(Använd erbjudandet nu)
+rabattkod.nyheter24.se,rabattkod.gp.se#?#.card:has-text(Till rabatt)
 rabattkode.gulesider.no##.deal
-rabble.*#?#.offer-card:-abp-has(i.icon-link-ext)
-tradera.com#?#.traderase-voucher:-abp-contains(Visa rabatten)
-varejakten.no#?#.no-gutters.row:-abp-contains(Vis tilbud)
-vg.no#?#.offer-details:-abp-contains(Vis tilbud)
+rabble.*#?#.offer-card:has(i.icon-link-ext)
+tradera.com#?#.traderase-voucher:has-text(Visa rabatten)
+varejakten.no#?#.no-gutters.row:has-text(Vis tilbud)
+vg.no#?#.offer-details:has-text(Vis tilbud)
 ! Blatantly bot-generated fraudsters
 ||e-rabattkode.no^$document
 ||hotdeals.com^$document
@@ -30,8 +30,8 @@ vg.no#?#.offer-details:-abp-contains(Vis tilbud)
 !#if !env_mobile
 pixiv.net##._premium-lead-popular-d-body
 pixiv.net##._premium-lead-tag-search-bar > a[href^="/premium.php"]
-pixiv.net#?#div:-abp-has(> aside + a[href^="/premium/lead/"])
-pixiv.net#?#div > div + section:-abp-has(a[href^="/premium/lead/"])
+pixiv.net#?#div:has(> aside + a[href^="/premium/lead/"])
+pixiv.net#?#div > div + section:has(a[href^="/premium/lead/"])
 !#endif
 !#if env_mobile
 pixiv.net##.premium-lead
@@ -57,18 +57,18 @@ bulbapedia.bulbagarden.net###upper-article
 
 ! ——— Slot machine design ads(?) on Artstation ———
 ! Most easily visible when searching for fantasy creatures like "mermaid" and "fairy".
-artstation.com#?#projects-list-item:-abp-contains(/slot machine/i)
-artstation.com#?#projects-list-item:-abp-contains(/video slot/i)
-artstation.com#?#projects-list-item:-abp-contains(/slot symbol/i)
-artstation.com#?#projects-list-item:-abp-contains(/Keno[ .]/)
-artstation.com#?#projects-list-item:-abp-contains(/slot game/i)
-artstation.com#?#projects-list-item:-abp-contains(Artforgame Gamedesign)
+artstation.com#?#projects-list-item:has-text(/slot machine/i)
+artstation.com#?#projects-list-item:has-text(/video slot/i)
+artstation.com#?#projects-list-item:has-text(/slot symbol/i)
+artstation.com#?#projects-list-item:has-text(/Keno[ .]/)
+artstation.com#?#projects-list-item:has-text(/slot game/i)
+artstation.com#?#projects-list-item:has-text(Artforgame Gamedesign)
 
 ! ——— Project "sponsors" that are actually just the project leaders selling out to online casinos
 ||images.opencollective.com^$domain=socket.io
 ||socket.io/images/sponsors^$image
 socket.io###sponsors
-islandecho.co.uk#?#.herald-module:-abp-has(.category-news-in-brief)
+islandecho.co.uk#?#.herald-module:has(.category-news-in-brief)
 
 ! ——— Placeholders that are seemingly too small for EasyList ———
 mightytext.net###ad-block-holder

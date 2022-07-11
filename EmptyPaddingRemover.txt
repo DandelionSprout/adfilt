@@ -1,4 +1,4 @@
-[Adblock Plus 3.6]
+[Adblock Plus 3.13]
 ! Title: 🕳 Empty Padding Remover
 ! Version: 18May2022v1-Alpha
 ! Expires: 4 days
@@ -49,24 +49,24 @@
 ##.body-spacer:not(html, body)
 
 ! ——— Site-specific ———
-indiegogo.com#?#h3:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
-indiegogo.com#?#h2:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
+indiegogo.com#?#h3:has-text(/^\xA0$/):not(:has-text(/\S/))
+indiegogo.com#?#h2:has-text(/^\xA0$/):not(:has-text(/\S/))
 kentonline.co.uk##.clearfix + .clearfix
 kentonline.co.uk##.line + .clearfix
 skiinfo.*,onthesnow.*##.clear
-alarabiya.net#?#.main-content > section:not(:-abp-has(a))
+alarabiya.net#?#.main-content > section:not(:has(a))
 theweatheroutlook.com##.row20
-appleinsider.com#?#.cfix:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/))
+appleinsider.com#?#.cfix:has-text(/^\xA0$/):not(:has-text(/\S/))
 ice.no##.air-block
 tnt-tv.no,tnt-tv.dk##.desktop_element.promo
 tnt-tv.no,tnt-tv.dk##.logos
 tnt-tv.no,tnt-tv.dk##.tabs_placeholder
 dyrevennene.no##.td-footer-wrapper
-replacementdocs.com#?#.forumheader3:not(:-abp-has(img)):not(:-abp-contains(/\S/)):not(:-abp-has(input))
+replacementdocs.com#?#.forumheader3:not(:has(img)):not(:has-text(/\S/)):not(:has(input))
 transfermarkt.com##.clearer
 sat24.com###headermenu
 !#if !env_mobile
-pixiv.net#?#div[class*=" "]:not(:-abp-has(*)):-abp-has(+ aside + aside)
+pixiv.net#?#div[class*=" "]:not(:has(*)):has(+ aside + aside)
 !#endif
 
 ! Disqualified entries due to breakage of regular content (Example given)

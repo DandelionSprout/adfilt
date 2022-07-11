@@ -1,4 +1,4 @@
-[Adblock Plus 3.6]
+[Adblock Plus 3.13]
 ! Title: 🗨 Anti-'Google Hangouts' List
 ! Version: 06October2020v2-Beta
 ! Expires: 20 days
@@ -12,10 +12,10 @@
 mail.google.com###talk_roster
 
 ! Aims to remove Hangouts-related app listings in Google Play Store in browsers
-play.google.com#?#c-wiz > div > div > div:-abp-has(> c-wiz[jsshadow] > div):-abp-contains(/^Hangouts/)
+play.google.com#?#c-wiz > div > div > div:has(> c-wiz[jsshadow] > div):has-text(/^Hangouts/)
 
 ! Removes the Hangouts button from the Google website app drawer 📛
-google.*##.gb_h:-abp-has(.gb_c[rel=noreferrer][target=_blank][href="https://hangouts.google.com/"])
+google.*##.gb_h:has(.gb_c[rel=noreferrer][target=_blank][href="https://hangouts.google.com/"])
 
 ! Displays a warning when opening Hangouts' own website 📛
 ||hangouts.google.com$document

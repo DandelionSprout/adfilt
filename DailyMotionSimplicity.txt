@@ -1,4 +1,4 @@
-[Adblock Plus 3.6]
+[Adblock Plus 3.13]
 ! Title: 🎯 DailyMotion Simplicity
 ! Version: 16November2020v2-Beta
 ! Expires: 7 days
@@ -6,12 +6,12 @@
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 
 ! Removes the "Featured channels" feed below the video player
-dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer]:-abp-has(a[class*=channelCard])
+dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer]:has(a[class*=channelCard])
 
 ! Removes the "Trending" feed that shows up below the video player if the location is set to the United States
-dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer]:-abp-has(span:-abp-contains(Trend))
-dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer]:-abp-has(div[class^=GenericCard]:-abp-contains(Trend))
-dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer]:-abp-has(a[style^="background-image: linear-gradient(225deg, rgb(255, 221"])
+dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer]:has(span:has-text(Trend))
+dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer]:has(div[class^=GenericCard]:has-text(Trend))
+dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer]:has(a[style^="background-image: linear-gradient(225deg, rgb(255, 221"])
 
 ! Makes it easier to take screencaps of the videos
 dailymotion.com##.np_Darken
@@ -23,4 +23,4 @@ dailymotion.com##div[class^=AdDiscovery]
 dailymotion.com##div[class*=_adCell_]
 
 ! Removes the "Browse more videos" feed below the video player"
-dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer_]:-abp-contains(Browse more )
+dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer_]:has-text(Browse more )

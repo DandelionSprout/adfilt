@@ -1,4 +1,4 @@
-[Adblock Plus 3.4]
+[Adblock Plus 3.13]
 ! Title: 🚪 Browse websites without logging in
 ! Version: 03July2022v1
 ! Expires: 3 days
@@ -23,7 +23,7 @@
 ! Autosport 📠
 ||blueconic.net^$third-party
 ! https://linustechtips.com/main/topic/1133668-how-to-get-rid-of-green-fps-counter-with-beeping-sound/
-linustechtips.com,forum.malwarebytes.com,community.ccleaner.com#?#.cTopicPostArea:-abp-has(.cGuestTeaser):not(:-abp-has(.ipsComposeArea_editor))
+linustechtips.com,forum.malwarebytes.com,community.ccleaner.com#?#.cTopicPostArea:has(.cGuestTeaser):not(:has(.ipsComposeArea_editor))
 ! theepochtimes.com
 ||subs.youmaker.com^$third-party
 ! fwi.co.uk
@@ -71,7 +71,7 @@ instagram.com###fb-root + div[role=presentation]
 ! SpanishDict
 ! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-559903607
 ! Removes a one-time account creation prompt
-spanishdict.com#?#.ReactModal__Overlay:-abp-has(video[src$="/bloom2.mp4"])
+spanishdict.com#?#.ReactModal__Overlay:has(video[src$="/bloom2.mp4"])
 
 ! Die Zeit 📛
 ! Makes the official article previews fully visible
@@ -98,7 +98,7 @@ pinterest.*##div[data-test-id=pin-closeup-image] > div[role=button] > div:not([c
 
 ! Twitter
 !! Removes a "See What's Happening" prompt at the bottom of some tweet chains
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=primaryColumn] div:-abp-has(> div > div > a[href="/login"])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=primaryColumn] div:has(> div > div > a[href="/login"])
 !! Removes a login prompt when visiting "/intent/follow"-type links in mobile environments
 ! https://twitter.com/intent/follow?screen_name=mesitsu (13/04/2020)
 mobile.twitter.com,mobile.twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
@@ -106,7 +106,7 @@ mobile.twitter.com,mobile.twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyo
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
 !#endif
 ! Removes the bottom login sticky banner about logging in, in the April 2020-ish redesign 🔨
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:has(a[href="/i/flow/signup"])
 ! https://twitter.com/hideo_kojima_en/status/319595772981166080
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
 
@@ -137,7 +137,7 @@ minervanett.no##.teaserContent:before
 
 ! YouTube
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-678544030
-www.youtube.com#?#ytd-popup-container > .ytd-popup-container[role=dialog]:-abp-has(a[href="https://support.google.com/youtube/?p=sign_in"])
+www.youtube.com#?#ytd-popup-container > .ytd-popup-container[role=dialog]:has(a[href="https://support.google.com/youtube/?p=sign_in"])
 
 ! TekInvestor (Norway)
 tekinvestor.no###full-page-signup-cta
@@ -278,8 +278,8 @@ deezer.com###modal_login:upward(2)
 ! Instagram
 ! https://github.com/DandelionSprout/adfilt/issues/25
 !! Removes the bottom login banner
-instagram.com#?#.ZUqME:-abp-has(a[href^="/accounts/emailsignup/"])
-! (Note to self: If this entry ceases to work, replace it with "instagram.com#?#div[class*=" "]:-abp-has(> div > div > div > a[class][href^="/accounts/emailsignup/"])", as per https://github.com/DandelionSprout/adfilt/issues/25#issuecomment-458347604.)
+instagram.com#?#.ZUqME:has(a[href^="/accounts/emailsignup/"])
+! (Note to self: If this entry ceases to work, replace it with "instagram.com#?#div[class*=" "]:has(> div > div > div > a[class][href^="/accounts/emailsignup/"])", as per https://github.com/DandelionSprout/adfilt/issues/25#issuecomment-458347604.)
 
 ! Ooopic
 !! Removes uncloseable login prompt
@@ -287,7 +287,7 @@ ooopic.com###public-mask-login
 
 ! Stack Exchange and related sites
 !! Removes the "Here's how it works" banner at the top
-stackexchange.com,askubuntu.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com#?#.js-dismissable-hero:-abp-contains(Sign up)
+stackexchange.com,askubuntu.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com#?#.js-dismissable-hero:has-text(Sign up)
 
 ! Mr. Food
 !! Removes an uncloseable newsletter prompt

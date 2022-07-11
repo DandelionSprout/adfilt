@@ -1,4 +1,4 @@
-[Adblock Plus 3.6]
+[Adblock Plus 3.13]
 ! Title: 📭 Anti-Amazon List for Twitch
 ! Version: 18November2021v1-Beta
 ! Expires: 2 days
@@ -12,18 +12,18 @@ twitch.tv##[data-a-target=try-prime-link]
 twitch.tv##[data-a-target*=get-bits-button]
 twitch.tv##[data-a-target=bits-button]
 twitch.tv##.prime-offers__pill
-twitch.tv#?#div.tw-mg-b-2:-abp-has(div[data-test-selector=prime-sub-upsell])
-twitch.tv#?#.extension-taskbar-card-container:-abp-has(img[src*=".ext-twitch.tv/"][src*="/internal/taskbar-icon/"][src$="/636647020003385346.png"])
+twitch.tv#?#div.tw-mg-b-2:has(div[data-test-selector=prime-sub-upsell])
+twitch.tv#?#.extension-taskbar-card-container:has(img[src*=".ext-twitch.tv/"][src*="/internal/taskbar-icon/"][src$="/636647020003385346.png"])
 ||d4uvtfdr04uq6raoenvj7m86gdk16v.ext-twitch.tv^
-twitch.tv#?#.extension-taskbar-card-container:-abp-contains(V1)
-twitch.tv#?#.extension-taskbar-card-container:-abp-contains(C1)
-twitch.tv#?#.blue-bar__bar:-abp-contains(Twitch Prime)
-twitch.tv#?#.tw-transition:-abp-has(.tw-tooltip:-abp-contains(Loot Reminder))
-twitch.tv#?#.extensions-dock__layout:-abp-has([title$="Loot Reminder"])
+twitch.tv#?#.extension-taskbar-card-container:has-text(V1)
+twitch.tv#?#.extension-taskbar-card-container:has-text(C1)
+twitch.tv#?#.blue-bar__bar:has-text(Twitch Prime)
+twitch.tv#?#.tw-transition:has(.tw-tooltip:has-text(Loot Reminder))
+twitch.tv#?#.extensions-dock__layout:has([title$="Loot Reminder"])
 !#if !adguard
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(you can link your Twitch account to your active Amazon Prime subscription)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(/With Amazon prime you can subscribe for FREE/i)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(you can link your Twitch account to your active Amazon Prime subscription)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(/With Amazon prime you can subscribe for FREE/i)
 !#endif
 !#endif
-m.twitch.tv#?#.tw-c-background-base > li:-abp-contains(you can link your Twitch account to your active Amazon Prime subscription)
-m.twitch.tv#?#.tw-c-background-base > li:-abp-contains(/With Amazon prime you can subscribe for FREE/i)
+m.twitch.tv#?#.tw-c-background-base > li:has-text(you can link your Twitch account to your active Amazon Prime subscription)
+m.twitch.tv#?#.tw-c-background-base > li:has-text(/With Amazon prime you can subscribe for FREE/i)
