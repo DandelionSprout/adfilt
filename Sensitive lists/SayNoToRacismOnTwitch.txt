@@ -1,13 +1,13 @@
-[Adblock Plus 3.6]
+[Adblock Plus 3.13]
 ! Title: 👨🏾👩🏼🤵 Say No to Racism on Twitch
 ! Version: 18November2021v1-Alpha
 ! Expires: 7 days
 ! Description: Twitch is a platform to stream videogames, everyday life, and advertisements disguised as gaming expos. But at least from a traditional standpoint, many Twitch userbase in-jokes have taken forms that would've been considered racist in many other settings, including emotes that are used to accuse black people of being terrorists, women of being whiny, or businessmen game characters of being Jewish. If you wish for a more squeaky-clean experience that simply considers humans to be humans, here's a list for you.
 ! To get rid of Pepe emotes, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiPepeList.txt. I also maintain lists to remove Twitch Prime promotions and to mark Rickroll links in Twitch chat in strong red colours.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-has(img[alt$=ANELE]):-abp-has(.message:not(:-abp-contains(/\S/)))
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-has(img[alt$=cmonBruh]):-abp-has(.message:not(:-abp-contains(/\S/)))
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-has(img[alt$=HotPokket]):-abp-has(.message:not(:-abp-contains(/\S/)))
+twitch.tv#?#div[class$=message]:not(.tw-inline):has(img[alt$=ANELE]):has(.message:not(:has-text(/\S/)))
+twitch.tv#?#div[class$=message]:not(.tw-inline):has(img[alt$=cmonBruh]):has(.message:not(:has-text(/\S/)))
+twitch.tv#?#div[class$=message]:not(.tw-inline):has(img[alt$=HotPokket]):has(.message:not(:has-text(/\S/)))
 !#if !env_mobile
 twitch.tv##.emote-button__link[name=ANELE]
 twitch.tv##.emote-button__link[name=cmonBruh]
@@ -16,21 +16,21 @@ twitch.tv##button[data-tooltip-type=emote][data-name=ANELE]
 twitch.tv##button[data-tooltip-type=emote][data-name=cmonBruh]
 twitch.tv##button[data-tooltip-type=emote][data-name=HotPokket]
 twitch.tv##button[data-tooltip-type=emote][data-name=HYPERBRUH]
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-has(img[alt$=HYPERBRUH]):-abp-has(.message:not(:-abp-contains(/\S/)))
+twitch.tv#?#div[class$=message]:not(.tw-inline):has(img[alt$=HYPERBRUH]):has(.message:not(:has-text(/\S/)))
 ||cdn.frankerfacez.com/*de02fdb9721af300ac68de088b69a5fb.PNG^
 !#endif
 ||static-cdn.jtvnw.net/emoticons/v1/357^
 ||static-cdn.jtvnw.net/emoticons/v1/3792^
 ||static-cdn.jtvnw.net/emoticons/v1/84608^
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(/jew/i):not(:-abp-contains(/jewel/i))
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(/\(\(\(\S/)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(卍)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(卐)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(1488)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(/O[yi]/i):-abp-contains(/ vey/i)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(/O[yi]/i):-abp-contains(/ veee/i)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(MAGA)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(/goyim/i)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(/trans/i):-abp-contains(/politic/i)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(/McCarthy/i):-abp-contains(/right/i)
-twitch.tv#?#div[class$=message]:not(.tw-inline):-abp-contains(/McCarthy/i):-abp-contains(/another/i)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(/jew/i):not(:has-text(/jewel/i))
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(/\(\(\(\S/)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(卍)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(卐)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(1488)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(/O[yi]/i):has-text(/ vey/i)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(/O[yi]/i):has-text(/ veee/i)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(MAGA)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(/goyim/i)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(/trans/i):has-text(/politic/i)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(/McCarthy/i):has-text(/right/i)
+twitch.tv#?#div[class$=message]:not(.tw-inline):has-text(/McCarthy/i):has-text(/another/i)
