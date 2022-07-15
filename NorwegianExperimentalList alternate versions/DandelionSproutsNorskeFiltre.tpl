@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 26June2022v2-Alpha
+# Version: 14July2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -600,6 +600,8 @@ msFilterList
 +d _980x100.
 # Makes most links show up correctly (Fixed in AdGuard Base)
 # https://github.com/uBlockOrigin/uAssets/issues/11546/(Not/yet/forwarded to EasyList)
+# https://github.com/uBlockOrigin/uAssets/issues/13907
+@@://imasdk.googleapis.com/js/sdkloader/ima3.js
 # ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 # ★★★ Caused by «AdGuard Annoyances Filter» and «AdGuard Tracking Protection Filter»
@@ -883,6 +885,8 @@ msFilterList
 -d kikuchitadahisa.com
 # https://www.tv2.no/14815077
 -d kontodb.com
+# https://kommunikasjon.ntb.no/pressemelding/power-advarer-mot-sms-svindel?publisherId=17847615&releaseId=17937583
+-d aqff.me
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
@@ -894,6 +898,8 @@ msFilterList
 -d 167.71.49.177
 -d 134.209.82.119
 -d 154.213.16.136
+-d 158.247.212.220
+-d 165.227.168.212
 -d 132.148.220.142
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).

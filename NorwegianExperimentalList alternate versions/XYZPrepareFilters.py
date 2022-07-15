@@ -4224,12 +4224,6 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"\$all$", 
-           r"$empty,important", 
-           line
-        )
-
-        line = re.sub(
            r"\$doc(,|$)", 
            r"$document\1", 
            line
