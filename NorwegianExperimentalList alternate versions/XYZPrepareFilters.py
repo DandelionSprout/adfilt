@@ -4242,7 +4242,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
+           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*", 
            r"", 
            line
         )
@@ -4471,7 +4471,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
+           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*", 
            r"", 
            line
         )
@@ -4845,6 +4845,18 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*\*&\*=.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\?.*", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\r\n'
 
@@ -5170,6 +5182,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^127\.0\.0\.1 [a-z]{1,20}$", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\r\n'
 
@@ -5312,6 +5330,12 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^[a-z0-9-]{1,}\$.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-z]{1,20}$", 
            r"", 
            line
         )
@@ -5522,7 +5546,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo)\^.*", 
+           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*", 
            r"", 
            line
         )
