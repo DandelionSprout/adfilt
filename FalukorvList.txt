@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: 🌭 Falukorv List
-! Version: 01April2022v2-Beta
+! Version: 18July2022v1-Beta
 ! Expires: 10 days
 ! Description: Originally created because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! The list is not designed to be used together with anti-'social network' lists.
@@ -73,10 +73,6 @@
 
 ! Caused by «ABP Japanese Filters» (https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt)
 @@||lemondeinformatique.fr^
-
-! Caused by «Phishing URL Blocklist»
-! https://gitlab.com/curben/phishing-filter/-/issues/9
-@@||157.240.194.
 
 !#if env_mobile
 ! Caused by «Liste AR» (Ensures that DailyMotion pages load properly in at least AdGuard Home)
@@ -153,3 +149,7 @@
 
 ! HTTPS certificate verifiers
 @@||lencr.org^
+
+!#if !env_mobile
+!#include uBO%20list%20extensions/FalukorvList-NotForAdGuardHome.txt
+!#endif
