@@ -454,7 +454,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"(! Title: 🏔️ Dandelion Sprout.*)", 
-           r"[Adblock Plus 3.6]\n\1", 
+           r"[Adblock Plus 3.13]\n\1", 
            line
         )
 
@@ -2455,7 +2455,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^(! Title: 🏔️ Dandelion Sprout.*)", 
-           r"[Adblock Plus 3.7]\n\1", 
+           r"[Adblock Plus 3.13]\n\1", 
            line
         )
 

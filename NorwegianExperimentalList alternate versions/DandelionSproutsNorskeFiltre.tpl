@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 14July2022v1-Alpha
+# Version: 23July2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -92,7 +92,6 @@ msFilterList
 -d dotbanner.dk
 -d easy-ad.no
 -d easy-ads.dk
--d finndelbilder.blob.core.windows.net
 -d heartbeat.airserve.net
 -d images.passendo.com
 -d isweb.no
@@ -883,8 +882,6 @@ msFilterList
 -d p-stn.net
 -d wxqgx123.com
 -d kikuchitadahisa.com
-# https://www.tv2.no/14815077
--d kontodb.com
 # https://kommunikasjon.ntb.no/pressemelding/power-advarer-mot-sms-svindel?publisherId=17847615&releaseId=17937583
 -d aqff.me
 # IP addresses of servers notorious for hosting many of the sites above
