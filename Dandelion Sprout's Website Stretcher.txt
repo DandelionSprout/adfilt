@@ -1,5 +1,5 @@
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! Version: 19July2022v3-Beta
+! Version: 23July2022v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -426,9 +426,10 @@ nintendo.com###game-set:style(column-count: 8 !important)
 !!!wikipedia.org,wiktionary.org##.mw-content-container:style(max-width: none !important)
 wikipedia.org,wiktionary.org###mw-navigation + .mw-content-container:style(margin-left: 176px !important)
 ! Hopefully most mainstream implementations of the Vector wiki skin, for instance on https://wiki.pcsx2.net/Main_Page
-net,org,com##html.vector-sticky-header-enabled .mw-page-container:style(max-width: 97vw !important)
-net,org,com##html.vector-sticky-header-enabled .mw-workspace-container:style(max-width: none !important)
-net,org,com##html.vector-sticky-header-enabled .mw-content-container:style(max-width: 98vw !important; margin-left: 175px !important)
+! ":not(.ve-available)" is needed for https://www.mediawiki.org/wiki/Help:Range_blocks/IPv6
+net,org,com##html.vector-sticky-header-enabled:not(.ve-available) .mw-page-container:style(max-width: 97vw !important)
+net,org,com##html.vector-sticky-header-enabled:not(.ve-available) .mw-workspace-container:style(max-width: none !important)
+net,org,com##html.vector-sticky-header-enabled:not(.ve-available) .mw-content-container:style(max-width: 98vw !important; margin-left: 175px !important)
 
 ! —————————————————————————————————————————————————————————————————————
 
