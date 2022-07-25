@@ -67,13 +67,15 @@ KNOWN_BAD_FILTERS = [
     # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1796961
     "$removeparam=ved,domain=google.*",
     # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2408392
-    '$removeparam=s,domain=amazon.*',
+    "$removeparam=s,domain=amazon.*",
     # https://github.com/DandelionSprout/adfilt/commit/8c3520f272162c70bd48dd27fb7c37a9abf00fa8 - I don't think it is in this list, but added anyway
     "||bing.com^$removeparam=filters",
     # unknown breakage
     "||google.com^$removeparam=dpr",
     "$~xmlhttprequest,removeparam=psc",
     "||walmart.$removeparam=wl13",
+    # Netflix Track ID
+    "$removeparam=trackId,domain=netflix.com",
 ]
 
 ALLOWLIST = """
