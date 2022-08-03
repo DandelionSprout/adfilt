@@ -307,7 +307,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\.php\?$", 
+           r"\.php(\||\?)$", 
            r"", 
            line
         )
@@ -344,6 +344,18 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^\|\|overclockers\.co\.uk\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|opensubtitles\.com\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|bit\.ly\^$", 
            r"", 
            line
         )
@@ -633,6 +645,24 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^! \*\*\* easylistgermany:easylistgermany/easylistgermany_allowlist_popup\.txt \*\*\*$", 
            r"! Title: ABP Filters", 
+           line
+        )
+
+        line = re.sub(
+           r"^!-------------{1,}!$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[0-9]{1,} .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-z0-9/-]{1,5}$", 
+           r"", 
            line
         )
 
@@ -1063,7 +1093,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/TopDescription-Notifications.notlist', 'https://easylist-downloads.adblockplus.org/fanboy-notifications.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/sections/push-notifications.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/TopDescription-Notifications.notlist', 'https://easylist-downloads.adblockplus.org/fanboy-notifications.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/push-notifications_general.txt']
 
 UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$ghide', ',ghide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain', '[Adblock Plus 2.0]', 'CV-']
 
@@ -1373,7 +1403,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\.php\?$", 
+           r"\.php(\||\?)$", 
            r"", 
            line
         )
@@ -1561,6 +1591,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"([a-zA-Z0-9.,;'?!#_-]) $", 
            r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^(! This section contains )", 
+           r"! Title: AdGuard Popups filter - Push notifications, specific\n\1", 
+           line
+        )
+
+        line = re.sub(
+           r".*/,stylesheet$", 
+           r"", 
            line
         )
 
