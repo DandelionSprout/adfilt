@@ -34,7 +34,7 @@ HEAD = """\
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
 ! Last updated: {date}
-! Script last updated: 12/8/2022
+! Script last updated: 13/8/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Note: This was based off of https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues
@@ -48,6 +48,7 @@ KNOWN_BAD_FILTERS = [
     "$removeparam=/^ref_?=/",
     # Break google search links (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1598337)
     "$removeparam=sa,domain=google.*",
+    "||google.*^$removeparam=sa",
     "$removeparam=usg,domain=google.*",
     # This looks like it could break things 
     "$removeparam=referrer",
@@ -55,19 +56,26 @@ KNOWN_BAD_FILTERS = [
     "||google.*/search?$removeparam=client",
     # breaks Google redirect links - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1666162
     "$removeparam=source,domain=google.*",
+    "||google.*^$removeparam=source",
     # breaks Twitter - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1677828
     "$removeparam=s,domain=twitter.com",
+    "||twitter.com^$removeparam=s",
     # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726673
     "||microsoft.com^$removeparam=ru",
     # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1749912
     "$removeparam=type,domain=amazon.com",
+    "||amazon.com^$removeparam=type",
     # https://github.com/DandelionSprout/adfilt/commit/e5894c3b70c028cd47235457fbf13fc8617d989a
     "$removeparam=sa,domain=google.*",
+    "||google.*^$removeparam=sa",
     "$removeparam=usg,domain=google.*",
+    "||google.*^$removeparam=usg",
     # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1796961
     "$removeparam=ved,domain=google.*",
+    "||google.*^$removeparam=ved",
     # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2408392
     '$removeparam=s,domain=amazon.*',
+    "||amazon.*^$removeparam=s",
     # https://github.com/DandelionSprout/adfilt/commit/8c3520f272162c70bd48dd27fb7c37a9abf00fa8 - I don't think it is in this list, but added anyway
     "||bing.com^$removeparam=filters",
     # unknown breakage
@@ -248,8 +256,8 @@ def main() -> int:
             write_rules(
                 url_pattern,
                 rules,
-                "$removeparam=/^{0}=/,domain={1}",
-                "$removeparam={0},domain={1}",
+                "||{1}^$removeparam=/^{0}=/",
+                "||{1}^$removeparam={0}",
                 filterlist,
             )
 
