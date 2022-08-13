@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 10August2022v5
+! Version: 13August2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3028,19 +3028,19 @@ $removeparam=psrc,domain=savagex.com
 ||vimeo.com^$removeparam=owner
 
 ! https://www.lenovo.com/us/en/c/laptops/thinkpad?orgRef=https%253A%252F%252Fduckduckgo.com%252F
-$removeparam=orgRef,domain=lenovo.com
+||lenovo.com^$removeparam=orgRef
 
 ! https://chollometro.digidip.net/visit?url=https%3A%2F%2Fwww.ebay.es%2Fitm%2F313545659728%3Fhash%3Ditem4900c71550%25253Ag%25253AefQAAOSwM%25257EBhkcpH%26_trkparms%3D%26rpp_cid%3D61a98c608d080d0465e9035f&ppref=https%3A%2F%2Fwww.chollometro.com%2Fcupones%2Febay.es
 $removeparam=ppref,domain=digidip.net
 
 ! https://www.dhgate.com/product/global-version-xiaomi-mi-11t-4g-8gb-128gb/740400510.html?f=bda%7Ccontent%7Cchollometro%7Cdeals
-$removeparam=f,domain=dhgate.com
+||dhgate.com^$removeparam=f
 
 ! https://www.cyberghostvpn.com/en_US/offer/xmas?brand=vpnMentor&coupon=3Y3M
 $removeparam=brand,domain=cyberghostvpn.com|privateinternetaccess.com
 
 ! https://safe.cyberghostvpn.com/en_US/xmas?lp=flashdevices&coupon=3Y3M&media_source=CJ_affiliates&channel=External LPs
-$removeparam=media_source,domain=cyberghostvpn.com
+||cyberghostvpn.com^$removeparam=media_source
 
 ! https://github.com/uBlockOrigin/uAssets/issues/10995
 !!! ||zhihu.com^$removeparam=search_source
@@ -3048,13 +3048,13 @@ $removeparam=media_source,domain=cyberghostvpn.com
 ||zhihu.com^$removeparam=hybrid_search_extra
 
 ! https://www.theregister.com/2021/12/20/linux_5_16_rc6/?td=keepreading-btm
-$removeparam=td,domain=theregister.com
+||theregister.com^$removeparam=td
 
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/210
-$removeparam=fromrel,domain=dzone.com
+||dzone.com^$removeparam=fromrel
 
 ! https://blog.feedspot.com/?_src=footer
-$removeparam=_src,domain=feedspot.com
+||feedspot.com^$removeparam=_src
 
 ! https://asunnot.oikotie.fi/vinkit-ja-oppaat/yleinen/suomen-jouluisin-kaupunki/?promo_name=article&promo_creative=kotiinartikkelit&promo_position=listing_page
 $removeparam=promo_name,domain=oikotie.fi|kesaduuni.org
@@ -3518,6 +3518,11 @@ $removeparam=plimit,domain=privatehomeclips.com
 $removeparam=source,domain=privatehomeclips.com
 $removeparam=fr,domain=hclips.com
 $removeparam=rp,domain=hclips.com
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3391059
+||xhamster.*^$removeparam=pb
+||eporner.*^$removeparam=trx
+$removeparam=sub,domain=allboner.com|twinkvideos.com
 
 !#if !env_mobile
 ! ——— Mobile ——— !
