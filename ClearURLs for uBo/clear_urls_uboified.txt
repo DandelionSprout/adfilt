@@ -1,8 +1,8 @@
 ! Title: ClearURLs for uBo
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard
-! Last updated: 30/06/2022
-! Script last updated: 26/3/2022
+! Last updated: 13/08/2022
+! Script last updated: 12/8/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Note: This was based off of https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues
@@ -619,42 +619,42 @@ $removeparam=dop_id,domain=nova.cz
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/(appsactivity|aclk\?)/$removeparam
 @@||matrix.org/_matrix/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?(cloudflare\.com|prismic\.io|tangerine\.ca|gitlab\.com)/$removeparam
-@@$removeparam,domain=myaccount.google.*
+@@||myaccount.google.*^$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?gcsip\.(com|nl)[^?]*\?.*?&?ref_?=./$removeparam
 @@/^https?:\/\/[^/]+/[^/]+/[^/]+\/-\/refs\/switch[^?]*\?.*?&?ref_?=./$removeparam
 @@/^https?:\/\/bugtracker\.[^/]*\/[^?]+\?.*?&?ref_?=[^/?&]*/$removeparam
 @@||comment-cdn.9gag.com/*comment-list.json?$removeparam
 @@||battle.net/login$removeparam
 @@||blizzard.com/oauth2$removeparam
-@@$removeparam,domain=kreditkarten-banking.lbb.de
-@@$removeparam,domain=www.tinkoff.ru
+@@||kreditkarten-banking.lbb.de^$removeparam
+@@||www.tinkoff.ru^$removeparam
 @@||www.cyberport.de/adscript.php$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?tweakers\.net\/ext\/lt\.dsp\?.*?(%3F)?&?ref_?=./$removeparam
 @@/^https?:\/\/git(lab)?\.[^/]*\/[^?]+\?.*?&?ref_?=[^/?&]*/$removeparam
 @@||amazon.*/message-us?$removeparam
-@@$removeparam,domain=authorization.td.com
-@@$removeparam,domain=support.steampowered.com
+@@||authorization.td.com^$removeparam
+@@||support.steampowered.com^$removeparam
 @@||privacy.vakmedianet.nl/*ref=$removeparam
 @@||sso.serverplan.com/manage2fa/check?ref=$removeparam
 @@||login.meijer.com/*?ref=$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?facebook\.com\/(login_alerts|ajax|should_add_browser)//$removeparam
 @@||facebook.com/groups/member_bio/bio_dialog/$removeparam
-@@$removeparam,domain=api.taiga.io
+@@||api.taiga.io^$removeparam
 @@||gog.com/click.html$removeparam
-@@$removeparam,domain=login.progressive.com
+@@||login.progressive.com^$removeparam
 @@||www.sephora.com/api/$removeparam
-@@$removeparam,domain=www.contestgirl.com
-@@$removeparam,domain=agenciatributaria.gob.es
-@@$removeparam,domain=login.ingbank.pl
+@@||www.contestgirl.com^$removeparam
+@@||agenciatributaria.gob.es^$removeparam
+@@||login.ingbank.pl^$removeparam
 @@|wss://zoom.us^$removeparam
-@@$removeparam,domain=api.bilibili.com
+@@||api.bilibili.com^$removeparam
 @@||onet.pl/*?*utm_campaign=$removeparam
 @@||stripe.com/*?*referrer=$removeparam
 @@||lichess.org/login*referrer=$removeparam
 @@||like.co/api/like/likebutton/*?*referrer=$removeparam
 @@||button.like.co/in/*referrer=$removeparam
-@@$removeparam,domain=www.mma.go.kr
-@@$removeparam,domain=github.com
+@@||www.mma.go.kr^$removeparam
+@@||github.com^$removeparam
 @@||billiger.de/*mc=$removeparam
 @@||amazon-adsystem.*/v3/oor?$removeparam
 @@||youtube.com/signin?$removeparam
@@ -669,7 +669,7 @@ $removeparam=dop_id,domain=nova.cz
 @@||indeed.com/rc/clk$removeparam
 @@||mozilla.org/api$removeparam
 @@||comment-cdn.9gag.com/*comment-list.json?$removeparam
-@@$removeparam,domain=api.bilibili.com
+@@||api.bilibili.com^$removeparam
 @@||marketscreener.com/search/?$removeparam
 
 ! This is an allowlist added by the Adfilt maintainers
