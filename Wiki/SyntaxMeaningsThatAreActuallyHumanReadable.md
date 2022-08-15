@@ -19,9 +19,10 @@
 * `[href~="text"]`: Finds page elements whose value contains the word (with spaces around it) anywhere within it.
 * `[href|="text"]`: Same as `[href="text"]`, but can also select text that is then followed by a hyphen `-`.
 * `:not(.element)`: Finds page elements that doesn't contain a specified element or text string.
-* `:-abp-contains(text)`: Finds page elements that contains such text within it.
-* `:-abp-has(.element)`: Finds page elements that contains such an element within it.
-* `:-abp-has(>` : Tells `:-abp-has` to only find elements whose criteria match their immediate subelement(s).
+* `:has-text(text)`: Finds page elements that contains such text within it.
+* `:has(.element)`: Finds page elements that contains such an element within it.
+* `:has(>` : Tells `:has` to only find elements whose criteria match their immediate subelement(s).
+* `:not(:-abp-contains(Text))` / `:not(:-abp-has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order. To select multiple numbers, one has to use `n` calculations (e.g. `(n+2)`), since ranges (e.g. `(3-6)`) are not supported.
 * `:only-of-type` / `first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
 * `:first-child` / `:last-child`: Appears to be synonymous with `first-of-type` and `last-of-type` for adblocking purposes.
@@ -71,12 +72,9 @@
 #### Hiding
 * `:style`: Changes the CSS values of an element, in much the same way as what userstyle extensions like Stylish would've done.
 * `#$#` + `{ }`: Same as above.
-* `:has-text`: Same as `:-abp-contains`.
-* `:has`: Same as `:-abp-has`.
 * `!#if`: Specifies that a section of entries only apply to specific platforms or extensions. Closed out by `!#endif`. Possible options are listed [here](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#if-condition).
 * `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
 * `:matches-css-before` / `:matches-css-after`: Same as above, but looks for CSS values in its pseudo-elements instead.
-* `:not(:-abp-contains(Text))` / `:not(:-abp-has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
 * `:remove()`: Removes the element entirely from the F12 tree. The parentheses are required.
 * `#$?#` + `{ remove: true; }`: Same as above.
 #### Blocking
@@ -89,7 +87,7 @@
 * `$match-case`: Makes the criteria case-sensitive. uBO only supports it in RegEx entries.
 
 ## uBlock Origin, Adblock Plus and AdBlock only
-* `##element1,element2:-abp-(has/contains)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where `element1` is instead blocked in its entirety.
+* `##element1,element2:has(-text)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where all instances of `element1` would be blocked.
 
 ## uBlock Origin only:
 #### Hiding
@@ -122,7 +120,7 @@
 * `! Redirect:`: Tells the adblocker to look for list updates from a new URL from that point on. To be used in the old file only (Not the new one), to avoid an infitite redirection loop.
 * `! Checksum:`: No longer in use by *any* adblockers. Was used by ABP/AB on Firefox prior to November 2017, out of a then-decade-old fear that antivirus tools could tamper with list contents to create disastrously miswritten entries. AdGuard adds their own checksums to natively included lists, which do not need any maintainer intervention.
 #### Hiding
-* `#?#`: Required to make entries with `:-abp-has`, `:-abp-contains` and `:-abp-properties` work in those particular extensions, and to make `:style` entries not break the list extremely heavily.
+* `#?#`: Required to make entries with `:has`, `:has-text` and `:-abp-properties` work in those particular extensions, and to make `:style` entries not break the list extremely heavily.
 * `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
 * `#$#`: Similar to, but incompatible with, `##+js`. Possible options are listed in [this file](https://gitlab.com/eyeo/adblockplus/adblockpluscore/blob/next/lib/content/snippets.js) (text-search `@alias`).
 #### Blocking
@@ -145,7 +143,7 @@
 * `$cookie=`: Blocks cookies with specific names.
 * `$cookie=` + `maxAge`: Changes the cookie to have an expiration time in seconds.
 * `$cookie=` + `same-site`: Changes the cookie to use the "Lax" mode of `samesite` known from the `Set-Cookie` browser HTTP response system.
-* `$mp4`: Seems to be equivalent to `$redirect=noopmp4`, but does not require any AdGuard trust rights. Allegedly to be obsoleted soon.
+* `$mp4`: Seems to be equivalent to `$redirect=noopmp4`, but does not require any AdGuard trust rights. Was allegedly to be obsoleted soon as of 2021.
 * `@@` + `$urlblock`: Turns off file-request blocking entirely while on that domain.
 
 ## AdGuard for [Windows/Mac/Android] only:
@@ -173,4 +171,4 @@
 * No entries can use both `||` and `##` at the same time.
 * Major note to advanced CSS experts: Some advanced terms have been replaced in this guide, because they'd be less than obvious to laymen who'd need this guide. For instance, I replaced `DOM tree` with `F12 filetree`, because I 100% genuinely felt that it was easy to think `DOM` was short for "dominatrix", and also because many people may not even know how to open said tree in web browsers.
 
-¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, Adblock Plus version ≥3.5, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, Blokada, or Pi-hole, whose syntax supports are considerably inferior to the above list.
+¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, Adblock Plus version ≥3.13, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, Blokada, or Pi-hole, whose syntax supports are considerably inferior to the above list.
