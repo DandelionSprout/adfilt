@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 27July2022v1-Alpha
+# Version: 19August2022v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -729,8 +729,6 @@ msFilterList
 # 🇬🇧: Copied over from «Dandelion Sprout's Anti-Malware List»
 -d fredfiber.no
 -d gogle.net
-# 🇬🇧: Domains related to thehotelshowdev[.]bitkit[.]dk
--d big5-nigeria.bitkit.dk
 # 🇬🇧: Scam domains as reported in https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-988127908
 # https://www.tek.no/i/lVeQAe/
 # https://www.nkom.no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
@@ -882,10 +880,11 @@ msFilterList
 -d p-stn.net
 -d wxqgx123.com
 -d kikuchitadahisa.com
-# https://kommunikasjon.ntb.no/pressemelding/power-advarer-mot-sms-svindel?publisherId=17847615&releaseId=17937583
--d aqff.me
 # https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
 -d k-yw.com
+# https://dinside.dagbladet.no/okonomi/tusenvis-forsokt-lurt/76921148
+-d a2ics.eu
+-d smsb.co
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
@@ -1015,7 +1014,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 01June2022v2-Extension
+# Last updated: 01August2022v1-Extension
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js

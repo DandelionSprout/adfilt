@@ -5581,6 +5581,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\^dnstype=", 
+           r"^$dnstype=", 
+           line
+        )
+
         if is_supported_agh(line):
             text += line + '\r\n'
 
@@ -6504,6 +6510,70 @@ def prepare_domains(lines) -> str:
         line = re.sub(
            r".*prohibitions on .*", 
            r"", 
+           line
+        )
+
+        if not line == '':
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    domains_filter = prepare_domains(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_DOMAINS, "w") as text_file:
+        text_file.write(domains_filter)
+
+    print('The Nitter list version has been generated.')
+
+#/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\
+#•X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X•
+#\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiKpopSpammersTwitter.txt']
+
+OUTPUT = 'Domeneversjoner/xyzzyxkpop.txt'
+OUTPUT_DOMAINS = 'Domeneversjoner/AntiKpopNitter.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard Home
+def prepare_domains(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#div\[style\*=\"position: absolute; \"]:not\(\[class\]\)", 
+           r"nitter.net,nitter.42l.fr#?#.timeline-item", 
+           line
+        )
+
+        line = re.sub(
+           r"^! Title: 🪑 .*", 
+           r"🌂 Anti-'K-pop on Twitter' List - Nitter Supplement", 
            line
         )
 
