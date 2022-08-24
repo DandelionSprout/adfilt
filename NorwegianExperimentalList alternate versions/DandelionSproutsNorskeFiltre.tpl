@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 22August2022v1-Alpha
+# Version: 24August2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -664,6 +664,8 @@ msFilterList
 +d bondebladet.screen9.tv
 +d eurosport.no
 +d eurosport.dk
+# Fixed in better ways in AdGuard Base and uBlock Filters, but is needed for ABP
++d inputmag.dk
 # 🇳🇴: Fjerner overflødige deler av URL-er for å gjøre dem kortere og lettere å dele
 # 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
 # Infrequently synced with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt

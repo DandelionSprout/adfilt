@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 220820221
+! Version: 240820221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1148,6 +1148,7 @@ in.fo##.row > .mobile-hide
 indkast.dk##.flat
 indkast.dk##.site_ad_container
 information.dk##.masthead
+inputmag.dk##.stream-item
 installator.dk##.addon--ad
 intrafish.no##.text-center.mb-3
 intrafish.no##.row > .d-lg-block
@@ -1991,6 +1992,8 @@ nettavisen.no###topover
 @@||bondebladet.screen9.tv^$generichide
 @@||eurosport.no^$generichide
 @@||eurosport.dk^$generichide
+! Fixed in better ways in AdGuard Base and uBlock Filters, but is needed for ABP
+@@||inputmag.dk^$generichide
 
 ! 🇳🇴: Fjerner overflødige deler av URL-er for å gjøre dem kortere og lettere å dele
 ! 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
@@ -4533,7 +4536,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 [Adblock Plus 3.13]
-! Version: 220820221
+! Version: 240820221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4541,6 +4544,7 @@ wellness.se#?#article:-abp-has(.ad)
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues
+! email (noreply): suomilista@fire.fundersclub.com
 
 ! -----GENERAL FILTERS-----
 
@@ -5513,6 +5517,8 @@ urjalansanomat.fi#?#.urjal-widget.main:has(a[href="https://ysiauto.fi/"])
 urjalansanomat.fi#?#.widget:has(> a[href="/lounaat"])
 uudenkaupunginsanomat.fi###auto-grid-container-5c40764673d19
 uusisuomi.fi##[data-test=mainTeaserColumn][href^="https://www.uusisuomi.fi/kumppanisisallot/"]
+uusisuomi.fi##aside [href^="https://track.adform.net/"]
+uusisuomi.fi##aside [href^="https://www.ilmarinen.fi/"]
 uusisuomi.fi#?#.lazyload-wrapper + section:has-text(Kaupallinen yhteistyö)
 uusisuomi.fi#?#.lazyload-wrapper:has(.eo-embed-announcements-container)
 uusisuomi.fi#?#div#skyscraper-height-div > div > aside > section > a:has-text(Kaupallinen yhteistyö)
@@ -5663,6 +5669,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||c1.hinta.fi^$third-party,script
 ||caravan-lehti.fi/media/Carado-matkailuauto.$image,domain=caravan-lehti.fi
 ||carousel-prod-kaleva-fi.s3.amazonaws.com^$third-party
+||cdn.bluebillywig.com/apps/player/$script,domain=gekkonen.net|hevosurheilu.fi
 ||celtra.com^$third-party
 ||cjar.a-lehdet.fi^$third-party
 ||cloudfront.net/images/backgroundimages/backgroundimage^$third-party
