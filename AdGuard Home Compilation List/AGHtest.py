@@ -666,6 +666,168 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\.[a-zA-Z0-9]{3,}\|$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! E[nN][dD].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! Expires: [0-9] .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! (Good|Bad): .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".* end ⬆️$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! This section contains the list of .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! Note, .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*github\.com/NanoMeow/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r" -{4,}(!?)$", 
+           r" ---\1", 
+           line
+        )
+
+        line = re.sub(
+           r"! ?-{3,}!?$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r" ={4,}$", 
+           r" ===", 
+           line
+        )
+
+        line = re.sub(
+           r"^!-{4,}([ A-ZÉ])", 
+           r"!---\1", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z(])-{4,}!$", 
+           r"\1---!", 
+           line
+        )
+
+        line = re.sub(
+           r"^! Last modified: %timestamp%$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\*\*\*! Title: ", 
+           r"***\n! Title: ", 
+           line
+        )
+
+        line = re.sub(
+           r"^! \*\*\* .*hide.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! Smart ?JSON.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! ! .*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"  ", 
+           r" ", 
+           line
+        )
+
+        line = re.sub(
+           r"^! \*\*\* easylistspanish:easylistspanish(_adult/adult_thirdparty|/easylistspanish_allowlist_|_adult/adult_allowlist).*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! \*\*\* easylist:easylist_adult/adult_specific_block_popup\.txt \*\*\*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! \*\*\* easylist:easylist_adult/adult_allowlist.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! \*\*\* easylistgermany:easylistgermany/(easylistgermany_allowlist|easylistgermany_specific_block_popup\.).*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"! \*\*\* antiadblockfilters.*(czech|dutch|finnish|hebrew|indonesian|latvian|romanian|slovak).*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|51\.89\.187\.136\^$", 
+           r"51.89.187.136/29", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|51\.89\.187\.1(3[7-9]|4[0-3])\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!$", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\r\n'
 
