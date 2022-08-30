@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 24August2022v1-Alpha
+# Version: 30August2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -603,9 +603,10 @@ msFilterList
 @@://imasdk.googleapis.com/js/sdkloader/ima3.js
 # ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
-# ★★★ Caused by «AdGuard Annoyances Filter» and «AdGuard Tracking Protection Filter»
+# ★★★ Caused by «AdGuard Annoyances Filter» and «AdGuard Tracking Protection Filter» ★★★
 # (Currently empty.)
-# ★★★ Caused by «Schacks Adblock Plus liste»
+# ★★★ Caused by «AdGuard Popups Filter» ★★★
+# ★★★ Caused by «Schacks Adblock Plus liste» ★★★
 # https://github.com/ryanbr/fanboy-adblock/issues/1410
 # ★★★ Unknown cause ★★★
 # https://github.com/DandelionSprout/adfilt/issues/67

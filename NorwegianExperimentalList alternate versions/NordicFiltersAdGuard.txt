@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Version: 24August2022v1
+! Version: 30August2022v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1929,9 +1929,11 @@ findbolig.nu#@#.advertLink
 ! ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 ! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 telenor.no##.global-overlay-background
-! ★★★ Caused by «AdGuard Annoyances Filter» and «AdGuard Tracking Protection Filter»
+! ★★★ Caused by «AdGuard Annoyances Filter» and «AdGuard Tracking Protection Filter» ★★★
 ! (Currently empty.)
-! ★★★ Caused by «Schacks Adblock Plus liste»
+! ★★★ Caused by «AdGuard Popups Filter» ★★★
+@@/^https:\/\/www.gamer.no\/[0-9a-f]{32,40}$/$script,~third-party
+! ★★★ Caused by «Schacks Adblock Plus liste» ★★★
 ! https://github.com/ryanbr/fanboy-adblock/issues/1410
 ekstrabladet.dk#@#body>div[id][style]
 ! ★★★ Unknown cause ★★★
@@ -2160,6 +2162,7 @@ csp.screen9.com#@#.adsbox
 @@||sixscissors.com^$third-party,domain=itavisen.no
 @@||www.tv2.no/s/js/ads.js$script,~third-party
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
+@@||sumo.cdn.tv2.no/ads^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121422
 @@.v.fwmrm.net/ad/g^*:MTG_Play_
 
