@@ -19,7 +19,7 @@ assignees: ''
 <!-- For info on supported extensions, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md. Manifest V3 extensions are not allowed. -->
 - [ ] uBlock Origin
 - [ ] AdGuard (Paid desktop version)
-- [ ] AdGuard (for browsers)
+- [ ] AdGuard (Gratis browser versions that aren't Manifest V3 nor Safari)
 - [ ] AdBlock (Firefox or Manifest V2)
 - [ ] Adblock Plus (Firefox or Manifest V2)
 - [ ] AdGuard Home
