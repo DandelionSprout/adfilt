@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 30August2022v1
+! Version: 30August2022v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2163,6 +2163,12 @@ csp.screen9.com#@#.adsbox
 @@||www.tv2.no/s/js/ads.js$script,1p
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 @@||sumo.cdn.tv2.no/ads^
+!#if adguard
+!+ NOT_OPTIMIZED
+
+!+ NOT_OPTIMIZED
+@@||securepubads.g.doubleclick.net^$app=no.tv2.sumo
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121422
 @@.v.fwmrm.net/ad/g^*:MTG_Play_
 
