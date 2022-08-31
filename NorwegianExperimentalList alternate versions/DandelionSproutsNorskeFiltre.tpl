@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 30August2022v2-Alpha
+# Version: 31August2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -425,10 +425,6 @@ msFilterList
 -d 82.196.13.38
 -d 82.221.81.9
 -d 178.79.136.45
--d freewheel-mtgx-tv.akamaized.net
--d ssl-mtgstream.tns-cs.net
--d krxd.net
--d 2mdn.net
 -d 5e529.v.fwmrm.net
 -d ssl-dnnstream.tns-cs.net
 -d discoverynordics.hb.omtrdc.net
@@ -636,7 +632,7 @@ msFilterList
 +d oddstips.norsktippingpartner.no
 -d cloudfront.net Liveoddsen.aspx
 # nidaros.no (02 12 2021)
-# ——— Gamereactor + Viafree PC ———
+# ——— Gamereactor PC ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 # 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
@@ -646,8 +642,6 @@ msFilterList
 - insert_grtv_stats.
 - prerolls
 - videojs.ima.
--d client-stream-events.mtg-api.com
--d freewheel-mtgx-tv.akamaized.net
 - insert_grtv_stats.
 - prerolls
 - videojs.ima.
@@ -682,7 +676,6 @@ msFilterList
 -d boost-cdn.manatee.dk mboost
 # https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # jyllands-posten.dk (09 07 2020)
-# https://github.com/uBlockOrigin/uAssets/issues/9821
 # 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)

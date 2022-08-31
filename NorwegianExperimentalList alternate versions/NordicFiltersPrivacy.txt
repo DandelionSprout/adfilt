@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 30August2022v2
+! Version: 31August2022v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -229,7 +229,6 @@ peters1.dk##.sleeknote-anchor
 peters1.dk##div[style="width: 100%;"]
 peters1.dk##div[style="width: 100%;"] + p
 polarmedia.dk#?#p:has(a[href*=casino])
-viafree.*##.player-wrapper .viafree-player .vjs-tech:style(display: initial !important)
 portal.fo###sidebar_asside > a
 portal.fo###top_vev
 portal.fo##.ablock
@@ -899,10 +898,6 @@ _300x500pix$domain=rykindribe.dk,image
 ||82.221.81.9^$domain=~in-addr.arpa
 ||178.79.136.45^$domain=~in-addr.arpa
 !#if !ext_ublock
-||freewheel-mtgx-tv.akamaized.net^$app=no.viafree.android|dk.viafree.android
-||ssl-mtgstream.tns-cs.net^$app=no.viafree.android|dk.viafree.android
-||krxd.net^$app=no.viafree.android|dk.viafree.android
-||2mdn.net^$app=no.viafree.android|dk.viafree.android
 ||5e529.v.fwmrm.net^$app=com.discovery.dplay
 ||ssl-dnnstream.tns-cs.net^$app=com.discovery.dplay
 ||discoverynordics.hb.omtrdc.net^$app=com.discovery.dplay
@@ -2002,7 +1997,7 @@ startsiden.no##div[class^=nyttig__tippingHeader__]
 ! nidaros.no (02/12/2021)
 ##.sportspill-container[href*=lotto]
 
-! ——— Gamereactor + Viafree PC ———
+! ——— Gamereactor PC ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 ! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
@@ -2044,15 +2039,6 @@ gamereactor.*##+js(ra, autoplay)
 /videojs.ima.$script,domain=gamereactor.*
 
 @@||openx.gamereactor.dk/www/delivery/fc.php$xhr,domain=gamereactor.*
-viafree.*##.vjs-playing:upward(1) ~ .no-autoplay-overlay
-viafree.*##.ad-click-through
-viafree.*##.pause-ad
-viafree.*##.pause-ad-container
-||viafree.*/collect$important,xhr
-||client-stream-events.mtg-api.com^$domain=viafree.*
-||freewheel-mtgx-tv.akamaized.net^$media,mp4,domain=viafree.*
-@@||fwmrm.net/ad/$image,xhr,domain=viafree.*
-@@||fwmrm.net/crossdomain.xml$xhr,domain=viafree.*
 !#if !ext_ublock
 /insert_grtv_stats.$xhr,app=com.gamereactor
 /prerolls/*$app=com.gamereactor
@@ -2192,8 +2178,6 @@ sofabold.dk##.centerMgfx
 ~nytid.no##.td-a-rec
 ! jyllands-posten.dk (09/07/2020)
 ###topBanners
-! https://github.com/uBlockOrigin/uAssets/issues/9821
-@@||v.fwmrm.net/ad/g/1$domain=viafree.dk|viafree.fi|viafree.no|viafree.se
 !#endif
 
 !#if !ext_ublock
