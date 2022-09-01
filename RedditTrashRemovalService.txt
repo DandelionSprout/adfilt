@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 06August2022v1-Beta
+! Version: 01September2022v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8kun. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
@@ -111,13 +111,16 @@ reddit.com#?#.Post:has(span[data-click-id=metadata_comments]):not(:has(span[data
 reddit.com#?#.Post:has(div[style*=-postfooter-]):not(:has(span[data-click-id=metadata_votes]))
 
 ! Usernames that are 139% guaranteed to be trolls
-!#if !adguard
-reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
-reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/kekistan/i))
-reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/RedditAdmins/i))
-reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/j[eou][owi]w?[sz]?/i):has-text(/white/i))
-reddit.com#?#.Post,.Comment:has(a[href^="/user"]:has-text(/g[o0]y/i):has-text(/wh[i1]te/i))
-!#endif
+reddit.com#?#.Post:has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
+reddit.com#?#.Post:has(a[href^="/user"]:has-text(/kekistan/i))
+reddit.com#?#.Post:has(a[href^="/user"]:has-text(/RedditAdmins/i))
+reddit.com#?#.Post:has(a[href^="/user"]:has-text(/j[eou][owi]w?[sz]?/i):has-text(/white/i))
+reddit.com#?#.Post:has(a[href^="/user"]:has-text(/g[o0]y/i):has-text(/wh[i1]te/i))
+reddit.com#?#.Comment:has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
+reddit.com#?#.Comment:has(a[href^="/user"]:has-text(/kekistan/i))
+reddit.com#?#.Comment:has(a[href^="/user"]:has-text(/RedditAdmins/i))
+reddit.com#?#.Comment:has(a[href^="/user"]:has-text(/j[eou][owi]w?[sz]?/i):has-text(/white/i))
+reddit.com#?#.Comment:has(a[href^="/user"]:has-text(/g[o0]y/i):has-text(/wh[i1]te/i))
 
 ! Removes the "n new posts for you" banner
 reddit.com#?#div:has(> svg[viewbox="0 0 34 16"])
