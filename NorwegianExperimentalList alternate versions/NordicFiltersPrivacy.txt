@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 03September2022v4
+! Version: 03September2022v5
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -160,9 +160,9 @@ gamer.no##.article__articleboard
 itavisen.no##.article-ad-video
 itavisen.no##.itavi-homepage-video-player-instream
 itavisen.no##.sponsored
-itavisen.no#?#.item:has(.meta:has-text(/^Annonse$/))
+itavisen.no#?#.item:-abp-has(.meta:has-text(/^Annonse$/))
 itavisen.no#?#.spklw-post:has(a[href*=smartadserver])
-itavisen.no#?#.td-c-loop-item:has(.meta-info:has-text(Annonse))
+itavisen.no#?#.td-c-loop-item:-abp-has(.meta-info:has-text(Annonse))
 jn.fo###the_banners
 jumpb.dk#?#strong:has-text(/Casino/i)
 kanalen.no##.bannergroup
@@ -366,7 +366,7 @@ seksualitet24.no##a[href*="partner-ads."]
 gamer.no##.feed--commercial
 gamer.no##[class^=ad-placeholder]
 gamer.no##div[data-name=gamer_toppbanner]:upward(1)
-gamer.no#?#.entrance:has(.entrance__mark__text:has-text(Annonse:))
+gamer.no#?#.entrance:-abp-has(.entrance__mark__text:has-text(Annonse:))
 verktoy24.no##.stream-item
 topp.no##a[href*="/annonse/"]
 bussmagasinet.no##.textwidget > div[align=center]
@@ -984,7 +984,7 @@ bilgalleri.dk##.recbanner300x250
 bilmagasinet.dk#?#.wg-editorial:has(div[id^=cx_])
 bilnorge.no###artikkel300x250right
 bilnorge.no##td[colspan="7"][style]
-bilnorge.no#?#tr:has(td:has-text(Annonse:))
+bilnorge.no#?#tr:-abp-has(td:has-text(Annonse:))
 bilnorge.no,yrkesbil.no###nettboard_art1
 bimmers.no##div[id="336x280-sidebar"]:upward(1)
 bloggomtoppbloggere.com##.eaa.widget_text
@@ -2015,7 +2015,7 @@ gamereactor.*##+js(aopw, banner_video)
 gamereactor.*##+js(nano-stb, timeDown)
 gamereactor.*##.ad_smartphbig
 gamereactor.*##.ad_video
-gamereactor.*#?#.artistyle3:has(h4:has-text(/sponsored/i))
+gamereactor.*#?#.artistyle3:-abp-has(h4:has-text(/sponsored/i))
 gamereactor.*##.cocacola
 gamereactor.*##.external_div_bigVideoAd:remove()
 gamereactor.*##.sponsor
