@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 31August2022v2-Alpha
+# Version: 03September2022v4-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -444,6 +444,7 @@ msFilterList
 # — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
+# https://www.aftenposten.no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
 # — — — — —
 # 🇳🇴: Blokkeringsoppføringer
 # 🇬🇧: Blocking-entries

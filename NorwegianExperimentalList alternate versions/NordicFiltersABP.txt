@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 310820222
+! Version: 030920224
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -35,7 +35,6 @@
 abcnyheter.no###commercial
 abcnyheter.no##.c-ad--adStickyContainer
 aftenposten.no,tek.no###wallpaper
-agendamagasin.no#?#.block:has(p:has-text(Annonse))
 altomdinhelse.no##.ad-container
 alvdalmiv.no,tynsetingen.no##.article-panel-mixed + .front-page-widget
 alvdalmiv.no,tynsetingen.no##.widget-1.columns-5
@@ -52,7 +51,6 @@ biff.no,diabetes.no##.ads
 biip.no###advertisement
 bilgalleri.dk##.container-featured + .container:last-of-type
 bilgalleri.dk#?#*:-abp-has(> * > * > a[href*=casino])
-blabyhallen.no#?#a:has(> img[src$="/homepg.gif"])
 blogg.no##.contentmarketing-box
 bobilverden.no##.grid > h5
 boblad.no##.uk-overlay-hover.uk-panel
@@ -79,7 +77,6 @@ computerworld.dk##.candis-spot
 costume.no,costume.dk#?#*:-abp-has(> * > * >  * > .teaser__native)
 cw.no##.ad-displace-sidebar::before
 cw.no##.w-advert-article
-cw.no#?#.spot:has(div[cw-ad])
 dagbladet.no##.xrow.fullwidth
 dagens.dk##.col-sticky > div > p
 dagens.dk##.col-sticky > p
@@ -113,7 +110,6 @@ fcfredericia.dk##.et_pb_equal_columns
 feltet.dk###struct_topBanner
 feltet.dk##.box_300_default
 feltet.dk##a[onclick^=octo_]
-femina.dk#?#article.col-md-4.teaser--normal.teaser:has(div[class=annonce])
 finndel.no###ads
 flashscore.dk##.boxOverContent--a
 flashscore.dk##div[class^=box_over_content]
@@ -147,7 +143,6 @@ gunnarandreassen.com#?#a:has-text(/[kc]asino/i)
 gunnarandreassen.com,fodboldspilleren.dk##a[href*=betting]
 heilsutorg.is##.strevda
 hestafrettir.is##.wpb_raw_code
-hnytt.no#?#.et_pb_row:has([hidden])
 holdsport.dk#?#.article:has(a[href*=betting])
 holdsport.dk#?#.article:has(a[href*=casino])
 holdsport.dk#?#.article:has(a[href*=mr-green])
@@ -313,6 +308,8 @@ xn--bodposten-n8a.no,ranaposten.no##.widget_links
 xn--bodposten-n8a.no,ranaposten.no##a[href$="/vpn-til-mac/"]
 xn--bodposten-n8a.no,ranaposten.no#?#.widget-goodpress-home-block-one:has-text(Annonsørinnhold)
 xstra.no##.td-fix-index
+gamer.no##img[src^="blob:"]
+gamer.no##.d-none.d-lg-flex
 ytresogn.no###hcol
 e24.no##div[class^=article-wrapper] > div[class^=_][class*=" "]
 feltet.dk#?#div[class^=tmplNews_body_] > p:last-of-type:has(a[href*=casino])
@@ -1513,7 +1510,7 @@ ehandel.com,ehandel.dk,ehandel.se,ehandel.fi##body[data-scrolling] .post-contain
 ehandel.com,ehandel.dk,ehandel.se,ehandel.fi#?#.aside-image-with-link:has([href^="https://www.whatsnxt.io/"])
 e24.no##div[data-placement^=native_in_text_]
 vg.no##div[class^=article-wrapper-] > div[class^=" css-"]
-isabellas.dk##div[data-type=ad]
+isabellas.dk,femina.dk##div[data-type=ad]
 jyllands-posten.dk##div[class*=" jp-banner--"]
 dagbladet.no,sol.no#?#*:-abp-has(> .adunit)
 nhi.no,langrenn.com##.advert
@@ -1524,13 +1521,16 @@ tu.no##.carpet
 tu.no##.undefined.hidden
 tu.no,digi.no##[id^=adContainer-]:not([id$=-afterBody])
 aperitif.no##div[class^=edge-]
-vg.no#?#*:has(> div[class*=" hyperion-css-"][data-ad-subtype])
 vg.no##hr[class^=creative_feature_]
 ekstrabladet.dk##div[id^=ebbanner_]
+femina.dk##.mb-30.bg-grey-100
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
 
+! https://www.aftenposten.no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid (03/09/2022)
+##article > div[class^=" hyperion-css-"]
+###related-articles + div[class^=" hyperion-css-"]
 nakenprat.com###sidebar
 innherred.no##.master.x10
 rbkweb.no#?#font > table:first-of-type
