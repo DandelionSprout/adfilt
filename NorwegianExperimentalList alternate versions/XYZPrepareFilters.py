@@ -824,6 +824,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"#\?#([a-z0-9]{1,}\[[a-z0-9]{1,}[*^$]?=\" )\*:(-abp-)?has\(> ", 
+           r"#?#*:has(> \1", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -2485,121 +2491,121 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(1\)", 
-           r"\1#?#\2\3*:-abp-has(> \4)", 
+           r"\1#?#\2\3*:has(> \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(2\)", 
-           r"\1#?#\2\3*:-abp-has(> * > \4)", 
+           r"\1#?#\2\3*:has(> * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(3\)", 
-           r"\1#?#\2\3*:-abp-has(> * > * > \4)", 
+           r"\1#?#\2\3*:has(> * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(4\)", 
-           r"\1#?#\2\3*:-abp-has(> * > * >  * > \4)", 
+           r"\1#?#\2\3*:has(> * > * >  * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(5\)", 
-           r"\1#?#\2\3*:-abp-has(> * > * > * > * > \4)", 
+           r"\1#?#\2\3*:has(> * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(6\)", 
-           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > \4)", 
+           r"\1#?#\2\3*:has(> * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(7\)", 
-           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > \4)", 
+           r"\1#?#\2\3*:has(> * > * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(8\)", 
-           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > * > \4)", 
+           r"\1#?#\2\3*:has(> * > * > * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(9\)", 
-           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > * > * > \4)", 
+           r"\1#?#\2\3*:has(> * > * > * > * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(10\)", 
-           r"\1#?#\2\3*:-abp-has(> * > * > * > * > * > * > * > * > * > \4)", 
+           r"\1#?#\2\3*:has(> * > * > * > * > * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
-           r"\1#?#*:-abp-has(> \2)", 
+           r"\1#?#*:has(> \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
-           r"\1#?#*:-abp-has(> * > \2)", 
+           r"\1#?#*:has(> * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
-           r"\1#?#*:-abp-has(> * > * > \2)", 
+           r"\1#?#*:has(> * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
-           r"\1#?#*:-abp-has(> * > * >  * > \2)", 
+           r"\1#?#*:has(> * > * >  * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
@@ -2905,19 +2911,25 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^(! 🇳🇴🏞: Denne lista .*)", 
-           r"\1\n! 🇸🇪: Listan omfattar webbplatser för Norge, Danmark, Island, danska territorier, Schleswig-Holsteins danska minoritet, den samiska ursprungsbefolkningen, Sverige och Finland. Denna versionen av listan innehåller inte anti-anti-reklamblockering, eftersom sådana poster inte är tillåtna i listor som ingår i Adblock Plus. För mer information, detaljer, hjälpmedel och andra listor som jag har gjort, besök https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english", 
+           r"\1\n! 🇸🇪: Listan omfattar webbplatser för Norge, Danmark, Island, danska territorier, Schleswig-Holsteins danska minoritet, den samiska ursprungsbefolkningen, Sverige och Finland. Denna versionen av listan innehåller inte anti-anti-reklamblockering, eftersom sådana poster inte är tillåtna i listor som ingår i Adblock Plus. För mer information, detaljer, hjälpmedel och andra listor som jag har gjort, besök https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english\n! 🇫🇮: Tämä lista kattaa suomen-, ruotsin-, norjan-, tanskan-, islannin- ja saamenkieliset verkkosivustot. Tämä lista ei poista sivustoilla olevia mainoseston torjujia, koska Adblock Plus ei salli sellaista sisäänrakennetuissa listoissaan. Lisätietoja, yksityiskohtia, hyödyllisiä työkaluja ja muita tekemiäni listoja löytyy täältä: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#suomi", 
            line
         )
 
         line = re.sub(
            r"^(! 🇳🇴: Generelle #-oppføringer.*)", 
-           r"\1\n! 🇸🇪: Generella #-poster med källor", 
+           r"\1\n! 🇸🇪: Generella #-poster med källor\n! 🇫🇮: Yleiset #-merkinnät, joilla on lähteitä", 
            line
         )
 
         line = re.sub(
            r"^(! 🇳🇴: Generelle oppføringer.*)", 
-           r"\1\n! 🇸🇪: Generella poster med källor", 
+           r"\1\n! 🇸🇪: Generella poster med källor\n! 🇫🇮: Yleiset merkinnät, joilla on lähteitä", 
+           line
+        )
+
+        line = re.sub(
+           r"#\?#([a-z0-9]{1,}\[[a-z0-9]{1,}[*^$]?=\" )\*:(-abp-)?has\(> ", 
+           r"#?#*:has(> \1", 
            line
         )
 
