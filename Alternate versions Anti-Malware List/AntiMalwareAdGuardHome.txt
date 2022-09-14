@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home, and for AdGuard for Android/Windows' DNS filtering)
-! Version: 06September2022v1
+! Version: 14September2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -25,7 +25,7 @@
 ||top^$denyallow=corriente.top|gdtot.top|nicenature.top|reminder.top|magocoro.top|castlevania.top|suiten.top|shucks.top|1stream.top|ambr.top|techblog.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^
-||agency^$denyallow=battlefield.agency
+||agency^$denyallow=battlefield.agency|shortcut.agency
 ||gdn^
 ||bid^
 ||ooo^
@@ -2061,9 +2061,11 @@
 ||telemetry-urs-microsoft.com^
 ||top-captcharesolver.
 ||winrar-desktop.com^
+
 46.161.27.0/24
 78.128.112.0/24
 179.60.146.0/24
+
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121544
 ||trafredirtds.com^
 .com/landers/iphone*_spin
@@ -2449,6 +2451,7 @@
 ||z-prize.icu^
 ||zfcurqe.art^
 ||zuginmw.art^
+
 /^178\.253\.[0-7]\.[0-9]{1,3}$/$network
 178.253.14.0/24
 178.253.15.0/24
@@ -2457,6 +2460,7 @@
 178.253.46.0/24
 178.253.47.0/24
 178.253.54.0/24
+
 85.17.31.152
 95.211.26.202
 ! https://kommunikasjon.ntb.no/pressemelding/power-advarer-mot-sms-svindel?publisherId=17847615&releaseId=17937583
@@ -2474,8 +2478,10 @@
 ||wznp.link^
 158.247.212.220
 165.227.168.212
+
 ! https://www.reddit.com/r/engrish/comments/w6u4uy/received_this_text_message_yesterday_i_am_very/
 162.241.115.0/24
+
 ! https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
 ||k-yw.com^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125285
@@ -2750,6 +2756,11 @@
 147.135.253.55
 ! https://github.com/uBlockOrigin/uAssets/issues/14569 → https://www.virustotal.com/gui/url/b819586938326577d759d8024abe3e0e6de1c853d6b67824daf6f613fba0f63b/detection (https://app.any.run/tasks/5914a712-1a73-4432-b89a-ca0627a24ade)
 ||bnbdeal.net^
+! https://github.com/AdguardTeam/AdguardFilters/issues/129414
+!+ NOT_OPTIMIZED
+/^http://imgblaze.net/[a-z0-9]{6}$/
+!+ NOT_OPTIMIZED
+/^http://imgblaze.net/[a-z0-9]{6}$/$third-party,subdocument
 
 
 ! ——— Standard malware that I stumbled upon on my own ———
@@ -7577,8 +7588,10 @@
 192.243.59.12
 192.243.59.13
 192.243.59.20
+
 /^(https?://)?192\.243\.59\.[0-9]{1,3}($|/)/
 192.243.59.0/24
+
 ! rule34hentai.net when uBlock Filters and AdGuard Base are turned off
 ||eivbjsegbino.com^
 ||mczahprdql.com^
@@ -7920,11 +7933,12 @@
 ||wanmei-hy.ru^
 ||wanmeizi.ru^
 ||widesdays.com^
-194.226.139.0/24
 194.226.139.121
 194.226.139.7
 95.181.157.36
 95.181.172.204
+
+194.226.139.0/24
 ! AS209813 (https://github.com/AdguardTeam/AdguardFilters/issues/114618#issuecomment-1100702530; currently specific to tools that support CIDR blocking)
 5.8.67.0/24
 5.101.45.0/24
@@ -7938,6 +7952,7 @@
 46.161.31.0/24
 91.243.41.0/24
 91.243.42.0/24
+
 
 5.8.44.0/22
 5.101.46.0/23
