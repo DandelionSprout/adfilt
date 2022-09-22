@@ -6525,6 +6525,12 @@ def prepare_domains(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(! Homepage: .*)", 
+           r"\1\n! Entry syntaxes specific to this supplement:\nnitter.net,nitter.42l.fr#?#.timeline-item:has(.fullname[title*=🇺🇸])\nnitter.net,nitter.42l.fr#?#.timeline-item:has(.fullname[title*=🇺🇲])", 
+           line
+        )
+
         if not line == '':
             text += line + '\r\n'
 
