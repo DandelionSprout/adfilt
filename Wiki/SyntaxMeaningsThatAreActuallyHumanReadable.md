@@ -122,7 +122,7 @@
 #### Hiding
 * `#?#`: Required to make entries with `:has`, `:has-text` and `:-abp-properties` work in those particular extensions, and to make `:style` entries not break the list extremely heavily.
 * `:-abp-properties`: A highly modified version of `:matches-css[-before]`, with some syntax differences. Can also select text encodings (à la Base64) and a few other non-CSS traits.
-* `#$#`: Similar to, but incompatible with, `##+js`. Possible options are listed in [this file](https://gitlab.com/eyeo/adblockplus/adblockpluscore/blob/next/lib/content/snippets.js) (text-search `@alias`).
+* `#$#`: Similar to, but incompatible with, `##+js`. Possible options are listed in [this file](https://gitlab.com/eyeo/adblockplus/adblockpluscore/blob/next/lib/content/snippets.js) (text-search `@alias`). Prohibited from use in third-party filters, but can be used in User Filters in Firefox and MV2. Multiple values can be chained with `; ` in-between.
 #### Blocking
 * `@@||` + `$document`: Turns off adblocking entirely while on that domain.
 * `@@||` + `$~document`: Not easily obvious. Could possibly make sure to not turn off adblockers while on that domain, while preventing blockage of on-site elements.
