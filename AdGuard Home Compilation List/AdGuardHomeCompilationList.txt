@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
 ! Title: Dandelion Sprout's AdGuard Home Compilation List
-! Version: 01October2022v2-Beta
+! Version: 01October2022v1-Beta
 ! Expires: 14 days
 ! Licence: In accordance with the Dandelicence, all of the borrowed lists' contents are to be treated as GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html), except for Liste FR's and Liste AR's entries which are to be treated as CC BY-NC-SA 3.0 (https://creativecommons.org/licenses/by-nc-sa/3.0/), and RU AdList whose loose CC BY 3.0 seems to me to enable me to relicence them under the Dandelicence. Known credits in accordance with attribution requirements, are The EasyList Authors (EasyList^³, Adblock Warning Removal List), Raymond Hill (uBlock Filters^²), AdGuard Software Limited (AdGuard Base Filter, AdGuard French Filter), smed79 (Liste AR), Daniel Kladnik (I Don't Care About Cookies), monztA & friends (ABP Filters), and Lain13 & Dimisa (RU AdList).
 ! Description: AdGuard Home is one of the tools for the future, or at least it is for those who know how to set up and use a Raspberry Pi. However, its current internal structure discards virtually every $-using block rule (e.g. EasyList), which makes EasyList and similar lists virtually useless in AdGuard Home, despite how many of the entries would be ≥90% as functional without them. So until the AdGuard Home team implements a better way to deal with $ values, here's my intermissional list to work around it.
@@ -13,9 +13,9 @@
 ! To seemingly unbreak Nintendo Switch online games
 @@||104.198.251.169
 ! ————————————————————————————————————
-! Version: 202210010821
+! Version: 202210010841
 ! Title: EasyList without element hiding rules
-! Last modified: 01 Oct 2022 08:21 UTC
+! Last modified: 01 Oct 2022 08:41 UTC
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
 ! Please report any unblocked adverts or problems
@@ -26631,12 +26631,8 @@
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
 ! Examples: AG_removeCookie('/REGEX/') or AG_removeCookie('part of the cookie name')
 ! See https://github.com/AdguardTeam/deep-override
-! Aborts execution of a script when it attempts to write the specified property.
 ! Based on AG_defineProperty (https://github.com/AdguardTeam/deep-override)
 ! Examples:
-! @param property property or properties chain
-! Aborts execution of a script when it attempts to read the specified property.
-! Aborts execution of an inline script when it attempts to access the specified property
 ! AND content of the <script> element matches specified regular expression.
 ! @param regex regular expression that the inline script contents must match
 !--- Advertising networks ---!
@@ -28804,7 +28800,6 @@
 ! SECTION: mdpDeBlocker
 ! 'mdpDeBlocker'("-blackout active")
 ! In case of DNS filtering
-! !SECTION: mdpDeBlocker
 ! SECTION: FuckAdBlock
 ! START: FuckAdBlock *** ALL RULES MUST HAVE THE SAME DOMAINS LIST ***
 !! Temporary
@@ -28813,40 +28808,32 @@
 /fuckadblock.min.js$badfilter
 ! Temporary rule for apps, if website check if fuckAdBlock is undefined
 ! SECTION: KillAdBlock
-! !SECTION: KillAdBlock
 ! SECTION: BlockAdBlock
 !START: BlockAdBlock
 !END: BlockAdBlock
-! !SECTION: BlockAdBlock
 ! SECTION: antiblock.org g207
 ! START: antiblock.org g207
 ! Scriptlet rules does not work in apps
-! !SECTION: antiblock.org g207
 ! SECTION: InstartLogic
 ! START: InstartLogic
 ! InstartLogic version: 10.6.32/10.9.37/10.9.40
-! !SECTION: InstartLogic
 ! SECTION: Sourcepoint
 ! before extension update please move foreign domains to respected filter
 ||sp.usatoday.com^
-! !SECTION: Sourcepoint
 !--- ChameleonX ---
 ! NOTE: Kill-Adblock
 ! SECTION: Uponit
-! !SECTION: Uponit
 ! plistaWidget detection and first-party ads
 ! NoAdBlock (CloudflareApps)
 ! ***It has less supported ad domains than new rule***
 ! ads reinjection
 ! SECTION: AdFender
 !--- Prevent AdFender detection ---
-! !SECTION: AdFender
 ! SECTION: Yavli
 ! 'ta_do:', ',adb:function(){if('
 ! another variant
 ! For content blockers
 ! With CSP rule ads are not blocked
-! !SECTION: Yavli
 ! NOTE: MediaNews Group, Inc. sites
 ||d1wa9546y9kg0n.cloudfront.net^$badfilter
 !* adf.ly, q.gs, j.gs etc.
@@ -28856,7 +28843,6 @@
 ! url block
 ! SECTION: AdBlock Notify
 ! `AdBlock Notify` (anOptions)
-! !SECTION: AdBlock Notify
 !START: adtoniq
 !END: adtoniq
 ! 'ai_adb_detected'
@@ -28864,7 +28850,6 @@
 ! SECTION: ai_front / ai_adb
 ! For Safari
 ! anti-adblock 'adBlockDetected'
-! !SECTION: ai_front / ai_adb
 ! NOTE: 'absda'
 ! AdRegain
 ! Ad reinject
@@ -28904,8 +28889,6 @@
 ! '(function(root,factory){if(typeof define==='function'&&define.amd)'
 ! crackevil.com anti adb
 ||cheezwhiz.z9.web.core.windows.net^
-! !#if (adguard_app_ios
-! !#endif
 ! adz7short.space,goldenfaucet.io,croclix.me anti-adb
 ! chp_ads_blocker_detector
 ! Incase of DNS Filtering
@@ -28928,12 +28911,10 @@
 ! unblock if feature blocked and move analytics rule to Tracking protection
 ! It seems that website is using Element.outerHTML to checks if some elements and script are part of the site
 ! and it looks like that then it's valided on server side
-! dropgalaxy.com#$?#input[id^="adblock_"] { remove: true; }
 ! For DNS filtering
 ! mylink.
 ||sp.tennessean.com^
 ! if it returns true, then ABDEF cookie is set to "V=13&ABDV=13" and then display a different ads, if returns false then to "V=13&ABDV=11" and ad reinjection is not called, if I'm not wrong
-! bing.com#$?#.b_ad { remove: true; }
 ! mac-torrent-download.net
 ! FAB with different baits list('.pub_300x25')
 ! Disabled. Antiadblock not reproduced https://github.com/AdguardTeam/AdguardFilters/issues/58231
@@ -29201,8 +29182,6 @@
 ! It's caused by Fanboy's Annoyances filter and it's also fixed there, but fix doesn't work with apps
 !--- EasyPrivacy ---
 ! NOTE: EasyPrivacy
-! !SECTION: Fixing other filters
-!--- General hiding rules---!
 ! This section contains generic element hiding rules that block ads.
 ! disqus ads(for apps)
 ! For example: http://vol.az/mp3-3288-Nara-Richebru-Araftayim-2016
@@ -29310,9 +29289,6 @@
 ! delete second rule after scriptlets are supported by standalone apps
 ! update: 05.06.2020 (full rule)
 ! Blocking ads on old interface (big rule will be split for easier maintaining)
-! Blocking ads based on property, works only with new design
-! Blocking ads based on property in watch section
-! Blocking ads based on property when watching an marketplace item
 ! new interface
 ! old interface
 ! backin.net popunder
@@ -29390,7 +29366,6 @@ Banner468x60
 !--- Rules for specific web sites ---!
 ! Section contains rules for specific websites
 ! SECTION: Temporary
-! !SECTION: Temporary
 ! ExoClick
 ! system.popunder
 ! For ad scripts, which are using onerror event
@@ -29465,7 +29440,6 @@ Banner468x60
 ||bitstarz.com^
 ||baltizm.co^
 ||hit2k.com^
-||picbank.tk#,
 ||asiatravel2017.com^
 ||g0ads.com^
 ||ashot.txxx.com^
@@ -40945,7 +40919,6 @@ Banner468x60
 ! *** antiadblockfilters:antiadblockfilters/antiadblock_english.txt ***
 ! General block
 /adblock-img.
-! General hide
 ! Specific block
 ! Admiral antiadb
 ||absorbingcorn.com^
@@ -50504,7 +50477,6 @@ Banner468x60
 /side-adds-
 ! test
 !--- Génériques popup ---!
-!--- Éléments génériques ---!
 !--- Annonceurs ---!
 ||0.13.75.226^
 ||37.59.72.131^
@@ -50621,10 +50593,8 @@ Banner468x60
 ||popup.egyup.com^
 ||pub.sabqpress.net^
 ||serveregypt.com^
-!--- Éléments ---!
 !--- Exceptions ---!
 ! Liste blanche pour corriger le blocage strict
-!--- Exceptions d'éléments ---!
 !--- Anti-Adblock ---!
 ! Title: EasyList Spanish
 ! in the forums (https://forums.lanik.us/viewforum.php?f=103)
@@ -50635,8 +50605,6 @@ Banner468x60
 /publicitario.
 ! *** easylistspanish:easylistspanish/easylistspanish_general_block_dimensions.txt ***
 ! *** easylistspanish:easylistspanish/easylistspanish_general_block_popup.txt ***
-/bjmp*.htm^
-/mavenjump.htm^
 !---General element hiding rules---!
 ! *** easylistspanish:easylistspanish/easylistspanish_adservers.txt ***
 ||butlercdn.com^

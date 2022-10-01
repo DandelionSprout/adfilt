@@ -852,6 +852,48 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^! !.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\.htm\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.*[Éé]lément.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.* property.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.*General hid.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*#\$\?#.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|.*[#,].*", 
+           r"", 
+           line
+        )
+
         # $badfilter-ed entries, as Sublime Text kept complaining about "Ran out of stack space" when I tried to semi-automate it with RegEx.
 
         line = re.sub(
