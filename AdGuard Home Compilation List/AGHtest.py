@@ -828,6 +828,24 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^/[a-zA-Z]{1,8}$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! .* Adblock Plus($| .*)", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! .*CSS.*", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\r\n'
 
