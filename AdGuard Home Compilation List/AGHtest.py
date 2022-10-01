@@ -835,13 +835,27 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^! .* Adblock Plus($| .*)", 
+           r"^!.* Adblock Plus($| .*)", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^! .*CSS.*", 
+           r"^!.*CSS.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!.*JS.*", 
+           r"", 
+           line
+        )
+
+        # $badfilter-ed entries, as Sublime Text kept complaining about "Ran out of stack space" when I tried to semi-automate it with RegEx.
+
+        line = re.sub(
+           r"^(/adblockpopup\.|/ads\.css|/propads\.|\|\|amgload\.net\^|\|\|desbloqueador\.org\^|\|\|down-paradise\.com\^|\|\|embed\.mystream\.to\^|\|\|fast\.io\^|\|\|fastcontentdelivery\.com\^|\|\|freeadultcomix\.com\^|\|\|hydrax\.net\^|\|\|imfast\.io\^|\|\|klclick\.com\^|\|\|leechpremium\.link\^|\|\|pepsia\.com\^|\|\|piguiqproxy\.com\^|\|\|player-cdn\.com\^|\|\|playhydrax\.com\^|\|\|rcdn\.pro\^|\|\|realfinanceblogcenter\.com\^|\|\|redirect-ads\.com\^|\|\|rule34hentai\.net\^|\|\|shoosh\.co\^|\|\|taobao\.com\^|\|\|template-help\.com\^|\|\|uptodatefinishconferenceroom\.com\^|\|\|wpnrtnmrewunrtok\.xyz\^|\|\|zenaps\.com\^|\|\|zzz\.pissrip\.net\^)(\$badfilter)?$", 
            r"", 
            line
         )
