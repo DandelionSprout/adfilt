@@ -6,7 +6,7 @@ The main connection addresses are:
 * DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query` + `https://dandelionsprout2.asuscomm.com:2501/dns-query`
 * DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` + `tls://dandelionsprout2.asuscomm.com:853` (There are currently problems with getting DoT to work in <i>AdGuard for Android</i>. <i>Nebulo</i> and <i>AdGuard for Windows</i> are reported to work.)
 * DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:48582` + `quic://dandelionsprout2.asuscomm.com:48582`
-* DNSCrypt IPv4: `sdns://AQEAAAAAAAAAEzg0LjIwMi4xNTUuMjE3OjU0NDMgOKEL1WhWlPWX9yILXMmWEzM6KWDYVv7vFEJQ8UxkUmwsMi5kbnNjcnlwdC1jZXJ0LmRhbmRlbGlvbnNwcm91dC5hc3VzY29tbS5jb20` (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:5443 - 38A10BD5685694F597F7220B5CC99613333A2960D856FEEF144250F14C64526C - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
+* DNSCrypt IPv4 (Currently not enabled): `sdns://AQEAAAAAAAAAEzg0LjIwMi4xNTUuMjE3OjU0NDMgOKEL1WhWlPWX9yILXMmWEzM6KWDYVv7vFEJQ8UxkUmwsMi5kbnNjcnlwdC1jZXJ0LmRhbmRlbGlvbnNwcm91dC5hc3VzY29tbS5jb20` (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:5443 - 38A10BD5685694F597F7220B5CC99613333A2960D856FEEF144250F14C64526C - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
 
 Although I do also offer standard IPv4 and IPv6 addresses (both regular and `tcp://`), they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
@@ -18,7 +18,7 @@ The server attempts to block ads, malware, fake webshops, push notifications, an
 
 On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 28th of October 2021:
+Current list set as of 2nd of October 2022:
 
 #### Lists against ads, against app notifications, and against a few trackers
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
@@ -34,15 +34,13 @@ Current list set as of 28th of October 2021:
 
 #### Lists against malware
 * 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt
-* Phishing URL Blocklist (AdGuard Home) — https://curben.gitlab.io/malware-filter/phishing-filter-agh.txt
+* Phishing URL Blocklist (AdGuard Home) — https://malware-filter.gitlab.io/malware-filter/phishing-filter-domains.txt
 * Hexxium Creations Threat List — https://raw.githubusercontent.com/HexxiumCreations/threat-list/gh-pages/hexxiumthreatlist.txt
 * Magento - Burner Domains — https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt
 * Nolovia - Government Malware — https://raw.githubusercontent.com/parseword/nolovia/master/skel/hosts-government-malware.txt
 * noads.online anti scumware list — https://raw.githubusercontent.com/deletescape/noads/master/lists/fo-scumware.txt
 * Scam Blocklist by DurableNapkin — https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
-* Spam404 Domains — https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
 * Steam Scam Site — https://raw.githubusercontent.com/PoorPocketsMcNewHold/steamscamsites/master/steamscamsite.txt
-* Grayware Blocklist — https://raw.githubusercontent.com/VernonStow/Filterlist/master/Filterlist.txt
 
 #### Lists against unfairly popular culture
 * 🤗 Anti-'Abuse porn' list — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiAbusePorn.txt
@@ -70,11 +68,11 @@ Are you curious about **which** exact list that is blocking a site, without havi
 
 ### Who can use the server
 
-Users from PR-China were originally unsupported, due to considerable amounts of query spam from that country that preceded the server's cataloging by AdGuard; but are being allowed on a trial basis as of February 2022 in an attempt to appeal to anti-GFW audiences.
-
-Additionally, company networks from The Netherlands, Romania, Russia and Ukraine will usually be prohibited as well. Residential networks from those countries are fine.
+Company networks from The Netherlands, Romania, Russia and Ukraine will usually be prohibited as well. Residential networks from those countries are fine.
 
 Many companies known to look through the fingers with port-scanners and spammers, are also prohibited. Full list: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuardHomeDisallowedIPs.txt
+
+Users from PR-China were originally unsupported, due to considerable amounts of query spam from that country that preceded the server's cataloging by AdGuard; but have been allowed since February 2022 in an attempt to appeal to anti-GFW audiences.
 
 ### Other technical aspects
 
@@ -87,7 +85,6 @@ Average uptime for `dandelionsprout.` is more than 23h55min per day, but is not 
 ### Known problems
 
 * Many (but not all) redirection/affiliation links on e.g. price comparison sites, may be blocked too. This is a known problem inherent to all major DNS adblocker servers, incl. AdGuard DNS.
-* <i>Grayware Blocklist</i> blocks TLDs that aren't 100.0% malware, most notably `||club^`. Problems with specific `.club` sites are therefore extra important for me to be told about.
 
 ### Privacy
 
@@ -95,12 +92,15 @@ Since the server is based on AdGuard Home, the user's IP addresses and the domai
 
 No query or IP data are shared or sold to third-parties, especially so because I dislike user data buyers.
 
-Current non-LAN upstreams as of 4th of November 2021:
+Current non-LAN upstreams as of 2nd of October 2022:
 
 ```
 quic://dns-unfiltered.adguard.com
 https://dns.google/dns-query
 tls://unicast.censurfridns.dk
+sdns://AQAAAAAAAAAADjIwOC42Ny4yMjAuMjIwILc1EUAgbyJdPivYItf9aR6hwzzI1maNDL4Ev6vKQ_t5GzIuZG5zY3J5cHQtY2VydC5vcGVuZG5zLmNvbQ
+https://doh.pub/dns-query
+tls://101.101.101.101
 ```
 
 The DNS server has one server-PC and location, in Norway. This (most likely) makes the server more suited for European users than for users elsewhere.
