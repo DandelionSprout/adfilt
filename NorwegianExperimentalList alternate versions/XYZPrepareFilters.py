@@ -3306,7 +3306,7 @@ def prepare_pihole(lines) -> str:
 
         line = re.sub(
            r"# Platform notes:.*", 
-           "# Platform notes: This list version is intended for those who make use of the Regex functionality in Pi-Hole.", 
+           "# Platform notes: This list version is intended for those who make use of the Regex functionality in Pi-Hole. It is strongly recommended to also add the whitelist at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDomainsAllowlist.txt as a whitelist.", 
            line
         )
 
@@ -3391,6 +3391,18 @@ def prepare_pihole(lines) -> str:
         line = re.sub(
            r"\*\$\\", 
            r".*\\", 
+           line
+        )
+
+        line = re.sub(
+           r"^![a-z0-9*].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^# ——— (Centralised whitelist section|By default, the entries below will only).*", 
+           r"", 
            line
         )
 
