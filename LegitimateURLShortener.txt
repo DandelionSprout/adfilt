@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 13October2022v2
+! Version: 15October2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1381,6 +1381,9 @@ $removeparam=adobe_mc
 
 ! https://segmentify.github.io/segmentify-dev-doc/integration_web/
 $removeparam=/^_sgm_/i
+
+! https://gitlab.com/ClearURLs/rules/-/issues/254
+$removeparam=omnisendContactID
 
 ! Below in this paragraph are entries that we borrowed from AdGuard URL Tracking Protection, which is maintained by the AdGuard team at https://github.com/AdguardTeam/AdguardFilters, and which is licenced under GPL-3.0.
 $removeparam=_zucks_suid
@@ -3228,9 +3231,10 @@ $removeparam=rcode,domain=kucoin.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1979025
 $removeparam=Bibblio_source,domain=macrumors.com
 
-! https://www.goodeeworld.com/products/pluviophile-rain-candle?pr_prod_strat=copurchase&pr_rec_pid=4780770132108&pr_ref_pid=5263231090828&pr_seq=uniform
+! https://fluffnest.com/products/may-the-bee-pre-order?pr_prod_strat=collection_fallback&pr_rec_id=b614090d7&pr_rec_pid=7101857890455&pr_ref_pid=7812473159938&pr_seq=uniform
 $removeparam=/^pr_/,domain=goodeeworld.com|lacemade.com|lifamasks.shop|willi.fi
 $removeparam=pr_prod_strat
+$removeparam=pr_rec_id
 $removeparam=pr_rec_pid
 $removeparam=pr_ref_pid
 $removeparam=pr_seq
