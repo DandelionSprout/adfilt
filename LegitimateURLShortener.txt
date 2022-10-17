@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 16October2022v1
+! Version: 17October2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2141,7 +2141,7 @@ $removeparam=article_url,domain=shop-links.co
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-931912
 $removeparam=/^shared%3D/,domain=seura.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi|eralehti.fi
 $removeparam=shared,domain=seura.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi|alibi.fi|hymy.fi|eralehti.fi
-$removeparam=origin,denyallow=platform.twitter.com,domain=yle.fi|flaticon.com|drop.com|symbolab.com|archive.org|norton.com|philips.*|nordstrom.com
+$removeparam=origin,denyallow=platform.twitter.com,domain=yle.fi|flaticon.com|drop.com|symbolab.com|archive.org|norton.com|philips.*|nordstrom.com|buzzfeed.com|buzzfeednews.com
 
 ! https://adtraction.com/blog/what-is-epi-and-how-does-it-work
 ! https://fernerjacobsen.no/?epi=STS-SHP--FernerJacobsen-Logo%7Cxid%3Afr1624121412114eah
@@ -2821,7 +2821,9 @@ $removeparam=h,domain=clockks.com|tellywebnews.com
 $removeparam=e,domain=clockks.com|tellywebnews.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1634094
-$removeparam=d_id,domain=buzzfeed.com
+$removeparam=d_id,domain=buzzfeed.com|buzzfeednews.com
+! https://www.buzzfeednews.com/article/ikrd/gen-z-climate-change-activists-advice?bfsource=relatedmanual
+||buzzfeednews.com$removeparam=bfsource
 
 ! https://www.change.org/p/bethesda-petition-to-have-bethesda-abolish-the-creation-club?j=124054&sfmc_sub=544588942&l=32_HTML&u=24084311&mid=7233052&jb=356516
 ! https://help.salesforce.com/s/articleView?id=000315098&type=1
@@ -3273,9 +3275,6 @@ $removeparam=refresh,domain=cnn.com
 $removeparam=rec,domain=argos.co.uk
 $removeparam=/[$]ja/,domain=argos.co.uk
 $removeparam=clickPR,domain=argos.co.uk
-
-! https://www.buzzfeednews.com/article/salvadorhernandez/joe-rogan-spotify-racial-slur-apology?d_id=3132683&ref=bftwbuzzfeed
-||buzzfeednews.com^$removeparam=d_id
 
 ! https://blog.getadblock.com/getting-started-with-the-adblock-extension-2219b3c7878c?gi=285fe5d9ab7d
 ||blog.getadblock.com^$removeparam=gi
