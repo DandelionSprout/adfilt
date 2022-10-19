@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 19October2022v1-Alpha
+# Version: 19October2022v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -956,7 +956,7 @@ msFilterList
 -d 193.148.70.153
 # 🇳🇴: Falske nettapoteker
 # 🇬🇧: Fake online pharmacies
--d *-med.footeo.com
+- -med.footeo.com
 -d *medisin*.over-blog.com
 -d alphaapotek.com
 -d bedsteapoteksverige.com
@@ -965,7 +965,6 @@ msFilterList
 -d jensapoteker.com
 -d kjop-palitelige-medisiner.com
 -d kobconcerta54mgonlineidanmark.wordpress.com
--d konstantleverans.blogspot.com
 -d marson.footeo.com
 -d nkwana-medstore.com
 -d sikkertapotek.com
