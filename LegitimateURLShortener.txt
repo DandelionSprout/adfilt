@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 22October2022v1
+! Version: 23October2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1805,14 +1805,14 @@ $removeparam=referral,domain=tv2.no|spotify.com|yubo.live
 ||aliexpress.com/item/$removeparam=pvid
 ||aliexpress.*^$removeparam=_t
 ! https://es.aliexpress.com/item/4001349152860.html?gps-id=5547572&scm_id=1007.19201.130907.0&scm=1007.19201.130907.0&scm-url=1007.19201.130907.0
-||aliexpress.$removeparam=gps-id
+||aliexpress.*^$removeparam=gps-id
 $removeparam=scm_id
 $removeparam=scm
 $removeparam=scm-url
-||aliexpress.com^$removeparam=initiative_id
+||aliexpress.*^$removeparam=initiative_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
-||aliexpress.$removeparam=tt
-||aliexpress.$removeparam=terminal_id
+||aliexpress.*^$removeparam=tt
+||aliexpress.*^$removeparam=terminal_id
 $removeparam=tmLog
 $removeparam=aem_p4p_detail
 $removeparam=algo_exp_id
@@ -1847,6 +1847,8 @@ $removeparam=aff_click_id
 ||aliexpress.*^$removeparam=pdp_pi
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3286863
 ||aliexpress.*^$removeparam=pdp_npi
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3943463
+||aliexpress.*^$removeparam=curPageLogUid
 
 !!!! ——— Baidu ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
