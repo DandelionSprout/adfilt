@@ -107,7 +107,7 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div
 !! Removes a login prompt when visiting "/intent/follow"-type links in mobile environments
 ! https://twitter.com/intent/follow?screen_name=mesitsu (13/04/2020)
 mobile.twitter.com,mobile.twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
-!#if env_mobile
+!#if !env_mobile
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
 !#endif
 ! Removes the bottom login sticky banner about logging in, in the April 2020-ish redesign 🔨
@@ -347,7 +347,7 @@ behance.net##.Popup-popup-T3F
 ! Zulily
 ! https://www.zulily.com/e/sew-on-and-sew-forth-338868.html
 !! Aims to remove the forced login overlay, without breaking the login button in the upper right
-!#if !ext_ublock
+!#if ext_ublock
 zulily.com###loginModal[aria-hidden=false]:not([aria-describedby=subtitle-signin])
 !#endif
 
