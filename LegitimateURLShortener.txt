@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 27October2022v3
+! Version: 30October2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1385,6 +1385,43 @@ $removeparam=/^_sgm_/i
 ! https://gitlab.com/ClearURLs/rules/-/issues/254
 $removeparam=omnisendContactID
 
+! https://ddos-guard.net/?affiliate=119953
+$removeparam=affiliate
+
+! https://www.sears.com/?trco_id=5411901
+$removeparam=trco_id
+
+! https://www.hurley.com/collections/mens-sale-a4e97b/products/explore-h2o-dri-trek-shorts-17-5-mws0006490-khaki?nosto_source=cmp&nosto=61fcad80db653e1833874019
+$removeparam=nosto_source
+$removeparam=nosto
+
+! https://www.eneba.com/es/marketplace?af_id=nate
+$removeparam=af_id
+
+! https://www.gearbest.com/?affi_id=103504
+$removeparam=affi_id
+
+! https://www.coolshop.co.uk/product/don-one-lifestyle-tws120-black-in-ear-true-wireless-stereo-earbuds-with-charging-case/235AS7/?retailAttributionToken=ChM1OTEyOTM2MDQyNjAyNDQwOTgwEA0aI2Nvb2wtLS1yZWNfcmVjb21tZW5kZV8xNjI1MTM0MTA5NDY5Ihxjb29sdWstLS1yZWNvbW1lbmRlZC1mb3IteW91KAA
+$removeparam=retailAttributionToken
+
+! https://www.uncommongoods.com/product/baseball-park-map-mug?trafficSource=Impact
+$removeparam=trafficSource
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1920124
+! https://github.com/AdguardTeam/AdguardFilters/commit/920d973db052ded91b48fbb8c7ca3fe2fdeda237
+$removeparam=gps_adid
+$removeparam=unicorn_click_id
+! https://github.com/AdguardTeam/AdguardFilters/commit/f00faaa8333722db743deaeec23205f2c78232cf
+$removeparam=ebisAdID
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2597385
+$document,removeparam=_clde
+$document,removeparam=_cldee
+
+! https://www.smithsonianmag.com/history/real-warriors-woman-king-dahomey-agojie-amazons-180980750/?is_pocket=1
+! https://github.com/DandelionSprout/adfilt/pull/652
+$removeparam=is_pocket
+
 ! Below in this paragraph are entries that we borrowed from AdGuard URL Tracking Protection, which is maintained by the AdGuard team at https://github.com/AdguardTeam/AdguardFilters, and which is licenced under GPL-3.0.
 $removeparam=_zucks_suid
 $removeparam=adfrom
@@ -2507,9 +2544,6 @@ $removeparam=scd,domain=ashleystewart.com
 ! https://www.ifixit.com/Store/Tools/Toolkits?sponsor=ltt
 ||ifixit.com^$removeparam=sponsor
 
-! https://ddos-guard.net/?affiliate=119953
-$removeparam=affiliate
-
 ! https://www.greenmangaming.com/?tap_a=1964-996bbb&tap_s=2041734-c9a23b
 ||greenmangaming.com^$removeparam=/^tap_/
 
@@ -2576,9 +2610,6 @@ $removeparam=site_id,domain=taskrabbit.com|kochava.com
 ! https://www.shopbop.com/?extid=affprg_linkshare_SB-qpF0HYnRugA&affuid=03YIJ120qrfneBzrgFZphAL&subid1=qpF0HYnRugA-DXFRwhmlttyMxF3QMcHugA&pf_rd_p=524fa342-a6a1-4ffe-bf4c-faa1b3b0fdc5&pf_rd_r=PPQP63RRXQVFCASEJGYW&ref_=SB_ALL_P2_CATx_whatsNew_4
 ||shopbop.com^$removeparam=extid
 
-! https://www.sears.com/?trco_id=5411901
-$removeparam=trco_id
-
 ! https://www.saksfifthavenue.com/?site_refer=AFF001&LSoid=778432&LSlinkid=10&LScreativeid=1
 $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ||saksfifthavenue.com^$removeparam=LSoid
@@ -2621,10 +2652,6 @@ $removeparam=ref_ctx_id
 ! https://sn.dk/Verden/Rumturister-er-tilbage-paa-Jorden-efter-historisk-mission/artikel/1472742?rss
 $removeparam=rss,domain=sn.dk|ted.com
 
-! https://www.hurley.com/collections/mens-sale-a4e97b/products/explore-h2o-dri-trek-shorts-17-5-mws0006490-khaki?nosto_source=cmp&nosto=61fcad80db653e1833874019
-$removeparam=nosto_source
-$removeparam=nosto
-
 ! https://scontent.cdninstagram.com/v/t50.2886-16/228280186_4462339507137399_6165083647713647040_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5zdG9yeS5kZWZhdWx0In0&_nc_ht=scontent-iev1-1.cdninstagram.com&_nc_ohc=nL_7kCFHgrcAX-HT6F1&edm=AOVtZ6oBAAAA&vs=17895914579221456_1489520608&_nc_vs=HBksFQAYJEdIcEhtdzEzcXpCaGVkb1BBTUNaaXVEcHhvNVZidXFIQUFBQRUAAsgBABUAGCRHTVdiZFE2Z2ZIa3dVWFVBQUtNZXdSNFhTQ2NSYnBrd0FBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACbCkMnRj5zWPxUCKAJDMywXQCREGJN0vGoYEmRhc2hfYmFzZWxpbmVfM192MREAdegHAA%3D%3D&ccb=7-4&oe=614B0BE1&oh=22849edcbcdb1949e3f0cbde56ddd89b&_nc_vts_prog=1&dl=1
 ||cdninstagram.com^$removeparam=ccb
 ||cdninstagram.com^$removeparam=efg
@@ -2634,9 +2661,6 @@ $removeparam=nosto
 
 ! https://www.infoq.com/articles/kotlin-ten-years-qa/?topicPageSponsorship=9df7746f-b196-415b-964e-bc8483319fd9
 ||infoq.com^$removeparam=topicPageSponsorship
-
-! https://www.eneba.com/es/marketplace?af_id=nate
-$removeparam=af_id
 
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/58
 ! (Exception: discord.*; see #445)
@@ -2747,9 +2771,6 @@ $removeparam=web,domain=microcenter.com|tomtop.com
 
 ! https://www.unieuro.it/online/Smartphone/OPPO-A54-Smartphone-5G-193g-Display-6-5-FHD-90Hz-4-Fotocamere-48MP-RAM-4GBROM-64GB-Batteria-5000mAh-Ricarica-rapida-Dual-Sim-Versione-Italiana-Fantastic-Purple-pidOOPA54P?dedup=trovaprezzi
 ||unieuro.it^$removeparam=dedup
-
-! https://www.gearbest.com/?affi_id=103504
-$removeparam=affi_id
 
 ! https://www.usa.philips.com/c-m-so/headphones?linkname=hero-1473-logo&origin=3_us_us_1343__SFMC_non_DENO_1342_g2&uuid=5c6a865d670ab781af66fd7c827ae733b1a00239bc26d81132e4337d641542d119d
 ||philips.$removeparam=linkname
@@ -2994,9 +3015,6 @@ $removeparam=mv_pc,domain=fragrancenet.com
 $removeparam=term,domain=outnorth.fi|bybit.com
 $removeparam=/^quot;/,domain=outnorth.fi
 
-! https://www.coolshop.co.uk/product/don-one-lifestyle-tws120-black-in-ear-true-wireless-stereo-earbuds-with-charging-case/235AS7/?retailAttributionToken=ChM1OTEyOTM2MDQyNjAyNDQwOTgwEA0aI2Nvb2wtLS1yZWNfcmVjb21tZW5kZV8xNjI1MTM0MTA5NDY5Ihxjb29sdWstLS1yZWNvbW1lbmRlZC1mb3IteW91KAA
-$removeparam=retailAttributionToken
-
 ! https://www.bostonglobe.com/business/technology/?p1=BGHeader_MainNav
 $removeparam=p1,domain=bostonglobe.com
 
@@ -3008,9 +3026,6 @@ $removeparam=refdomain,domain=bestbuy.com
 
 ! https://www.nike.com/fi/t/air-force-1-07-shoe-lKPQ6q/CW2288-111?CP=EUNS_AFF_AWIN_FI_78888_Skimlinks_204893
 $removeparam=CP,domain=nike.com
-
-! https://www.uncommongoods.com/product/baseball-park-map-mug?trafficSource=Impact
-$removeparam=trafficSource
 
 ! https://www.jwanderson.com/us/?LSNSID=2116208
 $removeparam=LSNSID,domain=jwanderson.com
@@ -3179,12 +3194,6 @@ $removeparam=tags,domain=reddit.app.link
 ! https://www.marketwatch.com/story/immix-biopharmas-stock-rockets-after-pediatric-cancer-treatment-granted-rpd-by-the-fda-2022-01-03?siteid=yhoof2&yptr=yahoo
 $removeparam=yptr,domain=marketwatch.com|barrons.com|investors.com
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1920124
-! https://github.com/AdguardTeam/AdguardFilters/commit/920d973db052ded91b48fbb8c7ca3fe2fdeda237
-$removeparam=gps_adid
-$removeparam=unicorn_click_id
-! https://github.com/AdguardTeam/AdguardFilters/commit/f00faaa8333722db743deaeec23205f2c78232cf
-$removeparam=ebisAdID
 ! https://github.com/AdguardTeam/AdguardFilters/commit/bfcd89f013fa810ba1f2c959a7e8757deb9d3dce
 ||adjust.com^$removeparam=adgroup
 
@@ -3437,10 +3446,6 @@ $removeparam=response_type,domain=udemy.com
 ! https://www.oerproject.com/Account/Teacher-Signup?RegistrationSource={8F3F8D17-0E32-4C9B-9E33-971B12CC0B97}
 ||oerproject.com^$removeparam=RegistrationSource
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2597385
-$document,removeparam=_clde
-$document,removeparam=_cldee
-
 ! https://fi.hotels.com/ho134443/?wapa6=&sub_publisher=5350479&sub_site=100415378&sub_ad=13951578
 ! http://no.grupper.hotels.com/GroupForm.cfm?locale=no_NO&intlid=OTHER+%3A%3A+header_main_section&kw=header
 $removeparam=intlid,domain=hotels.com
@@ -3571,10 +3576,6 @@ $removeparam=sub,domain=allboner.com|twinkvideos.com
 
 ! https://www.sony.se/electronics/sound-bars/ht-a3000?cpint=homepage_promotion_tiles-Promotion%20Tiles--responsivegrid_structure_top_promotiontiles_copy_1
 ||sony.^$removeparam=cpint
-
-! https://www.smithsonianmag.com/history/real-warriors-woman-king-dahomey-agojie-amazons-180980750/?is_pocket=1
-! https://github.com/DandelionSprout/adfilt/pull/652
-$removeparam=is_pocket
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3778558
 ||target.*^$removeparam=preselect
