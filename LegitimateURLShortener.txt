@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30October2022v1
+! Version: 02November2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3312,8 +3312,12 @@ $removeparam=ico,domain=inews.co.uk|metro.co.uk|thisismoney.co.uk
 
 ! https://www.disneyplus.com/en-fi?cid=DSS-Affiliate-Impact-Content-Future%20PLC.-564546
 ! https://www.disneyplus.com/en-fi?cid=DTCI-Synergy-OMD-Blog-Awareness-Announce-US-DisneyPlus-OMD-EN-BlogPost-librarystunt-NA
-$removeparam=/^cid=DSS-Affiliate/,domain=disneyplus.com
-$removeparam=/^cid=DTCI-Synergy/,domain=disneyplus.com
+! https://www.espn.com/?&ex_cid=DSS-Search-Bing-71700000070036442&cid=DSS-Search-Bing-71700000070036442
+$removeparam=/^cid=DSS-Affiliate/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
+$removeparam=/^cid=DSS-Search-/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
+$removeparam=/^cid=DTCI_STAR-Synergy/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
+$removeparam=/^cid=DTCI-Synergy/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
+||espn.com^$removeparam=ex_cid
 
 ! https://hobbyhall.fi/fi/huonekalut-ja-sisustus/matot/isot-matot/matto-shaggy-latte-160x220-cm?id=24303&feat=home&navigation_source=interactionStudio
 $removeparam=feat,domain=hobbyhall.fi
