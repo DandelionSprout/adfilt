@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home, and for AdGuard for Android/Windows' DNS filtering)
-! Version: 19October2022v1
+! Version: 03November2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -12,16 +12,16 @@
 !!!||tk^
 @@||coolcmd.tk|budterence.tk|google.tk|transportnews.tk|c0d3c.tk|anonytext.tk|tokelau-info.tk|fakaofo.tk|loljp-wiki.tk|ninetail.tk|goshujin.tk|graph.tk|dls2.pokeacer.tk|nolfrevival.tk|coppersurfer.tk|restricted-functions.tk|bstweaker.tk|nbd-media.tk|glypx-pakhsh-nakon.tk|gotofap.tk|somepythonthings.tk^
 ! Gabon
-||ga^$denyallow=google.ga|filtri-dns.ga|dgdi.ga|voitures.ga|economie-gabon.ga|9191.ga
-! Mali
-||ml^$denyallow=google.ml|mobili.ml|melody.ml|dcod.ml|info-matin.ml|amap.ml|mastodon.ml|worproject.ml|nothingprivate.ml|lingva.ml|lemmy.ml|bittor.ml|noic.ml|beatbump.ml|gymlibrary.ml
+||ga^$denyallow=google.ga|filtri-dns.ga|dgdi.ga|voitures.ga|economie-gabon.ga|9191.ga|animevsub.ga
+! Mali (The entry would be deactivated if 20 whitelistable domains are found.)
+||ml^$denyallow=google.ml|mobili.ml|melody.ml|dcod.ml|info-matin.ml|amap.ml|mastodon.ml|worproject.ml|nothingprivate.ml|lingva.ml|lemmy.ml|bittor.ml|noic.ml|beatbump.ml|gymlibrary.ml|animevsub.ml
 ! Equatorial Guinea
 ||gq^$denyallow=deimos.gq|inege.gq|tvgelive.gq|comprarcarros.gq
 ! Central African Republic
 ||cf^$denyallow=google.cf|rths.cf|voitures.cf|assembleenationale-rca.cf|cps-rca.cf|acap.cf|miraculousladybug.cf|scrat.cf
 ! Palau
 ||pw^$denyallow=libgen.pw|petridish.pw|palaugov.pw|dpc.pw|zikrap.pw|demonoid.pw|bittor.pw|buttercup.pw|rezka.pw|darkcrystal.pw|xor.pw|fullhdfilmizlesene.pw|b00k.pw|gopass.pw
-! Legitimate use is almost non-existent, but has a tiny userbase in Japan
+! Legitimate use is almost non-existent, but has a tiny userbase in Japan. Its extreme common-ness in malware redirections means that the entry will be kept forever.
 ||top^$denyallow=corriente.top|gdtot.top|nicenature.top|reminder.top|magocoro.top|castlevania.top|suiten.top|shucks.top|1stream.top|ambr.top|techblog.top|changlam10.top|changlam11.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^
@@ -33,6 +33,8 @@
 ||monster^$denyallow=egybest.monster|yts.monster|cloudcdn.monster
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131156
 ||sbs^
+! https://github.com/DandelionSprout/adfilt/issues/659
+||discount^
 ! Experimental attempt to cover a few hardcore spam ASNs
 .buzz/*/?*=*&*=*&*=*&*=*&*=
 .life/*/?*=*&*=*&*=*&*=*&*=
@@ -102,6 +104,7 @@
 138.68.252.54
 ||useragentswitch.com^
 ||dev-nano.com^
+||adblocker-app.info^
 ! Presumed to be fraudulent antivirus extensions on app/extension sites where it's perfectly probable that everyday people could install them.
 ! Page links previously found on PCGamingWiki pages
 ||inside3d.com^
