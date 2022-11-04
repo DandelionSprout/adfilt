@@ -92,7 +92,7 @@ ALLOWLIST = """
 @@||tix.axs.com^$removeparam=utm_source
 @@||tix.axs.com^$removeparam=utm_term
 ! https://github.com/DandelionSprout/adfilt/issues/678
-@@||transfernow.net/en/dltransfer$removeparam
+@@||transfernow.net/*/dltransfer$removeparam
 """
 
 
