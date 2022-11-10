@@ -34,9 +34,10 @@ HEAD = """\
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions
 ! Last updated: {date}
-! Script last updated: 7/11/2022
+! Script last updated: 10/11/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
+! Warning: This list may break websites, and contains possibly-problematic rules. There is not much the Adfilt maintainers can do, as this list is just the ClearURLs rules converted into a uBo/AdGuard filterlist. Use with caution
 ! Note: This was based off of https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues
 ! IMPORTANT NOTE: Do not modify this file in pull requests. This file is auto-generated and therefore any direct edit to it will be undone. Instead, modifications must be made to https://github.com/DandelionSprout/adfilt/blob/master/ClearURLs%20for%20uBo/compile.py or to the upstream ClearURLs rules. If you experience an issue, please report it to https://github.com/DandelionSprout/adfilt/discussions/163, and we (the Adfilt maintainers and community) will look into it and either add an exclusion or report it to the ClearURLs team
 ! Important note about the purpose of this list: this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view params on the strict-block page to bypass it
@@ -195,25 +196,27 @@ def getrules() -> str:
     return requests.get(RULES).text
 
 def haschanged() -> bool:
-    c = False
+    changed = False
     try:
         hashes = json.loads(open("hash.txt").read())
     except:
         hashes = []
     toph = hashlib.sha256(HEAD.encode()).hexdigest()
     if toph not in hashes:
-        c = True
+        changed = True
     ruleshash = hashlib.sha256(getrules().encode()).hexdigest()
     if ruleshash not in hashes:
-        c = True
+        changed = True
     exchash = hashlib.sha256(",".join(KNOWN_BAD_FILTERS).encode()).hexdigest()
     if exchash not in hashes:
-        c = True
+        changed = True
+    extra_allowlist_hash = hashlib.sha256(ALLOWLIST.encode()).hexdigest()
+    if extra_allowlist_hash not in hashes:
+        changed = True
     with open("hash.txt","w") as rulesf:
-        rulesf.write(json.dumps([toph,ruleshash,exchash]))
+        rulesf.write(json.dumps([toph,ruleshash,exchash,extra_allowlist_hash]))
         rulesf.close()
-    print(hashes,toph,exchash,ruleshash,c)
-    return c
+    return changed
 
 def main() -> int:
     data_min_json = json.loads(getrules())
