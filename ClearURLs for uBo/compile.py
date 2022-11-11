@@ -99,6 +99,11 @@ ALLOWLIST = """
 @@||webapps.sftc.org/captcha/captcha.dll$removeparam
 """
 
+def normalize_rule(rule: str) -> str:
+    rule = rule.replace("(?:%3F)?", "", 1)
+    rule = rule.replace("(?:", "(")
+    rule = rule.replace(r"\$", r"\x24")
+    return rule
 
 def normalize_url_pattern(url_pattern: str) -> str:
     # No need for protocol and subdomain
@@ -163,13 +168,13 @@ def normalize_exception(exception: str) -> tuple[str, str]:
 
 def expand_se(rule: str) -> list[str]:
     # https://stackoverflow.com/questions/20061268/python-regex-string-expansion
-    # Is there a lib for that?
-    #
-    # 1. foo_(1|2)_bar -> foo_1_bar + foo_2_bar
-    # 2. foo_[12]_bar -> foo_1_bar + foo_2_bar
-    # 3. foo_?bar -> foobar + foo_bar
-    # But foo_[a-z]*_bar -> foo_[a-z]*_bar
-    raise NotImplementedError
+
+    if rule.count("(") == 1 and rule.count(")") == 1 and "\\" not in rule:
+        fixed_prefix, remains = rule.split("(")
+        variants, fixed_suffix = remains.split(")")
+        variants = variants.split("|")
+        return [fixed_prefix + variant + fixed_suffix for variant in variants]
+    return [rule]
 
 
 def is_regex(rule: str) -> bool:
@@ -240,10 +245,8 @@ def main() -> int:
     # $removeparam=/^p\[\]=/,domain=flipkart.com
     for url_pattern, rules in providers.items():
         url_pattern = normalize_url_pattern(url_pattern)
-        rules = [
-            rule.replace("(?:%3F)?", "", 1).replace("(?:", "(").replace(r"\$", r"\x24")
-            for rule in rules
-        ]
+        rules = (expand_se(normalize_rule(rule)) for rule in rules)
+        rules = [rule for expanded_rule in rules for rule in expanded_rule]
         if url_pattern == ".*":
             write_rules(
                 url_pattern,
