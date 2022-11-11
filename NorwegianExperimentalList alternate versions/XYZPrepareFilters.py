@@ -178,6 +178,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r",~inline-font,~inline-script$", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -4295,6 +4301,18 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r",~inline-font,~inline-script$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r",~inline-font,~inline-script,~domain=", 
+           r",~domain=", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -4533,6 +4551,18 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"\$match-case,", 
            r"$", 
+           line
+        )
+
+        line = re.sub(
+           r",~inline-font,~inline-script$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*,~inline-font,~inline-script,~domain=discord\.gift$", 
+           r"", 
            line
         )
 
@@ -5030,12 +5060,6 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"^\..*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"^&.*", 
            r"", 
            line
@@ -5522,7 +5546,13 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"\$all,$", 
+           r".*\$all,.*\..*$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$all,(.*)?$", 
            r"", 
            line
         )
@@ -5632,6 +5662,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"\^dnstype=", 
            r"^$dnstype=", 
+           line
+        )
+
+        line = re.sub(
+           r".*\$popup$", 
+           r"", 
            line
         )
 

@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 011120221
+! Version: 101120221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1506,7 +1506,6 @@ ehandel.com,ehandel.dk,ehandel.se,ehandel.fi##body[data-scrolling] .post-contain
 ehandel.com,ehandel.dk,ehandel.se,ehandel.fi#?#.aside-image-with-link:has([href^="https://www.whatsnxt.io/"])
 e24.no##div[data-placement^=native_in_text_]
 vg.no##div[class^=article-wrapper-] > div[class^=" css-"]
-isabellas.dk,femina.dk##div[data-type=ad]
 jyllands-posten.dk##div[class*=" jp-banner--"]
 dagbladet.no,sol.no#?#*:has(> .adunit)
 nhi.no,langrenn.com##.advert
@@ -1526,6 +1525,7 @@ kammeret.no#?#.ipsWidget:has(a[href*="=advertisement"])
 liverpool.no##.ot-ad
 tv2.no##.feed-ad
 lydogbilde.no,lydogbillede.dk#?#*:has(> .adunit-lazy)
+billedbladet.dk##.lg\:flex.hidden
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1575,6 +1575,7 @@ midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##.container-spacer
 midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##.container-outer-wrapper > .col-2:last-of-type
 united.no,valkal.no,montages.no##.ads
 mytastenor.com,mytastednk.com,tv3sport.dk##.panorama
+isabellas.dk,femina.dk,billedbladet.dk##div[data-type=ad]
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
@@ -4540,7 +4541,7 @@ vmj.se#?#.sidebox:-abp-contains(/Externa länkar|Artiklar/)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 [Adblock Plus 3.13]
-! Version: 051120222
+! Version: 081120221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4773,7 +4774,8 @@ como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi##div[data-recomm
 como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi#?#.border-bottom.row:-abp-has(.poppartners)
 como.fi,tilt.fi#?#body:not(.post-type-archive-advertoriaali) .bg-white.p-3.mb-6:-abp-has(a[href*=".fi/advertoriaali/"])
 como.fi,tilt.fi#?#div[class="w-full bg-white border-gray-200 border-b py-2 px-4"]:-abp-has([id*="_smart_boksi"])
-como.fi,tilt.fi#?#div[style^="min-height:"]:-abp-has([id*="_smart_paraati"])
+como.fi##.px-4.py-2.border-b.border-gray-200.bg-white.w-full
+como.fi##div[class="flex flex-wrap md:flex-nowrap lg:flex-nowrap gap-x-4"][style="min-height:500px;"]
 dailyfinland.fi##.wrepper.mx-auto > .row[style="margin-bottom:20px"]
 dawn.fi##[style="margin:-15px -15px 15px -15px;text-align:center; min-height: 250px;"]
 dawn.fi##[style="margin:-15px -15px 15px -15px;text-align:center; min-height: 300px;"]
@@ -4822,7 +4824,7 @@ epari.fi,jarviseutu-lehti.fi,jurvansanomat.fi,komiat.fi,suupohjansanomat.fi,vaas
 episodi.fi##.bg-elisa-dark
 episodi.fi#?#.main-article > div:has-text(Mainos)
 episodi.fi,inferno.fi#?#.px-4.py-2.bg-white.w-full:-abp-has(.poppartners)
-episodi.fi,inferno.fi,rumba.fi###tilt-ad-top-stay-away
+episodi.fi,inferno.fi,rumba.fi,tilt.fi###tilt-ad-top-stay-away
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##.box.ads
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##article[class="article-preview content-marketing box"]
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##div.section:nth-of-type(2) > .row > .show-for-large.columns.xxlarge-6.xlarge-7.large-8.sidebar
@@ -4838,8 +4840,6 @@ f1-forum.fi##.sponsoredrow
 facebook.com##a[aria-label="Mainostajan linkki"]
 facebook.com##a[aria-label=Mainostaja]
 facebook.com#?#div[aria-label="Hakutulokset"][role="main"] [role="feed"] > [role="article"]:-abp-has(b[class]:has-text(Sponsoroitu))
-facebook.com#?#div[role="feed"] > div:-abp-has(div[class][role="button"][tabindex]:has-text(Sponsoroitu))
-facebook.com#?#div[role="feed"] > span:-abp-has(a[class][href][role][tabindex]:has-text(Sponsoroitu))
 facebook.com#?#div[role=complementary] > div > div > div > div > div:not([class], [data-visualcompletion]) > span:-abp-has([aria-label=Mainostaja])
 facebook.com#?#span#ssrb_feed_start + div > div[class]:-abp-has(span[class][dir="auto"] > span[id]:has-text(Sponsoroitu))
 feedi.fi,tanssiin.fi##.alp-advert
@@ -5410,17 +5410,9 @@ satakunnankansa.fi##div[class=s-ryhma-carousel-wrapper]
 satakunnankansa.fi##div[class^=adContainer]
 satakunnankansa.fi#?#article.list:has-text(Mainokset)
 satakunnanviikko.fi##.panoraama_etus
-seiska.fi###inhouse_ad
-seiska.fi##.ad-inhouse-desktop
-seiska.fi##.category-container--commercial.category-container.container-fluid
-seiska.fi##.dicCCM
-seiska.fi##.dre-item--skin-native
-seiska.fi##.hcAuCH
-seiska.fi##.tilaa-banner
-seiska.fi##div[class*=AdAndCarousel__Wrapper]
-seiska.fi##div[class^=Ad__AdWrapper]
 seiska.fi#?##article-body > div[class]:-abp-has(.ad-container)
-seiska.fi#?#article:-abp-has(a[href=""][rel="no-index,no-follow"])
+seiska.fi#?##article-body > div[class^="sc-"]:has-text(/Juttu jatkuu ilmoituksen jälkeen|ilmoitus päättyy/i)
+seiska.fi#?#div[data-testid="article-body"] > div[class^="sc-"]:has-text(/Juttu jatkuu ilmoituksen jälkeen|ilmoitus päättyy/i)
 selanne-lehti.fi##.ad-list-read-all
 selanne-lehti.fi##.mainospalsta
 seura.fi#?#.grid__item_lg-1.grid__item_1:-abp-has(.dfp-advertisement)
