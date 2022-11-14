@@ -4561,8 +4561,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*,~inline-font,~inline-script,~domain=discord\.gift$", 
-           r"", 
+           r"-,popup$", 
+           r"-", 
            line
         )
 
