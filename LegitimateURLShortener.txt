@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 16November2022v1
+! Version: 17November2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3650,6 +3650,10 @@ $document,removeparam=l,domain=ask.com|askmoney.com|bloglines.com|consumersearch
 ! https://www.onenote.com/notebooks?auth=1&nf=1&fromAR=1 (The result of using the «OneNote Online» Chrome "app" that simply opens a OneDrive tab)
 ||onenote.com^$removeparam=nf
 ||onenote.com^$removeparam=fromAR
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4168335
+$removeparam=_mak_partner_campaign
+||courir.com^$removeparam=/^_mak_partner_/
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
