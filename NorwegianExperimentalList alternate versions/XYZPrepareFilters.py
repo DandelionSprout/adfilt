@@ -4165,7 +4165,7 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            r"\[Adblock Plus 3\..*", 
-           r"[AdGuard versions from 2019 onwards]", 
+           r"[AdGuard]", 
            line
         )
 
