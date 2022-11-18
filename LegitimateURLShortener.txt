@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 17November2022v1
+! Version: 18November2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1422,6 +1422,13 @@ $document,removeparam=_cldee
 ! https://github.com/DandelionSprout/adfilt/pull/652
 $removeparam=is_pocket
 
+! https://portfolio.adobe.com/?app_clickref=&mv=affiliate&mv2=pz&as_camptype=&as_channel=affiliate&as_source=partnerize&as_campaign=justcreative22
+$removeparam=app_clickref
+$removeparam=as_campaign
+$removeparam=as_camptype
+$removeparam=as_channel
+$removeparam=as_source
+
 ! Below in this paragraph are entries that we borrowed from AdGuard URL Tracking Protection, which is maintained by the AdGuard team at https://github.com/AdguardTeam/AdguardFilters, and which is licenced under GPL-3.0.
 $removeparam=_zucks_suid
 $removeparam=adfrom
@@ -1455,7 +1462,7 @@ $removeparam=ref,domain=abebooks.com|accounts.binance.com|adobe.com|akuankka.fi|
 $removeparam=tid,domain=clickbank.net|comixology.*|gap.com|gapcanada.ca|mintmobile.com|nhl.com|zulily.com
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|brave.com|buyzero.de|cytron.io|digikey.*|elastix.org|engadget.com|hinta.fi|investors.com|kennethcole.com|kipling-usa.com|kubii.*|melopero.com|mozilla.org|msn.com|neeva.com|newbalance.com|nexo.io|officestationery.co.uk|okdo.com|raspipc.es|reichelt.*|thepihut.com|thunderbird.net|tiendatec.es|tokopedia.com|twitter.com|udemy.com|viking-direct.co.uk|webmd.com|welectron.com|wondershare.*|wuzhuiso.com|yahoo.com
+$removeparam=src,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|brave.com|buyzero.de|cytron.io|digikey.*|elastix.org|engadget.com|hallmark.com|hinta.fi|investors.com|kennethcole.com|kipling-usa.com|kubii.*|melopero.com|mozilla.org|msn.com|neeva.com|newbalance.com|nexo.io|officestationery.co.uk|okdo.com|raspipc.es|reichelt.*|thepihut.com|thunderbird.net|tiendatec.es|tokopedia.com|twitter.com|udemy.com|viking-direct.co.uk|webmd.com|welectron.com|wondershare.*|wuzhuiso.com|yahoo.com
 ! https://github.com/DandelionSprout/adfilt/pull/474
 ! https://user.qzone.qq.com/1250252459?source=aiostar (01/02/2022)
 $document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|blog.getadblock.com|blogs.oracle.com|boscovs.com|boxboat.com|brownells.*|britishcornershop.co.uk|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|edx.org|educba.com|eonline.com|escentual.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|instagram.com|itnext.io|jacquielawson.com|just-eat.co.uk|kasta.io|medium.com|microsoftedgewelcome.microsoft.com|monster.fi|nautica.com|nortonsafe.search.ask.com|onehanesplace.com|outnorth.fi|petsupplies.com|phonesoap.com|riteaid.com|runnode.com|search.brave.com|seekingalpha.com|sonos.com|spiceworks.com|squarespace.com|studio.co.uk|subscribe.gq.com|t.me|thedailybeast.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|tumblr.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|youtube.com|yubo.live
@@ -2520,7 +2527,7 @@ $removeparam=cp,domain=converse.com|nike.com
 $removeparam=ecmp,domain=4wheelparts.com
 $removeparam=kc,domain=autoanything.com
 $removeparam=/^linkshareid=/i,domain=bloomingdales.com|macys.com
-$removeparam=mc,domain=bose.*
+$removeparam=mc,domain=bose.*|hallmark.com
 $removeparam=mid,domain=agentprovocateur.com|columbia.com|dxl.com|hanes.com|josbank.com|onehanesplace.com|saksfifthavenue.com|saksoff5th.com|sorel.com|verabradley.com|change.org|productshopper.*
 $removeparam=mktvar002,domain=autodesk.com
 $removeparam=mp_id,domain=blinds.com
@@ -3654,6 +3661,13 @@ $document,removeparam=l,domain=ask.com|askmoney.com|bloglines.com|consumersearch
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4168335
 $removeparam=_mak_partner_campaign
 ||courir.com^$removeparam=/^_mak_partner_/
+
+! https://www.hallmarkchannel.com/?glbnav=hc
+$removeparam=glbnav,domain=hallmark.com|hallmarkchannel.com|hallmarkchannelwines.com|hallmarkdrama.com|hallmarkmoviesandmysteries.com|hmnow.com|watchhallmarktv.com
+
+! https://www.adobe.com/products/special-offers.html?promoid=TKZTLBST&mv=other&clickref=1011lwmprPq2&mv=affiliate&mv2=pz&as_camptype=&as_channel=affiliate&as_source=partnerize&as_campaign=macrumors
+||adobe.com^$removeparam=mv
+||adobe.com^$removeparam=mv2
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
