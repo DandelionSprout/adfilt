@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19November2022v4
+! Version: 19November2022v5
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3677,6 +3677,25 @@ $removeparam=glbnav,domain=hallmark.com|hallmarkchannel.com|hallmarkchannelwines
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4182527
 ||puma.com^$removeparam=amp
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4182667
+$removeparam=src_medium,document
+$removeparam=src_source,document
+$removeparam=src_campaign,document
+$removeparam=src_term,document
+$removeparam=src_content
+$removeparam=src_custom
+||bbc.*^$removeparam=at_campaign
+||bbc.*^$removeparam=at_type
+||bbc.*^$removeparam=at_identifier
+||bbc.*^$removeparam=at_format
+||bbc.*^$removeparam=at_creation
+||bbc.*^$removeparam=at_variant
+||bbc.*^$removeparam=at_link_type
+||bbc.*^$removeparam=at_bbc_team
+||bbc.*^$removeparam=at_ptr_name
+||bbc.*^$removeparam=at_link_id
+||bbc.*^$removeparam=at_link_origin
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
