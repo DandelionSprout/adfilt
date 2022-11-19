@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19November2022v2
+! Version: 19November2022v3
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3668,6 +3668,12 @@ $removeparam=glbnav,domain=hallmark.com|hallmarkchannel.com|hallmarkchannelwines
 ! https://www.adobe.com/products/special-offers.html?promoid=TKZTLBST&mv=other&clickref=1011lwmprPq2&mv=affiliate&mv2=pz&as_camptype=&as_channel=affiliate&as_source=partnerize&as_campaign=macrumors
 ||adobe.com^$removeparam=mv
 ||adobe.com^$removeparam=mv2
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4182519
+||columbiasportswear.*^$removeparam=did
+||columbiasportswear.*^$removeparam=mid
+||columbiasportswear.*^$removeparam=nid
+||columbiasportswear.*^$removeparam=oid
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
