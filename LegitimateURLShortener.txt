@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19November2022v6
+! Version: 25November2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3750,6 +3750,10 @@ buffalonews.com##+js(set, lee_trkLinkSrc, noopFunc)
 
 ! Fix the video player 'Invalid signature' - https://www.fox.com/watch/ffae8bb93256fb0d0b3a4b30f00e0ada/
 @@||link.theplatform.com/s/fox-dcg/media/$removeparam
+
+! Newsletter unsubscribe buttons are the one place where you generally don't want error messages from false positive parameter removals
+!! http://crm-innhold.telenor.no/unsub/?cid=(...)&uid=(...)
+@@/unsub/?$removeparam
 
 !#if adguard
 !#if adguard_ext_firefox
