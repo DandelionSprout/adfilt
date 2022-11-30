@@ -1,5 +1,5 @@
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! Version: 26October2022v1-Beta
+! Version: 30November2022v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -258,9 +258,10 @@ wikia.org,fandom.com###WikiaMainContent:style(width: 100% !important; margin: 0 
 wikia.org,fandom.com###WikiaMainContentContainer:style(margin: 0 !important)
 ! Flow the sidebars (which were moved to the bottom of the page) into 2 columns to save vertical space.
 ! These rules mostly emulate the website’s rules at a small breakpoint when this happens naturally.
-wikia.org,fandom.com##.WikiaRail:style(display: block !important; column-count: 2 !important; width: auto !important)
-wikia.org,fandom.com##.rail-module:style(break-inside: avoid !important)
-wikia.org,fandom.com##.rail-sticky-module:style(position: static !important)
+! (Causes unnecessary whitespace on https://winx.fandom.com/wiki/Tecna)
+!!!wikia.org,fandom.com##.WikiaRail:style(display: block !important; column-count: 2 !important; width: auto !important)
+!!!wikia.org,fandom.com##.rail-module:style(break-inside: avoid !important)
+!!!wikia.org,fandom.com##.rail-sticky-module:style(position: static !important)
 ! For 2-column Wikias, e.g. https://spyro.fandom.com/wiki/Fairies
 fandom.com##.WikiaSiteWrapper:style(width: 98vw !important)
 fandom.com##.article-with-rail .WikiaRail:style(max-width: 250px !important; column-count: 1 !important)
