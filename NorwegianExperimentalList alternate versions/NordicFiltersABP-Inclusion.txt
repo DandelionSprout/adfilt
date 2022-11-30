@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 161120221
+! Version: 301120221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -367,6 +367,8 @@ bussmagasinet.no##.textwidget > div[align=center]
 itavisen.no#?#article.clearfix:has(a[href*="/go/"])
 aftenbladet.no###weather-provider-url
 tidensand.no#?#div[class*=View_has-space__]:has(> .text-center)
+tv2.no##.esi-include
+nettavisen.no#?#.optimus-complex-front:has(amedia-include[manifest*=".norkon."])
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1755,6 +1757,15 @@ _980banner_
 ! nordlys.no, an.no (19/06/2022)
 ##optimus-element[linecount=undefined][width="980"]
 ##optimus-element[linecount=undefined][width="480"]:first-of-type:nth-last-of-type(2)
+! https://www.nettavisen.no/ (27/11/2022, during the Cyber Monday weekend)
+||services.api.no/api/mnemonic^$third-party
+
+! 🇳🇴/🇩🇰: ——— Sporingsfiler ———
+! 🇳🇴🏞: ——— Sporingsfilar ———
+! ❄: ——— Guorrafiilaid ———
+! 🇬🇧: ——— Tracker files ———
+! https://github.com/DandelionSprout/adfilt/pull/699
+||s.api.no/mittari/c/article/*/sectionId/*.gif^
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -4545,7 +4556,7 @@ vmj.se#?#.sidebox:-abp-contains(/Externa länkar|Artiklar/)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 [Adblock Plus 3.13]
-! Version: 171120221
+! Version: 281120221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4671,6 +4682,7 @@ aamulehti.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi
 aamulehti.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,satakunnankansa.fi,suurkeuruu.fi,sydansatakunta.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi##.parade-ad.ad
 aamulehti.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,satakunnankansa.fi,suurkeuruu.fi,sydansatakunta.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi##article[class*="native-ad"]
 aamulehti.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,satakunnankansa.fi,suurkeuruu.fi,sydansatakunta.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi#?#article[class="list bg-positive w-full mb-16"]:has-text(Mainos)
+aamulehti.fi,jamsanseutu.fi,janakkalansanomat.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,satakunnankansa.fi,suurkeuruu.fi,sydansatakunta.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi#?#div[class|="ab-test-laneitem"]:-abp-has(.list__heading:has-text(Mainos))
 aamuposti.fi,esaimaa.fi,ess.fi,forssanlehti.fi,hameensanomat.fi,hankasalmensanomat.fi,heinavedenlehti.fi,helsinginuutiset.fi,iisalmensanomat.fi,ita-savo.fi,itahame.fi,joroistenlehti.fi,joutsenolehti.fi,juvanlehti.fi,kaakonkulma.fi,kangasniemenlehti.fi,karkkilantienoo.fi,keski-hame.fi,keski-uusimaa.fi,keskilaakso.fi,koillis-savo.fi,kouvolansanomat.fi,ksml.fi,kymensanomat.fi,lansi-savo.fi,lansi-uusimaa.fi,lansisaimaa.fi,lansivayla.fi,lappeenrannanuutiset.fi,laukaa-konnevesi.fi,lopenlehti.fi,loviisansanomat.fi,luoteis-uusimaa.fi,luumaenlehti.fi,mantsalanuutiset.fi,mattijaliisa.fi,miilu.fi,mikkelinkaupunkilehti.fi,nurmijarvenuutiset.fi,pieksamaenlehti.fi,pielavesi-keitele.fi,pitajalainen.fi,pitajanuutiset.fi,puruvesi.net,pyhtaanlehti.fi,sampolehti.fi,savonsanomat.fi,seinajoensanomat.fi,seutuneloset.fi,sipoonsanomat.fi,sisa-savolehti.fi,sisasuomenlehti.fi,sjl.fi,soisalonseutu.fi,tamperelainen.fi,tollotin.fi,turkulainen.fi,uusilahti.fi,uusimaa.fi,uutis-jousi.fi,uutisvuoksi.fi,vantaansanomat.fi,viikkosavo.fi,viispiikkinen.fi,viitasaarenseutu.fi,warkaudenlehti.fi##[data-info-container-text^="MAINOS"]
 aamuset.fi##div[class$=nativead]
 aasiakas.net##div[style="width:970px;height:250px;margin:0 auto;margin-top:25px;"]
@@ -4776,6 +4788,7 @@ como.fi,episodi.fi,fum.fi,inferno.fi,kaaoszine.fi,rumba.fi,soundi.fi,tilt.fi#?#d
 como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi##.poppartners
 como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi##div[data-recommendation-type=ad]
 como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi#?#.border-bottom.row:-abp-has(.poppartners)
+como.fi,episodi.fi,inferno.fi,rumba.fi,tilt.fi##.md\:bg-gray-200.md\:max-w-full.md\:px-4.md\:py-4
 como.fi,tilt.fi#?#body:not(.post-type-archive-advertoriaali) .bg-white.p-3.mb-6:-abp-has(a[href*=".fi/advertoriaali/"])
 como.fi,tilt.fi#?#div[class="w-full bg-white border-gray-200 border-b py-2 px-4"]:-abp-has([id*="_smart_boksi"])
 como.fi##.px-4.py-2.border-b.border-gray-200.bg-white.w-full
@@ -4928,6 +4941,7 @@ gekkonen.net#?#.td_block_wrap.td_block_text_with_title:-abp-has(a[href^="https:/
 gekkonen.net#?#.td_block_wrap.td_block_text_with_title:has-text(/kasino/i)
 gekkonen.net#?#.widget:-abp-has(.adsbygoogle)
 gekkonen.net#?#.widget:-abp-has([rel^="https://affmore.com/"])
+glu.fi#?#.box:has-text(Mainos:)
 glu.fi#?#li:-abp-has(.adsbygoogle)
 glu.fi#?#ul.link:-abp-has(a[href^="http://clk.tradedoubler.com/"])
 gogolf.fi##.is-advertorial
@@ -5659,6 +5673,7 @@ wizhdsports.fi##.widget_media_image
 www.io-tech.fi###text-7
 www.io-tech.fi#?#.artikkeli-slide:-abp-has(img[src*="-nostokuva"])
 www.io-tech.fi#?#.artikkeli-slide:-abp-has(img[src*="Ad-otsikko"])
+www.io-tech.fi#?#.artikkeli-slide:-abp-has(img[src*="mainos"])
 www.io-tech.fi#?#.artikkeli-slide:-abp-has(img[src*="natiivi-otsikko"])
 www.io-tech.fi#?#.view-full.uutinen:-abp-has(a[href="https://www.io-tech.fi/category/mainos/"])
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###homeBottomBoxBanner
@@ -5682,8 +5697,10 @@ www.suomi24.fi#?#p:-abp-has(+ p + .asp)
 www.ts.fi##[class="tsv3-c-common-article__contentad notloaded"]
 www.ts.fi##[data-readpeakurl^="https://app.readpeak.com/ads/"]
 www.ts.fi##div[class*="tsv3-c-common-smart noad-hideaction"]
+www.ts.fi#?#.tsv3-c-common-elementlist--layout-mobiili_etusivu:has-text(/yhteistyö[\u00AD]kumppanimme artikkelit/)
 www.ts.fi#?#.tsv3-c-common-forum-threadviewer__messages__item:-abp-has(.smartad)
 www.ts.fi#?#.tsv3-c-common-twocolumnslayout:-abp-has(div[class*=element--nativead])
+www.ts.fi#?#.tsv3-c-common-twocolumnslayout:has-text(/yhteistyö[\u00AD]kumppanimme artikkelit/)
 www.uusisuomi.fi#?#.lazyload-wrapper:-abp-has(.at-embed-container)
 www.uusisuomi.fi#?#aside > section:has-text(Kaupallinen yhteistyö)
 www.uusisuomi.fi#?#body:not(.is-style-kumppanisisallot) main > div[class]:has-text(Kaupallinen yhteistyö)
