@@ -2,7 +2,7 @@
 ! Title: ⏰ Anti-'Prayer times' List
 ! Translated title: 🇮🇷: لیست ضد اوقات شرعی
 ! Translated title: 🇹🇷: Anti-'Namaz vakitleri' Listesi
-! Version: 06December2022v1
+! Version: 06December2022v2
 ! Expires: 7 days
 
 ! Description: 🇬🇧: So you're sitting there reading a newssite, and then you find big banners that try to tell you the exact points in time you're supposed to pray? If you want to feel less stressed and less like a slave of the clock, then this list is for you.
@@ -32,22 +32,14 @@
 ~albayan.ae##.prayertime:not(html, body)
 ! almanar.com.lb
 ##.prayer-times:not(html, body)
-! almasryalyoum.com
-##.prayer_time:not(html, body)
-! alrai.com
-##.salat-time:not(html, body)
+##.dropdown-prayer:not(html, body)
 ! todaytime.ir
 ##.pray_times:not(html, body)
-! adwhit.com
-##a[href$=PrayerTimes]
-! info-algerie.com
-##a[href*=horaires-priere]
 ! albayan.ae
 ##.prayertimer:not(html, body)
+##.imsakiyaholder:not(html, body)
 ! bahesab.ir
 ##[href$="/time/prayer/"]
-! tunisienumerique.com, casablancacity.ma
-##a[href*="/horaires-de-priere" i]
 ! lematin.ma
 ##a[href^="/horaire-priere"]
 ##.priere-bloc:not(html, body)
@@ -55,8 +47,6 @@
 ##a[href$="/مواقيت-الصلاة"]
 ! https://www.sabah.com.tr/, https://www.milligazete.com.tr/, https://www.tgrthaber.com.tr/, https://www.haberturk.com/
 ##a[href$=namaz-vakitleri]
-! cnnturk.com
-##a[href*="/namaz-vakitleri/"]
 ! bolgegundem.com
 ##a[href*="/namaz-vakitleri.htm"]
 ! ntv.com.tr
@@ -66,14 +56,8 @@
 ###ramazan-sayac
 ! https://www.posta.com.tr/insan/astroloji
 ##.imsakiye-lite:not(html, body)
-! almanar.com.lb
-##.dropdown-prayer:not(html, body)
-! albayan.ae
-##.imsakiyaholder:not(html, body)
 ! haberler.com
 ###imsak_serit
-! dhivehi.mv
-##.icon_prayer-times:not(html, body)
 ! addustour.com
 ||timesprayer.com/widgets.php^$third-party
 ! yeniasya.com.tr
@@ -83,31 +67,28 @@
 ! bingolonline.com
 ##.namazVakitleriBlok:not(html, body)
 ! https://www.burdurweb.com/web/
-! herihaber.com.tr
-###namazVakitleri
-! gunisigigazetesi.net, eskisehirhaber.com
+##meta[content*=haber i] ~ * a[href$="/namaz-vakitleri"]
+! https://www.herihaber.com.tr/belediye-15-tlye-mal-ettigi-icme-suyunu-254-tlye-satiyor/ (06/12/2022)
+##div[id*=haber i] ~ * #namazVakitleri
+! gunisigigazetesi.net
 ###prayer-times
 ! bingolgazetesi.com.tr, bingolkenthaber.com, burdurilkadim.com
 ##.namaz:not(html, body)
-! cagdasburdur.com
+! cagdasburdur.com, tarsusekspres.com.tr
 ||vakitci.com^$subdocument,third-party
-! mersinistikbal.net, tarsusekspres.com.tr
+! mersinistikbal.net
 ##.namaz-saatleri:not(html, body)
 ! esgundem26.com
 ##.panel-namaz:not(html, body)
 ! asigazetesi.com
 ##.header2-vakit:not(html, body)
 ! analizmerkezi.com
-##.namazvakityeni:not(html, body)
-! guncelgazete.com
-##.praying-content:not(html, body)
-! giresungazete.net
-##.namazWidget:not(html, body)
+##div[class*=haber] ~ * .namazvakityeni:not(html, body)
 ! batmancagdas.com
 ##.hs-panel-namaz:not(html, body)
 ! nigdehaber.com.tr
 ###module_namaz_vakit
-! yozgatgazetesi.com
+! yozgatgazetesi.com, esgundem26.com
 ##.namaz-vakitleri:not(html, body)
 ! gazeteguncel.com, gaziantep27.net, hakimiyet.com
 ##.prayer-side:not(html, body)
@@ -178,5 +159,26 @@ kuzeyanadolugazetesi.com#?#.cerceve-anket:has(> #burc)
 yenisalpazari.com#?##sidebar .kanews-section:has(.table-prayer)
 malatyamegahaber.com#?#section.haberler:has(strong:has-text(NAMAZ VAKİTLERİ))
 alwatan.kuwait.tt##.time > div[style^="float:left;"]
+guncelgazete.com##.praying-content
 ||icdn.tgrthaber.com.tr/*/cami_icon_*.png^$image
 ||img.piri.net/*imsakiye.jpg^$domain=yenisafak.com
+
+! 🇬🇧: ——— Temporary standalone category for entries that block text-only links/buttons ———
+! adwhit.com
+##a[href$=PrayerTimes]
+! alrai.com
+##.salat-time:not(html, body)
+! cnnturk.com
+##a[href*="/namaz-vakitleri/"]
+! tunisienumerique.com
+##a[href*="/horaires-de-priere" i]
+! dhivehi.mv
+##.icon_prayer-times:not(html, body)
+
+! 🇬🇧: ——— Could no longer be found on the example site ———
+! giresungazete.net
+!!!##.namazWidget:not(html, body)
+! almasryalyoum.com
+!!!##.prayer_time:not(html, body) (Could no longer be found on the example site)
+! info-algerie.com
+!!!##a[href*=horaires-priere] (Could no longer be found on the example site)
