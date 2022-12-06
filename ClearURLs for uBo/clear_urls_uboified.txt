@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 12/11/2022
+! Last updated: 06/12/2022
 ! Script last updated: 12/11/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -126,6 +126,24 @@ $removeparam=spm
 $removeparam=/^vn(_[a-z]*)+=/
 $removeparam=tracking_source
 $removeparam=ceneo_spo
+$removeparam=/^itm_(campaign|medium|source)=/
+$removeparam=__hsfp
+$removeparam=__hssc
+$removeparam=__hstc
+$removeparam=_hsenc
+$removeparam=__s
+$removeparam=hsCtaTracking
+$removeparam=mc_eid
+$removeparam=ml_subscriber
+$removeparam=ml_subscriber_hash
+$removeparam=msclkid
+$removeparam=oly_anon_id
+$removeparam=oly_enc_id
+$removeparam=rb_clickid
+$removeparam=s_cid
+$removeparam=vero_conv
+$removeparam=vero_id
+$removeparam=wickedid
 ||youtube.com^$removeparam=feature
 ||youtube.com^$removeparam=gclid
 ||youtube.com^$removeparam=kw
