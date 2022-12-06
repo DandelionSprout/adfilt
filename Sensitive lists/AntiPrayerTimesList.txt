@@ -2,7 +2,7 @@
 ! Title: ⏰ Anti-'Prayer times' List
 ! Translated title: 🇮🇷: لیست ضد اوقات شرعی
 ! Translated title: 🇹🇷: Anti-'Namaz vakitleri' Listesi
-! Version: 06December2022v4
+! Version: 06December2022v5
 ! Expires: 7 days
 
 ! Description: 🇬🇧: So you're sitting there reading a newssite, and then you find big banners that try to tell you the exact points in time you're supposed to pray? If you want to feel less stressed and less like a slave of the clock, then this list is for you.
@@ -19,28 +19,12 @@
 ! 🇬🇧: ——— Generic ———
 ! 🇮🇷: ——— عمومی ———
 ! 🇹🇷: ——— Genel ———
-##.waktu-solat-block:not(html, body)
-##div[class^=waktusolat_]
-~e-solat.*##[href^="https://www.e-solat."]
-! almanar.com.lb
-##.prayer-times:not(html, body)
-##.dropdown-prayer:not(html, body)
 ! todaytime.ir
 ##.pray_times:not(html, body)
 ! albayan.ae
-##.prayertimer:not(html, body)
 ##.imsakiyaholder:not(html, body)
-! bahesab.ir
-##[href$="/time/prayer/"]
 ! lematin.ma
-##a[href^="/horaire-priere"]
-##.priere-bloc:not(html, body)
-! casablancacity.ma
-##a[href$="/مواقيت-الصلاة"]
-! https://www.sabah.com.tr/, https://www.milligazete.com.tr/, https://www.tgrthaber.com.tr/, https://www.haberturk.com/
-##a[href$=namaz-vakitleri]
-! bolgegundem.com
-##a[href*="/namaz-vakitleri.htm"]
+##div[class*=monde i] ~ * .priere-bloc
 ! ntv.com.tr
 ##.imsakiye:not(html, body)
 ! haberturk.com
@@ -53,9 +37,9 @@
 ! addustour.com
 ||timesprayer.com/widgets.php^$third-party
 ! yeniasya.com.tr
-##.salaat-times:not(html, body)
+##div[class*=news i] ~ .salaat-times
 ! bursahabermerkezi.com
-##.namazvakitleri:not(html, body)
+##.sidebar > .namazvakitleri
 ! bingolonline.com
 ##.namazVakitleriBlok:not(html, body)
 ! https://www.burdurweb.com/web/
@@ -63,29 +47,25 @@
 ! https://www.herihaber.com.tr/belediye-15-tlye-mal-ettigi-icme-suyunu-254-tlye-satiyor/ (06/12/2022)
 ##div[id*=haber i] ~ * #namazVakitleri
 ! gunisigigazetesi.net
-###prayer-times
+##div[id*=news i] ~ * #prayer-times
 ! bingolgazetesi.com.tr, bingolkenthaber.com, burdurilkadim.com
-##.namaz:not(html, body)
+##div[class*=haber i] ~ * .namaz
 ! cagdasburdur.com, tarsusekspres.com.tr
 ||vakitci.com^$subdocument,third-party
 ! mersinistikbal.net
-##.namaz-saatleri:not(html, body)
+##div[id*=haber i] ~ * .namaz-saatleri
 ! esgundem26.com
-##.panel-namaz:not(html, body)
+##.panel-namaz.panel-bg-mosque:not(html, body)
 ! asigazetesi.com
 ##.header2-vakit:not(html, body)
 ! analizmerkezi.com
-##div[class*=haber] ~ * .namazvakityeni:not(html, body)
+##div[class*=haber] ~ * .namazvakityeni
 ! batmancagdas.com
 ##.hs-panel-namaz:not(html, body)
 ! nigdehaber.com.tr
 ###module_namaz_vakit
-! yozgatgazetesi.com, esgundem26.com
-##.namaz-vakitleri:not(html, body)
 ! gazeteguncel.com, gaziantep27.net, hakimiyet.com
 ##.prayer-side:not(html, body)
-! bursahakimiyet.com.tr
-##.prayertimes:not(html, body)
 ! jugantor.com (16/11/2022)
 ##.prayerTimePanel:not(html, body)
 ! dailyinqilab.com (16/11/2022)
@@ -97,6 +77,14 @@
 ! nigdehaber.com.tr (06/12/2022)
 ||gazisoft.com/services.php?*service=namaz^$third-party
 ||bogazicigundem.com/theme*/namaz_bg.$third-party
+! https://www.sabah.com.tr/ (06/12/2022)
+##[class*=News i] ~ [data-praytimes-counter]
+! https://www.milligazete.com.tr/ (06/12/2022)
+###lblPrayerLink
+! Indonesian news sites
+##.waktu-solat-block:not(html, body)
+##div[class^=waktusolat_]
+~e-solat.*##[href^="https://www.e-solat."]
 
 ! 🇬🇧: ——— Site-specific ———
 ! 🇮🇷: ——— مختص هر سایت ———
@@ -105,6 +93,7 @@ yenisafak.com,yeniakit.com.tr,haber7.com##.prayer
 yjc.ir,tabnak.ir##a[href$="/fa/prayer"]
 adnocdistribution.ae##.footer-info-time
 albayan.ae##.prayername
+albayan.ae##.prayertimer
 almanar.com.lb#?#.box-wrapper:has(.prayer-times)
 alrai.com#?#.padd10px:has(> .salat-time)
 arabiaweather.com##.ramadan-section-container
@@ -155,10 +144,14 @@ yenisalpazari.com#?##sidebar .kanews-section:has(.table-prayer)
 malatyamegahaber.com#?#section.haberler:has(strong:has-text(NAMAZ VAKİTLERİ))
 alwatan.kuwait.tt##.time > div[style^="float:left;"]
 guncelgazete.com##.praying-content
+yozgatgazetesi.com,esgundem26.com##.namaz-vakitleri
+bursahakimiyet.com.tr##.prayertimes
 ||icdn.tgrthaber.com.tr/*/cami_icon_*.png^$image
 ||img.piri.net/*imsakiye.jpg^$domain=yenisafak.com
+||albayan.ae/res/img/prayertmbg.png^$~third-party
 
 ! 🇬🇧: ——— Temporary standalone category for entries that block text-only links/buttons ———
+trgthaber.com.tr,haberturk.com##a[href$="namaz-vakitleri"]
 ! adwhit.com
 ##a[href$=PrayerTimes]
 ! alrai.com
@@ -169,14 +162,22 @@ guncelgazete.com##.praying-content
 ##a[href*="/horaires-de-priere" i]
 ! dhivehi.mv
 ##.icon_prayer-times:not(html, body)
+! bolgegundem.com
+##a[href*="/namaz-vakitleri.htm"]
+! bahesab.ir
+##[href$="/time/prayer/"]
+! almanar.com.lb
+##.dropdown-prayer:not(html, body)
 
 ! 🇬🇧: ——— Could no longer be found on the example site ———
 ! giresungazete.net
 !!!##.namazWidget:not(html, body)
 ! almasryalyoum.com
-!!!##.prayer_time:not(html, body) (Could no longer be found on the example site)
+!!!##.prayer_time:not(html, body)
 ! info-algerie.com
-!!!##a[href*=horaires-priere] (Could no longer be found on the example site)
+!!!##a[href*=horaires-priere]
+! casablancacity.ma
+##a[href$="/مواقيت-الصلاة"] (The example site is down.)
 ! No known example sites
 ###pray_time
 ##.prayer-sec_1:not(html, body)
