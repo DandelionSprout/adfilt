@@ -34,7 +34,7 @@ HEAD = """\
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
 ! Last updated: {date}
-! Script last updated: 12/11/2022
+! Script last updated: 7/12/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Warning: This list may break websites, and contains possibly-problematic rules. There is not much the Adfilt maintainers can do, as this list is just the ClearURLs rules converted into a uBo/AdGuard filterlist. Use with caution.
@@ -86,6 +86,8 @@ KNOWN_BAD_FILTERS = [
     # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4123725
     "||amazon.*^$removeparam=rnid",
     "||amazon.*/s?$removeparam=rnid",
+    # breaks GSB lookup - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4337362
+    "||google.*^$removeparam=site",
 ]
 
 ALLOWLIST = """
