@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 301120222
+! Version: 061220222
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -322,6 +322,7 @@ startsiden.no##div[class*=partnerWidgetContainer]
 nocc.no##.forsideReklame2
 nocc.no##.forsideReklame
 nocc.no##.forsideInnhold
+gamer.no#?#[class*=-artikkelboard]:has(a[href*="/apx/"])
 campingportalen.no###block-annonse-blokk1
 skaunnytt.no##.sb-widget
 reiseplaneten.no###rt-sidebar-c
@@ -1243,6 +1244,7 @@ markedsforing.dk##.acf-block
 markedsforing.dk##.mega-banner
 maskinbladet.dk##.megaboard-inner
 maskinbladet.dk##.outer-skybanner
+gamer.no##body > div[class^="content-element "]
 matematikbogen.dk##td:nth-of-type(3)
 matoppskrift.no###sticky
 matoppskrift.no##.overskrift_naeringsinnhold
@@ -4557,7 +4559,7 @@ vmj.se#?#.sidebox:-abp-contains(/Externa länkar|Artiklar/)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 [Adblock Plus 3.13]
-! Version: 281120221
+! Version: 051220223
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4790,7 +4792,7 @@ como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi##.poppartners
 como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi##div[data-recommendation-type=ad]
 como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi#?#.border-bottom.row:-abp-has(.poppartners)
 como.fi,episodi.fi,inferno.fi,rumba.fi,tilt.fi##.md\:bg-gray-200.md\:max-w-full.md\:px-4.md\:py-4
-como.fi,tilt.fi#?#body:not(.post-type-archive-advertoriaali) .bg-white.p-3.mb-6:-abp-has(a[href*=".fi/advertoriaali/"])
+como.fi,tilt.fi,rumba.fi#?#body:not(.post-type-archive-advertoriaali) .bg-white.p-3.mb-6:-abp-has(a[href*=".fi/advertoriaali/"])
 como.fi,tilt.fi#?#div[class="w-full bg-white border-gray-200 border-b py-2 px-4"]:-abp-has([id*="_smart_boksi"])
 como.fi##.px-4.py-2.border-b.border-gray-200.bg-white.w-full
 como.fi##div[class="flex flex-wrap md:flex-nowrap lg:flex-nowrap gap-x-4"][style="min-height:500px;"]
@@ -4843,6 +4845,7 @@ episodi.fi##.bg-elisa-dark
 episodi.fi#?#.main-article > div:has-text(Mainos)
 episodi.fi,inferno.fi#?#.px-4.py-2.bg-white.w-full:-abp-has(.poppartners)
 episodi.fi,inferno.fi,rumba.fi,tilt.fi###tilt-ad-top-stay-away
+episodi.fi,inferno.fi,tilt.fi#?#.px-4.py-2.bg-white.w-full:-abp-has([data-ad-unit-id])
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##.box.ads
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##article[class="article-preview content-marketing box"]
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##div.section:nth-of-type(2) > .row > .show-for-large.columns.xxlarge-6.xlarge-7.large-8.sidebar
@@ -5038,6 +5041,7 @@ impe.fi##[class^=mainospaikka]
 inarilainen.fi,sompio.fi##.paraati1
 inarilainen.fi,sompio.fi##.pikkusentteri1
 inarilainen.fi,sompio.fi##[href^="/ilmoitus/mainostajan-artikkeli"]
+inferno.fi#?#.md\:max-w-full.md\:px-4.py-4:-abp-has([data-ad-unit-id])
 inferno.fi#?#p:-abp-has([href^="https://track.adform.net/"])
 inssinosingot.fi##.block-mainos
 inssinosingot.fi##.button-mainos
@@ -5575,7 +5579,7 @@ tilannehuone.fi##[class^=mainos]:not(:only-child)
 tilannehuone.fi#?##cnt_lista tr:-abp-has(.mainosinline) + tr:-abp-has(> .divid)
 tilannehuone.fi#?##cnt_lista tr:has-text(/^\s$/):-abp-has(+ tr:-abp-has(.mainosinline))
 tilisanomat.fi##.ctaad
-tilt.fi##.lazyloading
+tilt.fi##[data-mobile-ad-unit-id]
 tilt.fi#?#div[class="w-full bg-black border-gray-200 border-b"]:-abp-has(a[href^="http://pubads.g.doubleclick.net/"])
 tinderinparhaat.com##.adf-placement-top
 tivi.fi##aside > div[class] > a[href^="https://www.tivi.fi/kumppanisisallot/"]
@@ -5609,6 +5613,7 @@ urjalansanomat.fi#?#.urjal-widget.main:-abp-has(a[href="https://ysiauto.fi/"])
 urjalansanomat.fi#?#.widget:-abp-has(> a[href="/lounaat"])
 uudenkaupunginsanomat.fi###auto-grid-container-5c40764673d19
 uusisuomi.fi##[data-test=mainTeaserColumn][href^="https://www.uusisuomi.fi/kumppanisisallot/"]
+uusisuomi.fi##aside [data-test="tabs"] [href^="https://www.uusisuomi.fi/kumppanisisallot"]
 uusisuomi.fi##aside [href^="https://track.adform.net/"]
 uusisuomi.fi##aside [href^="https://www.ilmarinen.fi/"]
 uusisuomi.fi#?#.lazyload-wrapper + section:has-text(Kaupallinen yhteistyö)
@@ -5745,6 +5750,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 /*-mainos-$image,domain=futisfani.com|kiekkofani.com|omalahio.fi|penkkiurheilu.com|uutisankka.com
 /macro.adnami.io$script,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
+/pop_media_*_fi_inarticle$script,domain=episodi.fi|rumba.fi|tilt.fi
 /prerolls/*.mp4$domain=gamereactor.fi
 /Pussit_300x3001.mp4$domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /Pussit_Vape_300x300_new.mp4$domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
@@ -5826,7 +5832,6 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||nyt.tassa.fi/ctxwidget/ipCtxWidget.js$script,domain=ilkkapohjalainen.fi
 ||otavamedia.fi/ad/$script
 ||pirkkalainen.com/images/mainospaikat/3.jpg$image,domain=pirkkalainen.com
-||popmedia.bbvms.com/a/pop_media_episodi_fi_inarticle$script,domain=episodi.fi
 ||rakentaja.fi/kuvat/esitykset/bannerit/*_Keittiomaailma-schibsted-*-kampanja$image,domain=rakentaja.fi
 ||rantapallo.fi^$third-party
 ||recommendations.asunnot.oikotie.fi^$domain=is.fi
