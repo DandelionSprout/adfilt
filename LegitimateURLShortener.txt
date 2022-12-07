@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 07December2022v2
+! Version: 07December2022v3
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2241,7 +2241,7 @@ $removeparam=m_sc,domain=bloomingdales.com
 
 ! https://us.boohoo.com/?$3p=a_cj_affiliate&~click_id=8c77e9c00c1e11ec82da00790a180510&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=https%3A%2F%2Fus.boohoo.com%2F&~keyword=8807380&cj_linkd=12344165&cj_webid=8807380&cj_affid=1397064&cj_affname=Offers.com%20-%20Vertive%2C%20LLC&_branch_match_id=962049055156509358
 ! https://www.forever21.com/?$3p=a_cj_affiliate&~click_id=b8c806cf0cad11ec806d4d010a18050d&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=http%3A%2F%2Fwww.forever21.com&cj_pub_sid=06gtKjdPmfBs463ojiL8awp&_branch_match_id=962306946010631351
-$removeparam=/^\$/,domain=boohoo.com|forever21.com
+$removeparam=/^[$],domain=boohoo.com|forever21.com
 $removeparam=/^\~/,domain=boohoo.com|forever21.com
 
 ! https://www.columbia.com/?uid=10728209&nid=8807380
@@ -2497,7 +2497,7 @@ $removeparam=soc_trk
 ||blue-tomato.com^$removeparam=varid
 $removeparam=ia-pkpmtrack
 ||blue-tomato.com^$removeparam=zanox
-||blue-tomato.com^$removeparam=/_\$ja/
+||blue-tomato.com^$removeparam=/_[$]ja/
 ||spartoo.$removeparam=sx
 ||spartoo.$removeparam=track_id
 
