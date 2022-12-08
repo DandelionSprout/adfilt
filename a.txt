@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 05December2022v5-Personal
+! Version: 08December2022v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 ! /\/\ Supercompilations: /\/\
@@ -215,6 +215,11 @@ dnpedia.com#?#.ui-row-ltr:has-text(klinikk)
 
 ! So that I don't mistake links to it for links to r/thomastheplankengine
 ||reddit.com/r/thomasthetankengine^$doc
+
+! Aims to make the site only show sites with hardware token support (Shouldn't be turned on 24/7)
+!!!2fa.directory##.table-success:not(:has(img[alt=U2F], .custom-hardware-popover))
+! Makes airport flight checkers only show international flights (Unlikely to get a standalone list anytime soon, and shouldn't be turned on 24/7)
+!!!avinor.no##.flight-single:has-text(/Oslo|Bergen|Sandefjord|Stavanger|Sandnes|Rørvik|Mo i Rana|Bodø|Namsos|Brønnøysund|Mosjøen|Ålesund|Tromsø|Harstad/)
 
 ! ↓ Below are categories that may or may not get independent lists for public use one day. ↓
 ! And yes, there's a reason why a.txt is for private use only: It shows the seething despisement I have against large chunks of planet Earth.
