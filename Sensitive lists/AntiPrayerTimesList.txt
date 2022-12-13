@@ -2,7 +2,7 @@
 ! Title: ⏰ Anti-'Prayer times' List
 ! Translated title: 🇮🇷: لیست ضد اوقات شرعی
 ! Translated title: 🇹🇷: Anti-'Namaz vakitleri' Listesi
-! Version: 07December2022v2
+! Version: 13December2022v1
 ! Expires: 7 days
 
 ! Description: 🇬🇧: So you're sitting there reading a newssite, and then you find big banners that try to tell you the exact points in time you're supposed to pray? If you want to feel less stressed and less like a slave of the clock, then this list is for you.
@@ -148,7 +148,8 @@ bingolonline.com##.namazVakitleriBlok
 ||img.piri.net/*imsakiye.jpg^$domain=yenisafak.com
 ||albayan.ae/res/img/prayertmbg.png^$~third-party
 
-! 🇬🇧: ——— Temporary standalone category for entries that block text-only links/buttons ———
+!#if !adguard
+! 🇬🇧: ——— Entries that block text-only links/buttons ———
 trgthaber.com.tr,haberturk.com##a[href$="namaz-vakitleri"]
 todaytime.ir##.navbar-nav [href="/اوقات-شرعی-اذان"]
 ! adwhit.com
@@ -186,3 +187,4 @@ todaytime.ir##.navbar-nav [href="/اوقات-شرعی-اذان"]
 ##li > [href*="/prayer-time-"]
 ~google.*##a[href$="/prayer-times"]
 ~albayan.ae##.prayertime:not(html, body)
+!#endif
