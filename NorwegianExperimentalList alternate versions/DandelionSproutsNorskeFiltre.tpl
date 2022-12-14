@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 06December2022v2-Alpha
+# Version: 08December2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -544,8 +544,6 @@ msFilterList
 # farmatid.no (16 11 2021)
 # https://radioh.no/norsk-opphenting-mot-nederland-sikret-vm-kvartfinale-storm-i-kastene/ (14 12 2021)
 # nordlys.no, an.no (19 06 2022)
-# https://www.nettavisen.no/ (27 11 2022, during the Cyber Monday weekend)
--d services.api.no mnemonic
 # 🇳🇴 🇩🇰: ——— Sporingsfiler ———
 # 🇳🇴🏞: ——— Sporingsfilar ———
 # ❄: ——— Guorrafiilaid ———
