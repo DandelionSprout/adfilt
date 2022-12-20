@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 081220221
+! Version: 181220221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -370,6 +370,8 @@ aftenbladet.no###weather-provider-url
 tidensand.no#?#div[class*=View_has-space__]:has(> .text-center)
 tv2.no##.esi-include
 nettavisen.no#?#.optimus-complex-front:has(amedia-include[manifest*=".norkon."])
+retrospilling.no#?#.widget:has-text(Play-Asia)
+retrospilling.no#?#.widget:has-text(Reklame)
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1535,6 +1537,8 @@ tv2.no##.feed-ad
 lydogbilde.no,lydogbillede.dk#?#*:has(> .adunit-lazy)
 billedbladet.dk##.lg\:flex.hidden
 dinordbok.no##.ad-container
+tiendeo.no###header-standard-container
+tiendeo.no##.js-print-container > li[order]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -4557,7 +4561,7 @@ vmj.se#?#.sidebox:-abp-contains(/Externa länkar|Artiklar/)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 [Adblock Plus 3.13]
-! Version: 101220221
+! Version: 141220221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4907,6 +4911,7 @@ fuengirola.fi,mesta.net,paakallo.fi,puheenaiheet.fi##.gofollow
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##.adv-link
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##.advr_box
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##.mvp-side-widget.widget_text
+futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##.pum-overlay
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##[class^=top-banner-]
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##[data-advadstrackid]
 futisfani.com,kiekkofani.com,penkkiurheilu.com,uutisankka.com##[href="https://bonuspanda.com/fi/"]
@@ -5426,7 +5431,9 @@ rantapallo.fi##div[id|=almad]
 ratkojat.fi###adslot_bottom
 ratkojat.fi###adslot_search
 ratkojat.fi###topslot
+ratkojat.fi##.adslot_right
 ratkojat.fi##[href="https://www.suomi24.fi/lainaa/yhdista-lainat/"]
+redfoxsanakirja.fi##.ad-container-wide
 retkilehti.fi##.category-mainos
 retkilehti.fi,riistalehti.fi##.gutenberg-content [style^="margin-left: auto; margin-right: auto; text-align: center;"]:is([id|="retki"], [id|="riist"])
 retkilehti.fi,riistalehti.fi##body.home [style^="margin-left: auto; margin-right: auto; text-align: center;"]:is([id|="retki"], [id|="riist"]) + .wp-block-separator
@@ -5665,7 +5672,9 @@ viranomaisuutiset.fi##.td-a-rec
 viranomaisuutiset.fi##[href^="https://in.matsmart.fi/t/"]
 viranomaisuutiset.fi##[href^="https://track.adtraction.com/"]
 viranomaisuutiset.fi##div[id|=nm-300x300]
-viranomaisuutiset.fi#?#div[id|=polii]:-abp-has(br + br + div[id|=nm-300x300] + br + br)
+viranomaisuutiset.fi#?#.td-footer-wrap .td_block_title:-abp-has(+ .td-a-rec)
+viranomaisuutiset.fi#?#.td-footer-wrap .td-block-row:has-text(-Yhteistyössä-)
+viranomaisuutiset.fi#?#div[id|=polii]:-abp-has([id|=nm-300x300] + br + br)
 voice.fi##.article-sponsored
 voice.fi##a[class="article-item articlestream-item unloaded"][data-sponsored="1"]
 voice.fi##section[class^=sbsads] + section[class^="sbs-articleitems full-size-list"][data-module_position_id="612"]
@@ -5783,6 +5792,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||cloudfront.net/images/backgroundimages/backgroundimage^$third-party
 ||cloudfront.net/poppartners/$script
 ||deals.innocode.no/api/public/v1/widgets$domain=aland.com|alandstidningen.ax|enontekionsanomat.fi|inarilainen.fi|kainuunsanomat.fi|kittilalehti.fi|kotilappi.fi|kuhmolainen.fi|luoteis-lappi.fi|saariselansanomat.fi|sompio.fi|sotkamolehti.fi|ylakainuu.fi
+||deals.kledjut.com^$domain=viranomaisuutiset.fi
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com^$media,domain=discoveryplus.fi
 ||etn.fi/images/banners/$image
 ||expekt.com^$third-party

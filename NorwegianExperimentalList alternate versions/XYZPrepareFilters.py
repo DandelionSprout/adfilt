@@ -5671,6 +5671,25 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"@@\|\|coolcmd\.tk\|..*", 
+           r"", 
+           line
+        )
+
+        # Test 20th of December 2022; see https://github.com/AdguardTeam/HostlistCompiler/issues/42
+        line = re.sub(
+           r"^\|\|discount\^$", 
+           r"||*.discount^", 
+           line
+        )
+
+        line = re.sub(
+           r".*\*&\*=\*&\*.*", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line):
             text += line + '\r\n'
 
@@ -6527,7 +6546,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#article", 
-           r"nitter.net,nitter.42l.fr#?#.timeline-item", 
+           r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
            line
         )
 
@@ -6599,7 +6618,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^(! Homepage: .*)", 
-           r"\1\n! Entry syntaxes specific to this supplement:\nnitter.net,nitter.42l.fr#?#.timeline-item:has(.fullname[title*=🇺🇸])\nnitter.net,nitter.42l.fr#?#.timeline-item:has(.fullname[title*=🇺🇲])", 
+           r"\1\n! Entry syntaxes specific to this supplement:\nnitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has(.fullname[title*=🇺🇸])\nnitter.net,nitter.42l.fr#?#.timeline-item:has(.fullname[title*=🇺🇲])", 
            line
         )
 
@@ -6657,7 +6676,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#div\[style\*=\"position: absolute; \"]:not\(\[class\]\)", 
-           r"nitter.net,nitter.42l.fr#?#.timeline-item", 
+           r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
            line
         )
 
