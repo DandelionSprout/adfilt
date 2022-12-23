@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 18December2022v1-Alpha
+# Version: 23December2022v1-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -655,7 +655,6 @@ msFilterList
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 # 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
 # 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
-- *-annonse-*
 # https://github.com/ryanbr/fanboy-adblock/issues/1405
 # 🇳🇴: Falske innlastinger som sløser bort tid
 # 🇩🇰: Falske indlastinger, der søler bort tid
