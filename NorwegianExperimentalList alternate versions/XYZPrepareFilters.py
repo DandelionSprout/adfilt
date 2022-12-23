@@ -5653,11 +5653,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        line = re.sub(
-           r"^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})\.\*\$network$", 
-           r"\1.0/24", 
-           line
-        )
+        # Replaced due to https://github.com/AdguardTeam/HostlistCompiler/issues/42#issuecomment-1360494184
+        #line = re.sub(
+        #   r"^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})\.\*\$network$", 
+        #   r"\1.0/24", 
+        #   line
+        #)
 
         line = re.sub(
            r"\^dnstype=", 
@@ -5679,14 +5680,27 @@ def prepare_agh(lines) -> str:
 
         # Test 20th of December 2022; see https://github.com/AdguardTeam/HostlistCompiler/issues/42
         line = re.sub(
-           r"^\|\|discount\^$", 
-           r"||*.discount^", 
+           r"^\|\|([a-z]{2,})\^$", 
+           r"||*.\1^", 
            line
         )
 
         line = re.sub(
            r".*\*&\*=\*&\*.*", 
            r"", 
+           line
+        )
+
+        # Needed due to https://github.com/AdguardTeam/HostlistCompiler/issues/42#issuecomment-1360494184, despite a lack of testing
+        line = re.sub(
+           r"^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.\*\$network$", 
+           r"/^\1\\.\2\\.\3\\.[0-9]{1,3}$/", 
+           line
+        )
+
+        line = re.sub(
+           r"/\$network$", 
+           r"/", 
            line
         )
 
