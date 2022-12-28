@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 23December2022v1
+! Version: 28December2022v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2092,7 +2092,8 @@ ektenyheter.no##.cm-message
 norgesavisen.no##.td-fix-index
 frihetskamp.net##a[href*="greenpilled.com"]
 politainment.no#?#.widget:has-text(Annonse)
-inyheter.no#?#div.wpb_wrapper:-abp-has([src*="/pagead"])
+! https://github.com/uBlockOrigin/uAssets/issues/16138
+inyheter.no#?#.td-main-page-wrap .td-element-style + .tdc-row:has(.adsbygoogle)
 ! https://github.com/ryanbr/fanboy-adblock/issues/1405
 @@||politainment.no^*/cookieconsent.min.js
 
