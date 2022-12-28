@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 231220221
+! Version: 281220221
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1996,7 +1996,8 @@ ektenyheter.no##.cm-message
 norgesavisen.no##.td-fix-index
 frihetskamp.net##a[href*="greenpilled.com"]
 politainment.no#?#.widget:has-text(Annonse)
-inyheter.no#?#div.wpb_wrapper:-abp-has([src*="/pagead"])
+! https://github.com/uBlockOrigin/uAssets/issues/16138
+inyheter.no#?#.td-main-page-wrap .td-element-style + .tdc-row:has(.adsbygoogle)
 ! https://github.com/ryanbr/fanboy-adblock/issues/1405
 @@||politainment.no^*/cookieconsent.min.js
 
@@ -4575,7 +4576,7 @@ vmj.se#?#.sidebox:-abp-contains(/Externa länkar|Artiklar/)
 ! /\/\/\/\/\/\/\/\/\/\ Manuella fixor tillagt av Adblock Plus-teamet / Manual fixes added by the Adblock Plus team /\/\/\/\/\/\/\/\/\/\
 ! (Currently empty.)
 [Adblock Plus 3.13]
-! Version: 201220221
+! Version: 231220221
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4832,6 +4833,7 @@ edgeski.fi,foregolf.fi,kalamies.com,rodeosnow.fi##.adv_content
 edgeski.fi,foregolf.fi,kalamies.com,rodeosnow.fi##.adv_side
 edgeski.fi,foregolf.fi,rodeosnow.fi##[id|=adni_widgets]
 edukas.fi##.compareGoogleCell
+eeva.fi#?#.swiper-slide:-abp-has(div[class*="ContentCard__AdLabel"])
 eeva.fi#?#div[class^="EmbeddedArticle__Container"]:-abp-has(div[class*="CommercialLabelContainer"])
 eeva.fi#?#div[class^="ContentFlowBlock__CardContainer"]:-abp-has(div[class*="ContentCard__AdLabel"])
 ehandel.fi###div-leeadsFullpageAd
@@ -5103,6 +5105,7 @@ kaksplus.fi#?#.owl-item:-abp-has(.portal__commercial)
 kalamies.com##.custom_banners_big_linkbefore-content
 kalamies.com##.custom_banners_big_linkwidget
 kalamies.com##[class^=custom_banners_big_linkcontent]
+kalamies.com##[id^="_ning_zone_"]
 kalastus.com###mini-panel-autodoc_150x50
 kalastus.com##.gam-holder
 kaleva.fi###puff-container
@@ -5630,6 +5633,7 @@ tuntopalvelu.fi##.list-ads > .iframe:not(.whyreview)
 turuntienoo.fi###main > .ads
 tvmatsit.com##.panorama-wrapper
 twitter.com#?#div:-abp-has(> div > div > div > h2 > div > span:has-text(Mainostettu twiitti))
+tyyliniekka.fi#?#.tdc-row.stretch_row_1400.td-stretch-content:has-text(MAINOS:)
 ulvilanseutu.fi###right-sidebar
 ulvilanseutu.fi##.adsanity-single
 ulvilanseutu.fi##.top-bar
@@ -5835,6 +5839,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||kake.fi^$third-party
 ||kaksplus.fi/upotukset/hintaopas^
 ||kaksplus.fi/wp-json/feeds/ad-feed$xmlhttprequest,domain=keskustelu.kaksplus.fi
+||kalamies.com/?_dnid=$subdocument,domain=kalamies.com
 ||karjalainen.fi/images/banners/kiinnostuitko$image,domain=karjalainen.fi
 ||kelkkalehti.com/bannerit/$image,domain=kelkkalehti.com
 ||keskustelu.pakkotoisto.com/bannerit/$image,domain=keskustelu.pakkotoisto.com
