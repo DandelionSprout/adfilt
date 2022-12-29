@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 27December2022v5
+! Version: 29December2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -24,6 +24,20 @@ $removeparam=fb_ref
 $removeparam=fb_source
 $removeparam=action_object_map
 $removeparam=action_ref_map
+
+! Below in this paragraph are entries that we borrowed from AdGuard URL Tracking Protection, which is maintained by the AdGuard team at https://github.com/AdguardTeam/AdguardFilters, and which is licenced under GPL-3.0.
+$removeparam=_zucks_suid
+$removeparam=adfrom
+$removeparam=aiad_clid
+$removeparam=maf
+$removeparam=mindbox-message-key
+$removeparam=nx_source
+$removeparam=oprtrack
+$removeparam=ysclid
+&uclick=*&uclickhash=$removeparam
+/?r=dir&zoneid=$removeparam
+/?rb=*&zoneid=$removeparam
+/?uclick=*;uclickhash=$removeparam
 
 ! https://www.elkjop.no/product/data/kabler-og-tilkobling-pc-og-nettverk/APPLEMD463ZA/thunderbolt-til-gigabit-ethernet-adapter?utm_id=Pricecomparison2989_5_False&utm_medium=Pricecomparison (14/11/2020)
 ! https://www.ikea.com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
@@ -1434,19 +1448,9 @@ $removeparam=as_source
 ! https://www.telia.fi/kauppa/tuote/jbl-tune-710bt/jblt710btblk?source=igodigital
 $removeparam=/^source=igodigital$/
 
-! Below in this paragraph are entries that we borrowed from AdGuard URL Tracking Protection, which is maintained by the AdGuard team at https://github.com/AdguardTeam/AdguardFilters, and which is licenced under GPL-3.0.
-$removeparam=_zucks_suid
-$removeparam=adfrom
-$removeparam=aiad_clid
-$removeparam=maf
-$removeparam=mindbox-message-key
-$removeparam=nx_source
-$removeparam=oprtrack
-$removeparam=ysclid
-&uclick=*&uclickhash=$removeparam
-/?r=dir&zoneid=$removeparam
-/?rb=*&zoneid=$removeparam
-/?uclick=*;uclickhash=$removeparam
+! https://baike.baidu.com/item/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD?qq-pf-to=pcqq.c2c (29/12/2022)
+! https://github.com/DandelionSprout/adfilt/pull/722
+$removeparam=qq-pf-to
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
