@@ -13,7 +13,7 @@
 * `#@#.`/`#@#`/`#@##`: Whitelists page elements to make them load.
 * `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or numerous other things that are highlighted in brown in the F12 filetree. Does not support RegEx.
 * `[href^="text"]`: Finds page elements whose value *begins* with the text.
-* `[href="text" i]`: Save as above, except case-insensitive.
+* `[href="text" i]`: Same as above, except case-insensitive.
 * `[href$="text"]`: Finds page elements whose value *ends* with the text.
 * `[href*="text"]`: Finds page elements whose value contains the text anywhere within it.
 * `[href~="text"]`: Finds page elements whose value contains the word (with spaces around it) anywhere within it.
