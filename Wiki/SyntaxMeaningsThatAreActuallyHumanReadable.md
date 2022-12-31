@@ -79,7 +79,6 @@
 * `:remove()`: Removes the element entirely from the F12 tree. The parentheses are required.
 * `#$?#` + `{ remove: true; }`: Same as above.
 * `:matches-attr`: Similar to `[href*="text"]`, but adds support for RegEx.
-* `:watch-attr`: Claims to be able to reconsider a blocking if something new happens to the element (e.g. to its element types).
 #### Blocking
 * `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
 * `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list. Requires the bad entry to be written verbatim; except for removing Hosts prefix IPs. You can not `badfilter` a `badfilter` rule.
@@ -102,6 +101,7 @@
 * `##^script:has-text` (prev. `##script:contains`): Intends to prevent inline scripts from starting up. Do not use the F12 filetree to create these filters, you must use `View source` instead. Also only works in Firefox and Tor Browser.
 * `:upward` (prev. `:nth-ancestor`): Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree. Equivalent to `:xpath(../..)`, but with normal numbers. Now also has the ability to look for specific element names at *any* indentation amount.
 * `:min-text-length`: Appears to select elements whose underlying source content has at least that amount of characters. Is completely disassociated from the actual on-page visible text by an order of several magnitudes.
+* `:watch-attr`: Claims to be able to reconsider a blocking if something new happens to the element (e.g. to its element types).
 * `:-abp-has(:scope >`: Almost identical to `:-abp-has(>`, but is used to prevent some bugs seen in the latter that I've forgot what they were about.
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
