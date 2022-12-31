@@ -62,8 +62,8 @@
 #### Universal
 * `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
 * `/\/\/\/`, `/regextext/`, and similar: Text detections in RegEx format. Supported in most (if not all) blocking rules, as well as in `:-abp-contains` and `:has-text`. Note that *all* blocking rules that start and end with `/` are treated as RegEx; a workaround is to add a `*` before or after.
-* `[Adblock Plus n.n]`: Mandatory for Adblock Plus, AdBlock, and forks of them, as they use the tag to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. This has no effect on uBO or its forks. Tags like `[uBlock Origin 1.20.0]` are just for clarification of intent, and have no effect on anything whatsoever.
-* `[uBlock Origin]`, `[AdGuard]`, `[Adblock Plus]`: These activate the syntax highlighter if the file is hosted on GitHub, should be placed on the first line of the list.
+* `[Adblock Plus n.n]`: Mandatory for Adblock Plus, AdBlock, and forks of them, as they use the tag to determine if they should load the filterlist. This has no effect on uBO and AdGuard or their forks. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. It also enables the GitHub syntax highlighter for that file.
+* `[uBlock Origin]`, `[AdGuard]`: These activate the syntax highlighter if the file is hosted on GitHub, should be placed on the first line of the list.
 * `! Title:` Specifies the intended name of the list. Required to make the name automatically show up in the settings of most adblockers, instead of the URL or of manual text input.
 * `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
 * `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days". ABP also supports "hour/hours".
@@ -106,9 +106,9 @@
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
 * `$3p`: Same as `$third-party`.
-* `$strict3p`: Same as `$third-party` but a network request qualifies as 3rd-party as soon as the context and the request _hostnames_ are different, i.e. `www.example.org` => `subdomain.example.org` is now considered 3rd-party.
+* `$strict3p`: Same as `$third-party`, but also considers other subdomains to be 3rd-party, i.e. if `www.example.org` loads an asset from `subdomain.example.org`, the latter is now considered 3rd-party.
 * `$1p` / `$first-party`: Same as `$~third-party`.
-* `$strict1p`: Same as `$first-party` but a network request only qualifies as 1st-party if both the context and the request share the same _hostname_, i.e. `www.example.org` => `www.example.org` is still considered 1st-party but `www.example.org` => `subdomain.example.org` isn't considered 1st-party anymore.
+* `$strict1p`: Same as `$first-party` but considers other subdomains to not be 1st-party, i.e. if `www.example.org` loads an asset from `subdomain.example.org`, the latter is now considered 3rd-party.
 * `$xhr`: Same as `$xmlhttprequest`.
 * `$doc`: Same as `$document`. May cause problems in some versions of AdGuard.
 * `$all`: De facto combines all other `$` values. Officially combines the use of no `$` values at all + `$popup` + `$document` + `$inline-script` + `$inline-font`.
@@ -117,7 +117,7 @@
 * `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Only applies to Firefox and Tor Browser.
 * `$from`: Same as `$domain`.
 * `$denyallow` + `,domain=`: Allows choosing which third-party domain requests to allowlist, instead of which ones to block, while visiting specified domains.
-* `$to`: Superset of `$denyallow`. Supports Entity-based (`google.*`) hostnames and negated hostnames (`~example.com`). 
+* `$to`: Superset of `$denyallow`. Supports TLD-wildcard (`google.*`) hostnames and negated hostnames (`~example.com`). 
 
 ## Adblock Plus, AdBlock and AdGuard only:
 * `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API. The uBO equivalent seems to be `##+js(nowebrtc)`, but conversion is not done automatically. It is deprecated in AdGuard and `##+js(nowebrtc)` should be used instead.
