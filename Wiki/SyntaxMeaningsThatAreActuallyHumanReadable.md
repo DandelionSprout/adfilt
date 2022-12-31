@@ -113,7 +113,7 @@
 * `$doc`: Same as `$document`. May cause problems in some versions of AdGuard.
 * `$all`: De facto combines all other `$` values. Officially combines the use of no `$` values at all + `$popup` + `$document` + `$inline-script` + `$inline-font`.
 * `$redirect-rule`: Similar to `$redirect`, but is only applied if it's already blocked by *another* entry or dynamic rule(set).
-* `@@||` + `$ghide`: Same as `@@||` + `$generichide`.
+* `$mp4`: Equivalent to `$redirect=noopmp4-1s,media`.
 * `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Only applies to Firefox and Tor Browser.
 * `$from`: Alias for `$domain`.
 * `$denyallow` + `,domain=`: Allows choosing which third-party domain requests to allowlist, instead of which ones to block, while visiting specified domains.
@@ -149,7 +149,6 @@
 * `$cookie=`: Blocks cookies with specific names.
 * `$cookie=` + `maxAge`: Changes the cookie to have an expiration time in seconds.
 * `$cookie=` + `same-site`: Changes the cookie to use the "Lax" mode of `samesite` known from the `Set-Cookie` browser HTTP response system.
-* ~`$mp4`~: Equivalent to `$redirect=noopmp4-1s,media4`, but does not require any AdGuard trust rights. It is deprecated.
 * `@@` + `$urlblock`: Turns off file-request blocking entirely while on that domain.
 
 ## AdGuard for [Windows/Mac/Android] only:
