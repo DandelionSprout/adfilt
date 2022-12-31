@@ -83,7 +83,7 @@
 * `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
 * `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list. Requires the bad entry to be written verbatim; except for removing Hosts prefix IPs. You can not `badfilter` a `badfilter` rule.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
-* `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/wiki/Resources-Library#available-empty-redirect-resources) (AdGuard has a [slightly bigger selection](https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/about-redirects.md#-available-redirect-resources)).
+* `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed [on this page](https://github.com/gorhill/uBlock/wiki/Resources-Library#available-empty-redirect-resources) (AdGuard has a [slightly bigger selection](https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/about-redirects.md#-available-redirect-resources)).
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
 * `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `?tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, that a lack of `/^` will make it search *anywhere* in that string, and a lack of support for backslashing. Whitelistings must match the exact parameter that was blocked.
 * `$match-case`: Makes the criteria case-sensitive. uBO only supports it in RegEx entries.
@@ -94,7 +94,7 @@
 ## uBlock Origin only:
 #### Hiding
 * `!#include`: Embeds another filterlist that is hosted on the same domain. Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard. Tonnes of restrictions apply, such as refusing to embed lists from another domain / repository / parent-folder.
-* `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/wiki/Resources-Library#available-general-purpose-scriptlets).
+* `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed [on this page](https://github.com/gorhill/uBlock/wiki/Resources-Library#available-general-purpose-scriptlets).
 * * `##+js(ra, class, .element)`: Removes the specified element class name from all elements on the page, without removing the elements themselves.
 * `:xpath`: An entry written with the very advanced Xpath syntax.
 * `##^.element`: Remove page elements _before_ they've even been loaded, based on their values in `View source` instead of their F12 ones. **Only** works in Firefox and Tor Browser.
