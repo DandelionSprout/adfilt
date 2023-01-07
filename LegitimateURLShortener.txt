@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 06January2023v2
+! Version: 07January2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3773,6 +3773,13 @@ $removeparam=srsltid,document
 ||reddit.com^$removeparam=%243p
 ||reddit.com^$removeparam=%24deep_link
 ||reddit.com^$removeparam=post_index
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4617249
+$removeparam=auto_token,domain=nextdoor.com
+$removeparam=mobile_deeplink_data,domain=nextdoor.com
+$removeparam=link_source_user_id,domain=nextdoor.com
+$removeparam=is,domain=nextdoor.com
+$removeparam=mar,domain=nextdoor.com
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
