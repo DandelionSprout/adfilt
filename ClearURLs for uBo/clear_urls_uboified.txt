@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 22/12/2022
+! Last updated: 10/01/2023
 ! Script last updated: 7/12/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -144,6 +144,7 @@ $removeparam=s_cid
 $removeparam=vero_conv
 $removeparam=vero_id
 $removeparam=wickedid
+$removeparam=twclid
 ||youtube.com^$removeparam=feature
 ||youtube.com^$removeparam=gclid
 ||youtube.com^$removeparam=kw
@@ -264,6 +265,7 @@ $removeparam=wickedid
 ||linkedin.com^$removeparam=refId
 ||linkedin.com^$removeparam=trk
 ||linkedin.com^$removeparam=/^li[a-z]{2}=/
+||linkedin.com^$removeparam=trackingId
 ||linkedin.com/learning$removeparam=u
 ||spiegel.de^$removeparam=b
 ||instagram.com^$removeparam=igshid
@@ -405,9 +407,11 @@ $removeparam=wickedid
 ||bilibili.com^$removeparam=from_source
 ||bilibili.com^$removeparam=from
 ||bilibili.com^$removeparam=seid
+||bilibili.com^$removeparam=mid
 ||bilibili.com^$removeparam=share_source
 ||bilibili.com^$removeparam=msource
 ||bilibili.com^$removeparam=refer_from
+||bilibili.com^$removeparam=share_from
 ||bilibili.com^$removeparam=share_medium
 ||bilibili.com^$removeparam=share_source
 ||bilibili.com^$removeparam=share_plat
@@ -623,11 +627,25 @@ $removeparam=wickedid
 ||nova.cz^$removeparam=dop_source_zone_name
 ||nova.cz^$removeparam=dop_req_id
 ||nova.cz^$removeparam=dop_id
+||mercadolibre.com^$removeparam=DEAL_ID
+||mercadolibre.com^$removeparam=L
+||mercadolibre.com^$removeparam=S
+||mercadolibre.com^$removeparam=T
+||mercadolibre.com^$removeparam=V
+||mercadolibre.com^$removeparam=pdp_filters
+||mercadolibre.com^$removeparam=position
+||mercadolibre.com^$removeparam=search_layout
+||mercadolibre.com^$removeparam=tracking_id
+||mercadolibre.com^$removeparam=type
+||mercadolibre.com^$removeparam=/^c_[_a-zA-Z]+=/
+||mercadolibre.com^$removeparam=/^me\.[_a-zA-Z]+=/
+||mercadolibre.com^$removeparam=/^reco_[_a-zA-Z]+=/
+||quizlet.com^$removeparam=funnelUUID
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
 @@/^https?:\/\/(docs|accounts)\.google(\.[a-z]{2,}){1,}/$removeparam
-@@/^https?:\/\/([a-z0-9-\.])*drive\.google\.com\/videoplayback/$removeparam
+@@/^https?:\/\/([a-z0-9-\.])*(chat|drive)\.google\.com\/videoplayback/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}(\/upload)?\/drive\//$removeparam
 @@||news.google.com.*?hl=$removeparam
 @@||hangouts.google.com/webchat*zx=$removeparam
