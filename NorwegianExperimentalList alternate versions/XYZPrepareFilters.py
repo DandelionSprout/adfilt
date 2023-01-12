@@ -5672,12 +5672,6 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        line = re.sub(
-           r"@@\|\|coolcmd\.tk\|..*", 
-           r"", 
-           line
-        )
-
         # Test 20th of December 2022; see https://github.com/AdguardTeam/HostlistCompiler/issues/42
         line = re.sub(
            r"^\|\|([a-z]{2,})\^$", 
@@ -5701,6 +5695,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"/\$network$", 
            r"/", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||/|:).*[&%].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"@@\|\|[a-zA-Z0-9.-]{0,}\|[a-zA-Z0-9.-].*", 
+           r"", 
            line
         )
 
@@ -6447,7 +6453,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^# [—¤].*", 
+           r"^# [—¤|].*", 
            r"", 
            line
         )
@@ -6503,6 +6509,12 @@ def prepare_domains(lines) -> str:
         line = re.sub(
            r"^# Description: .*", 
            r"# Description: This IP set combines IP and CIDR addresses from plentiful of major adblocker lists. It contains heavily altered content from Dandelion Sprout's Anti-Malware List, Dandelion Sprout's Nordic Filters, EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, and EasyList Spanish.\n# For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english", 
+           line
+        )
+
+        line = re.sub(
+           r"^# (These|Google|Gigabyte|Copied).*", 
+           r"", 
            line
         )
 
