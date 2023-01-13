@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 10January2023v3
+! Version: 13January2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2487,7 +2487,7 @@ $removeparam=adcampaigngroup
 ||dell.com^$removeparam=gacd
 $removeparam=ref_id,domain=expedia.com|intuit.com|tunnelbear.com
 ||expedia.com^$removeparam=my_ad
-||gamestop.com^$removeparam=sourceID
+$removeparam=sourceID,domain=gamestop.com|verizon.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1143347
 $removeparam=rank,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
@@ -3796,6 +3796,11 @@ $removeparam=mar,domain=nextdoor.com
 ||clicklogger.rm.uol.com.br^$removeparam=grp
 ||clicklogger.rm.uol.com.br^$removeparam=msr
 ||clicklogger.rm.uol.com.br^$removeparam=oper
+
+! https://www.verizon.com/smartphones/apple/?campaignGroup=General&campaignName=UPG%20-%20iPhone%2014%20Hi%20Risk%20BASE%20LT%20-%20EMS&campaignSource=CRM&cmp=CRM_M_CU_CMU_TXUPG_99_99_HRBASE_LT_IPHONE14&expectedTransaction=Order&extSystemTransactionId=[redacted]&sourceID=SmartLink (send via SMS)
+||verizon.com^$removeparam=campaignGroup
+||verizon.com^$removeparam=campaignName
+||verizon.com^$removeparam=campaignSource
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
