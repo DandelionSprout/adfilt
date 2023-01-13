@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 28December2022v1-Alpha
+# Version: 13January2023v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -891,6 +891,29 @@ msFilterList
 # https://dinside.dagbladet.no/okonomi/tusenvis-forsokt-lurt/76921148
 -d a2ics.eu
 -d smsb.co
+# https://github.com/DandelionSprout/adfilt/issues/747
+- -norge.co.no
+*skodanmark.com
+-d skechersskosalg-norge.com
+-d dkgaborsneakers.com
+-d haglofstilbud.com
+-d fjallraventilbud.com
+*norgeskosalg.
+-d hitecskonorge.com
+-d off-whitenorge.com
+-d gaborskonorge.com
+-d oofosnorgeoutlet.com
+-d under-armour-norge.com
+-d camperskonorge.com
+-d eccoskonorge.com
+-d clarksskonorge.com
+-d merrelldanmark.com
+-d off-whitedanmark.com
+-d underarmourdanmarkdk.com
+-d eccodanmarkwebbutik.com
+-d clarks-dk.com
+-d salomonoutletnorge.com
+-d speedcrossnettbutikk.com
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
@@ -905,6 +928,8 @@ msFilterList
 -d 158.247.212.220
 -d 165.227.168.212
 -d 132.148.220.142
+-d 104.160.10.
+-d 165.231.154.
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
