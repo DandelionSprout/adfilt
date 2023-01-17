@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 17January2023v1
+! Version: 17January2023v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1616,6 +1616,8 @@ $removeparam=returnFromLogin,domain=amazon.*
 ||amazon.*^$removeparam=colid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4229388
 ||amazon.*/dp/$removeparam=s,document
+! https://gaming.amazon.com/?ref_=sm_w_tup_ntp_t_c&ingress=twch&redirectRoute=b2FsYWJzbGl2ZS9zY2hlZHVsZQ==&twitchReferral=065774263bd9f5904d1ae1586a52e87e
+||gaming.amazon.com^$removeparam=redirectRoute
 
 !!! ——— Bing ———
 ! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
@@ -2356,7 +2358,7 @@ $removeparam=pgtype,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj
 $removeparam=section,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 
 ! https://www.imdb.com/title/tt7826036/?ref_=ttep_ep5
-$~xmlhttprequest,removeparam=ref_,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|imdb.com|primevideo.com|shopbop.com|awesomeopensource.com
+$~xmlhttprequest,removeparam=ref_,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|imdb.com|primevideo.com|shopbop.com|awesomeopensource.com|amazon.*
 
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 $removeparam=tag,domain=amazon.*|argos.co.uk|habitat.co.uk|tv2.no
