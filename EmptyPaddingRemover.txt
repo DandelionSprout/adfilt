@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🕳 Empty Padding Remover
-! Version: 18December2022v1-Alpha
+! Version: 18January2023v1-Alpha
 ! Expires: 4 days
 ! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -12,8 +12,11 @@
 ! https://zh.cn.nikkei.com/politicsaeconomy/stockforex/39110-2020-01-21-09-55-57.html
 ! (Exception: https://www.pixiv.net/bookmark.php)
 *##p:has-text(/^\xA0\xA0$/):not(:has-text(/\S/)):not(:has(span))
+!#if !adguard
 ! https://nyheder.tv2.dk/2020-02-02-forfatter-derfor-slipper-sportsstjerner-fra-voldtaegtsanklager-uden-skrammer
+! (https://github.com/AdguardTeam/ExtendedCss/issues/159)
 *##p:has-text(/^ $/):not(:has-text(/\S/)):not(:has(img, input, iframe))
+!#endif
 ! As per https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace
 ! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/119108)
 ##p:empty:not([class])
