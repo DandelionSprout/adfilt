@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 13January2023v2-Alpha
+# Version: 18January2023v3-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -388,6 +388,7 @@ msFilterList
 -d levmeddiabetes.no Accu-
 -d tv2.no sponsor
 -d rett24.no*bannerizor.js
+-d static.finncdn.no FINNExternalDistribution.js
 # — — — — — — —
 # 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 +d vgtv.no
@@ -898,7 +899,6 @@ msFilterList
 -d dkgaborsneakers.com
 -d haglofstilbud.com
 -d fjallraventilbud.com
-*norgeskosalg.
 -d hitecskonorge.com
 -d off-whitenorge.com
 -d gaborskonorge.com
@@ -914,6 +914,74 @@ msFilterList
 -d clarks-dk.com
 -d salomonoutletnorge.com
 -d speedcrossnettbutikk.com
+# https://github.com/DandelionSprout/adfilt/issues/748
+-d salomonnorgeoutlet.com
+-d salomomnorgeoutlet.com
+-d lacostenorge.com
+-d bogs-norge.com
+-d jakkeshopdanmark.com
+-d jakkeshopnorge.com
+-d norge-adidas.com
+-d tevanorgeshop.com
+-d wolverineskonorge.com
+-d thenorthfacenorge.co.no
+-d vansnorge.co.no
+-d vanssnorge.co.no
+-d hunternorge.co
+-d hunternorge.co.no
+-d hunternorgeno.com
+-d havaianasnorge.co.no
+-d martensnorge.co.no
+-d norgeskotilbud.com
+-d hokasnorgeno.com
+-d vanssnorge.com
+-d asoloskonorge.com
+-d hokaonenorge.com
+-d jordannorge.top
+-d quiksilvernorge.com
+-d vejaskonorge.org
+-d hokalopesko.com
+-d hokalopesko.top
+-d hokanorgeno.com
+-d demonias-danmark.com
+-d drmdanmark.com
+-d tevadanmarkshop.com
+-d crocssalgdanmark.com
+-d hunter-danmark.com
+-d salomonbutikdanmark.com
+-d jordantilbud.com
+-d jordantilbuddanmark.com
+-d quiksilverdanmark.com
+-d salomon-danmark.net
+-d salomonidanmark.com
+-d saucony-dk.com
+-d vejadanmark.org
+-d crocssko-dk.com
+-d palladiumskodk.com
+-d salomondkoutlet.com
+-d tilbudhokasko.com
+-d keensandalertilbud.com
+-d quiksilvertilbud.com
+-d palladiumskobutikk.com
+-d hunterstovlersalg.com
+-d salomonskosalgno.com
+-d martenssalg.com
+-d nobullskosalg.com
+-d hokaskooutlet.co.no
+-d hoka-sko.com
+-d hoka-one-one.cc
+-d hokaoneone*
+*norgeskosalg.
+*norge-salg.com
+*norgesalg.com
+*norgesalgs.com
+*salgnorge.com
+*danmarkdk.com
+*skodktilbud.
+*skonorgeeu.com
+*sneakersnorgeshop.
+*sneakersdkshop.com
+*skodanmarks.
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34

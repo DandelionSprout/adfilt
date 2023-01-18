@@ -6732,3 +6732,72 @@ if __name__ == "__main__":
         text_file.write(domains_filter)
 
     print('The Nitter list version has been generated.')
+
+#/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\
+#•X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X•
+#\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/
+
+import requests
+import re
+
+SOURCES = ['https://easylist-downloads.adblockplus.org/fanboy-notifications.txt', 'https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_notifications_specific_uBO.txt']
+
+OUTPUT = 'Domeneversjoner/xyzzyxfanboynotifications.txt'
+OUTPUT_DOMAINS = 'Domeneversjoner/FanboyNotifications-LoadableInUBO.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard Home
+def prepare_domains(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"^!#include fanboy_notifications_specific_uBO\.txt$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! Title: Fanboy's Notifications Blocking List$", 
+           r"! Title: Fanboy's Notifications Blocking List - Loadable in uBO", 
+           line
+        )
+        line = re.sub(
+           r"^(@@.*)(!.*)", 
+           r"\1\n\2", 
+           line
+        )
+
+        if not line == '':
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    domains_filter = prepare_domains(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_DOMAINS, "w") as text_file:
+        text_file.write(domains_filter)
+
+    print('The Fanboy Notifications uBO version has been generated.')
