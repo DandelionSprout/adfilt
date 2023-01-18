@@ -9,7 +9,6 @@
 ! Email: easylist@protonmail.com
 ! Homepage: https://easylist.to/
 ! Forums: https://forums.lanik.us/
-! (Note added by Dandelion Sprout:) If you use uBlock Origin, it is recommended to also subscribe to https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_notifications_specific_uBO.txt
 !
 !--------------------------General blocking rules-----------------------------!
 ! *** easylist:fanboy-addon/fanboy_notifications_general_block.txt ***
@@ -944,4 +943,98 @@ mobi24.net#@#a[href^="https://www.mobi24.net/"]
 @@||webpush.jp/js/browserpushv3.js$domain=zakzak.co.jp
 ! Mobile Notifications
 @@||mafia.ua/js/jquery.smartbanner.js$script,~third-party
-@@||mirage.ru/js/jquery.smartbanner.js$script,~third-party
+@@||mirage.ru/js/jquery.smartbanner.js$script,~third-party! uBO-specific fixes
+downace.com##+js(acis, requestPermission)
+news18.com##+js(acis, serviceworker.register)
+shrinkzzy.link##+js(acis, firebase.initializeApp)
+! International
+rd.fi##.nivoSlider:remove()
+puuilo.fi##.cf-container-wrapper
+puuilo.fi##body:style(overflow: auto !important)
+! autoevolution.com
+autoevolution.com###notif_asker_div
+autoevolution.com##body,html:style(height: auto !important; overflow: auto !important)
+! nu.nl https://github.com/easylist/easylist/issues/10468
+nu.nl##.webpush-popup
+nu.nl##body,html:style(height: auto !important; overflow: auto !important)
+! phonearena.com
+phonearena.com###pa-survey-modal
+phonearena.com##.pa-modal-backdrop
+phonearena.com##body:style(overflow: auto !important; position: initial !important;)
+! ask.fm (forced app download / login page) https://github.com/easylist/easylist/pull/12751
+ask.fm##.lightbox_overlay
+ask.fm##body:style(overflow: auto !important)
+! reddit.com (mobile)
+reddit.com##.XPromoBlockingModal
+reddit.com##.XPromoPopup__overlay
+reddit.com##.XPromoBlockingModalRpl
+reddit.com##.PreviewDrawer
+reddit.com##.XPromoPopup
+reddit.com##.XPromoPill
+reddit.com##shreddit-experience-tree
+reddit.com##+js(aeld, block-body-scrolling)
+reddit.com##body,html.scroll-is-blocked:style(overflow: auto !important;)
+reddit.com##body.scroll-disabled:style(overflow: visible!important; position: static!important;)
+reddit.com##.XPromoPopupRpl
+reddit.com##body:style(pointer-events:auto !important;)
+reddit.com##.XPromoInFeed
+amp.reddit.com##.AppSelectorModal__body
+amp.reddit.com##.upsell_banner
+! flipboard.com (in-app overlay)
+!flipboard.com##.modal-overlay
+!flipboard.com##body:style(overflow: visible!important; position: static!important;)
+!flipboard.com##.outbound-link.button--primary
+! behance.net (in-app overlay)
+behance.net##.js-vue-mobile-app-upsell
+behance.net##body,html:style(overflow: auto !important; position: initial !important;)
+behance.net##.PrimaryNav-appLinkContainer-bhx
+! ifunny (in-app overlay)
+ifunny.co##.aq4y._0sJI
+ifunny.co##body,html:style(overflow: auto !important; position: initial !important;)
+! trip.com (app download overlay)
+trip.com##.tcp-h5-install-pop
+trip.com##body,html:style(overflow: auto !important; position: initial !important;)
+! player.fm
+player.fm##.bottom-promo-overlay
+player.fm##.bottom-promo
+player.fm##body,html:style(overflow: auto !important; position: initial !important;)
+! m.economictimes.com
+m.economictimes.com###prominentOverlay
+m.economictimes.com##body,html:style(overflow: auto !important; position: initial !important;)
+! m.yelp.com
+m.yelp.com##.overlay__09f24__ApBaK
+m.yelp.com##body,html:style(overflow: auto !important; position: initial !important;)
+! linkedin.com
+linkedin.com##.promo-bottom-sheet
+linkedin.com##body:style(overflow: auto !important; position: initial !important;)
+! coinpaprika.com (app)
+coinpaprika.com##.coins-promo
+coinpaprika.com##body:style(overflow: auto !important; position: initial !important;)
+! slickdeals.net (app)
+slickdeals.net##.sdModalOverlay
+slickdeals.net##.bottomBarContainer
+slickdeals.net##body:style(overflow: auto !important; position: initial !important;)
+! canva.com
+canva.com##.nEyXsQ
+canva.com##.S_i1pg
+canva.com##body:style(overflow: auto !important; position: initial !important;)
+! ebay (scanner app on load)
+ebay.com##.pc-dweb
+ebay.com##html:style(overflow: auto !important; position: initial !important;)
+! audius.co
+audius.co##[class*="AppRedirectPopover_container_"]
+audius.co##+js(rc, scrollLock, , stay)
+audius.co##body:style(overflow: scroll !important)
+! simpleswap.io (mobile UA)
+simpleswap.io##.iRXLZi
+simpleswap.io##body,html:style(overflow: auto !important; position: initial !important;)
+! insider.com,businessinsider.com
+insider.com,businessinsider.com##.in-app-banner
+insider.com,businessinsider.com##body:style(overflow: auto !important; position: initial !important;)
+insider.com,businessinsider.com##.app-button
+! emailnator.com
+emailnator.com##.modal
+emailnator.com##.modal-backdrop
+emailnator.com##+js(rc, modal-open, , stay)
+emailnator.com##html,body:style(position: static !important; overflow: auto !important; width: auto !important;)
+emailnator.com##.top-banner
