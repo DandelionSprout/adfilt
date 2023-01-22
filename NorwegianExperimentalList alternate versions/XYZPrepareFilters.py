@@ -3071,6 +3071,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^127\.0\.0\.1 .*/.*", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
             text += line + '\r\n'
 
@@ -3409,6 +3415,36 @@ def prepare_pihole(lines) -> str:
         line = re.sub(
            r"^# ——— (Centralised whitelist section|By default, the entries below will only).*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[0-9].*/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\*[a-z0-9].*)\.", 
+           r".\1\\.", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\*-.*)\.", 
+           r".\1\\.", 
+           line
+        )
+
+        line = re.sub(
+           r"^((\(|\.).*[a-z0-9])\.([a-z0-9])", 
+           r"\1\\.\3", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z0-9-])\*$", 
+           r"\1.*", 
            line
         )
 
@@ -5172,7 +5208,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"127\.0\.0\.1 \[(.*)\]", 
-           r":: \1", 
+           r"", 
            line
         )
 
