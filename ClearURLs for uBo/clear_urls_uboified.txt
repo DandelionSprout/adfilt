@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 10/01/2023
+! Last updated: 30/01/2023
 ! Script last updated: 7/12/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -81,7 +81,6 @@
 ||google.*^$removeparam=/^gws_[a-z]*=/
 ||google.*^$removeparam=atyp
 ||google.*^$removeparam=vet
-||google.*^$removeparam=zx
 ||google.*^$removeparam=_u
 ||google.*^$removeparam=je
 ||google.*^$removeparam=dcr
@@ -648,8 +647,6 @@ $removeparam=twclid
 @@/^https?:\/\/([a-z0-9-\.])*(chat|drive)\.google\.com\/videoplayback/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}(\/upload)?\/drive\//$removeparam
 @@||news.google.com.*?hl=$removeparam
-@@||hangouts.google.com/webchat*zx=$removeparam
-@@||client-channel.google.com/client-channel*zx=$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/s\?tbm=map.*?gs_[a-z]*=./$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/(complete\/search|setprefs|searchbyimage)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/(appsactivity|aclk\?)/$removeparam
