@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 21January2023v1-Alpha
+# Version: 01February2023v3-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -86,7 +86,6 @@ msFilterList
 -d betterbanners.org
 -d bilborsen.webannonse.no
 -d boligkanalen-maestro-new.azurewebsites.net
--d brandstudio.inventory.schibsted.io
 -d cluster.chart.dk
 -d delivered-by-madington.com
 -d dotbanner.dk
@@ -703,29 +702,23 @@ msFilterList
 -d 102.112.2o7.net
 -d 52.216.146.90
 -d 92.42.104.146
--d bizcashtrend.com
 -d djurs.com-*.
--d fullbagcash.com
 -d hervelegeroutletusa.com
 -d itunesconnect-*.no
 -d jimmychoostore.top
 -d look-like-star.myshopify.com
 -d marked.no
 -d mrcal365.com
--d nymelding.com
 -d optimizersppc.com
 -d pensjonistferie.no
 -d postuksus.com
 -d replicapatekphilippe.com
 -d replicarolexyachtmaster.com
 -d secureriches.com
--d toptechmania.com
 -d trackvoluum.com
 -d tromselementbygg.no
 -d ultimate-tech-products.myshopify.com
 -d vipps-sikkerhet.
--d noipermontanera.it
--d lydmagasinet.com
 -d norskposten.com
 -d oslo-tannlegene.no
 -d y6.no
@@ -749,8 +742,6 @@ msFilterList
 -d rnbinance.com
 -d brightertrade.com
 # https://www.nrk.no/norge/1.14511067
-# https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
--d earnmoneyglobal.com
 # https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
 # https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
 -d liveshopdealz.com
@@ -758,8 +749,6 @@ msFilterList
 -d elkjop*.club
 # https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 - css *sparebank1.no
-# https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
--d phosphox.com
 # https://www.facebook.com/viralspiralen/posts/2494251397311027
 -d addmoviesnow.com
 # https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
@@ -769,10 +758,6 @@ msFilterList
 -d legoland.com-*.
 # https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
-# https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
--d vision-hey.club
-# https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
--d top-topic.co
 # https://www.nrk.no/troms/1.14788086
 -d geometra-bologna.it
 # https://www.nrk.no/nyheter/1.14793929
@@ -786,13 +771,9 @@ msFilterList
 -d ocgadgetss.myshopify.com
 # https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
 -d ekstrabiadet.
-# https://www.mm.dk/tjekdet/artikel/nej-joergen-leth-har-ikke-investeret-500-millioner-kroner-i-bitcoins
--d daily-news.tech
 # https://www.tv2.no/nyheter/11516670/
 -d fintechnow*.buzz
 -d wealthnews*.xyz
-# https://www.datahjelperne.no/dnb-sms-svindel/
--d no-personal.com
 # https://www.datahjelperne.no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
 -d newzeninfotech.com
 # https://www.datahjelperne.no/skatteberegning-mail-svindel/
@@ -808,8 +789,6 @@ msFilterList
 -d vidcopa.me
 # https://www.adressa.no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
 -d smallrise.com
-# https://www.nrk.no/sorlandet/advarer-mot-nytt-svindelforsok-1.15197328
--d lepq.club
 # https://www.datahjelperne.no/coop-du-har-fatt-nye-kuponger-mail-svindel/
 -d offerleads.club
 - cop-no index.htm
@@ -822,12 +801,7 @@ msFilterList
 # https://www.datahjelperne.no/norske-facebook-profiler-misbrukes-i-svindel/
 -d sites.google.com truls-svendsen
 -d signup-*vpns.com
-# https://www.datahjelperne.no/du-er-blitt-rammet-av-taggespam-hva-gjor-du-na/
--d velumstand.com
--d thesleepinggod.com
 # https://www.datahjelperne.no/telenor-din-faktura-mislyktes-svindel/
-# https://www.datahjelperne.no/apple-abbonnements-bekreftelse-svindel/
--d ssl-bekreftelse-abonnement.com
 # https://www.datahjelperne.no/eurocard-falsk-epost-faktura/
 -d valspe.com.br
 # https://www.datahjelperne.no/eika-falsk-epost-svindel/
@@ -838,10 +812,6 @@ msFilterList
 -d cinefique.com
 # https://www.datahjelperne.no/posten-sms-svindel/
 -d niupaiba.com
-# https://www.nrk.no/osloogviken/slik-prover-sms-svindlerne-a-lure-deg-1.15397367
--d m-dnbnorge.com
-# https://www.adressa.no/pluss/nyheter/2021/03/20/Politiet-advarer-Dette-er-ikke-et-jobbintervju.-Det-er-et-svindelfors%C3%B8k-23687158.ece/(21 03 2021)
--d job-view.link
 # https://www.adressa.no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece
 -d nordeninterior.weebly.com
 # Googling Aksel Hennie (Results for prior week) in late July 2021
@@ -851,29 +821,19 @@ msFilterList
 -d fancywoman.dk
 -d privatedagplejere.dk
 -d mxdesign.dk
--d qteck.io
 -d bitcoinevolutionaustraliareview.com
 -d irb.dk
 -d ditsunde.dk
--d sunrisebar.it
 -d economywatch.com
 -d superbinvest.com
--d bitcoinprofitrecensioni.com
 -d marvelouskaunas.club
 -d aktienboard.com
 -d minklubshop.dk dk
-# https://dinside.dagbladet.no/okonomi/ligg-unna-denne-nettbutikken/74392579
--d kjokkenbutikk.com
 # https://www.nrk.no/vestfoldogtelemark/1.15750360
 -d dundeehills.group
 # https://www.adressa.no/pluss/nyheter/2021/12/04/Posten-advarer-Vi-sender-ikke-slike-tekstmeldinger-24894483.ece
 -d ozarkvillage.net
 -d channawars.com
-# https://www.dr.dk/nyheder/penge/kontant/kommissionsbilerdk-saelger-kundernes-biler-og-beholder-deres-penge
--d kommissionsbiler.dk
-# https://dinside.dagbladet.no/data/varsellampene-lyser/75613329
-# https://itavisen.no/2022/03/16/dette-skjedde-da-de-handlet-fra-spillweb-com/
--d spillweb.com
 # https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
 -d melding.link
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1114669106
@@ -883,7 +843,6 @@ msFilterList
 # https://www.kode24.no/artikkel/75980495
 -d campbell-living.com
 # https://www.telia.no/kundeservice/mobil/malware-flubot-android/
--d destinyrealty.in
 -d p-stn.net
 -d wxqgx123.com
 -d kikuchitadahisa.com
@@ -903,11 +862,9 @@ msFilterList
 -d off-whitenorge.com
 -d gaborskonorge.com
 -d oofosnorgeoutlet.com
--d under-armour-norge.com
 -d camperskonorge.com
 -d eccoskonorge.com
 -d clarksskonorge.com
--d merrelldanmark.com
 -d off-whitedanmark.com
 -d underarmourdanmarkdk.com
 -d eccodanmarkwebbutik.com
@@ -915,10 +872,7 @@ msFilterList
 -d salomonoutletnorge.com
 -d speedcrossnettbutikk.com
 # https://github.com/DandelionSprout/adfilt/issues/748
--d salomonnorgeoutlet.com
 -d salomomnorgeoutlet.com
--d lacostenorge.com
--d bogs-norge.com
 -d jakkeshopdanmark.com
 -d jakkeshopnorge.com
 -d norge-adidas.com
@@ -926,11 +880,9 @@ msFilterList
 -d wolverineskonorge.com
 -d thenorthfacenorge.co.no
 -d vansnorge.co.no
--d vanssnorge.co.no
 -d hunternorge.co
 -d hunternorge.co.no
 -d hunternorgeno.com
--d havaianasnorge.co.no
 -d martensnorge.co.no
 -d norgeskotilbud.com
 -d hokasnorgeno.com
@@ -939,14 +891,11 @@ msFilterList
 -d hokaonenorge.com
 -d jordannorge.top
 -d quiksilvernorge.com
--d vejaskonorge.org
 -d hokalopesko.com
 -d hokalopesko.top
 -d hokanorgeno.com
--d demonias-danmark.com
 -d drmdanmark.com
 -d tevadanmarkshop.com
--d crocssalgdanmark.com
 -d hunter-danmark.com
 -d salomonbutikdanmark.com
 -d jordantilbud.com
@@ -955,18 +904,12 @@ msFilterList
 -d salomon-danmark.net
 -d salomonidanmark.com
 -d saucony-dk.com
--d vejadanmark.org
--d crocssko-dk.com
 -d palladiumskodk.com
--d salomondkoutlet.com
--d tilbudhokasko.com
 -d keensandalertilbud.com
 -d quiksilvertilbud.com
 -d palladiumskobutikk.com
 -d hunterstovlersalg.com
--d salomonskosalgno.com
 -d martenssalg.com
--d nobullskosalg.com
 -d hokaskooutlet.co.no
 -d hoka-sko.com
 -d hoka-one-one.cc
@@ -1004,45 +947,28 @@ msFilterList
 # Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
 -d adidasko.com
 -d airmaxskobillige.com
--d allergyfl.com
--d apvoc-ga.com
 -d assassinfitness.com
--d billigesalg.com
--d bostongrnhsflowers.com
--d caperforaciones.com
 -d coralls.com
 -d daradis.com
--d denningwelldrilling.com
 -d drakternorge.com
 -d drcarolyngroff.com
 -d dunjakke-no.com
 -d fotballsko-salg.com
 -d gsport.com
 -d hernoclothing.com
--d hollisternorge.com
 -d jakkesalgs.com
 -d jakkesnorge.com
--d lindseysopticians.com
 -d linkshe.com
 -d mbtnorge.com
--d meladermfacts.com
 -d moteshoes.com
--d museuw.com
 -d mycraftypad.com
 -d norfotball.com
 -d norgefotball.com
--d norgejakke.com
--d norgejakkerbutikk.com
 -d norgeshoes.com
 -d oflike.com
--d parajumpersitoutlet.com
--d parajumpersnettbutikk.com
--d parajumpersnorway.com
 -d parajumperssalg.com
 -d pjs.outlet.com
 -d popeurope.com
--d skonmdnorge.com
--d xn--sykkeltrye-7cb.com
 -d um-bs.com
 # 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
@@ -1057,12 +983,9 @@ msFilterList
 # 🇬🇧: Fake online pharmacies
 - -med.footeo.com
 -d *medisin*.over-blog.com
--d alphaapotek.com
--d bedsteapoteksverige.com
 -d godtdsamaritansk.com
 -d helsehjelp.over-blog.com
 -d jensapoteker.com
--d kjop-palitelige-medisiner.com
 -d kobconcerta54mgonlineidanmark.wordpress.com
 -d marson.footeo.com
 -d nkwana-medstore.com
@@ -1072,7 +995,6 @@ msFilterList
 # 🇬🇧: Old domains stolen by casino sites
 -d kohlershop.dk
 -d fredensborg-orredfiskeri.dk
--d tvaalborg.dk
 -d informationer.nu
 -d cphspaogwellness.dk
 -d webavisen.gl
