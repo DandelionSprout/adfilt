@@ -1,8 +1,8 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 12/11/2022
-! Script last updated: 12/11/2022
+! Last updated: 30/01/2023
+! Script last updated: 7/12/2022
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Warning: This list may break websites, and contains possibly-problematic rules. There is not much the Adfilt maintainers can do, as this list is just the ClearURLs rules converted into a uBo/AdGuard filterlist. Use with caution.
@@ -40,6 +40,7 @@
 ||amazon.*^$removeparam=dchild
 ||amazon.*^$removeparam=camp
 ||amazon.*^$removeparam=creative
+||amazon.*^$removeparam=content-id
 ||amazon.*/s?$removeparam=/^p[fd]_rd_[a-z]*=/
 ||amazon.*/s?$removeparam=qid
 ||amazon.*/s?$removeparam=/^srs?=/
@@ -72,7 +73,6 @@
 ||google.*^$removeparam=/^gfe_[a-z]*=/
 ||google.*^$removeparam=ei
 ||google.*^$removeparam=/^gs_[a-z]*=/
-||google.*^$removeparam=site
 ||google.*^$removeparam=oq
 ||google.*^$removeparam=esrc
 ||google.*^$removeparam=uact
@@ -81,7 +81,6 @@
 ||google.*^$removeparam=/^gws_[a-z]*=/
 ||google.*^$removeparam=atyp
 ||google.*^$removeparam=vet
-||google.*^$removeparam=zx
 ||google.*^$removeparam=_u
 ||google.*^$removeparam=je
 ||google.*^$removeparam=dcr
@@ -126,6 +125,25 @@ $removeparam=spm
 $removeparam=/^vn(_[a-z]*)+=/
 $removeparam=tracking_source
 $removeparam=ceneo_spo
+$removeparam=/^itm_(campaign|medium|source)=/
+$removeparam=__hsfp
+$removeparam=__hssc
+$removeparam=__hstc
+$removeparam=_hsenc
+$removeparam=__s
+$removeparam=hsCtaTracking
+$removeparam=/^mc_(eid|cid|tc)=/
+$removeparam=ml_subscriber
+$removeparam=ml_subscriber_hash
+$removeparam=msclkid
+$removeparam=oly_anon_id
+$removeparam=oly_enc_id
+$removeparam=rb_clickid
+$removeparam=s_cid
+$removeparam=vero_conv
+$removeparam=vero_id
+$removeparam=wickedid
+$removeparam=twclid
 ||youtube.com^$removeparam=feature
 ||youtube.com^$removeparam=gclid
 ||youtube.com^$removeparam=kw
@@ -246,6 +264,7 @@ $removeparam=ceneo_spo
 ||linkedin.com^$removeparam=refId
 ||linkedin.com^$removeparam=trk
 ||linkedin.com^$removeparam=/^li[a-z]{2}=/
+||linkedin.com^$removeparam=trackingId
 ||linkedin.com/learning$removeparam=u
 ||spiegel.de^$removeparam=b
 ||instagram.com^$removeparam=igshid
@@ -387,9 +406,11 @@ $removeparam=ceneo_spo
 ||bilibili.com^$removeparam=from_source
 ||bilibili.com^$removeparam=from
 ||bilibili.com^$removeparam=seid
+||bilibili.com^$removeparam=mid
 ||bilibili.com^$removeparam=share_source
 ||bilibili.com^$removeparam=msource
 ||bilibili.com^$removeparam=refer_from
+||bilibili.com^$removeparam=share_from
 ||bilibili.com^$removeparam=share_medium
 ||bilibili.com^$removeparam=share_source
 ||bilibili.com^$removeparam=share_plat
@@ -397,6 +418,7 @@ $removeparam=ceneo_spo
 ||bilibili.com^$removeparam=share_session_id
 ||bilibili.com^$removeparam=timestamp
 ||bilibili.com^$removeparam=unique_k
+||bilibili.com^$removeparam=vd_source
 ||m.bilibili.com^$removeparam=bbid
 ||m.bilibili.com^$removeparam=ts
 ||live.bilibili.com^$removeparam=visit_id
@@ -604,15 +626,27 @@ $removeparam=ceneo_spo
 ||nova.cz^$removeparam=dop_source_zone_name
 ||nova.cz^$removeparam=dop_req_id
 ||nova.cz^$removeparam=dop_id
+||mercadolibre.com^$removeparam=DEAL_ID
+||mercadolibre.com^$removeparam=L
+||mercadolibre.com^$removeparam=S
+||mercadolibre.com^$removeparam=T
+||mercadolibre.com^$removeparam=V
+||mercadolibre.com^$removeparam=pdp_filters
+||mercadolibre.com^$removeparam=position
+||mercadolibre.com^$removeparam=search_layout
+||mercadolibre.com^$removeparam=tracking_id
+||mercadolibre.com^$removeparam=type
+||mercadolibre.com^$removeparam=/^c_[_a-zA-Z]+=/
+||mercadolibre.com^$removeparam=/^me\.[_a-zA-Z]+=/
+||mercadolibre.com^$removeparam=/^reco_[_a-zA-Z]+=/
+||quizlet.com^$removeparam=funnelUUID
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
 @@/^https?:\/\/(docs|accounts)\.google(\.[a-z]{2,}){1,}/$removeparam
-@@/^https?:\/\/([a-z0-9-\.])*drive\.google\.com\/videoplayback/$removeparam
+@@/^https?:\/\/([a-z0-9-\.])*(chat|drive)\.google\.com\/videoplayback/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}(\/upload)?\/drive\//$removeparam
 @@||news.google.com.*?hl=$removeparam
-@@||hangouts.google.com/webchat*zx=$removeparam
-@@||client-channel.google.com/client-channel*zx=$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/s\?tbm=map.*?gs_[a-z]*=./$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/(complete\/search|setprefs|searchbyimage)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/(appsactivity|aclk\?)/$removeparam
@@ -669,6 +703,7 @@ $removeparam=ceneo_spo
 @@||mozilla.org/api$removeparam
 @@||comment-cdn.9gag.com/*comment-list.json?$removeparam
 @@||api.bilibili.com^$removeparam
+@@||space.bilibili.com^$removeparam
 @@||marketscreener.com/search/?$removeparam
 
 ! This is an allowlist added by the Adfilt maintainers

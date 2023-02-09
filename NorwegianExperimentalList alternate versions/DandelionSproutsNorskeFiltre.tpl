@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 10November2022v1-Alpha
+# Version: 09February2023v2-Alpha
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -86,7 +86,6 @@ msFilterList
 -d betterbanners.org
 -d bilborsen.webannonse.no
 -d boligkanalen-maestro-new.azurewebsites.net
--d brandstudio.inventory.schibsted.io
 -d cluster.chart.dk
 -d delivered-by-madington.com
 -d dotbanner.dk
@@ -388,6 +387,7 @@ msFilterList
 -d levmeddiabetes.no Accu-
 -d tv2.no sponsor
 -d rett24.no*bannerizor.js
+-d static.finncdn.no FINNExternalDistribution.js
 # — — — — — — —
 # 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 +d vgtv.no
@@ -544,6 +544,12 @@ msFilterList
 # farmatid.no (16 11 2021)
 # https://radioh.no/norsk-opphenting-mot-nederland-sikret-vm-kvartfinale-storm-i-kastene/ (14 12 2021)
 # nordlys.no, an.no (19 06 2022)
+# 🇳🇴 🇩🇰: ——— Sporingsfiler ———
+# 🇳🇴🏞: ——— Sporingsfilar ———
+# ❄: ——— Guorrafiilaid ———
+# 🇬🇧: ——— Tracker files ———
+# https://github.com/DandelionSprout/adfilt/pull/699
+-d s.api.no *.gif
 # 🇳🇴: ——— Tomme skillebokser ———
 # 🇩🇰: ——— Tomme adskillerbokser ———
 # 🇳🇴🏞: ——— Tomme skiljeboksar ———
@@ -649,7 +655,7 @@ msFilterList
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 # 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
 # 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
-- *-annonse-*
+# https://github.com/uBlockOrigin/uAssets/issues/16138
 # https://github.com/ryanbr/fanboy-adblock/issues/1405
 # 🇳🇴: Falske innlastinger som sløser bort tid
 # 🇩🇰: Falske indlastinger, der søler bort tid
@@ -696,29 +702,23 @@ msFilterList
 -d 102.112.2o7.net
 -d 52.216.146.90
 -d 92.42.104.146
--d bizcashtrend.com
 -d djurs.com-*.
--d fullbagcash.com
 -d hervelegeroutletusa.com
 -d itunesconnect-*.no
 -d jimmychoostore.top
 -d look-like-star.myshopify.com
 -d marked.no
 -d mrcal365.com
--d nymelding.com
 -d optimizersppc.com
 -d pensjonistferie.no
 -d postuksus.com
 -d replicapatekphilippe.com
 -d replicarolexyachtmaster.com
 -d secureriches.com
--d toptechmania.com
 -d trackvoluum.com
 -d tromselementbygg.no
 -d ultimate-tech-products.myshopify.com
 -d vipps-sikkerhet.
--d noipermontanera.it
--d lydmagasinet.com
 -d norskposten.com
 -d oslo-tannlegene.no
 -d y6.no
@@ -742,8 +742,6 @@ msFilterList
 -d rnbinance.com
 -d brightertrade.com
 # https://www.nrk.no/norge/1.14511067
-# https://www.aftenposten.no/osloby/i/mRK8xq/Fatt-tilbud-om-gratis-kollektivbillett-Svindel_-melder-Ruter
--d earnmoneyglobal.com
 # https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
 # https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
 -d liveshopdealz.com
@@ -751,8 +749,6 @@ msFilterList
 -d elkjop*.club
 # https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 - css *sparebank1.no
-# https://www.faktisk.no/notiser/l5/nei-petter-stordalen-har-ikke-investert-i-bitcoin-program
--d phosphox.com
 # https://www.facebook.com/viralspiralen/posts/2494251397311027
 -d addmoviesnow.com
 # https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
@@ -762,10 +758,6 @@ msFilterList
 -d legoland.com-*.
 # https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
-# https://www.mm.dk/tjekdet/artikel/michael-laudrup-har-ikke-vaeret-i-go-morgen-danmark-for-at-fortaelle-om-bitcoin-fidus
--d vision-hey.club
-# https://www.mm.dk/tjekdet/artikel/deltagere-i-go-morgen-danmark-misbrugt-i-bitcoin-svindelnummer
--d top-topic.co
 # https://www.nrk.no/troms/1.14788086
 -d geometra-bologna.it
 # https://www.nrk.no/nyheter/1.14793929
@@ -779,13 +771,9 @@ msFilterList
 -d ocgadgetss.myshopify.com
 # https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
 -d ekstrabiadet.
-# https://www.mm.dk/tjekdet/artikel/nej-joergen-leth-har-ikke-investeret-500-millioner-kroner-i-bitcoins
--d daily-news.tech
 # https://www.tv2.no/nyheter/11516670/
 -d fintechnow*.buzz
 -d wealthnews*.xyz
-# https://www.datahjelperne.no/dnb-sms-svindel/
--d no-personal.com
 # https://www.datahjelperne.no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
 -d newzeninfotech.com
 # https://www.datahjelperne.no/skatteberegning-mail-svindel/
@@ -801,8 +789,6 @@ msFilterList
 -d vidcopa.me
 # https://www.adressa.no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
 -d smallrise.com
-# https://www.nrk.no/sorlandet/advarer-mot-nytt-svindelforsok-1.15197328
--d lepq.club
 # https://www.datahjelperne.no/coop-du-har-fatt-nye-kuponger-mail-svindel/
 -d offerleads.club
 - cop-no index.htm
@@ -815,12 +801,7 @@ msFilterList
 # https://www.datahjelperne.no/norske-facebook-profiler-misbrukes-i-svindel/
 -d sites.google.com truls-svendsen
 -d signup-*vpns.com
-# https://www.datahjelperne.no/du-er-blitt-rammet-av-taggespam-hva-gjor-du-na/
--d velumstand.com
--d thesleepinggod.com
 # https://www.datahjelperne.no/telenor-din-faktura-mislyktes-svindel/
-# https://www.datahjelperne.no/apple-abbonnements-bekreftelse-svindel/
--d ssl-bekreftelse-abonnement.com
 # https://www.datahjelperne.no/eurocard-falsk-epost-faktura/
 -d valspe.com.br
 # https://www.datahjelperne.no/eika-falsk-epost-svindel/
@@ -831,10 +812,6 @@ msFilterList
 -d cinefique.com
 # https://www.datahjelperne.no/posten-sms-svindel/
 -d niupaiba.com
-# https://www.nrk.no/osloogviken/slik-prover-sms-svindlerne-a-lure-deg-1.15397367
--d m-dnbnorge.com
-# https://www.adressa.no/pluss/nyheter/2021/03/20/Politiet-advarer-Dette-er-ikke-et-jobbintervju.-Det-er-et-svindelfors%C3%B8k-23687158.ece/(21 03 2021)
--d job-view.link
 # https://www.adressa.no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece
 -d nordeninterior.weebly.com
 # Googling Aksel Hennie (Results for prior week) in late July 2021
@@ -844,29 +821,19 @@ msFilterList
 -d fancywoman.dk
 -d privatedagplejere.dk
 -d mxdesign.dk
--d qteck.io
 -d bitcoinevolutionaustraliareview.com
 -d irb.dk
 -d ditsunde.dk
--d sunrisebar.it
 -d economywatch.com
 -d superbinvest.com
--d bitcoinprofitrecensioni.com
 -d marvelouskaunas.club
 -d aktienboard.com
 -d minklubshop.dk dk
-# https://dinside.dagbladet.no/okonomi/ligg-unna-denne-nettbutikken/74392579
--d kjokkenbutikk.com
 # https://www.nrk.no/vestfoldogtelemark/1.15750360
 -d dundeehills.group
 # https://www.adressa.no/pluss/nyheter/2021/12/04/Posten-advarer-Vi-sender-ikke-slike-tekstmeldinger-24894483.ece
 -d ozarkvillage.net
 -d channawars.com
-# https://www.dr.dk/nyheder/penge/kontant/kommissionsbilerdk-saelger-kundernes-biler-og-beholder-deres-penge
--d kommissionsbiler.dk
-# https://dinside.dagbladet.no/data/varsellampene-lyser/75613329
-# https://itavisen.no/2022/03/16/dette-skjedde-da-de-handlet-fra-spillweb-com/
--d spillweb.com
 # https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
 -d melding.link
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1114669106
@@ -876,7 +843,6 @@ msFilterList
 # https://www.kode24.no/artikkel/75980495
 -d campbell-living.com
 # https://www.telia.no/kundeservice/mobil/malware-flubot-android/
--d destinyrealty.in
 -d p-stn.net
 -d wxqgx123.com
 -d kikuchitadahisa.com
@@ -885,6 +851,80 @@ msFilterList
 # https://dinside.dagbladet.no/okonomi/tusenvis-forsokt-lurt/76921148
 -d a2ics.eu
 -d smsb.co
+# https://github.com/DandelionSprout/adfilt/issues/747
+- -norge.co.no
+*skodanmark.com
+-d skechersskosalg-norge.com
+-d dkgaborsneakers.com
+-d haglofstilbud.com
+-d fjallraventilbud.com
+-d hitecskonorge.com
+-d off-whitenorge.com
+-d gaborskonorge.com
+-d oofosnorgeoutlet.com
+-d camperskonorge.com
+-d eccoskonorge.com
+-d clarksskonorge.com
+-d off-whitedanmark.com
+-d underarmourdanmarkdk.com
+-d eccodanmarkwebbutik.com
+-d clarks-dk.com
+-d salomonoutletnorge.com
+-d speedcrossnettbutikk.com
+# https://github.com/DandelionSprout/adfilt/issues/748
+-d salomomnorgeoutlet.com
+-d jakkeshopdanmark.com
+-d jakkeshopnorge.com
+-d norge-adidas.com
+-d tevanorgeshop.com
+-d wolverineskonorge.com
+-d thenorthfacenorge.co.no
+-d vansnorge.co.no
+-d hunternorge.co
+-d hunternorge.co.no
+-d hunternorgeno.com
+-d martensnorge.co.no
+-d norgeskotilbud.com
+-d hokasnorgeno.com
+-d vanssnorge.com
+-d asoloskonorge.com
+-d hokaonenorge.com
+-d jordannorge.top
+-d quiksilvernorge.com
+-d hokalopesko.com
+-d hokalopesko.top
+-d hokanorgeno.com
+-d drmdanmark.com
+-d tevadanmarkshop.com
+-d hunter-danmark.com
+-d salomonbutikdanmark.com
+-d jordantilbud.com
+-d jordantilbuddanmark.com
+-d quiksilverdanmark.com
+-d salomon-danmark.net
+-d salomonidanmark.com
+-d saucony-dk.com
+-d palladiumskodk.com
+-d keensandalertilbud.com
+-d quiksilvertilbud.com
+-d palladiumskobutikk.com
+-d hunterstovlersalg.com
+-d martenssalg.com
+-d hokaskooutlet.co.no
+-d hoka-sko.com
+-d hoka-one-one.cc
+-d hokaoneone*
+*norgeskosalg.
+*norge-salg.com
+*norgesalg.com
+*norgesalgs.com
+*salgnorge.com
+*danmarkdk.com
+*skodktilbud.
+*skonorgeeu.com
+*sneakersnorgeshop.
+*sneakersdkshop.com
+*skodanmarks.
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
@@ -899,51 +939,36 @@ msFilterList
 -d 158.247.212.220
 -d 165.227.168.212
 -d 132.148.220.142
+-d 104.160.10.
+-d 165.231.154.
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 # Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
 -d adidasko.com
 -d airmaxskobillige.com
--d allergyfl.com
--d apvoc-ga.com
 -d assassinfitness.com
--d billigesalg.com
--d bostongrnhsflowers.com
--d caperforaciones.com
 -d coralls.com
 -d daradis.com
--d denningwelldrilling.com
 -d drakternorge.com
 -d drcarolyngroff.com
 -d dunjakke-no.com
 -d fotballsko-salg.com
 -d gsport.com
 -d hernoclothing.com
--d hollisternorge.com
 -d jakkesalgs.com
 -d jakkesnorge.com
--d lindseysopticians.com
 -d linkshe.com
 -d mbtnorge.com
--d meladermfacts.com
 -d moteshoes.com
--d museuw.com
 -d mycraftypad.com
 -d norfotball.com
 -d norgefotball.com
--d norgejakke.com
--d norgejakkerbutikk.com
 -d norgeshoes.com
 -d oflike.com
--d parajumpersitoutlet.com
--d parajumpersnettbutikk.com
--d parajumpersnorway.com
 -d parajumperssalg.com
 -d pjs.outlet.com
 -d popeurope.com
--d skonmdnorge.com
--d xn--sykkeltrye-7cb.com
 -d um-bs.com
 # 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
@@ -958,12 +983,9 @@ msFilterList
 # 🇬🇧: Fake online pharmacies
 - -med.footeo.com
 -d *medisin*.over-blog.com
--d alphaapotek.com
--d bedsteapoteksverige.com
 -d godtdsamaritansk.com
 -d helsehjelp.over-blog.com
 -d jensapoteker.com
--d kjop-palitelige-medisiner.com
 -d kobconcerta54mgonlineidanmark.wordpress.com
 -d marson.footeo.com
 -d nkwana-medstore.com
@@ -973,7 +995,6 @@ msFilterList
 # 🇬🇧: Old domains stolen by casino sites
 -d kohlershop.dk
 -d fredensborg-orredfiskeri.dk
--d tvaalborg.dk
 -d informationer.nu
 -d cphspaogwellness.dk
 -d webavisen.gl
@@ -1013,7 +1034,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 01August2022v1-Extension
+# Last updated: 09February2023v2-Extension
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js

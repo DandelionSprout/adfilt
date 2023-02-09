@@ -12,8 +12,8 @@
 * `###`: Hides page elements based on the `id` value.
 * `#@#.`/`#@#`/`#@##`: Whitelists page elements to make them load.
 * `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or numerous other things that are highlighted in brown in the F12 filetree. Does not support RegEx.
+* `[href="text" i]`: Same as above, except case-insensitive.
 * `[href^="text"]`: Finds page elements whose value *begins* with the text.
-* `[href="text" i]`: Save as above, except case-insensitive.
 * `[href$="text"]`: Finds page elements whose value *ends* with the text.
 * `[href*="text"]`: Finds page elements whose value contains the text anywhere within it.
 * `[href~="text"]`: Finds page elements whose value contains the word (with spaces around it) anywhere within it.
@@ -25,7 +25,7 @@
 * `:not(:-abp-contains(Text))` / `:not(:-abp-has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order. To select multiple numbers, one has to use `n` calculations (e.g. `(n+2)`), since ranges (e.g. `(3-6)`) are not supported.
 * `:only-of-type` / `first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
-* `:first-child` / `:last-child`: Appears to be synonymous with `first-of-type` and `last-of-type` for adblocking purposes.
+* `:first-child` / `:last-child`: Appears to be synonymous with `first-of-type` and `last-of-type` for adblocking purposes. `:last-child` is easily mistaken for what `:empty` does.
 * `:before` / `:after`: Removes the pseudo-elements that belong to a page element. If a pseudo-element is present, they're shown as standalone `::before` or `::after` lines in all-brown in the F12 filetree.
 * `>`: Creates chain criteria, in which a selected page element must have a specific element on the floor above it in the filetree.
 * `+`: Blocks the element that is right below the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
@@ -62,7 +62,8 @@
 #### Universal
 * `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
 * `/\/\/\/`, `/regextext/`, and similar: Text detections in RegEx format. Supported in most (if not all) blocking rules, as well as in `:-abp-contains` and `:has-text`. Note that *all* blocking rules that start and end with `/` are treated as RegEx; a workaround is to add a `*` before or after.
-* `[Adblock Plus n.n]`: Mandatory for Adblock Plus, AdBlock, and forks of them, as they use the tag to determine if they should load the filterlist. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. This has no effect on uBO or its forks. Tags like `[uBlock Origin 1.20.0]` are just for clarification of intent, and have no effect on anything whatsoever.
+* `[Adblock Plus n.n]`: Mandatory for Adblock Plus, AdBlock, and forks of them, as they use the tag to determine if they should load the filterlist. This has no effect on uBO and AdGuard or their forks. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. It also enables the GitHub syntax highlighter for that file.
+* `[uBlock Origin]`, `[AdGuard]`: These activate the syntax highlighter if the file is hosted on GitHub, should be placed on the first line of the list.
 * `! Title:` Specifies the intended name of the list. Required to make the name automatically show up in the settings of most adblockers, instead of the URL or of manual text input.
 * `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
 * `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days". ABP also supports "hour/hours".
@@ -77,13 +78,14 @@
 * `:matches-css-before` / `:matches-css-after`: Same as above, but looks for CSS values in its pseudo-elements instead.
 * `:remove()`: Removes the element entirely from the F12 tree. The parentheses are required.
 * `#$?#` + `{ remove: true; }`: Same as above.
+* `:matches-attr`: Similar to `[href*="text"]`, but adds support for RegEx.
 #### Blocking
 * `||` + `$document`: Usually guarantees a danger warning when loading a page, even when the criteria is a subpath.
 * `$badfilter`: Deactivates a resource-blocking entry, even if it is present in another list. Requires the bad entry to be written verbatim; except for removing Hosts prefix IPs. You can not `badfilter` a `badfilter` rule.
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
-* `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/src/js/redirect-engine.js) (AdGuard has a [slightly smaller selection](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/redirects.yml)).
+* `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed [on this page](https://github.com/gorhill/uBlock/wiki/Resources-Library#available-empty-redirect-resources) (AdGuard has a [slightly bigger selection](https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/about-redirects.md#-available-redirect-resources)).
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
-* `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `?tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, and that a lack of `/^` will make it search *anywhere* in that string.
+* `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `?tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, that a lack of `/^` will make it search *anywhere* in that string, and a lack of support for backslashing. Whitelistings must match the exact parameter that was blocked.
 * `$match-case`: Makes the criteria case-sensitive. uBO only supports it in RegEx entries.
 
 ## uBlock Origin, Adblock Plus and AdBlock only
@@ -92,11 +94,11 @@
 ## uBlock Origin only:
 #### Hiding
 * `!#include`: Embeds another filterlist that is hosted on the same domain. Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard. Tonnes of restrictions apply, such as refusing to embed lists from another domain / repository / parent-folder.
-* `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed in [this file](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) (The top strings of each paragraph).
+* `##+js` (prev. `##script:inject`): Invokes a script that is embedded in those extensions, and usually using the script to modify a value on the site. Possible options are listed [on this page](https://github.com/gorhill/uBlock/wiki/Resources-Library#available-general-purpose-scriptlets).
 * * `##+js(ra, class, .element)`: Removes the specified element class name from all elements on the page, without removing the elements themselves.
 * `:xpath`: An entry written with the very advanced Xpath syntax.
-* `##^.element`: Blocks page elements before they've even been loaded, based on their values in *View source* instead of their F12 ones. **Only** works in Firefox and Tor Browser.
-* `##^script:has-text` (prev. `##script:contains`): Intends to prevent inline scripts from starting up, based on the content of the scripts in the F12 filetree. Also only works in Firefox and Tor Browser.
+* `##^.element`: Remove page elements _before_ they've even been loaded, based on their values in `View source` instead of their F12 ones. **Only** works in Firefox and Tor Browser.
+* `##^script:has-text` (prev. `##script:contains`): Intends to prevent inline scripts from starting up. Do not use the F12 filetree to create these filters, you must use `View source` instead. Also only works in Firefox and Tor Browser.
 * `:upward` (prev. `:nth-ancestor`): Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree. Equivalent to `:xpath(../..)`, but with normal numbers. Now also has the ability to look for specific element names at *any* indentation amount.
 * `:min-text-length`: Appears to select elements whose underlying source content has at least that amount of characters. Is completely disassociated from the actual on-page visible text by an order of several magnitudes.
 * `:watch-attr`: Claims to be able to reconsider a blocking if something new happens to the element (e.g. to its element types).
@@ -104,17 +106,21 @@
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
 * `$3p`: Same as `$third-party`.
+* `$strict3p`: Same as `$third-party`, but also considers other subdomains to be 3rd-party, i.e. if `www.example.org` loads an asset from `subdomain.example.org`, the latter is now considered 3rd-party.
 * `$1p` / `$first-party`: Same as `$~third-party`.
+* `$strict1p`: Same as `$first-party` but considers other subdomains to not be 1st-party, i.e. if `www.example.org` loads an asset from `subdomain.example.org`, the latter is now considered 3rd-party.
 * `$xhr`: Same as `$xmlhttprequest`.
 * `$doc`: Same as `$document`. May cause problems in some versions of AdGuard.
 * `$all`: De facto combines all other `$` values. Officially combines the use of no `$` values at all + `$popup` + `$document` + `$inline-script` + `$inline-font`.
 * `$redirect-rule`: Similar to `$redirect`, but is only applied if it's already blocked by *another* entry or dynamic rule(set).
-* `@@||` + `$ghide`: Same as `@@||` + `$generichide`.
+* `$mp4`: Equivalent to `$redirect=noopmp4-1s,media`.
 * `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Only applies to Firefox and Tor Browser.
+* `$from`: Same as `$domain`.
 * `$denyallow` + `,domain=`: Allows choosing which third-party domain requests to allowlist, instead of which ones to block, while visiting specified domains.
+* `$to`: Superset of `$denyallow`. Supports TLD-wildcard (`google.*`) hostnames and negated hostnames (`~example.com`). 
 
 ## Adblock Plus, AdBlock and AdGuard only:
-* `$webrtc`: Prevents such resources from being downloaded through the titular JavaScript API. The uBO equivalent seems to be `##+js(nowebrtc)`, but conversion is not done automatically.
+* `$webrtc`: Prevents WebRTC (Real-Time Communication) connections which is usually used by messengers and games. The uBO equivalent is `##+js(nowebrtc)`, but conversion is not done automatically. It is deprecated in AdGuard, which has transitioned over to uBO's `##+js(nowebrtc)`.
 
 ## Adblock Plus and AdBlock only:
 * `! Redirect:`: Tells the adblocker to look for list updates from a new URL from that point on. To be used in the old file only (Not the new one), to avoid an infitite redirection loop.
@@ -132,18 +138,17 @@
 ## AdGuard only:
 * `! Description:`: Shows a description of the list's purpose, when the question mark next to the list in the AdGuard settings is hovered over. That being said, a description is convenient for users of all adblockers, if they're willing to look up a list's raw content.
 #### Hiding
-* `#%#//scriptlet`: Similar to, but only partially compatible with, `##+js` and ABP's `#$#`. Possible options are listed in [this file](https://github.com/AdguardTeam/AdguardBrowserExtension/blob/master/Extension/lib/filter/rules/scriptlets/scriptlets.js) (text-search ".names").
+* `#%#//scriptlet`: Similar to, but only partially compatible with, `##+js` and ABP's `#$#`. Possible options are listed in [this file](https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/about-scriptlets.md#-available-scriptlets).
 * `#%#AG_`: A few extra scriptlets for whom documentation appears to be non-existent.
-* `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file. Requires heavy privileges.
+* `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file. Only works in AdGuard's own lists or User Filters.
 * `!+ PLATFORM`: Similar to `!#if`, but is only used during the AdGuard team's compiling of included lists. It has no effect on custom lists.
 * `:matches-property`: Selects an HTML element by using a CSS identifier, as detailed under AdGuard's [ExtendedCSS](https://github.com/AdguardTeam/ExtendedCss#extended-css-matches-property) project.
 #### Blocking
-* `$$script`: Uses very advanced criteria to block scripts that meet them.
+* `$$script`: Same as `##^script:has-text`.
 * `$cookie`: Blocks cookies.
 * `$cookie=`: Blocks cookies with specific names.
 * `$cookie=` + `maxAge`: Changes the cookie to have an expiration time in seconds.
 * `$cookie=` + `same-site`: Changes the cookie to use the "Lax" mode of `samesite` known from the `Set-Cookie` browser HTTP response system.
-* `$mp4`: Seems to be equivalent to `$redirect=noopmp4`, but does not require any AdGuard trust rights. Was allegedly to be obsoleted soon as of 2021.
 * `@@` + `$urlblock`: Turns off file-request blocking entirely while on that domain.
 
 ## AdGuard for [Windows/Mac/Android] only:

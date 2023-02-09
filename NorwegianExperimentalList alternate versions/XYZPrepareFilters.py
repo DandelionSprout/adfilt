@@ -3071,6 +3071,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^127\.0\.0\.1 .*/.*", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
             text += line + '\r\n'
 
@@ -3409,6 +3415,36 @@ def prepare_pihole(lines) -> str:
         line = re.sub(
            r"^# ——— (Centralised whitelist section|By default, the entries below will only).*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[0-9].*/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\*[a-z0-9].*)\.", 
+           r".\1\\.", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\*-.*)\.", 
+           r".\1\\.", 
+           line
+        )
+
+        line = re.sub(
+           r"^((\(|\.).*[a-z0-9])\.([a-z0-9])", 
+           r"\1\\.\3", 
+           line
+        )
+
+        line = re.sub(
+           r"([a-z0-9-])\*$", 
+           r"\1.*", 
            line
         )
 
@@ -4165,7 +4201,7 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            r"\[Adblock Plus 3\..*", 
-           r"[AdGuard versions from 2019 onwards]", 
+           r"[AdGuard]", 
            line
         )
 
@@ -4561,8 +4597,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*,~inline-font,~inline-script,~domain=discord\.gift$", 
-           r"", 
+           r"-,popup$", 
+           r"-", 
            line
         )
 
@@ -5172,7 +5208,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"127\.0\.0\.1 \[(.*)\]", 
-           r":: \1", 
+           r"", 
            line
         )
 
@@ -5653,11 +5689,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        line = re.sub(
-           r"^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})\.\*\$network$", 
-           r"\1.0/24", 
-           line
-        )
+        # Replaced due to https://github.com/AdguardTeam/HostlistCompiler/issues/42#issuecomment-1360494184
+        #line = re.sub(
+        #   r"^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})\.\*\$network$", 
+        #   r"\1.0/24", 
+        #   line
+        #)
 
         line = re.sub(
            r"\^dnstype=", 
@@ -5667,6 +5704,44 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r".*\$popup$", 
+           r"", 
+           line
+        )
+
+        # Test 20th of December 2022; see https://github.com/AdguardTeam/HostlistCompiler/issues/42
+        line = re.sub(
+           r"^\|\|([a-z]{2,})\^$", 
+           r"||*.\1^", 
+           line
+        )
+
+        line = re.sub(
+           r".*\*&\*=\*&\*.*", 
+           r"", 
+           line
+        )
+
+        # Needed due to https://github.com/AdguardTeam/HostlistCompiler/issues/42#issuecomment-1360494184, despite a lack of testing
+        line = re.sub(
+           r"^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.\*\$network$", 
+           r"/^\1\\.\2\\.\3\\.[0-9]{1,3}$/", 
+           line
+        )
+
+        line = re.sub(
+           r"/\$network$", 
+           r"/", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||/|:).*[&%].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"@@\|\|[a-zA-Z0-9.-]{0,}\|[a-zA-Z0-9.-].*", 
            r"", 
            line
         )
@@ -6414,7 +6489,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^# [—¤].*", 
+           r"^# [—¤|].*", 
            r"", 
            line
         )
@@ -6473,6 +6548,12 @@ def prepare_domains(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^# (These|Google|Gigabyte|Copied).*", 
+           r"", 
+           line
+        )
+
         if not line == '':
             text += line + '\r\n'
 
@@ -6527,7 +6608,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#article", 
-           r"nitter.net,nitter.42l.fr#?#.timeline-item", 
+           r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
            line
         )
 
@@ -6599,7 +6680,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^(! Homepage: .*)", 
-           r"\1\n! Entry syntaxes specific to this supplement:\nnitter.net,nitter.42l.fr#?#.timeline-item:has(.fullname[title*=🇺🇸])\nnitter.net,nitter.42l.fr#?#.timeline-item:has(.fullname[title*=🇺🇲])", 
+           r"\1\n! Entry syntaxes specific to this supplement:\nnitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has(.fullname[title*=🇺🇸])\nnitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has(.fullname[title*=🇺🇲])\nnitter.net,nitter.lacontrevoie.fr##.timeline-item:has(.fullname[title*=🏴󠁧󠁢])\nnitter.net,nitter.lacontrevoie.fr##.timeline-item:has(.fullname[title*=🇦🇺󠁧󠁢󠁥󠁮󠁧󠁿])\nnitter.net,nitter.lacontrevoie.fr##.timeline-item:has(.fullname[title*=🦕][title*=🌻])\nnitter.net,nitter.lacontrevoie.fr##.timeline-item:has(.fullname[title*=🦖][title*=🧙‍♀️])", 
            line
         )
 
@@ -6657,7 +6738,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#div\[style\*=\"position: absolute; \"]:not\(\[class\]\)", 
-           r"nitter.net,nitter.42l.fr#?#.timeline-item", 
+           r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
            line
         )
 
@@ -6687,3 +6768,72 @@ if __name__ == "__main__":
         text_file.write(domains_filter)
 
     print('The Nitter list version has been generated.')
+
+#/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\/•\
+#•X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X•
+#\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/
+
+import requests
+import re
+
+SOURCES = ['https://easylist-downloads.adblockplus.org/fanboy-notifications.txt', 'https://raw.githubusercontent.com/easylist/easylist/master/fanboy-addon/fanboy_notifications_specific_uBO.txt']
+
+OUTPUT = 'Domeneversjoner/xyzzyxfanboynotifications.txt'
+OUTPUT_DOMAINS = 'Domeneversjoner/FanboyNotifications-LoadableInUBO.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard Home
+def prepare_domains(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"^!#include fanboy_notifications_specific_uBO\.txt$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! Title: Fanboy's Notifications Blocking List$", 
+           r"! Title: Fanboy's Notifications Blocking List - Loadable in uBO", 
+           line
+        )
+        line = re.sub(
+           r"^(@@.*)(!.*)", 
+           r"\1\n\2", 
+           line
+        )
+
+        if not line == '':
+            text += line + '\r\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    domains_filter = prepare_domains(lines)
+
+    with open(OUTPUT, "w") as text_file:
+        text_file.write(text)
+
+    with open(OUTPUT_DOMAINS, "w") as text_file:
+        text_file.write(domains_filter)
+
+    print('The Fanboy Notifications uBO version has been generated.')

@@ -1,5 +1,5 @@
 ! This is an extension file, not an independent list.
-! Extension file's version: 26October2022v1-Extension
+! Extension file's version: 09February2023v1-Extension
 
 ! Experts Exchange 📛📠
 experts-exchange.com##.accepted.answer:style(display: block !important)
@@ -12,10 +12,10 @@ nijie.info##.ngtag.mozamoza:style(-webkit-filter: none !important)
 ! StudyCOM (Text articles only) 📛📠
 ! Makes text lessons fully readable
 study.com###articleMain > div[class=hidden]:style(visibility: visible !important; display: block !important)
-study.com##.faded-content:after
+study.com##.faded-content::after
 ! Makes the flashcard tables fully visible
 study.com##.paywall:style(display: table !important)
-study.com##.paywall:after
+study.com##.paywall::after
 
 ! HowToLucid 📛📠
 howtolucid.com##.onp-sl-blur-area:style(filter: none !important)
@@ -112,6 +112,8 @@ segmentfault.com##.modal-open [style]:is([data-padding-right], [data-margin-righ
 !!!tumblr.com##style:has-text(/^body /):remove()
 tumblr.com##style:has-text(/^body /):has(use[href*=logo-tumblr]):remove()
 tumblr.com#?##glass-container:has(use[href*=logo-tumblr])
+!! The same prompt 6 months later:
+tumblr.com#?##glass-container > div[role^=dialog]:has(#g-recaptcha):has(a[href*=terms-of-service])
 !! Floaty on bottom
 ||tumblr.com^$removeparam=/^source=login_/
 tumblr.com##div[style^="background:#7c5cff;"]:upward(1)

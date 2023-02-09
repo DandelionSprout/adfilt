@@ -894,10 +894,52 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|dyndns\.$", 
+           r"", 
+           line
+        )
+
         # $badfilter-ed entries, as Sublime Text kept complaining about "Ran out of stack space" when I tried to semi-automate it with RegEx.
 
         line = re.sub(
            r"^(/adblockpopup\.|/ads\.css|/propads\.|\|\|amgload\.net\^|\|\|desbloqueador\.org\^|\|\|down-paradise\.com\^|\|\|embed\.mystream\.to\^|\|\|fast\.io\^|\|\|fastcontentdelivery\.com\^|\|\|freeadultcomix\.com\^|\|\|hydrax\.net\^|\|\|imfast\.io\^|\|\|klclick\.com\^|\|\|leechpremium\.link\^|\|\|pepsia\.com\^|\|\|piguiqproxy\.com\^|\|\|player-cdn\.com\^|\|\|playhydrax\.com\^|\|\|rcdn\.pro\^|\|\|realfinanceblogcenter\.com\^|\|\|redirect-ads\.com\^|\|\|rule34hentai\.net\^|\|\|shoosh\.co\^|\|\|taobao\.com\^|\|\|template-help\.com\^|\|\|uptodatefinishconferenceroom\.com\^|\|\|wpnrtnmrewunrtok\.xyz\^|\|\|zenaps\.com\^|\|\|zzz\.pissrip\.net\^)(\$badfilter)?$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|.*[a-zA-Z0-9]\|[|a-zA-Z0-9].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!!.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! \[.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\$.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*Reek's Anti-Adblock Killer.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(:/)?/[b-z]([a-z]{1,2})?\.$", 
            r"", 
            line
         )
@@ -1329,7 +1371,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/TopDescription-Notifications.notlist', 'https://easylist-downloads.adblockplus.org/fanboy-notifications.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/push-notifications_general.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/TopDescription-Notifications.notlist', 'https://easylist-downloads.adblockplus.org/fanboy-notifications.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/push-notifications_general.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/Popups/sections/push-notifications_specific.txt']
 
 UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$ghide', ',ghide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain', '[Adblock Plus 2.0]', 'CV-']
 
@@ -1838,6 +1880,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r".*/,stylesheet$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^%.*", 
            r"", 
            line
         )

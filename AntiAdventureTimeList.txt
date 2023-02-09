@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🏭 Anti-'Adventure Time' List
-! Version: 26October2022v1-Alpha
+! Version: 29January2023v1-Alpha
 ! Expires: 5 days
 ! Description: Adventure Time is a very popular cartoon made by completely inexperienced art students who disregard young viewers and insert it full of adult morals and completely nonsensical plotlines instead. This list is how to get an arm's length away from it.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -169,6 +169,28 @@ deviantart.com##a[data-hook][href*="/art/"][href*=Finn i][href*=Jake i]
 deviantart.com##a[data-hook][href*="/art/"][href*=Marceline i]
 deviantart.com##a[data-hook][href*="/art/"][href*=Marshall-Lee i]
 deviantart.com##a[data-hook][href*="/art/"][href*=Multiversus i]
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Adventure ?Time/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Bonnibel/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Fio?nna? ?the ?Human/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Flame? ?Princess/i):not(:has-text(/dragon/i))
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Fubblegum/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Jake the Dog/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Marceline/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Marshall ?Lee/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Princess ?Bubblegum/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Rainicorn/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(Bubbleline)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(Bubbline)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(Finn):has-text(Bubblegum)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(Finn):has-text(Jake)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(Ice King)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(Lemongrab)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(Marcy)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(Prince Gumball)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Princesa ?Chicle/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Hot ?Dog ?Princess/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/Bronwyn/i)
+nitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has-text(/MultiVersus/i)
 
 ! Entries with multiple elements + :-abp-, which makes AdGuard completely implode
 !#if !adguard
@@ -287,8 +309,8 @@ youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#r
 ! Other entries
 ||adventuretime.fandom.com^$document
 vlcomic.com#?#.ig-grid:has(a[href*=adventure-time])
-rule34.xxx,gelbooru.com,booru.org,sankakucomplex.com,tbib.org,xbooru.com,megabooru.com,zombooru.com,zumki.ru,kusubooru.com,tentaclerape.net,wh40kart.im,rule34.paheal.net,rule34hentai.net#?#.thumb:has(img[title*=adventure_time])
-rule34.xxx,gelbooru.com,booru.org,sankakucomplex.com,tbib.org,xbooru.com,megabooru.com,zombooru.com,zumki.ru,kusubooru.com,tentaclerape.net,wh40kart.im,rule34.paheal.net,rule34hentai.net#?#.thumb:has(img[title~=princess_bubblegum])
+rule34.xxx,gelbooru.com,booru.org,sankakucomplex.com,tbib.org,xbooru.com,megabooru.com,zombooru.com,kusubooru.com,tentaclerape.net,wh40kart.im,rule34.paheal.net,rule34hentai.net#?#.thumb:has(img[title*=adventure_time])
+rule34.xxx,gelbooru.com,booru.org,sankakucomplex.com,tbib.org,xbooru.com,megabooru.com,zombooru.com,kusubooru.com,tentaclerape.net,wh40kart.im,rule34.paheal.net,rule34hentai.net#?#.thumb:has(img[title~=princess_bubblegum])
 konachan.com,yande.re,hypnohub.net,lolibooru.moe#?##post-list-posts > li:has(img[title*=adventure_time])
 e621.net,donmai.us,allthefallen.moe##article[data-tags*=adventure_time]
 hentai-foundry.com#?#.thumb_square:has-text(/Princess/i):has-text(/Bubblegum/i)
@@ -307,6 +329,7 @@ pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=プリンセス][a
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=bubbline i])
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*="Finn the "])
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=bronwyn i])
+pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=rainicorn i])
 !#endif
 !#if env_mobile
 pixiv.net#?#.works-item:has(img[alt*=Adventure i][alt*=Time i])
@@ -324,6 +347,7 @@ pixiv.net#?#.works-item:has(img[alt*=プリンセス][alt*=バブルガム])
 pixiv.net#?#.works-item:has(img[alt*=bubbline i])
 pixiv.net#?#.works-item:has(img[alt*="Finn the "])
 pixiv.net#?#.works-item:has(img[alt*=bronwyn i])
+pixiv.net#?#.works-item:has(img[alt*=rainicorn i])
 !#endif
 custom-cursor.com#?#.mb20:has-text(Adventure Time)
 
