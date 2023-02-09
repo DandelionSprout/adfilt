@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 010220233
+! Version: 090220232
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -76,7 +76,7 @@ byggfakta.no##.sponsor-row
 canariposten.no##.theiaStickySidebar > .widget-1
 computerworld.dk##.candis-spot
 costume.no,costume.dk#?#*:has(> * > * >  * > .teaser__native)
-cw.no##.ad-displace-sidebar::before
+cw.no##.ad-displace-sidebar:::before
 cw.no##.w-advert-article
 dagbladet.no##.xrow.fullwidth
 dagens.dk##.col-sticky > div > p
@@ -371,6 +371,7 @@ nettavisen.no#?#.optimus-complex-front:has(amedia-include[manifest*=".norkon."])
 retrospilling.no#?#.widget:has-text(Play-Asia)
 retrospilling.no#?#.widget:has-text(Reklame)
 allematpriser.no##.bottom-center-box
+startsiden.no##.wp-block-create-block-prisjakt-product
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -405,7 +406,7 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! norskenettsider.no, sva.no
 ~playpilot.com##a[href*="online.adservicemedia.dk"]
 ! https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
-~prisguiden.no##.prisguidePost
+~prisguiden.no##.prisguidePost:not(html, body)
 ! tv2.no
 ##.spklw-post-attr[data-type=ad]
 tv2.no##.spklw-post-attr[data-pc]
@@ -1165,7 +1166,7 @@ intrafish.no##.text-center.mb-3
 intrafish.no##.row > .d-lg-block
 itavisen.no###contents-wrap > .block-wrap-columns
 itavisen.no##.\35 00Add:not(.homepage-video-area)
-itavisen.no##.ad::before
+itavisen.no##.ad:::before
 itavisen.no#?#*:has(> .comcontent)
 itavisen.no##.fifth-article-ad
 itavisen.no##.itavi-after-content
@@ -1248,6 +1249,9 @@ gamer.no##body > div[class^="content-element "]
 matematikbogen.dk##td:nth-of-type(3)
 matoppskrift.no###sticky
 matoppskrift.no##.overskrift_naeringsinnhold
+digi.no##div[class*=ads-wrapper]
+digi.no##.banner
+digi.no,tu.no#?#div[id^=row-]:has(.banner)
 medier24.no##.ad-toppbanner-article
 meremobil.dk##.a-single
 meremobil.dk#?##header > div:has(div[id*=gpt-ad-])
@@ -1386,7 +1390,7 @@ sykepleien.no##.advertisement-responsive
 sysla.no##.ad-nexus-ad
 tek.no###application > div[class]:nth-of-type(1):nth-last-of-type(2)
 tek.no#?#*:has(> #topboard)
-tek.no##body::before
+tek.no##body:::before
 tek.no##div[class^=styles__]
 tek.no##section[class*=canvas]
 tek.no#?#article > div:has-text(/^annonse$/)
@@ -1543,6 +1547,7 @@ gulesider.no#?#.MuiContainer-root .MuiGrid-root + .MuiBox-root:has(div[id*=gpt])
 tv2.dk##div[class=tc_deck]
 purehelp.no##.h-300px
 gulesider.no##div[class*=-spacing-xs-] > div[class^="MuiBox-root css-"]
+startsiden.no##div[class*=layout_adsContainer__]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1600,7 +1605,7 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 ! 🇫🇮: Yleiset merkinnät, joilla on lähteitä
 ! 🇬🇧: Generic entries that have sources
 ! sol.no
-~basketnews.lt,~basketnews.com,~hero-magazine.com,~ut.no##.advertisement
+~basketnews.lt,~basketnews.com,~hero-magazine.com,~ut.no##.advertisement:not(html, body)
 ##div[itemtype$=WPAdBlock]
 ! www.qxl.no
 ###BannerEniro
@@ -2053,7 +2058,7 @@ sofabold.dk##div[class^=sidebanner]
 sofabold.dk##.centerMgfx
 klikk.no##.affiliate-content
 ! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
-~nytid.no##.td-a-rec
+~nytid.no##.td-a-rec:not(html, body)
 ! jyllands-posten.dk (09/07/2020)
 ###topBanners
 

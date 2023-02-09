@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 01February2023v3
+! Version: 09February2023v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -74,7 +74,7 @@ byggfakta.no##.sponsor-row
 canariposten.no##.theiaStickySidebar > .widget-1
 computerworld.dk##.candis-spot
 costume.*##.teaser__native:upward(4)
-cw.no##.ad-displace-sidebar:before
+cw.no##.ad-displace-sidebar::before
 cw.no##.w-advert-article
 dagbladet.no##.xrow.fullwidth
 dagens.dk##.col-sticky > div > p
@@ -381,6 +381,7 @@ nettavisen.no#?#.optimus-complex-front:has(amedia-include[manifest*=".norkon."])
 retrospilling.no#?#.widget:has-text(Play-Asia)
 retrospilling.no#?#.widget:has-text(Reklame)
 allematpriser.no##.bottom-center-box
+startsiden.no##.wp-block-create-block-prisjakt-product
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -414,7 +415,7 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! norskenettsider.no, sva.no
 ~playpilot.com##a[href*="online.adservicemedia.dk"]
 ! https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
-~prisguiden.no##.prisguidePost
+~prisguiden.no##.prisguidePost:not(html, body)
 ! tv2.no
 ##.spklw-post-attr[data-type=ad]
 tv2.no##.spklw-post-attr[data-pc]
@@ -1201,7 +1202,7 @@ intrafish.*##.text-center.mb-3
 intrafish.no##.row > .d-lg-block
 itavisen.no###contents-wrap > .block-wrap-columns
 itavisen.no##.\35 00Add:not(.homepage-video-area)
-itavisen.no##.ad:before
+itavisen.no##.ad::before
 itavisen.no##.comcontent:upward(1)
 itavisen.no##.fifth-article-ad
 itavisen.no##.itavi-after-content
@@ -1288,6 +1289,9 @@ matematikbogen.dk##td:nth-of-type(3)
 matoppskrift.no###sticky
 matoppskrift.no##.overskrift_naeringsinnhold
 matoppskrift.no#?#.text-center:not(:has(img))
+digi.no##div[class*=ads-wrapper]
+digi.no##.banner
+digi.no,tu.no#?#div[id^=row-]:has(.banner)
 mbl.is##.container:style(margin-top: 0 !important)
 mbl.is##.main-header:style(margin-top: 0 !important)
 mbl.is#?#.col-sm-6.col-12:has(.augl):not(:has(.fluid))
@@ -1439,7 +1443,7 @@ sykepleien.no##.advertisement-responsive
 sysla.no##.ad-nexus-ad
 tek.no###application > div[class]:nth-of-type(1):nth-last-of-type(2)
 tek.no###topboard:upward(1)
-tek.no##body:before
+tek.no##body::before
 tek.no##div[class^=styles__]
 tek.no##section[class*=canvas]
 tek.no##section[class^=GreatCanvas__smallArticles-]:style(width: 100% !important)
@@ -1604,6 +1608,7 @@ gulesider.no#?#.MuiContainer-root .MuiGrid-root + .MuiBox-root:has(div[id*=gpt])
 tv2.dk##div[class=tc_deck]
 purehelp.no##.h-300px
 gulesider.no##div[class*=-spacing-xs-] > div[class^="MuiBox-root css-"]
+startsiden.no##div[class*=layout_adsContainer__]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1670,7 +1675,7 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
 !#endif
 ! sol.no
-~basketnews.lt,~basketnews.com,~hero-magazine.com,~ut.no##.advertisement
+~basketnews.lt,~basketnews.com,~hero-magazine.com,~ut.no##.advertisement:not(html, body)
 ##div[itemtype$=WPAdBlock]
 ! www.qxl.no
 ###BannerEniro
@@ -2204,7 +2209,7 @@ sofabold.dk##div[class^=sidebanner]
 sofabold.dk##.centerMgfx
 klikk.no##.affiliate-content
 ! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
-~nytid.no##.td-a-rec
+~nytid.no##.td-a-rec:not(html, body)
 ! jyllands-posten.dk (09/07/2020)
 ###topBanners
 !#endif
@@ -2612,13 +2617,13 @@ triplx.dk##.aff-inner-col
 ! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
 ! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
 ! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
-##.Article-header-body:before
+##.Article-header-body::before
 ##.paywall-fade:not(html, body)
-##.polarisSpid.widget:before
-aftenbladet.no,fvn.no##.overlay-wrap:before
-aftenposten.no##.widget-salesposter:before
-dagogtid.no##.dot-shorttext:before
-dinepenger.no##.article-body:after
+##.polarisSpid.widget::before
+aftenbladet.no,fvn.no##.overlay-wrap::before
+aftenposten.no##.widget-salesposter::before
+dagogtid.no##.dot-shorttext::before
+dinepenger.no##.article-body::after
 dn.no##.vrs-image-block__image-description-overlay
 fiskeribladet.no##.teaser_overlay
 information.dk##.greyed-text
@@ -2626,23 +2631,23 @@ information.dk##.paywall-box:style(margin-top: 0px !important)
 mm.dk##.fadeout
 mm.dk##.promotion:style(top: 0px !important)
 morgenbladet.no##.preview-overlay
-nationen.no##.article-container.locked:after
-politiken.dk##.card.stopsign__article.stopsign:before
-vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:not(.undefined):not([class^=creative_dark_feature]):before
+nationen.no##.article-container.locked::after
+politiken.dk##.card.stopsign__article.stopsign::before
+vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:not(.undefined):not([class^=creative_dark_feature])::before
 borsen.dk##.paywall:style(top: 0px !important)
 borsen.dk##.indent-wrapper > .overlay
 dknyt.dk,kommunen.dk##.fade-out
-vartoslo.no##.teaserContent:before
-h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content:before
+vartoslo.no##.teaserContent::before
+h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content::before
 h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content:style(max-height: none !important)
 markedsforing.dk##.gradient-y-trans-to-white-95
-berlingske.dk##.paywall-wrapper:before
+berlingske.dk##.paywall-wrapper::before
 berlingske.dk##.paywall-wrapper:style(top: unset !important)
 intrafish.no##.preview-gradient
 lydogbilde.no,lydogbillede.dk##.lbplussinfo
 ||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
 information.dk###paywall:style(margin-top: 0px !important)
-digi.no###order-form:before
+digi.no###order-form::before
 aasavis.no,amta.no,an.no,ao.no,auraavis.no,austagderblad.no,avisenagder.no,ba.no,bygdebladet.no,bygdeposten.no,dalane-tidende.no,dt.no,eikerbladet.no,enebakkavis.no,f-b.no,finnmarkdagblad.no,finnmarken.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gjengangeren.no,glomdalen.no,h-avis.no,ha-halden.no,hadeland.no,hardanger-folkeblad.no,helg.no,iharstad.no,indre.no,jarlsbergavis.no,jbl.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofotposten.no,lyngdalsavis.no,moss-avis.no,nettavisen.no,nidaros.no,noblad.no,nordhordland.no,nordlys.no,nt24.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,r-a.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,ringsaker-blad.no,sa.no,sandeavis.no,sandnesposten.no,sb.no,smaalenene.no,sognavis.no,solabladet.no,solungavisa.no,strandbuen.no,svelviksposten.no,ta.no,tb.no,telen.no,tk.no,tvedestrandsposten.no,varingen.no,vestbyavis.no,merakerposten.no##amedia-include[src*="/incentive/"]:style(border: 10px !important; border-color: #CD5C5C !important; border-style: solid !important)
 aasavis.no,amta.no,an.no,ao.no,auraavis.no,austagderblad.no,avisenagder.no,ba.no,bygdebladet.no,bygdeposten.no,dalane-tidende.no,dt.no,eikerbladet.no,enebakkavis.no,f-b.no,finnmarkdagblad.no,finnmarken.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gjengangeren.no,glomdalen.no,h-avis.no,ha-halden.no,hadeland.no,hardanger-folkeblad.no,helg.no,iharstad.no,indre.no,jarlsbergavis.no,jbl.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofotposten.no,lyngdalsavis.no,moss-avis.no,nettavisen.no,nidaros.no,noblad.no,nordhordland.no,nordlys.no,nt24.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,r-a.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,ringsaker-blad.no,sa.no,sandeavis.no,sandnesposten.no,sb.no,smaalenene.no,sognavis.no,solabladet.no,solungavisa.no,strandbuen.no,svelviksposten.no,ta.no,tb.no,telen.no,tk.no,tvedestrandsposten.no,varingen.no,vestbyavis.no,merakerposten.no##amedia-incentive:style(top: 1600px !important)
 aasavis.no,amta.no,an.no,ao.no,auraavis.no,austagderblad.no,avisenagder.no,ba.no,bygdebladet.no,bygdeposten.no,dalane-tidende.no,dt.no,eikerbladet.no,enebakkavis.no,f-b.no,finnmarkdagblad.no,finnmarken.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gjengangeren.no,glomdalen.no,h-avis.no,ha-halden.no,hadeland.no,hardanger-folkeblad.no,helg.no,iharstad.no,indre.no,jarlsbergavis.no,jbl.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofotposten.no,lyngdalsavis.no,moss-avis.no,nettavisen.no,nidaros.no,noblad.no,nordhordland.no,nordlys.no,nt24.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,r-a.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,ringsaker-blad.no,sa.no,sandeavis.no,sandnesposten.no,sb.no,smaalenene.no,sognavis.no,solabladet.no,solungavisa.no,strandbuen.no,svelviksposten.no,ta.no,tb.no,telen.no,tk.no,tvedestrandsposten.no,varingen.no,vestbyavis.no,merakerposten.no##.aid-background-blur:style(filter: none !important)
@@ -2652,18 +2657,18 @@ tv2.no##.login-wall__gradient
 ! dagbladet.no,elbil24.no
 ##.CTA-body-faded:not(html, body)
 ! digi.no, tu.no, medier24.no, porten.no
-##.faded-article-content:after
+##.faded-article-content::after
 ! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
 ##.paywall-gradient:not(html, body)
 ! https://www.vg.no/nyheter/i/y3Mka2/ (08/04/2020)
-vg.no##div[data-test-tag=timestamp] + div:before
+vg.no##div[data-test-tag=timestamp] + div::before
 ! https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
-vg.no##div[data-test-tag=timestamp] + p + div:before
+vg.no##div[data-test-tag=timestamp] + p + div::before
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 01August2022v1-Extension
+! Last updated: 09February2023v2-Extension
 dagensbyggeri.dk##+js(std, (), 2500)
 eurosport.*##+js(aeld, contextmenu)
 techstart.dk##+js(set, adblock, false)

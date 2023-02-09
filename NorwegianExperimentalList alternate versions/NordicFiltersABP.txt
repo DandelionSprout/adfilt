@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 010220233
+! Version: 090220232
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -74,7 +74,7 @@ byggfakta.no##.sponsor-row
 canariposten.no##.theiaStickySidebar > .widget-1
 computerworld.dk##.candis-spot
 costume.no,costume.dk#?#*:-abp-has(> * > * >  * > .teaser__native)
-cw.no##.ad-displace-sidebar::before
+cw.no##.ad-displace-sidebar:::before
 cw.no##.w-advert-article
 dagbladet.no##.xrow.fullwidth
 dagens.dk##.col-sticky > div > p
@@ -373,6 +373,7 @@ nettavisen.no#?#.optimus-complex-front:has(amedia-include[manifest*=".norkon."])
 retrospilling.no#?#.widget:has-text(Play-Asia)
 retrospilling.no#?#.widget:has-text(Reklame)
 allematpriser.no##.bottom-center-box
+startsiden.no##.wp-block-create-block-prisjakt-product
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -406,7 +407,7 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! norskenettsider.no, sva.no
 ~playpilot.com##a[href*="online.adservicemedia.dk"]
 ! https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
-~prisguiden.no##.prisguidePost
+~prisguiden.no##.prisguidePost:not(html, body)
 ! tv2.no
 ##.spklw-post-attr[data-type=ad]
 tv2.no##.spklw-post-attr[data-pc]
@@ -1166,7 +1167,7 @@ intrafish.no##.text-center.mb-3
 intrafish.no##.row > .d-lg-block
 itavisen.no###contents-wrap > .block-wrap-columns
 itavisen.no##.\35 00Add:not(.homepage-video-area)
-itavisen.no##.ad::before
+itavisen.no##.ad:::before
 itavisen.no#?#*:-abp-has(> .comcontent)
 itavisen.no##.fifth-article-ad
 itavisen.no##.itavi-after-content
@@ -1250,6 +1251,9 @@ matematikbogen.dk##td:nth-of-type(3)
 matoppskrift.no###sticky
 matoppskrift.no##.overskrift_naeringsinnhold
 matoppskrift.no#?#.text-center:not(:has(img))
+digi.no##div[class*=ads-wrapper]
+digi.no##.banner
+digi.no,tu.no#?#div[id^=row-]:has(.banner)
 mbl.is#?#.col-sm-6.col-12:has(.augl):not(:has(.fluid))
 medier24.no##.ad-toppbanner-article
 menn.is#?#.vc_column-inner:has(.mobile-ad):not(:has(a))
@@ -1394,7 +1398,7 @@ sykepleien.no##.advertisement-responsive
 sysla.no##.ad-nexus-ad
 tek.no###application > div[class]:nth-of-type(1):nth-last-of-type(2)
 tek.no#?#*:-abp-has(> #topboard)
-tek.no##body::before
+tek.no##body:::before
 tek.no##div[class^=styles__]
 tek.no##section[class*=canvas]
 tek.no#?#article > div:has-text(/^annonse$/)
@@ -1551,6 +1555,7 @@ gulesider.no#?#.MuiContainer-root .MuiGrid-root + .MuiBox-root:has(div[id*=gpt])
 tv2.dk##div[class=tc_deck]
 purehelp.no##.h-300px
 gulesider.no##div[class*=-spacing-xs-] > div[class^="MuiBox-root css-"]
+startsiden.no##div[class*=layout_adsContainer__]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1606,7 +1611,7 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources
 ! sol.no
-~basketnews.lt,~basketnews.com,~hero-magazine.com,~ut.no##.advertisement
+~basketnews.lt,~basketnews.com,~hero-magazine.com,~ut.no##.advertisement:not(html, body)
 ##div[itemtype$=WPAdBlock]
 ! www.qxl.no
 ###BannerEniro
@@ -2064,7 +2069,7 @@ sofabold.dk##div[class^=sidebanner]
 sofabold.dk##.centerMgfx
 klikk.no##.affiliate-content
 ! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
-~nytid.no##.td-a-rec
+~nytid.no##.td-a-rec:not(html, body)
 ! jyllands-posten.dk (09/07/2020)
 ###topBanners
 
@@ -2543,48 +2548,48 @@ triplx.dk##.aff-inner-col
 ! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
 ! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
 ! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
-##.Article-header-body::before
+##.Article-header-body:::before
 ##.paywall-fade:not(html, body)
-##.polarisSpid.widget::before
-aftenbladet.no,fvn.no##.overlay-wrap::before
-aftenposten.no##.widget-salesposter::before
-dagogtid.no##.dot-shorttext::before
-dinepenger.no##.article-body::after
+##.polarisSpid.widget:::before
+aftenbladet.no,fvn.no##.overlay-wrap:::before
+aftenposten.no##.widget-salesposter:::before
+dagogtid.no##.dot-shorttext:::before
+dinepenger.no##.article-body:::after
 dn.no##.vrs-image-block__image-description-overlay
 fiskeribladet.no##.teaser_overlay
 information.dk##.greyed-text
 
 morgenbladet.no##.preview-overlay
-nationen.no##.article-container.locked::after
-politiken.dk##.card.stopsign__article.stopsign::before
-vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:not(.undefined):not([class^=creative_dark_feature])::before
+nationen.no##.article-container.locked:::after
+politiken.dk##.card.stopsign__article.stopsign:::before
+vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:not(.undefined):not([class^=creative_dark_feature]):::before
 borsen.dk##.indent-wrapper > .overlay
 dknyt.dk,kommunen.dk##.fade-out
-vartoslo.no##.teaserContent::before
-h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content::before
+vartoslo.no##.teaserContent:::before
+h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content:::before
 markedsforing.dk##.gradient-y-trans-to-white-95
-berlingske.dk##.paywall-wrapper::before
+berlingske.dk##.paywall-wrapper:::before
 intrafish.no##.preview-gradient
 lydogbilde.no,lydogbillede.dk##.lbplussinfo
 ||dagligvarehandelen.no/sites/all/themes/custom/ledelseas/gfx/veil.png$image
-digi.no###order-form::before
+digi.no###order-form:::before
 tv2.no##.login-wall__gradient
 
 ! dagbladet.no,elbil24.no
 ##.CTA-body-faded:not(html, body)
 ! digi.no, tu.no, medier24.no, porten.no
-##.faded-article-content::after
+##.faded-article-content:::after
 ! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
 ##.paywall-gradient:not(html, body)
 ! https://www.vg.no/nyheter/i/y3Mka2/ (08/04/2020)
-vg.no##div[data-test-tag=timestamp] + div::before
+vg.no##div[data-test-tag=timestamp] + div:::before
 ! https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
-vg.no##div[data-test-tag=timestamp] + p + div::before
+vg.no##div[data-test-tag=timestamp] + p + div:::before
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 01August2022v1-Extension
+! Last updated: 09February2023v2-Extension
 tv2.no#$#abort-current-inline-script adblockDetector
 ||elderlyscissors.com^
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
