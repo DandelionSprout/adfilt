@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🚪 Browse websites without logging in
-! Version: 27January2023v1
+! Version: 09February2023v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -30,11 +30,11 @@ linustechtips.com,forum.malwarebytes.com,community.ccleaner.com#?#.cTopicPostAre
 */plugins/pm-gating/
 
 ! Aims to remove blurs of article previews
-##.Article-header-body:before
+##.Article-header-body::before
 ##.paywall-fade:not(html, body)
-##.article-container.locked:after
-##.card.stopsign__article.stopsign:before
-##.faded-article-content:after
+##.article-container.locked::after
+##.card.stopsign__article.stopsign::before
+##.faded-article-content::after
 ##.paywall-gradient:not(html, body)
 ##.fade-out-article.art_content::before
 ! vaterland.li (11/11/2020)
@@ -82,7 +82,7 @@ spanishdict.com#?#.ReactModal__Overlay:has(video[src$="/bloom2.mp4"])
 ! Makes the official article previews fully visible
 ! https://www.zeit.de/2020/06/alfred-bauer-filmbuerokratie-nationalsozialismus-berlinale
 zeit.de#?#.paragraph--faded:style(overflow: visible !important)
-zeit.de#?#.paragraph--faded:before:style(background-image: none !important)
+zeit.de#?#.paragraph--faded::before:style(background-image: none !important)
 zeit.de#?##paywall:style(top: 250px !important)
 
 ! ScienceDirect
@@ -142,7 +142,7 @@ community.spiceworks.com##+js(cookie-remover,visit_count)
 
 ! Minerva (Norway) 📠
 minervanett.no##.paywallTeaser
-minervanett.no##.teaserContent:before
+minervanett.no##.teaserContent::before
 
 ! YouTube
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-678544030
@@ -171,7 +171,7 @@ tumblr.com##.tmblr-iframe--follow-teaser
 ! https://www.deviantart.com/demotex/art/Latex-Polly-903934930 (NSFW; thankfully not NSFL, which is what most other DA art is)
 deviantart.com##div[style] > div[class^=_] + div:not([class^=_]):nth-of-type(2):last-of-type
 deviantart.com#?#div[style*="wixmp.com/"]:style(filter: none !important)
-deviantart.com##div[style*="wixmp.com/"]:before
+deviantart.com##div[style*="wixmp.com/"]::before
 deviantart.com##body[class*=ads-] div[style^="width:"][class]:not([class*=" "]) > div[class]:nth-of-type(2):last-of-type:not([style])
 ! Small login banner on bottom on some search pages
 ! (https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1407020400)
