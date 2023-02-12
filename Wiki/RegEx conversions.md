@@ -18,4 +18,4 @@
 `deviantart.com##a[data-hook][href*="/art/"][href*=\1 i]\ndeviantart.com#?#div[style^="width:"][style*="display:"]:has(a[href*="/art/"][href*=\1 i])`
 * `("\]\[href\*=)(/.*)/ i` → `\1"\2/"`
 * `("\]\[href\*=)(/.*[a-zA-Z0-9-]) ` → `\1"\2" `
-* ` \+ ` → `i][href*=`
+* `\ \+\ ` → `\ i][href*=`
