@@ -1389,7 +1389,7 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"(! Version: .*)", 
-           r"\1-Alpha", 
+           r"\1-Deprecated", 
            line
         )
 
@@ -1611,6 +1611,24 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"\$all$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$frame$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$3p.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\./.*\\.*", 
            r"", 
            line
         )
