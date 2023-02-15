@@ -1224,7 +1224,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^(Description: .*)", 
+           r"^(# Description: .*)", 
            r"\1\n# Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.", 
            line
         )
