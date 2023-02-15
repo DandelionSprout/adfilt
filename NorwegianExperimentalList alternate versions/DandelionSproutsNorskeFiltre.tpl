@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 12February2023v1-Alpha
+# Version: 12February2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -58,7 +58,6 @@ msFilterList
 - banners casinotop
 # gnavergalleri.dk (along with ~60 affiliates sites)
 # https://github.com/DandelionSprout/adfilt/issues/233
-*galleri.dk content images fixed
 # sol.dk (25 04 2021)
 # bilgalleri.dk (25 04 2021)
 # forum.ipmsnorge.org (24 05 2021)
@@ -853,7 +852,6 @@ msFilterList
 -d smsb.co
 # https://github.com/DandelionSprout/adfilt/issues/747
 - -norge.co.no
-*skodanmark.com
 -d skechersskosalg-norge.com
 -d dkgaborsneakers.com
 -d haglofstilbud.com
@@ -914,17 +912,6 @@ msFilterList
 -d hoka-sko.com
 -d hoka-one-one.cc
 -d hokaoneone*
-*norgeskosalg.
-*norge-salg.com
-*norgesalg.com
-*norgesalgs.com
-*salgnorge.com
-*danmarkdk.com
-*skodktilbud.
-*skonorgeeu.com
-*sneakersnorgeshop.
-*sneakersdkshop.com
-*skodanmarks.
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
