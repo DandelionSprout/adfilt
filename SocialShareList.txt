@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 11February2023v1-Alpha
+! Version: 18February2023v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -20,9 +20,12 @@
 ###new-social-share
 ###p-sharing
 ###pinterest
+###ppsPopupBgOverlay
 ###rail-share-bar
 ###share-buttons
+###share-facebook-bottom
 ###share-tool
+###share-twitter-bottom
 ###share-unit
 ###share_bar
 ###share_container
@@ -35,6 +38,9 @@
 ###story-socials
 ###tell-a-friend
 ###top_share
+##.addthis_button_facebook:not(html, body)
+##.addthis_button_linkedin:not(html, body)
+##.addthis_button_messenger:not(html, body)
 ##.addthis_button_more:not(html, body)
 ##.addthis_counter:not(html, body)
 ##.addtoany_content:not(html, body)
@@ -81,6 +87,7 @@
 ##.globalSharing:not(html, body)
 ##.googleplusshare:not(html, body)
 ##.heateor_sss_sharing_container:not(html, body)
+##.heateor_sss_sharing_container:not(html, body)
 ##.i-more-share:not(html, body)
 ##.icon--facebook:not(html, body)
 ##.icon--twitter:not(html, body)
@@ -93,11 +100,13 @@
 ##.linkedinShare:not(html, body)
 ##.loader-container.shares:not(html, body)
 ##.mashsb-box:not(html, body)
+##.meta-share-wrapper:not(html, body)
 ##.news-share-link:not(html, body)
 ##.news_share:not(html, body)
 ##.pinterest-share:not(html, body)
 ##.post-social-goog:not(html, body)
 ##.post_social:not(html, body)
+##.ppsPopupFbLikeShell:not(html, body)
 ##.product-sharing:not(html, body)
 ##.recentsocial:not(html, body)
 ##.sbtn_main:not(html, body)
@@ -116,7 +125,6 @@
 ##.share-item-plus:not(html, body)
 ##.share-link.js-require-widget:not(html, body)
 ##.share-linkedin:not(html, body)
-~baidu.com##.share-list:not(html, body)
 ##.share-metas:not(html, body)
 ##.share-networks:not(html, body)
 ##.share-nw:not(html, body)
@@ -147,6 +155,7 @@
 ##.sharebtns:not(html, body)
 ##.shareFacebook:not(html, body)
 ##.shareit:not(html, body)
+##.shareon:not(html, body)
 ##.shares-badge:not(html, body)
 ##.sharethis-wrapper:not(html, body)
 ##.shareToggle:not(html, body)
@@ -165,7 +174,6 @@
 ##.sns:not(html, body)
 ##.soc-list:not(html, body)
 ##.social-action[test-id*=facebook]:not(html, body)
-~ef.com##.social-btns:not(html, body)
 ##.social-footer:not(html, body)
 ##.social-icon:not(html, body)
 ##.social-likes:not(html, body)
@@ -185,6 +193,7 @@
 ##.spotheader__sharing:not(html, body)
 ##.ssba:not(html, body)
 ##.ssk-group:not(html, body)
+##.story-share-bottom
 ##.swp-hover-pin-button:not(html, body)
 ##.swp_social_panel:not(html, body)
 ##.twit_share_button:not(html, body)
@@ -283,6 +292,7 @@
 ##button[title^="Share this "]
 ##div[button=share]
 ##div[class$=-share-single]
+##div[class$=-sticky-share]
 ##div[class*=_share_button]
 ##div[class*=addthis]
 ##div[class*=article-share]
@@ -352,6 +362,7 @@
 /btn_share_ln.
 /btn_share_tw.
 /mixx_share.gif$image
+/modules/responsive_share_buttons^
 /pinitbtn.$image
 /share-icons_$image
 /share/*-icon.png$image
@@ -387,51 +398,60 @@ condoblues.com###milotree_box_wrap
 ||ws.sharethis.com^$third-party
 ||yastatic.net/share/*-icon.
 ~allrecipes.com,~myrecipes.com##div[class*=sharebar]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.btn[href*="facebook.com/sharer/"]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[data-popup-url*="facebook.com/dialog/share?"]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/feed"]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/send?"]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/share?"]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/share.php?u=http"]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/sharer.php"]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/sharer/sharer.php"]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[onclick*="facebook.com/sharer.php?"]
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[title="Share this post on Facebook"]
+~baidu.com##.share-list:not(html, body)
+~digg.com##a[href*="://digg.com/submit?url="]
+~ef.com##.social-btns:not(html, body)
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion###share-facebook
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.btn[href*="facebook.com/sharer/"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[data-popup-url*="facebook.com/dialog/share?"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/feed"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/send?"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/share?"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/share.php?u=http"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/sharer.php"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/sharer/sharer.php"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[onclick*="facebook.com/sharer.php?"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[title="Share this post on Facebook"]
 ~flipboard.com##a[href*="://share.flipboard.com/bookmarklet/popout?"]
 ~hatena.ne.jp##.hatena-bookmark-button:not(html, body)
 ~kjokkenskriveren.no##[class*=ShareButton i]:not(button, body, html)
 ~line.me##a[href*="/lineit/share?"]
+~linkedin.com##.linkedin_share:not(html, body)
 ~linkedin.com##a[href*="linkedin.com/cws/share?"]
 ~linkedin.com##a[href*="linkedin.com/shareArticle?"]
 ~linkedin.com##a[href*="linkedin.com/sharing/share-offsite/"]
+~mail.ru##a[href^="https://connect.mail.ru/share?url="]
 ~mewe.com##div[class*=share-link]
-!!!~mewe.com,~www.nrk.no##[class*=share-button i]:not(body, html) (Can't be generic due to www.nrk.no, mewe.com, stylecaster.com)
 ~mixi.jp##a[href*="mixi.jp/simplepost/voice?status="]
 ~ne.jp##a[href*="b.hatena.ne.jp/add?url="]
 ~ne.jp##iframe[class^=hatena-bookmark]
+~ok.ru##a[href*="/connect.ok.ru/dk?"]
+~ok.ru##a[href^="https://connect.ok.ru/offer?url="]
 ~pinterest.*##.inline-share-pinterest:not(html, body)
 ~pinterest.*##.pinterest[href*="/pin/create/"]
-~pinterest.*##a[class$=share-pinterest]
 ~pinterest.*##a[class$=pinterest-share]
+~pinterest.*##a[class$=share-pinterest]
 ~pinterest.*##a[href*="pinterest.com/pin/find/?"]
 ~pinterest.*##a[href*=pinterest][href*="/pin/create/b"]
 ~pinterest.*##a[href="#pinit"]
+~pinterest.*##a[onclick^=execPinmarklet]
 ~pinterest.*##button[data-href*="pinterest.com/pin/create/button/"]
+~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion###share-reddit
+~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##a[href*="reddit.com/r/"][href*="/submit?url="]
 ~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##a[href*="reddit.com/submit?"]
 ~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##button[data-href*="reddit.com/submit?"]
-~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##a[href*="reddit.com/r/"][href*="/submit?url="]
 ~skype.com##a[href*="web.skype.com/share?url="]
 ~stumbleupon.com##a[href*="stumbleupon.com/badge?"]
 ~stumbleupon.com##a[href*="stumbleupon.com/submit?url="]
 ~telegram.org##a[href^="tg://msg_url?"]
-!!!~tidssonen.no,~mmoculture.com##div[class*=share-container] (Entry needs to be rewritten at some point)
 ~tumblr.com##a[href*="tumblr.com/share/"]
 ~tumblr.com##a[href*="tumblr.com/share?"]
 ~tumblr.com##a[href*="tumblr.com/widgets/share/"]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###share-twitter
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[class$=share-twitter]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[class=twitter i][title=Tweet]
-~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/home?status="]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/home?source="]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/home?status="]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/intent/tweet?"]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/share?text="]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/share?url="]
@@ -439,30 +459,17 @@ condoblues.com###milotree_box_wrap
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[onclick*="twitter.com/share?"]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[title="Tweet this post"]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##button[data-href*="twitter.com/share?text="]
-!!!~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion,~feedly.com,~chaturbate.com##.follow (Too many exceptions needed)
 ~viber.com##a[href^="viber://forward?text"]
 ~vk.com##a[href*="/vk.com/share.php"]
 ~vk.com##iframe[src^="https://vk.com/widget_like.php?"]
+~vk.com,~vkontakte.ru##a[href*="vkontakte.ru/share.php?"]
 ~whatsapp.com##[href^="whatsapp://send"]
 ~whatsapp.com##a[href*="whatsapp.com/send?"]
 ~whatsapp.com,~wa.me##a[href*="://wa.me/?text="]
-~ok.ru##a[href^="https://connect.ok.ru/offer?url="]
-~mail.ru##a[href^="https://connect.mail.ru/share?url="]
 ~xing.com###xing-share
-/modules/responsive_share_buttons^
-##.shareon:not(html, body)
-##div[class$=-sticky-share]
-##.meta-share-wrapper:not(html, body)
-~digg.com##a[href*="://digg.com/submit?url="]
-##.addthis_button_linkedin:not(html, body)
-##.addthis_button_messenger:not(html, body)
-##.addthis_button_facebook:not(html, body)
-~vk.com,~vkontakte.ru##a[href*="vkontakte.ru/share.php?"]
-~ok.ru##a[href*="/connect.ok.ru/dk?"]
-###ppsPopupBgOverlay
-##.ppsPopupFbLikeShell:not(html, body)
-##.heateor_sss_sharing_container:not(html, body)
-~linkedin.com##.linkedin_share:not(html, body)
+!!!~mewe.com,~www.nrk.no##[class*=share-button i]:not(body, html) (Can't be generic due to www.nrk.no, mewe.com, stylecaster.com)
+!!!~tidssonen.no,~mmoculture.com##div[class*=share-container] (Entry needs to be rewritten at some point)
+!!!~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion,~feedly.com,~chaturbate.com##.follow (Too many exceptions needed)
 
 ! NOT allowed to be generic
 pastebin.com##.h_800.tweet
