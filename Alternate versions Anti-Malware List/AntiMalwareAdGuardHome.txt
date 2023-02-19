@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home, and for AdGuard for Android/Windows' DNS filtering)
-! Version: 15February2023v2
+! Version: 19February2023v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -12,7 +12,7 @@
 !!!||tk^
 
 ! Gabon
-||ga^$denyallow=google.ga|filtri-dns.ga|dgdi.ga|9191.ga|animevsub.ga
+||ga^$denyallow=google.ga|filtri-dns.ga|dgdi.ga|9191.ga|animevsub.ga|my.ga
 ! Mali (Put on break due to too many and too frequent whitelistings being needed)
 !!!||ml^
 
@@ -23,10 +23,10 @@
 ! Palau
 ||pw^$denyallow=libgen.pw|petridish.pw|palaugov.pw|dpc.pw|buttercup.pw|rezka.pw|darkcrystal.pw|xor.pw|fullhdfilmizlesene.pw|gopass.pw|vost.pw|core.pw|bittor.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan. Its extreme common-ness in malware redirections means that the entry will be kept forever.
-||top^$denyallow=caitlin.top|corriente.top|gdtot.top|nicenature.top|reminder.top|magocoro.top|castlevania.top|suiten.top|shucks.top|1stream.top|ambr.top|techblog.top|changlam10.top|changlam11.top|pdcdn1.top|mastodon.top|pressplay.top|chillx.top
+||top^$denyallow=caitlin.top|corriente.top|gdtot.top|nicenature.top|reminder.top|magocoro.top|castlevania.top|suiten.top|shucks.top|1stream.top|ambr.top|techblog.top|changlam10.top|changlam11.top|pdcdn1.top|mastodon.top|pressplay.top|chillx.top|strims.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||*.loan^
-||agency^$denyallow=battlefield.agency|shortcut.agency
+||agency^$denyallow=battlefield.agency|baam.agency|uphotel.agency
 ||*.gdn^
 ||*.bid^
 ||*.ooo^
@@ -10955,6 +10955,16 @@
 ||only4leaked.co^
 ||thotsbay-leaked.com^
 ||cbox.ws^$chicks.cam
+! https://github.com/blocklistproject/Lists/issues/933
+||jNKmS0zFuEh.click^
+||pjljo54uk.click^
+||v1asy4ncr.click^
+||p5tvhrlw30h.click^
+||8narwi309.click^
+||sbjjzdwqg41ps.click^
+! https://app.any.run/tasks/679e9afa-eb19-4414-a086-e280a779a448 and https://tria.ge/230217-xd8nksgc9x/behavioral2
+||ru-torproject.ru^
+
 
 ! ——— Horrendously bad copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
