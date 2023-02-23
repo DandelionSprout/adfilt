@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 22February2023v2
+! Version: 23February2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -386,7 +386,7 @@ $removeparam=tblci
 $removeparam=tcid,domain=~rug.nl
 $removeparam=/^dv_adwords_/
 $removeparam=wdorigin
-$removeparam=/^aff_id[0-9]?=/i,domain=~affiliate.salestring.com
+$removeparam=/^aff_id\d?=/i,domain=~affiliate.salestring.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-773756
 $removeparam=twitchReferral
@@ -903,10 +903,10 @@ $removeparam=_kx
 ! https://www.affluent.io/affiliate-marketing-blog/affiliate-sub-campaign-sid-tracking-guide/
 ! https://strackr.com/subid
 $removeparam=/^affsrc=/i
-$removeparam=/^aff_sub[0-9]?=/
+$removeparam=/^aff_sub\d?=/
 $removeparam=afftrack
 $removeparam=atid
-$removeparam=/^clickref[0-9]?=/
+$removeparam=/^clickref\d?=/
 $removeparam=cuid
 $removeparam=data1,domain=~web3.cmvm.pt
 $removeparam=data2
@@ -1066,7 +1066,7 @@ $removeparam=af_referrer_customer_id
 $removeparam=af_referrer_name
 $removeparam=af_referrer_uid
 $removeparam=af_siteid
-$removeparam=/^af_sub[0-9]=/
+$removeparam=/^af_sub\d=/
 $removeparam=af_sub_siteid
 $removeparam=is_retargeting
 $removeparam=shortlink
@@ -1096,7 +1096,7 @@ $removeparam=detail_from
 
 ! https://s.lazada.sg/s.ZIugg
 $removeparam=sub_aff_id
-$removeparam=/^sub_id[0-9]=/
+$removeparam=/^sub_id\d=/
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915
 $removeparam=tg_ref
@@ -2362,7 +2362,7 @@ $~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com|ledger.*|mrgay.com|odyse
 ||humblebundle.com^$removeparam=mcID
 
 ! https://cdnb.artstation.com/p/assets/images/images/030/045/719/large/abhishek-karmakar-b56f0421b303b8d9016f022d17330898.jpg?1599443127 (06/05/2021)
-||artstation.com^$removeparam=/^[0-9]/
+||artstation.com^$removeparam=/^\d/
 
 ! https://www.thedailybeast.com/russian-doctor-alexander-murakhovsky-who-lied-about-navalny-poisoning-disappeared-in-the-woods?source=articles&via=rss
 ||thedailybeast.com^$removeparam=via
@@ -3072,7 +3072,7 @@ $removeparam=f_id,domain=admitad.com
 $removeparam=mv_pc,domain=fragrancenet.com
 
 ! https://www.walmart.com/ip/My-Little-Pony-GWP-Kick-Scooter/298640635?selectedSellerId=0&wl13=2708&&wl0&wl1=g&wl2=m&wl3=526807706123&wl4=pla-1303781078790&wl5=9031484&wl6&wl7&wl8&wl9=pla&wl10=8175035&wl11=local&wl12=298640635
-||walmart.$removeparam=/^wl[0-9]=/
+||walmart.$removeparam=/^wl\d=/
 ||walmart.$removeparam=wl10
 ||walmart.$removeparam=wl11
 ||walmart.$removeparam=wl12
@@ -3309,7 +3309,7 @@ $removeparam=block,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3
 $removeparam=rcode,domain=kucoin.com
 
 ! https://www.adressa.no/pluss/nyheter/2020/01/09/Over-1000-lynnedslag-i-Midt-Norge-p%C3%A5-ett-d%C3%B8gn-Sjelden-det-er-s%C3%A5-mye-vintertorden-som-dette-20788273.ece?rs2449061583154706756&t=1
-||adressa.no^$removeparam=/^rs[0-9]/
+||adressa.no^$removeparam=/^rs\d/
 
 ! https://www.deezer.com/en/track/143032368?deferredFl=1
 ||deezer.com^$removeparam=deferredFl
@@ -3914,7 +3914,7 @@ buffalonews.com##+js(set, lee_trkLinkSrc, noopFunc)
 @@||img*.nga$removeparam=cmpid
 
 ! Fix '404 Not Found' on pages with path /aff_c - https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
-@@/aff_c?$removeparam=/^aff_id[0-9]?=/i
+@@/aff_c?$removeparam=/^aff_id\d?=/i
 
 ! Map views for Blocket.se classifieds
 @@||hitta.se^$removeparam=ad_id
