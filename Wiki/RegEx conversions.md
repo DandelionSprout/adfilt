@@ -21,5 +21,5 @@
 * `\ \+\ ` → `\ i][href*=`
 
 ## Letters suited for backslash obfuscation when using RegEx
-According to Sublime Text build 4143. Results are case-sensitive, but what they match is believed to <i>not</i> be case-sensitive.
+According to Sublime Text build 4143. Case-sensitive.
 * i, j, m, o, y, E, F, I, J, M, O, T, Y
