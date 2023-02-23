@@ -19,3 +19,7 @@
 * `("\]\[href\*=)(/.*)/ i` → `\1"\2/"`
 * `("\]\[href\*=)(/.*[a-zA-Z0-9-]) ` → `\1"\2" `
 * `\ \+\ ` → `\ i][href*=`
+
+## Letters suited for backslash obfuscation when using RegEx
+According to Sublime Text build 4143. Results are case-sensitive, but what they match is believed to ''not'' be case-sensitive.
+* i, j, m, o, y, E, F, I, J, M, O, T, Y
