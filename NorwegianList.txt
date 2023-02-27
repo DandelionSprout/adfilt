@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 09February2023v2
+! Version: 23February2023v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -382,6 +382,7 @@ retrospilling.no#?#.widget:has-text(Play-Asia)
 retrospilling.no#?#.widget:has-text(Reklame)
 allematpriser.no##.bottom-center-box
 startsiden.no##.wp-block-create-block-prisjakt-product
+bikelifenorge.no##.dannys-ad-container
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1210,7 +1211,6 @@ itavisen.no##.itavi-article-page-video-player-outstream
 itavisen.no##.td-adspot-title
 itavisen.no##.td-c-loop-ad
 itavisen.no##.td-header-ad-wrap
-itavisen.no#?#.code-block:has-text(/Annonse/i)
 itavisen.no,tvguide.dk##div[id^=ad-]
 jn.fo##.lysingarspot
 jodelgrin.dk###text-2
@@ -1307,6 +1307,8 @@ minervanett.no#?#.row:has(> .adnuntius-ad)
 minmote.no##.advert-container-inline
 minmote.no##.advert-horseshoe
 minmote.no##div[id^=advert-]:upward(1)
+itavisen.no##.block-wrap-columns
+itavisen.no##p[style="text-align: center;"]
 mittkongsvinger.no##.advertising
 mobil.nu,mobilkunden.dk##.tower
 bold.dk##div[id$=-banner]
@@ -1843,6 +1845,8 @@ _980banner_
 ! nordlys.no, an.no (19/06/2022)
 ##optimus-element[linecount=undefined][width="980"]
 ##optimus-element[linecount=undefined][width="480"]:first-of-type:nth-last-of-type(2)
+! nidaros.no (22/02/2023)
+##div[id^=art-challengeAd-]
 
 ! 🇳🇴/🇩🇰: ——— Sporingsfiler ———
 ! 🇳🇴🏞: ——— Sporingsfilar ———
@@ -2137,7 +2141,7 @@ $removeparam=utm_id,domain=elkjop.no|elgiganten.dk
 ||tv2.no^$removeparam=r
 $removeparam=afid,domain=proshop.dk|proshop.no
 $removeparam=scid,domain=elgiganten.dk|elkjop.no
-||adressa.no^$removeparam=/^rs[0-9]/
+||adressa.no^$removeparam=/^rs\d/
 ||adressa.no^$removeparam=t
 ||bilhusnord.dk^$removeparam=au_advert_id
 ||bilhusnord.dk^$removeparam=au_car_id

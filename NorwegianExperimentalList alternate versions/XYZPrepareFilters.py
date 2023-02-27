@@ -1,7 +1,7 @@
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt']
+SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/-/raw/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '$$', '$app', '$csp=upgrade-insecure-requests', '$removeparam', 'badfilter', '!#include']
@@ -180,6 +180,12 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            r",~inline-font,~inline-script$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r",~inline-script,~inline-font$", 
            r"", 
            line
         )
@@ -1069,7 +1075,7 @@ def prepare_tpl(lines) -> str:
 
         line = re.sub(
            r"(# Version: .*[0-9][A-Z].*)", 
-           r"\1-Alpha", 
+           r"\1-Deprecated", 
            line
         )
 
@@ -1218,8 +1224,8 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^#.*PFBLOCKERNG.*", 
-           r"# Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.", 
+           r"^(# Description: .*)", 
+           r"\1\n# Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.", 
            line
         )
 
@@ -1337,6 +1343,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\*.*", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\r\n'
 
@@ -1377,7 +1389,7 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"(! Version: .*)", 
-           r"\1-Alpha", 
+           r"\1-Deprecated", 
            line
         )
 
@@ -1599,6 +1611,24 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"\$all$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$frame$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\$3p.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\./.*\\.*", 
            r"", 
            line
         )
@@ -2173,7 +2203,7 @@ if __name__ == "__main__":
     import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt', 'https://raw.githubusercontent.com/DandelionSprout/Swedish-List-for-Adblock-Plus/main/Swedish%20List%20for%20Adblock%20Plus.txt', 'https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt']
+SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/-/raw/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt', 'https://raw.githubusercontent.com/DandelionSprout/Swedish-List-for-Adblock-Plus/main/Swedish%20List%20for%20Adblock%20Plus.txt', 'https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app', ':not(:-abp-', ':not(:has','$csp=upgrade-insecure-requests', '$removeparam', 'badfilter']
@@ -4344,6 +4374,12 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
+           r",~inline-script,~inline-font$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r",~inline-font,~inline-script,~domain=", 
            r",~domain=", 
            line
@@ -4543,18 +4579,6 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r":has-text", 
-           r":-abp-contains", 
-           line
-        )
-
-        line = re.sub(
-           r":has", 
-           r":-abp-has", 
-           line
-        )
-
-        line = re.sub(
            r"^\*#.*", 
            r"", 
            line
@@ -4579,7 +4603,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z])##([#.]?[a-z_].*:-abp-)", 
+           r"([a-z])##([#.]?[a-z_].*:has)", 
            r"\1#?#\2", 
            line
         )
@@ -4597,8 +4621,20 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r",~inline-script,~inline-font$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"-,popup$", 
            r"-", 
+           line
+        )
+
+        line = re.sub(
+           r".*\$network$", 
+           r"", 
            line
         )
 
@@ -4971,6 +5007,42 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\^ \\..*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[0-9&].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^://", 
+           r"-d ", 
+           line
+        )
+
+        line = re.sub(
+           r"^- \(.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^!\+.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(# Version: .*[0-9])$", 
+           r"\1-Deprecated", 
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\r\n'
 
@@ -5098,6 +5170,12 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            r"^&.*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(# Version: .*[0-9])$", 
+           r"\1-Deprecated", 
            line
         )
 

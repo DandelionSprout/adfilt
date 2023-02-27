@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 07February2023v1
+! Version: 27February2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -177,7 +177,7 @@ $removeparam=/^hmb_/
 ! https://nttxstore.jp/_RH_3550?FMID=ocntop&LID=ocntop&_ga=2.104844229.490267265.1610372894-229139367.1610372894 (11/01/2021)
 $removeparam=FMID
 $~xmlhttprequest,removeparam=LID
-$removeparam=_ga
+$removeparam=_ga,domain=~login.aliexpress.*
 
 ! https://techcrunch.com/2021/02/09/eus-lead-data-supervisor-for-most-of-big-tech-is-still-using-lotus-notes/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZGlnaS5uby8&guce_referrer_sig=AQAAAJnvyfO0iClmtx73_ycersFbfhSLMdJB5kyLHseaWdi9TiXKa3ao3deC8nvfiBm9IQAwmBtL8QaSY7_01D0_zasr2yeupMAku3-KxlDkOxDyxYUx3AQ5Q8Y9C0U16b4NGeZWMVUyVkqEhj-UruGKz5DG1uVu7gBjEoBlwtGYgoQu (12/02/2021)
 $removeparam=guccounter
@@ -307,7 +307,7 @@ $removeparam=/^OCID=/i,domain=~youtube.com|~reiseauskunft.bahn.de
 !#if adguard
 @@$removeparam=/^OCID=/i,app=Microsoft.Msn.News.exe
 !#endif
-$removeparam=tduid,domain=~redir.tradedoubler.com
+$removeparam=tduid,domain=~tradedoubler.com
 $removeparam=irclickid
 $removeparam=irclicid
 $removeparam=intcmp
@@ -386,7 +386,7 @@ $removeparam=tblci
 $removeparam=tcid,domain=~rug.nl
 $removeparam=/^dv_adwords_/
 $removeparam=wdorigin
-$removeparam=/^aff_id[0-9]?=/i,domain=~affiliate.salestring.com
+$removeparam=/^aff_id\d?=/i,domain=~affiliate.salestring.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-773756
 $removeparam=twitchReferral
@@ -530,10 +530,13 @@ $removeparam=as_src
 $removeparam=edsacid
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1142244
-$removeparam=/^adjust_/
 $removeparam=action_type_map
 $removeparam=/^bsft_/
 $removeparam=/^dpg_/
+
+! https://bingapp.microsoft.com/bing?adjust=5k7sgdk_2xoxpwb when click on https://i.imgur.com/XFTKzVw.png on https://rewards.bing.com/
+$removeparam=/^adjust/
+
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1169570
 $removeparam=elq
@@ -900,10 +903,10 @@ $removeparam=_kx
 ! https://www.affluent.io/affiliate-marketing-blog/affiliate-sub-campaign-sid-tracking-guide/
 ! https://strackr.com/subid
 $removeparam=/^affsrc=/i
-$removeparam=/^aff_sub[0-9]?=/
+$removeparam=/^aff_sub\d?=/
 $removeparam=afftrack
 $removeparam=atid
-$removeparam=/^clickref[0-9]?=/
+$removeparam=/^clickref\d?=/
 $removeparam=cuid
 $removeparam=data1,domain=~web3.cmvm.pt
 $removeparam=data2
@@ -1063,7 +1066,7 @@ $removeparam=af_referrer_customer_id
 $removeparam=af_referrer_name
 $removeparam=af_referrer_uid
 $removeparam=af_siteid
-$removeparam=/^af_sub[0-9]=/
+$removeparam=/^af_sub\d=/
 $removeparam=af_sub_siteid
 $removeparam=is_retargeting
 $removeparam=shortlink
@@ -1093,7 +1096,7 @@ $removeparam=detail_from
 
 ! https://s.lazada.sg/s.ZIugg
 $removeparam=sub_aff_id
-$removeparam=/^sub_id[0-9]=/
+$removeparam=/^sub_id\d=/
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915
 $removeparam=tg_ref
@@ -1784,9 +1787,10 @@ $removeparam=cp_ksver
 ! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
 $removeparam=biw
 $removeparam=bih
-!#if env_chromium
+! https://github.com/DandelionSprout/adfilt/issues/710
 ||google.$removeparam=ved
 @@||google.com/url?$removeparam=ved
+!#if env_chromium
 $removeparam=usg,domain=~translate.googleusercontent.com|~google.*
 !#endif
 ! https://www.google.no/search?ei=rKq_X621OYCHwPAP5YCiuA0&q=penli.fi&oq=penli.fi&gs_lcp=CgZwc3ktYWIQAzIECAAQEzIGCAAQHhATMgYIABAeEBNQw2VYw2Vg-2ZoAHAAeACAAWGIAacBkgEBMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&uact=5 (26/11/2020)
@@ -2228,7 +2232,7 @@ $removeparam=trkid,domain=netflix.com|tokopedia.com
 ! (Exceptions: Discord's app download buttons)
 $removeparam=channel,domain=rei.com|squarespace.com|privateinternetaccess.com|bybit.com|t.me|twitter.com|docs.google.com|instagram.com|forms.gle|goodcrypto.app|eventbrite.*|youtube.com|coinpanel.com|docsend.com|kasta.io|runnode.com|gleam.io|1sol.io|reddit.app.link
 $removeparam=fr,domain=baidu.com|thegay.com
-$removeparam=promo,domain=thegay.com|hammacher.com|upornia.com
+$removeparam=promo,domain=thegay.com|hammacher.com|upornia.com|hclips.com
 $removeparam=sref,domain=bloomberg.com|go.skimresources.com|go.skimlinks.com|go.redirectingat.com
 $removeparam=argsite,domain=metaffiliation.com
 $removeparam=ctc,domain=avantlink.com
@@ -2358,7 +2362,7 @@ $~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com|ledger.*|mrgay.com|odyse
 ||humblebundle.com^$removeparam=mcID
 
 ! https://cdnb.artstation.com/p/assets/images/images/030/045/719/large/abhishek-karmakar-b56f0421b303b8d9016f022d17330898.jpg?1599443127 (06/05/2021)
-||artstation.com^$removeparam=/^[0-9]/
+||artstation.com^$removeparam=/^\d/
 
 ! https://www.thedailybeast.com/russian-doctor-alexander-murakhovsky-who-lied-about-navalny-poisoning-disappeared-in-the-woods?source=articles&via=rss
 ||thedailybeast.com^$removeparam=via
@@ -3068,7 +3072,7 @@ $removeparam=f_id,domain=admitad.com
 $removeparam=mv_pc,domain=fragrancenet.com
 
 ! https://www.walmart.com/ip/My-Little-Pony-GWP-Kick-Scooter/298640635?selectedSellerId=0&wl13=2708&&wl0&wl1=g&wl2=m&wl3=526807706123&wl4=pla-1303781078790&wl5=9031484&wl6&wl7&wl8&wl9=pla&wl10=8175035&wl11=local&wl12=298640635
-||walmart.$removeparam=/^wl[0-9]=/
+||walmart.$removeparam=/^wl\d=/
 ||walmart.$removeparam=wl10
 ||walmart.$removeparam=wl11
 ||walmart.$removeparam=wl12
@@ -3305,7 +3309,7 @@ $removeparam=block,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3
 $removeparam=rcode,domain=kucoin.com
 
 ! https://www.adressa.no/pluss/nyheter/2020/01/09/Over-1000-lynnedslag-i-Midt-Norge-p%C3%A5-ett-d%C3%B8gn-Sjelden-det-er-s%C3%A5-mye-vintertorden-som-dette-20788273.ece?rs2449061583154706756&t=1
-||adressa.no^$removeparam=/^rs[0-9]/
+||adressa.no^$removeparam=/^rs\d/
 
 ! https://www.deezer.com/en/track/143032368?deferredFl=1
 ||deezer.com^$removeparam=deferredFl
@@ -3657,9 +3661,6 @@ $removeparam=qsrc,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|d
 $document,removeparam=o,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
 $document,removeparam=l,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3827225
-||blogger.com^$removeparam=bpli
-
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3889813
 ! https://github.com/uBlockOrigin/uAssets/issues/15281
 ||startribune.com^$removeparam=refresh
@@ -3860,6 +3861,38 @@ $removeparam=cvid,domain=msn.cn|msn.com|chinadaily.com.cn|yiyouliao.com|tianqi.c
 ! https://mini.eastday.com/nsa/n230125110013294.html?qid=04426&cvid=ef9c243ff9fd4d5d8606d5a42b2b2023 (26/01/2023)
 ||eastday.com^$removeparam=qid
 
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4962768
+$removeparam=pk_vid,document
+
+! https://github.com/ClearURLs/Rules/issues/71
+||xiaohongshu.com^$removeparam=app_platform,document
+||xiaohongshu.com^$removeparam=app_version,document
+||xiaohongshu.com^$removeparam=share_from_user_hidden,document
+||xiaohongshu.com^$removeparam=xhsshare,document
+||xiaohongshu.com^$removeparam=appuid,document
+||xiaohongshu.com^$removeparam=apptime,document
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4978150
+||tiktok.com^$removeparam=embed_source
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4966523
+||login.afreecatv.com^$removeparam=szFrom
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5081433
+||typeform.com^$removeparam=typeform-source
+
+! https://www.selected.com/en-gb/homme/trousers/slim-fit-trousers-16086553_Grey_966031.html?clickedFromCategory=sl-homme-collection-trousers
+||selected.com^$removeparam=clickedFromCategory
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5116401
+$removeparam=natb,domain=duckduckgo.com
+||duckduckgo.com^$removeparam=cp
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5116953
+||cdc.gov^$removeparam=ACSTrackingID
+||cdc.gov^$removeparam=ACSTrackingLabel
+||cdc.gov^$removeparam=deliveryName
+
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
@@ -3890,7 +3923,7 @@ buffalonews.com##+js(set, lee_trkLinkSrc, noopFunc)
 @@||img*.nga$removeparam=cmpid
 
 ! Fix '404 Not Found' on pages with path /aff_c - https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
-@@/aff_c?$removeparam=/^aff_id[0-9]?=/i
+@@/aff_c?$removeparam=/^aff_id\d?=/i
 
 ! Map views for Blocket.se classifieds
 @@||hitta.se^$removeparam=ad_id

@@ -34,10 +34,10 @@ HEAD = """\
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
 ! Last updated: {date}
-! Script last updated: 7/12/2022
+! Script last updated: 26/2/2023
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
-! Warning: This list may break websites, and contains possibly-problematic rules. There is not much the Adfilt maintainers can do, as this list is just the ClearURLs rules converted into a uBo/AdGuard filterlist. Use with caution.
+! Warning: This list may break websites, and contains many problematic rules. There is not much the Adfilt maintainers can do, as this list is just the ClearURLs rules converted into a uBo/AdGuard filterlist. Use with caution.
 ! Note: This was based off of https://gist.github.com/rusty-snake/5cd83a87d680ecbd03e79a1a06758207, which is based off of https://github.com/ClearURLs/Rules. The maintainers of Adfilt (DandelionSprout and iam-py-test, and contributors) have made some modifications as to keep it up-to-date with the source and to fix issues.
 ! IMPORTANT NOTE: Do not modify this file in pull requests. This file is auto-generated and therefore any direct edit to it will be undone. Instead, modifications must be made to https://github.com/DandelionSprout/adfilt/blob/master/ClearURLs%20for%20uBo/compile.py or to the upstream ClearURLs rules. If you experience an issue, please report it to https://github.com/DandelionSprout/adfilt/discussions/163, and we (the Adfilt maintainers and community) will look into it and either add an exclusion or report it to the ClearURLs team.
 ! Important note about the purpose of this list: this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view params on the strict-block page to bypass it.
@@ -88,6 +88,9 @@ KNOWN_BAD_FILTERS = [
     "||amazon.*/s?$removeparam=rnid",
     # breaks GSB lookup - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4337362
     "||google.*^$removeparam=site",
+    # https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5017320
+    "||firefox.com^$removeparam=entrypoint",
+    "||firefox.com^$removeparam=context",
 ]
 
 ALLOWLIST = """
@@ -102,6 +105,8 @@ ALLOWLIST = """
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4081177
 ! https://github.com/ClearURLs/Rules/issues/54
 @@||webapps.sftc.org/captcha/captcha.dll$removeparam
+! https://github.com/ClearURLs/Rules/issues/46
+@@||track.sendle.com/tracking$removeparam=ref
 """
 
 def normalize_rule(rule: str) -> str:

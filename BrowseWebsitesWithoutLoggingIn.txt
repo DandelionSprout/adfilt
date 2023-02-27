@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🚪 Browse websites without logging in
-! Version: 09February2023v1
+! Version: 26February2023v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -110,10 +110,12 @@ mobile.twitter.com,mobile.twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyo
 !#if env_mobile
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
 !#endif
+!#if false
 ! Removes the bottom login sticky banner about logging in, in the April 2020-ish redesign 🔨
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:has(a[href="/i/flow/signup"])
 ! https://twitter.com/hideo_kojima_en/status/319595772981166080
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
+!#endif
 !#if !env_mobile
 ! Fullpage uncloseable overlay on some pages
 twitter.com#?#div[role=group]:has(div[data-testid*=apple_sign_in]:only-of-type)
@@ -208,6 +210,12 @@ pinterest.*##div[id$=unauth-container] div[data-test-id=pin-closeup-image] > div
 !! Removes what appears to be a blank white overlay banner on the bottom of images (15/12/2022)
 pinterest.com##div[style^="opacity:1;"] + div[style="bottom:0;z-index:0"]
 !! It turned out to be extremely difficult to remove the custom right-click menu; so to save an image, use adblocker element pickers or the F12 Elements tree to get the "https://i.pinimg.com/originals/(...)" URLs
+
+! Douyin
+!! Login overlay that shows up at random when watching videos (Was difficult to test, as I used a VPN and massive scriptblocking for personal security reasons.)
+!!! https://www.douyin.com/video/6971423371900849422
+douyin.com###summon-sdk-style + div:not([class], [id])
+douyin.com##script[src*=websdk] + div:not([class], [id])
 
 ! ——————————————————————————————————————————————————————————————————————
 

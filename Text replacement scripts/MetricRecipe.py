@@ -604,7 +604,7 @@ def prepare_metric(lines) -> str:
         )
 
         line = re.sub(
-           r"([0-9]) quart ", 
+           r"(\d) quart ", 
            r"\1-liter ", 
            line
         )

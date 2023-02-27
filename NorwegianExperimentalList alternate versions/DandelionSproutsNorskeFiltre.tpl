@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 09February2023v2-Alpha
+# Version: 19February2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -9,6 +9,7 @@ msFilterList
 # 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, Sydslesvig, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#dansk
 # 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
+# Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.
 # Wish to help translate more category titles to Nordic languages 🇩🇰 🇮🇸 🇳🇴🏞 🇫🇴 🇬🇱 ❄? https://crowdin.com/project/dandelion-sprout-nordic-filter
 # If you wish to remove cookie banners from Nordic websites, check out https://easylist-downloads.adblockplus.org/easylist-cookie.tpl (Can also be subscribed to from https://raw.githack.com/collinbarrett/FilterLists/master/data/TPLSubscriptionAssistant.html)
 # 🇳🇴 🇩🇰: ——— Reklamer ———
@@ -58,7 +59,6 @@ msFilterList
 - banners casinotop
 # gnavergalleri.dk (along with ~60 affiliates sites)
 # https://github.com/DandelionSprout/adfilt/issues/233
-*galleri.dk content images fixed
 # sol.dk (25 04 2021)
 # bilgalleri.dk (25 04 2021)
 # forum.ipmsnorge.org (24 05 2021)
@@ -853,7 +853,6 @@ msFilterList
 -d smsb.co
 # https://github.com/DandelionSprout/adfilt/issues/747
 - -norge.co.no
-*skodanmark.com
 -d skechersskosalg-norge.com
 -d dkgaborsneakers.com
 -d haglofstilbud.com
@@ -914,17 +913,6 @@ msFilterList
 -d hoka-sko.com
 -d hoka-one-one.cc
 -d hokaoneone*
-*norgeskosalg.
-*norge-salg.com
-*norgesalg.com
-*norgesalgs.com
-*salgnorge.com
-*danmarkdk.com
-*skodktilbud.
-*skonorgeeu.com
-*sneakersnorgeshop.
-*sneakersdkshop.com
-*skodanmarks.
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
