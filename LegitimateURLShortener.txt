@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 28February2023v3
+! Version: 02March2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1650,7 +1650,8 @@ $removeparam=sk,domain=bing.com|aliexpress.*
 ||bing.com/search?$removeparam=cvid
 !!! @@||bing.com/AS/Suggestions?$removeparam=cvid
 ! https://www.bing.com/search?q=brew+milk+video+heathly+or+brainwash&shtp=GetUrl&shid=52ffd333-de86-43eb-8e42-3c4b8d86b6a3&shtk=RHJpbmsgT25lIEdsYXNzIG9mIE1pbGsgYSBEYXkuIEJldHRlciBCb25lcyBvciBCcmFpbndhc2hpbmc%2F&shdk=VGhpcyB2aWRlbyBpcyBzcG9uc29yZWQgYnkgRGFzaGxhbmUuIFRyeSBpdCBmcmVlIGZvciAzMCBkYXlzIGF0IGh0dHBzOi8vd3d3LmRhc2hsYW5lLmNvbS9icmV3IElmIHlvdSBsaWtlIGl0LCB1c2UgdGhlIGNvZGUg4oCYYnJld%2BKAmSBmb3IgMTAlIG9mZiBhdCBjaGVja291dCBJcyBtaWxrIGdvb2Qgb3IgYmFkIGZvciB5b3U%2FIElzIGl0IHJlYWxseSBoZWFsdGh5IGZvciB5b3VyIGJvbmVzPyBXaHkgYXJlIHJlc2VhcmNoZXJzIGFuZCBzY2llbnRpc3RzIHNwZWFraW5nIGFnYWluc3QgaXQ%2FIElzIHRoZSBmb29kIGluZHVzdHJ5IGhpZGluZyBzb21ldGhpbmcgZnJvbSB1cz8gTGV0J3MgZmluZCBvdXQgLi4u&shhk=a8MjbVhOQyCok8qs42amxA6%2B8sUgPQh4DtB4PgJh0gI%3D&shth=OVP.XR1Cz2a0aI5ebTNFbFySUAIIEk
-||bing.com^$removeparam=/^sh/
+! (https://github.com/DandelionSprout/adfilt/issues/796)
+||bing.com^$removeparam=/^sh[a-np-z0-9]/
 ! https://github.com/DandelionSprout/adfilt/pull/504
 ! https://www.bing.com/search?q=Test&cc=CN&setlang=zh-CN&nclid=2F21E165874042D66713EAE9392AD01E&ts=1644819994709&wsso=Moderate (14/02/2022)
 ||bing.com^$removeparam=nclid
