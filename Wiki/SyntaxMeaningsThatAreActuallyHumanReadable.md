@@ -143,6 +143,7 @@
 * `#%#` without `//scriptlet`: Appears to insert JavaScript code that is written into the list, as opposed to from an embedded file. Only works in AdGuard's own lists or User Filters.
 * `!+ PLATFORM`: Similar to `!#if`, but is only used during the AdGuard team's compiling of included lists. It has no effect on custom lists.
 * `:matches-property`: Selects an HTML element by using a CSS identifier, as detailed under AdGuard's [ExtendedCSS](https://github.com/AdguardTeam/ExtendedCss#extended-css-matches-property) project.
+* `[$path]`: Unclear. Most likely limits hiding rules to only have effect on URLs that contain the `$path` value, e.g. `[$path=sport]`.
 #### Blocking
 * `$$script`: Same as `##^script:has-text`.
 * `$cookie`: Blocks cookies.
@@ -150,6 +151,7 @@
 * `$cookie=` + `maxAge`: Changes the cookie to have an expiration time in seconds.
 * `$cookie=` + `same-site`: Changes the cookie to use the "Lax" mode of `samesite` known from the `Set-Cookie` browser HTTP response system.
 * `@@` + `$urlblock`: Turns off file-request blocking entirely while on that domain.
+* `$removeheader`: Unknown.
 
 ## AdGuard for [Windows/Mac/Android] only:
 
