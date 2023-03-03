@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 03March2023v2-Alpha
+! Version: 03March2023v3-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -16,7 +16,6 @@
 ###mashfbar-header
 ###new-social-share
 ###p-sharing
-###pinterest
 ###ppsPopupBgOverlay
 ###rail-share-bar
 ###share-buttons
@@ -68,15 +67,12 @@
 ##.heateor_sss_sharing_container:not(html, body)
 ##.i-more-share:not(html, body)
 ##.js-share-btn:not(html, body)
-##.js-share-pinterest:not(html, body)
-##.js-share-stumble:not(html, body)
 ##.jw-sharing-icon:not(html, body)
 ##.loader-container.shares:not(html, body)
 ##.mashsb-box:not(html, body)
 ##.meta-share-wrapper:not(html, body)
 ##.news-share-link:not(html, body)
 ##.news_share:not(html, body)
-##.pinterest-share:not(html, body)
 ##.post-social-goog:not(html, body)
 ##.post_social:not(html, body)
 ##.ppsPopupFbLikeShell:not(html, body)
@@ -100,7 +96,6 @@
 ##.share-networks:not(html, body)
 ##.share-nw:not(html, body)
 ##.share-other:not(html, body)
-##.share-pinterest:not(html, body)
 ##.share-reddit:not(html, body)
 ##.share-social:not(html, body)
 ##.share-telegram:not(html, body)
@@ -109,7 +104,6 @@
 ##.share-tools:not(html, body)
 ##.share-top:not(html, body)
 ##.share-trigger:not(html, body)
-##.share-tumblr:not(html, body)
 ##.share-whatsapp:not(html, body)
 ##.share__list:not(html, body)
 ##.share_area:not(html, body)
@@ -166,9 +160,7 @@
 ##.wpusb:not(html, body)
 ##[app=addtoany]:not(html, body)
 ##[class*=share-toolbar]:not(html, body)
-##[class*=social-share]:not(article, html, body, [preload])
 ##[class*=social_share]:not(article, html, body)
-##[class*=socialshare i]:not(html, body)
 ##[data-flip-widget=shareflip]:not(html, body)
 ##[socialshare]:not(html, body)
 ##a[appshareclick]
@@ -180,12 +172,10 @@
 ##a[class*=BtnShare]
 ##a[class*=google_plus_share]
 ##a[class*=share__button]
-##a[class^=pinterest-save]
 ##a[class^=share_btn]
 ##a[class^=sharing-popup-]
 ##a[class^=socialbutton i][onclick*="window.open"]
 ##a[data-ga-event-action^="share:"]
-##a[data-pin-do=buttonPin]
 ##a[data-plugin^=sharingButtons]
 ##a[data-ss-ss-type]
 ##a[data-tooltip^="Share on "]
@@ -198,16 +188,13 @@
 ##a[href*="api.addthis.com"]:not([href*="/email/"])
 ##a[href*="plusone.google.com"]
 ##a[href*="telegram.me/share/url?"]
-##a[href*=share-tools]
 ##a[href="#javascript"][class*=social-link]
 ##a[href="/#messenger"]
-##a[href="/#pinterest"]
 ##a[href^="/sharer/sharer.php?"] > button[type=submit]
 ##a[href^="javascript:sendSns('"]
 ##a[href^="javascript:tw_share('"]
 ##a[id*=share-][id*=-button]
 ##a[id^=share_btn]
-##a[onclick*="pinterest.com/pin/create/"]
 ##a[onclick*="plus.google.com/share?"]
 ##a[onclick^="share_toggle("]
 ##a[onclick^="var share"]
@@ -215,17 +202,14 @@
 ##a[onclick^=ShowShareDialog]
 ##a[onmouseover^="return addthis_open"]
 ##a[title="Share on Baidu" i]
-##a[title="Share on Pinterest" i]
 ##a[title="Share on Reddit" i]
 ##a[title="Share on Telegram" i]
-##a[title="Share on Tumblr" i]
 ##a[title="Share on WhatsApp" i]
 ##a[title^="Share to "]
 ##amedia-share
 ##amp-social-share
 ##button[aria-controls=ShareContainer]
 ##button[class*=ShareOverlayButton i]
-##button[class*=SharesButton i]
 ##button[class^=share-module__share]
 ##button[data-a-target^=share]
 ##button[data-arctrac*=socialShare i]
@@ -249,7 +233,6 @@
 ##div[class*=post-sharing]
 ##div[class*=share-article]
 ##div[class*=sharer-tool]
-##div[class*=sharethisbutton i]
 ##div[class*=shareToolbar]
 ##div[class*=social-panel]
 ##div[class*=social][class*=sharing]
@@ -289,6 +272,8 @@
 */images/share_icons/
 */images/social-share/
 */share-newsletter/
+/[./]share\.[a-z0-9-]{2,60}\./$image
+/[./]sharing\.[a-z0-9-]{2,60}\./$image
 /addthis_widget.js^
 /btn_share_fb.
 /btn_share_ln.
@@ -317,8 +302,6 @@ condoblues.com###milotree_box_wrap
 ||milotree.com^$third-party
 ||platform.twitter.com/widgets/follow_button$subdocument
 ||platform.twitter.com/widgets/tweet_button$subdocument
-||share.*.$image
-||sharing.*.$image
 ||social-plugins.line.me/widget/share?url=$subdocument
 ||softwareok.com/img/i_like_this.png?$image
 ||static.addtoany.com/buttons^$image
@@ -385,7 +368,6 @@ condoblues.com###milotree_box_wrap
 ~instagram.com##div[class=instagram-Share i]
 ~instagram.com##div[class=instagram_Share i]
 ~instagram.com##div[class=instagramShare i]
-~kjokkenskriveren.no##[class*=ShareButton i]:not(button, body, html)
 ~line.me##a[href*="/lineit/share?"]
 ~linkedin.com##.addthis_button_linkedin:not(html, body)
 ~linkedin.com##.button__linkedin:not(html, body)
@@ -405,14 +387,23 @@ condoblues.com###milotree_box_wrap
 ~ne.jp##iframe[class^=hatena-bookmark]
 ~ok.ru##a[href*="/connect.ok.ru/dk?"]
 ~ok.ru##a[href^="https://connect.ok.ru/offer?url="]
+~pinterest.*###pinterest
 ~pinterest.*##.inline-share-pinterest:not(html, body)
+~pinterest.*##.js-share-pinterest:not(html, body)
+~pinterest.*##.pinterest-share:not(html, body)
 ~pinterest.*##.pinterest[href*="/pin/create/"]
+~pinterest.*##.share-pinterest:not(html, body)
 ~pinterest.*##a[class$=pinterest-share]
 ~pinterest.*##a[class$=share-pinterest]
+~pinterest.*##a[class^=pinterest-save]
+~pinterest.*##a[data-pin-do=buttonPin]
 ~pinterest.*##a[href*="pinterest.com/pin/find/?"]
 ~pinterest.*##a[href*=pinterest][href*="/pin/create/b"]
 ~pinterest.*##a[href="#pinit"]
+~pinterest.*##a[href="/#pinterest"]
+~pinterest.*##a[onclick*="pinterest.com/pin/create/"]
 ~pinterest.*##a[onclick^=execPinmarklet]
+~pinterest.*##a[title="Share on Pinterest" i]
 ~pinterest.*##button[data-href*="pinterest.com/pin/create/button/"]
 ~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion###share-reddit
 ~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##a[href*="reddit.com/r/"][href*="/submit?url="]
@@ -422,9 +413,12 @@ condoblues.com###milotree_box_wrap
 ~stumbleupon.com##a[href*="stumbleupon.com/badge?"]
 ~stumbleupon.com##a[href*="stumbleupon.com/submit?url="]
 ~telegram.org##a[href^="tg://msg_url?"]
+~tumblr.com##.js-share-stumble:not(html, body)
+~tumblr.com##.share-tumblr:not(html, body)
 ~tumblr.com##a[href*="tumblr.com/share/"]
 ~tumblr.com##a[href*="tumblr.com/share?"]
 ~tumblr.com##a[href*="tumblr.com/widgets/share/"]
+~tumblr.com##a[title="Share on Tumblr" i]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###share-twitter
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###share-twitter-bottom
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##.btn-twitter:not(html, body)
@@ -469,6 +463,14 @@ condoblues.com###milotree_box_wrap
 !!!~mewe.com,~www.nrk.no##[class*=share-button i]:not(body, html) (Can't be generic due to www.nrk.no, mewe.com, stylecaster.com)
 !!!~tidssonen.no,~mmoculture.com##div[class*=share-container] (Entry needs to be rewritten at some point)
 !!!~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion,~feedly.com,~chaturbate.com##.follow (Too many exceptions needed)
+
+! Fairly broad entries, likely to be made non-generic after the next false positive is found
+##[class*=socialshare i]:not(html, body)
+##[class*=social-share]:not(article, html, body, [preload])
+##a[href*=share-tools]
+##button[class*=SharesButton i]
+##div[class*=sharethisbutton i]
+~kjokkenskriveren.no##[class*=ShareButton i]:not(button, body, html)
 
 ! NOT allowed to be generic
 pastebin.com##.h_800.tweet
