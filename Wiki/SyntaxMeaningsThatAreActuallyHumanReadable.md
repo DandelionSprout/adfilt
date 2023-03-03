@@ -151,7 +151,7 @@
 * `$cookie=` + `maxAge`: Changes the cookie to have an expiration time in seconds.
 * `$cookie=` + `same-site`: Changes the cookie to use the "Lax" mode of `samesite` known from the `Set-Cookie` browser HTTP response system.
 * `@@` + `$urlblock`: Turns off file-request blocking entirely while on that domain.
-* `$removeheader`: Unknown.
+* `$removeheader`: Removes lines found in the F12 Dev Tools → Network → Ctrl+F to let it record the whole page's loading → All → Name → "Response Headers" or "Request Headers".
 
 ## AdGuard for [Windows/Mac/Android] only:
 
