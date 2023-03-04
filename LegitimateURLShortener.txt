@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 02March2023v2
+! Version: 04March2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2304,7 +2304,7 @@ $removeparam=reflink,domain=marketwatch.com|mansionglobal.com
 $removeparam=hpt,domain=cnn.com
 
 ! https://blog.archive.org/matching-gifts/?iax=typage
-||archive.org^$removeparam=iax
+||archive.org^*iax$removeparam=iax
 
 ! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
 ||cdon.$removeparam=g
@@ -2313,33 +2313,33 @@ $removeparam=hpt,domain=cnn.com
 ||pbtech.$removeparam=qr
 
 ! https://www.son-video.com/article/ecouteurs-true-wireless/apple/airpods-avec-boitier-de-charge?ae=12 (28/11/2020)
-||son-video.com^$removeparam=ae
+||son-video.com^*ae$removeparam=ae
 
 ! https://www.fnac.es/mp9080323/TV-OLED-LG-UltraHD-4K-55-OLED55A13LA-negro/w-4?Origin=AFF_TRDB_2434087&ptd=70431#omnsearchpos=10
 ||fnac.$removeparam=Origin
 
 ! https://www.paypal.com/myaccount/transaction/details/7CY16898V3123435J?v=1&utm_unptid=&ppid=RT000016&cnac=NO&rsta=no_NO(nb-NO)&cust=&unptid=&calc=24c08e54728d&unp_tpcid=null&page=main%3Aemail%3ART000016&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.26.0&xt=
-||paypal.com^$removeparam=calc
+||paypal.com^*calc$removeparam=calc
 
 ! https://www.youtube.com/watch?v=ACb-3n4tRGE&ab_channel=BillyO%27Reilly (07/12/2020)
-||youtube.com^$removeparam=ab_channel
+||youtube.com^*ab_channel$removeparam=ab_channel
 
 ! https://my.postnord.no/tracking/73330062019301037?mobile=00000000&signed=30c93bff-3e20-4bca-bedf-d96c464a9328
 ||postnord.$removeparam=mobile
 ||postnord.$removeparam=signed
 
 ! https://www.alibaba.com/toprankedsellers/index.html?spm=a2700.8293689.0.0.2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
-||alibaba.com^$removeparam=categoryIds
+||alibaba.com^*categoryIds$removeparam=categoryIds
 
 ! https://rugby.no/finn-din-lokale-klubb/ (05/03/2021)
 ||maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate^$removeparam
 ||maps.googleapis.com/maps/api/js/QuotaService.RecordEvent^$removeparam
 
 ! https://ekstrabladet.dk/nyheder/samfund/slut-med-massageannoncer/8498857?account=ebreaking&ext_source=twitter (10/03/2021)
-||ekstrabladet.dk^$removeparam=account
+||ekstrabladet.dk^*account$removeparam=account
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-487427 (17/03/2021)
-||tradera.com^$removeparam=transactionalEmail
+||tradera.com^*transactionalEmail$removeparam=transactionalEmail
 
 ! https://www.tv2.no/?r=refresh (16/12/2020)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-987226
@@ -2355,18 +2355,18 @@ $~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com|ledger.*|mrgay.com|odyse
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-526736 (25/03/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-873926
-||tcgplayer.com^$removeparam=productLineName
-||tcgplayer.com^$removeparam=setName
+||tcgplayer.com^*productLineName$removeparam=productLineName
+||tcgplayer.com^*setName$removeparam=setName
 
 ! https://www.humblebundle.com/store/?linkID=&mcID=102:UUIDHERE:ot:UUIDHERE:1 (06/05/2021)
-||humblebundle.com^$removeparam=linkID
-||humblebundle.com^$removeparam=mcID
+||humblebundle.com^*linkID$removeparam=linkID
+||humblebundle.com^*mcID$removeparam=mcID
 
 ! https://cdnb.artstation.com/p/assets/images/images/030/045/719/large/abhishek-karmakar-b56f0421b303b8d9016f022d17330898.jpg?1599443127 (06/05/2021)
 ||artstation.com^$removeparam=/^\d/
 
 ! https://www.thedailybeast.com/russian-doctor-alexander-murakhovsky-who-lied-about-navalny-poisoning-disappeared-in-the-woods?source=articles&via=rss
-||thedailybeast.com^$removeparam=via
+||thedailybeast.com^*via$removeparam=via
 
 ! https://www.imdb.com/title/tt10048342/mediaviewer/rm2490882049/?context=default
 $removeparam=context,domain=imdb.com|fiverr.com
@@ -2384,25 +2384,25 @@ $~xmlhttprequest,removeparam=ref_,domain=facebook.*|facebookwkhpilnemxj7asaniu7v
 $removeparam=tag,domain=amazon.*|argos.co.uk|habitat.co.uk|tv2.no
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-728592
-||udemy.com^$removeparam=publisher_id
-||udemy.com^$removeparam=website_id
+||udemy.com^*publisher_id$removeparam=publisher_id
+||udemy.com^*website_id$removeparam=website_id
 ||hostinger.$removeparam=session
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-737564
-||riverisland.com^$removeparam=sem
-||marksandspencer.com^$removeparam=bvstate
+||riverisland.com^*sem$removeparam=sem
+||marksandspencer.com^*bvstate$removeparam=bvstate
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
-||xbox.com^$removeparam=xr
-||deepdiscount.com^$removeparam=bid
+||xbox.com^*xr$removeparam=xr
+||deepdiscount.com^*bid$removeparam=bid
 $removeparam=medium,domain=deepdiscount.com|eonline.com|outnorth.fi|bybit.com|t.me|twitter.com|docs.google.com|instagram.com|forms.gle|goodcrypto.app|discord.*|eventbrite.*|youtube.com|coinpanel.com|docsend.com|kasta.io|runnode.com|gleam.io|1sol.io
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750307
 $removeparam=rid,domain=giphy.com
-||rightmove.co.uk^$removeparam=csg
+||rightmove.co.uk^*csg$removeparam=csg
 
 ! https://www.ericgown.no/A-Formet-Prinsesse-V-Hals-Gulvlengde-Chiffong-Selskapskjoler-Med-Frynse-Splittet-Front-017216976-g216976/?ggsub=pl&ggntk=g&ggcid=426150376762&ggkey&ggpos&ggdev=m&ggdevm&ggplm&ggtgt&currency=EUR (22/05/2021)
-||ericgown.no^$removeparam=ggkey
+||ericgown.no^*ggkey$removeparam=ggkey
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-770867
 $removeparam=ServiceType,domain=gamespot.com|cnet.*
@@ -2414,18 +2414,18 @@ $removeparam=TheTime,domain=gamespot.com|cnet.*
 ||bbc.$removeparam=pinned_post_locator
 ||bbc.$removeparam=pinned_post_asset_id
 ||bbc.$removeparam=pinned_post_type
-||thehackernews.com^$removeparam=_m
+||thehackernews.com^*_m$removeparam=_m
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-783185
-||apple.com^$removeparam=fnode
-||epidemicsound.com^$removeparam=_us
-||epidemicsound.com^$removeparam=_usx
-||photojobz.com^$removeparam=hop
-||microsoft.com^$removeparam=headerid
+||apple.com^*fnode$removeparam=fnode
+||epidemicsound.com^*_us$removeparam=_us
+||epidemicsound.com^*_usx$removeparam=_usx
+||photojobz.com^*hop$removeparam=hop
+||microsoft.com^*headerid$removeparam=headerid
 ||microsoft.com^$removeparam=/^AAAA/
-||babbel.com^$removeparam=bsc
-||babbel.com^$removeparam=btp
-||microsoft.com^$removeparam=destrt
+||babbel.com^*bsc$removeparam=bsc
+||babbel.com^*btp$removeparam=btp
+||microsoft.com^*destrt$removeparam=destrt
 
 ! https://www.data-systems.fi/tuote/seagate-2tb-hdd-for-ps4/?ad=hintaseuranta&ad_src=hintaseuranta.fi&ad_content=Seagate+Game+Drive+2+TB+(PS4)+STGD2000200%2c+ulkoinen+kovalevy&ad_prodid=9851598
 ! https://github.com/DandelionSprout/adfilt/commit/2781552717e908b5b33c2fd497151e11cc67abcf
@@ -2435,12 +2435,12 @@ $removeparam=ad_content,domain=adlibris.com|scandinavianphoto.fi|e-ville.com|dat
 $removeparam=ad_prodid,domain=adlibris.com|scandinavianphoto.fi|e-ville.com|data-systems.fi|24hshop.fi|swamp.fi
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
-||rei.com^$removeparam=target_id
-||squarespace.com^$removeparam=subchannel
+||rei.com^*target_id$removeparam=target_id
+||squarespace.com^*subchannel$removeparam=subchannel
 
 ! https://chggtrx.com/clk.trk?CID=267627&AFID=304351
 $removeparam=partner,domain=accuweather.com|fastcompany.com|humblebundle.com
-||mechanicalkeyboards.com^$removeparam=creator
+||mechanicalkeyboards.com^*creator$removeparam=creator
 ||audible.$removeparam=source_code
 ||audible.$removeparam=ipRedirectFrom
 ||audible.$removeparam=ipRedirectOriginalURL
@@ -2450,7 +2450,7 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ! ||booking.com^$removeparam=label (Breaks slide-in hotel review feeds)
 
 ! https://www.verizon.com/deals/?SID=908A84AE-9041-433A-8EC7-CD9AB19B08F4&vendorid=CJM&PUBID=746431&cjevent=fb375adac6a811eb838200b20a18050d&cjdata=MXxZfDB8WXww
-||verizon.com^$removeparam=vendorid
+||verizon.com^*vendorid$removeparam=vendorid
 
 ! https://www.discoveryplus.dk/programmer/fk-ikke-med-piger?idp=Facebook&responseCode=212 (18/06/2021)
 ||discoveryplus.$removeparam=idp
@@ -2462,16 +2462,16 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ||tui.$removeparam=onebrand_source
 
 ! https://www.hp.com/us-en/shop/slp/weekly-deals?jumpid=ma_home_hero_na_1_210623
-||hp.com^$removeparam=jumpid
+||hp.com^*jumpid$removeparam=jumpid
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1015504
-||walmart.com^$removeparam=veh
+||walmart.com^*veh$removeparam=veh
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1018250
 $removeparam=ved,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1018655
-||hinta.fi^$removeparam=v
+||hinta.fi^*v$removeparam=v
 @@||hinta.fi/lib/$removeparam=v
 ! https://www.bbc.co.uk/news/uk-57892934?at_medium=custom7&at_custom4=2CB46890-EAAD-11EB-AC49-99003A982C1E&at_custom3=BBC+News&at_custom1=%5Bpost+type%5D&at_campaign=64&at_custom2=facebook_page&fbclid=IwAR2wR9VZ_1-lFkKWtkQP6t__s4wHQ_lAM8yggT7B_RZpi7A5HVi6oow34-A
 ||bbc.$removeparam=at_medium
@@ -2482,94 +2482,94 @@ $removeparam=ved,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5w
 ||bbc.$removeparam=at_campaign
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
-||simplelogin.io^$removeparam=slref
-||roboform.com^$removeparam=rec
+||simplelogin.io^*slref$removeparam=slref
+||roboform.com^*rec$removeparam=rec
 
 ! https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTQ_thTIPr-4kGYMHEyfPeD9YN_0fwvx4-fQ&usqp=CAU
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2466789
 $removeparam=usqp,domain=gstatic.com|cdn.ampproject.org
 
 ! https://www.gog.com/promo/rerelease_ultima_underworld_and_syndicate?pp=b2a10a6c3dcadb10c8ffd734c1bab896d55cf0ec (06/08/2021)
-||gog.com^$removeparam=pp
+||gog.com^*pp$removeparam=pp
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1141831
-||roblox.com^$removeparam=refPageId
+||roblox.com^*refPageId$removeparam=refPageId
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1142244
 ||taxscouts.$removeparam=referralSource
-||ting.com^$removeparam=lpn
-||newegg.com^$removeparam=quicklink
-||newegg.com^$removeparam=nm_mc
-||slickdeals.net^$removeparam=bsencid
-||target.com^$removeparam=clkid
+||ting.com^*lpn$removeparam=lpn
+||newegg.com^*quicklink$removeparam=quicklink
+||newegg.com^*nm_mc$removeparam=nm_mc
+||slickdeals.net^*bsencid$removeparam=bsencid
+||target.com^*clkid$removeparam=clkid
 $removeparam=adcampaigngroup
-||dell.com^$removeparam=dgc
-||dell.com^$removeparam=VEN1
-||dell.com^$removeparam=nclid
-||dell.com^$removeparam=gacd
+||dell.com^*dgc$removeparam=dgc
+||dell.com^*VEN1$removeparam=VEN1
+||dell.com^*nclid$removeparam=nclid
+||dell.com^*gacd$removeparam=gacd
 $removeparam=ref_id,domain=expedia.com|intuit.com|tunnelbear.com
-||expedia.com^$removeparam=my_ad
+||expedia.com^*my_ad$removeparam=my_ad
 $removeparam=sourceID,domain=gamestop.com|verizon.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1143347
 $removeparam=rank,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 
 ! https://www.asahi.com/sp/articles/ASP8K5CZ3P8KUTFK011.html?iref=comtop_7_01
-||asahi.com^$removeparam=iref
+||asahi.com^*iref$removeparam=iref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1151326
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-831247
-||malwarebytes.com^$removeparam=guard
-||malwarebytes.com^$removeparam=x-source
-||malwarebytes.com^$removeparam=ADDITIONAL_x-source
+||malwarebytes.com^*guard$removeparam=guard
+||malwarebytes.com^*x-source$removeparam=x-source
+||malwarebytes.com^*ADDITIONAL_x-source$removeparam=ADDITIONAL_x-source
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1159362
 ||aws^$removeparam=did
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1169570
-||ozon.ru^$removeparam=advert
+||ozon.ru^*advert$removeparam=advert
 ||mediamarket.$removeparam=rbtc
-||sitepoint.com^$removeparam=fromBlog
-||msn.com^$removeparam=ignorejs
-||forbes.com^$removeparam=sh
+||sitepoint.com^*fromBlog$removeparam=fromBlog
+||msn.com^*ignorejs$removeparam=ignorejs
+||forbes.com^*sh$removeparam=sh
 $removeparam=soc_src
 $removeparam=soc_trk
-||euronews.com^$removeparam=_ope
+||euronews.com^*_ope$removeparam=_ope
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1185036
-||belk.com^$removeparam=start
+||belk.com^*start$removeparam=start
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1203873
-||blue-tomato.com^$removeparam=varid
+||blue-tomato.com^*varid$removeparam=varid
 $removeparam=ia-pkpmtrack
-||blue-tomato.com^$removeparam=zanox
+||blue-tomato.com^*zanox$removeparam=zanox
 ||blue-tomato.com^$removeparam=/_(\$)ja/
 ||spartoo.$removeparam=sx
 ||spartoo.$removeparam=track_id
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1206280
 $removeparam=impression_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
-||microcenter.com^$removeparam=rf
+||microcenter.com^*rf$removeparam=rf
 
 ! https://business.udemy.com/resources/hybrid-workplace-webinar/?btn=ub-smartbar
-||udemy.com^$removeparam=btn
+||udemy.com^*btn$removeparam=btn
 
 ! https://en.as.com/en/2021/08/23/soccer/1629727141_093723.html?omnil=resrelart
 ! https://en.as.com/tag/lionel_messi/a?id_externo_noti=mod_ficha
 ! https://as.com/futbol/2021/08/24/primera/1629781727_235298.html?m1=cG9ydGFkYV9wb3J0YWRh&m2=QUNUVUFMSURBRA%3D%3D&m3=NA%3D%3D&m4=bm9ybWFs&m5=MjI%3D&m1=cG9ydGFkYV9wb3J0YWRh&m2=QUNUVUFMSURBRA%3D%3D&m3=NQ%3D%3D&m4=bm9ybWFs&m5=MjI%3D
-||as.com^$removeparam=omnil
-||as.com^$removeparam=id_externo_noti
-||as.com^$removeparam=m1
-||as.com^$removeparam=m2
-||as.com^$removeparam=m3
-||as.com^$removeparam=m4
-||as.com^$removeparam=m5
+||as.com^*omnil$removeparam=omnil
+||as.com^*id_externo_noti$removeparam=id_externo_noti
+||as.com^*m1$removeparam=m1
+||as.com^*m2$removeparam=m2
+||as.com^*m3$removeparam=m3
+||as.com^*m4$removeparam=m4
+||as.com^*m5$removeparam=m5
 
 ! https://www.udemy.com/courses/search/?q=data+structures&kw=data+struc
-||udemy.com^$removeparam=kw
+||udemy.com^*kw$removeparam=kw
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1263630
-||surfshark.com^$removeparam=transaction_id
+||surfshark.com^*transaction_id$removeparam=transaction_id
 
 ! https://blackfriday.com/stores/black-friday
 $removeparam=CID,domain=burpee.com|chegg.com|express.com|farmandfleet.com|marvel.com|mcafee.com|overstock.com|pepboys.com|puritan.com|rosettastone.com|samsung.com|shutterfly.com|staples.com|teleflora.com|ulta.com|virginatlantic.com|vrbo.com|walgreens.com
@@ -2609,10 +2609,10 @@ $removeparam=/^srcCode=/i,domain=jcrew.com|magellans.com|teleflora.com|tigerdire
 $removeparam=scd,domain=ashleystewart.com
 
 ! https://casper.com/?coupon_code_amount=50&coupon_code&partner_hero_name&promo_code&gwlurl=https%3A%2F%2Fcasper.com%2F%3Fclickid%3DwVS0-ry5EV79w7lVgyz7gRQMUkg3cwUdzw4SWQ0%26irgwc%3D1%26utm_medium%3Daffiliate%26utm_source%3Dap_ir%26cvo_placement%3Dlandingpage%26coupon_code_amount%3D50%26cvosrc%3Daffiliate.-ap_ir.COU_OFFERS50%26utm_campaign%3Dnano%26coupon_code%3DOFFERS50%26partner_hero_name%3DOFFERS50%26utm_content%3DCOU_OFFERS50%26cvo_campaign%3DCOU%26cvo_creative%3DOnline%2520Tracking%2520Link%26utm_term%3D%26promo_code%3DOFFERS50%26cvo_country%3DNAM%26cvo_product%3DMAT%26clickid%3DS2JWRT0fsxyIRwNxiAS6PRWLUkBTve0%253A4xL1Ws0%26irgwc%3D1%26utm_medium%3Daffiliate%26utm_source%3DZiff%2520Davis%2520-%2520Black%2520Friday%26utm_campaign%3Dap_ir%26coupon_code%3D%26partner_hero_name%3D%26utm_content%3DB22723142.275269922%253Bdc_trk_aid%253D469817975%253Bdc_trk_cid%253D133608354_%26utm_term%3Dlower%26promo_code%3D
-||casper.com^$removeparam=gwlurl
+||casper.com^*gwlurl$removeparam=gwlurl
 
 ! https://www.ifixit.com/Store/Tools/Toolkits?sponsor=ltt
-||ifixit.com^$removeparam=sponsor
+||ifixit.com^*sponsor$removeparam=sponsor
 
 ! https://www.greenmangaming.com/?tap_a=1964-996bbb&tap_s=2041734-c9a23b
 ||greenmangaming.com^$removeparam=/^tap_/
@@ -2622,149 +2622,149 @@ $removeparam=scd,domain=ashleystewart.com
 $removeparam=pt,domain=icedrive.net|apple.com
 
 ! https://www.adorama.com/?sterm=VWlWgE0K8xyIRwNxiAS6PRWLUkBTDLT34xL1Ws0
-||adorama.com^$removeparam=sterm
+||adorama.com^*sterm$removeparam=sterm
 
 ! https://www.kohls.com/search.jsp?submit-search=web-regular&search=Ninja%20Foodi%20Deluxe%20XLr&kls_sbp=17499784183223295270059026280929794051&cid=affiliate-_-75107
 ! https://www.kohls.com/product/prd-5164006/ninja-creami-ice-cream-gelato-sorbet-maker.jsp?pfm=bdrecs-WebStore-Search-Horizontal1-b1174-257&bdrecsId=2bdf149f-933a-4139-a756-a9467ddd11ea?prdPV=32
-||kohls.com^$removeparam=kls_sbp
-||kohls.com^$removeparam=pfm
-||kohls.com^$removeparam=bdrecsId
-||kohls.com^$removeparam=prdPV
+||kohls.com^*kls_sbp$removeparam=kls_sbp
+||kohls.com^*pfm$removeparam=pfm
+||kohls.com^*bdrecsId$removeparam=bdrecsId
+||kohls.com^*prdPV$removeparam=prdPV
 
 ! https://www.mcafee.com/consumer/en-us/landing-page/direct/aff/mtp-family/desktop/mcafee-total-protection.html?pkg_id=521&culture=en-us&csrc=cj&csrcl2=Black+Friday%2C+Ziff+Davis+LLC&ccoe=direct&ccoel2=am&ccstype=partnerlinks_412446610cc511ec82da00f00a180510&cctype=desktop&prgt=a
 $removeparam=csrc,domain=mcafee.com|vitacost.com
-||mcafee.com^$removeparam=csrcl2
-||mcafee.com^$removeparam=cctype
-||mcafee.com^$removeparam=ccstype
+||mcafee.com^*csrcl2$removeparam=csrcl2
+||mcafee.com^*cctype$removeparam=cctype
+||mcafee.com^*ccstype$removeparam=ccstype
 
 ! https://www.lightinthebox.com/c/robot-vacuums-cleaners_113104?p.litb_from=SAS&p.utm_source=sas&p.utm_medium=affiliate&p.utm_campaign=136482&url=http%3A%2F%2Fwww.lightinthebox.com%2Fc%2Frobot-vacuums-cleaners_113104
-||lightinthebox.com^$removeparam=url
+||lightinthebox.com^*url$removeparam=url
 
 ! https://hoteles.com/?tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&rffrid=aff.hcom.us.002.003.8807380.cjaff.kwrd=886b4ff00cb611ec806d4d080a18050d&wapa6=00aLOkbcDwTPhG5y3pNOVi2&sub_publisher=1397064&sub_site=8807380&sub_ad=10780389
-||hoteles.com^$removeparam=PSRC
-||hoteles.com^$removeparam=wapa6
+||hoteles.com^*PSRC$removeparam=PSRC
+||hoteles.com^*wapa6$removeparam=wapa6
 ||hoteles.com^$removeparam=/^sub_/
-||hoteles.com^$removeparam=tmid
+||hoteles.com^*tmid$removeparam=tmid
 
 ! https://buschgardens.com/?AFS=CJ
-||buschgardens.com^$removeparam=AFS
+||buschgardens.com^*AFS$removeparam=AFS
 
 ! https://pub.emails.dollar.com/EmailAcquisition?SourceSystem=DOLLAR.COM&sourcecode=emailacq?&icid_source=enus&icid_campaign=D_A_USCA_IN_EmailAcquisition_Offer&icid_medium=Email_Acquisiton2_Hero&iata=00170201
-||dollar.com^$removeparam=SourceSystem
-||dollar.com^$removeparam=sourcecode
-||dollar.com^$removeparam=iata
+||dollar.com^*SourceSystem$removeparam=SourceSystem
+||dollar.com^*sourcecode$removeparam=sourcecode
+||dollar.com^*iata$removeparam=iata
 
 ! https://www.taskrabbit.com/?creative_id=13180506&site_id=3211374
-||taskrabbit.com^$removeparam=creative_id
+||taskrabbit.com^*creative_id$removeparam=creative_id
 $removeparam=site_id,domain=taskrabbit.com|kochava.com
 
 ! https://control.kochava.com/v1/cpi/click?app_source=website&app_medium=button&app_campaign=app-ios&campaign_id=koios-client-app-c36sca13f37d993fe&network_id=9569&site_id=1&device_id=device_id
 ||kochava.com^$removeparam=/^app_/
-||kochava.com^$removeparam=network_id
-||kochava.com^$removeparam=device_id
+||kochava.com^*network_id$removeparam=network_id
+||kochava.com^*device_id$removeparam=device_id
 
 ! https://sunbasket.com/try/90off-healthy-delivered/?offer=AFFMKSPRING90&mclk=VrJ0FZ0boxyIRwNxiAS6PRWLUkBTp4Vn4xL1Ws0&mrnd=5967574&maid=466145&mcid=8078&mpid=10098&msid&mpty=mediapartner&msb1&msb2&msb3&muts=1630695381206
-||sunbasket.com^$removeparam=msb1
-||sunbasket.com^$removeparam=msb2
-||sunbasket.com^$removeparam=msb3
-||sunbasket.com^$removeparam=muts
+||sunbasket.com^*msb1$removeparam=msb1
+||sunbasket.com^*msb2$removeparam=msb2
+||sunbasket.com^*msb3$removeparam=msb3
+||sunbasket.com^*muts$removeparam=muts
 
 ! https://www.skyscanner.de/?previousCultureSource=GEO_LOCATION&redirectedFrom=www.skyscanner.com
 ||skyscanner.$removeparam=redirectedFrom
 ||skyscanner.$removeparam=previousCultureSource
 
 ! https://www.shopdisney.com/?LSID=8807380%7C11502922%7C07AfU4m6VVCOWkcvKjVHrwn&att=LSGenAffl&EFC=224510
-||shopdisney.com^$removeparam=att
-||shopdisney.com^$removeparam=EFC
+||shopdisney.com^*att$removeparam=att
+||shopdisney.com^*EFC$removeparam=EFC
 
 ! https://www.shopbop.com/?extid=affprg_linkshare_SB-qpF0HYnRugA&affuid=03YIJ120qrfneBzrgFZphAL&subid1=qpF0HYnRugA-DXFRwhmlttyMxF3QMcHugA&pf_rd_p=524fa342-a6a1-4ffe-bf4c-faa1b3b0fdc5&pf_rd_r=PPQP63RRXQVFCASEJGYW&ref_=SB_ALL_P2_CATx_whatsNew_4
-||shopbop.com^$removeparam=extid
+||shopbop.com^*extid$removeparam=extid
 
 ! https://www.saksfifthavenue.com/?site_refer=AFF001&LSoid=778432&LSlinkid=10&LScreativeid=1
 $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
-||saksfifthavenue.com^$removeparam=LSoid
-||saksfifthavenue.com^$removeparam=LSlinkid
-||saksfifthavenue.com^$removeparam=LScreativeid
+||saksfifthavenue.com^*LSoid$removeparam=LSoid
+||saksfifthavenue.com^*LSlinkid$removeparam=LSlinkid
+||saksfifthavenue.com^*LScreativeid$removeparam=LScreativeid
 
 ! https://www.humblebundle.com/?zmg_code=047w7nLoOX7W0gtuuWl9c6u
-||humblebundle.com^$removeparam=zmg_code
+||humblebundle.com^*zmg_code$removeparam=zmg_code
 
 ! https://epson.com/?cje=28a0febb0cac11ec83a7efca0a180512
 ||epson.$removeparam=cje
 
 ! https://www.fubo.tv/stream/latino/?irad=1070868&irmp=416484&sharedID=HTW
-||fubo.tv^$removeparam=irad
-||fubo.tv^$removeparam=irmp
+||fubo.tv^*irad$removeparam=irad
+||fubo.tv^*irmp$removeparam=irmp
 
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-915141282
-||imobiliare.ro^$removeparam=exprec
-||imobiliare.ro^$removeparam=rec_ref
-||imobiliare.ro^$removeparam=sursa_rec
-||imobiliare.ro^$removeparam=imoidviz
+||imobiliare.ro^*exprec$removeparam=exprec
+||imobiliare.ro^*rec_ref$removeparam=rec_ref
+||imobiliare.ro^*sursa_rec$removeparam=sursa_rec
+||imobiliare.ro^*imoidviz$removeparam=imoidviz
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1307231
 $removeparam=context_referrer
 $removeparam=ref_ctx_id
-||fiverr.com^$removeparam=pckg_id
-||fiverr.com^$removeparam=is_pro
-||fiverr.com^$removeparam=context_alg
-||fiverr.com^$removeparam=context_type
+||fiverr.com^*pckg_id$removeparam=pckg_id
+||fiverr.com^*is_pro$removeparam=is_pro
+||fiverr.com^*context_alg$removeparam=context_alg
+||fiverr.com^*context_type$removeparam=context_type
 
 ! https://www.virustotal.com/gui/file/cdecce5824e901bbbd97c0f933c15a14a4f2c1b260da17d8081b6b87cf306c2f/community
-||ccleaner.com^$removeparam=x-acqsource
+||ccleaner.com^*x-acqsource$removeparam=x-acqsource
 
 ! https://us.norton.com/?displocale=iso3%3ausa&displang=iso3%3aeng&ssdcat=266&origin=safew&env=prod&version=1.0
-||norton.com^$removeparam=ssdcat
+||norton.com^*ssdcat$removeparam=ssdcat
 
 ! https://tyopaikat.oikotie.fi/avoimet-tyopaikat/commercial-range-director/1498629?sRef=HSAvainpaikat&keyJobId=204734
-||oikotie.fi^$removeparam=sRef
+||oikotie.fi^*sRef$removeparam=sRef
 
 ! https://sn.dk/Verden/Rumturister-er-tilbage-paa-Jorden-efter-historisk-mission/artikel/1472742?rss
 $removeparam=rss,domain=sn.dk|ted.com
 
 ! https://scontent.cdninstagram.com/v/t50.2886-16/228280186_4462339507137399_6165083647713647040_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5zdG9yeS5kZWZhdWx0In0&_nc_ht=scontent-iev1-1.cdninstagram.com&_nc_ohc=nL_7kCFHgrcAX-HT6F1&edm=AOVtZ6oBAAAA&vs=17895914579221456_1489520608&_nc_vs=HBksFQAYJEdIcEhtdzEzcXpCaGVkb1BBTUNaaXVEcHhvNVZidXFIQUFBQRUAAsgBABUAGCRHTVdiZFE2Z2ZIa3dVWFVBQUtNZXdSNFhTQ2NSYnBrd0FBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACbCkMnRj5zWPxUCKAJDMywXQCREGJN0vGoYEmRhc2hfYmFzZWxpbmVfM192MREAdegHAA%3D%3D&ccb=7-4&oe=614B0BE1&oh=22849edcbcdb1949e3f0cbde56ddd89b&_nc_vts_prog=1&dl=1
-||cdninstagram.com^$removeparam=ccb
-||cdninstagram.com^$removeparam=efg
+||cdninstagram.com^*ccb$removeparam=ccb
+||cdninstagram.com^*efg$removeparam=efg
 
 ! https://nerdrooted.com/2020/01/06/how-to-install-wow-in-arch-manjaro-linux/?sfw=pass1693248042
-||nerdrooted.com^$removeparam=sfw
+||nerdrooted.com^*sfw$removeparam=sfw
 
 ! https://www.infoq.com/articles/kotlin-ten-years-qa/?topicPageSponsorship=9df7746f-b196-415b-964e-bc8483319fd9
-||infoq.com^$removeparam=topicPageSponsorship
+||infoq.com^*topicPageSponsorship$removeparam=topicPageSponsorship
 
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/58
 ! (Exception: discord.*; see #445)
 $removeparam=content,domain=eonline.com|bybit.com|t.me|twitter.com|docs.google.com|instagram.com|forms.gle|goodcrypto.app|eventbrite.*|youtube.com|coinpanel.com|docsend.com|kasta.io|runnode.com|gleam.io|1sol.io
 
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/53
-||tokopedia.com^$removeparam=whid
+||tokopedia.com^*whid$removeparam=whid
 
 ! https://www.flipkart.com/wildcraft-knight-mel-17-5-l-laptop-backpack/p/itmfejkcj45hnsdw?pid=BKPFEJKCFU49PCDE&lid=LSTBKPFEJKCFU49PCDEKYMJX4&marketplace=FLIPKART&store=reh%2F4d7%2Fak9&srno=b_1_1&otracker=hp_omu_Top%2BOffers%2BOn_3_13.dealCard.OMU_6NBH6T8TFQ5H_6&otracker1=hp_omu_WHITELISTED_neon%2Fmerchandising_Top%2BOffers%2BOn_NA_dealCard_cc_3_NA_view-all_6&fm=organic&iid=en_JRTu6S3VTYUNswfx2Vf%2BIxSVpVqAn%2BgBL%2F4egSHBpmeZwysjg95tdc%2B0VNBUu1uuBVLsn39nQeqsYzc7%2BsLNkQ%3D%3D&ppt=None&ppn=None&ssid=ooc70jk6kg0000001634312695177&cid=6NBH6T8TFQ5H
-||flipkart.com^$removeparam=fm
-||flipkart.com^$removeparam=ppn
-||flipkart.com^$removeparam=ppt
-||flipkart.com^$removeparam=srno
-||flipkart.com^$removeparam=ssid
-||flipkart.com^$removeparam=store
-||flipkart.com^$removeparam=marketplace
+||flipkart.com^*fm$removeparam=fm
+||flipkart.com^*ppn$removeparam=ppn
+||flipkart.com^*ppt$removeparam=ppt
+||flipkart.com^*srno$removeparam=srno
+||flipkart.com^*ssid$removeparam=ssid
+||flipkart.com^*store$removeparam=store
+||flipkart.com^*marketplace$removeparam=marketplace
 
 ! https://www.mozilla.org/en-US/firefox/new/?redirect_source=getfirefox-com
-||mozilla.org^$removeparam=redirect_source
+||mozilla.org^*redirect_source$removeparam=redirect_source
 
 ! https://www.fiverr.com/mountdesign/design-3-professional-logo-for-you-in-24-hours?pos=1&funnel=c2c7cf95edaaf02368858291d8f4f9b2
-||fiverr.com^$removeparam=funnel
+||fiverr.com^*funnel$removeparam=funnel
 
 ! https://www.epicgames.com/store/en-US/p/humankind?epic_affiliate=raptoria&epic_gameId=02c14a01b7044db98de3f3a10813a42e
-||epicgames.com^$removeparam=epic_affiliate
-||epicgames.com^$removeparam=epic_gameId
+||epicgames.com^*epic_affiliate$removeparam=epic_affiliate
+||epicgames.com^*epic_gameId$removeparam=epic_gameId
 
 ! https://adele.lnk.to/EOM
 $removeparam=cId,domain=apple.com|youtube.com
 $removeparam=lId,domain=apple.com|youtube.com
 $removeparam=/^src=Linkfire$/,domain=apple.com|youtube.com
 $removeparam=ct,domain=apple.com|bumble.com|newsroom.co.nz
-||music.apple.com^$removeparam=itsct
-||music.apple.com^$removeparam=itscg
+||music.apple.com^*itsct$removeparam=itsct
+||music.apple.com^*itscg$removeparam=itscg
 
 ! https://tv.apple.com/?ign-itscg=10000&ign-itsct=atv-0-tv_ovp-nav_stm-apl-avl-191111
 ||apple.com^$removeparam=/^ign-/
@@ -2781,10 +2781,10 @@ $removeparam=req_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj
 $removeparam=variant,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 
 ! https://open.hpi.de/courses/blockchain2021?tracking_user=4ZwXmvv7FLG8WhY4yKXysh&tracking_type=news&tracking_id=5zEP2RzB50kuwZRBjDJyiQ
-||hpi.de^$removeparam=tracking_id
+||hpi.de^*tracking_id$removeparam=tracking_id
 
 ! https://store.steampowered.com/agecheck/app/377160/?ser=1_0_
-||steampowered.com^$removeparam=ser
+||steampowered.com^*ser$removeparam=ser
 
 ! https://www.vitaminshoppe.com/?sourceType=af&source=cj
 $removeparam=sourceType,domain=vitaminshoppe.com|aliexpress.com
@@ -2801,35 +2801,35 @@ $removeparam=ds_e_network,domain=clickserve.dartsearch.net
 $removeparam=ds_url_v,domain=clickserve.dartsearch.net
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97935
-||jasonsavard.com^$removeparam=cUrl
+||jasonsavard.com^*cUrl$removeparam=cUrl
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1527502
 $removeparam=ab,domain=fanatics.com|nhl.com
 $removeparam=_ref,domain=fanatics.com|nhl.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1493321
-||xg4ken.com^$removeparam=prof
-||xg4ken.com^$removeparam=kct
-||xg4ken.com^$removeparam=kchid
-||xg4ken.com^$removeparam=kdv
-||xg4ken.com^$removeparam=kpid
-||xg4ken.com^$removeparam=criteriaid
-||xg4ken.com^$removeparam=locphy
-||macys.com^$removeparam=trackingid
+||xg4ken.com^*prof$removeparam=prof
+||xg4ken.com^*kct$removeparam=kct
+||xg4ken.com^*kchid$removeparam=kchid
+||xg4ken.com^*kdv$removeparam=kdv
+||xg4ken.com^*kpid$removeparam=kpid
+||xg4ken.com^*criteriaid$removeparam=criteriaid
+||xg4ken.com^*locphy$removeparam=locphy
+||macys.com^*trackingid$removeparam=trackingid
 $removeparam=/^m_/,domain=macys.com|macysinc.com
-||macys.com^$removeparam=CAGPSPN
+||macys.com^*CAGPSPN$removeparam=CAGPSPN
 
 ! https://store.wsj.com/shop/apac/jp/jwsjss21/?inttrackingCode=aaqwimzi&icid=JJ_ON_JHP_ACQ_NA
-||wsj.com^$removeparam=inttrackingcode
+||wsj.com^*inttrackingcode$removeparam=inttrackingcode
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915
-||bindright.com^$removeparam=camp_id
+||bindright.com^*camp_id$removeparam=camp_id
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559940
-||lendgo.com^$removeparam=rate
-||lendgo.com^$removeparam=apr
+||lendgo.com^*rate$removeparam=rate
+||lendgo.com^*apr$removeparam=apr
 $removeparam=rt,domain=lendgo.com|bilibili.com
-||lendgo.com^$removeparam=lt
+||lendgo.com^*lt$removeparam=lt
 ||lendgo.com^$removeparam=_offer_super-low_rates.
 
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/1784
@@ -2840,7 +2840,7 @@ $removeparam=referaldomain,domain=microcenter.com
 $removeparam=web,domain=microcenter.com|tomtop.com
 
 ! https://www.unieuro.it/online/Smartphone/OPPO-A54-Smartphone-5G-193g-Display-6-5-FHD-90Hz-4-Fotocamere-48MP-RAM-4GBROM-64GB-Batteria-5000mAh-Ricarica-rapida-Dual-Sim-Versione-Italiana-Fantastic-Purple-pidOOPA54P?dedup=trovaprezzi
-||unieuro.it^$removeparam=dedup
+||unieuro.it^*dedup$removeparam=dedup
 
 ! https://www.usa.philips.com/c-m-so/headphones?linkname=hero-1473-logo&origin=3_us_us_1343__SFMC_non_DENO_1342_g2&uuid=5c6a865d670ab781af66fd7c827ae733b1a00239bc26d81132e4337d641542d119d
 ||philips.$removeparam=linkname
@@ -2850,20 +2850,20 @@ $removeparam=web,domain=microcenter.com|tomtop.com
 $removeparam=iv_,domain=allbirds.com|backcountry.com|catch.com.au
 
 ! https://tv.apple.com/?mttn3pid=Google%20AdWords&mttnagencyid=a5e&mttncc=US&mttnsiteid=143238&mttnsubad=OUS2019801_1-518881866941-c&mttnsubkw=75222244984__EcxXHbWp_&mttnsubplmnt=true&mttnpid=305109
-||apple.com^$removeparam=mttn3pid
-||apple.com^$removeparam=mttnagencyid
-||apple.com^$removeparam=mttncc
-||apple.com^$removeparam=mttnsiteid
-||apple.com^$removeparam=mttnsubad
-||apple.com^$removeparam=mttnsubkw
-||apple.com^$removeparam=mttnsubplmnt
-||apple.com^$removeparam=mttnpid
+||apple.com^*mttn3pid$removeparam=mttn3pid
+||apple.com^*mttnagencyid$removeparam=mttnagencyid
+||apple.com^*mttncc$removeparam=mttncc
+||apple.com^*mttnsiteid$removeparam=mttnsiteid
+||apple.com^*mttnsubad$removeparam=mttnsubad
+||apple.com^*mttnsubkw$removeparam=mttnsubkw
+||apple.com^*mttnsubplmnt$removeparam=mttnsubplmnt
+||apple.com^*mttnpid$removeparam=mttnpid
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97108
-||weidian.com^$removeparam=distributorid
+||weidian.com^*distributorid$removeparam=distributorid
 $removeparam=wfr,domain=weidian.com|baidu.com
-||weidian.com^$removeparam=ifr
-||weidian.com^$removeparam=share_relation
+||weidian.com^*ifr$removeparam=ifr
+||weidian.com^*share_relation$removeparam=share_relation
 
 ! https://www.etsy.com/listing/655283263/docking-stationgift-for-men-for?organic_search_click=1&pop=1
 ! https://www.etsy.com/listing/984664013/personalized-leather-walletmens?plkey=e61127eaa78c1a3d517e415d3e2014db7e43e6f5%3A984664013&pro=1&frs=1
@@ -2879,22 +2879,22 @@ $removeparam=click_sum,domain=etsy.com
 $removeparam=share_time,domain=etsy.com
 
 ! https://linkvertise.com/8062/TS3StoreMagnet?o=sharing
-||linkvertise.com^$removeparam=o
+||linkvertise.com^*o$removeparam=o
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1589504
 $removeparam=trk,domain=linkedin.com
 
 ! https://github.com/DandelionSprout/adfilt/issues/324
-||community.spiceworks.com^$removeparam=carPos
+||community.spiceworks.com^*carPos$removeparam=carPos
 
 ! https://www.bleepingcomputer.com/search/?cx=partner-pub-0920899300397823%3A3529943228&cof=FORID%3A10&ie=UTF-8&q=ransomware
-||bleepingcomputer.com^$removeparam=cx
+||bleepingcomputer.com^*cx$removeparam=cx
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1600035
 $removeparam=collection,domain=everlane.com
 
 ! https://1.bp.blogspot.com/-j1vCw2c3c8o/WDaCDjs8WiI/AAAAAAAELx0/2lBglz1aaw4fnW09LcAsIj88VsPUr9n5gCLcB/s1600/AS000761_04.gif?time=Sun%20Nov%2007%202021%2012:01:08%20GMT+0300%20(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,%20%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F)
-||bp.blogspot.com^$removeparam=time
+||bp.blogspot.com^*time$removeparam=time
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1614826
 $removeparam=iid,domain=cnn.com
@@ -2918,7 +2918,7 @@ $removeparam=e,domain=clockks.com|tellywebnews.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1634094
 $removeparam=d_id,domain=buzzfeed.com|buzzfeednews.com
 ! https://www.buzzfeednews.com/article/ikrd/gen-z-climate-change-activists-advice?bfsource=relatedmanual
-||buzzfeednews.com$removeparam=bfsource
+||buzzfeednews.com*bfsource$removeparam=bfsource
 
 ! https://www.change.org/p/bethesda-petition-to-have-bethesda-abolish-the-creation-club?j=124054&sfmc_sub=544588942&l=32_HTML&u=24084311&mid=7233052&jb=356516
 ! https://help.salesforce.com/s/articleView?id=000315098&type=1
@@ -2928,13 +2928,13 @@ $removeparam=u,domain=change.org
 $removeparam=jb,domain=change.org
 
 ! https://www.cellularcountry.com/used-cell-phones/verizon?zenid=99a49d91264c60e89d18a29cb168435c
-||cellularcountry.com^$removeparam=zenid
+||cellularcountry.com^*zenid$removeparam=zenid
 
 ! https://www.onbuy.com/gb/newstar-apple-imac-pre-2012-vesa-mount-adapter-plate~c16172~p5416812/?stat=eyJpcCI6IjI5LjAwMDAiLCJkcCI6IjAuMDAwMCIsImxpZCI6MzM0MjEzMTcsInMiOiI2IiwidCI6MTYzNTc0NDg3NCwiYm1jIjowfQ==
-||onbuy.com^$removeparam=stat
+||onbuy.com^*stat$removeparam=stat
 
 ! https://www.allbeauty.com/gb/en/1168797-salcura-bioskin-junior-daily-nourishing-spray-100ml?abref=KelkooCsGoogleUkSandgoogleUkB&ref=kelkoogb
-||allbeauty.com^$removeparam=abref
+||allbeauty.com^*abref$removeparam=abref
 
 ! https://www.endesa.com/en/advice/app-endesa-en?eml=end:newscar:own:eenn:cdg:eng:::web:::imt:otc:::mtd:::
 $removeparam=eml,domain=endesa.com|scholastic.com
@@ -2944,7 +2944,7 @@ $removeparam=eml,domain=endesa.com|scholastic.com
 ||despegar.$removeparam=mktdata
 
 ! https://www.entradas.com/campaign/regala-entradas?affiliate=AD7&referer_info=CN-TGP-EDIT-ES_24982&uid=a9fa960288498dd5b189230435422eeb&cHash=c2a9920cad0995b06e8c9504b2bd8e0e
-||entradas.com^$removeparam=referer_info
+||entradas.com^*referer_info$removeparam=referer_info
 
 ! https://www.bodykind.com/product/4113-a-vogel-tormentil-complex-50ml.aspx?referer=paidonresults&porc=tcilEtxEdidBqupqwrBudkHsGgmyqdj
 $removeparam=referer,domain=bodykind.com
@@ -2953,17 +2953,17 @@ $removeparam=referer,domain=bodykind.com
 ||officemonster.co.uk^$removeparam=/^fo_/
 
 ! https://www.viglink.com/?vgref=352353
-||viglink.com^$removeparam=vgref
+||viglink.com^*vgref$removeparam=vgref
 
 ! https://analytics.bluekai.com/site/16231?phint=event=click&phint=campaign=BRAND-TAB&phint=platform=search&done=https://example.com/
-||analytics.bluekai.com^$removeparam=phint
+||analytics.bluekai.com^*phint$removeparam=phint
 
 ! https://www.hao123.com/?tn=93288632_hao_pg
 ! It is the rebate parameter for the page - https://github.com/DandelionSprout/adfilt/pull/351
-||hao123.com^$removeparam=tn
+||hao123.com^*tn$removeparam=tn
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1646225
-||wsj.com^$removeparam=reflink
+||wsj.com^*reflink$removeparam=reflink
 
 ! https://s.lazada.com.ph/s.3LwM6
 ||lazada.$removeparam=dsource
@@ -2972,8 +2972,8 @@ $removeparam=referer,domain=bodykind.com
 ||lazada.$removeparam=exlaz
 
 ! https://www.target.com/c/home-decor-deals/-/N-vxtra?lnm=1171879&marketing_id=EMAIL-104207-header&lnk=C_HomeDecorDeals_EMAIL-104207
-||target.com^$removeparam=lnm
-||target.com^$removeparam=lnk
+||target.com^*lnm$removeparam=lnm
+||target.com^*lnk$removeparam=lnk
 $removeparam=marketing_id
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1666311
@@ -3006,16 +3006,16 @@ $removeparam=visit_id,domain=bilibili.com|google.*
 ||cc.loginfra.com/cc$removeparam=nsc
 
 ! http://www.cyber-ad01.cc/0155/?ip=0155&id=L206
-||cyber-ad01.cc^$removeparam=ip
+||cyber-ad01.cc^*ip$removeparam=ip
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98659
-||listelerim.hepsiburada.com^$removeparam=c
+||listelerim.hepsiburada.com^*c$removeparam=c
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98685
-||coupang.com^$removeparam=wRef
-||coupang.com^$removeparam=traceid
-||coupang.com^$removeparam=wTime
-||coupang.com^$removeparam=wPcid
+||coupang.com^*wRef$removeparam=wRef
+||coupang.com^*traceid$removeparam=traceid
+||coupang.com^*wTime$removeparam=wTime
+||coupang.com^*wPcid$removeparam=wPcid
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/99645
 ||trendyol.com^$removeparam=/^tyutm_/
@@ -3036,38 +3036,38 @@ $removeparam=tvh,domain=hotspotshield.com|gethotspotshield.com
 $removeparam=vh,domain=hotspotshield.com|gethotspotshield.com
 
 ! https://www.tkqlhce.com/click-100130848-15032659?sdate=D202111231126_o
-||tkqlhce.com^$removeparam=sdate
+||tkqlhce.com^*sdate$removeparam=sdate
 
 ! https://ad.admitad.com/g/xljorca896cf955d81ea4bf89f6ddb/?i=5&f_id=14723&ulp=https%3A%2F%2Fwww.tomtop.com%2Fp-os1622au.html&subid=tomshardware-us-5867704010115023000
 $removeparam=f_id,domain=admitad.com
 
 ! https://www.pulseway.com/land/linus?rfid=linus2021
-||pulseway.com^$removeparam=rfid
+||pulseway.com^*rfid$removeparam=rfid
 
 ! https://github.com/ClearURLs/Homepage/issues/3
-||dw.com^$removeparam=maca
-||reuters.com^$removeparam=edition-redirect
+||dw.com^*maca$removeparam=maca
+||reuters.com^*edition-redirect$removeparam=edition-redirect
 
 ! https://www.backcountry.com/mountainsmith-upland-tent-2-person-3-season?CMP_SKU=MOU004K&MER=0406&skid=MOU004K-CIGN-ONESIZ&mr:trackingCode=E0A9CA92-7D40-E711-8100-005056944E17&mr:referralID=NA&mr:device=m&mr:adType=plaonline&CMP_ID=PLA_GMm001&rmatt=tsid:1042790|cid:213414877|agid:45770983886|tid:pla-391109883354|crid:224538011675|nw:g|rnd:958514882087759869|dvc:m|adp:1o1|mt:|loc:9005959
-||backcountry.com^$removeparam=CMP_SKU
-||backcountry.com^$removeparam=CMP_ID
-||backcountry.com^$removeparam=MER
-||backcountry.com^$removeparam=rmatt
+||backcountry.com^*CMP_SKU$removeparam=CMP_SKU
+||backcountry.com^*CMP_ID$removeparam=CMP_ID
+||backcountry.com^*MER$removeparam=MER
+||backcountry.com^*rmatt$removeparam=rmatt
 
 ! https://www.backcountry.com/patagonia-micro-puff-hooded-jacket-mens?skid=PAT029Y-FIR-M&INT_ID=AP_home%7Chome_NA-NA_0_Best-Sellers_SKU-PAT029Y_1_20211028&ti=QVBfaG9tZXxob21lX05BLU5BXzBfQmVzdC1TZWxsZXJzX1NLVS1QQVQwMjlZXzFfMjAyMTEwMjg=
-||backcountry.com^$removeparam=INT_ID
-||backcountry.com^$removeparam=ti
+||backcountry.com^*INT_ID$removeparam=INT_ID
+||backcountry.com^*ti$removeparam=ti
 
 ! https://go.fiverr.com/visit/?bta=[your_affiliate_ID]&brand=fiverrlearn
-||fiverr.com^$removeparam=bta
-||fiverr.com^$removeparam=afp
-||fiverr.com^$removeparam=cxd_token
+||fiverr.com^*bta$removeparam=bta
+||fiverr.com^*afp$removeparam=afp
+||fiverr.com^*cxd_token$removeparam=cxd_token
 
 ! https://www.sporcle.com/memberships/?rp=main_adhesion_go_orange_link
-||sporcle.com^$removeparam=rp
+||sporcle.com^*rp$removeparam=rp
 
 ! https://localmonero.co/?rc=zfot
-||localmonero.co^$removeparam=rc
+||localmonero.co^*rc$removeparam=rc
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1710177
 $removeparam=mv_pc,domain=fragrancenet.com
@@ -3089,7 +3089,7 @@ $removeparam=/^quot;/,domain=outnorth.fi
 $removeparam=p1,domain=bostonglobe.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1740327
-||verkkokauppa.com^$removeparam=list
+||verkkokauppa.com^*list$removeparam=list
 
 ! https://www.bestbuy.com/site/acer-nitro-xf243y-pbmiiprx-23-8-full-hd-monitor-hdmi/6425559.p?refdomain=rtings.com&skuId=6425559
 $removeparam=refdomain,domain=bestbuy.com
@@ -3114,68 +3114,68 @@ $removeparam=psrc,domain=savagex.com
 ||shopee.$removeparam=deep_and_deferred
 
 ! https://www.gamivo.com/product/windows-10-professional?glv=geyuy8q7
-||gamivo.com^$removeparam=glv
+||gamivo.com^*glv$removeparam=glv
 
 ! https://www.gearbest.com/?lkid=10825469
 ||gearbest.$removeparam=lkid
 
 ! https://www.banggood.com/custlink/mD3KCmUISV
-||banggood.com^$removeparam=custlinkid
+||banggood.com^*custlinkid$removeparam=custlinkid
 
 ! https://www.newark.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/02AH3164?COM=ref_hackster
-||newark.com^$removeparam=COM
+||newark.com^*COM$removeparam=COM
 
 ! https://github.com/ClearURLs/Addon/issues/161
-||soundcloud.com^$removeparam=si
+||soundcloud.com^*si$removeparam=si
 
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/192
-||market.yandex.ru^$removeparam=cpc
+||market.yandex.ru^*cpc$removeparam=cpc
 
 ! http://pixel.everesttech.net/1325/cq?ev_sid=3&ev_ln%E2%80%8B=bankrate+com&ev_crx=277142460%E2%80%8B08&ev_mt=p&ev_n=g&ev_ltx=&ev_pl=&ev_pos=1t1&ev_dvc=c&ev_dvm=&url=http://www.example.com
 ||everesttech.net^$removeparam=/^ev_/
 
 ! https://pp.promofarma.com/dynclick/promocionesfarma/?etf-publisher=kelkoo&etf-name=kelkoo&etf-prdref=451760&eurl=https%3A%2F%2Fwww.promofarma.com%2Fes%2Fksix-fitness-band-thermometer-hr-negro-1ud%2Fp-451760%3Fkk%3Da4c6365-17d6c2e951c-309d81%26utm_medium%3Daffiliation%26utm_source%3Dkelkoo%26utm_campaign%3DES-Feed%26utm_content%3Dfeed%26utm_term%3Dfeed
-||promofarma.com^$removeparam=etf-name
-||promofarma.com^$removeparam=etf-prdref
-||promofarma.com^$removeparam=etf-publisher
+||promofarma.com^*etf-name$removeparam=etf-name
+||promofarma.com^*etf-prdref$removeparam=etf-prdref
+||promofarma.com^*etf-publisher$removeparam=etf-publisher
 
 ! https://es-go.kelkoogroup.net/ctl/go/sitesearchGo?.ts=1638197043475&.sig=h2ZCyx5n69Y26ez.wIm2fEV1QiA-&affiliationId=96977405&comId=100523372&country=es&offerId=e61223a9f4eeae9326e47fee39a60b17&searchId=1076100361196477_1638197043372_23360860&service=36&tokenId=5e68aee4-67a5-4cf7-98a3-48a58ebc9021&custom1=elprecio_es_organic
-||kelkoogroup.net^$removeparam=custom1
+||kelkoogroup.net^*custom1$removeparam=custom1
 
 ! https://abo.welt.de/?wtrid=displayperformance.onsite.abo.vertrieb.abo-button.amp_header
-||welt.de^$removeparam=wtrid
+||welt.de^*wtrid$removeparam=wtrid
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1793055
-||vimeo.com^$removeparam=owner
+||vimeo.com^*owner$removeparam=owner
 
 ! https://www.lenovo.com/us/en/c/laptops/thinkpad?orgRef=https%253A%252F%252Fduckduckgo.com%252F
-||lenovo.com^$removeparam=orgRef
+||lenovo.com^*orgRef$removeparam=orgRef
 
 ! https://chollometro.digidip.net/visit?url=https%3A%2F%2Fwww.ebay.es%2Fitm%2F313545659728%3Fhash%3Ditem4900c71550%25253Ag%25253AefQAAOSwM%25257EBhkcpH%26_trkparms%3D%26rpp_cid%3D61a98c608d080d0465e9035f&ppref=https%3A%2F%2Fwww.chollometro.com%2Fcupones%2Febay.es
 $removeparam=ppref,domain=digidip.net
 
 ! https://www.dhgate.com/product/global-version-xiaomi-mi-11t-4g-8gb-128gb/740400510.html?f=bda%7Ccontent%7Cchollometro%7Cdeals
-||dhgate.com^$removeparam=f
+||dhgate.com^*f$removeparam=f
 
 ! https://www.cyberghostvpn.com/en_US/offer/xmas?brand=vpnMentor&coupon=3Y3M
 $removeparam=brand,domain=cyberghostvpn.com|privateinternetaccess.com
 
 ! https://safe.cyberghostvpn.com/en_US/xmas?lp=flashdevices&coupon=3Y3M&media_source=CJ_affiliates&channel=External LPs
-||cyberghostvpn.com^$removeparam=media_source
+||cyberghostvpn.com^*media_source$removeparam=media_source
 
 ! https://github.com/uBlockOrigin/uAssets/issues/10995
 !!! ||zhihu.com^$removeparam=search_source
-||zhihu.com^$removeparam=hybrid_search_source
-||zhihu.com^$removeparam=hybrid_search_extra
+||zhihu.com^*hybrid_search_source$removeparam=hybrid_search_source
+||zhihu.com^*hybrid_search_extra$removeparam=hybrid_search_extra
 
 ! https://www.theregister.com/2021/12/20/linux_5_16_rc6/?td=keepreading-btm
-||theregister.com^$removeparam=td
+||theregister.com^*td$removeparam=td
 
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/210
-||dzone.com^$removeparam=fromrel
+||dzone.com^*fromrel$removeparam=fromrel
 
 ! https://blog.feedspot.com/?_src=footer
-||feedspot.com^$removeparam=_src
+||feedspot.com^*_src$removeparam=_src
 
 ! https://asunnot.oikotie.fi/vinkit-ja-oppaat/yleinen/suomen-jouluisin-kaupunki/?promo_name=article&promo_creative=kotiinartikkelit&promo_position=listing_page
 $removeparam=promo_name,domain=oikotie.fi|kesaduuni.org
@@ -3194,12 +3194,12 @@ $removeparam=plink,domain=audible.*
 @@||startpage.com/suggestions$removeparam=segment
 
 ! https://www.netflix.com/watch/81110875?trackId=254794450&tctx=2%2C1%2C96c1d619-68cd-4cad-ba6c-7e473d76dd30-24305116%2C%2Cunknown%2C%2C%2C (29/12/2021)
-||netflix.com^$removeparam=trackId
-||netflix.com^$removeparam=tctx
-||netflix.com^$removeparam=trackIdJaw
-||netflix.com^$removeparam=trackIdTrailer
-||netflix.com^$removeparam=trackIdEpisode
-||netflix.com^$removeparam=dpRightClick
+||netflix.com^*trackId$removeparam=trackId
+||netflix.com^*tctx$removeparam=tctx
+||netflix.com^*trackIdJaw$removeparam=trackIdJaw
+||netflix.com^*trackIdTrailer$removeparam=trackIdTrailer
+||netflix.com^*trackIdEpisode$removeparam=trackIdEpisode
+||netflix.com^*dpRightClick$removeparam=dpRightClick
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1889101
 $removeparam=rx_c,domain=cvshealth.*
@@ -3265,7 +3265,7 @@ $removeparam=tags,domain=reddit.app.link
 $removeparam=yptr,domain=marketwatch.com|barrons.com|investors.com
 
 ! https://github.com/AdguardTeam/AdguardFilters/commit/bfcd89f013fa810ba1f2c959a7e8757deb9d3dce
-||adjust.com^$removeparam=adgroup
+||adjust.com^*adgroup$removeparam=adgroup
 
 ! https://www.shopbop.com/areaware-aelfie-pillow-gift-boutique/vp/v=1/1574808756.htm?fm=search-viewall-shopbysize&os=false&colorId=1A926&searchClick=true&searchResultClicked=Areaware+Aelfie+Pillow&breadcrumb=undefined
 $removeparam=searchClick,domain=shopbop.com
@@ -3273,20 +3273,20 @@ $removeparam=searchResultClicked,domain=shopbop.com
 $removeparam=breadcrumb,domain=shopbop.com
 
 ! https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S-1476216186%3A1641712437682727&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp (09/01/2022)
-||accounts.google.com^$removeparam=dsh
+||accounts.google.com^*dsh$removeparam=dsh
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1935694
 ! https://go.skimresources.com/?id=76112X1604401&xs=1&xcreo=500004&url=https://www.matchesfashion.com/us/products/Raf-Simons-Children-of-the-Revolution-roll-neck-jersey-top-1414525&xed=1&xcust=julydigitalcover
-||go.skimresources.com^$removeparam=xcreo
-||go.skimresources.com^$removeparam=xed
+||go.skimresources.com^*xcreo$removeparam=xcreo
+||go.skimresources.com^*xed$removeparam=xed
 $removeparam=rffrid
-||bottegaveneta.com^$removeparam=tp
+||bottegaveneta.com^*tp$removeparam=tp
 ! https://bit.ly/3xMwzGy?cc=8f8d85334707b66b55e73dabddab4672
 !!! ||bit.ly^$removeparam=cc (until https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1950056 is resolved)
 ! https://www.matchesfashion.com/us/womens/designers/raf-simons?qxjkl=tsid:38929|cgn:TnL5HPStwNw
 $removeparam=/^qxjkl=tsid:/
 $removeparam=ad_name
-||dermstore.com^$removeparam=URL
+||dermstore.com^*URL$removeparam=URL
 
 ! https://www.gamereactor.fi/uutiset/914423/JBL+esitteli+aanekkaan+BoomBox+3n+ja+samalla+uuden+mikrofonin+ja+nappikuulokkeet+pelaamiseen/?rs=rss
 $removeparam=rs,domain=gamereactor.*
@@ -3296,15 +3296,15 @@ $removeparam=alpha,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3
 $removeparam=block,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 
 ! https://www.domains.ch/en/Search/Index?domain=iam-py-test.xyz&REF=2469
-||domains.ch^$removeparam=REF
+||domains.ch^*REF$removeparam=REF
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104849
 ||greenhouse.io^$removeparam=/^lever-/
 
 ! https://ad.admitad.com/g/ca265zafmkbc8f6d165a9f466608b0
 ! https://www.milanoo.com/?Promotion=AF_Admitad&deduplication_channel=admitad
-||milanoo.com^$removeparam=Promotion
-||milanoo.com^$removeparam=deduplication_channel
+||milanoo.com^*Promotion$removeparam=Promotion
+||milanoo.com^*deduplication_channel$removeparam=deduplication_channel
 
 ! https://www.kucoin.com/ucenter/signup?rcode=rJ8BQX4
 $removeparam=rcode,domain=kucoin.com
@@ -3313,7 +3313,7 @@ $removeparam=rcode,domain=kucoin.com
 ||adressa.no^$removeparam=/^rs\d/
 
 ! https://www.deezer.com/en/track/143032368?deferredFl=1
-||deezer.com^$removeparam=deferredFl
+||deezer.com^*deferredFl$removeparam=deferredFl
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1979025
 $removeparam=Bibblio_source,domain=macrumors.com
@@ -3327,7 +3327,7 @@ $removeparam=pr_ref_pid
 $removeparam=pr_seq
 
 ! https://www.bleepingcomputer.com/news/security/mcafee-agent-bug-lets-hackers-run-code-with-windows-system-privileges/?traffic_source=Connatix
-||bleepingcomputer.com^$removeparam=traffic_source
+||bleepingcomputer.com^*traffic_source$removeparam=traffic_source
 $removeparam=/traffic_source=Connatix/i
 
 ! https://www.alina.se/Produkt.aspx?site=prisjakt&T2=0045496453435
@@ -3340,14 +3340,14 @@ $removeparam=prisjakt,domain=davids.se|larsbengtsson.se|poradio.se|teleradio.nu
 $removeparam=refresh,domain=cnn.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2052109
-||tradingview.com^$removeparam=feature
+||tradingview.com^*feature$removeparam=feature
 
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1026964901
-||emag.ro^$removeparam=recid
-||emag.ro^$removeparam=scenario_ID
+||emag.ro^*recid$removeparam=recid
+||emag.ro^*scenario_ID$removeparam=scenario_ID
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2108688
-||realestate.com.au^$removeparam=rsf
+||realestate.com.au^*rsf$removeparam=rsf
 
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1030398788
 $removeparam=mt_click_id,domain=mail.ru|vkplay.ru
@@ -3362,7 +3362,7 @@ $removeparam=clickPR,domain=argos.co.uk
 $removeparam=clickCSR,domain=argos.co.uk
 
 ! https://blog.getadblock.com/getting-started-with-the-adblock-extension-2219b3c7878c?gi=285fe5d9ab7d
-||blog.getadblock.com^$removeparam=gi
+||blog.getadblock.com^*gi$removeparam=gi
 
 ! https://www.pinkbike.com/news/all-the-winners-of-the-2021-pinkbike-advent-calendar.html?pbref=p
 $removeparam=pbref,domain=pinkbike.com
@@ -3389,25 +3389,25 @@ $removeparam=/^cid=DSS-Affiliate/,domain=disneyplus.com|espn.com|hotstar.com|sta
 $removeparam=/^cid=DSS-Search-/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
 $removeparam=/^cid=DTCI_STAR-Synergy/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
 $removeparam=/^cid=DTCI-Synergy/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
-||espn.com^$removeparam=ex_cid
+||espn.com^*ex_cid$removeparam=ex_cid
 
 ! https://hobbyhall.fi/fi/huonekalut-ja-sisustus/matot/isot-matot/matto-shaggy-latte-160x220-cm?id=24303&feat=home&navigation_source=interactionStudio
 $removeparam=feat,domain=hobbyhall.fi
 $removeparam=navigation_source,domain=hobbyhall.fi
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2223658
-||mercadolibre.com.ar^$removeparam=pdp_filters
+||mercadolibre.com.ar^*pdp_filters$removeparam=pdp_filters
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2227905
-||babybunting.com.au^$removeparam=cq_src
-||babybunting.com.au^$removeparam=cq_cmp
-||babybunting.com.au^$removeparam=cq_con
-||babybunting.com.au^$removeparam=cq_term
-||babybunting.com.au^$removeparam=cq_med
-||babybunting.com.au^$removeparam=cq_plac
-||babybunting.com.au^$removeparam=cq_net
-||babybunting.com.au^$removeparam=cq_pos
-||babybunting.com.au^$removeparam=cq_plt
+||babybunting.com.au^*cq_src$removeparam=cq_src
+||babybunting.com.au^*cq_cmp$removeparam=cq_cmp
+||babybunting.com.au^*cq_con$removeparam=cq_con
+||babybunting.com.au^*cq_term$removeparam=cq_term
+||babybunting.com.au^*cq_med$removeparam=cq_med
+||babybunting.com.au^*cq_plac$removeparam=cq_plac
+||babybunting.com.au^*cq_net$removeparam=cq_net
+||babybunting.com.au^*cq_pos$removeparam=cq_pos
+||babybunting.com.au^*cq_plt$removeparam=cq_plt
 
 ! https://github.com/DandelionSprout/adfilt/pull/523
 $removeparam=ad,domain=ocado.com
@@ -3416,10 +3416,10 @@ $removeparam=fromSeasonalTab,domain=ocado.com
 $removeparam=fromLoggedOutHome,domain=ocado.com
 
 ! https://twitter.com/Jerma985/status/651540735322255360?cxt=HHwWgMCj2Zi23ooSAAAA
-||twitter.com^$removeparam=cxt
+||twitter.com^*cxt$removeparam=cxt
 
 ! https://www.learner.org/series/the-habitable-planet-a-systems-approach-to-environmental-science/oceans/oceans-2/?jwsource=cl
-||learner.org^$removeparam=jwsource
+||learner.org^*jwsource$removeparam=jwsource
 
 ! https://www.thisismoney.co.uk/video/moneycars/video-2600427/Video-F1-designer-Gordon-Murray-unveils-new-1-7m-supercar.html?mwv_rm=rta
 $removeparam=mwv_rm,domain=dailymail.co.uk|thisismoney.co.uk
@@ -3428,8 +3428,8 @@ $removeparam=mwv_rm,domain=dailymail.co.uk|thisismoney.co.uk
 $removeparam=mrn_rm,domain=dailymail.co.uk|thisismoney.co.uk
 
 ! https://www.comodo.com/home/browsers-toolbars/browser.php?track=14596&af=14596
-||comodo.com^$removeparam=track
-||comodo.com^$removeparam=af
+||comodo.com^*track$removeparam=track
+||comodo.com^*af$removeparam=af
 
 ! https://fortune.com/2021/03/11/amazon-fresh-retail-stores-vacant-plan/?queryly=related_article
 $removeparam=queryly,domain=fortune.com
@@ -3450,22 +3450,22 @@ $removeparam=intcid,domain=cbsnews.com
 $removeparam=mediapartner,domain=evesleep.co.uk
 
 ! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/1140
-||greenvoice.fr^$removeparam=bucket
+||greenvoice.fr^*bucket$removeparam=bucket
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2430288
 ||lidl.*^$removeparam=flyx
 
 ! https://tv.apple.com/no/show/kongle-og-ponni/umc.cmc.2jwlalsi34m25fcfljpvk990r?ctx_brand=tvs.sbd.4000&l=no
-||apple.com^$removeparam=ctx_brand
+||apple.com^*ctx_brand$removeparam=ctx_brand
 
 ! https://www.expansion.com/economia.html?s_kw=economia
 $removeparam=s_kw,domain=expansion.com|marca.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2471760
-||qwant.com^$removeparam=client
+||qwant.com^*client$removeparam=client
 ! (https://github.com/DandelionSprout/adfilt/issues/582)
 !!!||startpage.com^$removeparam=pl
-||ecosia.org^$removeparam=addon
+||ecosia.org^*addon$removeparam=addon
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2526545
 ! wix.com/dashboard/123456/home?referralInfo=EDITOR
@@ -3478,9 +3478,9 @@ $removeparam=li,domain=msn.com
 $removeparam=zsource,domain=slashgear.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2535958
-||cardif.fr^$removeparam=at_medium
-||cardif.fr^$removeparam=at_custom_var9
-||cardif.fr^$removeparam=at_custom_var10
+||cardif.fr^*at_medium$removeparam=at_medium
+||cardif.fr^*at_custom_var9$removeparam=at_custom_var9
+||cardif.fr^*at_custom_var10$removeparam=at_custom_var10
 
 ! https://www.nytimes.com/2022/04/12/opinion/inflation-consumer-prices.html?searchResultPosition=15
 $removeparam=searchResultPosition,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
@@ -3493,34 +3493,34 @@ $removeparam=locale,domain=udemy.com
 $removeparam=response_type,domain=udemy.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2561976
-||zoho.com^$removeparam=zsrc
+||zoho.com^*zsrc$removeparam=zsrc
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2580104
-||lookmovie211.xyz^$removeparam=mid
-||lookmovie211.xyz^$removeparam=sid
-||lookmovie211.xyz^$removeparam=sec
+||lookmovie211.xyz^*mid$removeparam=mid
+||lookmovie211.xyz^*sid$removeparam=sid
+||lookmovie211.xyz^*sec$removeparam=sec
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2581603
-||nortonsafe.search.ask.com^$removeparam=installsource
-||nortonsafe.search.ask.com^$removeparam=os
-||nortonsafe.search.ask.com^$removeparam=ssdcat
-||nortonsafe.search.ask.com^$removeparam=templatecat
-||nortonsafe.search.ask.com^$removeparam=o
-||nortonsafe.search.ask.com^$removeparam=vendorsrc
-||nortonsafe.search.ask.com^$removeparam=olpchannel
-||nortonsafe.search.ask.com^$removeparam=chn
-||nortonsafe.search.ask.com^$removeparam=tpr
-||nortonsafe.search.ask.com^$removeparam=p2
-||nortonsafe.search.ask.com^$removeparam=qsrc
-||nortonsafe.search.ask.com^$removeparam=cmpgn
-||nortonsafe.search.ask.com^$removeparam=qo
-||nortonsafe.search.ask.com^$removeparam=doi
+||nortonsafe.search.ask.com^*installsource$removeparam=installsource
+||nortonsafe.search.ask.com^*os$removeparam=os
+||nortonsafe.search.ask.com^*ssdcat$removeparam=ssdcat
+||nortonsafe.search.ask.com^*templatecat$removeparam=templatecat
+||nortonsafe.search.ask.com^*o$removeparam=o
+||nortonsafe.search.ask.com^*vendorsrc$removeparam=vendorsrc
+||nortonsafe.search.ask.com^*olpchannel$removeparam=olpchannel
+||nortonsafe.search.ask.com^*chn$removeparam=chn
+||nortonsafe.search.ask.com^*tpr$removeparam=tpr
+||nortonsafe.search.ask.com^*p2$removeparam=p2
+||nortonsafe.search.ask.com^*qsrc$removeparam=qsrc
+||nortonsafe.search.ask.com^*cmpgn$removeparam=cmpgn
+||nortonsafe.search.ask.com^*qo$removeparam=qo
+||nortonsafe.search.ask.com^*doi$removeparam=doi
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2586765
-||support.github.com^$removeparam=tag
+||support.github.com^*tag$removeparam=tag
 
 ! https://www.oerproject.com/Account/Teacher-Signup?RegistrationSource={8F3F8D17-0E32-4C9B-9E33-971B12CC0B97}
-||oerproject.com^$removeparam=RegistrationSource
+||oerproject.com^*RegistrationSource$removeparam=RegistrationSource
 
 ! https://fi.hotels.com/ho134443/?wapa6=&sub_publisher=5350479&sub_site=100415378&sub_ad=13951578
 ! http://no.grupper.hotels.com/GroupForm.cfm?locale=no_NO&intlid=OTHER+%3A%3A+header_main_section&kw=header
@@ -3538,10 +3538,10 @@ $removeparam=rfrr,domain=ebookers.*
 $removeparam=fbid,domain=festo-didactic.com
 
 ! https://www.tokopedia.com/legoclassic/my-little-pony-a-new-generation-crystal-princess-petals-figure-set?src=topads&xClientId=amp-IWyM3dL4bS8QlacnZO4hyg&cid=amp-IWyM3dL4bS8QlacnZO4hyg&amp=true
-||tokopedia.com^$removeparam=xClientId
+||tokopedia.com^*xClientId$removeparam=xClientId
 
 ! https://ekstrabladet.dk/?ilc=c
-||ekstrabladet.dk^$removeparam=ilc
+||ekstrabladet.dk^*ilc$removeparam=ilc
 
 ! https://www.nytimes.com/2022/04/30/business/elon-musk-twitter.html?shadow_vec_sim=0
 $removeparam=shadow_vec_sim,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
@@ -3568,7 +3568,7 @@ $removeparam=tc,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=textadID,domain=media-cdn.costco.ca|media-cdn.costco.com
 
 ! https://blogs.oracle.com/scoter/post/webinar-ransomware-attacks-alert?source=:so:tw:or:awr:ovbx:::RC_WWMK220223P00060:LinuxSocialG&SC=:so:tw:or:awr:ovbx:::RC_WWMK220223P00060:LinuxSocialG&pcode=WWMK220223P00060
-||blogs.oracle.com^$removeparam=pcode
+||blogs.oracle.com^*pcode$removeparam=pcode
 
 ! https://venturebeat.com/2022/05/05/google-goes-passwordless/?__vfz=medium%3Dconversations_top_pages
 $removeparam=__vfz,domain=venturebeat.com
@@ -3580,15 +3580,15 @@ $removeparam=affwin,domain=boots.com
 $removeparam=ch,domain=studio.co.uk
 
 ! https://www.nytimes.com/2022/05/19/opinion/privacy-technology-data.html?instance_id=61795&nl=zeynep-tufekci&regi_id=179812617&segment_id=92715&te=1&user_id=9a6c865300954a1dcdbb5f83549d656a
-||nytimes.com^$removeparam=instance_id
-||nytimes.com^$removeparam=nl
-||nytimes.com^$removeparam=regi_id
-||nytimes.com^$removeparam=segment_id
-||nytimes.com^$removeparam=te
-||nytimes.com^$removeparam=user_id
+||nytimes.com^*instance_id$removeparam=instance_id
+||nytimes.com^*nl$removeparam=nl
+||nytimes.com^*regi_id$removeparam=regi_id
+||nytimes.com^*segment_id$removeparam=segment_id
+||nytimes.com^*te$removeparam=te
+||nytimes.com^*user_id$removeparam=user_id
 
 ! https://mothership.sg/2022/06/lalamove-cake-destroyed/?fs=e&s=cl
-||mothership.sg^$removeparam=fs
+||mothership.sg^*fs$removeparam=fs
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3048458
 ^fs=e$doc,removeparam=fs
@@ -3601,7 +3601,7 @@ $removeparam=publisher_id,domain=t-mobile.com
 $removeparam=x50878,domain=pmctraining.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/13958#issuecomment-1178776992
-||redirect.appmetrica.yandex.com^$removeparam=c
+||redirect.appmetrica.yandex.com^*c$removeparam=c
 
 ! https://www.bloomberg.com/news/articles/2022-07-07/stocks-set-to-rise-as-recession-obsession-cools-markets-wrap?fromMostRead=true
 $removeparam=fromMostRead,domain=bloomberg.com
@@ -3616,8 +3616,8 @@ $removeparam=referrer_id,domain=autoblog.com
 $removeparam=ocid,domain=msn.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3262558
-||linkedin.com^$removeparam=original_referer
-||linkedin.com^$removeparam=refId
+||linkedin.com^*original_referer$removeparam=original_referer
+||linkedin.com^*refId$removeparam=refId
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3283595
 $removeparam=mode,domain=omaha.com
@@ -3635,20 +3635,20 @@ $removeparam=pb,domain=fullxh.com|hamsterix.*|megaxh.com|unlockxh4.com|xhamster.
 $removeparam=sub,domain=allboner.com|twinkvideos.com
 
 ! https://sims.fandom.com/wiki/Fairy?so=search
-||fandom.com^$removeparam=so
+||fandom.com^*so$removeparam=so
 
 ! https://www.lindex.com/fi?affiliate_source=adtraction
-||lindex.com^$removeparam=affiliate_source
+||lindex.com^*affiliate_source$removeparam=affiliate_source
 
 ! https://long-hands-in-the-cornfield.tumblr.com/post/694818880757055489/last-night-i-had-a-dream-that-i-told-a-joke-that?is_related_post=1
-||tumblr.com^$removeparam=is_related_post
+||tumblr.com^*is_related_post$removeparam=is_related_post
 
 ! https://www.xbox.com/nb-no/games/store/lost-words-beyond-the-page/9n14mfn0dv4k?rtc=1
-||xbox.com^$removeparam=rtc
+||xbox.com^*rtc$removeparam=rtc
 
 ! https://www.tokopedia.com/lunashop78/buku-stiker-warna-my-little-pony-be-kind-together-coloring-book?extParam=ivf%3Dfalse%26src%3Dsearch&refined=true
-||tokopedia.com^$removeparam=extParam
-||tokopedia.com^$removeparam=refined
+||tokopedia.com^*extParam$removeparam=extParam
+||tokopedia.com^*refined$removeparam=refined
 
 ! https://www.sony.se/electronics/sound-bars/ht-a3000?cpint=homepage_promotion_tiles-Promotion%20Tiles--responsivegrid_structure_top_promotiontiles_copy_1
 ||sony.^$removeparam=cpint
@@ -3666,56 +3666,56 @@ $document,removeparam=l,domain=ask.com|askmoney.com|bloglines.com|consumersearch
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3889813
 ! https://github.com/uBlockOrigin/uAssets/issues/15281
-||startribune.com^$removeparam=refresh
+||startribune.com^*refresh$removeparam=refresh
 
 ! https://www.baike.com/wikiid/7504757876798179444?search_id=1rbwh1s2axuo00&prd=search_sug&view_id=o1oipiacwtc00 (19/10/2022)
 ! https://github.com/DandelionSprout/adfilt/pull/666
-||baike.com^$removeparam=prd
-||baike.com^$removeparam=view_id
-||baike.com^$removeparam=search_id
+||baike.com^*prd$removeparam=prd
+||baike.com^*view_id$removeparam=view_id
+||baike.com^*search_id$removeparam=search_id
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3960806
 ||emag.ro^$document,removeparam=ref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3976010
-||qvc.com^$removeparam=qq
+||qvc.com^*qq$removeparam=qq
 
 ! https://www.pcgamesn.com/steam-deck/ea-games-compatibility?driver=popular-now&ifs=1
 $removeparam=driver,domain=pcgamesn.com|pockettactics.com|thedigitalfix.com|theloadout.com|wargamer.com
 $removeparam=ifs,domain=pcgamesn.com|pockettactics.com|thedigitalfix.com|theloadout.com|wargamer.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4070394
-||jcpenney.com$removeparam=deptId
-||jcpenney.com$removeparam=catId
-||jcpenney.com$removeparam=urlState
-||jcpenney.com$removeparam=productGridView
-||jcpenney.com$removeparam=Dr
-||jcpenney.com$removeparam=badge
-||jcpenney.com$removeparam=selectedSKUId
+||jcpenney.com*deptId$removeparam=deptId
+||jcpenney.com*catId$removeparam=catId
+||jcpenney.com*urlState$removeparam=urlState
+||jcpenney.com*productGridView$removeparam=productGridView
+||jcpenney.com*Dr$removeparam=Dr
+||jcpenney.com*badge$removeparam=badge
+||jcpenney.com*selectedSKUId$removeparam=selectedSKUId
 
 ! https://github.com/ClearURLs/Rules/issues/57
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4081177
-||bandcamp.com^$removeparam=search_item_id
-||bandcamp.com^$removeparam=search_item_type
-||bandcamp.com^$removeparam=search_match_part
-||bandcamp.com^$removeparam=search_page_no
-||bandcamp.com^$removeparam=search_rank
+||bandcamp.com^*search_item_id$removeparam=search_item_id
+||bandcamp.com^*search_item_type$removeparam=search_item_type
+||bandcamp.com^*search_match_part$removeparam=search_match_part
+||bandcamp.com^*search_page_no$removeparam=search_page_no
+||bandcamp.com^*search_rank$removeparam=search_rank
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4097133
-||bstn.com^$removeparam=indexName
-||bstn.com^$removeparam=objectID
-||bstn.com^$removeparam=p
-||bstn.com^$removeparam=queryID
+||bstn.com^*indexName$removeparam=indexName
+||bstn.com^*objectID$removeparam=objectID
+||bstn.com^*p$removeparam=p
+||bstn.com^*queryID$removeparam=queryID
 
 ! https://app.slack.com/plans/[redacted]?entry_point=upgrade-button
-||app.slack.com^$removeparam=entry_point
+||app.slack.com^*entry_point$removeparam=entry_point
 
 ! https://sp.seiga.nicovideo.jp/comic/33962?track=mym_favorite
 ||nicovideo.jp/comic^$removeparam=track
 
 ! https://www.onenote.com/notebooks?auth=1&nf=1&fromAR=1 (The result of using the «OneNote Online» Chrome "app" that simply opens a OneDrive tab)
-||onenote.com^$removeparam=nf
-||onenote.com^$removeparam=fromAR
+||onenote.com^*nf$removeparam=nf
+||onenote.com^*fromAR$removeparam=fromAR
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4168335
 $removeparam=_mak_partner_campaign
@@ -3725,8 +3725,8 @@ $removeparam=_mak_partner_campaign
 $removeparam=glbnav,domain=hallmark.com|hallmarkchannel.com|hallmarkchannelwines.com|hallmarkdrama.com|hallmarkmoviesandmysteries.com|hmnow.com|watchhallmarktv.com
 
 ! https://www.adobe.com/products/special-offers.html?promoid=TKZTLBST&mv=other&clickref=1011lwmprPq2&mv=affiliate&mv2=pz&as_camptype=&as_channel=affiliate&as_source=partnerize&as_campaign=macrumors
-||adobe.com^$removeparam=mv
-||adobe.com^$removeparam=mv2
+||adobe.com^*mv$removeparam=mv
+||adobe.com^*mv2$removeparam=mv2
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4182519
 ||columbiasportswear.*^$removeparam=did
@@ -3735,7 +3735,7 @@ $removeparam=glbnav,domain=hallmark.com|hallmarkchannel.com|hallmarkchannelwines
 ||columbiasportswear.*^$removeparam=oid
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4182527
-||puma.com^$removeparam=amp
+||puma.com^*amp$removeparam=amp
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4182667
 $removeparam=src_medium,document
@@ -3758,21 +3758,21 @@ $removeparam=src_custom
 ||bbc.*^$removeparam=at_link_origin
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4131326
-||linkedin.com^$removeparam=updateEntityUrn
+||linkedin.com^*updateEntityUrn$removeparam=updateEntityUrn
 
 ! https://faq.whatsapp.com/673193694148537/?helpref=hc_fnav
-||whatsapp.com^$removeparam=helpref
+||whatsapp.com^*helpref$removeparam=helpref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4488426
-||nvidia.com^$removeparam=jso
+||nvidia.com^*jso$removeparam=jso
 
 ! https://github.com/DandelionSprout/adfilt/issues/715
 $removeparam=srsltid,document
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4502840
-||dl-protect.net^$removeparam=fn
-||dl-protect.net^$removeparam=rl
-||1fichier.com^$removeparam=af
+||dl-protect.net^*fn$removeparam=fn
+||dl-protect.net^*rl$removeparam=rl
+||1fichier.com^*af$removeparam=af
 
 ! https://github.com/DandelionSprout/adfilt/pull/721
 ||discoveryplus.com^*_referrer$removeparam=_referrer
@@ -3882,7 +3882,7 @@ $removeparam=pk_vid,document
 $removeparam=szFrom,document,domain=login.afreecatv.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5081433
-||typeform.com^$removeparam=typeform-source
+||typeform.com^*typeform-source$removeparam=typeform-source
 
 ! https://www.selected.com/en-gb/homme/trousers/slim-fit-trousers-16086553_Grey_966031.html?clickedFromCategory=sl-homme-collection-trousers
 ||selected.com^*clickedFromCategory$removeparam=clickedFromCategory
