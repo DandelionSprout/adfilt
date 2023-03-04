@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 04March2023v5
+! Version: 04March2023v6
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1004,7 +1004,7 @@ $removeparam=pa-partnerid
 
 ! https://prispresseren.dk/shop/mobiltilbehoer/mobilholder/samdi-universal-wood-phone-holder-kaffefarve/?amp;utm_campaign=Google%20Feed&amp;utm_medium=cpc&amp;utm_term=29379
 ! ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
-||prispresseren.dk^$removeparam=/^amp;/
+||prispresseren.dk^*amp;$removeparam=/^amp;/
 
 ! https://www.fashiondays.ro/p/pantofi-sport-cu-aspect-colorblock-cell-omega-manga-cult-femei-puma-p2750164-1/?2p_affiliate_id=15adef88&2p_click_token=e64efe01d03493852f8fc609
 $removeparam=2p_affiliate_id
@@ -1522,14 +1522,14 @@ $removeparam=dchild
 ||amazon.*creative$removeparam=creative
 $removeparam=creativeASIN
 ! https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html?sc_icampaign=Adoption_Campaign_pac-optimize-2020-console-1-asg-max&sc_ichannel=ha&sc_icontent=awssm-5270&sc_ioutcome=Enterprise_Digital_Marketing&sc_iplace=console-ec2autoscaling_infobar&trk=ha_a121p21423yfe1DAD~ha_awssm-5270&trkCampaign=pac-edm-2019-optimize-autoscaling-instance-asg (28/02/2021)
-||amazon.$removeparam=/^sc_i/
+||amazon.*sc_i$removeparam=/^sc_i/
 $removeparam=trkCampaign
 $removeparam=trk,domain=splashthat.com|aws.amazon.com|aws|xkcd.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700946
 ||amazon.$removeparam=/^__mk_*_/
 ||amazon.*ascsubtag$removeparam=ascsubtag
 ||amazon.*crid$removeparam=crid
-||amazon.$removeparam=/^cv_ct_/
+||amazon.*cv_ct_$removeparam=/^cv_ct_/
 !!! ||amazon.$removeparam=ie - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2611566
 !!! ||amazon.$removeparam=rnid - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4123725
 ! ||amazon.$removeparam=s
@@ -1540,7 +1540,7 @@ $removeparam=coliid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
 $removeparam=geniuslink
 ||amazon.*aaxitk$removeparam=aaxitk
-||amazon.$removeparam=/^pd_rd_/
+||amazon.*pd_rd_$removeparam=/^pd_rd_/
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 !!!$~xmlhttprequest,removeparam=psc (Breaks cloth size selection)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-944078
@@ -1562,7 +1562,7 @@ $removeparam=geniuslink
 ||amazon.*field-lbr_brands_browse-bin$removeparam=field-lbr_brands_browse-bin
 ! https://www.amazon.com/dp/B08RNHCZ3K?maas=maas_adg_api_8014460300101_static_12_26&ref_=aa_maas&aa_campaignid=3361_LTT_OfficeTour_US-B08RNHCZ3K-inf&aa_adgroupid=youtube_&aa_creativeid=US-ZMAJjR9On (07/08/2021)
 ||amazon.*maas$removeparam=maas
-||amazon.$removeparam=/^aa_/
+||amazon.*aa_$removeparam=/^aa_/
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1206280
 ||amazon.*asc_item$removeparam=asc_item
 ||amazon.*m$removeparam=m
@@ -1943,7 +1943,7 @@ $removeparam=aff_click_id
 
 !!!! ——— Baidu ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
-||baidu.com^$removeparam=/^rsv/
+||baidu.com^*rsv$removeparam=/^rsv/
 ||baidu.com^*euri$removeparam=euri
 ||baidu.com/s?$removeparam=f
 ||baidu.com^*for$removeparam=for
@@ -2050,11 +2050,11 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
-||bilibili.com^$removeparam=/^current/
-||bilibili.com^$removeparam=/^from/
-||bilibili.com^$removeparam=/^network/
-||bilibili.com^$removeparam=/^playurl/
-||bilibili.com^$removeparam=/^share_/
+||bilibili.com^*current$removeparam=/^current/
+||bilibili.com^*from$removeparam=/^from/
+||bilibili.com^*network$removeparam=/^network/
+||bilibili.com^*playurl$removeparam=/^playurl/
+||bilibili.com^*share_$removeparam=/^share_/
 ||bilibili.com^*accept_quality$removeparam=accept_quality
 ||bilibili.com^*bbid$removeparam=bbid
 ||bilibili.com^*broadcast_type$removeparam=broadcast_type
@@ -2095,7 +2095,7 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ||bilibili.com^*-Arouter$removeparam=-Arouter
 ! https://github.com/DandelionSprout/adfilt/pull/498
 ! https://b23.tv/qyCIzk0?share_medium=android&share_source=qq&bbid=XY109CF1E34C218EE069040BA659740FD307B&ts=1644566174988 (11/02/2022)
-||b23.tv^$removeparam=/^share_/
+||b23.tv^*share_$removeparam=/^share_/
 ||b23.tv^*bbid$removeparam=bbid
 ||b23.tv^*ts$removeparam=ts
 ! https://github.com/DandelionSprout/adfilt/pull/605
@@ -2164,8 +2164,8 @@ $removeparam=user_ip
 ||sogou.com^*interV$removeparam=interV
 ! https://github.com/DandelionSprout/adfilt/pull/364
 ! https://www.sogou.com/web?query=Test&ie=utf8&oq&ri=0&suguuid=0caa7aac-2827-472b-942c-a5f03b0704ce&stj=0%3B4%3B0%3B0&stj2=0&stj0=0&stj1=4&hp=48&hp1&suglabid=suglabId_1 (20/11/2021)
-||sogou.com^$removeparam=/^hp/
-||sogou.com^$removeparam=/^stj/
+||sogou.com^*hp$removeparam=/^hp/
+||sogou.com^*stj$removeparam=/^stj/
 ||sogou.com^*oq$removeparam=oq
 ||sogou.com^*ri$removeparam=ri
 ||sogou.com^*suglabid$removeparam=suglabid
@@ -2422,7 +2422,7 @@ $removeparam=TheTime,domain=gamespot.com|cnet.*
 ||epidemicsound.com^*_usx$removeparam=_usx
 ||photojobz.com^*hop$removeparam=hop
 ||microsoft.com^*headerid$removeparam=headerid
-||microsoft.com^$removeparam=/^AAAA/
+||microsoft.com^*AAAA$removeparam=/^AAAA/
 ||babbel.com^*bsc$removeparam=bsc
 ||babbel.com^*btp$removeparam=btp
 ||microsoft.com^*destrt$removeparam=destrt
@@ -2615,7 +2615,7 @@ $removeparam=scd,domain=ashleystewart.com
 ||ifixit.com^*sponsor$removeparam=sponsor
 
 ! https://www.greenmangaming.com/?tap_a=1964-996bbb&tap_s=2041734-c9a23b
-||greenmangaming.com^$removeparam=/^tap_/
+||greenmangaming.com^*tap_$removeparam=/^tap_/
 
 ! https://icedrive.net/?pt=lojxagugwf
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112128
@@ -2643,7 +2643,7 @@ $removeparam=csrc,domain=mcafee.com|vitacost.com
 ! https://hoteles.com/?tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&rffrid=aff.hcom.us.002.003.8807380.cjaff.kwrd=886b4ff00cb611ec806d4d080a18050d&wapa6=00aLOkbcDwTPhG5y3pNOVi2&sub_publisher=1397064&sub_site=8807380&sub_ad=10780389
 ||hoteles.com^*PSRC$removeparam=PSRC
 ||hoteles.com^*wapa6$removeparam=wapa6
-||hoteles.com^$removeparam=/^sub_/
+||hoteles.com^*sub_$removeparam=/^sub_/
 ||hoteles.com^*tmid$removeparam=tmid
 
 ! https://buschgardens.com/?AFS=CJ
@@ -2659,7 +2659,7 @@ $removeparam=csrc,domain=mcafee.com|vitacost.com
 $removeparam=site_id,domain=taskrabbit.com|kochava.com
 
 ! https://control.kochava.com/v1/cpi/click?app_source=website&app_medium=button&app_campaign=app-ios&campaign_id=koios-client-app-c36sca13f37d993fe&network_id=9569&site_id=1&device_id=device_id
-||kochava.com^$removeparam=/^app_/
+||kochava.com^*app_$removeparam=/^app_/
 ||kochava.com^*network_id$removeparam=network_id
 ||kochava.com^*device_id$removeparam=device_id
 
@@ -2767,7 +2767,7 @@ $removeparam=ct,domain=apple.com|bumble.com|newsroom.co.nz
 ||music.apple.com^*itscg$removeparam=itscg
 
 ! https://tv.apple.com/?ign-itscg=10000&ign-itsct=atv-0-tv_ovp-nav_stm-apl-avl-191111
-||apple.com^$removeparam=/^ign-/
+||apple.com^*ign-$removeparam=/^ign-/
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1490207
 ! i.e. https://go.skimresources.com/?id=160612X1627478&xcust=adm2_841947&xs=1&url=https%3A%2F%2Fwalmart.com%2Fip%2F204105463
@@ -2940,7 +2940,7 @@ $removeparam=jb,domain=change.org
 $removeparam=eml,domain=endesa.com|scholastic.com
 
 ! https://www.despegar.com.mx/hoteles/h-233023/las-brisas-ixtapa-ixtapa+zihuatanejo?clt_c=MX_12072021_CONCURSO-ACT&clt_emsgid=01dcee7d48504585acfcf91bf4ce0957071221&clt_n=e&mktdata=key%3DUT81AK9JAFEGJ4D69OVO6J673E%26ltype%3Dsell%26clt_n%3De%26clt_c%3DMX_12072021_CONCURSO-ACT%26pr%3DG%26cc%3DMX%26cm%3DMX_12072021_CONCURSO-ACT%26etype%3Dmanual%26clt_emsgid%3D01dcee7d48504585acfcf91bf4ce0957071221%26id%3D20210712232146134443099767584773%26trackeame_user_id%3D12C019D917BD1623430638441402f5dec-a37b-420c-8e2c-abf195b0d28625916425
-||despegar.$removeparam=/^clt_/
+||despegar.*clt_$removeparam=/^clt_/
 ||despegar.*mktdata$removeparam=mktdata
 
 ! https://www.entradas.com/campaign/regala-entradas?affiliate=AD7&referer_info=CN-TGP-EDIT-ES_24982&uid=a9fa960288498dd5b189230435422eeb&cHash=c2a9920cad0995b06e8c9504b2bd8e0e
@@ -2950,7 +2950,7 @@ $removeparam=eml,domain=endesa.com|scholastic.com
 $removeparam=referer,domain=bodykind.com
 
 ! https://www.officemonster.co.uk/laptop-monitor-risers/fellowes-hana-monitor-support-230v-usb-eu-uk-metal-base-black-8060501--6?fo_c=3748&fo_k=c3102c618ef75aa5e461355397178cad&fo_s=awin
-||officemonster.co.uk^$removeparam=/^fo_/
+||officemonster.co.uk^*fo_$removeparam=/^fo_/
 
 ! https://www.viglink.com/?vgref=352353
 ||viglink.com^*vgref$removeparam=vgref
@@ -3018,7 +3018,7 @@ $removeparam=visit_id,domain=bilibili.com|google.*
 ||coupang.com^*wPcid$removeparam=wPcid
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/99645
-||trendyol.com^$removeparam=/^tyutm_/
+||trendyol.com^*tyutm_$removeparam=/^tyutm_/
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94662#issuecomment-946949031
 $removeparam=correlation_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
@@ -3079,7 +3079,7 @@ $removeparam=mv_pc,domain=fragrancenet.com
 ||walmart.*wl12$removeparam=wl12
 !!!||walmart.$removeparam=wl13 (Decides pickup location)
 ! https://www.walmart.com/ip/Old-El-Paso-Stand-N-Stuff-Bold-Nacho-Cheese-Flavored-Taco-Dinner-Kit-9-5-oz/38260506?athcpid=38260506&athpgid=AthenaItempage&athcgid=null&athznid=siext&athieid=v0&athstid=CS056&athguid=egnNrMG_5XOxTB0tFsuPZlPSj01v5EdpAUIb&athancid=null&athena=true
-||walmart.$removeparam=/^ath/
+||walmart.*ath$removeparam=/^ath/
 
 ! https://www.outnorth.fi/timberland/women-s-premium-6-waterproof-boot?source=hintaopas.fi&medium=productlinks&campaign=varmfodrade+k%C3%A4ngor&term=Women%27s+Premium+6&quot;+Waterproof+Boot#Black
 $removeparam=term,domain=outnorth.fi|bybit.com
@@ -3132,7 +3132,7 @@ $removeparam=psrc,domain=savagex.com
 ||market.yandex.ru^*cpc$removeparam=cpc
 
 ! http://pixel.everesttech.net/1325/cq?ev_sid=3&ev_ln%E2%80%8B=bankrate+com&ev_crx=277142460%E2%80%8B08&ev_mt=p&ev_n=g&ev_ltx=&ev_pl=&ev_pos=1t1&ev_dvc=c&ev_dvm=&url=http://www.example.com
-||everesttech.net^$removeparam=/^ev_/
+||everesttech.net^*ev_$removeparam=/^ev_/
 
 ! https://pp.promofarma.com/dynclick/promocionesfarma/?etf-publisher=kelkoo&etf-name=kelkoo&etf-prdref=451760&eurl=https%3A%2F%2Fwww.promofarma.com%2Fes%2Fksix-fitness-band-thermometer-hr-negro-1ud%2Fp-451760%3Fkk%3Da4c6365-17d6c2e951c-309d81%26utm_medium%3Daffiliation%26utm_source%3Dkelkoo%26utm_campaign%3DES-Feed%26utm_content%3Dfeed%26utm_term%3Dfeed
 ||promofarma.com^*etf-name$removeparam=etf-name
@@ -3299,7 +3299,7 @@ $removeparam=block,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3
 ||domains.ch^*REF$removeparam=REF
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104849
-||greenhouse.io^$removeparam=/^lever-/
+||greenhouse.io^*lever-$removeparam=/^lever-/
 
 ! https://ad.admitad.com/g/ca265zafmkbc8f6d165a9f466608b0
 ! https://www.milanoo.com/?Promotion=AF_Admitad&deduplication_channel=admitad
@@ -3441,10 +3441,10 @@ $removeparam=subref,domain=newsweek.com
 $removeparam=intcid,domain=cbsnews.com
 
 ! https://articulo.mercadolibre.com.mx/MLM-1389627545-nuevo-buzz-lightyear-2022-disney-mattel-_JM?matt_tool=99486937&matt_word=&matt_source=google&matt_campaign_id=15693562203&matt_ad_group_id=132817878898&matt_match_type=&matt_network=g&matt_device=c&matt_creative=571796003518&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=537786473&matt_product_id=MLM1389627545&matt_product_partition_id=1418803903092&matt_target_id=aud-1575562103163:pla-1418803903092&gclid=CjwKCAjwlcaRBhBYEiwAK341jU8MwyPwPy3nth_2S9WH97rxtxl7eVQXNSLl-oGgg8w0rVrXlMSXcxoC3qAQAvD_BwE (18/03/2022)
-||mercadolibre.com.mx^$removeparam=/^matt_/
+||mercadolibre.com.mx^*matt_$removeparam=/^matt_/
 
 ! https://articulo.mercadolibre.com.mx/MLM-1369998343-peluche-stitch-original-de-disney-store-envio-gratis-_JM#reco_item_pos=5&reco_backend=machinalis-seller-items-pdp&reco_backend_type=low_level&reco_client=vip-seller_items-above&reco_id=e859b1d9-86b2-4aa7-ba17-0c9ffd43acfc
-||mercadolibre.com.mx^$removeparam=/^reco_/
+||mercadolibre.com.mx^*reco_$removeparam=/^reco_/
 
 ! https://www.evesleep.co.uk/?mediapartner
 $removeparam=mediapartner,domain=evesleep.co.uk
@@ -3719,7 +3719,7 @@ $removeparam=ifs,domain=pcgamesn.com|pockettactics.com|thedigitalfix.com|theload
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4168335
 $removeparam=_mak_partner_campaign
-||courir.$removeparam=/^_mak_partner_/
+||courir.*_mak_partner_$removeparam=/^_mak_partner_/
 
 ! https://www.hallmarkchannel.com/?glbnav=hc
 $removeparam=glbnav,domain=hallmark.com|hallmarkchannel.com|hallmarkchannelwines.com|hallmarkdrama.com|hallmarkmoviesandmysteries.com|hmnow.com|watchhallmarktv.com
