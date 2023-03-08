@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 27February2023v1-Personal
+! Version: 08March2023v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 ! /\/\ Supercompilations: /\/\
@@ -217,6 +217,8 @@ dnpedia.com#?#.ui-row-ltr:has-text(.edu.)
 !!!avinor.no##.flight-single:has-text(/Oslo|Bergen|Sandefjord|Stavanger|Sandnes|Rørvik|Mo i Rana|Bodø|Namsos|Brønnøysund|Mosjøen|Ålesund|Tromsø|Harstad/)
 ! Aims to make Google search for Apple App Store apps only show Mac apps (Shouldn't be turned on 24/7)
 !!!www.google.*##.g:has-text(Gratis · ‎iOS)
+! Aims to remove "Coming soon" games from "New releases" searches
+!!!store.epicgames.com#?#section li:has([data-testid$=subtitle]:has-text(Available))
 
 ! ↓ Below are categories that may or may not get independent lists for public use one day. ↓
 ! And yes, there's a reason why a.txt is for private use only: It shows the seething despisement I have against large chunks of planet Earth.
@@ -416,6 +418,7 @@ twe.no#?#.is-10-widescreen > .columns > .column:has-text(Premier League)
 viaplay.no##video[poster*=_PL_]
 viaplay.no##a[href*=premier-league]
 ||comfyballs.no/wp-content/uploads/sites/*/hero-comfy-pl-*.jpg|$image
+theguardian.com##[name=MostViewedRightWrapper]
 !#if !adguard
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(/Haaland/i)
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(De Jong)
@@ -716,6 +719,19 @@ disneyplus.com#?#.slick-slide:has(div[alt*=Kardashian i], div[alt*=Marvel i], di
 disneyplus.com##span.item[data-route=STARTSIDE]
 disneyplus.com##.slice-slide:style(opacity: 1 !important)
 disneyplus.com##span.item[data-route=ORIGINALS]
+
+! Script blocking for PRC sites
+*/log/$domain=bilibili.com
+||cm.bilibili.com^$all
+/bili-collect.js$all
+||bilibili.com^*/data/collector^$all
+||boss.hdslb.com^$all
+||bilibili.com/x/click-interface^$all
+||bilibili.com/*/is_forbid^$all
+||bilibili.com/*/log-reporter.js$all
+*/laputa-header/$all
+||hdslb.com/*/pcdn-$all
+||hdslb.com/*/nc-loader-$all
 
 ! Workaround while testing for Chrome freezes (Specifically to see if "Google Hit Hider by Domain" can remain turned off)
 google.*##div[data-ow]:has(a[href*="deviantart.com"])
