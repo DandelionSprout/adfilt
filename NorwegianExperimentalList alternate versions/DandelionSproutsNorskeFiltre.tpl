@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 23February2023v1-Deprecated
+# Version: 08March2023v3-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -67,6 +67,9 @@ msFilterList
 # vesterbroliv.dk, vafo.dk, amagerliv.dk
 # https://github.com/uBlockOrigin/uAssets/issues/13224
 # rett24.no (13 06 2022)
+# metalsupply.no, licitationen.dk (08 03 2023)
+# https://www.licitationen.dk/article/view/900259/efter_entreprenors_konkurs_river_106_ufaerdige_huse_ned_i_hojetaastrup/(08/03/2023)
+# maskinregisteret.no (08 03 2023)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -404,10 +407,9 @@ msFilterList
 -d gfx.no refererPromo
 # buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
 -d f.nordiskemedier.dk *.gif
-# metalsupply.no
--d f.nordiskemedier.dk 2*.png
 # building-supply.dk
 -d f.nordiskemedier.dk banner
+# metalsupply.no, licitationen.dk
 # viivilla.no (10 11 2020)
 -d bcm.interactives.dk script
 # adressa.no (10 11 2020)

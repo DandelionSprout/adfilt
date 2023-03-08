@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 230220231
+! Version: 080320233
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -482,7 +482,15 @@ dk##section.article__adblock
 ! https://github.com/uBlockOrigin/uAssets/issues/13224
 ##a[data-bid="1"][href*="/linkout"]
 ! rett24.no (13/06/2022)
-##.bannerizor-banner
+##.bannerizor-banner:not(html, body)
+! metalsupply.no, licitationen.dk (08/03/2023)
+##.mowgli-right:not(html, body)
+! https://www.licitationen.dk/article/view/900259/efter_entreprenors_konkurs_river_106_ufaerdige_huse_ned_i_hojetaastrup (08/03/2023)
+##.mowgli-inread:not(html, body)
+##.top-mowgli:not(html, body)
+##.main-article-right-container > div[id][style^="margin-bottom:"]
+! maskinregisteret.no (08/03/2023)
+###front-page-app .row > #box2-container
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -869,11 +877,10 @@ _300x500pix$domain=rykindribe.dk,image
 ||gfx.no^*/refererPromo$script,stylesheet
 ! buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
 ||f.nordiskemedier.dk/*.gif^
-! metalsupply.no
-||f.nordiskemedier.dk/2*.png^
-@@||f.nordiskemedier.dk/2*_*.png^
 ! building-supply.dk
 ||f.nordiskemedier.dk/banner^
+! metalsupply.no, licitationen.dk
+/://f\.nordiskemedier\.dk/2[a-z0-9]{12,}\.(jpg|png|jpeg)/$third-party
 ! viivilla.no (10/11/2020)
 ||bcm.interactives.dk/script^$third-party
 ! adressa.no (10/11/2020)
@@ -4695,7 +4702,7 @@ vmj.se#?#.sidebox:-abp-contains(/Externa länkar|Artiklar/)
 @@||doubleclick.net/tag/js/gpt.js$domain=feber.se
 feber.se##.maxetise
 [Adblock Plus 3.13]
-! Version: 190220231
+! Version: 40320232
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -5464,6 +5471,7 @@ mtvuutiset.fi##.component-soniaincontent
 mtvuutiset.fi##.leaderboard
 mtvuutiset.fi##.sonia-container
 mtvuutiset.fi#?#.latest-listing > .listing-items > li:has-text(Mainos)
+murha.info##a[href="https://www.jurinet.fi"]
 muropaketti.com##.widget_ads_carousel
 muropaketti.com##.widget_hintaopasbestprice
 muropaketti.com##SECTION[id*=hintaopaspopular]
@@ -5541,6 +5549,9 @@ polttoaine.net##[href="http://www.vertaa.fi/lentoliput/"]
 pottupellossa.fi##.widget_media_image > a[href="http://dimex.fi"]
 pottupellossa.fi#?#.widget_text:has-text(Mainos)
 projektiuutiset.fi##.proje-widget
+pt-media.org###custom_html-63
+pt-media.org###text-32
+pt-media.org##[href="https://pt-media.org/pikakasinot/"]
 pt-media.org##[href^="https://kasinopartio.com/"]
 pt-media.org#?#section:-abp-has(> a[href="https://nocompromiseclothing.com/"])
 puheenaiheet.fi##div[class=wpb_wrapper]
