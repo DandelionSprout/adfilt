@@ -944,6 +944,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"http://creativecommons\.org/licenses/", 
+           r"https://creativecommons.org/licenses/", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\r\n'
 
@@ -1825,12 +1831,6 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"! Disabling of push-notifications", 
-           r"! Title: AdGuard Annoyances Web Push\n! Homepage: https://github.com/AdguardTeam/AdguardFilters/tree/master/AnnoyancesFilter/sections\n! Sourced from: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/AnnoyancesFilter/sections/push-notifications.txt\n! Disabling of push-notifications",
-           line
-        )
-
-        line = re.sub(
            r"^[a-z0-9.-].*[/?_+=&]$", 
            r"", 
            line
@@ -1887,6 +1887,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^%.*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"http://creativecommons\.org/licenses/", 
+           r"https://creativecommons.org/licenses/", 
            line
         )
 
