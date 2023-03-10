@@ -6821,7 +6821,13 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#\.article", 
+           r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#\.?article", 
+           r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
+           line
+        )
+
+        line = re.sub(
+           r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#\.?div\[data-testid=cellInnerDiv\]", 
            r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
            line
         )
