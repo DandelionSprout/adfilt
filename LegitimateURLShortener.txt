@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 09March2023v1
+! Version: 10March2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3862,7 +3862,7 @@ $removeparam=cvid,domain=msn.cn|msn.com|chinadaily.com.cn|yiyouliao.com|tianqi.c
 ||quizlet.com^$removeparam=signupOrigin
 
 ! https://mini.eastday.com/nsa/n230125110013294.html?qid=04426&cvid=ef9c243ff9fd4d5d8606d5a42b2b2023 (26/01/2023)
-||eastday.com^$removeparam=qid
+$removeparam=qid,domain=eastday.com|bookdepository.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4962768
 $removeparam=pk_vid,document
@@ -3903,6 +3903,9 @@ $removeparam=_1lr
 ||css-tricks.com^$removeparam=relatedposts_hit
 ||css-tricks.com^$removeparam=relatedposts_origin
 ||css-tricks.com^$removeparam=relatedposts_position
+
+! https://www.bookdepository.com/Ladybird-Readers-Beginner-Level-My-Little-Pony-Sunnys-Garden-ELT-Graded-Reader-Ladybird/9780241616956?qid=1678437368012&sr=1-8 (10/03/2023)
+||bookdepository.com^$removeparam=sr
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
