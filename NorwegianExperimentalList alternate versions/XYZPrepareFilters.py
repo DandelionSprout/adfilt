@@ -6686,7 +6686,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#article", 
-           r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
+           r"nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item", 
            line
         )
 
@@ -6758,7 +6758,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^(! Homepage: .*)", 
-           r"\1\n! Entry syntaxes specific to this supplement:\nnitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has(.fullname[title*=🇺🇸])\nnitter.net,nitter.lacontrevoie.fr#?#.timeline-item:has(.fullname[title*=🇺🇲])\nnitter.net,nitter.lacontrevoie.fr##.timeline-item:has(.fullname[title*=🏴󠁧󠁢])\nnitter.net,nitter.lacontrevoie.fr##.timeline-item:has(.fullname[title*=🇦🇺󠁧󠁢󠁥󠁮󠁧󠁿])\nnitter.net,nitter.lacontrevoie.fr##.timeline-item:has(.fullname[title*=🦕][title*=🌻])\nnitter.net,nitter.lacontrevoie.fr##.timeline-item:has(.fullname[title*=🦖][title*=🧙‍♀️])", 
+           r"\1\n! Entry syntaxes specific to this supplement:\nnitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has(.fullname[title*=🇺🇸])\nnitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has(.fullname[title*=🇺🇲])\nnitter.net,nitter.lacontrevoie.fr,nitter.1d4.us##.timeline-item:has(.fullname[title*=🏴󠁧󠁢])\nnitter.net,nitter.lacontrevoie.fr,nitter.1d4.us##.timeline-item:has(.fullname[title*=🇦🇺󠁧󠁢󠁥󠁮󠁧󠁿])\nnitter.net,nitter.lacontrevoie.fr,nitter.1d4.us##.timeline-item:has(.fullname[title*=🦕][title*=🌻])\nnitter.net,nitter.lacontrevoie.fr,nitter.1d4.us##.timeline-item:has(.fullname[title*=🦖][title*=🧙‍♀️])", 
            line
         )
 
@@ -6816,19 +6816,19 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#div\[style\*=\"position: absolute; \"]:not\(\[class\]\)", 
-           r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
+           r"nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item", 
            line
         )
 
         line = re.sub(
            r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#\.?article", 
-           r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
+           r"nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item", 
            line
         )
 
         line = re.sub(
            r"^twitter\.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid\.onion#\?#\.?div\[data-testid=cellInnerDiv\]", 
-           r"nitter.net,nitter.lacontrevoie.fr#?#.timeline-item", 
+           r"nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item", 
            line
         )
 
