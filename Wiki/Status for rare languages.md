@@ -21,7 +21,6 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 ### Sites not yet checked
 * Burmese
 * Filipino/Tagalog
-* Khmer
 * Kurdish
 * Laotian
 * Maltese
@@ -43,6 +42,7 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 ### Limited support with AdGuard Base
 * Armenian
 * Mongolian
+* Khmer
 
 ### No lists believed to be willing to accept entries for them
 * Afrikaans
