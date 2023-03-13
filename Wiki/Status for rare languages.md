@@ -28,7 +28,7 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Papiamento
 * Pashto
 * Somalian
-* Swahili
+* Swahili (`taifaleo.nation.co.ke##.text-center`?)
 * Tatar
 * Urdu
 
