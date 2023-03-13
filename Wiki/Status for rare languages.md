@@ -3,20 +3,21 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 ### Fully covered
 * Namibia German (EasyList Germany)
 * Liechtenstein (EasyList Germany)
+* Luxembourgish (EasyList Germany, if I remember correctly)
 * Angola (EasyList Portuguese)
 * Mozambique (EasyList Portuguese)
 * Cape Verde (EasyList Portuguese)
-* Welsh (EasyList)
-* Kyrgyz (AdGuard Base)
 * Åland (Frellwit's Swedish Filter <i>and</i> Adblock List for Finland)
 * Sri Lanka (IndianList)
 * Nepal (IndianList)
 * Bangladesh (IndianList)
-* Georgian (AdGuard Base)
-* Luxembourgish (EasyList Germany, if I remember correctly)
 * Tajik (PersianFilter)
 * Thai (EasyList Thailand)
+* Frisian (EasyDutch, from the looks of it)
 * Georgian (AdGuard Base)
+* Georgian (AdGuard Base)
+* Kyrgyz (AdGuard Base)
+* Welsh (EasyList)
 
 ### Sites not yet checked
 * Burmese
