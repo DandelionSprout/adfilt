@@ -24,11 +24,15 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Khmer
 * Kurdish
 * Laotian
-* Maltese (`tvmnews.mt##div[data-widget_type="shortcode.default"]`?)
+* Maltese
+* * `tvmnews.mt##div[data-widget_type="shortcode.default"]`?
 * Papiamento
+* * `721news.com##.wdslider`? (on articles)
+* * `721news.com##aside[id^=media_]`?
 * Pashto
 * Somalian
-* Swahili (`taifaleo.nation.co.ke##.text-center`?)
+* Swahili
+* * `taifaleo.nation.co.ke##.text-center`?
 * Tatar
 * Urdu
 
