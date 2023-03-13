@@ -22,7 +22,8 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Burmese
 * Filipino/Tagalog
 * Kurdish
-* Laotian
+* Laos Lao
+* * `vientianetimeslao.la##div[id^=media_image]`?
 * Maltese
 * * `tvmnews.mt##div[data-widget_type="shortcode.default"]`?
 * Papiamento
