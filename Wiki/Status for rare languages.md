@@ -25,7 +25,6 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Khmer
 * Kurdish
 * Laotian
-* Malagasy (`https://github.com/AdguardTeam/AdguardFilters/issues/145446`)
 * Maltese
 * Papiamento
 * Pashto
@@ -35,12 +34,15 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Tatar
 * Urdu
 
+### Under evaluation by filterlist makers
+* Cyprus Greek (`https://github.com/kargig/greek-adblockplus-filter/issues/120`)
+* Malagasy (`https://github.com/AdguardTeam/AdguardFilters/issues/145446`)
+
 ### Limited support with AdGuard Base
 * Armenian
 * Mongolian
 
 ### No lists believed to be willing to accept entries for them
-* Cyprus Greek
 * Afrikaans
 * Zulu
 
