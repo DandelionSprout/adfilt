@@ -25,7 +25,7 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Khmer
 * Kurdish
 * Laotian
-* Malagasy
+* Malagasy (`https://github.com/AdguardTeam/AdguardFilters/issues/145446`)
 * Maltese
 * Papiamento
 * Pashto
