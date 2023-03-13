@@ -28,7 +28,6 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Maltese
 * Papiamento
 * Pashto
-* Rumansh
 * Somalian
 * Swahili
 * Tatar
@@ -56,3 +55,4 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Canada Inuktitut
 * Transnistria Cyrillic Romanian
 * Brunei
+* Rumansch
