@@ -15,7 +15,6 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Thai (EasyList Thailand)
 * Frisian (EasyDutch, from the looks of it)
 * Georgian (AdGuard Base)
-* Georgian (AdGuard Base)
 * Kyrgyz (AdGuard Base)
 * Welsh (EasyList)
 
