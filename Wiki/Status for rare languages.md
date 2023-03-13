@@ -20,12 +20,11 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 
 ### Sites not yet checked
 * Burmese
-* Canada Cree
 * Filipino/Tagalog
 * Khmer
 * Kurdish
 * Laotian
-* Maltese
+* Maltese (`tvmnews.mt##div[data-widget_type="shortcode.default"]`?)
 * Papiamento
 * Pashto
 * Somalian
@@ -53,6 +52,7 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Scottish Gaelic
 * Turkmen
 * Canada Inuktitut
+* Canada Cree
 * Transnistria Cyrillic Romanian
 * Brunei
 * Rumansch
