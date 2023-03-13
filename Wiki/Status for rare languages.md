@@ -48,7 +48,7 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 
 ### No lists believed to be willing to accept entries for them
 * Afrikaans
-* Zulu
+* Zulu (https://github.com/DandelionSprout/adfilt/blob/master/AdRemovalListForUnusualAds.txt#L77-L81)
 
 ### No known sites with unblocked ads
 * Singapore Tamil
