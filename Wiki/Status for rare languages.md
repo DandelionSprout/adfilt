@@ -1,6 +1,6 @@
 Status for adblock list coverage of rare languages, countries, and country-language combos, as of when this file was most recently updated:
 
-### Fully covered
+### Fully supported and/or covered
 * Namibia German (EasyList Germany)
 * Liechtenstein (EasyList Germany)
 * Luxembourgish (EasyList Germany, if I remember correctly)
@@ -16,7 +16,9 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Frisian (EasyDutch, from the looks of it)
 * Georgian (AdGuard Base)
 * Kyrgyz (AdGuard Base)
+* Mongolian (AdGuard Base)
 * Welsh (EasyList)
+* Malagasy (Ad Removal List for Unusual Ads *de facto*, unless more than 1 site with ads are found)
 
 ### Sites not yet checked
 * Burmese
@@ -39,11 +41,9 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 
 ### Under evaluation by filterlist makers
 * Cyprus Greek (`https://github.com/kargig/greek-adblockplus-filter/issues/120`)
-* Malagasy (`https://github.com/AdguardTeam/AdguardFilters/issues/145446`)
 
 ### Limited support with AdGuard Base
 * Armenian
-* Mongolian
 * Khmer
 
 ### Unclear situation
