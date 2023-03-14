@@ -37,11 +37,11 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Somalian
 * Swahili
 * * `taifaleo.nation.co.ke##.text-center`?
-* Tatar
 * Urdu
 
 ### Under evaluation by filterlist makers
 * Cyprus Greek (`https://github.com/kargig/greek-adblockplus-filter/issues/120`)
+* Tatar (`https://github.com/AdguardTeam/AdguardFilters/issues/145558`)
 
 ### Limited support with AdGuard Base
 * Armenian
