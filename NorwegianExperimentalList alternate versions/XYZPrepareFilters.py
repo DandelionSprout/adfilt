@@ -4385,6 +4385,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|amazonaws\.com(\^)?($|\$[ac-z,-]{1,}$).*", 
+           r"", 
+           line
+        )
+
         text += line + '\r\n'
 
     return text
@@ -4430,7 +4436,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            "Dandelion Sprout's Anti-Malware List", 
-           "Dandelion Sprout's Anti-Malware List (for AdBlock and Adblock Plus)", 
+           "Dandelion Sprout's Anti-Malware List (for Adblock Plus and AdBlock)", 
            line
         )
 
@@ -4496,61 +4502,67 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
-           r"\1#?#*:-abp-has(> \2)", 
+           r"\1#?#*:has(> \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
-           r"\1#?#*:-abp-has(> * > \2)", 
+           r"\1#?#*:has(> * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
-           r"\1#?#*:-abp-has(> * > * > \2)", 
+           r"\1#?#*:has(> * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
-           r"\1#?#*:-abp-has(> * > * >  * > \2)", 
+           r"\1#?#*:has(> * > * >  * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
-           r"\1#?#*:-abp-has(> * > * > * > * > * > * > * > * > * > \2)", 
+           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
+           line
+        )
+
+        line = re.sub(
+           r".*[,$]badfilter$", 
+           r"", 
            line
         )
 
@@ -4634,6 +4646,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r".*\$network$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|amazonaws\.com(\^)?($|\$).*", 
            r"", 
            line
         )
@@ -5179,6 +5197,12 @@ def prepare_privoxy(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|amazonaws\.com(\^)?($|\$[ac-z]).*", 
+           r"", 
+           line
+        )
+
         if is_supported_privoxy(line):
          text += line + '\r\n'
 
@@ -5374,6 +5398,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r" amazonaws\.com( .*|$)", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\r\n'
 
@@ -5522,6 +5552,12 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^[a-z]{1,20}$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^amazonaws\.com$", 
            r"", 
            line
         )
@@ -5820,6 +5856,24 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"@@\|\|[a-zA-Z0-9.-]{0,}\|[a-zA-Z0-9.-].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|amazonaws\.com(\^)?($|\$[ac-z].*$)", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\^,.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|.*\^[a-z].*", 
            r"", 
            line
         )
