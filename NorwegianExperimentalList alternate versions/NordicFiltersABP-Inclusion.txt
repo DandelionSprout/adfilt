@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 130320231
+! Version: 160320231
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1562,6 +1562,8 @@ tv2.dk##div[class=tc_deck]
 purehelp.no##.h-300px
 gulesider.no##div[class*=-spacing-xs-] > div[class^="MuiBox-root css-"]
 startsiden.no##div[class*=layout_adsContainer__]
+klikk.no##.gpt-sticky
+klikk.no##article[id^=lpc_belowArticle_]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -4709,7 +4711,7 @@ vmj.se#?#.sidebox:-abp-contains(/Externa länkar|Artiklar/)
 @@||doubleclick.net/tag/js/gpt.js$domain=feber.se
 feber.se##.maxetise
 [Adblock Plus 3.13]
-! Version: 120320233
+! Version: 150320231
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -4899,10 +4901,12 @@ anna.fi,kaksplus.fi##.widget_nativearticles
 anna.fi,keskustelu.kaksplus.fi###native_text_wrapper
 app.mtvuutiset.fi##.ppas
 app.mtvuutiset.fi##div[data-testid="endorsement"]
+apteekkari.fi##.frontpage-banner
 apteekkari.fi##.native-comms
 apteekkari.fi#?#.container:has-text(MAINOS (TEKSTI JATKUU ALLA))
 apu.fi#?#div[class*="PageBlock__ContentContainer"]:-abp-has(div[class*="ContentSpotlightBlock__AdLabel"])
 apu.fi,eeva.fi,lily.fi,meillakotona.fi,terve.fi##[class*=ad__component]
+apu.fi,eeva.fi,lily.fi,meillakotona.fi,terve.fi##[class^=Ad__AdRoot]
 arcticinsider.com##a[href*=bannerTrack]
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,metropoli.net,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,tinderinparhaat.com,valioliiga.com,viikonloppu.com##.pnad-container
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com##.td-post-content > .social-share ~ *
@@ -5119,7 +5123,7 @@ gogolf.fi#?#.has-background:has-text(mainos)
 gogolf.fi#?#.is-sidebar > .has-background:-abp-has(.is-advertorial)
 gogolf.fi#?#.is-sidebar > .has-background:-abp-has(a[href*="utm_medium=banner"])
 gogolf.fi#?#.js-tabpanel > ol > li:-abp-has(.is-advertorial)
-gogolf.fi#?#.wp-block-column > .has-background:has-text(MAINOS)
+gogolf.fi#?#.has-background:has-text(/MAINOS/i)
 golfpiste.com###gp-natives
 golfpiste.com##.carousel-cell--native
 golfpiste.com##.content-continues-after-ad
@@ -5670,6 +5674,7 @@ suomi24.fi##.ast
 suomi24.fi##.editorial-slots
 suomi24.fi##div[class*=Ad__AdWrapper]
 suomi24.fi##div[class^=HomePage__HeaderAd]
+suomi24.fi##div[id^=viihdes24_desktop-sidebar]
 suomi24.fi#?#div[class^=ThreadGridItemWrapper__CardCol]:-abp-has([class^=AdLivewrapped__AdWrapper])
 suomif1.com,suomifutis.com,suomikiekko.com,valioliiga.com##[data-bottom-floater]
 suomifutis.com##[href$="/nettikasinot/"]
@@ -5873,10 +5878,10 @@ www.suomi24.fi#?#p:-abp-has(+ p + .asp)
 www.ts.fi##[class="tsv3-c-common-article__contentad notloaded"]
 www.ts.fi##[data-readpeakurl^="https://app.readpeak.com/ads/"]
 www.ts.fi##div[class*="tsv3-c-common-smart noad-hideaction"]
+www.ts.fi#?#.tsv3-c-common-elementcollection:has-text(/yhteistyö[\u00AD]kumppanimme artikkelit/)
 www.ts.fi#?#.tsv3-c-common-elementlist--layout-mobiili_etusivu:has-text(/yhteistyö[\u00AD]kumppanimme artikkelit/)
 www.ts.fi#?#.tsv3-c-common-forum-threadviewer__messages__item:-abp-has(.smartad)
 www.ts.fi#?#.tsv3-c-common-twocolumnslayout:-abp-has(div[class*=element--nativead])
-www.ts.fi#?#.tsv3-c-common-twocolumnslayout:has-text(/yhteistyö[\u00AD]kumppanimme artikkelit/)
 www.uusisuomi.fi#?#.lazyload-wrapper:-abp-has(.at-embed-container)
 www.uusisuomi.fi#?#aside > section:has-text(Kaupallinen yhteistyö)
 www.uusisuomi.fi#?#body:not(.is-style-kumppanisisallot) main > div[class]:has-text(Kaupallinen yhteistyö)
@@ -5917,20 +5922,23 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
 
+/*-mainos-$image,domain=futisfani.com|kiekkofani.com|omalahio.fi|penkkiurheilu.com|uutisankka.com
+/a-ylabannerit$image,domain=apteekkari.fi
+/b-suurbannerit-uutisvirrassa$image,domain=apteekkari.fi
 /HalvinLaina_300x300_fin.mp4$domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /io-tech\.fi\/.*\/[0-9a-f]{32}\./$image,domain=io-tech.fi
-/*-mainos-$image,domain=futisfani.com|kiekkofani.com|omalahio.fi|penkkiurheilu.com|uutisankka.com
 /macro.adnami.io$script,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
 /pop_media_*_fi_inarticle$script,domain=episodi.fi|rumba.fi|tilt.fi
 /prerolls/*.mp4$domain=gamereactor.fi
 /Pussit_300x3001.mp4$domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /Pussit_Vape_300x300_new.mp4$domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
-/telsu\.fi\/[\w!.,:;\-*%åäö${@€|]{20,}$/$image,domain=telsu.fi
-/telsu\.fi\/s\/[\w\d]{30,40}$/$image,domain=telsu.fi
 /telsu\.fi\/(?![^>]*\.\w{3}$).+/$image,domain=telsu.fi
-/telsu\.fi\/(?![^>].*\.(jpg|png|svg|ico)$).+/$image,domain=www.telsu.fi
+/telsu\.fi\/(?![^>].*\.(jpg|png|svg|ico)$).+/$image,domain=telsu.fi
+/telsu\.fi\/[\w!.,:;\-*%åäö${@€|]{20,}$/$image,domain=telsu.fi
+/telsu\.fi\/[\w]+\?[\d]{3,9}/$xmlhttprequest,~third-party,domain=telsu.fi
 /telsu\.fi\/img\/(?!cloudcity|mindmax|navibg|prg|tvohjelmat)/$image,domain=telsu.fi
+/telsu\.fi\/s\/[\w\d]{30,40}$/$image,domain=telsu.fi
 /wp-content/uploads/2022/04/HymyAlibi2022_300x300_pupu.jpg$image,domain=alibi.fi|hymy.fi
 /wp-content/uploads/pum/*$domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
@@ -5940,7 +5948,6 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||alibi.fi/wp-content/uploads/2018/03/AL_sivupalkin_myyntiviesti2.jpg$image
 ||alibi.fi/wp-content/uploads/2022/04/HymyAlibi_300x300_VAPPU.jpg$image
 ||ap-online.media.fi/scripts/eneo*.dll$script,domain=aamuposti.fi|helsinginuutiset.fi|keski-uusimaa.fi|lansi-uusimaa.fi|lansivayla.fi|lappeenrannanuutiset.fi|loviisansanomat.fi|mantsalanuutiset.fi|nurmijarvenuutiset.fi|seinajoensanomat.fi|sipoonsanomat.fi|tamperelainen.fi|turkulainen.fi|uusimaa.fi|vantaansanomat.fi|vihdinuutiset.fi
-||apteekkari.fi/media/kuvat/bannerit/$image,domain=apteekkari.fi
 ||asuntorauma.fi/iframe/uusimmat$subdocument,domain=ls24.fi
 ||auto1.fi^$third-party
 ||bittiraha.fi/app/themes/bittiraha-theme/assets/images/bittiraha_coinmotion_banner$image
@@ -6021,7 +6028,6 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||sf.nm-ovp.nelonenmedia.fi/player/games/ruutu-player-loader.js$script,domain=alypaa.com
 ||strongbox.nostemedia.fi^$script,third-party
 ||superskills.fi/fi*?isIframe=true$subdocument
-||telsu.fi/telsu_pot_$xmlhttprequest,domain=telsu.fi
 ||testeri.fi/ext_telsu$subdocument
 ||testeri.fi/inc/museokortti.png$image
 ||tiketti.fi/tiedostot/*/Tiketti*_Paraati_$image,domain=tiketti.fi
