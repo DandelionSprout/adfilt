@@ -5581,9 +5581,28 @@ def prepare_agh(lines) -> str:
     # remove or modifiy entries with unsupported modifiers
     for line in lines:
 
+        # Doesn't seem like $denyallow will be fixed in HostfilesRegistry anytime soon as of March 2023
+        #line = re.sub(
+        #   r"^(\||:)(.*)\$doc,domain=(.*)", 
+        #   r"\1\2$denyallow=\3", 
+        #   line
+        #)
+
         line = re.sub(
-           r"^(\||:)(.*)\$doc,domain=(.*)", 
-           r"\1\2$denyallow=\3", 
+           r"^(\|\|)([a-z]{1,}\^)\$doc,domain=~(.*)", 
+           r"\1\2\n@@||\3", 
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|([a-z]{2,17})\^", 
+           r"||*.\1^", 
+           line
+        )
+
+        line = re.sub(
+           r".*google\.(tk|ml).*", 
+           r"", 
            line
         )
 
@@ -5593,11 +5612,11 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        line = re.sub(
-           r"\|~", 
-           r"|", 
-           line
-        )
+        #line = re.sub(
+        #   r"\|~", 
+        #   r"|", 
+        #   line
+        #)
 
         line = re.sub(
            "\$doc,", 
@@ -5774,7 +5793,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*", 
+           r"^\|\|.*[a-z0-9]\.(ga|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*", 
            r"", 
            line
         )
@@ -5875,6 +5894,24 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^\|\|.*\^[a-z].*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\|~", 
+           r"^\n@@||", 
+           line
+        )
+
+        line = re.sub(
+           r"(@@\|\|[a-z0-9.-]{1,})$", 
+           r"\1^", 
+           line
+        )
+
+        line = re.sub(
+           r"\^\^", 
+           r"^", 
            line
         )
 
