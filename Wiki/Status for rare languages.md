@@ -19,7 +19,8 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Mongolian (AdGuard Base)
 * Tatar (AdGuard Base)
 * Welsh (EasyList)
-* Malagasy (Dandelion Sprout's African Languages List *de facto*, unless more than 1 site with ads are found)
+* Malagasy (Dandelion Sprout's African Languages List *de facto*)
+* Somalian (Dandelion Sprout's African Languages List *de facto*)
 * Zulu (Dandelion Sprout's African Languages List *de facto*, unless more than 1 site with ads are found. A uAssets report is planned soon as of mid-March 2023.)
 * Swahili (Split between AdGuard Base and Dandelion Sprout's African Languages List)
 
@@ -36,7 +37,6 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * * `721news.com##.wdslider`? (on articles)
 * * `721news.com##aside[id^=media_]`?
 * Pashto
-* Somalian
 * Urdu
 
 ### Under evaluation by filterlist makers
