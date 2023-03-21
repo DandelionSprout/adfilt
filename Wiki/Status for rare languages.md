@@ -17,6 +17,7 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Georgian (AdGuard Base)
 * Kyrgyz (AdGuard Base)
 * Mongolian (AdGuard Base)
+* Tatar (AdGuard Base)
 * Welsh (EasyList)
 * Malagasy (Ad Removal List for Unusual Ads *de facto*, unless more than 1 site with ads are found)
 * Zulu (Ad Removal List for Unusual Ads *de facto*, unless more than 1 site with ads are found. A uAssets report is planned soon as of mid-March 2023.)
@@ -41,7 +42,6 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 
 ### Under evaluation by filterlist makers
 * Cyprus Greek (`https://github.com/kargig/greek-adblockplus-filter/issues/120`)
-* Tatar (`https://github.com/AdguardTeam/AdguardFilters/issues/145558`)
 
 ### Limited support with AdGuard Base
 * Armenian
