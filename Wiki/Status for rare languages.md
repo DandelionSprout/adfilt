@@ -21,6 +21,7 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Welsh (EasyList)
 * Malagasy (Ad Removal List for Unusual Ads *de facto*, unless more than 1 site with ads are found)
 * Zulu (Ad Removal List for Unusual Ads *de facto*, unless more than 1 site with ads are found. A uAssets report is planned soon as of mid-March 2023.)
+* Swahili (Ad Removal List for Unusual Ads *de facto*, unless more than 1 site with ads are found)
 
 ### Sites not yet checked
 * Burmese
@@ -36,8 +37,6 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * * `721news.com##aside[id^=media_]`?
 * Pashto
 * Somalian
-* Swahili
-* * `taifaleo.nation.co.ke##.text-center`?
 * Urdu
 
 ### Under evaluation by filterlist makers
