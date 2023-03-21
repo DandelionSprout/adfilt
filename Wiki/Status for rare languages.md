@@ -66,3 +66,4 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Brunei
 * Rumansch
 * Xhosa
+* Atlas Tamazight / Berber
