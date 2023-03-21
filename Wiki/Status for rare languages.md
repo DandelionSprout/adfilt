@@ -48,7 +48,7 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Khmer
 
 ### Unclear situation
-* Kazakh (Officially covered by https://github.com/AdguardTeam/AdguardFilters/tree/master/CyrillicFilters/Kazakh/sections, but 0 entries for `.kz` sites in other folders are eligible for it.)
+* Kazakh (Supposed to be covered by https://github.com/AdguardTeam/AdguardFilters/tree/master/CyrillicFilters/Kazakh/sections, but 0 sites in existence are eligible for it. The one and only such newssite was rejected by AdGuard in `https://github.com/AdguardTeam/AdguardFilters/issues/146131`)
 * Uzbek (1 entry in AdGuard Russian Filter seemingly by accident: `bugun.uz##.desrek`; 0 in AdGuard Base.)
 
 ### No lists believed to be willing to accept entries for them
