@@ -65,3 +65,4 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Transnistria Cyrillic Romanian
 * Brunei
 * Rumansch
+* Xhosa
