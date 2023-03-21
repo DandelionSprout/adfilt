@@ -19,9 +19,9 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Mongolian (AdGuard Base)
 * Tatar (AdGuard Base)
 * Welsh (EasyList)
-* Malagasy (Ad Removal List for Unusual Ads *de facto*, unless more than 1 site with ads are found)
-* Zulu (Ad Removal List for Unusual Ads *de facto*, unless more than 1 site with ads are found. A uAssets report is planned soon as of mid-March 2023.)
-* Swahili (Ad Removal List for Unusual Ads *de facto*, unless more than 1 site with ads are found)
+* Malagasy (Dandelion Sprout's African Languages List *de facto*, unless more than 1 site with ads are found)
+* Zulu (Dandelion Sprout's African Languages List *de facto*, unless more than 1 site with ads are found. A uAssets report is planned soon as of mid-March 2023.)
+* Swahili (Split between AdGuard Base and Dandelion Sprout's African Languages List)
 
 ### Sites not yet checked
 * Burmese
