@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🎫 Ad Removal List for Unusual Ads
-! Version: 14March2023v1-Alpha
+! Version: 21March2023v1-Alpha
 ! Expires: 4 days
 ! Description: This is a list to remove the kinds of ads that very few well-established international adblocker lists would want to remove, due to many of them not meeting those lists' strict criteria of what an ad actually is. So that's where this list comes into play.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -75,13 +75,22 @@ islandecho.co.uk#?#.herald-module:has(.category-news-in-brief)
 mightytext.net###ad-block-holder
 
 ! ——— Denied (or implied denied) in EasyList for not being in English, denied in AdGuard Base for not being a popular site, no known language lists for it. May be submitted to uAssets at some point ———
+! For info on languages and which lists to send them to, see https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Status%20for%20rare%20languages.md
+! —— Zulu ——
 ! https://ilanganews.co.za/
 ilanganews.co.za##.vc_single_image.wpb_wrapper
 ! https://ilanganews.co.za/bayobuke-bafa-ababili-abebentshontsha-amakhebuli/
 ilanganews.co.za##.widget_media_image
+! —— Malagasy ——
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145446
 ###bann-airtel
 ###airtelMlay
+! —— Kazakh (Қазақша) ——
+! https://github.com/AdguardTeam/AdguardFilters/issues/146131
+kostanaytany.kz#?#.elementor-widget-image:not(:has([href*=kostanaytany]))
+kostanaytany.kz#?#.elementor-widget-image:has(a[href*=uploads])
+old.kostanaytany.kz#?#.widget > p:not(:has(a[href*=kostanaytany]))
+old.kostanaytany.kz#?#.widget > p:has(a[href*=uploads])
 
 ! ——— Slot machine spam ———
 deviantart.com#?#div[style^="width:"][style*="display:"]:has(a[href*="/art/"][href*=slotonline i])
@@ -246,7 +255,6 @@ zh.airbnb.com##._1395v5a
 ctrip.com##.bXQCwX.sc-jcEtbA
 ctrip.com##.pb80.train-flex.train-wrapper > .h5hide.train-right > .scan-qrcode
 lianjia.com##.content-guarantee
-
 
 ! SEO, copyright notices and useless legal links of sites in PR-China
 12306.cn##.foot-code
