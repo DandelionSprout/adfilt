@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 160320231
+! Version: 220320231
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1564,6 +1564,7 @@ gulesider.no##div[class*=-spacing-xs-] > div[class^="MuiBox-root css-"]
 startsiden.no##div[class*=layout_adsContainer__]
 klikk.no##.gpt-sticky
 klikk.no##article[id^=lpc_belowArticle_]
+jyllands-posten.dk##section[id^=monster_]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1791,6 +1792,8 @@ _980banner_
 ##optimus-element[linecount=undefined][width="480"]:first-of-type:nth-last-of-type(2)
 ! nidaros.no (22/02/2023)
 ##div[id^=art-challengeAd-]
+! jyllands-posten.dk (22/03/2023)
+##.banner-container-monster-topscroll:not(html, body)
 
 ! 🇳🇴/🇩🇰: ——— Sporingsfiler ———
 ! 🇳🇴🏞: ——— Sporingsfilar ———
@@ -4711,7 +4714,7 @@ vmj.se#?#.sidebox:-abp-contains(/Externa länkar|Artiklar/)
 @@||doubleclick.net/tag/js/gpt.js$domain=feber.se
 feber.se##.maxetise
 [Adblock Plus 3.13]
-! Version: 180320237
+! Version: 210320235
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -5732,7 +5735,7 @@ telsu.fi###prg img:not(.ch img)
 telsu.fi##.footer > .pb1
 telsu.fi##.footer > .pb100
 telsu.fi##.pop img:not(.cd img)
-telsu.fi##a[href][target="_blank"][style]
+! telsu.fi##a[href][style]:not([rel], .sets, .ft-menu)
 telsu.fi##img:not(#foot1 img, #foot2 img, #prg img, .data img, .pop img, .stat img, img[src^="/img/"], .chnsbox[rel="suosikit"] img)
 telsu.fi#?#.ch:-abp-has(em>a)
 telsu.fi#?#.ch:has-text(/SPON|SPONS|SPONSO|SPONSOR|SPONSORO|SPONSOROI|SPONSOROIT|SPONSOROITU/)
@@ -5825,7 +5828,7 @@ vauva.fi##[href^="https://kampanjat.is.fi/"]
 vauva.fi##a[href$="vauvabanneri"]
 vauva.fi##div.cts-row-wrapper
 vauva.fi##div[id^=aldente-]
-vauva.fi#?#.pane-sbase-static-blocks-sbase-static-blocks-1:-abp-has(> h2 > a[href="https://alennuskoodi.is.fi/"])
+vauva.fi#?#.pane-sbase-static-blocks-sbase-static-blocks-1:-abp-has(> h2 > a[https://www.is.fi/alennuskoodi/"])
 venelehti.fi##.ads_carousel-2.widget
 verkkouutiset.fi##.page-ad__location
 verkkouutiset.fi##.vu-adlabel
@@ -5930,9 +5933,11 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ! -----NETWORK FILTERS-----
 
 /*-mainos-$image,domain=futisfani.com|kiekkofani.com|omalahio.fi|penkkiurheilu.com|uutisankka.com
+/HalvinLaina_300x300_fin.mp4$domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /a-ylabannerit$image,domain=apteekkari.fi
 /b-suurbannerit-uutisvirrassa$image,domain=apteekkari.fi
-/HalvinLaina_300x300_fin.mp4$domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
+/https:\/\/[www]{3}\.v{0}t{1}f{0}e{1}f{0}l{1}f{0}s{1}f{0}g{0}u{1}\.fi\/[\w]{3}\?[\d]{8}\+[\d]/$~third-party,domain=vauva.fi
+/https:\/\/[www]{3}\.v{0}t{1}f{0}e{1}f{0}l{1}f{0}s{1}f{0}g{0}u{1}\.fi\/[\w]{9}-[\w]{7}\?[\w]{4}\+[\w]{6}\+[\w]{9}\+[\w]{4}\+[\w]{5}\+[\w%\d]{19}/$~third-party,domain=vauva.fi
 /io-tech\.fi\/.*\/[0-9a-f]{32}\./$image,domain=io-tech.fi
 /macro.adnami.io$script,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
