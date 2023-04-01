@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 22March2023v1-Deprecated
+# Version: 28March2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -848,7 +848,6 @@ msFilterList
 # https://www.kode24.no/artikkel/75980495
 -d campbell-living.com
 # https://www.telia.no/kundeservice/mobil/malware-flubot-android/
--d p-stn.net
 -d wxqgx123.com
 -d kikuchitadahisa.com
 # https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
