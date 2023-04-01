@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🎫 Ad Removal List for Unusual Ads
-! Version: 21March2023v3-Alpha
+! Version: 01April2023v1-Alpha
 ! Expires: 4 days
 ! Description: This is a list to remove the kinds of ads that very few well-established international adblocker lists would want to remove, due to many of them not meeting those lists' strict criteria of what an ad actually is. So that's where this list comes into play.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -26,7 +26,7 @@ vg.no#?#.offer-details:has-text(Vis tilbud)
 ||rabattkodendin.com^$document
 
 ! ——— Unnecessarily obtrusive premium service banners ———
-! If a banner is in this category, it means that those who still do want to buy into their premium services, can do so through the user settings without having to see the obtrusive banners.
+! If a banner is in this category, it means that those who still do want to buy into their Premium services, can do so through the user settings without having to see the obtrusive banners.
 !#if !env_mobile
 pixiv.net##._premium-lead-popular-d-body
 pixiv.net##._premium-lead-tag-search-bar > a[href^="/premium.php"]
@@ -50,7 +50,7 @@ whois.net###alternative_filters > table
 whois.net###midColumn
 mewe.com##.emoji-picker-promotion
 techdirt.com#?#.storyblock:has-text(Daily Deal: )
-! Causes problems with "No results found" pages
+! (Causes problems with "No results found" pages)
 !!!google.*###topstuff
 
 ! ——— Huge third-party newsletter promotions ———
@@ -74,14 +74,17 @@ islandecho.co.uk#?#.herald-module:has(.category-news-in-brief)
 ! ——— Placeholders that are seemingly too small for EasyList ———
 mightytext.net###ad-block-holder
 
-! ——— Denied (or implied denied) in EasyList for not being in English, denied in AdGuard Base for not being a popular site, no known language lists for it. May be submitted to uAssets at some point ———
+! ——— Denied (or implied denied) in EasyList for not being in English, denied (or implied denied) in AdGuard Base for not being a popular site, no known language lists for it. May be submitted to uAssets at some point ———
 ! For info on languages and which lists to send them to, see https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Status%20for%20rare%20languages.md
-! —— Kazakh (Қазақша) ——
+! —— 🇰🇿 Kazakh (Қазақша) ——
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146131
 kostanaytany.kz#?#.elementor-widget-image:not(:has([href*=kostanaytany]))
 kostanaytany.kz#?#.elementor-widget-image:has(a[href*=uploads])
 old.kostanaytany.kz#?#.widget > p:not(:has(a[href*=kostanaytany]))
 old.kostanaytany.kz#?#.widget > p:has(a[href*=uploads])
+! —— 🇲🇹 Maltese (Malti) ———
+! Alexa: 239,224th
+tvmnews.mt##div[data-widget_type="shortcode.default"]
 
 ! ——— Slot machine spam ———
 deviantart.com#?#div[style^="width:"][style*="display:"]:has(a[href*="/art/"][href*=slotonline i])
