@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 21March2023v1-Personal
+! Version: 03April2023v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 ! /\/\ Supercompilations: /\/\
@@ -36,6 +36,9 @@
 !#if !env_mobile
 !#include Anti-'Christmas%20carols'%20List.txt
 !#endif
+!#if env_chromium
+!#include AntiMV3List.txt
+!#endif
 
 ! ——/——/——/——/——/——/——/——/——/——/——/——/——/——/——/——
 
@@ -51,7 +54,6 @@ dandelionsprout.asuscomm.com#?#.dashboard .card:not(.card--full):style(height: u
 twitch.tv##.chat-line__message[data-room=jerma985] > .message > strong[data-login=dandelionsprout]:style(background-color: #b1eac1 !important)
 twitch.tv##.chat-line__message[data-room=jerma985] > .message > strong[data-login=dandelionsprout] ~ span:style(background-color: #b1eac1 !important)
 ssbwiki.com#?#.infobox tr:has(a[href^="/Tournament_legal"])
-tvtropes.org#?##main-article > ul > li, .folder > ul > li:has-text(Adult Fear)
 !pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=Cedfia i])
 !pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=Sedfia i])
 !pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=セドフィア])
@@ -107,7 +109,6 @@ twitch.tv#?#.tw-transition:has-text(/Vinesauce|FIFA|Overwatch|World of Warcraft|
 netflix.com#?#.lolomoRow:has(svg[id^=rank])
 netflix.com##.billboard-row
 vinmonopolet.no##.product-item:has-text(/ Øl |Chardonnay|Lager|Muscat|Riseling|Rosé|Weisse|Martini|Pinot Noir|Sauvignon|Pilsner|Carlsberg/)
-||fandom.com/f^|$document
 finn.no###buyer-experience-collections-podlet-app
 !#if !adguard
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post,.Comment,.thing:has-text(/Morb/i)
@@ -115,6 +116,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Pos
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(/Baneheia/i)
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(/Andersen/i)
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(/Anders-?sak/i)
+tvtropes.org#?##main-article > ul > li, .folder > ul > li:has-text(Adult Fear)
 !#endif
 ! Must keep the "www." part
 www.adressa.no##a[href*=trdby]
@@ -149,7 +151,7 @@ adressa.no,nidaros.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no##a[
 ! Caused by "AdGuard Annoyances Filter - Anti-Adblock"
 @@||translate.googleusercontent.com^$generichide,badfilter
 
-! I hate the weebs' total domination of Pixiv's new translation system
+! I hate the weebs' total domination of Pixiv's translation system
 crowdin.com##.untranslated_phrase:has-text(アークナイツ)
 crowdin.com##.untranslated_phrase:has-text(アズールレーン)
 crowdin.com##.untranslated_phrase:has-text(ライブ!)
@@ -454,16 +456,6 @@ adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,svt.se,express
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,svt.se,expressen.se,aftonbladet.se,theguardian.com,bbc.com##a[href*=-dakar- i]
 dr.dk,tv2.dk,ekstrabladet.dk##a[href*=motorcykel i][href*=oerken i]
 
-! Mani-pest v3 (I will fight to the bitter end)
-||github.com/*/download/*/uBlock0.mv3.zip^$all
-||agrd.io/adguard_mv3^$all
-||chrome.google.com/webstore/detail/adguard-adblocker-mv3$all
-github.com#?#.Box-row:has(a[href$="/uBlock0.mv3.zip"][href*="/download/"])
-github.com#?#.flex-justify-center.my-5:has-text(github-actions):has-text(uBOLite)
-||adguard.com/*/blog/adguard-mv3.html^$doc,popup
-adguard.com##a[href*="/adguard-mv3"]
-||gitlab.com/ThomasGreiner-eyeo/abp/*-mv3.zip^$all
-
 ! Homestuck's sudden fandom revival in the year 2022
 tumblr.com#?#div[data-id][tabindex="-1"]:has-text(/Homestuck/i)
 tumblr.com#?#div[data-id][tabindex="-1"]:has-text(/Fantroll/i)
@@ -499,9 +491,9 @@ adressa.no,nrk.no,dr.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*=-f1- i
 adressa.no,nrk.no,dr.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*="/f1-" i]
 adressa.no,nrk.no,dr.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*="/lando-" i]
 adressa.no,nrk.no,dr.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*=-lando- i]
+adressa.no,nrk.no,dr.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*=ian-horner i]
 theguardian.com,bbc.*##a[href*=-f1s- i]
 theguardian.com,bbc.*##a[href*="/f1s-" i]
-!#if !adguard
 
 !#if false
 ! Anti-'2022 World Cup'
