@@ -842,6 +842,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r":::(before|after)", 
+           r"::\1", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -2966,6 +2972,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"#\?#([a-z0-9]{1,}\[[a-z0-9]{1,}[*^$]?=\" )\*:(-abp-)?has\(> ", 
            r"#?#*:has(> \1", 
+           line
+        )
+
+        line = re.sub(
+           r":::(before|after)", 
+           r"::\1", 
            line
         )
 
