@@ -1,6 +1,6 @@
 ! Checksum: Ux+nhlp5BmiebTxIuORipw
 ! Version: 202304061250
-! Title: Fanboy's Notifications Blocking List - Loadable in uBO
+! Title: Fanboy's Notifications Blocking List - Loadable in uBO+AdGuard
 ! Last modified: 06 Apr 2023 12:50 UTC
 ! Expires: 1 days (update frequency)
 ! License: https://creativecommons.org/licenses/by/3.0/
@@ -988,10 +988,12 @@ puuilo.fi##.cf-container-wrapper
 puuilo.fi##body:style(overflow: auto !important)
 ! autoevolution.com
 autoevolution.com###notif_asker_div
-autoevolution.com##body,html:style(height: auto !important; overflow: auto !important)
+autoevolution.com##html:style(height: auto !important; overflow: auto !important)
+autoevolution.com##body:style(height: auto !important; overflow: auto !important)
 ! nu.nl https://github.com/easylist/easylist/issues/10468
 nu.nl##.webpush-popup
-nu.nl##body,html:style(height: auto !important; overflow: auto !important)
+nu.nl##html:style(height: auto !important; overflow: auto !important)
+nu.nl##body:style(height: auto !important; overflow: auto !important)
 ! phonearena.com
 phonearena.com###pa-survey-modal
 phonearena.com##.pa-modal-backdrop
@@ -1008,7 +1010,8 @@ reddit.com##.XPromoPopup
 reddit.com##.XPromoPill
 reddit.com##shreddit-experience-tree
 reddit.com##+js(aeld, block-body-scrolling)
-reddit.com##body,html.scroll-is-blocked:style(overflow: auto !important;)
+reddit.com##html.scroll-is-blocked:style(overflow: auto !important;)
+reddit.com##body.scroll-is-blocked:style(overflow: auto !important;)
 reddit.com##body.scroll-disabled:style(overflow: visible!important; position: static!important;)
 reddit.com##.XPromoPopupRpl
 reddit.com##body:style(pointer-events:auto !important;)
@@ -1017,18 +1020,21 @@ amp.reddit.com##.AppSelectorModal__body
 amp.reddit.com##.upsell_banner
 ! .bottom-0.fixed
 newsbreak.com##.bottom-0.fixed
-newsbreak.com##body,html:style(overflow: auto !important; position: initial !important;)
+newsbreak.com##html:style(overflow: auto !important; position: initial !important;)
+newsbreak.com##body:style(overflow: auto !important; position: initial !important;)
 ! flipboard.com (in-app overlay)
 !flipboard.com##.modal-overlay
 !flipboard.com##body:style(overflow: visible!important; position: static!important;)
 !flipboard.com##.outbound-link.button--primary
 ! behance.net (in-app overlay)
 behance.net##.js-vue-mobile-app-upsell
-behance.net##body,html:style(overflow: auto !important; position: initial !important;)
+behance.net##html:style(overflow: auto !important; position: initial !important;)
+behance.net##body:style(overflow: auto !important; position: initial !important;)
 behance.net##.PrimaryNav-appLinkContainer-bhx
 ! ifunny (in-app overlay)
 ifunny.co##.aq4y._0sJI
-ifunny.co##body,html:style(overflow: auto !important; position: initial !important;)
+ifunny.co##html:style(overflow: auto !important; position: initial !important;)
+ifunny.co##body:style(overflow: auto !important; position: initial !important;)
 ! sprintmedical.in
 sprintmedical.in##.react-responsive-modal-root
 sprintmedical.in##body:style(height: auto !important; overflow: auto !important)
@@ -1040,16 +1046,20 @@ trip.com##body:style(overflow: auto !important; position: initial !important;)
 ! player.fm
 player.fm##.bottom-promo-overlay
 player.fm##.bottom-promo
-player.fm##body,html:style(overflow: auto !important; position: initial !important;)
+player.fm##html:style(overflow: auto !important; position: initial !important;)
+player.fm##body:style(overflow: auto !important; position: initial !important;)
 ! m.economictimes.com
 m.economictimes.com###prominentOverlay
-m.economictimes.com##body,html:style(overflow: auto !important; position: initial !important;)
+m.economictimes.com##html:style(overflow: auto !important; position: initial !important;)
+m.economictimes.com##body:style(overflow: auto !important; position: initial !important;)
 ! m.yelp.com
 m.yelp.com##div[class^="overlay__09f24"]
-m.yelp.com##body,html:style(overflow: auto !important; position: initial !important;)
+m.yelp.com##html:style(overflow: auto !important; position: initial !important;)
+m.yelp.com##body:style(overflow: auto !important; position: initial !important;)
 ! thedesignlove.com
 thedesignlove.com##.cp-overlay
-thedesignlove.com##body,html:style(overflow: auto !important; position: initial !important;)
+thedesignlove.com##html:style(overflow: auto !important; position: initial !important;)
+thedesignlove.com##body:style(overflow: auto !important; position: initial !important;)
 ! linkedin.com
 linkedin.com##.promo-bottom-sheet
 linkedin.com##body:style(overflow: auto !important; position: initial !important;)
@@ -1076,11 +1086,13 @@ cnet.com##.modal-backdrop
 cnet.com##body:style(height: auto !important; overflow: auto !important)
 ! simpleswap.io (mobile UA)
 simpleswap.io##.iRXLZi
-simpleswap.io##body,html:style(overflow: auto !important; position: initial !important;)
+simpleswap.io##html:style(overflow: auto !important; position: initial !important;)
+simpleswap.io##body:style(overflow: auto !important; position: initial !important;)
 ! m.webtoons.com
 m.webtoons.com##.pop_download_home
 m.webtoons.com##.dim
-m.webtoons.com##body,html:style(overflow: auto !important; position: initial !important;)
+m.webtoons.com##html:style(overflow: auto !important; position: initial !important;)
+m.webtoons.com##body:style(overflow: auto !important; position: initial !important;)
 ! 9gag
 9gag.com##.open-in-app
 9gag.com##body:style(overflow: auto !important;)
@@ -1091,7 +1103,8 @@ insider.com,businessinsider.com##.app-button
 ! thestar.com
 thestar.com##.kumulos-background-mask
 thestar.com##.kumulos-prompt
-thestar.com##body,html:style(overflow: auto !important; position: initial !important;)
+thestar.com##html:style(overflow: auto !important; position: initial !important;)
+thestar.com##body:style(overflow: auto !important; position: initial !important;)
 thestar.com##+js(rc, kumulos-background-mask-blur, , stay)
 ! jp-m.banggood.com (remove top empty space on mobile)
 jp-m.banggood.com##+js(rc,  show-app-bar, , stay)
