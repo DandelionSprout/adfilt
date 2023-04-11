@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 27/02/2023
+! Last updated: 11/04/2023
 ! Script last updated: 26/2/2023
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -417,6 +417,10 @@ $removeparam=twclid
 ||bilibili.com^$removeparam=timestamp
 ||bilibili.com^$removeparam=unique_k
 ||bilibili.com^$removeparam=vd_source
+||bilibili.com^$removeparam=plat_id
+||bilibili.com^$removeparam=buvid
+||bilibili.com^$removeparam=is_story_h5
+||bilibili.com^$removeparam=up_id
 ||m.bilibili.com^$removeparam=bbid
 ||m.bilibili.com^$removeparam=ts
 ||live.bilibili.com^$removeparam=visit_id
@@ -638,6 +642,12 @@ $removeparam=twclid
 ||mercadolibre.com^$removeparam=/^me\.[_a-zA-Z]+=/
 ||mercadolibre.com^$removeparam=/^reco_[_a-zA-Z]+=/
 ||quizlet.com^$removeparam=funnelUUID
+||bbc.com^$removeparam=xtor
+||bbc.com^$removeparam=/^at_[a-z_]+=/
+||airbnb.(com|ae|ca|co.in|co.nz|co.uk|co.za|com.au|com.mt|com.sg|de|gy|ie)^$removeparam=federated_search_id
+||airbnb.(com|ae|ca|co.in|co.nz|co.uk|co.za|com.au|com.mt|com.sg|de|gy|ie)^$removeparam=search_type
+||airbnb.(com|ae|ca|co.in|co.nz|co.uk|co.za|com.au|com.mt|com.sg|de|gy|ie)^$removeparam=source
+||airbnb.(com|ae|ca|co.in|co.nz|co.uk|co.za|com.au|com.mt|com.sg|de|gy|ie)^$removeparam=source_impression_id
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
