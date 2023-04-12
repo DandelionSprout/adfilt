@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 05April2023v2-Deprecated
+# Version: 10April2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -111,15 +111,12 @@ msFilterList
 -d vefbordi.is
 -d vevlysingar.fo
 -d videotool.fbg.dk
--d farm-dk.plista.com
 -d svindel.info
 -d annoncer.nichehuset.dk
 -d print2web.sn.dk
 -d lib.idg.no
 # Adressa.no
 -d drbrand.herokuapp.com
-# Kapital.no (31 03 2021)
--d farm-no.plista.com
 # Copied over from the New AdAway list
 -d admob.no
 -d admob.dk
@@ -850,7 +847,6 @@ msFilterList
 -d campbell-living.com
 # https://www.telia.no/kundeservice/mobil/malware-flubot-android/
 -d wxqgx123.com
--d kikuchitadahisa.com
 # https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
 -d k-yw.com
 # https://dinside.dagbladet.no/okonomi/tusenvis-forsokt-lurt/76921148
@@ -981,7 +977,6 @@ msFilterList
 -d jensapoteker.com
 -d kobconcerta54mgonlineidanmark.wordpress.com
 -d marson.footeo.com
--d nkwana-medstore.com
 -d sikkertapotek.com
 -d sobrilleverandoridanmark.wordpress.com
 -d xanax*.over-blog.com

@@ -2981,6 +2981,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".*[$,]redirect-rule.*", 
+           r"", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\r\n'
 
@@ -7001,12 +7007,31 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^! Title: Fanboy's Notifications Blocking List$", 
-           r"! Title: Fanboy's Notifications Blocking List - Loadable in uBO", 
+           r"! Title: Fanboy's Notifications Blocking List - Loadable in uBO+AdGuard", 
            line
         )
+
         line = re.sub(
            r"^(@@.*)(!.*)", 
            r"\1\n\2", 
+           line
+        )
+
+        line = re.sub(
+           r"^\[Adblock Plus.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"http://creativecommons\.org/", 
+           r"https://creativecommons.org/", 
+           line
+        )
+
+        line = re.sub(
+           r"^(.*[a-z*])##body,html(.*)$", 
+           r"\1##html\2\n\1##body\2", 
            line
         )
 
