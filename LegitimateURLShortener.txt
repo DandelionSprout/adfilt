@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 11April2023v6
+! Version: 13April2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1279,7 +1279,7 @@ $removeparam=dtpid
 ! https://github.com/DandelionSprout/adfilt/pull/448
 ! https://m.baidu.com/ssid=3aed7368656e7a68696d696e673434e940/s?word=test&ts=4303890&t_kt=0&ie=utf-8&tj=1&params_ssrt=node-san& (25/10/2021)
 ! http://blog.sina.com.cn/s/blog_635c86d50102zvmo.html?tj=1 (4/1/2022)
-$removeparam=tj
+$removeparam=tj,domain=baidu.com|sina.com.cn
 
 ! https://ad.admitad.com/g/xrzqqr83azcf955d81ea0789458fbf/?i=5&ulp=https%3A%2F%2Fwww.cafago.com%2Fp-c11231b.html
 ! https://ad.admitad.com/g/xljorca896e18d2252e34bf89f6ddb/
@@ -2060,6 +2060,29 @@ $removeparam=aff_click_id
 wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ! https://wenku.baidu.com/view/8228b0e3f342336c1eb91a37f111f18583d00cc0?aggId=5981c6211db91a37f111f18583d049649a660e40 (26/01/2023)
 ||wenku.baidu.com^$removeparam=aggId
+! https://github.com/DandelionSprout/adfilt/issues/831
+||baidu.com^$removeparam=fenlei
+||baidu.com^$removeparam=ie
+||baidu.com^$document,removeparam=/^rsv_/
+||baidu.com^$document,removeparam=pn
+||baidu.com^$document,removeparam=rn
+||baidu.com^$removeparam=bsst
+||baidu.com^$removeparam=p_tk
+||baidu.com^$document,removeparam=ps
+||baidu.com^$document,removeparam=nc
+||baidu.com^$document,removeparam=xzhid
+||baidu.com^$document,removeparam=fid
+||baidu.com^$document,removeparam=pi
+||baidu.com^$document,removeparam=iid
+||baidu.com^$document,removeparam=query
+||baidu.com^$document,removeparam=lattr
+||baidu.com^$document,removeparam=category
+||baidu.com^$document,removeparam=jid
+||baidu.com^$document,removeparam=prod_type
+||baidu.com^$document,removeparam=cf
+||baidu.com^$document,removeparam=miniId
+||baidu.com^$document,removeparam=/^from/
+||baidu.com^$document,removeparam=tpl_from
 
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
