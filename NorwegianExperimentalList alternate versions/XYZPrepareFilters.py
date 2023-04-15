@@ -190,7 +190,7 @@ def prepare_ag(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -849,7 +849,7 @@ def prepare_abp(lines) -> str:
         )
 
         if is_supported_abp(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -1356,7 +1356,7 @@ def prepare_tpl(lines) -> str:
         )
 
         if is_supported_tpl(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -1640,7 +1640,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         if is_supported_privoxy(line) and not line == '':
-          text += line + '\r\n'
+          text += line + '\n'
 
     return text
 
@@ -1777,7 +1777,7 @@ def prepare_privacy(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -2044,7 +2044,7 @@ def prepare_umatrix(lines) -> str:
         )
 
         if is_supported_umatrix(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -2158,7 +2158,7 @@ def prepare_xul(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -2988,7 +2988,7 @@ def prepare_abp(lines) -> str:
         )
 
         if is_supported_abp(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -3126,7 +3126,7 @@ def prepare_hosts(lines) -> str:
         )
 
         if is_supported_hosts(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -3224,7 +3224,7 @@ def prepare_ls(lines) -> str:
         )
 
         if is_supported_ls(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -3286,7 +3286,7 @@ def prepare_dnsmasq(lines) -> str:
         )
 
         if is_supported_dnsmasq(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -3341,7 +3341,7 @@ def prepare_hostsdeny(lines) -> str:
         )
 
         if is_supported_hosts(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -3496,7 +3496,7 @@ def prepare_pihole(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -3675,7 +3675,7 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -3812,7 +3812,7 @@ def prepare_shadowsocks(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -3877,7 +3877,7 @@ def prepare_rpz(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -3942,7 +3942,7 @@ def prepare_unbound(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -4001,7 +4001,7 @@ def prepare_minerblock(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -4074,7 +4074,7 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         if is_supported_hosts(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -4133,7 +4133,7 @@ def prepare_domainsallowlist(lines) -> str:
         )
 
         if not line == '':    
-            text += line + '\r\n'
+            text += line + '\n'
         
     return text
 
@@ -4409,7 +4409,7 @@ def prepare_ag(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
@@ -4675,7 +4675,7 @@ def prepare_abp(lines) -> str:
         )
 
         if is_supported_abp(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -5080,7 +5080,7 @@ def prepare_tpl(lines) -> str:
         )
 
         if is_supported_tpl(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -5222,7 +5222,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         if is_supported_privoxy(line):
-         text += line + '\r\n'
+         text += line + '\n'
 
     return text
 
@@ -5423,7 +5423,7 @@ def prepare_hosts(lines) -> str:
         )
 
         if is_supported_hosts(line):
-         text += line + '\r\n'
+         text += line + '\n'
 
     return text
 
@@ -5581,7 +5581,7 @@ def prepare_domains(lines) -> str:
         )
 
         if is_supported_domains(line):
-         text += line + '\r\n'
+         text += line + '\n'
 
     return text
 
@@ -5934,7 +5934,7 @@ def prepare_agh(lines) -> str:
         )
 
         if is_supported_agh(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6049,7 +6049,7 @@ def prepare_domains(lines) -> str:
         )
 
         if is_supported_domains(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6136,7 +6136,7 @@ def prepare_domains(lines) -> str:
         )
 
         if is_supported_domains(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6260,7 +6260,7 @@ def prepare_domains(lines) -> str:
         )
 
         if is_supported_domains(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6347,7 +6347,7 @@ def prepare_agh(lines) -> str:
         )
 
         if is_supported_domains(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6438,7 +6438,7 @@ def prepare_domains(lines) -> str:
         )
 
         if is_supported_domains(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6525,7 +6525,7 @@ def prepare_domains(lines) -> str:
         )
 
         if is_supported_domains(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6612,7 +6612,7 @@ def prepare_domains(lines) -> str:
         )
 
         if is_supported_domains(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6742,7 +6742,7 @@ def prepare_domains(lines) -> str:
         )
 
         if not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6872,7 +6872,7 @@ def prepare_domains(lines) -> str:
         )
 
         if not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -6948,7 +6948,7 @@ def prepare_domains(lines) -> str:
         )
 
         if not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -7036,7 +7036,7 @@ def prepare_domains(lines) -> str:
         )
 
         if not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
