@@ -951,7 +951,7 @@ def prepare_agh(lines) -> str:
         )
 
         if is_supported_agh(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -1348,7 +1348,7 @@ def prepare_ip(lines) -> str:
         )
 
         if is_supported_ip(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
@@ -1897,7 +1897,7 @@ def prepare_agh(lines) -> str:
         )
 
         if is_supported_agh(line) and not line == '':
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 
