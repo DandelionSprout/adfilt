@@ -125,7 +125,7 @@ def prepare_urlr(lines) -> str:
         )
 
         if is_supported_urlr(line):
-            text += line + '\r\n'
+            text += line + '\n'
 
     return text
 

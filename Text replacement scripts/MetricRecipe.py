@@ -649,7 +649,7 @@ def prepare_metric(lines) -> str:
            line
         )
 
-        text += line + '\r\n'
+        text += line + '\n'
 
     return text
 
