@@ -577,12 +577,6 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|(cdn77\.org|non\.li)\^$", 
-           r"||\1^$dnstype=~CNAME", 
-           line
-        )
-
-        line = re.sub(
            r".*\.(png|jpe?g|gif|js|swf)($|\||\^)", 
            r"", 
            line
@@ -901,7 +895,6 @@ def prepare_agh(lines) -> str:
         )
 
         # $badfilter-ed entries, as Sublime Text kept complaining about "Ran out of stack space" when I tried to semi-automate it with RegEx.
-
         line = re.sub(
            r"^(/adblockpopup\.|/ads\.css|/propads\.|\|\|amgload\.net\^|\|\|desbloqueador\.org\^|\|\|down-paradise\.com\^|\|\|embed\.mystream\.to\^|\|\|fast\.io\^|\|\|fastcontentdelivery\.com\^|\|\|freeadultcomix\.com\^|\|\|hydrax\.net\^|\|\|imfast\.io\^|\|\|klclick\.com\^|\|\|leechpremium\.link\^|\|\|pepsia\.com\^|\|\|piguiqproxy\.com\^|\|\|player-cdn\.com\^|\|\|playhydrax\.com\^|\|\|rcdn\.pro\^|\|\|realfinanceblogcenter\.com\^|\|\|redirect-ads\.com\^|\|\|rule34hentai\.net\^|\|\|shoosh\.co\^|\|\|taobao\.com\^|\|\|template-help\.com\^|\|\|uptodatefinishconferenceroom\.com\^|\|\|wpnrtnmrewunrtok\.xyz\^|\|\|zenaps\.com\^|\|\|zzz\.pissrip\.net\^)(\$badfilter)?$", 
            r"", 
@@ -944,9 +937,17 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        # We are in the year 2023 (or later).
         line = re.sub(
            r"http://creativecommons\.org/licenses/", 
            r"https://creativecommons.org/licenses/", 
+           line
+        )
+
+        # AdGuard French Filter bottom section oddities (https://github.com/DandelionSprout/adfilt/issues/837)
+        line = re.sub(
+           r"^(\|\||:?/?/)(goal\.com|opensubtitles\.org|hentaibox\.fr\|cdn77\.org)\^?(\$badfilter)$", 
+           r"", 
            line
         )
 
