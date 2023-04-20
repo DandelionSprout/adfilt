@@ -190,6 +190,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -845,6 +851,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r":::(before|after)", 
            r"::\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
+           r"", 
            line
         )
 
@@ -2158,6 +2170,12 @@ def prepare_xul(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2209,7 +2227,7 @@ if __name__ == "__main__":
     import requests
 import re
 
-SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/-/raw/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt', 'https://raw.githubusercontent.com/DandelionSprout/Swedish-List-for-Adblock-Plus/main/Swedish%20List%20for%20Adblock%20Plus.txt', 'https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt']
+SOURCES = ['https://gitlab.com/DandelionSprout/adfilt/-/raw/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt', 'https://raw.githubusercontent.com/DandelionSprout/Swedish-List-for-Adblock-Plus/main/Swedish%20List%20for%20Adblock%20Plus.txt', 'https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/gh-pages/Finland_adb.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app', ':not(:-abp-', ':not(:has','$csp=upgrade-insecure-requests', '$removeparam', 'badfilter']
@@ -2983,6 +3001,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r".*[$,]redirect-rule.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
            r"", 
            line
         )
@@ -4409,6 +4433,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4670,6 +4700,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^\|\|amazonaws\.com(\^)?($|\$).*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
            r"", 
            line
         )
@@ -5076,6 +5112,12 @@ def prepare_tpl(lines) -> str:
         line = re.sub(
            r"^(# Version: .*[0-9])$", 
            r"\1-Deprecated", 
+           line
+        )
+
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
+           r"", 
            line
         )
 
@@ -6871,6 +6913,12 @@ def prepare_domains(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
+           r"", 
+           line
+        )
+
         if not line == '':
             text += line + '\n'
 
@@ -6944,6 +6992,12 @@ def prepare_domains(lines) -> str:
         line = re.sub(
            r"^! Title: 🪑 .*", 
            r"🌂 Anti-'K-pop on Twitter' List - Nitter Supplement", 
+           line
+        )
+
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
+           r"", 
            line
         )
 
@@ -7032,6 +7086,12 @@ def prepare_domains(lines) -> str:
         line = re.sub(
            r"^(.*[a-z*])##body,html(.*)$", 
            r"\1##html\2\n\1##body\2", 
+           line
+        )
+
+        line = re.sub(
+           r"^\$[a-z0-9-]{1,}$", 
+           r"", 
            line
         )
 

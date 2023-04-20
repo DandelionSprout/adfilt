@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 170420231
+! Version: 190420231
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1567,6 +1567,8 @@ klikk.no##article[id^=lpc_belowArticle_]
 jyllands-posten.dk##section[id^=monster_]
 dagbladet.no#?#div[class^=styles__StudioSpacer-]:has(div[class^=AdWrapper__])
 startsiden.no##div[class*=__adContainer__]
+fjellforum.no##li[class=ipsDataItem]
+fjellforum.no###elPostFeed > form > center
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -4770,8 +4772,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: %timestamp%
-! Test
+! Last modified: Thu, 20 Apr 2023 10:30:17 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -5036,8 +5037,10 @@ edgeski.fi,foregolf.fi,rodeosnow.fi##[id|=adni_widgets]
 edukas.fi##.compareGoogleCell
 eeva.fi#?#.swiper-slide:-abp-has(div[class*="ContentCard__AdLabel"])
 eeva.fi#?#a[class^="ContentCard__Card-"]:has-text(Mainos: )
+eeva.fi#?#div[class^="EmbeddedArticle__Container"]:-abp-has(.category:has-text(Mainos:))
 eeva.fi#?#div[class^="EmbeddedArticle__Container"]:-abp-has(div[class*="CommercialLabelContainer"])
 eeva.fi#?#div[class^="ContentFlowBlock__CardContainer"]:-abp-has(div[class*="ContentCard__AdLabel"])
+eeva.fi#?#div[class^="StripeBannerBlock__StripeBannerContainer"]:has-text(Mainos:)
 ehandel.fi###div-leeadsFullpageAd
 ehandel.fi##.article-ad-container
 ehandel.fi##.commercial-row
@@ -5346,6 +5349,7 @@ keskustelu.afterdawn.com###div-ad-below-message
 keskustelu.afterdawn.com##.pageWidth > div[style="min-height:90px;text-align:center;margin:auto;"]
 keskustelu.afterdawn.com##.sidebar > div[style="min-height:250px;text-align:center;margin:auto;"]
 keskustelu.kaksplus.fi###native-list-wrapper
+keskustelu.kaksplus.fi###native_text_wrapper
 keskustelu.kaksplus.fi##.native.feed_box_container
 keskustelu.kauppalehti.fi##.blogi__nosto
 keskustelu.kauppalehti.fi##.kl-sima--blocks > [href^="https://www.kauppalehti.fi/kumppanisisallot/"]
@@ -5601,7 +5605,6 @@ palkkavertailu.com###nav + div[style="min-height:250px;text-align:center"]
 pelaaja.fi##div.views-injected-row.views-row
 pelaaja.fi##div[class="main-container header-container container-fluid"]
 pelaaja.fi#?#div.full-width-col.row:-abp-has(.ad-pane)
-pelaajalehti.com##.views-injected-row
 pelikone.fi,teknavi.fi##.ad
 pelikone.fi##.preroll-text
 pelikone.fi##.text-ad-container
@@ -6105,6 +6108,7 @@ _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutis
 ||tohtorille.fi/Content/img/op-banners/$image
 ||tokentube.net/f_scripts/shared/videojs/ads.vast.js$script
 ||tokentube.net/vast?t=vjs&v=$xmlhttprequest
+||tori.fi/templates/common/arrays_marketing_banner.js$script,domain=moottori.fi
 ||ts.fi/adframe.js$script,domain=ts.fi
 ||urbaanisanakirja.com/static/img/portsaad.png$image
 ||vertaa.fi^*/showads.js$script,domain=vertaa.fi
