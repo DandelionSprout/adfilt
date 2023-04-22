@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 22April2023v2
+! Version: 22April2023v3
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1467,6 +1467,11 @@ $removeparam=li_medium
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5301390 (15/03/2023)
 $removeparam=/^adpopup=[a-eg-zA-EG-Z0-9]/
 $removeparam=/^adppopup=[a-eg-zA-EG-Z0-9]/
+
+! https://css-tricks.com/trigonometry-in-css-and-javascript-beyond-triangles/?relatedposts_hit=1&relatedposts_origin=377074&relatedposts_position=1
+$removeparam=relatedposts_hit
+$removeparam=relatedposts_origin
+$removeparam=relatedposts_position
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
@@ -3934,11 +3939,6 @@ $removeparam=natb,domain=duckduckgo.com
 
 ! https://vkplay.ru/play/game/witchcrafty/?_1lr=63fe2a3d7f8804b0-3412327_2070601-3424209_2073149-3424209_2073149&mt_click_id=mt-k6vwk7-1677601519-2846701076
 $removeparam=_1lr
-
-! https://css-tricks.com/trigonometry-in-css-and-javascript-beyond-triangles/?relatedposts_hit=1&relatedposts_origin=377074&relatedposts_position=1
-||css-tricks.com^$removeparam=relatedposts_hit
-||css-tricks.com^$removeparam=relatedposts_origin
-||css-tricks.com^$removeparam=relatedposts_position
 
 ! https://www.bookdepository.com/Ladybird-Readers-Beginner-Level-My-Little-Pony-Sunnys-Garden-ELT-Graded-Reader-Ladybird/9780241616956?qid=1678437368012&sr=1-8 (10/03/2023)
 ||bookdepository.com^$removeparam=sr
