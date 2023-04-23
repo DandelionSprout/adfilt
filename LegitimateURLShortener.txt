@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 23April2023v1
+! Version: 23April2023v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -448,15 +448,13 @@ $removeparam=extcmp
 ! https://www.staypro.no/?at_gd=2B9E397233E3B6D5EF466E3BC0AC42F1885D8A50
 $removeparam=at_gd
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5635117
-!#if !env_mobile
 ! https://www.gamerevolution.com/guides/685650-windows-11-tpm-2-0-pc-cant-run-install?amp, https://www.independent.co.uk/sport/scotland-france-antoine-dupont-grand-slam-finn-russell-b2024042.html?amp, pcmag.com, theathletic.com (No one on fast networks really likes AMP, least of all uBlock Origin + 'Firefox for Android' users; 25/06/2021)
 $removeparam=/^amp$/,domain=~eurasiantimes.com
 ! https://www.tokopedia.com/legoclassic/my-little-pony-a-new-generation-crystal-princess-petals-figure-set?src=topads&xClientId=amp-IWyM3dL4bS8QlacnZO4hyg&cid=amp-IWyM3dL4bS8QlacnZO4hyg&amp=true
 $removeparam=/^amp=true$/
 ! https://www.newsweek.com/housing-market-falls-sales-new-homes-down-1727968?amp=1
-$removeparam=/^amp=1$/,document,domain=~listafriikki.com|~londonjazznews.com|~libretro.com
-!#endif
+! can not be made global, see https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5635117
+$removeparam=/^amp=1$/,document,domain=newsweek.com
 
 ! https://inews.co.uk/opinion/matt-hancock-health-bill-huge-row-no10-boris-johnson-1067703?_gl=1*1l47swq*_ga*OUp3WnF6dklkRHNVaHBfaDJmUnFHSkR5VFBtMzV5enpSWk1XUENzWlNENGg2VmdQZHZoRVFfV3BmNXV2ZjREYQ
 $removeparam=_gl
