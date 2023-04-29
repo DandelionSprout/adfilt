@@ -54,3 +54,5 @@ For entries that start with `||` or `@@||`, the following applies (Note the use 
 Should I have missed out on any details that'd be nice to have in this contribution explanation, give me a heads up about it, e.g. in Issues.
 
 I do encourage forking, both for experimentation, archiving, or for any other reason you may come up with.
+
+When submitting issue reports and pull requests, I aim to reply to it or fix it within 72 hours. Discussions threads where I see that input from me is desired, is aimed to be handled within 96 hours, although delays can happen. Commit-replies are not always read or replied to.
