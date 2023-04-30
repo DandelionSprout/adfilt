@@ -1,5 +1,5 @@
 ! This is an extension file, not an independent list.
-! Extension file's version: 28April2023v1-Extension
+! Extension file's version: 30April2023v1-Extension
 
 ! Experts Exchange 📛📠
 experts-exchange.com##.accepted.answer:style(display: block !important)
@@ -121,6 +121,9 @@ tumblr.com##style:has-text(/^body /):has(use[href*=logo-tumblr]):remove()
 tumblr.com#?##glass-container:has(p + p):has(a[href^="/auth/google?"])
 !! The same prompt 6 months later:
 tumblr.com#?##glass-container > div[role^=dialog]:has(#g-recaptcha):has(a[href*=terms-of-service])
+!! https://github.com/DandelionSprout/adfilt/commit/db0401c254e7064a9048e1aa52326a080ed97107#commitcomment-111160729
+tumblr.com##figure[class], button[class], a[class]:remove-attr(/^data-login-wall-/)
+||assets.tumblr.com/pop/js/modern/async-login-wall$script,domain=www.tumblr.com
 !! Floaty on bottom
 ||tumblr.com^$removeparam=/^source=login_/
 tumblr.com##div[style^="background:#7c5cff;"]:upward(1)
