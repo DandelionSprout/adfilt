@@ -23,6 +23,7 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Somalian (Dandelion Sprout's African Languages List *de facto*)
 * Zulu (Dandelion Sprout's African Languages List *de facto*, unless more than 1 site with ads are found. A uAssets report is planned soon as of mid-March 2023.)
 * Swahili (Split between AdGuard Base and Dandelion Sprout's African Languages List)
+* Afrikaans (EasyDutch, as per `https://github.com/EasyDutch-uBO/EasyDutch/issues/41#issuecomment-1531866647`)
 
 ### Sites not yet checked
 * Burmese
@@ -49,9 +50,6 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 ### Unclear situation
 * Kazakh (Supposed to be covered by https://github.com/AdguardTeam/AdguardFilters/tree/master/CyrillicFilters/Kazakh/sections, but 0 sites in existence are eligible for it. The one and only such newssite was rejected by AdGuard in `https://github.com/AdguardTeam/AdguardFilters/issues/146131`)
 * Uzbek (1 entry in AdGuard Russian Filter seemingly by accident: `bugun.uz##.desrek`; 0 in AdGuard Base.)
-
-### No lists believed to be willing to accept entries for them
-* Afrikaans
 
 ### No known sites with unblocked ads
 * Singapore Tamil
