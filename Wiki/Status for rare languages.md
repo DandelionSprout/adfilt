@@ -21,9 +21,10 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * Welsh (EasyList)
 * Malagasy (Dandelion Sprout's African Languages List *de facto*)
 * Somalian (Dandelion Sprout's African Languages List *de facto*)
-* Zulu (Dandelion Sprout's African Languages List *de facto*, unless more than 1 site with ads are found. A uAssets report is planned soon as of mid-March 2023.)
+* Zulu (Dandelion Sprout's African Languages List *de facto*)
 * Swahili (Split between AdGuard Base and Dandelion Sprout's African Languages List)
 * Afrikaans (EasyDutch, as per `https://github.com/EasyDutch-uBO/EasyDutch/issues/41#issuecomment-1531866647`)
+* Cyprus Greek (Greek AdBlock Filter)
 
 ### Sites not yet checked
 * Burmese
@@ -39,9 +40,6 @@ Status for adblock list coverage of rare languages, countries, and country-langu
 * * `721news.com##aside[id^=media_]`?
 * Pashto
 * Urdu
-
-### Under evaluation by filterlist makers
-* Cyprus Greek (`https://github.com/kargig/greek-adblockplus-filter/issues/120`)
 
 ### Limited support with AdGuard Base
 * Armenian
