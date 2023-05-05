@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 25April2023v1-Deprecated
+# Version: 04May2023v2-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -595,6 +595,7 @@ msFilterList
 # https://github.com/ryanbr/fanboy-adblock/issues/1339
 # https://github.com/ryanbr/fanboy-adblock/issues/1468
 # https://github.com/easylist/easylist/issues/12067#issuecomment-1132797711
+# https://github.com/easylist/easylist/issues/15519
 # ★★★ Caused by «EasyList» ★★★
 +d _prebid_
 @@://billink*.blob.core.windows.net/*/annonser
