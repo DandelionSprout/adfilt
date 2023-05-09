@@ -1,4 +1,4 @@
-10th of May 2023: After several years of fine service, this server has become increasingly difficult to maintain and keep up. To get the server's benefits with higher uptime, you are welcome to give upvotes to https://github.com/AdguardTeam/HostlistsRegistry/issues/121
+10th of May 2023: After several years of fine service, this server has become increasingly difficult to maintain and keep up. To get the server's wildcard adblocking benefits with higher uptime, you are welcome to give upvotes to https://github.com/AdguardTeam/HostlistsRegistry/issues/121
 
 ————————————————————————————————
 
