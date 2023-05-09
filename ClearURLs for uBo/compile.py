@@ -139,7 +139,8 @@ def normalize_url_pattern(url_pattern: str) -> str:
 
 def normalize_exception(exception: str) -> tuple[str, str]:
     orig_exception = exception
-
+    
+    exception = exception.replace(r"^https?:\/\/(?:[a-z0-9-]+\.)*?\\.", "||", 1)
     exception = exception.replace(r"^https?:\/\/(?:[a-z0-9-]+\.)*?", "||", 1)
     exception = exception.replace(r"^https?:\/\/", "||", 1)
     # FIXME: |ws://
