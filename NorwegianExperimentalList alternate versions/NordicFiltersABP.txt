@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 040520232
+! Version: 090520231
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1260,7 +1260,7 @@ maskinbladet.dk##.outer-skybanner
 gamer.no##body > div[class^="content-element "]
 matematikbogen.dk##td:nth-of-type(3)
 matoppskrift.no###sticky
-matoppskrift.no##.overskrift_naeringsinnhold
+matoppskrift.no#?#.overskrift_naeringsinnhold:has(> h3)
 matoppskrift.no#?#.text-center:not(:has(img))
 digi.no##div[class*=ads-wrapper]
 digi.no##.banner
@@ -2004,41 +2004,26 @@ startsiden.no##div[class^=nyttig__tippingHeader__]
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 ! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
-gamereactor.no,gamereactor.dk###ad_mobiletopinsidetext
-gamereactor.no,gamereactor.dk###ad_video
-gamereactor.no,gamereactor.dk###bigVideoAd
-gamereactor.no,gamereactor.dk###eventad
-gamereactor.no,gamereactor.dk###sky2_1
-gamereactor.no,gamereactor.dk#$#abort-on-property-write banner_video
-gamereactor.no,gamereactor.dk##.ad_smartphbig
-gamereactor.no,gamereactor.dk##.ad_video
-gamereactor.no,gamereactor.dk#?#.artistyle3:-abp-has(h4:has-text(/sponsored/i))
-gamereactor.no,gamereactor.dk##.cocacola
-gamereactor.no,gamereactor.dk##.external_div_bigVideoAd
 gamereactor.no,gamereactor.dk##.sponsor
-gamereactor.no,gamereactor.dk##.vast_ad_video
-gamereactor.no,gamereactor.dk##.videoContent > .clickTag
-gamereactor.no,gamereactor.dk##a[href*="/adclick.php"]
-gamereactor.no,gamereactor.dk#?#*:-abp-has(> a[href^="/grtv/"][title*=Sponsored])
-gamereactor.no,gamereactor.dk#?#article.rwd_row:has(a[href$="/sponsoredcontent/"])
-gamereactor.no,gamereactor.dk##div[class^=ad300]
-gamereactor.no,gamereactor.dk##div[style*="width:300px;height:600px;"]
+gamereactor.no,gamereactor.dk###eventad
+gamereactor.no,gamereactor.dk##[id^=sky]
+gamereactor.no,gamereactor.dk##[id^=ad_lead]
+gamereactor.no,gamereactor.dk##a[rel=sponsored]
+gamereactor.no,gamereactor.dk##.external_div_bigVideoAd
+gamereactor.no,gamereactor.dk###mpu
+gamereactor.no,gamereactor.dk###leftToLogo
+gamereactor.no,gamereactor.dk##div[class^=ad_Bumper]
 gamereactor.no,gamereactor.dk##div[style="min-height: 600px; margin-bottom: 20px;"]
-||gamereactor.*/lay/ad-video-stats.$script
-||gamereactor.*/lay/dfp_$script
-||gamereactor.*/lay/js/adblock_desktop.$script
-||gamereactor.*/lay/js/background.$script
-||gamereactor.*/lay/js/banners_config.$script
-||gamereactor.*/lay/js/manageBanners.$script
-||gamereactor.*/media/eventad/$image
-||media.gamereactor.dk/*Promo$media,rewrite=abp-resource:blank-mp3,domain=gamereactor.no|gamereactor.dk
-||media.gamereactor.dk/prerolls$media,rewrite=abp-resource:blank-mp3,domain=gamereactor.no|gamereactor.dk
-||openx.gamereactor.dk/multi.php?$script
-/insert_grtv_stats.$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
-/prerolls/*$domain=gamereactor.no|gamereactor.dk
-/videojs.ima.$script,domain=gamereactor.no|gamereactor.dk
-@@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.no|gamereactor.dk
-@@||openx.gamereactor.dk/www/delivery/fc.php$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
+gamereactor.no,gamereactor.dk##div[id^=ad_]
+gamereactor.no,gamereactor.dk##div[class^=preAd_]
+gamereactor.no,gamereactor.dk##div[class^=ad_smartphbig]
+gamereactor.no,gamereactor.dk##.adMobileBig
+gamereactor.no,gamereactor.dk##div[class^=preMobileBig]
+gamereactor.no,gamereactor.dk##.external_div_videoAd
+gamereactor.no,gamereactor.dk#?#*:-abp-has(> #grtvbelt_Sponsored)
+gamereactor.no,gamereactor.dk##.ad_interscroller:upward(.wrapper)
+||gamereactor.*/ads^
+||gamereactor.*/exclusive.json^
 
 
 ! 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.

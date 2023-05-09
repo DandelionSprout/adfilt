@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for «uBlock Origin Legacy»)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for «uBlock Origin Legacy»)
-! Version: 04May2023v2-Beta
+! Version: 09May2023v1-Beta
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1299,7 +1299,7 @@ maskinbladet.dk##.outer-skybanner
 gamer.no##body > div[class^="content-element "]
 matematikbogen.dk##td:nth-of-type(3)
 matoppskrift.no###sticky
-matoppskrift.no##.overskrift_naeringsinnhold
+matoppskrift.no#?#.overskrift_naeringsinnhold:has(> h3)
 matoppskrift.no#?#.text-center:not(:has(img))
 digi.no##div[class*=ads-wrapper]
 digi.no##.banner
@@ -2081,44 +2081,26 @@ startsiden.no##div[class^=nyttig__tippingHeader__]
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 ! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
-gamereactor.*###ad_mobiletopinsidetext
-gamereactor.*###ad_video
-gamereactor.*###bigVideoAd
-gamereactor.*###eventad
-gamereactor.*###pagebackground:style(background-image: none !important)
-gamereactor.*###sky2_1
-gamereactor.*##+js(aopw, banner_video)
-gamereactor.*##+js(nano-stb, timeDown)
-gamereactor.*##.ad_smartphbig
-gamereactor.*##.ad_video
-gamereactor.*#?#.artistyle3:-abp-has(h4:has-text(/sponsored/i))
-gamereactor.*##.cocacola
-gamereactor.*##.external_div_bigVideoAd:remove()
 gamereactor.*##.sponsor
-gamereactor.*##.vast_ad_video
-gamereactor.*##.videoContent > .clickTag
-gamereactor.*##a[href*="/adclick.php"]
-gamereactor.*##a[href^="/grtv/"][title*=Sponsored]:upward(1)
-gamereactor.*#?#article.rwd_row:has(a[href$="/sponsoredcontent/"])
-gamereactor.*##div[class^=ad300]
-gamereactor.*##div[style*="width:300px;height:600px;"]
+gamereactor.*###eventad
+gamereactor.*##[id^=sky]
+gamereactor.*##[id^=ad_lead]
+gamereactor.*##a[rel=sponsored]
+gamereactor.*##.external_div_bigVideoAd
+gamereactor.*###mpu
+gamereactor.*###leftToLogo
+gamereactor.*##div[class^=ad_Bumper]
 gamereactor.*##div[style="min-height: 600px; margin-bottom: 20px;"]
-gamereactor.*##+js(ra, autoplay)
-||gamereactor.*/lay/ad-video-stats.$script
-||gamereactor.*/lay/dfp_$script
-||gamereactor.*/lay/js/adblock_desktop.$script
-||gamereactor.*/lay/js/background.$script
-||gamereactor.*/lay/js/banners_config.$script
-||gamereactor.*/lay/js/manageBanners.$script
-||gamereactor.*/media/eventad/$image
-||media.gamereactor.dk/*Promo$redirect=noopmp4,domain=gamereactor.no|gamereactor.dk
-||media.gamereactor.dk/prerolls$redirect=noopmp4,domain=gamereactor.no|gamereactor.dk
-||openx.gamereactor.dk/multi.php?$important,script
-/insert_grtv_stats.$xhr,domain=gamereactor.no|gamereactor.dk
-/prerolls/*$domain=gamereactor.no|gamereactor.dk
-/videojs.ima.$script,domain=gamereactor.no|gamereactor.dk
-@@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.no|gamereactor.dk
-@@||openx.gamereactor.dk/www/delivery/fc.php$xhr,domain=gamereactor.no|gamereactor.dk
+gamereactor.*##div[id^=ad_]
+gamereactor.*##div[class^=preAd_]
+gamereactor.*##div[class^=ad_smartphbig]
+gamereactor.*##.adMobileBig
+gamereactor.*##div[class^=preMobileBig]
+gamereactor.*##.external_div_videoAd
+gamereactor.*###grtvbelt_Sponsored:upward(1)
+gamereactor.*##.ad_interscroller:upward(.wrapper)
+||gamereactor.*/ads^
+||gamereactor.*/exclusive.json^
 !#if !ext_ublock
 
 

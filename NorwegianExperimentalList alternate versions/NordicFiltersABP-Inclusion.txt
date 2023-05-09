@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 040520232
+! Version: 090520231
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1259,7 +1259,7 @@ maskinbladet.dk##.outer-skybanner
 gamer.no##body > div[class^="content-element "]
 matematikbogen.dk##td:nth-of-type(3)
 matoppskrift.no###sticky
-matoppskrift.no##.overskrift_naeringsinnhold
+matoppskrift.no#?#.overskrift_naeringsinnhold:has(> h3)
 digi.no##div[class*=ads-wrapper]
 digi.no##.banner
 digi.no,tu.no#?#div[id^=row-]:has(.banner)
@@ -1994,40 +1994,26 @@ startsiden.no##div[class^=nyttig__tippingHeader__]
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 ! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
-gamereactor.no,gamereactor.dk###ad_mobiletopinsidetext
-gamereactor.no,gamereactor.dk###ad_video
-gamereactor.no,gamereactor.dk###bigVideoAd
-gamereactor.no,gamereactor.dk###eventad
-gamereactor.no,gamereactor.dk###sky2_1
-gamereactor.no,gamereactor.dk##.ad_smartphbig
-gamereactor.no,gamereactor.dk##.ad_video
-gamereactor.no,gamereactor.dk#?#.artistyle3:-abp-has(h4:has-text(/sponsored/i))
-gamereactor.no,gamereactor.dk##.cocacola
-gamereactor.no,gamereactor.dk##.external_div_bigVideoAd
 gamereactor.no,gamereactor.dk##.sponsor
-gamereactor.no,gamereactor.dk##.vast_ad_video
-gamereactor.no,gamereactor.dk##.videoContent > .clickTag
-gamereactor.no,gamereactor.dk##a[href*="/adclick.php"]
-gamereactor.no,gamereactor.dk#?#*:has(> a[href^="/grtv/"][title*=Sponsored])
-gamereactor.no,gamereactor.dk#?#article.rwd_row:has(a[href$="/sponsoredcontent/"])
-gamereactor.no,gamereactor.dk##div[class^=ad300]
-gamereactor.no,gamereactor.dk##div[style*="width:300px;height:600px;"]
+gamereactor.no,gamereactor.dk###eventad
+gamereactor.no,gamereactor.dk##[id^=sky]
+gamereactor.no,gamereactor.dk##[id^=ad_lead]
+gamereactor.no,gamereactor.dk##a[rel=sponsored]
+gamereactor.no,gamereactor.dk##.external_div_bigVideoAd
+gamereactor.no,gamereactor.dk###mpu
+gamereactor.no,gamereactor.dk###leftToLogo
+gamereactor.no,gamereactor.dk##div[class^=ad_Bumper]
 gamereactor.no,gamereactor.dk##div[style="min-height: 600px; margin-bottom: 20px;"]
-||gamereactor.*/lay/ad-video-stats.$script
-||gamereactor.*/lay/dfp_$script
-||gamereactor.*/lay/js/adblock_desktop.$script
-||gamereactor.*/lay/js/background.$script
-||gamereactor.*/lay/js/banners_config.$script
-||gamereactor.*/lay/js/manageBanners.$script
-||gamereactor.*/media/eventad/$image
-||media.gamereactor.dk/*Promo$media,rewrite=abp-resource:blank-mp3,domain=gamereactor.no|gamereactor.dk
-||media.gamereactor.dk/prerolls$media,rewrite=abp-resource:blank-mp3,domain=gamereactor.no|gamereactor.dk
-||openx.gamereactor.dk/multi.php?$script
-/insert_grtv_stats.$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
-/prerolls/*$domain=gamereactor.no|gamereactor.dk
-/videojs.ima.$script,domain=gamereactor.no|gamereactor.dk
-@@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.no|gamereactor.dk
-@@||openx.gamereactor.dk/www/delivery/fc.php$xmlhttprequest,domain=gamereactor.no|gamereactor.dk
+gamereactor.no,gamereactor.dk##div[id^=ad_]
+gamereactor.no,gamereactor.dk##div[class^=preAd_]
+gamereactor.no,gamereactor.dk##div[class^=ad_smartphbig]
+gamereactor.no,gamereactor.dk##.adMobileBig
+gamereactor.no,gamereactor.dk##div[class^=preMobileBig]
+gamereactor.no,gamereactor.dk##.external_div_videoAd
+gamereactor.no,gamereactor.dk#?#*:has(> #grtvbelt_Sponsored)
+gamereactor.no,gamereactor.dk##.ad_interscroller:upward(.wrapper)
+||gamereactor.*/ads^
+||gamereactor.*/exclusive.json^
 
 
 ! 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
@@ -4776,7 +4762,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Fri, 05 May 2023 13:21:05 +0000
+! Last modified: Mon, 08 May 2023 15:57:52 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -6090,7 +6076,7 @@ _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutis
 ||script.ilcdn.fi/etua-lainalaskuri/etua-lainalaskuri.min.js$script,domain=iltalehti.fi
 ||seksitreffit.fi/*popunder.js$script,domain=seksitreffit.fi
 ||seksitreffit.fi/banners/$domain=seksitreffit.fi
-||sf.nm-ovp.nelonenmedia.fi/player/games/ruutu-player-loader.js$script,domain=alypaa.com
+||sf.nm-ovp.nelonenmedia.fi/player/games/ruutu-player-loader.js$script,domain=10kysymysta.fi|alypaa.com
 ||strongbox.nostemedia.fi^$script,third-party
 ||superskills.fi/fi*?isIframe=true$subdocument
 ||testeri.fi/ext_telsu$subdocument
@@ -6173,10 +6159,6 @@ arvopaperi.fi,kauppalehti.fi,mediuutiset.fi,mikrobitti.fi,talouselama.fi,tekniik
 mtvuutiset.fi,mtv.fi,suomiareena.fi,msn.com##.mtv-player-ad-container
 ||cloudfront.net/creatives/assets/$image,domain=mtvuutiset.fi
 @@||fi-mtv3.videoplaza.tv/proxy/pulse-sdk-html5/*/latest.min.js
-
-! Tori.fi ads
-##[src*="://ad.doubleclick.net/"]
-||cloudfront.net/banners/$domain=tori.fi
 
 ! Adblock check
 murha.info#@#.adsbygoogle

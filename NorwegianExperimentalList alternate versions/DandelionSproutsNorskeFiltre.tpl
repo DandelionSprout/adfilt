@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 04May2023v2-Deprecated
+# Version: 09May2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -647,12 +647,6 @@ msFilterList
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 # 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
--d media.gamereactor.dk *Promo
--d media.gamereactor.dk prerolls
--d openx.gamereactor.dk multi.php?
-- insert_grtv_stats.
-- prerolls
-- videojs.ima.
 - insert_grtv_stats.
 - prerolls
 - videojs.ima.
