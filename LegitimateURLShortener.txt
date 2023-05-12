@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 12May2023v2
+! Version: 12May2023v3
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1808,7 +1808,7 @@ $removeparam=store_visit_source,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnj
 $removeparam=entrypoint,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion
 $removeparam=paipv,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion
 
-!!! ——— Google Search ———
+!!! ——— Google ———
 ! https://books.googleusercontent.com/books/content/reader?id=ZqK8A800eu4C&hl=no&pg=epub_10-jpg&img=1&zoom=6&cds=2&sig=ACfU3U3Si7lRb8j-vl0ZHTxcQUS7QcwWfg&w=800&h=1046&cp_ksver=2%3DVrverkkqAh0.&source=ge-web-app (The "$sig" value is specific to individual Google Play Books accounts; 22/11/2020)
 $removeparam=cp_ksver
 ! https://www.google.no/search?q=disney+fairies+rani&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj14vqyvpbtAhXDlYsKHYXwAE4Q_AUoAXoECAsQAw&biw=1440&bih=2417#imgrc=wxIq9RsVA6XwVM
@@ -1871,6 +1871,10 @@ $removeparam=ogbl
 ! https://github.com/DandelionSprout/adfilt/issues/834#issuecomment-1510431981
 ||www.google.*/search?$document,removeparam=sclient
 ! Should not be removed: dpr (Determines image search results' box sizes)
+! https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S-1476216186%3A1641712437682727&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp (09/01/2022)
+||accounts.google.com^$removeparam=dsh,document
+! https://support.google.com/contributionpolicy/answer/7400114?ref_topic=7422769
+||support.google.com^$removeparam=ref_topic
 
 !!! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
@@ -3326,9 +3330,6 @@ $removeparam=searchClick,domain=shopbop.com
 $removeparam=searchResultClicked,domain=shopbop.com
 $removeparam=breadcrumb,domain=shopbop.com
 
-! https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S-1476216186%3A1641712437682727&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp (09/01/2022)
-||accounts.google.com^$removeparam=dsh
-
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1935694
 ! https://go.skimresources.com/?id=76112X1604401&xs=1&xcreo=500004&url=https://www.matchesfashion.com/us/products/Raf-Simons-Children-of-the-Revolution-roll-neck-jersey-top-1414525&xed=1&xcust=julydigitalcover
 ||go.skimresources.com^$removeparam=xcreo
@@ -3876,9 +3877,6 @@ $removeparam=mar,domain=nextdoor.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4677166
 ||youtube.com^$removeparam=embeds_euri
 ||youtube.com^$removeparam=source_ve_path
-
-! https://support.google.com/contributionpolicy/answer/7400114?ref_topic=7422769
-||support.google.com^$removeparam=ref_topic
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4686110
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4690986
