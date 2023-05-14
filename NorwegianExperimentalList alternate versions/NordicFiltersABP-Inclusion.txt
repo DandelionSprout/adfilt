@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 090520231
+! Version: 150520232
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -375,6 +375,7 @@ retrospilling.no#?#.widget:has-text(Reklame)
 allematpriser.no##.bottom-center-box
 startsiden.no##.wp-block-create-block-prisjakt-product
 bikelifenorge.no##.dannys-ad-container
+voguescandinavia.com##div[class^=AdssetsAd_]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -559,6 +560,7 @@ dk##section.article__adblock
 ||videotool.fbg.dk^$third-party
 ||svindel.info^
 ||annoncer.nichehuset.dk^$third-party
+||pliing.com^$third-party
 ||print2web.sn.dk^$image
 ||lib.idg.no^
 ! Adressa.no
@@ -2064,23 +2066,76 @@ csp.screen9.com#@#.adsbox
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 ! 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
-newz.dk##.top-interstitial
-vg.no,e24.no##.ad
-vgtv.no###player.pulse-isPauseAdVisible > .jw-overlays
-jyllands-posten.dk##.bpTopPlacement
+bt.no##.proaktiv-ad
+dagensbyggeri.dk###megaboard-top-container
+digi.no##.poster-placeholder
+digi.no##.tu-frontpage > .frontpage-top-poster-wrap
+digi.no##.tujobs-ad
+digi.no##div[class^=sticky-col-] > .sticky-content
+dt.no##.am-bazaar-ad
+e24.no##.ad
+ekstrabladet.dk##.eb-position
+ekstrabladet.dk##.mar-m--tb .native-element.list-wrapper
+ekstrabladet.dk#?#.fnSpaceManagement > div:has(> .widgetiframe)
 finans.dk##.baPosition
-itavisen.no##.banner
-trendsales.dk##.top__banner
-vg.no##.advert
-||boost-cdn.manatee.dk/config/mboost
+finn.no##.banner-skyscraper-container
+finn.no##.banners.adsbox
+finn.no##.banners[data-banner-pos=topbanner]
+finn.no##div.banners[style^="height: 150px"]
+finn.no##div.external-banner-board.adsbox[data-controller]
+finn.no##iframe#easyad
+finn.no##iframe#smallEasyAd
+gulindex.no###cintmodal
+information.dk##.ib-wrap
+itavisen.no##div[id^=ad-]
+jyllands-posten.dk##.bpTopPlacement
+klikk.no##iframe[src^="//widget.tippebannere.no/"]
+langrenn.com##body > .bannerlocation > div > a[href^="/bannerclick.php/"]
+maskinbladet.dk##.openx-iframe-wrapper
+mx.dk###wrapper > #leaderboard
+mx.dk##[class^=ad_][class$="_300x250"]
+nakenprat.com#?##sidebar > li > .block:has(> .blocksubhead > span:contains(Noen sponsorer))
+nettavisen.no###article-body > .rel-article
+nettavisen.no##.am-bazaar-ad
+nettavisen.no##.background-na-commercial
+nettavisen.no##a > .background-na-commercial ~ *
+nettavisen.no#?#amedia-frontpage > .optimus-complex-front:has(> header > h2:contains(/Reklame|REKLAME/))
+newz.dk##.top-interstitial
+nordschleswiger.dk##.TopAdvertising-Content-Wrapper
+politiken.dk##.ad--horseshoe
+politiken.dk##div[class^="ad ad--ctx-"]
+qxl.dk###catIndexTopSeller
+qxl.dk##body > div[style*="min-height:"][style*=background]
+qxl.no###GoogleAdsensePanorama
+qxl.no###qxlprofilertebox
+qxl.no##.butikkbunn
+sofabold.dk##.centerMgfx
 sofabold.dk##.top_b_display
 sofabold.dk##div[class^=sidebanner]
-sofabold.dk##.centerMgfx
-klikk.no##.affiliate-content
-! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
-~nytid.no##.td-a-rec:not(html, body)
-! jyllands-posten.dk (09/07/2020)
-###topBanners
+trendsales.dk##.top__banner
+tu.no##.col-full-width > .products-carousel.daily-offers
+tu.no##.commercial
+tu.no##.poster-placeholder
+tu.no##.tu-frontpage > .frontpage-top-poster-wrap
+tu.no##.tujobs-ad
+tu.no##article[data-pinned].annonse
+tu.no##body > .surround > .top-poster-wrap.align-center
+tu.no##div[class^=sticky-col-] > .sticky-content
+tv2.no##.tv2-ad
+vg.no###ad-topboard
+vg.no##.ad
+vg.no##.inline-ad-text
+xn--bredbnd-ixa.dk##div[class^=speedtest-bg] > a > img
+||boost.manatee.dk/srx/srx_lib_block_$script,other
+||deiligejenter.com/testfile23.js
+||freewheel-mtgx-tv.akamaized.net^$media,domain=tv3sport.dk
+||gratisxxx.no/*.php?bn=
+||inputmag.dk/wp-content/uploads/*/*_Galaxy-_takeover_$image
+||nakenprat.com/adfirst*.js
+||nakenprat.com/adlast*.php^
+||v.fwmrm.net/ad/g/$domain=ekstrabladet.dk
+||widget.tippebannere.no^$third-party
+||widgets.sprinklecontent.com^$domain=klikk.no
 
 ! 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 triplx.dk##.aff-inner-col
@@ -4762,7 +4817,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Mon, 08 May 2023 15:57:52 +0000
+! Last modified: Sun, 14 May 2023 11:28:14 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -5233,6 +5288,7 @@ huonoaiti.fi#?#.col.article-card.item:has-text(Kaupallinen yhteistyö, yhteisty�
 huuto.net###hise-items-container
 huuto.net#?#.grid-element-container:-abp-has(.hise-link[href^="https://"])
 hymy.fi##.grid--dfp-slots
+hymy.fi##.sidebar-block > a[href^="http://pubads.g.doubleclick.net/gampad/clk"]
 hyvaterveys.fi##.pane-sbase-cts-native-native-front
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.ad-separator
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi###paraati-ad-grid
@@ -5261,6 +5317,7 @@ iskelma.fi,radionova.fi,voice.fi#?#.sbs-articleitems.list-right-column:-abp-has(
 iskelma.fi,radionova.fi,voice.fi#?#div.item:-abp-has(.sponsored)
 jaatama.fi#?#.box--transparent:-abp-has(.advert)
 jaatama.fi,maastohiihto.com,retkilehti.fi,riistalehti.fi##.advert
+jaakiekonmmkisat.com,ruuhkavuodet.fi##div[class|="g g"]
 jahtimedia.fi#?#.latest-post-link:-abp-has(.mainos)
 jatkoaika.com###cmorelink
 jatkoaika.com##div[class="block block-block"]
@@ -5398,6 +5455,8 @@ lapinkansa.fi#?#div[class="m-contentListItemThumb -ctx-frontpage-now -level-1"]:
 lapinkansa.fi#?#div[class="m-managedListing__column -ctx-index -level-1 -cols-2"]:-abp-has(> div > div > div > div[class^=m-contentListItem__advertisement])
 lapuansanomat.fi##.tilaa-tasta
 lapuansanomat.fi##.ylabanner1
+lauttakyla.fi##.box-banner a[href^="/redirect/"]
+lauttakyla.fi##.fullwidth-imagebanner
 lauttakyla.fi##.hasordercontent.orange-bg
 lauttakyla.fi##.mainbanner
 lauttakyla.fi#?#.fullwidth-banner:-abp-has(> a[href="https://www.lauttakyla.fi/tilaa/"])
@@ -5643,7 +5702,6 @@ riemurasia.net##a[rel^="sponsored"]
 riistalehti.fi##.riist-content
 ristinvoitto.fi##a[href*="subaction=bannerredirect"]:not(a[href*="-rv-tilaus"])
 rumba.fi#?#.bg-white.w-full.py-2.px-4:-abp-has(.poppartners)
-ruuhkavuodet.fi##div[class|="g g"]
 ruuhkavuodet.fi#?#.widget_block:-abp-has(#nm-300x600-300x300)
 sammysatv.com##a[href*=banner]
 satakunnanviikko.fi##.panoraama_etus
@@ -5662,6 +5720,8 @@ sijoittaja.fi#?#body.single-post .container[style]:-abp-has(.g-single > .hs-cta-
 sijoitustieto.fi##.view-2019-ajankohtaiset-tarjoukset
 sijoitustieto.fi##.view-banneripaikka-etusivuoikea1
 sijoitustieto.fi#?#p > em > strong:has-text(Kaupallinen yhteistyö:)
+sjofart.ax##.elementor-location-header .topp
+sjofart.ax#?#.ae-bg-gallery-type-default.elementor-section-height-default.elementor-section-boxed.elementor-hidden-phone.has_ae_slider:-abp-has([src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"])
 sketsi.net##footer > .container.tdt-ad-wrap
 somerolehti.fi###auto-grid-container-5c470b0150cba
 sportti.com##[href^="http://ads.leovegas.com/"]
@@ -5961,8 +6021,10 @@ ylasatakunta.fi##.ad[class*=ylaboksi]
 ylasatakunta.fi##.tarranurkka
 ylasatakunta.fi##a[href^="/artikkeli-kaupallinen-"]
 ylojarvenuutiset.fi#?#.widget:-abp-has(.mainossidebar)
+yrittajat.fi##.b-area-ad-sidebar
 yrittajat.fi##.b-otavamedia-ads
 yrittajat.fi##.gb-otavamedia-ad
+yrittajat.fi##.s-area-ad-header
 yrittajat.fi##.wrap-top-ad
 yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 
@@ -6025,6 +6087,7 @@ _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutis
 ||honestpartners.com^$third-party
 ||hymy.fi/wp-content/uploads/2018/03/HY_sivupalkin_myyntiviesti2.jpg$image
 ||hymy.fi/wp-content/uploads/2022/11/nicorette_hymy.jpg$image
+||hymy.fi/wp-content/uploads/2023/05/Nicorette2023_4_300x300.jpg$image,domain=hymy.fi
 ||ig.fi/bannerit/koronabanneri.png$image
 ||improveads.fi^$third-party
 ||io-tech.fi/images/*_290x290px.png$image

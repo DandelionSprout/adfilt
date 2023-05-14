@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 09May2023v1-Deprecated
+# Version: 15May2023v2-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -113,6 +113,7 @@ msFilterList
 -d videotool.fbg.dk
 -d svindel.info
 -d annoncer.nichehuset.dk
+-d pliing.com
 -d print2web.sn.dk
 -d lib.idg.no
 # Adressa.no
@@ -679,9 +680,18 @@ msFilterList
 # 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
--d boost-cdn.manatee.dk mboost
-# https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
-# jyllands-posten.dk (09 07 2020)
+-d boost.manatee.dk srx_lib_block_
+-d deiligejenter.com testfile23.js
+-d freewheel-mtgx-tv.akamaized.net *.mp4
+-d freewheel-mtgx-tv.akamaized.net
+-d googletagservices.com gpt.js
+-d gratisxxx.no *.php?bn=
+-d inputmag.dk *_Galaxy-_takeover_
+-d nakenprat.com adfirst*.js
+-d nakenprat.com adlast*.php
+-d v.fwmrm.net g
+-d widget.tippebannere.no
+-d widgets.sprinklecontent.com
 # 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
