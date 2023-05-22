@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 15May2023v3-Deprecated
+# Version: 22May2023v3-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -70,6 +70,7 @@ msFilterList
 # metalsupply.no, licitationen.dk (08 03 2023)
 # https://www.licitationen.dk/article/view/900259/efter_entreprenors_konkurs_river_106_ufaerdige_huse_ned_i_hojetaastrup/(08/03/2023)
 # maskinregisteret.no (08 03 2023)
+# eikernytt.no (18 05 2023)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -179,6 +180,11 @@ msFilterList
 # https://www.diabetes.no/mer/nyheter-om-diabetes/nyheter-2021/sporsmal-og-svar-om-koronavaksinen-og-diabetes/ (16 11 2021)
 - globalassets banner_
 # https://github.com/AdguardTeam/AdguardFilters/issues/114245#issuecomment-1085683154
+# https://viivilla.no/hage/terrasse/slik-gjor-du-terrassen-festklar-til-17-mai-pa-1-2-3//(18/05/2023)
+-d gcp.passendo.com
+-d psscdn.com
+# samferdselinfra.no (2023-05-18)
+- wp-content uploads ad-html
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -597,6 +603,9 @@ msFilterList
 # https://github.com/ryanbr/fanboy-adblock/issues/1468
 # https://github.com/easylist/easylist/issues/12067#issuecomment-1132797711
 # https://github.com/easylist/easylist/issues/15519
+# ★★★ Caused by «Fanboy's Enhanced Blocking List» ★★★
+# https://github.com/DandelionSprout/adfilt/discussions/779#discussioncomment-5962141
++d vg.no
 # ★★★ Caused by «EasyList» ★★★
 +d _prebid_
 @@://billink*.blob.core.windows.net/*/annonser
