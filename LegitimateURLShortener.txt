@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 24May2023v1
+! Version: 24May2023v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1912,9 +1912,6 @@ $removeparam=/^web_id\d+/,domain=tiktok.com
 
 !!! ———Spotify———
 ! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
-$removeparam=algo
-$removeparam=imp_id
-! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
 $removeparam=si,domain=open.spotify.com|zappos.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1740689
 ||open.spotify.com^$removeparam=/advertising_partner_name=/i
@@ -2837,6 +2834,8 @@ $removeparam=surface,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2d
 $removeparam=fellback,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=req_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=variant,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
+$removeparam=algo,document
+$removeparam=imp_id,document
 
 ! https://open.hpi.de/courses/blockchain2021?tracking_user=4ZwXmvv7FLG8WhY4yKXysh&tracking_type=news&tracking_id=5zEP2RzB50kuwZRBjDJyiQ
 ||hpi.de^$removeparam=tracking_id
