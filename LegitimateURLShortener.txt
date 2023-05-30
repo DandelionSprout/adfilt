@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30May2023v2
+! Version: 31May2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -4008,6 +4008,10 @@ $removeparam=/^ref=troyhunt\.com/
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6040753
 ||bild.de^$document,removeparam=t_ref
+
+! https://www.etsy.com/listing/1455587707/150-costco-hot-dog-soda-combo-t-shirt?gpla=1&gao=1&
+||etsy.com^$removeparam=gpla
+||etsy.com^$removeparam=gao
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
