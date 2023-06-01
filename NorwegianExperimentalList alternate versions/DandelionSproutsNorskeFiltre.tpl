@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 22May2023v3-Deprecated
+# Version: 01June2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -183,8 +183,10 @@ msFilterList
 # https://viivilla.no/hage/terrasse/slik-gjor-du-terrassen-festklar-til-17-mai-pa-1-2-3//(18/05/2023)
 -d gcp.passendo.com
 -d psscdn.com
-# samferdselinfra.no (2023-05-18)
+# samferdselinfra.no (18 05 2023)
 - wp-content uploads ad-html
+# https://spurt.no/zyrtec-mot-myggstikk/ (01 06 2023
+- convertpro cp-popup.min.css
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
