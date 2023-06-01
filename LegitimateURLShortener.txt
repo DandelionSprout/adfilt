@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 31May2023v1
+! Version: 1June2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -4012,6 +4012,12 @@ $removeparam=/^ref=troyhunt\.com/
 ! https://www.etsy.com/listing/1455587707/150-costco-hot-dog-soda-combo-t-shirt?gpla=1&gao=1&
 ||etsy.com^$removeparam=gpla
 ||etsy.com^$removeparam=gao
+
+! https://www.whitepages.com/checkout/phone-summary?phoneNumber=[redacted]&wp_medium=ObfuscatedName&wp_source=phone_unpub&funnelType=phone_onepages_1&skip=false&wp_content=Masked&wp_term=ObfuscatedName
+||whitepages.com^$document,removeparam=wp_medium
+$document,removeparam=wp_source,domain=ac24.cz|ambcrypto.com|glispa.com|whitepages.com
+||whitepages.com^$document,removeparam=wp_content
+||whitepages.com^$document,removeparam=wp_term
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
