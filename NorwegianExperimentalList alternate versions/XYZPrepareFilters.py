@@ -5975,6 +5975,42 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^.*/script,subdocument,image$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^\?.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[:/|].*=$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\^\$[a-z-]{1,}[.|].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\.denyallow=", 
+           r".$denyallow=", 
+           line
+        )
+
+        line = re.sub(
+           r"(denyallow=.*),", 
+           r"\1|", 
+           line
+        )
+
         if is_supported_agh(line):
             text += line + '\n'
 
