@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 05June2023v1
+! Version: 05June2023v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -212,7 +212,7 @@ $removeparam=hashc
 
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 $removeparam=irgwc
-$removeparam=/^clickid=/i
+$document,removeparam=/^clickid=/i,domain=~discover.*
 
 ! https://metro.co.uk/2017/04/11/hubble-just-spotted-something-massive-coming-out-of-uranus-6567896/?ito=article.desktop.share.top.facebook
 $removeparam=ito
