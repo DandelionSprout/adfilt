@@ -4710,6 +4710,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(! Homepage: .*)", 
+           r"\1\n! As of June 2023, Pi-Hole FTL ≥5.22 users should rather use https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, which is a ||-type list version designed specifically for DNS tools.", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\n'
 
@@ -5464,6 +5470,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^127\.0\.0\.1 ? ?$", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\n'
 
@@ -5692,7 +5704,7 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            "Dandelion Sprout's Anti-Malware List", 
-           "Dandelion Sprout's Anti-Malware List (for AdGuard Home, and for AdGuard for Android/Windows' DNS filtering)", 
+           "Dandelion Sprout's Anti-Malware List (for AdGuard Home, AdGuard for Android/Windows' DNS filtering, and Pi-Hole FTL ≥5.22)", 
            line
         )
 
