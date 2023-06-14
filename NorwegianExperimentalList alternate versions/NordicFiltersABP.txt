@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 080620231
+! Version: 140620231
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -103,6 +103,7 @@ e24.no###adPlaceholderFront
 e24.no##.bg-xAdrow
 e24.no##.component_content-marketing
 e24.no##.content-marketing-container
+e24.no##.dr-edition-teaser
 e24.no##.teaser__preview
 e24.no##a[href*="/go.click?"]
 e24.no##div[class^=article-wrapper] > div[class^=_][class*=" "]
@@ -1050,6 +1051,8 @@ dv.is##.ticker
 e24.no###main > div:nth-of-type(1)
 e24.no###main > div:nth-of-type(3)
 e24.no##div[data-ad-subtype]
+e24.no##div[data-config*=fallbackAdPlacement]
+e24.no#?#.row-with-bottom-border:has(.ad-wrap)
 eavisa.com##.custom-a-ds
 eavisa.com##.post-content > .items-container
 tek.no##div[class^=adStyles_]
@@ -1570,7 +1573,7 @@ liverpool.no##.ot-ad
 tv2.no##.feed-ad
 lydogbilde.no,lydogbillede.dk#?#*:-abp-has(> .adunit-lazy)
 billedbladet.dk##.lg\:flex.hidden
-dinordbok.no##.ad-container
+aftenposten.no,dinordbok.no##.ad-container
 tiendeo.no###header-standard-container
 tiendeo.no##.js-print-container > li[order]
 gulesider.no#?#.MuiContainer-root .MuiGrid-root + .MuiBox-root:has(div[id*=gpt])
@@ -1591,6 +1594,7 @@ brunsvika.net#?#.platform-content:has([src*="/pagead"])
 startsiden.dk#?#.block:has(a[id=Annoncer])
 vglive.no##.ad
 kundeavisogtilbud.no,tilbudsaviseronline.dk##.anchor-wrapper
+aftenposten.no###widget-recirculation-matrix + div[class^=" hyperion-"]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2524,6 +2528,9 @@ triplx.dk##.aff-inner-col
 ! https://www.adressa.no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull
 ! https://www.adressa.no/nyheter/trondheim/i/69d3lL/spisesteder-rammet-det-er-forferdelig-jeg-fikk-panikk
 ||sitey.me^
+! https://www.tv2.no/nyheter/innenriks/olav-thon-misbrukes-i-svindelannonser-ble-feilaktig-meldt-dod/15818647/
+||24-news.online^
+||24-news.online^$popup
 ! IP addresses of servers notorious for hosting many of the sites above
 ||51.195.133.131^$domain=~in-addr.arpa
 ||66.206.3.34^$domain=~in-addr.arpa
@@ -2540,6 +2547,7 @@ triplx.dk##.aff-inner-col
 ||132.148.220.142^$domain=~in-addr.arpa
 ||104.160.10.$domain=~in-addr.arpa
 ||165.231.154.$domain=~in-addr.arpa
+||167.99.196.225^$domain=~in-addr.arpa
 
 ! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 ! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
@@ -2664,6 +2672,7 @@ lydogbilde.no,lydogbillede.dk##.lbplussinfo
 digi.no###order-form::before
 tv2.no##.login-wall__gradient
 sol.no##[class^=Body__Fade-sc-]
+aftenposten.no#?#div[class^=hyperion-css-] > div[class^=hyperion-css-] > div[class^=hyperion-css-] > div[class^=hyperion-css-]:has([for="login label"])
 
 ! dagbladet.no,elbil24.no
 ##.CTA-body-faded:not(html, body)
@@ -2679,7 +2688,7 @@ vg.no##div[data-test-tag=timestamp] + p + div::before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 25April2023v1-Extension
+! Last updated: 10June2023v1-Extension
 tv2.no#$#abort-current-inline-script adblockDetector
 ||elderlyscissors.com^
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
