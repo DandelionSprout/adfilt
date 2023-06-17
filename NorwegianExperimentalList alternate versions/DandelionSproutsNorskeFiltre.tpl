@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 14June2023v1-Deprecated
+# Version: 17June2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -47,7 +47,6 @@ msFilterList
 # ekstrabladet.dk
 # nab.no (Only shown if cookies are accepted; 18 08 2020)
 # Bet365 widget triggered for Norwegian audiences only
-# doktor.frettabladid.is (18 09 2020)
 # borsen.no (08 10 2020)
 # https://www.nettavisen.no/3424050834.html/(24/11/2020)
 # reavisa.no (06 12 2020)
@@ -71,6 +70,7 @@ msFilterList
 # https://www.licitationen.dk/article/view/900259/efter_entreprenors_konkurs_river_106_ufaerdige_huse_ned_i_hojetaastrup/(08/03/2023)
 # maskinregisteret.no (08 03 2023)
 # eikernytt.no (18 05 2023)
+# Various now-dead Frettabladid subdomains
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -307,11 +307,6 @@ msFilterList
 -d malviknytt.no *-firkant-*e1*.
 -d reiseliv.no *-Annons%C3%B8rinnhold-*-Aksjer-*.
 -d escort46.dk bg_images
--d doktor.frettabladid.is *-Doktor-landscape.jpg
--d doktor.frettabladid.is 410x300_*.jpg
--d doktor.frettabladid.is *-addoktor.jpg
--d doktor.frettabladid.is *heilsu*.
--d doktor.frettabladid.is Reidist*.jpg
 -d forum.flyprat.no Header
 - _300x250px-*.gif
 - -banner_
@@ -520,8 +515,6 @@ msFilterList
 # kimbino.no, kimbino.dk (13 09 2020)
 # fasteignir.frettabladid.is (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/111644)
 -d via.placeholder.com
-# hringbraut.frettabladid.is (18 09 2020)
-# https://hringbraut.frettabladid.is/frettir-pistlar/smit-a-akranesi-allir-sem-foru-i-raektina-thurfa-ad-fara-i-sottkvi/
 # lokal-avisa.no, ringsakern.no (19 09 2020)
 # gjoviksblad.no (19 09 2020)
 # midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt.dk (30 09 2020)
@@ -555,6 +548,7 @@ msFilterList
 # nidaros.no (22 02 2023)
 # jyllands-posten.dk (22 03 2023)
 # forum.kvinneguiden.no (Mobile user agent; 05 04 2023)
+# Various now-dead Frettabladid subdomains from 2020
 # 🇳🇴 🇩🇰: ——— Sporingsfiler ———
 # 🇳🇴🏞: ——— Sporingsfilar ———
 # ❄: ——— Guorrafiilaid ———
@@ -726,13 +720,11 @@ msFilterList
 -d 52.216.146.90
 -d 92.42.104.146
 -d djurs.com-*.
--d hervelegeroutletusa.com
 -d itunesconnect-*.no
 -d jimmychoostore.top
 -d look-like-star.myshopify.com
 -d marked.no
 -d mrcal365.com
--d optimizersppc.com
 -d pensjonistferie.no
 -d postuksus.com
 -d replicapatekphilippe.com
