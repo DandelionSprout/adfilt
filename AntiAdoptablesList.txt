@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🛃 Anti-'Adoptables and Artsite NFTs' List
-! Version: 25May2023v1-Alpha
+! Version: 17June2023v1-Alpha
 ! Expires: 7 days
 ! Description: The concept of adoptables (and NFTs + to some extent closed species) on artsites is bewilderingly ludicrous, and goes against every known measure of good-practice capitalism. It denies the freedom to make transformative fan art, does not check if the seller has the skills to make art based on the purchase (s)he bought, and implies litigation threats that'd make Disney want the sellers' autographs. Here's how to avoid that shameful hateful culture.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -116,21 +116,17 @@ nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has(.fullname:h
 inkbunny.net#?#.widget_thumbnailLargeCompleteFromSubmission:has(img[title*=adopt])
 
 ! ——— Tumblr ———
-!#if !adguard
-tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has-text(/adoptable/i)
-tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has-text(/adopts/i)
-tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has-text(/cryptoart/i)
-tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has-text(NFT project)
-tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has-text(/nftcommunity/i)
-tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has-text(/nft ?collection/i)
-tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has-text(/nft ?marketplace/i)
-tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has-text(/nft ?art/)
-tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has-text(/OpenSea/i)
-tumblr.com#?#.post:not([class]):has(a[href*="foundation.app"])
-tumblr.com#?#.post:not([class]):has(a[href*="opensea.io"])
-tumblr.com#?#div[tabindex]:not([class]):has(a[href*="foundation.app"])
-tumblr.com#?#div[tabindex]:not([class]):has(a[href*="opensea.io"])
-!#endif
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has-text(/adoptable/i)
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has-text(/adopts/i)
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has-text(/cryptoart/i)
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has-text(NFT project)
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has-text(/nftcommunity/i)
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has-text(/nft ?collection/i)
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has-text(/nft ?marketplace/i)
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has-text(/nft ?art/)
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has-text(/OpenSea/i)
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has(a[href*="foundation.app"])
+tumblr.com#?#div[tabindex]:is([style],[data-id]:not([class*=" "])):has(a[href*="opensea.io"])
 
 ! ——— Furry Network ———
 furrynetwork.com#?#.media-grid__item:has-text(/Adoptable/i)
