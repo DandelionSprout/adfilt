@@ -38,6 +38,7 @@
 * `##element.class`: Hide something both based on its element (##element1) and `class` value (.class). Note the placement/absence of fullstops.
 * While they're based on the same `class` values, `##.element1` will match any `class` (sub-)value, whereas `##div[class="element1"]` and their modifiers are based on the *entire* `class` string in the F12 filetree.
 * `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or (domain-)specific, where they have one or more domains in front of them, separated by commas. uBO/AdGuard support wildcard asterisks (`*`) in such domains, and only for the immediate pre-TLD part; while ABP/AdBlock do not.
+* `##div:is(.element,.element2)`: Compression of `##div.element` and `##div.element2`. It is extremely rare that this would be needed in lists for uBlock Origin or Adblock Plus (who would be able to use `##div.element1,div.element2` in all circumstances), but it could help work around problems in AdGuard with `##element1,element2:has(-text)` that are explained in its section below.
 
 #### File blocking (a.k.a. blocking rules, a.k.a. non-#-rules)
 * \[no prefix\]: Blocks resources that have this text string *anywhere* in its URL.
