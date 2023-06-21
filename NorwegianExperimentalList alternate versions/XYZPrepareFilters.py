@@ -6023,6 +6023,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"! Placeholder line for alternate list versions", 
+           r"! To keep track of when on earth the AdGuard team will allow $denyallow in included lists\n||example.org^$denyallow=example.org\n||example.org^$denyallow=~example.org", 
+           line
+        )
+
         if is_supported_agh(line):
             text += line + '\n'
 
