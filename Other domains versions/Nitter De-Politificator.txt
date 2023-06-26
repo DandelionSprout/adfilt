@@ -1,12 +1,13 @@
 [Adblock Plus 3.13]
 ! Title: 🌂 Twitter De-Politificator - Nitter Supplement
-! Version: 19June2023v1
+! Version: 26June2023v2
 ! Expires: 4 days
 ! Description: Are you just trying to casually browse through some comedy and art accounts on Twitter, and have grown really, really tired and worn out by seeing trashy posts and accounts made by tweeters who physically can't stop babbling about politics, especially American politics? Then this list will probably save your life.
 ! Motivation: I joined Twitter in 2014, and it was a pretty cosy little coffee club for about a year and a half after that. Then the 2016 American election happened, and the entirety of Twitter turned into one giant political bitchslap contest that was completely devoid of common sense. By 2017 it had got nasty enough that I deleted my Twitter account, and I didn't begin to lurk there again for another year. This list has made me able to remove large portions of the crappy drama stuff, and now I can browse Twitter while seeing far less seething, mind-melting idiocy fill the comment sections.
 ! IMPORTANT NOTE 1: This list does not imply that I or the users of the list hold any particular political stance. The only thing that it claims, is that its users are tired of all the political stuff that is on Twitter.
 ! IMPORTANT NOTE 2: Generally, a word is added to the list if more than ~80% of the tweets that uses it are either depressing to get to know about, or are politically bitchslapping. There will be false positives, and there's very little I can do about that unless it's a matter of life and death. My apologies in advance, New England Patriots fans.
 ! IMPORTANT NOTE 3: It's not easy to figure out which keywords I should block and which ones I shouldn't. I usually can't block overly generic terms like "Christian", "Muslim", "guns", or avatar names with eagle emotes.
+! Note 4 20th of June 2023: Such is the severity of the terms I've dug up in recent months, that I've felt a need to use RegEx obfuscation so that no one would think I in any way use the terms the entries block, and to avoid having affected Twitter users find this list in search engine results.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! Entry syntaxes specific to this supplement:
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has(.fullname[title*=🇺🇸])
@@ -40,7 +41,7 @@ nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/[.!?]
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/An?drenochro[nm]e/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/agenda/i):not(:has-text(SVT))
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/anti[ -]?Semiti/i)
-nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Antifa /i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Antifa([ .,;!?=s_-]|\'|\")/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Blackpill/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/bluepilled/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Build[ _]?The[ _]?Wall/i)
@@ -367,7 +368,7 @@ nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/shitl
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/T(he)? ?Post ?Millen\ial/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/dc ?enquirer/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/James\OKeefe/)
-nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Dinesh ?D\'?Souza/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/D\inesh ?D\'?Souza/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Love ?Jihad/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Bl@\*?ck/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/(Brown|Black)/i):has-text(/Parasite/i)
@@ -375,6 +376,20 @@ nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/P[@*]
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Kh[@a]list[b-z@ .,:;]/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/m[@*uo]zl[ie]m/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/ ESG([ .,;!?=s-]|\'|\")/)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/race ?traitor/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/race ?mixing/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/gender ?freak/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/T\imc[аa]st/)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/bloodline/i):has-text(/destroy/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/flag/i):has-text(/ideolog/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/subhum[аa]n/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/ n\i?[*.…-]{1,}e?r([ .,;!?=_-]|\'|\")/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/white ?countr/i):has-text(/destroy/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/hol\ocoast/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has(.r-dnmrzs:has([alt=✝️]))
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has(.r-dnmrzs:has([alt=☦️]))
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/musl\ima/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/wh\ite ?fl\ight/i)
 ! Non-Anglophone entries
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/landsforræder/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/landsförräd/i)
@@ -392,6 +407,13 @@ nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/sosia
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Miljöpartiet/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(MLP_officiel)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/जय[ _]?श्री[ _]?राम/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/massinvandring/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/j\oh[аa]n ?g\ill\man/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/dkpol/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/klimatsekt/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/z\igenar/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/invandrarspråk/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/ neg[€e]r/i)
 ! Specific politicians
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Trump/i):not(:has-text(/Twitch|Judd/)):not(:has-text(/Snooker|Trumpet|Trumping/i))
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(טראמפ)
@@ -459,3 +481,5 @@ nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Russe
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/(Kevin|Speaker) ?McCarthy/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Jacinda ?Ardern/i)
 nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Lauren[ _]?Boebert/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/RFK ?Jr/i)
+nitter.net,nitter.lacontrevoie.fr,nitter.1d4.us#?#.timeline-item:has-text(/Robert ?Kennedy/i)
