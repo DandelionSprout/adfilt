@@ -1,5 +1,5 @@
 [Adblock Plus 3.13]
-! Version: 04June2023v1
+! Version: 27June2023v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -23,6 +23,7 @@
 ###custom_smartbanner
 ###download-app-banner
 ###epoznan-apk-banner-container
+###getTheAppFooter
 ###ibu_app_download_banner
 ###mn-app-banner
 ###mobilapp-download-module
@@ -47,12 +48,12 @@
 ##.app-advertising:not(html, body)
 ##.app-banner:not(html, body)
 ##.app-btn:not(html, body)
-##.app-cta:not(html, body)
 ##.app-cta-strip-banner:not(html, body)
-##.app-download:not(html, body, section)
+##.app-cta:not(html, body)
 ##.app-download-wrap:not(html, body)
-##.app-nag:not(html, body)
+##.app-download:not(html, body, section)
 ##.app-nag-body:not(html, body)
+##.app-nag:not(html, body)
 ##.app-store-banner:not(html, body)
 ##.app-teaser:not(html, body)
 ##.app__banner:not(html, body)
@@ -65,8 +66,8 @@
 ##.AppBanner:not(html, body)
 ##.AppBannerContainer:not(html, body)
 ##.appdl_header:not(html, body)
-##.appdownload:not(html, body)
 ##.appdownload-panel:not(html, body)
+##.appdownload:not(html, body)
 ##.AppPopup:not(html, body)
 ##.appPromo:not(html, body)
 ##.appPromotionPanel:not(html, body)
@@ -78,25 +79,29 @@
 ##.bottom-download-app-view:not(html, body)
 ##.brn-web-to-app-banner:not(html, body)
 ##.content-toaster--mobile-app:not(html, body)
-##.download-app:not(html, body)
 ##.download-app-banner:not(html, body)
+##.download-app:not(html, body)
 ##.download_app:not(html, body)
-##.downloadapp:not(html, body)
 ##.downloadapp-modal:not(html, body)
+##.downloadapp:not(html, body)
 ##.downloadAppBar:not(html, body)
+##.downloadAppWrapper:not(html, body)
 ##.downloadPlay:not(html, body)
 ##.fixed_downapp:not(html, body)
 ##.footer_apk:not(html, body)
 ##.footerapps:not(html, body)
 ##.fra_js_app_banner:not(html, body)
 ##.get-app-block:not(html, body)
-~macgamestore.com##.get-the-app:not(html, body)
 ##.getapp:not(html, body)
 ##.getTheApp:not(html, body)
+##.gh-app-banner:not(html, body)
 ##.go-to-app:not(html, body)
+##.gta-banner-link:not(html, body)
+##.gta-header-banner:not(html, body)
 ##.header-promo-apps:not(html, body)
 ##.install_app:not(html, body)
 ##.installAppPopup:not(html, body)
+##.item__application-wrap:not(html, body)
 ##.js-app_banner:not(html, body)
 ##.js-mobile-app:not(html, body)
 ##.js-mobile-banner:not(html, body)
@@ -104,29 +109,32 @@
 ##.jsAppDown:not(html, body)
 ##.m-smartbanner:not(html, body)
 ##.menu-bar-pitch_open-in-app:not(html, body)
+##.mob-app-redirect:not(html, body)
 ##.mob-download:not(html, body)
 ##.mobile-app-bar-view:not(html, body)
 ##.mobile-app-links:not(html, body)
 ##.mobile-applications-promo:not(html, body)
 ##.mobile_apps:not(html, body)
-##.mobileApp:not(html, body)
 ##.mobileApp-wrap:not(html, body)
+##.mobileApp:not(html, body)
 ##.MobileAppHeader-downloadLink:not(html, body)
 ##.mobileAppWarning:not(html, body)
 ##.ms-side-widget--promo-app:not(html, body)
-##.open-in-app:not(html, body)
+##.nwopnapp:not(html, body)
 ##.open-in-app-promo:not(html, body)
+##.open-in-app:not(html, body)
 ##.open-in-application:not(html, body)
 ##.OpenInAppBanner:not(html, body)
 ##.OpenInAppButton:not(html, body)
+##.PcToAppBanner
 ##.popup-app:not(html, body)
 ##.shz-frame-apps-banner:not(html, body)
 ##.SiteHeader__AppBtn:not(html, body)
 ##.smart-app-banner:not(html, body)
 ##.smart-banner:not(html, body)
+##.smartBanner-container:not(html, body)
 ##.SmartBanner:not(html, body)
 ##.smartbanner:not(html, body)
-##.smartBanner-container:not(html, body)
 ##.smartbanner__height:not(html, body)
 ##.smartbanner_new:not(html, body)
 ##.SmartBannerContainer:not(html, body)
@@ -135,21 +143,19 @@
 ##.wds-is-community-apps:not(html, body)
 ##.widget-smart-banner:not(html, body)
 ##[class^=GetTheAppBanner]:not(html, body)
-##.downloadAppWrapper:not(html, body)
-##.item__application-wrap:not(html, body)
 ##[data-test-id=install-app]
 ##a[data-js-open-in-app]
 ##amp-app-banner
-##smart-banner
 ##div[class$="-download-app-container"]
 ##div[class*=smart-banner i]:not(.smart-banner-visible)
 ##div[class*=smartbanner i]
-##div[class^=download-app_box]
-##div[class^=DownloadAppBanner__]
 ##div[class^=app-download-wrap]
 ##div[class^=app_banner]
 ##div[class^=app_download]
+##div[class^=AppBanner__]
 ##div[class^=AppUpsellHeader]
+##div[class^=download-app_box]
+##div[class^=DownloadAppBanner__]
 ##div[class^=mobile-upsell]
 ##div[id$=smart-app-banner]
 ##div[id*=smart-banner i]
@@ -157,14 +163,12 @@
 ##head[prefix~="medium-com:"] ~ body .js-openInAppButton
 ##head[prefix~="medium-com:"] ~ body .js-postActionsBarContent > .js-readNextInteractions
 ##section[appdownload]
-*/jquery.smartbanner/
-.smartbanner.js
-/js/smartbanner.
-/smart-app-banner.
-/smartbanner/appbanner.js
-/wp-content/plugins/ioimedia-app-banner/*
+##smart-banner
+~macgamestore.com##.get-the-app:not(html, body)
+180.no##.ad-fallback
 9gag.com##.badge-sticky-button
 abril.com.br##.magazine-read
+adguard.com##.sidebar-download
 aliexpress.com#?#.ms-downloadbar-wrap:style(display: none!important)
 aliexpress.com#?#.ms-header.w-download .header-main:style(margin-top: auto!important)
 aliexpress.com#?#.ms-header.w-download:style(height: 55px!important)
@@ -183,7 +187,9 @@ bilibili.com##.nav-link-item a[href$="app.bilibili.com"]
 booking.com##.appacq-banner-rating-wrap
 cloud.mail.ru###leftcol > div.download
 cofers.com#?#.widget:has-text(Download our App!)
+dagbladet.no##.slide-in-banner
 delfi.*###delfi_header > div#dh_middle
+dinside.no##.mobile-only.slide-in-banner
 disk.yandex.*##.b-download
 dropbox.com###pyxl2881092706975949833
 ednist.info##.phone-container
@@ -194,6 +200,7 @@ ferry.nyc##.header__bar
 finans.mynet.com###moblie_banner_300x250
 finans.mynet.com###moblie_banner_650x80
 freekaamaal.com###ftrbgdiv
+geekdashboard.com##.section--download
 geniuskitchen.com##.gk-promo-card
 giveawayoftheday.com##.bottom_b
 google.*##mobile-promo
@@ -206,6 +213,7 @@ instagram.com##._c05qa
 instagram.com##a[href="/accounts/login/?next=%2F&source=mobile_nav"] + button
 instagram.com##a[href^="https://itunes.apple.com/app/instagram/id389801252?"][role=alert]
 instagram.com##body > span > section > nav > div > div > section.xZ2Xk
+instagram.com##main > div[class$="     "]:first-of-type + section:last-of-type
 instagram.com#?#nav > div > div > section > div:has(div > div > button > div)
 intellicast.com###promoAd
 intellicast.com###stormLink
@@ -215,11 +223,11 @@ ipleer.fm##.rt_play_market
 ixigua.com##.nav-list a[href$="/app/"]
 jkanime.site##body > div[style="padding:5px; background-color:yellow; text-align:center; border:2px solid yellow;"]
 kaktam.ru##.wrapper--banner
-adguard.com##.sidebar-download
 kicker.de#?##ovContentScroller:style(padding-top: 0 !important)
 kicker.de#?##ovHeader:style(top: 0 !important)
 klavyer.com#?#a[href="https://www.klavyer.com/android-uygulamamiz"]:style(display: none!important)
 klavyer.com#?#body .container .sidebar_last:style(margin-top: -5px!important)
+kurashiru.com##.footer-image-wrapper
 lefigaro.fr#?#html.smartBanner header#fig-header:style(height: 50px!important)
 lezzet.com.tr##.footer-mobil-uygulama-box
 lifehacker.ru###sidebar-footer-3 > aside > div.textwidget > a > img
@@ -267,6 +275,8 @@ mbasic.facebook.com,d.facebook.com,free.facebook.com,0.facebook.com,mbasic.faceb
 mediamarkt.de##.mrh-app-banner
 mediamarkt.de#?#.app-banner-active #header-wrapper:style(height: 50px !important)
 mediamarkt.de#?#.app-banner-active header.mrh-header:style(top: 0 !important)
+metservice.com##.Footer-section--promo
+metservice.com##.HasPromoPadding
 miui.com##.app_download
 momondo.*###mobile-splash-popup:style(display: none!important)
 momondo.*###mui-header:style(display: block!important)
@@ -279,10 +289,13 @@ music.yandex.*##.event__notify_bg5
 my.klarna.com##.reveal-overlay
 mywot.com##.app-stripe
 naturalatlas.com##.mapbar-btn.btn-has-icon
+news18.com##.app_icon
 nfb.ca##.bandeOuterHeightLogo
 nostalgie.be,nrj.be#?##android_box:style(display: none!important)
 nostalgie.be,nrj.be#?#.navbar-fixed-top:style(top: 0 !important)
+nova.rs##.banner-footer
 nytimes.com,nytimes3xbfgragh.onion##.css-990mwl
+objektiv.rs##.app-section
 obzor.press###meerkat-wrap
 olx.ua###appsBottomBar
 oncoforum.ru##.footer-app
@@ -293,13 +306,18 @@ opodo.de###new_app_layer
 pagesix.com##.pagesix-app-flyout__wrapper
 pcgames.de##div.header_footer.ui-footer.ui-bar-inherit.ui-footer-fixed.slideup[data-role="footer"]
 pixiv.net##dialog.app-dialog-for-first-user
+playpilot.com##.android-prompt
 presseportal.de##.mobile-container.app-notification
 pvplive.net##a[href="/m/getmobile"]
+radarbox.com##.apps
 radio.yandex.*##.nav__items > div.nav__banner
 radugaskidok.ru##.store-bg
 radugaskidok.ru#?#.rs-header-line-new:style(top: 0 !important)
 rambler.ru##.wrap > section.promo.j-promo
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##.XPromoPill
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[class]:last-of-type:not([class*=" "]) > div[class]:only-of-type:not([class*=" "]):has(img[src*=redditstatic][src*="/img/nsfw-blocking-"])
 regnum.ru##.footer-apps
+republika.rs##.app-box
 roblox.com###app-bumper-main
 romania-insider.com##.ri-app
 rozetka.com.ua###banner-application
@@ -307,8 +325,10 @@ rt.com###offers
 rt.com##.app-panel
 rt.com#?#.header.header_top-interval_js:style(margin-top: 0 !important)
 rt.com#?#.layout__header_top-interval_js:style(height: 50px !important)
-rtcg.me##.footerStoreLinks
 rtcg.me##.footerBgrdImg
+rtcg.me##.footerStoreLinks
+rts.rs##.footer-download
+rts.rs#?#.boxRight:has(img[src*=ndroid-aplikacija])
 schlaukopf.de#?#html:style(margin-top: 0 !important)
 schnaeppchenfuchs.com##.mobile-promo-apps__vertical-spacer
 shiftdelete.net##.e_magazine_mobile
@@ -320,6 +340,7 @@ slader.com##a[href^="https://itunes.apple.com/"].slader-stickers
 slatedroid.com###banner_div_empty
 slatedroid.com###tt_mobile_banner
 soundcloud.com##article.mobileApps
+speedtest.net##.mobile-pretest
 spor.mynet.com###fSocialMediaWrap > #fApp
 sport-express.ru##.addmenu li.advertwww
 sport.de##a.hs-app
@@ -336,6 +357,8 @@ tabs.ultimate-guitar.com#?#.spl-content-side-overflow:style(max-width: none !imp
 tabs.ultimate-guitar.com#?#.ugm-chord-panel--scroller:style(white-space: normal !important)
 tabs.ultimate-guitar.com#?#.undefined:has(button[icon=android])
 tellows.de###hint_box
+tokopedia.com##div[id*=header] div[class^=css-]> a[href="/mobile-apps/"]
+tokopedia.com#?#div[id*=header] i:has(+ a[href="/mobile-apps/"])
 touch.qunar.com#?#.col4:has(.guide-box[href*="/download?immediate="])
 tripadvisor.*###partialScreenInterrupter
 tripadvisor.*#?##PAGE_CONTAINER.smartbanner_shown_on_top:style(top: 0 !important)
@@ -374,12 +397,12 @@ zaycev.fm##.soft-promo
 zedge.net##.column.grid_12.leader
 zedge.net##.column.trailer.leader
 zona.mobi###zona-android
-dinside.no##.mobile-only.slide-in-banner
-radarbox.com##.apps
-metservice.com##.Footer-section--promo
-metservice.com##.HasPromoPadding
-dagbladet.no##.slide-in-banner
-geekdashboard.com##.section--download
+*/jquery.smartbanner/
+.smartbanner.js
+/js/smartbanner.
+/smart-app-banner.
+/smartbanner/appbanner.js
+/wp-content/plugins/ioimedia-app-banner/*
 ||2app.lk^$third-party
 ||anistar.ru/templates/*/images/android-app-on-google-play.png^
 ||assets.ilcdn.fi/IL_Parassaa_612px.gif^$image
@@ -397,29 +420,6 @@ geekdashboard.com##.section--download
 ||unleashedprepaids.com/mobiquo/smartbanner/
 ||vizefinalsorupaylasimi.com/uploads/googleplay.jpg^
 ||weather.gc.ca/banner/images/App_*.gif$image
-##.gta-header-banner:not(html, body)
-##.gta-banner-link:not(html, body)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##.XPromoPill
-speedtest.net##.mobile-pretest
-instagram.com##main > div[class$="     "]:first-of-type + section:last-of-type
-nova.rs##.banner-footer
-180.no##.ad-fallback
-##.gh-app-banner:not(html, body)
-playpilot.com##.android-prompt
-##div[class^=AppBanner__]
-##.mob-app-redirect:not(html, body)
-###getTheAppFooter
-kurashiru.com##.footer-image-wrapper
-##.PcToAppBanner
-tokopedia.com##div[id*=header] div[class^=css-]> a[href="/mobile-apps/"]
-tokopedia.com#?#div[id*=header] i:has(+ a[href="/mobile-apps/"])
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[class]:last-of-type:not([class*=" "]) > div[class]:only-of-type:not([class*=" "]):has(img[src*=redditstatic][src*="/img/nsfw-blocking-"])
-republika.rs##.app-box
-objektiv.rs##.app-section
-rts.rs#?#.boxRight:has(img[src*=ndroid-aplikacija])
-rts.rs##.footer-download
-##.nwopnapp:not(html, body)
-news18.com##.app_icon
 
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/116903)
 !!!twitter.com###layers > div:nth-of-type(2):last-of-type
