@@ -103,18 +103,18 @@ pinterest.*##div[data-test-id=pin-closeup-image] > div[role=button] > div:not([c
 
 ! Twitter
 !! Removes a "See What's Happening" prompt at the bottom of some tweet chains
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=primaryColumn] div:has(> div > div > a[href="/login"])
+twitter.com#?#div[data-testid=primaryColumn] div:has(> div > div > a[href="/login"])
 !! Removes a login prompt when visiting "/intent/follow"-type links in mobile environments
 ! https://twitter.com/intent/follow?screen_name=mesitsu (13/04/2020)
 mobile.twitter.com,mobile.twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
 !#if env_mobile
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
+twitter.com#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
 !#endif
 !#if false
 ! Removes the bottom login sticky banner about logging in, in the April 2020-ish redesign 🔨
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:has(a[href="/i/flow/signup"])
+twitter.com#?##layers > div[class*=" "]:first-of-type:has(a[href="/i/flow/signup"])
 ! https://twitter.com/hideo_kojima_en/status/319595772981166080
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
+twitter.com###layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
 !#endif
 !#if !env_mobile
 ! Fullpage uncloseable overlay on some pages
