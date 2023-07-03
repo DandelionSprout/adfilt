@@ -191,6 +191,12 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
+           r",~inline-font$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"^\$[a-z0-9-]{1,}$", 
            r"", 
            line
@@ -4422,7 +4428,19 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
+           r",~inline-font$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r",~inline-font,~inline-script,~domain=", 
+           r",~domain=", 
+           line
+        )
+
+        line = re.sub(
+           r",~inline-font,~domain=", 
            r",~domain=", 
            line
         )
@@ -4682,6 +4700,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r",~inline-script,~inline-font$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r",~inline-font$", 
            r"", 
            line
         )
@@ -5126,6 +5150,11 @@ def prepare_tpl(lines) -> str:
            r"", 
            line
         )
+        line = re.sub(
+           r".* amazonaws.*", 
+           r"", 
+           line
+        )
 
         if is_supported_tpl(line):
             text += line + '\n'
@@ -5269,6 +5298,12 @@ def prepare_privoxy(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\.amazonaws.*", 
+           r"", 
+           line
+        )
+
         if is_supported_privoxy(line):
          text += line + '\n'
 
@@ -5276,7 +5311,6 @@ def prepare_privoxy(lines) -> str:
 
 # ————— /hosts file version —————
 
-# Attempts to achieve Internet Explorer TPL support
 def is_supported_hosts(line) -> bool:
     for token in UNSUPPORTED_HOSTS:
         if token in line:
