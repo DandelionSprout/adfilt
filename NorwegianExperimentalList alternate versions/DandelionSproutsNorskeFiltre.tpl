@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 25June2023v1-Deprecated
+# Version: 05July2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -741,6 +741,7 @@ msFilterList
 -d havfruen4220.dk
 -d bankid-sperret.
 -d srilanka.no
+-d innboks.info
 - ?finn.no login
 # 🇬🇧: Copied over from «Dandelion Sprout's Anti-Malware List»
 -d fredfiber.no
