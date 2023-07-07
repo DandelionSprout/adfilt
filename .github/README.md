@@ -4,7 +4,7 @@
 
 ———————————————————————————
 
-**IMPORTANT NOTE:** My lists do not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and its various syntax limitations. Issue reports for Manifest v3-based extension versions, or Chrome versions released [after May 2023](https://www.ghacks.net/2022/09/29/google-delays-the-death-of-manifest-v2-extensions-to-2024/), will **not** be accepted, and if you do submit one, you would be asked to use an alternate web browser instead.
+**IMPORTANT NOTE:** My lists do not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and its various syntax limitations. Issue reports for Manifest v3-based extension versions will **not** be accepted, and if you do submit one, you would be asked to use an alternate web browser instead.
 
 And just in case anyone thinks I'm not serious about it, **I no longer offer support to Safari ≥13 users** (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
 
