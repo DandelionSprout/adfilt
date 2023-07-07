@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 06July2023v1
+! Version: 07July2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2780,7 +2780,7 @@ $removeparam=ref_ctx_id
 ||oikotie.fi^$removeparam=sRef
 
 ! https://sn.dk/Verden/Rumturister-er-tilbage-paa-Jorden-efter-historisk-mission/artikel/1472742?rss
-$removeparam=rss,domain=sn.dk|ted.com
+$removeparam=rss,domain=marketwatch.com|sn.dk|ted.com
 
 ! https://scontent.cdninstagram.com/v/t50.2886-16/228280186_4462339507137399_6165083647713647040_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5zdG9yeS5kZWZhdWx0In0&_nc_ht=scontent-iev1-1.cdninstagram.com&_nc_ohc=nL_7kCFHgrcAX-HT6F1&edm=AOVtZ6oBAAAA&vs=17895914579221456_1489520608&_nc_vs=HBksFQAYJEdIcEhtdzEzcXpCaGVkb1BBTUNaaXVEcHhvNVZidXFIQUFBQRUAAsgBABUAGCRHTVdiZFE2Z2ZIa3dVWFVBQUtNZXdSNFhTQ2NSYnBrd0FBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACbCkMnRj5zWPxUCKAJDMywXQCREGJN0vGoYEmRhc2hfYmFzZWxpbmVfM192MREAdegHAA%3D%3D&ccb=7-4&oe=614B0BE1&oh=22849edcbcdb1949e3f0cbde56ddd89b&_nc_vts_prog=1&dl=1
 ||cdninstagram.com^$removeparam=ccb
@@ -4117,6 +4117,12 @@ $removeparam=repost,domain=nbcnews.com|sacurrent.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6306076
 ||uslecce.it^$removeparam=et
+
+! https://www.skinnytaste.com/burger-recipes/?adt_ei=*|EMAIL|*
+||skinnytaste.com^$removeparam=adt_ei
+
+! https://www.pnas.org/doi/abs/10.1073/pnas.2024425118?af=R
+$document,removeparam=af,domain=pnas.org|science.org|scitation.org|wiley.com|worldscientific.com
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
