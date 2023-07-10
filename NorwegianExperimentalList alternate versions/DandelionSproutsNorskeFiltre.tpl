@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 08July2023v1-Deprecated
+# Version: 10July2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -753,6 +753,62 @@ msFilterList
 -d eccolabgroup.com
 -d galerijajava.ba
 -d p-stn.net
+# Fak Gymshark webshops
+-d altrasgshoes.com
+-d altrask.com
+-d bershka-norge.com
+-d bershkadenmark.com
+-d blundstoneskooslo.com
+-d brunateskonorge.com
+-d dsbuhw.shop
+-d dscvsb.shop
+-d dsjifs.shop
+-d dswuxd.shop
+-d g-ymsharknorge.com
+-d gantdanmark.com
+-d gantnorge.com
+-d gym-shark-norge.com
+-d gymshark-danmarkudsalg.com
+-d gymshark-no.com
+-d gymsharkbutikdanmark.com
+-d gymsharkbutikkoslo.com
+-d gymsharkdanmark.com
+-d gymsharkidanmark.com
+-d gymsharkiesale.com
+-d gymsharkklærnorge.com
+-d gymsharkldanmark.com
+-d gymsharklnorge.com
+-d gymsharkno.com
+-d gymsharknorge.com
+-d gymsharkoutletsnorge.com
+-d gymsharksalg.com
+-d gymsharktightsnorge.com
+-d gymsharnorge.com
+-d hilfigerdenmark.com
+-d hilfigernorge.com
+-d hugobossbutikk.com
+-d hunterstovlerbutikk.com
+-d josefseibeloutletnorge.com
+-d joyaskobutikk.com
+-d kybunskodanmark.com
+-d louboutinnorge.com
+-d montec-danmark.com
+-d montecnorge.com
+-d montecsalg.com
+-d nauticadanmark.com
+-d nauticanorge.com
+-d salgvejanorge.com
+-d sanukdk.com
+-d sanuksandaler.com
+-d umbrodk.com
+-d umbrono.com
+-d underarmour-dk.com
+-d underarmourdk.com
+-d underarmourdks.com
+-d vejadanmarkudsalg.com
+-d xeroshoes-danmark.com
+-d xeroshoesdanmark.com
+- -norgesalg.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
