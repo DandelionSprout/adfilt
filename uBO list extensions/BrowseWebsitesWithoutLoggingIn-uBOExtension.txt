@@ -1,5 +1,5 @@
 ! This is an extension file, not an independent list.
-! Extension file's version: 13July2023v1-Extension
+! Extension file's version: 13July2023v2-Extension
 
 ! Experts Exchange 📛📠
 experts-exchange.com##.accepted.answer:style(display: block !important)
@@ -118,7 +118,8 @@ segmentfault.com##.modal-open [style]:is([data-padding-right], [data-margin-righ
 tumblr.com##style:has-text(/^body /):has(use[href*=logo-tumblr]):remove()
 !!! tumblr.com#?##glass-container:has(use[href*=logo-tumblr]) - https://github.com/DandelionSprout/adfilt/issues/845
 !!! tumblr.com#?##glass-container:has(use[href$=_google-logo]) - https://github.com/DandelionSprout/adfilt/issues/845
-tumblr.com#?##glass-container:has(p + p):has(a[href^="/auth/google?"])
+! ([role=dialog] is needed to make the ••• buttons work)
+tumblr.com###glass-container > div[role=dialog]:has(p + p):has(a[href^="/auth/google?"])
 !! The same prompt 6 months later:
 tumblr.com#?##glass-container > div[role^=dialog]:has(#g-recaptcha):has(a[href*=terms-of-service])
 !! https://github.com/DandelionSprout/adfilt/commit/db0401c254e7064a9048e1aa52326a080ed97107#commitcomment-111160729 + https://github.com/DandelionSprout/adfilt/discussions/642 + The Trending page's numbered top list tries to enforce logins
