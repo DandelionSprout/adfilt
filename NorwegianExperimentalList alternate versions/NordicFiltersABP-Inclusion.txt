@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 100720231
+! Version: 310720231
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -374,6 +374,7 @@ brunsvika.net#?#.platform-content:has(a[href*="averoybrannvern.no"])
 spurt.no##.cp-popup-container
 spurt.no##.typology-ad
 migogkbh.dk##a[href*=casino]
+gaysir.no##div[info*=annonse]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -864,6 +865,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||tv2.no/prod/sponsor^$image
 ||rett24.no^*bannerizor.js
 ||static.finncdn.no/*/FINNExternalDistribution.js^$domain=aftenbladet.no|aftenposten.no
+||gaysir.no/rek^
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 @@||vgtv.no^$generichide
@@ -1002,7 +1004,7 @@ bt.no#?#*:has(> [data-variants*=article_netboard])
 bt.no##div[class^=article-wrapper-] > div[class^=" "]
 bt.no##div[class^=article-wrapper-] > div[class^=_]
 budstikka.no##.bazaar
-byas.no##.section-ad-netboard
+byas.no,pressfire.no##.section-ad-netboard
 bygg.no##.ads-floating
 bygg.no##.ads-strip
 byggebolig.no##.maestro-content-plugins
@@ -1599,6 +1601,8 @@ borsen.dk###topbanner
 herognu.dk##div[id^=herognu_]
 folketidende.dk#?#.block:has(> .adblock)
 folketidende.dk#?#.block:has(> div[id^=jourbox] > iframe[src*=readpeak])
+pressfire.no##.ad-netboard
+tidssonen.no##.post-content > p[style*=font]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -5039,7 +5043,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Sun, 09 Jul 2023 08:36:29 +0000
+! Last modified: Tue, 25 Jul 2023 17:03:54 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -6043,6 +6047,7 @@ tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:has-text(Kaup
 tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
 telsu.fi#?#.ch:-abp-has(em>a)
 telsu.fi#?#.ch:has-text(/SPON|SPONS|SPONSO|SPONSOR|SPONSORO|SPONSOROI|SPONSOROIT|SPONSOROITU/)
+telsu.fi#?#.ch:has-text(/SP(O|0)NSOROITU/)
 tennis.fi##.ad-blocks
 tervareitti.fi##.advertisement-banner-row
 tervareitti.fi#?#.article-container.shadow-sm.col:-abp-has(img[alt^="Oma tilausmainos"])

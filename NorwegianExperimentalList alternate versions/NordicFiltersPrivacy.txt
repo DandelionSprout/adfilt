@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 10July2023v1
+! Version: 31July2023v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -384,6 +384,7 @@ brunsvika.net#?#.platform-content:has(a[href*="averoybrannvern.no"])
 spurt.no##.cp-popup-container
 spurt.no##.typology-ad
 migogkbh.dk##a[href*=casino]
+gaysir.no##div[info*=annonse]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -873,6 +874,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||tv2.no/prod/sponsor^$image
 ||rett24.no^*bannerizor.js
 ||static.finncdn.no/*/FINNExternalDistribution.js^$domain=aftenbladet.no|aftenposten.no
+||gaysir.no/rek^
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 !#if false
@@ -1034,7 +1036,7 @@ bt.no##[data-variants*=article_netboard]:upward(1)
 bt.no##div[class^=article-wrapper-] > div[class^=" "]
 bt.no##div[class^=article-wrapper-] > div[class^=_]
 budstikka.no##.bazaar
-byas.no##.section-ad-netboard
+byas.no,pressfire.no##.section-ad-netboard
 bygg.no##.ads-floating
 bygg.no##.ads-strip
 byggebolig.no##.maestro-content-plugins
@@ -1661,6 +1663,8 @@ borsen.dk###topbanner
 herognu.dk##div[id^=herognu_]
 folketidende.dk#?#.block:has(> .adblock)
 folketidende.dk#?#.block:has(> div[id^=jourbox] > iframe[src*=readpeak])
+pressfire.no##.ad-netboard
+tidssonen.no##.post-content > p[style*=font]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
