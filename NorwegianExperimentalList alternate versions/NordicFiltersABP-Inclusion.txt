@@ -5043,7 +5043,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Tue, 25 Jul 2023 17:03:54 +0000
+! Last modified: Sun, 06 Aug 2023 17:08:53 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -5198,6 +5198,7 @@ alibi.fi##.magazineorderwidget__content
 alibi.fi#?#.article__body > p:has-text(/^\xA0$/)
 alibi.fi#?#.sidebar-block:-abp-has(img.awpo-lazy)
 alibi.fi,ampparit.com,anna.fi,eralehti.fi,golfpiste.com,hymy.fi,kaksplus.fi,kipparilehti.fi,kotiliesi.fi,koululainen.fi,muropaketti.com,nettiauto.com,nettikaravaani.com,nettikone.com,nettimarkkina.com,nettimokki.com,nettimoto.com,nettivaraosa.com,nettivene.com,nettivuokraus.com,rakennusmaailma.fi,seura.fi,suomenkuvalehti.fi,tekniikanmaailma.fi,venelehti.fi##div[id^=dfp__]
+alibi.fi,hymy.fi##.sidebar-block > a[href^="http://pubads.g.doubleclick.net/gampad/clk"]
 alibi.fi,hymy.fi##[href*="paratiisi.fi"]
 alueviesti.fi###front_after_menu
 alueviesti.fi##.latest_sima
@@ -5507,7 +5508,6 @@ huonoaiti.fi#?#.col.article-card.item:has-text(Kaupallinen yhteistyö, yhteisty�
 huuto.net###hise-items-container
 huuto.net#?#.grid-element-container:-abp-has(.hise-link[href^="https://"])
 hymy.fi##.grid--dfp-slots
-hymy.fi##.sidebar-block > a[href^="http://pubads.g.doubleclick.net/gampad/clk"]
 hyvaterveys.fi##.pane-sbase-cts-native-native-front
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi###paraati-ad-grid
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.-ad1.-ad.sidebar__column-item
@@ -5856,7 +5856,7 @@ outokummunseutu.fi,pielisjokiseutu.fi,pogostansanomat.fi,ylakarjala.fi#?#.sp-mod
 pakkotoisto.com##.samBannerUnit
 pakkotoisto.com##.samCodeUnit
 pakkotoisto.com##.td-header-sp-recs
-palkkavertailu.com###nav + div[style="min-height:250px;text-align:center"]
+palkkavertailu.com###nav + div[style="text-align:center;min-height:280px"]
 palloliitto.fi##[aria-label="Linkki mainokseen"]:not([href^="https://kauppa.palloliitto.fi/"])
 pelaaja.fi##div.views-injected-row.views-row
 pelaaja.fi##div[class="main-container header-container container-fluid"]
@@ -6271,7 +6271,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ! /telsu\.fi\/[\w?-]+$/$xmlhttprequest,~third-party,domain=telsu.fi
 ! /telsu\.fi\/img\/(?!cloudcity|mindmax|navibg|prg|tvohjelmat)/$image,domain=telsu.fi
 ! /telsu\.fi\/s\/[\w\d]{30,40}$/$image,domain=telsu.fi
-/wp-content/uploads/*/HymyAlibi2022_300x300_pupu.jpg$image,domain=alibi.fi|hymy.fi
+/wp-content/uploads/*/HymyAlibi*_300x300_$image,domain=alibi.fi|hymy.fi
 /wp-content/uploads/pum/*$domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
@@ -6280,7 +6280,6 @@ _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutis
 ||affiliate.guts.com^$third-party
 ||affiliatesolution.se^$domain=ykkoslohja.fi
 ||alibi.fi/wp-content/uploads/2018/03/AL_sivupalkin_myyntiviesti2.jpg$image
-||alibi.fi/wp-content/uploads/2022/04/HymyAlibi_300x300_VAPPU.jpg$image
 ||ap-online.media.fi/scripts/eneo*.dll$script,domain=aamuposti.fi|helsinginuutiset.fi|karkkilantienoo.fi|keski-uusimaa.fi|lansi-uusimaa.fi|lansivayla.fi|lappeenrannanuutiset.fi|lopenlehti.fi|loviisansanomat.fi|mantsalanuutiset.fi|nurmijarvenuutiset.fi|pyhtaanlehti.fi|seinajoensanomat.fi|sipoonsanomat.fi|tamperelainen.fi|turkulainen.fi|uusimaa.fi|vantaansanomat.fi|vihdinuutiset.fi
 ||apps.sandviks.com/apix?x-method=ElementService.selectAdvertiserElement$script,domain=vau.fi
 ||asuntorauma.fi/iframe/uusimmat$subdocument,domain=ls24.fi
@@ -6482,9 +6481,6 @@ kotiliesi.fi#?#.article-card-grid li:-abp-has(div[id^=dfp__])
 
 ! Exception to Lowe's list - it removes some boxes
 @@||conductrics.com^$script,domain=elisa.fi
-
-! Sending a product review won't work, Lowe's list
-@@||mpsnare.iesnare.com/snare.js$script,domain=power.fi
 
 ! Lowe's list and Easyprivacy prevent opening thread replys via email
 @@||click.redditmail.com^$~third-party
