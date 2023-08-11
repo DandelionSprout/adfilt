@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 31July2023v1-Deprecated
+# Version: 11August2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -754,7 +754,7 @@ msFilterList
 -d eccolabgroup.com
 -d galerijajava.ba
 -d p-stn.net
-# Fak Gymshark webshops
+# Fake Gymshark webshops
 -d altrasgshoes.com
 -d altrask.com
 -d bershka-norge.com
@@ -810,6 +810,10 @@ msFilterList
 -d xeroshoes-danmark.com
 -d xeroshoesdanmark.com
 - -norgesalg.com
+# E-mail tips
+-d s.free.fr
+-d trmff.wpengine.com
+-d 212.27.60.108
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
