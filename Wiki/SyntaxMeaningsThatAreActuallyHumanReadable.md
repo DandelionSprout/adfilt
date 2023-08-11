@@ -8,10 +8,10 @@
 
 #### Element removal (a.k.a. cosmetic rules, a.k.a. hiding rules, a.k.a. ##-rules)
 * `##.`: Hides page elements, based on one or more `class` values in the F12 "Elements" filetree (separated with full-stops).
-* `##`: Hides page elements based on the element type, e.g. `a`, `li`, `button`, `iframe`, etc., that are usually highlighted in purple in the F12 "Elements" filetree.
+* `##`: Hides page elements based on the element type, e.g. `a`, `li`, `button`, `iframe`, etc., that are usually highlighted in purple in the F12 DOM (Document Object Model) "Elements" index.
 * `###`: Hides page elements based on the `id` value.
 * `#@#.`/`#@#`/`#@##`: Whitelists page elements to make them load.
-* `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or numerous other things that are highlighted in brown in the F12 filetree. Does not support RegEx.
+* `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or numerous other things that are highlighted in brown in the F12 DOM (Document Object Model) "Elements" index. Does not support RegEx.
 * `[href="text" i]`: Same as above, except case-insensitive.
 * `[href^="text"]`: Finds page elements whose value *begins* with the text.
 * `[href$="text"]`: Finds page elements whose value *ends* with the text.
@@ -177,6 +177,6 @@
 * It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
 * In Opera, the F12 filetree is not actually opened with F12, but instead with Ctrl+Shift+I (Capital İ).
 * No entries can use both `||` and `##` at the same time.
-* Major note to advanced CSS experts: Some advanced terms have been replaced in this guide, because they'd be less than obvious to laymen who'd need this guide. For instance, I replaced `DOM tree` with `F12 filetree`, because I 100% genuinely felt that it was easy to think `DOM` was short for "dominatrix", and also because many people may not even know how to open said tree in web browsers.
+* Major note to advanced CSS experts: Some advanced terms have been replaced in this guide, because they'd be less than obvious to laymen who'd need this guide.
 
 ¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, Adblock Plus version ≥3.13, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, Blokada, or Pi-hole, whose syntax supports are considerably inferior to the above list.
