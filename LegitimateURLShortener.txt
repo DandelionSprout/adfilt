@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 13August2023v1
+! Version: 14August2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2145,7 +2145,6 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ||bilibili.com^$removeparam=seid
 ||bilibili.com^$removeparam=spm_id_from
 ||bilibili.com^$removeparam=tdsourcetag
-||bilibili.com^$removeparam=timestamp
 ||bilibili.com^$removeparam=unique_k
 ! https://github.com/the1812/Bilibili-Evolved/commit/e859b988c5a28ebd1acdedd2df037f23ab27637d
 ! https://github.com/AdguardTeam/AdguardFilters/issues/106834
@@ -4175,6 +4174,10 @@ $doc,removeparam=user_email_address
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6556014
 ||twitter.com^$doc,removeparam=cn
+
+! https://github.com/AdguardTeam/AdguardFilters/commit/5d415635140b5b6f2173c923104d53e473dd67fd
+! https://github.com/uBlockOrigin/uAssets/pull/10010
+$doc,domain=bilibili.com|querie.me,removeparam=timestamp
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
