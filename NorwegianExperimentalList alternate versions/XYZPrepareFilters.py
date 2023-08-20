@@ -866,6 +866,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"/ument$", 
+           r"/", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\n'
 
@@ -3014,6 +3020,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"^\$[a-z0-9-]{1,}$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"/ument$", 
+           r"/", 
            line
         )
 
