@@ -203,7 +203,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -879,7 +879,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -1814,7 +1814,7 @@ def prepare_privacy(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -2086,7 +2086,7 @@ def prepare_umatrix(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -2213,7 +2213,7 @@ def prepare_xul(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -3060,7 +3060,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -3204,7 +3204,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -3370,7 +3370,7 @@ def prepare_dnsmasq(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -3431,7 +3431,7 @@ def prepare_hostsdeny(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -3593,7 +3593,7 @@ def prepare_pihole(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -3778,7 +3778,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -3921,7 +3921,7 @@ def prepare_shadowsocks(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -3992,7 +3992,7 @@ def prepare_rpz(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -4122,7 +4122,7 @@ def prepare_minerblock(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -4200,7 +4200,7 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -4265,7 +4265,7 @@ def prepare_domainsallowlist(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -4566,7 +4566,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -4861,7 +4861,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -5637,7 +5637,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -5801,7 +5801,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
@@ -6202,7 +6202,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
            line
         )
