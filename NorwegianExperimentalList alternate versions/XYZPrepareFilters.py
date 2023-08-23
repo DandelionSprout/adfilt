@@ -202,6 +202,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -869,6 +875,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"/ument$", 
            r"/", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
            line
         )
 
@@ -1801,6 +1813,12 @@ def prepare_privacy(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2067,6 +2085,12 @@ def prepare_umatrix(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         if is_supported_umatrix(line) and not line == '':
             text += line + '\n'
 
@@ -2184,6 +2208,12 @@ def prepare_xul(lines) -> str:
 
         line = re.sub(
            r"^\$[a-z0-9-]{1,}$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
            r"", 
            line
         )
@@ -3029,6 +3059,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\n'
 
@@ -3163,6 +3199,12 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"^127\.0\.0\.1 .*/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
            r"", 
            line
         )
@@ -3327,6 +3369,12 @@ def prepare_dnsmasq(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         if is_supported_dnsmasq(line) and not line == '':
             text += line + '\n'
 
@@ -3378,6 +3426,12 @@ def prepare_hostsdeny(lines) -> str:
 
         line = re.sub(
            r"ALL: [!/].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
            r"", 
            line
         )
@@ -3535,6 +3589,12 @@ def prepare_pihole(lines) -> str:
         line = re.sub(
            r"([a-z0-9-])\*$", 
            r"\1.*", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
            line
         )
 
@@ -3717,6 +3777,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -3854,6 +3920,12 @@ def prepare_shadowsocks(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -3915,6 +3987,12 @@ def prepare_rpz(lines) -> str:
 
         line = re.sub(
            r"^/.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
            r"", 
            line
         )
@@ -4043,6 +4121,12 @@ def prepare_minerblock(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4115,6 +4199,12 @@ def prepare_hostsipv6(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
             text += line + '\n'
 
@@ -4171,6 +4261,12 @@ def prepare_domainsallowlist(lines) -> str:
         line = re.sub(
            r"^!([a-z0-9*])", 
            r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
            line
         )
 
@@ -4469,6 +4565,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4749,6 +4851,18 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"^(! Homepage: .*)", 
            r"\1\n! As of June 2023, Pi-Hole FTL ≥5.22 users should rather use https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, which is a ||-type list version designed specifically for DNS tools.", 
+           line
+        )
+
+        line = re.sub(
+           r"/ument$", 
+           r"/", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
            line
         )
 
@@ -5522,6 +5636,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\n'
 
@@ -5676,6 +5796,12 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^amazonaws\.com$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
            r"", 
            line
         )
@@ -6072,6 +6198,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"! Placeholder line for alternate list versions", 
            r"! To keep track of when on earth the AdGuard team will allow $denyallow in included lists\n||example.org^$denyallow=example.org\n||example.org^$denyallow=~example.org", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\||:|/|[a-zA-Z0-9]|\*).*, .*$", 
+           r"", 
            line
         )
 
