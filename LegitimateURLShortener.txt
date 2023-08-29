@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 25August2023v1
+! Version: 29August2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1934,7 +1934,7 @@ $removeparam=/^web_id\d+/,domain=tiktok.com
 
 !!! ———Spotify———
 ! https://open.spotify.com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
-$removeparam=si,domain=open.spotify.com|zappos.com
+$removeparam=si,doc,domain=open.spotify.com|soundcloud.com|youtube.com|youtu.be|zappos.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1740689
 ||open.spotify.com^$removeparam=/advertising_partner_name=/i
 ||open.spotify.com^$removeparam=%243p
@@ -3203,9 +3203,6 @@ $removeparam=psrc,domain=savagex.com
 
 ! https://www.newark.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/02AH3164?COM=ref_hackster
 ||newark.com^$removeparam=COM
-
-! https://github.com/ClearURLs/Addon/issues/161
-||soundcloud.com^$removeparam=si
 
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/192
 ||market.yandex.ru^$removeparam=cpc
