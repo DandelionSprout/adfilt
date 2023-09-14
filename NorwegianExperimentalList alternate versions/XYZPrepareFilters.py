@@ -208,6 +208,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -880,6 +886,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
            r"", 
            line
         )
@@ -1819,6 +1831,12 @@ def prepare_privacy(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2214,6 +2232,12 @@ def prepare_xul(lines) -> str:
 
         line = re.sub(
            r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
            r"", 
            line
         )
@@ -3065,6 +3089,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
+           r"", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\n'
 
@@ -3779,6 +3809,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
            r"", 
            line
         )
@@ -4571,6 +4607,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4862,6 +4904,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
            r"", 
            line
         )
@@ -6142,8 +6190,8 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"\|~", 
-           r"^\n@@||", 
+           r"\|~([a-z0-9-]{2,}\.([a-z]{2,20}|\*))", 
+           r"^\n@@||\1", 
            line
         )
 
@@ -6203,6 +6251,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
            r"", 
            line
         )

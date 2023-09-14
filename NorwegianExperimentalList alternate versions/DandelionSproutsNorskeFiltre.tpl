@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 09September2023v4-Deprecated
+# Version: 13September2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -996,6 +996,30 @@ msFilterList
 -d sitey.me
 # https://www.tv2.no/nyheter/innenriks/olav-thon-misbrukes-i-svindelannonser-ble-feilaktig-meldt-dod/15818647/
 -d 24-news.online
+# https://www.tv2.no/nyheter/innenriks/advarer-ikke-klikk-pa-lenken/16040614/
+-d brugerverificering.com
+-d dhl-trackng.com
+-d dnb-oppdater.
+-d linkednordersalenavigate.com
+-d mobilidentitet.com
+-d mobiltrygheden.com
+-d mobilunderskriv.com
+-d no-aut.co
+-d no-bekreft.com
+-d no-confir.com
+-d no-erne.com
+-d no-erne.live
+-d no-nye.live
+-d no-renovere.com
+-d no-sikkerhet.com
+-d no-update.live
+-d no-updater.live
+-d start-myaltinn.com
+-d no-forny*
+-d my-altinn*
+-d no-oppdatere.
+-d no-oppdatert.
+-d 179.43.189.62
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
