@@ -3239,6 +3239,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^-.*", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
             text += line + '\n'
 
@@ -5690,6 +5696,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^-.*", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\n'
 
@@ -5850,6 +5862,12 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^-.*", 
            r"", 
            line
         )
