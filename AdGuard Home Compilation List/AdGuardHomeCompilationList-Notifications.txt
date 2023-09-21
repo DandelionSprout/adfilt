@@ -1,15 +1,15 @@
 [Adblock Plus 3.4]
 ! Title: Dandelion Sprout's AdGuard Home Compilation List - Web Push Notifications
 ! Contains modified entries from: Fanboy's Notifications Blocking List, and AdGuard Annoyances Web Push
-! Version: 16June2023v1-Beta
+! Version: 21September2023v1-Beta
 ! Expires: 14 days
 ! Licence: In accordance with the Dandelicence, AdGuard Annoyances Web Push's contents are to be treated as GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html), while Fanboy's Notifications Blocking List whose loose CC BY 3.0 seems to me to enable me to relicence them under the Dandelicence. Known credits in accordance with attribution requirements, are Ryan Brown (Fanboy's Notifications Blocking List) and AdGuard Software Limited (AdGuard Annoyances Web Push).
 ! Description: AdGuard Home is one of the tools for the future, or at least it is for those who know how to set up and use a Raspberry Pi. However, its current internal structure discards virtually every $-using block rule, which makes various major lists virtually useless in AdGuard Home, despite how many of the entries would be ≥90% as functional without them. So until the AdGuard Home team implements a better way to deal with $ values, here's my intermissional list to work around it.
 ! Note: If a list update is needed quickly, check out the instructions at https://github.com/DandelionSprout/adfilt/blob/master/AdGuard%20Home%20Compilation%20List/README.md
 ! ——————————————————————————————————————————————
-! Version: 202306160502
+! Version: 202309211630
 ! Title: Fanboy's Notifications Blocking List
-! Last modified: 16 Jun 2023 05:02 UTC
+! Last modified: 21 Sep 2023 16:30 UTC
 ! License: https://creativecommons.org/licenses/by/3.0/
 ! Please report any unblocked content or problems by email or in our forums
 ! Email: easylist@protonmail.com
@@ -59,6 +59,7 @@
 /sna-pushwoosh.
 /t2push.
 /web-push-
+/web-push-worker.
 /web-push.
 /webalert-notification
 /webnotification.
@@ -70,6 +71,7 @@
 !------------------------General element hiding rules-------------------------!
 ! *** easylist:fanboy-addon/fanboy_notifications_general_hide.txt ***
 ! Mobile Notifications
+! substack
 ! spot.im Notifications
 ! International
 !-------------------------Third-party blocking rules--------------------------!
@@ -82,7 +84,6 @@
 ||cdn.qgraph.io^
 ||centrnotify.com^
 ||checke.biz^
-||checkpost.club^
 ||confirmit.com^
 ||conforama-push.com^
 ||digipush.io^
@@ -112,6 +113,7 @@
 ||push.daksham.in^
 ||push.delivery.ethinking.de^
 ||push.delivery^
+||push.esputnik.com^
 ||push.getbeamer.com^
 ||push.knd.ro^
 ||push.newscraft.io^
@@ -122,6 +124,7 @@
 ||pushango.com^
 ||pushassist.com^
 ||pushaya.com^
+||pushbaza.com^
 ||pushbots.com^
 ||pushbox.info^
 ||pushcentr.com^
@@ -136,6 +139,7 @@
 ||pushkahouse.com^
 ||pushkaplus.com^
 ||pushly.com^
+||pushmaster-cdn.xyz^
 ||pushmejs.com^
 ||pushnews.eu^
 ||pushnotifications.click^
@@ -157,7 +161,6 @@
 ||realpush.network^
 ||revpusher.com^
 ||sckxppzdm.com^
-||sendyourpush.com^
 ||signaly.co^
 ||snrcdn.net^
 ||spacepush.ru^
@@ -170,7 +173,6 @@
 ||webpushs.com^
 ||whitepush.biz^
 ||worldpush.co^
-||wpshsdk.com^
 ||wpush.biz^
 ||wpushsdk.com^
 ||xedo.me^
@@ -182,7 +184,6 @@
 ||aswpsdkeu.com^
 ||aswpsdkus.com^
 ||bildirt.com^
-||bmfeed.ru^
 ||bosspush.com^
 ||browserpusher.com^
 ||cdn-sitegainer.com^
@@ -249,6 +250,7 @@
 ||wwclicknews.club^
 ||wwclicktm.club^
 ||xtremepush.com^
+! Mobile notifications
 ||mobi24.net^
 !--------------------------Specific blocking filters--------------------------!
 ! *** easylist:fanboy-addon/fanboy_notifications_specific_block.txt ***
@@ -256,21 +258,33 @@
 ||alerts.thedailystar.net^
 ||notify.hindustantimes.com^
 ||push.cnnindonesia.com^
+! International
 ||push.neko-san.fr^
 ||pushme.magellanotech.it^
+! Mobile Notifications
 !------------------------Specific element hiding rules------------------------!
 ! *** easylist:fanboy-addon/fanboy_notifications_specific_hide.txt ***
 !! International
 ! Mobile app Notifications
+! Advanced element hiding rules for Adblock Plus
 !---------------------------------Allowlists----------------------------------!
 ! *** easylist:fanboy-addon/fanboy_notifications_allowlist_general_hide.txt ***
+! Mobile notifications
 ! *** easylist:fanboy-addon/fanboy_notifications_allowlist.txt ***
+! Mobile Notifications
 ! Title: AdGuard Popups filter - Push notifications, specific
 ! This section contains the list of generic rules that block website push notifications ("subscribe to the news" kind of notifications).
 ! Good: any type of the rules will be good
 ! SECTION: Push notifications - Generic rules
 .vafrike.ru^
 ! `window.wpnConfig`
+||cdn.larapush.com^
+||pushbaza.com^
+||nadajotum.com^
+||getback.ch^
+||vokayatus.com^
+||migineg.com^
+||adkela-push.com^
 ||push.msgby.ru^
 ||us-pub.dengage.com^
 ||dobrnovosti.com^
@@ -282,14 +296,18 @@
 ||goodvibesmatterforus.com^
 ||premclubs.com^
 ||my1elitclub.com^
+||pushdealer.com^
 ||mewigurom.com^
 ||pushadvert.bid^
+||notifpush.com^
 ||greysummergo.biz^
 ||zovihutum.com^
 ||pt.appirits.com^
 ||a.trstplse.com^
 ||abcnewspro.com^
+||accengage.net^
 ||achilles-ena.com^
+||actirinius.com^
 ||actuanius.com^
 ||admessage.support^
 ||adsblockkpush.com^
@@ -302,23 +320,31 @@
 ||amsvts.com^
 ||android-win-reward.com^
 ||api.infinario.com^
+||api.jeeng.com^
 ||api.pushnami.com^
 ||api.savemedia.website^
 ||api.sociaplus.com^
 ||api.useinsider.com^
 ||app.dengage.com^
 ||app.getbeamer.com^
+||app.najva.com^
 ||aptashark.club^
 ||aquarepush.com^
 ||arianelab.com^
 ||aristianewr.club^
+||aswpsdkeu.com^
+||aswpsdkus.com^
 ||bagirastyle.ru^
 ||bakibarus.com^
 ||bezrukov.fun^
 ||bigreal.org^
 ||bildirim.net^
 ||bildirimci.net^
+||bildirnet.com^
+||bildirt.com^
 ||bitmakerz.biz^
+||bmfeed.ru^
+||bosspush.com^
 ||britopush.com^
 ||bro1.biz^
 ||bttm.guru^
@@ -328,17 +354,24 @@
 ||canzocoos.com^
 ||catchynews.net^
 ||cdn.carrotquest.io^
+||cdn.gravitec.net^
 ||cdn.hostpush.info
 ||cdn.instadrama.site^
 ||cdn.jeapie.com^
 ||cdn.letreach.com^
 ||cdn.mxapis.com^
+||cdn.onepush.app^
 ||cdn.p-n.io^
 ||cdn.siteswithcontent.com^
+||cdn.subscribers.com^
+||cdn.webpush.jp^
 ||cdnt.netcoresmartech.com^
 ||celesterium.com^
+||centrnotify.com^
 ||centrpush.com^
 ||check-now.online^
+||checke.biz^
+||checkpost.club^
 ||chensenconter.com^
 ||chgilks.com^
 ||clairpixum.com^
@@ -348,10 +381,12 @@
 ||colamirus.com^
 ||corported.com^
 ||cr-eam.com^
+||cracataum.com^
 ||crimitating.com^
 ||currepush.com^
 ||d2r1yp2w7bby2u.cloudfront.net^
 ||dankulavius.com^
+||danorenius.com^
 ||datswebnnews.com^
 ||defundium.com^
 ||deltaction.com^
@@ -363,25 +398,35 @@
 ||dolohatum.com^
 ||dolweerum.com^
 ||dryum.ru^
+||easyfeeed.com^
 ||easyinformer.com^
 ||emarketingsuite.net^
 ||encounts.com^
 ||erihj.com^
 ||esputnik.com^
 ||esterlonder.com^
+||face-push.com^
 ||feductius.com^
 ||feed-6009.coderformylife.info^
+||feedify.net^
+||feraciumus.com^
+||fernomius.com^
 ||fire-push.net^
 ||first.megas44.ru^
 ||fistcartyped.casa^
+||foxpush.com^
+||foxpush.net^
 ||fspark-ap.com^
 ||gatecurium.com^
 ||gerdonarium.com^
+||getpush.net^
 ||getpush.org^
+||getpushmonkey.com^
 ||gewrh.com^
 ||gogool.ru^
 ||guideforwindows.top^
 ||hattepush.com^
+||heroesdom.com^
 ||hilleness.info^
 ||hostpush.info^
 ||hrbpark.bid^
@@ -398,6 +443,7 @@
 ||jagevirom.com^
 ||jubi.ai^
 ||karuna4u.com^
+||kattepush.com^
 ||kerchenovias.com^
 ||kursatarak.com^
 ||latest.android-central.news^
@@ -412,15 +458,19 @@
 ||loboclick.com^
 ||lodder6.biz^
 ||loulouly.net^
+||luravius.com^
 ||m-th.ru^
 ||magarimot.com^
 ||mailer.i.bizml.ru^
 ||majorworker.com^
+||master-push.com^
+||master-push.net^
 ||maylohack.ru^
 ||mediaboom.site^
 ||meladonicum.com^
 ||merdihatus.com^
 ||mibknb.com^
+||moengage.com^
 ||mol17.biz^
 ||mol3.biz^
 ||monstelenius.com^
@@ -431,6 +481,7 @@
 ||mucizewus.com^
 ||mypush.online^
 ||n1goserch.com^
+||nativesubscribe.pro^
 ||navse.pukchpok.online^
 ||netmera-web.com^
 ||news-back.best^
@@ -448,10 +499,12 @@
 ||news-yakaja.cc^
 ||news.ueep.com^
 ||news.vuer.net^
+||news2day.me^
 ||newscaffe.net^
 ||newsgrabber.me^
 ||newsmagic.net^
 ||newswe.org^
+||notification-time.com^
 ||notification.best^
 ||notify-guru.com^
 ||notify-master.net^
@@ -459,14 +512,18 @@
 ||notify.premium-news.me^
 ||notify.rocks^
 ||ntsecd.com^
+||ntvsw.com^
 ||nwliko.com^
 ||nydrctnk.com^
 ||nyphtrue.com^
 ||ofhappinyer.com^
+||olgtex.com^
 ||onesignal.com^
 ||p.dengage.com^
 ||panaur.com^
+||partishion.com^
 ||pathfootprint.com^
+||pathlime.com^
 ||pathlinex.com^
 ||patrospermit.com^
 ||pecukirom.com^
@@ -478,9 +535,17 @@
 ||pro-web.net^
 ||pronews.me^
 ||prospertinum.com^
+||psh.one^
 ||purchacade.info^
+||puscomosca.com^
+||push-ad.com^
+||push-centr.com^
+||push-centr.net^
+||push-free.com^
+||push-house.net^
 ||push-money.ru^
 ||push-news.net^
+||push-pro.net^
 ||push.akket.com^
 ||push.all-stor.ru^
 ||push.anews.one^
@@ -489,20 +554,34 @@
 ||push.esputnik.com.ua^
 ||push.estart.jp^
 ||push.expert^
+||push.knd.ro^
 ||push.maribacaberita.com^
 ||push.news-pro.today^
+||push.newscraft.io^
 ||push.ueep.com^
 ||push.webandname.com^
+||push.world^
 ||push.zdips.ru^
 ||push4site.com^
+||pushalert.co^
+||pushassist.com^
+||pushaya.com^
 ||pushbasitop.ru^
+||pushbird.com^
+||pushcentr.com^
+||pushchev.info^
 ||pushcode.jp^
 ||pushcodetop.ru^
+||pushcrew.com^
 ||pushell.info^
+||pushengage.com^
 ||pushere.info^
+||pushex.io^
 ||pushex.net^
 ||pushid.info^
+||pushify.com^
 ||pushiki.ru^
+||pushkahouse.com^
 ||pushkapro.com^
 ||pushkintop.ru^
 ||pushland.net^
@@ -511,31 +590,44 @@
 ||pushnotificationx.com^
 ||pushofferpro.com^
 ||pushout.ru^
+||pushpad.xyz^
+||pushpanda.io^
 ||pushpro.co.za^
 ||pushprofit.net^
+||pushprofit.ru^
 ||pushpush.net^
+||pushpushgo.com^
 ||pushsar.com^
 ||pushwelcome.com^
+||pushwoosh.com^
 ||reallypab.com^
+||realpush.media^
 ||redpsh.pro^
 ||relateddigital.com^
+||reprocautious.com^
 ||rocket-push.com^
 ||rokettsaince.com^
 ||rushhips.com^
 ||salesmanago.com^
+||sckxppzdm.com^
+||sdk.jeeng.com^
 ||sdkloc1.com^
 ||secure.esputnik.com.ua^
+||select5.realpush.network^
 ||send-news.net^
 ||send-notice.com^
 ||sendelven.com^
+||sendpulse.com^
 ||serumawus.com^
 ||setrowid.com^
 ||shaidolt.com^
 ||sitreleastme.info^
 ||smart-push.best^
+||spacepush.ru^
 ||spattepush.com^
 ||special-offers.online^
 ||ss.6ib.ru^
+||static.pushe.co^
 ||stengeholt.com^
 ||sticky.news^
 ||stumtererum.com^
@@ -543,6 +635,7 @@
 ||tafrebadus.com^
 ||tempersonic.com^
 ||today.vuer.net^
+||topswp.com^
 ||tracker.wigzopush.com^
 ||traglencium.com^
 ||traneranium.com^
@@ -551,6 +644,7 @@
 ||trendentrium.com^
 ||trenrasius.com^
 ||trourted.pro^
+||truepush.com^
 ||trynews.me^
 ||tutad.ru^
 ||u21drwj6mp.com^
@@ -561,6 +655,7 @@
 ||varroterius.com^
 ||vergilimus.com^
 ||via.batch.com^
+||viapush.com^
 ||vinuser5.biz^
 ||vistoolr.net^
 ||vitalectium.com^
@@ -568,16 +663,23 @@
 ||vkonrakte.com^
 ||volanosier.com^
 ||vultispotus.com^
+||web.webpushs.com^
 ||webpush.hackers.com^
 ||webpush.ria.com^
 ||webpushonline.com^
+||webpushr.com^
 ||wertendium.com^
+||whitepush.biz^
 ||win-your-prize.com^
 ||windowsguidenews.com^
 ||womanshouz.ru^
+||wonderpush.com^
 ||wp.24smi.org^
+||wpush.biz^
+||wwclicknews.club^
 ||wwopenclick.vip^
 ||wwsercher.biz^
+||xedo.me^
 ||xyznews1.today^
 ||xyznews2.today^
 ||xyznews3.today^
@@ -589,16 +691,21 @@
 ||zorbanmat.com^
 ! NOTE: Generic rules end ⬆️
 ! !SECTION: Push notifications - Generic rules
+! Title: AdGuard Popups filter - Push notifications, specific
 ! This section contains the list of rules that block website push notifications ("subscribe to the news" kind of notifications).
+! Good: any type of the rules will be good
 ! SECTION: Push notifications - Popular rules
 ! Disabling of push-notifications
-! NOTE: Specific end ⬆️
+! NOTE: Popular rules end ⬆️
 ! !SECTION: Push notifications - Popular rules
 ! SECTION: Push notifications - Regular rules
+||push.autosaratov.ru^
 ||bws0wvqt3k.ru^
 ||push.englishraven.com^
 ||push-parking.inzhener-info.ru^
+||push.delivery.ethinking.de^
 ||pp.teksty-pesenok.ru^
 ||gu7socdn.txxx.com^
+||cdn.pushowl.com^
 ! NOTE: Regular rules end ⬆️
 ! !SECTION: Push notifications - Regular rules
