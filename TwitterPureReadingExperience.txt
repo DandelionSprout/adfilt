@@ -6,19 +6,19 @@
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
 ! Removes the "Related users" sections
-twitter.com##.RelatedUsers
-twitter.com##.WhoToFollow
-twitter.com##div[data-testid=sidebarColumn] > div > div > div > div > div > div > div:nth-of-type(3)
+twitter.com,x.com##.RelatedUsers
+twitter.com,x.com##.WhoToFollow
+twitter.com,x.com##div[data-testid=sidebarColumn] > div > div > div > div > div > div > div:nth-of-type(3)
 
 ! Removes the Trending list
-twitter.com##div[data-testid=sidebarColumn] section > div[aria-label]
+twitter.com,x.com##div[data-testid=sidebarColumn] section > div[aria-label]
 ||twitter.com/i/trends?
-twitter.com##.trends-inner
-twitter.com##.r-1u4rsef.r-9cbz99
+twitter.com,x.com##.trends-inner
+twitter.com,x.com##.r-1u4rsef.r-9cbz99
 
 ! Removes the "You might like" section
-twitter.com##div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type aside
-twitter.com#?#div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type > div > div > div > div:has(> aside[role])
+twitter.com,x.com##div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type aside
+twitter.com,x.com#?#div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type > div > div > div > div:has(> aside[role])
 
 ! Removes "Who to follow" box headers and footers from user timelines
 !!!twitter.com#?#div[data-testid=primaryColumn] div:has(> div > div > h2[role=heading] > div[dir=auto] > span)
@@ -31,11 +31,11 @@ twitter.com#?#div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div
 
 !#if false
 ! Removes login nags
-twitter.com#?##layers > div[class*=" "]:first-of-type:has(a[href="/i/flow/signup"])
+twitter.com,x.com#?##layers > div[class*=" "]:first-of-type:has(a[href="/i/flow/signup"])
 !#endif
 !#if !adguard
 ! https://mobile.twitter.com/nasuno_Posi
-twitter.com##div[data-testid=sidebarColumn] section[aria-label][role=region]
+twitter.com,x.com##div[data-testid=sidebarColumn] section[aria-label][role=region]
 !#endif
 
 ! Removes the cookie sticky on bottom
@@ -43,12 +43,12 @@ twitter.com##div[data-testid=sidebarColumn] section[aria-label][role=region]
 
 ! Notification overlay prompt
 ! https://github.com/easylist/easylist/issues/14305
-twitter.com#?#div[role=dialog]:has(path[d^="M19.993 9.042C19.48 "])
+twitter.com,x.com#?#div[role=dialog]:has(path[d^="M19.993 9.042C19.48 "])
 
 ! Attempts to remove "Discover more" tweets
-twitter.com#?#html:has(link[href*="/status/"]) div[data-testid=cellInnerDiv]:has(h2[role=heading] + div)
-twitter.com#?#html:has(link[href*="/status/"]) div[data-testid=cellInnerDiv]:has(h2[role=heading] + div) ~ div
+twitter.com,x.com#?#html:has(link[href*="/status/"]) div[data-testid=cellInnerDiv]:has(h2[role=heading] + div)
+twitter.com,x.com#?#html:has(link[href*="/status/"]) div[data-testid=cellInnerDiv]:has(h2[role=heading] + div) ~ div
 
 ! "Readers added context they thought people might want to know"
 ! https://github.com/DandelionSprout/adfilt/issues/873
-twitter.com##div[data-testid=birdwatch-pivot]
+twitter.com,x.com##div[data-testid=birdwatch-pivot]
