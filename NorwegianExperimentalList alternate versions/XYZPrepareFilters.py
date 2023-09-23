@@ -4619,6 +4619,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r",~inline-script$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4917,6 +4923,17 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"/ument(,|$)", 
+           r"/\1", 
+           line
+        )
+        line = re.sub(
+           r",match-case(,|$)", 
+           r"\1", 
            line
         )
 
@@ -5336,6 +5353,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\+d [a-z]{1,}$", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\n'
 
@@ -5702,6 +5725,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"([0-9a-z].*)\$.*", 
+           r"", 
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\n'
 
@@ -5868,6 +5897,12 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^-.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"([0-9a-z].*)\$.*", 
            r"", 
            line
         )
