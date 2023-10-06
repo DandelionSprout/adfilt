@@ -1,5 +1,5 @@
 ! This is an extension file, not an independent list.
-! Extension file's version: 31August2023v1-Extension
+! Extension file's version: 06October2023v1-Extension
 
 ! Experts Exchange 📛📠
 experts-exchange.com##.accepted.answer:style(display: block !important)
@@ -80,25 +80,7 @@ chronicle.com##.bcpNotificationBar
 chronicle.com##html:style(overflow: auto !important; height: 100% !important)
 chronicle.com##.Page-body:style(overflow: auto !important; height: 100% !important)
 
-! Twitter
-!! Re-enables scrolling after closing the "Log in to view more" prompt on users' timelines
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##html:style(overflow: unset !important)
-!#if !env_mobile
-!! Removes an uncloseable prompt overlay
-!! Moved to here from the main file due to https://github.com/DandelionSprout/adfilt/issues/557
-!! Can't be used on physical phones due to https://github.com/AdguardTeam/AdguardFilters/issues/116903
-!! ":has(svg)" is needed to avoid problems with unfollowment prompts; see https://github.com/AdguardTeam/AdguardFilters/issues/124949
-!!!twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:-abp-has(> div[data-testid])
-!!!twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:has(> div[data-testid]):has(div[role=button][style^="background-color: rgb(15, 20, 25)"]):has(svg)
-!!!twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:has(> div[data-testid]):has(div[role=button]:first-of-type + div[role=button]:last-of-type):has(svg)
-!#endif
-! Syncing with AdGuard Popups Filter
-!!!twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
-! https://github.com/DandelionSprout/adfilt/issues/788
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid=BottomBar] > div > div:empty
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid=BottomBar] > div > div > div:not([class*=" "])
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###layers > div:has([data-testid=BottomBar] a[href*="/login"]):style(max-width: 300px !important)
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid=BottomBar] > div > div:last-of-type:style(width: unset !important)
+! Twitter support was removed in early October 2023, due to its owner becoming a white supremacist and a Tucker Carlson terrorism collaborator; see https://new.reddit.com/r/insanepeoplefacebook/comments/170jdls/it_is_to_early_in_the_morning_for_this/
 
 ! Facebook
 !! Reduces the background opacity of the login overlay
