@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🚪 Browse websites without logging in
-! Version: 08August2023v1
+! Version: 06October2023v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -107,24 +107,7 @@ pinterest.*##div[data-test-id=pin-closeup-image] > div[role=button] > div:not([c
 ||pinterest.*mt=signup$removeparam=mt
 
 ! Twitter
-!! Removes a "See What's Happening" prompt at the bottom of some tweet chains
-twitter.com,x.com#?#div[data-testid=primaryColumn] div:has(> div > div > a[href="/login"])
-!! Removes a login prompt when visiting "/intent/follow"-type links in mobile environments
-! https://twitter.com/intent/follow?screen_name=mesitsu (13/04/2020)
-mobile.twitter.com,mobile.twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
-!#if env_mobile
-twitter.com,x.com#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
-!#endif
-!#if false
-! Removes the bottom login sticky banner about logging in, in the April 2020-ish redesign 🔨
-twitter.com,x.com#?##layers > div[class*=" "]:first-of-type:has(a[href="/i/flow/signup"])
-! https://twitter.com/hideo_kojima_en/status/319595772981166080
-twitter.com,x.com###layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
-!#endif
-!#if !env_mobile
-! Fullpage uncloseable overlay on some pages
-twitter.com,x.com#?#div[role=group]:has(div[data-testid*=apple_sign_in]:only-of-type)
-!#endif
+! Twitter support was removed in early October 2023, due to its owner becoming a white supremacist and a Tucker Carlson terrorism collaborator; see https://new.reddit.com/r/insanepeoplefacebook/comments/170jdls/it_is_to_early_in_the_morning_for_this/
 
 ! The New Republic 📠🔨
 ! https://github.com/easylist/easylist/issues/5331#issuecomment-627813147
@@ -285,21 +268,6 @@ cdn.membershipworks.com*
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##._5hn6
 !! Attempts to remove the "Not logged in" dialog window that shows up further down on the timelinw
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.generic_dialog_modal.pop_dialog
-
-! Twitter
-! Removes the "Aren't you on Twitter??" prompt in the upper right of user timelines
-! https://twitter.com/nasuno_Posi
-twitter.com,x.com##.js-signup-call-out
-
-! Twitter Mobile
-!! Aims to remove the login overlay prompt when browsing down an account's timeline
-mobile.twitter.com##.rn-13w96dm
-mobile.twitter.com##.rn-1kihuf0.rn-1awozwy
-!#if !adguard
-! https://mobile.twitter.com/nasuno_Posi
-!! Removes the "Are you new on Twitter?" banner in the upper right of user timelines (Screen area has to be ≥~1400px wide)
-mobile.twitter.com##div[data-testid=sidebarColumn] section[aria-label][role=region]
-!#endif
 
 ! Pinterest ↪️📛🌇 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
 ! For very important notes about Pinterest, see https://github.com/DandelionSprout/adfilt/issues/26.
