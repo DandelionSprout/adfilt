@@ -951,6 +951,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^/([a-z0-9]{1,8}\.)$", 
+           r"://\1", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\n'
 
