@@ -37,8 +37,8 @@ def prepare_agh(lines) -> str:
             continue
 
         line = re.sub(
-           r"([$,])(1p|3p|all|doc|document|first-party|frame|image|media|network|object|popunder|popup|script|subdocument|third-party|~object-subrequest|~third-party)",
-           "", 
+           r"([$,])(1p|3p|all|doc$|document|first-party|frame|image|media|network|object|popunder|popup|script|subdocument|third-party|~object-subrequest|~third-party)",
+           r"", 
            line
         )
 
@@ -277,19 +277,25 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[a-z0-9.-].*[a-z0-9.-][/?_+=&][a-zA-Z0-9.$*-].*", 
+           r"^[a-zA-Z0-9.-].*[a-z0-9.-][/?_+=&][a-zA-Z0-9.$*-].*", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^/.*[_=/;~@%#+,?!].*", 
+           r"^/.*[_=/;~@%#+,!].*", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[|:/.-].*[%&:].*", 
+           r"^[@|:/.-].*[%&?_=].*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[|:/.-].*:.*", 
            r"", 
            line
         )
@@ -301,7 +307,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[.:/|].*\.(png|jpe?g|gif|js|swf|gz|exe|php)($|\||\^)", 
+           r"^[.:/|a-zA-Z0-9-].*[*.](png|jpe?g|gif|js|swf|gz|exe|php)($|\||\^)", 
            r"", 
            line
         )
@@ -603,7 +609,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^([.:/|].*\.(com|org|net|uk|eu|at|it|io|fi|de|nl|agency|es|pl|is|br|gr|ru|su|pro|xyz|win|ch))$",
+           r"^([.:/|-].*\.(com|org|net|uk|eu|at|it|io|fi|de|nl|agency|es|pl|is|br|gr|ru|su|pro|xyz|win|ch))$",
            r"\1^", 
            line
         )
@@ -623,6 +629,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^(\.|:?/?/|\|\|?)[a-z0-9-]{1,}(\^|\|)$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^![!#].*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^(@@|\.|(:/)?/|\|\|?|-)[a-z0-9]\*\.[a-z]{2,}(\^|\|)?$", 
+           "", 
            line
         )
 
