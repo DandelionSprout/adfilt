@@ -976,7 +976,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[0-9].*:.*", 
+           r"^[0-9].*[: ].*", 
            r"", 
            line
         )
