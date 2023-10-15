@@ -987,6 +987,42 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^([.:/|].*\.(com|org|net|uk|eu|at|it|io|fi|de|nl|agency|es|pl|is|br|gr|ru|su|pro|xyz|win))$",
+           r"\1^", 
+           line
+        )
+
+        line = re.sub(
+           r"^[.:/|].*\.(gz|exe)\^?$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[.:/|].*\.(wasm|comm)\^$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\.\^$", 
+           r".", 
+           line
+        )
+
+        line = re.sub(
+           r"^[.:/|].*\.[a-z]$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[:/|][a-zA-Z0-9]{10,}\^$", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\n'
 
