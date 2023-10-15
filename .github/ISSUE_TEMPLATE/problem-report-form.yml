@@ -32,7 +32,8 @@ body:
       multiple: true
       options:
         - uBlock Origin
-        - AdGuard (Paid desktop version)
+        - AdGuard (Paid desktop/Android versions - Standard filtering only)
+        - AdGuard (Paid desktop/Android versions - Standard filtering + DNS Blocking™™©)
         - AdGuard (Gratis browser versions that aren't Manifest V3 nor Safari)
         - Adblock Plus (Firefox or Manifest V2)
         - AdBlock (Firefox or Manifest V2)
@@ -41,11 +42,15 @@ body:
         - I Don't Care About Cookies (The extension)
         - AdNauseam
         - pfBlockerNG
-        - Brave's built-in adblocker
+        - Brave's built-in adblocker (a.k.a. Brave Shield)
         - Firefox's built-in tracking protection
         - Vivaldi's built-in adblocker
         - Opera's built-in adblocker
+        - MS Edge's built-in tracking protection
         - DNS adblocking server(s)
+        - Pi-hole (Support may be limited)
+        - dnsmasq (Support may be limited)
+        - Adblocker Ultimate (Not recommended, as it's a ripoff of AdGuard's browser versions)
         - (Other)
     validations:
       required: true
@@ -70,7 +75,7 @@ body:
       multiple: true
       options:
         - Google Chrome (Manifest V2)
-        - Firefox
+        - Firefox (incl. LibreFox)
         - Vivaldi
         - Brave Browser
         - Tor Browser
@@ -80,8 +85,8 @@ body:
         - Midori Electron (not WebKit)
         - Opera (any variety)
         - Kiwi Browser
-        - Internet Explorer 11
-        - It's about a phone/TV app
+        - Internet Explorer 11 (Support may be limited)
+        - It's about a phone app, TV app, or console
         - (Other)
     validations:
       required: true
@@ -89,7 +94,7 @@ body:
     id: browsers-version
     attributes:
       label: Browser version(s)
-      placeholder: Write the version number(s) and "Other" browsers here, e.g. "92.0.1234.123", "x64", "Canary", "Nightly", "no.finn.android", etc.
+      placeholder: Write the version number(s), "Other" browsers, app names, or etc. here, e.g. "92.0.1234.123", "x64", "Canary", "Nightly", "no.finn.android", etc. *Very* old browser versions could be rejected; for Firefox and Chrome, the treshold was v75.0 as of October 2023.
     validations:
       required: false
   - type: dropdown
@@ -105,6 +110,9 @@ body:
         - Windows 8.1
         - Windows 7
         - Android
+        - iOS (Support may be limited)
+        - FreeBSD (Support may be limited)
+        - OpenBSD (Support may be limited)
         - (Other)
     validations:
       required: false
