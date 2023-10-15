@@ -1,7 +1,7 @@
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt', 'https://filters.adtidy.org/extension/ublock/filters/16.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/english.txt', 'https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/french.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://easylist-downloads.adblockplus.org/advblock.txt', 'https://easylist-downloads.adblockplus.org/Liste_AR.txt', 'https://easylist-downloads.adblockplus.org/easylistspanish.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/general_extensions.txt', 'https://filters.adtidy.org/extension/ublock/filters/16.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/english.txt', 'https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/french.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://easylist-downloads.adblockplus.org/advblock.txt', 'https://easylist-downloads.adblockplus.org/Liste_AR.txt', 'https://easylist-downloads.adblockplus.org/easylistspanish.txt']
 
 UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$ghide', ',ghide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain', '[Adblock Plus 2.0]', 'CV-', '$csp']
 UNSUPPORTED_IP = ['##', '@#', '#?#', '#%#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '!+']
@@ -134,6 +134,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"([$,])all", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])network", 
            "", 
            line
         )
@@ -983,6 +989,12 @@ def prepare_ip(lines) -> str:
             continue
 
         line = re.sub(
+           r"^.*\)([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})\\.\..*$",
+           r"\1.\2.\3.0/24",
+           line
+        )
+
+        line = re.sub(
            r"([$,])third-party", 
            "", 
            line
@@ -1085,6 +1097,18 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
+           r"([$,])network", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])websocket.*", 
+           "", 
+           line
+        )
+
+        line = re.sub(
            r",important", 
            "$important", 
            line
@@ -1111,12 +1135,6 @@ def prepare_ip(lines) -> str:
         line = re.sub(
            r"^([a-z])", 
            r"||\1", 
-           line
-        )
-
-        line = re.sub(
-           r"^[0-9].*", 
-           "", 
            line
         )
 
@@ -1271,12 +1289,6 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"^/.*[a-z0-9]\\?/[a-z0-9\(].*", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"^/\^[h.].*", 
            r"", 
            line
@@ -1285,12 +1297,6 @@ def prepare_ip(lines) -> str:
         line = re.sub(
            r"^/\\.*", 
            r"", 
-           line
-        )
-
-        line = re.sub(
-           r"^/\(https\?:\\/\\/\)([0-9][0-9]?[0-9]?)\\.([0-9][0-9]?[0-9]?)\\.([0-9][0-9]?[0-9]?)\\.\..*/", 
-           r"\1.\2.\3.0/24", 
            line
         )
 
@@ -1351,6 +1357,12 @@ def prepare_ip(lines) -> str:
         line = re.sub(
            r"([a-zA-Z0-9.,;'?!#_-]) $", 
            r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9].*[#$|a-z].*", 
+           r"", 
            line
         )
 
