@@ -988,7 +988,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^([.:/|].*\.(com|org|net|uk|eu|at|it|io|fi|de|nl|agency|es|pl|is|br|gr|ru|su|pro|xyz|win))$",
+           r"^([.:/|].*\.(com|org|net|uk|eu|at|it|io|fi|de|nl|agency|es|pl|is|br|gr|ru|su|pro|xyz|win|ch))$",
            r"\1^", 
            line
         )
@@ -1007,12 +1007,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"\.\^$", 
-           r".", 
+           r"^", 
            line
         )
 
         line = re.sub(
-           r"^[.:/|].*\.[a-z]$", 
+           r"^[.:/|].*\.[a-z]\^$", 
            r"", 
            line
         )
