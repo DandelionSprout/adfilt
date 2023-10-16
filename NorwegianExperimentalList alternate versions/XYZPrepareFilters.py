@@ -4385,9 +4385,9 @@ if __name__ == "__main__":
 SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout\'s%20Anti-Malware%20List.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
-    ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com', 'gamecopyworld', '$app']
-UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com', 'gamecopyworld', ':  ', 'duckdns.org']
-UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^', 'gamecopyworld', '://']
+    ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com', 'gamecopyworld', '$app', '$dnstype']
+UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com', 'gamecopyworld', ':  ', 'duckdns.org', '$dnstype']
+UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^', 'gamecopyworld', '://', '$dnstype']
 UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.', '*', '/^', '://', 'duckdns.org']
 UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
     '##', '.*#' , '#?#', 'gamecopyworld', 'version.bind', 'hostname.bind', '|id.server|', '$app']
@@ -4621,6 +4621,12 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            r",~inline-script$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r".*\$dnstype.*", 
            r"", 
            line
         )
@@ -5359,6 +5365,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r".* (cisco|cloudflare)\.com$", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\n'
 
@@ -5502,7 +5514,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"^\.amazonaws.*", 
+           r"^\.(amazonaws|cisco|cloudflare).*", 
            r"", 
            line
         )
@@ -5904,6 +5916,18 @@ def prepare_domains(lines) -> str:
         line = re.sub(
            r"([0-9a-z].*)\$.*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[0-9].*:.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^([0-9.]{7,15})\^$", 
+           r"\1", 
            line
         )
 
