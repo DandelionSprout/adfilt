@@ -1,7 +1,7 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 20October2023v2
+! Version: 20October2023v3
 ! Expires: 1 day
-! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
+! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Homepage for the repository: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
@@ -1089,10 +1089,6 @@ $removeparam=deep_link_sub1
 $removeparam=ClickThruEmail
 $removeparam=ClickThruCustomerNumber
 
-! https://scripts.affiliatefuture.com/AFClick.asp?affiliateID=29219&merchantID=2543&programmeID=6678&mediaID=0&tracking=&url=https://example.com/
-$removeparam=/^tracker=affiliatefuture$/i
-$removeparam=affc
-
 ! https://www.kichink.com/home/issafari?uri=https://example.com
 $removeparam=byp455
 
@@ -1143,9 +1139,6 @@ $removeparam=rbx_source
 $removeparam=rbx_medium
 $removeparam=rbx_campaign
 
-! https://www.iyuigjo.com/vpnMentor1?offer=3monthsfree&a_fid=vpnMentor&data3=https%253A%252F%252Fwww.vpnmentor.com%252Fvpn-comparison%252Fhotspot-shield-vs-surfeasy-vpn%252F
-$removeparam=a_fid
-
 ! https://www.backcountry.com/7-protection-m1-helmet?mr%3AtrackingCode=F31EAD0D-557E-E711-8100-005056944E17&mr%3AreferralID=NA&mr%3Adevice=c&mr%3AadType=plaonline
 ! https://www.llbean.com/llb/shop/1098?originalProduct=126140&pla1=0&mr%3AtrackingCode=DAFDEDC8-63D3-EB11-8114-00505694403D&mr%3AreferralID=NA&mr%3Adevice=c&mr%3AadType=dynonline
 $removeparam=mr%3AtrackingCode
@@ -1183,9 +1176,6 @@ $removeparam=ircid
 ! https://5dayleadchallenge.com/register-5dlc-1?cf_affiliate_id=3274849
 $removeparam=cf_affiliate_id
 
-! http://usfinf.net/-89906OKEM/1NV6?rndad=3155871133-1637879802
-$removeparam=rndad
-
 ! https://www.reddit.com/r/uBlockOrigin/comments/owcag5/previously_blocked_ads_suddenly_showing_on/
 $removeparam=ad_config_id
 
@@ -1208,8 +1198,12 @@ $removeparam=cje
 ! https://www.myprotein.es/?removedParams=utm_content
 $removeparam=removedParams
 
-! https://go.dgdp.net/CRJ71H/3HS2HZ/?sub1=0k00qpdi2i95&sub3=chollometro&sub2=https%3A%2F%2Fwww.tuimeilibre.com%2Fxiaomi-pocophone-x3-pro-8gb256gb-azul-helado-libre.html%3Fclick_id%3D%7Btransaction_id%7D
+! (Example links removed to try to handle antivirus false positives)
 $removeparam=iclid
+$removeparam=rndad
+$removeparam=/^tracker=affiliatefuture$/i
+$removeparam=affc
+$removeparam=a_fid
 
 ! https://maxchadwick.xyz/tracking-query-params-registry/
 $removeparam=_bta_tid
@@ -2538,7 +2532,6 @@ $removeparam=subid,domain=admitad.com|mintmobile.com|secretlab.*|webmasterplan.c
 $removeparam=tracking,domain=affiliatefuture.com|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|gtomega.*|malwarebytes.com|messenger.com
 $removeparam=ws,domain=ds1.nl
 
-! https://click.linksynergy.com/deeplink?id=kXQk6%2AivFEQ&mid=44583&u1=tomshardware-us-4362736165889510400&murl=https%3A%2F%2Fwww.newegg.com%2Fintel-core-i7-11700k-core-i7-11th-gen%2Fp%2FN82E16819118233
 ! https://shop-links.co/link/?publisher_slug=future&u1=tomshardware-us-1320336574459533300&exclusive=1&url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6425639%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6425639.p%253Fcmp%253DRMX&article_name=Best%20SSDs%202021%3A%20From%20Budget%20SATA%20to%20Blazing-Fast%20NVMe&article_url=https%3A%2F%2Fwww.tomshardware.com%2Freviews%2Fbest-ssds%2C3891.html%2F%2Freviews%2Fbest-ssds%2C3891.html
 $removeparam=u1,domain=linksynergy.com|shop-links.co
 $removeparam=article_name,domain=shop-links.co
@@ -2549,7 +2542,6 @@ $removeparam=article_url,domain=shop-links.co
 $removeparam=/^shared/,domain=alibi.fi|anna.fi|eralehti.fi|hymy.fi|kaksplus.fi|kotiliesi.fi|rakennusmaailma.fi|seura.fi|tekniikanmaailma.fi
 $removeparam=origin,denyallow=platform.twitter.com,domain=archive.org|buzzfeed.com|buzzfeednews.com|drop.com|flaticon.com|nordstrom.com|norton.com|philips.*|symbolab.com|yle.fi
 
-! https://adtraction.com/blog/what-is-epi-and-how-does-it-work
 ! https://fernerjacobsen.no/?epi=STS-SHP--FernerJacobsen-Logo%7Cxid%3Afr1624121412114eah
 $removeparam=epi,domain=fernerjacobsen.no|webhallen.com|microsoft.com|xbox.com|adtraction.com|tradedoubler.com
 $removeparam=epi2,domain=tradedoubler.com
@@ -2733,13 +2725,6 @@ $removeparam=ad_prodid,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.co
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
 ||rei.com^$removeparam=target_id
 ||squarespace.com^$removeparam=subchannel
-
-! https://chggtrx.com/clk.trk?CID=267627&AFID=304351
-$removeparam=partner,domain=accuweather.com|fastcompany.com|humblebundle.com
-||mechanicalkeyboards.com^$removeparam=creator
-||audible.$removeparam=source_code
-||audible.$removeparam=ipRedirectFrom
-||audible.$removeparam=ipRedirectOriginalURL
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1412160
 $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
@@ -3177,9 +3162,6 @@ $removeparam=click_key,domain=etsy.com
 $removeparam=click_sum,domain=etsy.com
 $removeparam=share_time,domain=etsy.com
 
-! https://linkvertise.com/8062/TS3StoreMagnet?o=sharing
-||linkvertise.com^$removeparam=o
-
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1589504
 $removeparam=trk,domain=linkedin.com
 
@@ -3306,9 +3288,6 @@ $removeparam=visit_id,doc,domain=bilibili.com|google.*
 ||cc.loginfra.com/cc$removeparam=sy
 ||cc.loginfra.com/cc$removeparam=nsc
 
-! http://www.cyber-ad01.cc/0155/?ip=0155&id=L206
-||cyber-ad01.cc^$removeparam=ip
-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98659
 ||listelerim.hepsiburada.com^$removeparam=c
 
@@ -3336,12 +3315,6 @@ $removeparam=hoaci,domain=hotspotshield.com|gethotspotshield.com
 $removeparam=tvh,domain=hotspotshield.com|gethotspotshield.com
 $removeparam=vh,domain=hotspotshield.com|gethotspotshield.com
 
-! https://www.tkqlhce.com/click-100130848-15032659?sdate=D202111231126_o
-||tkqlhce.com^$removeparam=sdate
-
-! https://ad.admitad.com/g/xljorca896cf955d81ea4bf89f6ddb/?i=5&f_id=14723&ulp=https%3A%2F%2Fwww.tomtop.com%2Fp-os1622au.html&subid=tomshardware-us-5867704010115023000
-$removeparam=f_id,domain=admitad.com
-
 ! https://www.pulseway.com/land/linus?rfid=linus2021
 ||pulseway.com^$removeparam=rfid
 
@@ -3366,9 +3339,6 @@ $removeparam=f_id,domain=admitad.com
 
 ! https://www.sporcle.com/memberships/?rp=main_adhesion_go_orange_link
 ||sporcle.com^$removeparam=rp
-
-! https://localmonero.co/?rc=zfot
-||localmonero.co^$removeparam=rc
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1710177
 $removeparam=mv_pc,domain=fragrancenet.com
@@ -3576,8 +3546,6 @@ $removeparam=breadcrumb,domain=shopbop.com
 ||go.skimresources.com^$removeparam=xed
 $removeparam=rffrid
 ||bottegaveneta.com^$removeparam=tp
-! https://bit.ly/3xMwzGy?cc=8f8d85334707b66b55e73dabddab4672
-!!! ||bit.ly^$removeparam=cc (until https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1950056 is resolved)
 ! https://www.matchesfashion.com/us/womens/designers/raf-simons?qxjkl=tsid:38929|cgn:TnL5HPStwNw
 $removeparam=/^qxjkl=tsid:/
 $removeparam=ad_name
@@ -4478,6 +4446,18 @@ $doc,removeparam=iId,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4ky
 ||simplermedia.com^$doc,removeparam=smg_medium
 ||simplermedia.com^$doc,removeparam=smg_campaign
 ||simplermedia.com^$doc,removeparam=smg_content
+
+! (Example links removed to try to handle antivirus false positives)
+||tkqlhce.com^$removeparam=sdate
+||localmonero.co^$removeparam=rc
+||linkvertise.com^$removeparam=o
+$removeparam=partner,domain=accuweather.com|fastcompany.com|humblebundle.com
+||mechanicalkeyboards.com^$removeparam=creator
+||audible.$removeparam=source_code
+||audible.$removeparam=ipRedirectFrom
+||audible.$removeparam=ipRedirectOriginalURL
+$removeparam=f_id,domain=admitad.com
+||cyber-ad01.cc^$removeparam=ip
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
