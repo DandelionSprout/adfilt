@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 20October2023v5
+! Version: 20October2023v6
 ! Expires: 1 day
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1203,6 +1203,8 @@ $removeparam=a_fid
 $removeparam=afCampaignId
 $removeparam=afCreativeId
 $removeparam=afcode
+$removeparam=_offer_super-low_rates.
+$removeparam=topicPageSponsorship
 
 ! https://maxchadwick.xyz/tracking-query-params-registry/
 $removeparam=_bta_tid
@@ -2732,7 +2734,7 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ! https://www.tui.fi/?agent=napsu
 ! https://www.tui.co.uk/?onebrand_source=country_selector_tuicom
 ||tui.$removeparam=agent
-||tui.$removeparam=onebrand_source
+$removeparam=onebrand_source
 
 ! https://www.hp.com/us-en/shop/slp/weekly-deals?jumpid=ma_home_hero_na_1_210623
 ||hp.com^$removeparam=jumpid
@@ -2772,7 +2774,7 @@ $removeparam=usqp,domain=gstatic.com|cdn.ampproject.org
 ||ting.com^$removeparam=lpn
 ||newegg.com^$removeparam=quicklink
 ||newegg.com^$removeparam=nm_mc
-||slickdeals.net^$removeparam=bsencid
+$removeparam=bsencid
 ||target.com^$removeparam=clkid
 $removeparam=adcampaigngroup
 ||dell.com^$removeparam=dgc
@@ -2903,12 +2905,6 @@ $removeparam=pt,domain=apple.com|icedrive.net
 ||kohls.com^$removeparam=bdrecsId
 ||kohls.com^$removeparam=prdPV
 
-! https://www.mcafee.com/consumer/en-us/landing-page/direct/aff/mtp-family/desktop/mcafee-total-protection.html?pkg_id=521&culture=en-us&csrc=cj&csrcl2=Black+Friday%2C+Ziff+Davis+LLC&ccoe=direct&ccoel2=am&ccstype=partnerlinks_412446610cc511ec82da00f00a180510&cctype=desktop&prgt=a
-$removeparam=csrc,domain=mcafee.com|vitacost.com
-||mcafee.com^$removeparam=csrcl2
-||mcafee.com^$removeparam=cctype
-||mcafee.com^$removeparam=ccstype
-
 ! https://www.lightinthebox.com/c/robot-vacuums-cleaners_113104?p.litb_from=SAS&p.utm_source=sas&p.utm_medium=affiliate&p.utm_campaign=136482&url=http%3A%2F%2Fwww.lightinthebox.com%2Fc%2Frobot-vacuums-cleaners_113104
 ||lightinthebox.com^$removeparam=url
 
@@ -2959,7 +2955,7 @@ $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ||saksfifthavenue.com^$removeparam=LScreativeid
 
 ! https://www.humblebundle.com/?zmg_code=047w7nLoOX7W0gtuuWl9c6u
-||humblebundle.com^$removeparam=zmg_code
+$removeparam=zmg_code
 
 ! https://epson.com/?cje=28a0febb0cac11ec83a7efca0a180512
 ||epson.$removeparam=cje
@@ -2971,8 +2967,8 @@ $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-915141282
 ||imobiliare.ro^$removeparam=exprec
 ||imobiliare.ro^$removeparam=rec_ref
-||imobiliare.ro^$removeparam=sursa_rec
-||imobiliare.ro^$removeparam=imoidviz
+$removeparam=sursa_rec
+$removeparam=imoidviz
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1307231
 $removeparam=context_referrer
@@ -2981,9 +2977,6 @@ $removeparam=ref_ctx_id
 ||fiverr.com^$removeparam=is_pro
 ||fiverr.com^$removeparam=context_alg
 ||fiverr.com^$removeparam=context_type
-
-! https://www.virustotal.com/gui/file/cdecce5824e901bbbd97c0f933c15a14a4f2c1b260da17d8081b6b87cf306c2f/community
-||ccleaner.com^$removeparam=x-acqsource
 
 ! https://us.norton.com/?displocale=iso3%3ausa&displang=iso3%3aeng&ssdcat=266&origin=safew&env=prod&version=1.0
 $removeparam=ssdcat,domain=norton.com|ask.com
@@ -3000,9 +2993,6 @@ $removeparam=rss,domain=marketwatch.com|sn.dk|ted.com
 
 ! https://nerdrooted.com/2020/01/06/how-to-install-wow-in-arch-manjaro-linux/?sfw=pass1693248042
 ||nerdrooted.com^$removeparam=sfw
-
-! https://www.infoq.com/articles/kotlin-ten-years-qa/?topicPageSponsorship=9df7746f-b196-415b-964e-bc8483319fd9
-||infoq.com^$removeparam=topicPageSponsorship
 
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/58
 ! (Exception: discord.*; see #445)
@@ -3043,8 +3033,8 @@ $doc,removeparam=ct,domain=apple.com|bumble.com|newsroom.co.nz
 ||apple.com^$removeparam=/^ign-/
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1490207
-$removeparam=xcust,domain=go.skimresources.com|go.skimlinks.com|go.redirectingat.com
-$removeparam=xs,domain=go.skimresources.com|go.skimlinks.com|go.redirectingat.com
+$removeparam=xcust
+$removeparam=xs,domain=skimresources.com|skimlinks.com|redirectingat.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 $removeparam=surface,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
@@ -3070,7 +3060,7 @@ $removeparam=ds_a_caid,domain=clickserve.dartsearch.net
 $removeparam=ds_a_agid,domain=clickserve.dartsearch.net
 $removeparam=ds_a_lid,domain=clickserve.dartsearch.net
 $removeparam=ds_e_adid,domain=clickserve.dartsearch.net
-$removeparam=ds_e_target_id,domain=clickserve.dartsearch.net
+$removeparam=ds_e_target_id
 $removeparam=ds_e_network,domain=clickserve.dartsearch.net
 $removeparam=ds_url_v,domain=clickserve.dartsearch.net
 
@@ -3091,7 +3081,7 @@ $removeparam=_ref,domain=fanatics.com|nhl.com
 ||xg4ken.com^$removeparam=locphy
 ||macys.com^$removeparam=trackingid
 $removeparam=/^m_/,domain=macys.com|macysinc.com
-||macys.com^$removeparam=CAGPSPN
+$removeparam=CAGPSPN
 
 ! https://store.wsj.com/shop/apac/jp/jwsjss21/?inttrackingCode=aaqwimzi&icid=JJ_ON_JHP_ACQ_NA
 ||wsj.com^$removeparam=inttrackingcode
@@ -3104,7 +3094,6 @@ $removeparam=/^m_/,domain=macys.com|macysinc.com
 ||lendgo.com^$removeparam=apr
 $removeparam=rt,domain=lendgo.com|bilibili.com
 ||lendgo.com^$removeparam=lt
-||lendgo.com^$removeparam=_offer_super-low_rates.
 
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/1784
 $removeparam=lid,domain=baidu.com|clickserve.dartsearch.net|flipkart.com
@@ -3355,8 +3344,8 @@ $removeparam=recs_seed,domain=nordstrom.com
 ! https://www.savagex.com/shop/savage-x-smoking-jacket-sq2149163-6212-12096199?psrc=browse_men_sleep
 $removeparam=psrc,domain=savagex.com
 
-! https://shopee.es/?c=install_homepage01_211109&deep_and_deferred=1&smtt=9&pid=affiliates_planning_chollometro
-||shopee.$removeparam=deep_and_deferred
+! Shopee Spain
+$removeparam=deep_and_deferred
 
 ! https://www.gamivo.com/product/windows-10-professional?glv=geyuy8q7
 ||gamivo.com^$removeparam=glv
@@ -3511,9 +3500,8 @@ $removeparam=searchResultClicked,domain=shopbop.com
 $removeparam=breadcrumb,domain=shopbop.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1935694
-! https://go.skimresources.com/?id=76112X1604401&xs=1&xcreo=500004&url=https://www.matchesfashion.com/us/products/Raf-Simons-Children-of-the-Revolution-roll-neck-jersey-top-1414525&xed=1&xcust=julydigitalcover
-||go.skimresources.com^$removeparam=xcreo
-||go.skimresources.com^$removeparam=xed
+$removeparam=xcreo
+||skimresources.com^$removeparam=xed
 $removeparam=rffrid
 ||bottegaveneta.com^$removeparam=tp
 ! https://www.matchesfashion.com/us/womens/designers/raf-simons?qxjkl=tsid:38929|cgn:TnL5HPStwNw
@@ -3651,7 +3639,7 @@ $removeparam=cxt,domain=twitter.com|x.com
 ||learner.org^$removeparam=jwsource
 
 ! https://www.thisismoney.co.uk/video/moneycars/video-2600427/Video-F1-designer-Gordon-Murray-unveils-new-1-7m-supercar.html?mwv_rm=rta
-$removeparam=mwv_rm,domain=dailymail.co.uk|thisismoney.co.uk
+$removeparam=mwv_rm
 
 ! https://www.dailymail.co.uk/money/markets/article-10555281/Morrisons-emerges-potential-buyer-beleaguered-McColls.html?mrn_rm=rta
 $removeparam=mrn_rm,domain=dailymail.co.uk|thisismoney.co.uk
@@ -3785,7 +3773,7 @@ $removeparam=textadID,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=__vfz,domain=venturebeat.com
 
 ! https://www.boots.com/dior-sauvage-eau-de-toilette-100ml-gift-box-10300220?affwin
-$removeparam=affwin,domain=boots.com
+$removeparam=affwin
 
 ! https://www.studio.co.uk/shop/health---beauty/dental-care/oral-b-pro3-black-edition-cross-action-electric-toothbrush-with-travel-case?source=TQ45&ch=aw
 $removeparam=ch,domain=studio.co.uk
@@ -3806,7 +3794,7 @@ $removeparam=user_id,doc,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64yt
 ^fs=e&s=cl$doc,removeparam=s
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3101743
-$removeparam=x50878,domain=pmctraining.com
+$removeparam=x50878
 
 ! https://github.com/uBlockOrigin/uAssets/issues/13958#issuecomment-1178776992
 ||redirect.appmetrica.yandex.com^$removeparam=c
@@ -3980,7 +3968,7 @@ $removeparam=srsltid,doc
 ||mcafee.com^$removeparam=adid
 ||malwarebytes.com^$removeparam=x-affid
 ||malwarebytes.com^$removeparam=ADDITIONAL_AFFID
-||malwarebytes.com^$removeparam=x-wts
+$removeparam=x-wts
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4598037
 $removeparam=%243p,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
@@ -3989,7 +3977,7 @@ $removeparam=post_index,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4617249
 $removeparam=auto_token,domain=nextdoor.com
-$removeparam=mobile_deeplink_data,domain=nextdoor.com
+$removeparam=mobile_deeplink_data
 $removeparam=link_source_user_id,domain=nextdoor.com
 $removeparam=is,domain=nextdoor.com|discordapp.*
 $removeparam=mar,domain=nextdoor.com
@@ -4132,7 +4120,7 @@ $removeparam=/^ref=troyhunt\.com/
 ||homedepot.com^$removeparam=fromReminder
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5996450
-||youtube.com^$removeparam=embeds_referring_euri
+$removeparam=embeds_referring_euri
 
 ! https://music.bugs.co.kr/?wl_ref=M_header_03_01
 ||bugs.co.kr^$removeparam=wl_ref
@@ -4225,7 +4213,7 @@ $removeparam=caniuse_source,doc
 ||github.com^$removeparam=reference_location
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6259406
-||aliexpress.com^$removeparam=afSmartRedirect
+$removeparam=afSmartRedirect
 
 ! https://app.snyk.io/org/t145/project/9c0fc40b-7515-4c9e-86c7-7cf768775d4b?utm_source=github&utm_medium=referral&page=upgrade-pr
 ||app.snyk.io^$removeparam=page,doc
@@ -4241,7 +4229,7 @@ $removeparam=repost,domain=nbcnews.com|sacurrent.com
 ||uslecce.it^$removeparam=et
 
 ! https://www.skinnytaste.com/burger-recipes/?adt_ei=*|EMAIL|*
-||skinnytaste.com^$removeparam=adt_ei
+$removeparam=adt_ei
 
 ! https://www.pnas.org/doi/abs/10.1073/pnas.2024425118?af=R
 $doc,removeparam=af,domain=pnas.org|science.org|scitation.org|wiley.com|worldscientific.com
@@ -4376,6 +4364,11 @@ $removeparam=f_id,domain=admitad.com
 ||cyber-ad01.cc^$removeparam=ip
 $removeparam=referrer_code,domain=hodlhodl.com
 ||domains.ch^$removeparam=REF
+$removeparam=x-acqsource
+$removeparam=csrc,domain=mcafee.com|vitacost.com
+$removeparam=csrcl2
+||mcafee.com^$removeparam=cctype
+||mcafee.com^$removeparam=ccstype
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
