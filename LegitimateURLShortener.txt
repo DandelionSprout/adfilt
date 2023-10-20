@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 20October2023v3
+! Version: 20October2023v4
 ! Expires: 1 day
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -466,9 +466,6 @@ $removeparam=gtmtrack
 $removeparam=vifAdCount
 $removeparam=vifNav
 
-! https://www.siteground.es/index.htm?afcode=dfe40d3ff0fcb7398f1c2a21ccc60504
-$removeparam=afcode
-
 ! https://bcy.net/item/detail/6871525119949282312?_source_page=hashtag
 $removeparam=_source_page
 
@@ -906,7 +903,6 @@ $removeparam=__s,doc
 ! https://help.klaviyo.com/hc/en-us/articles/115005076767
 $removeparam=_kx
 
-! https://www.affluent.io/affiliate-marketing-blog/affiliate-sub-campaign-sid-tracking-guide/
 ! https://strackr.com/subid
 $removeparam=/^affsrc=/i
 $removeparam=/^aff_sub\d?=/
@@ -1204,6 +1200,9 @@ $removeparam=rndad
 $removeparam=/^tracker=affiliatefuture$/i
 $removeparam=affc
 $removeparam=a_fid
+$removeparam=afCampaignId
+$removeparam=afCreativeId
+$removeparam=afcode
 
 ! https://maxchadwick.xyz/tracking-query-params-registry/
 $removeparam=_bta_tid
@@ -1283,10 +1282,6 @@ $removeparam=tj,domain=baidu.com|sina.com.cn
 ! https://ad.admitad.com/g/xrzqqr83azcf955d81ea0789458fbf/?i=5&ulp=https%3A%2F%2Fwww.cafago.com%2Fp-c11231b.html
 ! https://ad.admitad.com/g/xljorca896e18d2252e34bf89f6ddb/
 $removeparam=tagtag_uid
-
-! https://go.shopyourlikes.com/pi/96e08a288d05cb3bf7f8034ddc45d33da77bb090?afId=614548&afCampaignId=cn-___COM_CLICK_ID___-dtp&afCreativeId=2993
-$removeparam=afCampaignId
-$removeparam=afCreativeId
 
 ! https://www.m1finance.com/?affiliateCode=3HO3ny3%3AixyIToKUQ7X4Nz5IUkG1ZCzf4xL1Us0
 $removeparam=affiliateCode
@@ -3052,7 +3047,6 @@ $doc,removeparam=ct,domain=apple.com|bumble.com|newsroom.co.nz
 ||apple.com^$removeparam=/^ign-/
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1490207
-! i.e. https://go.skimresources.com/?id=160612X1627478&xcust=adm2_841947&xs=1&url=https%3A%2F%2Fwalmart.com%2Fip%2F204105463
 $removeparam=xcust,domain=go.skimresources.com|go.skimlinks.com|go.redirectingat.com
 $removeparam=xs,domain=go.skimresources.com|go.skimlinks.com|go.redirectingat.com
 
@@ -3234,9 +3228,6 @@ $removeparam=referer,doc,domain=bodykind.com|clink2.com|dlink2.com|nitter.net
 
 ! https://www.officemonster.co.uk/laptop-monitor-risers/fellowes-hana-monitor-support-230v-usb-eu-uk-metal-base-black-8060501--6?fo_c=3748&fo_k=c3102c618ef75aa5e461355397178cad&fo_s=awin
 ||officemonster.co.uk^$removeparam=/^fo_/
-
-! https://www.viglink.com/?vgref=352353
-||viglink.com^$removeparam=vgref
 
 ! https://analytics.bluekai.com/site/16231?phint=event=click&phint=campaign=BRAND-TAB&phint=platform=search&done=https://example.com/
 ||analytics.bluekai.com^$removeparam=phint
@@ -3499,9 +3490,6 @@ $removeparam=is_from_origin_btn,domain=shein.com
 $removeparam=from_country,domain=shein.com
 $removeparam=_t,domain=shein.com
 
-! https://hodlhodl.com/join/JDXT
-$removeparam=referrer_code,domain=hodlhodl.com
-
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1899731
 ! https://www.youtube.com/watch?v=7yk3WDZRcTM&feature=youtu.be
 $removeparam=sr_id,domain=reddit.app.link
@@ -3557,9 +3545,6 @@ $removeparam=rs,domain=gamereactor.*
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1949473
 $removeparam=alpha,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=block,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
-
-! https://www.domains.ch/en/Search/Index?domain=iam-py-test.xyz&REF=2469
-||domains.ch^$removeparam=REF
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104849
 ||greenhouse.io^$removeparam=/^lever-/
@@ -3731,7 +3716,6 @@ $removeparam=s_kw,domain=expansion.com|marca.com
 ||ecosia.org^$removeparam=addon
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2526545
-! wix.com/dashboard/123456/home?referralInfo=EDITOR
 $removeparam=referralInfo,domain=wix.com
 ! Microsoft
 $removeparam=pfr,domain=msn.com
@@ -4458,6 +4442,8 @@ $removeparam=partner,domain=accuweather.com|fastcompany.com|humblebundle.com
 ||audible.$removeparam=ipRedirectOriginalURL
 $removeparam=f_id,domain=admitad.com
 ||cyber-ad01.cc^$removeparam=ip
+$removeparam=referrer_code,domain=hodlhodl.com
+||domains.ch^$removeparam=REF
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
