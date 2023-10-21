@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21October2023v2
+! Version: 21October2023v3
 ! Expires: 1 day
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -4370,6 +4370,16 @@ $removeparam=csrc,domain=mcafee.com|vitacost.com
 $removeparam=csrcl2
 ||mcafee.com^$removeparam=cctype
 ||mcafee.com^$removeparam=ccstype
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-7346325
+$doc,removeparam=intc,domain=citi.com
+$doc,removeparam=src,domain=citi.com
+$doc,removeparam=selectedCCIndex,domain=citi.com
+$doc,removeparam=aoOfferParams,domain=citi.com
+! $removeparam=BT_TX,domain=citi.com
+$removeparam=ProspectID,domain=citi.com
+$removeparam=Promo_ID,domain=citi.com
+$removeparam=BT_VanityDomain,domain=citi.com
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
