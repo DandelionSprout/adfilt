@@ -1,4 +1,4 @@
-Important note to self: Running Python scripts in Cygwin and PowerShell seems to create **COMPLETELY** different file encodings that completely overwrite one another. Stick to the Cygwin output versions if at all humanly possible for logkeeping's sake.
+Important note to self: Running Python scripts in Cygwin and PowerShell seems to create **COMPLETELY** different file encodings that completely overwrite one another. Stick to the Cygwin output versions if at all humanly possible for logkeeping's sake. It is hoped that a specific line in Gitattributes is able to force Unix line endings, but it's not "only only" to test it on a mass scale.
 
 Recommended adblockers for the various list versions:
 
