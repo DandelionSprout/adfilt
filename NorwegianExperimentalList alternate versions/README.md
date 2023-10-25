@@ -28,7 +28,8 @@ Recommended adblockers for the various list versions:
 This is only recommended for Adfilt team members or those who want to test the script, and is not recommended for pull requests.
 
 1) Right-click on https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/XYZPrepareFilters.py and save it on your PC, preferably in its own folder.
-2) If you're on Windows, install [Cygwin 64-bit](https://www.cygwin.com/), and pick the <i>python39</i> (or higher-numbered within the `python3` generation) package when you're prompted to install any packages. macOS and Linux can <i>usually</i> use the included-in-distro command lines. <b>Do not</b> use PowerShell/CMD for this, since PowerShell and Gitattributes collectively completely utterly refuse to acknowledge any attempts whatsoever to convert newlines to Unix.
-3) In the folder where you placed `XYZPrepareFilters.py`, create two new subfolders with the names of `Anti-Malware List` and `Domeneversjoner`.
-4) Open Cygwin (on Windows) or the default terminal (on macOS or Linux), use `cd` to navigate to the folder that contains `XYZPrepareFilters.py`, and run `Python3 XYZPrepareFilters.py`.
-5) If it worked, it'll lead to a few lines with text along the lines of "The list versions have been generated."
+2) If you're on Windows, install [Cygwin 64-bit](https://www.cygwin.com/), and pick the <i>python39</i> (or higher-numbered within the `python3` generation) package when you're prompted to install any packages. Starting 25th of October 2023, PowerShell/CMD combined with a [desktop install of Python](https://www.python.org/downloads/windows/) now works correctly (I lack confidence in the [MS Store version of Python](https://apps.microsoft.com/detail/python-3-11/9NRWMJP3717K) in regards to potentially shifting filepaths).
+* * macOS and Linux can <i>usually</i> use the included-in-distro command lines.
+4) In the folder where you placed `XYZPrepareFilters.py`, create two new subfolders with the names of `Anti-Malware List` and `Domeneversjoner`.
+5) Open your preferred terminal setup, use `cd` to navigate to the folder that contains `XYZPrepareFilters.py`, and run `Python3 XYZPrepareFilters.py` (PowerShell/CMD: `python XYZPrepareFilters.py`).
+6) If it worked, it'll lead to a few lines with text along the lines of "The list versions have been generated."
