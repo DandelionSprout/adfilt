@@ -24,7 +24,7 @@
 * `:has(>` : Tells `:has` to only find elements whose criteria match their immediate subelement(s).
 * `:not(:-abp-contains(Text))` / `:not(:-abp-has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order. To select multiple numbers, one has to use `n` calculations (e.g. `(n+2)`), since ranges (e.g. `(3-6)`) are not supported.
-* `:only-of-type` / `first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
+* `:only-of-type` / `:first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
 * `:first-child` / `:last-child`: Appears to be synonymous with `first-of-type` and `last-of-type` for adblocking purposes. `:last-child` is easily mistaken for what `:empty` does.
 * `::before` / `::after`: Removes the pseudo-elements that belong to a page element. If a pseudo-element is present, they're shown as standalone `::before` or `::after` lines in all-brown in the F12 filetree.
 * `>`: Creates chain criteria, in which a selected page element must have a specific element on the floor above it in the filetree.
