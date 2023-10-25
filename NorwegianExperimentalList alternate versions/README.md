@@ -28,7 +28,7 @@ Recommended adblockers for the various list versions:
 This is only recommended for Adfilt team members or those who want to test the script, and is not recommended for pull requests.
 
 1) Right-click on https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/XYZPrepareFilters.py and save it on your PC, preferably in its own folder.
-2) If you're on Windows, install [Cygwin 64-bit](https://www.cygwin.com/), and pick the <i>python39</i> (or higher-numbered within the `python3` generation) package when you're prompted to install any packages. macOS and Linux can <i>usually</i> use the included-in-distro command lines. PowerShell/CMD should be tested by uploading <i>one</i> file at a time to see if <code>* text=auto eol=lf</code> in Gitattributes is in fact working correctly.
+2) If you're on Windows, install [Cygwin 64-bit](https://www.cygwin.com/), and pick the <i>python39</i> (or higher-numbered within the `python3` generation) package when you're prompted to install any packages. macOS and Linux can <i>usually</i> use the included-in-distro command lines. <b>Do not</b> use PowerShell/CMD for this, since PowerShell and Gitattributes collectively completely utterly refuse to acknowledge any attempts whatsoever to convert newlines to Unix.
 3) In the folder where you placed `XYZPrepareFilters.py`, create two new subfolders with the names of `Anti-Malware List` and `Domeneversjoner`.
 4) Open Cygwin (on Windows) or the default terminal (on macOS or Linux), use `cd` to navigate to the folder that contains `XYZPrepareFilters.py`, and run `Python3 XYZPrepareFilters.py`.
 5) If it worked, it'll lead to a few lines with text along the lines of "The list versions have been generated."
