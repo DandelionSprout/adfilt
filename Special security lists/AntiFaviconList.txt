@@ -1,6 +1,35 @@
 [Adblock Plus 3.6]
 ! Title: ⛺ Anti-Favicon List
-! Version: 23January2021v1-Beta
+! Version: 27October2023v1-Beta
 ! Description: The article at https://www.ghacks.net/2021/01/22/favicons-may-be-used-to-track-users/ probably explains this list better than anything I could've written myself.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 /favicon.ico|
+/favicon.png|
+/favicon.svg|
+/assets/favicon^
+/cropped-favicon-*.png|
+/favico.ico|
+/favico.png|
+/favicon-*.png|
+/favicon-32.gif|
+/favicon.*.ico|
+/favicon.ico?
+/favicon_black.ico|
+/favicon_desktop_*.png|
+/favicon_round.ico|
+/favicon_v*.ico|
+/favicons/*.png|
+/img/favicon^
+/media/favicon/*
+/web/favicons/*
+_favicon_.ico|
+.php/*.ico|$domain=cdninstagram.com|fbcdn.net
+
+! ——— Entries below this line require uBlock Origin or AdGuard ———
+! e.g. ShopDisney.com, viaplaygroup.com, SteamDB.info
+#?#link[rel=icon]:remove()
+! Unsure if the entry is needed
+!!!##link[rel=mask-icon]:remove()
+
+! For users of Dandelion Sprout's Annoyances List
+@@/favicon.ico|$badfilter
