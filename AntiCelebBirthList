@@ -1,10 +1,11 @@
 [Adblock Plus 3.13]
 ! Title: 😌 Anti-'Newsstories about celebs giving birth' List
-! Version: 23August2023v1-Beta
+! Version: 27October2023v1-Beta
 ! Expires: 3 days
 ! Description: We hear so much talk about "fake news" nowadays, but we never hear any talk about non-news, such as C-tier celebrities either expecting offspring or giving birth to such. This list will aid in removing such kinds of non-news.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
+!#if !env_mv3
 ! Multiple sites (English-language)
 theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=birth-of-baby]
 theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=baby-news]
@@ -234,3 +235,4 @@ nrk.no#?#.kur-newsfeed__message:has-text(/venter barn/i)
 
 ! The Guardian
 theguardian.com#?#ul[data-component*=carousel] li:has(a[href*=pregnan])
+!#endif
