@@ -1,8 +1,9 @@
 [Adblock Plus 3.6]
 ! Title: ⛺ Anti-Favicon List
-! Version: 27October2023v2-Beta
+! Version: 27October2023v4-Beta
 ! Description: The article at https://www.ghacks.net/2021/01/22/favicons-may-be-used-to-track-users/ probably explains this list better than anything I could've written myself.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
+!#if !env_mv3
 /favicon.ico|
 /favicon.png|
 /favicon.svg|
@@ -27,9 +28,18 @@ _favicon_*.ico|
 
 ! ——— Entries below this line require uBlock Origin or AdGuard ———
 ! e.g. ShopDisney.com, viaplaygroup.com, SteamDB.info
+!#if cap_html_filtering
+*##^link[rel~=icon]
+!#endif
+
+! It is pretty unlikely if these have the desired effect, but it was the best I could do for Chromium as of October 2023
+!#if !env_firefox
 #?#link[rel=icon]:remove()
-! Unsure if the entry is needed
-!!!##link[rel=mask-icon]:remove()
+*#?#link[rel=icon]:remove()
+#?#link[rel=mask-icon]:remove()
+*#?#link[rel=mask-icon]:remove()
+!#endif
 
 ! For users of Dandelion Sprout's Annoyances List
 @@/favicon.ico|$badfilter
+!#endif
