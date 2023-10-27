@@ -1,12 +1,13 @@
 [Adblock Plus 3.13]
 ! Title: 🌧 Anti-Skype List for Office Online
-! Version: 12January2021v1-Alpha
+! Version: 27October2021v1-Alpha
 ! Expires: 15 days
 ! Description: Office Online, which is effectively a free lite version of Microsoft Office, was a pretty nice and kind move by Microsoft. However, they seem to think that quick access to Skype from it is essential for project communication, which is less than desirable for those who've moved on to e.g. Discord. Here's a list that will make your Office Online experience Skype-free.
 ! Note that this list currently only covers Office Online, and not e.g. app stores's PC browser versions. I am however willing to expand this list into covering such things on request.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! 📛 = This category requires using either uBlock Origin or AdGuard.
 
+!#if !env_mv3
 ! Removes the Skype button from the Office Online frontpage
 office.com###ShellSkype_link
 
@@ -22,3 +23,4 @@ account.microsoft.com#?#.c-card:has(h6[ng-if="card.title"]:has-text(Skype))
 
 ! Shows a warning when being about to visit Skype's browser interface 📛
 ||web.skype.com^$document
+!#endif
