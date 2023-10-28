@@ -1,12 +1,13 @@
 [Adblock Plus 3.13]
 ! Title: 🗨 Anti-'Google Hangouts' List
-! Version: 06October2020v2-Beta
+! Version: 28October2023v1-Beta
 ! Expires: 20 days
 ! Description: Are you a non-user of Hangouts, and are tired of seeing the uncloseable Hangouts section on Gmail, and various Hangouts buttons and pages? Then this is the list for you.
 ! I (The list maintainer) have been made aware of the phase-out of Hangouts Classic in the 2nd half of 2020. So far it remains to be seen whether this list will retain a reason to exist afterwards or not.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! 📛 = This category requires using either uBlock Origin or AdGuard.
 
+!#if !env_mv3
 ! Removes the Hangouts feed in the lower left of Gmail
 ||hangouts.google.com/webchat/u/0/frame2$domain=mail.google.com
 mail.google.com###talk_roster
@@ -19,3 +20,4 @@ google.*##.gb_h:has(.gb_c[rel=noreferrer][target=_blank][href="https://hangouts.
 
 ! Displays a warning when opening Hangouts' own website 📛
 ||hangouts.google.com$document
+!#endif
