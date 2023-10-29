@@ -1,10 +1,11 @@
 [Adblock Plus 3.13]
 ! Title: 🛤️ Anti-Astrology List
-! Version: 24October2023v2-Beta
+! Version: 29October2023v1-Beta
 ! Expires: 4 days
 ! Description: The alignment of the stars predict that you will use this list, in order to stop listening so much to such completely unfounded predictions anymore, and to get your eyes off the starry skies and onto your life that should be planted firmly on the ground.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
+!#if !env_mv3
 ! International
 ##.horoscopes:not(html, body)
 ##.front-page-horoscope-section:not(html, body)
@@ -125,6 +126,7 @@ artstation.com#?#projects-list-item,.project:has-text(/Capricorn/i)
 artstation.com#?#projects-list-item,.project:has-text(/Horoscope/i)
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment,.Post,.thing,.entry:has-text(/Vriska/i)
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment,.Post,.thing,.entry:has-text(/Homestuck/i)
+fandom.com#?#.userbox:has(a[href*="/Zodiac_sign"])
 !#endif
 !#if !env_mobile
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=Capricorn i])
@@ -635,3 +637,4 @@ sims.fandom.com#?#.tabbertab > center:has-text(Sign / personality mismatch)
 sims.fandom.com#?#.tabbertab > center:has-text(Genetic personality)
 sims.fandom.com#?#.wikitable + center:has-text(Sign / personality mismatch)
 sims.fandom.com#?#.wikitable + center + center:has-text(Genetic personality)
+!#endif
