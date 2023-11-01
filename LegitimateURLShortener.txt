@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30October2023v1
+! Version: 1November2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1925,6 +1925,7 @@ $removeparam=sk,domain=aliexpress.*|bing.com
 ! https://www.bing.com/search?q=Jinmay&PTAG=ICO-c9d0fc87 (Searching with Vivaldi's "Search with Bing" function)
 ||bing.$removeparam=PTAG
 ! https://cn.bing.com/search?q=%e8%b1%86%e7%93%a3&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgQIARAAMgQIAhAAMgQIAxAAMgQIBBAAMgQIBRAAMgQIBhAAMgQIBxAAMgYICBBFGD3SAQgxMjE3ajBqMagCALACAA&FPIG=FA771155383A494687304784CB8358B9&first=7 (24/10/2023)
+! https://github.com/DandelionSprout/adfilt/pull/934
 ||bing.com/search?$removeparam=gs_lcrp
 ||bing.com/search?$removeparam=FPIG
 
@@ -2401,6 +2402,9 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ! https://www.bilibili.com/video/BV1vd4y1V7a4/?plat_id=163 (26/01/2023)
 ! https://github.com/DandelionSprout/adfilt/pull/761
 ||bilibili.com^$removeparam=plat_id
+! https://www.bilibili.com/video/BV1iQ4y1J7ti/?spmid=main.ugc-video-detail.0.0 (01/11/2023)
+! https://github.com/DandelionSprout/adfilt/pull/940
+||bilibili.com^$removeparam=spmid
 
 !!!! ——— iQIYI ———
 ! https://github.com/DandelionSprout/adfilt/pull/390
