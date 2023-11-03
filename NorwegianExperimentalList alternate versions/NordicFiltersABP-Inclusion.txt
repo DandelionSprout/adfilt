@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Translated title: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 221020231
+! Version: 031120231
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -230,6 +230,7 @@ mc-avisa.no##.avisa-widget
 melkoghonning.no##.g
 mobilsiden.dk##.content-widget-HTML
 momondo.no,monondo.dk##.type-provider.clearfix.flights
+gamer.no##.moved
 musikknyheter.no##.spklw-widget
 nettavisen.no##[param-editionid=reklame]
 nettavisen.no#?#.optimus-complex-front:has(amedia-include[manifest*=".norkon."])
@@ -382,6 +383,8 @@ in.fo##div[class*=midlads]
 in.fo##.mobile-hide[class*=ads]
 tvkampen.com,tvsporten.dk#?#li.tv:has(>.do-link)
 tvkampen.com,tvsporten.dk#?#li[class^=tv]:has(img:is([alt*=bet i],[alt*=tipping i]))
+version2.dk,ing.dk,techmanagement.dk,radar.dk##div[class^=layout] > .block-tm-kevel
+version2.dk,ing.dk,techmanagement.dk,radar.dk##div:not([class]) > .jobs-wrapper
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -648,6 +651,8 @@ _visittkortannonse_$image
 /wp-content/uploads/ad-html^
 ! https://spurt.no/zyrtec-mot-myggstikk/ (01/06/2023
 /convertpro/*/cp-popup.min.css|
+! https://www.version2.dk/artikel/medie-yngre-er-til-nemid-aeldre-til-mitid (02/11/2023)
+||service.tekhus.dk/*.jpg^$image,third-party
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -1132,6 +1137,8 @@ freak.no##.right-column-wrapper
 friflyt.no###ads_fullwidth_container
 friflyt.no###wallpaperCenterAd
 friflyt.no,terrengsykkel.no##.inlineAdBlock
+gamer.no#?#div[class]:has(+ main)
+gamer.no##.comcontent
 fvn.no##.brandboard-container
 gaffa.dk##.external-branding
 gaffa.dk##.sticky-banner-wrapper
@@ -1617,6 +1624,11 @@ tidssonen.no##.post-content > p[style*=font]
 midtsiden.no##main > div > div:not([class])
 altinget.no##div[class*=advert-banner-]
 abcnyheter.no##div[class^=AdSlot__]
+vinavisen.dk##.banner
+dust2.dk##.target-concept
+jyllands-posten.dk,finans.dk##div[class*=banner-container]
+borsen.dk#?#div[class*=col] > *:has(> .native-teaser)
+jyllands-posten.dk##section[id^=commercial]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2399,6 +2411,15 @@ triplx.dk##.aff-inner-col
 ||trmff.wpengine.com^$popup
 ||212.27.60.108^
 ||212.27.60.108^$popup
+! Overly dedicated E-mail spambots
+||fed-packs.no^
+||fed-packs.no^$popup
+||har-freight.us^
+||har-freight.us^$popup
+||wirexapp.africa.com^
+||wirexapp.africa.com^$popup
+||tachyoniums.eu.com^
+||tachyoniums.eu.com^$popup
 
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider

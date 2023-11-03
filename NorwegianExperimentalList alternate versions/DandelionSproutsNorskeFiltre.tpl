@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 22October2023v1-Deprecated
+# Version: 03November2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -189,6 +189,8 @@ msFilterList
 - wp-content uploads ad-html
 # https://spurt.no/zyrtec-mot-myggstikk/ (01 06 2023
 - convertpro cp-popup.min.css
+# https://www.version2.dk/artikel/medie-yngre-er-til-nemid-aeldre-til-mitid/(02/11/2023)
+-d service.tekhus.dk *.jpg
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -815,6 +817,11 @@ msFilterList
 -d s.free.fr
 -d trmff.wpengine.com
 -d 212.27.60.108
+# Overly dedicated E-mail spambots
+-d fed-packs.no
+-d har-freight.us
+-d wirexapp.africa.com
+-d tachyoniums.eu.com
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
@@ -1129,7 +1136,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 10June2023v1-Extension
+# Last updated: 28October2023v1-Extension
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js

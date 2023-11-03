@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Translated title: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 221020231
+! Version: 031120231
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -229,6 +229,7 @@ mc-avisa.no##.avisa-widget
 melkoghonning.no##.g
 mobilsiden.dk##.content-widget-HTML
 momondo.no,monondo.dk##.type-provider.clearfix.flights
+gamer.no##.moved
 musikknyheter.no##.spklw-widget
 nakenprat.com#$#abort-on-property-read document.dispatchEvent
 nettavisen.no##[param-editionid=reklame]
@@ -384,6 +385,8 @@ in.fo##div[class*=midlads]
 in.fo##.mobile-hide[class*=ads]
 tvkampen.com,tvsporten.dk#?#li.tv:has(>.do-link)
 tvkampen.com,tvsporten.dk#?#li[class^=tv]:has(img:is([alt*=bet i],[alt*=tipping i]))
+version2.dk,ing.dk,techmanagement.dk,radar.dk##div[class^=layout] > .block-tm-kevel
+version2.dk,ing.dk,techmanagement.dk,radar.dk##div:not([class]) > .jobs-wrapper
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -649,6 +652,8 @@ _visittkortannonse_$image
 /wp-content/uploads/ad-html^
 ! https://spurt.no/zyrtec-mot-myggstikk/ (01/06/2023
 /convertpro/*/cp-popup.min.css|
+! https://www.version2.dk/artikel/medie-yngre-er-til-nemid-aeldre-til-mitid (02/11/2023)
+||service.tekhus.dk/*.jpg^$image,third-party
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -1133,6 +1138,8 @@ freak.no##.right-column-wrapper
 friflyt.no###ads_fullwidth_container
 friflyt.no###wallpaperCenterAd
 friflyt.no,terrengsykkel.no##.inlineAdBlock
+gamer.no#?#div[class]:has(+ main)
+gamer.no##.comcontent
 fvn.no##.brandboard-container
 gaffa.dk##.external-branding
 gaffa.dk##.sticky-banner-wrapper
@@ -1625,6 +1632,11 @@ tidssonen.no##.post-content > p[style*=font]
 midtsiden.no##main > div > div:not([class])
 altinget.no##div[class*=advert-banner-]
 abcnyheter.no##div[class^=AdSlot__]
+vinavisen.dk##.banner
+dust2.dk##.target-concept
+jyllands-posten.dk,finans.dk##div[class*=banner-container]
+borsen.dk#?#div[class*=col] > *:-abp-has(> .native-teaser)
+jyllands-posten.dk##section[id^=commercial]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2409,6 +2421,15 @@ triplx.dk##.aff-inner-col
 ||trmff.wpengine.com^$popup
 ||212.27.60.108^
 ||212.27.60.108^$popup
+! Overly dedicated E-mail spambots
+||fed-packs.no^
+||fed-packs.no^$popup
+||har-freight.us^
+||har-freight.us^$popup
+||wirexapp.africa.com^
+||wirexapp.africa.com^$popup
+||tachyoniums.eu.com^
+||tachyoniums.eu.com^$popup
 
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
@@ -2878,7 +2899,7 @@ lydogbilde.no,lydogbillede.dk##.lbplussinfo
 digi.no###order-form::before
 tv2.no##.login-wall__gradient
 sol.no##[class^=Body__Fade-sc-]
-aftenposten.no#?#div[class^=hyperion-css-] > div[class^=hyperion-css-] > div[class^=hyperion-css-] > div[class^=hyperion-css-]:has([for="login label"])
+www.aftenposten.no#?#div[class^=hyperion-css-] > div[class^=hyperion-css-] > div[class^=hyperion-css-] > div[class^=hyperion-css-]:has([for="login label"])
 
 ! dagbladet.no,elbil24.no
 ##.CTA-body-faded:not(html, body)
@@ -2894,7 +2915,7 @@ vg.no##div[data-test-tag=timestamp] + p + div::before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 10June2023v1-Extension
+! Last updated: 28October2023v1-Extension
 tv2.no#$#abort-current-inline-script adblockDetector
 ||elderlyscissors.com^
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
