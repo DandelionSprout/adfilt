@@ -1,10 +1,12 @@
 [Adblock Plus 3.6]
 ! Title: 🏀 Dandelion Sprout's Serbo-Croatian filters
-! Version: 28October2023v1-Alpha
+! Version: 03November2023v1-Alpha
 ! Expires: 5 days
 ! Description: For the first time in known history, this is a filterlist for websites in Serbian, Montenegrin, Croatian, and Bosnian. This means that all significant language groups in Europe now have filterlists for them.
 ! Description translations to Serbo-Croatian, both Latin and Cyrillic, are wanted: https://crowdin.com/project/dandelion-sprout-nordic-filter
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
+! Note to self: The amount of Kosovo-Serbian newssites that are actually based _within Kosovo_ can be counted on one hand, with all but info-ks being ad-free due to stipends from USA and/or Serbia. Such sites should therefore not be a core focus to research.
+! Notes to self 2: No newssites in Slavomolisano are known to exist. The one Austrian Serbo-Croatian newssite I could find was ad-free. The sole Serbo-Croatian newssite in Hungary is already covered.
 ! ——————————
 ! Specific entries for sites, or blocking-entries
 021.rs##.banner-right
@@ -236,6 +238,11 @@ novilist.hr##.widget-slider-wrap
 24sata.hr##.pieces_widget
 glasistre.hr##.text-center.col-md-3
 vecer.com##.billboard-wrapper
+b92.tv##.ayuPost:has(img[src*="://redakcija."])
+info-ks.net##.featured-add
+vino.rs##section[id$=Top i] > div[class="box "]
+vino.rs##[class*="box  nomargin"]
+vino.rs##.djslider-loader
 ||avalaads.com^$third-party
 ||linker.hr^$third-party
 ||native.tportal.hr^$third-party
@@ -267,6 +274,8 @@ vecer.com##.billboard-wrapper
 ||widget.admiral.hr^$third-party
 ||traffic.styria.hr^$third-party
 ||sk.rs/slike/baneri^
+||redakcija.alo.rs^$image,third-party
+||info-ks.net/assets/img/banners^
 ! ——————————
 ! Generic entries with sources
 ! 24sata.hr, vecernji.hr (19/10/2020)
@@ -306,6 +315,10 @@ sodalive.ba##section[data-settings]:first-of-type
 ##.cxenseignore:not(html, body)
 ! https://vecer.com/pogledi/pogled-izza-meje-mejne-kontrole-v-rimu-ocitno-mislijo-da-lahko-s-slovenijo-pocnejo-kar-se-jim-zljubi-10342894 (28/10/2023)
 ##div[data-ocm-ad]
+! vino.rs (03/11/2023)
+.rs/images/banners^
+! For good measure, because why not. (03/11/2023)
+.ba/images/banners^
 ! ——————————
 ! Borrowed from https://github.com/AdguardTeam/AdguardFilters/blob/master/BaseFilter/sections/foreign.txt (which is licenced as GPL-3.0) with minor modifications
 aviatica.rs##.fusion-imageframe > a[href][target="_blank"] > img
