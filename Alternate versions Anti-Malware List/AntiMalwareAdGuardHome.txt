@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home, AdGuard for Android/Windows' DNS filtering, and Pi-Hole FTL ≥5.22)
-! Version: 23October2023v1
+! Version: 03November2023v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1145,7 +1145,8 @@
 ://adblock-pro-download.
 
 /^142\.91\.159\.[0-9]{1,3}$/
-/^172\.255\.6\.[0-9]{1,3}$/
+! https://github.com/DandelionSprout/adfilt/issues/942
+/^172\.255\.6\.([0-9]{1,2}|[12][0-689][0-9]|17[0-689])$/
 /^23\.109\.150\.[0-9]{1,3}$/
 /^23\.109\.248\.[0-9]{1,3}$/
 
@@ -22867,6 +22868,11 @@
 ||your-ups-track.com^
 ||zoll-pakete-support.com^
 95.214.26.78
+! Overly dedicated E-mail spammers
+||fed-packs.no^
+||har-freight.us^
+||wirexapp.africa.com^
+||tachyoniums.eu.com^
 
 ! ——— Horrendously bad copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
