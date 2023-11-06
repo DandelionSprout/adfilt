@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 👩 Anti-Futa List
-! Version: 27October2023v1
+! Version: 06November2023v1
 ! Expires: 3 days
 ! Description: It seems to me that a common thought process on porn sites are "Hey, do you know what would've made this cute woman even sexier? I know. We should give her a dick!". Well, not anymore, thanks to this list.
 ! Note that on some of these sites, such as Pixiv, quite a few futa images are uploaded without having "futa" in its title or in its search result metadata, making them practically unblockable through this method. Categories known to have significant slipthrough percentages are marked with a 🔴.
@@ -19,7 +19,7 @@
 ! ——— Pixiv ———
 !#if !env_mobile
 ! New search results, image suggestions on image pages, and carousel items on image pages
-pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=futa i]:not([alt*=futari i], [alt*=futaba i], [alt*=futago i]))
+pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=futa i]:not([alt*=futari i],[alt*=futaba i],[alt*=futago i]))
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=dickgirl i])
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=lolita][alt*=" penis"])
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=ふたなり])
@@ -55,7 +55,7 @@ pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has-text(FUCKHEADmanip)
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has-text(Hanshyn)
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has-text(Necrobern)
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has-text(Mutagenica)
-pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has-text(/Futa( |n|$)/)
+pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has-text(/Futa([.,:;s?!n=_#’“”-]|\\s|\\'|\\"|$)/)
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has(a[href$="users/2090534"])
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has(a[href$="users/6714417"])
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has(a[href$="users/45479613"])
@@ -75,8 +75,8 @@ pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has(a[href$="users/1497694
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"]):has(a[href$="users/12905383"])
 pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"][data-gtm-user-id="82552424"]):not(:has-text(Lisa))
 ! Promotion cards on some user galleries
-pixiv.net#?#ul > li > div:last-of-type:nth-of-type(2):has-text(/Futa([ac-qs-zA-Z0-9,._-]| |$)/)
-pixiv.net#?#ul > li > div:last-of-type:nth-of-type(2):has-text(/ futas?[.?! ]/i)
+pixiv.net#?#ul > li > div:last-of-type:nth-of-type(2):has-text(/Futa([ac-qs-zA-Z0-9.,:;?!=_#’“”-]|\s|\'|\"|$)/)
+pixiv.net#?#ul > li > div:last-of-type:nth-of-type(2):has-text(/ futa([.,:;?!=s_#’“”-]|\s|\'|\"|$)/i)
 pixiv.net#?#ul > li > div:last-of-type:nth-of-type(2):has-text(/futanari/i)
 pixiv.net#?#ul > li > div:last-of-type:nth-of-type(2):has-text(/dickgirl/i)
 pixiv.net#?#ul > li > div:last-of-type:nth-of-type(2):has-text(ふたなり)
@@ -86,7 +86,7 @@ pixiv.net#?#ul > li > div:last-of-type:nth-of-type(2):has-text(후타나리)
 !#endif
 !#if env_mobile
 ! Phone version
-pixiv.net#?#.works-item:has(img[alt*=futa i]:not([alt*=futaba i], [alt*=futari i], [alt*=futago i]))
+pixiv.net#?#.works-item:has(img[alt*=futa i]:not([alt*=futaba i],[alt*=futari i],[alt*=futago i]))
 pixiv.net#?#.works-item:has(img[alt*=dickgirl i])
 pixiv.net#?#.works-item:has(img[alt*=lolita][alt*=" penis"])
 pixiv.net#?#.works-item:has(img[alt*=ふたなり])
@@ -124,11 +124,11 @@ luscious.net#?#.o-justified-box:has-text(Futa)
 luscious.net#?#.o-justified-box:has(img[src*=Futa i])
 
 ! ——— FurAffinity ——— 🔴
-furaffinity.net#?#.t-image:has-text(/Futas?[.?! ]/)
-furaffinity.net#?#.t-image:has-text(/ futas?[.?! ]/i)
+furaffinity.net#?#.t-image:has-text(/Futa([.,:;?!=s_#’“”-]|\s|\'|\"|$)/)
+furaffinity.net#?#.t-image:has-text(/ futa([.,:;?!=s_#’“”-]|\s|\'|\"|$)/i)
 furaffinity.net#?#.t-image:has-text(/futanari/i)
 furaffinity.net#?#.t-image:has-text(/dickgirl/i)
-furaffinity.net#?#figure:has-text(/Futa(by|n| )/)
+furaffinity.net#?#figure:has-text(/Futa(by|n|.,:;?!=_#’“”-]|\s|\'|\"|$)/)
 
 ! ——— Rule34xxx ———
 rule34.xxx,gelbooru.com,booru.org,sankakucomplex.com,tbib.org,xbooru.com,rule34hentai.net,tentaclerape.net#?#.thumb:has(img[title*=futanari])
@@ -212,8 +212,8 @@ store.steampowered.com##a[data-ds-itemkey][href*=Futa_]
 ! ——— Mastodon ———
 !#if !adguard
 mastodon.*,mstdn.*,mas.to,pawoo.net,tchncs.de,octodon.social,sinblr.com,baraag.net,xxxtumblr.org#?#.entry,.statuses-grid__item,.status:has-text(/futanari/i)
-mastodon.*,mstdn.*,mas.to,pawoo.net,tchncs.de,octodon.social,sinblr.com,baraag.net,xxxtumblr.org#?#.entry,.statuses-grid__item,.status:has-text(/Futas?[.?! ]/)
-mastodon.*,mstdn.*,mas.to,pawoo.net,tchncs.de,octodon.social,sinblr.com,baraag.net,xxxtumblr.org#?#.entry,.statuses-grid__item,.status:has-text(/[# ]futas?[.?! ]/i)
+mastodon.*,mstdn.*,mas.to,pawoo.net,tchncs.de,octodon.social,sinblr.com,baraag.net,xxxtumblr.org#?#.entry,.statuses-grid__item,.status:has-text(/Futa([.,:;?!=s_#’“”-]|\s|\'|\"|$)/)
+mastodon.*,mstdn.*,mas.to,pawoo.net,tchncs.de,octodon.social,sinblr.com,baraag.net,xxxtumblr.org#?#.entry,.statuses-grid__item,.status:has-text(/[# ]futa([.,:;?!=s_#’“”-]|\s|\'|\"|$)/i)
 mastodon.*,mstdn.*,mas.to,pawoo.net,tchncs.de,octodon.social,sinblr.com,baraag.net,xxxtumblr.org#?#.entry,.statuses-grid__item,.status:has-text(ふたなり)
 mastodon.*,mstdn.*,mas.to,pawoo.net,tchncs.de,octodon.social,sinblr.com,baraag.net,xxxtumblr.org#?#.entry,.statuses-grid__item,.status:has-text(フタナリ)
 mastodon.*,mstdn.*,mas.to,pawoo.net,tchncs.de,octodon.social,sinblr.com,baraag.net,xxxtumblr.org#?#.entry,.statuses-grid__item,.status:has-text(/dickgirl/i)
@@ -252,8 +252,8 @@ deviantart.com##a[data-hook][href*="/art/"][href*=sarahtxxx i]
 
 ! ——— Nitter ———
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/futanari/i)
-nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/Futas?[.?! ]/)
-nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/[# ]futas?[.?! ]/i)
+nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/Futa([.,:;?!=s_#’“”-]|\s|\'|\"|$)/)
+nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/[# ]futa([.,:;?!=s_#’“”-]|\s|\'|\"|$)/i)
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/dickgirl/i)
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(Futabu)
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(ふたなり)
