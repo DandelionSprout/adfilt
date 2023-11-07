@@ -34,7 +34,7 @@ HEAD = """\
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
 ! Last updated: {date}
-! Script last updated: 9/5/2023
+! Script last updated: 7/11/2023
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Warning: This list may break websites, and contains many problematic rules. There is not much the Adfilt maintainers can do, as this list is just the ClearURLs rules converted into a uBo/AdGuard filterlist. Use with caution.
@@ -199,7 +199,7 @@ def write_rules(
         filter_ = (regex_fromat if is_regex(rule) else plain_format).format(
             rule, url_pattern
         )
-        print(url_pattern, filter_, plain_format, rules)
+        print("[debug]", url_pattern, filter_, plain_format, rules)
         if filter_ not in KNOWN_BAD_FILTERS:
             filterlist.write(filter_ + "\n")
 
