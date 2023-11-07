@@ -199,6 +199,7 @@ def write_rules(
         filter_ = (regex_fromat if is_regex(rule) else plain_format).format(
             rule, url_pattern
         )
+        print(url_pattern, filter_, plain_format, rules)
         if filter_ not in KNOWN_BAD_FILTERS:
             filterlist.write(filter_ + "\n")
 
