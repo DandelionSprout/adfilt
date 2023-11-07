@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 15/06/2023
+! Last updated: 07/11/2023
 ! Script last updated: 9/5/2023
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -97,6 +97,7 @@
 ||google.*^$removeparam=rlz
 ||google.*^$removeparam=i-would-rather-use-firefox
 ||google.*^$removeparam=pcampaignid
+||google.*^$removeparam=sca_esv
 ||google.*/search?$removeparam=sclient
 $removeparam=/^utm(_[a-z_]*)?=/
 $removeparam=/^ga_[a-z_]+=/
@@ -144,9 +145,10 @@ $removeparam=vero_conv
 $removeparam=vero_id
 $removeparam=wickedid
 $removeparam=twclid
-||youtube.com^$removeparam=feature
-||youtube.com^$removeparam=gclid
-||youtube.com^$removeparam=kw
+||(youtube.com|youtu.be)^$removeparam=feature
+||(youtube.com|youtu.be)^$removeparam=gclid
+||(youtube.com|youtu.be)^$removeparam=kw
+||(youtube.com|youtu.be)^$removeparam=si
 ||facebook.com^$removeparam=/^hc_[a-z_%\[\]0-9]*=/
 ||facebook.com^$removeparam=/^[a-z]*ref[a-z]*=/
 ||facebook.com^$removeparam=__tn__
@@ -659,6 +661,7 @@ $removeparam=twclid
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/s\?tbm=map.*?gs_[a-z]*=./$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/(complete\/search|setprefs|searchbyimage)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/(appsactivity|aclk\?)/$removeparam
+@@/^https?:\/\/([a-z0-9-]+\.)*?google(\.[a-z]{2,}){1,}\/safe[-]?browsing\/([^&]+)/$removeparam
 @@||matrix.org/_matrix/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?(cloudflare\.com|prismic\.io|tangerine\.ca|gitlab\.com)/$removeparam
 @@||myaccount.google.*^$removeparam
@@ -699,6 +702,7 @@ $removeparam=twclid
 @@||github.com^$removeparam
 @@||billiger.de/*mc=$removeparam
 @@||youtrack.cloud^$removeparam
+@@^https?:/cu.bankid.com$removeparam
 @@||amazon-adsystem.*/v3/oor?$removeparam
 @@||youtube.com/signin?$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?facebook\.com\/.*?(plugins|ajax)\//$removeparam
