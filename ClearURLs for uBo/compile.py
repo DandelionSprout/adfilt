@@ -200,7 +200,6 @@ def write_rules(
         filter_ = (regex_fromat if is_regex(rule) else plain_format).format(
             rule, url_pattern
         )
-        print("[debug]", url_pattern, filter_, plain_format, rules)
         if filter_ not in KNOWN_BAD_FILTERS:
             filterlist.write(filter_ + "\n")
 
@@ -272,6 +271,14 @@ def main() -> int:
                 rules,
                 "||{1}$removeparam=/^{0}=/",
                 "||{1}$removeparam={0}",
+                filterlist,
+            )
+        elif url_pattern.startswith("(") and url_pattern.endswith(")"):
+            write_rules(
+                url_pattern[1:-1],
+                rules,
+                "$removeparam=/^{0}=/,domain={1}",
+                "$removeparam={0},domain={1}",
                 filterlist,
             )
         else:
