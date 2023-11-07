@@ -121,7 +121,6 @@ def normalize_url_pattern(url_pattern: str) -> str:
     url_pattern = url_pattern.replace(r"(?:\.[a-z]{2,}){1,}", ".*", 1)
     # Remove backslashes
     url_pattern = url_pattern.replace("\\", "")
-
     # Specific fixups
     url_pattern = url_pattern.replace("(?:accounts.)?", "", 1)
     url_pattern = url_pattern.replace("(?:support.)?", "", 1)
@@ -129,6 +128,8 @@ def normalize_url_pattern(url_pattern: str) -> str:
     #https://github.com/DandelionSprout/adfilt/commit/9dfcd0c3d3bb5a880a4c473c0b9ad5579e963a3f#r62388808
     url_pattern = url_pattern.replace("weibo.(cn|com)", "weibo.*", 1) 
     url_pattern = url_pattern.replace("nikkei.co(?:m|.jp)", "nikkei.com", 1)
+    #airbnb.(com|ae|ca|co.in|co.nz|co.uk|co.za|com.au|com.mt|com.sg|de|gy|ie)
+    url_pattern = url_pattern.replace(".(com|ae|ca|co.in|co.nz|co.uk|co.za|com.au|com.mt|com.sg|de|gy|ie)", ".*", 1)
     
     if "(" in url_pattern and ")" in url_pattern:
     	# something went wrong
