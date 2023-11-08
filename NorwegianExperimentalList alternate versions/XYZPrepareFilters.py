@@ -923,6 +923,12 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
+           r".*dnstype.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"(# Title: 🏔️ Dandelion Sprout.*)", 
            r"msFilterList\n\1", 
            line
@@ -1426,6 +1432,12 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Privoxy)", 
+           line
+        )
+
+        line = re.sub(
+           r".*dnstype.*", 
+           r"", 
            line
         )
 
@@ -4970,6 +4982,12 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
+           r".*dnstype.*", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
            r"\[Adblock Plus .*\]", 
            "msFilterList", 
            line
@@ -5395,6 +5413,12 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            r"^!!? ", 
            r"# ", 
+           line
+        )
+
+        line = re.sub(
+           r".*dnstype.*", 
+           r"", 
            line
         )
 
