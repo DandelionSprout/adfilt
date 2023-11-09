@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 03November2023v1-Deprecated
+# Version: 09November2023v4-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -23,6 +23,8 @@ msFilterList
 # — — — — — — — — —
 # 🇳🇴: Oppføringer for minst 3 nettsteder
 # 🇬🇧: Entries for at least 3 websites
+- images banners
+-d widgets.sprinklecontent.com
 # — — — — — — — — —
 # 🇳🇴: Generelle #-oppføringer med kilder
 # 🇬🇧: Generic #-entries that have sources
@@ -204,7 +206,6 @@ msFilterList
 -d arendalstidende.no *_490px.jpg
 -d austevollforlag.no yachtmarine2014.
 -d austurfrett.is *augl.jpg
-- images banners
 -d banner.landbrugsavisen.dk reklame.aspx
 -d biip.no *320x250.jpg
 -d bobilverden.no Banner-1200x300px.jpg
@@ -266,7 +267,6 @@ msFilterList
 -d utrop.no utrop.no_-1.jpg
 -d viasport-assets.mtg-api.com comScore-*.js
 -d vikari.is frjalsi-lif*.png
--d widgets.sprinklecontent.com
 -d xn--bredbnd-ixa.dk velkommen_banner
 -d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
 - Bannere
@@ -305,7 +305,6 @@ msFilterList
 -d thainytt.no *-160.jpg
 -d nyteknikk.no 180x
 -d nyteknikk.no x150
-- images banners
 -d malviknytt.no ani*-*.gif
 -d malviknytt.no *-998x1024.jpeg
 -d malviknytt.no *-firkant-*e1*.
@@ -459,7 +458,6 @@ msFilterList
 -d fcbarcelona.dk footerbg.jpg
 -d 730.no sonymusic
 -d danishfamilysearch.dk xp2
--d gaysir.no bb_inline
 -d gulindex.no spring.js
 -d mmm.dk safeframe
 -d yrkesbil.no 1pix.gif
@@ -702,7 +700,6 @@ msFilterList
 -d nakenprat.com adlast*.php
 -d v.fwmrm.net g
 -d widget.tippebannere.no
--d widgets.sprinklecontent.com
 # • Not to be removed during upstream syncs •
 # https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # jyllands-posten.dk (09 07 2020)
@@ -975,8 +972,6 @@ msFilterList
 -d hokaonenorge.com
 -d jordannorge.top
 -d quiksilvernorge.com
--d hokalopesko.com
--d hokalopesko.top
 -d hokanorgeno.com
 -d drmdanmark.com
 -d tevadanmarkshop.com

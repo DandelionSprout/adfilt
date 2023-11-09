@@ -4643,6 +4643,31 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        # Need to make https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/ThirdParty/filter_250_DandelionSproutAnnoyances/diff.txt shorter, so I can more easily find actual syntax errors.
+        line = re.sub(
+           r"\$doc$", 
+           r"$document", 
+           line
+        )
+
+        line = re.sub(
+           r",~inline-font$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^@@\|\|discord\.gift\^\$all$", 
+           r"@@||discord.gift^$important", 
+           line
+        )
+
+        line = re.sub(
+           r"^facebook\.com#\?#", 
+           r"facebook.com##", 
+           line
+        )
+
         text += line + '\n'
 
     return text
