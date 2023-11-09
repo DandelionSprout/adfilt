@@ -220,9 +220,16 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        # Trying to make https://github.com/AdguardTeam/FiltersRegistry/blob/master/filters/ThirdParty/filter_249_NorwegianList/diff.txt shorter
         line = re.sub(
            r"([$,])frame(,|$)", 
            r"\1subdocument\2", 
+           line
+        )
+
+        line = re.sub(
+           r":style\((.*)\)$", 
+           r" { \1 }", 
            line
         )
 
