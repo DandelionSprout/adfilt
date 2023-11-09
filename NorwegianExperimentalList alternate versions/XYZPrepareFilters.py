@@ -214,6 +214,18 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|((([0-9]){1,3}\.){3})\$.*", 
+           r"\1.*$network", 
+           line
+        )
+
+        line = re.sub(
+           r"([$,])frame(,|$)", 
+           r"\1subdocument\2", 
+           line
+        )
+
         text += line + '\n'
 
     return text
