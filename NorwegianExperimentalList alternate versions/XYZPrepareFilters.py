@@ -228,7 +228,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z])##(.*):style\((.*)\)$", 
+           r"([a-z])#\??#(.*):style\((.*)\)$", 
            r"\1#$#\2 { \3 }", 
            line
         )
