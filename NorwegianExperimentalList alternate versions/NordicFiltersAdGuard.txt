@@ -891,7 +891,7 @@ _300x500pix$domain=rykindribe.dk,image
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 !#if false
-@@||vgtv.no^$ghide
+@@||vgtv.no^$generichide
 !#endif
 !#if !ext_ublock
 ||adnxs.com^$domain=vgtv.no
@@ -1421,8 +1421,8 @@ qxl.*###crosslistingLauritzAdsenseBanner
 qxl.*###GoogleAdsenseFooter + div[style^="width: 100%;"]
 qxl.*###lauritzListingView
 qxl.*###leaderBoardListingviewTop
-qxl.*###whitetop:style(margin-top: 0px !important)
-qxl.*##.n_ListHeader:style(margin-top: 5px !important)
+qxl.*#$##whitetop { margin-top: 0px !important }
+qxl.*#$#.n_ListHeader { margin-top: 5px !important }
 radiololand.no##.elementor-widget-theme-post-content + .elementor-widget-text-editor
 realmadrid.dk##.TopBanner
 realmadrid.dk##div[style^="float:right;width:300px"]
@@ -1984,7 +1984,7 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 ! Posten's new parcel tracker, fixes the form for giving them delivery information (doorbell name/number)
 @@||glow.posten.no/api/tracking/*$xmlhttprequest,~third-party
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
-@@||seher.no/reise$ghide
+@@||seher.no/reise$generichide
 ! folkebladet.no; Makes job position lists show up correctly
 @@||stillingledig.*.no^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
@@ -2193,10 +2193,10 @@ nettavisen.no###topover
 ||collector.schibsted.io^$third-party
 
 ! "Generic Hide"
-@@||bondebladet.screen9.tv^$ghide
-@@||eurosport.no^$ghide
-@@||eurosport.dk^$ghide
-@@||nyheder.dk^$ghide
+@@||bondebladet.screen9.tv^$generichide
+@@||eurosport.no^$generichide
+@@||eurosport.dk^$generichide
+@@||nyheder.dk^$generichide
 !#if false
 ! Fixed in better ways in AdGuard Base and uBlock Filters, but is needed for ABP
 @@||inputmag.dk^$generichide
