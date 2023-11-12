@@ -109,3 +109,16 @@ Son güncelleme: 6 Eylül 2022 (Çeviri için Surveyor, Saurane ve Veridisqvo'ya
 • [GitLab'daki listelerimin güvenlik yedeği](https://gitlab.com/DandelionSprout/adfilt) <br>
 
 Elbette benimle Norveççe, Nynorsk, Danca veya İsveççe olarak da iletişime geçebilirsiniz. Sonuçta İngilizce kullanmak zorunlu değil. 🙂 <br>
+
+# 🇭🇷 Hrvatski
+
+Posljednje ažuriranje: 13. Studeni 2023 (Hvala [Rancher](https://crowdin.com/profile/rancher)u na prijevodu)
+• [Web-stranica liste na GitHub repozitoriju](https://gitlab.com/DandelionSprout/adfilt) <br>
+• [Licenca mojih lista](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Pažljivo je skrojena s ciljem da prihvata sadržaj drugih filtar-lista, a da što manje ugrožava njihove autore. <br>
+• [Načini doniranja](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
+• Zajednički sustav za [praćenje problema]((https://github.com/DandelionSprout/adfilt/issues)) i [zahtjeva za promjenama]((https://github.com/DandelionSprout/adfilt/pulls)) (potreban je račun na GitHubu). <br>
+• [Moje druge liste](https://filterlists.com/), koje su korisne u raznim situacijama i alatkama, možete pronaći ako odete na „Maintainers” i odaberete „Imre Kristoffer Eilertsen”. <br>
+• [Prevodilački projekt za par mojih lista, uključujući ovu stranicu](https://crwd.in/dandelion-sprout-nordic-filter). <br>
+• [Sigurnosna kopija mojih lista na GitLabu](https://gitlab.com/DandelionSprout/adfilt) <br>
+
+Možete me kontaktirati i na norveškom, novonorveškom, danskom ili švedskom. Poznavanje engleskog jezika nije obavezno. 🙂 <br>
