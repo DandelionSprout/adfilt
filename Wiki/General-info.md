@@ -113,6 +113,7 @@ Elbette benimle Norveççe, Nynorsk, Danca veya İsveççe olarak da iletişime 
 # 🇭🇷 Hrvatski
 
 Posljednje ažuriranje: 13. Studeni 2023 (Hvala [Rancher](https://crowdin.com/profile/rancher)u na prijevodu)
+
 • [Web-stranica liste na GitHub repozitoriju](https://gitlab.com/DandelionSprout/adfilt) <br>
 • [Licenca mojih lista](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Pažljivo je skrojena s ciljem da prihvata sadržaj drugih filtar-lista, a da što manje ugrožava njihove autore. <br>
 • [Načini doniranja](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
