@@ -138,7 +138,7 @@ Možete me kontaktirati i na norveškom, novonorveškom, danskom ili švedskom. 
 
 Можете ме контактирати и на норвешком, новонорвешком, данском или шведском. Познавање енглеског језика није обавезно.
 
-# 🇹🇼 正體字/中華民國 漢語
+# 🇹🇼 正體字/中華民國 漢語 <img src="https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Republic%20flag.webp" width="38">
 
 (To-Do: Import strings from Crowdin.)
 
