@@ -1,10 +1,18 @@
 [Adblock Plus 3.6]
 ! Title: 🆒 IDN Homograph Attack Protection - Complete Blockage
-! Version: 15March2020v1-Beta
+! Version: 13November2023v1-Beta
 ! Expires: 15 days
 ! Description: One of many possible ways for malware to try to enter your computers and phones, is through substituting some US Latin letters with lookalike letters from other alphabets and scripts. For instance, most humans can't easily tell A and А apart (except when using certain fonts), but computers can instantly tell the former is Latin and the latter is Cyrillic, and adresses with them are treated as different. However, ALL use of non-US letters in URLs will be treated as 'xn--[random letters]' by HTML-based tools, making it relatively easy to block, which this list will do for you.
 ! Note: This version blocks ALL use of non-US letters, including non-Latin TLDs like .рф and .台灣; an alternate list version exists that'll let non-Latin TLDs through. Both versions will also block made-for-convenience European redirects like Elkjøp.no.
 ! Special thanks to https://github.com/HopHop20 for initially creating the RegEx entry below.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
-/.*?xn--.*/
+||xn--*
+
+! For uBlock Origin and AdGuard
+||xn--*$doc,popup,frame
+
+! For Adblock Plus
+!#if false
+||xn--*$popup,subdocument
+!#endif
