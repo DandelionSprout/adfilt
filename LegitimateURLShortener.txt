@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 15November2023v1
+! Version: 16November2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1870,8 +1870,10 @@ $removeparam=/^asc_/,doc,domain=amazon.*|aboutamazon.com|amzn.to
 
 !!! ——— Bing ———
 ! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
+! https://cn.bing.com/?FORM=Z9FD1 (16/11/2023)
 ! Please do not add for the entire domain name or the image will not load, see https://github.com/DandelionSprout/adfilt/pull/608
-||bing.com/search?$removeparam=/^form=/i
+!!! ||bing.com/search?$removeparam=/^form=/i (This filter will corrupt Microsoft Rewards, see https://github.com/DandelionSprout/adfilt/pull/959)
+||bing.com/?$removeparam=/^form=/i
 ! https://www.bing.com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.$removeparam=sp
 $removeparam=sc,doc,domain=bing.com|qvc.com|startpage.com
