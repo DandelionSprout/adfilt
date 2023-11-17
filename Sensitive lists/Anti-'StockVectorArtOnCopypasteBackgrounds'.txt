@@ -1,10 +1,11 @@
 [Adblock Plus 3.13]
 ! Title: 🐇 Anti-'Stock vector art on copypaste backgrounds'
-! Version: 08November2023v1-Alpha
+! Version: 17November2023v1-Alpha
 ! Expires: 8 days
 ! Description: This list removes "Your fav is" and some character-specific "Daily _____" from some sites, to reduce clutter when searching for top-class fanart of various franchises.
 ! Important note: The list serves a very specific purpose, which is to show a higher percentage of original art when scrolling through sites for art to repost on e.g. Discord servers. In that specific context, official vectors copypasted on or next to simple backgrounds with text along the lines of "Your fav is demiromantic and sapphic", falls outside of that definition. I am generally speaking friendly to the LGBT community.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
+!#if !env_mv3
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has(.tweet-name-row:has-text(/your ?fave? ?is/i))
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has(.fullname:has-text(/^hourly /i))
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has(.fullname:has-text(/ otd$/i))
@@ -20,3 +21,4 @@ tumblr.com#?#:is(.post,div[data-cell-id][style],div[tabindex]:is([style^=m],[dat
 tumblr.com#?#:is(.post,div[data-cell-id][style],div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class]))):has-text(/#.*character ?of ?the ?(day|week)/i)
 tumblr.com#?#:is(.post,div[data-cell-id][style],div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class]))):has-text(/[# -]play[ -]?of[ -]?the[ -]?game/i)
 tumblr.com#?#:is(.post,div[data-cell-id][style],div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class]))):has(a[rel=author][href$=flags])
+!#endif
