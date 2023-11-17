@@ -1,10 +1,11 @@
 [Adblock Plus 3.13]
 ! Title: 🔴 Anti-'Unnecessary notification counters' List
-! Version: 09February2023v2-Deprecated
+! Version: 17November2023v2-Deprecated
 ! Expires: 7 days
 ! Description: Having something display a permanent fake notification counter, to make the users think that they've received a notification when they haven't, takes quite a bit of scumminess on the maker's behalf to pull off. Here's how to filter them out of sight.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
+!#if !env_mv3
 ! Google Play Store
 play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.allmessages.inonemessenger"])
 play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.barleymobile.mms"])
@@ -95,3 +96,4 @@ timesofindia.com##.id_track::after
 ! Online presence counters that are extremely unreliable
 mewe.com##.chat-avatar_dot
 mewe.com##.h-dot
+!#endif
