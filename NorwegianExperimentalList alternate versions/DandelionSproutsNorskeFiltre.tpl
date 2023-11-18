@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
-# Translated title: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 09November2023v4-Deprecated
+# Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
+# Version: 18November2023v1-Deprecated
 : expires = 1
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -78,6 +78,13 @@ msFilterList
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
+-d dk ad
+-d dk ads
+-d is ad
+-d is augl
+-d is netbordar
+-d is augl
+-d no ad
 - annonsar
 - annonse_
 - auglysing
@@ -159,6 +166,7 @@ msFilterList
 # ytresogn.no (16 12 2020)
 - hnuannonse
 # heilsutorg.is (17 04 2021)
+-d is strevda
 # fugleognatur.dk (14 05 2021)
 - images bannere
 # https://norges.online/produkt/nestle-viking-melk-410-g
@@ -184,6 +192,7 @@ msFilterList
 # https://www.diabetes.no/mer/nyheter-om-diabetes/nyheter-2021/sporsmal-og-svar-om-koronavaksinen-og-diabetes/ (16 11 2021)
 - globalassets banner_
 # https://github.com/AdguardTeam/AdguardFilters/issues/114245#issuecomment-1085683154
+-d no apx
 # https://viivilla.no/hage/terrasse/slik-gjor-du-terrassen-festklar-til-17-mai-pa-1-2-3//(18/05/2023)
 -d gcp.passendo.com
 -d psscdn.com
@@ -511,7 +520,7 @@ msFilterList
 # e24.no, aftenbladet.no, sysla.no
 # https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi/(15/04/2020)
 # https://fiskur.fo/gitte-henning-1-landar-i-maloy/(09/05/2020)
-- fo css img banner2x1.png
+-d fo banner2x1.png
 # https://www.dagsavisen.no/nyheter/verden/1.1731911/(18/06/2020)
 # https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
 # advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668/(16/08/2020)
@@ -819,6 +828,7 @@ msFilterList
 -d har-freight.us
 -d wirexapp.africa.com
 -d tachyoniums.eu.com
+-d service-nespresso.no
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
@@ -899,7 +909,7 @@ msFilterList
 # https://www.adressa.no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece
 -d nordeninterior.weebly.com
 # Googling Aksel Hennie (Results for prior week) in late July 2021
-- com vg.no
+-d com vg.no
 # Various Google results for 'jesper buch bitcoin'
 -d fartuelt.dk
 -d fancywoman.dk
@@ -921,9 +931,9 @@ msFilterList
 # https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
 -d melding.link
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1114669106
-- cx nordea
-- cx sparebank
-- cx sbanken
+-d cx nordea
+-d cx sparebank
+-d cx sbanken
 # https://www.kode24.no/artikkel/75980495
 -d campbell-living.com
 # https://www.telia.no/kundeservice/mobil/malware-flubot-android/

@@ -2166,7 +2166,7 @@ def prepare_xul(lines) -> str:
         )
 
         line = re.sub(
-           r":not\(html, body\)", 
+           r":not\(html, ?body\)", 
            r":not(html):not(body)", 
            line
         )
