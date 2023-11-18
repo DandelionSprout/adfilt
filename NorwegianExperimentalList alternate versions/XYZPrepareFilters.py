@@ -2160,7 +2160,7 @@ def prepare_xul(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"(itle:.*Dandelion Sprout.*)", 
+           r"(itle.*:.*Dandelion Sprout.*)", 
            r"\1 (for «uBlock Origin Legacy»)", 
            line
         )
