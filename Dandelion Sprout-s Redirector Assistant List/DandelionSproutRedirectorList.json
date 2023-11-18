@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2022-06-15T14:38:02.077Z",
+    "createdAt": "2023-11-18T13:09:15.863Z",
     "redirects": [
         {
             "description": "{Anti-PUP 1} Adobe Flash for Windows Chromium browsers without all the McAfee stuff",
@@ -980,6 +980,75 @@
                 "main_frame",
                 "image",
                 "xmlhttprequest"
+            ]
+        },
+                {
+            "description": "Tumblr image view mode",
+            "exampleUrl": "https://64.media.tumblr.com/31c1d601cc184df7b8ddaffeec54d9e7/06cf4f8dd0ab0265-51/s640x960/bba2377a2db16668fbac9139cdbf6c139aa353ba.pnj",
+            "exampleResult": "https://64.media.tumblr.com/31c1d601cc184df7b8ddaffeec54d9e7/06cf4f8dd0ab0265-51/s5000x5000/bba2377a2db16668fbac9139cdbf6c139aa353ba.png",
+            "error": null,
+            "includePattern": "^(https://[0-9]{1,3}\\.media\\.tumblr\\.com/(.*)/)s([1-4]?[0-9]{1,3})x([1-4]?[0-9]{1,3})/((.*)\\.)pnj",
+            "excludePattern": "",
+            "patternDesc": "Aims to more easily find the proper fullsize images. For best results, rightclick the resulting image and open it in a new tab.",
+            "redirectUrl": "$1s5000x5000/$5png",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "R34X³ fileformat tag advising",
+            "exampleUrl": "https://wimg.rule34.xxx/thumbnails/191/thumbnail_779d19cbb9474d4c223c52a3a58c2a9afd5024bb.jpg?190727",
+            "exampleResult": "https://wimg.rule34.xxx//images/191/779d19cbb9474d4c223c52a3a58c2a9afd5024bb.jpeg?190727",
+            "error": null,
+            "includePattern": "https://wimg.rule34.xxx/thumbnails/*/thumbnail_*.jpg*",
+            "excludePattern": "",
+            "patternDesc": "Used to _attempt_ to find images to tag as png/jpeg/jpg/gif/mp4. Shouldn't be turned on 24/7.",
+            "redirectUrl": "https://wimg.rule34.xxx//images/$1/$2.jpeg$3",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "history",
+                "other"
+            ]
+        },
+        {
+            "description": "Wikia image category image expander",
+            "exampleUrl": "https://static.wikia.nocookie.net/sims/images/9/93/DiegoAlmeria.png/revision/latest/smart/width/40/height/30?cb=20130623211628",
+            "exampleResult": "https://static.wikia.nocookie.net/sims/images/9/93/DiegoAlmeria.png/revision/latest/smart/width/150/height/150",
+            "error": null,
+            "includePattern": "https://static.wikia.nocookie.net/sims/images/*/revision/latest/smart/width/40/height/30*",
+            "excludePattern": "",
+            "patternDesc": "Aims to make Wikia category images much smaller than they usually are, but the entry relies on adblocker entries that have not yet been made public.",
+            "redirectUrl": "https://static.wikia.nocookie.net/sims/images/$1/revision/latest/smart/width/150/height/150",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "history",
+                "other"
             ]
         }
     ]
