@@ -6025,11 +6025,11 @@ def prepare_agh(lines) -> str:
     for line in lines:
 
         # Doesn't seem like $denyallow will be fixed in HostfilesRegistry anytime soon as of March 2023
-        #line = re.sub(
-        #   r"^(\||:)(.*)\$doc,domain=(.*)", 
-        #   r"\1\2$denyallow=\3", 
-        #   line
-        #)
+        line = re.sub(
+           r"^(\||:)(.*)\$doc,domain=(.*)", 
+           r"\1\2$denyallow=\3", 
+           line
+        )
 
         line = re.sub(
            r"^(\|\|)([a-z]{1,}\^)\$doc,domain=~(.*)", 
@@ -6055,11 +6055,11 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        #line = re.sub(
-        #   r"\|~", 
-        #   r"|", 
-        #   line
-        #)
+        line = re.sub(
+           r"\|~", 
+           r"|", 
+           line
+        )
 
         line = re.sub(
            "\$doc,", 
@@ -6181,17 +6181,17 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        line = re.sub(
-           r"\^~(.*)", 
-           r"^\n@@||\1^", 
-           line
-        )
+        #line = re.sub(
+        #   r"\^~(.*)", 
+        #   r"^\n@@||\1^", 
+        #   line
+        #)
 
-        line = re.sub(
-           r"\.~([a-z0-9.-]{5,})", 
-           r".\n@@||\1^", 
-           line
-        )
+        #line = re.sub(
+        #   r"\.~([a-z0-9.-]{5,})", 
+        #   r".\n@@||\1^", 
+        #   line
+        #)
 
         line = re.sub(
            r".* bounty .*", 
@@ -6340,11 +6340,11 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        line = re.sub(
-           r"\|~([a-z0-9-]{2,}\.([a-z]{2,20}|\*))", 
-           r"^\n@@||\1", 
-           line
-        )
+        #line = re.sub(
+        #   r"\|~([a-z0-9-]{2,}\.([a-z]{2,20}|\*))", 
+        #   r"^\n@@||\1", 
+        #   line
+        #)
 
         line = re.sub(
            r"(@@\|\|[a-z0-9.-]{1,})$", 
@@ -6388,11 +6388,11 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        line = re.sub(
-           r"(denyallow=.*),", 
-           r"\1|", 
-           line
-        )
+        #line = re.sub(
+        #   r"(denyallow=.*),", 
+        #   r"\1|", 
+        #   line
+        #)
 
         line = re.sub(
            r"! Placeholder line for alternate list versions", 
