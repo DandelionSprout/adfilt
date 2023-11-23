@@ -1,10 +1,11 @@
 [Adblock Plus 3.13]
 ! Title: 🛃 Anti-'Adoptables and Artsite NFTs' List
-! Version: 04November2023v1-Alpha
+! Version: 23November2023v1-Alpha
 ! Expires: 7 days
 ! Description: The concept of adoptables (and NFTs + to some extent closed species) on artsites is bewilderingly ludicrous, and goes against every known measure of good-practice capitalism. It denies the freedom to make transformative fan art, does not check if the seller has the skills to make art based on the purchase (s)he bought, and implies litigation threats that'd make Disney want the sellers' autographs. Here's how to avoid that shameful hateful culture.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
+!#if !env_mv3
 ! ——— Weasyl ———
 weasyl.com##a[href*=adopt]
 weasyl.com##a[href*=auction]
@@ -146,6 +147,7 @@ deviantart.com##a[data-hook][href*="/art/"][href*=-character-sale- i]
 deviantart.com##a[data-hook][href*="/art/"][href*=ADOPTED-]
 deviantart.com##a[data-hook][href*="/art/"][href*=potion-ponies]
 www.deviantart.com#?#div[role=complementary] > div[style^=height] + div:has-text(/Adoptable/i)
+www.deviantart.com#?#div[data-testid] + div:last-of-type[style^=width] > div:only-of-type > div[class^=_]:has(img[src*=deviation-status][src*=adopt])
 
 ! ——— NFT trading sites ———
 ||opensea.io^$document
@@ -153,6 +155,7 @@ www.deviantart.com#?#div[role=complementary] > div[style^=height] + div:has-text
 ||rarible.com^$document
 ||makersplace.com^$document
 ||fairies.cc^$document
+!#endif
 
 ! ——— Twitter ———
 ! Twitter support was removed due to Musk being a white supremacist; see https://www.theguardian.com/technology/2023/sep/18/elon-musk-accuses-george-soros-foundation-of-wanting-to-destroy-western-civilisation
