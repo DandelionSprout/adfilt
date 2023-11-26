@@ -124,7 +124,7 @@ Posljednje ažuriranje: 13. Studeni 2023 (Hvala [Rancher](https://crowdin.com/pr
 
 Možete me kontaktirati i na norveškom, novonorveškom, danskom ili švedskom. Poznavanje engleskog jezika nije obavezno. 🙂 <br>
 
-# 🇷🇸Ћир Српски
+# 🇷🇸 Српски
 
 Последње ажурирање: 15. новембра 2023 (Хвала [Rancher](https://crowdin.com/profile/rancher)-у на преводу)
 
@@ -136,7 +136,7 @@ Možete me kontaktirati i na norveškom, novonorveškom, danskom ili švedskom. 
 • [Преводилачки пројекат за пар мојих листа, укључујући ову страницу](https://crwd.in/dandelion-sprout-nordic-filter). <br>
 • [Резервна копија мојих листа на GitLab-у](https://gitlab.com/DandelionSprout/adfilt) <br>
 
-Можете ме контактирати и на норвешком, новонорвешком, данском или шведском. Познавање енглеског језика није обавезно.
+Можете ме контактирати и на норвешком, новонорвешком, данском или шведском. Познавање енглеског језика није обавезно. 🙂 <br>
 
 # 🇹🇼 正體字/中華民國 漢語 <img src="https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Republic%20flag.webp" width="38">
 
@@ -153,5 +153,14 @@ Možete me kontaktirati i na norveškom, novonorveškom, danskom ili švedskom. 
 當然，你也可以用挪威文、新挪威文、丹麥文或瑞典文來聯絡我。畢竟，沒有人強迫你只能用英文。🙂 <br>
 
 # 🇨🇳 简化字/中国 汉语
+上次更新于: 26日11月2023年 (感谢 TotalImportance 进行翻译)
 
-(To-Do: Import strings from Crowdin.)
+• [清单位于软件代码寄存网站 GitHub 的主页](https://gitlab.com/DandelionSprout/adfilt) <br>
+• [我的清单的特许条款](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md)，专门设计为能够包含其他过滤清单的内容，同时尽可能地不冒犯清单维护者们。<br>
+• [捐赠方式](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
+• [清单结合了问题追](https://github.com/DandelionSprout/adfilt/issues)[踪及拉取请求系统](https://github.com/DandelionSprout/adfilt/pulls) （需要 GitHub 帐号）。<br>
+• [我製作的其他清单](https://filterlists.com/)（前住 ‘’Maintainers” 然后选择 ‘’Imre Kristoffer Eilertsen”），为多种不同的目的和工具而製。<br>
+• [我的一小部份清单的翻译项目](https://crwd.in/dandelion-sprout-nordic-filter)，包括这个页面。<br>
+• [我的清单在 GitLab 上的安全备份](https://gitlab.com/DandelionSprout/adfilt)
+
+当然，你也可以用挪威语、新挪威语、丹麦语或瑞典语与我联络。毕竟，使用英语并非强制要求。🙂 <br>
