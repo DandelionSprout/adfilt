@@ -112,10 +112,10 @@ Elbette benimle Norveççe, Nynorsk, Danca veya İsveççe olarak da iletişime 
 
 # 🇭🇷 Hrvatski
 
-Posljednje ažuriranje: 13. Studeni 2023 (Hvala [Rancher](https://crowdin.com/profile/rancher)u na prijevodu)
+Posljednje ažuriranje: 26. Studeni 2023 (hvala [Rancher](https://crowdin.com/profile/rancher) na prijevodu)
 
 • [Web-stranica liste na GitHub repozitoriju](https://gitlab.com/DandelionSprout/adfilt) <br>
-• [Licenca mojih lista](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Pažljivo je skrojena s ciljem da prihvaća sadržaj drugih filtar-lista, a da što manje ugrožava njihove autore. <br>
+• [Licenca mojih lista](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Pažljivo je skrojena kako bi se omogućilo preuzimanje sadržaja drugih lista filtara, a da se što manje ugrožavaju prava njihovih autora. <br>
 • [Načini doniranja](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • Zajednički sustav za [praćenje problema](https://github.com/DandelionSprout/adfilt/issues) i [zahtjeva za promjenama]((https://github.com/DandelionSprout/adfilt/pulls)) (potreban je račun na GitHubu). <br>
 • [Moje druge liste](https://filterlists.com/), koje su korisne u raznim situacijama i alatkama, možete pronaći ako odete na „Maintainers” i odaberete „Imre Kristoffer Eilertsen”. <br>
@@ -126,10 +126,10 @@ Možete me kontaktirati i na norveškom, novonorveškom, danskom ili švedskom. 
 
 # 🇷🇸 Српски
 
-Последње ажурирање: 15. новембра 2023 (Хвала [Rancher](https://crowdin.com/profile/rancher)-у на преводу)
+Последње ажурирање: 26. новембра 2023 (хвала [Rancher](https://crowdin.com/profile/rancher) на преводу)
 
 • [Веб-страница листе на GitHub репозиторијуму](https://gitlab.com/DandelionSprout/adfilt) <br>
-• [Лиценца мојих листа](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Пажљиво је скројена са циљем да прихвата садржај других филтер-листа, а да што мање угрожава њихове ауторе. <br>
+• [Лиценца мојих листа](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Пажљиво је скројена како би се омогућило преузимање садржаја других листа филтера, а да се што мање угрожавају права њихових аутора. <br>
 • [Начини донирања](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • Заједнички систем за [праћење проблема](https://github.com/DandelionSprout/adfilt/issues) и [захтева за променама](https://github.com/DandelionSprout/adfilt/pulls) (потребан је налог на GitHub-у). <br>
 • [Моје друге листе](https://filterlists.com/), које су корисне у разним ситуацијама и алаткама, можете пронаћи ако одете на „Maintainers” и изаберете „Imre Kristoffer Eilertsen”. <br>
