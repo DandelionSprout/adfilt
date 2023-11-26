@@ -117,7 +117,7 @@ Posljednje ažuriranje: 13. Studeni 2023 (Hvala [Rancher](https://crowdin.com/pr
 • [Web-stranica liste na GitHub repozitoriju](https://gitlab.com/DandelionSprout/adfilt) <br>
 • [Licenca mojih lista](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Pažljivo je skrojena s ciljem da prihvaća sadržaj drugih filtar-lista, a da što manje ugrožava njihove autore. <br>
 • [Načini doniranja](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
-• Zajednički sustav za [praćenje problema]((https://github.com/DandelionSprout/adfilt/issues)) i [zahtjeva za promjenama]((https://github.com/DandelionSprout/adfilt/pulls)) (potreban je račun na GitHubu). <br>
+• Zajednički sustav za [praćenje problema](https://github.com/DandelionSprout/adfilt/issues) i [zahtjeva za promjenama]((https://github.com/DandelionSprout/adfilt/pulls)) (potreban je račun na GitHubu). <br>
 • [Moje druge liste](https://filterlists.com/), koje su korisne u raznim situacijama i alatkama, možete pronaći ako odete na „Maintainers” i odaberete „Imre Kristoffer Eilertsen”. <br>
 • [Prevodilački projekt za par mojih lista, uključujući ovu stranicu](https://crwd.in/dandelion-sprout-nordic-filter). <br>
 • [Sigurnosna kopija mojih lista na GitLabu](https://gitlab.com/DandelionSprout/adfilt) <br>
@@ -132,7 +132,7 @@ Možete me kontaktirati i na norveškom, novonorveškom, danskom ili švedskom. 
 • [Лиценца мојих листа](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md). Пажљиво је скројена са циљем да прихвата садржај других филтер-листа, а да што мање угрожава њихове ауторе. <br>
 • [Начини донирања](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
 • Заједнички систем за [праћење проблема](https://github.com/DandelionSprout/adfilt/issues) и [захтева за променама](https://github.com/DandelionSprout/adfilt/pulls) (потребан је налог на GitHub-у). <br>
-• [Моје](https://filterlists.com/) друге листе, које су корисне у разним ситуацијама и алаткама, можете пронаћи ако одете на „Maintainers” и изаберете „Imre Kristoffer Eilertsen”. <br>
+• [Моје друге листе](https://filterlists.com/), које су корисне у разним ситуацијама и алаткама, можете пронаћи ако одете на „Maintainers” и изаберете „Imre Kristoffer Eilertsen”. <br>
 • [Преводилачки пројекат за пар мојих листа, укључујући ову страницу](https://crwd.in/dandelion-sprout-nordic-filter). <br>
 • [Резервна копија мојих листа на GitLab-у](https://gitlab.com/DandelionSprout/adfilt) <br>
 
@@ -140,7 +140,17 @@ Možete me kontaktirati i na norveškom, novonorveškom, danskom ili švedskom. 
 
 # 🇹🇼 正體字/中華民國 漢語 <img src="https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Republic%20flag.webp" width="38">
 
-(To-Do: Import strings from Crowdin.)
+最後更新於：26日11月2023年 (感謝 TotalImportance 的翻譯)
+
+• [清單位於軟件代碼寄存網站 GitHub 的主頁](https://gitlab.com/DandelionSprout/adfilt) <br>
+• [我的清單的特許條款](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md)，專門設計為能夠包含其他過濾清單的內容，同時盡可能地不冒犯它們的維護者們。<br>
+• [捐款方式](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations) <br>
+• [清單結合了問題追](https://github.com/DandelionSprout/adfilt/issues)[蹤及拉取請求系統](https://github.com/DandelionSprout/adfilt/pulls) （需要 GitHub 帳號）。<br>
+• [我的其他清單](https://filterlists.com/)（前住 「Maintainers」 然後選擇 「Imre Kristoffer Eilertsen」），為多種不同的目的和工具而製。<br>
+• [我的一小部份清單的翻譯項目](https://crwd.in/dandelion-sprout-nordic-filter)，包括這個頁面。<br>
+• [我的清單在 GitLab 上的安全備份](https://gitlab.com/DandelionSprout/adfilt) <br>
+
+當然，你也可以用挪威文、新挪威文、丹麥文或瑞典文來聯絡我。畢竟，沒有人強迫你只能用英文。🙂 <br>
 
 # 🇨🇳 简化字/中国 汉语
 
