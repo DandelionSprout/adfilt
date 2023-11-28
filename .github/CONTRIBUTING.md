@@ -1,4 +1,4 @@
-(Last updated: 30th of March 2023)
+(Last updated: 29th of November 2023)
 
 ## Notes on how to contribute:
 
@@ -23,7 +23,7 @@ All other versions are generated from those two files.
 
 ### Communication languages
 
-All communication and contribution that is permitted above, can also be done in Bokmål, Nynorsk, Swedish and Danish. In those cases, I would take contact with you in Bokmål, unless otherwise is requested.
+All communication and contribution that is permitted above, can also be done in Bokmål, Nynorsk, Swedish and Danish. In those cases, I would take contact with you in the same language, unless otherwise is requested.
 
 ### Low-priority websites
 
@@ -56,3 +56,5 @@ Should I have missed out on any details that'd be nice to have in this contribut
 I do encourage forking, both for experimentation, archiving, or for any other reason you may come up with.
 
 When submitting issue reports and pull requests, I aim to reply to it or fix it within 72 hours. Discussions threads where I see that input from me is desired, is aimed to be handled within 96 hours, although delays can happen. Commit-replies are not always read or replied to.
+
+***Please***, for the love of goodness, *don't delete your GitHub account in the midst of a report-in-process*, and ***definitely*** not before me or my team have posted any replies to that report.
