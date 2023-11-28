@@ -77,7 +77,7 @@
 * `!#if`: Specifies that a section of entries only apply to specific platforms or extensions. Closed out by `!#endif`. Possible options are listed [here](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#if-condition).
 * `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
 * `:matches-css-before` / `:matches-css-after`: Same as above, but looks for CSS values in its pseudo-elements instead.
-* `:remove()`: Removes the element entirely from the F12 tree. The parentheses are required.
+* `:remove()`: Removes the element entirely from the F12 tree. The parentheses are required. Can glitch out spectacularly on a select few sites, most notably Tumblr.
 * `#$?#` + `{ remove: true; }`: Same as above.
 * `:matches-attr`: Similar to `[href*="text"]`, but adds support for RegEx.
 #### Blocking
