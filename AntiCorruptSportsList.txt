@@ -1,10 +1,11 @@
 ! Title: 🤾🏼‍♂️ Anti-'Corrupt sports' List
-! Version: 19September2023v1-Alpha
+! Version: 30September2023v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to remove news articles about sports competitions that are laughably corrupt and money-hoarding, especially those that are in the pockets of the homicidal, anti-atheist Saudi Arabian royal house.
 ! Removes: Various football leagues (UEFA Champions League, AFC Champions League, Premier League, La Liga, Serie A, Bundesliga, Paris Saint Germain, Saudi Pro League), all major golf competitions, Dakar Rally, Saudi Arabian Grand Prix
 ! To-do: Add more relevant newssites, add to FilterLists.com
 
+!#if !env_mv3
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,theguardian.com,bbc.*,tv2.no##a[href*=haaland i]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*=mbappe i]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,theguardian.com,bbc.*,tv2.no##a[href*=manchester-city i]
@@ -107,6 +108,7 @@ viaplay.no##video[poster*=_PL_]
 viaplay.no##a[href*=premier-league]
 ||comfyballs.no/wp-content/uploads/sites/*/hero-comfy-pl-*.jpg|$image
 theguardian.com##[name=MostViewedRightWrapper]
+wikipedia.org#?#.wikitable > tbody tr:has(img:is([src*="Flag_of_Saudi" i],[src*="Flag of Saudi"]))
 !#if !adguard
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(/Haaland/i)
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(De Jong)
@@ -137,3 +139,4 @@ adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,svt.se,express
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,svt.se,expressen.se,aftonbladet.se,theguardian.com,bbc.*##a[href*="/pga" i]
 adressa.no,nrk.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,svt.se,expressen.se,aftonbladet.se,theguardian.com,bbc.*##a[href*=hovland i]
 dr.dk,tv2.dk,ekstrabladet.dk##a[href*=motorcykel i][href*=oerken i]
+!#endif
