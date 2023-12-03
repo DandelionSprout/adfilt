@@ -1,8 +1,8 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 26November2023v1-Deprecated
-: expires = 1
+# Version: 02December2023v1-Deprecated
+: expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -430,6 +430,7 @@ msFilterList
 -d static.polarismedia.no cxense.js
 # https://github.com/uBlockOrigin/uAssets/issues/13661/(11/06/2022)
 -d freewheel-mtgx-tv.akamaized.net
+# https://github.com/DandelionSprout/adfilt/issues/968
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -1032,6 +1033,10 @@ msFilterList
 -d no-oppdatere.
 -d no-oppdatert.
 -d 179.43.189.62
+# https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7694946
+-d easypark-
+-d 74.119.239.234
+-d 162.241.194.206
 # IP addresses of servers notorious for hosting many of the sites above
 -d 51.195.133.131
 -d 66.206.3.34
