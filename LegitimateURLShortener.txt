@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 04December2023v1
+! Version: 05December2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1738,7 +1738,7 @@ $removeparam=id,domain=go.redirectingat.com|go.skimlinks.com|go.skimresources.co
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726383
 $removeparam=offer_id,domain=catch.com.au|surfshark.com
 ! https://tenshoku.nikkei.co.jp/lp/15002/?n_cid=TPRN0002&waad=Ujim9yQ8&adid=NK_L2_T_shortlink_Sun_diagnosis&utm_source=NKdenshiban&utm_medium=content-text&utm_content=text&utm_campaign=shortlink_Sun_diagnosis (Can't be made generic due to: finn.no, willhaben.at, kijiji.ca, https://github.com/DandelionSprout/adfilt/issues/601)
-$removeparam=adid,domain=nikkei.co.jp
+$removeparam=adid,domain=nikkei.co.jp|mcafee.com|indeed.com
 
 !! ——— Rules for heavily covered sites ———
 !!! ——— Amazon ———
@@ -2731,7 +2731,7 @@ $removeparam=TheTime,domain=cnet.*|gamespot.com
 
 ! https://www.data-systems.fi/tuote/seagate-2tb-hdd-for-ps4/?ad=hintaseuranta&ad_src=hintaseuranta.fi&ad_content=Seagate+Game+Drive+2+TB+(PS4)+STGD2000200%2c+ulkoinen+kovalevy&ad_prodid=9851598
 ! https://github.com/DandelionSprout/adfilt/commit/2781552717e908b5b33c2fd497151e11cc67abcf
-$removeparam=ad,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|moosejaw.com|multitronic.fi|scandinavianphoto.fi|swamp.fi|ocado.com|ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
+$removeparam=ad,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|moosejaw.com|multitronic.fi|scandinavianphoto.fi|swamp.fi|ocado.com|ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com|indeed.com
 $removeparam=ad_src,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|scandinavianphoto.fi|swamp.fi
 $removeparam=ad_content,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|scandinavianphoto.fi|swamp.fi
 $removeparam=ad_prodid,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|scandinavianphoto.fi|swamp.fi
@@ -3987,7 +3987,6 @@ $removeparam=srsltid,doc
 ||search.yahoo.com^$removeparam=fr2
 
 ! Yahoo ads, i.e. https://www.malwarebytes.com/?c=cj&s=5370367&k=14452255&tracking=cj&x-wts=cj&x-affid=5370367&ADDITIONAL_AFFID=cj-5370367
-||mcafee.com^$removeparam=adid
 ||malwarebytes.com^$removeparam=x-affid
 ||malwarebytes.com^$removeparam=ADDITIONAL_AFFID
 $removeparam=x-wts
@@ -4535,6 +4534,15 @@ buffalonews.com##+js(set, lee_trkLinkSrc, noopFunc)
 
 ! Strangely prevents placeholders on flagpedia.net/index (24/11/2023)
 @@||flagpedia.net^$ping,xhr,removeparam=gtm
+
+! https://uk.indeed.com/viewjob?jk=a41ffca2ac5f7558&tk=1hgsnk064210a000&from=hp&vjs=3&advn=709719975271334&adid=382097114&ad=-6NYlbfkN0DjCZpU1rKD532J497OJ0vMCaeQk_OAIBwvcRy8C2L4KkefNXaNcq_bLpptXQ32l5n1vrnX_MHhizLL-hpo7s0Tyd4gW3WE6VpM5e4ipNZzflPkne_ZBA5v1G5mR3r73a12Jo52HTBeN5psaZg1zR9h7BGQZ0J8yRzV3COER19b6q1T93w9LiauuR4PZHofcR6ZTJkWTx-MzZHml2AYYpeC3Gk32459I_GBSk_ExCSAWx6FWX61CLsS9zOYuisGfkr8l6snsND3bQX9MKNbi1VMlA6c7msUlJng2IhCr80C8FaZHBxi593JjVG0wqIsgnL8ck9ZOP-m_a1gjXUsM7VU1OY_jSFfyZ-7SlOLpOsxS_vS7_Ss0ranKOOLm0csLJydVZbMXxMMbl0b1bZgV7z8giminlpOfjUARSW06EtuEs-3jV0NX4JDbX1O0kJt-4RGMUnDhSQ0F1a-fTkSMlVIBVfcp-uRBmVbddogxr3GfcuHOphpCH2nmkvn9C3lK42E94RKBhvcD99ybrA3NZ9Vi9dSJGq4z2PFaYgcitZlb52e-6XnCYYWDCJwlSi90Y0l95p3Z7O3kQ==&xkcb=SoCO-_M3HcnMCKRZcR0LbzkdCdPP&xpse=SoBo6_I3Hcnf3XAXv70JbzkdCdPP&sjdu=QWF4TUFyrHvH7u082A4fa_NsvzgLbIUqSUnOBngGDVA
+$removeparam=tk,domain=indeed.com
+$removeparam=from,domain=indeed.com
+$removeparam=vjs,domain=indeed.com
+$removeparam=advn,domain=indeed.com
+$removeparam=xkcb,domain=indeed.com
+$removeparam=xpse,domain=indeed.com
+$removeparam=sjdu,domain=indeed.com
 
 !#if adguard
 !#if adguard_ext_firefox
