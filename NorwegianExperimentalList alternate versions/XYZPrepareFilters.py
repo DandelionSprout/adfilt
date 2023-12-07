@@ -3235,6 +3235,12 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
+           r"(# Version:.*)", 
+           "\1\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt, unless otherwise proven.", 
+           line
+        )
+
+        line = re.sub(
            r"^(127\.0\.0\.1) (.*)", 
            r"\1 \2 www.\2", 
            line
@@ -3493,7 +3499,7 @@ def prepare_hostsdeny(lines) -> str:
 
         line = re.sub(
            r"(# Version: .*)", 
-           r"\1-Beta", 
+           r"\1-Deprecated", 
            line
         )
 
@@ -3523,25 +3529,25 @@ def prepare_pihole(lines) -> str:
 
         line = re.sub(
            r" Dandelion Sprouts nordiske filtre.*", 
-           " Dandelion Sprouts nordiske filtre (for Pi-hole)", 
+           " Dandelion Sprouts nordiske filtre (for Pi-hole v5.21 og tidligere)", 
            line
         )
 
         line = re.sub(
            r" Dandelion Sprout's Nordic Filters.*", 
-           " Dandelion Sprout's Nordic Filters (for Pi-hole)", 
+           " Dandelion Sprout's Nordic Filters (for Pi-hole v5.21 and earlier)", 
            line
         )
 
         line = re.sub(
            r"# Platform notes:.*", 
-           "# Platform notes: This list version is intended for those who make use of the Regex functionality in Pi-Hole. It is strongly recommended to also add the whitelist at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDomainsAllowlist.txt as a whitelist.", 
+           "# Platform notes: This list version is intended for those who make use of the Regex functionality in Pi-Hole. Users of the list should also add the whitelist at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDomainsAllowlist.txt as a whitelist.", 
            line
         )
 
         line = re.sub(
            r"(# Version: .*)", 
-           r"\1-Alpha", 
+           r"\1-Deprecated\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt, unless otherwise proven.", 
            line
         )
 
@@ -5814,6 +5820,12 @@ def prepare_hosts(lines) -> str:
         line = re.sub(
            r"([0-9a-z].*)\$.*", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"(# Version:.*)", 
+           "\1\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.", 
            line
         )
 

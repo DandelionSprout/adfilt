@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 02December2023v1-Deprecated
+# Version: 07December2023v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -112,7 +112,6 @@ msFilterList
 -d kunde.apt.no
 -d kynning.olis.is
 -d matriell.dm-storage.no
--d myad.no
 -d ndstage.wpengine.com
 -d openad.visir.is
 -d samfilm.codelab.is
@@ -229,7 +228,6 @@ msFilterList
 -d feltet.dk wallpaper_1.jpg
 -d feltet.dk *_300x60.gif
 -d footy.dk Sk%C3%A6rmbillede-*.png
--d gratisxxx.no
 - wp-content uploads *.gif
 -d hnytt.no Fluffy.jpg
 -d karfan.is *-470x130*.jpg
@@ -704,7 +702,6 @@ msFilterList
 -d freewheel-mtgx-tv.akamaized.net *.mp4
 -d freewheel-mtgx-tv.akamaized.net
 -d googletagservices.com gpt.js
--d gratisxxx.no *.php?bn=
 -d inputmag.dk *_Galaxy-_takeover_
 -d nakenprat.com adfirst*.js
 -d nakenprat.com adlast*.php
@@ -769,16 +766,10 @@ msFilterList
 -d altrask.com
 -d bershka-norge.com
 -d bershkadenmark.com
--d blundstoneskooslo.com
 -d brunateskonorge.com
--d dsbuhw.shop
--d dscvsb.shop
--d dsjifs.shop
--d dswuxd.shop
 -d g-ymsharknorge.com
 -d gantdanmark.com
 -d gantnorge.com
--d gym-shark-norge.com
 -d gymshark-danmarkudsalg.com
 -d gymshark-no.com
 -d gymsharkbutikdanmark.com
@@ -813,7 +804,6 @@ msFilterList
 -d sanuksandaler.com
 -d umbrodk.com
 -d umbrono.com
--d underarmour-dk.com
 -d underarmourdk.com
 -d underarmourdks.com
 -d vejadanmarkudsalg.com
@@ -825,11 +815,8 @@ msFilterList
 -d trmff.wpengine.com
 -d 212.27.60.108
 # Overly dedicated E-mail spambots
--d fed-packs.no
--d har-freight.us
 -d wirexapp.africa.com
 -d tachyoniums.eu.com
--d service-nespresso.no
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
@@ -1116,7 +1103,6 @@ msFilterList
 -d storustovu.dk
 -d campingnews.dk
 # 🇬🇧: Copied over from URLHaus and verified
--d biopaten.no
 -d hagebakken.no
 -d mdb.nu
 -d idj.no
