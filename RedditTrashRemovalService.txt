@@ -1,12 +1,13 @@
 [Adblock Plus 3.13]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 17August2023v1-Beta
+! Version: 12🏝️2023v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8kun. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
 ! Similarly, the ability for me to help out with Reddit in phone browsers is very limited due to its very frequent app demands, though the list has at least been set to work in phone browsers now (10th of March 2023).
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
+!#if !env_mv3
 ! Removes sitewide feeds from the dropdown menu, on the assumption that they contain posts from bad subreddits
 ! Dropdown menu
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion###focus-All
@@ -38,8 +39,6 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#a[id
 ||reddit.com/r/yiffinhell^$document
 ! Known to ban all men:
 ||reddit.com/r/PinkpillFeminism^$document
-! Known to ban all Europeans:
-||reddit.com/r/dankmemes^$document
 ! Known to ban most of their white users:
 ||reddit.com/r/blackpeopletwitter^$document
 ||reddit.com/r/CurlyHair^$document
@@ -107,14 +106,14 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Pos
 
 ! Usernames that are 139% guaranteed to be trolls
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post:has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post:has(a[href^="/user"]:has-text(/kekistan/i))
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post:has(a[href^="/user"]:has-text(/RedditAdmins/i))
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post:has(a[href^="/user"]:has-text(/j[eou][owi]w?[sz]?/i):has-text(/white/i))
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post:has(a[href^="/user"]:has-text(/kek\istan/i))
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post:has(a[href^="/user"]:has-text(/Red{2}\itAd\m\ins/i))
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post:has(a[href^="/user"]:has-text(/j[eou][owi]w?[sz]?/i):has-text(/wh\ite/i))
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post:has(a[href^="/user"]:has-text(/g[o0]y/i):has-text(/wh[i1]te/i))
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a[href^="/user"]:has-text(/p[e3]p[e3]/i):has-text(/fr[o0]g/i))
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a[href^="/user"]:has-text(/kekistan/i))
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a[href^="/user"]:has-text(/RedditAdmins/i))
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a[href^="/user"]:has-text(/j[eou][owi]w?[sz]?/i):has-text(/white/i))
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a[href^="/user"]:has-text(/kek\istan/i))
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a[href^="/user"]:has-text(/Red{2}\itAd\m\ins/i))
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a[href^="/user"]:has-text(/j[eou][owi]w?[sz]?/i):has-text(/wh\ite/i))
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a[href^="/user"]:has-text(/g[o0]y/i):has-text(/wh[i1]te/i))
 
 ! Removes the "n new posts for you" banner
@@ -129,28 +128,28 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[
 
 ! Removes three specific types of comments that offer nothing to a thread apart from vapid far-out-of-place greetings
 !#if !adguard
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment,.entry:has-text(/Happy Cake ?Day/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment,.entry:has-text(/charge your phone/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a:has-text(/^r/chargeyourphone$/))
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.entry:has(a:has-text(/^r/chargeyourphone$/))
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment,.entry:has-text(/Hap{2}\y Cake ?Day/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment,.entry:has-text(/charge \your phone/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Comment:has(a:has-text(/^r/charge\yourphone$/))
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.entry:has(a:has-text(/^r/charge\yourphone$/))
 !#endif
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Edit/i):has-text(/first gold/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Edit/i):has-text(/first silver/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Edit/i):has-text(/first platinum/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Edit/i):has-text(/first award/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/gold/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/silver/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/platinum/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/award/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Edit/i):has-text(/Thank/i):has-text(/stranger/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Ed\it/i):has-text(/f\irst gold/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Ed\it/i):has-text(/f\irst s\ilver/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Ed\it/i):has-text(/f\irst plat\inum/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Ed\it/i):has-text(/f\irst award/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Ed\it/i):has-text(/Thank/i):has-text(/gold/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Ed\it/i):has-text(/Thank/i):has-text(/s\ilver/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Ed\it/i):has-text(/Thank/i):has-text(/plat\inum/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Ed\it/i):has-text(/Thank/i):has-text(/award/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#p:has-text(/^Ed\it/i):has-text(/Thank/i):has-text(/stranger/i)
 
 ! Attempts to remove the "Recommended posts" feed on the right of most posts
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[data-redditstyle=false] + div:has(> div[data-redditstyle=true])
 
 ! Let's give people a more free choice on whether to use New or Old Reddit, okay?
 ||styles.redditmedia.com/t5_2qimj/styles/image_widget_hosy9x86gxv11.png$image
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[data-redditstyle=false][style]:has-text(/Old Reddit/i)
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[data-redditstyle=false][style]:has-text(/New Reddit/i):has-text(/Trash/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[data-redditstyle=false][style]:has-text(/Old Red{2}\it/i)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[data-redditstyle=false][style]:has-text(/New Red{2}\it/i):has-text(/Trash/i)
 
 ! Aims to prevent Imgur embeds from cutting off half the preview
 imgur.com#?#img[id=image-element][src*=imgur]:style(margin-top: 0 !important)
@@ -222,3 +221,4 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.thi
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.thing[data-author=maxwellhill]
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.thing[data-author=bubblr]
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.thing[data-author=PowerModerator]
+!#endif
