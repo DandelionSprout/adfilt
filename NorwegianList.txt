@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 12December2023v1
+! Version: 13December2023v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -429,7 +429,7 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! arendalstidende.no
 ##.ad-paied-cont-front:not(html,body,:empty)
 ! https://www.langrenn.com/cppage.6250314-1743.html
-##.spklw-post-attr[data-recommendation-type=ad]
+##.spklw-post-attr[data-recommendation-type=ad]:not(html,body,:empty)
 ! bobilverden.no
 ##img[alt^="Annonse "]
 ! norskenettsider.no, sva.no
@@ -437,10 +437,10 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
 ~prisguiden.no##.prisguidePost:not(html,body,:empty)
 ! tv2.no
-##.spklw-post-attr[data-type=ad]
+##.spklw-post-attr[data-type=ad]:not(html,body,:empty)
 tv2.no##.spklw-post-attr[data-pc]
 ! https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
-##.spklw-post-attr[data-recommendation-type=sprinkleit]
+##.spklw-post-attr[data-recommendation-type=sprinkleit]:not(html,body,:empty)
 ! https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
 ##.native-ad-kicker:not(html,body,:empty)
 ##.content-adunit:not(html,body,:empty)
@@ -490,7 +490,7 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ! gnavergalleri.dk (along with ~60 affiliates sites)
 ! https://github.com/DandelionSprout/adfilt/issues/233
 ##.row > div[class=top-fixed-wrapper]
-##.section-module.blog-frontpage-module.margin-top-10.row
+##.section-module.blog-frontpage-module.margin-top-10.row:not(html,body,:empty)
 *galleri.dk/content/images/fixed^$image
 ! sol.dk (25/04/2021)
 ~norges.casino##a[href*="norges.casino"]
@@ -1825,14 +1825,14 @@ vafo.dk##.adform-flexblock
 ##[id^=art-bazaarAd]
 ||services.api.no/api/bazaar^$3p
 ! aftenbladet.no
-##.ad[data-config-name]
+##.ad[data-config-name]:not(html,body,:empty)
 ! avisalofoten.no
 ##.ad.text-center:not(html,body,:empty)
 ! blv.no/nyheter/kan-bruke-23-millioner-pa-the-whale-undersokelsene
 ##div[id*=html-embedded-ad]
 ! https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
-##.ad[id^=netboard_]
-##.ad[id^=skyscraper]
+##.ad[id^=netboard_]:not(html,body,:empty)
+##.ad[id^=skyscraper]:not(html,body,:empty)
 ##.ad.topBanner:not(html,body,:empty)
 ! https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
 ###sponsorstripe
@@ -2118,8 +2118,8 @@ spleis.no##+js(set, __INITIAL_STATE__.features.should-show-snow, false)
 ||widget.tippebannere.no^$frame,domain=~tipster.no
 ||tipster.no/embed$frame
 ###ntwidget
-##.ntbox-btn
-##.ntbox-tab.bg-primary
+##.ntbox-btn:not(html,body,:empty)
+##.ntbox-tab.bg-primary:not(html,body,:empty)
 ###sportspill-box-top
 vglive.no##.tipster-liveodds-embed
 ba.no##.sportspill
@@ -2147,7 +2147,7 @@ startsiden.no###consumer_service_tipping
 startsiden.no##div[class^=nyttig__tippingHeader__]
 ||cloudfront.net/v*/Liveoddsen.aspx^$domain=vglive.no
 ! nidaros.no (02/12/2021)
-##.sportspill-container[href*=lotto]
+##.sportspill-container[href*=lotto]:not(html,body,:empty)
 ! h-avis.no (11/12/2023)
 no#?#optimus-element[linecount=undefined]:has(a[href^="/sportspill/"][href*="/x/"])
 no#?#optimus-element:has(a[href*=".pxf.io/"])
