@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 07December2023v1-Deprecated
+# Version: 12December2023v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -75,6 +75,7 @@ msFilterList
 # Various now-dead Frettabladid subdomains
 # migogkbh.dk (22 06 2023)
 # digitalt.tv (08 09 2023)
+# h-avis.no (11 12 2023)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -661,6 +662,7 @@ msFilterList
 +d oddstips.norsktippingpartner.no
 -d cloudfront.net Liveoddsen.aspx
 # nidaros.no (02 12 2021)
+# h-avis.no (11 12 2023)
 # ——— Gamereactor PC ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
@@ -1132,7 +1134,7 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 28October2023v1-Extension
+# Last updated: 07December2023v1-Extension
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
