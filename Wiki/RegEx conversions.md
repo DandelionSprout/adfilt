@@ -17,3 +17,8 @@
 ## Letters suited for backslash obfuscation when using RegEx
 According to Sublime Text build 4143. Case-sensitive.
 * i, j, m, o, y, E, F, I, J, M, O, T, Y
+
+### Trials to put said obfuscations into structural use (Note: Currently also matches square brackets as false positives. MUST be case-sensitive.)
+* `(\(/.*)([a-zA-Z])\2([a-zA-Z0-9|/-])` → `\1\2{2}\3`
+* `(\(/.*[a-zA-Z0-9 ?}-])([ijmoyEFIJMOTY])([a-zA-Z0-9 |/\\-].*:not)` → `\1\\\2\3`
+* `(\(/.*[a-zA-Z0-9 ?}-])([ijmyEFIJMOTY])([a-zA-Z0-9 |{}/\\-].*/i?\))` `\1\\\2\3`
