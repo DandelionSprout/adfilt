@@ -922,7 +922,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(no)?#\??#optimus-element(.*:)", 
+           r"^(no)?#\??#optimus-element(.*:[a-eg-kmo-z])", 
            r"aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austagderblad.no,avisa-hordaland.no,avisagaula.no,avisenagder.no,ba.no,blv.no,budstikka.no,bygdebladet.no,bygdeposten.no,dalane-tidende.no,dt.no,eikerbladet.no,enebakkavis.no,f-b.no,fanaposten.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gjengangeren.no,glomdalen.no,h-a.no,h-avis.no,ha-halden.no,hadeland.no,hardanger-folkeblad.no,helg.no,ialta.no,ifinnmark.no,ifinnmarkdebatten.no,iharstad.no,ilevanger.no,inderoyningen.no,indre.no,isandnessjoen.no,jarlsbergavis.no,jbl.no,kirkenesby.no,krs.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofot-tidende.no,lofotposten.no,lyngdalsavis.no,merakerposten.no,minenergi.no,mitthammerfest.no,mittjessheim.no,mittlillestrom.no,mittloerenskog.no,moss-avis.no,nab.no,namdalsavisa.no,nettavisen.no,nidaros.no,noblad.no,nord24.no,nordhordland.no,nordlys.no,nordnorskdebatt.no,nt24.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,r-a.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,ringsaker-blad.no,sa.no,sageneavis.no,sandeavis.no,sandnesposten.no,sb.no,senja247.no,smaalenene.no,snasningen.no,sognavis.no,solabladet.no,solungavisa.no,steinkjer-avisa.no,strandbuen.no,sva.no,svelviksposten.no,sydvesten.no,t-a.no,ta.no,tb.no,telen.no,tk.no,totenidag.no,tromsoby.no,tronderdebatt.no,tvedestrandsposten.no,varingen.no,vestbyavis.no,vestviken24.no,vp.no#?#optimus-element\2", 
            line
         )
@@ -3145,7 +3145,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(no)?#\??#optimus-element(.*:)", 
+           r"^(no)?#\??#optimus-element(.*:[a-eg-kmo-z])", 
            r"aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austagderblad.no,avisa-hordaland.no,avisagaula.no,avisenagder.no,ba.no,blv.no,budstikka.no,bygdebladet.no,bygdeposten.no,dalane-tidende.no,dt.no,eikerbladet.no,enebakkavis.no,f-b.no,fanaposten.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gjengangeren.no,glomdalen.no,h-a.no,h-avis.no,ha-halden.no,hadeland.no,hardanger-folkeblad.no,helg.no,ialta.no,ifinnmark.no,ifinnmarkdebatten.no,iharstad.no,ilevanger.no,inderoyningen.no,indre.no,isandnessjoen.no,jarlsbergavis.no,jbl.no,kirkenesby.no,krs.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofot-tidende.no,lofotposten.no,lyngdalsavis.no,merakerposten.no,minenergi.no,mitthammerfest.no,mittjessheim.no,mittlillestrom.no,mittloerenskog.no,moss-avis.no,nab.no,namdalsavisa.no,nettavisen.no,nidaros.no,noblad.no,nord24.no,nordhordland.no,nordlys.no,nordnorskdebatt.no,nt24.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,r-a.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,ringsaker-blad.no,sa.no,sageneavis.no,sandeavis.no,sandnesposten.no,sb.no,senja247.no,smaalenene.no,snasningen.no,sognavis.no,solabladet.no,solungavisa.no,steinkjer-avisa.no,strandbuen.no,sva.no,svelviksposten.no,sydvesten.no,t-a.no,ta.no,tb.no,telen.no,tk.no,totenidag.no,tromsoby.no,tronderdebatt.no,tvedestrandsposten.no,varingen.no,vestbyavis.no,vestviken24.no,vp.no#?#optimus-element\2", 
            line
         )
