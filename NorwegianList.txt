@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 13December2023v1
+! Version: 15December2023v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -340,6 +340,8 @@ travservice.dk##.tm-main-top
 travservice.dk##.widget_widgetkit
 trening.no##.cp-slidein-body
 trondheim24.no##.recommended-module
+digi.no##.items-center.mx-auto
+digi.no#?#div[id^=row-]:has(.preamble-shadow)
 tv-kalundborg.dk##.flickity-viewport
 tv-kalundborg.dk##div.col-s-100.col-50:nth-of-type(2)
 tv2.no##+js(json-prune, enabled, testhide)
@@ -1700,6 +1702,7 @@ jyllands-posten.dk,finans.dk##div[class*=banner-container]
 borsen.dk##div[class*=col] > .native-teaser:upward(1)
 jyllands-posten.dk##section[id^=commercial]
 bt.no##p ~ div[class^=hyperion-css-]:has(> div[id*=-ad- i])
+viralomania.com##.sidebar > div[id^=block-]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2151,6 +2154,8 @@ startsiden.no##div[class^=nyttig__tippingHeader__]
 ! h-avis.no (11/12/2023)
 no#?#optimus-element[linecount=undefined]:has(a[href^="/sportspill/"][href*="/x/"])
 no#?#optimus-element:has(a[href*=".pxf.io/"])
+! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##.norsk-tipping-widget:not(html,body,:empty)
 
 ! ——— Gamereactor PC ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
@@ -2631,6 +2636,8 @@ triplx.dk##.aff-inner-col
 ! https://dinside.dagbladet.no/okonomi/tusenvis-forsokt-lurt/76921148
 ||a2ics.eu^$all
 ||smsb.co^$doc
+! https://www.tv2.no/nyheter/innenriks/advarer-om-svindel-sms-sender-aldri-slike-henvendelser/16284207/ (15/12/2023)
+||minklarna.$doc,popup,domain=~no|~se|~dk
 ! https://github.com/DandelionSprout/adfilt/issues/747
 -norge.co.no^$all
 *skodanmark.com^$all
