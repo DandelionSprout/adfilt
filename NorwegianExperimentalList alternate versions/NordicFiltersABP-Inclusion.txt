@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 121220231
+! Version: 161220231
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -335,6 +335,8 @@ travservice.dk##.tm-main-top
 travservice.dk##.widget_widgetkit
 trening.no##.cp-slidein-body
 trondheim24.no##.recommended-module
+digi.no##.items-center.mx-auto
+digi.no#?#div[id^=row-]:has(.preamble-shadow)
 tv-kalundborg.dk##.flickity-viewport
 tv-kalundborg.dk##div.col-s-100.col-50:nth-of-type(2)
 tv2.no##.esi-include
@@ -420,7 +422,7 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! arendalstidende.no
 ##.ad-paied-cont-front:not(html,body,:empty)
 ! https://www.langrenn.com/cppage.6250314-1743.html
-##.spklw-post-attr[data-recommendation-type=ad]
+##.spklw-post-attr[data-recommendation-type=ad]:not(html,body,:empty)
 ! bobilverden.no
 ##img[alt^="Annonse "]
 ! norskenettsider.no, sva.no
@@ -428,10 +430,10 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
 ~prisguiden.no##.prisguidePost:not(html,body,:empty)
 ! tv2.no
-##.spklw-post-attr[data-type=ad]
+##.spklw-post-attr[data-type=ad]:not(html,body,:empty)
 tv2.no##.spklw-post-attr[data-pc]
 ! https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
-##.spklw-post-attr[data-recommendation-type=sprinkleit]
+##.spklw-post-attr[data-recommendation-type=sprinkleit]:not(html,body,:empty)
 ! https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
 ##.native-ad-kicker:not(html,body,:empty)
 ##.content-adunit:not(html,body,:empty)
@@ -481,7 +483,7 @@ goal.com#?#*:has(> * > .js-betting-widget.is-country-no)
 ! gnavergalleri.dk (along with ~60 affiliates sites)
 ! https://github.com/DandelionSprout/adfilt/issues/233
 ##.row > div[class=top-fixed-wrapper]
-##.section-module.blog-frontpage-module.margin-top-10.row
+##.section-module.blog-frontpage-module.margin-top-10.row:not(html,body,:empty)
 *galleri.dk/content/images/fixed^$image
 ! sol.dk (25/04/2021)
 ~norges.casino##a[href*="norges.casino"]
@@ -1638,6 +1640,7 @@ jyllands-posten.dk,finans.dk##div[class*=banner-container]
 borsen.dk#?#div[class*=col] > *:has(> .native-teaser)
 jyllands-posten.dk##section[id^=commercial]
 bt.no##p ~ div[class^=hyperion-css-]:has(> div[id*=-ad- i])
+viralomania.com##.sidebar > div[id^=block-]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1754,14 +1757,14 @@ vafo.dk##.adform-flexblock
 ##[id^=art-bazaarAd]
 ||services.api.no/api/bazaar^$third-party
 ! aftenbladet.no
-##.ad[data-config-name]
+##.ad[data-config-name]:not(html,body,:empty)
 ! avisalofoten.no
 ##.ad.text-center:not(html,body,:empty)
 ! blv.no/nyheter/kan-bruke-23-millioner-pa-the-whale-undersokelsene
 ##div[id*=html-embedded-ad]
 ! https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
-##.ad[id^=netboard_]
-##.ad[id^=skyscraper]
+##.ad[id^=netboard_]:not(html,body,:empty)
+##.ad[id^=skyscraper]:not(html,body,:empty)
 ##.ad.topBanner:not(html,body,:empty)
 ! https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
 ###sponsorstripe
@@ -2030,8 +2033,8 @@ ekstrabladet.dk#@#body>div[id][style]
 ||widget.tippebannere.no^$subdocument,domain=~tipster.no
 ||tipster.no/embed$subdocument
 ###ntwidget
-##.ntbox-btn
-##.ntbox-tab.bg-primary
+##.ntbox-btn:not(html,body,:empty)
+##.ntbox-tab.bg-primary:not(html,body,:empty)
 ###sportspill-box-top
 vglive.no##.tipster-liveodds-embed
 ba.no##.sportspill
@@ -2059,10 +2062,12 @@ startsiden.no###consumer_service_tipping
 startsiden.no##div[class^=nyttig__tippingHeader__]
 ||cloudfront.net/v*/Liveoddsen.aspx^$domain=vglive.no
 ! nidaros.no (02/12/2021)
-##.sportspill-container[href*=lotto]
+##.sportspill-container[href*=lotto]:not(html,body,:empty)
 ! h-avis.no (11/12/2023)
 aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austagderblad.no,avisa-hordaland.no,avisagaula.no,avisenagder.no,ba.no,blv.no,budstikka.no,bygdebladet.no,bygdeposten.no,dalane-tidende.no,dt.no,eikerbladet.no,enebakkavis.no,f-b.no,fanaposten.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gjengangeren.no,glomdalen.no,h-a.no,h-avis.no,ha-halden.no,hadeland.no,hardanger-folkeblad.no,helg.no,ialta.no,ifinnmark.no,ifinnmarkdebatten.no,iharstad.no,ilevanger.no,inderoyningen.no,indre.no,isandnessjoen.no,jarlsbergavis.no,jbl.no,kirkenesby.no,krs.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofot-tidende.no,lofotposten.no,lyngdalsavis.no,merakerposten.no,minenergi.no,mitthammerfest.no,mittjessheim.no,mittlillestrom.no,mittloerenskog.no,moss-avis.no,nab.no,namdalsavisa.no,nettavisen.no,nidaros.no,noblad.no,nord24.no,nordhordland.no,nordlys.no,nordnorskdebatt.no,nt24.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,r-a.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,ringsaker-blad.no,sa.no,sageneavis.no,sandeavis.no,sandnesposten.no,sb.no,senja247.no,smaalenene.no,snasningen.no,sognavis.no,solabladet.no,solungavisa.no,steinkjer-avisa.no,strandbuen.no,sva.no,svelviksposten.no,sydvesten.no,t-a.no,ta.no,tb.no,telen.no,tk.no,totenidag.no,tromsoby.no,tronderdebatt.no,tvedestrandsposten.no,varingen.no,vestbyavis.no,vestviken24.no,vp.no#?#optimus-element[linecount=undefined]:has(a[href^="/sportspill/"][href*="/x/"])
 aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austagderblad.no,avisa-hordaland.no,avisagaula.no,avisenagder.no,ba.no,blv.no,budstikka.no,bygdebladet.no,bygdeposten.no,dalane-tidende.no,dt.no,eikerbladet.no,enebakkavis.no,f-b.no,fanaposten.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gjengangeren.no,glomdalen.no,h-a.no,h-avis.no,ha-halden.no,hadeland.no,hardanger-folkeblad.no,helg.no,ialta.no,ifinnmark.no,ifinnmarkdebatten.no,iharstad.no,ilevanger.no,inderoyningen.no,indre.no,isandnessjoen.no,jarlsbergavis.no,jbl.no,kirkenesby.no,krs.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofot-tidende.no,lofotposten.no,lyngdalsavis.no,merakerposten.no,minenergi.no,mitthammerfest.no,mittjessheim.no,mittlillestrom.no,mittloerenskog.no,moss-avis.no,nab.no,namdalsavisa.no,nettavisen.no,nidaros.no,noblad.no,nord24.no,nordhordland.no,nordlys.no,nordnorskdebatt.no,nt24.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,r-a.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,ringsaker-blad.no,sa.no,sageneavis.no,sandeavis.no,sandnesposten.no,sb.no,senja247.no,smaalenene.no,snasningen.no,sognavis.no,solabladet.no,solungavisa.no,steinkjer-avisa.no,strandbuen.no,sva.no,svelviksposten.no,sydvesten.no,t-a.no,ta.no,tb.no,telen.no,tk.no,totenidag.no,tromsoby.no,tronderdebatt.no,tvedestrandsposten.no,varingen.no,vestbyavis.no,vestviken24.no,vp.no#?#optimus-element:has(a[href*=".pxf.io/"])
+! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##.norsk-tipping-widget:not(html,body,:empty)
 
 ! ——— Gamereactor PC ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
@@ -2541,6 +2546,8 @@ triplx.dk##.aff-inner-col
 ||a2ics.eu^
 ||a2ics.eu^$popup
 ||smsb.co^
+! https://www.tv2.no/nyheter/innenriks/advarer-om-svindel-sms-sender-aldri-slike-henvendelser/16284207/ (15/12/2023)
+||minklarna.
 ! https://github.com/DandelionSprout/adfilt/issues/747
 -norge.co.no^
 -norge.co.no^$popup
@@ -2759,6 +2766,21 @@ triplx.dk##.aff-inner-col
 ||104.160.10.$domain=~in-addr.arpa
 ||165.231.154.$domain=~in-addr.arpa
 ||167.99.196.225^$domain=~in-addr.arpa
+! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7872103
+||betzykrisesenter.no^
+||citra2010oslo.no^
+||digiter.no^
+||easydisplay.no^
+||kjaerra.no^
+||kontrast1.no^
+||norskmatkultur.no^
+||norskoffroadteknikk.no^
+||nyematoghelse.no^
+||securmarksykkel.no^
+||thecoolgirl.no^
+||topshineauto.no^
+||vossblues.no^
+||yttersiden.no^
 
 ! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 ! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
@@ -2833,16 +2855,6 @@ triplx.dk##.aff-inner-col
 ||1.14.61.188^
 ||smarthouseforum.ru^
 ||trafikkskoleapp.no^
-
-! 🇬🇧: Copied over from BlockListProject malware/phishing and verified
-||a1match.dk^
-||adminflex.dk^
-||asound.no^
-||aluminium.olbi.no^
-||ccbuus.dk^
-||artmusic.dk^
-||336.linux1.testsider.dk^
-
 
 
 
@@ -5307,7 +5319,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Sat, 09 Dec 2023 23:19:58 +0000
+! Last modified: Thu, 14 Dec 2023 17:48:31 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -6212,6 +6224,7 @@ riemurasia.net##[href^="https://tc.tradetracker%2Enet/"]
 riemurasia.net##a[rel^="sponsored"]
 riimihaku.fi##.top-banner
 riistalehti.fi##.riist-content
+riistalehti.fi##div[id|=riist][style*="text-align: center"]
 ristinvoitto.fi##a[href*="subaction=bannerredirect"]:not(a[href*="-rv-tilaus"])
 rumba.fi#?#.bg-white.w-full.py-2.px-4:has(.poppartners)
 ruuhkavuodet.fi#?#.widget_block:has(#nm-300x600-300x300)
@@ -6796,5 +6809,3 @@ pienimatkaopas.com#@##mainos
 
 
 ! Will be removed after PR's accepted (whitelistings for issues caused by other lists or additions to the main Easylist)
-! https://github.com/easylist/easylist/pull/17949
-toimitilat.kauppalehti.fi#@#.sponsored-article

@@ -4723,6 +4723,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(\|\|?|://|/)(([0-9]{1,3}\.){3})(\$.*|$)", 
+           r"\2*$network", 
+           line
+        )
+
         text += line + '\n'
 
     return text

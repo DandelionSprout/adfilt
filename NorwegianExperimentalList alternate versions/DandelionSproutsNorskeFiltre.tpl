@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 12December2023v1-Deprecated
+# Version: 16December2023v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -663,6 +663,7 @@ msFilterList
 -d cloudfront.net Liveoddsen.aspx
 # nidaros.no (02 12 2021)
 # h-avis.no (11 12 2023)
+# https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
 # ——— Gamereactor PC ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
@@ -933,6 +934,8 @@ msFilterList
 # https://dinside.dagbladet.no/okonomi/tusenvis-forsokt-lurt/76921148
 -d a2ics.eu
 -d smsb.co
+# https://www.tv2.no/nyheter/innenriks/advarer-om-svindel-sms-sender-aldri-slike-henvendelser/16284207//(15/12 2023)
+-d minklarna.
 # https://github.com/DandelionSprout/adfilt/issues/747
 - -norge.co.no
 -d skechersskosalg-norge.com
@@ -1043,6 +1046,21 @@ msFilterList
 -d 104.160.10.
 -d 165.231.154.
 -d 167.99.196.225
+# https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7872103
+-d betzykrisesenter.no
+-d citra2010oslo.no
+-d digiter.no
+-d easydisplay.no
+-d kjaerra.no
+-d kontrast1.no
+-d norskmatkultur.no
+-d norskoffroadteknikk.no
+-d nyematoghelse.no
+-d securmarksykkel.no
+-d thecoolgirl.no
+-d topshineauto.no
+-d vossblues.no
+-d yttersiden.no
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
@@ -1111,14 +1129,6 @@ msFilterList
 -d 1.14.61.188
 -d smarthouseforum.ru
 -d trafikkskoleapp.no
-# 🇬🇧: Copied over from BlockListProject malware phishing and verified
--d a1match.dk
--d adminflex.dk
--d asound.no
--d aluminium.olbi.no
--d ccbuus.dk
--d artmusic.dk
--d 336.linux1.testsider.dk
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
