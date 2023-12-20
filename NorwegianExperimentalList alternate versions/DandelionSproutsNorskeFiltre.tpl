@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 16December2023v1-Deprecated
+# Version: 20December2023v4-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -664,6 +664,8 @@ msFilterList
 # nidaros.no (02 12 2021)
 # h-avis.no (11 12 2023)
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
+# https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7865350
+# https://www.nettavisen.no/sportspill/her-er-tallene-som-vil-fa-liverpool-fansen-i-godt-humor/s/5-95-1529066
 # ——— Gamereactor PC ———
 # 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
 # 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
@@ -1061,6 +1063,9 @@ msFilterList
 -d topshineauto.no
 -d vossblues.no
 -d yttersiden.no
+# https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7873648
+-d monetrizer*.
+-d 38.180.96.244
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.

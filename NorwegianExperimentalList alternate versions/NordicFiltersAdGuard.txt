@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 16December2023v1
+! Version: 20December2023v4
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1284,6 +1284,7 @@ gamer.no##.site__sticky__ads + div[class*=" "]
 kommunikationsforum.dk##.banner-top
 kommunikationsforum.dk##.col-xs-12[style]
 kommunikationsforum.dk##div[style="padding-top: 20px; padding-bottom: 20px; "]
+e24.no##div[class^=advertory- i]
 kondis.no#$##content { margin-top: 0px !important }
 kondis.no##.articles .bannerlocation
 kondis.no##.bannerlocatixxxxon
@@ -2152,10 +2153,15 @@ startsiden.no##div[class^=nyttig__tippingHeader__]
 ! nidaros.no (02/12/2021)
 ##.sportspill-container[href*=lotto]:not(html,body,:empty)
 ! h-avis.no (11/12/2023)
-no#?#optimus-element[linecount=undefined]:has(a[href^="/sportspill/"][href*="/x/"])
+no#?#optimus-element:has(a[href^="/sportspill/"][href*="/x/"])
 no#?#optimus-element:has(a[href*=".pxf.io/"])
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
 ~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##.norsk-tipping-widget:not(html,body,:empty)
+! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7865350
+no#?#optimus-element:has(a[href^="/sportspill/"][href*=pott])
+no#?#optimus-element:has(a[href^="/sportspill/"][href*=million])
+! https://www.nettavisen.no/sportspill/her-er-tallene-som-vil-fa-liverpool-fansen-i-godt-humor/s/5-95-1529066
+~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="tipping.pxf.io"][href*=oddstips i]
 
 ! ——— Gamereactor PC ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
@@ -2778,6 +2784,9 @@ triplx.dk##.aff-inner-col
 ||topshineauto.no^$document
 ||vossblues.no^$document
 ||yttersiden.no^$document
+! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7873648
+||monetrizer*.$all
+38.180.96.244$network
 
 ! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 ! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
@@ -2867,6 +2876,16 @@ triplx.dk##.aff-inner-col
 
 
 
+
+
+!#if ext_ublock
+!#include AdditionalGenericEntriesForUBO.txt
+!#endif
+
+
+!#if adguard
+!#include AdditionalGenericEntriesForAdGuard.txt
+!#endif
 
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
