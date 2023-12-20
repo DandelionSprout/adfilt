@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19December2023v1
+! Version: 20December2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3568,13 +3568,13 @@ $removeparam=traffic_source,domain=aljazeera.com|bleepingcomputer.com
 $removeparam=/traffic_source=Connatix/i
 
 ! https://www.alina.se/Produkt.aspx?site=prisjakt&T2=0045496453435
-$removeparam=site,domain=alina.se
+$doc,removeparam=site,domain=affiliate.insider.com|alina.se
 
 ! https://www.davids.se/produkt/mlpg3qn-a?variant=15818&prisjakt=1
 $removeparam=prisjakt,domain=davids.se|larsbengtsson.se|poradio.se|teleradio.nu
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2043678
-$removeparam=refresh,domain=cnn.com|startribune.com
+$doc,removeparam=refresh,domain=cnn.com|startribune.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2052109
 ||tradingview.com^$removeparam=feature
@@ -4473,6 +4473,13 @@ $doc,removeparam=af_reengagement_window
 
 ! from Yuki: https://www.plus.fifa.com/en/player/2942bbcc-f9c0-4264-8118-331977fdd9bf?gl=jp&catalogId=0f18f301-1e44-4d7a-ab00-8a4505e3ad60&entryPoint=Slider
 ||fifa.com^$doc,removeparam=entryPoint
+
+! https://affiliate.insider.com/?amazonTrackingID=biauto-47904-20&h=fbdafd7ddd7ff36960d85ce9f6e961d74ac393e2ea64d4b24f6203625ecf1629&platform=browser&postID=52668b89ecad04f92183007b&postSlug=sadistic-amazon-treated-book-sellers-the-way-a-cheetah-would-pursue-a-sickly-gazelle-2013-10&site=bi&u=https%3A%2F%2Fwww.amazon.com%2FThe-Everything-Store-Bezos-Amazon-ebook%2Fdp%2FB00BWQW73E (from https://www.businessinsider.com/sadistic-amazon-treated-book-sellers-the-way-a-cheetah-would-pursue-a-sickly-gazelle-2013-10)
+||affiliate.insider.com^$doc,removeparam=amazonTrackingID
+||affiliate.insider.com^$doc,removeparam=h
+||affiliate.insider.com^$doc,removeparam=platform
+||affiliate.insider.com^$doc,removeparam=postID
+||affiliate.insider.com^$doc,removeparam=postSlug
 
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
