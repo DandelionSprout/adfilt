@@ -1,12 +1,13 @@
 [Adblock Plus 3.13]
 ! Title: ☣️ Anti-Elsagate List
-! Version: 20June2023v1
+! Version: 20June2023v2
 ! Expires: 3 days
 ! Description: This list aims to remove particularly disturbing content on YouTube, Vimeo, DailyMotion, Internet Archive, and Rumble that targets young children, as well as nursery rhymes, "Finger Family", "Wrong Heads", and other things that are hotbeds for extremely unproductive videos. Also supports YouTube on mobile browsers (but sadly not the apps).
 ! Motivation: I do not think of this as protecting children. I see this as protecting all of mankind. No humans, old or young, should need to be subjected to Elsagate-style material.
 ! Note that in order to be really certain of avoiding Elsagate, especially in the case of children, this list also deactivates Autoplay and end-of-video links, but at the moment only on desktop browsers.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
+!#if !env_mv3
 ! —— YouTube on desktop browsers, including "Disable Polymer" mode and TV mode ——
 !#if !adguard
 www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.watchable-tile:has-text(Nursery)
@@ -660,3 +661,4 @@ www.microsoft.com##.card[data-bi-cn*=pregnan i][data-bi-cn*=doctor i]
 ||www.microsoft.com/*pregnan$document
 
 !#include StopAutoplayOnYouTube.txt
+!#endif
