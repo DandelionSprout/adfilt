@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 😌 Anti-'Newsstories about celebs giving birth' List
-! Version: 34November2023v1-Beta
+! Version: 34November2023v2-Beta
 ! Expires: 3 days
 ! Description: We hear so much talk about "fake news" nowadays, but we never hear any talk about non-news, such as C-tier celebrities either expecting offspring or giving birth to such. This list will aid in removing such kinds of non-news.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -16,7 +16,8 @@ theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=bab
 theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=gives-birth]
 theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=welcome-newborn]
 theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=had-a-baby]
-theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=sport][href*=pregnan]
+theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=sport]:is([href*=pregnan],[href*=baby])
+theguardian.com,standard.co.uk,metro.co.uk,dw.com,independent.co.uk##a[href*=celeb]:is([href*=pregnan],[href*=baby])
 
 ! Multiple sites (Norwegian + Danish)
 nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href*=babylykke i]
@@ -47,7 +48,7 @@ nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href
 nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href*=under-foedsel]
 nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href*=vaere-morfar]
 nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href*=vaere-mormor]
-nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href*=sport][href*=gravid]
+nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href*=sport]:is([href*=gravid],[href*=baby])
 nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href*=underholdning][href*=gravid]
 nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href*=ny-baby-i-ma]
 nrk.no,vg.no,dagbladet.no,adressa.no,dr.dk,tv2.dk,ekstrabladet.dk,tv2.no##a[href*=venter-barn-]
@@ -80,6 +81,7 @@ nrk.no,vg.no,dagbladet.no,adressa.no,tv2.no##a[href*=babynyhet]
 nrk.no,vg.no,dagbladet.no,adressa.no,tv2.no##a[href*=blitt-mamma-]
 nrk.no,vg.no,dagbladet.no,adressa.no,tv2.no##a[href*=nybakt-mamma]
 nrk.no,vg.no,dagbladet.no,adressa.no,tv2.no##a[href*=nybakt-pappa]
+nrk.no,vg.no,dagbladet.no,adressa.no,tv2.no##a[href*=kjendis]:is([href*=barn],[href*=baby],[href*=gravid],[href*=fodsel],[href*=foedsel])
 
 ! Multiple sites (Danish)
 dr.dk,tv2.dk,ekstrabladet.dk##a[href*=andet-barn]
@@ -174,6 +176,7 @@ tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-tex
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(/Gravidmage/i)
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(/Kongelig nyhet/i)
 tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(/Avslører navnet/i)
+tv2.no#?#.article,.article--article-list,.lp-a,.col-sm-12,article.column:has-text(/kjendis.*barn/i)
 !#endif
 
 ! Ekstra Bladet
