@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 20December2023v4-Deprecated
+# Version: 25December2023v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -198,10 +198,12 @@ msFilterList
 -d psscdn.com
 # samferdselinfra.no (18 05 2023)
 - wp-content uploads ad-html
-# https://spurt.no/zyrtec-mot-myggstikk/ (01 06 2023
+# https://spurt.no/zyrtec-mot-myggstikk/ (01 06 2023)
 - convertpro cp-popup.min.css
 # https://www.version2.dk/artikel/medie-yngre-er-til-nemid-aeldre-til-mitid/(02/11/2023)
 -d service.tekhus.dk *.jpg
+# vilgernelevel.dk (25 12 2023)
+-d skisverige.dk *banner_*.gif
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -715,6 +717,7 @@ msFilterList
 # • Not to be removed during upstream syncs •
 # https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # jyllands-posten.dk (09 07 2020)
+# specificTXT
 # 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)

@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)
-! Version: 201220234
+! Version: 251220231
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -392,6 +392,23 @@ tvkampen.com,tvsporten.dk#?#li.tv:has(>.do-link)
 tvkampen.com,tvsporten.dk#?#li[class^=tv]:has(img:is([alt*=bet i],[alt*=tipping i]))
 version2.dk,ing.dk,techmanagement.dk,radar.dk##div[class^=layout] > .block-tm-kevel
 version2.dk,ing.dk,techmanagement.dk,radar.dk##div:not([class]) > .jobs-wrapper
+digitalt.tv##.code-block
+migogaarhus.dk,migogaalborg.dk##.yb-top-spot
+migogaarhus.dk,migogaalborg.dk##.banner
+migogaarhus.dk,migogaalborg.dk##div[id^=Step-network_]
+vielskerserier.dk,udeoghjemme.dk##div.hidden.justify-center
+juicynet.dk#?#.widget_custom_html:has(ins)
+juicynet.dk,vilgerneleve.dk##main > section[id^=text-]
+vilgerneleve.dk#?#div.sidebar-widget-container.widget_text:has(:is(center > a,ins,div[class*=affiliate]))
+vilgerneleve.dk##div[class^=container-inner] > section[id^=text-]
+vilgerneleve.dk#?#div[class^=container-] > section:has(:is(center,ins))
+vilgerneleve.dk#?#section:has(:is(center > a,.strossle-widget))
+vilgerneleve.dk#?#.sidebar-widget-container:has(center > a)
+udeoghjemme.dk#?#.justify-center.flex:has(div[data-type])
+udeoghjemme.dk#?#section[class^=bg-brown-]:has(.text-center)
+udeoghjemme.dk##.bg-brown-200.py-30
+alt.dk##.section-banner
+ddig.dk##.td-main-sidebar
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -659,10 +676,12 @@ _visittkortannonse_$image
 ||psscdn.com^$third-party
 ! samferdselinfra.no (18/05/2023)
 /wp-content/uploads/ad-html^
-! https://spurt.no/zyrtec-mot-myggstikk/ (01/06/2023
+! https://spurt.no/zyrtec-mot-myggstikk/ (01/06/2023)
 /convertpro/*/cp-popup.min.css|
 ! https://www.version2.dk/artikel/medie-yngre-er-til-nemid-aeldre-til-mitid (02/11/2023)
 ||service.tekhus.dk/*.jpg^$image,third-party
+! vilgernelevel.dk (25/12/2023)
+||skisverige.dk/*banner_*.gif^$image,third-party
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -2221,6 +2240,12 @@ xn--bredbnd-ixa.dk##div[class^=speedtest-bg] > a > img
 ~nytid.no##.td-a-rec:not(html,body,:empty)
 ! jyllands-posten.dk (09/07/2020)
 ###topBanners
+! specificTXT
+euautodeler.co.no,euautodele.dk##.traffic_banner_wrapper
+thelocal.no,thelocal.dk##.footer-sticker-ad
+thelocal.no,thelocal.dk#?#.row > div[class^="row-"]:has(> a[href="#"] > .panel-ad)
+thelocal.no,thelocal.dk#?#div > .section:has(> div[class*=-label]:has-text(Sponsored))
+radio-danmark.dk,radio-norge.org###team_ad
 
 ! 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 triplx.dk##.aff-inner-col
