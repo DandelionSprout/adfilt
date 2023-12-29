@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 25December2023v1
+! Version: 29December2023v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -347,6 +347,7 @@ tv-kalundborg.dk##div.col-s-100.col-50:nth-of-type(2)
 tv2.no##+js(json-prune, enabled, testhide)
 tv2.no##.esi-include
 tv2.no##.sponsor
+digi.no##a[href*="/tumstudio/"]
 tvh.no##.article-contentmarketing
 tvkampen.com##.odds
 tvkampen.com,tvsporten.dk###event_banner
@@ -546,6 +547,8 @@ dk##section.article__adblock
 ##.adsbymanatee:not(html,body,:empty)
 ! h-avis.no (11/12/2023)
 ##amedia-resizable-iframe[src*="/ad."]
+! skessuhorn.is (29/12/2023)
+##.ad-front-310x400:not(html,body,:empty)
 ! — — — — — — —
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
@@ -691,6 +694,8 @@ _visittkortannonse_$image
 ||service.tekhus.dk/*.jpg^$image,third-party
 ! vilgernelevel.dk (25/12/2023)
 ||skisverige.dk/*banner_*.gif^$image,3p
+! skessuhorn.is (29/12/2023)
+||app.pulsmedia.is^$subdocument,3p
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -1303,7 +1308,6 @@ gamer.no##.site__sticky__ads + div[class*=" "]
 kommunikationsforum.dk##.banner-top
 kommunikationsforum.dk##.col-xs-12[style]
 kommunikationsforum.dk##div[style="padding-top: 20px; padding-bottom: 20px; "]
-e24.no##div[class^=advertory- i]
 kondis.no###content:style(margin-top: 0px !important)
 kondis.no##.articles .bannerlocation
 kondis.no##.bannerlocatixxxxon
@@ -1961,6 +1965,10 @@ _980banner_
 ##.tag-page-ad-container:not(html,body,:empty)
 ##.scrolling-side-ad-container:not(html,body,:empty)
 ##.ticker-ad-wrapper:not(html,body,:empty)
+! https://www.aftenposten.no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter (26/12/2023)
+! e24.no (Mid-December 2023)
+##div[class^=advertory- i]
+##div[class*=" advertory-" i]
 
 ! 🇳🇴/🇩🇰: ——— Sporingsfiler ———
 ! 🇳🇴🏞: ——— Sporingsfilar ———
@@ -2125,7 +2133,7 @@ ekstrabladet.dk#@#body>div[id][style]
 ! 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
 ! Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP for showing me the existence of this particular CSP command.
 ! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
-$csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no|geo.ngu.no|lofotenlinks.no|windowsnett.no|selstad.no|turnforening.no|ernaeringsradet.no|frigg.no|studentvelferd.no|luster.kommune.no|ugk.no|drs.dk|dsmu.dk|92grp.dk|kuntzanimation.dk
+$csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no|lofotenlinks.no|windowsnett.no|selstad.no|turnforening.no|frigg.no|studentvelferd.no|luster.kommune.no|ugk.no|drs.dk|dsmu.dk|92grp.dk|kuntzanimation.dk
 
 ! 🇳🇴: Anti-'CPU-massakrering'
 ! 🇮🇸: And-örgjörvislatrun

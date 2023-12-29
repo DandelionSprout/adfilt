@@ -17,6 +17,7 @@ OUTPUT_PRIVOXY = 'NordicFiltersPrivoxy.action'
 OUTPUT_PRIVACY = 'NordicFiltersPrivacy.txt'
 OUTPUT_UMATRIX = 'NordicFilters-uMatrixSupplement.txt'
 OUTPUT_XUL = 'NordicFilters-uBOLegacy.txt'
+OUTPUT_FFANUBO = 'zyzzyxFirefoxUBOAndroidWorkaround-MANUAL_ONLY-.txt'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -2295,6 +2296,60 @@ def prepare_xul(lines) -> str:
 
     return text
 
+# ——— Makes it easier to produce the Firefox Android uBO workaround ———    
+
+def prepare_ffanubo(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+      line = re.sub(
+           r"^[!/.$@:|*_a-zA-Z0-9-].*", 
+           r"", 
+           line
+        )
+
+      line = re.sub(
+           r"(.*[a-z]##)", 
+           r"no,dk,is,fo,translate.goog,web.archive.org,\1", 
+           line
+        )
+
+      line = re.sub(
+           r"^##", 
+           r"no,dk,is,fo,translate.goog,web.archive.org##", 
+           line
+        )
+
+      line = re.sub(
+           r",~([a-z.-]{1,50}\.)?(com|net|lt|fr|it|es|jp|nl)#", 
+           r"#", 
+           line
+        )
+
+      line = re.sub(
+           r",~([a-z.-]{1,40}\.)?(com|net|lt|fr|it|es|jp|nl),", 
+           r",", 
+           line
+        )
+
+      line = re.sub(
+           r",~([a-z.-]{1,50}\.)?(com|net|lt|fr|it|es|jp|nl)#", 
+           r"#", 
+           line
+        )
+
+      line = re.sub(
+           r",~([a-z.-]{1,40}\.)?(com|net|lt|fr|it|es|jp|nl),", 
+           r",", 
+           line
+        )
+
+      text += line + '\n'
+
+    return text
+
+
 
 if __name__ == "__main__":
     print('Starting the script')
@@ -2309,6 +2364,7 @@ if __name__ == "__main__":
     privacy_filter = prepare_privacy(lines)
     umatrix_filter = prepare_umatrix(lines)
     xul_filter = prepare_xul(lines)
+    ffanubo_filter = prepare_ffanubo(lines)
 
     with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
         text_file.write(text)
@@ -2333,6 +2389,9 @@ if __name__ == "__main__":
 
     with open(OUTPUT_XUL, "w", encoding="utf-8", newline='\n') as text_file:
         text_file.write(xul_filter)
+
+    with open(OUTPUT_FFANUBO, "w", encoding="utf-8", newline='\n') as text_file:
+        text_file.write(ffanubo_filter)
 
     print('The adblocker-based list versions have been generated.')
 

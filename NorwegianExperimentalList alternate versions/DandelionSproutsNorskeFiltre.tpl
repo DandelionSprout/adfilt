@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 25December2023v1-Deprecated
+# Version: 29December2023v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -76,6 +76,7 @@ msFilterList
 # migogkbh.dk (22 06 2023)
 # digitalt.tv (08 09 2023)
 # h-avis.no (11 12 2023)
+# skessuhorn.is (29 12 2023)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -204,6 +205,8 @@ msFilterList
 -d service.tekhus.dk *.jpg
 # vilgernelevel.dk (25 12 2023)
 -d skisverige.dk *banner_*.gif
+# skessuhorn.is (29 12 2023)
+-d app.pulsmedia.is
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -563,6 +566,8 @@ msFilterList
 # jyllands-posten.dk (22 03 2023)
 # forum.kvinneguiden.no (Mobile user agent; 05 04 2023)
 # Various now-dead Frettabladid subdomains from 2020
+# https://www.aftenposten.no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter/(26/12 2023)
+# e24.no (Mid-December 2023)
 # 🇳🇴 🇩🇰: ——— Sporingsfiler ———
 # 🇳🇴🏞: ——— Sporingsfilar ———
 # ❄: ——— Guorrafiilaid ———
