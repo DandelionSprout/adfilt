@@ -1,4 +1,4 @@
-(Last updated: 29th of November 2023)
+(Last updated: 29th of December 2023)
 
 ## Notes on how to contribute:
 
@@ -41,6 +41,10 @@ I will refuse to write or double-check entries for the following sites, and any 
 
 If possible, change the `! Version:` date if you're making a pull request, into the date where the pull request is submitted to me. If the existing date is the same as the submission date, increase its `v` number by one instead.
 
+The day should be written as 2 digits, but nothing bad will happen if it doesn't.
+
+Likewise, the date should be based on Central European (Summer) Time, but once more, nothing bad will happen if it doesn't.
+
 ### Syntaxes
 
 For entries that start with `||` or `@@||`, the following applies (Note the use of or absense of `^`):
@@ -48,6 +52,7 @@ For entries that start with `||` or `@@||`, the following applies (Note the use 
 * For normal domains like `example.org`: Write the domain as `||example.org^`
 * For multi-TLD domains like `example.*`: Write the domain as `||example.`
 * For entire TLDs like `org`: Write it as `||org^`
+* It is not yet decided what to do in the rare cases where an entry would work best if it *started* with a `*`.
 
 ### Other
 
@@ -55,6 +60,6 @@ Should I have missed out on any details that'd be nice to have in this contribut
 
 I do encourage forking, both for experimentation, archiving, or for any other reason you may come up with.
 
-When submitting issue reports and pull requests, I aim to reply to it or fix it within 72 hours. Discussions threads where I see that input from me is desired, is aimed to be handled within 96 hours, although delays can happen. Commit-replies are not always read or replied to.
+When submitting issue reports and pull requests, I aim to reply to it or fix it within 72 hours. Requests in list-specific discussions pages currently have no timed target times. Commit-replies are not always read or replied to.
 
 ***Please***, for the love of goodness, *don't delete your GitHub account in the midst of a report-in-process*, and ***definitely*** not before me or my team have posted any replies to that report.
