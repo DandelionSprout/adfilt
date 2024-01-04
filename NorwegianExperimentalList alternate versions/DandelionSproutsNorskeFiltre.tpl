@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 29December2023v1-Deprecated
+# Version: 03January2023v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -207,6 +207,8 @@ msFilterList
 -d skisverige.dk *banner_*.gif
 # skessuhorn.is (29 12 2023)
 -d app.pulsmedia.is
+# https://bygge-anlaegsavisen.dk/historisk-vejprojekt-mellem-sisimiut-og-kangerlussuaq-undervejs/(30/12/2023)
+-d s3.eu-west-1.amazonaws.com ads.
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -409,6 +411,7 @@ msFilterList
 -d rett24.no*bannerizor.js
 -d static.finncdn.no FINNExternalDistribution.js
 -d gaysir.no rek
+- mediaxpress ad
 # — — — — — — —
 # 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 +d vgtv.no
@@ -435,6 +438,7 @@ msFilterList
 # https://github.com/uBlockOrigin/uAssets/issues/13661/(11/06/2022)
 -d freewheel-mtgx-tv.akamaized.net
 # https://github.com/DandelionSprout/adfilt/issues/968
+# https://github.com/DandelionSprout/adfilt/issues/983
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Hovudsakleg for AdGuard

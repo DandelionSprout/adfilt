@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for «uBlock Origin Legacy»)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for «uBlock Origin Legacy»)
-! Version: 29December2023v1-Beta
+! Version: 03January2023v2-Beta
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -348,7 +348,7 @@ tv-kalundborg.dk##div.col-s-100.col-50:nth-of-type(2)
 tv2.no##+js(json-prune, enabled, testhide)
 tv2.no##.esi-include
 tv2.no##.sponsor
-digi.no##a[href*="/tumstudio/"]
+digi.no,tu.no##a[href*="/tumstudio/"]
 tvh.no##.article-contentmarketing
 tvkampen.com##.odds
 tvkampen.com,tvsporten.dk###event_banner
@@ -381,6 +381,9 @@ viaplay.*##.interaction-block
 viralefilmer.no##.td_mod_wrap
 viralefilmer.no#?#.td_module_wrap:has(a[href*=automat])
 viralefilmer.no#?#.td_module_wrap:has(a[href*=casino])
+tu.no##div[class*=-ads-wrapper i]
+tu.no##div[id^=row- i]
+tu.no##div.relative > div[class*=" items-center hidden " i]
 voguescandinavia.com##div[class^=AdssetsAd_]
 xklub.dk###seealladv
 xlmoto.no##.overlay-bg
@@ -421,6 +424,7 @@ udeoghjemme.dk#?#section[class^=bg-brown-]:has(.text-center)
 udeoghjemme.dk##.bg-brown-200.py-30
 alt.dk##.section-banner
 ddig.dk##.td-main-sidebar
+bygge-anlaegsavisen.dk##.main--add
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -697,6 +701,8 @@ _visittkortannonse_$image
 ||skisverige.dk/*banner_*.gif^$image,3p
 ! skessuhorn.is (29/12/2023)
 ||app.pulsmedia.is^$subdocument,3p
+! https://bygge-anlaegsavisen.dk/historisk-vejprojekt-mellem-sisimiut-og-kangerlussuaq-undervejs (30/12/2023)
+||s3.eu-west-1.amazonaws.com/ads.$subdocument
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -920,6 +926,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||rett24.no^*bannerizor.js
 ||static.finncdn.no/*/FINNExternalDistribution.js^$domain=aftenbladet.no|aftenposten.no
 ||gaysir.no/rek^
+/mediaxpress/ad^$domain=bygge-anlaegsavisen.dk,image
 ! — — — — — — —
 ! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
 !#if false
@@ -957,6 +964,8 @@ _300x500pix$domain=rykindribe.dk,image
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=embed.viaplay.com,redirect=noopmp3-0.1s
 ! https://github.com/DandelionSprout/adfilt/issues/968
 ||finn.no/distribution-front/external/carousel^$frame,3p
+! https://github.com/DandelionSprout/adfilt/issues/983
+.no/api/unit-image?config=$image
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
@@ -1728,6 +1737,12 @@ borsen.dk##div[class*=col] > .native-teaser:upward(1)
 jyllands-posten.dk##section[id^=commercial]
 bt.no##p ~ div[class^=hyperion-css-]:has(> div[id*=-ad- i])
 viralomania.com##.sidebar > div[id^=block-]
+ing.dk##.block-tm-kevel
+installator.dk##.banner-hidden
+lav-det-selv.dk##.topic-aftercontent-desktop
+lav-det-selv.dk##.topwide
+lokalavisen.dk##div[class*=banner-container]
+samvirke.dk##.external-banner--continue
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2178,6 +2193,7 @@ startsiden.no###consumer_service_tipping
 @@||oddstips.norsktippingpartner.no^
 startsiden.no##div[class^=nyttig__tippingHeader__]
 ||cloudfront.net/v*/Liveoddsen.aspx^$domain=vglive.no
+abcnyheter.no##div + section[class*=" o-section__between-layout"]
 ! nidaros.no (02/12/2021)
 ##.sportspill-container[href*=lotto]:not(html,body,:empty)
 ! h-avis.no (11/12/2023)
