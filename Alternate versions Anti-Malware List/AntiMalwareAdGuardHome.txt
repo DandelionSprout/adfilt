@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home, AdGuard for Android/Windows' DNS filtering, and Pi-Hole FTL ≥5.22)
-! Version: 25December2023v1
+! Version: 29December2023v2
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -237,11 +237,98 @@
 ! Other sites
 
 
-! ——— Wrong TLDs of legitimate sites ———
-||ubuntu.org^
+! ——— Typo squatting, misspellings, and honest TLD address bar mistakes ———
+||ubuntu.org^$denyallow=you-were-likely-looking-for-ubuntu.com
 103.224.212.249
-||speedtest.com^
-||kelkoogroup.net^
+||speedtest.com^$denyallow=you-were-likely-looking-for-speedtest.net
+
+||snapchat.cm^$denyallow=malware-typo-squatter-of-snapchat.com
+||facebook.cm^$denyallow=malware-typo-squatter-of-facebook.com
+||wix.cm^$denyallow=malware-typo-squatter-of-wix.com
+199.59.243.222
+|http://ww01.$denyallow=very-very-extremely-frequently-used-in-malware-redirections.*
+
+173.208.96.42
+173.208.96.43
+173.208.96.44
+173.208.96.45
+173.208.96.46
+213.227.149.208
+213.227.149.211
+
+
+
+
+
+
+
+
+! https://github.com/DevSpen/links/blob/master/src/links.txt
+
+
+
+
+
+
+
+
+||steamcommin*$denyallow=likely-a-fake-malware-version-of-steamcommunity.com
+
+
+
+
+
+
+
+
+
+
+||steamconnu*$denyallow=likely-a-fake-malware-version-of-steamcommunity.com
+||steancomm*$denyallow=likely-a-fake-malware-version-of-steamcommunity.com
+
+
+
+
+||free-discordnitro.
+||freediscordnitro.
+
+
+/^(.*[./])?discord[a-z0-9-]{1,}\.gifts?(/|$)/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+||githubus.com^$denyallow=you-were-likely-looking-for-githubusercontent.com
+||githubu.com^$denyallow=you-were-likely-looking-for-githubusercontent.com
+||githu.com^$denyallow=you-were-likely-looking-for-github.com
+||wgithub.com^$denyallow=you-were-likely-looking-for-githubusercontent.com
+||githubuser.com^$denyallow=you-were-likely-looking-for-githubusercontent.com
+||rgithub.com^$denyallow=you-were-likely-looking-for-githubusercontent.com
+||githubt.com^$denyallow=you-were-likely-looking-for-githubusercontent.com
+! https://scammer.info/t/discord-nitro-scam-25/87887
+
 
 ! ——— Frequently used to infiltrate and maliciously redirect sites, e.g. ToonBarn ———
 ||netnet44.net^
@@ -264,7 +351,7 @@
 ||proserpina-zeb.com^
 ||lordagty.com^
 ||madagty.com^
-||zeroredirect5.com^
+||zeroredirect5.com^$denyallow=malware-redirection-trains.*
 54.209.22.226
 54.91.125.197
 52.202.53.245
@@ -275,7 +362,7 @@
 3.216.243.46
 ||roamingclicks.com^
 ! Source: desidert.no
-||collectfasttracks.com^
+
 ! Source: vn-zoom.com
 ||ttnrd.com^
 ||amanda.*.com^
@@ -287,9 +374,9 @@
 35.172.40.232
 3.90.125.85
 ! Various ex-affiliate links at www.zombooru.com
-||track.vcdc.com^
-||track.tkbo.com^
-||track.traffic.club^
+
+
+
 ||lasvegas-vacations.net^
 ||ndsplitter.com^
 ||ns1.trafficclub.com^
@@ -302,26 +389,19 @@
 195.201.92.254
 ! https://github.com/DandelionSprout/adfilt/pull/167
 ||forgoprokick.icu^
-! Other
-||ddscordapp.
-||diicordapp.
-||disccrdapp.
-||dissordapp.
-||discorrapp.
-||discordaap.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124611
 ! (https://github.com/DandelionSprout/adfilt/issues/632)
 
 ||inbluson.com^
-||bemobtrcks.com^
+
 
 ! ——— Found in witness reports online ———
 ! Adblock Plus list maintainer weekly reports
 ||pinoy-offers.com^
 ||googleboost.xyz^
-||bemobtracks.com^
-||bemobtrk.com^
-||bemobpath.com^
+
+
+
 ||couponbybox.com^
 ||newpage.in^
 
@@ -3484,7 +3564,7 @@
 ||zfirst-news.com^
 ||zmp3-online.com^
 ||zmusic-online.com^
-||zredir.com^
+
 178.128.142.109
 ||findmedia.biz^
 ||backtonews.biz^
@@ -3563,8 +3643,8 @@
 ||gogle.net^
 ||quatrefeuillepolonaise.xyz^
 ||extragifis.site^
-||best-prizes-202*.com^
-||all-best-prize-202*.com^
+||best-prizes-202*.com^$denyallow=malware-site.*
+||all-best-prize-202*.com^$denyallow=malware-site.*
 ||captcharesolving-universe.com^
 ||captcharesolver.com^
 ||instantfwding.com^
@@ -3572,8 +3652,8 @@
 ||gamesex.fun^
 ||goldprize.xyz^
 ||kmip.net^
-||0redirc.com^
-||redirekted.com^
+
+
 ||rebiraert.com^
 ||iuqerfsodp9ifjaposdfjhgosurijfaewrwergwff.com^
 5.8.34.26
@@ -3656,7 +3736,7 @@
 ||click-to-see.live^
 ||click-to-watch.live^
 ||cpa-optimizer.online^
-||cpvlabtrk.online^
+
 ||critical-alert.info^
 ||financial-message.club^
 ||free-coupons.network^
@@ -3783,7 +3863,6 @@
 
 
 ! https://github.com/DandelionSprout/adfilt/issues/251#issue-974102211
-||discordapp.cam^
 ||nanorgin.ydns.eu^
 ||thefreshstuffs.mu^
 ||cocinasintonterias.com^
@@ -3804,7 +3883,7 @@
 ||mediagetplus.com^
 ||mgmgmg.com^
 ||temp74.com^
-||trackwebclick.com^
+
 23.111.31.137
 23.111.88.207
 ! https://github.com/DandelionSprout/adfilt/issues/254
@@ -3820,7 +3899,7 @@
 ||beastbuying.com^
 ||pesoaniz.com^
 ||omnatuor.com^
-||novitrk1.com^
+
 ||cu27t-evo29lution.xyz^
 ||sothis-sayers.xyz^
 ||doneonline.xyz^
@@ -3831,7 +3910,7 @@
 ||secureleadsforever.com^
 ||renewal-software-update.com^
 ||pushmeup.art^
-||trc.*.co^
+||trc.*.co^$denyallow=malware-redirection-trains.*
 ||artofads.co^
 ||pc-my-protection.xyz^
 ||beta-news.org^
@@ -3938,15 +4017,15 @@
 ||tweakbit.com^
 ||pcspeedup.en.softonic.com^
 ! Copied from «uBlock Filters - Badware Risks» because it has proven to be a very good entry
-||1redirb.com^
+
 ! https://github.com/DandelionSprout/adfilt/issues/188#issuecomment-931700117
 ||retailproductsusa.com^
 ||cloud-repos.store^
 ! https://github.com/DandelionSprout/adfilt/issues/188#issuecomment-931742337 (Initial batch)
-||adtrk18.com^
-||jpgtrk.com^
+
+
 ||pnghst.com^
-||pshtrk.com^
+
 ||diabasewoodhouse.xyz^
 ||displayoptoffers.com^
 ||spnccrzone.com^
@@ -3976,7 +4055,6 @@
 ! (https://github.com/DandelionSprout/adfilt/issues/904)
 
 ! https://github.com/DandelionSprout/adfilt/issues/288
-||discordap.com^
 ||forwrdnow.com^
 ||7lyonline.com^
 ||safelyonline.net^
@@ -3987,9 +4065,9 @@
 ||data-px.services^
 ||newsvot.com^
 ||adalgard-wol.com^
-||trkk4.com^
+||trkk4.com^$denyallow=malware-redirection-trains.*
 ||secure-access-*.gate23.xyz^
-||hosting-redirect.com^
+||hosting-redirect.com^$denyallow=malware-redirection-trains.*
 
 ! https://github.com/DandelionSprout/adfilt/pull/289
 ||gogles.com^
@@ -4206,7 +4284,7 @@
 ||delicate-tame-angora.glitch.me^
 ||secureinvoice.glitch.me^
 ||holy-ruddy-brace.glitch.me^
-||instagramcomphoto212paaatrk.glitch.me^
+
 ||instafollow.glitch.me^
 ||loving-discovered-swordfish.glitch.me^
 ||aquamarine-cotton-impala.glitch.me^
@@ -4214,32 +4292,6 @@
 ||tough-numerous-lemur.glitch.me^
 ! https://scammer.info/t/mcafee-phish/83725
 ||securefirst.us-east-1.linodeobjects.com^
-! https://github.com/DevSpen/links/blob/master/src/links.txt
-/(^|\.|://)d[il]sc(or|ro)ds?-?g[il]ft[se]?[.-].*/
-/(^|\.|://)d[il]sc(or|ro)ds?-?n[il]tro[.-].*/
-||discord-nltro.
-||discord-app.
-||discord-promo*
-||dlscord.
-||dlscord-app.
-/(^|\.|://)gifts?-?discord\..*/
-||steamcommin*
-||steamcommm*
-||steamcommn*
-||steamcommunet*
-||steamcommunitty.
-||steamcommunnity.
-||steamcommunty.
-||steamcommuu*
-||steamcommyn*
-||steamcomnu*
-||steamcomrn*
-||steamconnu*
-||steancomm*
-||steanncomu*
-||discord-glft.
-||discordnitrogift*
-||gift-nitro.
 ! https://www.virustotal.com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
 39.65.72.211
 42.238.151.197
@@ -4417,8 +4469,6 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103475
 ||ru.com^
 141.8.226.34
-! https://scammer.info/t/discord-nitro-scam-25/87887
-||discorde-nitre.xyz^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108571
 ||ston-app.com^
 ! fake human verification scam
@@ -4511,20 +4561,20 @@
 ||installiq.com^
 ||specgoal.com^
 ||sandhyapi.online^
-/trk2/*?ld
-||rtbrvdirect.com^
+/trk2/*?ld~very-likely-a-malware-redirection.*
+
 ||goprotectpc.com^
 ||mybetterck.com^
 ||matildawu.online^
-||cpmrevdirect.com^
-||rtbverdirect.com^
+||cpmrevdirect.com^$denyallow=malware-redirection-trains.*
+||rtbverdirect.com^$denyallow=malware-redirection-trains.*
 ||fsalfrwdr.com^
-||cpmvrdirect.com^
-||fadverdirect.com^
-||cpmrvdirect.com^
-||rtbrevdirect.com^
-||rtbvrdirect.com^
-||cpmverdirect.com^
+||cpmvrdirect.com^$denyallow=malware-redirection-trains.*
+||fadverdirect.com^$denyallow=malware-redirection-trains.*
+||cpmrvdirect.com^$denyallow=malware-redirection-trains.*
+||rtbrevdirect.com^$denyallow=malware-redirection-trains.*
+||rtbvrdirect.com^$denyallow=malware-redirection-trains.*
+||cpmverdirect.com^$denyallow=malware-redirection-trains.*
 15.197.244.48
 96.47.230.67
 96.47.230.68
@@ -4543,12 +4593,12 @@
 ://179.60.146.
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121544
-||trafredirtds.com^
+
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121772
 ||pu020ev.com^
 ||kadam.net^
-||kdtrk.net^
+
 ||clcpb.net^
 ||kadam.ru^
 ||kadxin.net^
@@ -4573,7 +4623,7 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122757
 ://adbrbk.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123544
-||saferedirects.xyz^
+
 ||online-guard.com^
 
 ! https://twitter.com/iam_py_test/status/1545164642346930176
@@ -4819,10 +4869,10 @@
 ||tlkn45ssg.cyou^
 ||toprefgtbvatv.com^
 ||tov49ro5ep.art^
-||track2it4.icu^
-||trackerry.com^
-||trackgdi.com^
-||trckrry.com^
+
+
+
+
 ||udlwwle.site^
 ||uij5nn-ta.cyou^
 ||uqujzco.xyz^
@@ -5105,7 +5155,7 @@
 ||astogepian.com^
 ||influencer2020.com^
 ||vooculok.com^
-||mobytrks.com^
+
 139.45.197.236
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128029
 ||becovi.com^
@@ -5148,7 +5198,7 @@
 146.19.169.98
 146.19.169.99
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132079
-/pushredirect/?
+/pushredirect/?~malware-redirection-trains.*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134355
 ||1000girl.com^
 ||1000islandsinfo.com^
@@ -5942,7 +5992,7 @@
 ||keyrug.com^
 ||keysschools.net^
 ||keystonehoops.com^
-||keywebtracker.com^
+
 ||keywordadvisetoolplus.com^
 ||kickoff.cm^
 ||kindfirls.com^
@@ -6991,7 +7041,7 @@
 ||cadbitff.com^
 ||chemitug.net^
 ||civadsoo.net^
-||clicktracklink.com^
+
 ||comivolo.com^
 ||consoupow.com^
 ||costaquire.com^
@@ -7389,7 +7439,7 @@
 ||4.fo^
 ||kckb.st^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139106
-||*-trk.xyz^
+
 ||loadingnow.me^
 ||gsecurecontent.com^
 ||pressizer.net^
@@ -10423,9 +10473,9 @@
 ||thor-pom.com^
 ||thutm-bru.com^
 ||uthyr-que.com^
-||zeroredirect1.com^
+
 ||zp-dom.com^
-||redirect.newprogrammatic.click^
+||redirect.newprogrammatic.click^$denyallow=likely-a-malware-redirection.*
 ||arcad-hoh.com^
 ||eadri-fnr.com^
 ||gerhi-psv.com^
@@ -10759,8 +10809,8 @@
 ||hornygirlsinapp.com^
 ||jump-path1.com^
 ||jump-path2.com^
-||redirect-path1.com^
-||redirect-path2.com^
+
+
 ||your-online-casino.com^
 ||hot-girls-around.com^
 ||how2-become-rich.com^
@@ -10787,8 +10837,8 @@
 ||pw-show-ad.com^
 ||pw-show-main.com^
 ||pw-show-test.com^
-||pwredir-*.com^
-||redir-pw*.com^
+
+
 ||rich-people-club.com^
 ||search-top-videos.com^
 ||secret-casino-site.com^
@@ -10925,7 +10975,7 @@
 ||click-to-see.live^
 ||click-to-watch.live^
 ||cpa-optimizer.online^
-||cpvlabtrk.online^
+
 ||critical-alert.info^
 ||daily-breaking-news.one^
 ||daily-buzzing-gossip.com^
@@ -11012,7 +11062,7 @@
 ||openthenotification.com^
 ||p0kerr.com^
 ||pclkpackg.xyz^
-||pclkredrct.xyz^
+
 ||popular-messages.com^
 ||premium-news-for.me^
 ||premium-shops-around.me^
@@ -11020,7 +11070,7 @@
 ||private-message.live^
 ||private-message.online^
 ||private-show.live^
-||pushapitracker.com^
+
 ||read-and-reveal.com^
 ||read-before-the-rest.com^
 ||read-new-post.com^
@@ -11088,7 +11138,7 @@
 ||trending-celeb-news.com^
 ||trending-gossip.com^
 ||trends-celebs.com^
-||ts-tracker.me^
+
 ||updates-news-magazine.com^
 ||very-important.online^
 ||video-change.digital^
@@ -11123,18 +11173,18 @@
 ||defre.net^
 ||pocrd.cc^
 ||puredi.net^
-||redic.net^
-||redic2.net^
-||redic3.com^
-||redic4.com^
-||redir2.net^
-||redir3.net^
-||redir4.net^
-||redir5.net^
-||redir6.net^
-||redir7.net^
-||redir8.net^
-||redir9.net^
+
+
+
+
+
+
+
+
+
+
+
+
 ||rejco.online^
 ||rejco2.store^
 ||spinwincas.online^
@@ -11727,7 +11777,7 @@
 ||rahfnq.com^
 ||raybhi.com^
 ||rcqmrz.com^
-||redirected1.com^
+
 ||rfduik.com^
 ||rgitpv.com^
 ||riaeqd.com^
@@ -12298,7 +12348,7 @@
 ||searchassured.com^
 ||searchequivalents.com^
 ||searchexcellent.com^
-||searchingredirect.com^
+
 ||searchinquire.com^
 ||searchsimilars.com^
 ||searchstarters.com^
@@ -16876,7 +16926,7 @@
 ||zapdescendant.com^
 ||zapprecisionadmire.com^
 ||zealousstraitcommit.com^
-://trk.*.run/$document
+://trk.*.run/$document,~very-likely-a-malware-redirection-train.*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159157
 ||apbbjmp.com^
 ||apptjmp.com^
@@ -16966,7 +17016,7 @@
 ||charutboll.com^
 ||chaseverifications.com^
 ||cloud-network.online^
-||cmcmdirrect.com^
+
 ||coltersaidas.com^
 ||com-96-hours.com^
 ||com-96hours.com^
@@ -17091,7 +17141,7 @@
 ||paywide.cards^
 ||promo-carte-avantages.com^
 ||qc1.site^
-||redirect2url.com^
+
 ||revoiut-cy.com^
 ||revoke.money^
 ||richiediilrimborso.com^
@@ -17309,12 +17359,12 @@
 ||usqtvc.com
 ||usutnr.top
 ||204.44.92.187
-://ap-trk.
-://cw-trk.
-://cw-trak.
-://ktraks.
-://flow-clck.
-://apps-trk.
+
+
+
+
+
+
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7872103
 ||betzykrisesenter.no^
 ||citra2010oslo.no^
@@ -19280,56 +19330,25 @@
 ||nickswheels.com^
 ||spizzicopizza.net^
 ! Other
-||redirectme.net^
+||redirectme.net^$denyallow=malware-redirection-trains.*
 ||anthargo.com^
 ! Domains on IPs known to host Discord Nitro spambots
 
 ||csgocup.ru^
 ||csgogf*.xyz^
 ||csgogift*.xyz^
-/^(.*[./])?discord[a-z0-9-]{1,}\.gifts?(/|$)/
-
-/^(.*[./])?discord[a-z0-9-]{1,}\.gifts?(/|$)/
-
-
-||discord*.gifts^
-||discord-give.
-||discord-nitro-gift.
-||discord-nitro.
-||discord-nitros.
-||discord.foundation^
-||discordnitro-steam.
-||discordxgift.
-||discordxnitro.
-||discrod.ru^
 ||dotagift*.xyz^
 ||eslpro.ru^
 ||fortnitebuy.com^
-||free-discordnitro.
-||freediscordnitro.
 ||steamcommunlty.it^
 ||ggtour.ru^
 ||heroes.com.ua^
 ||idchecker.xyz^
 ||market-csgo.ru^
-||nitro*.gift^
-||nitro*.gifts^
 ||pubggf*.xyz^
 ||pubggift*.xyz^
 ||s-arts.pro^
 ||skinosoda.online^
-||sleanmconmunltiy.ru^
-||staemcommunty.ru^
-||steamcomiunity.com^
-||steamcommunillty.com^
-||steamcommunjty.ru^
-||steamcommunlity.ru^
-||steamcomnnuity.com^
-||steamconmunyty.ru^
-||steamconunity.ru^
-||steamcumunity.ru^
-||steanmconynnuytiy.
-||stearncommynity.ru^
 ||tradeoffer.com.ru^
 194.226.139.121
 194.226.139.7
@@ -20153,7 +20172,7 @@
 ||highlandnews.com^
 ||genuinescansupport.com^
 ||diverseflowlink.com^
-||redirectedflow.com^
+
 ||pcbasicstrength.com^
 ||conceptualizefact.com^
 ||varietyflow.com^
@@ -20224,7 +20243,7 @@
 ! Commonly set as a proxy on hacked devices (https://www.virustotal.com/gui/url/e610e7d09c614529cb8c64185717769946f5c86044ac5c31c6608e604995f577/detection)
 34.80.59.191
 ! Various domains on https://securitytrails.com/list/ip/72.14.178.174
-|http://www6.
+|http://www6.$denyallow=often-used-in-malware-redirections.*
 
 ||megabooru.com^
 ||zombooru.com^
@@ -20282,7 +20301,7 @@
 ||awesomewinner.com^
 ||awesomewinner.net^
 ||awesomewinners.net^
-||b2ztrk.com^
+
 ||beastgadget.net^
 ||beastoffer.net^
 ||beastoffrs.com^
@@ -20615,7 +20634,7 @@
 ||winnerssite.net^
 ||xyzoffer.net^
 ||yasdoodl.com^
-||ym3trk.com^
+
 ||youwanthis.com^
 ||zebramode.com^
 ||zebraoffers.net^
@@ -22663,13 +22682,13 @@
 
 ! ——— Horrendously bad copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
-||unofficialtwrp.com^
-||androidweblog.com^
-||androidgreek.com^
-||ytechb.com^
-||gadgetstwist.com^
-||gadgetsfarms.com^
-||techorfy.com^
+||unofficialtwrp.com^$denyallow=had-not-updated-their-root-guides-to-reflect-a-b-partition-phones-as-of-2021.*
+||androidweblog.com^$denyallow=had-not-updated-their-root-guides-to-reflect-a-b-partition-phones-as-of-2021.*
+||androidgreek.com^$denyallow=had-not-updated-their-root-guides-to-reflect-a-b-partition-phones-as-of-2021.*
+||ytechb.com^$denyallow=had-not-updated-their-root-guides-to-reflect-a-b-partition-phones-as-of-2021.*
+||gadgetstwist.com^$denyallow=had-not-updated-their-root-guides-to-reflect-a-b-partition-phones-as-of-2021.*
+||gadgetsfarms.com^$denyallow=had-not-updated-their-root-guides-to-reflect-a-b-partition-phones-as-of-2021.*
+||techorfy.com^$denyallow=had-not-updated-their-root-guides-to-reflect-a-b-partition-phones-as-of-2021.*
 
 
 ! ——— If you run a webserver of any sort, and you get incoming requests to resolve these domains, that's rarely a good sign for that requestor's intentions ———
@@ -22681,15 +22700,6 @@
 |1x1.cz^
 
 
-! ——— Since I very, very often have to go from "raw.githubusercontent.com" to "github.com" by means of manual address bar highlighting, I feel I could need some kind of protection insurance in case I highlight 2mm off-course one day. ———
-||githubus.com^
-||githubu.com^
-||githu.com^
-||wgithub.com^
-||githubuser.com^
-||rgithub.com^
-||githubt.com^
-
 ! ——— Usually used by various groups who buy old domains and display illicit ads on them ———
 ://ww4.$denyallow=ww4.ikea.com
 ://ww5.$denyallow=ww5.ikea.com|ww5.msu.ac.zw
@@ -22697,47 +22707,47 @@
 ://ww7.$denyallow=ww7.be|ww7.readsnk.com
 ://ww8.$denyallow=ww8.co|ww8.ikea.com|ww8.tiki.ne.jp|ww8.erovoice.us|ww8.anyanime.com|ww8.bakushpal.az|ww8.tokyoghoulre.com|ww8.readonepiece.com
 ://ww9.$denyallow=ww9.ikea.com|ww9.tiki.ne.jp|ww9.sakura.ne.jp|ww9.generali.pt|ww9.itau.com.br
-://ww10.
-://ww11.
-://ww12.
-://ww13.
-://ww14.
-://ww15.$denyallow=ww15.nl
-://ww16.
-://ww17.
-://ww18.
-://ww19.
-://ww20.
-://ww21.
-://ww22.
-://ww23.
-://ww24.
-://ww25.
-://ww26.
-://ww27.
-://ww28.
-://ww29.
-://ww30.
-://ww31.
-://ww32.
-://ww33.
-://ww34.
-://ww35.
-://ww36.
-://ww37.
-://ww38.
-://ww39.
-://ww40.
-://ww41.
-://ww42.
-://ww43.
-://ww44.
-://ww45.
-://ww46.
-://ww47.
-://ww48.
-://ww49.
-://ww50.
+://ww10.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww11.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww12.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww13.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww14.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww15.$denyallow=ww15.nl|practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww16.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww17.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww18.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww19.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww20.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww21.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww22.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww23.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww24.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww25.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww26.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww27.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww28.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww29.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww30.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww31.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww32.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww33.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww34.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww35.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww36.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww37.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww38.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww39.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww40.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww41.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww42.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww43.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww44.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww45.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww46.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww47.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww48.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww49.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww50.$denyallow=practically-always-leads-to-a-domain-parking-service-known-for-malware.*
 
 ! ——— Temp hotfix for https://github.com/AdguardTeam/AdGuardHome/issues/1835 ———
 !!!/\\/
@@ -22765,21 +22775,6 @@
 ! https://get.adobe.com/no/reader/
 ! Gigabyte APP Center (which use sneaky tricks to install a Norton 360 trial period; May require «AdGuard for Windows»)
 
-
-! ——— Potential typo-squats and directly related stuff ———
-||snapchat.cm^
-||facebook.cm^
-||wix.cm^
-199.59.243.222
-|http://ww01.
-||14d.us^
-173.208.96.42
-173.208.96.43
-173.208.96.44
-173.208.96.45
-173.208.96.46
-213.227.149.208
-213.227.149.211
 
 ! ——— Carried over from "Anti-'Asset Flip Shovelware' List" in response to Microsoft Store's non-existent quality control ———
 ! All legitimate Pac-Man games would use "pac-man" links with a dash
