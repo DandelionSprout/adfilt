@@ -3371,6 +3371,18 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(Description: .*)$", 
+           r"\1\n!#if !env_mv3", 
+           line
+        )
+
+        line = re.sub(
+           r"(if-a-large-hosts-file.*)", 
+           r"\1\n!#endif", 
+           line
+        )
+
         if is_supported_hosts(line):
             text += line + '\n'
 
@@ -3757,6 +3769,18 @@ def prepare_pihole(lines) -> str:
         line = re.sub(
            r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"(Description: .*)$", 
+           r"\1\n!#if !env_mv3", 
+           line
+        )
+
+        line = re.sub(
+           r"(if-a-large-hosts-file.*)", 
+           r"\1\n!#endif", 
            line
         )
 
@@ -4295,6 +4319,18 @@ def prepare_minerblock(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(Description: .*)$", 
+           r"\1\n!#if !env_mv3", 
+           line
+        )
+
+        line = re.sub(
+           r"(if-a-large-hosts-file.*)", 
+           r"\1\n!#endif", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4370,6 +4406,18 @@ def prepare_hostsipv6(lines) -> str:
         line = re.sub(
            r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"(Description: .*)$", 
+           r"\1\n!#if !env_mv3", 
+           line
+        )
+
+        line = re.sub(
+           r"(if-a-large-hosts-file.*)", 
+           r"\1\n!#endif", 
            line
         )
 
