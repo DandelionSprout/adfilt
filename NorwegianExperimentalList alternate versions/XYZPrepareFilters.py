@@ -888,7 +888,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"#\?#([a-z0-9]{1,}\[[a-z0-9]{1,}[*^$]?=\" )\*:(-abp-)?has\(> ", 
-           r"#?#*:has(> \1", 
+           r"##*:has(> \1", 
            line
         )
 
@@ -2725,121 +2725,121 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(1\)", 
-           r"\1#?#\2\3*:has(> \4)", 
+           r"\1##\2\3*:has(> \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(2\)", 
-           r"\1#?#\2\3*:has(> * > \4)", 
+           r"\1##\2\3*:has(> * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(3\)", 
-           r"\1#?#\2\3*:has(> * > * > \4)", 
+           r"\1##\2\3*:has(> * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(4\)", 
-           r"\1#?#\2\3*:has(> * > * >  * > \4)", 
+           r"\1##\2\3*:has(> * > * >  * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(5\)", 
-           r"\1#?#\2\3*:has(> * > * > * > * > \4)", 
+           r"\1##\2\3*:has(> * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(6\)", 
-           r"\1#?#\2\3*:has(> * > * > * > * > * > \4)", 
+           r"\1##\2\3*:has(> * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(7\)", 
-           r"\1#?#\2\3*:has(> * > * > * > * > * > * > \4)", 
+           r"\1##\2\3*:has(> * > * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(8\)", 
-           r"\1#?#\2\3*:has(> * > * > * > * > * > * > * > \4)", 
+           r"\1##\2\3*:has(> * > * > * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(9\)", 
-           r"\1#?#\2\3*:has(> * > * > * > * > * > * > * > * > \4)", 
+           r"\1##\2\3*:has(> * > * > * > * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(10\)", 
-           r"\1#?#\2\3*:has(> * > * > * > * > * > * > * > * > * > \4)", 
+           r"\1##\2\3*:has(> * > * > * > * > * > * > * > * > * > \4)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
-           r"\1#?#*:has(> \2)", 
+           r"\1##*:has(> \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
-           r"\1#?#*:has(> * > \2)", 
+           r"\1##*:has(> * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
-           r"\1#?#*:has(> * > * > \2)", 
+           r"\1##*:has(> * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
-           r"\1#?#*:has(> * > * >  * > \2)", 
+           r"\1##*:has(> * > * >  * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
-           r"\1#?#*:has(> * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
-           r"\1#?#*:has(> * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
@@ -3163,7 +3163,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"#\?#([a-z0-9]{1,}\[[a-z0-9]{1,}[*^$]?=\" )\*:(-abp-)?has\(> ", 
-           r"#?#*:has(> \1", 
+           r"##*:has(> \1", 
            line
         )
 
@@ -4486,6 +4486,18 @@ def prepare_domainsallowlist(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(Description: .*)$", 
+           r"\1\n!#if !env_mv3", 
+           line
+        )
+
+        line = re.sub(
+           r"(if-a-large-hosts-file.*)", 
+           r"\1\n!#endif", 
+           line
+        )
+
         if not line == '':    
             text += line + '\n'
         
@@ -4562,7 +4574,7 @@ UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com', 'gamecopyworld', '$app', '$dnstype']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com', 'gamecopyworld', ':  ', 'duckdns.org', '$dnstype']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^', 'gamecopyworld', '://', '$dnstype']
-UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '!#', '[Adblock Plus 3.', '*', '/^', '://', 'duckdns.org']
+UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '[Adblock Plus 3.', '*', '/^', '://', 'duckdns.org']
 UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
     '##', '.*#' , '#?#', 'gamecopyworld', 'version.bind', 'hostname.bind', '|id.server|', '$app']
 
@@ -4657,61 +4669,61 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
-           r"\1#?#*:has(> \2)", 
+           r"\1##*:has(> \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
-           r"\1#?#*:has(> * > \2)", 
+           r"\1##*:has(> * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
-           r"\1#?#*:has(> * > * > \2)", 
+           r"\1##*:has(> * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
-           r"\1#?#*:has(> * > * >  * > \2)", 
+           r"\1##*:has(> * > * >  * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
-           r"\1#?#*:has(> * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
-           r"\1#?#*:has(> * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
@@ -4953,61 +4965,61 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)", 
-           r"\1#?#*:has(> \2)", 
+           r"\1##*:has(> \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)", 
-           r"\1#?#*:has(> * > \2)", 
+           r"\1##*:has(> * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)", 
-           r"\1#?#*:has(> * > * > \2)", 
+           r"\1##*:has(> * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)", 
-           r"\1#?#*:has(> * > * >  * > \2)", 
+           r"\1##*:has(> * > * >  * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)", 
-           r"\1#?#*:has(> * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)", 
-           r"\1#?#*:has(> * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
         line = re.sub(
            r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)", 
-           r"\1#?#*:has(> * > * > * > * > * > * > * > * > * > \2)", 
+           r"\1##*:has(> * > * > * > * > * > * > * > * > * > \2)", 
            line
         )
 
@@ -5154,6 +5166,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(./),~", 
+           r"\1$~", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\n'
 
@@ -5167,7 +5185,7 @@ def is_supported_tpl(line) -> bool:
 
     return True
 
-# function that prepares the filter list for ABP
+# function that prepares the filter list for TPL
 def prepare_tpl(lines) -> str:
     text = ''
 
@@ -5588,6 +5606,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^[+-].*[,~].*$", 
+           r"", 
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\n'
 
@@ -5775,7 +5799,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"^\!.*", 
+           r"^\! .*", 
            "#", 
            line
         )
@@ -5966,9 +5990,22 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+
         line = re.sub(
            r"(# Version:.*)", 
            r"\1\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.", 
+           line
+        )
+
+        line = re.sub(
+           r"(Description: .*)$", 
+           r"\1\n!#if !env_mv3", 
+           line
+        )
+
+        line = re.sub(
+           r"(mobsters .*)$", 
+           r"\1\n!#endif", 
            line
         )
 
@@ -6005,7 +6042,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^\!.*", 
+           r"^\! .*", 
            "#", 
            line
         )
@@ -6157,6 +6194,18 @@ def prepare_domains(lines) -> str:
         line = re.sub(
            r"^([0-9.]{7,15})\^$", 
            r"\1", 
+           line
+        )
+
+        line = re.sub(
+           r"(Description: .*)$", 
+           r"\1\n!#if !env_mv3", 
+           line
+        )
+
+        line = re.sub(
+           r"(mobsters .*)$", 
+           r"\1\n!#endif", 
            line
         )
 
