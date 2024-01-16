@@ -23,3 +23,8 @@ According to Sublime Text build 4143. Case-sensitive.
 * `(\(/.*[a-zA-Z0-9 ?}-])([ijmoyEFIJMOTY])([a-zA-Z0-9 |/\\-].*:not)` → `\1\\\2\3`
 * `(\(/.*[a-zA-Z0-9 ?}-])([ijmyEFIJMOTY])([a-zA-Z0-9 |{}/\\-].*/i?\))` → `\1\\\2\3`
 * `(:has-text\(/[/\\a-zA-Z0-9{}()?|.*#]{1,}) (.*/i?\))` → `\1\\s\2`
+
+## Convert `#?#*:has(` to `##*:has(` due to new browser (and ABP) guidelines
+`^([a-z0-9*,.-]{0,})#\?#((([a-zA-Z0-9.#_*="_+>~/\^ -]|\[|\]|:"){0,}):has\(([_=."+#a-zA-Z0-9~>%&/$',;?^!*一-龯ぁ-んァ-ン・ーㄱ-힣æøåÆØÅäöÄÖ -]|\[|\]){1,}\))$`
+↓
+`\1##\2`
