@@ -83,11 +83,11 @@
 
 ! International (All adblockers)
 bing.com#?#.b_algo:has(cite:has-text(imdb.com)) .b_sritem
-newonnetflix.info#?#p:has(a[target=_imdb])
+newonnetflix.info##p:has(a[target=_imdb])
 rakuten.tv##.score
 rakuten.tv##a[href*=".imdb.com/title/"]
 rakuten.tv##div[type=scores]
-sfanytime.com#?#div:has(> img[alt^=IMDB])
+sfanytime.com##div:has(> img[alt^=IMDB])
 sfanytime.com#?#li:has-text(/^imdb$/)
 playpilot.com##.ratings
 whatsondisneyplus.com#?#li:has-text(Imdb)
@@ -105,10 +105,10 @@ www.google.*##div[data-async-context^="query:"] > .g:has(a[href*=".imdb.com/"]) 
 www.google.*##.g:has(a[href*="imdb.com"]) g-review-stars:upward(1)
 www.google.*##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
 www.google.*#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
-www.google.*#?#div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
+www.google.*##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/148512)
 !#if !env_mobile
-www.google.*#?#.g div[jscontroller]:has(a[href*=imdb]) div + div + div[class*=" "]:has(span[role=img])
+www.google.*##.g div[jscontroller]:has(a[href*=imdb]) div + div + div[class*=" "]:has(span[role=img])
 !#endif
 viaplay.*##.Imdb-link-slSbv
 viaplay.*##.ImdbExtended-container-_sA0e
@@ -118,10 +118,10 @@ viaplay.*##div[id*=imdb][data-testhook=carousel-header] + section
 yandex.*##li.serp-item:has(a[href*="imdb.com"]) .rating
 
 ! Norway
-filmweb.no#?#.Ratings:has(img[alt=IMDb])
+filmweb.no##.Ratings:has(img[alt=IMDb])
 tvguide.vg.no##._3_ZF3
 tvguide.vg.no#?#span:has(span:has-text(IMDb)):has-text(/, $/)
-twe.no#?#div.content-list:has(a[href*=imdb])
+twe.no##div.content-list:has(a[href*=imdb])
 twe.no##div[data-test-id=home-section-item__decorators] > div[style^=text-align]
 twe.no##div[data-test-id=tile__decorators] > div:nth-of-type(2)
 serienytt.no#?#strong:has-text(/^IMDb:$/)
@@ -133,7 +133,7 @@ play.tv2.no##a[title$=" stemmer"]
 tv.nu##a[href*="imdb.com"]
 tv.nu##._1bnN4
 tv.nu#?#a[title] span:has-text(IMDb)
-tv.nu#?#a[title] span:has(path[d^="M9.465 "])
+tv.nu##a[title] span:has(path[d^="M9.465 "])
 
 ! Denmark
 tvguide.dk##.zk-poster-badges
@@ -151,7 +151,7 @@ kissanime.*##.rating
 kissanime.*##a[href*="kissanime."][href$="/imdb/"]
 
 ! Australia
-binge.com.au#?#h3 + p + ul > li:has(svg[class$=Imdb])
+binge.com.au##h3 + p + ul > li:has(svg[class$=Imdb])
 
 ! Iran
 gapfilm.ir##a[href^="/movie/"] + div:not([class*=" "]):last-of-type > a[href^="/movie/"] ~ div:not([class*=" "]):last-of-type
@@ -164,9 +164,9 @@ gapfilm.ir##.progress-drs
 cinerama.uz##div[class^=MovieDescription_rating__]:nth-of-type(1)
 
 ! Various movie sites
-ddl-warez.to#?#td:has(.btn[data-original-title^=IMDb])
+ddl-warez.to##td:has(.btn[data-original-title^=IMDb])
 myfriendspizza.com#?#a:has-text(IMDb)
-yts.am#?#div.rating-row:has(a[title="IMDb Rating"])
+yts.am##div.rating-row:has(a[title="IMDb Rating"])
 yuptorrents.com#?#div.row:has-text(IMDB Rating)
 movies2k.pro,mmsubtitles.co#?#.custom_fields:has-text(IMDb)
 moviewatcher.is#?#img[alt="Movie rating"]:upward(2)
