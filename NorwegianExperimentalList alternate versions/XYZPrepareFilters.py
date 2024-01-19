@@ -3227,6 +3227,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(! If you wish to remove.*)", 
+           r"\1\n! As of 19 January 2024, syntax support for Firefox ESR v115.x, Tor Browser, and Waterfox, is somewhat spotty in this list, because this list has chose to follow a new ABP guideline from 12 January onwards that assumes native «:has» CSS in browsers, which for Firefox has only been true since Stable v122.x.", 
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\n'
 
