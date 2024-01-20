@@ -2461,13 +2461,13 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider", 
-           "Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler)",
+           "Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)",
            line
         )
 
         line = re.sub(
            "Dandelion Sprout's Nordic filters for tidier websites", 
-           "Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance)",
+           "Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)",
            line
         )
 
@@ -3229,7 +3229,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^(! If you wish to remove.*)", 
-           r"\1\n! As of 19 January 2024, syntax support for Firefox ESR v115.x, Tor Browser, and Waterfox, is somewhat spotty in this list, because this list has chose to follow a new ABP guideline from 12 January onwards that assumes native «:has» CSS in browsers, which for Firefox has only been true since Stable v122.x.", 
+           r"\1\n! As of 19 January 2024, syntax support for ABP in Firefox ESR v115.x, Tor Browser, Waterfox, and SeaMonkey, is somewhat spotty in this list, because this list has chose to follow a new ABP guideline from 12 January onwards that assumes native «:has» CSS in browsers, which for Firefox has only been true since Stable v121.x.", 
            line
         )
 
