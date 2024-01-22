@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 08/01/2024
+! Last updated: 22/01/2024
 ! Script last updated: 8/1/2024
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -171,6 +171,11 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||twitter.com^$removeparam=cn
 ||twitter.com^$removeparam=ref_url
 ||twitter.com^$removeparam=t
+||x.com^$removeparam=/^(ref_?)?src=/
+||x.com^$removeparam=s
+||x.com^$removeparam=cn
+||x.com^$removeparam=ref_url
+||x.com^$removeparam=t
 ||reddit.com^$removeparam=%24deep_link
 ||reddit.com^$removeparam=/^\x24deep_link=/
 ||reddit.com^$removeparam=correlation_id
@@ -714,6 +719,7 @@ $removeparam=si,domain=youtube.com|youtu.be
 @@||facebook.com/privacy/specific_audience_selector_dialog/$removeparam
 @@||facebook.com/photo/download/$removeparam
 @@||twitter.com/i/redirect$removeparam
+@@||x.com/i/redirect$removeparam
 @@||bing.*/WS/redirect/$removeparam
 @@||indeed.com/rc/clk$removeparam
 @@||mozilla.org/api$removeparam
