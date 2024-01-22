@@ -1,6 +1,6 @@
-[Adblock Plus 3.13]
+[Adblock Plus 3.17]
 ! Title: 🛶 Anti-'Pork meat on restaurant menus' List
-! Version: 27October2023v1-Alpha
+! Version: 22October2023v1-Alpha
 ! Expires: 7 days
 ! Description: Do you feel that bacon and pork tastes really icky and sourly greasy, yet half of all things you'll find in restaurants have pork in them, and there's 30 different terms for pork to keep track of to avoid unpleasant surprises? If so, then this list has saved your taste buds and stomach.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -90,7 +90,7 @@ pizzabaker.ie,pizzabaker.co.uk,pizza-baker.com#?#.prod_item,.pizza_item:has-text
 !#endif
 ! https://www.ikea.com/no/no/stores/restaurant/#f1b2a02b-5bd1-11eb-8f61-53ccc1e0abc9
 ikea.com#?#html:not([lang*=it]) div[data-pub-type] > div[class*=" "] > div[class]:not([class=" "]) > div[class*=" "]:has-text(/pepperoni/i)
-ikea.com#?#div[data-pub-type] > div[class*=" "] > div[class]:not([class=" "]) > div[class*=" "]:has-text(/hot dog/i)
+ikea.com#?#div[data-pub-type] > div[class*=" "] > div[class]:not([class=" "]) > div[class*=" "]:has-text(/hot\sdog/i)
 ikea.com#?#div[data-pub-type] > div[class*=" "] > div[class]:not([class=" "]) > div[class*=" "]:has-text(/pork/i)
 ikea.com#?#div[data-pub-type] > div[class*=" "] > div[class]:not([class=" "]) > div[class*=" "]:has-text(/skinke/i)
 ikea.com#?#div[data-pub-type] > div[class*=" "] > div[class]:not([class=" "]) > div[class*=" "]:has-text(/pølse/i)
@@ -118,7 +118,7 @@ wolt.com#?#div[class^=MenuItem-module__contentBorderContainer___]:has-text(/ ham
 wolt.com#?#div[class^=MenuItem-module__contentBorderContainer___]:has-text(/Sausage/i)
 wolt.com#?#div[class^=MenuItem-module__contentBorderContainer___]:has-text(/Ribbe/i)
 wolt.com#?#div[class^=MenuItem-module__contentBorderContainer___]:has-text(/Porcetta/i)
-wolt.com#?#button:has-text(/bacon|pulled pork|pølse|spianata|skinke|speck|svin|pepperoni|salami/i)
+wolt.com#?#button:has-text(/bacon|pulled\spork|pølse|spianata|skinke|speck|svin|pepperoni|salami/i)
 ! Just Eat
 just-eat.*,lieferando.*,menulog.*,takeaway.com,10bis.co.il,pyszne.pl,skipthedishes.com,thuisbezorgd.nl#?#div[menu-item-id]:has-text(/Pepperoni/i)
 just-eat.*,lieferando.*,menulog.*,takeaway.com,10bis.co.il,pyszne.pl,skipthedishes.com,thuisbezorgd.nl#?#div[menu-item-id]:has-text(/Bacon/i)
@@ -182,12 +182,12 @@ tacotime.com#?#.owl-item:has-text(/Sausage|Bacon|Pork/)
 ! ——— 🇳🇴🇸🇪🇩🇰 Scandinavia (multi-country) - Skandinavia (Flernasjons) ———
 ! https://egon.no/menyen
 !#if !adguard
-egon.*#?#.menu-item-wrap,.recommendedItems-container:has-text(/(^| |a)skink/i)
+egon.*#?#.menu-item-wrap,.recommendedItems-container:has-text(/(^|\s|a)skink/i)
 egon.*#?#.menu-item-wrap,.recommendedItems-container:has-text(/bacon/i)
 egon.*#?#.menu-item-wrap,.recommendedItems-container:has-text(/pepperoni/i)
 egon.*#?#.menu-item-wrap,.recommendedItems-container:has-text(/pork/i)
 egon.*#?#.menu-item-wrap,.recommendedItems-container:has-text(/sparerib/i)
-egon.no#?#.menu-item-wrap,.recommendedItems-container:has-text(/(^| )svin/i)
+egon.no#?#.menu-item-wrap,.recommendedItems-container:has-text(/(^|\s)svin/i)
 egon.no#?#.menu-item-wrap,.recommendedItems-container:has-text(/chistorra/i)
 egon.no#?#.menu-item-wrap,.recommendedItems-container:has-text(/pølse/i):not(:has-text(ENGLISH BREAKFAST))
 egon.no#?#.menu-item-wrap,.recommendedItems-container:has-text(/ribbe/i)
@@ -202,7 +202,7 @@ foodora.*#?#.dish-card,.product-topping-item:has-text(/salsiccia/i)
 foodora.*#?#.dish-card,.product-topping-item:has-text(/pork/i)
 foodora.*#?#.dish-card,.product-topping-item:has-text(/guanciale/i)
 foodora.*#?#.dish-card,.product-topping-item:has-text(/ventricina/i)
-foodora.*#?#.dish-card,.product-topping-item:has-text(/coppa di parma/i)
+foodora.*#?#.dish-card,.product-topping-item:has-text(/coppa\sdi\sparma/i)
 foodora.*#?#.dish-card,.product-topping-item:has-text(/sparerib/i)
 foodora.*#?#.dish-card,.product-topping-item:has-text(/n([`]|\')?duja/i)
 foodora.*#?#.dish-card,.product-topping-item:has-text(/Porcetta/i)
@@ -365,7 +365,7 @@ unapizzeria.no#?#.menu-segment > .item:has-text(salam)
 unapizzeria.no#?#.menu-segment > .item:has-text(skinke)
 unapizzeria.no#?#.menu-segment > .item:has-text(pølse)
 unapizzeria.no#?#.menu-segment > .item:has-text(bacon)
-unapizzeria.no#?#.menu-segment > .item:has-text(/coppa di parma/i)
+unapizzeria.no#?#.menu-segment > .item:has-text(/coppa\sdi\sparma/i)
 ! https://grano.no/middag/
 !#if !adguard
 grano.no#?#p,h6:has-text(/skinke/i)
@@ -505,7 +505,7 @@ papajohns.ru#?#.OCoeO-38:has-text(/пепперони/i)
 ! ——— 🇮🇹 Italy - Italia ———
 ! KFC
 kfc.it#?#ul[style] > li:has-text(Kiss Burger)
-kfc.it#?#ul[style] > li:has-text(/Colonel\'s Burger/)
+kfc.it#?#ul[style] > li:has-text(/Colonel\'s\sBurger/)
 
 ! ——— 🇮🇸 Iceland - Ísland ———
 ! https://www.ikea.is/veitingasvid/veitingastadur
