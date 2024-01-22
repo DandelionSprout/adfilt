@@ -24,6 +24,9 @@ According to Sublime Text build 4143. Case-sensitive.
 * `(\(/.*[a-zA-Z0-9 ?}-])([ijmyEFIJMOTY])([a-zA-Z0-9 |{}/\\-].*/i?\))` → `\1\\\2\3`
 * `(:has-text\(/[/\\a-zA-Z0-9{}()?|.*#]{1,}) (.*/i?\))` → `\1\\s\2`
 
+#### Similar obfuscation to replace spaces with "\s". (Can be case-insensitive)
+* `(:has-text\(/([a-zæøåäöA-Z0-9е{}()|^$.,*'-]|\\|\?){1,}) (([a-zæøåäöA-Z0-9е{}()|^$.,*' -]|\\|\?){1,}/i?\))` → `\1\\s\3`
+
 ## Convert `#?#*:has(` to `##*:has(` due to new browser (and ABP) guidelines
 `^([a-z0-9*,.-]{0,})#\?#((([a-zA-Z0-9.#_*="_+>~/\^ -]|\[|\]|:"){0,}):has\(([_=."+#a-zA-Z0-9~>%&/$',;?^!*一-龯ぁ-んァ-ン・ーㄱ-힣æøåÆØÅäöÄÖ() -]|\[|\]|://){1,}\))$`
 ↓
