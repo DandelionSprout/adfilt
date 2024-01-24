@@ -25,8 +25,8 @@ According to Sublime Text build 4143. Case-sensitive.
 * `(:has-text\(/[/\\a-zA-Z0-9{}()?|.*#]{1,}) (.*/i?\))` → `\1\\s\2`
 
 #### Similar obfuscation to replace spaces with "\s". (Can be case-insensitive)
-* `((\(.*)\[ -\]|(\(.*)\[- \])` → `\2(\\s|-)`
-* `(\(.*)\[ _-\]` → `\1(\\s|_|-)`
+* `((\(.*)\[ -\]|(\(.*)\[- \])` → `\2(\\\s|-)`
+* `(\(.*)\[ _-\]` → `\1(\\\s|_|-)`
 * `(:has-text\(/([a-zæøåäöA-Z0-9е{}()|^$.,*'&’#@éèáàóòíìúùü-]|\\|\?){0,}) (([a-zæøåäöA-Z0-9е{}()|^$.,*'&’#@éèáàóòíìúùü -]|\\|\?){0,}/i?\))` → `\1\\s\3`
 
 ## Convert `#?#*:has(` to `##*:has(` due to new browser (and ABP) guidelines
