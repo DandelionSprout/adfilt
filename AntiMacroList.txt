@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🧚 Anti-Macro List
-! Version: 22January2024v2-Alpha
+! Version: 28January2024v1-Alpha
 ! Expires: 7 days
 ! Description: Are you an art enthusiast, but you also have enough self-confidence that you have zero desire to get murdered by some 300m tall furry kaiju monster? Here's a list that will make the art you're looking at a lot more reasonably sized and down-to-earth.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -118,8 +118,11 @@ kemono.party#?#.post-card:-abp-has(a:has-text(/Giantess/i))
 furaffinity.net#?#.t-image:has-text(GeckoDude92)
 
 ! Tumblr
-tumblr.com#?#div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class])):has-text(/Giantess/i)
-tumblr.com#?#div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class])):has-text(/shrinking ?woman/i)
+tumblr.com#?#:is(.post,div[data-cell-id][style]:not([data-cell-id*=carousel]),div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class]))):has-text(/giantess/i)
+tumblr.com#?#:is(.post,div[data-cell-id][style]:not([data-cell-id*=carousel]),div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class]))):has-text(/shrinking woman/i)
+tumblr.com#?#:is(.post,div[data-cell-id][style]:not([data-cell-id*=carousel]),div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class]))):has-text(/giant/tiny/i)
+tumblr.com#?#:is(.post,div[data-cell-id][style]:not([data-cell-id*=carousel]),div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class]))):has-text(/(\s|#)g/t(\s|#)/i)
+tumblr.com#?#:is(.post,div[data-cell-id][style]:not([data-cell-id*=carousel]),div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class]))):has-text(/(\s|#)giant/tiny(\s|#)/i):not(:has-text(/fair(y(\s|#|-|\')|ies))
 
 ! Other sites
 ||giantessbooru.com^$document,domain=~macro-murder-and-or-porn-site.*
