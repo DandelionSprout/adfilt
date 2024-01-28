@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 22January2024v1-Compilation
+! Version: 28January2024v1-Compilation
 ! Expires: 2 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, prayer time clocks on newssites, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds, opt-out autoplay on video sites
@@ -112,6 +112,8 @@ foodora.*##.user-wrapper + .order-components:style(top: 64px !important)
 ! filmmagasinetNO
 @@/adsanity-adblock-detection^$domain=~github.com|~gitlab.*
 ! Inspired by https://github.com/uBlockOrigin/uAssets/issues/20849
+! (Such entries are non-viable as of 28 January 2024, due to them needing corresponding whitelistings from EasyList as well.)
+!#if false
 #@#.adsbyexoclick
 ##.adsbyexoclick:not(html,body,:empty)
 #@#.adsarea
@@ -161,6 +163,7 @@ foodora.*##.user-wrapper + .order-components:style(top: 64px !important)
 ##.ad-300x600:not(html,body,:empty)
 #@#.adsanity-alignnone
 ##.adsanity-alignnone:not(html,body,:empty)
+!#endif
 
 ! Suggestion algorithms considered by tens of millions of humans to be dangerous to the human species.
 ! In light of several dozen end-users wanting the suggestions back, I've had to give in to the pressure and instead only block ones tagged as "New" and "Suggested for you".
