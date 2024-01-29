@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 22/01/2024
+! Last updated: 29/01/2024
 ! Script last updated: 8/1/2024
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -657,6 +657,11 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||airbnb.*^$removeparam=source
 ||airbnb.*^$removeparam=source_impression_id
 ||kahoot.it^$removeparam=refer_method
+||goodreads.com^$removeparam=from_search
+||goodreads.com^$removeparam=from_srp
+||goodreads.com^$removeparam=qid
+||goodreads.com^$removeparam=rank
+||goodreads.com^$removeparam=ac
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
@@ -709,7 +714,7 @@ $removeparam=si,domain=youtube.com|youtu.be
 @@||github.com^$removeparam
 @@||billiger.de/*mc=$removeparam
 @@||youtrack.cloud^$removeparam
-@@^https?:/cu.bankid.com$removeparam
+@@||cu.bankid.com^$removeparam
 @@||amazon-adsystem.*/v3/oor?$removeparam
 @@||youtube.com/signin?$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?facebook\.com\/.*?(plugins|ajax)\//$removeparam
