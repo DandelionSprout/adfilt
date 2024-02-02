@@ -6216,14 +6216,20 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"(Description: .*)$", 
-           r"\1\n!#if !env_mv3", 
+           r"^!#.*", 
+           r"", 
            line
         )
 
         line = re.sub(
-           r"(mobsters .*)$", 
-           r"\1\n!#endif", 
+           r"(# Description.*$)", 
+           r"\1\n# Note: The very limited syntax available to raw domains lists, considering it's, well, raw, means that outright anti-MV3 measures (which'd as of February 2024 only affect Minus, a project whose name is unworthy of the uBO label) cannot be done. However, at some 20,000 entries, Team Chromium's shameful leaders aren't liking this list anyway.", 
+           line
+        )
+
+        line = re.sub(
+           r"^!!!.*", 
+           r"", 
            line
         )
 
