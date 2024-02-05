@@ -1,3 +1,11 @@
+### Note, 5 February 2024 (Does not apply to the Notifications list):
+When I started this project in what must've been 2021, the situation was that AdGuard DNS Filter had only around 15,000 entries and non-existent wildcarding, so I decided to see <i>"I can do this better than them, big time."</i>
+
+And it did actually go well for 1½-2 years, until my stamina that was already struggling with frequent colds, plummeted to the bottom in December 2022, and updates became steadily less frequent, even more so after contracting severe rashes in November 2023. At the same time, AdGuard DNS Filter had increased to a fair and decent 61,600 entries, so I effectively concede defeat to them.
+
+But it's not the end of the road <i>just</i> yet. Should there be a time in February 2024 where my health permits, I'll run a new list update just to see which entries are exclusive to my or their list, and then adjust the main and IP lists' scope accordingly (and also I need to sync Notifications either way, as it's an opt-in in AdGuard Home).
+
+### Update instructions as of late 2023, still valid unless otherwise stated:
 To update `AdGuardHomeCompilationList.txt`:
 
 1) Install Python 3.x.
