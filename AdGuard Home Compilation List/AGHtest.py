@@ -754,12 +754,6 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"\[Adblock Plus 3\.[0-9]{1,3}\]", 
-           r"", 
-           line
-        )
-
-        line = re.sub(
            r"\|\|", 
            r"", 
            line
@@ -797,7 +791,7 @@ def prepare_ip(lines) -> str:
 
         line = re.sub(
            r"# Version: (.*)-.*", 
-           r"! Version: \1-Alpha", 
+           r"! Version: \1-PreAlpha", 
            line
         )
 
