@@ -754,7 +754,7 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"\[Adblock Plus 2\.0\]", 
+           r"\[Adblock Plus 3\.[0-9]{1,3}\]", 
            r"", 
            line
         )
@@ -790,7 +790,7 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"\[Adblock Plus 3\.4\]", 
+           r"\[Adblock Plus 3\.[0-9]{1,3}\]", 
            "! Title: IP Entries from Adblock Lists\n! Contains transformated entries from: EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, EasyList Spanish \n! Expires: 14 days\n! Licence: In accordance with the Dandelicence, the borrowed entries are considered to have been changed and reduced enough from their original lists, that they're counted as transformative work, meaning that creditation and seperate paragraphs are not necessary unless one of the lists' makers were to ask for such.\n! Description: This was made as a proof-of-concept to see if the IP-based entries of major adblock lists, could be used to create an IP adblocker list for IP blockers, despite how IP lists are normally only meant to block malware, E-mail spam, or port scanners.", 
            line
         )
