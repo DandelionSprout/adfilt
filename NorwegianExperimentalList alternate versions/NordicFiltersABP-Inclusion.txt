@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)
-! Version: 270120231
+! Version: 070220241
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1672,7 +1672,7 @@ abcnyheter.no##div[class^=AdSlot__]
 vinavisen.dk##.banner
 dust2.dk##.target-concept
 jyllands-posten.dk,finans.dk##div[class*=banner-container]
-borsen.dk##div[class*=col] > *:has(> .native-teaser)
+borsen.dk##div[class*=col]:has(.native-teaser)
 jyllands-posten.dk##section[id^=commercial]
 bt.no##p ~ div[class^=hyperion-css-]:has(> div[id*=-ad- i])
 viralomania.com##.sidebar > div[id^=block-]
@@ -1683,6 +1683,7 @@ lav-det-selv.dk##.topwide
 lokalavisen.dk##div[class*=banner-container]
 samvirke.dk##.external-banner--continue
 insidetelecom.no##.items-center:empty
+nhi.no##div.MuiContainer-root div[class^=mui-style-]:has(div[data-ad-unit-id])
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -5624,7 +5625,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Tue, 09 Jan 2024 11:51:15 +0000
+! Last modified: Tue, 06 Feb 2024 11:26:42 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -5865,7 +5866,7 @@ como.fi,episodi.fi,fum.fi,inferno.fi,pelaaja.fi,rumba.fi,soundi.fi##.poppartners
 como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi##div[data-recommendation-type=ad]
 como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi#?#.border-bottom.row:has(.poppartners)
 como.fi,episodi.fi,inferno.fi,leffatykki.com,pelaaja.fi,rumba.fi,tilt.fi##.md\:bg-gray-200.md\:max-w-full.md\:px-4.md\:py-4
-como.fi,episodi.fi,rumba.fi,soundi.fi,tilt.fi##div.min-h-\[450px\]
+como.fi,episodi.fi,pelaaja.fi,rumba.fi,soundi.fi,tilt.fi##div.min-h-\[450px\]
 como.fi,pelaaja.fi##.px-4.py-2.border-b.border-gray-200.bg-white.w-full
 como.fi,rumba.fi,soundi.fi,tilt.fi##div[style="min-height:450px;"]
 como.fi,tilt.fi#?#div[class="w-full bg-white border-gray-200 border-b py-2 px-4"]:has([id*="_smart_boksi"])
@@ -5922,6 +5923,7 @@ episodi.fi#?#.main-article > div:has-text(Mainos)
 episodi.fi,inferno.fi,pelaaja.fi#?#.md\:max-w-full.md\:px-4.py-4:has([data-ad-unit-id])
 eralehti.fi##.DfpAdSlot_dfp-ad-slot
 eralehti.fi##.Index_native-ads
+eralehti.fi,metsastysjakalastus.fi,rakennusmaailma.fi,tekniikanmaailma.fi##.Article_native-ads
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##div[class^=ad]
 esports.pallomeri.net##.cb-banneri-uusi
 etlehti.fi,hyvaterveys.fi,soppa365.fi#?#.views-row:has(.is-commercial)
@@ -6359,7 +6361,6 @@ metsalehti.fi##.teaser-top-banner--partner
 metsalehti.fi##[data-set="main-ad"]
 metsastajaliitto.fi#?#.view-id-jahtimedia_latest .list-item:has([href^="https://jahtimedia.fi/mainokset/"])
 metsastysjakalastus.fi##.Index_native-ads
-metsastysjakalastus.fi,rakennusmaailma.fi,tekniikanmaailma.fi##.Article_native-ads
 metsastysjakalastus.fi,rakennusmaailma.fi,tekniikanmaailma.fi##.in-text-ad-slot-wrapper
 mikrobitti.fi##a[data-ga-teaser-name="PartnerContentTeaser"]
 mikrobitti.fi##body:not(.is-style-kumppanisisallot) :is(aside, section) a[href^="https://www.mikrobitti.fi/kumppanisisallot/"]
@@ -6558,6 +6559,7 @@ sijoittaja.fi#?#body.home .container > div[style="z-index:1800; margin-bottom:40
 sijoittaja.fi#?#body.single-post .container[style]:has(.g-single > .hs-cta-wrapper)
 sijoitustieto.fi##.view-2019-ajankohtaiset-tarjoukset
 sijoitustieto.fi##.view-banneripaikka-etusivuoikea1
+sijoitustieto.fi#?#.st-banneri-view:has-text(Mainos:) > div
 sijoitustieto.fi#?#p > em > strong:has-text(Kaupallinen yhteistyö:)
 sjofart.ax##.elementor-location-header .topp
 sjofart.ax#?#.ae-bg-gallery-type-default.elementor-section-height-default.elementor-section-boxed.elementor-hidden-phone.has_ae_slider:has([src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"])
@@ -6721,6 +6723,7 @@ uusisuomi.fi##[data-test=mainTeaserColumn][href^="https://www.uusisuomi.fi/kumpp
 uusisuomi.fi##aside [data-test="tabs"] [href^="https://www.uusisuomi.fi/kumppanisisallot"]
 uusisuomi.fi##aside [href^="https://track.adform.net/"]
 uusisuomi.fi##aside [href^="https://www.ilmarinen.fi/"]
+uusisuomi.fi##aside a[data-ga-teaser-name="PartnerContentTeaser"]
 uusisuomi.fi#?#.lazyload-wrapper + section:has-text(Kaupallinen yhteistyö)
 uusisuomi.fi#?#.lazyload-wrapper:has(.eo-embed-announcements-container)
 uusisuomi.fi#?#div#skyscraper-height-div > div > aside > section > a:has-text(Kaupallinen yhteistyö)
@@ -6755,7 +6758,7 @@ verkkouutiset.fi##article.rp-lift.featured-post
 verkkouutiset.fi##section[id^="front-page-parade"]
 verkkouutiset.fi##section[id^="front_page_parade"]
 verkkouutiset.fi#?#.elementor-motion-effects-parent:has(.strossle-sidebar)
-verkkouutiset.fi#?#.elementor-section-height-default.elementor-section-boxed.elementor-element.elementor-top-section.elementor-section:has(.elementor-widget-shortcode:has(.vu-adlabel))
+verkkouutiset.fi#?#.elementor-widget-shortcode:has(.vu-adlabel)
 verkkouutiset.fi#?#article.featured-post:has-text(Mainos)
 vertaa.fi##[id|=gpt-slot-billboard]
 vertaa.fi#?#li[class^=cg-][data-role=items-list-item]:has(> div > [id^=gpt-slot-results-][id*=rectangle])
@@ -6893,6 +6896,7 @@ _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutis
 ||affiliatesolution.se^$domain=ykkoslohja.fi
 ||alibi.fi/wp-content/uploads/2018/03/AL_sivupalkin_myyntiviesti2.jpg$image
 ||ap-online.media.fi/scripts/eneo*.dll$script,domain=aamuposti.fi|helsinginuutiset.fi|karkkilantienoo.fi|keski-uusimaa.fi|lansi-uusimaa.fi|lansivayla.fi|lappeenrannanuutiset.fi|lopenlehti.fi|loviisansanomat.fi|mantsalanuutiset.fi|nurmijarvenuutiset.fi|pyhtaanlehti.fi|seinajoensanomat.fi|sipoonsanomat.fi|tamperelainen.fi|turkulainen.fi|uusimaa.fi|vantaansanomat.fi|vihdinuutiset.fi
+||api.etuovi.com/bad/wings/v2/kisu$domain=uusisuomi.fi
 ||apps.sandviks.com/apix?x-method=ElementService.selectAdvertiserElement$script,domain=vau.fi
 ||asuntorauma.fi/iframe/uusimmat$subdocument,domain=ls24.fi
 ||auto1.fi^$third-party
@@ -7147,6 +7151,7 @@ anna.fi,kaksplus.fi#@#.sponsored-content
 hs.fi,sokos.fi#@#.mainokset
 hs.fi,tilannehuone.fi#@#.mainos
 pienimatkaopas.com#@##mainos
+netticaravan.fi#@#article.ad
 
 @@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$script,domain=telsu.fi
 
