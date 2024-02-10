@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 07February2024v2-Deprecated
+# Version: 10February2024v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -209,6 +209,8 @@ msFilterList
 -d app.pulsmedia.is
 # https://bygge-anlaegsavisen.dk/historisk-vejprojekt-mellem-sisimiut-og-kangerlussuaq-undervejs/(30/12/2023)
 -d s3.eu-west-1.amazonaws.com ads.
+# https://www.minmote.no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
+-d shopi.tize.no
 # — — — — — — —
 # 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 # 🇬🇧: Fileserver or site-specific blocking rules
@@ -794,7 +796,7 @@ msFilterList
 -d gymsharkdanmark.com
 -d gymsharkidanmark.com
 -d gymsharkiesale.com
--d gymsharkklærnorge.com
+-d xn--gymsharkklrnorge-3ob.com
 -d gymsharkldanmark.com
 -d gymsharklnorge.com
 -d gymsharkno.com

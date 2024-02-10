@@ -6223,7 +6223,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"(# Description.*$)", 
-           r"\1\n# Note: The very limited syntax available to raw domains lists, considering it's, well, raw, means that outright anti-MV3 measures (which'd as of February 2024 only affect Minus, a project whose name is unworthy of the uBO label) cannot be done. However, at some 20,000 entries, Team Chromium's shameful leaders aren't liking this list anyway.", 
+           r"\1\n# Note: The very limited syntax available to raw domains lists, considering it's, well, raw, means that outright anti-MV3 measures (which'd as of February 2024 only affect Minus, a project whose name is unworthy of the uBO label; AdGuard browser extensions has no relevant support for raw domains either way) cannot be done. However, at some 20,000 entries, Team Chromium's shameful leaders aren't liking this list anyway.", 
            line
         )
 

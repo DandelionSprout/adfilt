@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 07February2024v2
+! Version: 10February2024v2
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -384,7 +384,7 @@ tu.no##div[class*=-ads-wrapper i]
 tu.no##div[id^=row- i]
 tu.no##div.relative > div[class*=" items-center hidden " i]
 voguescandinavia.com##div[class^=AdssetsAd_]
-itavisen.no##article:has(.title:has-text(/[?:;—] annons[eø]r?$/))
+itavisen.no##article:has(.title:has-text(/[?:;—]\sannons[eø]r?$/))
 xklub.dk###seealladv
 xlmoto.no##.overlay-bg
 xlmoto.no##.overlay-container
@@ -703,6 +703,8 @@ _visittkortannonse_$image
 ||app.pulsmedia.is^$subdocument,third-party
 ! https://bygge-anlaegsavisen.dk/historisk-vejprojekt-mellem-sisimiut-og-kangerlussuaq-undervejs (30/12/2023)
 ||s3.eu-west-1.amazonaws.com/ads.$subdocument
+! https://www.minmote.no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
+||shopi.tize.no^$subdocument,third-party
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -1746,6 +1748,9 @@ lokalavisen.dk##div[class*=banner-container]
 samvirke.dk##.external-banner--continue
 insidetelecom.no##.items-center:empty
 nhi.no##div.MuiContainer-root div[class^=mui-style-]:has(div[data-ad-unit-id])
+elbil24.no##.carousel-container + div:not(.carousel-container):has([class*=ad])
+digi.no##.col-span-12:not([class*=" "]):has(> :is([class$=" "],[class*=_class],:not([class*=" "])))
+digi.no##.hidden[class*=" lg:flex"]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2524,7 +2529,7 @@ triplx.dk##.aff-inner-col
 ||gymsharkdanmark.com^$all
 ||gymsharkidanmark.com^$all
 ||gymsharkiesale.com^$all
-||gymsharkklærnorge.com^$all
+||xn--gymsharkklrnorge-3ob.com^$all
 ||gymsharkldanmark.com^$all
 ||gymsharklnorge.com^$all
 ||gymsharkno.com^$all
