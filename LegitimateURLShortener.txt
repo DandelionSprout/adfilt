@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 14February2024v4
+! Version: 14February2024v5
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -11,9 +11,9 @@
 ! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view parameters on the strict-block page or tools to bypass it.
 ! - this list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
 ! - this list can not remove parameters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
-! - as of 10/3/2023, this list is not supported in Brave, due to Brave missing several critical features this list uses. Please use this list only with uBlock Origin or AdGuard.
+! - as of 10/03/2023, this list is not supported in Brave, due to Brave missing several critical features this list uses. Please use this list only with uBlock Origin or AdGuard.
 
-! ——— General remove rules ——— !
+! 🗺️ ——— General remove rules ——— 🗺️ !
 ! From AdGuard CoreLibs (11/11/2020)
 $removeparam=yclid
 $removeparam=gclid
@@ -1705,7 +1705,7 @@ $removeparam=dlsi
 ! https://github.com/the1812/Bilibili-Evolved/issues/2247
 /auto-append-spmid.js
 
-! ——— Specific remove rules ——— !
+! 🐹 ——— Specific remove rules 🐹 ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
 $doc,removeparam=cid,domain=8days.sg|abcnews.go.com|adguard.com|adshares.net|ae.com|anntaylor.com|apple.com|bitdefender.*|blair.com|channelnewsasia.com|childrensplace.com|dcard.tw|elmundo.es|emirates.com|factoryoutletstore.com|fifa.com|flipkart.com|gamestop.com|giphy.com|glasses.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|lenovo.com|loft.com|marca.com|microsoft.com|nbcnews.com|nike.com|nyandcompany.com|overstock.com|persol.com|proshop.*|radissonhotelsamericas.com|ray-ban.com|rei.com|rightmove.co.uk|samsung.com|stadium.*|staples.com|telenor.no|todayonline.com|tokopedia.com|tommy.com|toms.com|totalbeauty.com|tractorsupply.com|underarmour.com|vineyardvines.com|voxi.co.uk|wine.com|wsj.com|xg4ken.com|zales.com
@@ -2178,7 +2178,7 @@ $removeparam=referral,domain=tv2.no|spotify.com|yubo.live
 !! ——— Rules for heavily covered international sites ———
 !!! ——— PR-China ———
 !!! Special thanks to https://github.com/DeepChirp for helping with this section.
-!!!! ——— Alibaba ———
+!!!! ——— Alibaba + AliExpress ———
 ! https://es.aliexpress.com/item/4000672272353.html?pvid=c4cdc770-f05a-4b7b-8a50-d8b81efff6c9&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:c4cdc770-f05a-4b7b-8a50-d8b81efff6c9,tpp_buckets:668%230%23131923%230_668%23808%234094%23200_668%23888%233325%231_668%232846%238113%23646_668%232717%237558%23188_668%231000022185%231000066059%230_668%233468%2315617%23897
 ||aliexpress.*/item/$removeparam=pvid
 ||aliexpress.$removeparam=_t
@@ -2227,6 +2227,8 @@ $removeparam=aff_click_id
 ||aliexpress.$removeparam=pdp_npi
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3943463
 ||aliexpress.$removeparam=curPageLogUid
+! https://www.alibaba.com/toprankedsellers/index.html?spm=a2700.8293689.0.0.2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
+||alibaba.com^$removeparam=categoryIds
 
 !!!! ——— Baidu ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
@@ -2529,7 +2531,7 @@ $removeparam=report_recomm_player
 ! https://user.qzone.qq.com/1250252459/infocenter?via=toolbar (10/02/2022)
 ^via=toolbar^$removeparam=via,domain=user.qzone.qq.com
 
-!! ——— Miscellaneous ———
+!! 🏘️ ——— Miscellaneous specific entries ——— 🏘️ !
 ! No particular examples
 $removeparam=app,domain=tiktok.com|music.apple.*
 ! (Do not add to the below entry: play.google.com; see https://github.com/DandelionSprout/adfilt/issues/475)
@@ -2635,9 +2637,6 @@ $removeparam=hpt,domain=cnn.com
 ! https://my.postnord.no/tracking/73330062019301037?mobile=00000000&signed=30c93bff-3e20-4bca-bedf-d96c464a9328
 ||postnord.$removeparam=mobile
 ||postnord.$removeparam=signed
-
-! https://www.alibaba.com/toprankedsellers/index.html?spm=a2700.8293689.0.0.2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
-||alibaba.com^$removeparam=categoryIds
 
 ! https://rugby.no/finn-din-lokale-klubb/ (05/03/2021)
 ||maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate^$removeparam
@@ -4587,7 +4586,7 @@ ref=upstract.com$doc,removeparam=/^ref=upstract.com$/
 ||abcnyheter.no^$removeparam=nr
 
 !#if !env_mobile
-! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
+! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
 $removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk
@@ -4598,7 +4597,7 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ||ikea.com/*/images/products^$removeparam=f
 !#endif
 
-! + ——— + Scriptlets + ——— + !
+! 🤖 + ——— + Scriptlets + ——— + 🤖 !
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1352038
 actionewz.com,animemojo.com,comicbookmovie.com,fearhq.com,gamefragger.com,mtvuutiset.fi,sffgazette.com,theringreport.com,toonado.com##+js(set, GSvars.addressTracking, false)
 
@@ -4608,7 +4607,7 @@ buffalonews.com##+js(set, lee_trkLinkSrc, noopFunc)
 ! https://github.com/DandelionSprout/adfilt/issues/874
 !!! forbes.com##+js(set, trackingService.track, noopFunc)
 
-! @@ ——— @@ Allowlist @@ ——— @@ !
+! 🌞 @@ ——— @@ Allowlist @@ ——— @@ 🌞 !
 ! https://github.com/DandelionSprout/adfilt/commit/6dd010c70438a84cae7cf6b683d0d99dc56794ad
 @@mailinglist$removeparam=/^utm_/i
 
