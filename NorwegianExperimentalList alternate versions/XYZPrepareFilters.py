@@ -3229,7 +3229,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^(! If you wish to remove.*)", 
-           r"\1\n! As of 19 January 2024, syntax support for ABP in Firefox ESR v115.x, Tor Browser, Waterfox, and SeaMonkey, is somewhat spotty in this list, because this list has chose to follow a new ABP guideline from 12 January onwards that assumes native «:has» CSS in browsers, which for Firefox has only been true since Stable v121.x.", 
+           r"\1\n! February-July 2024 — Users of ABP in Firefox ESR v115.x, Tor Browser, Waterfox, and SeaMonkey, MUST go to about:config → layout.css.has-selector.enabled, and set it to «true», in order for this list to work correctly. ESR 128.0 will fix this.", 
            line
         )
 

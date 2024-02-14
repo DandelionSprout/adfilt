@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)
-! Version: 100220242
+! Version: 140220241
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -14,7 +14,7 @@
 
 ! Wish to help translate more category titles to Nordic languages 🇩🇰 🇮🇸 🇳🇴🏞 🇫🇴 🇬🇱 ❄? https://crowdin.com/project/dandelion-sprout-nordic-filter
 ! If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
-! As of 19 January 2024, syntax support for ABP in Firefox ESR v115.x, Tor Browser, Waterfox, and SeaMonkey, is somewhat spotty in this list, because this list has chose to follow a new ABP guideline from 12 January onwards that assumes native «:has» CSS in browsers, which for Firefox has only been true since Stable v121.x.
+! February-July 2024 — Users of ABP in Firefox ESR v115.x, Tor Browser, Waterfox, and SeaMonkey, MUST go to about:config → layout.css.has-selector.enabled, and set it to «true», in order for this list to work correctly. ESR 128.0 will fix this.
 
 ! 🇳🇴/🇩🇰: ——— Reklamer ———
 ! 🇳🇴🏞: ——— Reklamar ———
@@ -416,6 +416,7 @@ udeoghjemme.dk##.bg-brown-200.py-30
 alt.dk##.section-banner
 ddig.dk##.td-main-sidebar
 bygge-anlaegsavisen.dk##.main--add
+kommunal-rapport.no##.dre-item--skin-reklame
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -696,7 +697,8 @@ _visittkortannonse_$image
 ! https://bygge-anlaegsavisen.dk/historisk-vejprojekt-mellem-sisimiut-og-kangerlussuaq-undervejs (30/12/2023)
 ||s3.eu-west-1.amazonaws.com/ads.$subdocument
 ! https://www.minmote.no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
-||shopi.tize.no^$subdocument,third-party
+! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8408727
+||tize.no^$subdocument,third-party
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -1689,6 +1691,7 @@ nhi.no##div.MuiContainer-root div[class^=mui-style-]:has(div[data-ad-unit-id])
 elbil24.no##.carousel-container + div:not(.carousel-container):has([class*=ad])
 digi.no##.col-span-12:not([class*=" "]):has(> :is([class$=" "],[class*=_class],:not([class*=" "])))
 digi.no##.hidden[class*=" lg:flex"]
+vg.no##.advert
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -5630,7 +5633,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Fri, 09 Feb 2024 13:00:10 +0000
+! Last modified: Mon, 12 Feb 2024 19:59:43 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -6108,6 +6111,7 @@ huuto.net###hise-items-container
 huuto.net#?#.grid-element-container:has(.hise-link[href^="https://"])
 hymy.fi##.grid--dfp-slots
 hymy.fi##.sidebar-block a[href^="https://seura.fi/mainos/"]
+hymy.fi##.sidebar-block a[href^="https://tekniikanmaailma.fi/mainoslehti/"]
 hyvaterveys.fi##.pane-sbase-cts-native-native-front
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi###paraati-ad-grid
 iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.-ad1.-ad.sidebar__column-item
@@ -7166,6 +7170,19 @@ netticaravan.fi#@#article.ad
 
 ! "RU Adlist" breaks the carousel showing own products of Netrauta
 @@||/media/banners/*$image,domain=www.netrauta.fi
+
+! Allow opt-in in a cookieconsent-blocked element (for example, YouTube embeds)
+! Example page (YouTube embed): https://www.seurakuntalainen.fi/uutiset/jutta-urpilainen-arvotentissa-arvoni-pohjaavat-kristinuskoon-mutta-ovat-linjassa-sosiaalidemokratian-kanssa/
+@@||consent.cookiebot.com/uc.js$domain=www.seurakuntalainen.fi
+@@||consent.cookiebot.com/*/cc.js?renew=true$domain=www.seurakuntalainen.fi
+@@||consent.cookiebot.com/logconsent.ashx$domain=www.seurakuntalainen.fi
+www.seurakuntalainen.fi#@##CookieBanner
+
+! Unbreak cookie consent, however this doesn't hide it
+! uBO extras has set-cookie to automatically set a cookie to hide it
+! https://srk.fi/fi/
+@@||srk.fi/*/cookielaw.js$script
+srk.fi#@##CookielawBanner
 
 ! -----UNBREAK END-----
 

@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 100220242
+! Version: 140220241
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -417,6 +417,7 @@ udeoghjemme.dk##.bg-brown-200.py-30
 alt.dk##.section-banner
 ddig.dk##.td-main-sidebar
 bygge-anlaegsavisen.dk##.main--add
+kommunal-rapport.no##.dre-item--skin-reklame
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -696,7 +697,8 @@ _visittkortannonse_$image
 ! https://bygge-anlaegsavisen.dk/historisk-vejprojekt-mellem-sisimiut-og-kangerlussuaq-undervejs (30/12/2023)
 ||s3.eu-west-1.amazonaws.com/ads.$subdocument
 ! https://www.minmote.no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
-||shopi.tize.no^$subdocument,third-party
+! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8408727
+||tize.no^$subdocument,third-party
 ! — — — — — — —
 ! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
 ! 🇬🇧: Fileserver or site-specific blocking rules
@@ -1696,6 +1698,7 @@ nhi.no##div.MuiContainer-root div[class^=mui-style-]:has(div[data-ad-unit-id])
 elbil24.no##.carousel-container + div:not(.carousel-container):has([class*=ad])
 digi.no##.col-span-12:not([class*=" "]):has(> :is([class$=" "],[class*=_class],:not([class*=" "])))
 digi.no##.hidden[class*=" lg:flex"]
+vg.no##.advert
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2981,6 +2984,9 @@ www.aftenposten.no#?#div[class^=hyperion-css-] > div[class^=hyperion-css-] > div
 dn.no##div[style*=linear-gradient]
 alt.no##amedia-include[manifest*=access-check i]
 ba.no###aid-overlay
+! 10/02/2024
+vg.no##.paywallTextFading
+kommunal-rapport.no##.paywall-fade-out::after
 
 ! dagbladet.no,elbil24.no
 ##.CTA-body-faded:not(html, body)
@@ -2996,7 +3002,7 @@ vg.no##div[data-test-tag=timestamp] + p + div::before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 07December2023v1-Extension
+! Last updated: 10February2024v1-Extension
 tv2.no#$#abort-current-inline-script adblockDetector
 ||elderlyscissors.com^
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
