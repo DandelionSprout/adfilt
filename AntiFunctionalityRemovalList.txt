@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🧗 Anti-'Functionality removal' List
-! Version: 11November2023v1-Beta
+! Version: 15February2024v1-Beta
 ! Expires: 9 days
 ! Description: This list aims to combat some sites' attempts to make it impossible to copy text, right-click on pages, open the F12 menu, create fake loading times, or who otherwise obstruct people from features that they should be perfectly in their rights to have access to.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -10,6 +10,7 @@
 ! Copypaste hijackers 📛
 bloombergquint.com##+js(acis, document.oncopy)
 bloombergquint.com##+js(aopr, getSelection)
+delfi.lt##+js(aeld, copy)
 !!!||deepl.com/js/docTrans-react.chunk. (https://github.com/AdguardTeam/AdguardFilters/issues/119645)
 !#if !adguard
 ||www.15min.lt/naujiena^$inline-script
@@ -24,8 +25,8 @@ bloombergquint.com##+js(aopr, getSelection)
 ! https://www.patheos.com/blogs/godzooks
 /wp-content/plugins/disable-right-click-and-content-copy-protection^
 ! From "Frellwit's Swedish Filter"
-/plugins/wp-content-copy-protection/*
-/plugins/wp-copy-protect-with-color-design/*
+/plugins/wp-content-copy-protection^
+/plugins/wp-copy-protect-with-color-design^
 
 ! Prevents sites from removing the ability to copy text 📛
 respublika.lt#?#[class^=com_]:style(user-select: unset !important; -webkit-user-select: unset !important; -moz-user-select: unset !important)
