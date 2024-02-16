@@ -52,3 +52,10 @@ According to Sublime Text build 4143. Case-sensitive.
 `^([a-z0-9*,.-]{0,})#\?#((([a-zA-Z0-9.#_*="_+>~/\^ -]|\[|\]|:"){0,}):has\(([_=."+#a-zA-Z0-9~>%&/$',;?^!*一-龯ぁ-んァ-ン・ーㄱ-힣а-яА-ЯæøåÆØÅäöÄÖ() -]|\[|\]|://){1,}\))$`
 ↓
 `\1##\2`
+
+## Tumblr new syntaxing (16/02/2024)
+`^(.*)$`
+<br>↓
+```
+tumblr.com##div[data-timeline*="/timeline/"] div[style^=width] > div[tabindex]:has-text(\1)\ntumblr.com##div[data-timeline*=notes_info] div[data-cell-id]:has-text(\1):watch-attr(class):watch-attr(style)\ntumblr.com##div[data-timeline*="/blog/"] header + div:has-text(\1)\ntumblr.com##div[data-timeline*="/blog/"] header + div + div > div:has-text(\1)\ntumblr.com##div:is([aria-label=Replay i],[aria-label=Like i],[aria-label=Reblog i]):has-text(\1)
+```
