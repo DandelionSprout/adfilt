@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 14February2024v1
+! Version: 18February2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -181,6 +181,7 @@ holdsport.dk##.article:has(a[href*=online-spil])
 holdsport.dk##.article:has(a[href*=spillemaskin])
 hvat.fo##.vev-wrap
 hytteavisen.no##.onlybigplaktat
+digi.no,tu.no##.grid > div:not([class*=" "]):has(> div:not([class*=" "]))
 hytteavisen.no##.prodlist > .row > .small-12
 indblik.net##div[id^=adni_widgets-]
 iphoneluppen.dk##a[href*=bingo]
@@ -244,6 +245,7 @@ nordlysid.fo###ease_adgroup_3
 nordlysid.fo##.adgroup--component[collapse=top]
 nordlysid.fo##.adgroup--component[collapse=vertical]
 nordlysid.fo##column[class*=ad-style]:not([collapse])
+startsiden.no##a[id^=desked-section-][rel=nofollow]
 noresk.com,eroguide.dk##.ipsSpacer_both
 norges.online###modaladv
 norges.online##+js(aopr, adclick)
@@ -256,6 +258,7 @@ norskenettsider.no###g_image4
 norskenettsider.no##table
 nyteknikk.no##.rightbanner
 nyteknikk.no##.toppbanner
+tu.no,digi.no##.grid > div:not([class*=" "]):has(> div[class$=" "])
 nettavisen.no##optimus-element:has(a[href*="://norsk-tipping."],a[href^="/shoppingtips/"])
 elbil24.no#?#.preview:has(.kicker:has-text(/an{2}onse/i))
 onlineaviser.no##a[href="../html/gratis_no.html"]
@@ -569,6 +572,7 @@ dk##section.article__adblock
 /annonse_$image
 /auglysing/*
 /auglysingar/*
+.no/api/unit-image?$xmlhttprequest,~third-party
 /vefauglysingar/*
 ||ad.*.no^$domain=~ad.dep.no|~ad.hem.no|~ad.amediakreativ.no|~ba.no
 ||ad1.*.dk^
@@ -1206,6 +1210,7 @@ fiskeribladet.no##div[id^=banner_billboard1_]
 fiskeribladet.no##div[id^=banner_billboard1_] + .hide_on_print
 fl-arena.de##.content_right_medium_rect_ad_box
 fl-arena.de##.do_not_print.article_teaser_no_border
+vp.fo###top
 fla.de##.adsenseblock
 fla.de##.font-robotoregular.font10
 fla.de##div[data-glade]
@@ -1807,7 +1812,7 @@ byggeplads.dk,magasinetgulv.dk,officeplusdesign.dk##.region-sidebar-second > div
 midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##main > .container:not([class*=" "])
 midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##.container-spacer
 midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##.container-outer-wrapper > .col-2:last-of-type
-united.no,valkal.no,montages.no##.ads
+united.no,valkal.no,montages.no,kundeavisogtilbud.no##.ads
 mytastenor.com,mytastednk.com,tv3sport.dk##.panorama
 isabellas.dk,femina.dk,billedbladet.dk##div[data-type=ad]
 !+ NOT_OPTIMIZED
