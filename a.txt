@@ -1,6 +1,6 @@
 [Adblock Plus 3.18]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 19February2024v2-Personal
+! Version: 20February2024v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 !#if !env_mv3
@@ -594,6 +594,9 @@ dominos.*#?#div[class^=CardGrid_grid__] > div:not([class],[id]):has-text(/pepper
 peppes.no#?#.product-section > div:has-text(/pepperoni|bacon|skinke|BBQ-saus|sopp|jalape[ñn]o|nduja|salami|Blue ?Cheese/i)
 egon.no#?#.menu-item-wrap:has-text(/Karbonade| reke|kalkunskinke|scampi|sopp|gorgonzola|jalape[nñ]o| mynte|ørret/i)
 foodora.no#?#.product-tile:has-text(/bacon|chorizo|svin|hvit ?vin|rødvin|reke[hcr]|skinke|salami|sopp|sjømat|gorgonzola|pølse|blåmugg/i)
+tumblr.com##div[data-timeline*="/blog/"] header + div + div > div:has-text(/minister[ -]of[ -]spring/i):not(:has-text(/minister[ -]of[ -](winter|summer|fall)/i)):upward(div[data-cell-id])
+tumblr.com##div[data-timeline*="/blog/"] header + div:has-text(/minister[ -]of[ -]spring/i):not(:has-text(/minister[ -]of[ -](winter|summer|fall)/i)):upward(div[data-cell-id])
+tumblr.com##div[data-timeline*="/timeline/"] div[style^=width] > div[tabindex]:has-text(/minister[ -]of[ -]spring/i):not(:has-text(/minister[ -]of[ -](winter|summer|fall)/i))
 
 !if !env_mobile
 pixiv.net##li[class*=" "]:has(a[href*="/artworks/"]):has-text(/fe{2}t\ies/i)
