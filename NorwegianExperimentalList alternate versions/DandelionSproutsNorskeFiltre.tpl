@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 24February2024v1-Deprecated
+# Version: 25February2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -11,7 +11,7 @@ msFilterList
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 # Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.
 # Wish to help translate more category titles to Nordic languages 🇩🇰 🇮🇸 🇳🇴🏞 🇫🇴 🇬🇱 ❄? https://crowdin.com/project/dandelion-sprout-nordic-filter
-# If you wish to remove cookie banners from Nordic websites, check out https://easylist-downloads.adblockplus.org/easylist-cookie.tpl (Can also be subscribed to from https://raw.githack.com/collinbarrett/FilterLists/master/data/TPLSubscriptionAssistant.html)
+# If you wish to remove cookie banners from Nordic websites, check out https://filters.adtidy.org/windows/filters/18.txt
 # 🇳🇴 🇩🇰: ——— Reklamer ———
 # 🇳🇴🏞: ——— Reklamar ———
 # 🇮🇸: ——— Auglýsingar ———
@@ -614,6 +614,7 @@ msFilterList
 # Attempts to resolve how some frontpage articles are hard to open
 # 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
 # 🇬🇧: Makes Discovery+'s login page show up properly
+# https://github.com/easylist/easylist/issues/18542/(These/entries/are here to stay, regardless of the report's outcome.)
 # ★★★ Caused by «Fanboy's Social Blocking List», if I recall correctly ★★★
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
