@@ -1,6 +1,6 @@
 [Adblock Plus 3.18]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 29February2024v2-Personal
+! Version: 01March2024v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suffixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-off pre-alpha list concepts of mine.
 !#if !env_mv3
@@ -737,13 +737,25 @@ dnpedia.com#?#.ui-row-ltr:has-text(.edu.)
 !!!2fa.directory##.table-success:not(:has(img[alt=U2F], .custom-hardware-popover))
 ! Makes airport flight checkers only show international flights (Unlikely to get a standalone list anytime soon, and shouldn't be turned on 24/7)
 !!!avinor.no##.flight-single:has-text(/Oslo|Bergen|Sandef\jord|Stavanger|Sandnes|Rørv\ik|Mo\s\i\sRana|Bodø|Na\msos|Brønnøysund|Mosjøen|Ålesund|Tro\msø|Harstad/)
-! Aims to remove "Coming soon" games from "New releases" searches
-!!!store.epicgames.com#?#section li:has([data-testid$=subtitle]:has-text(Available))
 
 ! Saudi Arabia
 ||sa^$doc,script,xmlhttprequest
 ! https://www.theguardian.com/media/2023/aug/15/vice-blocked-news-stories-that-could-offend-saudi-arabia-insiders-say
 ||vice.com^$all
+
+! ——— I swear idol fans are messed up. ———
+tumblr.com##div[data-timeline*="/blog/"] article:has-text(/\skms(\s|[!.])|アイドル|#idol\s|pripara/)
+tumblr.com##div[data-testid=scroll-container] > div:only-of-type > div:last-of-type a[target][tabindex][href*=-kms-]
+osu.ppy.sh#?#.beatmapsets__item:has-text(Waifu)
+osu.ppy.sh#?#.beatmapsets__item:has-text(ラブライブ)
+crunchyroll.com#?#div:is([class^=carousel-scroller__card--],[class^=single-show-card--],[class^=release-episode-card-base--],.browse-card):has-text(/ \idol([.,:;?!s=_#’“”-]|\s|\'|\"|$)/|Love\s?L\ive|Id[o@]l\s?M[a@]ster|mus\ic.*star|stage\s?troup/i)
+!#if !adguard
+soundcloud.com#?#.badgeList__item,.g-scrollable-inner li,.systemPlaylistTrackList__item,.playableTile,.sound:has-text(Halation)
+soundcloud.com#?#.badgeList__item,.g-scrollable-inner li,.systemPlaylistTrackList__item,.playableTile,.sound:has-text( halation)
+www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text(iDOLM@STER)
+www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text(/Snow\shalat\ion/i)
+www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text(Love Live!)
+!#endif
 
 ! ↓ Below are categories that may or may not get independent lists for public use one day. ↓
 ! And yes, there's a reason why a.txt is for private use only: It shows the seething despisement I have against large chunks of planet Earth.
@@ -771,15 +783,11 @@ artstation.com#?#.gallery-grid-item,.project:has-text(Barkhat Gay Traveler)
 !#endif
 
 ! Anti-weeb
-osu.ppy.sh#?#.beatmapsets__item:has-text(Waifu)
-osu.ppy.sh#?#.beatmapsets__item:has-text(ラブライブ)
 osu.ppy.sh#?#.beatmapsets__item:has-text(ソードアート・オンライン)
 osu.ppy.sh#?#.beatmapsets__item:has-text(Literature Club)
 ##a[href="/memes/subcultures/doki-doki-literature-club"]
 !#if !adguard
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.Post,.thing:has-text(DDLC)
-soundcloud.com#?#.badgeList__item,.g-scrollable-inner li,.systemPlaylistTrackList__item,.playableTile,.sound:has-text(Halation)
-soundcloud.com#?#.badgeList__item,.g-scrollable-inner li,.systemPlaylistTrackList__item,.playableTile,.sound:has-text( halation)
 !#endif
 pixiv.net#?#section:has-text(Daily ranking)
 pixiv.net#?#section:has-text(Popular tags)
@@ -817,10 +825,7 @@ dr.dk##.dre-article-teaser:has(a[href*="/vinter-pl/"])
 
 !#if !adguard
 ! Bad SiİvaGunner stuff
-www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text(iDOLM@STER)
 www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text(/\s\(JP\sVers\ion\)\s-\s/)
-www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text(/Snow\shalat\ion/i)
-www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text(Love Live!)
 www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text( - Deltarune)
 www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text( - Undertale)
 www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text(Nickelodeon All-Star Brawl)
@@ -932,8 +937,6 @@ adressa.no,nidaros.no,nrk.no,tv2.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet
 crunchyroll.com#?#div:is([class^=carousel-scroller__card--],[class^=single-show-card--],[class^=release-episode-card-base--],.browse-card):has-text(/Su\m\moned|Su\m\mons|Re\incarnat|Transported|Reborn.*(World|Land)|paral{2}el\sworld|\sanother\sworld\s|next\sl\ife\s|\iseka\i|Tan\ya\sthe\s\Ev\il/i)
 ! Isekai-style JRPG
 crunchyroll.com#?#div:is([class^=carousel-scroller__card--],[class^=single-show-card--],[class^=release-episode-card-base--],.browse-card):has-text(/[SABC](\s|-)rank|(VR| )M{2}\O|Sword Art \Onl\ine| soc\ial ga\me |table-?top| RPG |Neptun\ia/i)
-! Idols
-crunchyroll.com#?#div:is([class^=carousel-scroller__card--],[class^=single-show-card--],[class^=release-episode-card-base--],.browse-card):has-text(/ \idol([.,:;?!s=_#’“”-]|\s|\'|\"|$)/|Love ?L\ive|Id[o@]l\s?M[a@]ster|mus\ic.*star|stage ?troup/i)
 ! Misc. weebery
 crunchyroll.com#?#div:is([class^=carousel-scroller__card--],[class^=single-show-card--],[class^=release-episode-card-base--],.browse-card):has-text(/\s\Ma\ids?\s|Musu\me|\sbeaut\iful\sg\irls\s|KanCol{2}e|Str\ike\sW\itches|Azur\sLane/i)
 
