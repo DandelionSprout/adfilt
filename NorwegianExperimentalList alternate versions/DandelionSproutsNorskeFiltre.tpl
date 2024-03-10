@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 04March2024v1-Deprecated
+# Version: 10March2024v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -246,6 +246,8 @@ msFilterList
 -d karfan.is *-vefbor%C3%B0i-
 -d leikjaland.is bannerstopright
 -d leikjaland.is *logo.png
+-d digi.no api
+-d tu.no api
 -d magasinetreiselyst.no *_annonse*promo
 -d media.sonymusic.no *.html
 -d melkoghonning.no *_980x300px.jpg
@@ -1150,6 +1152,7 @@ msFilterList
 -d 1.14.61.188
 -d smarthouseforum.ru
 -d trafikkskoleapp.no
+# Last updated: 10March2024v1-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -1158,6 +1161,7 @@ msFilterList
 # Thanks to THEtomaso (https://github.com/THEtomaso)/for/most/of/these/entries.
 -d dagligvarehandelen.no veil.png
 # 10 02 2024
+# https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8603702
 # dagbladet.no,elbil24.no
 # digi.no, tu.no, medier24.no, porten.no
 # https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
@@ -1166,7 +1170,6 @@ msFilterList
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
-# Last updated: 10February2024v1-Extension
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js

@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)
-! Version: 040320241
+! Version: 100320242
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -153,6 +153,9 @@ gamer.no##.posta-placeholder
 gamer.no##[class^=ad-placeholder]
 gamer.no##article ~ .text-center
 gamer.no##body > .content-wrap
+tu.no,digi.no#?#article~div:has-text(/^A[n|ĳ]n\ons/i)
+tu.no,digi.no##main > div > div:empty
+digi.no,tu.no##div[class*=" clear"]
 gamer.no##*:has(> div[data-name=gamer_toppbanner])
 gamer.no##div[data-track-visibility]
 gamer.no##div[data-unit$=banner]
@@ -420,6 +423,7 @@ alt.dk##.section-banner
 ddig.dk##.td-main-sidebar
 bygge-anlaegsavisen.dk##.main--add
 kommunal-rapport.no##.dre-item--skin-reklame
+tvsporten.dk##.match-channels > li.tv11110
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -741,6 +745,9 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||karfan.is/wp-content/uploads/*-vefbor%C3%B0i-$image
 ||leikjaland.is/*/bannerstopright/$image
 ||leikjaland.is/images/*logo.png|
+||digi.no/api/$xmlhttprequest
+@@.no/api/tekjobb|$xmlhttprequest
+||tu.no/api/$xmlhttprequest
 ||magasinetreiselyst.no/wp-content/*_annonse*promo$image
 ||media.sonymusic.no/marketing/*.html$subdocument,third-party
 ||melkoghonning.no/wp-content/uploads/*_980x300px.jpg^
@@ -1699,6 +1706,9 @@ digi.no##.col-span-12:not([class*=" "]):has(> :is([class$=" "],[class*=_class],:
 digi.no##.hidden[class*=" lg:flex"]
 vg.no##.advert
 alletilbudsaviser.co.no##div[class*=banner i]
+friflyt.no,jeger.no,landevei.no,norsk-klatring.no,terrengsykkel.no,utemagasinet.no##.ad
+friflyt.no,jeger.no,landevei.no,norsk-klatring.no,terrengsykkel.no,utemagasinet.no##.text-center
+tvkampen.com,tvsporten.dk##div[data-hbwrap]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -5697,7 +5707,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Sat, 02 Mar 2024 13:23:10 +0000
+! Last modified: Sat, 09 Mar 2024 17:33:59 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -6997,7 +7007,6 @@ _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutis
 ||deals.kledjut.com^$domain=viranomaisuutiset.fi
 ||dropbox.com/*usbanner.gif$image,domain=urbaanisanakirja.com
 ||elmotv.com/wp-content/uploads/*/stake-banneri-$image,domain=elmotv.com
-||es.ylilauta.org^$domain=ylilauta.org
 ||etn.fi/images/banners/$image
 ||expekt.com^$third-party
 ||feed.autotalli.com/bannerdata/html/*.html$subdocument
@@ -7015,7 +7024,6 @@ _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutis
 ||improveads.fi^$third-party
 ||io-tech.fi/images/*_290x290px.png$image
 ||is.fi/kampanjat/taloussanomat/startel_600x300px.jpg$image,domain=is.fi
-||fcdn.lauta.media/adform.js$~third-party
 ||kaasujalka.fi/assets/banners/$image,domain=kaasujalka.fi
 ||kake.fi^$third-party
 ||kaksplus.fi/upotukset/hintaopas^

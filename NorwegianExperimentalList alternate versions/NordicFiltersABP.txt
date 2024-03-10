@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 040320241
+! Version: 100320242
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -150,6 +150,9 @@ gamer.no##.posta-placeholder
 gamer.no##[class^=ad-placeholder]
 gamer.no##article ~ .text-center
 gamer.no##body > .content-wrap
+tu.no,digi.no#?#article~div:has-text(/^A[n|ĳ]n\ons/i)
+tu.no,digi.no##main > div > div:empty
+digi.no,tu.no##div[class*=" clear"]
 gamer.no##*:has(> div[data-name=gamer_toppbanner])
 gamer.no##div[data-track-visibility]
 gamer.no##div[data-unit$=banner]
@@ -421,6 +424,7 @@ alt.dk##.section-banner
 ddig.dk##.td-main-sidebar
 bygge-anlaegsavisen.dk##.main--add
 kommunal-rapport.no##.dre-item--skin-reklame
+tvsporten.dk##.match-channels > li.tv11110
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -741,6 +745,9 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||karfan.is/wp-content/uploads/*-vefbor%C3%B0i-$image
 ||leikjaland.is/*/bannerstopright/$image
 ||leikjaland.is/images/*logo.png|
+||digi.no/api/$xmlhttprequest
+@@.no/api/tekjobb|$xmlhttprequest
+||tu.no/api/$xmlhttprequest
 ||magasinetreiselyst.no/wp-content/*_annonse*promo$image
 ||media.sonymusic.no/marketing/*.html$subdocument,third-party
 ||melkoghonning.no/wp-content/uploads/*_980x300px.jpg^
@@ -1706,6 +1713,9 @@ digi.no##.col-span-12:not([class*=" "]):has(> :is([class$=" "],[class*=_class],:
 digi.no##.hidden[class*=" lg:flex"]
 vg.no##.advert
 alletilbudsaviser.co.no##div[class*=banner i]
+friflyt.no,jeger.no,landevei.no,norsk-klatring.no,terrengsykkel.no,utemagasinet.no##.ad
+friflyt.no,jeger.no,landevei.no,norsk-klatring.no,terrengsykkel.no,utemagasinet.no##.text-center
+tvkampen.com,tvsporten.dk##div[data-hbwrap]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2957,7 +2967,7 @@ triplx.dk##.aff-inner-col
 
 
 
-
+! Last updated: 10March2024v1-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -2998,6 +3008,7 @@ ba.no###aid-overlay
 ! 10/02/2024
 vg.no##.paywallTextFading
 kommunal-rapport.no##.paywall-fade-out::after
+! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8603702
 
 ! dagbladet.no,elbil24.no
 ##.CTA-body-faded:not(html, body)
@@ -3013,7 +3024,6 @@ vg.no##div[data-test-tag=timestamp] + p + div::before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 10February2024v1-Extension
 tv2.no#$#abort-current-inline-script adblockDetector
 ||elderlyscissors.com^
 ||vg.no/cnp-assets/src/sites/vg/components/AdblockModal$script,~third-party
