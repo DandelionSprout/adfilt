@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 10March2024v1
+! Version: 10March2024v2
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -151,6 +151,10 @@ gamer.no##.posta-placeholder
 gamer.no##[class^=ad-placeholder]
 gamer.no##article ~ .text-center
 gamer.no##body > .content-wrap
+tu.no,digi.no#?#article~div:has-text(/^A[n|ĳ]n\ons/i)
+digi.no,tu.no##footer:style(margin: 0 !important)
+tu.no,digi.no##main > div > div:empty
+digi.no,tu.no##div[class*=" clear"]
 gamer.no##div[data-name=gamer_toppbanner]:upward(1)
 gamer.no##div[data-track-visibility]
 gamer.no##div[data-unit$=banner]
@@ -750,6 +754,9 @@ contentMarketing$xhr,domain=sol.no
 ||karfan.is/wp-content/uploads/*-vefbor%C3%B0i-$image
 ||leikjaland.is/*/bannerstopright/$image
 ||leikjaland.is/images/*logo.png|
+||digi.no/api/$xhr
+@@.no/api/tekjobb|$xhr
+||tu.no/api/$xhr
 ||magasinetreiselyst.no/wp-content/*_annonse*promo$image
 ||media.sonymusic.no/marketing/*.html$frame,3p
 ||melkoghonning.no/wp-content/uploads/*_980x300px.jpg^
