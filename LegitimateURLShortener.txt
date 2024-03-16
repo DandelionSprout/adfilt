@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 15March2024v1
+! Version: 16March2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -661,10 +661,10 @@ $removeparam=impradname
 $removeparam=cm_type
 
 ! https://www.roku.com/products/roku-ultra?Ref=CJ
-$doc,removeparam=/^ref=cj$/i
+Ref=CJ$doc,removeparam=ref
 
 ! https://newyorkcomedyclub.com/?ref=awin
-$doc,removeparam=/^ref=awin$/
+ref=awin$doc,removeparam=ref
 
 ! https://untilgone.com/products/usps-forever-stamps-2018-or-2019-u-s-flag-100-pack.html?source=pepperjam
 $doc,removeparam=/^source=pepperjam$/
@@ -898,8 +898,8 @@ $removeparam=_vsrefdom
 
 ! https://github.com/ClearURLs/Addon/issues/108
 $removeparam=ceneo_spo
-$doc,removeparam=/^from=ceneo$/
-$doc,removeparam=/^ref=ceneo$/
+from=ceneo$doc,removeparam=from
+ref=ceneo$doc,removeparam=ref
 
 ! https://www.drip.com/learn/docs/manual/email-builder/suppress-__s-from-rendered-links
 $removeparam=__s,doc
@@ -992,7 +992,7 @@ $doc,removeparam=/^network=webgains$/i
 
 ! https://www.ssense.com/en-gb/women/product/balenciaga/blue-shopping-phone-holder-bag/6754521?clickref=1100liwW6M5R&ref=kelkoogb
 ! https://www.peterhahn.dk/peter-hahn-buks-i-100-bomuld-sort-265728.html?campaign=Preissuchmaschinen/kelkoo (DK)/265728/265728360&ref=kelkoodk
-$doc,removeparam=/^ref=kelkoo/
+ref=kelkoo$doc,removeparam=ref
 
 ! https://www.myprotein.es/sports-accessories/brazalete-smartphone-gym-essentials-negro/12591033.html?kk=a4c6368-17cd7f25ed7-10120a&affil=thgppc&from=kelkooes
 ! https://www.overly.it/tv-led/21225-nikkei-ni24hd6c-tvc-24-hd-sat-8022625024065.html?kk=a4c6361-17d0fd13439-d1022&from=kelkoo
@@ -1269,10 +1269,10 @@ $doc,removeparam=/^from=rss$/
 $doc,removeparam=/^source=rss$/
 
 ! https://www.smh.com.au/world/europe/i-really-want-to-be-free-dubai-ruler-s-ex-wife-awarded-1b-to-settle-uk-custody-case-20211221-p59jf7.html?ref=rss
-$doc,removeparam=/^ref=rss$/
+ref=rss$doc,removeparam=ref
 
 ! https://slate.com/culture/2022/01/the-beach-boys-brian-wilson-documentary-genius-pet-sounds.html?via=rss
-$doc,removeparam=/^via=rss$/
+via=rss$doc,removeparam=via
 
 ! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/1095
 $removeparam=mindbox-click-id
@@ -1296,7 +1296,7 @@ $removeparam=affiliateCode
 $removeparam=affcode
 
 ! https://www.ericdress.com/?ref=admitad&tagtag_uid=a2338650fc306f56899654dc88324895
-$doc,removeparam=/^ref=admitad$/
+ref=admitad$doc,removeparam=ref
 
 ! https://www.sunsky-online.com/v/1645470?source=admitad&tagtag_uid=53cd7d068fc6c1e124bf697e785d3d6f
 $doc,removeparam=/^source=admitad$/
@@ -1363,10 +1363,10 @@ $removeparam=vgo_ee
 $removeparam=rpcid
 
 ! https://www.spelbutiken.se/produkt/oculus-quest-2-128gb/238WU6/?ref=prisjakt
-$doc,removeparam=/^ref=prisjakt/i
+ref=prisjakt$doc,removeparam=ref
 
 ! https://www.onbuy.com/gb/sony-wh-1000xm4-wireless-noise-canceling-over-ear-headphones-blue~c3241~p48721262/?ref=pricespy
-$doc,removeparam=/^ref=pricespy/i
+ref=pricespy$doc,removeparam=ref
 
 ! https://www.printerinks.com/16936/2p-n-014/inkjet-cartridges/canon/canon-pg-540xl_cl-541xl-original-high-capacity-ink-cartridge-multipack/?pgid=8449ff20-72de-4233-b817-37a1f4bcda5f&amp;utm_medium=awin&amp;utm_source=cse
 $doc,removeparam=/^amp;utm_/
@@ -1471,8 +1471,8 @@ $removeparam=relatedposts_position
 
 ! https://itsfoss.com/linux-gaming-guide/?ref=news.itsfoss.com
 ! https://www.raspberrypi.org/documentation/usage/kodi/?ref=itsfoss.com
-$doc,removeparam=/^ref=itsfoss.com$/
-$doc,removeparam=/^ref=news.itsfoss.com$/
+ref=itsfoss.com$doc,removeparam=ref
+ref=news.itsfoss.com$doc,removeparam=ref
 
 ! https://borsen.dk/nyheder/udland/smaa-skridt-mod-svensk-medlemskab-af-nato?b_source=borsen&b_medium=row_3&b_campaign=news_2
 $removeparam=b_source
@@ -4137,7 +4137,7 @@ $doc,removeparam=waporef
 $removeparam=sdsrc,doc
 
 ! https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs?ref=troyhunt.com
-$removeparam=/^ref=troyhunt\.com/
+ref=troyhunt.com$doc,removeparam=ref
 
 ! https://www.shrunken.com/index.php?shortUrlDomain=7.ly
 ||shrunken.com^$doc,removeparam=shortUrlDomain
@@ -4226,7 +4226,7 @@ $doc,removeparam=wp_source,domain=ac24.cz|ambcrypto.com|glispa.com|whitepages.co
 ||businessinsider.com^$removeparam=op,doc
 
 ! https://blog.torproject.org/mission-improbable-hardening-android-security-and-privacy/?ref=spreadprivacy.com
-$removeparam=/^ref=spreadprivacy.com$/
+ref=spreadprivacy.com$removeparam=ref
 
 ! https://www.browserstack.com/?ref=caniuse-source&caniuse_source=brand-asset
 $removeparam=caniuse_source,doc
@@ -4335,10 +4335,10 @@ $removeparam=dyn,domain=clink2.com|dlink2.com,doc
 ||adguard.info^$removeparam=nc
 
 ! https://malwaretips.com/blogs/fanjestic-com-a-dubious-free-trial-offer-explained/?ref=404media.co
-ref=404media.co$doc,removeparam=/^ref=404media.co$/
+ref=404media.co$doc,removeparam=ref
 
 ! https://generated.photos/human-generator/?ref=easywithai
-ref=easywithai$doc,removeparam=/^ref=easywithai$/
+ref=easywithai$doc,removeparam=ref
 
 ! masterkia: https://slack.com/downloads/linux?t=[Slack channel ID]
 ||slack.com/downloads/$doc,removeparam=t
@@ -4417,7 +4417,7 @@ $doc,removeparam=wt_mc
 $doc,removeparam=wt_zmc
 
 ! https://www.wired.com/story/the-best-chrome-extensions-to-prevent-creepy-web-tracking/?ref=exploit.media
-ref=exploit.media$doc,removeparam=/^ref=exploit.media$/
+ref=exploit.media$doc,removeparam=ref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-7469206
 $doc,removeparam=bpli,domain=blogger.com
@@ -4426,7 +4426,7 @@ $doc,removeparam=bpli,domain=blogger.com
 $doc,removeparam=st,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 
 ! https://vimeo.com/17401157?ref=beep.blog
-ref=beep.blog$doc,removeparam=/^ref=beep.blog$/
+ref=beep.blog$doc,removeparam=ref
 
 ! https://en.tempo.co/read/1190449/prabowo-not-against-globalization-gerindra?tracking_page_direct
 ||tempo.co^$doc,removeparam=tracking_page_direct
@@ -4451,13 +4451,13 @@ ref=beep.blog$doc,removeparam=/^ref=beep.blog$/
 ||cimri.com^$doc,removeparam=hasFavorite
 
 ! https://github.com/AsuharietYgvar/AppleNeuralHash2ONNX/issues/1?ref=blog.roboflow.com
-ref=blog.roboflow.com$doc,removeparam=/^ref=blog.roboflow.com$/
+ref=blog.roboflow.com$doc,removeparam=ref
 
 ! https://gitlab.com/search?nav_source=navbar&search=blocklist
 ||gitlab.com^$doc,removeparam=nav_source
 
 ! https://futureparty.com/spotlight/?ref=buffer.com
-ref=buffer.com$doc,removeparam=/^ref=buffer.com$/
+ref=buffer.com$doc,removeparam=ref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-7715888
 ||bybit.com^$doc,removeparam=/^sa_utm_/i
@@ -4488,7 +4488,7 @@ $doc,removeparam=af_reengagement_window
 ||affiliate.insider.com^$doc,removeparam=postSlug
 
 ! https://translate.wordpress.com/languages/nb/default/-all-waiting?ref=weekly-email (22/12/2023)
-||wordpress.com^$removeparam=/^ref=[a-z-]{5,}$/
+||wordpress.com^$doc,removeparam=/^ref=[a-z-]{5,}$/
 
 ! https://www.avito.ru/azov/tovary_dlya_detey_i_igrushki/my_little_pony_pinki_pay_2041239389?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFJKNSgzqsopTDfNMcm0rDAtzirMt8gwLqtKMyvNNimvULKuBQQAAP__rPiLMTUAAAA (26/12/2023)
 $removeparam=context,domain=avito.ru|avito.ma
@@ -4581,10 +4581,10 @@ $removeparam=cgkit_search_word
 ||shop.samsung.com^$doc,removeparam=hmz_lid
 
 ! https://labs.watchtowr.com/are-we-now-part-of-ivanti/
-ref=labs.watchtowr.com$doc,removeparam=/^ref=labs.watchtowr.com$/
+ref=labs.watchtowr.com$doc,removeparam=ref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8455734
-ref=upstract.com$doc,removeparam=/^ref=upstract.com$/
+ref=upstract.com$doc,removeparam=ref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8463132
 ||koreaherald.com^$doc,removeparam=ACE_SEARCH
@@ -4622,7 +4622,7 @@ $doc,removeparam=vsm_pid
 $doc,removeparam=pk_cid
 
 ! https://www.zetter-zeroday.com/nevada-ag-asks-court-to-ban-meta-from-providing-end-to-end-encryption-to-minors/ -> https://www.wired.com/2016/02/apples-fbi-battle-is-complicated-heres-whats-really-going-on/?ref=zetter-zeroday.com
-ref=zetter-zeroday.com$doc,removeparam=/^ref=zetter-zeroday.com$/
+ref=zetter-zeroday.com$doc,removeparam=ref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8721233
 ||qzone.qq.com^$doc,removeparam=loginfrom
@@ -4651,10 +4651,10 @@ ref=zetter-zeroday.com$doc,removeparam=/^ref=zetter-zeroday.com$/
 $doc,removeparam=Tcsack
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8785529
-ref=awesometechstack.com$doc,removeparam=/^ref=awesometechstack.com$/
+ref=awesometechstack.com$doc,removeparam=ref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8785568
-ref=gtg.benabraham.net$doc,removeparam=/^ref=gtg.benabraham.net$/
+ref=gtg.benabraham.net$doc,removeparam=ref
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
