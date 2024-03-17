@@ -1,7 +1,7 @@
-[Adblock Plus 3.4]
+[Adblock Plus 3.12]
 ! Title: 🎬 Stop Autoplay On Video Sites
 ! Expires: 7 days
-! Version: 03July2022v1
+! Version: 17March2024v1
 ! Description: Are you tired of having to turn off autoplay on YouTube, Vimeo, and other video sites every time you e.g. go to incognito mode? Do you work in classrooms/courserooms and don't want to accidentally show unfitting videos to your students/coursetakers? Are you worried of having to use specific extensions just for that purpose? Then this list is for you.
 ! Special thanks to https://github.com/llacb47 for waterproofing large parts of this list.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -10,10 +10,10 @@
 
 ! ——— YouTube ———
 ! Note: Video suggestions after the video is finished, will not be shown.
-/endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
-youtube.com###head.ytd-compact-autoplay-renderer
-youtube.com##.checkbox-on-off
-youtube.com##.watch-sidebar-head
+/endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com|35.190.94.206
+youtube.com,35.190.94.206###head.ytd-compact-autoplay-renderer
+youtube.com,35.190.94.206##.checkbox-on-off
+youtube.com,35.190.94.206##.watch-sidebar-head
 m.youtube.com##.ytm-autonav-bar
 !#if !ext_ublock
 /endscreen.js$app=com.google.android.youtube|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
@@ -46,10 +46,9 @@ vimeo.com#%#AG_setConstant('vimeo.clip_page_config.continuous_play_enabled', 'fa
 ||ixigua.com/api/feedv2^
 
 ! ——— Help wanted for: ———
-! Dailymotion (Bounty: 15€)
+! Dailymotion
 ! Sites using JW Player (e.g. Mediaite)
 ! Gfycat
-! YouTube channel trailers (https://github.com/DandelionSprout/adfilt/issues/69 is open for help and comments on it.)
 ! YouTube Kids
 
 !#include uBO%20list%20extensions/StopAutoplayOnYouTube-uBOExtension.txt
