@@ -1,7 +1,7 @@
-! Checksum: u8JFP3HNhlQO510aS5Lgaw
-! Version: 202403100521
+! Checksum: Qf6vcZjIaRAWeQYPks/flQ
+! Version: 202403201151
 ! Title: Fanboy's Notifications Blocking List - Loadable in uBO+AdGuard
-! Last modified: 10 Mar 2024 05:21 UTC
+! Last modified: 20 Mar 2024 11:51 UTC
 ! Expires: 1 days (update frequency)
 ! License: https://creativecommons.org/licenses/by/3.0/
 ! Please report any unblocked content or problems by email or in our forums
@@ -442,6 +442,7 @@ _revotas_push.
 ||news2day.me^$third-party
 ||notification-time.com^$third-party
 ||notification.tubecup.net^
+||notifications.ltd^$third-party
 ||notix.io^$third-party
 ||ntvsw.com^$third-party
 ||partishion.com^$third-party
@@ -696,6 +697,7 @@ startpage.com##.a-gl-tp__gcsa
 nzherald.co.nz##.action-bar
 informationweek.com##.announcement
 tmz.com##.browser-notifications-prompt
+romaniajournal.ro##.bs-push-noti
 smocca.jp##.c-box-app_banner
 cnet.com##.c-globalNotification
 techwalla.com##.component-push-notification
@@ -725,6 +727,7 @@ gptoday.net##.webpush_popup
 waze.com##.wz-downloadbar
 reddit.com##.xPromoAppStoreFooter
 chrome.google.com##[role="banner"] > div[class][role="dialog"][aria-labelledby="promo-header"]
+wallapop.com##div[class^="app-smart-banner_"]
 !! International
 segre.com###body_modal_5bNRsFSmILUgICbhc8pp
 diarimes.com###body_modal_mLuzd6bcGWwnVCvfwvBU
@@ -865,7 +868,7 @@ skysports.com##.android-banner
 filmix.ac##.android-telegram-main
 coincodex.com##.app
 washingtonpost.com##.app-adoption-banner
-m.calciomercato.com,mygwork.com,similarweb.com,spooncast.net,substack.com,whosampled.com##.app-banner
+m.calciomercato.com,mygwork.com,prioritypass.com,similarweb.com,spooncast.net,substack.com,whosampled.com##.app-banner
 mygwork.com##.app-banner--overlay
 republika.rs##.app-box
 financialexpress.com,indianexpress.com##.app-btn
@@ -894,6 +897,7 @@ qatarairways.com##.appstore
 ny1.com##.article-app-prompt
 msn.com##.articlePage_continueReadingButtonPrimary-DS-EntryPoint1-1
 nltimes.nl##.ath-phone
+bing.com##.b_bnp_bopc
 castbox.fm##.banner
 gibiru.com##.banner-button
 animeanime.global##.banner-click-app
@@ -952,6 +956,7 @@ myanimelist.net##.footer-app
 pink.rs##.footer-apps
 news24.com##.footer__app-links
 thepinknews.com##.footer__top-bar
+uniqlo.com##.fr-ec-cms-smart-banner
 ebay.at,ebay.co.uk,ebay.com,ebay.com.au,ebay.de,ebay.es,ebay.fr,ebay.it,ebay.nl,ebay.pl##.gadget-banner-wrapper
 goobike.com##.gb_appbnrs
 boredpanda.com,citizen.com,coincodex.com##.get-app
@@ -1058,7 +1063,7 @@ sportskeeda.com##.sidebar-app-download
 glas-javnosti.rs##.skini
 crypto.com,zacks.com##.smart-banner
 minne.com##.smartAppBanner
-forfun.com,imgur.com,kaltura.com,sowetanlive.co.za,turkishairlines.com##.smartbanner
+forfun.com,imgur.com,kaltura.com,sowetanlive.co.za,turkishairlines.com,yazio.com##.smartbanner
 cnnindonesia.com##.smartbanner_new
 whosampled.com##.spSlot
 amazon.com##.sparkle-container
@@ -1340,6 +1345,9 @@ miravia.es##html:style(--g-header-top-pos: 0vw !important;)
 ! instacart.com
 instacart.com###native-app-upsell-interstitial
 instacart.com##body:style(height: auto !important; overflow: auto !important)
+! crealitycloud.com
+crealitycloud.com##+js(set-local-storage-item, permission_open_push, 1)
+crealitycloud.com##+js(set-local-storage-item, closeGuideRegisterTime, 1)
 ! emailnator.com
 emailnator.com##.modal
 emailnator.com##.modal-backdrop
@@ -1369,3 +1377,5 @@ mydramalist.com##+js(rc, smartbanner-active, body)
 smocca.jp##+js(set, history.state, undefined)
 ! patreon.com (mobile)
 patreon.com##+js(aeld, touchmove, preventDefault)
+! onedio.com https://github.com/uBlockOrigin/uAssets/issues/22914
+onedio.com##+js(set-cookie, o-push-alert, 1)
