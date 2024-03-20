@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
-! Version: 10March2024v2-Alpha
+! Version: 18March2024v1-Alpha
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -14,11 +14,6 @@
 startsiden.no widgets.sprinklecontent.com * block
 musikknyheter.no widgets.sprinklecontent.com * block
 klikk.no widgets.sprinklecontent.com * block
-! 🇳🇴: Generelle #-oppføringer med kilder
-! 🇬🇧: Generic #-entries that have sources
-! Exceptions: ballade.no
-! Bet365 widget triggered for Norwegian audiences only
-! Various now-dead Frettabladid subdomains
 ! 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧: Broad or whole-domain blocking rules
 third-party adnordics.com * block
@@ -57,22 +52,32 @@ third-party admob.no * block
 third-party admob.dk * block
 third-party gcp.passendo.com * block
 third-party psscdn.com * block
-! 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
-! 🇬🇧: Fileserver or site-specific blocking rules
+! 🇳🇴: Domenefokuserte blokkeringsoppføringer
+! 🇬🇧: Domain-speficic blocking-entries
 eniro.no akamai.net script block
 eniro.dk akamai.net script block
-diskusjon.no export.prisguide.no * block
-diskusjon.no export.prisguiden.no * block
-bt.no finn.no frame block
-118.dk track.adform.net * block
 discoveryplus.no akamaihd.net other block
 discoveryplus.dk akamaihd.net other block
 discoveryplus.no dnitv.com other block
 discoveryplus.dk dnitv.com other block
+diskusjon.no export.prisguide.no * block
+diskusjon.no export.prisguiden.no * block
+bt.no finn.no frame block
 ||rett24.no^*bannerizor.js
-! 🇬🇧: Fileserver or site-specific blocking rules with special conditions
-vgtv.no adnxs.com * block
+118.dk track.adform.net * block
 ! 🇬🇧: Fileserver or site-specific blocking rules with sources
+! 🇳🇴: Generelle oppføringer med kilder
+! 🇬🇧: Generic entries that have sources
+! Exceptions: ballade.no
+! Bet365 widget triggered for Norwegian audiences only
+! Various now-dead Frettabladid subdomains
+! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/58527)
+* 85.17.76.181 image block
+* via.placeholder.com image block
+! Various now-dead Frettabladid subdomains from 2020
+! 🇳🇴: Oppføringer med spesielle omstendigheter
+! 🇬🇧: Entries with special circumstances
+vgtv.no adnxs.com * block
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Hovudsakleg for AdGuard
 ! 🇮🇸: Aðallega fyrir AdGuard
@@ -83,18 +88,6 @@ in-addr.arpa 45.58.146.154 * allow
 in-addr.arpa 82.196.13.38 * allow
 in-addr.arpa 82.221.81.9 * allow
 in-addr.arpa 178.79.136.45 * allow
-! 🇳🇴: Oppføringer med spesielle omstendigheter
-! 🇬🇧: Entries with special circumstances
-! 🇳🇴: Blokkeringsoppføringer
-! 🇬🇧: Blocking-entries
-! 🇳🇴: Oppføringer for minst 3 nettsteder
-! 🇬🇧: Entries for at least 3 websites
-! 🇳🇴: Generelle oppføringer med kilder
-! 🇬🇧: Generic entries that have sources
-! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/58527)
-* 85.17.76.181 image block
-* via.placeholder.com image block
-! Various now-dead Frettabladid subdomains from 2020
 ! Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt, which has not been the case.
 ! Posten's new parcel tracker, fixes the form for giving them delivery information (doorbell name/number)
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.

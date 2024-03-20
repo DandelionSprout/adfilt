@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 10March2024v2-Deprecated
+# Version: 18March2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -12,71 +12,11 @@ msFilterList
 # Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.
 # Wish to help translate more category titles to Nordic languages 🇩🇰 🇮🇸 🇳🇴🏞 🇫🇴 🇬🇱 ❄? https://crowdin.com/project/dandelion-sprout-nordic-filter
 # If you wish to remove cookie banners from Nordic websites, check out https://filters.adtidy.org/windows/filters/18.txt
-# 🇳🇴 🇩🇰: ——— Reklamer ———
-# 🇳🇴🏞: ——— Reklamar ———
-# 🇮🇸: ——— Auglýsingar ———
-# 🇫🇴: ——— Lýsingar ———
-# 🇬🇱: ——— Pilerisaarniarlugit ———
-# ❄: ——— Reklámaid ———
-# ❄🌳: ——— Reklaameidie ———
-# 🇬🇧: ——— Advertisements ———
 # — — — — — — — — —
 # 🇳🇴: Oppføringer for minst 3 nettsteder
 # 🇬🇧: Entries for at least 3 websites
 - images banners
 -d widgets.sprinklecontent.com
-# — — — — — — — — —
-# 🇳🇴: Generelle #-oppføringer med kilder
-# 🇬🇧: Generic #-entries that have sources
-# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
-# Exceptions: ballade.no
-# https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
-# arendalstidende.no
-# https://www.langrenn.com/cppage.6250314-1743.html
-# bobilverden.no
-# norskenettsider.no, sva.no
-# https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
-# tv2.no
-# https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
-# https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
-# portal.fo (09 05 2020)
-# jyllands-posten.dk
-# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews.dk
-# retailnews.dk (11 09 2020)
-# n247.no
-# healthtalk.no
-# appetitt.no
-# ekstrabladet.dk
-# nab.no (Only shown if cookies are accepted; 18 08 2020)
-# Bet365 widget triggered for Norwegian audiences only
-# borsen.no (08 10 2020)
-# https://www.nettavisen.no/3424050834.html/(24/11/2020)
-# reavisa.no (06 12 2020)
-# ytresogn.no (16 12 2020)
-# nettavisen.no (25 12 2020)
-# ao.no (28 12 2020)
-# keldan.is (05 01 2021)
-# madridista.dk (21 04 2021)
-- banners casinotop
-# gnavergalleri.dk (along with ~60 affiliates sites)
-# https://github.com/DandelionSprout/adfilt/issues/233
-# sol.dk (25 04 2021)
-# bilgalleri.dk (25 04 2021)
-# forum.ipmsnorge.org (24 05 2021)
-# tipsbladet.dk (15 06 2021)
-# sol.no (22 09 2021)
-# vesterbroliv.dk, vafo.dk, amagerliv.dk
-# https://github.com/uBlockOrigin/uAssets/issues/13224
-# rett24.no (13 06 2022)
-# metalsupply.no, licitationen.dk (08 03 2023)
-# https://www.licitationen.dk/article/view/900259/efter_entreprenors_konkurs_river_106_ufaerdige_huse_ned_i_hojetaastrup/(08/03/2023)
-# maskinregisteret.no (08 03 2023)
-# eikernytt.no (18 05 2023)
-# Various now-dead Frettabladid subdomains
-# migogkbh.dk (22 06 2023)
-# digitalt.tv (08 09 2023)
-# h-avis.no (11 12 2023)
-# skessuhorn.is (29 12 2023)
 # — — — — — — —
 # 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧: Broad or whole-domain blocking rules
@@ -212,65 +152,175 @@ msFilterList
 # https://www.minmote.no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8408727
 -d tize.no
-# — — — — — — —
-# 🇳🇴: Blokkeringsoppføringer for filtjenere eller enkeltnettsteder
-# 🇬🇧: Fileserver or site-specific blocking rules
+# — — — — —
+# 🇳🇴: Domenefokuserte blokkeringsoppføringer
+# 🇬🇧: Domain-speficic blocking-entries
+- gifs *emty.gif
+- -banner_
+- -bazaar-
+- -l%C3%BDsing-
+- 930x180_*.gif
+- _bm abd
+- Bannere
+- banners
+- bazaar
+- bilder erotikk1.jpg
+- entag.js
+- js smartbanner
+- liveodds-button_nordicbet
+- mediaxpress ad
+- nordicbet_logo
+- partners *_ad_icon
+- resources dfp
+- tv2ads.js
+- wp-content banners
+- wp-content uploads *.gif
+- wp-content uploads *bruktbilann*.jpg
+- wp-content uploads *casino
+- _300x250px-*.gif
+- _300x500pix
+- _930x180pix
 - contentMarketing
 - blob:https://www.veier24.no/
 -d 1819.is infosmall
+-d 730.no sonymusic
+-d aa-cdn.mytaste.org ad.js
 -d acdn.adnxs.com ast.js
 -d acdn.adnxs.com ast.js
 -d akamai.net
+-d akamaihd.net
 -d amino.dk 240x140-forside-hardcoded*.jpg
+-d annoncelight.dk banner
+-d appetitt.no *_1150x350*.jpg
+-d appetitt.no *_Bannere_
+-d appetitt.no *_widescreen_1920x1080_*.jpg
+-d appetitt.no 1150*
+-d appetitt.no 320x640-*.png
+-d appetitt.no Annis.jpg
+-d appetitt.no Topp-banner-*.jpg
 -d arendalstidende.no *_490px.jpg
 -d austevollforlag.no yachtmarine2014.
 -d austurfrett.is *augl.jpg
+-d ballade.no *Uke*_Sky
 -d banner.landbrugsavisen.dk reklame.aspx
 -d biip.no *320x250.jpg
+-d bilbasen.dk GetVipFinanceBanner
 -d bobilverden.no Banner-1200x300px.jpg
 -d bornholm.nu banner
+-d canariposten.no 300x1500*
 -d cdn.rikstoto.no GameShop
+-d check-in.dk *_930x180.gif
+-d cms.sona.fo ads
+-d danishfamilysearch.dk xp2
 -d deals.innocode.no api
+-d detailersclub.no *_banner.
+-d digi.no api
+-d dnitv.com
 -d dust2.dk banners
+-d erotikmix.dk mixads300.html
+-d escort46.dk bg_images
 -d export.prisguide.no
 -d export.prisguiden.no
 -d eyjar.net ads
+-d fcbarcelona.dk footerbg.jpg
+-d fcbarcelona.dk bcn_*.gif
 -d feltet.dk topbanner_*.jpg
 -d feltet.dk wallpaper_1.jpg
 -d feltet.dk *_300x60.gif
 -d footy.dk Sk%C3%A6rmbillede-*.png
-- wp-content uploads *.gif
+-d forum.flyprat.no Header
+-d frilansinfo.no *-annonse.jpg
+-d gamer.no ?module=Tumedia\DFProxy\Modules
+-d gaysir.no rek
+-d gulindex.no spring.js
+-d healthtalkweb.s3.amazonaws.com *_560x210.
 -d hnytt.no Fluffy.jpg
+-d i0.wp.com 180x500.png
+-d img.sofabold.dk banner
+-d indblik.net angwp
+-d isolor.no *-toppbanner-
+-d isolor.no *_480x150px.jpg
 -d karfan.is *-470x130*.jpg
 -d karfan.is *300x250.jpg
 -d karfan.is *-vefbor%C3%B0i-
+-d ksu247.no *-300x64.jpg
+-d ksu247.no banner-*.jpg
+-d ksu247.no BP-logo-*.png
+-d ksu247.no Bunnpris2.jpg
 -d leikjaland.is bannerstopright
 -d leikjaland.is *logo.png
--d digi.no api
--d tu.no api
+-d levmeddiabetes.no Accu-
 -d magasinetreiselyst.no *_annonse*promo
+-d malviknytt.no ani*-*.gif
+-d malviknytt.no *-998x1024.jpeg
+-d malviknytt.no *-firkant-*e1*.
+-d mc-avisa.no Banner-*.jpg
 -d media.sonymusic.no *.html
 -d melkoghonning.no *_980x300px.jpg
 -d melkoghonning.no *_Banner_
+-d mmm.dk safeframe
 -d n247.no salg
+-d ni.dk *banner
+-d nocc.no System_Promoteringssaker
 -d nordlysid.fo lysing
 -d norskenettsider.no ageras-banner.jpg
 -d norskenettsider.no remember-banner-2016.jpg
 -d nvnytt.no *annonse-
+-d nyteknikk.no 180x
+-d nyteknikk.no x150
+-d oppdrettstorget.no cms
 -d oyggjatidindi.com *L%C3%BDsing
+-d r7.fo lysing
+-d radiohallingdal.no abanners
+-d radiorana.no *-300x300.jpg
+-d radiorana.no Meyership.jpg
+-d radiorana.no Telemix2.jpg
+-d reavisa.blob.core.windows.net *-annonse-
+-d reavisa.blob.core.windows.net *-NET.jpg
+-d reavisa.blob.core.windows.net *-NETT.jpg
+-d reavisa.blob.core.windows.net *_300x100
+-d reavisa.blob.core.windows.net *_annonse_
+-d reavisa.blob.core.windows.net *_NETT.jpg
+-d reavisa.blob.core.windows.net *visittkort
+-d reiseliv.no *-Annons%C3%B8rinnhold-*-Aksjer-*.
 -d rett24.no inline
+-d rett24.no*bannerizor.js
+-d ridr.dk partners
+-d s3-eu-west-1.amazonaws.com *-980x500-
+-d s3-eu-west-1.amazonaws.com *-annonse-*.gif
+-d s3-eu-west-1.amazonaws.com *-toppannonse-
+-d s3-eu-west-1.amazonaws.com *.-jpg.jpg
+-d s3-eu-west-1.amazonaws.com *.jpeg.jpg
+-d s3-eu-west-1.amazonaws.com *nettannonse-
+-d s3-eu-west-1.amazonaws.com nordbohus.gif
 -d saernieh.no j%C3%B8rn-jensen.jpg
+-d seksualitet24.no sinful_
+-d semegleren.com video
+-d skagensavis.dk annonceblok_baggrund.jpg
+-d skagensavis.dk skagennet
+-d smakmagasinet.no 170x500-
+-d smakmagasinet.no 970x250-
+-d spaniaidag.no Alltihus.jpg
+-d spaniaidag.no Ceru-Design-Web-*.jpg
+-d spaniaidag.no Kolstad-Gif-SI.gif
+-d spanienidag.es patrocinadores
+-d ssl.p.jwpcdn.com freewheel.js
+-d ssl.p.jwpcdn.com jwpsrv.js
+-d ssl.p.jwpcdn.com sharing.js
+-d ssl.p.jwpcdn.com vast.js
+-d static.finncdn.no FINNExternalDistribution.js
 -d storfjordnytt.no *.jpg
 -d storfjordnytt.no 26_hh.png
 -d storfjordnytt.no *_bilsenter.jpg
 -d storfjordnytt.no *_hovleriet.jpg
 -d storfjordnytt.no *_muri.jpg
--d ssl.p.jwpcdn.com freewheel.js
--d ssl.p.jwpcdn.com jwpsrv.js
--d ssl.p.jwpcdn.com sharing.js
--d ssl.p.jwpcdn.com vast.js
--d track.adform.net
+-d stream.fo *-300x111.jpg
+-d teknologiskmatforum.no ViewImage.aspx?*width=343
+-d thaiguiden.no tg-980.html
+-d thainytt.no *-160.jpg
+-d thainytt.no 160_*
 -d track.adform.net Banners
+-d track.adform.net
 -d travservice.dk wp-content
 -d trolli.is banner
 -d trolli.is benecta.png
@@ -280,148 +330,44 @@ msFilterList
 -d trolli.is videoval_logo
 -d trolli.is *logo-*.png
 -d trolli.is Untitled-1-1.jpg
+-d tu.no api
 -d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
+-d tv-kalundborg.dk banner
+-d tv2.no sponsor
 -d tvkampen.com banner*
 -d tvkampen.com unibet-lo
 -d utrop.no Banner_utrop
 -d utrop.no utrop.no_-1.jpg
--d viasport-assets.mtg-api.com comScore-*.js
--d vikari.is frjalsi-lif*.png
--d xn--bredbnd-ixa.dk velkommen_banner
--d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
-- Bannere
-- bazaar
-- bilder erotikk1.jpg
-- entag.js
-- js smartbanner
-- liveodds-button_nordicbet
-- nordicbet_logo
-- partners *_ad_icon
-- wp-content banners
-- _bm abd
-- -bazaar-
-- resources dfp
-- tv2ads.js
--d i0.wp.com 180x500.png
-- banners
--d ballade.no *Uke*_Sky
--d teknologiskmatforum.no ViewImage.aspx?*width=343
--d healthtalkweb.s3.amazonaws.com *_560x210.
--d gamer.no ?module=Tumedia\DFProxy\Modules
--d oppdrettstorget.no cms
--d appetitt.no 320x640-*.png
--d appetitt.no Topp-banner-*.jpg
--d appetitt.no 1150*
--d appetitt.no *_widescreen_1920x1080_*.jpg
--d appetitt.no *_1150x350*.jpg
--d appetitt.no Annis.jpg
--d appetitt.no *_Bannere_
--d semegleren.com video
--d canariposten.no 300x1500*
--d stream.fo *-300x111.jpg
--d frilansinfo.no *-annonse.jpg
--d thaiguiden.no tg-980.html
--d thainytt.no 160_*
--d thainytt.no *-160.jpg
--d nyteknikk.no 180x
--d nyteknikk.no x150
--d malviknytt.no ani*-*.gif
--d malviknytt.no *-998x1024.jpeg
--d malviknytt.no *-firkant-*e1*.
--d reiseliv.no *-Annons%C3%B8rinnhold-*-Aksjer-*.
--d escort46.dk bg_images
--d forum.flyprat.no Header
-- _300x250px-*.gif
-- -banner_
--d fcbarcelona.dk bcn_*.gif
--d annoncelight.dk banner
-- 930x180_*.gif
--d veitingageirinn.is haus20g.jpg
 -d utvarpsaga.is *-bordi.jpg
 -d utvarpsaga.is *_banner.png
-- wp-content uploads *bruktbilann*.jpg
--d detailersclub.no *_banner.
--d reavisa.blob.core.windows.net *_NETT.jpg
--d reavisa.blob.core.windows.net *-NETT.jpg
--d reavisa.blob.core.windows.net *_300x100
--d reavisa.blob.core.windows.net *visittkort
--d reavisa.blob.core.windows.net *_annonse_
--d reavisa.blob.core.windows.net *-annonse-
--d reavisa.blob.core.windows.net *-NET.jpg
--d ytresogn.no *-Topbanner-
--d ytresogn.no *-nett.jpg
--d ytresogn.no *-1.jpg
--d ytresogn.no *-copy.jpg
--d ytresogn.no Fureli-nett-mobil.jpg
--d ytresogn.no 128829765_1713260288837784_946999945581640675_n.jpg
--d ytresogn.no Ytre_718_360_2.jpg
--d ytresogn.no default_file-1607345037.png
--d ytresogn.no Fj.-Varmepumpe.png
--d ytresogn.no image007.jpg
--d webforumet.no *-250x250.jpg
--d webforumet.no AD-*.jpg
--d vf.is geysir-dekkjaskipti.jpg
--d vf.is *2000x616.jpg
--d isolor.no *-toppbanner-
--d isolor.no *_480x150px.jpg
--d radiohallingdal.no abanners
--d ksu247.no Bunnpris2.jpg
--d ksu247.no banner-*.jpg
--d ksu247.no BP-logo-*.png
--d ksu247.no *-300x64.jpg
--d radiorana.no *-300x300.jpg
--d radiorana.no Meyership.jpg
--d radiorana.no Telemix2.jpg
-- _930x180pix
-- _300x500pix
--d spaniaidag.no Ceru-Design-Web-*.jpg
--d spaniaidag.no Kolstad-Gif-SI.gif
--d spaniaidag.no Alltihus.jpg
--d spanienidag.es patrocinadores
--d img.sofabold.dk banner
 -d vaktin.is grkuk
--d indblik.net angwp
--d akamaihd.net
--d dnitv.com
--d check-in.dk *_930x180.gif
--d xklub.dk bannercache
--d xklub.dk banner
-- wp-content uploads *casino
--d viralefilmer.no *slot-
--d ni.dk *banner
--d ridr.dk partners
--d cms.sona.fo ads
--d r7.fo lysing
--d nocc.no System_Promoteringssaker
--d s3-eu-west-1.amazonaws.com *-980x500-
--d s3-eu-west-1.amazonaws.com *-toppannonse-
--d s3-eu-west-1.amazonaws.com *nettannonse-
--d s3-eu-west-1.amazonaws.com *.jpeg.jpg
--d s3-eu-west-1.amazonaws.com *-annonse-*.gif
--d s3-eu-west-1.amazonaws.com *.-jpg.jpg
--d s3-eu-west-1.amazonaws.com nordbohus.gif
--d skagensavis.dk skagennet
--d skagensavis.dk annonceblok_baggrund.jpg
--d mc-avisa.no Banner-*.jpg
--d tv-kalundborg.dk banner
--d aa-cdn.mytaste.org ad.js
--d bilbasen.dk GetVipFinanceBanner
--d smakmagasinet.no 970x250-
--d smakmagasinet.no 170x500-
--d seksualitet24.no sinful_
+-d veitingageirinn.is haus20g.jpg
 -d verktoy24.no Banner-*px.jpg
 -d verktoy24.no *_300px-scaled.jpg
--d levmeddiabetes.no Accu-
--d tv2.no sponsor
--d rett24.no*bannerizor.js
--d static.finncdn.no FINNExternalDistribution.js
--d gaysir.no rek
-- mediaxpress ad
-# — — — — — — —
-# 🇬🇧: Fileserver or site-specific blocking rules with special conditions
-+d vgtv.no
--d adnxs.com
--d samimag.no Screenshot-2020-03-21-at-12.40.32.png
+-d vf.is *2000x616.jpg
+-d vf.is geysir-dekkjaskipti.jpg
+-d viasport-assets.mtg-api.com comScore-*.js
+-d vikari.is frjalsi-lif*.png
+-d viralefilmer.no *slot-
+-d webforumet.no AD-*.jpg
+-d webforumet.no *-250x250.jpg
+-d www-presse-fotos-dk.filesusr.com
+-d xklub.dk bannercache
+-d xklub.dk banner
+-d xn--bredbnd-ixa.dk velkommen_banner
+-d youtube.com *&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1
+-d yrkesbil.no 1pix.gif
+-d ytresogn.no index.html
+-d ytresogn.no *-copy.jpg
+-d ytresogn.no *-Topbanner-
+-d ytresogn.no *-1.jpg
+-d ytresogn.no *-nett.jpg
+-d ytresogn.no 128829765_1713260288837784_946999945581640675_n.jpg
+-d ytresogn.no default_file-1607345037.png
+-d ytresogn.no Fj.-Varmepumpe.png
+-d ytresogn.no Fureli-nett-mobil.jpg
+-d ytresogn.no image007.jpg
+-d ytresogn.no Ytre_718_360_2.jpg
 # — — — — — — —
 # 🇬🇧: Fileserver or site-specific blocking rules with sources
 # bilasolur.is (03 05 2020)
@@ -444,57 +390,58 @@ msFilterList
 -d freewheel-mtgx-tv.akamaized.net
 # https://github.com/DandelionSprout/adfilt/issues/968
 # https://github.com/DandelionSprout/adfilt/issues/983
-# — — — — — — — — —
-# 🇳🇴: Hovedsaklig for AdGuard
-# 🇳🇴🏞: Hovudsakleg for AdGuard
-# 🇮🇸: Aðallega fyrir AdGuard
-# 🇬🇧: Mostly for AdGuard
--d 3.248.18.175
--d 35.227.231.163
--d 45.58.146.154
--d 82.196.13.38
--d 82.221.81.9
--d 178.79.136.45
--d 5e529.v.fwmrm.net
--d ssl-dnnstream.tns-cs.net
--d discoverynordics.hb.omtrdc.net
--d widgets.sprinklecontent.com
-- tv2ads.js
-- -bazaar-
-- bazaar
-- resources dfp
-- contentMarketing
-# 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
-# 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
-# 🇳🇴🏞: ——— Tomme resteboksar som EasyList har slengd ifrå seg ———
-# 🇮🇸 🇫🇴: ——— Tóma afgangsrammar eftir EasyList ———
-# 🇬🇱: ——— Piunngitsut ungalusaqlut EasyList ———
-# ❄: ——— Gurrosat bovssaid bearrái EasyList ———
-# 🇬🇧: ——— Leftover empty spaces that EasyList have left behind ———
-# — — — — —
-# 🇳🇴: Oppføringer med spesielle omstendigheter
-# 🇬🇧: Entries with special circumstances
-# https://www.aftenposten.no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
-# — — — — —
-# 🇳🇴: Blokkeringsoppføringer
-# 🇬🇧: Blocking-entries
--d fcbarcelona.dk footerbg.jpg
--d 730.no sonymusic
--d danishfamilysearch.dk xp2
--d gulindex.no spring.js
--d mmm.dk safeframe
--d yrkesbil.no 1pix.gif
--d www-presse-fotos-dk.filesusr.com
--d ytresogn.no index.html
--d erotikmix.dk mixads300.html
-- gifs *emty.gif
-- -l%C3%BDsing-
-# — — — — —
-# 🇳🇴: Oppføringer for minst 3 nettsteder
-# 🇬🇧: Entries for at least 3 websites
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
+# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
+# Exceptions: ballade.no
+# https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
+# arendalstidende.no
+# https://www.langrenn.com/cppage.6250314-1743.html
+# bobilverden.no
+# norskenettsider.no, sva.no
+# https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
+# tv2.no
+# https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
+# https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
+# portal.fo (09 05 2020)
+# jyllands-posten.dk
+# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews.dk
+# retailnews.dk (11 09 2020)
+# n247.no
+# healthtalk.no
+# appetitt.no
+# ekstrabladet.dk
+# nab.no (Only shown if cookies are accepted; 18 08 2020)
+# Bet365 widget triggered for Norwegian audiences only
+# borsen.no (08 10 2020)
+# https://www.nettavisen.no/3424050834.html/(24/11/2020)
+# reavisa.no (06 12 2020)
+# ytresogn.no (16 12 2020)
+# nettavisen.no (25 12 2020)
+# ao.no (28 12 2020)
+# keldan.is (05 01 2021)
+# madridista.dk (21 04 2021)
+- banners casinotop
+# gnavergalleri.dk (along with ~60 affiliates sites)
+# https://github.com/DandelionSprout/adfilt/issues/233
+# sol.dk (25 04 2021)
+# bilgalleri.dk (25 04 2021)
+# forum.ipmsnorge.org (24 05 2021)
+# tipsbladet.dk (15 06 2021)
+# sol.no (22 09 2021)
+# vesterbroliv.dk, vafo.dk, amagerliv.dk
+# https://github.com/uBlockOrigin/uAssets/issues/13224
+# rett24.no (13 06 2022)
+# metalsupply.no, licitationen.dk (08 03 2023)
+# https://www.licitationen.dk/article/view/900259/efter_entreprenors_konkurs_river_106_ufaerdige_huse_ned_i_hojetaastrup/(08/03/2023)
+# maskinregisteret.no (08 03 2023)
+# eikernytt.no (18 05 2023)
+# Various now-dead Frettabladid subdomains
+# migogkbh.dk (22 06 2023)
+# digitalt.tv (08 09 2023)
+# h-avis.no (11 12 2023)
+# skessuhorn.is (29 12 2023)
 # sol.no
 # www.qxl.no
 # www.vtb.no
@@ -577,6 +524,33 @@ msFilterList
 # Various now-dead Frettabladid subdomains from 2020
 # https://www.aftenposten.no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter/(26/12 2023)
 # e24.no (Mid-December 2023)
+# — — — — — — —
+# 🇳🇴: Oppføringer med spesielle omstendigheter
+# 🇬🇧: Entries with special circumstances
++d vgtv.no
+-d adnxs.com
+-d samimag.no Screenshot-2020-03-21-at-12.40.32.png
+# https://www.aftenposten.no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
+# — — — — — — — — —
+# 🇳🇴: Hovedsaklig for AdGuard
+# 🇳🇴🏞: Hovudsakleg for AdGuard
+# 🇮🇸: Aðallega fyrir AdGuard
+# 🇬🇧: Mostly for AdGuard
+-d 3.248.18.175
+-d 35.227.231.163
+-d 45.58.146.154
+-d 82.196.13.38
+-d 82.221.81.9
+-d 178.79.136.45
+-d 5e529.v.fwmrm.net
+-d ssl-dnnstream.tns-cs.net
+-d discoverynordics.hb.omtrdc.net
+-d widgets.sprinklecontent.com
+- tv2ads.js
+- -bazaar-
+- bazaar
+- resources dfp
+- contentMarketing
 # 🇳🇴 🇩🇰: ——— Sporingsfiler ———
 # 🇳🇴🏞: ——— Sporingsfilar ———
 # ❄: ——— Guorrafiilaid ———

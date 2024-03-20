@@ -3993,6 +3993,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(# For more information.*)", 
+           r"\1\nIf you wish to remove cookie banners from Nordic websites, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt", 
+           line
+        )
+
         text += line + '\n'
 
     return text
