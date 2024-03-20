@@ -3269,7 +3269,7 @@ UNSUPPORTED_DNSMASQ = ['*', '# ']
 UNSUPPORTED_DOMAINSALLOWLIST = ['randomplaceholdertext']
 
 OUTPUT = 'xyzzyxdomains.txt'
-OUTPUT_HOSTS = 'AdawayHosts'
+OUTPUT_HOSTS = 'NordicHosts.txt'
 OUTPUT_LS = 'LittleSnitchNorwegianList.lsrules'
 OUTPUT_DNSMASQ = 'NordicFiltersDnsmasq.conf'
 OUTPUT_HOSTSDENY = 'NordicFiltersHostsDeny.deny'
@@ -3319,13 +3319,13 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            "📔 Dandelion Sprouts nordiske filtre \(Domenelisteversjonen\)", 
-           "Dandelion Sprouts nordiske filtre («hosts»-versjonen)", 
+           "Dandelion Sprouts nordiske filtre («hosts»-versjonen) (VIL BLI FLYTTET TIL https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicHosts.txt OMKRING 3. APRIL 2024)", 
            line
         )
 
         line = re.sub(
            "Dandelion Sprout's Nordic Filters \(The domains list version\)", 
-           "Dandelion Sprout's Nordic Filters (The «hosts» file version)", 
+           "Dandelion Sprout's Nordic Filters (The «hosts» file version) (WILL BE MOVED TO https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicHosts.txt IN EARLY APRIL 2024)", 
            line
         )
 
