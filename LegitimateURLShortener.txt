@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21March2024v1
+! Version: 21March2024v3
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2190,6 +2190,9 @@ $removeparam=gtm
 $removeparam=referral,domain=tv2.no|spotify.com|yubo.live
 ! https://open.spotify.com/album/7D2NdGvBHIavgLhmcwhluK?nd=1
 ||spotify.com^$removeparam=nd
+! https://open.spotify.com/album/6Mf15O3wMv52ySP3aSTre1?uid=1dadcf09fbbee47a&uri=spotify%3Atrack%3A3HoSi38l1e6E1K1lHWUCeV — https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8867924
+||open.spotify.com^$removeparam=uid
+!!! Don't remove "uri", as it seems to involve source songs to some extent.
 
 !! ——— Rules for heavily covered international sites ———
 !!! ——— PR-China ———
