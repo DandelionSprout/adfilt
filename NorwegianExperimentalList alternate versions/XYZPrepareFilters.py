@@ -4878,6 +4878,24 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"(^/\^\d{1,3}\\\..*(\\d\{1,3}|\d\]\))\$/$)", 
+           r"\1$network", 
+           line
+        )
+
+        line = re.sub(
+           r"^([|:/].*([a-z}]|\)))\$/", 
+           r"\1\\$/", 
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\$domain=for-txt-dnstype-conversions\.mint$", 
+           r"\1$dnstype=TXT", 
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -6257,6 +6275,12 @@ def prepare_agh(lines) -> str:
 
     # remove or modifiy entries with unsupported modifiers
     for line in lines:
+
+        line = re.sub(
+           r"^(.*)\$domain=for-txt-dnstype-conversions\.mint$", 
+           r"\1$dnstype=TXT", 
+           line
+        )
 
         # Doesn't seem like $denyallow will be fixed in HostfilesRegistry anytime soon as of March 2023
         line = re.sub(
