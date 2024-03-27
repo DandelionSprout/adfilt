@@ -1,7 +1,7 @@
-! Checksum: Qf6vcZjIaRAWeQYPks/flQ
-! Version: 202403201151
+! Checksum: mwwhq/lCQXpVaoQWtZ8+ug
+! Version: 202403270431
 ! Title: Fanboy's Notifications Blocking List - Loadable in uBO+AdGuard
-! Last modified: 20 Mar 2024 11:51 UTC
+! Last modified: 27 Mar 2024 04:31 UTC
 ! Expires: 1 days (update frequency)
 ! License: https://creativecommons.org/licenses/by/3.0/
 ! Please report any unblocked content or problems by email or in our forums
@@ -449,6 +449,7 @@ _revotas_push.
 ||pathlime.com^$third-party
 ||popmechanic.ru^$third-party
 ||propush.net^$third-party
+||pt.appirits.com^$third-party
 ||puscomosca.com^$third-party
 ||push-centr.com^$third-party
 ||push-centr.net^$third-party
@@ -621,6 +622,7 @@ _revotas_push.
 ||bigbangnews.com/sw.js
 ||dailymail.co.uk/api/web-push-notification/
 ||gadgetsnow.com/sw.cms
+||gstatic.com/firebasejs/$domain=joins.com
 ||hindustantimes.com/messaging-sw.js
 ||hindustantimes.com/sw.js
 ||hindustantimes.com^*/ht-notification-
@@ -671,10 +673,8 @@ _revotas_push.
 !------------------------Specific element hiding rules------------------------!
 ! *** easylist:fanboy-addon/fanboy_notifications_specific_hide.txt ***
 ! fanboy_notifications_specific_hide.txt
-clubd.co.jp###FixedBanner
 tbsnews.net###___tbspushdiv
 redbull.com###bottom-notifications
-clubd.co.jp###footerBanner
 thehindu.com,thehindubusinessline.com###gsi_overlay
 masrawy.com,yallakora.com###izooto-optin
 kizi.com###kizi-popover-dialog
@@ -698,7 +698,6 @@ nzherald.co.nz##.action-bar
 informationweek.com##.announcement
 tmz.com##.browser-notifications-prompt
 romaniajournal.ro##.bs-push-noti
-smocca.jp##.c-box-app_banner
 cnet.com##.c-globalNotification
 techwalla.com##.component-push-notification
 manutd.com##.custom-popup
@@ -715,6 +714,7 @@ techpowerup.com##.notice-content
 correiobraziliense.com.br##.noticia_notificacao
 laarena.com.ar##.notificacion-modal
 business-standard.com##.notification-col
+winnipegfreepress.com##.notifications-banner
 wnep.com##.page__notifications
 post-gazette.com##.pg-notifybox
 pnas.org##.pop-notification
@@ -753,7 +753,6 @@ nu.nl##.breakingpush
 zillow.com##.cQZIoF
 kariyer.net##.download-app-wrapper
 actionnetwork.com##.follow-author__button
-dietplus.jp##.js-app-bg
 buyma.com##.js-app-download-url
 ziare.com##.modal-backdrop
 tuttoandroid.net,tuttotech.net##.modal-notifiche
@@ -764,7 +763,6 @@ elconsolto.com,masrawy.com##.notification
 metroworldnews.com.br##.notification-subs
 almanar.com.lb##.notification-wrap
 sport.ro##.notification-wrapper
-ozmall.co.jp##.oz__headApp
 mail.ru##.ph-balloo
 actionnetwork.com##.promotion-card__container
 flvto.biz##.push-offer
@@ -783,6 +781,7 @@ cba24n.com.ar##view-firebase-prompt
 ! Mobile app Notifications
 bhaskar.com###APP_INSTALL_POPUP_CONTAINER_ID
 thefastmode.com###ChromeAppPromotion
+clubd.co.jp###FixedBanner
 paypal.com###PPAppDownloadBannerContainer
 newsmax.com###SMSbanner
 trakt.tv###android-beta-wrapper
@@ -807,6 +806,7 @@ map.baidu.com###downloadnativepopupUlink
 economictimes.indiatimes.com###float_app_ET
 codeur.com###follow-modal
 kogan.com###footer-native-banner
+clubd.co.jp###footerBanner
 mercari.com###getTheAppFooter
 patreon.com###half-sheet-app-banner
 ventusky.com###header > .ii[href]
@@ -916,6 +916,7 @@ banggood.com##.bottom-app-contain
 map.baidu.com##.bottom-banner-float
 commaful.com##.bottom-section-signup
 al-monitor.com##.breaking-news-alert
+smocca.jp##.c-box-app_banner
 warbyparker.com##.c-hYggeK
 dailywire.com##.c-link
 cricbuzz.com##.cbz-leaderboard-banner
@@ -983,6 +984,7 @@ news18.com##.instlsapp_fxd
 terabox.com##.introduce-sticky-btn
 ticketmaster.com##.jBEXsA
 ticketmaster.com##.jDQUfz
+dietplus.jp##.js-app-bg
 tanp.jp##.js-appDownloadHeaderBanner
 duckduckgo.com##.js-atb-banner
 duckduckgo.com##.js-open-in-app
@@ -1033,6 +1035,7 @@ livemint.com##.openinApp
 livemint.com##.openinApp2
 newegg.com##.our-apps
 satellitemap.space##.overlay-open-in-app-button
+ozmall.co.jp##.oz__headApp
 kinarino-mall.jp##.p-appeal-top-banner__container
 sbs.com.au##.pane-bean-in-house-ad
 islambook.com##.panel-danger
@@ -1379,3 +1382,6 @@ smocca.jp##+js(set, history.state, undefined)
 patreon.com##+js(aeld, touchmove, preventDefault)
 ! onedio.com https://github.com/uBlockOrigin/uAssets/issues/22914
 onedio.com##+js(set-cookie, o-push-alert, 1)
+! izumi.jp (mobile app)
+izumi.jp###s_header[style="top: 84px;"]:style(top: 0 !important;)
+izumi.jp##html[data-smartbanner-original-margin-top="0"][style="margin-top: 84px;"]:style(margin-top: 0 !important;)
