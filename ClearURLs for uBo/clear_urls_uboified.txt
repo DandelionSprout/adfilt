@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 13/03/2024
+! Last updated: 28/03/2024
 ! Script last updated: 29/2/2024
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -42,6 +42,10 @@
 ||amazon.*^$removeparam=camp
 ||amazon.*^$removeparam=creative
 ||amazon.*^$removeparam=content-id
+||amazon.*^$removeparam=dib
+||amazon.*^$removeparam=dib_tag
+||msn.com^$removeparam=cvid
+||msn.com^$removeparam=ocid
 ||amazon.*/s?$removeparam=/^p[fd]_rd_[a-z]*=/
 ||amazon.*/s?$removeparam=qid
 ||amazon.*/s?$removeparam=/^srs?=/
@@ -167,6 +171,7 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||facebook.com^$removeparam=tracking
 ||facebook.com^$removeparam=referral_code
 ||facebook.com^$removeparam=referral_story_type
+||facebook.com^$removeparam=mibextid
 ||twitter.com^$removeparam=/^(ref_?)?src=/
 ||twitter.com^$removeparam=cn
 ||twitter.com^$removeparam=ref_url
@@ -276,6 +281,7 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||linkedin.com/learning$removeparam=u
 ||spiegel.de^$removeparam=b
 ||instagram.com^$removeparam=igshid
+||instagram.com^$removeparam=igsh
 ||lazada.com.my^$removeparam=ad_src
 ||lazada.com.my^$removeparam=did
 ||lazada.com.my^$removeparam=pa
