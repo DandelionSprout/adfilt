@@ -24,7 +24,7 @@ assignees: ''
 - [ ] Adblock Plus (Firefox or Manifest V2)
 - [ ] AdGuard Home
 - [ ] Blokada
-- [ ] I Don't Care About Cookies (The extension)
+- [ ] I Still Don't Care About Cookies (The extension)
 - [ ] AdNauseam
 
 Other(s):
