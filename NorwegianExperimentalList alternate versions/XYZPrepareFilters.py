@@ -1893,6 +1893,36 @@ def prepare_privacy(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^@.*[|.]cookieinformation\..*$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@.*/google-ads/.*\.json.*$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@.*cookieconsent\.min\.js.*$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@.*v\.fwmrm\.net.*$", 
+           "", 
+           line
+        )
+
+        line = re.sub(
+           r"^@.*\.azureedge\.net/.*$", 
+           "", 
+           line
+        )
+
         text += line + '\n'
 
     return text
