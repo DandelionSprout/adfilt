@@ -1,8 +1,8 @@
 [Adblock Plus 3.13]
 ! Title: 🕳 Empty Padding Remover
-! Version: 29December2023v1-Alpha
+! Version: 05April2024v1-Alpha
 ! Expires: 4 days
-! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? If so, this list will help you a little extra bit with that.
+! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? Or perhaps you're tired ot very large shadows on video sites when moving the mouse? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
 ! ——— Generic ———
@@ -74,8 +74,43 @@ sat24.com###headermenu
 ! For listings with 2 or more related/size notices
 rule34.xxx###status-notices > br:empty
 !#if !env_mobile
-pixiv.net#?#div[class*=" "]:empty:has(+ aside + aside)
+pixiv.net##div[class*=" "]:empty:has(+ aside + aside)
 !#endif
 
 ! Disqualified entries due to breakage of regular content (Example given)
 !!! *##p:has(br):not(:has-text(/\S/)):not(:has(span)):not(:has(img)) (Caused newlines to fail to work in Slack)
+
+! Merged from «Media Player Gradient Remover»
+viaplay.*##.backdrop-bottom
+telenor.no##section.banner-hero > .gradient
+hbomax.com#?#.vjs-control-bar:style(background: none !important)
+hbomax.com#?#.video-js ~ div:style(background-image: none !important)
+disneyplus.com##.controls__header::before
+disneyplus.com##.controls__footer::before
+disneyplus.com##.fadeIn::before
+rakuten.tv#?#div[data-testid^=video_controls_]:style(background: none !important)
+! netflix.com
+##.title-episode-gradient:not(html, body)
+netflix.com##div[class^=watch-video--][class*="-container "]:style(background-image: none !important)
+! tv.nrk.no
+##.ludo-layout__gradient:not(html, body)
+! svtplay.se
+##div[class*=VideoPlayerNew__ui-container--visible]::after
+! viafree.no
+##.player-bottom-gradient:not(html, body)
+! arenan.yle.fi
+*#?#.playkit-bottom-bar:style(background: none !important)
+*#?#.playkit-top-bar:style(background: none !important)
+! https://www.bbc.com/reel/video/p084pp2h/the-airport-for-celebrities-you-never-knew-existed
+##.p_gradientLayer:not(html, body)
+! https://www.mewatch.sg/watch/Nella-the-Princess-Knight-S2-E18-Piece-of-Cake-Tale-of-Two-Nellas-276115
+##.player-block__fader:not(html, body)
+! https://positivr.fr/plant-moms-les-conseils-pour-verdir-nos-interieurs-fleurissent-sur-tiktok/
+##.c-controls__background:not(html, body)
+! YouTube on PC
+www.youtube.com##div[class*="-gradient-bottom "]
+www.youtube.com##div[class$=-gradient-bottom]
+##div[class^=ytp-gradient-]
+! T-We
+twe.no##div[style*=overlayFadeTo]:style(--overlayFadeTo: none !important)
+! %•%•% Help would be appreciated for Hulu, BBC iPlayer, Prime Video, and just about any other streaming or rental service out there in the world as well, especially USA- or nation-specific ones. %•%•%
