@@ -7,6 +7,9 @@
 ! In order to hide buttons and links to Amazon's account and payment services, check out "Anti-Amazon List for Twitch" (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiAmazonListForTwitch.txt).
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
+!#if !env_mv3
+!#if !ext_ubol
+!#if !adguard_ext_android_cb
 ! Removes the "Recommended channels" section when you're logged on
 www.twitch.tv##.recommended-channels
 www.twitch.tv##.tw-flex-grow-1 > div:nth-of-type(1) > .side-nav-section:nth-of-type(2)
@@ -67,3 +70,6 @@ clips.twitch.tv#?#.clips-watch.tw-lg-pd-b-5.tw-pd-b-2.tw-sm-pd-b-3:style(max-wid
 
 ! Makes avatars square again without having to use FrankerFaceZ
 twitch.tv#?#.tw-avatar > img.tw-border-radius-rounded:style(border-radius: unset !important)
+!#endif
+!#endif
+!#endif
