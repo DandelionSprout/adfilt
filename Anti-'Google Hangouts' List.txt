@@ -8,6 +8,8 @@
 ! 📛 = This category requires using either uBlock Origin or AdGuard.
 
 !#if !env_mv3
+!#if !ext_ubol
+!#if !adguard_ext_android_cb
 ! Removes the Hangouts feed in the lower left of Gmail
 ||hangouts.google.com/webchat/u/0/frame2$domain=mail.google.com
 mail.google.com###talk_roster
@@ -20,4 +22,6 @@ google.*##.gb_h:has(.gb_c[rel=noreferrer][target=_blank][href="https://hangouts.
 
 ! Displays a warning when opening Hangouts' own website 📛
 ||hangouts.google.com$document
+!#endif
+!#endif
 !#endif
