@@ -9,6 +9,8 @@
 ! 📛 = This category requires using either uBlock Origin or AdGuard.
 
 !#if !env_mv3
+!#if !ext_ubol
+!#if !adguard_ext_android_cb
 ! Removes the Skype button from the Office Online frontpage
 office.com###ShellSkype_link
 
@@ -24,4 +26,6 @@ account.microsoft.com#?#.c-card:has(h6[ng-if="card.title"]:has-text(Skype))
 
 ! Shows a warning when being about to visit Skype's browser interface 📛
 ||web.skype.com^$document
+!#endif
+!#endif
 !#endif

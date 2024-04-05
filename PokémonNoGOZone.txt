@@ -4,6 +4,8 @@
 ! Note: The list currently only supports AdGuard Home, AdGuard for Android, AdGuard for iOS, and presumably Pi-Hole (RegEx versions only). There is no reason whatsoever to use this list on a desktop PC, so I've intentionally made this list not work in any uBlock Origin- or Adblock Plus-based adblockers, nor in PC or browser versions of AdGuard.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 !#if !env_mv3
+!#if !ext_ubol
+!#if !adguard_ext_android_cb
 !#if adguard_app_android
 ||nianticlabs.com^$app=com.nianticlabs.pokemongo|com.nianticlabs.hpwu.prod|com.nianticproject.ingress
 ||crittercism.com^$app=com.nianticlabs.pokemongo|com.nianticlabs.hpwu.prod|com.nianticproject.ingress
@@ -15,5 +17,7 @@
 !#if !false
 (.*\.)?nianticlabs\.com$
 (.*\.)?crittercism\.com$
+!#endif
+!#endif
 !#endif
 !#endif
