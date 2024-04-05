@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 27March2024v1-Deprecated
+# Version: 04April2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -591,6 +591,8 @@ msFilterList
 # 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
 # 🇬🇧: Makes Discovery+'s login page show up properly
 # https://github.com/easylist/easylist/issues/18542/(These/entries/are here to stay, regardless of the report's outcome.)
++d medlemskap.*.no
+-d medlemskap.fagforbundet.no
 # ★★★ Caused by «Fanboy's Social Blocking List», if I recall correctly ★★★
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
@@ -1126,7 +1128,7 @@ msFilterList
 -d 1.14.61.188
 -d smarthouseforum.ru
 -d trafikkskoleapp.no
-# Last updated: 10March2024v1-Extension
+# Last updated: 03April2024v1-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -1152,6 +1154,8 @@ msFilterList
 # https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
 # https://www.findroommate.dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum/(17/12/2021)
 # https://github.com/uBlockOrigin/uAssets/issues/13495
+# The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
+-d piano.io execute
 # 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 # 🇳🇴 🇩🇰: ——— Ikke for Brave Browser ———
 # 🇬🇧: ——— Not for Brave Browser ———

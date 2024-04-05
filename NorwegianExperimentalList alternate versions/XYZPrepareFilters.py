@@ -7431,7 +7431,7 @@ def prepare_domains(lines) -> str:
             continue
 
         line = re.sub(
-           r"^[a-zA-Z!_*/İ-].*", 
+           r"^[a-zA-Z!_*/İ=%&-].*", 
            r"", 
            line
         )
