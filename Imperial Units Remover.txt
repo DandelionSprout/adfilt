@@ -6,6 +6,8 @@
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
 !#if !env_mv3
+!#if !ext_ubol
+!#if !adguard_ext_android_cb
 ! Removing miles from dual-unit distance measurements in Google Maps (uBO and AdGuard only)
 google.*##html[lang$=US] #ruler span:first-of-type
 google.*##html[lang=en] #ruler span:first-of-type
@@ -19,4 +21,6 @@ holiday-weather.com#?#.distance_data_container > :has-text(miles)
 lematin.ma##.meteo-bloc span
 sveip.no##.wmsb_f
 gismeteo.de##.ifnoie
+!#endif
+!#endif
 !#endif
