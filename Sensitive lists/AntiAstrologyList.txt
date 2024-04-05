@@ -1,11 +1,13 @@
 [Adblock Plus 3.13]
 ! Title: 🛤️ Anti-Astrology List
-! Version: 04March2024v1-Beta
+! Version: 05March2024v1-Beta
 ! Expires: 4 days
 ! Description: The alignment of the stars predict that you will use this list, in order to stop listening so much to such completely unfounded predictions anymore, and to get your eyes off the starry skies and onto your life that should be planted firmly on the ground.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
 !#if !env_mv3
+!#if !ext_ubol
+!#if !adguard_ext_android_cb
 ! International
 ##.horoscopes:not(html,body,:empty)
 ##.front-page-horoscope-section:not(html,body,:empty)
@@ -37,6 +39,7 @@ msn.com##li:has(a[href*="zodiac"])
 msn.com##.lifestyle div[data-aop=hero]:has(a[href*=zodiac])
 msn.com##.lifestyle div[data-aop=hero]:has(a[href*=astrology])
 play.google.com##.no-rationale.card:has(a[href*=apps]):has([href*=horoscope])
+!#if false
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/z\od\iac/i):not(:has-text(/k\il{2}er/i))
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/capr\icorn/i)
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/\sv\irgo\s/i)
@@ -58,6 +61,7 @@ nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,n
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/ Vr\iska([ .,:;?!]|\'|\")/i)
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/ Nepeta([ .,:;?!]|\'|\")/i)
 nitter.net,nitter.unixfox.eu,nitter.mint.lgbt,nitter.esmailelbob.xyz,nitter.cz,nitter.d420.de,nitter.x86-64-unknown-linux-gnu.zip,nitter.woodland.cafe,nitter.dafriser.be,nitter.catsarch.com,nitter.perennialte.ch,nitter.salastil.com,nitter.uni-sonia.com,n.opnxng.com,nitter.ktachibana.party#?#.timeline-item:has-text(/ \Terezi([ .,:;?!]|\'|\")/i)
+!#endif
 vice.com#?#.latest-feed__item:has-text(/Horoscop/i)
 vice.com#?#.latest-feed__item:has-text(/Z\od\iac/i):not(:has-text(/k\il{2}er/i))
 vice.com##.latest-feed__item:has(a[href*=astrology])
@@ -664,4 +668,6 @@ sims.fandom.com#?#.tabbertab > center:has-text(Sign / personality mismatch)
 sims.fandom.com#?#.tabbertab > center:has-text(Genetic personality)
 sims.fandom.com#?#.wikitable + center:has-text(Sign / personality mismatch)
 sims.fandom.com#?#.wikitable + center + center:has-text(Genetic personality)
+!#endif
+!#endif
 !#endif
