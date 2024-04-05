@@ -12,25 +12,25 @@
 * `###`: Hides page elements based on the `id` value.
 * `#@#.`/`#@#`/`#@##`: Whitelists page elements to make them load.
 * `[href="text"]`: Finds page elements whose values in the F12 filetree console contains such a value. The value can be `href`, `id`, `class`, `type`, or numerous other things that are highlighted in brown in the F12 DOM (Document Object Model) "Elements" index. Does not support RegEx.
-* `[href="text" i]`: Same as above, except case-insensitive.
-* `[href^="text"]`: Finds page elements whose value *begins* with the text.
-* `[href$="text"]`: Finds page elements whose value *ends* with the text.
-* `[href*="text"]`: Finds page elements whose value contains the text anywhere within it.
+* `[href="text" i]`: Same as above, except <b>case-insensitive</b>.
+* `[href^="text"]`: Finds page elements whose value <b>*begins*</b> with the text.
+* `[href$="text"]`: Finds page elements whose value <b>*ends*</b> with the text.
+* `[href*="text"]`: Finds page elements whose value contains the text <b>anywhere within it</b>.
 * `[href~="text"]`: Finds page elements whose value contains the word (with spaces around it) anywhere within it.
-* `[href|="text"]`: Same as `[href="text"]`, but can also select text that is then followed by a hyphen `-`.
-* `:not(.element)`: Finds page elements that doesn't contain a specified element or text string.
+* `[href|="text"]`: Same as `[href="text"]`, but can *also* select text that is then followed by a hyphen `-`.
+* `:not(.element)`: Finds page elements that <b>doesn't</b> contain a specified element or text string.
 * `:has-text(text)`: Finds page elements that contains such text within it.
 * `:has(.element)`: Finds page elements that contains such an element within it.
-* `:has(>` : Tells `:has` to only find elements whose criteria match their immediate subelement(s).
+* `:has(>` : Tells `:has` to only find elements whose criteria match their <b>immediate</b> subelement(s).
 * `:not(:-abp-contains(Text))` / `:not(:-abp-has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order. To select multiple numbers, one has to use `n` calculations (e.g. `(n+2)`), since ranges (e.g. `(3-6)`) are not supported.
 * `:only-of-type` / `:first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
 * `:first-child` / `:last-child`: Appears to be synonymous with `first-of-type` and `last-of-type` for adblocking purposes. `:last-child` is easily mistaken for what `:empty` does.
-* `::before` / `::after`: Removes the pseudo-elements that belong to a page element. If a pseudo-element is present, they're shown as standalone `::before` or `::after` lines in all-brown in the F12 filetree.
+* `::before` / `::after`: Removes the <b>pseudo-elements</b> that belong to a page element. If a pseudo-element is present, they're shown as standalone `::before` or `::after` lines in all-brown in the F12 filetree.
 * `>`: Creates chain criteria, in which a selected page element must have a specific element on the floor above it in the filetree.
-* `+`: Blocks the element that is right below the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
+* `+`: Blocks the element that is <b>right below</b> the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
 * `~`, as in `##.element ~ div`: Similar to `+`, but blocks *all* such `div` elements that are below it on the same floor in the filetree, and not just the one right below.
-* Spacing between elements, e.g. `##.element .element`: Similar to `>`, but can mean *any* number of floors between the elements, and not just those that are one floor apart.
+* Spacing between elements, e.g. `##.element .element`: Similar to `>`, but can mean <b>*any*</b> number of floors between the elements, and not just those that are one floor apart.
 * `##element1,element2` (alt. `##element1, element2`): Combines two hiding entries into the same line of text.
 
 ##### Advanced examples:
@@ -42,33 +42,34 @@
 
 #### File blocking (a.k.a. blocking rules, a.k.a. non-#-rules)
 * \[no prefix\]: Blocks resources that have this text string *anywhere* in its URL.
-* `||`: Blocks resources that have a specific domain as its main domain.
+* `||`: Blocks resources that have a specific domain or subdomain.
 * `@@`: Whitelists resources to make them load.
 * `^`: Wildcard for anything that isn't alphanumerical or _-.%, and for end-of-lines.
-* `$third-party`: Ensures that resources from a domain are only blocked if you're not visiting the domain itself.
-* `$~third-party`: Ensures that resources from a domain are only blocked if you're visiting the domain itself.
-* `$domain=`: Ensures that resources from a domain are only blocked if you're visiting a specified website. Multiple domains are separated with `|` (Vertical line) and not commas. Supports top-level domain wildcards with e.g. `$domain=tk`.
+* `$third-party`: Ensures that resources from a domain are only blocked if you're <b>not</b> visiting the domain itself.
+* `$~third-party`: Ensures that resources from a domain are only blocked if you're visiting *the domain itself*.
+* `$domain=`: Ensures that resources from a domain are only blocked if you're visiting a <b>specified</b> website. Multiple domains are separated with `|` (Vertical line) and not commas. Supports top-level domain wildcards with e.g. `$domain=tk`.
 * `@@||` + `$generichide`: Prevents all non-domain-specific (a.k.a. generic) hiding entries from working on a website. On uBO it prevents *all* generic entries from working.
-* `@@||` + `$specifichide`: Prevents all domain-specific hiding entries from working on a website. On uBO it seems to prevent *all* domain-specific entries from working.
+* `@@||` + `$specifichide`: Prevents all domain-specific <b>element removal</b> entries from working on a website. On uBO it seems to prevent *all* domain-specific entries from working.
 * `@@||` + `$elemhide`: Combines `$generichide` and `$specifichide`. Also completely breaks the element picker in uBO on that site as of the 14th of July 2020.
 * `$script`: Blocks resources from domains or parts thereof from being loaded, but only if it's a script, e.g. a JavaScript runtime.
 * `$csp`: Inserts additional *Content Security Policies* into the page.
 * `$xmlhttprequest` / `$websocket`: Prevents such resources from being downloaded through the titular JavaScript APIs.
 * `$popup` / `$image` / `$font` / `$other` / `$stylesheet` / `$css`: These ones should hopefully be self-explanatory (Give me a heads-up in an issue report if it isn't).
 * `$object`: Despite its name, it refers to blocking resources that use a request type called `object`, and not just all sorts of objects.
-* `|text`: Matches URLs that *begin* with the text.
-* `text|`: Matches URLs that *end* with the text.
-* `~`: Means that an entry does *not* apply to a specific domain.
+* `|text`: Matches URLs that <b>*begin*</b> with the text.
+* `text|`: Matches URLs that <b>*end*</b> with the text.
+* `~`: Means that an entry does <b>*not*</b> apply to a specific domain.
 
 #### Universal
 * `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
-* `/\/\/\/`, `/regextext/`, and similar: Text detections in RegEx format. Supported in most (if not all) blocking rules, as well as in `:-abp-contains` and `:has-text`. Note that *all* blocking rules that start and end with `/` are treated as RegEx; the intended workaround is to add a `*` after, which makes `*` supposedly serve as a plaintext indicator, instead of as a wildcard.
-* `[Adblock Plus n.n]`: Mandatory for Adblock Plus, AdBlock, and forks of them, as they use the tag to determine if they should load the filterlist. This has no effect on uBO and AdGuard or their forks. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.1` and higher is on the rise and can be used to block support for old or low-quality forks. It also enables the GitHub syntax highlighter for that file.
-* `[uBlock Origin]`, `[AdGuard]`: These activate the syntax highlighter if the file is hosted on GitHub, should be placed on the first line of the list.
-* `! Title:` Specifies the intended name of the list. Required to make the name automatically show up in the settings of most adblockers, instead of the URL or of manual text input.
+* `/\/\/\/`, `/regextext/`, and similar: Text detections in <b>RegEx</b> format. Supported in most (if not all) blocking rules, as well as in `:-abp-contains` and `:has-text`. Note that *all* blocking rules that start and end with `/` are treated as RegEx; the intended workaround is to add a `*` after, which makes `*` supposedly serve as a plaintext indicator, instead of as a wildcard.
+* * <i>Insider tip for very advanced users: If you see a RegEx that ends with `.*/`, change it to `.*$/`. Likewise, if it starts with `/.*`, change it to `/^.*`. Depending on the entry, this can reduce CPU usage quite a lot.''</i>
+* `[Adblock Plus n.n]`: Mandatory for Adblock Plus, AdBlock, and forks of them, as they use the tag to determine if they should load the filterlist. This has *no* effect on uBO and AdGuard or their forks. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.10` and higher is on the rise and can be used to block support for old or low-quality forks. It also enables the GitHub syntax highlighter for that file.
+* * `[uBlock Origin]`, `[AdGuard]`: These activate the syntax highlighter if the file is hosted on GitHub, should be placed on the first line of the list.
+* `! Title:` Specifies the intended name of the list. Required to make the name <b>automatically show up</b> in the settings of most adblockers, instead of the URL or of manual text input.
 * `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
-* `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days" or "n hour/hours". uBlock Origin rounds hours up to 6/12/18/24 hours.
-* `! Homepage:` In uBlock Origin, it determines the link that the list's 🏠 (house) button in uBO's settings leads to. Often also used in other adblockers for informational purposes.
+* `! Expires:`: Determines the timespan between each automated sync attempt with the list's source. Values are given in "n day/days" or "n hour/hours". uBlock Origin rounds hours up to 6/12/18/24 hours. Usually ignored by AdGuard softwares.
+* `! Homepage:` In uBlock Origin, it determines the link that the list's <b>🏠 (house) button in uBO's settings</b> leads to. Often also used in other adblockers for informational purposes.
 
 ## uBlock Origin and AdGuard only:
 #### Hiding
