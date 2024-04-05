@@ -5,6 +5,8 @@
 ! Description: Spun off from a.txt when I began placing public scrutiny on myself and my DNS server, as I didn't intend for some of the entries in it to be blocked by DNS server users that weren't myself, and I didn't except even hardcore tech experts to know that "$document" meant that the entries didn't apply to the server.
 
 !#if !env_mv3
+!#if !ext_ubol
+!#if !adguard_ext_android_cb
 ! ———Applies to public users:———
 ! Syncing allowlist with that of AdGuard:
 @@||settings.crashlytics.com^
@@ -101,5 +103,7 @@ zone "www.nrk.no" { type master; notify no; file "null.zone.file"; };
 !#if false
 /^https://.*[/?]/
 /^[1-9].*:[0-9]{1,5},.*/
+!#endif
+!#endif
 !#endif
 !#endif
