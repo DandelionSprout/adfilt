@@ -1,57 +1,57 @@
 [Adblock Plus 3.13]
 ! Title: 🕳 Empty Padding Remover
-! Version: 05April2024v1-Alpha
+! Version: 05April2024v2-Alpha
 ! Expires: 4 days
 ! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? Or perhaps you're tired ot very large shadows on video sites when moving the mouse? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
 ! ——— Generic ———
 ##.skille:not(html, body)
-! change.org, indiegogo.com, thejc.com, icelandreview.com, bir.no, medier24.no, knr.gl, nutiminn.is
-! (https://github.com/DandelionSprout/adfilt/issues/923)
+! change•org, indiegogo•com, thejc•com, icelandreview•com, bir•no, medier24•no, knr•gl, nutiminn•is
+! (https://github•com/DandelionSprout/adfilt/issues/923)
 *,~barter.vg##p:has-text(/^\xA0$/):not(:has-text(/\S/)):not(:has(img))
-! https://zh.cn.nikkei.com/politicsaeconomy/stockforex/39110-2020-01-21-09-55-57.html
-! (Exception: https://www.pixiv.net/bookmark.php)
+! https://zh•cn•nikkei•com/politicsaeconomy/stockforex/39110-2020-01-21-09-55-57•html
+! (Exception: https://www•pixiv•net/bookmark•php)
 *##p:has-text(/^\xA0\xA0$/):not(:has-text(/\S/)):not(:has(span))
 !#if !adguard
-! https://nyheder.tv2.dk/2020-02-02-forfatter-derfor-slipper-sportsstjerner-fra-voldtaegtsanklager-uden-skrammer
-! (https://github.com/AdguardTeam/ExtendedCss/issues/159)
+! https://nyheder•tv2•dk/2020-02-02-forfatter-derfor-slipper-sportsstjerner-fra-voldtaegtsanklager-uden-skrammer
+! (https://github•com/AdguardTeam/ExtendedCss/issues/159)
 *,~fandom.com##p:has-text(/^ $/):not(:has-text(/\S/)):not(:has(img, input, iframe))
 !#endif
-! As per https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace
-! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/119108)
+! As per https://developer•mozilla•org/en-US/docs/Web/CSS/:-moz-only-whitespace
+! (Exception: https://github•com/AdguardTeam/AdguardFilters/issues/119108)
 ##p:empty:not([class])
 !#if !env_chromium
 ##p:-moz-only-whitespace
 !#endif
-! lyricsmania.com,songtextemania.com
+! lyricsmania•com,songtextemania•com
 ##.spacer-20:not(html, body)
-! alrai.com
+! alrai•com
 ##.space20:not(html, body)
-! talkmore.no
-! (Exceptions: Various US local newspaper sites, https://github.com/DandelionSprout/adfilt/issues/63/#issuecomment-1086956813)
+! talkmore•no
+! (Exceptions: Various US local newspaper sites, https://github•com/DandelionSprout/adfilt/issues/63/#issuecomment-1086956813)
 !!!*##.spacer:not(html, body):not(:has-text(/\S/))
 !!!trakt.tv#@#.spacer
 !!!mousechief.com#@#.spacer
-! icelandreview.com
+! icelandreview•com
 ##.mk-padding-divider:not(html, body)
-! https://www.sat24.com/foreloop.aspx?type=0&continent=europa
+! https://www•sat24•com/foreloop•aspx?type=0&continent=europa
 ###horizontalspace
-! https://newrepublic.com/article/156829/happened-jordan-peterson
+! https://newrepublic•com/article/156829/happened-jordan-peterson
 ##.section-break:not(html, body)
-! https://mobilabonnement.dk/mobiltesten
+! https://mobilabonnement•dk/mobiltesten
 ~simplenote.com##.wp-block-spacer:not(html, body)
-! https://www.thetravelinspector.no/news/dobler-prisen-for-nye-pass-bestill-naa
+! https://www•thetravelinspector•no/news/dobler-prisen-for-nye-pass-bestill-naa
 ##.spacer-block:not(html, body)
-! doktor.frettabladid.is
+! doktor•frettabladid•is
 ~gog.com##.footer-spacer:not(html, body)
-! https://thedroidguy.com/htc-u11-troubleshooting (25/10/2020)
+! https://thedroidguy•com/htc-u11-troubleshooting (25/10/2020)
 ##.elementor-spacer:not(html, body)
-! allers.no
+! allers•no
 ~schengenvisainfo.com##.vc_empty_space:not(html, body)
-! https://byggebolig.no/luft-luft-varmepumpe/erfaringer-med-mitsubishi-kirigamine-6-6/msg445542 (12/11/2020)
+! https://byggebolig•no/luft-luft-varmepumpe/erfaringer-med-mitsubishi-kirigamine-6-6/msg445542 (12/11/2020)
 ##.body-spacer:not(html, body)
-! https://academickids.com/encyclopedia/index.php/Cream_the_Rabbit (Though the source page is unsalvageable, the general spirit of the entry remains applicable.)
+! https://academickids•com/encyclopedia/index•php/Cream_the_Rabbit (Though the source page is unsalvageable, the general spirit of the entry remains applicable•)
 ##.spacer150px:not(html,body)
 
 ! ——— Site-specific ———
@@ -89,23 +89,23 @@ disneyplus.com##.controls__header::before
 disneyplus.com##.controls__footer::before
 disneyplus.com##.fadeIn::before
 rakuten.tv#?#div[data-testid^=video_controls_]:style(background: none !important)
-! netflix.com
+! netflix•com
 ##.title-episode-gradient:not(html, body)
 netflix.com##div[class^=watch-video--][class*="-container "]:style(background-image: none !important)
-! tv.nrk.no
+! tv•nrk•no
 ##.ludo-layout__gradient:not(html, body)
-! svtplay.se
+! svtplay•se
 ##div[class*=VideoPlayerNew__ui-container--visible]::after
-! viafree.no
+! viafree•no
 ##.player-bottom-gradient:not(html, body)
-! arenan.yle.fi
+! arenan•yle•fi
 *#?#.playkit-bottom-bar:style(background: none !important)
 *#?#.playkit-top-bar:style(background: none !important)
-! https://www.bbc.com/reel/video/p084pp2h/the-airport-for-celebrities-you-never-knew-existed
+! https://www•bbc•com/reel/video/p084pp2h/the-airport-for-celebrities-you-never-knew-existed
 ##.p_gradientLayer:not(html, body)
-! https://www.mewatch.sg/watch/Nella-the-Princess-Knight-S2-E18-Piece-of-Cake-Tale-of-Two-Nellas-276115
+! https://www•mewatch•sg/watch/Nella-the-Princess-Knight-S2-E18-Piece-of-Cake-Tale-of-Two-Nellas-276115
 ##.player-block__fader:not(html, body)
-! https://positivr.fr/plant-moms-les-conseils-pour-verdir-nos-interieurs-fleurissent-sur-tiktok/
+! https://positivr•fr/plant-moms-les-conseils-pour-verdir-nos-interieurs-fleurissent-sur-tiktok/
 ##.c-controls__background:not(html, body)
 ! YouTube on PC
 www.youtube.com##div[class*="-gradient-bottom "]
