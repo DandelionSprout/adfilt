@@ -101,14 +101,14 @@
 ./annonse-
 {+block{https://www.ballade.no/}}
 ./wp-content/uploads/*_Annonse_
-.*_toppbanner_
+^.*_toppbanner_
 {+block{https://www.osterud.name/FF57W10/norwegian-filters.txt}}
 ./bannerannonser/*
 {+block{byggenytt.no}}
 ./_annonser
 {+block{frende.no}}
 {+block}
-
+.api.frende.no/webshop/log
 {+block{https://malviknytt.no/2020/07/31/skyting-pa-hjemmebande/ (16/08/2020)}}
 ./Nettbanner-
 {+block{sexpiger.dk}}
@@ -119,7 +119,7 @@
 # salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12/10/2020)
 ./getbanner.php
 # biff.no (26/10/2020)
-.*_nettannonse.
+^.*_nettannonse.
 ./BINARY/*-BANNER-*.gif
 ./BINARY/*%20200x300.jpg
 # nett.no (30/11/2020)
@@ -127,8 +127,8 @@
 # adressa.no (02/12/2020)
 ./polarnexus.js
 # reavisa.no (06/12/2020)
-.*_nettbanner_
-.*_visittkortannonse_
+^.*_nettbanner_
+^.*_visittkortannonse_
 -visittkortannonse-
 # ytresogn.no (16/12/2020)
 ./hnuannonse
@@ -231,9 +231,7 @@
 {+block}
 .aa-cdn.mytaste.org/js/ad.js
 {+block}
-
-{+block}
-
+.acdn.adnxs.com/ast/ast.js$script,domain=vg.no
 {+block}
 .aftenposten.no/seksjon/dist/ads-
 {+block}
@@ -275,13 +273,11 @@
 {+block}
 .canariposten.no/wp-content/uploads/300x1500*
 {+block}
-
+.cdn.rikstoto.no/expert/GameShop$frame,3p,domain=~tipster.no
 {+block}
 .check-in.dk/wp-content/uploads/*_930x180.gif
 {+block}
 .cms.sona.fo/ads
-{+block}
-
 {+block}
 .danishfamilysearch.dk/images/xp2
 {+block}
@@ -446,7 +442,7 @@
 {+block}
 .seksualitet24.no/wp-content/uploads/*/sinful_
 {+block}
-
+.semegleren.com/video$domain=canariajournalen.no
 {+block}
 .skagensavis.dk/annonceblok_baggrund.jpg
 {+block}
@@ -464,15 +460,15 @@
 {+block}
 .spanienidag.es/sites/default/files/patrocinadores
 {+block}
-
+.ssl.p.jwpcdn.com*/freewheel.js$script,domain=eurosport.*
 {+block}
-
+.ssl.p.jwpcdn.com*/jwpsrv.js$script,domain=eurosport.*|gamereactor.*|vg.no
 {+block}
-
+.ssl.p.jwpcdn.com*/sharing.js$script,domain=eurosport.*|gamereactor.*
 {+block}
-
+.ssl.p.jwpcdn.com*/vast.js$script,domain=eurosport.*|gamereactor.*|vg.no
 {+block}
-
+.static.finncdn.no/*/FINNExternalDistribution.js$domain=aftenbladet.no|aftenposten.no
 {+block}
 .static.vg.no/css/admark_top.gif
 {+block}
@@ -596,7 +592,7 @@
 ./lykill_banner
 {+block{bt.no}}
 {+block}
-
+.finn.no/distribution-carousel?$object
 {+block{https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/}}
 {+block}
 .images.sprinklecontent.com/*.amazonaws.com%2Fimages%
@@ -657,7 +653,7 @@
 ./banners/casinotop
 # gnavergalleri.dk (along with ~60 affiliates sites)
 {+block{https://github.com/DandelionSprout/adfilt/issues/233}}
-.*galleri.dk/content/images/fixed
+^.*$galleri.dk/content/images/fixed
 # sol.dk (25/04/2021)
 # bilgalleri.dk (25/04/2021)
 # forum.ipmsnorge.org (24/05/2021)
@@ -738,7 +734,7 @@
 # costume.no, costume.dk (09/11/2020)
 # boligpluss.no (09/11/2020), women.dk
 # ytresogn.no (16/12/2020)
-.*_980banner_
+^.*_980banner_
 # ambulanseforum.no (26/12/2020)
 # fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad.dk (02/01/2021)
 # forum.doktoronline.no (06/01/2021), forum.klikk.no, forum.kvinneguiden.no
@@ -830,11 +826,11 @@
 .tv2.no/*/config/analytics.json
 # Attempts to resolve how some frontpage articles are hard to open
 {-block}
-
+.schibsted.com/autoTracker$domain=vg.no
 # 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
 {+block{🇬🇧: Makes Discovery+'s login page show up properly}}
 {-block}
-
+.mparticle.com*/login$domain=discoveryplus.*
 {+block{https://github.com/easylist/easylist/issues/18542 (These entries are here to stay, regardless of the report's outcome.)}}
 {-block}
 .medlemskap.*.no
@@ -845,34 +841,34 @@
 .medlemskap.fagforbundet.no$badfilter
 # ★★★ Caused by «Fanboy's Social Blocking List», if I recall correctly ★★★
 {-block}
-
+./images/*youtube.jpg$domain=realityportalen.dk
 {-block}
-
+.api.instagram.com$domain=samiteahter.org
 {+block{https://github.com/ryanbr/fanboy-adblock/issues/1261}}
 {+block{https://github.com/easylist/easylist/issues/7805 (05/05/2021)}}
 {-block}
-
+.cookieinformation.com$domain=gulesider.no|degulesider.dk|krak.dk|altibox.no
 # ★★★ Caused by «Fanboy's Annoyances List» and «EasyList Cookie List» ★★★
 {+block{https://github.com/ryanbr/fanboy-adblock/issues/1243}}
 {+block}
 .ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
 {+block{https://github.com/ryanbr/fanboy-adblock/issues/1339}}
 {-block}
-
+./obj/global/feature/tagCommander/$script,domain=billetlugen.dk|eventim.no
 {+block{https://github.com/ryanbr/fanboy-adblock/issues/1468}}
 {-block}
-
+./newsletter/newsletter_popup.gif$domain=lampegiganten.dk|lampegiganten.no
 {+block{https://github.com/easylist/easylist/issues/12067#issuecomment-1132797711}}
 {+block{https://github.com/easylist/easylist/issues/15519}}
 # ★★★ Caused by «Fanboy's Enhanced Blocking List» ★★★
 {+block{https://github.com/DandelionSprout/adfilt/discussions/779#discussioncomment-5962141}}
 # ★★★ Caused by «EasyList» ★★★
 {-block}
-
+._prebid_$domain=seher.no
 {-block}
-
+./images/ads-db/right-tower/vipps-sponsor-$domain=canariajournalen.no
 {-block}
-
+./adnetwork/*$domain=fla.de
 @@://billink*.blob.core.windows.net/*/annonser
 {-block}
 .finn.no/user/ads.html$popup
@@ -884,13 +880,13 @@
 .marketingfabrikken.dk/page-data/google-ads/page-data.json
 {+block{https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt}}
 {-block}
-
+.cdn.easy-ads.com/js/swipemod.js$script,domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
 {-block}
-
+.easy-ads.com/subscriber$image,domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
 # Forum feeds in the upper right of articles
 # Makes 1p info banners show up correctly
 {-block}
-
+._980x100.$domain=ruijan-kaiku.no
 # Makes most links show up correctly (Fixed in AdGuard Base)
 {+block{https://github.com/uBlockOrigin/uAssets/issues/11546 (Not yet forwarded to EasyList)}}
 {+block{https://github.com/uBlockOrigin/uAssets/issues/13907}}
@@ -907,18 +903,18 @@
 # ★★★ Unknown cause ★★★
 {+block{https://github.com/DandelionSprout/adfilt/issues/67}}
 {-block}
-
+.fe.adstate.net/assets/common/img/web_ad$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
 {-block}
-
+.fe.adstate.net/stream_file.php?type=ad_preview_image$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
 {+block{https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/}}
 {-block}
 .cmp.ekstrabladet.dk/get_site_data
 {-block}
-
+.dialogue.sp-prod.net/messagingWithoutDetection.js$script,domain=ekstrabladet.dk
 {-block}
-
+.notice.sp-prod.net$frame,domain=ekstrabladet.dk
 {-block}
-
+.sp-prod.net
 {-block}
 .ad.amediakreativ.no/widgets/stillingskarusell
 #
@@ -942,12 +938,12 @@
 {+block}
 .vg.no/vgc/pool/tipster.png
 ./pustehullet/betting-header.png
-
+.norsktippingpartner.no$3p,domain=~norsktipping.no
 .tipster.no
 {-block}
 .oddstips.norsktippingpartner.no
 {+block}
-
+.cloudfront.net/v*/Liveoddsen.aspx$domain=vglive.no
 # nidaros.no (02/12/2021)
 # h-avis.no (11/12/2023)
 {+block{https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535}}
@@ -963,9 +959,9 @@
 .gamereactor.*/exclusive.json
 ./insert_grtv_stats.
 {-block}
-
+.imasdk.googleapis.com/js/sdkloader/ima3.$app=com.gamereactor
 {-block}
-
+.openx.gamereactor.dk/www/delivery/fc.php$app=com.gamereactor
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 # 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
 {+block{🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.}}
@@ -986,21 +982,21 @@
 # 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
 {+block{🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)}}
 {-block}
-
+.dk/assets/templates/*/ads.png$image,domain=maskinbladet.dk|agrar-plus.dk|fritidsmarkedet.dk|dagensbyggeri.dk|maskinteknik.dk|gronteknik.dk
 {-block}
-
+./js/ads.js$1p,domain=tvkampen.com|tvsporten.dk
 {-block}
-
+.sixscissors.com
 {-block}
 .www.tv2.no/s/js/ads.js
 {-block}
-
+.fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 {-block}
 .sumo.cdn.tv2.no/ads
 {-block}
-
+.imasdk.googleapis.com$app=no.tv2.sumo
 {-block}
-
+.securepubads.g.doubleclick.net$app=no.tv2.sumo
 {+block{https://github.com/AdguardTeam/AdguardFilters/issues/121422}}
 {-block}
 .v.fwmrm.net/ad/g*:MTG_Play_
@@ -1012,17 +1008,13 @@
 {+block}
 .deiligejenter.com/testfile23.js
 {+block}
-
-{+block}
-
-{+block}
 .inputmag.dk/wp-content/uploads/*/*_Galaxy-_takeover_
 {+block}
 .nakenprat.com/adfirst*.js
 {+block}
 .nakenprat.com/adlast*.php
 {+block}
-
+.v.fwmrm.net/ad/g/$domain=ekstrabladet.dk
 .widget.tippebannere.no$third-party
 # • Not to be removed during upstream syncs •
 {+block{https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/}}
@@ -1038,7 +1030,7 @@
 # Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
 ./begrensede-tilbudet/*
 ./bli-avbrutt-bor-du-oppdater/*
-.*/dnb11111
+^.*$/dnb11111
 ./KiwiErbjudanden1/*
 ./Norgesecure/*
 ./pakkerlevering/*
@@ -1148,15 +1140,15 @@
 .xeroshoes-danmark.com$all,~inline-font
 .xeroshoesdanmark.com$all,~inline-font
 -norgesalg.com
-.*danmarks.com
-.*norgno.com
-.*norges.com
-.*norgebutikk.com
-.*norgestore.com
-.*norge-no.com
-.*norgestores.com
-.*skobutikks.com
-.*butikksoslo.com
+^.*$danmarks.com
+^.*$norgno.com
+^.*$norges.com
+^.*$norgebutikk.com
+^.*$norgestore.com
+^.*$norge-no.com
+^.*$norgestores.com
+^.*$skobutikks.com
+^.*$butikksoslo.com
 # E-mail tips
 .s.free.fr
 .trmff.wpengine.com
@@ -1292,7 +1284,7 @@
 .minklarna.
 {+block{https://github.com/DandelionSprout/adfilt/issues/747}}
 -norge.co.no
-.*skodanmark.com
+^.*$skodanmark.com
 .skechersskosalg-norge.com
 .dkgaborsneakers.com
 .haglofstilbud.com
@@ -1352,17 +1344,17 @@
 .hoka-sko.com
 .hoka-one-one.cc
 .hokaoneone*
-.*norgeskosalg.
-.*norge-salg.com
-.*norgesalg.com
-.*norgesalgs.com
-.*salgnorge.com
-.*danmarkdk.com
-.*skodktilbud.
-.*skonorgeeu.com
-.*sneakersnorgeshop.
-.*sneakersdkshop.com
-.*skodanmarks.
+^.*$norgeskosalg.
+^.*$norge-salg.com
+^.*$norgesalg.com
+^.*$norgesalgs.com
+^.*$salgnorge.com
+^.*$danmarkdk.com
+^.*$skodktilbud.
+^.*$skonorgeeu.com
+^.*$sneakersnorgeshop.
+^.*$sneakersdkshop.com
+^.*$skodanmarks.
 {+block{https://www.adressa.no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull}}
 {+block{https://www.adressa.no/nyheter/trondheim/i/69d3lL/spisesteder-rammet-det-er-forferdelig-jeg-fikk-panikk}}
 .sitey.me
@@ -1518,7 +1510,7 @@
 .vg.no/cnp-assets/src/sites/vg/components/AdblockModal
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 {+block}
-
+.googletagmanager.com/gtm.js$domain=dk|bornholm.nu
 # aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
 {+block{https://github.com/uBlockOrigin/uAssets/issues/8648}}
 {+block{https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305}}
@@ -1526,7 +1518,7 @@
 {+block{https://github.com/uBlockOrigin/uAssets/issues/13495}}
 # The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
 {+block}
-
+.piano.io/xbuilder/experience/execute
 {+block{🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———}}
 # 🇳🇴/🇩🇰: ——— Ikke for Brave Browser ———
 {+block{🇬🇧: ——— Not for Brave Browser ———}}

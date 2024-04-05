@@ -48,13 +48,13 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: [0-9]{4}.*", 
+           r"! Version: [0-9]{4}.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"! Redirect:.*", 
+           r"! Redirect:.*$", 
            "", 
            line
         )
@@ -84,13 +84,13 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^!.*PFBLOCKERNG.*", 
+           r"^!.*PFBLOCKERNG.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*", 
+           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*$", 
            r"\1$network", 
            line
         )
@@ -262,7 +262,7 @@ def prepare_abp(lines) -> str:
 
         # remove $document modifier from the rule
         line = re.sub(
-           r"\$doc.*", 
+           r"\$doc.*$", 
            "", 
            line
         )
@@ -293,13 +293,13 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^no##.*", 
+           r"^no##.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"! Redirect:.*", 
+           r"! Redirect:.*$", 
            "", 
            line
         )
@@ -557,7 +557,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^!.*PFBLOCKERNG.*", 
+           r"^!.*PFBLOCKERNG.*$", 
            r"", 
            line
         )
@@ -683,7 +683,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*mm\.dk##\.fadeout.*", 
+           r"^.*mm\.dk##\.fadeout.*$", 
            r"", 
            line
         )
@@ -707,13 +707,13 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^!.* Elgiganten .*", 
+           r"^!.* Elgiganten .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^!.* elko\.is .*", 
+           r"^!.* elko\.is .*$", 
            r"", 
            line
         )
@@ -737,7 +737,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$.*,app=.*", 
+           r"^.*\$.*,app=.*$", 
            r"", 
            line
         )
@@ -767,13 +767,13 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^! .*HTTPS(,| ).*", 
+           r"^! .*HTTPS(,| ).*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^! .* CSP .*", 
+           r"^! .* CSP .*$", 
            r"", 
            line
         )
@@ -967,7 +967,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r".*dnstype.*", 
+           r"^.*dnstype.*$", 
            r"", 
            line
         )
@@ -991,7 +991,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$\$script.*", 
+           r"^.*\$\$script.*$", 
            "-d ", 
            line
         )
@@ -1003,37 +1003,37 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r".*[a-z0-9]//\$.*$", 
+           r"^.*[a-z0-9]//\$.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r".*\$removeparam.*", 
+           r"^.*\$removeparam.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r".*\$1p$", 
+           r"^.*\$1p$", 
            "", 
            line
         )
 
         line = re.sub(
-           r".*\$1p,.*", 
+           r"^.*\$1p,.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r".*,1p$", 
+           r"^.*,1p$", 
            "", 
            line
         )
 
         line = re.sub(
-           r".*,1p,.*", 
+           r"^.*,1p,.*$", 
            "", 
            line
         )
@@ -1052,13 +1052,13 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"\$.*", 
+           r"\$.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"! Redirect:.*", 
+           r"! Redirect:.*$", 
            "", 
            line
         )
@@ -1088,7 +1088,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"@@\*\..*", 
+           r"@@\*\..*$", 
            "", 
            line
         )
@@ -1112,7 +1112,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"!#if.*", 
+           r"!#if.*$", 
            "", 
            line
         )
@@ -1130,7 +1130,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^\.([d|i|n]).*", 
+           r"^\.([d|i|n]).*$", 
            "", 
            line
         )
@@ -1142,7 +1142,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^@@ .*", 
+           r"^@@ .*$", 
            "", 
            line
         )
@@ -1154,13 +1154,13 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "# Redirect:.*", 
+           "# Redirect:.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\+d\s[a-z0-9].*\s[a-z0-9*].*", 
+           r"\+d\s[a-z0-9].*\s[a-z0-9*].*$", 
            "", 
            line
         )
@@ -1346,13 +1346,13 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"!\+.*", 
+           r"!\+.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"@@\..* [a-z0-9].*", 
+           r"@@\..* [a-z0-9].*$", 
            r"", 
            line
         )
@@ -1424,7 +1424,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r".*NorwegianCashbackAssistant.*", 
+           r"^.*NorwegianCashbackAssistant.*$", 
            r"", 
            line
         )
@@ -1436,19 +1436,19 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^- ://.*", 
+           r"^- ://.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^-.*\\\..*", 
+           r"^-.*\\\..*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\*.*", 
+           r"^\*.*$", 
            r"", 
            line
         )
@@ -1480,7 +1480,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r".*dnstype.*", 
+           r"^.*dnstype.*$", 
            r"", 
            line
         )
@@ -1594,7 +1594,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$app=.*", 
+           r"^.*\$app=.*$", 
            r"", 
            line
         )
@@ -1606,7 +1606,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"\$doc.*", 
+           r"\$doc.*$", 
            r"", 
            line
         )
@@ -1619,25 +1619,25 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"^_", 
-           r".*_", 
+           r"^.*_", 
            line
         )
 
         line = re.sub(
-           r"\$csp.*", 
+           r"\$csp.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^#\+.*", 
+           r"^#\+.*$", 
            r"", 
            line
         )
 
         line = re.sub(
            r"^\*", 
-           r".*", 
+           r"^.*$", 
            line
         )
 
@@ -1660,13 +1660,13 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r".*[$,]domain.*", 
+           r"^.*[$,]domain.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"\$xhr.*", 
+           r"\$xhr.*$", 
            r"", 
            line
         )
@@ -1690,13 +1690,13 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"\$xhr.*", 
+           r"\$xhr.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*\$object.*", 
+           r"^.*\$object.*$", 
            r"", 
            line
         )
@@ -1732,13 +1732,13 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"\$3p.*", 
+           r"\$3p.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\./.*\\.*", 
+           r"^\./.*\\.*$", 
            r"", 
            line
         )
@@ -1756,97 +1756,97 @@ def prepare_privacy(lines) -> str:
 
         # until this is done: https://github.com/AdguardTeam/CoreLibs/issues/152
         line = re.sub(
-           r"^@.*tradedoubler\.com.*", 
+           r"^@.*tradedoubler\.com.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*\.zanox\..*", 
+           r"^@.*\.zanox\..*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*/analytics\..*", 
+           r"^@.*/analytics\..*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*\.adtraction\..*", 
+           r"^@.*\.adtraction\..*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*\.adform\..*", 
+           r"^@.*\.adform\..*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*/autoTrack.*", 
+           r"^@.*/autoTrack.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*\|\|mparticle\..*", 
+           r"^@.*\|\|mparticle\..*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*\.adobedtm\..*", 
+           r"^@.*\.adobedtm\..*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@@_prebid.*", 
+           r"^@@_prebid.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*\.googleapis\..*", 
+           r"^@.*\.googleapis\..*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*widgets\.spklw\..*", 
+           r"^@.*widgets\.spklw\..*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@@\|\|fe\.adstate\.net.*", 
+           r"^@@\|\|fe\.adstate\.net.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@@\|\|.*sp-prod\.net.*", 
+           r"^@@\|\|.*sp-prod\.net.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@.*easy-ads\.com.*", 
+           r"^@.*easy-ads\.com.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^@@\|\|api\.instagram\.com.*", 
+           r"^@@\|\|api\.instagram\.com.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r".*#@#.*adform\..*", 
+           r"^.*#@#.*adform\..*$", 
            "", 
            line
         )
@@ -1864,7 +1864,7 @@ def prepare_privacy(lines) -> str:
         )
 
         line = re.sub(
-           r"! If you wish to remove cookie banners.*", 
+           r"! If you wish to remove cookie banners.*$", 
            "! Warning: This list version does not exchange tracker protection for added browsing convenience, and is for advanced tech users ONLY! Some web stuff that are unbroken by whitelistings in the normal version, are NOT fixed in this version! Additionally, it is only made with uBO and close derivatives in mind.", 
            line
         )
@@ -1944,37 +1944,37 @@ def prepare_umatrix(lines) -> str:
 
         # remove $document modifier from the rule
         line = re.sub(
-           r"^\*?/.*", 
+           r"^\*?/.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*\.\*\..*", 
+           r"^.*\.\*\..*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[a-zA-Z0-9.|@].*[a-zA-Z0-9]/[a-zA-Z0-9].*", 
+           r"^[a-zA-Z0-9.|@].*[a-zA-Z0-9]/[a-zA-Z0-9].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*/\*[a-zA-Z0-9*_=/.-].*", 
+           r"^.*/\*[a-zA-Z0-9*_=/.-].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*\*/.*", 
+           r"^.*\*/.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[a-zA-Z0-9_-].*", 
+           r"^[a-zA-Z0-9_-].*$", 
            r"", 
            line
         )
@@ -1992,13 +1992,13 @@ def prepare_umatrix(lines) -> str:
         )
 
         line = re.sub(
-           r"^! [a-z0-9—].*", 
+           r"^! [a-z0-9—].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^!.*—.*", 
+           r"^!.*—.*$", 
            r"", 
            line
         )
@@ -2094,13 +2094,13 @@ def prepare_umatrix(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|[a-zA-Z0-9].*", 
+           r"^\|[a-zA-Z0-9].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^@@_.*", 
+           r"^@@_.*$", 
            r"", 
            line
         )
@@ -2166,13 +2166,13 @@ def prepare_umatrix(lines) -> str:
         )
 
         line = re.sub(
-           r"^@@/.*", 
+           r"^@@/.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\* .* all .*", 
+           r"^\* .* all .*$", 
            r"", 
            line
         )
@@ -2184,7 +2184,7 @@ def prepare_umatrix(lines) -> str:
         )
 
         line = re.sub(
-           r"^\*[a-z0-9].*", 
+           r"^\*[a-z0-9].*$", 
            r"", 
            line
         )
@@ -2221,7 +2221,7 @@ def prepare_xul(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$removeparam.*", 
+           r"^.*\$removeparam.*$", 
            r"", 
            line
         )
@@ -2263,7 +2263,7 @@ def prepare_xul(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$\$script.*", 
+           r"^.*\$\$script.*$", 
            r"", 
            line
         )
@@ -2293,13 +2293,13 @@ def prepare_xul(lines) -> str:
         )
 
         line = re.sub(
-           r".*(\$|,)app=.*", 
+           r"^.*(\$|,)app=.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*##\^.*", 
+           r"^.*##\^.*$", 
            r"", 
            line
         )
@@ -2340,7 +2340,7 @@ def prepare_ffanubo(lines) -> str:
     for line in lines:
 
       line = re.sub(
-           r"^[!/.$@:|*_a-zA-Z0-9-].*", 
+           r"^[!/.$@:|*_a-zA-Z0-9-].*$", 
            r"", 
            line
         )
@@ -2471,7 +2471,7 @@ def prepare_abp(lines) -> str:
 
         # remove $document modifier from the rule
         line = re.sub(
-           r"\$doc.*", 
+           r"\$doc.*$", 
            "", 
            line
         )
@@ -2502,13 +2502,13 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^no##.*", 
+           r"^no##.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"! Redirect:.*", 
+           r"! Redirect:.*$", 
            "", 
            line
         )
@@ -2754,7 +2754,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^!.*PFBLOCKERNG.*", 
+           r"^!.*PFBLOCKERNG.*$", 
            r"", 
            line
         )
@@ -2880,7 +2880,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*mm\.dk##\.fadeout.*", 
+           r"^.*mm\.dk##\.fadeout.*$", 
            r"", 
            line
         )
@@ -2904,13 +2904,13 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^!.* Elgiganten .*", 
+           r"^!.* Elgiganten .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^!.* elko\.is .*", 
+           r"^!.* elko\.is .*$", 
            r"", 
            line
         )
@@ -2952,7 +2952,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$\$script.*", 
+           r"^.*\$\$script.*$", 
            r"", 
            line
         )
@@ -2964,7 +2964,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$.*,app=.*", 
+           r"^.*\$.*,app=.*$", 
            r"", 
            line
         )
@@ -3000,13 +3000,13 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^! .*HTTPS(,| ).*", 
+           r"^! .*HTTPS(,| ).*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^! .* CSP .*", 
+           r"^! .* CSP .*$", 
            r"", 
            line
         )
@@ -3210,7 +3210,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*[$,]redirect-rule.*", 
+           r"^.*[$,]redirect-rule.*$", 
            r"", 
            line
         )
@@ -3360,7 +3360,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including pfBlockerNG, Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.\n# If you use a tool that edits the system's own hosts file, such as Hosts File Editor, Gas Mask, or Magisk Manager, make sure to also use the IPv6 version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersHostsIPv6.txt", 
            line
         )
@@ -3378,7 +3378,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z]) www\.www\..*", 
+           r"([a-z]) www\.www\..*$", 
            r"\1", 
            line
         )
@@ -3396,13 +3396,13 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"127\.0\.0\.1 [!/].*", 
+           r"127\.0\.0\.1 [!/].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^127\.0\.0\.1 .*/.*", 
+           r"^127\.0\.0\.1 .*/.*$", 
            r"", 
            line
         )
@@ -3414,7 +3414,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"^-.*", 
+           r"^-.*$", 
            r"", 
            line
         )
@@ -3464,13 +3464,13 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"^# Title:.*", 
+           r"^# Title:.*$", 
            "{ \"title\": \"👒 Dandelion Sprout's Nordic List for LS\",", 
            line
         )
 
         line = re.sub(
-           r"^# Description:.*", 
+           r"^# Description:.*$", 
            "\"description\": \"This list aims to block Norwegian, Danish, Icelandic and Faroese scam sellers, ad servers, and a small handful of tracking servers.\",\n\"rules\": [", 
            line
         )
@@ -3506,7 +3506,7 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r".*remote-domains(\": \"[0-9a-f:]{4,39})$", 
+           r"^.*remote-domains(\": \"[0-9a-f:]{4,39})$", 
            r'', 
            line
         )
@@ -3574,7 +3574,7 @@ def prepare_dnsmasq(lines) -> str:
         )
 
         line = re.sub(
-           r".*=/[0-9a-f:]{6,71}$", 
+           r"^.*=/[0-9a-f:]{6,71}$", 
            r"", 
            line
         )
@@ -3586,7 +3586,7 @@ def prepare_dnsmasq(lines) -> str:
         )
 
         line = re.sub(
-           r"^server=//.*", 
+           r"^server=//.*$", 
            r"", 
            line
         )
@@ -3623,19 +3623,19 @@ def prepare_hostsdeny(lines) -> str:
         )
 
         line = re.sub(
-           r" Dandelion Sprouts nordiske filtre.*", 
+           r" Dandelion Sprouts nordiske filtre.*$", 
            " Dandelion Sprouts nordiske filtre («hosts.deny»-versjonen)", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprout's Nordic Filters.*", 
+           r" Dandelion Sprout's Nordic Filters.*$", 
            " Dandelion Sprout's Nordic Filters (The «hosts.deny» version)", 
            line
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "# Platform notes: This list version is intended for those who still use a Linux system function called «hosts.deny».", 
            line
         )
@@ -3647,7 +3647,7 @@ def prepare_hostsdeny(lines) -> str:
         )
 
         line = re.sub(
-           r"ALL: [!/].*", 
+           r"ALL: [!/].*$", 
            r"", 
            line
         )
@@ -3671,19 +3671,19 @@ def prepare_pihole(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r" Dandelion Sprouts nordiske filtre.*", 
+           r" Dandelion Sprouts nordiske filtre.*$", 
            " Dandelion Sprouts nordiske filtre (for Pi-hole v5.21 og tidligere)", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprout's Nordic Filters.*", 
+           r" Dandelion Sprout's Nordic Filters.*$", 
            " Dandelion Sprout's Nordic Filters (for Pi-hole v5.21 and earlier)", 
            line
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "# Platform notes: This list version is intended for those who make use of the Regex functionality in Pi-Hole. Users of the list should also add the whitelist at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDomainsAllowlist.txt as a whitelist.", 
            line
         )
@@ -3738,7 +3738,7 @@ def prepare_pihole(lines) -> str:
 
         line = re.sub(
            r"^\*\.(.*)\.(.*)$", 
-           r".*\.\1\.\2$", 
+           r"^.*\.\1\.\2$", 
            line
         )
 
@@ -3768,24 +3768,24 @@ def prepare_pihole(lines) -> str:
 
         line = re.sub(
            r"\*\$\\", 
-           r".*\\", 
+           r"^.*\\", 
            line
         )
 
         line = re.sub(
-           r"^![a-z0-9*].*", 
+           r"^![a-z0-9*].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^# ——— (Centralised whitelist section|By default, the entries below will only).*", 
+           r"^# ——— (Centralised whitelist section|By default, the entries below will only).*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[0-9].*/.*", 
+           r"^[0-9].*/.*$", 
            r"", 
            line
         )
@@ -3810,7 +3810,7 @@ def prepare_pihole(lines) -> str:
 
         line = re.sub(
            r"([a-z0-9-])\*$", 
-           r"\1.*", 
+           r"\1.*$", 
            line
         )
 
@@ -3844,19 +3844,19 @@ def prepare_agh(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r" Dandelion Sprouts nordiske filtre.*", 
+           r" Dandelion Sprouts nordiske filtre.*$", 
            " Dandelion Sprouts nordiske filtre (for AdGuard Home, AdGuard for Android/Windows/macOS sine DNS-filtreringer, og Pi-Hole FTL ≥5.22)", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprout's Nordic Filters.*", 
+           r" Dandelion Sprout's Nordic Filters.*$", 
            " Dandelion Sprout's Nordic Filters (for AdGuard Home, AdGuard for Android/Windows/macOS' DNS filtering, and Pi-Hole FTL ≥5.22)", 
            line
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "# Platform notes: This list version is intended for those who use AdGuard Home and its oddly specific subset of adblocker syntaxes.", 
            line
         )
@@ -3916,7 +3916,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r".*without modification .*", 
+           r"^.*without modification .*$", 
            r"", 
            line
         )
@@ -4041,19 +4041,19 @@ def prepare_shadowsocks(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r" Dandelion Sprouts nordiske filtre.*", 
+           r" Dandelion Sprouts nordiske filtre.*$", 
            " Dandelion Sprouts nordiske filtre (for Shadowsocks)", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprout's Nordic Filters.*", 
+           r" Dandelion Sprout's Nordic Filters.*$", 
            " Dandelion Sprout's Nordic Filters (for Shadowsocks)", 
            line
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "# Platform notes: This list version is intended for those who use Shadowsocks, Shadowrocket, Surge, and other Socks5-based tools that have become popular in PR-China for several reasons.", 
            line
         )
@@ -4084,7 +4084,7 @@ def prepare_shadowsocks(lines) -> str:
 
         line = re.sub(
            r"^([a-z0-9].*)\.(.*)\.\*", 
-           r"URL-REGEX,^https?:\\/\\/\1\\.\2\\.*", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.\2\\.*$", 
            line
         )
 
@@ -4102,13 +4102,13 @@ def prepare_shadowsocks(lines) -> str:
 
         line = re.sub(
            r"^\*\.(.*)\.\*", 
-           r"URL-REGEX,^https?:\\/\\/\*\\.\1\\.*", 
+           r"URL-REGEX,^https?:\\/\\/\*\\.\1\\.*$", 
            line
         )
 
         line = re.sub(
            r"^([a-z0-9].*)\.\*$", 
-           r"URL-REGEX,^https?:\\/\\/\1\\.*", 
+           r"URL-REGEX,^https?:\\/\\/\1\\.*$", 
            line
         )
 
@@ -4155,7 +4155,7 @@ def prepare_shadowsocks(lines) -> str:
         )
 
         line = re.sub(
-           r".*without modification .*", 
+           r"^.*without modification .*$", 
            r"", 
            line
         )
@@ -4196,7 +4196,7 @@ def prepare_rpz(lines) -> str:
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "; Platform notes: This list version is intended for those who use BIND or other DNS server tools that support RPZ files.", 
            line
         )
@@ -4208,13 +4208,13 @@ def prepare_rpz(lines) -> str:
         )
 
         line = re.sub(
-           r" Dandelion Sprouts nordiske filtre.*", 
+           r" Dandelion Sprouts nordiske filtre.*$", 
            " Dandelion Sprouts nordiske filtre (for BIND/RPZ)", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprout's Nordic Filters.*", 
+           r" Dandelion Sprout's Nordic Filters.*$", 
            " Dandelion Sprout's Nordic Filters (for BIND/RPZ)", 
            line
         )
@@ -4226,13 +4226,13 @@ def prepare_rpz(lines) -> str:
         )
 
         line = re.sub(
-           r".*without modification .*", 
+           r"^.*without modification .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^/.*", 
+           r"^/.*$", 
            r"", 
            line
         )
@@ -4273,19 +4273,19 @@ def prepare_unbound(lines) -> str:
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "# Platform notes: This list version is intended for those who use the DNS server tool Unbound.", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprouts nordiske filtre.*", 
+           r" Dandelion Sprouts nordiske filtre.*$", 
            " Dandelion Sprouts nordiske filtre (for Unbound)", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprout's Nordic Filters.*", 
+           r" Dandelion Sprout's Nordic Filters.*$", 
            " Dandelion Sprout's Nordic Filters (for Unbound)", 
            line
         )
@@ -4297,13 +4297,13 @@ def prepare_unbound(lines) -> str:
         )
 
         line = re.sub(
-           r".*without modification .*", 
+           r"^.*without modification .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^/.*", 
+           r"^/.*$", 
            r"", 
            line
         )
@@ -4332,19 +4332,19 @@ def prepare_minerblock(lines) -> str:
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "# Platform notes: So, let's say your company boss is not letting you install any adblocker on your awful work laptop, but (s)he lets you install MinerBlock for some indeterminable reason? In this very unlikely case, I've saved your day.\n# Note: This list does not actually block any mining-related stuff.", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprouts nordiske filtre.*", 
+           r" Dandelion Sprouts nordiske filtre.*$", 
            " Dandelion Sprouts nordiske filtre (for MinerBlock)", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprout's Nordic Filters.*", 
+           r" Dandelion Sprout's Nordic Filters.*$", 
            " Dandelion Sprout's Nordic Filters (for MinerBlock)", 
            line
         )
@@ -4362,7 +4362,7 @@ def prepare_minerblock(lines) -> str:
         )
 
         line = re.sub(
-           r"^/.*", 
+           r"^/.*$", 
            r"", 
            line
         )
@@ -4422,7 +4422,7 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "# Platform notes: This list version is meant to be used simultaneously of the regular «Hosts» version when using computer/Android system hosts file editors like Hosts File Editor, Gas Mask, Magisk Manager, etc. It is not needed for tools that strip away the entries' IP address, such as Blokada and pfBlockerNG.", 
            line
         )
@@ -4434,7 +4434,7 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z]) www\.www\..*", 
+           r"([a-z]) www\.www\..*$", 
            r"\1", 
            line
         )
@@ -4452,7 +4452,7 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r"^:: [!/].*", 
+           r"^:: [!/].*$", 
            r"", 
            line
         )
@@ -4499,31 +4499,31 @@ def prepare_domainsallowlist(lines) -> str:
         )
 
         line = re.sub(
-           r"# Platform notes:.*", 
+           r"# Platform notes:.*$", 
            "# Platform notes: This list version is intended for users of Pi-hole, Blokada and DNS66, as a recommended supplement to their regular list versions. For AdGuard Home, the allowlistings are already incorporated in its regular list version.", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprouts nordiske filtre.*", 
+           r" Dandelion Sprouts nordiske filtre.*$", 
            " Dandelion Sprouts nordiske filtre (Domenehviteliste)", 
            line
         )
 
         line = re.sub(
-           r" Dandelion Sprout's Nordic Filters.*", 
+           r" Dandelion Sprout's Nordic Filters.*$", 
            " Dandelion Sprout's Nordic Filters (Domains allowlist)", 
            line
         )
 
         line = re.sub(
-           r"^[a-z0-9*/].*", 
+           r"^[a-z0-9*/].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^# ——— .*", 
+           r"^# ——— .*$", 
            r"", 
            line
         )
@@ -4662,31 +4662,31 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: [0-9]{4}.*", 
+           r"! Version: [0-9]{4}.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\[Adblock Plus 3\..*", 
+           r"\[Adblock Plus 3\..*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"! Redirect:.*", 
+           r"! Redirect:.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"=~ Warning.*", 
+           r"=~ Warning.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\|~ Warning.*", 
+           r"\|~ Warning.*$", 
            "", 
            line
         )
@@ -4710,13 +4710,13 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*", 
+           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*$", 
            r"\1$network", 
            line
         )
 
         line = re.sub(
-           r"^\|\|\[(.*)\]\^\$.*", 
+           r"^\|\|\[(.*)\]\^\$.*$", 
            r"[\1]$network", 
            line
         )
@@ -4794,13 +4794,13 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^!#include uBO%20list%20extensions/.*", 
+           r"^!#include uBO%20list%20extensions/.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*", 
+           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*$", 
            r"", 
            line
         )
@@ -4836,7 +4836,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|amazonaws\.com(\^)?($|\$[ac-z,-]{1,}$).*", 
+           r"^\|\|amazonaws\.com(\^)?($|\$[ac-z,-]{1,}$).*$", 
            r"", 
            line
         )
@@ -4866,7 +4866,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$dnstype.*", 
+           r"^.*\$dnstype.*$", 
            r"", 
            line
         )
@@ -4976,7 +4976,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"!#if.*", 
+           r"!#if.*$", 
            "", 
            line
         )
@@ -4988,25 +4988,25 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^no##.*", 
+           r"^no##.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"! Redirect:.*", 
+           r"! Redirect:.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"=~ Warning.*", 
+           r"=~ Warning.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\|~ Warning.*", 
+           r"\|~ Warning.*$", 
            "", 
            line
         )
@@ -5096,7 +5096,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*[,$]badfilter$", 
+           r"^.*[,$]badfilter$", 
            r"", 
            line
         )
@@ -5126,25 +5126,25 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^\*#.*", 
+           r"^\*#.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^!if .*", 
+           r"^!if .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^!#include .*", 
+           r"^!#include .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*", 
+           r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*$", 
            r"", 
            line
         )
@@ -5186,13 +5186,13 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$network$", 
+           r"^.*\$network$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\|\|amazonaws\.com(\^)?($|\$).*", 
+           r"^\|\|amazonaws\.com(\^)?($|\$).*$", 
            r"", 
            line
         )
@@ -5271,7 +5271,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r".*dnstype.*", 
+           r"^.*dnstype.*$", 
            r"", 
            line
         )
@@ -5314,13 +5314,13 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"~ Warning.*", 
+           r"~ Warning.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"\$doc,domain=.*", 
+           r"\$doc,domain=.*$", 
            "", 
            line
         )
@@ -5332,7 +5332,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^- \^.*", 
+           r"^- \^.*$", 
            "", 
            line
         )
@@ -5344,7 +5344,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"! Redirect:.*", 
+           r"! Redirect:.*$", 
            "", 
            line
         )
@@ -5362,7 +5362,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"@@\*\..*", 
+           r"@@\*\..*$", 
            "", 
            line
         )
@@ -5392,7 +5392,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"!#if.*", 
+           r"!#if.*$", 
            "", 
            line
         )
@@ -5410,7 +5410,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^\.[din].*", 
+           r"^\.[din].*$", 
            "", 
            line
         )
@@ -5422,7 +5422,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^@@ .*", 
+           r"^@@ .*$", 
            "", 
            line
         )
@@ -5440,13 +5440,13 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           "# Redirect:.*", 
+           "# Redirect:.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\+d\s[a-z0-9].*\s[a-z0-9*].*", 
+           r"\+d\s[a-z0-9].*\s[a-z0-9*].*$", 
            "", 
            line
         )
@@ -5476,13 +5476,13 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^-d .*\*\..*", 
+           r"^-d .*\*\..*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^- https\?.*", 
+           r"^- https\?.*$", 
            "", 
            line
         )
@@ -5554,7 +5554,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"\$.*", 
+           r"\$.*$", 
            "", 
            line
         )
@@ -5578,7 +5578,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r".* bounty .*", 
+           r"^.* bounty .*$", 
            r"", 
            line
         )
@@ -5590,13 +5590,13 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^!if .*", 
+           r"^!if .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^!#include .*", 
+           r"^!#include .*$", 
            r"", 
            line
         )
@@ -5608,25 +5608,25 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r".*\*&\*=.*", 
+           r"^.*\*&\*=.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\?.*", 
+           r"^\?.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\^ \\..*", 
+           r"^\^ \\..*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[0-9&].*", 
+           r"^[0-9&].*$", 
            r"", 
            line
         )
@@ -5638,13 +5638,13 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^- \(.*", 
+           r"^- \(.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^!\+.*", 
+           r"^!\+.*$", 
            r"", 
            line
         )
@@ -5661,7 +5661,7 @@ def prepare_tpl(lines) -> str:
            line
         )
         line = re.sub(
-           r".* amazonaws.*", 
+           r"^.* amazonaws.*$", 
            r"", 
            line
         )
@@ -5673,7 +5673,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r".* (cisco|cloudflare|adobe|atlassian)\.com$", 
+           r"^.* (cisco|cloudflare|adobe|atlassian)\.com$", 
            r"", 
            line
         )
@@ -5712,13 +5712,13 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r".*dnstype.*", 
+           r"^.*dnstype.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"\$.*", 
+           r"\$.*$", 
            "", 
            line
         )
@@ -5736,13 +5736,13 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"^\[Adblock Plus 3\..*", 
+           r"^\[Adblock Plus 3\..*$", 
            r"{+block}", 
            line
         )
 
         line = re.sub(
-           r"^\!.*", 
+           r"^\!.*$", 
            "#", 
            line
         )
@@ -5773,7 +5773,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"# Placeholder line.*", 
+           r"# Placeholder line.*$", 
            "{-block}\n# Manually updated Privoxy version of the whitelisted domains from the other versions of this list.\n.coolcmd.tk\n.budterence.tk\n.intr0.tk\n.google.tk\n.transportnews.tk\n.unicorncardlist.tk\n.c0d3c.tk\n.loljp-wiki.tk\n.ninetail.tk\n.goshujin.tk\n.graph.tk\n.google.ga\n.filtri-dns.ga\n.google.ml\n.deimos.gq\n.1hos.cf\n.intr0.cf\n.ivoid.cd\n.domainvoider.cf\n.google.cf\n.rths.cf\n.anonytext.tk\n.tokelau-info.tk\n.fakaofo.tk\n.nukunonu.tk\n.anpigabon.ga\n.dgdi.ga\n.voitures.ga\n.mobili.ml\n.inege.gq\n.tvgelive.gq\n.comprarcarros.gq\n.voitures.cf\n.assembleenationale-rca.cf\n.cps-rca.cf\n.acap.cf", 
            line
         )
@@ -5803,7 +5803,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r".* bounty .*", 
+           r"^.* bounty .*$", 
            r"", 
            line
         )
@@ -5815,7 +5815,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"^&.*", 
+           r"^&.*$", 
            r"", 
            line
         )
@@ -5827,13 +5827,13 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|amazonaws\.com(\^)?($|\$[ac-z]).*", 
+           r"^\|\|amazonaws\.com(\^)?($|\$[ac-z]).*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\.(amazonaws|cisco|cloudflare|adobe|atlassian).*", 
+           r"^\.(amazonaws|cisco|cloudflare|adobe|atlassian).*$", 
            r"", 
            line
         )
@@ -5865,13 +5865,13 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"\^.*", 
+           r"\^.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^\! .*", 
+           r"^\! .*$", 
            "#", 
            line
         )
@@ -5883,7 +5883,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"# Placeholder line.*", 
+           r"# Placeholder line.*$", 
            "", 
            line
         )
@@ -5895,7 +5895,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"\|\|.*/.*", 
+           r"\|\|.*/.*$", 
            "", 
            line
         )
@@ -5907,7 +5907,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"127\.0\.0\.1 \..*", 
+           r"127\.0\.0\.1 \..*$", 
            "", 
            line
         )
@@ -5949,7 +5949,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"^/.*", 
+           r"^/.*$", 
            r"", 
            line
         )
@@ -5973,7 +5973,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r".*gamecopyworld.*", 
+           r"^.*gamecopyworld.*$", 
            "", 
            line
         )
@@ -5985,43 +5985,43 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r".* bounty .*", 
+           r"^.* bounty .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\$.*", 
+           r"^\$.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\..*", 
+           r"^\..*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*\.\$[a-z].*", 
+           r"^.*\.\$[a-z].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^&.*", 
+           r"^&.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\?.*", 
+           r"^\?.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^127\.0\.0\.1 [a-z0-9-]{1,}\$.*", 
+           r"^127\.0\.0\.1 [a-z0-9-]{1,}\$.*$", 
            r"", 
            line
         )
@@ -6051,13 +6051,13 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"^-.*", 
+           r"^-.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"([0-9a-z].*)\$.*", 
+           r"([0-9a-z].*)\$.*$", 
            r"", 
            line
         )
@@ -6108,13 +6108,13 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"\^.*", 
+           r"\^.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"^\! .*", 
+           r"^\! .*$", 
            "#", 
            line
         )
@@ -6126,19 +6126,19 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"# Placeholder line.*", 
+           r"# Placeholder line.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\|\|.*/.*", 
+           r"\|\|.*/.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"\|\|\..*", 
+           r"\|\|\..*$", 
            "", 
            line
         )
@@ -6168,7 +6168,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^/.*", 
+           r"^/.*$", 
            "", 
            line
         )
@@ -6186,43 +6186,43 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r".* bounty .*", 
+           r"^.* bounty .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\$.*", 
+           r"^\$.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\..*", 
+           r"^\..*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*\.\$[a-z].*", 
+           r"^.*\.\$[a-z].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^&.*", 
+           r"^&.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\?.*", 
+           r"^\?.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[a-z0-9-]{1,}\$.*", 
+           r"^[a-z0-9-]{1,}\$.*$", 
            r"", 
            line
         )
@@ -6246,19 +6246,19 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^-.*", 
+           r"^-.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"([0-9a-z].*)\$.*", 
+           r"([0-9a-z].*)\$.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[0-9].*:.*", 
+           r"^[0-9].*:.*$", 
            r"", 
            line
         )
@@ -6270,7 +6270,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^!#.*", 
+           r"^!#.*$", 
            r"", 
            line
         )
@@ -6282,7 +6282,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^!!!.*", 
+           r"^!!!.*$", 
            r"", 
            line
         )
@@ -6332,7 +6332,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r".*google\.(tk|ml).*", 
+           r"^.*google\.(tk|ml).*$", 
            r"", 
            line
         )
@@ -6368,7 +6368,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"!#if.*", 
+           r"!#if.*$", 
            "", 
            line
         )
@@ -6380,13 +6380,13 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"! Redirect:.*", 
+           r"! Redirect:.*$", 
            "", 
            line
         )
 
         line = re.sub(
-           r"~ Warning.*", 
+           r"~ Warning.*$", 
            r"", 
            line
         )
@@ -6410,7 +6410,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"([$])1.*", 
+           r"([$])1.*$", 
            "", 
            line
         )
@@ -6422,13 +6422,13 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^.*", 
+           r"\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^.*$", 
            r"\1", 
            line
         )
 
         line = re.sub(
-           r"^\|\|\[(.*)\].*", 
+           r"^\|\|\[(.*)\].*$", 
            r"\1", 
            line
         )
@@ -6446,7 +6446,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$all,.*\..*$", 
+           r"^.*\$all,.*\..*$", 
            r"", 
            line
         )
@@ -6458,7 +6458,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"/(live|fun|popup)([,|]|$).*", 
+           r"/(live|fun|popup)([,|]|$).*$", 
            r"/", 
            line
         )
@@ -6482,19 +6482,19 @@ def prepare_agh(lines) -> str:
         #)
 
         line = re.sub(
-           r".* bounty .*", 
+           r"^.* bounty .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\$.*", 
+           r"^\$.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^@?@?\|\|.*/.*", 
+           r"^@?@?\|\|.*/.*$", 
            r"", 
            line
         )
@@ -6506,31 +6506,31 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^!if .*", 
+           r"^!if .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^!#include .*", 
+           r"^!#include .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^&.*", 
+           r"^&.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\|\|.*[a-z0-9]\.(ga|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*", 
+           r"^\|\|.*[a-z0-9]\.(ga|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[/|].*\.php[/^?].*", 
+           r"^[/|].*\.php[/^?].*$", 
            r"", 
            line
         )
@@ -6542,13 +6542,13 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^@?@?\|\|[a-z0-9.-]{1,}\|[a-z0-9.-].*", 
+           r"^@?@?\|\|[a-z0-9.-]{1,}\|[a-z0-9.-].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*\.png\^.*", 
+           r"^.*\.png\^.*$", 
            r"", 
            line
         )
@@ -6567,7 +6567,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r".*\$popup$", 
+           r"^.*\$popup$", 
            r"", 
            line
         )
@@ -6580,7 +6580,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r".*\*&\*=\*&\*.*", 
+           r"^.*\*&\*=\*&\*.*$", 
            r"", 
            line
         )
@@ -6599,13 +6599,13 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\||/|:).*[&%].*", 
+           r"^(\||/|:).*[&%].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"@@\|\|[a-zA-Z0-9.-]{0,}\|[a-zA-Z0-9.-].*", 
+           r"@@\|\|[a-zA-Z0-9.-]{0,}\|[a-zA-Z0-9.-].*$", 
            r"", 
            line
         )
@@ -6617,13 +6617,13 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r".*\^,.*", 
+           r"^.*\^,.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^\|\|.*\^[a-z].*", 
+           r"^\|\|.*\^[a-z].*$", 
            r"", 
            line
         )
@@ -6653,7 +6653,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\?.*", 
+           r"^\?.*$", 
            r"", 
            line
         )
@@ -6665,7 +6665,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r".*\^\$[a-z-]{1,}[.|].*", 
+           r"^.*\^\$[a-z-]{1,}[.|].*$", 
            r"", 
            line
         )
@@ -6786,7 +6786,7 @@ def prepare_domains(lines) -> str:
             continue
 
         line = re.sub(
-           r".*[$,]document.*", 
+           r"^.*[$,]document.*$", 
            r"", 
            line
         )
@@ -6873,7 +6873,7 @@ def prepare_domains(lines) -> str:
             continue
 
         line = re.sub(
-           r"[$,]document.*", 
+           r"[$,]document.*$", 
            r"", 
            line
         )
@@ -6961,7 +6961,7 @@ def prepare_domains(lines) -> str:
             continue
 
         line = re.sub(
-           r"[$,]document.*", 
+           r"[$,]document.*$", 
            r"", 
            line
         )
@@ -7009,7 +7009,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"[$,]third-party.*", 
+           r"[$,]third-party.*$", 
            r"", 
            line
         )
@@ -7021,7 +7021,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r".*removeparam.*", 
+           r"^.*removeparam.*$", 
            r"", 
            line
         )
@@ -7042,7 +7042,7 @@ def prepare_agh(lines) -> str:
             continue
 
         line = re.sub(
-           r"[$,]document.*", 
+           r"[$,]document.*$", 
            r"", 
            line
         )
@@ -7090,7 +7090,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"[$,]third-party.*", 
+           r"[$,]third-party.*$", 
            r"", 
            line
         )
@@ -7108,7 +7108,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r".*removeparam.*", 
+           r"^.*removeparam.*$", 
            r"", 
            line
         )
@@ -7175,7 +7175,7 @@ def prepare_domains(lines) -> str:
             continue
 
         line = re.sub(
-           r"[$,]document.*", 
+           r"[$,]document.*$", 
            r"", 
            line
         )
@@ -7262,7 +7262,7 @@ def prepare_domains(lines) -> str:
             continue
 
         line = re.sub(
-           r"[$,]document.*", 
+           r"[$,]document.*$", 
            r"", 
            line
         )
@@ -7349,7 +7349,7 @@ def prepare_domains(lines) -> str:
             continue
 
         line = re.sub(
-           r"[$,]document.*", 
+           r"[$,]document.*$", 
            r"", 
            line
         )
@@ -7431,19 +7431,19 @@ def prepare_domains(lines) -> str:
             continue
 
         line = re.sub(
-           r"^[a-zA-Z!_*/İ=%&-].*", 
+           r"^[a-zA-Z!_*/İ=%&-].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[0-9].*[a-zA-Z!_*-].*", 
+           r"^[0-9].*[a-zA-Z!_*-].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^# [—¤|].*", 
+           r"^# [—¤|].*$", 
            r"", 
            line
         )
@@ -7455,13 +7455,13 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^# (Translated title|Source|Note|Platform notes):.*", 
+           r"^# (Translated title|Source|Note|Platform notes):.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^# Title: 📔.*", 
+           r"^# Title: 📔.*$", 
            r"", 
            line
         )
@@ -7473,37 +7473,37 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^# For m.*", 
+           r"^# For m.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*Nordic Filters.*", 
+           r"^.*Nordic Filters.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*nordiske filtre.*", 
+           r"^.*nordiske filtre.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^# Title: .*", 
+           r"^# Title: .*$", 
            r"# Title: Dandelion Sprout's and other adblocker lists' IPs", 
            line
         )
 
         line = re.sub(
-           r"^# Description: .*", 
+           r"^# Description: .*$", 
            r"# Description: This IP set combines IP and CIDR addresses from plentiful of major adblocker lists. It contains heavily altered content from Dandelion Sprout's Anti-Malware List, Dandelion Sprout's Nordic Filters, EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, and EasyList Spanish.\n# For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english", 
            line
         )
 
         line = re.sub(
-           r"^# (These|Google|Gigabyte|Copied).*", 
+           r"^# (These|Google|Gigabyte|Copied).*$", 
            r"", 
            line
         )
@@ -7573,61 +7573,61 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! 📛 .*", 
+           r"^! 📛 .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^mas.*", 
+           r"^mas.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^[*#].*", 
+           r"^[*#].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*position: absolute; .*", 
+           r"^.*position: absolute; .*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*astodon.*", 
+           r"^.*astodon.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".* flag[ ,].*", 
+           r"^.* flag[ ,].*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r"^!!!.*", 
+           r"^!!!.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*united species.*", 
+           r"^.*united species.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*constructive meme.*", 
+           r"^.*constructive meme.*$", 
            r"", 
            line
         )
 
         line = re.sub(
-           r".*prohibitions on .*", 
+           r"^.*prohibitions on .*$", 
            r"", 
            line
         )
@@ -7715,7 +7715,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! Title: 🪑 .*", 
+           r"^! Title: 🪑 .*$", 
            r"! Title: 🌂 Anti-'K-pop on Twitter' List - Nitter Supplement", 
            line
         )
@@ -7797,7 +7797,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^\[Adblock Plus.*", 
+           r"^\[Adblock Plus.*$", 
            r"", 
            line
         )
