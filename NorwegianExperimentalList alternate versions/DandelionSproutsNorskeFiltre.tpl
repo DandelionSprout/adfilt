@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 04April2024v1-Deprecated
+# Version: 10April2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -763,8 +763,6 @@ msFilterList
 # Fake Gymshark webshops
 -d altrasgshoes.com
 -d altrask.com
--d bershka-norge.com
--d bershkadenmark.com
 -d brunateskonorge.com
 -d g-ymsharknorge.com
 -d gantdanmark.com
@@ -816,6 +814,7 @@ msFilterList
 # Overly dedicated E-mail spambots
 -d wirexapp.africa.com
 -d tachyoniums.eu.com
+# https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-9075749
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
@@ -958,12 +957,8 @@ msFilterList
 -d norge-adidas.com
 -d tevanorgeshop.com
 -d wolverineskonorge.com
--d thenorthfacenorge.co.no
--d vansnorge.co.no
 -d hunternorge.co
--d hunternorge.co.no
 -d hunternorgeno.com
--d martensnorge.co.no
 -d norgeskotilbud.com
 -d hokasnorgeno.com
 -d vanssnorge.com
@@ -1105,7 +1100,6 @@ msFilterList
 -d godtdsamaritansk.com
 -d helsehjelp.over-blog.com
 -d jensapoteker.com
--d kobconcerta54mgonlineidanmark.wordpress.com
 -d marson.footeo.com
 -d sikkertapotek.com
 -d sobrilleverandoridanmark.wordpress.com
