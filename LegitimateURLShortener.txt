@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 08April2024v1
+! Version: 14April2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1165,6 +1165,7 @@ $removeparam=mr:placement
 $removeparam=mr:ext
 
 ! https://www.staples.com/asus-rog-maximus-xiii-hero-socket-lga1200-atx-intel-gaming-motherboard-rogmaximusxiiihero/product_IM18PZ144?cid=NAR%3AIM18PZ144&nrtv_cid=27f8ed66fd062e2af2b425293ca49ed8f944481d16abd12fb5ca071b82caee44&nrtv_as_src=1
+! ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1614578
 $removeparam=nrtv_cid
 $removeparam=nrtv_as_src
 
@@ -1194,6 +1195,7 @@ $removeparam=amp_device_id
 $removeparam=awinaffid
 
 ! https://www.volotea.com/es/ofertas-vuelos/?cje=1ff9a22e4c5c11ec81ce02f50a180514
+! https://epson.com/?cje=28a0febb0cac11ec83a7efca0a180512
 $removeparam=cje
 
 ! https://www.myprotein.es/?removedParams=utm_content
@@ -1740,7 +1742,7 @@ $removeparam=sid,domain=anrdoezrs.net|dpbolvw.net|gopjn.com|jdoqocy.com|kqzyfj.c
 ! No particular example (Zoom can't be added; see https://github.com/DandelionSprout/adfilt/issues/665)
 $removeparam=from,doc,domain=apkpure.com|bandcamp.com|browserling.com|ettoday.net|luisaviaroma.com|sogou.com|store.hbr.org|app.snyk.io|onlinepngtools.com|indiatimes.com|jetbrains.com|nextdns.io|tvtropes.org|yandex.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915 and https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864 (eBay can't be added; see https://github.com/DandelionSprout/adfilt/pull/514)
-$removeparam=keyword,domain=bindright.com|lendgo.com
+$removeparam=keyword,domain=bindright.com|lendgo.com|reddit.app.link
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1707764
 $removeparam=id,domain=go.redirectingat.com|go.skimlinks.com|go.skimresources.com|karkkainen.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726383
@@ -2694,7 +2696,8 @@ $~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com|ledger.*|mrgay.com|odyse
 
 ! https://www.imdb.com/title/tt10048342/mediaviewer/rm2490882049/?context=default
 ! https://open.spotify.com/track/64IcRXZ9TzOOqyse3EPA3Y?context=spotify%3Aplaylist%3A37i9dQZF1Epio1Kah92zAl
-$removeparam=context,domain=imdb.com|fiverr.com|spotify.com
+! https://www.avito.ru/azov/tovary_dlya_detey_i_igrushki/my_little_pony_pinki_pay_2041239389?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFJKNSgzqsopTDfNMcm0rDAtzirMt8gwLqtKMyvNNimvULKuBQQAAP__rPiLMTUAAAA (26/12/2023)
+$removeparam=context,domain=imdb.com|fiverr.com|spotify.com|avito.ru|avito.ma
 
 ! https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=https%3A%2F%2Fwww.nytimes.com%2F2021%2F01%2F21%2Fopinion%2Fpublic-transit-funding.html%3Faction%3Dclick%26module%3DWell%26pgtype%3DHomepage%26section%3DEditorials (24/01/2021)
 $removeparam=action,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
@@ -2998,9 +3001,6 @@ $removeparam=site_refer,domain=saksfifthavenue.com|saksoff5th.com
 ! https://www.humblebundle.com/?zmg_code=047w7nLoOX7W0gtuuWl9c6u
 $removeparam=zmg_code
 
-! https://epson.com/?cje=28a0febb0cac11ec83a7efca0a180512
-||epson.$removeparam=cje
-
 ! https://www.fubo.tv/stream/latino/?irad=1070868&irmp=416484&sharedID=HTW
 ||fubo.tv^$removeparam=irad
 ||fubo.tv^$removeparam=irmp
@@ -3196,9 +3196,6 @@ $removeparam=collection,domain=everlane.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1614826
 $removeparam=iid,domain=cnn.com
-
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1614578
-$removeparam=nrtv_as_src,domain=bestbuy.com
 
 ! https://github.com/easylist/easylist/issues/9625
 ||weibo.com/ajax/log$removeparam=uicode
@@ -3465,7 +3462,6 @@ $removeparam=plink,domain=audible.*
 
 ! https://www.netflix.com/watch/81110875?trackId=254794450&tctx=2%2C1%2C96c1d619-68cd-4cad-ba6c-7e473d76dd30-24305116%2C%2Cunknown%2C%2C%2C (29/12/2021)
 ||netflix.com^$removeparam=trackId
-||netflix.com^$removeparam=tctx
 ||netflix.com^$removeparam=trackIdJaw
 ||netflix.com^$removeparam=trackIdTrailer
 ||netflix.com^$removeparam=trackIdEpisode
@@ -3520,7 +3516,6 @@ $removeparam=loid_created,domain=reddit.app.link
 $removeparam=reddaid,domain=reddit.app.link
 ! can't remove from YouTube: https://github.com/DandelionSprout/adfilt/issues/931
 $doc,removeparam=feature,domain=reddit.app.link
-$removeparam=keyword,domain=reddit.app.link
 $removeparam=mweb_subreddit_ids,domain=reddit.app.link
 $removeparam=mweb_loid,domain=reddit.app.link
 $removeparam=mweb_loid_created,domain=reddit.app.link
@@ -4496,9 +4491,6 @@ $doc,removeparam=af_reengagement_window
 
 ! https://translate.wordpress.com/languages/nb/default/-all-waiting?ref=weekly-email (22/12/2023)
 ||wordpress.com^$doc,removeparam=/^ref=[a-z-]{5,}$/
-
-! https://www.avito.ru/azov/tovary_dlya_detey_i_igrushki/my_little_pony_pinki_pay_2041239389?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFJKNSgzqsopTDfNMcm0rDAtzirMt8gwLqtKMyvNNimvULKuBQQAAP__rPiLMTUAAAA (26/12/2023)
-$removeparam=context,domain=avito.ru|avito.ma
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-7916139
 $doc,removeparam=_x_ns_sku_id,domain=temu.com 
