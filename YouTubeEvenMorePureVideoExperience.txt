@@ -1,6 +1,6 @@
 [Adblock Plus 3.15]
 ! Title: ▶️ YouTube: Even More Pure Video Experience
-! Version: 16April2024v1
+! Version: 16April2024v2
 ! Expires: 6 days
 ! Description: This list removes even more distracting or uncomfortable things on YouTube.
 ! If you want to block even more things on top of these two lists, feel free to check out the anti-Autoplay (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt) and anti-Elsagate (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt) lists that I've made.
@@ -173,20 +173,8 @@ www.youtube.com#?#div.top-nav-tab:has-text(/^Gaming$/)
 
 ! ————————————————————————————————————————————————————————————————
 
-! ——— YouTube Android apps (Requires "AdGuard for Android") ———
-
 !#if adguard_app_android
-! Removes comments on video pages
-||youtube.com/live_chat_fragments_ajax?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
-||youtube.com/comment_service_ajax?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
-
-! Removes video suggestions
-/annotations_module.js$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
-/endscreen.js$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
-||youtube.com/annotations_invideo?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
-
-! Removes recommended and featured videos in the endscreen
-||ytimg.com/yts/swfbin/player-*/endscreen.swf$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+!#include YouTubeEvenMorePureVideoExperience-AdGuardApps.txt
 !#endif
 
 ! ————————————————————————————————————————————————————————————————
