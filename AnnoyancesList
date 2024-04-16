@@ -227,3 +227,8 @@ valdemarsro.dk###recipe-intro p:last-of-type
 ! Attempts to fix how JPN ruby is so small in Chrome's default fonting as to be unreadable even by a small fairy, and the situation isn't all that much better in Firefox.
 ! https://www.mariowiki.com/The_Ghostly_Castle
 ~jp.wikipedia.org,~jp.wiktionary.org##table.wikitable ruby > rt:style(font-size: 67% !important)
+
+!#if env_chromium
+! In rare cases, most visibly on Wikipedia's language selection table, Meitei text would refuse to render, even if the relevant fonts had been installed
+en.wikipedia.org,www.wikipedia.org#?#:is(p,a):has-text(/[ꯀ-꯹ꫠ-꫶]/):style(font-family:sans-serif,"Noto Sans Meetei Mayek","Eeyek","Eeyek Unicode","Nirmala UI")
+!#endif
