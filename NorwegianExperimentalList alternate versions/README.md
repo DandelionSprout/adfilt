@@ -9,7 +9,7 @@ Recommended adblockers for the various list versions:
 • General ABP users: **NordicFiltersABP-Inclusion.txt**<br>
 • Blokada, DNS66: **DandelionSproutsNorskeFiltreDomains.txt** + **NordicFiltersDomainsAllowlist.txt**<br>
 • Google Hit Hider by Domain, uMatrix, personalDNSfilter, Samsung Knox, dnscrypt-proxy, Diversion, FireHOL: **DandelionSproutsNorskeFiltreDomains.txt**<br>
-• pfBlockerNG, AdAway, Gas Mask, hostsmgr, Hosts File Editor: **AdawayHosts**<br>
+• pfBlockerNG, Gas Mask, hostsmgr, Hosts File Editor: **NordicHosts.txt**<br>
 • Internet Explorer 11: **DandelionSproutsNorskeFiltre.tpl**<br>
 • AdGuard Home: **NordicFiltersAdGuardHome.txt**<br>
 • Pi-hole: **NordicFiltersPiHole.txt** + **NordicFiltersDomainsAllowlist.txt**<br>
