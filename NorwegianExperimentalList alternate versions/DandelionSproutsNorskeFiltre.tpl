@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 10April2024v1-Deprecated
+# Version: 25April2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1122,7 +1122,7 @@ msFilterList
 -d 1.14.61.188
 -d smarthouseforum.ru
 -d trafikkskoleapp.no
-# Last updated: 03April2024v1-Extension
+# Last updated: 18April2024v1-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -1151,6 +1151,7 @@ msFilterList
 # The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
 -d piano.io execute
 # 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
+!¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤!
 # 🇳🇴 🇩🇰: ——— Ikke for Brave Browser ———
 # 🇬🇧: ——— Not for Brave Browser ———
 # Last updated: 09February2022v1-Extension

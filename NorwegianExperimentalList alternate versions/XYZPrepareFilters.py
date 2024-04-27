@@ -1370,12 +1370,6 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"(.*)check out https://www\.i-dont-care-about-cookies\.eu/", 
-           r"\1check out https://easylist-downloads.adblockplus.org/easylist-cookie.tpl (Can also be subscribed to from https://raw.githack.com/collinbarrett/FilterLists/master/data/TPLSubscriptionAssistant.html)", 
-           line
-        )
-
-        line = re.sub(
            r"\|$", 
            r"", 
            line
@@ -6684,7 +6678,7 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"! Placeholder line for alternate list versions", 
-           r"! To keep track of when on earth the AdGuard team will allow $denyallow in included lists\n||example.org^$denyallow=example.org\n||example.org^$denyallow=~example.org", 
+           r"/^172\\.255\\.6\\.(\\d{1,2}|2.*|1[0-689].*|17[0-689])$/", 
            line
         )
 

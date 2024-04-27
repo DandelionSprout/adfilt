@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)
-! Version: 100420241
+! Version: 250420241
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -556,7 +556,7 @@ itavisen.no##.td-adspot-title
 itavisen.no##.td-c-loop-ad
 itavisen.no##.td-header-ad-wrap
 itavisen.no##article.clearfix:has(a[href*="/go/"])
-itavisen.no##article:-abp-has(.title:has-text(/[?:;—]\sannons[eø]r?$/))
+itavisen.no##article:-abp-has(.title:has-text(/[?:;—]\san{2}ons[eø]r?$/))
 itavisen.no##article[class*=annonse]
 itavisen.no##p[style="text-align: center;"]
 itavisen.no#?#.item:-abp-has(.meta:has-text(/^An{2}onse$/))
@@ -1002,7 +1002,7 @@ tu.no,digi.no##[id^=adContainer-]:not([id$=-afterBody])
 tu.no,digi.no##main > div > div:empty
 tu.no,digi.no#?#article~div:has-text(/^A[n|ĳ]n\ons/i)
 tungt.no#?#div.large-12.row:has-text(MASCUS)
-tunnelsyn.no#?#.widget_media_image:has-text(/^ANNONSE/)
+tunnelsyn.no#?#.widget_media_image:has-text(/^AN{2}ONSE/)
 tv-kalundborg.dk##.flickity-viewport
 tv-kalundborg.dk##div.col-s-100.col-50:nth-of-type(2)
 tv2.dk##.o-deck:has(div[class^="ad ad-wide"])
@@ -5653,7 +5653,7 @@ feber.se##.maxetise
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Thu, 21 Mar 2024 13:20:00 +0000
+! Last modified: Wed, 24 Apr 2024 13:25:17 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -6850,8 +6850,8 @@ www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimokki.com,ww
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.inh_banner_nl
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.leftAdvDiv
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.listing:not([data-id]):not(.tricky_link_listing)
-www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.quick-search__banner
-www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimokki.com,www.nettivaraosa.com,www.nettivuokraus.com##.huge-banner
+! www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.quick-search__banner
+! www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimokki.com,www.nettivaraosa.com,www.nettivuokraus.com##.huge-banner
 www.nettimokki.com##div.nc_r_banner
 www.nettimoto.com###smallViewHouseBanner
 www.nettimoto.com#?#.article-blocks__item:has(> [id|="almad-post-content"])
@@ -7146,7 +7146,7 @@ tori.fi##.appnexus-container
 danskebank.fi#@#.app-banner:not(html, body)
 
 ! https://www.nettiauto.com/advSearch.php
-www.nettiauto.com#@##adv
+classic.nettiauto.com,www.nettiauto.com#@##adv
 
 ! Unbreak Omaposti's service (EasyList – Chat Widgets)
 ! https://oma.posti.fi/fi/contact-us
@@ -7191,6 +7191,10 @@ netticaravan.fi#@#article.ad
 
 ! "RU Adlist" breaks the carousel showing own products of Netrauta
 @@||/media/banners/*$image,domain=www.netrauta.fi
+
+! 2024-04-23 https://elisa.fi/yhtiotieto/sijoittajille/
+! "se: Frellwit's Swedish Filter" breaks this
+@@||publish.ne.cision.com/$xmlhttprequest,domain=elisa.fi
 
 ! Allow opt-in in a cookieconsent-blocked element (for example, YouTube embeds)
 ! Example page (YouTube embed): https://www.seurakuntalainen.fi/uutiset/jutta-urpilainen-arvotentissa-arvoni-pohjaavat-kristinuskoon-mutta-ovat-linjassa-sosiaalidemokratian-kanssa/
