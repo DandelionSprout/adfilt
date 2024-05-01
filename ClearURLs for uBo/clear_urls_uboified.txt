@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 28/03/2024
+! Last updated: 01/05/2024
 ! Script last updated: 29/2/2024
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -171,6 +171,15 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||facebook.com^$removeparam=tracking
 ||facebook.com^$removeparam=referral_code
 ||facebook.com^$removeparam=referral_story_type
+||facebook.com^$removeparam=eav
+||facebook.com^$removeparam=sfnsn
+||facebook.com^$removeparam=idorvanity
+||facebook.com^$removeparam=wtsid
+||facebook.com^$removeparam=rdc
+||facebook.com^$removeparam=rdr
+||facebook.com^$removeparam=paipv
+||facebook.com^$removeparam=_nc_x
+||facebook.com^$removeparam=_rdr
 ||facebook.com^$removeparam=mibextid
 ||twitter.com^$removeparam=/^(ref_?)?src=/
 ||twitter.com^$removeparam=cn
@@ -282,13 +291,6 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||spiegel.de^$removeparam=b
 ||instagram.com^$removeparam=igshid
 ||instagram.com^$removeparam=igsh
-||lazada.com.my^$removeparam=ad_src
-||lazada.com.my^$removeparam=did
-||lazada.com.my^$removeparam=pa
-||lazada.com.my^$removeparam=mp
-||lazada.com.my^$removeparam=impsrc
-||lazada.com.my^$removeparam=cid
-||lazada.com.my^$removeparam=pos
 ||boredpanda.com^$removeparam=h
 ||bahn.de^$removeparam=/^dbkanal_[0-9]{3}=/
 ||disq.us^$removeparam=cuid
@@ -670,6 +672,24 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||goodreads.com^$removeparam=ac
 ||sohu.com^$removeparam=pvid
 ||sohu.com^$removeparam=scm
+||shopee.(com|co.th)^$removeparam=publish_id
+||shopee.(com|co.th)^$removeparam=sp_atk
+||shopee.(com|co.th)^$removeparam=xptdk
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=clickTrackInfo
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=abid
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=pvid
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=ad_src
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=spm
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=src
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=from
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=scm
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=pa
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=pid_pvid
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=did
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=mp
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=cid
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=impsrc
+||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=pos
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
