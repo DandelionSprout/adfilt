@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 1May2024v1
+! Version: 1May2024v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -61,7 +61,7 @@ $removeparam=logTag,doc
 $removeparam=gclsrc,doc
 
 ! https://www.nytimes.com/2020/11/10/us/yellowstone-chickens.html?smid=tw-share (11/11/2020)
-$removeparam=smid,domain=~amazon.*|~opinion.no
+$doc,removeparam=smid,domain=~amazon.*|~opinion.no
 
 ! https://www.norsk-tipping.no/redirector/oddsen/kjop?WT.mc_id=Nettavisen_nettavisen_ekomm_langoddsen_Oddsartikkel__ekomm&utm_source=nettavisen&utm_medium=ekomm&utm_content=langoddsen_Oddsartikkel_&utm_campaign=ekomm&view=lobby&rekker=[1548011,4825429,1]&spillsystem=1 (15/11/2020)
 $doc,removeparam=/^WT\..*$/i
@@ -71,166 +71,166 @@ $doc,removeparam=/^WTmc\..*$/i
 
 ! https://twitter.com/PlanNorge/status/1181537299038953473?ref_src=twsrc%2525255Etfw%2525257Ctwcamp%2525255Etweetembed%2525257Ctwterm%2525255E1181537299038953473&ref_url=https%2525253A%2525252F%2525252Fwww.vg.no%2525252F (14/11/2020; does not seem to work with AdGuard)
 $removeparam=ref_src,doc
-$removeparam=ref_url,domain=~randalls.com
+$doc,removeparam=ref_url,domain=~randalls.com
 
 ! https://www.netonnet.no/art/data-og-nettbrett/nettbrett/lader-og-dokking/apple-thunderboltgigabitethernet/182650.11071/?dclid=CjkKEQiAwMP9BRDt06nU9a_8_bABEiQAL_PHDRXNVIm2rrWiTDbj0z7kJeilQ-_BYvMHw3xzuRcnB2Dw_wcB (15/11/2020)
-$removeparam=dclid
+$doc,removeparam=dclid
 
 ! https://www.apple.com/no/shop/product/MD463ZM/A/thunderbolt-til-gigabit-ethernet-adapter?afid=p239%7C1405819&cid=aos-no-aff-ir (15/11/2020)
 ! https://www.proshop.dk/HyperX-Predator-RGB-ram?cid=64e93f7a-cee2-44d9-911a-37f3eafd7b5f (23/01/2021)
-$removeparam=afid
+$doc,removeparam=afid
 
 ! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
-$removeparam=WebSiteMapNodeID
+$doc,removeparam=WebSiteMapNodeID
 
 ! https://clips.twitch.tv/HotGenerousBearHeyGirl?tt_content=player_title&tt_medium=clips_embed
-$removeparam=tt_content
-$removeparam=tt_medium
+$doc,removeparam=tt_content
+$doc,removeparam=tt_medium
 
 ! https://www.elgiganten.dk/product/lyd-hi-fi/hovedtelefoner/WH1000XM3B/sony-tradlose-around-ear-hovedtelefoner-wh-1000xm3-sort?scid=Pricecomparison8084162610 (27/11/2020)
-$removeparam=scid,domain=~pnc.com
+$doc,removeparam=scid,domain=~pnc.com
 
 ! https://salming.com/sv-se/produkter/p/1099805-0416/salming-oval-fusion?trackID=79064280 (27/11/2020)
 $doc,removeparam=trackID
 
 ! https://productkeys.dk/produkt/pokemon-lets-go-pikachu/?dTribesID=9OIiIkbuCBtHQnvUeuU6ZD05WpuicLKP%7Cadtribes%7C11543 (27/11/2020)
-$removeparam=dTribesID
+$doc,removeparam=dTribesID
 
 ! https://shop.bt.com/products/nintendo-switch-hw---neon-red-and-neon-blue--2019-version--10002208-FCM1.html?awc=3043_1606583260_feef24aba0ca5ffbbf513bb8f34cd1be (28/11/2020)
-$removeparam=awc
+$doc,removeparam=awc
 
 ! https://www.onbuy.com/gb/nintendo-switch-62-32gb-touchscreen-wi-fi-blue-grey-red~c9482~p5584084/?exta=pspy (28/11/2020)
-$removeparam=exta
+$doc,removeparam=exta
 
 ! https://www.go2games.com/switch/nintendo-switch-console-fortnite-edition?ranMID=42957&ranEAID=ORHQW7E8X5A&ranSiteID=ORHQW7E8X5A-JzvoI1XaPNAAx901cYMaQw (28/11/2020)
 ! https://www.bloomingdales.com/index.ognc?LinkshareID=qpF0HYnRugA-gCA2Oa9Rs9NdZb7l4Vb_RA&m_sc=aff&PartnerID=LINKSHARE&cm_mmc=LINKSHARE-_-n-_-n-_-n&ranPublisherID=qpF0HYnRugA&ranLinkID=1&ranLinkTypeID=10&pubNAME=Offers.com+%28Offers.com%2C+LLC%29
-$removeparam=ranMID
-$removeparam=ranEAID
-$removeparam=ranSiteID
-$removeparam=ranPublisherID
-$removeparam=ranLinkID
-$removeparam=ranLinkTypeID
-$removeparam=ransiteID
+$doc,removeparam=ranMID
+$doc,removeparam=ranEAID
+$doc,removeparam=ranSiteID
+$doc,removeparam=ranPublisherID
+$doc,removeparam=ranLinkID
+$doc,removeparam=ranLinkTypeID
+$doc,removeparam=ransiteID
 
 ! https://www.jdwilliams.co.uk/shop/switch-neon-inc-rayman-and-spongebob/bm593/product/details/show.action?pdBoUid=3156&pdpClick=true (28/11/2020)
-$removeparam=pdpClick
+$doc,removeparam=pdpClick
 
 ! https://www.electrodepot.fr/ecouteurs-apple-airpods-2-boitier-de-charge.html?LGWCODE=17449%3B96175%3B2865 (28/11/2020)
-$removeparam=LGWCODE
+$doc,removeparam=LGWCODE
 
 ! https://www.boulanger.com/ref/1091513?lgw_code=15556-000000000001091513&xtor=AL-6875-%5B7%5D-%5B1395066878%5D-%5B300x250%5D-%5B%5D-%5B%5D (28/11/2020)
-$removeparam=lgw_code
-$removeparam=xtor
+$doc,removeparam=lgw_code
+$doc,removeparam=xtor
 
 ! https://www.but.fr/produits/0190199098572/Ecouteurs-APPLE-AIR-PODS-2.html?awc=7261_1606583838_a78fea9b309b3f8e9fad6d173d4d0853&xtor=AL-1008-%5Bnotype%5D-%5B295295%5D&SRC=8 (28/11/2020)
-$removeparam=SRC
+$doc,removeparam=SRC
 
 ! https://www.inmac-wstore.com/apple-airpods-with-charging-case-2nd-generation-veritables-ecouteurs-sans-fil-avec-micro/p7192806.htm?coagent=737684,1118410&cotracking=101 (28/11/2020)
-$removeparam=coagent
-$removeparam=cotracking
+$doc,removeparam=coagent
+$doc,removeparam=cotracking
 
 ! https://www.fnac.com/Apple-AirPods-2-avec-boitier-de-charge-Ecouteurs-sans-fil-True-Wireless/a10086709/w-4?ectrans=1&Origin=Awin295295&awc=12665_1606583916_a0dffc62f7c4e34914d0e5660e0c6dcf (28/11/2020)
-$removeparam=ectrans
+$doc,removeparam=ectrans
 
 ! https://www.darty.com/nav/achat/accessoires/casque_ecouteurs/casque_intra-auriculaire/apple_airpods_v2.html?awc=7735_1606583917_4f791edbe7805b48b06ce7131a26b480&ectrans=1&dartycid=aff_295295_generique_awin (28/11/2020)
-$removeparam=dartycid
+$doc,removeparam=dartycid
 
 ! https://fr.shopping.rakuten.com/offer/buy/5483124993/apple-airpods-2-avec-case-2eme-generation-blanc-mv7n2zm-a.html?bbaid=6680578123&t=6862148 (28/11/2020)
 ! https://steamcdn-a.akamaihd.net/steam/apps/1293120/ss_260369d8b0c8ab69e3a5a66f78174af4319c4acb.jpg?t=1607504533 (11/12/2020)
-$removeparam=bbaid
+$doc,removeparam=bbaid
 
 ! https://www.paypal.com/myaccount/transaction/details/7CY16898V3123435J?v=1&utm_unptid=&ppid=RT000016&cnac=NO&rsta=no_NO(nb-NO)&cust=&unptid=&calc=24c08e54728d&unp_tpcid=null&page=main%3Aemail%3ART000016&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.26.0&xt=
-||paypal.$removeparam=ppid
-$removeparam=unptid
-$removeparam=unp_tpcid
-$removeparam=pgrp
-$removeparam=mchn
+||paypal.$doc,removeparam=ppid
+$doc,removeparam=unptid
+$doc,removeparam=unp_tpcid
+$doc,removeparam=pgrp
+$doc,removeparam=mchn
 
 ! https://www.sfgate.com/news/editorspicks/article/French-Laundry-French-Laundry-London-Breed-Newsom-15767882.php?IPID=SFGate-HP-CP-Spotlight
-$removeparam=IPID
+$doc,removeparam=IPID
 
 ! http://tubepalm.com/es/videos/swing-out-sister-sub-esp.html?asgtbndr=1
-$removeparam=asgtbndr
+$doc,removeparam=asgtbndr
 
 ! https://p3.no/menn-vil-betale-for-a-slikke-kroppsharet-mitt/?draftsforfriends=pGXqum9EFRUyZS5bVsbJuZawWEaabC8L
-$removeparam=draftsforfriends
+$doc,removeparam=draftsforfriends
 
 ! https://sun9-44.userapi.com/impg/uaRyOJDA2eqOzkYBdnakulVBbAxHpRPkQPDAsw/B6DuJB9cw-A.jpg?size=1002x1080&quality=96&proxy=1&sign=a1819c79828795b28ad58bc27486030e&type=album
 .userapi.com/impg^$removeparam=proxy
 .userapi.com/impg^$removeparam=type
 
 ! https://www.bloglovin.com/blogs/enestaende-mat-2346432?widget-ref=https://enestaaendemat.no/ (07/12/2020)
-$removeparam=widget-ref
+$doc,removeparam=widget-ref
 
 ! https://www.reuters.com/article/us-apple-cydia-lawsuit-idUSKBN28K310?taid=5fd28550d1225d000133bf89 (10/12/2020)
-$removeparam=taid
+$doc,removeparam=taid
 
 ! https://www.tipsbladet.dk/nyhed/superliga/cv-afviser-traenerskifte-jeg-har-ikke-talt-med-kristian?eblink=artikel (14/12/2020)
-$removeparam=eblink
+$doc,removeparam=eblink
 
 ! https://contabo.com/?show=vps&utm_source=cj&utm_medium=affiliate&utm_campaign=vps&source=affiliate&AID=12454632&PID=8533995&SID=&CJEVENT=1999e98a465411eb825b03900a180510 (25/12/2020)
 $removeparam=AID,doc,denyallow=firestore.googleapis.com,domain=~google.*|~disqus.*|~disquscdn.com
 $removeparam=/^CJEVENT=.*$/i,doc
 
 ! https://account.microsoft.com/?refd=www.microsoft.com
-$removeparam=refd
+$doc,removeparam=refd
 
 ! https://www.humblebundle.com/?hmb_source=navbar (09/01/2021)
 $doc,removeparam=/^hmb_.*$/
 
 ! https://nttxstore.jp/_RH_3550?FMID=ocntop&LID=ocntop&_ga=2.104844229.490267265.1610372894-229139367.1610372894 (11/01/2021)
-$removeparam=FMID
+$doc,removeparam=FMID
 $doc,removeparam=LID
-$removeparam=_ga,domain=~login.aliexpress.*
+$doc,removeparam=_ga,domain=~login.aliexpress.*
 
 ! https://techcrunch.com/2021/02/09/eus-lead-data-supervisor-for-most-of-big-tech-is-still-using-lotus-notes/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZGlnaS5uby8&guce_referrer_sig=AQAAAJnvyfO0iClmtx73_ycersFbfhSLMdJB5kyLHseaWdi9TiXKa3ao3deC8nvfiBm9IQAwmBtL8QaSY7_01D0_zasr2yeupMAku3-KxlDkOxDyxYUx3AQ5Q8Y9C0U16b4NGeZWMVUyVkqEhj-UruGKz5DG1uVu7gBjEoBlwtGYgoQu (12/02/2021)
-$removeparam=guccounter
-$removeparam=guce_referrer
-$removeparam=guce_referrer_sig
+$doc,removeparam=guccounter
+$doc,removeparam=guce_referrer
+$doc,removeparam=guce_referrer_sig
 
 ! https://www.nytimes.com/interactive/2020/09/27/us/donald-trump-taxes.html?referringSource=articleShare (28/02/2021)
-$removeparam=referringSource
+$doc,removeparam=referringSource
 
 ! https://www.computing.co.uk/news/4019233/monzo-learned-lot-self-hosting-kubernetes-wouldn%E2%80%99?im_edp=7467218-78983dec13ce65eb%26campaignname%3DCTG.Daily_RL.EU.A.U&im_company=FAKE%20COMPANY%20NAME (28/02/2021)
-$removeparam=im_edp
-$removeparam=im_company
+$doc,removeparam=im_edp
+$doc,removeparam=im_company
 
 ! https://www.change.org/p/arkane-encourage-the-release-of-an-unfinished-build-of-arkane-s-half-life-2-return-to-ravenholm-273b1585-73cc-49c7-9d51-09433e172f80/psf/share?source_location=combo_psf&psf_variant=combo&share_intent=1 (28/02/2021)
-$removeparam=source_location
-$removeparam=psf_variant
+$doc,removeparam=source_location
+$doc,removeparam=psf_variant
 
 ! https://accelerateworkshopserverless.splashthat.com/?sc_channel=sm&sc_campaign=startupaccelerate_q3_serverless&sc_geo=emea&sc_country=mult&sc_outcome=reg&trkCampaign=bnl20_accelerate_q3_serverless&trk=bnl20_accelerate_q3_serverless_e&es_id=9ee9c1a102 (28/02/2021)
-$removeparam=es_id
+$doc,removeparam=es_id
 
 ! https://open.hpi.de/courses/malware2021?tracking_user=74v365zif700sQKXlqj020vyd&tracking_type=news&tracking_id=5ED4ZiWEw48Lft3MGkAag (28/02/2021)
-$removeparam=tracking_type
-$removeparam=tracking_user
+$doc,removeparam=tracking_type
+$doc,removeparam=tracking_user
 
 ! https://www.wired.com/story/how-to-solve-a-rubiks-cube-in-5-seconds-or-less/?bxid=5de6860acff06b68651dc0f7&cndid=59299325&esrc=&hasha=43963980a2110b889196f6ae90238cc6&hashb=e7bacab69176108b7edf6b15a2a80087a5eb1fb7&hashc=f0716ab5f4a5ef793da5e3f103cb64e3362c54aedb9630096cfd18f0244b9815&source=EDT_WIR_NEWSLETTER_0_ENGAGEMENT_ZZ (28/02/2021)
-$removeparam=bxid
-$removeparam=cndid
-$removeparam=hasha
-$removeparam=hashb
-$removeparam=hashc
+$doc,removeparam=bxid
+$doc,removeparam=cndid
+$doc,removeparam=hasha
+$doc,removeparam=hashb
+$doc,removeparam=hashc
 
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
-$removeparam=irgwc
+$doc,removeparam=irgwc
 $doc,removeparam=/^clickid=.*$/i,domain=~discover.*
 
 ! https://metro.co.uk/2017/04/11/hubble-just-spotted-something-massive-coming-out-of-uranus-6567896/?ito=article.desktop.share.top.facebook
-$removeparam=ito
+$doc,removeparam=ito
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-421689 (02/03/2021)
-$removeparam=c[0]
-$removeparam=rlz
-$removeparam=pcampaignid
-$removeparam=igshid
+$doc,removeparam=c[0]
+$doc,removeparam=rlz
+$doc,removeparam=pcampaignid
+$doc,removeparam=igshid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3041969
-$removeparam=snr,domain=steampowered.com|steamcommunity.com|steamgames.com
+$doc,removeparam=snr,domain=steampowered.com|steamcommunity.com|steamgames.com
 
 ! https://www.trouw.nl/nieuws/het-draagvlak-in-crisistijd-doet-premier-rutte-bijna-zweven-maar-hij-kan-ook-hard-vallen~bf367a86/?referrer=https%3A%2F%2Fwww.theguardian.com%2Fworld%2Fcommentisfree%2F2021%2Fmar%2F04%2Fcovid-derailed-great-hope-dutch-far-right-thierry-baudet (05/03/2021)
 $doc,removeparam=referrer,domain=~bolt.com|~f4map.com|~deviantart.com|~github.com|~discover.*|~vimeo.*|~123-reg.co.uk|~cravesandflames.com
-$removeparam=ext_source
+$doc,removeparam=ext_source
 
 ! https://graphicriver.net/item/invoice-estimation-brief/20668760?iradid=275988&irpid=1288974&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1 (17/03/2021)
 $removeparam=iradid
