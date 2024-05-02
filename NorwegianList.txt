@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 01May2024v1
+! Version: 02May2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -764,6 +764,13 @@ reiseliv.no##a[href*=annonsorartikler][href*=aksje]
 kanalfrederikshavn.dk##table[width="620"]
 tv-kalundborg.dk##.flickity-viewport
 vgtv.no##.apnx-container
+tu.no,digi.no##div:first-of-type[class*=" "]:has(> div:empty)
+digi.no,tu.no###brandBoardTop
+digi.no,tu.no###brandBoardBottom
+digi.no,tu.no###brandBoardTopMobile
+digi.no,tu.no###skyscraperLeft
+digi.no,tu.no###skyscraperRight
+tu.no,digi.no##div[id^=brandboard i]:upward(1)
 abcnyheter.no##span[class*=-ad__]
 gulesider.no##.MuiContainer-root .MuiGrid-root + .MuiBox-root:has(div[id*=gpt])
 tv2.no##div[data-third-party-link^="\[\""]
@@ -1184,6 +1191,13 @@ itavisen.no##.fifth-article-ad
 vgtv.no##.video-branding
 sporttv.is,utdanningsnytt.no##.banner-right
 aftenposten.no,vg.no###main > div:has([data-ad-subtype^=skyscraper])
+tu.no,digi.no##div:first-of-type[class*=" "]:has(> div:empty)
+digi.no,tu.no###brandBoardTop
+digi.no,tu.no###brandBoardBottom
+digi.no,tu.no###brandBoardTopMobile
+digi.no,tu.no###skyscraperLeft
+digi.no,tu.no###skyscraperRight
+tu.no,digi.no##div[id^=brandboard i]:upward(1)
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1551,6 +1565,7 @@ contentMarketing$xhr,domain=sol.no
 ||spaniaidag.no/wp-content/uploads/*/Ceru-Design-Web-*.jpg^
 ||spaniaidag.no/wp-content/uploads/*/Kolstad-Gif-SI.gif^
 ||spanienidag.es/sites/default/files/patrocinadores^
+/^.*://w{3}\.(tu|d\ig\i)\.n\o/(\d|[a-zA-Z_-]){130,}$/$xhr,domain=no
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.*
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.*|gamereactor.*|vg.no
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.*|gamereactor.*
