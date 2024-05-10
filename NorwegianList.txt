@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 10May2024v3
+! Version: 10May2024v4
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2326,74 +2326,51 @@ csp.screen9.com#@#.adsbox
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 ! 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
+! Starting with 10May2024v4, only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
 bt.no##.proaktiv-ad
-dagensbyggeri.dk###megaboard-top-container
-dagensbyggeri.dk##.ads:style(display: block !important)
-digi.no##.poster-placeholder
-digi.no##.tu-frontpage > .frontpage-top-poster-wrap
-digi.no##.tujobs-ad
-digi.no##div[class^=sticky-col-] > .sticky-content
-dt.no##.am-bazaar-ad
-e24.no##+js(set-constant, __AB__, noopFunc)
-e24.no##.ad
-ekstrabladet.dk##.eb-position
-ekstrabladet.dk##.mar-m--tb .native-element.list-wrapper
-ekstrabladet.dk##.fnSpaceManagement > div:has(> .widgetiframe)
-finans.dk##.baPosition
-finn.no##.banner-skyscraper-container
-finn.no##div.external-banner-board.adsbox[data-controller]
-finn.no##iframe#easyad
-finn.no##iframe#smallEasyAd
+gamer.no##+js('set-constant', 'ads', 'emptyObj')
+gamer.no##.container > div[class]:has(> [data-size-mapping="toppbanner"])
+gamer.no##.fullscreen-ad
+gamer.no##header ~ * > [class]:has(> [data-name="gamer_toppbanner"])
 gulindex.no###cintmodal
-information.dk##.ib-wrap
-inputmag.dk##html > body:style(background-image: none !important)
-jyllands-posten.dk##.bpTopPlacement
+jobindex.dk##div[aria-label="Annonce"]
+jyllands-posten.dk##body section[id^="monster_"]
+jyllands-posten.dk,finans.dk##body div[class*=banner-container]
+klikk.no##.affiliate-content
 klikk.no##iframe[src^="//widget.tippebannere.no/"]
-langrenn.com##body > .bannerlocation > div > a[href^="/bannerclick.php/"]
-langrenn.com##body.haslocation12:style(padding-top: 10px !important)
-maskinbladet.dk##+js(no-setTimeout-if, /doCheck\(.,.\)/)
-maskinbladet.dk##.openx-iframe-wrapper
-mx.dk###wrapper > #leaderboard
-mx.dk##[class^=ad_][class$="_300x250"]
+kundeavisogtilbud.no##div[class^="ad_"]
+maskinbladet.dk##+js("prevent-setTimeout", "/doCheck\(.,.\)/")
 nettavisen.no###article-body > .rel-article
 nettavisen.no##.am-bazaar-ad
 nettavisen.no##.background-na-commercial
 nettavisen.no##a > .background-na-commercial ~ *
 nettavisen.no#?#amedia-frontpage > .optimus-complex-front:has(> header > h2:contains(/Reklame|REKLAME/))
-newz.dk##.top-interstitial
-nordschleswiger.dk##.TopAdvertising-Content-Wrapper
-politiken.dk##.ad--horseshoe
-politiken.dk##div[class^="ad ad--ctx-"]
-qxl.dk###catIndexTopSeller
-qxl.dk##body > div[style*="min-height:"][style*=background]
-qxl.no###qxlprofilertebox
-qxl.no##.butikkbunn
 sofabold.dk##.centerMgfx
 sofabold.dk##.top_b_display
-sofabold.dk##div[class^=sidebanner]
+sofabold.dk##div[class^="sidebanner"]
 trendsales.dk##.top__banner
-tu.no##.col-full-width > .products-carousel.daily-offers
-tu.no##.commercial
-tu.no##.poster-placeholder
-tu.no##.tujobs-ad
-tu.no##article[data-pinned].annonse
-tu.no##div[class^=sticky-col-] > .sticky-content
-tv2.no##.tv2-ad
-vg.no###ad-topboard
-vg.no##.ad
-vg.no##.inline-ad-text
-vgtv.no##+js(json-prune, enabled, testhide)
-xn--bredbnd-ixa.dk##div[class^=speedtest-bg] > a > img
-||boost.manatee.dk/srx/srx_lib_block_$script,other
-||deiligejenter.com/testfile23.js
-||freewheel-mtgx-tv.akamaized.net/*.mp4$media,redirect=noop-1s.mp4,domain=bold.dk
+vgtv.no##+js('json-prune', 'enabled', 'testhide')
+xn--bredbnd-ixa.dk##div[class^="speedtest-bg"] > a > img
+||freewheel-mtgx-tv.akamaized.net/*.mp4$media,redirect=noopmp4-1s,domain=bold.dk
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=tv3sport.dk
-||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices_gpt.js,domain=vegetarbloggen.no,important
-||inputmag.dk/wp-content/uploads/*/*_Galaxy-_takeover_$image
-||nakenprat.com/adfirst*.js
-||nakenprat.com/adlast*.php^
+||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=vegetarbloggen.no,important
+||img.sofabold.dk/images/banner
 ||v.fwmrm.net/ad/g/$domain=ekstrabladet.dk,important
+||vgc.no/cdn/js/libs/homad-config.json$xmlhttprequest,redirect=noopjson
 ||widget.tippebannere.no^$third-party
+||widgets.sprinklecontent.com^$domain=klikk.no
+inky.no#@#iframe[width="200"][height="240"]
+ni.dk#@#a[href*=".adform.net/"]
+@@||borsen.dk/themes/borsen.dk/js/dfp.js
+@@||bt.dk/build/prebid-ads-advertisement_adbanner.*.js
+@@||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js$domain=nettavisen.no
+@@||cdn.maskinbladet.dk/*assets/templates/*/img/adblocker/ads.png
+@@||googletagservices.com/tag/js/gpt.js$domain=vegetarbloggen.no
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=nettavisen.no
+@@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=vegetarbloggen.no
+@@||v.fwmrm.net/ad/g/1$domain=bold.dk
+@@||v.fwmrm.net/ad/l/1$domain=bold.dk
+@@||v.fwmrm.net/crossdomain.xml$domain=bold.dk
 ! • Not to be removed during upstream syncs •
 ! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 ~nytid.no##.td-a-rec:not(html,body,:empty)
@@ -2405,6 +2382,7 @@ thelocal.no,thelocal.dk##.footer-sticker-ad
 thelocal.no,thelocal.dk##.row > div[class^="row-"]:has(> a[href="#"] > .panel-ad)
 thelocal.no,thelocal.dk#?#div > .section:has(> div[class*=-label]:has-text(Sponsored))
 radio-danmark.dk,radio-norge.org###team_ad
+gaamess.dk##div[class$="Ad"]
 
 !#if !ext_ublock
 ! 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
