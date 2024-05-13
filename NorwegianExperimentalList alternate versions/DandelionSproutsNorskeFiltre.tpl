@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 02May2024v2-Deprecated
+# Version: 10May2024v4-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -695,16 +695,14 @@ msFilterList
 # 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
--d boost.manatee.dk srx_lib_block_
--d deiligejenter.com testfile23.js
+# Starting with 10May2024v4, only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
 -d freewheel-mtgx-tv.akamaized.net *.mp4
 -d freewheel-mtgx-tv.akamaized.net
 -d googletagservices.com gpt.js
--d inputmag.dk *_Galaxy-_takeover_
--d nakenprat.com adfirst*.js
--d nakenprat.com adlast*.php
+-d img.sofabold.dk banner
 -d v.fwmrm.net g
 -d widget.tippebannere.no
+-d widgets.sprinklecontent.com
 # • Not to be removed during upstream syncs •
 # https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # jyllands-posten.dk (09 07 2020)

@@ -1,6 +1,6 @@
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Privoxy)
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for Privoxy)
-# Version: 02May2024v2-Deprecated
+# Version: 10May2024v4-Deprecated
 # Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -101,7 +101,6 @@
 ./annonse-
 {+block{https://www.ballade.no/}}
 ./wp-content/uploads/*_Annonse_
-^.*_toppbanner_
 {+block{https://www.osterud.name/FF57W10/norwegian-filters.txt}}
 ./bannerannonser/*
 {+block{byggenytt.no}}
@@ -1003,19 +1002,32 @@
 # 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 {+block{🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.}}
+# Starting with 10May2024v4, only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
 {+block}
-.boost.manatee.dk/srx/srx_lib_block_$script,other
-{+block}
-.deiligejenter.com/testfile23.js
-{+block}
-.inputmag.dk/wp-content/uploads/*/*_Galaxy-_takeover_
-{+block}
-.nakenprat.com/adfirst*.js
-{+block}
-.nakenprat.com/adlast*.php
+.img.sofabold.dk/images/banner
 {+block}
 .v.fwmrm.net/ad/g/$domain=ekstrabladet.dk
 .widget.tippebannere.no$third-party
+{-block}
+.borsen.dk/themes/borsen.dk/js/dfp.js
+{-block}
+.bt.dk/build/prebid-ads-advertisement_adbanner.*.js
+{-block}
+.cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js$domain=nettavisen.no
+{-block}
+.cdn.maskinbladet.dk/*assets/templates/*/img/adblocker/ads.png
+{-block}
+.googletagservices.com/tag/js/gpt.js$domain=vegetarbloggen.no
+{-block}
+.imasdk.googleapis.com/js/sdkloader/ima3.js$domain=nettavisen.no
+{-block}
+.securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=vegetarbloggen.no
+{-block}
+.v.fwmrm.net/ad/g/1$domain=bold.dk
+{-block}
+.v.fwmrm.net/ad/l/1$domain=bold.dk
+{-block}
+.v.fwmrm.net/crossdomain.xml$domain=bold.dk
 # • Not to be removed during upstream syncs •
 {+block{https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/}}
 # jyllands-posten.dk (09/07/2020)
