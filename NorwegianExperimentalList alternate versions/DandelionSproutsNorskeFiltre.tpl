@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 10May2024v4-Deprecated
+# Version: 13May2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -214,7 +214,6 @@ msFilterList
 -d danishfamilysearch.dk xp2
 -d deals.innocode.no api
 -d detailersclub.no *_banner.
--d digi.no api
 -d dnitv.com
 -d dust2.dk banners
 -d erotikmix.dk mixads300.html
@@ -330,7 +329,6 @@ msFilterList
 -d trolli.is videoval_logo
 -d trolli.is *logo-*.png
 -d trolli.is Untitled-1-1.jpg
--d tu.no api
 -d tunnelsyn1.files.wordpress.com sotra-trelast-isolasjon
 -d tv-kalundborg.dk banner
 -d tv2.no sponsor
