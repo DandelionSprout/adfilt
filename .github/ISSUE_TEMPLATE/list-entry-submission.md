@@ -18,14 +18,15 @@ assignees: ''
 ## Which adblocker(s) and version did you use when writing and testing the entries?
 <!-- For info on supported extensions, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md. Manifest V3 extensions are not allowed. -->
 - [ ] uBlock Origin
-- [ ] AdGuard (Paid desktop version)
+- [ ] AdGuard (Paid desktop or Android version)
 - [ ] AdGuard (Gratis browser versions that aren't Manifest V3 nor Safari)
-- [ ] AdBlock (Firefox or Manifest V2)
 - [ ] Adblock Plus (Firefox or Manifest V2)
+- [ ] AdBlock (Firefox or Manifest V2)
 - [ ] AdGuard Home
 - [ ] Blokada
 - [ ] I Still Don't Care About Cookies (The extension)
 - [ ] AdNauseam
+- [ ] AdGuard Private DNS
 
 Other(s):
 
