@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 16May2024v1
+! Version: 16May2024v3
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -9,10 +9,12 @@
 ! 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
 ! Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
-! Wish to help translate more category titles to Nordic languages 🇩🇰 🇮🇸 🇳🇴🏞 🇫🇴 🇬🇱 ❄? https://crowdin.com/project/dandelion-sprout-nordic-filter
 ! If you wish to remove cookie banners from Nordic websites, check out https://filters.adtidy.org/windows/filters/18.txt
 ! Starting 13 May 2024, reports about non-blocked banners on digi.no and tu.no must instead be sent to https://reports.adguard.com/new_issue.html and/or https://github.com/uBlockOrigin/uAssets/issues. No exceptions under any circumstances. They're simply far, far better at them than me. They must either fix it on their own, or have written all needed entries on their own in advance before they forward such reports to me. If they ever say otherwise, show them this line of text.
 
+! 🇳🇴: Fjerning av reklamebokser og tomme overskuddsbokser
+! 🇩🇰: Fjernelse af annonceboxer og tomme overskudsrammer
+! 🇬🇧: Ads and leftovers removal entries / Hiding-type rules
 ###ad_superboard
 ###ad_topp
 ###no-familieklubben-wde-front_topboard
@@ -1174,6 +1176,26 @@ ba.no##brick-teaser:has([title=Annonse])
 prisjakt.*##div[class^=EmptyCard-sc-]
 prisjakt.*##div[class^=AdPlacementWrapper-sc-]
 eurosport.*##.reform-top-container
+gamereactor.*##.sponsor
+gamereactor.*###eventad
+gamereactor.*##[id^=sky]
+gamereactor.*##[id^=ad_lead]
+gamereactor.*##a[rel=sponsored]
+gamereactor.*##.external_div_bigVideoAd
+gamereactor.*###mpu
+gamereactor.*###leftToLogo
+gamereactor.*##div[class^=ad_Bumper]
+gamereactor.*##div[style="min-height: 600px; margin-bottom: 20px;"]
+gamereactor.*##div[id^=ad_]
+gamereactor.*##div[class^=preAd_]
+gamereactor.*##div[class^=ad_smartphbig]
+gamereactor.*##.adMobileBig
+gamereactor.*##div[class^=preMobileBig]
+gamereactor.*##.external_div_videoAd
+gamereactor.*###grtvbelt_Sponsored:upward(1)
+gamereactor.*##.ad_interscroller:upward(.wrapper)
+||gamereactor.*/ads^
+||gamereactor.*/exclusive.json^
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1284,15 +1306,14 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 ||svindel.info^
 ||annoncer.nichehuset.dk^$3p
 ||pliing.com^$3p
+||admob.no^$3p
+||admob.dk^$3p
 !+ NOT_OPTIMIZED
 ||print2web.sn.dk^$image
 !+ NOT_OPTIMIZED
 ||lib.idg.no^
 ! Adressa.no
 ||drbrand.herokuapp.com^
-! Copied over from the New AdAway list
-||admob.no^$3p
-||admob.dk^$3p
 ! bobilverden.no
 /annonse-$image
 ! https://www.ballade.no/
@@ -1373,7 +1394,9 @@ _visittkortannonse_$image
 ||tize.no^$subdocument,3p
 ! — — — — —
 ! 🇳🇴: Domenefokuserte blokkeringsoppføringer
-! 🇬🇧: Domain-speficic blocking-entries
+! 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
+! 🇳🇴: Domænefokuserede blokeringsindførsler
+! 🇩🇰: Domain-speficic blocking-entries
 */gifs/*emty.gif^$domain=yrkesbil.no|bilnorge.no
 -banner_$domain=hnytt.no,image
 -bazaar-$script,domain=nettavisen.no
@@ -1610,6 +1633,9 @@ contentMarketing$xhr,domain=sol.no
 ||ytresogn.no/wp-content/uploads/2017/04/image007.jpg^
 ||ytresogn.no/wp-content/uploads/2020/02/Ytre_718_360_2.jpg^
 ! — — — — — — —
+! 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
+! 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
+! 🇩🇰: Filserver- eller webstedsspecifikke indførsler med kilder
 ! 🇬🇧: Fileserver or site-specific blocking rules with sources
 ! bilasolur.is (03/05/2020)
 /lykill_banner$image
@@ -1956,7 +1982,7 @@ rbkweb.no#?#font > table:first-of-type
 baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
-! 🇳🇴🏞: Hovudsakleg for AdGuard
+! 🇳🇴🏞: Huvudsakleg for AdGuard
 ! 🇮🇸: Aðallega fyrir AdGuard
 ! 🇬🇧: Mostly for AdGuard
 ||3.248.18.175^$domain=~in-addr.arpa
@@ -1965,18 +1991,6 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ||82.196.13.38^$domain=~in-addr.arpa
 ||82.221.81.9^$domain=~in-addr.arpa
 ||178.79.136.45^$domain=~in-addr.arpa
-!#if !ext_ublock
-||5e529.v.fwmrm.net^$app=com.discovery.dplay
-||ssl-dnnstream.tns-cs.net^$app=com.discovery.dplay
-||discoverynordics.hb.omtrdc.net^$app=com.discovery.dplay
-||widgets.sprinklecontent.com^$app=no.startsiden.bookmarks
-/tv2ads.js$app=dk.tv2.nyhedscenter
--bazaar-$app=no.nettavisen.phonegap.na
-/bazaar/*$app=no.nettavisen.phonegap.na
-/resources/dfp/*$app=no.nettavisen.phonegap.na
-||finn.no^$app=no.bt
-contentMarketing$app=no.sol
-!#endif
 
 ! 🇳🇴/🇩🇰: ——— Sporingsfiler ———
 ! 🇳🇴🏞: ——— Sporingsfilar ———
@@ -2142,12 +2156,6 @@ ekstrabladet.dk#@#body>div[id][style]
 !
 !#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt
 
-! 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
-! 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
-! Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP for showing me the existence of this particular CSP command.
-! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
-$csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no|lofotenlinks.no|windowsnett.no|selstad.no|turnforening.no|frigg.no|studentvelferd.no|luster.kommune.no|ugk.no|drs.dk|dsmu.dk|92grp.dk|kuntzanimation.dk
-
 ! 🇳🇴: Anti-'CPU-massakrering'
 ! 🇮🇸: And-örgjörvislatrun
 ! 🇬🇧: Anti-'CPU slaughtering'
@@ -2205,38 +2213,6 @@ no##optimus-element:has(a[href^="/sportspill/"][href*=million])
 ! https://www.nettavisen.no/sportspill/her-er-tallene-som-vil-fa-liverpool-fansen-i-godt-humor/s/5-95-1529066
 ~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="tipping.pxf.io"][href*=oddstips i]
 
-! ——— Gamereactor PC ———
-! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
-! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
-! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
-gamereactor.*##.sponsor
-gamereactor.*###eventad
-gamereactor.*##[id^=sky]
-gamereactor.*##[id^=ad_lead]
-gamereactor.*##a[rel=sponsored]
-gamereactor.*##.external_div_bigVideoAd
-gamereactor.*###mpu
-gamereactor.*###leftToLogo
-gamereactor.*##div[class^=ad_Bumper]
-gamereactor.*##div[style="min-height: 600px; margin-bottom: 20px;"]
-gamereactor.*##div[id^=ad_]
-gamereactor.*##div[class^=preAd_]
-gamereactor.*##div[class^=ad_smartphbig]
-gamereactor.*##.adMobileBig
-gamereactor.*##div[class^=preMobileBig]
-gamereactor.*##.external_div_videoAd
-gamereactor.*###grtvbelt_Sponsored:upward(1)
-gamereactor.*##.ad_interscroller:upward(.wrapper)
-||gamereactor.*/ads^
-||gamereactor.*/exclusive.json^
-!#if !ext_ublock
-/insert_grtv_stats.$xhr,app=com.gamereactor
-/prerolls/*$app=com.gamereactor
-/videojs.ima.$app=com.gamereactor
-@@||imasdk.googleapis.com/js/sdkloader/ima3.$app=com.gamereactor
-@@||openx.gamereactor.dk/www/delivery/fc.php$app=com.gamereactor
-!#endif
-
 ! 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 ! 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
 ! 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
@@ -2261,50 +2237,10 @@ nettavisen.no###topover
 @@||bondebladet.screen9.tv^$ghide
 @@||eurosport.no^$ghide
 @@||eurosport.dk^$ghide
-@@||nyheder.dk^$ghide
 !#if false
 ! Fixed in better ways in AdGuard Base and uBlock Filters, but is needed for ABP
 @@||inputmag.dk^$generichide
 !#endif
-
-! 🇳🇴: Fjerner overflødige deler av URL-er for å gjøre dem kortere og lettere å dele
-! 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
-! Infrequently synced with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
-$removeparam=utm_id,domain=elkjop.no|elgiganten.dk
-||cdon.$removeparam=g
-||deal.no^$removeparam=ref
-||digitalimpuls.no^$removeparam=WebSiteMapNodeID
-||jula.no^$removeparam=gclsrc
-||netonnet.no^$removeparam=dclid
-||norsktipping.no$removeparam=WT.mc_id
-||p3.no^$removeparam=draftsforfriends
-||tv2.no^$removeparam=r
-$removeparam=afid,domain=proshop.dk|proshop.no
-$removeparam=scid,domain=elgiganten.dk|elkjop.no
-||adressa.no^$removeparam=/^rs\d/
-||adressa.no^$removeparam=t
-||bilhusnord.dk^$removeparam=au_advert_id
-||bilhusnord.dk^$removeparam=au_car_id
-||cykelpartner.dk^$removeparam=/^source=partnerads$/
-||cykelpartner.dk^$removeparam=pa-partnerid
-||cykelpartner.dk^$removeparam=pacid
-||cykelpartner.dk^$removeparam=paid
-||dagligvarehandelen.no^$removeparam=itok
-||ekstrabladet.dk^$removeparam=ilc
-||ellos.no^$removeparam=extcmp
-||fernerjacobsen.no^$removeparam=epi
-||frisktpust.no^$removeparam=adg_id
-||frisktpust.no^$removeparam=cmp_id
-||kids-world.dk^$removeparam=/^source=tradedoubler$/
-||postnord.$removeparam=mobile
-||postnord.$removeparam=signed
-||prispresseren.dk^$removeparam=/^amp;/
-||productkeys.dk^$removeparam=dTribesID
-||shopping4net.dk^$removeparam=sClickID
-||sn.dk^$removeparam=rss
-||staypro.no^$removeparam=at_gd
-||tipsbladet.dk^$removeparam=eblink
-||tv2.no^$removeparam=tag
 
 ! 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
 ! 🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
@@ -2315,12 +2251,6 @@ csp.screen9.com#@#.adsbox
 @@||www.tv2.no/s/js/ads.js$script,1p
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 @@||sumo.cdn.tv2.no/ads^
-!#if adguard
-!+ NOT_OPTIMIZED
-@@||imasdk.googleapis.com^$app=no.tv2.sumo
-!+ NOT_OPTIMIZED
-@@||securepubads.g.doubleclick.net^$app=no.tv2.sumo
-!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121422
 @@.v.fwmrm.net/ad/g^*:MTG_Play_
 
