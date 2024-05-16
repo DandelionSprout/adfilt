@@ -1,15 +1,17 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
-! Version: 15May2024v2-Alpha
+! Version: 16May2024v3-Alpha
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
 ! 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, Sydslesvig, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#dansk
 ! 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
 ! Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-! Wish to help translate more category titles to Nordic languages 🇩🇰 🇮🇸 🇳🇴🏞 🇫🇴 🇬🇱 ❄? https://crowdin.com/project/dandelion-sprout-nordic-filter
 ! If you wish to remove cookie banners from Nordic websites, check out https://filters.adtidy.org/windows/filters/18.txt
 ! Starting 13 May 2024, reports about non-blocked banners on digi.no and tu.no must instead be sent to https://reports.adguard.com/new_issue.html and/or https://github.com/uBlockOrigin/uAssets/issues. No exceptions under any circumstances. They're simply far, far better at them than me. They must either fix it on their own, or have written all needed entries on their own in advance before they forward such reports to me. If they ever say otherwise, show them this line of text.
+! 🇳🇴: Fjerning av reklamebokser og tomme overskuddsbokser
+! 🇩🇰: Fjernelse af annonceboxer og tomme overskudsrammer
+! 🇬🇧: Ads and leftovers removal entries / Hiding-type rules
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
 startsiden.no widgets.sprinklecontent.com * block
@@ -46,15 +48,16 @@ third-party vevlysingar.fo frame block
 third-party videotool.fbg.dk * block
 third-party annoncer.nichehuset.dk * block
 third-party pliing.com * block
-* print2web.sn.dk image block
-! Adressa.no
-! Copied over from the New AdAway list
 third-party admob.no * block
 third-party admob.dk * block
+* print2web.sn.dk image block
+! Adressa.no
 third-party gcp.passendo.com * block
 third-party psscdn.com * block
 ! 🇳🇴: Domenefokuserte blokkeringsoppføringer
-! 🇬🇧: Domain-speficic blocking-entries
+! 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
+! 🇳🇴: Domænefokuserede blokeringsindførsler
+! 🇩🇰: Domain-speficic blocking-entries
 eniro.no akamai.net script block
 eniro.dk akamai.net script block
 discoveryplus.no akamaihd.net other block
@@ -66,6 +69,9 @@ diskusjon.no export.prisguiden.no * block
 bt.no finn.no frame block
 ||rett24.no^*bannerizor.js
 118.dk track.adform.net * block
+! 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
+! 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
+! 🇩🇰: Filserver- eller webstedsspecifikke indførsler med kilder
 ! 🇬🇧: Fileserver or site-specific blocking rules with sources
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources
@@ -80,7 +86,7 @@ bt.no finn.no frame block
 ! 🇬🇧: Entries with special circumstances
 vgtv.no adnxs.com * block
 ! 🇳🇴: Hovedsaklig for AdGuard
-! 🇳🇴🏞: Hovudsakleg for AdGuard
+! 🇳🇴🏞: Huvudsakleg for AdGuard
 ! 🇮🇸: Aðallega fyrir AdGuard
 ! 🇬🇧: Mostly for AdGuard
 in-addr.arpa 3.248.18.175 * allow
@@ -125,7 +131,6 @@ altibox.no cookieinformation.com * allow
 ekstrabladet.dk notice.sp-prod.net frame allow
 ekstrabladet.dk sp-prod.net xhr allow
 !
-! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
 ! 🇳🇴: Anti-'CPU-massakrering'
 ! 🇮🇸: And-örgjörvislatrun
 ! 🇬🇧: Anti-'CPU slaughtering'
@@ -133,9 +138,6 @@ tipster.no widget.tippebannere.no frame allow
 norsktipping.no norsktippingpartner.no 3p allow
 tipster.no norsktippingpartner.no 3p allow
 @@||oddstips.norsktippingpartner.no^
-! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
-! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
-! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
 ! 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 ! 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
 ! 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
@@ -145,9 +147,6 @@ tipster.no norsktippingpartner.no 3p allow
 third-party collector.schibsted.io * block
 ! "Generic Hide"
 ! Fixed in better ways in AdGuard Base and uBlock Filters, but is needed for ABP
-! 🇳🇴: Fjerner overflødige deler av URL-er for å gjøre dem kortere og lettere å dele
-! 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
-! Infrequently synced with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
 ! 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
 ! 🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
 itavisen.no sixscissors.com 3p allow

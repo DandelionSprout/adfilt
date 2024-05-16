@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 15May2024v2-Deprecated
+# Version: 16May2024v3-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -10,9 +10,11 @@ msFilterList
 # 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 # Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.
-# Wish to help translate more category titles to Nordic languages 🇩🇰 🇮🇸 🇳🇴🏞 🇫🇴 🇬🇱 ❄? https://crowdin.com/project/dandelion-sprout-nordic-filter
 # If you wish to remove cookie banners from Nordic websites, check out https://filters.adtidy.org/windows/filters/18.txt
 # Starting 13 May 2024, reports about non-blocked banners on digi.no and tu.no must instead be sent to https://reports.adguard.com/new_issue.html/and/or/https://github.com/uBlockOrigin/uAssets/issues./No/exceptions/under/any circumstances. They're simply far, far better at them than me. They must either fix it on their own, or have written all needed entries on their own in advance before they forward such reports to me. If they ever say otherwise, show them this line of text.
+# 🇳🇴: Fjerning av reklamebokser og tomme overskuddsbokser
+# 🇩🇰: Fjernelse af annonceboxer og tomme overskudsrammer
+# 🇬🇧: Ads and leftovers removal entries   Hiding-type rules
 # — — — — — — — — —
 # 🇳🇴: Oppføringer for minst 3 nettsteder
 # 🇬🇧: Entries for at least 3 websites
@@ -68,13 +70,12 @@ msFilterList
 -d svindel.info
 -d annoncer.nichehuset.dk
 -d pliing.com
+-d admob.no
+-d admob.dk
 -d print2web.sn.dk
 -d lib.idg.no
 # Adressa.no
 -d drbrand.herokuapp.com
-# Copied over from the New AdAway list
--d admob.no
--d admob.dk
 # bobilverden.no
 - annonse-
 # https://www.ballade.no/
@@ -155,7 +156,9 @@ msFilterList
 -d tize.no
 # — — — — —
 # 🇳🇴: Domenefokuserte blokkeringsoppføringer
-# 🇬🇧: Domain-speficic blocking-entries
+# 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
+# 🇳🇴: Domænefokuserede blokeringsindførsler
+# 🇩🇰: Domain-speficic blocking-entries
 - gifs *emty.gif
 - -banner_
 - -bazaar-
@@ -368,6 +371,9 @@ msFilterList
 -d ytresogn.no image007.jpg
 -d ytresogn.no Ytre_718_360_2.jpg
 # — — — — — — —
+# 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
+# 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
+# 🇩🇰: Filserver- eller webstedsspecifikke indførsler med kilder
 # 🇬🇧: Fileserver or site-specific blocking rules with sources
 # bilasolur.is (03 05 2020)
 - lykill_banner
@@ -532,7 +538,7 @@ msFilterList
 # https://www.aftenposten.no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
-# 🇳🇴🏞: Hovudsakleg for AdGuard
+# 🇳🇴🏞: Huvudsakleg for AdGuard
 # 🇮🇸: Aðallega fyrir AdGuard
 # 🇬🇧: Mostly for AdGuard
 -d 3.248.18.175
@@ -541,15 +547,6 @@ msFilterList
 -d 82.196.13.38
 -d 82.221.81.9
 -d 178.79.136.45
--d 5e529.v.fwmrm.net
--d ssl-dnnstream.tns-cs.net
--d discoverynordics.hb.omtrdc.net
--d widgets.sprinklecontent.com
-- tv2ads.js
-- -bazaar-
-- bazaar
-- resources dfp
-- contentMarketing
 # 🇳🇴 🇩🇰: ——— Sporingsfiler ———
 # 🇳🇴🏞: ——— Sporingsfilar ———
 # ❄: ——— Guorrafiilaid ———
@@ -632,10 +629,6 @@ msFilterList
 +d notice.sp-prod.net
 +d sp-prod.net
 !
-# 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
-# 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
-# Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP/for/showing me the existence of this particular CSP command.
-# Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS/as/your/main/solution/for these kinds of HTTPS upgrades.
 # 🇳🇴: Anti-'CPU-massakrering'
 # 🇮🇸: And-örgjörvislatrun
 # 🇬🇧: Anti-'CPU slaughtering'
@@ -658,13 +651,6 @@ msFilterList
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7865350
 # https://www.nettavisen.no/sportspill/her-er-tallene-som-vil-fa-liverpool-fansen-i-godt-humor/s/5-95-1529066
-# ——— Gamereactor PC ———
-# 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
-# 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
-# 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
-- insert_grtv_stats.
-- prerolls
-- videojs.ima.
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 # 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
 # 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
@@ -679,17 +665,11 @@ msFilterList
 +d bondebladet.screen9.tv
 +d eurosport.no
 +d eurosport.dk
-+d nyheder.dk
 # Fixed in better ways in AdGuard Base and uBlock Filters, but is needed for ABP
 +d inputmag.dk
-# 🇳🇴: Fjerner overflødige deler av URL-er for å gjøre dem kortere og lettere å dele
-# 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
-# Infrequently synced with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
 # 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
 # 🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
 +d sixscissors.com
-+d imasdk.googleapis.com
-+d securepubads.g.doubleclick.net
 # https://github.com/AdguardTeam/AdguardFilters/issues/121422
 # 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
