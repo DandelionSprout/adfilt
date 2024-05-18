@@ -1,5 +1,5 @@
 ! Generic entries that seem like they'd apply to the internet as a whole (Nordic sites included) that aren't in EasyList or AdGuard Base Filter, but which are in either uBlock Filters Ads, uBlock Filters Unbreak, or uBlock Filters Badware Risks.
-! Version: 17May2024v1-Extension
+! Version: 18May2024v1-Extension
 ###ad_feature:not(:empty)
 ###ad_img:not(:empty)
 ###adContext:not(:empty)
@@ -136,3 +136,6 @@ contentMarketing$app=no.sol
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179354
 @@||finn.no/bap/forsale/ad.html^$1p
 !#endif
+
+! Other entries that are «AdGuard syntax»-specific
+gamereactor.*$$script[onError="adblockEnabled()"]
