@@ -4920,6 +4920,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"! Placeholder line for alternate list versions", 
+           r"!#include uBO%20list%20extensions/Dandelion%20Sprout's%20Anti-Malware%20List%20—%20AdGuardOnlyEntries.txt", 
+           line
+        )
+
         text += line + '\n'
 
     return text
