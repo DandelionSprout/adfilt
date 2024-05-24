@@ -3253,7 +3253,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^(! If you wish to remove.*)", 
-           r"\1\n! February-July 2024 — Users of ABP in Firefox ESR v115.x, Tor Browser, Waterfox, and SeaMonkey, MUST go to about:config → layout.css.has-selector.enabled, and set it to «true», in order for this list to work correctly. ESR 128.0 will fix this.", 
+           r"!•\n\1\n!•\n! If you see “/v3/full/“ in the list's URL or a “! DiffUrl:“ row above, while you're using Firefox, ABP 3.x, or a non-ABP extension, then you have been scammed and must change the list subscription to https://easylist-downloads.adblockplus.org/dandelion_sprouts_nordic_filters+easylist.txt immediately.\n!•", 
            line
         )
 

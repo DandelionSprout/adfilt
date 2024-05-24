@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 23May2024v2-Deprecated
+# Version: 24May2024v3-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -625,15 +625,13 @@ msFilterList
 # https://github.com/ryanbr/fanboy-adblock/issues/1410
 # ★★★ Unknown cause ★★★
 # https://github.com/DandelionSprout/adfilt/issues/67
-# https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
+# https://new.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 +d notice.sp-prod.net
 +d sp-prod.net
 !
 # 🇳🇴: Anti-'CPU-massakrering'
 # 🇮🇸: And-örgjörvislatrun
 # 🇬🇧: Anti-'CPU slaughtering'
-# https://kendte.dk/stjernespaekket-havefest-foejer-nye-navne-paa-plakaten-04072020/
-- advisibility_*.js
 # 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 # 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
 # 🇳🇴🏞: ——— Norsk Tipping, inkl. tvilsamt motiverte lottoreklamar (Ein håndfull ikkje-påtrengande tippereklamar er i orden for meg) ———
