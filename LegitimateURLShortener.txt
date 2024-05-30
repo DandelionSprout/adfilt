@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30May2024v1
+! Version: 30May2024v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1887,11 +1887,15 @@ $removeparam=/^asc_.*$/,doc,domain=amazon.*|aboutamazon.com|amzn.to
 ||amazon.*/primeday/$removeparam=tag
 ||amazon.*/primeday/$removeparam=mfadid
 ! https://www.amazon.com/60-Large-Eye-Sharp-Needles/dp/B0CMHZT968?dib=eyJ2IjoiMSJ9.XCuQOwI2pP0h3gyIwYtHbu6XoKvFdVSHdG-a_sSIzqdfrDrBiM7WLXkgbvQDRkna865o8-YQPgV3tTQuOeYVEwL_iq6HG9JXe3lJA-BNjQEZSPKaQLEvy-ruDP6f5Lna8ZFUMjoilPEyUgN2lzEhQ4a79HhUat1X898e423PbPKF7srfYl_-x62LDWvAZJoSsbXKNxjjp8aGhxguKUwu4-NkC_evPnvLu0hItMP_Qbr_MhDAxg8Cwth6tMyamxzNIMQG9j7rcY1HTgGudHH1HEP9-R6_IJ8lWApc0CKTPqw.gwh-OxTtsi2sQjaKpj_pZs7BtiXp7rBzKtURGJvstVI&dib_tag=se&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8860491
-||www.amazon.$removeparam=/^[a-z_]{1,20}=[a-zA-Z0-9._-]{80,}$/
+||www.amazon.$doc,removeparam=/^[a-z_]{1,20}=[a-zA-Z0-9._-]{80,}$/
 ||www.amazon.$removeparam=sp_csd
 ||www.amazon.$removeparam=dib_tag
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9484579
 @@||amazon.*/profilewidget^$removeparam,~doc
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9589378
+||amazon.$doc,removeparam=social_share
+||amazon.$doc,removeparam=starsLeft
+||amazon.$doc,removeparam=skipTwisterOG
 
 !!! ——— Bing ———
 ! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
