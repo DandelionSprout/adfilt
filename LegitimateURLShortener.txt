@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 05June2024v1
+! Version: 05June2024v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -4713,6 +4713,19 @@ $removeparam=/^.*arena_facet_queries=.*$/,domain=altabibliotek.no|berlevagbiblio
 
 ! https://docs.kernel.org/process/cve.html?ref=news.risky.biz
 ref=news.risky.biz$doc,removeparam=ref
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9631373
+||www.roblox.com^$doc,removeparam=isAd
+||www.roblox.com^$doc,removeparam=nativeAdData
+||www.roblox.com^$doc,removeparam=numberOfLoadedTiles
+||www.roblox.com^$doc,removeparam=sortPos
+||www.roblox.com^$doc,removeparam=universeId
+||www.roblox.com^$doc,removeparam=discoverPageSessionInfo
+||www.roblox.com^$doc,removeparam=gameSetTargetId
+||www.roblox.com^$doc,removeparam=RelatedAssetType
+||www.roblox.com^$doc,removeparam=RelatedAssetID
+||www.roblox.com^$removeparam=gameSearchSessionInfo
+||www.roblox.com^$removeparam=treatmentType
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
