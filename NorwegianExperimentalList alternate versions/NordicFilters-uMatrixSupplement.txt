@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
-! Version: 23May2024v2-Alpha
+! Version: 09June2024v1-Alpha
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -85,6 +85,7 @@ bt.no finn.no frame block
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
 vgtv.no adnxs.com * block
+! Should not have ":not" + ":empty" added to it due to costume.no
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Huvudsakleg for AdGuard
 ! 🇮🇸: Aðallega fyrir AdGuard
@@ -165,9 +166,56 @@ klikk.no widgets.sprinklecontent.com * block
 ! 🇮🇸: Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
 ! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
+en-svindelside-som-ikke-er-itunes-eller-apple.* itunesconnect-*.no * allow
+en-falsk-banksvindel.* bankid-sperret. all allow
 ! 🇬🇧: Copied over from «Dandelion Sprout's Anti-Malware List»
 ! 🇬🇧: Scam domains as reported in https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-988127908
 ! Fake Gymshark webshops
+en-falsk-svindelbutikk.* altrasgshoes.com all,~inline-font allow
+en-falsk-svindelbutikk.* altrask.com all,~inline-font allow
+en-falsk-svindelbutikk.* brunateskonorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* g-ymsharknorge.com all,~inline-font allow
+en-falsk-svindelbutik.* gantdanmark.com all,~inline-font allow
+en-falsk-svindelbutikk.* gantnorge.com all,~inline-font allow
+en-falsk-svindelbutik.* gymshark-danmarkudsalg.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymshark-no.com all,~inline-font allow
+en-falsk-svindelbutik.* gymsharkbutikdanmark.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymsharkbutikkoslo.com all,~inline-font allow
+en-falsk-svindelbutik.* gymsharkdanmark.com all,~inline-font allow
+en-falsk-svindelbutik.* gymsharkidanmark.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymsharkiesale.com all,~inline-font allow
+en-falsk-svindelbutikk.* xn--gymsharkklrnorge-3ob.com all,~inline-font allow
+en-falsk-svindelbutik.* gymsharkldanmark.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymsharklnorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymsharkno.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymsharknorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymsharkoutletsnorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymsharksalg.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymsharktightsnorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* gymsharnorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* hilfigerdenmark.com all,~inline-font allow
+en-falsk-svindelbutikk.* hilfigernorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* hugobossbutikk.com all,~inline-font allow
+en-falsk-svindelbutikk.* hunterstovlerbutikk.com all,~inline-font allow
+en-falsk-svindelbutikk.* josefseibeloutletnorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* joyaskobutikk.com all,~inline-font allow
+en-falsk-svindelbutik.* kybunskodanmark.com all,~inline-font allow
+en-falsk-svindelbutikk.* louboutinnorge.com all,~inline-font allow
+en-falsk-svindelbutik.* montec-danmark.com all,~inline-font allow
+en-falsk-svindelbutikk.* montecnorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* montecsalg.com all,~inline-font allow
+en-falsk-svindelbutik.* nauticadanmark.com all,~inline-font allow
+en-falsk-svindelbutikk.* nauticanorge.com all,~inline-font allow
+en-falsk-svindelbutikk.* salgvejanorge.com all,~inline-font allow
+en-falsk-svindelbutik.* sanukdk.com all,~inline-font allow
+en-falsk-svindelbutikk.* sanuksandaler.com all,~inline-font allow
+en-falsk-svindelbutik.* umbrodk.com all,~inline-font allow
+en-falsk-svindelbutikk.* umbrono.com all,~inline-font allow
+en-falsk-svindelbutik.* underarmourdk.com all,~inline-font allow
+en-falsk-svindelbutik.* underarmourdks.com all,~inline-font allow
+en-falsk-svindelbutik.* vejadanmarkudsalg.com all,~inline-font allow
+en-falsk-svindelbutik.* xeroshoes-danmark.com all,~inline-font allow
+en-falsk-svindelbutik.* xeroshoesdanmark.com all,~inline-font allow
 ! E-mail tips
 ! Overly dedicated E-mail spambots
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
@@ -175,8 +223,73 @@ klikk.no widgets.sprinklecontent.com * block
 ! 🇬🇧: As mentioned in various news articles about fraud sites
 ! Googling Aksel Hennie (Results for prior week) in late July 2021
 ! Various Google results for 'jesper buch bitcoin'
+en-falsk-bitcoin-svindel.* fartuelt.dk doc,popup allow
+en-falsk-bitcoin-svindel.* fancywoman.dk doc,popup allow
+en-falsk-bitcoin-svindel.* privatedagplejere.dk doc,popup allow
+en-falsk-bitcoin-svindel.* mxdesign.dk doc,popup allow
+en-falsk-bitcoin-svindel.* bitcoinevolutionaustraliareview.com doc,popup allow
+en-falsk-bitcoin-svindel.* irb.dk doc,popup allow
+en-falsk-bitcoin-svindel.* ditsunde.dk doc,popup allow
+en-falsk-bitcoin-svindel.* economywatch.com doc,popup allow
+en-falsk-bitcoin-svindel.* superbinvest.com doc,popup allow
+en-falsk-bitcoin-svindel.* marvelouskaunas.club all allow
+en-falsk-bitcoin-svindel.* aktienboard.com doc,popup allow
 no|~se minklarna. doc,popup allow
 dk minklarna. doc,popup allow
+en-falsk-svindelbutikk.* skechersskosalg-norge.com all allow
+en-falsk-svindelbutik.* dkgaborsneakers.com all allow
+en-falsk-svindelbutikk.* haglofstilbud.com all allow
+en-falsk-svindelbutikk.* fjallraventilbud.com all allow
+en-falsk-svindelbutikk.* hitecskonorge.com all allow
+en-falsk-svindelbutikk.* off-whitenorge.com all allow
+en-falsk-svindelbutikk.* gaborskonorge.com all allow
+en-falsk-svindelbutikk.* oofosnorgeoutlet.com all allow
+en-falsk-svindelbutikk.* camperskonorge.com all allow
+en-falsk-svindelbutikk.* eccoskonorge.com all allow
+en-falsk-svindelbutikk.* clarksskonorge.com all allow
+en-falsk-svindelbutik.* off-whitedanmark.com all allow
+en-falsk-svindelbuti.* underarmourdanmarkdk.com all allow
+en-falsk-svindelbutik.* eccodanmarkwebbutik.com all allow
+en-falsk-svindelbutik.* clarks-dk.com all allow
+en-falsk-svindelbutikk.* salomonoutletnorge.com all allow
+en-falsk-svindelbutikk.* speedcrossnettbutikk.com all allow
+en-falsk-svindelbutikk.* salomomnorgeoutlet.com all allow
+en-falsk-svindelbutik.* jakkeshopdanmark.com all allow
+en-falsk-svindelbutikk.* jakkeshopnorge.com all allow
+en-falsk-svindelbutikk.* norge-adidas.com all allow
+en-falsk-svindelbutikk.* tevanorgeshop.com all allow
+en-falsk-svindelbutikk.* wolverineskonorge.com all allow
+en-falsk-svindelbutikk.* hunternorge.co all allow
+en-falsk-svindelbutikk.* hunternorgeno.com all allow
+en-falsk-svindelbutikk.* norgeskotilbud.com all allow
+en-falsk-svindelbutikk.* hokasnorgeno.com all allow
+en-falsk-svindelbutikk.* vanssnorge.com all allow
+en-falsk-svindelbutikk.* asoloskonorge.com all allow
+en-falsk-svindelbutikk.* hokaonenorge.com all allow
+en-falsk-svindelbutikk.* jordannorge.top all allow
+en-falsk-svindelbutikk.* quiksilvernorge.com all allow
+en-falsk-svindelbutikk.* hokalopesko. all allow
+en-falsk-svindelbutikk.* hokanorgeno.com all allow
+en-falsk-svindelbutik.* drmdanmark.com all allow
+en-falsk-svindelbutkk.* tevadanmarkshop.com all allow
+en-falsk-svindelbutik.* hunter-danmark.com all allow
+en-falsk-svindelbutik.* salomonbutikdanmark.com all allow
+en-falsk-svindelbutik.* jordantilbud.com all allow
+en-falsk-svindelbutik.* jordantilbuddanmark.com all allow
+en-falsk-svindelbutik.* quiksilverdanmark.com all allow
+en-falsk-svindelbutik.* salomon-danmark.net all allow
+en-falsk-svindelbutik.* salomonidanmark.com all allow
+en-falsk-svindelbutik.* saucony-dk.com all allow
+en-falsk-svindelbutik.* palladiumskodk.com all allow
+en-falsk-svindelbutikk.* keensandalertilbud.com all allow
+en-falsk-svindelbutikk.* quiksilvertilbud.com all allow
+en-falsk-svindelbutikk.* palladiumskobutikk.com all allow
+en-falsk-svindelbutikk.* hunterstovlersalg.com all allow
+en-falsk-svindelbutikk.* martenssalg.com all allow
+en-falsk-svindelbutikk.* hokaskooutlet.co.no all allow
+en-falsk-svindelbutikk.* hoka-sko.com all allow
+en-falsk-svindelbutikk.* hoka-one-one.cc all allow
+en-falsk-svindelbutikk.* hokaoneone* all allow
 no no-forny* all allow
 no my-altinn* all allow
 no no-oppdatert. all allow

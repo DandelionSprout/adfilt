@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 23May2024v2
+! Version: 09June2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -217,6 +217,7 @@ finn.no##.ads__unit--banner
 bt.no##div[class^=article-wrapper-] > div[class^=_]
 nettavisen.no##amedia-include[param-editionid=reklame]:upward(1)
 sundhedslex.dk##.boxl
+costume.no##.teaser--link:has(.teaser__cat--sponsorlabel)
 mytastenor.com,mytastednk.com##.affiliate
 itavisen.no##.td-adspot-title
 byggfakta.no##.sponsor-row
@@ -939,6 +940,7 @@ madbanditten.dk##.madbanditten-widget
 gunnarandreassen.com##a[href*=dreamz]
 midtsiden.no##main > div > div:not([class])
 journalisten.dk##.article:style(padding-bottom: 10px !important)
+datamaskin.biz##.ad2
 latterkula.no##a[title*=spill]
 kundeavisogtilbud.no,tilbudsaviseronline.dk##.anchor-wrapper
 fcbarcelona.dk##.bluebox.custom
@@ -1632,6 +1634,7 @@ contentMarketing$xhr,domain=sol.no
 ||ytresogn.no/wp-content/uploads/2020/02/Ytre_718_360_2.jpg^
 ||gamereactor.*/ads^
 ||gamereactor.*/exclusive.json^
+||datamaskin.biz/ad/
 ! — — — — — — —
 ! 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -1896,7 +1899,7 @@ vafo.dk##.adform-flexblock
 ! bt.no, byas.no, aftenbladet.no (30/10/2020)
 ##.vertical-x1-ad > .column--big:not(body,:empty)
 ! costume.no, costume.dk (09/11/2020)
-##.grid > div[class=flow-banner]:not(body,:empty)
+##.grid > div[class=flow-banner]:not(body)
 ! boligpluss.no (09/11/2020), women.dk
 ##.wg-banner:not(html,body,:empty)
 ! ytresogn.no (16/12/2020)
@@ -1980,6 +1983,8 @@ innherred.no##.master.x10
 rbkweb.no##font > table:first-of-type
 !+ NOT_OPTIMIZED
 baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
+! Should not have ":not" + ":empty" added to it due to costume.no
+##.bonnier-ad:not(html,body)
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Huvudsakleg for AdGuard
@@ -2144,7 +2149,7 @@ ekstrabladet.dk#@#body>div[id][style]
 ! https://github.com/DandelionSprout/adfilt/issues/67
 
 
-! https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
+! https://new.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 @@||cmp.ekstrabladet.dk/get_site_data$xhr,1p
 
 
@@ -2160,8 +2165,6 @@ ekstrabladet.dk#@#body>div[id][style]
 ! 🇮🇸: And-örgjörvislatrun
 ! 🇬🇧: Anti-'CPU slaughtering'
 spleis.no##+js(set, __INITIAL_STATE__.features.should-show-snow, false)
-! https://kendte.dk/stjernespaekket-havefest-foejer-nye-navne-paa-plakaten-04072020/
-/advisibility_*.js^
 
 ! 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 ! 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
@@ -2220,6 +2223,7 @@ alternativ-media.com##.wpa
 norgesavisen.no##.td-fix-index
 frihetskamp.net##a[href*="greenpilled.com"]
 politainment.no#?#.widget:has-text(Annonse)
+nytid.no#@#.td-a-rec:not(html,body,:empty)
 ! https://github.com/uBlockOrigin/uAssets/issues/16138
 inyheter.no##.td-main-page-wrap .td-element-style + .tdc-row:has(.adsbygoogle)
 ! https://github.com/ryanbr/fanboy-adblock/issues/1405
@@ -2304,7 +2308,7 @@ inky.no#@#iframe[width="200"][height="240"]
 
 ! • Not to be removed during upstream syncs •
 ! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
-~nytid.no##.td-a-rec:not(html,body,:empty)
+##.td-a-rec:not(html,body,:empty)
 ! jyllands-posten.dk (09/07/2020)
 ###topBanners
 ! specificTXT
@@ -2329,55 +2333,55 @@ triplx.dk##.aff-inner-col
 ! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
 /begrensede-tilbudet/*$doc
-/bli-avbrutt-bor-du-oppdater/*$doc
-*/dnb11111^$doc
+/bli-avbrutt-bor-du-oppdater/*$doc,domain=~en-falsk-banksvindel.*
+*/dnb11111^$doc,domain=~en-falsk-banksvindel.*
 /KiwiErbjudanden1/*$doc
-/Norgesecure/*$doc
-/pakkerlevering/*$doc
+/Norgesecure/*$doc,domain=~en-falsk-banksvindel.*
+/pakkerlevering/*$doc,domain=~en-falsk-postsvindel.*
 /finn.no/finno.htm$doc,domain=~facebook.com
 .gratis-reisebilletter.$doc
 ||102.112.2o7.net^$doc
 ||52.216.146.90^
 ||92.42.104.146^
-||appleid.*.no^
-||coop.no.$doc
-||danskebank.no.$doc
-||djurs.com-*.$doc
-||dnb.no.$doc
-||elkjop.no.$doc
-||finn.no.$doc
-||flysas-no.$doc
-||itunesconnect-*.no^
+||appleid.*.no^$domain=~en-svindelside-som-ikke-er-apple.*
+||coop.no.$doc,domain=~en-svindelside-som-ikke-er-coop.*
+||danskebank.no.$doc,domain=~en-svindelside-som-ikke-er-danskebank.*
+||djurs.com-*.$doc,domain=~en-svindelside-som-ikke-er-djurs-sommerland.*
+||dnb.no.$doc,domain=~en-svindelside-som-ikke-er-dnb.*
+||elkjop.no.$doc,domain=~en-svindelside.*
+||finn.no.$doc,domain=~en-svindelside-som-ikke-er-finn.*
+||flysas-no.$doc,domain=~en-svindelside-som-ikke-er-sas.*
+||itunesconnect-*.no^$domain=~en-svindelside-som-ikke-er-itunes-eller-apple.*
 ||jimmychoostore.top^$doc
-||komplett.no.$doc
+||komplett.no.$doc,domain=~en-svindelside-som-ikke-er-komplett.*
 ||look-like-star.myshopify.com^$doc
 ||marked.no^
 ||mrcal365.com^$doc
-||nordea.no.$doc
-||nordnet.no.$doc
-||norwegian.com.$doc
+||nordea.no.$doc,domain=~en-svindelside-som-ikke-er-nordnet.*
+||nordnet.no.$doc,domain=~en-svindelside-som-ikke-er-nordnet.*
+||norwegian.com.$doc,domain=~en-svindelside-som-ikke-er-norwegian.*
 ||pensjonistferie.no^$doc
-||posten.no.$doc
-||postnord.no.$doc
+||posten.no.$doc,domain=~en-svindelside-som-ikke-er-posten.*
+||postnord.no.$doc,domain=~en-svindelside-som-ikke-er-postnord.*
 ||postuksus.com^$doc
 ||replicapatekphilippe.com^$doc
 ||replicarolexyachtmaster.com^$doc
-||sbanken.no.$doc
+||sbanken.no.$doc,domain=~en-svindelside-som-ikke-er-sbanken.*
 ||secureriches.com^$doc
-||shell.no.$doc
-||skatteetaten.no.$doc
-||sparebank1.no.$doc
+||shell.no.$doc,domain=~en-svindelside-som-ikke-er-shell.*
+||skatteetaten.no.$doc,domain=~en-svindelside-som-ikke-er-skatteetaten.*
+||sparebank1.no.$doc,domain=~en-svindelside-som-ikke-er-sparebank1.*
 ||trackvoluum.com^$doc
 ||tromselementbygg.no^$doc
-||tusenfryd-com.$doc
+||tusenfryd-com.$doc,domain=~en-svindelside-som-ikke-er-tusenfryd.*
 ||ultimate-tech-products.myshopify.com^$doc
-||vg.no.$doc
-||vipps-sikkerhet.$doc
+||vg.no.$doc,domain=~en-svindelside-som-ikke-er-vg.*
+||vipps-sikkerhet.$doc,domain=~en-falsk-banksvindel.*
 ||norskposten.com^$doc
 ||oslo-tannlegene.no^$doc
 ||y6.no^$all
 ||havfruen4220.dk^$all
-||bankid-sperret.$all
+||bankid-sperret.$all,domain=~en-falsk-banksvindel.*
 ||srilanka.no^$doc
 ||innboks.info^$all
 !+ NOT_OPTIMIZED
@@ -2392,61 +2396,61 @@ triplx.dk##.aff-inner-col
 ||galerijajava.ba^$all
 ||p-stn.net^$all
 ! Fake Gymshark webshops
-||altrasgshoes.com^$all,~inline-font
-||altrask.com^$all,~inline-font
-||brunateskonorge.com^$all,~inline-font
-||g-ymsharknorge.com^$all,~inline-font
-||gantdanmark.com^$all,~inline-font
-||gantnorge.com^$all,~inline-font
-||gymshark-danmarkudsalg.com^$all,~inline-font
-||gymshark-no.com^$all,~inline-font
-||gymsharkbutikdanmark.com^$all,~inline-font
-||gymsharkbutikkoslo.com^$all,~inline-font
-||gymsharkdanmark.com^$all,~inline-font
-||gymsharkidanmark.com^$all,~inline-font
-||gymsharkiesale.com^$all,~inline-font
-||xn--gymsharkklrnorge-3ob.com^$all,~inline-font
-||gymsharkldanmark.com^$all,~inline-font
-||gymsharklnorge.com^$all,~inline-font
-||gymsharkno.com^$all,~inline-font
-||gymsharknorge.com^$all,~inline-font
-||gymsharkoutletsnorge.com^$all,~inline-font
-||gymsharksalg.com^$all,~inline-font
-||gymsharktightsnorge.com^$all,~inline-font
-||gymsharnorge.com^$all,~inline-font
-||hilfigerdenmark.com^$all,~inline-font
-||hilfigernorge.com^$all,~inline-font
-||hugobossbutikk.com^$all,~inline-font
-||hunterstovlerbutikk.com^$all,~inline-font
-||josefseibeloutletnorge.com^$all,~inline-font
-||joyaskobutikk.com^$all,~inline-font
-||kybunskodanmark.com^$all,~inline-font
-||louboutinnorge.com^$all,~inline-font
-||montec-danmark.com^$all,~inline-font
-||montecnorge.com^$all,~inline-font
-||montecsalg.com^$all,~inline-font
-||nauticadanmark.com^$all,~inline-font
-||nauticanorge.com^$all,~inline-font
-||salgvejanorge.com^$all,~inline-font
-||sanukdk.com^$all,~inline-font
-||sanuksandaler.com^$all,~inline-font
-||umbrodk.com^$all,~inline-font
-||umbrono.com^$all,~inline-font
-||underarmourdk.com^$all,~inline-font
-||underarmourdks.com^$all,~inline-font
-||vejadanmarkudsalg.com^$all,~inline-font
-||xeroshoes-danmark.com^$all,~inline-font
-||xeroshoesdanmark.com^$all,~inline-font
--norgesalg.com^$doc
-*danmarks.com^$doc
-*norgno.com^$doc
-*norges.com^$doc
-*norgebutikk.com^$doc
-*norgestore.com^$doc
-*norge-no.com^$doc
-*norgestores.com^$doc
-*skobutikks.com^$doc
-*butikksoslo.com^$doc
+||altrasgshoes.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||altrask.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||brunateskonorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||g-ymsharknorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gantdanmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||gantnorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymshark-danmarkudsalg.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||gymshark-no.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymsharkbutikdanmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||gymsharkbutikkoslo.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymsharkdanmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||gymsharkidanmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||gymsharkiesale.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||xn--gymsharkklrnorge-3ob.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymsharkldanmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||gymsharklnorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymsharkno.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymsharknorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymsharkoutletsnorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymsharksalg.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymsharktightsnorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||gymsharnorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||hilfigerdenmark.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||hilfigernorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||hugobossbutikk.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||hunterstovlerbutikk.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||josefseibeloutletnorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||joyaskobutikk.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||kybunskodanmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||louboutinnorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||montec-danmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||montecnorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||montecsalg.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||nauticadanmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||nauticanorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||salgvejanorge.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||sanukdk.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||sanuksandaler.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||umbrodk.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||umbrono.com^$all,~inline-font,domain=~en-falsk-svindelbutikk.*
+||underarmourdk.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||underarmourdks.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||vejadanmarkudsalg.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||xeroshoes-danmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+||xeroshoesdanmark.com^$all,~inline-font,domain=~en-falsk-svindelbutik.*
+-norgesalg.com^$doc,domain=~en-falsk-svindelbutikk.*
+*danmarks.com^$doc,domain=~en-falsk-svindelbutik.*
+*norgno.com^$doc,domain=~en-falsk-svindelbutikk.*
+*norges.com^$doc,domain=~en-falsk-svindelbutikk.*
+*norgebutikk.com^$doc,domain=~en-falsk-svindelbutikk.*
+*norgestore.com^$doc,domain=~en-falsk-svindelbutikk.*
+*norge-no.com^$doc,domain=~en-falsk-svindelbutikk.*
+*norgestores.com^$doc,domain=~en-falsk-svindelbutikk.*
+*skobutikks.com^$doc,domain=~en-falsk-svindelbutikk.*
+*butikksoslo.com^$doc,domain=~en-falsk-svindelbutikk.*
 ! E-mail tips
 ||s.free.fr^$all
 ||trmff.wpengine.com^$all
@@ -2455,33 +2459,33 @@ triplx.dk##.aff-inner-col
 ||wirexapp.africa.com^$all
 ||tachyoniums.eu.com^$all
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-9075749
-||paypal.*.no|$doc
-||paypal.*.no/$doc
+||paypal.*.no|$doc,domain=~en-falsk-banksvindel.*
+||paypal.*.no/$doc,domain=~en-falsk-banksvindel.*
 
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 ! 🇬🇧: As mentioned in various news articles about fraud sites
 ! https://www.tv2.no/nyheter/10493336/
-||rnbinance.com^$doc
-||brightertrade.com^$doc
+||rnbinance.com^$doc,domain=~en-falsk-bitcoin-svindel.*
+||brightertrade.com^$doc,domain=~en-falsk-bitcoin-svindel.*
 ! https://www.nrk.no/norge/1.14511067
-||kongeparken.com-*$doc
-||kiwi.com-*$doc
+||kongeparken.com-*$doc,domain=~en-svindelside-som-ikke-er-kongeparken.*
+||kiwi.com-*$doc,domain=~en-svindelside-som-ikke-er-kongeparken.*
 ! https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
-||getmail-no.$doc
+||getmail-no.$doc,domain=~en-falsk-postsvindel.*
 ! https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
 ||liveshopdealz.com^$doc
 ! https://www.nrk.no/livsstil/1.14732503
-||elkjop*.club^$doc
+||elkjop*.club^$doc,domain=~en-falsk-svindelbutikk.*
 ! https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
-/css/*sparebank1.no^$doc
+/css/*sparebank1.no^$docen-svindelside-som-ikke-er-sparebank1.*
 ! https://www.facebook.com/viralspiralen/posts/2494251397311027
 ||addmoviesnow.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
-||faarup.com-*.$doc
-||com-dk.com^$doc
+||faarup.com-*.$doc,domain=~en-svindelside-der-ikke-er-sommerland.*
+||com-dk.com^$doc,domain=~en-svindelside-.*
 ! https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
-||legoland.com-*.$doc
+||legoland.com-*.$doc,domain=~en-svindelside-der-ikke-er-legoland.*
 ! https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 ||hcliips.com^$doc
 ! https://www.nrk.no/troms/1.14788086
@@ -2491,38 +2495,38 @@ triplx.dk##.aff-inner-col
 ! https://www.online.no/sikkerhet/falsk-online-nettside
 ||is-a-personaltrainer.com^$doc
 ! https://nyheder.tv2.dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
-||rigspolitiet.com^$doc
+||rigspolitiet.com^$doc,domain=~en-falsk-banksvindel.*
 ! https://www.faktisk.no/faktasjekker/vw8/erik-gikk-fra-arbeidsledig-til-millionaer-pa-8-uker
-||ocgadgets.com^$doc
-||ocgadgetss.myshopify.com^$doc
+||ocgadgets.com^$doc,domain=~en-falsk-bitcoin-svindel.*
+||ocgadgetss.myshopify.com^$doc,domain=~en-falsk-bitcoin-svindel.*
 ! https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
-||ekstrabiadet.$doc
+||ekstrabiadet.$doc,domain=~en-svindelside-der-ikke-er-ekstrabladet.*
 ! https://www.tv2.no/nyheter/11516670/
-||fintechnow*.buzz^$doc
-||wealthnews*.xyz^$doc
+||fintechnow*.buzz^$doc,domain=~en-falsk-bitcoin-svindel.*
+||wealthnews*.xyz^$doc,domain=~en-falsk-bitcoin-svindel.*
 ! https://www.datahjelperne.no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
-||newzeninfotech.com^$doc
+||newzeninfotech.com^$doc,domain=~en-falsk-postsvindel.*
 ! https://www.datahjelperne.no/skatteberegning-mail-svindel/
-||probenefit.net^$doc
-||ssbeveragedistribution.com^$doc
+||probenefit.net^$doc,domain=~en-falsk-postsvindel.*
+||ssbeveragedistribution.com^$doc,domain=~en-falsk-postsvindel.*
 ! https://www.datahjelperne.no/olav-thon-facebook-svindel/
-||norge.*.icu^$doc
-||euronews*.buzz^$doc
-||softwaredaily*.monster^$doc
-||stalknews*.buzz^$doc
-||goldupdates*.xyz^$doc
+||norge.*.icu^$doc,domain=~en-falsk-bitcoin-svindel.*
+||euronews*.buzz^$doc,domain=~en-falsk-bitcoin-svindel.*
+||softwaredaily*.monster^$doc,domain=~en-falsk-bitcoin-svindel.*
+||stalknews*.buzz^$doc,domain=~en-falsk-bitcoin-svindel.*
+||goldupdates*.xyz^$doc,domain=~en-falsk-bitcoin-svindel.*
 ! https://www.datahjelperne.no/vipps-sms-svindel/
-||sikre-vipps-konto.$doc
+||sikre-vipps-konto.$doc,domain=~en-falsk-banksvindel.*
 ! https://www.datahjelperne.no/hvit-bjorn-river-kvinne-i-stykker-facebook-spam-oppdatert/
 ||vidcopa.me^$doc
 ! https://www.adressa.no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
 ||smallrise.com^$doc
 ! https://www.datahjelperne.no/coop-du-har-fatt-nye-kuponger-mail-svindel/
-||offerleads.club^$doc
-/cop-no/index.htm$doc
+||offerleads.club^$doc,domain=~en-falsk-postsvindel.*
+/cop-no/index.htm$doc,domain=~en-falsk-postsvindel.*
 ! https://www.datahjelperne.no/elkjop-kontaktforsok-mail-svindel/
-||bamboobotanica.com^$doc
-/survey/heldige^$doc
+||bamboobotanica.com^$doc,domain=~en-falsk-postsvindel.*
+/survey/heldige^$doc,domain=~en-falsk-postsvindel.*
 ! https://www.datahjelperne.no/sparebank-1-din-tilganger-er-blokkert-svindel/
 ||cionialessio.it^$doc
 ! https://www.dinside.no/okonomi/advarer-mot-falsk-facebook/72891041
@@ -2531,13 +2535,13 @@ triplx.dk##.aff-inner-col
 ||sites.google.com/view/truls-svendsen^$doc
 ||signup-*vpns.com^$doc
 ! https://www.datahjelperne.no/telenor-din-faktura-mislyktes-svindel/
-||telenors.*.cx^$doc
+||telenors.*.cx^$doc,domain=~en-falsk-banksvindel.*
 ! https://www.datahjelperne.no/eurocard-falsk-epost-faktura/
-||valspe.com.br^$doc
+||valspe.com.br^$doc,domain=~en-falsk-banksvindel.*
 ! https://www.datahjelperne.no/eika-falsk-epost-svindel/
-||tekuon.com^$doc
+||tekuon.com^$doc,domain=~en-falsk-banksvindel.*
 ! https://www.nrk.no/norge/1.15235615
--sparebank1.*.net^$doc
+-sparebank1.*.net^$doc,domain=~en-svindelside-som-ikke-er-sparebank1.*
 ! https://www.datahjelperne.no/er-det-deg-facebook-video-spam/
 ||cinefique.com^$doc
 /^(https?://)?[a-z]{10,12}\.easy\.co($|/.*$)/$doc
@@ -2546,20 +2550,20 @@ triplx.dk##.aff-inner-col
 ! https://www.adressa.no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece
 ||nordeninterior.weebly.com^$doc
 ! Googling Aksel Hennie (Results for prior week) in late July 2021
-||com/vg.no|$doc
+||com/vg.no|$doc,domain=~en-falsk-bitcoin-svindel.*
 ! Various Google results for 'jesper buch bitcoin'
-||fartuelt.dk^$doc,popup
-||fancywoman.dk^$doc,popup
-||privatedagplejere.dk^$doc,popup
-||mxdesign.dk^$doc,popup
-||bitcoinevolutionaustraliareview.com^$doc,popup
-||irb.dk^$doc,popup
-||ditsunde.dk^$doc,popup
-||economywatch.com^$doc,popup
-||superbinvest.com^$doc,popup
-||marvelouskaunas.club^$all
-||aktienboard.com^$doc,popup
-||minklubshop.dk/dk^$doc,popup
+||fartuelt.dk^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||fancywoman.dk^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||privatedagplejere.dk^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||mxdesign.dk^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||bitcoinevolutionaustraliareview.com^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||irb.dk^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||ditsunde.dk^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||economywatch.com^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||superbinvest.com^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||marvelouskaunas.club^$all,domain=~en-falsk-bitcoin-svindel.*
+||aktienboard.com^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
+||minklubshop.dk/dk^$doc,popup,domain=~en-falsk-bitcoin-svindel.*
 ! https://www.nrk.no/vestfoldogtelemark/1.15750360
 ||dundeehills.group^$all
 ! https://www.adressa.no/pluss/nyheter/2021/12/04/Posten-advarer-Vi-sender-ikke-slike-tekstmeldinger-24894483.ece
@@ -2568,9 +2572,9 @@ triplx.dk##.aff-inner-col
 ! https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
 ||melding.link^$doc
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1114669106
-||cx/nordea|$doc
-||cx/sparebank$doc
-||cx/sbanken|$doc
+||cx/nordea|$doc,domain=~en-falsk-banksvindel.*
+||cx/sparebank$doc,domain=~en-falsk-banksvindel.*
+||cx/sbanken|$doc,domain=~en-falsk-banksvindel.*
 ! https://www.kode24.no/artikkel/75980495
 ||campbell-living.com^$all
 ! https://www.telia.no/kundeservice/mobil/malware-flubot-android/
@@ -2583,74 +2587,74 @@ triplx.dk##.aff-inner-col
 ! https://www.tv2.no/nyheter/innenriks/advarer-om-svindel-sms-sender-aldri-slike-henvendelser/16284207/ (15/12/2023)
 ||minklarna.$doc,popup,domain=~no|~se|~dk
 ! https://github.com/DandelionSprout/adfilt/issues/747
--norge.co.no^$all
-*skodanmark.com^$all
-||skechersskosalg-norge.com^$all
-||dkgaborsneakers.com^$all
-||haglofstilbud.com^$all
-||fjallraventilbud.com^$all
-||hitecskonorge.com^$all
-||off-whitenorge.com^$all
-||gaborskonorge.com^$all
-||oofosnorgeoutlet.com^$all
-||camperskonorge.com^$all
-||eccoskonorge.com^$all
-||clarksskonorge.com^$all
-||off-whitedanmark.com^$all
-||underarmourdanmarkdk.com^$all
-||eccodanmarkwebbutik.com^$all
-||clarks-dk.com^$all
-||salomonoutletnorge.com^$all
-||speedcrossnettbutikk.com^$all
+-norge.co.no^$all,domain=~en-falsk-svindelbutikk.*
+*skodanmark.com^$all,domain=~en-falsk-svindelbutik.*
+||skechersskosalg-norge.com^$all,domain=~en-falsk-svindelbutikk.*
+||dkgaborsneakers.com^$all,domain=~en-falsk-svindelbutik.*
+||haglofstilbud.com^$all,domain=~en-falsk-svindelbutikk.*
+||fjallraventilbud.com^$all,domain=~en-falsk-svindelbutikk.*
+||hitecskonorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||off-whitenorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||gaborskonorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||oofosnorgeoutlet.com^$all,domain=~en-falsk-svindelbutikk.*
+||camperskonorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||eccoskonorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||clarksskonorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||off-whitedanmark.com^$all,domain=~en-falsk-svindelbutik.*
+||underarmourdanmarkdk.com^$all,domain=~en-falsk-svindelbuti.*
+||eccodanmarkwebbutik.com^$all,domain=~en-falsk-svindelbutik.*
+||clarks-dk.com^$all,domain=~en-falsk-svindelbutik.*
+||salomonoutletnorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||speedcrossnettbutikk.com^$all,domain=~en-falsk-svindelbutikk.*
 ! https://github.com/DandelionSprout/adfilt/issues/748
-||salomomnorgeoutlet.com^$all
-||jakkeshopdanmark.com^$all
-||jakkeshopnorge.com^$all
-||norge-adidas.com^$all
-||tevanorgeshop.com^$all
-||wolverineskonorge.com^$all
-||hunternorge.co^$all
-||hunternorgeno.com^$all
-||norgeskotilbud.com^$all
-||hokasnorgeno.com^$all
-||vanssnorge.com^$all
-||asoloskonorge.com^$all
-||hokaonenorge.com^$all
-||jordannorge.top^$all
-||quiksilvernorge.com^$all
-||hokalopesko.$all
-||hokanorgeno.com^$all
-||drmdanmark.com^$all
-||tevadanmarkshop.com^$all
-||hunter-danmark.com^$all
-||salomonbutikdanmark.com^$all
-||jordantilbud.com^$all
-||jordantilbuddanmark.com^$all
-||quiksilverdanmark.com^$all
-||salomon-danmark.net^$all
-||salomonidanmark.com^$all
-||saucony-dk.com^$all
-||palladiumskodk.com^$all
-||keensandalertilbud.com^$all
-||quiksilvertilbud.com^$all
-||palladiumskobutikk.com^$all
-||hunterstovlersalg.com^$all
-||martenssalg.com^$all
-||hokaskooutlet.co.no^$all
-||hoka-sko.com^$all
-||hoka-one-one.cc^$all
-||hokaoneone*$all
-*norgeskosalg.$all
-*norge-salg.com^$all
-*norgesalg.com^$doc,popup
-*norgesalgs.com^$all
-*salgnorge.com^$doc,popup
-*danmarkdk.com^$all
-*skodktilbud.$all
-*skonorgeeu.com^$all
-*sneakersnorgeshop.$all
-*sneakersdkshop.com^$all
-*skodanmarks.$all
+||salomomnorgeoutlet.com^$all,domain=~en-falsk-svindelbutikk.*
+||jakkeshopdanmark.com^$all,domain=~en-falsk-svindelbutik.*
+||jakkeshopnorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||norge-adidas.com^$all,domain=~en-falsk-svindelbutikk.*
+||tevanorgeshop.com^$all,domain=~en-falsk-svindelbutikk.*
+||wolverineskonorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||hunternorge.co^$all,domain=~en-falsk-svindelbutikk.*
+||hunternorgeno.com^$all,domain=~en-falsk-svindelbutikk.*
+||norgeskotilbud.com^$all,domain=~en-falsk-svindelbutikk.*
+||hokasnorgeno.com^$all,domain=~en-falsk-svindelbutikk.*
+||vanssnorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||asoloskonorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||hokaonenorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||jordannorge.top^$all,domain=~en-falsk-svindelbutikk.*
+||quiksilvernorge.com^$all,domain=~en-falsk-svindelbutikk.*
+||hokalopesko.$all,domain=~en-falsk-svindelbutikk.*
+||hokanorgeno.com^$all,domain=~en-falsk-svindelbutikk.*
+||drmdanmark.com^$all,domain=~en-falsk-svindelbutik.*
+||tevadanmarkshop.com^$all,domain=~en-falsk-svindelbutkk.*
+||hunter-danmark.com^$all,domain=~en-falsk-svindelbutik.*
+||salomonbutikdanmark.com^$all,domain=~en-falsk-svindelbutik.*
+||jordantilbud.com^$all,domain=~en-falsk-svindelbutik.*
+||jordantilbuddanmark.com^$all,domain=~en-falsk-svindelbutik.*
+||quiksilverdanmark.com^$all,domain=~en-falsk-svindelbutik.*
+||salomon-danmark.net^$all,domain=~en-falsk-svindelbutik.*
+||salomonidanmark.com^$all,domain=~en-falsk-svindelbutik.*
+||saucony-dk.com^$all,domain=~en-falsk-svindelbutik.*
+||palladiumskodk.com^$all,domain=~en-falsk-svindelbutik.*
+||keensandalertilbud.com^$all,domain=~en-falsk-svindelbutikk.*
+||quiksilvertilbud.com^$all,domain=~en-falsk-svindelbutikk.*
+||palladiumskobutikk.com^$all,domain=~en-falsk-svindelbutikk.*
+||hunterstovlersalg.com^$all,domain=~en-falsk-svindelbutikk.*
+||martenssalg.com^$all,domain=~en-falsk-svindelbutikk.*
+||hokaskooutlet.co.no^$all,domain=~en-falsk-svindelbutikk.*
+||hoka-sko.com^$all,domain=~en-falsk-svindelbutikk.*
+||hoka-one-one.cc^$all,domain=~en-falsk-svindelbutikk.*
+||hokaoneone*$all,domain=~en-falsk-svindelbutikk.*
+*norgeskosalg.$all,domain=~en-falsk-svindelbutikk.*
+*norge-salg.com^$all,domain=~en-falsk-svindelbutikk.*
+*norgesalg.com^$doc,popup,domain=~en-falsk-svindelbutikk.*
+*norgesalgs.com^$all,domain=~en-falsk-svindelbutikk.*
+*salgnorge.com^$doc,popup,domain=~en-falsk-svindelbutikk.*
+*danmarkdk.com^$all,domain=~en-falsk-svindelbutik.*
+*skodktilbud.$all,domain=~en-falsk-svindelbutik.*
+*skonorgeeu.com^$all,domain=~en-falsk-svindelbutikk.*
+*sneakersnorgeshop.$all,domain=~en-falsk-svindelbutikk.*
+*sneakersdkshop.com^$all,domain=~en-falsk-svindelbutik.*
+*skodanmarks.$all,domain=~en-falsk-svindelbutikk.*
 ! https://www.adressa.no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull
 ! https://www.adressa.no/nyheter/trondheim/i/69d3lL/spisesteder-rammet-det-er-forferdelig-jeg-fikk-panikk
 ||sitey.me^$doc
@@ -2726,31 +2730,31 @@ triplx.dk##.aff-inner-col
 ! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 ! 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 ! Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
-||adidasko.com^$doc
-||airmaxskobillige.com^$doc
-||assassinfitness.com^$doc
-||coralls.com^$doc
-||daradis.com^$doc
-||drakternorge.com^$doc
-||drcarolyngroff.com^$doc
-||dunjakke-no.com^$doc
-||fotballsko-salg.com^$doc
-||gsport.com^$doc
-||hernoclothing.com^$doc
-||jakkesalgs.com^$doc
-||jakkesnorge.com^$doc
-||linkshe.com^$doc
-||mbtnorge.com^$doc
-||moteshoes.com^$doc
-||mycraftypad.com^$doc
-||norfotball.com^$doc
-||norgefotball.com^$doc
-||norgeshoes.com^$doc
-||oflike.com^$doc
-||parajumperssalg.com^$doc
-||pjs.outlet.com^$doc
-||popeurope.com^$doc
-||um-bs.com^$doc
+||adidasko.com^$doc,domain=~en-falsk-svindelbutikk.*
+||airmaxskobillige.com^$doc,domain=~en-falsk-svindelbutikk.*
+||assassinfitness.com^$doc,domain=~en-falsk-svindelbutikk.*
+||coralls.com^$doc,domain=~en-falsk-svindelbutikk.*
+||daradis.com^$doc,domain=~en-falsk-svindelbutikk.*
+||drakternorge.com^$doc,domain=~en-falsk-svindelbutikk.*
+||drcarolyngroff.com^$doc,domain=~en-falsk-svindelbutikk.*
+||dunjakke-no.com^$doc,domain=~en-falsk-svindelbutikk.*
+||fotballsko-salg.com^$doc,domain=~en-falsk-svindelbutikk.*
+||gsport.com^$doc,domain=~en-falsk-svindelbutikk.*
+||hernoclothing.com^$doc,domain=~en-falsk-svindelbutikk.*
+||jakkesalgs.com^$doc,domain=~en-falsk-svindelbutikk.*
+||jakkesnorge.com^$doc,domain=~en-falsk-svindelbutikk.*
+||linkshe.com^$doc,domain=~en-falsk-svindelbutikk.*
+||mbtnorge.com^$doc,domain=~en-falsk-svindelbutikk.*
+||moteshoes.com^$doc,domain=~en-falsk-svindelbutikk.*
+||mycraftypad.com^$doc,domain=~en-falsk-svindelbutikk.*
+||norfotball.com^$doc,domain=~en-falsk-svindelbutikk.*
+||norgefotball.com^$doc,domain=~en-falsk-svindelbutikk.*
+||norgeshoes.com^$doc,domain=~en-falsk-svindelbutikk.*
+||oflike.com^$doc,domain=~en-falsk-svindelbutikk.*
+||parajumperssalg.com^$doc,domain=~en-falsk-svindelbutikk.*
+||pjs.outlet.com^$doc,domain=~en-falsk-svindelbutikk.*
+||popeurope.com^$doc,domain=~en-falsk-svindelbutikk.*
+||um-bs.com^$doc,domain=~en-falsk-svindelbutikk.*
 
 ! 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 ||nofotballshop.com^$doc
@@ -2764,22 +2768,22 @@ triplx.dk##.aff-inner-col
 
 ! 🇳🇴: Falske nettapoteker
 ! 🇬🇧: Fake online pharmacies
--med.footeo.com^$doc
-||*medisin*.over-blog.com^$doc
-||godtdsamaritansk.com^$doc
-||helsehjelp.over-blog.com^$doc
-||jensapoteker.com^$doc
-||marson.footeo.com^$doc
-||sikkertapotek.com^$doc
-||sobrilleverandoridanmark.wordpress.com^$doc
-||xanax*.over-blog.com^$doc
+-med.footeo.com^$doc,domain=~falskt-svindelapotek.*
+||*medisin*.over-blog.com^$doc,domain=~falskt-svindelapotek.*
+||godtdsamaritansk.com^$doc,domain=~falskt-svindelapotek.*
+||helsehjelp.over-blog.com^$doc,domain=~falskt-svindelapotek.*
+||jensapoteker.com^$doc,domain=~falskt-svindelapotek.*
+||marson.footeo.com^$doc,domain=~falskt-svindelapotek.*
+||sikkertapotek.com^$doc,domain=~falskt-svindelapotek.*
+||sobrilleverandoridanmark.wordpress.com^$doc,domain=~falskt-svindelapotek.*
+||xanax*.over-blog.com^$doc,domain=~falskt-svindelapotek.*
 
 ! 🇬🇧: Old domains stolen by casino sites
-||kohlershop.dk^$doc
-||fredensborg-orredfiskeri.dk^$doc
-||informationer.nu^$doc
-||cphspaogwellness.dk^$doc
-||webavisen.gl^$doc
+||kohlershop.dk^$doc,domain=~the-site-was-stolen-by-a-casino-scammer.*
+||fredensborg-orredfiskeri.dk^$doc,domain=~the-site-was-stolen-by-a-casino-scammer.*
+||informationer.nu^$doc,domain=~the-site-was-stolen-by-a-casino-scammer.*
+||cphspaogwellness.dk^$doc,domain=~the-site-was-stolen-by-a-casino-scammer.*
+||webavisen.gl^$doc,domain=~the-site-was-stolen-by-a-casino-scammer.*
 
 ! 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 ||desidert.no^

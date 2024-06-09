@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 24May2024v3-Deprecated
+# Version: 09June2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -370,6 +370,7 @@ msFilterList
 -d ytresogn.no Fureli-nett-mobil.jpg
 -d ytresogn.no image007.jpg
 -d ytresogn.no Ytre_718_360_2.jpg
+-d datamaskin.biz ad
 # — — — — — — —
 # 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -536,6 +537,7 @@ msFilterList
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
 # https://www.aftenposten.no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
+# Should not have ":not" + ":empty" added to it due to costume.no
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Huvudsakleg for AdGuard

@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 230520242
+! Version: 090620241
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -207,6 +207,7 @@ finn.no##.ads__unit--banner
 bt.no##div[class^=article-wrapper-] > div[class^=_]
 nettavisen.no##*:has(> amedia-include[param-editionid=reklame])
 sundhedslex.dk##.boxl
+costume.no##.teaser--link:has(.teaser__cat--sponsorlabel)
 mytastenor.com,mytastednk.com##.affiliate
 itavisen.no##.td-adspot-title
 byggfakta.no##.sponsor-row
@@ -906,6 +907,7 @@ kanalfrederikshavn.dk##td[height="237"]:not([valign])
 madbanditten.dk##.madbanditten-widget
 gunnarandreassen.com##a[href*=dreamz]
 midtsiden.no##main > div > div:not([class])
+datamaskin.biz##.ad2
 latterkula.no##a[title*=spill]
 kundeavisogtilbud.no,tilbudsaviseronline.dk##.anchor-wrapper
 fcbarcelona.dk##.bluebox.custom
@@ -1594,6 +1596,7 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||ytresogn.no/wp-content/uploads/2020/02/Ytre_718_360_2.jpg^
 ||gamereactor.*/ads^
 ||gamereactor.*/exclusive.json^
+||datamaskin.biz/ad/
 ! — — — — — — —
 ! 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -1855,7 +1858,7 @@ vafo.dk##.adform-flexblock
 ! bt.no, byas.no, aftenbladet.no (30/10/2020)
 ##.vertical-x1-ad > .column--big:not(body,:empty)
 ! costume.no, costume.dk (09/11/2020)
-##.grid > div[class=flow-banner]:not(body,:empty)
+##.grid > div[class=flow-banner]:not(body)
 ! boligpluss.no (09/11/2020), women.dk
 ##.wg-banner:not(html,body,:empty)
 ! ytresogn.no (16/12/2020)
@@ -1926,6 +1929,8 @@ aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austa
 innherred.no##.master.x10
 rbkweb.no##font > table:first-of-type
 baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
+! Should not have ":not" + ":empty" added to it due to costume.no
+##.bonnier-ad:not(html,body)
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Huvudsakleg for AdGuard
@@ -2081,7 +2086,7 @@ ekstrabladet.dk#@#body>div[id][style]
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
 @@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
-! https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
+! https://new.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 @@||cmp.ekstrabladet.dk/get_site_data$xmlhttprequest,~third-party
 @@||dialogue.sp-prod.net/messagingWithoutDetection.js$script,domain=ekstrabladet.dk
 @@||notice.sp-prod.net^$subdocument,domain=ekstrabladet.dk
@@ -2093,8 +2098,6 @@ ekstrabladet.dk#@#body>div[id][style]
 ! 🇳🇴: Anti-'CPU-massakrering'
 ! 🇮🇸: And-örgjörvislatrun
 ! 🇬🇧: Anti-'CPU slaughtering'
-! https://kendte.dk/stjernespaekket-havefest-foejer-nye-navne-paa-plakaten-04072020/
-/advisibility_*.js^
 
 ! 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 ! 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
@@ -2153,6 +2156,7 @@ alternativ-media.com##.wpa
 norgesavisen.no##.td-fix-index
 frihetskamp.net##a[href*="greenpilled.com"]
 politainment.no#?#.widget:has-text(Annonse)
+nytid.no#@#.td-a-rec:not(html,body,:empty)
 ! https://github.com/uBlockOrigin/uAssets/issues/16138
 inyheter.no##.td-main-page-wrap .td-element-style + .tdc-row:has(.adsbygoogle)
 ! https://github.com/ryanbr/fanboy-adblock/issues/1405
@@ -2231,7 +2235,7 @@ ni.dk#@#a[href*=".adform.net/"]
 @@||v.fwmrm.net/crossdomain.xml$domain=bold.dk
 ! • Not to be removed during upstream syncs •
 ! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
-~nytid.no##.td-a-rec:not(html,body,:empty)
+##.td-a-rec:not(html,body,:empty)
 ! jyllands-posten.dk (09/07/2020)
 ###topBanners
 ! specificTXT
@@ -2264,7 +2268,7 @@ triplx.dk##.aff-inner-col
 ||102.112.2o7.net^
 ||52.216.146.90^
 ||92.42.104.146^
-||appleid.*.no^
+||appleid.*.no^$domain=~en-svindelside-som-ikke-er-apple.*
 ||coop.no.
 ||danskebank.no.
 ||djurs.com-*.
@@ -2272,7 +2276,7 @@ triplx.dk##.aff-inner-col
 ||elkjop.no.
 ||finn.no.
 ||flysas-no.
-||itunesconnect-*.no^
+||itunesconnect-*.no^$domain=~en-svindelside-som-ikke-er-itunes-eller-apple.*
 ||jimmychoostore.top^
 ||komplett.no.
 ||look-like-star.myshopify.com^
@@ -2305,7 +2309,7 @@ triplx.dk##.aff-inner-col
 ||havfruen4220.dk^
 ||havfruen4220.dk^$popup
 ||bankid-sperret.
-||bankid-sperret.$popup
+||bankid-sperret.$popup,domain=~en-falsk-banksvindel.*
 ||srilanka.no^
 ||innboks.info^
 ||innboks.info^$popup
@@ -2325,95 +2329,95 @@ triplx.dk##.aff-inner-col
 ||p-stn.net^$popup
 ! Fake Gymshark webshops
 ||altrasgshoes.com^
-||altrasgshoes.com^$popup,~inline-font
+||altrasgshoes.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||altrask.com^
-||altrask.com^$popup,~inline-font
+||altrask.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||brunateskonorge.com^
-||brunateskonorge.com^$popup,~inline-font
+||brunateskonorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||g-ymsharknorge.com^
-||g-ymsharknorge.com^$popup,~inline-font
+||g-ymsharknorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gantdanmark.com^
-||gantdanmark.com^$popup,~inline-font
+||gantdanmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||gantnorge.com^
-||gantnorge.com^$popup,~inline-font
+||gantnorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymshark-danmarkudsalg.com^
-||gymshark-danmarkudsalg.com^$popup,~inline-font
+||gymshark-danmarkudsalg.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||gymshark-no.com^
-||gymshark-no.com^$popup,~inline-font
+||gymshark-no.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymsharkbutikdanmark.com^
-||gymsharkbutikdanmark.com^$popup,~inline-font
+||gymsharkbutikdanmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||gymsharkbutikkoslo.com^
-||gymsharkbutikkoslo.com^$popup,~inline-font
+||gymsharkbutikkoslo.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymsharkdanmark.com^
-||gymsharkdanmark.com^$popup,~inline-font
+||gymsharkdanmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||gymsharkidanmark.com^
-||gymsharkidanmark.com^$popup,~inline-font
+||gymsharkidanmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||gymsharkiesale.com^
-||gymsharkiesale.com^$popup,~inline-font
+||gymsharkiesale.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||xn--gymsharkklrnorge-3ob.com^
-||xn--gymsharkklrnorge-3ob.com^$popup,~inline-font
+||xn--gymsharkklrnorge-3ob.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymsharkldanmark.com^
-||gymsharkldanmark.com^$popup,~inline-font
+||gymsharkldanmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||gymsharklnorge.com^
-||gymsharklnorge.com^$popup,~inline-font
+||gymsharklnorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymsharkno.com^
-||gymsharkno.com^$popup,~inline-font
+||gymsharkno.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymsharknorge.com^
-||gymsharknorge.com^$popup,~inline-font
+||gymsharknorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymsharkoutletsnorge.com^
-||gymsharkoutletsnorge.com^$popup,~inline-font
+||gymsharkoutletsnorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymsharksalg.com^
-||gymsharksalg.com^$popup,~inline-font
+||gymsharksalg.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymsharktightsnorge.com^
-||gymsharktightsnorge.com^$popup,~inline-font
+||gymsharktightsnorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||gymsharnorge.com^
-||gymsharnorge.com^$popup,~inline-font
+||gymsharnorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||hilfigerdenmark.com^
-||hilfigerdenmark.com^$popup,~inline-font
+||hilfigerdenmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||hilfigernorge.com^
-||hilfigernorge.com^$popup,~inline-font
+||hilfigernorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||hugobossbutikk.com^
-||hugobossbutikk.com^$popup,~inline-font
+||hugobossbutikk.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||hunterstovlerbutikk.com^
-||hunterstovlerbutikk.com^$popup,~inline-font
+||hunterstovlerbutikk.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||josefseibeloutletnorge.com^
-||josefseibeloutletnorge.com^$popup,~inline-font
+||josefseibeloutletnorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||joyaskobutikk.com^
-||joyaskobutikk.com^$popup,~inline-font
+||joyaskobutikk.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||kybunskodanmark.com^
-||kybunskodanmark.com^$popup,~inline-font
+||kybunskodanmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||louboutinnorge.com^
-||louboutinnorge.com^$popup,~inline-font
+||louboutinnorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||montec-danmark.com^
-||montec-danmark.com^$popup,~inline-font
+||montec-danmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||montecnorge.com^
-||montecnorge.com^$popup,~inline-font
+||montecnorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||montecsalg.com^
-||montecsalg.com^$popup,~inline-font
+||montecsalg.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||nauticadanmark.com^
-||nauticadanmark.com^$popup,~inline-font
+||nauticadanmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||nauticanorge.com^
-||nauticanorge.com^$popup,~inline-font
+||nauticanorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||salgvejanorge.com^
-||salgvejanorge.com^$popup,~inline-font
+||salgvejanorge.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||sanukdk.com^
-||sanukdk.com^$popup,~inline-font
+||sanukdk.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||sanuksandaler.com^
-||sanuksandaler.com^$popup,~inline-font
+||sanuksandaler.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||umbrodk.com^
-||umbrodk.com^$popup,~inline-font
+||umbrodk.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||umbrono.com^
-||umbrono.com^$popup,~inline-font
+||umbrono.com^$popup,~inline-font,domain=~en-falsk-svindelbutikk.*
 ||underarmourdk.com^
-||underarmourdk.com^$popup,~inline-font
+||underarmourdk.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||underarmourdks.com^
-||underarmourdks.com^$popup,~inline-font
+||underarmourdks.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||vejadanmarkudsalg.com^
-||vejadanmarkudsalg.com^$popup,~inline-font
+||vejadanmarkudsalg.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||xeroshoes-danmark.com^
-||xeroshoes-danmark.com^$popup,~inline-font
+||xeroshoes-danmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 ||xeroshoesdanmark.com^
-||xeroshoesdanmark.com^$popup,~inline-font
+||xeroshoesdanmark.com^$popup,~inline-font,domain=~en-falsk-svindelbutik.*
 -norgesalg.com^
 *danmarks.com^
 *norgno.com^
@@ -2540,7 +2544,7 @@ triplx.dk##.aff-inner-col
 ||economywatch.com^
 ||superbinvest.com^
 ||marvelouskaunas.club^
-||marvelouskaunas.club^$popup
+||marvelouskaunas.club^$popup,domain=~en-falsk-bitcoin-svindel.*
 ||aktienboard.com^
 ||minklubshop.dk/dk^
 ! https://www.nrk.no/vestfoldogtelemark/1.15750360
@@ -2574,138 +2578,138 @@ triplx.dk##.aff-inner-col
 ||minklarna.
 ! https://github.com/DandelionSprout/adfilt/issues/747
 -norge.co.no^
--norge.co.no^$popup
+-norge.co.no^$popup,domain=~en-falsk-svindelbutikk.*
 *skodanmark.com^
-*skodanmark.com^$popup
+*skodanmark.com^$popup,domain=~en-falsk-svindelbutik.*
 ||skechersskosalg-norge.com^
-||skechersskosalg-norge.com^$popup
+||skechersskosalg-norge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||dkgaborsneakers.com^
-||dkgaborsneakers.com^$popup
+||dkgaborsneakers.com^$popup,domain=~en-falsk-svindelbutik.*
 ||haglofstilbud.com^
-||haglofstilbud.com^$popup
+||haglofstilbud.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||fjallraventilbud.com^
-||fjallraventilbud.com^$popup
+||fjallraventilbud.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||hitecskonorge.com^
-||hitecskonorge.com^$popup
+||hitecskonorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||off-whitenorge.com^
-||off-whitenorge.com^$popup
+||off-whitenorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||gaborskonorge.com^
-||gaborskonorge.com^$popup
+||gaborskonorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||oofosnorgeoutlet.com^
-||oofosnorgeoutlet.com^$popup
+||oofosnorgeoutlet.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||camperskonorge.com^
-||camperskonorge.com^$popup
+||camperskonorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||eccoskonorge.com^
-||eccoskonorge.com^$popup
+||eccoskonorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||clarksskonorge.com^
-||clarksskonorge.com^$popup
+||clarksskonorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||off-whitedanmark.com^
-||off-whitedanmark.com^$popup
+||off-whitedanmark.com^$popup,domain=~en-falsk-svindelbutik.*
 ||underarmourdanmarkdk.com^
-||underarmourdanmarkdk.com^$popup
+||underarmourdanmarkdk.com^$popup,domain=~en-falsk-svindelbuti.*
 ||eccodanmarkwebbutik.com^
-||eccodanmarkwebbutik.com^$popup
+||eccodanmarkwebbutik.com^$popup,domain=~en-falsk-svindelbutik.*
 ||clarks-dk.com^
-||clarks-dk.com^$popup
+||clarks-dk.com^$popup,domain=~en-falsk-svindelbutik.*
 ||salomonoutletnorge.com^
-||salomonoutletnorge.com^$popup
+||salomonoutletnorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||speedcrossnettbutikk.com^
-||speedcrossnettbutikk.com^$popup
+||speedcrossnettbutikk.com^$popup,domain=~en-falsk-svindelbutikk.*
 ! https://github.com/DandelionSprout/adfilt/issues/748
 ||salomomnorgeoutlet.com^
-||salomomnorgeoutlet.com^$popup
+||salomomnorgeoutlet.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||jakkeshopdanmark.com^
-||jakkeshopdanmark.com^$popup
+||jakkeshopdanmark.com^$popup,domain=~en-falsk-svindelbutik.*
 ||jakkeshopnorge.com^
-||jakkeshopnorge.com^$popup
+||jakkeshopnorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||norge-adidas.com^
-||norge-adidas.com^$popup
+||norge-adidas.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||tevanorgeshop.com^
-||tevanorgeshop.com^$popup
+||tevanorgeshop.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||wolverineskonorge.com^
-||wolverineskonorge.com^$popup
+||wolverineskonorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||hunternorge.co^
-||hunternorge.co^$popup
+||hunternorge.co^$popup,domain=~en-falsk-svindelbutikk.*
 ||hunternorgeno.com^
-||hunternorgeno.com^$popup
+||hunternorgeno.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||norgeskotilbud.com^
-||norgeskotilbud.com^$popup
+||norgeskotilbud.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||hokasnorgeno.com^
-||hokasnorgeno.com^$popup
+||hokasnorgeno.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||vanssnorge.com^
-||vanssnorge.com^$popup
+||vanssnorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||asoloskonorge.com^
-||asoloskonorge.com^$popup
+||asoloskonorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||hokaonenorge.com^
-||hokaonenorge.com^$popup
+||hokaonenorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||jordannorge.top^
-||jordannorge.top^$popup
+||jordannorge.top^$popup,domain=~en-falsk-svindelbutikk.*
 ||quiksilvernorge.com^
-||quiksilvernorge.com^$popup
+||quiksilvernorge.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||hokalopesko.
-||hokalopesko.$popup
+||hokalopesko.$popup,domain=~en-falsk-svindelbutikk.*
 ||hokanorgeno.com^
-||hokanorgeno.com^$popup
+||hokanorgeno.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||drmdanmark.com^
-||drmdanmark.com^$popup
+||drmdanmark.com^$popup,domain=~en-falsk-svindelbutik.*
 ||tevadanmarkshop.com^
-||tevadanmarkshop.com^$popup
+||tevadanmarkshop.com^$popup,domain=~en-falsk-svindelbutkk.*
 ||hunter-danmark.com^
-||hunter-danmark.com^$popup
+||hunter-danmark.com^$popup,domain=~en-falsk-svindelbutik.*
 ||salomonbutikdanmark.com^
-||salomonbutikdanmark.com^$popup
+||salomonbutikdanmark.com^$popup,domain=~en-falsk-svindelbutik.*
 ||jordantilbud.com^
-||jordantilbud.com^$popup
+||jordantilbud.com^$popup,domain=~en-falsk-svindelbutik.*
 ||jordantilbuddanmark.com^
-||jordantilbuddanmark.com^$popup
+||jordantilbuddanmark.com^$popup,domain=~en-falsk-svindelbutik.*
 ||quiksilverdanmark.com^
-||quiksilverdanmark.com^$popup
+||quiksilverdanmark.com^$popup,domain=~en-falsk-svindelbutik.*
 ||salomon-danmark.net^
-||salomon-danmark.net^$popup
+||salomon-danmark.net^$popup,domain=~en-falsk-svindelbutik.*
 ||salomonidanmark.com^
-||salomonidanmark.com^$popup
+||salomonidanmark.com^$popup,domain=~en-falsk-svindelbutik.*
 ||saucony-dk.com^
-||saucony-dk.com^$popup
+||saucony-dk.com^$popup,domain=~en-falsk-svindelbutik.*
 ||palladiumskodk.com^
-||palladiumskodk.com^$popup
+||palladiumskodk.com^$popup,domain=~en-falsk-svindelbutik.*
 ||keensandalertilbud.com^
-||keensandalertilbud.com^$popup
+||keensandalertilbud.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||quiksilvertilbud.com^
-||quiksilvertilbud.com^$popup
+||quiksilvertilbud.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||palladiumskobutikk.com^
-||palladiumskobutikk.com^$popup
+||palladiumskobutikk.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||hunterstovlersalg.com^
-||hunterstovlersalg.com^$popup
+||hunterstovlersalg.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||martenssalg.com^
-||martenssalg.com^$popup
+||martenssalg.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||hokaskooutlet.co.no^
-||hokaskooutlet.co.no^$popup
+||hokaskooutlet.co.no^$popup,domain=~en-falsk-svindelbutikk.*
 ||hoka-sko.com^
-||hoka-sko.com^$popup
+||hoka-sko.com^$popup,domain=~en-falsk-svindelbutikk.*
 ||hoka-one-one.cc^
-||hoka-one-one.cc^$popup
+||hoka-one-one.cc^$popup,domain=~en-falsk-svindelbutikk.*
 ||hokaoneone*
-||hokaoneone*$popup
+||hokaoneone*$popup,domain=~en-falsk-svindelbutikk.*
 *norgeskosalg.
-*norgeskosalg.$popup
+*norgeskosalg.$popup,domain=~en-falsk-svindelbutikk.*
 *norge-salg.com^
-*norge-salg.com^$popup
+*norge-salg.com^$popup,domain=~en-falsk-svindelbutikk.*
 *norgesalg.com^
 *norgesalgs.com^
-*norgesalgs.com^$popup
+*norgesalgs.com^$popup,domain=~en-falsk-svindelbutikk.*
 *salgnorge.com^
 *danmarkdk.com^
-*danmarkdk.com^$popup
+*danmarkdk.com^$popup,domain=~en-falsk-svindelbutik.*
 *skodktilbud.
-*skodktilbud.$popup
+*skodktilbud.$popup,domain=~en-falsk-svindelbutik.*
 *skonorgeeu.com^
-*skonorgeeu.com^$popup
+*skonorgeeu.com^$popup,domain=~en-falsk-svindelbutikk.*
 *sneakersnorgeshop.
-*sneakersnorgeshop.$popup
+*sneakersnorgeshop.$popup,domain=~en-falsk-svindelbutikk.*
 *sneakersdkshop.com^
-*sneakersdkshop.com^$popup
+*sneakersdkshop.com^$popup,domain=~en-falsk-svindelbutik.*
 *skodanmarks.
-*skodanmarks.$popup
+*skodanmarks.$popup,domain=~en-falsk-svindelbutikk.*
 ! https://www.adressa.no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull
 ! https://www.adressa.no/nyheter/trondheim/i/69d3lL/spisesteder-rammet-det-er-forferdelig-jeg-fikk-panikk
 ||sitey.me^
