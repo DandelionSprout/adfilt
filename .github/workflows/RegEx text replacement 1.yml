@@ -10,7 +10,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "([(]/.*([a-rt-zA-RT-Z0-9]))$2([^?].*/i[)])"
+          find: "(\(/.*([a-rt-zA-RT-Z0-9]))$2([^?].*/i\))"
           replace: "$1{2}$3"
           include: "a.txt"
           regex: true
