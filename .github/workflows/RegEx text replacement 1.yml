@@ -12,7 +12,7 @@ jobs:
         with:
           find: "((/.*([a-rt-zA-RT-Z0-9]))$3([^?].*/i))"
           replace: "$1{2}$4"
-          include: "a.txt"
+          include: "**a.txt"
           regex: true
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
