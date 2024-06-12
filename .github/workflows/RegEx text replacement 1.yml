@@ -12,7 +12,7 @@ jobs:
         with:
           find: "(:has-text/(//([a-zA-Z0-9øØåÅñ_.';,|/{}* !?-]|\\|\"){0,}([a-rt-zA-RæÆøØåÅT-Z0-9]))$3([a-zA-Z0-9æÆøØåÅñ_.';,|/* !]|\\|/|\")"
           replace: "$1{2}$4"
-          include: "**/a.txt"
+          include: "a.txt"
           regex: true
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
