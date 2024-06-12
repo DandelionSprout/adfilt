@@ -1,5 +1,5 @@
 name: RegEx text replacement (https://github.com/marketplace/actions/find-and-replace)
-on: [push, pull_request, discusson_comment]
+on: [push, pull_request, discussion_comment]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,7 +12,6 @@ jobs:
         with:
           find: "(:has-text\(/([a-zA-Z0-9øØåÅñ_.;,|/{}* !?"'-]|\\){0,}([a-rt-zA-RæÆøØåÅT-Z0-9]))\3([a-zA-Z0-9æÆøØåÅñ_.;,|/{}* !"'-]|\\)"
           replace: "\1{2}\4"
-          regex: true
           include: "**/a.txt"
       - name: Push changes
       - title: '[Bot] RegEx optimising'
