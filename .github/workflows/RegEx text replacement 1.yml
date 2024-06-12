@@ -10,7 +10,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "(:has-text/(//([a-zA-Z0-9øØåÅñ_.';,|/{}* !?-]|\\|\"){0,}([a-rt-zA-RæÆøØåÅT-Z0-9]))$3([a-zA-Z0-9æÆøØåÅñ_.';,|/* !]|\\|/|\")"
+          find: "(:has-text/([/]([a-zA-Z0-9øØåÅñ_.';,|/{}* !?-]|\\|\"){0,}([a-rt-zA-RæÆøØåÅT-Z0-9]))$3([a-zA-Z0-9æÆøØåÅñ_.';,|/* !]|\\|/|\")"
           replace: "$1{2}$4"
           include: "a.txt"
           regex: true
