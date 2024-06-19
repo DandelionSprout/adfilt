@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 15June2024v1
+! Version: 19June2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -266,6 +266,16 @@ canariajournalen.no##.ad-separator-top
 1819.is,finna.is##.augl
 gamer.no##.col-12:has(> betting-matchup)
 eyjar.net##.hausad
+baeredygtigtfiskeri.dk##div[data-element_type=widget][data-widget_type="search-form.default"] ~ div[data-element_type=widget][data-widget_type="image.default"]
+baeredygtigtfiskeri.dk##div[data-element_type=widget][data-widget_type="search-form.default"] ~ div[data-element_type=widget][data-widget_type="heading.default"]:has(+ div[data-widget_type="image.default"])
+baeredygtigtfiskeri.dk##section.elementor-top-section:has-text(/\s\sAnnoncer?\s\s/i) + section.elementor-top-section:has(.elementor-image > [loading=lazy])
+baeredygtigtfiskeri.dk##section.elementor-top-section:has-text(/\s\sAnnoncer?\s\s/i):has(+ section.elementor-top-section .elementor-image > [loading=lazy])
+fiskerforum.dk##section[class*=_slider]:has([class*=banner-ads])
+fiskerforum.dk##.elementor-widget-text-editor:has-text(/\s\sANNONCER\s\s/)
+fiskerforum.dk##div[data-elementor-type=wp-post] section[class*=_slider]:has(.elementor-size-default > a)
+fiskerforum.dk##section:has(.elementor-row > div:only-of-type div[id*=ezoic])
+netnatur.dk##.widget:has(.g-single)
+europamester.dk##div:has(> div[id^=cncpt-])
 musikknyheter.no##.centered:not(#toTop)
 itavisen.no,tvguide.dk##div[id^=ad-]
 mbl.is##.col-sm-6.col-12:has(.augl):not(:has(.fluid))
