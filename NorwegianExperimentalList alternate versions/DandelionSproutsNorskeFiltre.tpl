@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 09June2024v1-Deprecated
+# Version: 20June2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -376,26 +376,28 @@ msFilterList
 # 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
 # 🇩🇰: Filserver- eller webstedsspecifikke indførsler med kilder
 # 🇬🇧: Fileserver or site-specific blocking rules with sources
-# bilasolur.is (03 05 2020)
+# bilasolur•is (03 05 2020)
 - lykill_banner
-# bt.no
+# bt•no
 # https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
 -d images.sprinklecontent.com *.amazonaws.com%2Fimages%
 # https://github.com/AdguardTeam/AdguardFilters/issues/67358#issuecomment-724888304
 -d gfx.no refererPromo
-# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
+# buildingsupply•no, maskinregisteret•no, metalsupply•no, plastforum•no
 -d f.nordiskemedier.dk *.gif
-# building-supply.dk
+# building-supply•dk
 -d f.nordiskemedier.dk banner
-# metalsupply.no, licitationen.dk
-# viivilla.no (10 11 2020)
+# metalsupply•no, licitationen•dk
+# viivilla•no (10 11 2020)
 -d bcm.interactives.dk script
-# adressa.no (10 11 2020)
+# adressa•no (10 11 2020)
 -d static.polarismedia.no cxense.js
 # https://github.com/uBlockOrigin/uAssets/issues/13661/(11/06/2022)
 -d freewheel-mtgx-tv.akamaized.net
 # https://github.com/DandelionSprout/adfilt/issues/968
 # https://github.com/DandelionSprout/adfilt/issues/983
+# arto•dk
+-d artodata.net ads
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -646,6 +648,7 @@ msFilterList
 -d norsktippingpartner.no
 +d oddstips.norsktippingpartner.no
 -d cloudfront.net Liveoddsen.aspx
+- cloudfront.net oddsen
 # nidaros.no (02 12 2021)
 # h-avis.no (11 12 2023)
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
@@ -1099,7 +1102,7 @@ msFilterList
 -d 1.14.61.188
 -d smarthouseforum.ru
 -d trafikkskoleapp.no
-# Last updated: 18April2024v1-Extension
+# Last updated: 20June2024v2-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
