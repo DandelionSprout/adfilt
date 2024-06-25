@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 20June2024v1-Deprecated
+# Version: 26June2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -348,6 +348,7 @@ msFilterList
 -d verktoy24.no *_300px-scaled.jpg
 -d vf.is *2000x616.jpg
 -d vf.is geysir-dekkjaskipti.jpg
+-d elton.app widget
 -d viasport-assets.mtg-api.com comScore-*.js
 -d vikari.is frjalsi-lif*.png
 -d viralefilmer.no *slot-
