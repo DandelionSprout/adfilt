@@ -1,5 +1,5 @@
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! Version: 18May2024v1-Beta
+! Version: 26June2024v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -204,6 +204,9 @@ pixiv.net##div[class*=toppage] li:style(grid-column: unset !important)
 pixiv.net##div[class*=toppage] li:has(iframe[name*=branding])
 pixiv.net##div[class*=toppage] li:empty
 pixiv.net##div[class*=toppage] li:style(min-width: 184px !important; padding-bottom: 8px !important)
+
+! Fix the width of the main page's tag bar on top
+www.pixiv.net##div:first-of-type:has(+ div[class*=" sc-"]) > div:has(ul .gtm-toppage-tag-follow-illustration):style(padding-left: 0 !important; max-width: 85vw !important)
 
 ! ——————————————————————————————————————————————————————————————————
 
