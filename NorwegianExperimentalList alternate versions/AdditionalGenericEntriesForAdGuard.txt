@@ -1,5 +1,5 @@
 ! Generic entries that seem like they'd apply to the internet as a whole (Nordic sites included) that aren't in EasyList or AdGuard Base Filter, but which are in either uBlock Filters Ads, uBlock Filters Unbreak, or uBlock Filters Badware Risks.
-! Version: 18May2024v1-Extension
+! Version: 26June2024v1-Extension
 ###ad_feature:not(:empty)
 ###ad_img:not(:empty)
 ###adContext:not(:empty)
@@ -121,7 +121,7 @@
 /resources/dfp/*$app=no.nettavisen.phonegap.na
 ||finn.no^$app=no.bt
 contentMarketing$app=no.sol
-/insert_grtv_stats.$xhr,app=com.gamereactor
+/insert_grtv_stats.$xmlhttprequest,app=com.gamereactor
 /prerolls/*$app=com.gamereactor
 /videojs.ima.$app=com.gamereactor
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$app=com.gamereactor
@@ -134,7 +134,7 @@ contentMarketing$app=no.sol
 !#if adguard_app_ios
 ! When using AdGuard for iOS
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179354
-@@||finn.no/bap/forsale/ad.html^$1p
+@@||finn.no/bap/forsale/ad.html^$~third-party
 !#endif
 
 ! Other entries that are «AdGuard syntax»-specific
