@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 26June2024v1
+! Version: 26June2024v3
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2401,6 +2401,7 @@ triplx.dk##.aff-inner-col
 ||bankid-sperret.$all,domain=~en-falsk-banksvindel.*
 ||srilanka.no^$doc
 ||innboks.info^$all
+||skaatteenok.com^$all,domain~=en-falsk-svindelside.*
 !+ NOT_OPTIMIZED
 /?finn.no/login$doc
 ! 🇬🇧: Copied over from «Dandelion Sprout's Anti-Malware List»
@@ -2495,7 +2496,7 @@ triplx.dk##.aff-inner-col
 ! https://www.nrk.no/livsstil/1.14732503
 ||elkjop*.club^$doc,domain=~en-falsk-svindelbutikk.*
 ! https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
-/css/*sparebank1.no^$docen-svindelside-som-ikke-er-sparebank1.*
+/css/*sparebank1.no^$doc,domain=~en-svindelside-som-ikke-er-sparebank1.*
 ! https://www.facebook.com/viralspiralen/posts/2494251397311027
 ||addmoviesnow.com^$doc
 ! https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
