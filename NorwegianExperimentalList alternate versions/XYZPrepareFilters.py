@@ -246,6 +246,18 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r",~inline-font,", 
+           r",", 
+           line
+        )
+
+        line = re.sub(
+           r",~inline-font$", 
+           r"", 
+           line
+        )
+
         text += line + '\n'
 
     return text
