@@ -258,6 +258,18 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\$xhr,", 
+           r"$xmlhttprequest,", 
+           line
+        )
+
+        line = re.sub(
+           r"\$1p$", 
+           r"$~third-party", 
+           line
+        )
+
         text += line + '\n'
 
     return text
