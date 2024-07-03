@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🕳 Empty Padding Remover
-! Version: 05June2024v1-Alpha
+! Version: 03July2024v1-Alpha
 ! Expires: 4 days
 ! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? Or perhaps you're tired ot very large shadows on video sites when moving the mouse? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -109,8 +109,8 @@ netflix.com##div[class^=watch-video--][class*="-container "]:style(background-im
 ! https://positivr•fr/plant-moms-les-conseils-pour-verdir-nos-interieurs-fleurissent-sur-tiktok/
 ##.c-controls__background:not(html, body)
 ! YouTube on PC
-www.youtube.com##div[class*="-gradient-bottom "]
-www.youtube.com##div[class$=-gradient-bottom]
+www.youtube.com##head:has(meta[property$=":video:url"]) + body div[class*="-gradient-bottom "]
+www.youtube.com##head:has(meta[property$=":video:url"]) + body div[class$=-gradient-bottom]
 ##div[class^=ytp-gradient-]
 ! T-We
 twe.no##div[style*=overlayFadeTo]:style(--overlayFadeTo: none !important)
