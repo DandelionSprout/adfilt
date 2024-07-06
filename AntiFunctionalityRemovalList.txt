@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🧗 Anti-'Functionality removal' List
-! Version: 23June2024v1-Beta
+! Version: 06July2024v1-Beta
 ! Expires: 9 days
 ! Description: This list aims to combat some sites' attempts to make it impossible to copy text, right-click on pages, open the F12 menu, create fake loading times, or who otherwise obstruct people from features that they should be perfectly in their rights to have access to.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -27,6 +27,8 @@ delfi.lt##+js(aeld, copy)
 ! From "Frellwit's Swedish Filter"
 /plugins/wp-content-copy-protection^
 /plugins/wp-copy-protect-with-color-design^
+! https://github.com/DandelionSprout/adfilt/pull/1045
+/secure-copy-content-protection-public.css^$css
 
 ! Prevents sites from removing the ability to right-click on images 📛
 ! https://www•matprat•no/oppskrifter/kos/koreansk-beef-bulgogi/ (29/03/2024)
@@ -36,6 +38,13 @@ delfi.lt##+js(aeld, copy)
 respublika.lt#?#[class^=com_]:style(user-select: unset !important; -webkit-user-select: unset !important; -moz-user-select: unset !important)
 hirunews.lk,ada.lk#?#body:style(user-select: unset !important; -webkit-user-select: unset !important; -moz-user-select: unset !important)
 ||laisvadienis.lt^$inline-script
+! https://github.com/DandelionSprout/adfilt/pull/1045
+niskevesti.rs##^script:has-text(ays_tooltip)
+niskevesti.rs##:not(input):not(textarea)::selection:style(background-color: #B4D5FFA0 !important)
+!#if !env_firefox
+niskevesti.rs##style:not([class],[id]):remove()
+||niskevesti.rs^$inline-script
+!#endif
 
 ! Prevents sites from disabling DevTools keyboard shortcuts 📛
 dropgalaxy.*##+js(acs, document.onkeydown)
