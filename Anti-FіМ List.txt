@@ -4735,14 +4735,14 @@ apps.apple.com##a[href*=zen-pinball-party]
 
 ! Google (test; uBO and AdGuard only)
 !#if !env_mobile
-www.google.*##:is(.g,isv-r):has(a[href*="equestriadaily.com/"])
-www.google.*##:is(.g,isv-r):has-text(/mlp|m\y\sl\ittle\sp\on\y/i):has-text(/starlight/i):not(:has-text(/secrets\s?of/i))
+www.google.*##:is(.g,div[data-attrid^="images "]):has(a[href*="equestriadaily.com/"])
+www.google.*##:is(.g,div[data-attrid^="images "]):has-text(/mlp|m\y\sl\ittle\sp\on\y/i):has-text(/starlight/i):not(:has-text(/secrets\s?of/i))
 !#endif
 !#if env_mobile
 www.google.*#?#a[oncontextmenu][href*="equestriadaily.com/"]:upward(2)
 !#endif
-www.google.*#?#:is(.g,isv-r):has-text(/Flut{2}ershy/i)
-www.google.*##:is(.g,isv-r):has(a[href*=pony-town-][href*=".tumblr.com/"])
+www.google.*#?#:is(.g,div[data-attrid^="images "]):has-text(/Flut{2}ershy/i)
+www.google.*##:is(.g,div[data-attrid^="images "]):has(a[href*=pony-town-][href*=".tumblr.com/"])
 
 ! DuckDuckGo (test)
 duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$="equestriadaily.com"]
