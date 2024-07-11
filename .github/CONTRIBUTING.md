@@ -1,4 +1,4 @@
-(Last updated: 29th of December 2023)
+(Last updated: 11th of July 2024)
 
 ## Notes on how to contribute:
 
@@ -63,3 +63,5 @@ I do encourage forking, both for experimentation, archiving, or for any other re
 When submitting issue reports and pull requests, I aim to reply to it or fix it within 72 hours. Requests in list-specific discussions pages currently have no timed target times. Commit-replies are not always read or replied to.
 
 ***Please***, for the love of goodness, *don't delete your GitHub account in the midst of a report-in-process*, and ***definitely*** not before me or my team have posted any replies to that report.
+
+If a hidden, secret, private or offline source for entries is hinted to, talked about or linked to, you agree to that I/we will have dirt on you. Sources that are available to the public are not affected by this.
