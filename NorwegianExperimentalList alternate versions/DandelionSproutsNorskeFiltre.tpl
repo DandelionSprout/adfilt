@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 11July2024v1-Deprecated
+# Version: 19July2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -154,6 +154,8 @@ msFilterList
 # https://www.minmote.no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8408727
 -d tize.no
+# sn.dk (19 07 2024)
+- annoncer scripts
 # — — — — —
 # 🇳🇴: Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
@@ -1106,7 +1108,7 @@ msFilterList
 -d 1.14.61.188
 -d smarthouseforum.ru
 -d trafikkskoleapp.no
-# Last updated: 20June2024v2-Extension
+# Last updated: 15July2024v2-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -1135,6 +1137,8 @@ msFilterList
 # The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
 -d piano.io execute
 # 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
+# 🇬🇧: ——— An unusual entry, but a needed entry: Aims to prevents NRK's login system on Google Translate-d pages to their regular site, from being redirected from a translated page to the non-translated frontpage. ———
+-d innlogging.nrk.no
 !¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤!
 # 🇳🇴 🇩🇰: ——— Ikke for Brave Browser ———
 # 🇬🇧: ——— Not for Brave Browser ———

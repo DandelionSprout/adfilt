@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 110720241
+! Version: 190720241
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1176,6 +1176,13 @@ gamereactor.no,gamereactor.dk##*:has(> #grtvbelt_Sponsored)
 gamereactor.no,gamereactor.dk##.ad_interscroller:upward(.wrapper)
 sjoborg.no##div[data-debuglabel=_app]
 gulesider.no##div.place-items-center.grid:has([data-adunitid])
+favoritlinks.dk##table:has([align=center] > [class*=box_sponsor])
+sn.dk###bannerStuff
+sn.dk##.locked-template-block
+jyllands-posten.dk##.my-2:has(ins[id*=noconsent])
+jyllands-posten.dk##div[class*=adnm-]
+nyheder24.dk##.generic-widget:has(.annonce)
+nyheder24.dk##div[class*=inArticleBanner i]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1371,6 +1378,8 @@ _visittkortannonse_$image
 ! https://www.minmote.no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8408727
 ||tize.no^$subdocument,third-party
+! sn.dk (19/07/2024)
+/annoncer/scripts/*
 ! — — — — —
 ! 🇳🇴: Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
@@ -2915,7 +2924,7 @@ triplx.dk##.aff-inner-col
 
 
 
-! Last updated: 20June2024v2-Extension
+! Last updated: 15July2024v2-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -2991,6 +3000,9 @@ findroommate.dk###frm-ablo-message
 
 ! 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 playpilot.com##.takeover.modals
+
+! 🇬🇧: ——— An unusual entry, but a needed entry: Aims to prevents NRK's login system on Google Translate-d pages from forcing readers who were logged in to their regular site, from being redirected from a translated page to the non-translated frontpage. ———
+||innlogging.nrk.no^$subdocument,domain=www-nrk-no.translate.goog
 
 !¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤!
 ! 🇳🇴/🇩🇰: ——— Ikke for Brave Browser ———
