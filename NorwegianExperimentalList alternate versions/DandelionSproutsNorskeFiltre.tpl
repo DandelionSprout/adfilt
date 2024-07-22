@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 19July2024v1-Deprecated
+# Version: 22July2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -736,6 +736,7 @@ msFilterList
 -d skaatteenok.com
 -d pearlandcarpetcleaner.com
 -d logg-inn.online
+-d nyhetsnett.no
 - ?finn.no login
 # 🇬🇧: Copied over from «Dandelion Sprout's Anti-Malware List»
 -d fredfiber.no
