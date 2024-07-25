@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 22July2024v1-Deprecated
+# Version: 25July2024v3-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -74,87 +74,87 @@ msFilterList
 -d admob.dk
 -d print2web.sn.dk
 -d lib.idg.no
-# Adressa.no
+# Adressa•no
 -d drbrand.herokuapp.com
-# bobilverden.no
+# bobilverden•no
 - annonse-
-# https://www.ballade.no/
+# https://www•ballade•no/
 - wp-content uploads *_Annonse_
 - _toppbanner_
 # https://www.osterud.name/FF57W10/norwegian-filters.txt
 - bannerannonser
-# byggenytt.no
+# byggenytt•no
 - _annonser
-# frende.no
+# frende•no
 -d api.frende.no log
-# https://malviknytt.no/2020/07/31/skyting-pa-hjemmebande/ (16 08 2020)
+# https://malviknytt•no/2020/07/31/skyting-pa-hjemmebande/ (16 08 2020)
 - Nettbanner-
-# sexpiger.dk
+# sexpiger•dk
 -d lh3.googleusercontent.com *=w468-h60-
 -d lh3.googleusercontent.com *=w970-h250-
-# salangen-nyheter.com, hytteavisen.no, strafferunden.no, langrenn.com (12 10 2020)
+# salangen-nyheter•com, hytteavisen•no, strafferunden•no, langrenn•com (12 10 2020)
 - getbanner.php
-# biff.no (26 10 2020)
+# biff•no (26 10 2020)
 - _nettannonse.
 - BINARY *-BANNER-*.gif
 - BINARY *%20200x300.jpg
-# nett.no (30 11 2020)
+# nett•no (30 11 2020)
 - byteads
-# adressa.no (02 12 2020)
+# adressa•no (02 12 2020)
 - polarnexus.js
-# reavisa.no (06 12 2020)
+# reavisa•no (06 12 2020)
 - _nettbanner_
 - _visittkortannonse_
 - -visittkortannonse-
-# ytresogn.no (16 12 2020)
+# ytresogn•no (16 12 2020)
 - hnuannonse
-# heilsutorg.is (17 04 2021)
+# heilsutorg•is (17 04 2021)
 -d is strevda
-# fugleognatur.dk (14 05 2021)
+# fugleognatur•dk (14 05 2021)
 - images bannere
-# https://norges.online/produkt/nestle-viking-melk-410-g
+# https://norges•online/produkt/nestle-viking-melk-410-g
 -d fr135.net
 -d static-dscn.net
-# skagensavis.dk
+# skagensavis•dk
 - wp-content uploads i123_ads *.gif
 - wp-content uploads i123_ads *_460x196.jpg
 - wp-content uploads i123_ads 930x180_
-# tv-kalundborg.dk
+# tv-kalundborg•dk
 - system_files banner ckfinder
-# keldan.is (05 01 2021)
+# keldan•is (05 01 2021)
 - images augl
 -d tac.is kunnar
-# isolor.no (16 01 2021)
+# isolor•no (16 01 2021)
 - -skyskraper-annonse.
-# norskemagasinet.com (24 01 2021)
+# norskemagasinet•com (24 01 2021)
 -d img.norrbom.com *-300x60.png
-# vg.no (14 04 2021)
+# vg•no (14 04 2021)
 - gfx fishfingers
-# xpresstryk.dk
+# xpresstryk•dk
 -d images.staticjw.com casino24.jpg
-# https://www.diabetes.no/mer/nyheter-om-diabetes/nyheter-2021/sporsmal-og-svar-om-koronavaksinen-og-diabetes/ (16 11 2021)
+# https://www•diabetes•no/mer/nyheter-om-diabetes/nyheter-2021/sporsmal-og-svar-om-koronavaksinen-og-diabetes/ (16 11 2021)
 - globalassets banner_
 # https://github.com/AdguardTeam/AdguardFilters/issues/114245#issuecomment-1085683154
 -d no apx
-# https://viivilla.no/hage/terrasse/slik-gjor-du-terrassen-festklar-til-17-mai-pa-1-2-3//(18/05/2023)
+# https://viivilla•no/hage/terrasse/slik-gjor-du-terrassen-festklar-til-17-mai-pa-1-2-3//(18/05/2023)
 -d gcp.passendo.com
 -d psscdn.com
-# samferdselinfra.no (18 05 2023)
+# samferdselinfra•no (18 05 2023)
 - wp-content uploads ad-html
-# https://spurt.no/zyrtec-mot-myggstikk/ (01 06 2023)
+# https://spurt•no/zyrtec-mot-myggstikk/ (01 06 2023)
 - convertpro cp-popup.min.css
-# https://www.version2.dk/artikel/medie-yngre-er-til-nemid-aeldre-til-mitid/(02/11/2023)
+# https://www•version2•dk/artikel/medie-yngre-er-til-nemid-aeldre-til-mitid/(02/11/2023)
 -d service.tekhus.dk *.jpg
-# vilgernelevel.dk (25 12 2023)
+# vilgernelevel•dk (25 12 2023)
 -d skisverige.dk *banner_*.gif
-# skessuhorn.is (29 12 2023)
+# skessuhorn•is (29 12 2023)
 -d app.pulsmedia.is
-# https://bygge-anlaegsavisen.dk/historisk-vejprojekt-mellem-sisimiut-og-kangerlussuaq-undervejs/(30/12/2023)
+# https://bygge-anlaegsavisen•dk/historisk-vejprojekt-mellem-sisimiut-og-kangerlussuaq-undervejs/(30/12/2023)
 -d s3.eu-west-1.amazonaws.com ads.
-# https://www.minmote.no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
+# https://www•minmote•no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8408727
 -d tize.no
-# sn.dk (19 07 2024)
+# sn•dk (19 07 2024)
 - annoncer scripts
 # — — — — —
 # 🇳🇴: Domenefokuserte blokkeringsoppføringer
@@ -382,7 +382,7 @@ msFilterList
 # bilasolur•is (03 05 2020)
 - lykill_banner
 # bt•no
-# https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
+# https://newsbreak•dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
 -d images.sprinklecontent.com *.amazonaws.com%2Fimages%
 # https://github.com/AdguardTeam/AdguardFilters/issues/67358#issuecomment-724888304
 -d gfx.no refererPromo
@@ -404,145 +404,145 @@ msFilterList
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
-# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
-# Exceptions: ballade.no
-# https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
-# arendalstidende.no
+# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning•no
+# Exceptions: ballade•no
+# https://www•totensblad•no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
+# arendalstidende•no
 # https://www.langrenn.com/cppage.6250314-1743.html
-# bobilverden.no
-# norskenettsider.no, sva.no
-# https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
-# tv2.no
-# https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
-# https://www.dagbladet.no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
-# portal.fo (09 05 2020)
-# jyllands-posten.dk
-# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews.dk
-# retailnews.dk (11 09 2020)
-# n247.no
-# healthtalk.no
-# appetitt.no
-# ekstrabladet.dk
-# nab.no (Only shown if cookies are accepted; 18 08 2020)
+# bobilverden•no
+# norskenettsider.no, sva•no
+# https://www•diskusjon•no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
+# tv2•no
+# https://kulturplot•no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
+# https://www•dagbladet•no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
+# portal•fo (09 05 2020)
+# jyllands-posten•dk
+# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews•dk
+# retailnews•dk (11 09 2020)
+# n247•no
+# healthtalk•no
+# appetitt•no
+# ekstrabladet•dk
+# nab•no (Only shown if cookies are accepted; 18 08 2020)
 # Bet365 widget triggered for Norwegian audiences only
-# borsen.no (08 10 2020)
-# https://www.nettavisen.no/3424050834.html/(24/11/2020)
-# reavisa.no (06 12 2020)
-# ytresogn.no (16 12 2020)
-# nettavisen.no (25 12 2020)
-# ao.no (28 12 2020)
-# keldan.is (05 01 2021)
-# madridista.dk (21 04 2021)
+# borsen•no (08 10 2020)
+# https://www•nettavisen•no/3424050834.html/(24/11/2020)
+# reavisa•no (06 12 2020)
+# ytresogn•no (16 12 2020)
+# nettavisen•no (25 12 2020)
+# ao•no (28 12 2020)
+# keldan•is (05 01 2021)
+# madridista•dk (21 04 2021)
 - banners casinotop
-# gnavergalleri.dk (along with ~60 affiliates sites)
+# gnavergalleri•dk (along with ~60 affiliates sites)
 # https://github.com/DandelionSprout/adfilt/issues/233
-# sol.dk (25 04 2021)
-# bilgalleri.dk (25 04 2021)
+# sol•dk (25 04 2021)
+# bilgalleri•dk (25 04 2021)
 # forum.ipmsnorge.org (24 05 2021)
-# tipsbladet.dk (15 06 2021)
-# sol.no (22 09 2021)
-# vesterbroliv.dk, vafo.dk, amagerliv.dk
+# tipsbladet•dk (15 06 2021)
+# sol•no (22 09 2021)
+# vesterbroliv.dk, vafo.dk, amagerliv•dk
 # https://github.com/uBlockOrigin/uAssets/issues/13224
-# rett24.no (13 06 2022)
-# metalsupply.no, licitationen.dk (08 03 2023)
-# https://www.licitationen.dk/article/view/900259/efter_entreprenors_konkurs_river_106_ufaerdige_huse_ned_i_hojetaastrup/(08/03/2023)
-# maskinregisteret.no (08 03 2023)
-# eikernytt.no (18 05 2023)
+# rett24•no (13 06 2022)
+# metalsupply.no, licitationen•dk (08 03 2023)
+# https://www•licitationen•dk/article/view/900259/efter_entreprenors_konkurs_river_106_ufaerdige_huse_ned_i_hojetaastrup/(08/03/2023)
+# maskinregisteret•no (08 03 2023)
+# eikernytt•no (18 05 2023)
 # Various now-dead Frettabladid subdomains
-# migogkbh.dk (22 06 2023)
+# migogkbh•dk (22 06 2023)
 # digitalt.tv (08 09 2023)
-# h-avis.no (11 12 2023)
-# skessuhorn.is (29 12 2023)
-# sol.no
-# www.qxl.no
-# www.vtb.no
-# vafo.dk
-# reelligestilling.dk
-# www.rbnett.no
-# www.op.no
-# journalisten.dk
-# www.altomfotball.no
-# dv.is
-# bt.no
-# latterkula.no se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live
-# www.latterkula.no artikler
-# www.mbl.is frettir
-# adressa.no
-# https://nyheder.tv2.dk/2021-02-04-soennerne-saa-frem-til-en-arv-fra-deres-far-efter-mange-aars-lidelser-indtil-han-giftede/(04/02/2021)
-# kk.no, sol.no
+# h-avis•no (11 12 2023)
+# skessuhorn•is (29 12 2023)
+# sol•no
+# www•qxl•no
+# www•vtb•no
+# vafo•dk
+# reelligestilling•dk
+# www•rbnett•no
+# www•op•no
+# journalisten•dk
+# www•altomfotball•no
+# dv•is
+# bt•no
+# latterkula•no se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live
+# www•latterkula•no artikler
+# www•mbl•is frettir
+# adressa•no
+# https://nyheder.tv2•dk/2021-02-04-soennerne-saa-frem-til-en-arv-fra-deres-far-efter-mange-aars-lidelser-indtil-han-giftede/(04/02/2021)
+# kk.no, sol•no
 # (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/58527)
-# historienet.no, natgeo.no, komputer.no
-# qxl.no
-# gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi.no
-# demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb.no
-# ba.no
+# historienet.no, natgeo.no, komputer•no
+# qxl•no
+# gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi•no
+# demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb•no
+# ba•no
 # https://github.com/DandelionSprout/adfilt/pull/53
 -d services.api.no bazaar
-# aftenbladet.no
-# avisalofoten.no
-# blv.no nyheter kan-bruke-23-millioner-pa-the-whale-undersokelsene
-# https://www.aftenposten.no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
-# https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
-# aftenposten.no (Mobile useragent)
-# https://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
+# aftenbladet•no
+# avisalofoten•no
+# blv•no nyheter kan-bruke-23-millioner-pa-the-whale-undersokelsene
+# https://www•aftenposten•no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
+# https://www•aftenposten•no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
+# aftenposten•no (Mobile useragent)
+# https://www•brannmannen•no/brann/store-utfordringer-ved-togulykken-pa-asta/
 -d 85.17.76.181
-# krs247.no
-# lsk.no
-# https://www.budstikka.no/
-# e24.no, aftenbladet.no, sysla.no
-# https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi/(15/04/2020)
-# https://fiskur.fo/gitte-henning-1-landar-i-maloy/(09/05/2020)
+# krs247•no
+# lsk•no
+# https://www•budstikka•no/
+# e24.no, aftenbladet.no, sysla•no
+# https://www•austurfrett•is/frettir/lagt-smithlutfall-a-austurlandi/(15/04/2020)
+# https://fiskur•fo/gitte-henning-1-landar-i-maloy/(09/05/2020)
 -d fo banner2x1.png
-# https://www.dagsavisen.no/nyheter/verden/1.1731911/(18/06/2020)
-# https://www.nordlys.no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
-# advokatbladet.no; https://gardsdrift.no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668/(16/08/2020)
-# kimbino.no, kimbino.dk (13 09 2020)
-# fasteignir.frettabladid.is (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/111644)
+# https://www•dagsavisen•no/nyheter/verden/1.1731911/(18/06/2020)
+# https://www•nordlys•no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
+# advokatbladet.no; https://gardsdrift•no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668/(16/08/2020)
+# kimbino.no, kimbino•dk (13 09 2020)
+# fasteignir.frettabladid•is (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/111644)
 -d via.placeholder.com
-# lokal-avisa.no, ringsakern.no (19 09 2020)
-# gjoviksblad.no (19 09 2020)
-# midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt.dk (30 09 2020)
-# godstart.dk, sol.dk (30 09 2020)
+# lokal-avisa.no, ringsakern•no (19 09 2020)
+# gjoviksblad•no (19 09 2020)
+# midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt•dk (30 09 2020)
+# godstart.dk, sol•dk (30 09 2020)
 -d ni.dk *-bottom.html
-# fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo.dk (30 09 2020)
-# https://www.nutiminn.is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
-# dagsavisen.no (30 05 2021)
-# aftenposten.no, hockeymagasinet.dk, l-a.no, aftenbladet.no (30 10 2020)
-# bt.no, byas.no, aftenbladet.no (30 10 2020)
-# costume.no, costume.dk (09 11 2020)
-# boligpluss.no (09 11 2020), women.dk
-# ytresogn.no (16 12 2020)
+# fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo•dk (30 09 2020)
+# https://www•nutiminn•is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
+# dagsavisen•no (30 05 2021)
+# aftenposten.no, hockeymagasinet.dk, l-a.no, aftenbladet•no (30 10 2020)
+# bt.no, byas.no, aftenbladet•no (30 10 2020)
+# costume.no, costume•dk (09 11 2020)
+# boligpluss•no (09 11 2020), women•dk
+# ytresogn•no (16 12 2020)
 - _980banner_
-# ambulanseforum.no (26 12 2020)
-# fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad.dk (02 01 2021)
-# forum.doktoronline.no (06 01 2021), forum.klikk.no, forum.kvinneguiden.no
-# nettavisen.no (20 01 2021)
-# https://www.helsenett.no/spor-oss/har-du-smabarn/50657-svstadig-tilbakevendende-forkjolelsehostefeber.html/(10/02/2021)
-# https://www.tronderdebatt.no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453/(20/03/2021),/ba.no
-# https://viralefilmer.no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25 03 2021), eavisa.no
-# https://www.terrengsykkelforumet.no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021),/terrengsykkel.no
-# nettavisen.no (04 04 2021)
-# gnavergalleri.dk (along with ~60 affiliates sites; 21 04 2021)
-# nidaros.no
-# dagsavisen.no
-# elbil24.no, vi.no (21 06 2021)
-# farmatid.no (16 11 2021)
-# https://radioh.no/norsk-opphenting-mot-nederland-sikret-vm-kvartfinale-storm-i-kastene/ (14 12 2021)
-# nordlys.no, an.no (19 06 2022)
-# nidaros.no (22 02 2023)
-# jyllands-posten.dk (22 03 2023)
-# forum.kvinneguiden.no (Mobile user agent; 05 04 2023)
+# ambulanseforum•no (26 12 2020)
+# fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad•dk (02 01 2021)
+# forum.doktoronline•no (06 01 2021), forum.klikk.no, forum.kvinneguiden•no
+# nettavisen•no (20 01 2021)
+# https://www•helsenett•no/spor-oss/har-du-smabarn/50657-svstadig-tilbakevendende-forkjolelsehostefeber.html/(10/02/2021)
+# https://www•tronderdebatt•no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453/(20/03/2021),/ba•no
+# https://viralefilmer•no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25 03 2021), eavisa•no
+# https://www•terrengsykkelforumet•no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021),/terrengsykkel•no
+# nettavisen•no (04 04 2021)
+# gnavergalleri•dk (along with ~60 affiliates sites; 21 04 2021)
+# nidaros•no
+# dagsavisen•no
+# elbil24.no, vi•no (21 06 2021)
+# farmatid•no (16 11 2021)
+# https://radioh•no/norsk-opphenting-mot-nederland-sikret-vm-kvartfinale-storm-i-kastene/ (14 12 2021)
+# nordlys.no, an•no (19 06 2022)
+# nidaros•no (22 02 2023)
+# jyllands-posten•dk (22 03 2023)
+# forum.kvinneguiden•no (Mobile user agent; 05 04 2023)
 # Various now-dead Frettabladid subdomains from 2020
-# https://www.aftenposten.no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter/(26/12 2023)
-# e24.no (Mid-December 2023)
+# https://www•aftenposten•no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter/(26/12 2023)
+# e24•no (Mid-December 2023)
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
 +d vgtv.no
 -d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
-# https://www.aftenposten.no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
-# Should not have ":not" + ":empty" added to it due to costume.no
+# https://www•aftenposten•no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
+# Should not have ":not" + ":empty" added to it due to costume•no
 # — — — — — — — — —
 # 🇳🇴: Hovedsaklig for AdGuard
 # 🇳🇴🏞: Huvudsakleg for AdGuard
@@ -596,6 +596,7 @@ msFilterList
 # https://github.com/easylist/easylist/issues/18542/(These/entries/are here to stay, regardless of the report's outcome.)
 +d medlemskap.*.no
 -d medlemskap.fagforbundet.no
+# Bank login problems
 # ★★★ Caused by «Fanboy's Social Blocking List», if I recall correctly ★★★
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
@@ -622,7 +623,7 @@ msFilterList
 # https://github.com/uBlockOrigin/uAssets/issues/11546/(Not/yet/forwarded to EasyList)
 # https://github.com/uBlockOrigin/uAssets/issues/13907
 @@://imasdk.googleapis.com/js/sdkloader/ima3.js
-# http://sosialurin.fo/news-detail/steypafinala-vilhelm-og-rogvi-a-ruv1-fra-klokkan-1630
+# http://sosialurin•fo/news-detail/steypafinala-vilhelm-og-rogvi-a-ruv1-fra-klokkan-1630
 # ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 # ★★★ Caused by «AdGuard Annoyances Filter» and «AdGuard Tracking Protection Filter» ★★★
@@ -645,18 +646,18 @@ msFilterList
 # 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
 -d widget.tippebannere.no
 -d tipster.no embed
-# https://www.nettavisen.no/
-# https://www.ba.no/s/5-8-1221171
+# https://www•nettavisen•no/
+# https://www•ba•no/s/5-8-1221171
 - pustehullet betting-header.png
 -d norsktippingpartner.no
 +d oddstips.norsktippingpartner.no
 -d cloudfront.net Liveoddsen.aspx
 - cloudfront.net oddsen
-# nidaros.no (02 12 2021)
-# h-avis.no (11 12 2023)
+# nidaros•no (02 12 2021)
+# h-avis•no (11 12 2023)
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7865350
-# https://www.nettavisen.no/sportspill/her-er-tallene-som-vil-fa-liverpool-fansen-i-godt-humor/s/5-95-1529066
+# https://www•nettavisen•no/sportspill/her-er-tallene-som-vil-fa-liverpool-fansen-i-godt-humor/s/5-95-1529066
 # 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
 # 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
 # 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
@@ -665,7 +666,7 @@ msFilterList
 # 🇳🇴: Falske innlastinger som sløser bort tid
 # 🇩🇰: Falske indlastinger, der søler bort tid
 # 🇬🇧: Fake loading screens that waste time
-# adressa.no (02 12 2020)
+# adressa•no (02 12 2020)
 -d collector.schibsted.io
 # "Generic Hide"
 +d bondebladet.screen9.tv
@@ -689,17 +690,17 @@ msFilterList
 -d widget.tippebannere.no
 -d widgets.sprinklecontent.com
 # • Not to be removed during upstream syncs •
-# https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
-# jyllands-posten.dk (09 07 2020)
+# https://www•avvir•no/samegiella-ja-mearkagiella-vuosttasgiellan/
+# jyllands-posten•dk (09 07 2020)
 # specificTXT
 # 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
-# Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
+# Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg•no eller vg•no sport
 # 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 # 🇮🇸: Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
 # 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
-# Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no sport
+# Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg•no or vg•no sport
 - begrensede-tilbudet
 - bli-avbrutt-bor-du-oppdater
 - dnb11111
@@ -742,8 +743,8 @@ msFilterList
 -d fredfiber.no
 -d gogle.net
 # 🇬🇧: Scam domains as reported in https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-988127908
-# https://www.tek.no/i/lVeQAe/
-# https://www.nkom.no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
+# https://www•tek•no/i/lVeQAe/
+# https://www•nkom•no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
 -d eccolabgroup.com
 -d galerijajava.ba
 -d p-stn.net
@@ -798,6 +799,14 @@ msFilterList
 -d s.free.fr
 -d trmff.wpengine.com
 -d 212.27.60.108
+-d 790northsierrabonita.com
+-d dnnbcorporat*.mine.nu
+-d eltlnorsgogle.is-a-cpa.com
+-d pestseminars.com
+-d premosupplements.com
+-d printablemagic.com
+-d rumendia.com
+-d 94.156.65.204
 # Overly dedicated E-mail spambots
 -d wirexapp.africa.com
 -d tachyoniums.eu.com
@@ -805,81 +814,81 @@ msFilterList
 # 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 # 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧: As mentioned in various news articles about fraud sites
-# https://www.tv2.no/nyheter/10493336/
+# https://www•tv2•no/nyheter/10493336/
 -d rnbinance.com
 -d brightertrade.com
-# https://www.nrk.no/norge/1.14511067
-# https://www.datahjelperne.no/verifiser-get-konto-falsk-mail/
-# https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
+# https://www•nrk•no/norge/1.14511067
+# https://www•datahjelperne•no/verifiser-get-konto-falsk-mail/
+# https://www•datahjelperne•no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
 -d liveshopdealz.com
-# https://www.nrk.no/livsstil/1.14732503
+# https://www•nrk•no/livsstil/1.14732503
 -d elkjop*.club
-# https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
+# https://www•datahjelperne•no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 - css *sparebank1.no
 # https://www.facebook.com/viralspiralen/posts/2494251397311027
 -d addmoviesnow.com
-# https://www.mm.dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
+# https://www•mm•dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
 -d faarup.com-*.
 -d com-dk.com
-# https://www.mm.dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
+# https://www•mm•dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
 -d legoland.com-*.
-# https://www.mm.dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
+# https://www•mm•dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
 -d hcliips.com
-# https://www.nrk.no/troms/1.14788086
+# https://www•nrk•no/troms/1.14788086
 -d geometra-bologna.it
-# https://www.nrk.no/nyheter/1.14793929
+# https://www•nrk•no/nyheter/1.14793929
 -d sky.gs
-# https://www.online.no/sikkerhet/falsk-online-nettside
+# https://www•online•no/sikkerhet/falsk-online-nettside
 -d is-a-personaltrainer.com
-# https://nyheder.tv2.dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
+# https://nyheder.tv2•dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
 -d rigspolitiet.com
-# https://www.faktisk.no/faktasjekker/vw8/erik-gikk-fra-arbeidsledig-til-millionaer-pa-8-uker
+# https://www•faktisk•no/faktasjekker/vw8/erik-gikk-fra-arbeidsledig-til-millionaer-pa-8-uker
 -d ocgadgets.com
 -d ocgadgetss.myshopify.com
-# https://www.mm.dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
+# https://www•mm•dk/tjekdet/artikel/fup-artikel-hun-er-tiltalt-for-millionsvindel-men-nu-pludselig-loesladt
 -d ekstrabiadet.
-# https://www.tv2.no/nyheter/11516670/
+# https://www•tv2•no/nyheter/11516670/
 -d fintechnow*.buzz
 -d wealthnews*.xyz
-# https://www.datahjelperne.no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
+# https://www•datahjelperne•no/posten-informerer-deg-om-forsendelsen-din-mail-svindel/
 -d newzeninfotech.com
-# https://www.datahjelperne.no/skatteberegning-mail-svindel/
+# https://www•datahjelperne•no/skatteberegning-mail-svindel/
 -d probenefit.net
 -d ssbeveragedistribution.com
-# https://www.datahjelperne.no/olav-thon-facebook-svindel/
+# https://www•datahjelperne•no/olav-thon-facebook-svindel/
 -d euronews*.buzz
 -d softwaredaily*.monster
 -d stalknews*.buzz
 -d goldupdates*.xyz
-# https://www.datahjelperne.no/vipps-sms-svindel/
-# https://www.datahjelperne.no/hvit-bjorn-river-kvinne-i-stykker-facebook-spam-oppdatert/
+# https://www•datahjelperne•no/vipps-sms-svindel/
+# https://www•datahjelperne•no/hvit-bjorn-river-kvinne-i-stykker-facebook-spam-oppdatert/
 -d vidcopa.me
-# https://www.adressa.no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
+# https://www•adressa•no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
 -d smallrise.com
-# https://www.datahjelperne.no/coop-du-har-fatt-nye-kuponger-mail-svindel/
+# https://www•datahjelperne•no/coop-du-har-fatt-nye-kuponger-mail-svindel/
 -d offerleads.club
 - cop-no index.htm
-# https://www.datahjelperne.no/elkjop-kontaktforsok-mail-svindel/
+# https://www•datahjelperne•no/elkjop-kontaktforsok-mail-svindel/
 -d bamboobotanica.com
 - survey heldige
-# https://www.datahjelperne.no/sparebank-1-din-tilganger-er-blokkert-svindel/
+# https://www•datahjelperne•no/sparebank-1-din-tilganger-er-blokkert-svindel/
 -d cionialessio.it
-# https://www.dinside.no/okonomi/advarer-mot-falsk-facebook/72891041
-# https://www.datahjelperne.no/norske-facebook-profiler-misbrukes-i-svindel/
+# https://www•dinside•no/okonomi/advarer-mot-falsk-facebook/72891041
+# https://www•datahjelperne•no/norske-facebook-profiler-misbrukes-i-svindel/
 -d sites.google.com truls-svendsen
 -d signup-*vpns.com
-# https://www.datahjelperne.no/telenor-din-faktura-mislyktes-svindel/
-# https://www.datahjelperne.no/eurocard-falsk-epost-faktura/
+# https://www•datahjelperne•no/telenor-din-faktura-mislyktes-svindel/
+# https://www•datahjelperne•no/eurocard-falsk-epost-faktura/
 -d valspe.com.br
-# https://www.datahjelperne.no/eika-falsk-epost-svindel/
+# https://www•datahjelperne•no/eika-falsk-epost-svindel/
 -d tekuon.com
-# https://www.nrk.no/norge/1.15235615
+# https://www•nrk•no/norge/1.15235615
 - -sparebank1.*.net
-# https://www.datahjelperne.no/er-det-deg-facebook-video-spam/
+# https://www•datahjelperne•no/er-det-deg-facebook-video-spam/
 -d cinefique.com
-# https://www.datahjelperne.no/posten-sms-svindel/
+# https://www•datahjelperne•no/posten-sms-svindel/
 -d niupaiba.com
-# https://www.adressa.no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece
+# https://www•adressa•no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece
 -d nordeninterior.weebly.com
 # Googling Aksel Hennie (Results for prior week) in late July 2021
 -d com vg.no
@@ -896,27 +905,27 @@ msFilterList
 -d marvelouskaunas.club
 -d aktienboard.com
 -d minklubshop.dk dk
-# https://www.nrk.no/vestfoldogtelemark/1.15750360
+# https://www•nrk•no/vestfoldogtelemark/1.15750360
 -d dundeehills.group
-# https://www.adressa.no/pluss/nyheter/2021/12/04/Posten-advarer-Vi-sender-ikke-slike-tekstmeldinger-24894483.ece
+# https://www•adressa•no/pluss/nyheter/2021/12/04/Posten-advarer-Vi-sender-ikke-slike-tekstmeldinger-24894483.ece
 -d ozarkvillage.net
 -d channawars.com
-# https://www.vi.no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
+# https://www•vi•no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
 -d melding.link
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1114669106
 -d cx nordea
 -d cx sparebank
 -d cx sbanken
-# https://www.kode24.no/artikkel/75980495
+# https://www•kode24•no/artikkel/75980495
 -d campbell-living.com
-# https://www.telia.no/kundeservice/mobil/malware-flubot-android/
+# https://www•telia•no/kundeservice/mobil/malware-flubot-android/
 -d wxqgx123.com
-# https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
+# https://dinside.dagbladet•no/mobil/ikke-la-deg-friste/76730599
 -d k-yw.com
-# https://dinside.dagbladet.no/okonomi/tusenvis-forsokt-lurt/76921148
+# https://dinside.dagbladet•no/okonomi/tusenvis-forsokt-lurt/76921148
 -d a2ics.eu
 -d smsb.co
-# https://www.tv2.no/nyheter/innenriks/advarer-om-svindel-sms-sender-aldri-slike-henvendelser/16284207//(15/12 2023)
+# https://www•tv2•no/nyheter/innenriks/advarer-om-svindel-sms-sender-aldri-slike-henvendelser/16284207//(15/12 2023)
 -d minklarna.
 # https://github.com/DandelionSprout/adfilt/issues/747
 - -norge.co.no
@@ -974,12 +983,12 @@ msFilterList
 -d hoka-sko.com
 -d hoka-one-one.cc
 -d hokaoneone*
-# https://www.adressa.no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull
-# https://www.adressa.no/nyheter/trondheim/i/69d3lL/spisesteder-rammet-det-er-forferdelig-jeg-fikk-panikk
+# https://www•adressa•no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull
+# https://www•adressa•no/nyheter/trondheim/i/69d3lL/spisesteder-rammet-det-er-forferdelig-jeg-fikk-panikk
 -d sitey.me
-# https://www.tv2.no/nyheter/innenriks/olav-thon-misbrukes-i-svindelannonser-ble-feilaktig-meldt-dod/15818647/
+# https://www•tv2•no/nyheter/innenriks/olav-thon-misbrukes-i-svindelannonser-ble-feilaktig-meldt-dod/15818647/
 -d 24-news.online
-# https://www.tv2.no/nyheter/innenriks/advarer-ikke-klikk-pa-lenken/16040614/
+# https://www•tv2•no/nyheter/innenriks/advarer-ikke-klikk-pa-lenken/16040614/
 -d brugerverificering.com
 -d dhl-trackng.com
 -d dnb-oppdater.
@@ -1045,7 +1054,7 @@ msFilterList
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 # 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
-# Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
+# Source: https://www•forbrukertilsynet•no/netthandel/falske-nettbutikker.
 -d adidasko.com
 -d airmaxskobillige.com
 -d assassinfitness.com
