@@ -16,3 +16,6 @@ To update `AdGuardHomeCompilationList.txt`:
 6) In Sublime Text, use Ctrl+H to open the text replacement menu. Ensure the `.*` button is enabled (which enables RegEx mode). Paste <code>^! ([a-zA-Z0-9а-яА-ЯёЁàé.'"`_?#/,$=<>|+()^&; -]{1,})\n(!.*)</code> into <i>"Find:"</i>, then paste <code>\2</code> into <i>"Replace:"</i>, then press "Replace all". Repeat until Sublime Text can't find any more matches, then save the file.
 7) On top of the page, above `[Adblock Plus 3.4]`, add a line consisting solely of many (em-?)dashes, then paste the contents of https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-DeadDomains.notlist above that dashline. Then go to the menu bar → Edit → Permute Lines → Unique. Afterwards, delete the dashline and all text above it, and save the file.
 8) It is now ready to be uploaded at https://github.com/DandelionSprout/adfilt/tree/master/AdGuard%20Home%20Compilation%20List → Add file → Upload files.
+
+### Syntax notes
+Apparently AdGuard Home doesn't recognise single /'s as prefixes, nor ^ as prefixes. This got awkward for sure.
