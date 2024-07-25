@@ -1,14 +1,14 @@
 [Adblock Plus 3.15]
 ! Title: Dandelion Sprout's AdGuard Home Compilation List - Web Push Notifications
 ! Contains modified entries from: Fanboy's Notifications Blocking List, and AdGuard Annoyances Web Push
-! Version: 27June2024v2-Beta
+! Version: 25July2024v1-Beta
 ! Expires: 14 days
 ! Licence: In accordance with the Dandelicence, AdGuard Annoyances Web Push's contents are to be treated as GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html), while Fanboy's Notifications Blocking List whose loose CC BY 3.0 seems to me to enable me to relicence them under the Dandelicence. Known credits in accordance with attribution requirements, are Ryan Brown (Fanboy's Notifications Blocking List) and AdGuard Software Limited (AdGuard Annoyances Web Push).
 ! Description: AdGuard Home is one of the tools for the future. However, its current internal structure discards virtually every $-using block rule, which makes various major lists virtually useless in AdGuard Home, despite how many of the entries would be ≥90% as functional without them. So until the AdGuard Home team implements a better way to deal with $ values, here's my intermissional list to work around it.
 ! Note: If a list update is needed quickly, check out the instructions at https://github.com/DandelionSprout/adfilt/blob/master/AdGuard%20Home%20Compilation%20List/README.md
 ! ——————————————————————————————————————————————
 ! Custom entries added by Dandelion Sprout
-! Section last updated: 15th of March 2024
+! Section last updated: 27 June 2024
 ://push.delivery.
 ://push-notifications.
 ||potisni.me^
@@ -37,7 +37,6 @@
 ://multi-desktop-notification.
 ://nadz-sdk.
 ://onesignal-modal.
-://onesignal.min.
 ://onesignalfix.
 ://prpushsw.
 ://push-notification-*
@@ -60,9 +59,9 @@
 ://webpushnotifications.
 ://wonderpush.
 ! —————————————————————————————————————————————
-! Version: 202406270231
+! Version: 202407250941
 ! Title: Fanboy's Notifications Blocking List
-! Last modified: 27 Jun 2024 02:31 UTC
+! Last modified: 25 Jul 2024 09:41 UTC
 ! License: https://creativecommons.org/licenses/by/3.0/
 ! Please report any unblocked content or problems by email or in our forums
 ! Email: easylist@protonmail.com
@@ -71,12 +70,22 @@
 !--------------------------General blocking rules-----------------------------!
 ! *** easylist:fanboy-addon/fanboy_notifications_general_block.txt ***
 ! fanboy_notifications_general_block.txt
-/amp-user-notification-
-/onesignal.min.
-/push-worker-
+//amp-user-notification-
+//onesignal.min.
+//push-worker-
+! Mobile notifications
+!------------------------General element hiding rules-------------------------!
+! *** easylist:fanboy-addon/fanboy_notifications_general_hide.txt ***
+! fanboy_notifications_general_hide.txt
+! Mobile Notifications
+! google review popup
+! substack
+! spot.im Notifications
+! International
 !-------------------------Third-party blocking rules--------------------------!
 ! *** easylist:fanboy-addon/fanboy_notifications_thirdparty.txt ***
 ! fanboy_notifications_thirdparty.txt
+!
 ||api-push.com^
 ||bildirnet.com^
 ||braze.com^
@@ -176,7 +185,6 @@
 ||topswp.com^
 ||unative.com^
 ||virtualpushplatform.com^
-||webpush.jp^
 ||webpushr.com^
 ||webpushs.com^
 ||whitepush.biz^
@@ -271,7 +279,17 @@
 ||push.idowa.de^
 ||push.neko-san.fr^
 ||pushme.magellanotech.it^
-!-----------------------------------------------------------------------------!
+!------------------------Specific element hiding rules------------------------!
+! *** easylist:fanboy-addon/fanboy_notifications_specific_hide.txt ***
+! fanboy_notifications_specific_hide.txt
+!! International
+! Mobile app Notifications
+! Advanced element hiding rules for Adblock Plus
+!---------------------------------Allowlists----------------------------------!
+! *** easylist:fanboy-addon/fanboy_notifications_allowlist_general_hide.txt ***
+! fanboy_notifications_allowlist_general_hide.txt
+! *** easylist:fanboy-addon/fanboy_notifications_allowlist.txt ***
+! fanboy_notifications_allowlist.txt
 ! Title: AdGuard Popups filter - Push notifications, specific
 ! This section contains the list of generic rules that block website push notifications ("subscribe to the news" kind of notifications).
 ! Good: any type of the rules will be good
@@ -279,6 +297,8 @@
 ||sdk.chirpyweb.com^
 .vafrike.ru^
 ! `window.wpnConfig`
+||qushad.com^
+||quickalert.org^
 ||ziwelatum.com^
 ||adpush.com.tr^
 ||pushly.net^
@@ -524,8 +544,6 @@
 ||vivdq.com^
 ||volanosier.com^
 ||vultispotus.com^
-||webpush.hackers.com^
-||webpush.ria.com^
 ||webpushonline.com^
 ||wertendium.com^
 ||womanshouz.ru^
