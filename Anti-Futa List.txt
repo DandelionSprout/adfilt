@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 👩 Anti-Futa List
-! Version: 17July2024v1
+! Version: 01August2024v1
 ! Expires: 3 days
 ! Description: It seems to me that a common thought process on porn sites are "Hey, do you know what would've made this cute woman even sexier? I know. We should give her a dick!". Well, not anymore, thanks to this list.
 ! Note 1: On some of these sites, such as Pixiv and Fur Affinity, quite a few futa images are uploaded without having "futa" in its title or in its search result metadata, making them practically unblockable through this method. Categories known to have significant slipthrough percentages are marked with a 🔴.
@@ -22,7 +22,7 @@
 ! ——— Pixiv ———
 !#if !env_mobile
 ! New search results, image suggestions on image pages, and carousel items on image pages
-pixiv.net#?#li[class*=" "]:has(a[href*="/artworks/"] img[alt*=futa i]:not([alt*=futari i],[alt*=futaba i],[alt*=futago i]))
+pixiv.net##li[class*=" "]:has(a[href*="/artworks/"] img[alt*=futa i]:not([alt*=futari i],[alt*=futaba i],[alt*=futago i]))
 pixiv.net##li[class*=" "]:has(a[href*="/artworks/"] img[alt*=dickgirl i])
 pixiv.net##li[class*=" "]:has(a[href*="/artworks/"] img[alt*=lolita][alt*=" penis"])
 pixiv.net##li[class*=" "]:has(a[href*="/artworks/"] img[alt*=ふたなり])
@@ -89,7 +89,7 @@ pixiv.net#?#ul > li > div:last-of-type:nth-of-type(2):has-text(후타나리)
 !#endif
 !#if env_mobile
 ! Phone version
-pixiv.net#?#.works-item:has(img[alt*=futa i]:not([alt*=futaba i],[alt*=futari i],[alt*=futago i]))
+pixiv.net##.works-item:has(img[alt*=futa i]:not([alt*=futaba i],[alt*=futari i],[alt*=futago i]))
 pixiv.net##.works-item:has(img[alt*=dickgirl i])
 pixiv.net##.works-item:has(img[alt*=lolita][alt*=" penis"])
 pixiv.net##.works-item:has(img[alt*=ふたなり])
@@ -257,6 +257,10 @@ deviantart.com##a[data-hook][href*="/art/"][href*=sarahtxxx i]
 ! ——— Newgrounds ———
 newgrounds.com##div.align-center.span-1:has(a[href*=-futa-])
 newgrounds.com##div.align-center.span-1:has(a[href*="/futa-"])
+
+! ——— Artstation ———
+artstation.com#?#:is(.gallery-grid-item,.project):has-text(/^.*futanari.*$/i)
+artstation.com#?#:is(.gallery-grid-item,.project):has-text(/^.*(\s|-)futa(\s|-).*$/i)
 
 ! ——— Other sites ———
 ||hentai-futanari-xxx.com^$document
