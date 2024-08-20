@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Version: 17August2024v2
+! Version: 20August2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1045,6 +1045,9 @@ tvkampen.com,tvsporten.dk##li.tv:has(>.do-link)
 sveip.no##.fromod_section_2
 costume.*##.teaser__native:upward(4)
 boblad.no##.uk-overlay-hover.uk-panel
+lofotposten.no##.front > optimus-element:has(amedia-include[param-url*=innocode])
+lofotposten.no##.front > optimus-element:has(amedia-include[param-url*=amediakreativ])
+snasningen.no##.front > optimus-element:has(amedia-include[param-url*=".api.no"][param-url*=banner])
 opn.no###sidebar_2 #sidebarelement_2
 xlmoto.no##.overlay-bg
 itavisen.no,ba.no##.sponsored
@@ -1697,6 +1700,8 @@ contentMarketing$xhr,domain=sol.no
 .no/api/unit-image?config=$image
 ! arto•dk
 ||artodata.net/site/ads/$subdocument
+! inderoyningen•no (20/08/2024)
+no##section.noHeader:has(amedia-include[param-url*=innocode])
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources

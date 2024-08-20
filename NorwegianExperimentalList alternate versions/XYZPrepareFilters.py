@@ -6736,6 +6736,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\^~", 
+           r"^$denyallow=", 
+           line
+        )
+
         if is_supported_agh(line):
             text += line + '\n'
 
