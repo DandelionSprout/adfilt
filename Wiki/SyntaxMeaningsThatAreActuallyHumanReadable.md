@@ -117,7 +117,7 @@
 * `$all`: De facto combines all other `$` values. Officially combines the use of no `$` values at all + `$popup` + `$document` + `$inline-script` + `$inline-font`.
 * `$redirect-rule`: Similar to `$redirect`, but is only applied if it's already blocked by *another* entry or dynamic rule(set).
 * `$mp4`: Equivalent to `$redirect=noopmp4-1s,media`.
-* `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Only applies to Firefox and Tor Browser.
+* `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Not needed for entries that already have `$doc`. Only applies to Firefox and Tor Browser.
 * `$from`: Same as `$domain`.
 * `$denyallow` + `,domain=`: Allows choosing which third-party domain requests to allowlist, instead of which ones to block, while visiting specified domains.
 * `$to`: Superset of `$denyallow`. Supports TLD-wildcard (`google.*`) hostnames and negated hostnames (`~example.com`). 
