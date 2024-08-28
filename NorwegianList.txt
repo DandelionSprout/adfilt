@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Version: 28August2024v1
+! Version: 28August2024v2
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -404,7 +404,7 @@ yrkesbil.no##td:empty
 alvdalmiv.no,tynsetingen.no##.widget-1.columns-5
 eyjar.net##div[style^="width:100%;max-width:390px;"]
 nordjyske.dk##.ad-unit--body-wide
-aftenbladet.no##.article-content:style(padding: 0)
+aftenbladet.no##.article-content:style(padding:0)
 rorfag.no##.anonse
 kanalfrederikshavn.dk###c888
 onlinenytt.com##.textwidget > p
@@ -1218,6 +1218,8 @@ jyllands-posten.dk##.my-2:has(ins[id*=noconsent])
 jyllands-posten.dk##div[class*=adnm-]
 nyheder24.dk##.generic-widget:has(.annonce)
 nyheder24.dk##div[class*=inArticleBanner i]
+abcnyheter.no##.c-article__bottom-ad
+sykepleien.no##.content-extra__ads
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -2066,6 +2068,16 @@ idag.no#?#.nf-o-moduleblock:not(:has(a))
 mediavejviseren.dk###sectionBeforeBottom
 !+ NOT_OPTIMIZED
 avvir.no###block-block-1 > p:nth-of-type(4)
+no##html.height-calculated.nyheter[lang^=n] .article-footer:style(margin:0!important)
+no##html.height-calculated.nyheter[lang^=n] .time:style(margin-bottom:0!important;padding-bottom:0!important;margin-top:0!important)
+fagbladet.no##.title > h1.tittel:style(padding-top:0!important)
+spania.no##.tdc-element-style:has(.td-a-rec)
+spania.no##.tdc-row:not(:has(+ .tdc-row)):not(:has(p[class*=descr]:last-of-type))
+utrop.no##.td-main-content-wrap:style(padding-top:0!important)
+seher.no##.article-top header:style(padding-top:0!important;margin:0!important)
+sykepleien.no##:is(.container--break,.content-extra__recommended-news):style(padding:0!important;margin:0!important)
+! aİD (Phone user agent)
+no##.tag-page:style(margin:0!important;padding:0!important)
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ! 🇩🇰: ——— Distraherende baggrundsbilleder ———
@@ -2212,6 +2224,7 @@ spleis.no##+js(set, __INITIAL_STATE__.features.should-show-snow, false)
 ###sportspill-box-top:not(html,body,:empty)
 vglive.no##.tipster-liveodds-embed
 ba.no##.sportspill
+www.startsiden.no##div.small-12:first-of-type > a[class*=norskTippingWidget i]:is([data-ga4-link-title*=Eurojackpot i],[data-ga4-link-title*=Lotto i])
 ! https://www•nettavisen•no/
 ~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="norsk-tipping.no/lotteri/vikinglotto"]:not(html,body,:empty)
 ~norsk-tipping.no,~tipster.no,~online.no,~epost.telenor.no,~com##a[href*="norsk-tipping.no/lotteri/lotto"]:not(html,body,:empty)
