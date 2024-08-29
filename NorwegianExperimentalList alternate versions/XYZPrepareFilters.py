@@ -48,7 +48,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: [0-9]{4}.*$", 
+           r"! Version: \d{4}.*$", 
            "", 
            line
         )
@@ -90,13 +90,13 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*$", 
+           r"^\|\|(([1-2]?\d?\d\.?){4})\^\$.*$", 
            r"!+ PLATFORM(windows, mac, android)\n\1$network\n!+ NOT_PLATFORM(windows, mac, android)\n||\1^$all", 
            line
         )
 
         line = re.sub(
-           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^", 
+           r"^\|\|(([1-2]?\d?\d\.?){4})\^", 
            r"!+ PLATFORM(windows, mac, android)\n\1$network\n!+ NOT_PLATFORM(windows, mac, android)\n||\1^$all", 
            line
         )
@@ -216,7 +216,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|((([0-9]){1,3}\.){3})(\$.*|$)", 
+           r"^\|\|(((\d){1,3}\.){3})(\$.*|$)", 
            r"\1.*$network", 
            line
         )
@@ -473,73 +473,73 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: (.*)January(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)January(.*)v(\d\d?)", 
            r"! Version: \g<1>01\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)February(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)February(.*)v(\d\d?)", 
            r"! Version: \g<1>02\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)March(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)March(.*)v(\d\d?)", 
            r"! Version: \g<1>03\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)April(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)April(.*)v(\d\d?)", 
            r"! Version: \g<1>04\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)May(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)May(.*)v(\d\d?)", 
            r"! Version: \g<1>05\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)June(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)June(.*)v(\d\d?)", 
            r"! Version: \g<1>06\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)July(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)July(.*)v(\d\d?)", 
            r"! Version: \g<1>07\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)August(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)August(.*)v(\d\d?)", 
            r"! Version: \g<1>08\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)September(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)September(.*)v(\d\d?)", 
            r"! Version: \g<1>09\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)October(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)October(.*)v(\d\d?)", 
            r"! Version: \g<1>10\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)November(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)November(.*)v(\d\d?)", 
            r"! Version: \g<1>11\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)December(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)December(.*)v(\d\d?)", 
            r"! Version: \g<1>12\2\3", 
            line
         )
@@ -1208,7 +1208,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"(# Version: .*[0-9][A-Z].*)", 
+           r"(# Version: .*\d[A-Z].*)", 
            r"\1-Deprecated", 
            line
         )
@@ -2682,73 +2682,73 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: (.*)January(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)January(.*)v(\d\d?)", 
            r"! Version: \g<1>01\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)February(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)February(.*)v(\d\d?)", 
            r"! Version: \g<1>02\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)March(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)March(.*)v(\d\d?)", 
            r"! Version: \g<1>03\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)April(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)April(.*)v(\d\d?)", 
            r"! Version: \g<1>04\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)May(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)May(.*)v(\d\d?)", 
            r"! Version: \g<1>05\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)June(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)June(.*)v(\d\d?)", 
            r"! Version: \g<1>06\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)July(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)July(.*)v(\d\d?)", 
            r"! Version: \g<1>07\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)August(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)August(.*)v(\d\d?)", 
            r"! Version: \g<1>08\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)September(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)September(.*)v(\d\d?)", 
            r"! Version: \g<1>09\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)October(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)October(.*)v(\d\d?)", 
            r"! Version: \g<1>10\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)November(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)November(.*)v(\d\d?)", 
            r"! Version: \g<1>11\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)December(.*)v([0-9][0-9]?)", 
+           r"! Version: (.*)December(.*)v(\d\d?)", 
            r"! Version: \g<1>12\2\3", 
            line
         )
@@ -3414,7 +3414,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r" www\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}", 
+           r" www\.[1-2]?\d\d?\.[1-2]?\d\d?\.[1-2]?\d\d?\.[1-2]?\d\d?", 
            r"", 
            line
         )
@@ -3598,7 +3598,7 @@ def prepare_dnsmasq(lines) -> str:
         )
 
         line = re.sub(
-           r"server=/([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])\.([1-2]?[0-9]?[0-9])$", 
+           r"server=/([1-2]?\d?\d)\.([1-2]?\d?\d)\.([1-2]?\d?\d)\.([1-2]?\d?\d)$", 
            r"server=/\4.\3.\2.\1.in-addr.arpa/127.0.0.1", 
            line
         )
@@ -3815,7 +3815,7 @@ def prepare_pihole(lines) -> str:
         )
 
         line = re.sub(
-           r"^[0-9].*/.*$", 
+           r"^\d.*/.*$", 
            r"", 
            line
         )
@@ -3904,7 +3904,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^", 
+           r"^\|\|(([1-2]?\d?\d\.?){4})\^", 
            r"\1", 
            line
         )
@@ -4143,7 +4143,7 @@ def prepare_shadowsocks(lines) -> str:
         )
 
         line = re.sub(
-           r"^(([1-2]?[0-9]?[0-9]\.?){4})$", 
+           r"^(([1-2]?\d?\d\.?){4})$", 
            r"IP-CIDR,\1/32,REJECT,no-resolve", 
            line
         )
@@ -4470,7 +4470,7 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r" www\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}\.[1-2]?[0-9]{1,2}", 
+           r" www\.[1-2]?\d\d?\.[1-2]?\d\d?\.[1-2]?\d\d?\.[1-2]?\d\d?", 
            r"", 
            line
         )
@@ -4692,7 +4692,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: [0-9]{4}.*$", 
+           r"! Version: \d{4}.*$", 
            "", 
            line
         )
@@ -4740,7 +4740,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^\$.*$", 
+           r"^\|\|(([1-2]?\d?\d\.?){4})\^\$.*$", 
            r"!+ PLATFORM(windows, mac, android)\n\1$network\n!+ NOT_PLATFORM(windows, mac, android)\n||\1^$all", 
            line
         )
@@ -4927,7 +4927,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\|\|?|://|/)(([0-9]{1,3}\.){3})(\$.*|$)", 
+           r"^(\|\|?|://|/)((\d{1,3}\.){3})(\$.*|$)", 
            r"\2*$network", 
            line
         )
@@ -5686,7 +5686,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^(# Version: .*[0-9])$", 
+           r"^(# Version: .*\d)$", 
            r"\1-Deprecated", 
            line
         )
@@ -5857,7 +5857,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"^(# Version: .*[0-9])$", 
+           r"^(# Version: .*\d)$", 
            r"\1-Deprecated", 
            line
         )
@@ -6294,7 +6294,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^[0-9].*:.*$", 
+           r"^\d.*:.*$", 
            r"", 
            line
         )
@@ -6458,7 +6458,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"\|\|(([1-2]?[0-9]?[0-9]\.?){4})\^.*$", 
+           r"\|\|(([1-2]?\d?\d\.?){4})\^.*$", 
            r"\1", 
            line
         )
@@ -6591,7 +6591,7 @@ def prepare_agh(lines) -> str:
 
         # Replaced due to https://github.com/AdguardTeam/HostlistCompiler/issues/42#issuecomment-1360494184
         #line = re.sub(
-        #   r"^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})\.\*\$network$", 
+        #   r"^(\d{1,3}\.\d{1,3}\.\d{1,3})\.\*\$network$", 
         #   r"\1.0/24", 
         #   line
         #)
@@ -6623,7 +6623,7 @@ def prepare_agh(lines) -> str:
 
         # Needed due to https://github.com/AdguardTeam/HostlistCompiler/issues/42#issuecomment-1360494184, despite a lack of testing
         line = re.sub(
-           r"^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.\*\$network$", 
+           r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.\*\$network$", 
            r"/^\1\\.\2\\.\3\\.[0-9]{1,3}$/", 
            line
         )
@@ -6720,7 +6720,7 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"! Placeholder line for alternate list versions", 
-           r"/^172\\.255\\.6\\.(\\d{1,2}|2.*|1[0-689].*|17[0-689])$/", 
+           r"/^172\\.255\\.6\\.(\\d\\d?|2.*|1[0-689].*|17[0-689])$/", 
            line
         )
 
@@ -6739,6 +6739,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"\^~", 
            r"^$denyallow=", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\|\|(\*\.)?[a-z]{2,30}\^)\$denyallow(.*)$", 
+           r"\1$dnstype=~CNAME,denyallow\3", 
+           line
+        )
+
+        line = re.sub(
+           r"^(\|\|(\*\.)?[a-z]{2,30}\^)$", 
+           r"\1$dnstype=~CNAME", 
            line
         )
 
@@ -7479,7 +7491,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^[0-9].*[a-zA-Z!_*-].*$", 
+           r"^\d.*[a-zA-Z!_*-].*$", 
            r"", 
            line
         )

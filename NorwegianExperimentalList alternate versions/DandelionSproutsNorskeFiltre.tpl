@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Version: 20August2024v1-Deprecated
+# Version: 28August2024v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -568,6 +568,7 @@ msFilterList
 # 🇮🇸: ——— Tóma skilirammar ———
 # 🇬🇧: ——— Empty divider spaces ———
 # Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt,/which/has/not been the case.
+# aİD (Phone user agent)
 # 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 # 🇩🇰: ——— Distraherende baggrundsbilleder ———
 # 🇮🇸: ——— Truflanda baksýnsmyndir ———
