@@ -3875,13 +3875,13 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r" Dandelion Sprouts nordiske filtre.*$", 
-           " Dandelion Sprouts nordiske filtre (for AdGuard Home, AdGuard for Android/Windows/macOS sine DNS-filtreringer, og Pi-Hole FTL ≥5.22)", 
+           " Dandelion Sprouts nordiske filtre (for AdGuard Home, AdGuard for Android/Windows/macOS sine DNS-filtreringer, AdGuard Private DNS, og Pi-Hole FTL ≥5.22)", 
            line
         )
 
         line = re.sub(
            r" Dandelion Sprout's Nordic Filters.*$", 
-           " Dandelion Sprout's Nordic Filters (for AdGuard Home, AdGuard for Android/Windows/macOS' DNS filtering, and Pi-Hole FTL ≥5.22)", 
+           " Dandelion Sprout's Nordic Filters (for AdGuard Home, AdGuard for Android/Windows/macOS' DNS filtering, AdGuard Private DNS, and Pi-Hole FTL ≥5.22)", 
            line
         )
 
