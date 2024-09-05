@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 4September2024v1
+! Version: 5September2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2395,7 +2395,8 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ||baidu.com^$doc,removeparam=cf
 ||baidu.com^$doc,removeparam=miniId
 ||baidu.com^$doc,removeparam=/^from.*$/
-||baidu.com^$doc,removeparam=tpl_from
+! causes issues: https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10554103
+||baidu.com^$doc,removeparam=tpl_from,domain=~graph.baidu.com
 
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
