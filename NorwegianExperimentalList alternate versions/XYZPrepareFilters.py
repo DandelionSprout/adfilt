@@ -48,7 +48,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: \d{4}.*$", 
+           r"! (Version|Last[ -]?[Mm]odified): \d{4}.*$", 
            "", 
            line
         )
@@ -473,74 +473,74 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: (.*)January(.*)v(\d\d?)", 
-           r"! Version: \g<1>01\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)January(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>01\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)February(.*)v(\d\d?)", 
-           r"! Version: \g<1>02\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)February(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>02\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)March(.*)v(\d\d?)", 
-           r"! Version: \g<1>03\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)March(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>03\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)April(.*)v(\d\d?)", 
-           r"! Version: \g<1>04\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)April(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>04\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)May(.*)v(\d\d?)", 
-           r"! Version: \g<1>05\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)May(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>05\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)June(.*)v(\d\d?)", 
-           r"! Version: \g<1>06\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)June(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>06\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)July(.*)v(\d\d?)", 
-           r"! Version: \g<1>07\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)July(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>07\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)August(.*)v(\d\d?)", 
-           r"! Version: \g<1>08\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)August(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>08\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)September(.*)v(\d\d?)", 
-           r"! Version: \g<1>09\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)September(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>09\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)October(.*)v(\d\d?)", 
-           r"! Version: \g<1>10\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)October(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>10\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)November(.*)v(\d\d?)", 
-           r"! Version: \g<1>11\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)November(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>11\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)December(.*)v(\d\d?)", 
-           r"! Version: \g<1>12\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)December(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>12\2\3", 
            line
         )
 
@@ -1208,7 +1208,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"(# Version: .*\d[A-Z].*)", 
+           r"(# (Version|Last[ -]?[Mm]odified): .*\d[A-Z].*)", 
            r"\1-Deprecated", 
            line
         )
@@ -1522,7 +1522,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"(! Version: .*)", 
+           r"(! (Version|Last[ -]?[Mm]odified): .*)", 
            r"\1-Deprecated", 
            line
         )
@@ -2160,7 +2160,7 @@ def prepare_umatrix(lines) -> str:
         )
 
         line = re.sub(
-           r"^(! Version:.*)", 
+           r"^(! (Version|Last[ -]?[Mm]odified):.*)", 
            r"\1-Alpha", 
            line
         )
@@ -2257,7 +2257,7 @@ def prepare_xul(lines) -> str:
         )
 
         line = re.sub(
-           r"(^! Version: .*)", 
+           r"(^! (Version|Last[ -]?[Mm]odified): .*)", 
            r"\1-Beta", 
            line
         )
@@ -2682,74 +2682,74 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: (.*)January(.*)v(\d\d?)", 
-           r"! Version: \g<1>01\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)January(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>01\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)February(.*)v(\d\d?)", 
-           r"! Version: \g<1>02\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)February(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>02\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)March(.*)v(\d\d?)", 
-           r"! Version: \g<1>03\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)March(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>03\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)April(.*)v(\d\d?)", 
-           r"! Version: \g<1>04\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)April(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>04\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)May(.*)v(\d\d?)", 
-           r"! Version: \g<1>05\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)May(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>05\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)June(.*)v(\d\d?)", 
-           r"! Version: \g<1>06\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)June(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>06\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)July(.*)v(\d\d?)", 
-           r"! Version: \g<1>07\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)July(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>07\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)August(.*)v(\d\d?)", 
-           r"! Version: \g<1>08\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)August(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>08\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)September(.*)v(\d\d?)", 
-           r"! Version: \g<1>09\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)September(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>09\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)October(.*)v(\d\d?)", 
-           r"! Version: \g<1>10\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)October(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>10\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)November(.*)v(\d\d?)", 
-           r"! Version: \g<1>11\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)November(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>11\2\3", 
            line
         )
 
         line = re.sub(
-           r"! Version: (.*)December(.*)v(\d\d?)", 
-           r"! Version: \g<1>12\2\3", 
+           r"! (Version|Last[ -]?[Mm]odified): (.*)December(.*)v(\d\d?)", 
+           r"! (Version|Last[ -]?[Mm]odified): \g<1>12\2\3", 
            line
         )
 
@@ -3396,7 +3396,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"(# Version:.*)", 
+           r"(# (Version|Last[ -]?[Mm]odified):.*)", 
            r"\1\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt, unless otherwise proven.", 
            line
         )
@@ -3671,7 +3671,7 @@ def prepare_hostsdeny(lines) -> str:
         )
 
         line = re.sub(
-           r"(# Version: .*)", 
+           r"(# (Version|Last[ -]?[Mm]odified): .*)", 
            r"\1-Deprecated", 
            line
         )
@@ -3719,7 +3719,7 @@ def prepare_pihole(lines) -> str:
         )
 
         line = re.sub(
-           r"(# Version: .*)", 
+           r"(# (Version|Last[ -]?[Mm]odified): .*)", 
            r"\1-Deprecated\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt, unless otherwise proven.", 
            line
         )
@@ -4089,7 +4089,7 @@ def prepare_shadowsocks(lines) -> str:
         )
 
         line = re.sub(
-           r"(# Version: .*)", 
+           r"(# (Version|Last[ -]?[Mm]odified): .*)", 
            r"\1-Alpha", 
            line
         )
@@ -4214,7 +4214,7 @@ def prepare_rpz(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"(# Version: .*)", 
+           r"(# (Version|Last[ -]?[Mm]odified): .*)", 
            r"\1-Alpha", 
            line
         )
@@ -4285,7 +4285,7 @@ def prepare_unbound(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"(# Version: .*)", 
+           r"(# (Version|Last[ -]?[Mm]odified): .*)", 
            r"\1-Alpha", 
            line
         )
@@ -4350,7 +4350,7 @@ def prepare_minerblock(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"(# Version: .*)", 
+           r"(# (Version|Last[ -]?[Mm]odified): .*)", 
            r"\1-Alpha", 
            line
         )
@@ -4523,7 +4523,7 @@ def prepare_domainsallowlist(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"(# Version: .*)", 
+           r"(# (Version|Last[ -]?[Mm]odified): .*)", 
            r"\1-Beta", 
            line
         )
@@ -4692,7 +4692,7 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"! Version: \d{4}.*$", 
+           r"! (Version|Last[ -]?[Mm]odified): \d{4}.*$", 
            "", 
            line
         )
@@ -5686,7 +5686,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"^(# Version: .*\d)$", 
+           r"^(# (Version|Last[ -]?[Mm]odified): .*\d)$", 
            r"\1-Deprecated", 
            line
         )
@@ -5857,7 +5857,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"^(# Version: .*\d)$", 
+           r"^(# (Version|Last[ -]?[Mm]odified): .*\d)$", 
            r"\1-Deprecated", 
            line
         )
@@ -6100,7 +6100,7 @@ def prepare_hosts(lines) -> str:
 
 
         line = re.sub(
-           r"(# Version:.*)", 
+           r"(# (Version|Last[ -]?[Mm]odified):.*)", 
            r"\1\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.", 
            line
         )
@@ -7521,7 +7521,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^# Version: [a-zA-Z0-9]{1,}$", 
+           r"^# (Version|Last[ -]?[Mm]odified): [a-zA-Z0-9]{1,}$", 
            r"", 
            line
         )
