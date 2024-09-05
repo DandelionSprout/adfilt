@@ -474,73 +474,73 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)January(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>01\2\3", 
+           r"! Version: \g<2>01\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)February(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>02\2\3", 
+           r"! Version: \g<2>02\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)March(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>03\2\3", 
+           r"! Version: \g<2>03\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)April(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>04\2\3", 
+           r"! Version: \g<2>04\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)May(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>05\2\3", 
+           r"! Version: \g<2>05\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)June(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>06\2\3", 
+           r"! Version: \g<2>06\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)July(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>07\2\3", 
+           r"! Version: \g<2>07\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)August(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>08\2\3", 
+           r"! Version: \g<2>08\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)September(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>09\2\3", 
+           r"! Version: \g<2>09\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)October(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>10\2\3", 
+           r"! Version: \g<2>10\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)November(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>11\2\3", 
+           r"! Version: \g<2>11\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)December(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>12\2\3", 
+           r"! Version: \g<2>12\3\4", 
            line
         )
 
@@ -2683,73 +2683,73 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)January(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>01\2\3", 
+           r"! Version: \g<2>01\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)February(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>02\2\3", 
+           r"! Version: \g<2>02\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)March(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>03\2\3", 
+           r"! Version: \g<2>03\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)April(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>04\2\3", 
+           r"! Version: \g<2>04\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)May(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>05\2\3", 
+           r"! Version: \g<2>05\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)June(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>06\2\3", 
+           r"! Version: \g<2>06\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)July(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>07\2\3", 
+           r"! Version: \g<2>07\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)August(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>08\2\3", 
+           r"! Version: \g<2>08\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)September(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>09\2\3", 
+           r"! Version: \g<2>09\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)October(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>10\2\3", 
+           r"! Version: \g<2>10\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)November(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>11\2\3", 
+           r"! Version: \g<2>11\3\4", 
            line
         )
 
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)December(.*)v(\d\d?)", 
-           r"! (Version|Last[ -]?[Mm]odified): \g<1>12\2\3", 
+           r"! Version: \g<2>12\3\4", 
            line
         )
 
