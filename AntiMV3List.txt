@@ -5,26 +5,89 @@
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! Description: When I declared war on Chrome Manifest V3 in 2021, I really meant it. With this list that blocks MV3 extensions' download files and homepages, you too can be an active participant in the survival war.
+
+! ——— "We give up"-type alleged extensions ———
+||chrome.google.com/webstore/detail/adguard-adblocker-mv3^$important
+||chrome.google.com/webstore/detail/ublock-origin-lite^$important
+
+||chromewebstore.google.com/detail/adguard-adblocker-mv3$important
+||chromewebstore.google.com/detail/ublock-origin-lite^$important
+||chromewebstore.google.com/detail/adblock-plus$important
+
+||chromewebstore.google.com/detail/adguard-adblocker-mv3$important,doc,domain=~mv3-bootlicking-alleged-extension.*
+||chromewebstore.google.com/detail/ublock-origin-lite^$important,doc,domain=~mv3-bootlicking-alleged-extension.*
+||chromewebstore.google.com/detail/adblock-plus$important,doc,domain=~mv3-bootlicking-alleged-extension.*
+
+! ——— Dedicated websites ———
+
 ||adguard.com/*/blog/adguard-mv3.html^
 ||agrd.io/adguard_mv3^
-||adguard.com/*/blog/adguard-mv3.html^$doc,domain=~mv3-bootlicking-site.*
-||agrd.io/adguard_mv3^$doc,domain=~mv3-bootlicking-site.*
-||chrome.google.com/webstore/detail/adguard-adblocker-mv3^
-||chrome.google.com/webstore/detail/ublock-origin-lite^
-||github.com/*/download/*/uBlock0.mv3.zip^
-||gitlab.com/ThomasGreiner-eyeo/abp/*-mv3.zip^
+
+||adguard.com/*/blog/adguard-mv3.html^$important,doc,domain=~mv3-bootlicking-site.*
+||agrd.io/adguard_mv3^$important,doc,domain=~mv3-bootlicking-site.*
+
 adguard.com##a[href*="/adguard-mv3"]
+
+! ——— Dedicated projects ———
+! ————— uBO —————
+
 github.com##.Box-row:has(a[href$="/uBlock0.mv3.zip"][href*="/download/"])
 github.com#?#.flex-justify-center.my-5:has-text(github-actions):has-text(uBOLite)
 github.com##li.Box-row:has(.topic-tag[title$=" mv3"])
-||raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/ubol-filters.txt^$important,domain=~mv3-bootlicking-file.*
-||raw.githubusercontent.com/uBlockOrigin/uAssetsCDN/main/filters/ubol-filters.txt^$important,domain=~mv3-bootlicking-file.*
-||github.com/uBlockOrigin/uBOL-home^
-||github.com/uBlockOrigin/uBOL-home^$doc,domain=~mv3-bootlicking-site.*
 github.com#?#.flex-content-stretch:has-text(/uBO(L-|\sLite\s)home/i)
 github.com#?#.Box-row:has-text(/uBO(L-|\sLite\s)home/i)
+
+||github.com/uBlockOrigin/uBOL-home^$important
+
+||github.com/uBlockOrigin/uBOL-home^$important,doc,domain=~mv3-bootlicking-site.*
+
+! ————— AdGuard —————
+
 github.com#?#.Box-row:has-text(/\sAdGuardMV3\n/)
 github.com#?#.listviewitem:has-text(/^AdGuardMV3P/)
+
+! ——— Dedicated parts of broader projects ———
+! ————— AdGuard —————
+
+github.com##turbo-frame[src*="/AdguardTeam/"] .react-directory-row:has(a[href*=QuickFixesFilter i])
+github.com##react-app[initial-path*="/FiltersRegistry/"][initial-path$="/filters"] .react-directory-row:has(a[href*=_QuickFixes])
+
+! ——— Text files ———
+! ————— uBO —————
+
+||raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/ubol-filters.txt^$important
+||raw.githubusercontent.com/uBlockOrigin/uAssetsCDN/main/filters/ubol-filters.txt^$important
+||ublockorigin.github.io/uAssetsCDN/filters/ubol-filters.txt^$important
+||ublockorigin.pages.dev/filters/ubol-filters.txt^$important
+||jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/filters/ubol-filters.txt^$important
+||statically.io/gh/uBlockOrigin/uAssetsCDN/main/filters/ubol-filters.txt^$important
+
+||raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/ubol-filters.txt^$important,doc,domain=~mv3-bootlicking-file.*
+||raw.githubusercontent.com/uBlockOrigin/uAssetsCDN/main/filters/ubol-filters.txt^$important,doc,domain=~mv3-bootlicking-file.*
+||ublockorigin.github.io/uAssetsCDN/filters/ubol-filters.txt^$important,doc,domain=~mv3-bootlicking-file.*
+||ublockorigin.pages.dev/filters/ubol-filters.txt^$important,doc,domain=~mv3-bootlicking-file.*
+||jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/filters/ubol-filters.txt^$important,doc,domain=~mv3-bootlicking-file.*
+||statically.io/gh/uBlockOrigin/uAssetsCDN/main/filters/ubol-filters.txt^$important,doc,domain=~mv3-bootlicking-file.*
+
+! ————— AdGuard —————
+
+||filters.adtidy.org/*/filters/24.txt^$important
+||filters.adtidy.org/*/filters/24_optimized.txt^$important
+||raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/QuickFixesFilter/sections/quickfixes.txt^$important
+
+||filters.adtidy.org/*/filters/24.txt^$important,document,domain=~mv3-bootlicking-file.*
+||filters.adtidy.org/*/filters/24_optimized.txt^$important,document,domain=~mv3-bootlicking-file.*
+||raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/QuickFixesFilter/sections/quickfixes.txt^$important,document,domain=~mv3-bootlicking-file.*
+
+! ————— ABP and affiliates —————
+!#if false
 ||easylist-downloads.adblockplus.org/v3/full/
-||easylist-downloads.adblockplus.org/v3/full/$doc,domain=~mv3-bootlicking-site.*
-||raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/QuickFixesFilter/sections/quickfixes.txt^$important,domain=~mv3-bootlicking-file.*
+||github.com/*/download/*/uBlock0.mv3.zip^
+||gitlab.com/ThomasGreiner-eyeo/abp/*-mv3.zip^
+!#endif
+
+||easylist-downloads.adblockplus.org/v3/full/$important
+||github.com/*/download/*/uBlock0.mv3.zip^$important
+||gitlab.com/ThomasGreiner-eyeo/abp/*-mv3.zip^$important
+
+||easylist-downloads.adblockplus.org/v3/full/$important,document,domain=~mv3-bootlicking-file.*
