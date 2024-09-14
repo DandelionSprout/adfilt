@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Last modified: 08September2024v1
+! Last modified: 13September2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1220,6 +1220,8 @@ nyheder24.dk##.generic-widget:has(.annonce)
 nyheder24.dk##div[class*=inArticleBanner i]
 abcnyheter.no##.c-article__bottom-ad
 sykepleien.no##.content-extra__ads
+custompublish.com##.bannerlocation
+motorhobby.no##.hidden-phone.rt-block
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1420,6 +1422,10 @@ _visittkortannonse_$image
 ||tize.no^$subdocument,3p
 ! sn•dk (19/07/2024)
 /annoncer/scripts/*
+! https://inmagasinet•custompublish•com/blir-det-gull•4528974-87197•html
+/annonser-vert.gif^
+! https://www•motorhobby•no/no/events/arr-etter-type/item/6-stjordal-motorshow-trondheim-mai-2025-stjordal-motorshow-i-abrahallen (13/09/2024)
+.no/images/banners/$image
 ! — — — — —
 ! 🇳🇴: Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
@@ -2171,10 +2177,6 @@ babyklar.dk#@#.ads300-250
 babyklar.dk#@#.ads300_250-widget
 ! Makes 1p info banners show up correctly
 @@_980x100.$domain=ruijan-kaiku.no
-!#if !adguard
-! Makes most links show up correctly (Fixed in AdGuard Base)
-
-!#endif
 ! https://github.com/uBlockOrigin/uAssets/issues/11546 (Not yet forwarded to EasyList)
 findbolig.nu#@#.advertLink
 ! https://github.com/uBlockOrigin/uAssets/issues/13907
@@ -2317,8 +2319,6 @@ gamer.no##.fullscreen-ad
 gamer.no##header ~ * > [class]:has(> [data-name="gamer_toppbanner"])
 gulindex.no###cintmodal
 jobindex.dk##div[aria-label="Annonce"]
-jyllands-posten.dk##body section[id^="monster_"]
-jyllands-posten.dk,finans.dk##body div[class*=banner-container]
 klikk.no##.affiliate-content
 klikk.no##iframe[src^="//widget.tippebannere.no/"]
 kundeavisogtilbud.no##div[class^="ad_"]
@@ -2337,11 +2337,9 @@ xn--bredbnd-ixa.dk##div[class^="speedtest-bg"] > a > img
 ||freewheel-mtgx-tv.akamaized.net/*.mp4$media,redirect=noopmp4-1s,domain=bold.dk
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=tv3sport.dk
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=vegetarbloggen.no,important
-||img.sofabold.dk/images/banner
 ||v.fwmrm.net/ad/g/$domain=ekstrabladet.dk,important
 ||vgc.no/cdn/js/libs/homad-config.json$xmlhttprequest,redirect=noopjson
 ||widget.tippebannere.no^$third-party
-||widgets.sprinklecontent.com^$domain=klikk.no
 inky.no#@#iframe[width="200"][height="240"]
 
 @@||borsen.dk/themes/borsen.dk/js/dfp.js

@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 08September2024v1-Deprecated
+# Last modified: 13September2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -156,6 +156,9 @@ msFilterList
 -d tize.no
 # sn•dk (19 07 2024)
 - annoncer scripts
+# https://inmagasinet•custompublish•com/blir-det-gull•4528974-87197•html
+- annonser-vert.gif
+# https://www•motorhobby•no/no/events/arr-etter-type/item/6-stjordal-motorshow-trondheim-mai-2025-stjordal-motorshow-i-abrahallen/(13/09 2024)
 # — — — — —
 # 🇳🇴: Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
@@ -621,7 +624,6 @@ msFilterList
 # Forum feeds in the upper right of articles
 # Makes 1p info banners show up correctly
 +d _980x100.
-# Makes most links show up correctly (Fixed in AdGuard Base)
 # https://github.com/uBlockOrigin/uAssets/issues/11546/(Not/yet/forwarded to EasyList)
 # https://github.com/uBlockOrigin/uAssets/issues/13907
 @@://imasdk.googleapis.com/js/sdkloader/ima3.js
@@ -687,10 +689,8 @@ msFilterList
 -d freewheel-mtgx-tv.akamaized.net *.mp4
 -d freewheel-mtgx-tv.akamaized.net
 -d googletagservices.com gpt.js
--d img.sofabold.dk banner
 -d v.fwmrm.net g
 -d widget.tippebannere.no
--d widgets.sprinklecontent.com
 # • Not to be removed during upstream syncs •
 # https://www•avvir•no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # jyllands-posten•dk (09 07 2020)
