@@ -1,9 +1,10 @@
 [Adblock Plus 3.13]
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home, AdGuard for Android/Windows/macOS' DNS filtering, and Pi-Hole FTL ≥5.22)
-! Version: 20August2024v1
+! Version: 17September2024v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
+! (Note to self, only applicable to uBO: When 1.59.1 goes stable, implement "*$ipaddress=(...),all" for the IP addresses, alongside the previous syntaxing as the case is for AdGuard Browser Extension.)
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
 ! ——— Bad top-level domains ———
@@ -20,7 +21,7 @@
 ! Palau (Put on break due to too many whitelistings being needed)
 !!!||pw^$denyallow=libgen.pw|petridish.pw|palaugov.pw|dpc.pw|buttercup.pw|rezka.pw|darkcrystal.pw|xor.pw|fullhdfilmizlesene.pw|gopass.pw|vost.pw|core.pw|bittor.pw|plutonium.pw|nitter.pw|kge.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan. Its extreme common-ness in malware redirections means that the entry will be kept forever.
-||*.top^$dnstype=~CNAME,denyallow=caitlin.top|callmebymygender.top|corriente.top|gdtot.top|nicenature.top|reminder.top|magocoro.top|castlevania.top|suiten.top|shucks.top|1stream.top|ambr.top|techblog.top|changlam10.top|changlam11.top|pdcdn1.top|mastodon.top|pressplay.top|chillx.top|strims.top|thedesk.top|audioforyou.top|pegelinux.top|awavenue.top|reyhub.top
+||*.top^$dnstype=~CNAME,denyallow=caitlin.top|callmebymygender.top|corriente.top|gdtot.top|nicenature.top|reminder.top|magocoro.top|castlevania.top|suiten.top|shucks.top|1stream.top|ambr.top|techblog.top|changlam10.top|changlam11.top|pdcdn1.top|mastodon.top|pressplay.top|chillx.top|strims.top|thedesk.top|audioforyou.top|pegelinux.top|awavenue.top|reyhub.top|iboxs.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||*.loan^$dnstype=~CNAME
 !!!||agency^$denyallow=battlefield.agency|baam.agency|robotzebra.agency|uphotel.agency|ws.agency (Can't remember the last time I saw it used in a redirection train.)
@@ -29,7 +30,7 @@
 !!!||ooo^$denyallow=toast.ooo
 ! (https://github.com/DandelionSprout/adfilt/issues/999)
 !!!@@://oo*.ooo/
-! https://bgp.he.net/AS202492#_prefixes (17/07/2022)
+! https://bgp.he•net/AS202492#_prefixes (17/07/2022)
 !!!||monster^$denyallow=egybest.monster|yts.monster|cloudcdn.monster|fedi.monster|rollenspiel.monster|tts.monster|geometry.monster
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131156
 !!!||sbs^$denyallow=ecopulse.sbs
@@ -123,31 +124,31 @@
 
 ! ——— Links to PC "optimising" "tool" PUPs that'll most likely stuff your PC full of nagware and malware ———
 ! ¤¤¤ ReImagePlus (Also added to "uBlock Filters - Badware Risks") ¤¤¤
-! https://windowsreport.com/extend-windows-laptop-battery-life/
-! https://appuals.com/fix-error-0x800701e3-on-windows-7-8-1-10/
-! https://ugetfix.com/ask/how-to-fix-windows-store-error-0x8000ffff/
-! https://www.thewindowsclub.com/fix-windows-update-error-0xc1900130-on-windows-10
-! https://www.majorgeeks.com/files/details/patch_my_pc.html
+! https://windowsreport•com/extend-windows-laptop-battery-life/
+! https://appuals•com/fix-error-0x800701e3-on-windows-7-8-1-10/
+! https://ugetfix•com/ask/how-to-fix-windows-store-error-0x8000ffff/
+! https://www•thewindowsclub•com/fix-windows-update-error-0xc1900130-on-windows-10
+! https://www•majorgeeks•com/files/details/patch_my_pc•html
 
-! https://www.2-spyware.com/remove-redirector-gvt1-com.html
+! https://www•2-spyware•com/remove-redirector-gvt1-com•html
 ! ¤¤¤ ScanUtilities ¤¤¤
-! https://www.bynarycodes.com/fix-windows-10-update-error-0x80070006/
+! https://www•bynarycodes•com/fix-windows-10-update-error-0x80070006/
 ! ¤¤¤ Driver Easy ¤¤¤
-! https://www.drivereasy.com/knowledge/fix-critical-service-failed-blue-screen-error-on-windows-10/
-! https://www.drivereasy.com/knowledge/fixed-how-to-fix-stop-error-0x0000001e/
-! https://www.drivereasy.com/knowledge/download-gigabyte-audio-driver/
-! https://www.drivereasy.com/knowledge/epson-xp-420-driver-update-for-windows-7-8-and-10/
-! https://www.drivereasy.com/knowledge/solved-this-display-does-not-support-hdcp/
+! https://www•drivereasy•com/knowledge/fix-critical-service-failed-blue-screen-error-on-windows-10/
+! https://www•drivereasy•com/knowledge/fixed-how-to-fix-stop-error-0x0000001e/
+! https://www•drivereasy•com/knowledge/download-gigabyte-audio-driver/
+! https://www•drivereasy•com/knowledge/epson-xp-420-driver-update-for-windows-7-8-and-10/
+! https://www•drivereasy•com/knowledge/solved-this-display-does-not-support-hdcp/
 ! ¤¤¤ Slimware DriverUpdate ¤¤¤
-! https://forums.windowscentral.com/
+! https://forums•windowscentral•com/
 ! ¤¤¤ Driverpack Online (Accidentally also fixed in EasyPrivacy and «AdGuard Mobile Ads») ¤¤¤
 
 ! ¤¤¤ SpyHunter links ¤¤¤
-! https://howtoremove.guide/redirector-gvt1-com-virus-malware-chrome-removal/
-! https://www.2-spyware.com/remove-redirector-gvt1-com.html
+! https://howtoremove•guide/redirector-gvt1-com-virus-malware-chrome-removal/
+! https://www•2-spyware•com/remove-redirector-gvt1-com•html
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-968070041
-! https://www.cyclonis.com/how-to-create-gmail-account-without-phone-number/
-! https://www.2-viruses.com/remove-ad-spam-press-allow-to-continue
+! https://www•cyclonis•com/how-to-create-gmail-account-without-phone-number/
+! https://www•2-viruses•com/remove-ad-spam-press-allow-to-continue
 
 ! https://github.com/iam-py-test/my_filters_001/issues/119
 
@@ -158,11 +159,11 @@
 
 
 ! ¤¤¤ Restoro  ¤¤¤
-! https://www.windowsdispatch.com/fix-system-restore-0x81000203-error-code/
-! https://dlldownloads.com/xlive-dll/
-! https://windowsreport.com/find-remove-duplicate-files-windows-10/
-! https://windowsreport.com/how-to-update-roblox/ (08/12/2022)
-! https://appuals.com/pr-connect-reset-error/
+! https://www•windowsdispatch•com/fix-system-restore-0x81000203-error-code/
+! https://dlldownloads•com/xlive-dll/
+! https://windowsreport•com/find-remove-duplicate-files-windows-10/
+! https://windowsreport•com/how-to-update-roblox/ (08/12/2022)
+! https://appuals•com/pr-connect-reset-error/
 ! ¤¤¤ "Driver" download sites that instead download PUP tools ¤¤¤
 ||driver-soft.com^
 ! ¤¤¤ Outbyte ¤¤¤
@@ -180,7 +181,7 @@
 /^https://(apps?|best|competition|game|mobile|play|prize|reward|sweeps)\d{2,8}\.[a-z-]{5,22}\d{1,8}\.(icu|life|live)/
 
 
-! https://github.com/AdguardTeam/AdguardFilters/issues/58737
+! https://github•com/AdguardTeam/AdguardFilters/issues/58737
 /^https?:\/\/(?:www\.)?[-0-9a-z]{14,}\.(?:biz|fun|live)\/[a-zA-Z]{10,}\.php$/biz|fun|live
 
 ! ——— Banner for "MSN New Tab" ———
@@ -318,7 +319,7 @@
 ||githubuser.com^$denyallow=you-were-likely-looking-for-githubusercontent.com
 ||rgithub.com^$denyallow=you-were-likely-looking-for-githubusercontent.com
 ||githubt.com^$denyallow=you-were-likely-looking-for-githubusercontent.com
-! https://scammer.info/t/discord-nitro-scam-25/87887
+! https://scammer•info/t/discord-nitro-scam-25/87887
 
 
 ! ——— Frequently used to infiltrate and maliciously redirect sites, e.g. ToonBarn ———
@@ -352,9 +353,9 @@
 3.226.8.132
 3.216.243.46
 ||roamingclicks.com^
-! Source: desidert.no
+! Source: desidert•no
 
-! Source: vn-zoom.com
+! Source: vn-zoom•com
 ||ttnrd.com^
 ||amanda.*.com^
 ||katie.*.com^
@@ -364,7 +365,7 @@
 54.152.245.247
 35.172.40.232
 3.90.125.85
-! Various ex-affiliate links at www.zombooru.com
+! Various ex-affiliate links at www•zombooru•com
 
 
 
@@ -3548,7 +3549,7 @@
 ://192.243.59.
 ://192.243.61.
 
-! https://twitter.com/SUNgoddessOKAMI/status/1221295265195405315
+! https://twitter•com/SUNgoddessOKAMI/status/1221295265195405315
 ||deviuser.com^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61838
 /scan-update-and-protect-your-browser.html
@@ -3606,7 +3607,7 @@
 ||hooligapps.com^
 ||best202*-games-web1.com^
 ||theonlygames.com^
-! https://maldita.es/malditobulo/2020/12/04/concurso-mercadona-ganar-tarjeta-regalo-100-euros-phishing/
+! https://maldita•es/malditobulo/2020/12/04/concurso-mercadona-ganar-tarjeta-regalo-100-euros-phishing/
 ||notified-today.com^
 ||antivirus-update.com^
 ||new-message.cc^
@@ -3618,12 +3619,12 @@
 ||stay-notified.com^
 ||stay-notified.xyz^
 167.99.249.47
-! https://maldita.es/malditobulo/2020/12/02/lidl-regala-robot-cocina-silvercrest-monsieur-cuisine-encuesta/
-! https://maldita.es/malditobulo/2020/11/25/jordi-evole-el-hormiguero-bitcoin-revolution-timo-twitter/
+! https://maldita•es/malditobulo/2020/12/02/lidl-regala-robot-cocina-silvercrest-monsieur-cuisine-encuesta/
+! https://maldita•es/malditobulo/2020/11/25/jordi-evole-el-hormiguero-bitcoin-revolution-timo-twitter/
 ||moderncomputer.net^
-! https://maldita.es/malditobulo/2020/11/18/gobierno-tarjeta-debito-prepagada-covid-19-phishing-whatsapp/
+! https://maldita•es/malditobulo/2020/11/18/gobierno-tarjeta-debito-prepagada-covid-19-phishing-whatsapp/
 ||version.gratis^
-! https://maldita.es/malditobulo/2020/11/18/no-no-es-cierto-que-amancio-ortega-haya-invertido-100-millones-en-bitcoin-revolution-es-una-web-falsa/
+! https://maldita•es/malditobulo/2020/11/18/no-no-es-cierto-que-amancio-ortega-haya-invertido-100-millones-en-bitcoin-revolution-es-una-web-falsa/
 ||starpowders.github.io^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69611
 /^http://[a-z0-9-]{30,}\..*\.elasticbeanstalk\.com(/|$)/
@@ -3688,7 +3689,7 @@
 108.170.52.156
 ! https://github.com/DandelionSprout/adfilt/issues/198
 ||mysecrethoookup.com^
-! https://www.bleepingcomputer.com/virus-removal/ (18/06/2021)
+! https://www•bleepingcomputer•com/virus-removal/ (18/06/2021)
 ||toksearches.xyz^
 ||smashapps.net^
 ||smashappsearch.com^
@@ -3700,7 +3701,7 @@
 ||searchinggood.com^
 ||searchprivacyplus.com^
 ||powersmashsearch.com^
-! https://www.bleepingcomputer.com/virus-removal/remove-please-allow-to-watch-the-video
+! https://www•bleepingcomputer•com/virus-removal/remove-please-allow-to-watch-the-video
 ||1000-dollar.cash^
 ||1000-eur.cash^
 ||bokerstars.com^
@@ -3794,9 +3795,9 @@
 95.168.170.165
 213.227.145.147
 213.227.149.216
-! https://twitter.com/adamziaja/status/1252234957679808513
+! https://twitter•com/adamziaja/status/1252234957679808513
 ||wow-robotics.xyz^
-! https://blog.sucuri.net/2021/05/woocommerce-credit-card-skimmer.html
+! https://blog•sucuri•net/2021/05/woocommerce-credit-card-skimmer•html
 ||deepe.icu^
 ||google-analytics.buzz^
 ||intr0.cyou^
@@ -3844,7 +3845,7 @@
 ||ssielearning.com^
 ||paymetconfirm.com^
 69.49.231.244
-! https://movsb.0x0.st/users/mia
+! https://movsb•0x0•st/users/mia
 ||vid.me^$third-party
 ||5starhdporn.com^$frame,third-party
 ! https://github.com/DandelionSprout/adfilt/issues/228
@@ -3914,22 +3915,22 @@
 ||pc-my-protection.xyz^
 ||beta-news.org^
 ! https://github.com/DandelionSprout/adfilt/pull/266
-! https://www.virustotal.com/gui/domain/kirstialechulbard.space/relations
-! https://www.virustotal.com/gui/ip-address/198.54.117.244/relations
+! https://www•virustotal•com/gui/domain/kirstialechulbard•space/relations
+! https://www•virustotal•com/gui/ip-address/198•54•117•244/relations
 ||dashwoodestates.com^
-! http://vxvault.net/ViriFiche.php?ID=44013
-! https://www.virustotal.com/gui/url/8066b87ad10ddb5466bc307bb48454139572f6c8c8f80a9734275ac89cf966af/detection
-! https://www.virustotal.com/gui/url/826c451929420c4da32552f967fb1cab6467405a29c65b23802aaadb6a8c7505/detection
-! https://safeweb.norton.com/report/show?url=192.3.110.170
+! http://vxvault•net/ViriFiche•php?ID=44013
+! https://www•virustotal•com/gui/url/8066b87ad10ddb5466bc307bb48454139572f6c8c8f80a9734275ac89cf966af/detection
+! https://www•virustotal•com/gui/url/826c451929420c4da32552f967fb1cab6467405a29c65b23802aaadb6a8c7505/detection
+! https://safeweb•norton•com/report/show?url=192•3•110•170
 192.3.110.170
-! https://forums.malwarebytes.com/topic/278209-removal-instructions-for-socialsearchconverter/
+! https://forums•malwarebytes•com/topic/278209-removal-instructions-for-socialsearchconverter/
 ||socialsearchconverter.com^
 ||install.socialsearchconverter.com^
 ||feed.socialsearchconverter.com^
 ||api.socialsearchconverter.com^
 ||notify-service.com^
 ||install.stream-all.com^
-! copied over from https://github.com/uBlockOrigin/uAssets/issues/9848
+! Copied over from https://github.com/uBlockOrigin/uAssets/issues/9848
 ||gghacks.com^
 ||rewardsgiantusa.com^
 ||promotionsonlineusa.com^
@@ -3941,10 +3942,10 @@
 ||mediafiire.com^
 ||d1xkyo9j4r7vnn.cloudfront.net^
 ||onlinepromotionsusa.com^
-! https://securelist.com/apkpure-android-app-store-infected/101845/
-! https://www.virustotal.com/gui/url/866a25343864f03dc5a10105fda523bfbb6ed09c486d07fd31ca2b5306440089/detection
+! https://securelist•com/apkpure-android-app-store-infected/101845/
+! https://www•virustotal•com/gui/url/866a25343864f03dc5a10105fda523bfbb6ed09c486d07fd31ca2b5306440089/detection
 ||wcf.seven1029.com^
-! https://www.virustotal.com/gui/url/9c66e331e455dc5c5c9d06e1a537580c9e4db279182d2285c07783e837806a16/detection
+! https://www•virustotal•com/gui/url/9c66e331e455dc5c5c9d06e1a537580c9e4db279182d2285c07783e837806a16/detection
 ||foodin.site^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91506#issuecomment-904080849
 ||totalav.com^
@@ -3956,22 +3957,22 @@
 ||totaladblock.com^
 ||totaladblocker.xyz^
 ||totalwebshield.xyz^
-! https://www.virustotal.com/gui/file/c683bc3da4966110b419ac54d09a54ce798efdb51be398331d9ce011e2636fa9/community
-! https://www.virustotal.com/gui/url/5618023ed5a768d7f879c0d599b9ba7cff0e9171201981256eeaf5ce8eb09fdb/detection
-! https://www.virustotal.com/gui/url/8cf9ca3359f17cf92b9b3e5fdab30e29be23f08e66c8c5396c9410fcb91f7c3c/detection
+! https://www•virustotal•com/gui/file/c683bc3da4966110b419ac54d09a54ce798efdb51be398331d9ce011e2636fa9/community
+! https://www•virustotal•com/gui/url/5618023ed5a768d7f879c0d599b9ba7cff0e9171201981256eeaf5ce8eb09fdb/detection
+! https://www•virustotal•com/gui/url/8cf9ca3359f17cf92b9b3e5fdab30e29be23f08e66c8c5396c9410fcb91f7c3c/detection
 91.241.19.38
-! https://www.virustotal.com/gui/url/46e095c35d83e2dd0b98df4b5844d3d87948de0c930a618600121020a514c801/detection
-! https://safeweb.norton.com/report/show?url=telete.in
-! https://www.siteadvisor.com/sitereport.html?url=telete.in
+! https://www•virustotal•com/gui/url/46e095c35d83e2dd0b98df4b5844d3d87948de0c930a618600121020a514c801/detection
+! https://safeweb•norton•com/report/show?url=telete•in
+! https://www•siteadvisor•com/sitereport•html?url=telete•in
 ||telete.in^
-! https://www.virustotal.com/gui/file/e63b2d03e3fee2d538f8bd721b61dd3641284fa941087d846dea6f15cab40308/community
-! https://www.virustotal.com/gui/url/fbbc8a671bff32539bd829a76f6df9f364a21ac2279922e64e3ec494a1669dd3/detection
+! https://www•virustotal•com/gui/file/e63b2d03e3fee2d538f8bd721b61dd3641284fa941087d846dea6f15cab40308/community
+! https://www•virustotal•com/gui/url/fbbc8a671bff32539bd829a76f6df9f364a21ac2279922e64e3ec494a1669dd3/detection
 ||kiff.tech^
-! https://www.virustotal.com/gui/domain/kiff.tech/relations
-! https://www.virustotal.com/gui/url/dc038496b1b5358b97f89440135ec91258b406c40859a2cd95983dc7a81e0cfa/detection
+! https://www•virustotal•com/gui/domain/kiff•tech/relations
+! https://www•virustotal•com/gui/url/dc038496b1b5358b97f89440135ec91258b406c40859a2cd95983dc7a81e0cfa/detection
 45.90.58.90
-! https://www.virustotal.com/gui/file/e565ba89d034418fd26a5f642f6eeee4d72ee3b8dc69523419b7ca8dfd452730/community
-! https://www.virustotal.com/gui/url/e3a9189a1e1256beba8e0fc3abfeab6acb09f7f8cabfd973e22be9f77bb6886f/detection
+! https://www•virustotal•com/gui/file/e565ba89d034418fd26a5f642f6eeee4d72ee3b8dc69523419b7ca8dfd452730/community
+! https://www•virustotal•com/gui/url/e3a9189a1e1256beba8e0fc3abfeab6acb09f7f8cabfd973e22be9f77bb6886f/detection
 95.85.89.98
 ! https://github.com/DandelionSprout/adfilt/issues/267
 ||tekhacks.net^
@@ -3988,7 +3989,7 @@
 !! https://www.virustotal.com/gui/file/9f154115fa8045aa05f15f7cd1de9623ebe32e8ea400279ecb5dfa3596952e3b/community
 103.169.90.205
 ! https://github.com/DandelionSprout/adfilt/pull/281
-! https://www.virustotal.com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
+! https://www•virustotal•com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
 125.44.43.45
 182.121.8.240
 42.235.183.74
@@ -3999,9 +4000,9 @@
 188.120.50.98
 190.238.183.5
 27.220.253.78
-! https://www.virustotal.com/gui/file/0374ead74fa807fb1737d8829fdb5bad6c93779f6b9eb7162eddabff7a64acff/community
+! https://www•virustotal•com/gui/file/0374ead74fa807fb1737d8829fdb5bad6c93779f6b9eb7162eddabff7a64acff/community
 ||esetnode32-antiviru.ydns.eu^
-! https://www.joesandbox.com/analysis/486636/0/html#domains
+! https://www•joesandbox•com/analysis/486636/0/html#domains
 ||aieov.com^
 ! Relations to the original domain
 192.3.194.242
@@ -4075,17 +4076,17 @@
 ||army-glo.scrollingsystem.com^
 ||mcafee12.tt.omtrdc.net^
 ||trolleydrop.info^
-! https://www.virustotal.com/gui/ip-address/70.32.1.32/relations
+! https://www•virustotal•com/gui/ip-address/70•32•1•32/relations
 ||cd.org^
-! https://www.virustotal.com/gui/file/78f490e503c86eaaff5760197b9ff5308ed6e03161af13194a6c1e0cd95422de/community
+! https://www•virustotal•com/gui/file/78f490e503c86eaaff5760197b9ff5308ed6e03161af13194a6c1e0cd95422de/community
 ! https://github.com/DandelionSprout/adfilt/commit/f7f114945c83b339be5cdd848e229680d9918abb#commitcomment-57642875
 23.94.26.138
 ! https://github.com/DandelionSprout/adfilt/pull/298
-! https://www.virustotal.com/gui/file/ac5a95221b895545eb04cfea29693288d7b432ad313f6bfc9db2ddf86f085a63/community
+! https://www•virustotal•com/gui/file/ac5a95221b895545eb04cfea29693288d7b432ad313f6bfc9db2ddf86f085a63/community
 205.185.126.200
-! https://www.virustotal.com/gui/file/3ef65ce27d39b037d75bdc16b197e04f3b391f76c2da5f2f755e2ded38bb9078/community
+! https://www•virustotal•com/gui/file/3ef65ce27d39b037d75bdc16b197e04f3b391f76c2da5f2f755e2ded38bb9078/community
 185.243.56.167
-! https://www.virustotal.com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
+! https://www•virustotal•com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
 123.10.224.135
 59.47.187.147
 39.68.172.210
@@ -4133,24 +4134,24 @@
 111.224.199.91
 119.250.236.122
 112.30.110.58
-! https://www.virustotal.com/gui/file/715eef1fb3bbf84ade848d97d4ec05d380cf8595298b51af134385de70be9d08/community
+! https://www•virustotal•com/gui/file/715eef1fb3bbf84ade848d97d4ec05d380cf8595298b51af134385de70be9d08/community
 ||pcae.de^
-! https://www.virustotal.com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
+! https://www•virustotal•com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
 117.196.49.21
 115.55.54.234
 115.52.17.123
 182.59.69.21
-! https://www.virustotal.com/gui/file/3db0e385eb53a32d61a5a35908a99317868b571e4cf7079db67fd68604da662c/community
+! https://www•virustotal•com/gui/file/3db0e385eb53a32d61a5a35908a99317868b571e4cf7079db67fd68604da662c/community
 ||chip-secured-download.de^
-! https://www.virustotal.com/gui/url/5b1dc9b2ec70e28b5f6cbb282a598a1b2ecd4df2aebb66953ca9194fa1c9c4fb
+! https://www•virustotal•com/gui/url/5b1dc9b2ec70e28b5f6cbb282a598a1b2ecd4df2aebb66953ca9194fa1c9c4fb
 ! Domains which resolve to this (already blocked) IP - for users of HOSTs/Domains/uBlock Origin
 ||nctylivpwhpby.com^
 ||phhitgjxsit.com^
-! https://www.virustotal.com/gui/url/b2936e74f35940d2f09cabf4e089a0d655e62a5fc08ad32e1fae79a62683683f?nocache=1
+! https://www•virustotal•com/gui/url/b2936e74f35940d2f09cabf4e089a0d655e62a5fc08ad32e1fae79a62683683f?nocache=1
 ||saimission.org^
-! https://www.virustotal.com/gui/url/4c2c3cf2e4f5b9ac9765eb9c58f2756d8f0f4632ec707107afe3c111f4749025?nocache=1
+! https://www•virustotal•com/gui/url/4c2c3cf2e4f5b9ac9765eb9c58f2756d8f0f4632ec707107afe3c111f4749025?nocache=1
 ||grub-wa-saya.duckdns.org^
-! https://www.virustotal.com/gui/file/a6e89d2bb1c2da1d852fb8e248f39cf7b3d4b0ea05a8d8f343d1b8e74d271d43/relations
+! https://www•virustotal•com/gui/file/a6e89d2bb1c2da1d852fb8e248f39cf7b3d4b0ea05a8d8f343d1b8e74d271d43/relations
 ||driversupport.com^
 ! A PUP and scam website
 ||mycleanpc.com^
@@ -4161,9 +4162,9 @@
 ! The main website for the MyCleanPC company
 ||realdefen.se^
 ! Vermilion Strike
-! https://www.virustotal.com/gui/file/294b8db1f2702b60fb2e42fdc50c2cee6a5046112da9a5703a548a4fa50477bc/relations
+! https://www•virustotal•com/gui/file/294b8db1f2702b60fb2e42fdc50c2cee6a5046112da9a5703a548a4fa50477bc/relations
 160.202.163.100
-! https://www.virustotal.com/gui/ip-address/160.202.163.100/relations
+! https://www•virustotal•com/gui/ip-address/160•202•163•100/relations
 ||microsoftkernel.com^
 ||microsofthk.com^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-938167311
@@ -4174,11 +4175,11 @@
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-944612753
 ||pushbizapi.com^
 ! https://github.com/DandelionSprout/adfilt/pull/303
-! https://www.virustotal.com/gui/file/37328efa73c248b460aba605d7745b024f31ab7ab864e1af273e9a197a188f42/community
+! https://www•virustotal•com/gui/file/37328efa73c248b460aba605d7745b024f31ab7ab864e1af273e9a197a188f42/community
 45.95.169.115
-! https://www.virustotal.com/gui/file/03e4533ba8874c2f4dcdb94bd135914fa4c22ed477d7c0395dc2322b6468e249/community
+! https://www•virustotal•com/gui/file/03e4533ba8874c2f4dcdb94bd135914fa4c22ed477d7c0395dc2322b6468e249/community
 45.148.120.80
-! https://www.virustotal.com/gui/file/1a782cab036efa567c2c42b7bae9452bf735be72f0b00d68f6dcba48cea526fa/community
+! https://www•virustotal•com/gui/file/1a782cab036efa567c2c42b7bae9452bf735be72f0b00d68f6dcba48cea526fa/community
 85.239.33.9
 ! Relations to the domain above
 ||adminsys.serveftp.com^
@@ -4195,11 +4196,11 @@
 ||c4ase-verified9932.serveftp.com^
 ||1log-wellsfargo.serveftp.com^
 ||eposcardokubo.serveftp.com^
-! https://www.virustotal.com/gui/file/8a39f18caa77d52e80bec05f584ec50e733a3be1e33551d8902e95b9b0bfe6c0/community
+! https://www•virustotal•com/gui/file/8a39f18caa77d52e80bec05f584ec50e733a3be1e33551d8902e95b9b0bfe6c0/community
 107.173.176.183
-! https://www.virustotal.com/gui/file/54054209c921a68f12a9b29d6e84f1b45cb417bc0b5a99356a245727e0a41e40/community
+! https://www•virustotal•com/gui/file/54054209c921a68f12a9b29d6e84f1b45cb417bc0b5a99356a245727e0a41e40/community
 45.148.120.171
-! https://twitter.com/soranker0/status/1449491402409185283
+! https://twitter•com/soranker0/status/1449491402409185283
 ://disordgift.
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-950330114
 ||free-softs.net^
@@ -4226,7 +4227,7 @@
 ||kokotrokot.com^
 !!!?next_url=popup (https://github.com/AdguardTeam/AdguardFilters/issues/108072#issuecomment-1021534226)
 
-! https://www.upwork.com/freelance-jobs/apply/Integarte-push-notification-for-chrome_~013c73ed9282225184/
+! https://www•upwork•com/freelance-jobs/apply/Integarte-push-notification-for-chrome_~013c73ed9282225184/
 ||mugrikees.com^
 ||alpha-news.org^
 ! https://github.com/iam-py-test/investigations/blob/main/2021/11/3/1.md
@@ -4235,7 +4236,7 @@
 ||youvetube.com^
 ||youutube.com^
 ! https://github.com/DandelionSprout/adfilt/pull/348
-! https://www.virustotal.com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
+! https://www•virustotal•com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
 39.83.80.247
 68.197.33.124
 219.157.21.37
@@ -4267,7 +4268,7 @@
 106.86.172.194
 103.233.216.77
 183.188.192.55
-! https://www.virustotal.com/gui/file/3bf1b7e9bdaeaa4a5619cf26b59767637bc44193df2a0470df263b98b1fe47fe/community
+! https://www•virustotal•com/gui/file/3bf1b7e9bdaeaa4a5619cf26b59767637bc44193df2a0470df263b98b1fe47fe/community
 198.23.255.14
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-971512075
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-971495248
@@ -4278,7 +4279,7 @@
 ||runmodes.com^
 91.121.67.60
 172.67.186.189
-! https://www.virustotal.com/gui/url/af8f443208f4e86d469549b219fccbeb43b7cae40be5f1b4c4e5083e27fc8111
+! https://www•virustotal•com/gui/url/af8f443208f4e86d469549b219fccbeb43b7cae40be5f1b4c4e5083e27fc8111
 ||inconclusive-pyrite-grandparent.glitch.me^
 ||delicate-tame-angora.glitch.me^
 ||secureinvoice.glitch.me^
@@ -4289,9 +4290,9 @@
 ||aquamarine-cotton-impala.glitch.me^
 ||mature-periwinkle-advantage.glitch.me^
 ||tough-numerous-lemur.glitch.me^
-! https://scammer.info/t/mcafee-phish/83725
+! https://scammer•info/t/mcafee-phish/83725
 ||securefirst.us-east-1.linodeobjects.com^
-! https://www.virustotal.com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
+! https://www•virustotal•com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
 39.65.72.211
 42.238.151.197
 27.213.60.53
@@ -4312,21 +4313,21 @@
 ||members.tonightshookup.com^
 ||t.tonightshookup.com^
 ||yourladiefun.life^
-! https://www.virustotal.com/gui/url/a2524bba49ae71297d2b408b30d058700d9c80b5b1154924cafe190ec3e605a6/detection
+! https://www•virustotal•com/gui/url/a2524bba49ae71297d2b408b30d058700d9c80b5b1154924cafe190ec3e605a6/detection
 
-! https://www.virustotal.com/gui/file/2b2628a50d3b39b0fa2395d487bf62b00e37cdae847ff76ee58399bbe4e9f7b3/community
+! https://www•virustotal•com/gui/file/2b2628a50d3b39b0fa2395d487bf62b00e37cdae847ff76ee58399bbe4e9f7b3/community
 194.87.138.20
-! https://www.virustotal.com/gui/file/b320bc7a9151d70daca038c4356ca89bfcd4918bcd6f0f73683a27a6a72467ae/community
+! https://www•virustotal•com/gui/file/b320bc7a9151d70daca038c4356ca89bfcd4918bcd6f0f73683a27a6a72467ae/community
 103.167.92.73
-! https://www.virustotal.com/gui/file/6146dfe56dcb49e1b843624a44e204754e15625a4f94b230b59a5cafc924f618/community
+! https://www•virustotal•com/gui/file/6146dfe56dcb49e1b843624a44e204754e15625a4f94b230b59a5cafc924f618/community
 ||bursakulis.com^
-! https://www.virustotal.com/gui/url/b333c49efa4d399e65c5e2d96a905b380acbca58a3e3052b7bd7cfcb3e0e81ee
+! https://www•virustotal•com/gui/url/b333c49efa4d399e65c5e2d96a905b380acbca58a3e3052b7bd7cfcb3e0e81ee
 ||610418.selcdn.ru^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-977912975
-! https://www.tv2.no/nyheter/14368524/
+! https://www•tv2•no/nyheter/14368524/
 ||alexstewartinternationalltd.rw^
 ||vps.re^
-! https://www.tek.no/i/wOVv0o/
+! https://www•tek•no/i/wOVv0o/
 ||21steditionnaturalgh.com^
 ! https://github.com/iam-py-test/investigations/blob/main/2021/11/24/1.md
 ||macsoftwarez.com^
@@ -4342,7 +4343,7 @@
 ||yunosurveys.com^
 ! https://github.com/uBlockOrigin/uAssets/pull/10620
 ||shadyclient.net^
-! https://www.virustotal.com/gui/file/d546509ab6670f9ff31783ed72875dfc0f37fa2b666bd5870eecaaed2ebea4a8/community
+! https://www•virustotal•com/gui/file/d546509ab6670f9ff31783ed72875dfc0f37fa2b666bd5870eecaaed2ebea4a8/community
 58.249.74.79
 27.45.14.109
 27.40.101.191
@@ -4358,13 +4359,13 @@
 ||totalnicefeed.com^
 ! https://github.com/iam-py-test/investigations/blob/main/2021/11/28/2.md
 ||bestlifeoffer20.com^
-! https://scammer.info/t/password-stealer/84348
-! https://bazaar.abuse.ch/sample/462a689d171f543c10efa08e963996d382585b67a6b298ec40d64f924adfb47a/
+! https://scammer•info/t/password-stealer/84348
+! https://bazaar•abuse•ch/sample/462a689d171f543c10efa08e963996d382585b67a6b298ec40d64f924adfb47a/
 
 
 
 
-! https://www.virustotal.com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
+! https://www•virustotal•com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
 110.89.59.135
 113.116.89.1
 119.183.146.191
@@ -4376,33 +4377,33 @@
 171.112.177.90
 115.194.38.143
 61.52.79.32
-! https://scammer.info/t/pihishing-site-claiming-to-hold-a-ups-package-that-needs-payment/84466
+! https://scammer•info/t/pihishing-site-claiming-to-hold-a-ups-package-that-needs-payment/84466
 ://ups-dk.$denyallow=dk|nu|se|no|fo|gl|ups.com,ups-dk.*
-! https://www.virustotal.com/gui/url/269d374b629d7896da1f9e7449bd5afecf6284a9a564244f96a71e5192363635?nocache=1
+! https://www•virustotal•com/gui/url/269d374b629d7896da1f9e7449bd5afecf6284a9a564244f96a71e5192363635?nocache=1
 ||lowseelan.com^
-! https://www.virustotal.com/gui/file/50fd813cf8fe981e6aee179f8ba394e5527c5128b84c328f9f8347cd994bbc42/community
+! https://www•virustotal•com/gui/file/50fd813cf8fe981e6aee179f8ba394e5527c5128b84c328f9f8347cd994bbc42/community
 
-! https://www.virustotal.com/gui/file/2ea599605c4d65902943f12e1114a71af7a40fa7dffbf018b0ee3e7a61aaeaa3/community
+! https://www•virustotal•com/gui/file/2ea599605c4d65902943f12e1114a71af7a40fa7dffbf018b0ee3e7a61aaeaa3/community
 
 ! https://github.com/DandelionSprout/adfilt/pull/395
-! https://www.huorong.cn/info/1531309921141.html
+! https://www•huorong.cn/info/1531309921141.html
 ||kuaizip.com^
-! https://www.huorong.cn/info/1618397948649.html - possible malware
+! https://www•huorong.cn/info/1618397948649.html - possible malware
 ! ||zhuangjizhuli.com^
 ! ||zhuangjizhuli.net^
 ! https://github.com/uBlockOrigin/uAssets/pull/9656
 ||geekotg.com^
-! https://www.huorong.cn/info/1526627586130.html
+! https://www•huorong.cn/info/1526627586130.html
 ||xiaobaixitong.com^
-! https://www.huorong.cn/info/1577158839403.html
+! https://www•huorong.cn/info/1577158839403.html
 ||daque.cn^
-! https://www.huorong.cn/info/1598957552515.html
+! https://www•huorong.cn/info/1598957552515.html
 ||dabaicai.com^
-! https://www.huorong.cn/info/1617368984641.html
+! https://www•huorong.cn/info/1617368984641.html
 ||qqfzn.com^
 ! https://github.com/uBlockOrigin/uAssets/pull/10017
 ||flash.cn^
-! https://www.nrk.no/vestfoldogtelemark/1.15750360
+! https://www•nrk.no/vestfoldogtelemark/1.15750360
 ||dundeehills.group^
 !+ NOT_OPTIMIZED
 132.148.220.142
@@ -4416,8 +4417,8 @@
 ! https://scammer.info/t/fake-facebook-login-page/84939
 
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-988127908
-! https://www.tek.no/i/lVeQAe/
-! https://www.nkom.no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
+! https://www•tek.no/i/lVeQAe/
+! https://www•nkom.no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
 ||eccolabgroup.com^
 ||galerijajava.ba^
 ||p-stn.net^
@@ -4427,7 +4428,7 @@
 34.201.22.10
 ! https://scammer.info/t/crypto-scammers-onceagain/85354
 
-! https://www.virustotal.com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
+! https://www•virustotal•com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
 123.10.225.196
 122.192.106.84
 172.88.199.9
@@ -4478,9 +4479,9 @@
 ||d13pxqgp3ixdbh.cloudfront.net^
 ! Other
 ||crashfixes.com^
-! https://www.virustotal.com/gui/url/c25fe34c05cc8e9136027a67c277e175a5d6e35af921ee37bad98bdfeea6a2f9/community
+! https://www•virustotal•com/gui/url/c25fe34c05cc8e9136027a67c277e175a5d6e35af921ee37bad98bdfeea6a2f9/community
 ||splendid-fallacious-anaconda.glitch.me^
-! https://www.virustotal.com/gui/file/9d40ae0439ddc594b2cf64e21ad0fdea9bb440524298e3a6bcfcc1fb417f1ed2/relations
+! https://www•virustotal•com/gui/file/9d40ae0439ddc594b2cf64e21ad0fdea9bb440524298e3a6bcfcc1fb417f1ed2/relations
 91.240.118.172
 ! "Press Allow to continue"
 ||kuyhaa-mee.com^
@@ -4491,7 +4492,7 @@
 
 ||lucymods.com^
 ||gluegames.xyz^
-! https://twitter.com/iam_py_test/status/1496259425493225472
+! https://twitter•com/iam_py_test/status/1496259425493225472
 
 
 
@@ -4506,7 +4507,7 @@
 
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1074966240
 ||melding.link^
-! https://twitter.com/MBThreatIntel/status/1509956416311742464
+! https://twitter•com/MBThreatIntel/status/1509956416311742464
 ||xposednews.xyz^
 ||tomguide.xyz^
 ||eronews.xyz^
@@ -4527,7 +4528,7 @@
 ||freeversioncrack.com^$document
 ||top3hostngc.xyz^
 198.199.120.251
-! https://www.telia.no/kundeservice/mobil/malware-flubot-android/
+! https://www•telia.no/kundeservice/mobil/malware-flubot-android/
 !+ NOT_OPTIMIZED
 /^https?://(www\.)?[a-z0-9-]{1,}\.[a-z]{2,17}/[a-z0-9]/\?[a-z0-9.-]{8,}$/
 ! A Discord conversation I had about Throneful
@@ -4551,7 +4552,7 @@
 ||cumpussyy.uno^
 195.201.253.130
 195.201.253.131
-! The bottom download button on https://www.sushichop.com/
+! The bottom download button on https://www•sushichop•com/
 ||installiq.com^
 ||specgoal.com^
 ||sandhyapi.online^
@@ -4574,7 +4575,7 @@
 96.47.230.68
 96.47.230.69
 96.47.230.70
-! https://securitytrails.com/list/ns/ns1.fastthinkingdns.com
+! https://securitytrails•com/list/ns/ns1•fastthinkingdns•com
 ||highercaptcha-settle.
 ||highercaptchasettle.
 ||ns*.fastthinkingdns.com^
@@ -4620,7 +4621,7 @@
 
 ||online-guard.com^
 
-! https://twitter.com/iam_py_test/status/1545164642346930176
+! https://twitter•com/iam_py_test/status/1545164642346930176
 ||amazon-security-info.lnk.to^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123968
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124620
@@ -4935,7 +4936,7 @@
 158.247.212.220
 165.227.168.212
 
-! https://www.reddit.com/r/engrish/comments/w6u4uy/received_this_text_message_yesterday_i_am_very/
+! https://www•reddit.com/r/engrish/comments/w6u4uy/received_this_text_message_yesterday_i_am_very/
 ://162.241.115.
 
 ! https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
@@ -5181,7 +5182,7 @@
 51.91.66.125
 51.178.76.105
 147.135.253.55
-! https://github.com/uBlockOrigin/uAssets/issues/14569 → https://www.virustotal.com/gui/url/b819586938326577d759d8024abe3e0e6de1c853d6b67824daf6f613fba0f63b/detection (https://app.any.run/tasks/5914a712-1a73-4432-b89a-ca0627a24ade)
+! https://github.com/uBlockOrigin/uAssets/issues/14569 → https://www•virustotal•com/gui/url/b819586938326577d759d8024abe3e0e6de1c853d6b67824daf6f613fba0f63b/detection (https://app•any•run/tasks/5914a712-1a73-4432-b89a-ca0627a24ade)
 ||bnbdeal.net^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129414
 !+ NOT_OPTIMIZED
@@ -9211,7 +9212,7 @@
 ://196.245.52.
 ://196.245.56.
 
-! https://www.bleepingcomputer.com/news/security/hackers-push-malware-via-google-search-ads-for-vlc-7-zip-ccleaner/
+! https://www•bleepingcomputer•com/news/security/hackers-push-malware-via-google-search-ads-for-vlc-7-zip-ccleaner/
 ://rufus.download.popup
 ://virtualbox.download.popup
 ://vidiq.download.popup
@@ -9746,7 +9747,7 @@
 ||yourticketchance.com^
 ||yourorderupdate.com^
 64.132.201.92
-! https://www.adressa.no/nyheter/trondheim/i/BWkdkw/trodde-hun-skulle-faa-en-pakke-i-posten-ble-lurt-for-titusener
+! https://www•adressa.no/nyheter/trondheim/i/BWkdkw/trodde-hun-skulle-faa-en-pakke-i-posten-ble-lurt-for-titusener
 ||acessmygov.online^
 ||centerlinkmygov.com^
 ||centierssl.us^
@@ -10471,7 +10472,7 @@
 3.231.137.120
 54.204.83.105
 ! https://github.com/DandelionSprout/adfilt/issues/808
-! https://www.mandiant.com/resources/blog/tracking-evolution-gootloader-operations (26/01/2023)
+! https://www•mandiant.com/resources/blog/tracking-evolution-gootloader-operations (26/01/2023)
 ||jonathanbartz.com^
 ||jp.imonitorsoft.com^
 ||junk-bros.com^
@@ -10705,7 +10706,7 @@
 ||wuruclas.co.in^
 ||zondeucearixes.com^
 85.17.80.16
-! https://www.adressa.no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull
+! https://www•adressa.no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull
 ||sitey.me^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/151479
 ||agazpeppily.live^
@@ -16813,7 +16814,7 @@
 ! (https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2497)
 /(//|\.|^)github\.[a-z]{2,20}(/|$)/$document,match-case,~third-party,github.*|com|org|net|co|blog|community|host|io|microsoft|office|uk|us|xn--fiqs8s|dev|archive.*
 ||github.sale^
-! https://www.tv2.no/nyheter/innenriks/advarer-ikke-klikk-pa-lenken/16040614/
+! https://www•tv2.no/nyheter/innenriks/advarer-ikke-klikk-pa-lenken/16040614/
 ||0nedr1ved0cumentonline.com^
 ||88godetailsvc.com^
 ||amexmobileupdate.cc^
@@ -22703,9 +22704,9 @@
 
 
 ! ——— Standard malware that I stumbled upon on my own ———
-! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
+! http://www•toorgle•net/results•php?q=fetishkitsch&security=666
 ||downloadprovider.me^
-! https://www.riverbender.com/articles/details/two-charged-in-connection-of-the-stallon-drug-raid-in-wood-river-46877.cfm
+! https://www•riverbender•com/articles/details/two-charged-in-connection-of-the-stallon-drug-raid-in-wood-river-46877•cfm
 ||cash93.com^
 ||a4alig.com^
 ||cash03.com^
@@ -22718,7 +22719,7 @@
 ||netpay8.com^
 ||slimxketo.com^
 ||works35.com^
-! Various ex-affiliate links at www.zombooru.com
+! Various ex-affiliate links at www•zombooru•com
 ||allowandgo.com^
 ||aksuu.ru^
 ||allow-space.com^
@@ -22732,7 +22733,7 @@
 ||push.weo.su^
 ||traffsend.me^
 ||wwopenclick.club^
-! Spam comments at https://www.accountkiller.com/en/delete-htcdev-account
+! Spam comments at https://www•accountkiller•com/en/delete-htcdev-account
 ||azhydroxychloroquine.com^
 ||wisig.org^
 ||confrancisyalgomas.com^
@@ -22744,13 +22745,13 @@
 ||amoxycillin1st.com^
 ! The Jerma985 Discord server
 ||crazycrabreedville.com^
-! https://flclever.weebly.com/pixie-hollow-mini-games.html (06/05/2021)
+! https://flclever.weebly•com/pixie-hollow-mini-games•html (06/05/2021)
 ||messium.info^
 ! Various Google searches
 ://hullcitytigers.com^
 ! Various search results for 'kelloggs tresor' in Norwegian (30/05/2021)
 /pgxhtogrzm-
-! https://fx-onlinee.blogspot.com/2021/06/?r=Bergens-Tidende-Flertallet-av-fastlegene-i-Trondheim-sier-nei-til-Janssen-vaksinen-Umulig-%C3%A5-ta-det-ansvaret-seo+aj
+! https://fx-onlinee•blogspot•com/2021/06/?r=Bergens-Tidende-Flertallet-av-fastlegene-i-Trondheim-sier-nei-til-Janssen-vaksinen-Umulig-%C3%A5-ta-det-ansvaret-seo+aj
 
 ! Fake security sites that think every single domain is a supervirus and which try to make you install PUP (Most commonly SpyHunter)
 ||malwarecleanerpro.com^
@@ -24983,8 +24984,8 @@
 ||sidenoteconcern.com^
 ||abnegationbanquet.com^
 192.243.61.225
-! https://twitter.com/medicinehelp/status/1550250932394409985
-! https://securitytrails.com/list/ip/147.135.16.27
+! https://twitter•com/medicinehelp/status/1550250932394409985
+! https://securitytrails•com/list/ip/147•135•16•27
 ||2spendless.
 ||acrx.online^
 ||acrx.org^
@@ -25040,10 +25041,10 @@
 ||medicinecoupons.xyz^
 ||medicinehelp.news^
 147.135.16.27
-! https://www.google.no/search?q=mlp+g5&newwindow=1&tbm=isch&oq=mlp+g5&sclient=img
+! https://www•google.no/search?q=mlp+g5&newwindow=1&tbm=isch&oq=mlp+g5&sclient=img
 ||ingeniovirtual.com^
 ! Spambot posts on Tumblr (19/09/2022)
-! https://scambiofigu.forumcommunity.net/?t=57482915
+! https://scambiofigu.forumcommunity•net/?t=57482915
 ||scambiofigu.net^
 ! Only links to another site's (APKPure) APKs, yet tries to promote its own browser extension on the alleged download pages, which comes across as suspicious
 ! Google results for 'Katy and Bob: Cake Café powerpc' (04/11/2022)
@@ -25189,15 +25190,15 @@
 ! https://app.any.run/tasks/679e9afa-eb19-4414-a086-e280a779a448 and https://tria.ge/230217-xd8nksgc9x/behavioral2
 ||ru-torproject.ru^
 
-! https://forums.malwarebytes.com/topic/295588-support-scam-supportclientexe-and-screenconnectwindowsclientexe/ (account required)
-! https://forums.malwarebytes.com/topic/295605-techsupport-scam/ (account required)
+! https://forums•malwarebytes•com/topic/295588-support-scam-supportclientexe-and-screenconnectwindowsclientexe/ (account required)
+! https://forums•malwarebytes•com/topic/295605-techsupport-scam/ (account required)
 ! https://app.any.run/tasks/0f8b5786-177a-45c0-a1de-32e0d68beff2
 ||123secure.org^
 ! https://github.com/RPiList/specials/issues/948#issuecomment-1458739160
 ||yuppdownload.com^
 ! Commonly set as a proxy on hacked devices (https://www.virustotal.com/gui/url/e610e7d09c614529cb8c64185717769946f5c86044ac5c31c6608e604995f577/detection)
 34.80.59.191
-! Various domains on https://securitytrails.com/list/ip/72.14.178.174
+! Various domains on https://securitytrails•com/list/ip/72•14•178•174
 |http://www6.$denyallow=often-used-in-malware-redirections.*
 
 ||megabooru.com^
@@ -25216,7 +25217,7 @@
 96.126.123.244
 173.255.194.134
 198.58.118.167
-! https://hutudole.com/za-mu-%c9%93ullo-da-matakan-da-za-su-hana-al%c6%99alai-kwa%c9%97ayin-cin-hanci-ba-tinubu/
+! https://hutudole•com/za-mu-%c9%93ullo-da-matakan-da-za-su-hana-al%c6%99alai-kwa%c9%97ayin-cin-hanci-ba-tinubu/
 ||123chance.net^
 ||123links4u.net^
 ||123prizes.net^
@@ -25599,7 +25600,7 @@
 94.237.93.242
 94.237.99.118
 139.45.197.249
-! https://dnpedia.com/tlds/topm.php bizarrely listing "anahitagirted.uno" as the 622th most visited domain worldwide
+! https://dnpedia•com/tlds/topm•php bizarrely listing "anahitagirted•uno" as the 622th most visited domain worldwide
 ||acorusinfield.life^
 ||acridlydebit.live^
 ||aeneasclosure.website^
@@ -26273,8 +26274,8 @@
 
 
 ! ——— Anti-'Malware comments' (Currently Disqus-specific) ———
-! https://myip.ms/info/limitexcess
-! https://myip.ms/info/memberarea/My_Account.html
+! https://myip•ms/info/limitexcess
+! https://myip•ms/info/memberarea/My_Account•html
 
 
 ! ——— Dummy entry used to give myself credit, for when this list is used in large compilation hosts-type files (Although they are fully allowed by my licence to use this list, it'd be nice for me and end-users to see where it's being used, as a few of them do not credit their sources) ———
@@ -26285,14 +26286,14 @@
 ! This section covers ones that would not normally be found in EasyList or AdGuard Base, for instance McAfee WebAdvisor (which also tries to change the search engine)
 ||webadvisorc.rest.gti.mcafee.com^
 ||mip.api.mcafeewebadvisor.com^
-! https://get.adobe.com/no/reader/
+! https://get•adobe•com/no/reader/
 ! Gigabyte APP Center (which use sneaky tricks to install a Norton 360 trial period; May require «AdGuard for Windows»)
 
 
 ! ——— Carried over from "Anti-'Asset Flip Shovelware' List" in response to Microsoft Store's non-existent quality control ———
 ! All legitimate Pac-Man games would use "pac-man" links with a dash
 
-! https://eclypsium.com/blog/supply-chain-risk-from-gigabyte-app-center-backdoor/
+! https://eclypsium•com/blog/supply-chain-risk-from-gigabyte-app-center-backdoor/
 |http://mb.download.gigabyte.com/FileList/Swhttp/LiveUpdate4^
 
 ! (Presumably anonymous) E-mail tips
