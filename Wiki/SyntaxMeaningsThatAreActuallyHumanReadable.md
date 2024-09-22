@@ -2,7 +2,7 @@
 
 * Main example list: [uBlock Filters](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt)
 * AdGuard-specific syntaxes: [AdGuard Base Filters ('AdGuard for Windows' version)](https://filters.adtidy.org/windows/filters/2.txt)
-* ABP-/AdBlock-specific syntaxes: [ABP Anti-Circumvention List](https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt)
+* ABP-specific syntaxes: [ABP Anti-Circumvention List — English sites](https://gitlab.com/eyeo/anti-cv/abp-filters-anti-cv/-/raw/master/english.txt)
 
 ## All up-to-date significant adblockers¹
 
@@ -22,7 +22,7 @@
 * `:has-text(text)`: Finds page elements that contains such text within it.
 * `:has(.element)`: Finds page elements that contains such an element within it.
 * `:has(>` : Tells `:has` to only find elements whose criteria match their <b>immediate</b> subelement(s).
-* `:not(:-abp-contains(Text))` / `:not(:-abp-has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
+* `:not(:has-text(Text))` / `:not(:has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order. To select multiple numbers, one has to use `n` calculations (e.g. `(n+2)`), since ranges (e.g. `(3-6)`) are not supported.
 * `:only-of-type` / `:first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
 * `:first-child` / `:last-child`: Appears to be synonymous with `first-of-type` and `last-of-type` for adblocking purposes. `:last-child` is easily mistaken for what `:empty` does.
@@ -34,7 +34,7 @@
 * `##element1,element2` (alt. `##element1, element2`): Combines two hiding entries into the same line of text.
 
 ##### Advanced examples:
-* The first two `##` of an element entry, are not used for elements written after e.g. `>`, `+` or `:-abp-has`. In those cases, the `##` in `##element` gets removed, `##.class` becomes `.class`, and `###id` becomes `#id`.
+* The first two `##` of an element entry, are not used for elements written after e.g. `>`, `+` or `:has`. In those cases, the `##` in `##element` gets removed, `##.class` becomes `.class`, and `###id` becomes `#id`.
 * `##element.class`: Hide something both based on its element (##element1) and `class` value (.class). Note the placement/absence of fullstops.
 * While they're based on the same `class` values, `##.element1` will match any `class` (sub-)value, whereas `##div[class="element1"]` and their modifiers are based on the *entire* `class` string in the F12 filetree.
 * `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or (domain-)specific, where they have one or more domains in front of them, separated by commas. uBO/AdGuard support wildcard asterisks (`*`) in such domains, and only for the immediate pre-TLD part; while ABP/AdBlock do not.
@@ -62,9 +62,9 @@
 
 #### Universal
 * `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
-* `/\/\/\/`, `/regextext/`, and similar: Text detections in <b>RegEx</b> format. Supported in most (if not all) blocking rules, as well as in `:-abp-contains` and `:has-text`. Note that *all* blocking rules that start and end with `/` are treated as RegEx; the intended workaround is to add a `*` after, which makes `*` supposedly serve as a plaintext indicator, instead of as a wildcard.
-* * <i>Insider tip for very advanced users: If you see a RegEx that ends with `.*/`, change it to `.*$/`. Likewise, if it starts with `/.*`, change it to `/^.*`. Depending on the entry, this can reduce CPU usage quite a lot.''</i>
-* `[Adblock Plus n.n]`: Mandatory for Adblock Plus, AdBlock, and forks of them, as they use the tag to determine if they should load the filterlist. This has *no* effect on uBO and AdGuard or their forks. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.10` and higher is on the rise and can be used to block support for old or low-quality forks. It also enables the GitHub syntax highlighter for that file.
+* `/\/\/\/`, `/regextext/`, and similar: Text detections in <b>RegEx</b> format. Supported in most (if not all) blocking rules, as well as in `:has-text`. Note that *all* blocking rules that start and end with `/` are treated as RegEx; the intended workaround is to add a `*` after, which makes `*` supposedly serve as a plaintext indicator, instead of as a wildcard.
+* * <i>Insider tip for very advanced users: If you see a RegEx that ends with `.*/`, change it to `.*$/`. Likewise, if it starts with `/.*`, change it to `/^.*`. Depending on the entry, this can reduce CPU usage quite a lot.</i>
+* `[Adblock Plus n.n]`: Mandatory for Adblock Plus and forks of them, as they use the tag to determine if they should load the filterlist. This has *no* effect on uBO and AdGuard or their forks. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.10` and higher is on the rise and can be used to block support for old or low-quality forks. It also enables the GitHub syntax highlighter for that file.
 * * `[uBlock Origin]`, `[AdGuard]`: These activate the syntax highlighter if the file is hosted on GitHub, should be placed on the first line of the list.
 * `! Title:` Specifies the intended name of the list. Required to make the name <b>automatically show up</b> in the settings of most adblockers, instead of the URL or of manual text input.
 * `! Version:` The version number/alphanumeric of the list. Unofficially used to distinguish which version of a list a user is using. Used administratively by Adblock Plus' list report system (which requires a number-only version value). Many lists choose to use `! Last modified` as well or instead.
@@ -90,8 +90,8 @@
 * `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `?tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, that a lack of `/^` will make it search *anywhere* in that string, and a lack of support for backslashing. Whitelistings must match the exact parameter that was blocked.
 * `$match-case`: Makes the criteria case-sensitive. uBO only supports it in RegEx entries.
 
-## uBlock Origin, Adblock Plus and AdBlock only
-* `##element1,element2:has(-text)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where all instances of `element1` would be blocked.
+## uBlock Origin and Adblock Plus only
+* `##element1,element2:has(-text)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where all instances of `element1` would be blocked. This can be worked around by changing it to `##:is(element1,element2):has(-text)`
 
 ## uBlock Origin only:
 #### Hiding
@@ -104,7 +104,6 @@
 * `:upward` (prev. `:nth-ancestor`): Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree. Equivalent to `:xpath(../..)`, but with normal numbers. Now also has the ability to look for specific element names at *any* indentation amount.
 * `:min-text-length`: Appears to select elements whose underlying source content has at least that amount of characters. Is completely disassociated from the actual on-page visible text by an order of several magnitudes.
 * `:watch-attr`: Claims to be able to reconsider a blocking if something new happens to the element (e.g. to its element types).
-* `:-abp-has(:scope >`: Almost identical to `:-abp-has(>`, but is used to prevent some bugs seen in the latter that I've forgot what they were about.
 * `/^regextext\.(...)$/##.element`: Allows specifying domains through RegEx for very extensive wildcard possibilities. For example, `/^nitter\..*$/##.element` would match `nitter.*.*`. For practical reasons, the use of sentence-start `^` and sentence-end `$` are highly advised, especially so for `$`. Can be comma-combined with regular domains, for example `/^nitter\..*$/,google.com##.element`.
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
@@ -120,12 +119,13 @@
 * `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Not needed for entries that already have `$doc`. Only applies to Firefox and Tor Browser.
 * `$from`: Same as `$domain`.
 * `$denyallow` + `,domain=`: Allows choosing which third-party domain requests to allowlist, instead of which ones to block, while visiting specified domains.
-* `$to`: Superset of `$denyallow`. Supports TLD-wildcard (`google.*`) hostnames and negated hostnames (`~example.com`). 
+* `$to`: Superset of `$denyallow`. Supports TLD-wildcard (`google.*`) hostnames and negated hostnames (`~example.com`).
+* `$ipaddress`: Partially similar to AdGuard's `$network`, but is unable to block webpages outright. Only works in Firefox and Tor Browser.
 
-## Adblock Plus, AdBlock and AdGuard only:
+## Adblock Plus and AdGuard only:
 * `$webrtc`: Prevents WebRTC (Real-Time Communication) connections which is usually used by messengers and games. The uBO equivalent is `##+js(nowebrtc)`, but conversion is not done automatically. It is deprecated in AdGuard, which has transitioned over to uBO's `##+js(nowebrtc)`.
 
-## Adblock Plus and AdBlock only:
+## Adblock Plus only:
 * `! Redirect:`: Tells the adblocker to look for list updates from a new URL from that point on. To be used in the old file only (Not the new one), to avoid an infitite redirection loop.
 * `! Checksum:`: No longer in use by *any* adblockers. Was used by ABP/AB on Firefox prior to November 2017, out of a then-decade-old fear that antivirus tools could tamper with list contents to create disastrously miswritten entries. AdGuard adds their own checksums to natively included lists, which do not need any maintainer intervention.
 #### Hiding
@@ -173,7 +173,7 @@
 
 # Other particularly important usage notes
 
-* To make the text detection for `:-abp-contains` and `:has-text` case-insensitive, wrap the paranthesised text into `(/Example text/i)`.
+* To make the text detection for `:has-text` case-insensitive, wrap the paranthesised text into `(/Example text/i)`.
 * The `"` in `[href="text"]` is optional, but *only* if the criteria text is only a single word, and has no numbers, slashes, or certain other characters.
 * `:style` and `{ }` do not allow the use of URL values.
 * It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
@@ -181,4 +181,4 @@
 * No entries can use both `||` and `##` at the same time.
 * Major note to advanced CSS experts: Some advanced terms have been replaced in this guide, because they'd be less than obvious to laymen who'd need this guide.
 
-¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, Adblock Plus version ≥3.13, and AdBlock. It does **not** include AdGuard Home, Brave Browser, Slimjet, uBlock non-Origin, Tracking Protection List, Blokada, or Pi-hole, whose syntax supports are considerably inferior to the above list.
+¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, and Adblock Plus versions 3.13-3.20. It does **not** include AdGuard Home, Brave Browser, Adblock Plus ≥4.0, Slimjet, uBlock non-Origin, Tracking Protection List, Blokada, or Pi-hole, whose syntax supports are considerably inferior to the above list.
