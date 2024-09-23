@@ -1076,6 +1076,50 @@
                 "history",
                 "other"
             ]
+        },
+        {
+            "description": "Attempting to force live broadcasts on HBODiscovery Max for European users to always render at 50fps instead of 25fps, regardless of the browser window's size",
+            "exampleUrl": "https://fly.live.olympics.prd.media.max.com/live/use1/oly/72a_CixjZjAzMDliNi1mNDYyLTVjYmEtOGJkMC1jZjJjZmRlZTNmOGItdXMtZWFzdBINYm9sdC1nbG8tcHJvZBoTEhFwYWNrYWdlci1tcDQtY2VuYw/zJlBgEdWiXyC/avc-sdr-576p-25fps-2500kbps-11927.mp4",
+            "exampleResult": "https://fly.live.olympics.prd.media.max.com/live/use1/oly/72a_CixjZjAzMDliNi1mNDYyLTVjYmEtOGJkMC1jZjJjZmRlZTNmOGItdXMtZWFzdBINYm9sdC1nbG8tcHJvZBoTEhFwYWNrYWdlci1tcDQtY2VuYw/zJlBgEdWiXyC/avc-sdr-720p-50fps-5200kbps-11927.mp4",
+            "error": null,
+            "includePattern": "(^.*media.max.com/(live|bolt).*)-(180|450|576)p-25fps-\\d{2,4}kbps-(.*$)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1-720p-50fps-5200kbps-$4",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "image",
+                "imageset",
+                "object",
+                "xmlhttprequest",
+                "history",
+                "other"
+            ]
+        },
+        {
+            "description": "Attempting to remove trailing empty \"/?\"-s",
+            "exampleUrl": "https://example.org/?",
+            "exampleResult": "https://example.org/",
+            "error": null,
+            "includePattern": "^(.*/)\\?$",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame",
+                "image",
+                "imageset"
+            ]
         }
     ]
 }
