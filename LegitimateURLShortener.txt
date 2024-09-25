@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21September2024v4
+! Version: 25September2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -307,9 +307,6 @@ $removeparam=CMP
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
 $doc,removeparam=/^OCID=.*$/i,domain=~youtube.com|~reiseauskunft.bahn.de|~msn.com
-!#if adguard
-@@$removeparam=/^OCID=.*$/i,app=Microsoft.Msn.News.exe
-!#endif
 $removeparam=tduid,domain=~tradedoubler.com
 $removeparam=irclickid
 $removeparam=irclicid
@@ -4890,4 +4887,8 @@ buffalonews.com##+js(set, lee_trkLinkSrc, noopFunc)
 ! https://github.com/DandelionSprout/adfilt/issues/376
 @@|wss://$removeparam
 !#endif
+!#endif
+
+!#if !ext_ublock
+!#include uBO%20list%20extensions/LegitimateURLShortener%20—%20AdGuardOnlyEntries.txt
 !#endif
