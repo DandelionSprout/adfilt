@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Last modified: 22September2024v1
+! Last modified: 27September2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -462,6 +462,12 @@ audlindin.is,utvarpsaga.is##.g-dyn
 e24.no##.row-with-bottom-border:has(.ad-wrap)
 bramat.no##.scs-banner
 vartoslo.no##.vo-annonse
+gamer.no##:not(main,div,header,footer) > * > [data-uname="gamer_toppbanner"]:upward(2)
+gamer.no##.deal-container:has(a[href*="prisjakt.no"])
+gamer.no##div > .entrance:has(> a[href*="/annonser/"])
+gamer.no##div > .entrance:has(> a[href*="/stilling/"])
+gamer.no##[data-uname=gamer_artikkelboard]
+gamer.no##div > [data-uname^=gamer_midtbanner]:only-of-type:upward(1)
 kendte.dk#?#.list-group:has-text(/cas\ino/i)
 feltet.dk##p[style^=" color:#bbb;"]
 tv-kalundborg.dk##div.col-s-100.col-50:nth-of-type(2)
@@ -1524,7 +1530,6 @@ contentMarketing$xhr,domain=sol.no
 ||feltet.dk/*/topbanner_*.jpg^
 ||feltet.dk/*/wallpaper_1.jpg^
 ||feltet.dk/*_300x60.gif^
-||feltet.dk/octo_cms/files/Feltet.dk//$image
 ||finn.no^$frame,domain=bt.no
 ||footy.dk/wp-content/uploads/*/Sk%C3%A6rmbillede-*.png^
 ||forum.flyprat.no/images/r/Header^$frame
@@ -2086,6 +2091,8 @@ seher.no##.article-top header:style(padding-top:0!important;margin:0!important)
 sykepleien.no##:is(.container--break,.content-extra__recommended-news):style(padding:0!important;margin:0!important)
 ! aİD (Phone user agent)
 no##.tag-page:style(margin:0!important;padding:0!important)
+! https://github.com/AdguardTeam/AdguardFilters/issues/189667
+feltet.dk##iframe + div[style*="height: 80vh"]:style(height: unset !important)
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ! 🇩🇰: ——— Distraherende baggrundsbilleder ———

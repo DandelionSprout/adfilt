@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)
-! Version: 220920241
+! Version: 270920241
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -444,6 +444,12 @@ audlindin.is,utvarpsaga.is##.g-dyn
 e24.no##.row-with-bottom-border:has(.ad-wrap)
 bramat.no##.scs-banner
 vartoslo.no##.vo-annonse
+gamer.no##:not(main,div,header,footer) > * > *:has(> * > [data-uname="gamer_toppbanner"])
+gamer.no##.deal-container:has(a[href*="prisjakt.no"])
+gamer.no##div > .entrance:has(> a[href*="/annonser/"])
+gamer.no##div > .entrance:has(> a[href*="/stilling/"])
+gamer.no##[data-uname=gamer_artikkelboard]
+gamer.no##div > *:has(> [data-uname^=gamer_midtbanner]:only-of-type)
 kendte.dk#?#.list-group:has-text(/cas\ino/i)
 feltet.dk##p[style^=" color:#bbb;"]
 tv-kalundborg.dk##div.col-s-100.col-50:nth-of-type(2)
@@ -1479,7 +1485,6 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||feltet.dk/*/topbanner_*.jpg^
 ||feltet.dk/*/wallpaper_1.jpg^
 ||feltet.dk/*_300x60.gif^
-||feltet.dk/octo_cms/files/Feltet.dk//$image
 ||finn.no^$subdocument,domain=bt.no
 ||footy.dk/wp-content/uploads/*/Sk%C3%A6rmbillede-*.png^
 ||forum.flyprat.no/images/r/Header^$subdocument
@@ -2017,6 +2022,7 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 spania.no##.tdc-element-style:has(.td-a-rec)
 ! aİD (Phone user agent)
 
+! https://github.com/AdguardTeam/AdguardFilters/issues/189667
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ! 🇩🇰: ——— Distraherende baggrundsbilleder ———
