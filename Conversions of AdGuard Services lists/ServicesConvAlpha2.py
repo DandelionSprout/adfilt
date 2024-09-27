@@ -3579,6 +3579,54 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"\^$denyallow=([a-z0-9])",
+           r"^$all,domain=~\1",
+           line
+        )
+
+        line = re.sub(
+           r"\^\$denyallow=([a-z0-9])",
+           r"^$all,domain=~\1",
+           line
+        )
+
+        line = re.sub(
+           r"(\^\$all,domain=.*\|)([a-z0-9])",
+           r"\1~\2",
+           line
+        )
+
+        line = re.sub(
+           r"(\^\$all,domain=.*\|)([a-z0-9])",
+           r"\1~\2",
+           line
+        )
+
+        line = re.sub(
+           r"(\^\$all,domain=.*\|)([a-z0-9])",
+           r"\1~\2",
+           line
+        )
+
+        line = re.sub(
+           r"(\^\$all,domain=.*\|)([a-z0-9])",
+           r"\1~\2",
+           line
+        )
+
+        line = re.sub(
+           r"(\^\$all,domain=.*\|)([a-z0-9])",
+           r"\1~\2",
+           line
+        )
+
+        line = re.sub(
+           r"(\^\$all,domain=.*\|)([a-z0-9])",
+           r"\1~\2",
+           line
+        )
+
         text += line + '\n'
 
     return text
