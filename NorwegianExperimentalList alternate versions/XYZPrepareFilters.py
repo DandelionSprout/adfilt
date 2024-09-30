@@ -4962,6 +4962,18 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^.*[,$]ipaddress.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -5006,8 +5018,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"^.*[,$]ipaddress.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
            "Dandelion Sprout's Anti-Malware List",
-           "Dandelion Sprout's Anti-Malware List (for Adblock Plus and AdBlock)",
+           "Dandelion Sprout's Anti-Malware List (for Adblock Plus 3.x and Adblock Plus on Firefox)",
            line
         )
 
@@ -5277,6 +5295,18 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"(./),~",
            r"\1$~",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"\$popup,~inline-font,.*",
+           r"$popup",
            line
         )
 
@@ -5720,6 +5750,18 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^.*[,$]ipaddress.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\n'
 
@@ -5870,6 +5912,18 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"^\.(amazonaws|cisco|cloudflare|adobe|atlassian).*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*[,$]ipaddress.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
            r"",
            line
         )
@@ -6098,7 +6152,6 @@ def prepare_hosts(lines) -> str:
            line
         )
 
-
         line = re.sub(
            r"(# (Version|Last[ -]?[Mm]odified):.*)",
            r"\1\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.",
@@ -6114,6 +6167,18 @@ def prepare_hosts(lines) -> str:
         line = re.sub(
            r"(mobsters .*)$",
            r"\1\n!#endif",
+           line
+        )
+
+        line = re.sub(
+           r"^.*[,$]ipaddress.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
            line
         )
 
@@ -6319,6 +6384,18 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^!!!.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*[,$]ipaddress.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
            r"",
            line
         )
@@ -6751,6 +6828,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^(\|\|(\*\.)?[a-z]{2,30}\^)$",
            r"\1$dnstype=~CNAME",
+           line
+        )
+
+        line = re.sub(
+           r"^.*[,$]ipaddress.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
            line
         )
 
