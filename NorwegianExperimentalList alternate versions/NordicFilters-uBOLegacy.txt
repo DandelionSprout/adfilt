@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for «uBlock Origin Legacy»)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for «uBlock Origin Legacy»)
-! Last modified: 27September2024v1-Beta
+! Last modified: 01October2024v2-Beta
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -374,7 +374,6 @@ gaming.fo###sticky_ad
 onlineaviser.no##table[width^="7"]:first-of-type:has(a[href*=tradedoubler])
 ##.annonselenker:not(html):not(body):not(:empty)
 samferdselinfra.no##div[class="ct-div-block "]:last-of-type
-dbrs.dk##.grid__column--12.grid__placement
 diskusjon.no##.prisguide-content
 google.*###cnsi ~ [jsaction*=dismiss]
 kanalen.no##.bannergroup
@@ -524,6 +523,10 @@ momondo.*##.type-provider.clearfix.flights
 fjellforum.no##.ipsWidget:has([src*="amazonaws.com"])
 magasinetskolen.dk##.region-sidebar-first > .clearfix > .first
 e24.no##.teaser__preview
+travservice.dk##.et_pb_slider
+travservice.dk##.code-block-1:has(> a[href*="https://danskespil.dk/tips"]:only-of-type)
+kk.no##.carousel-container + div:not(.carousel-container):has(> div:last-child)
+dagbladet.no,elbil24.no,kk.no,seher.no,sol.no##div:has(> .adunit)
 tilbudmaskin.no##.page-body .col-sm-6
 nutiminn.is##.tdc-row:has(.vc_column:only-of-type .augl-container:only-of-type)
 dagens.dk##.generic-widget[class*=" d-none-"]
@@ -2037,12 +2040,18 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! 🇳🇴🏞: Huvudsakleg for AdGuard
 ! 🇮🇸: Aðallega fyrir AdGuard
 ! 🇬🇧: Mostly for AdGuard
-||3.248.18.175^$domain=~in-addr.arpa
-||35.227.231.163^$domain=~in-addr.arpa
-||45.58.146.154^$domain=~in-addr.arpa
-||82.196.13.38^$domain=~in-addr.arpa
-||82.221.81.9^$domain=~in-addr.arpa
-||178.79.136.45^$domain=~in-addr.arpa
+://3.248.18.175^
+
+://35.227.231.163^
+
+://45.58.146.154^
+
+://82.196.13.38^
+
+://82.221.81.9^
+
+://178.79.136.45^
+
 
 ! 🇳🇴/🇩🇰: ——— Sporingsfiler ———
 ! 🇳🇴🏞: ——— Sporingsfilar ———
@@ -2163,6 +2172,8 @@ clasohlson.com#@##js-cookie-notification
 !#endif
 ! https://github.com/easylist/easylist/issues/15519
 jolstad.no#@#.cookie-pop-up
+! https://github.com/easylist/easylist/issues/20085
+tikkio.com#@#.mfp-ready
 ! ★★★ Caused by «Fanboy's Enhanced Blocking List» ★★★
 ! https://github.com/DandelionSprout/adfilt/discussions/779#discussioncomment-5962141
 @@||vg.no^$generichide,badfilter
@@ -2397,8 +2408,10 @@ triplx.dk##.aff-inner-col
 /finn.no/finno.htm$doc,domain=~facebook.com
 .gratis-reisebilletter.$doc
 ||102.112.2o7.net^$doc
-||52.216.146.90^
-||92.42.104.146^
+://52.216.146.90^
+
+://92.42.104.146^
+
 ||appleid.*.no^$domain=~en-svindelside-som-ikke-er-apple.*
 ||coop.no.$doc,domain=~en-svindelside-som-ikke-er-coop.*
 ||danskebank.no.$doc,domain=~en-svindelside-som-ikke-er-danskebank.*
@@ -2514,7 +2527,8 @@ triplx.dk##.aff-inner-col
 ! E-mail tips
 ||s.free.fr^$all
 ||trmff.wpengine.com^$all
-||212.27.60.108^$all
+://212.27.60.108^$all
+
 ||790northsierrabonita.com^$all
 ||dnnbcorporat*.mine.nu^$all
 ||eltlnorsgogle.is-a-cpa.com^$all
@@ -2522,7 +2536,8 @@ triplx.dk##.aff-inner-col
 ||premosupplements.com^$all
 ||printablemagic.com^$all
 ||rumendia.com^$all
-||94.156.65.204^$all
+://94.156.65.204^$all
+
 ! Overly dedicated E-mail spambots
 ||wirexapp.africa.com^$all
 ||tachyoniums.eu.com^$all
@@ -2751,30 +2766,46 @@ triplx.dk##.aff-inner-col
 ||my-altinn*$all,domain=~no
 ||no-oppdatere.$all
 ||no-oppdatert.$all,domain=~no
-||179.43.189.62^$all
+://179.43.189.62^$all
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7694946
 ||easypark-$doc,popup
-||74.119.239.234^$all,domain=~in-addr.arpa
-||162.241.194.206^$all,domain=~in-addr.arpa
+://74.119.239.234^
+
+://162.241.194.206^
+
 ! IP addresses of servers notorious for hosting many of the sites above
-||51.195.133.131^$domain=~in-addr.arpa
-||66.206.3.34^$domain=~in-addr.arpa
-||82.118.242.69^$domain=~in-addr.arpa
-||136.243.73.30^$domain=~in-addr.arpa
-||138.201.126.227^$domain=~in-addr.arpa
-||156.236.126.173^$domain=~in-addr.arpa
-||196.196.230.76^$domain=~in-addr.arpa
-||167.71.49.177^$domain=~in-addr.arpa
-||134.209.82.119^$domain=~in-addr.arpa
-||154.213.16.136^$domain=~in-addr.arpa
-||158.247.212.220^$domain=~in-addr.arpa
-||165.227.168.212^$domain=~in-addr.arpa
+://51.195.133.131^
 
-||132.148.220.142^$domain=~in-addr.arpa
+://66.206.3.34^
 
-||104.160.10.$domain=~in-addr.arpa
-||165.231.154.$domain=~in-addr.arpa
-||167.99.196.225^$domain=~in-addr.arpa
+://82.118.242.69^
+
+://136.243.73.30^
+
+://138.201.126.227^
+
+://156.236.126.173^
+
+://196.196.230.76^
+
+://167.71.49.177^
+
+://134.209.82.119^
+
+://154.213.16.136^
+
+://158.247.212.220^
+
+://165.227.168.212^
+
+
+://132.148.220.142^
+
+
+://104.160.10.$domain=~in-addr.arpa
+://165.231.154.$domain=~in-addr.arpa
+://167.99.196.225^
+
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7872103
 ||betzykrisesenter.no^$doc
 ||citra2010oslo.no^$doc
@@ -2792,7 +2823,8 @@ triplx.dk##.aff-inner-col
 ||yttersiden.no^$doc
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7873648
 ||monetrizer*.$all
-||38.180.96.244^$all
+://38.180.96.244^
+
 ! https://sol•no/81812194/ / https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-10360231
 ||acc-inf.com^$all
 ||acc-ntfix.com^$all
@@ -2951,9 +2983,12 @@ triplx.dk##.aff-inner-col
 ||verification-no.com^$all
 ||wf-securelogin.com^$all
 ||wisehelpcentre.com^$all
-||193.143.1.45^$all
-||193.143.1.214^$all
-||193.143.1.217^$all
+://193.143.1.45^$all
+
+://193.143.1.214^$all
+
+://193.143.1.217^$all
+
 !#if !ext_ublock
 ://193.143.1.^$doc
 !#endif
@@ -2994,9 +3029,12 @@ triplx.dk##.aff-inner-col
 ||nodrakts.com^$doc
 ||dkfodboldstore.com^$doc
 ||vmfodboldtoj.com^$doc
-||5.39.217.206^$domain=~in-addr.arpa
-||5.39.221.180^$domain=~in-addr.arpa
-||193.148.70.153^$domain=~in-addr.arpa
+://5.39.217.206^
+
+://5.39.221.180^
+
+://193.148.70.153^
+
 
 ! 🇳🇴: Falske nettapoteker
 ! 🇬🇧: Fake online pharmacies
@@ -3029,7 +3067,8 @@ triplx.dk##.aff-inner-col
 ||hagebakken.no^
 ||mdb.nu^
 ||idj.no^
-||1.14.61.188^
+://1.14.61.188^
+
 ||smarthouseforum.ru^
 ||trafikkskoleapp.no^
 

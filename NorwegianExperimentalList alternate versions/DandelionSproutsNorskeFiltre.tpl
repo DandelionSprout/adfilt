@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 27September2024v1-Deprecated
+# Last modified: 01October2024v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -552,12 +552,12 @@ msFilterList
 # 🇳🇴🏞: Huvudsakleg for AdGuard
 # 🇮🇸: Aðallega fyrir AdGuard
 # 🇬🇧: Mostly for AdGuard
--d 3.248.18.175
--d 35.227.231.163
--d 45.58.146.154
--d 82.196.13.38
--d 82.221.81.9
--d 178.79.136.45
+:  3.248.18.175
+:  35.227.231.163
+:  45.58.146.154
+:  82.196.13.38
+:  82.221.81.9
+:  178.79.136.45
 # 🇳🇴 🇩🇰: ——— Sporingsfiler ———
 # 🇳🇴🏞: ——— Sporingsfilar ———
 # ❄: ——— Guorrafiilaid ———
@@ -615,6 +615,7 @@ msFilterList
 # https://github.com/ryanbr/fanboy-adblock/issues/1468
 # https://github.com/easylist/easylist/issues/12067#issuecomment-1132797711
 # https://github.com/easylist/easylist/issues/15519
+# https://github.com/easylist/easylist/issues/20085
 # ★★★ Caused by «Fanboy's Enhanced Blocking List» ★★★
 # https://github.com/DandelionSprout/adfilt/discussions/779#discussioncomment-5962141
 +d vg.no
@@ -713,8 +714,8 @@ msFilterList
 - finn.no finno.htm
 - gratis-reisebilletter.
 -d 102.112.2o7.net
--d 52.216.146.90
--d 92.42.104.146
+:  52.216.146.90
+:  92.42.104.146
 -d djurs.com-*.
 -d itunesconnect-*.no
 -d jimmychoostore.top
@@ -801,7 +802,7 @@ msFilterList
 # E-mail tips
 -d s.free.fr
 -d trmff.wpengine.com
--d 212.27.60.108
+:  212.27.60.108
 -d 790northsierrabonita.com
 -d dnnbcorporat*.mine.nu
 -d eltlnorsgogle.is-a-cpa.com
@@ -809,7 +810,7 @@ msFilterList
 -d premosupplements.com
 -d printablemagic.com
 -d rumendia.com
--d 94.156.65.204
+:  94.156.65.204
 # Overly dedicated E-mail spambots
 -d wirexapp.africa.com
 -d tachyoniums.eu.com
@@ -1014,28 +1015,28 @@ msFilterList
 -d my-altinn*
 -d no-oppdatere.
 -d no-oppdatert.
--d 179.43.189.62
+:  179.43.189.62
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7694946
 -d easypark-
--d 74.119.239.234
--d 162.241.194.206
+:  74.119.239.234
+:  162.241.194.206
 # IP addresses of servers notorious for hosting many of the sites above
--d 51.195.133.131
--d 66.206.3.34
--d 82.118.242.69
--d 136.243.73.30
--d 138.201.126.227
--d 156.236.126.173
--d 196.196.230.76
--d 167.71.49.177
--d 134.209.82.119
--d 154.213.16.136
--d 158.247.212.220
--d 165.227.168.212
--d 132.148.220.142
--d 104.160.10.
--d 165.231.154.
--d 167.99.196.225
+:  51.195.133.131
+:  66.206.3.34
+:  82.118.242.69
+:  136.243.73.30
+:  138.201.126.227
+:  156.236.126.173
+:  196.196.230.76
+:  167.71.49.177
+:  134.209.82.119
+:  154.213.16.136
+:  158.247.212.220
+:  165.227.168.212
+:  132.148.220.142
+:  104.160.10.
+:  165.231.154.
+:  167.99.196.225
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7872103
 -d betzykrisesenter.no
 -d citra2010oslo.no
@@ -1053,7 +1054,7 @@ msFilterList
 -d yttersiden.no
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7873648
 -d monetrizer*.
--d 38.180.96.244
+:  38.180.96.244
 # https://sol•no/81812194////https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-10360231
 -d acc-inf.com
 -d acc-ntfix.com
@@ -1212,9 +1213,9 @@ msFilterList
 -d verification-no.com
 -d wf-securelogin.com
 -d wisehelpcentre.com
--d 193.143.1.45
--d 193.143.1.214
--d 193.143.1.217
+:  193.143.1.45
+:  193.143.1.214
+:  193.143.1.217
 :  193.143.1.
 # 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 # 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
@@ -1251,9 +1252,9 @@ msFilterList
 -d nodrakts.com
 -d dkfodboldstore.com
 -d vmfodboldtoj.com
--d 5.39.217.206
--d 5.39.221.180
--d 193.148.70.153
+:  5.39.217.206
+:  5.39.221.180
+:  193.148.70.153
 # 🇳🇴: Falske nettapoteker
 # 🇬🇧: Fake online pharmacies
 - -med.footeo.com
@@ -1280,7 +1281,7 @@ msFilterList
 -d hagebakken.no
 -d mdb.nu
 -d idj.no
--d 1.14.61.188
+:  1.14.61.188
 -d smarthouseforum.ru
 -d trafikkskoleapp.no
 # Last updated: 15July2024v2-Extension

@@ -42,8 +42,14 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"\$domain=~in-addr\.arpa$",
-           r"",
+           r"^\*,ipaddress=(.*)$",
+           r"!+ PLATFORM(windows, mac, android)\n\1$network",
+           line
+        )
+
+        line = re.sub(
+           r"\$all\$network$",
+           r"$network",
            line
         )
 
@@ -86,18 +92,6 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"^!.*PFBLOCKERNG.*$",
            r"",
-           line
-        )
-
-        line = re.sub(
-           r"^\|\|(([1-2]?\d?\d\.?){4})\^\$.*$",
-           r"!+ PLATFORM(windows, mac, android)\n\1$network\n!+ NOT_PLATFORM(windows, mac, android)\n||\1^$all",
-           line
-        )
-
-        line = re.sub(
-           r"^\|\|(([1-2]?\d?\d\.?){4})\^",
-           r"!+ PLATFORM(windows, mac, android)\n\1$network\n!+ NOT_PLATFORM(windows, mac, android)\n||\1^$all",
            line
         )
 
@@ -267,6 +261,12 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"\$1p$",
            r"$~third-party",
+           line
+        )
+
+        line = re.sub(
+           r"^(://(\d{1,3}\.\d{1,3}\.\d{1,3}\.)(\$.*)?)$",
+           r"!+ PLATFORM(windows, mac, android)\n\2*$network",
            line
         )
 
@@ -965,8 +965,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r":has\((.*:has-text\()",
-           r":-abp-has(\1",
+           r"\$1p$",
+           r"$~third-party",
+           line
+        )
+
+        line = re.sub(
+           r"^.*ipaddress=.*$",
+           r"",
            line
         )
 
@@ -1477,6 +1483,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^.*ipaddress=.*$",
+           r"",
+           line
+        )
+
         if is_supported_tpl(line) and not line == '':
             text += line + '\n'
 
@@ -1763,6 +1775,12 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"^\./.*\\.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*ipaddress=.*$",
            r"",
            line
         )
@@ -2348,6 +2366,12 @@ def prepare_xul(lines) -> str:
 
         line = re.sub(
            r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*ipaddress=.*$",
            r"",
            line
         )
@@ -3139,6 +3163,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^\[Adblock Plus [1-3]\.[0-6]\]$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*ipaddress=.*$",
            r"",
            line
         )
@@ -4740,12 +4770,6 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|(([1-2]?\d?\d\.?){4})\^\$.*$",
-           r"!+ PLATFORM(windows, mac, android)\n\1$network\n!+ NOT_PLATFORM(windows, mac, android)\n||\1^$all",
-           line
-        )
-
-        line = re.sub(
            r"^\|\|\[(.*)\]\^\$.*$",
            r"[\1]$network",
            line
@@ -5151,6 +5175,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^.*[,$]badfilter$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*ipaddress=.*$",
            r"",
            line
         )
@@ -5762,6 +5792,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^.*ipaddress=.*$",
+           r"",
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\n'
 
@@ -5924,6 +5960,12 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*ipaddress=.*$",
            r"",
            line
         )
