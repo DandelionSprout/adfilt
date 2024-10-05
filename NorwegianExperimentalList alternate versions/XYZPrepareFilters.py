@@ -4688,7 +4688,7 @@ UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com', 'gamecopyworld', '$app', '$dnstype']
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com', 'gamecopyworld', ':  ', 'duckdns.org', '$dnstype']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^', 'gamecopyworld', '://', '$dnstype']
-UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '[Adblock Plus 3.', '*', '/^', '://', 'duckdns.org']
+UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '[Adblock Plus 3.', '*', '/^', 'duckdns.org']
 UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
     '##', '.*#' , '#?#', 'gamecopyworld', 'version.bind', 'hostname.bind', '|id.server|', '$app']
 
@@ -4748,6 +4748,12 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"\|~ Warning.*$",
            "",
+           line
+        )
+
+        line = re.sub(
+           r"^\*\$all,ipaddress=(.*)$",
+           r"!+ PLATFORM(windows, mac, android)\n\1$network",
            line
         )
 
@@ -4951,24 +4957,6 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\|\|?|://|/)((\d{1,3}\.){3})(\$.*|$)",
-           r"\2*$network",
-           line
-        )
-
-        line = re.sub(
-           r"(^/\^\d{1,3}\\\..*(\\d\{1,3}|\d\]\))\$/$)",
-           r"\1$network",
-           line
-        )
-
-        line = re.sub(
-           r"(^/\^\d{1,3}\\\..*(\\d\{1,3}|\d\]\))\$/$)",
-           r"\1$network",
-           line
-        )
-
-        line = re.sub(
            r"^([|:/].*([a-z}]|\)))\$/",
            r"\1\\$/",
            line
@@ -4983,12 +4971,6 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"! Placeholder line for alternate list versions",
            r"!#include Dandelion%20Sprout's%20Anti-Malware%20List%20—%20AdGuardOnlyEntries.txt",
-           line
-        )
-
-        line = re.sub(
-           r"^.*[,$]ipaddress.*$",
-           r"",
            line
         )
 
@@ -6195,18 +6177,6 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"(# (Version|Last[ -]?[Mm]odified):.*)",
-           r"\1\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.",
-           line
-        )
-
-        line = re.sub(
-           r"(Description: .*)$",
-           r"\1\n!#if !env_mv3",
-           line
-        )
-
-        line = re.sub(
            r"(mobsters .*)$",
            r"\1\n!#endif",
            line
@@ -6220,6 +6190,36 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^!!.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@/_-]{1,5}$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*Description: .*)$",
+           r"\1\n# Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.\n!#if !env_mv3",
+           line
+        )
+
+        line = re.sub(
+           r"^://([a-z0-9].*)$",
+           r"127.0.0.1 \1",
+           line
+        )
+
+        line = re.sub(
+           r"^127\.0\.0\.1 .*/.*$",
            r"",
            line
         )
@@ -6420,7 +6420,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"(# Description.*$)",
-           r"\1\n# Note: The very limited syntax available to raw domains lists, considering it's, well, raw, means that outright anti-MV3 measures (which'd as of February 2024 only affect Minus, a project whose name is unworthy of the uBO label; AdGuard browser extensions has no relevant support for raw domains either way) cannot be done. However, at some 20,000 entries, Team Chromium's shameful leaders aren't liking this list anyway.",
+           r"\1\n# Note: The very limited syntax available to raw domains lists, considering it's, well, raw, means that outright anti-MV3 measures (which'd as of February 2024 only affect Minus, a project whose name is unworthy of the uBO label; AdGuard browser extensions has no relevant support for raw domains either way) cannot be done. However, at some 20,000 entries, Team Chromium's shameful leaders aren't liking this list anyway.\n# Note 2: Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.",
            line
         )
 
@@ -6437,7 +6437,19 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@/_-]{1,5}$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^://([a-z0-9].*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-z0-9].*/.*$",
            r"",
            line
         )
@@ -6880,7 +6892,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@/_-]{1,5}$",
            r"",
            line
         )
