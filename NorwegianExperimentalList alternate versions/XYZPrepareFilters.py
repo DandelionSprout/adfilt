@@ -6224,6 +6224,18 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^:.{1,5}(\$.*)$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^!#[ie].*$",
+           r"",
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\n'
 
@@ -6450,6 +6462,18 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^[a-z0-9].*/.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^:.{1,5}(\$.*)$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^!#[ie].*$",
            r"",
            line
         )
