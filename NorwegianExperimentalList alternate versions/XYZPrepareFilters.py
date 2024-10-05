@@ -7705,6 +7705,18 @@ def prepare_domains(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^:.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^# ?([a-zABCGI-SU-Z0-9]|\(|F[a-np-z0-9]|T[a-hj-z0-9]).*$",
+           r"",
+           line
+        )
+
         if not line == '':
             text += line + '\n'
 
