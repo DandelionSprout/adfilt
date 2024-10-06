@@ -3427,7 +3427,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"(# (Version|Last[ -]?[Mm]odified):.*)",
-           r"\1\n# Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt, unless otherwise proven.\n# Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianList.txt, unless otherwise proven.",
+           r"\1\n# Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt, unless otherwise proven.\n# Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt, unless otherwise proven.",
            line
         )
 
@@ -6208,7 +6208,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"^(.*Description: .*)$",
-           r"\1\n# Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.\n# Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt, unless otherwise proven.\n!#if !env_mv3",
+           r"\1\n# Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.\n# Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt, unless otherwise proven.\n!#if !env_mv3",
            line
         )
 
@@ -6432,7 +6432,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"(# Description.*$)",
-           r"\1\n# Note: The very limited syntax available to raw domains lists, considering it's, well, raw, means that outright anti-MV3 measures (which'd as of February 2024 only affect Minus, a project whose name is unworthy of the uBO label; AdGuard browser extensions has no relevant support for raw domains either way) cannot be done. However, at some 20,000 entries, Team Chromium's shameful leaders aren't liking this list anyway.\n# Note 2: Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.\n# Note 3: Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt, unless otherwise proven.",
+           r"\1\n# Note: The very limited syntax available to raw domains lists, considering it's, well, raw, means that outright anti-MV3 measures (which'd as of February 2024 only affect Minus, a project whose name is unworthy of the uBO label; AdGuard browser extensions has no relevant support for raw domains either way) cannot be done. However, at some 20,000 entries, Team Chromium's shameful leaders aren't liking this list anyway.\n# Note 2: Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.\n# Note 3: Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt, unless otherwise proven.",
            line
         )
 
