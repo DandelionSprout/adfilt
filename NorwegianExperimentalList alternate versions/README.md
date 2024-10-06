@@ -11,8 +11,8 @@ Recommended adblockers for the various list versions:
 • Google Hit Hider by Domain, uMatrix, personalDNSfilter, Samsung Knox, dnscrypt-proxy, Diversion, FireHOL: **DandelionSproutsNorskeFiltreDomains.txt**<br>
 • pfBlockerNG, Gas Mask, hostsmgr, Hosts File Editor: **NordicHosts.txt**<br>
 • Internet Explorer 11: **DandelionSproutsNorskeFiltre.tpl**<br>
-• AdGuard Home: **NordicFiltersAdGuardHome.txt**<br>
-• Pi-hole: **NordicFiltersPiHole.txt** + **NordicFiltersDomainsAllowlist.txt**<br>
+• AdGuard Home, AdGuard for Windows/Android's "DNS Filtering" settings, Pi-hole ≥v5.22: **NordicFiltersAdGuardHome.txt**<br>
+• Pi-hole ≤v5.21: **NordicFiltersPiHole.txt** + **NordicFiltersDomainsAllowlist.txt**<br>
 • Little Snitch: **LittleSnitchNorwegianList.lsrules**<br>
 • dnsmasq: **NordicFiltersDnsmasq.conf**<br>
 • Privoxy: **NordicFiltersPrivoxy.action**<br>
