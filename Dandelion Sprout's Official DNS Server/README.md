@@ -31,10 +31,8 @@ Current list set as of 2nd of October 2022:
 * Dandelion Sprout's AdGuard Home Compilation - Web Push Notifications — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt
 * Dandelion Sprout's Nordic Filters (for AdGuard Home) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt
 * Perflyst and Dandelion Sprout's Smart-TV Blocklist for AdGuard Home — https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt
-* 🍚 Extremely Condensed Adblocking List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ExtremelyCondensedList.txt
 * 🎮 Game Console Adblock List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
 * 📭 Anti-Amazon List for Twitch — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiAmazonListForTwitch.txt
-* Ad Domains Filter List — https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/combined-filters.txt
 * AdGuard Mobile Ads filter — https://filters.adtidy.org/extension/android-content-blocker/filters/11.txt
 * Frellwit's Swedish Hosts File — https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt
 
