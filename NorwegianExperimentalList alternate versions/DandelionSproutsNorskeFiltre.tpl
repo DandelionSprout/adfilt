@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 01October2024v2-Deprecated
+# Last modified: 10October2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -505,7 +505,7 @@ msFilterList
 -d via.placeholder.com
 # lokal-avisa.no, ringsakern•no (19 09 2020)
 # gjoviksblad•no (19 09 2020)
-# midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt•dk (30 09 2020)
+# midtjyllandsavisDK, herningfolkebladDK, ikast-brandenytDK (30 09 2020)
 # godstart.dk, sol•dk (30 09 2020)
 -d ni.dk *-bottom.html
 # fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo•dk (30 09 2020)
@@ -514,23 +514,23 @@ msFilterList
 # aftenposten.no, hockeymagasinet.dk, l-a.no, aftenbladet•no (30 10 2020)
 # bt.no, byas.no, aftenbladet•no (30 10 2020)
 # costume.no, costume•dk (09 11 2020)
-# boligpluss•no (09 11 2020), women•dk
-# ytresogn•no (16 12 2020)
+# boligplussNO (09 11 2020), womenDK
+# ytresognNO (16 12 2020)
 - _980banner_
-# ambulanseforum•no (26 12 2020)
+# ambulanseforumNO (26 12 2020)
 # fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad•dk (02 01 2021)
 # forum.doktoronline•no (06 01 2021), forum.klikk.no, forum.kvinneguiden•no
-# nettavisen•no (20 01 2021)
+# nettavisenNO (20 01 2021)
 # https://www•helsenett•no/spor-oss/har-du-smabarn/50657-svstadig-tilbakevendende-forkjolelsehostefeber.html/(10/02/2021)
 # https://www•tronderdebatt•no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453/(20/03/2021),/ba•no
 # https://viralefilmer•no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25 03 2021), eavisa•no
 # https://www•terrengsykkelforumet•no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021),/terrengsykkel•no
-# nettavisen•no (04 04 2021)
-# gnavergalleri•dk (along with ~60 affiliates sites; 21 04 2021)
-# nidaros•no
-# dagsavisen•no
-# elbil24.no, vi•no (21 06 2021)
-# farmatid•no (16 11 2021)
+# nettavisenNO (04 04 2021)
+# gnavergalleriDK (along with ~60 affiliates sites; 21 04 2021)
+# nidarosNO
+# dagsavisenNO
+# elbil24NO, viNO (21 06 2021)
+# farmatidNO (16 11 2021)
 # https://radioh•no/norsk-opphenting-mot-nederland-sikret-vm-kvartfinale-storm-i-kastene/ (14 12 2021)
 # nordlys.no, an•no (19 06 2022)
 # nidaros•no (22 02 2023)
@@ -538,7 +538,8 @@ msFilterList
 # forum.kvinneguiden•no (Mobile user agent; 05 04 2023)
 # Various now-dead Frettabladid subdomains from 2020
 # https://www•aftenposten•no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter/(26/12 2023)
-# e24•no (Mid-December 2023)
+# e24NO (Mid-December 2023)
+# https://heimildin.is/greinar/?label=1/(09/10/2024)
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
@@ -1217,10 +1218,6 @@ msFilterList
 :  193.143.1.214
 :  193.143.1.217
 :  193.143.1.
-# 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
-# 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
-# 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
-# Source: https://www•forbrukertilsynet•no/netthandel/falske-nettbutikker.
 -d adidasko.com
 -d airmaxskobillige.com
 -d assassinfitness.com

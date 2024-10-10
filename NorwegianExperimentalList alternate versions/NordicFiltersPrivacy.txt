@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Last modified: 01October2024v2
+! Last modified: 10October2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -777,6 +777,14 @@ abcnyheter.no##span[class*=-ad__]
 gulesider.no##.MuiContainer-root .MuiGrid-root + .MuiBox-root:has(div[id*=gpt])
 tv2.no##div[data-third-party-link^="\[\""]
 digi.no,tu.no##footer:style(margin: 0 !important)
+mbl.is##div[class^=delta-arranger-]:has(> .augl)
+mbl.is##div[class*=-src-ad-]
+mbl.is##.bundle[class*=" pb-"] > div[class^=col-]:first-of-type:has(> * > .augl)
+heimildin.is##.ad:not(:empty)
+eyjafrettir.is##a[href*="&utm_medium=banner"]
+eyjafrettir.is##a:has(.e-con-inner:not(:has(> *)))
+eyjafrettir.is##a[data-element_type=container]
+eyjafrettir.is##.jet-parallax-section.e-child:not(:has(a))
 bvbnorge.no##.wsite-multicol-col:has(> .wsite-spacer)
 version2.dk,ing.dk,techmanagement.dk,radar.dk##div[class^=layout] > .block-tm-kevel
 xn--bodposten-n8a.no,ranaposten.no#?#.widget-goodpress-home-block-one:has-text(Annonsørinnhold)
@@ -985,6 +993,7 @@ juicynet.dk,vilgerneleve.dk##main > section[id^=text-]
 ##.jubii-adunit:not(html,body,:empty)
 ##a[href*="sting.de17a.com"]:not(body,:empty)
 filmfront.no##.responsiv_reklame
+heimildin.is##div.ad:not(:empty)
 fcbarcelona.dk##.bluebox:has(div[id^=cncpt-rec])
 dn.no###googlead-toppbanner:style(min-height: 0 !important)
 digi.no,medier24.no##.ad-label-vertical
@@ -1680,6 +1689,9 @@ contentMarketing$xhr,domain=sol.no
 ||gamereactor.*/ads^
 ||gamereactor.*/exclusive.json^
 ||datamaskin.biz/ad/
+_1170x400.$domain=eyjafrettir.is,image,1p
+_1170x400.$domain=eyjafrettir.is,image,1p
+/1170x400_$domain=eyjafrettir.is,image,1p
 ! — — — — — — —
 ! 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -1932,7 +1944,7 @@ vafo.dk##.adform-flexblock
 ##.widgerFullWidth:not(html,body,:empty)
 ! gjoviksblad•no (19/09/2020)
 ##.desktop-banner-widget:not(html,body,:empty)
-! midtjyllandsavis.dk, herningfolkeblad.dk, ikast-brandenyt•dk (30/09/2020)
+! midtjyllandsavisDK, herningfolkebladDK, ikast-brandenytDK (30/09/2020)
 ##.featuresplash-container:not(html,body,:empty)
 ##.ad-cookie:not(html,body,:empty)
 ! godstart.dk, sol•dk (30/09/2020)
@@ -1949,11 +1961,11 @@ vafo.dk##.adform-flexblock
 ##.vertical-x1-ad > .column--big:not(body,:empty)
 ! costume.no, costume•dk (09/11/2020)
 ##.grid > div[class=flow-banner]:not(body)
-! boligpluss•no (09/11/2020), women•dk
+! boligplussNO (09/11/2020), womenDK
 ##.wg-banner:not(html,body,:empty)
-! ytresogn•no (16/12/2020)
+! ytresognNO (16/12/2020)
 _980banner_
-! ambulanseforum•no (26/12/2020)
+! ambulanseforumNO (26/12/2020)
 ##.navigation__advertisement:not(html,body,:empty)
 ! fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad•dk (02/01/2021)
 ##.article__content > .article__adblock:not(body,:empty)
@@ -1963,7 +1975,7 @@ _980banner_
 ! forum.doktoronline•no (06/01/2021), forum.klikk.no, forum.kvinneguiden•no
 ###toppbanner:not(html,body,:empty)
 ##.ehm-megaboard:not(html,body,:empty)
-! nettavisen•no (20/01/2021)
+! nettavisenNO (20/01/2021)
 ##.maelstrom-skyscraper:not(html,body,:empty)
 ! https://www•helsenett•no/spor-oss/har-du-smabarn/50657-svstadig-tilbakevendende-forkjolelsehostefeber.html (10/02/2021)
 ##.forum-ad-box:not(html,body,:empty)
@@ -1974,17 +1986,17 @@ _980banner_
 ##.adguru-modal-popup:not(html,body,:empty)
 ! https://www•terrengsykkelforumet•no/ubbthreads.php?ubb=showflat&Number=2453543 (31/03/2021), terrengsykkel•no
 ###wallpaperAds:not(html,body,:empty)
-! nettavisen•no (04/04/2021)
+! nettavisenNO (04/04/2021)
 ##amedia-include[src*="services.api.no/api/bazaar/"]:not(body,:empty)
-! gnavergalleri•dk (along with ~60 affiliates sites; 21/04/2021)
+! gnavergalleriDK (along with ~60 affiliates sites; 21/04/2021)
 ##.container.container-topbanner:not(html,body,:empty)
-! nidaros•no
+! nidarosNO
 ##.ad-iframe-nt:not(html,body,:empty)
-! dagsavisen•no
+! dagsavisenNO
 ##.arcad-block-container:not(html,body,:empty)
-! elbil24.no, vi•no (21/06/2021)
+! elbil24NO, viNO (21/06/2021)
 ##.adunit-content-marketing:not(html,body,:empty)
-! farmatid•no (16/11/2021)
+! farmatidNO (16/11/2021)
 ##.nf-adholder:not(html,body,:empty)
 ! https://radioh•no/norsk-opphenting-mot-nederland-sikret-vm-kvartfinale-storm-i-kastene/ (14/12/2021)
 ##.single-adrotate:not(html,body,:empty)
@@ -2002,9 +2014,11 @@ _980banner_
 ##.scrolling-side-ad-container:not(html,body,:empty)
 ##.ticker-ad-wrapper:not(html,body,:empty)
 ! https://www•aftenposten•no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter (26/12/2023)
-! e24•no (Mid-December 2023)
+! e24NO (Mid-December 2023)
 ##div[class^=advertory- i]:not(html,body,:empty)
 ##div[class*=" advertory-" i][class*=board i]:not(html,body,:empty)
+! https://heimildin.is/greinar/?label=1 (09/10/2024)
+###ad-sidefloat-container:not(html,body,:empty)
 ! — — — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2425,7 +2439,7 @@ triplx.dk##.aff-inner-col
 ||look-like-star.myshopify.com^$doc
 ||marked.no^
 ||mrcal365.com^$doc
-||nordea.no.$doc,domain=~en-svindelside-som-ikke-er-nordnet.*
+||nordea.no.$doc,domain=~en-svindelside-som-ikke-er-nordea.*
 ||nordnet.no.$doc,domain=~en-svindelside-som-ikke-er-nordnet.*
 ||norwegian.com.$doc,domain=~en-svindelside-som-ikke-er-norwegian.*
 ||pensjonistferie.no^$doc
@@ -2452,10 +2466,10 @@ triplx.dk##.aff-inner-col
 ||bankid-sperret.$all,domain=~en-falsk-banksvindel.*
 ||srilanka.no^$doc
 ||innboks.info^$all
-||skaatteenok.com^$all,domain~=en-falsk-svindelside.*
+||skaatteenok.com^$all,domain=~en-falsk-svindelside.*
 ||pearlandcarpetcleaner.com^$all
-||logg-inn.online^$all,domain~=en-falsk-svindelside.*
-||nyhetsnett.no^$all,domain~=en-falsk-svindelside.*
+||logg-inn.online^$all,domain=~en-falsk-svindelside.*
+||nyhetsnett.no^$all,domain=~en-falsk-svindelside.*
 !+ NOT_OPTIMIZED
 /?finn.no/login$doc
 ! 🇬🇧: Copied over from «Dandelion Sprout's Anti-Malware List»
@@ -2991,11 +3005,6 @@ triplx.dk##.aff-inner-col
 !#if !ext_ublock
 ://193.143.1.^$doc
 !#endif
-
-! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
-! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
-! 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
-! Source: https://www•forbrukertilsynet•no/netthandel/falske-nettbutikker.
 ||adidasko.com^$doc,domain=~en-falsk-svindelbutikk.*
 ||airmaxskobillige.com^$doc,domain=~en-falsk-svindelbutikk.*
 ||assassinfitness.com^$doc,domain=~en-falsk-svindelbutikk.*
