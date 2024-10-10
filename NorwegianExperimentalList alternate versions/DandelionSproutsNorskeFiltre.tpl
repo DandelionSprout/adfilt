@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 10October2024v1-Deprecated
+# Last modified: 10October2024v3-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -74,63 +74,63 @@ msFilterList
 -d admob.dk
 -d print2web.sn.dk
 -d lib.idg.no
-# Adressa•no
+# AdressaNO
 -d drbrand.herokuapp.com
-# bobilverden•no
+# bobilverdenNO
 - annonse-
 # https://www•ballade•no/
 - wp-content uploads *_Annonse_
 - _toppbanner_
 # https://www.osterud.name/FF57W10/norwegian-filters.txt
 - bannerannonser
-# byggenytt•no
+# byggenyttNO
 - _annonser
-# frende•no
+# frendeNO
 -d api.frende.no log
 # https://malviknytt•no/2020/07/31/skyting-pa-hjemmebande/ (16 08 2020)
 - Nettbanner-
-# sexpiger•dk
+# sexpigerDK
 -d lh3.googleusercontent.com *=w468-h60-
 -d lh3.googleusercontent.com *=w970-h250-
-# salangen-nyheter•com, hytteavisen•no, strafferunden•no, langrenn•com (12 10 2020)
+# salangen-nyheterCOM, hytteavisenNO, strafferundenNO, langrennCOM (12 10 2020)
 - getbanner.php
-# biff•no (26 10 2020)
+# biffNO (26 10 2020)
 - _nettannonse.
 - BINARY *-BANNER-*.gif
 - BINARY *%20200x300.jpg
-# nett•no (30 11 2020)
+# nettNO (30 11 2020)
 - byteads
-# adressa•no (02 12 2020)
+# adressaNO (02 12 2020)
 - polarnexus.js
-# reavisa•no (06 12 2020)
+# reavisaNO (06 12 2020)
 - _nettbanner_
 - _visittkortannonse_
 - -visittkortannonse-
-# ytresogn•no (16 12 2020)
+# ytresognNO (16 12 2020)
 - hnuannonse
-# heilsutorg•is (17 04 2021)
+# heilsutorgIS (17 04 2021)
 -d is strevda
-# fugleognatur•dk (14 05 2021)
+# fugleognaturDK (14 05 2021)
 - images bannere
 # https://norges•online/produkt/nestle-viking-melk-410-g
 -d fr135.net
 -d static-dscn.net
-# skagensavis•dk
+# skagensavisDK
 - wp-content uploads i123_ads *.gif
 - wp-content uploads i123_ads *_460x196.jpg
 - wp-content uploads i123_ads 930x180_
-# tv-kalundborg•dk
+# tv-kalundborgDK
 - system_files banner ckfinder
-# keldan•is (05 01 2021)
+# keldanIS (05 01 2021)
 - images augl
 -d tac.is kunnar
-# isolor•no (16 01 2021)
+# isolorNO (16 01 2021)
 - -skyskraper-annonse.
-# norskemagasinet•com (24 01 2021)
+# norskemagasinetCOM (24 01 2021)
 -d img.norrbom.com *-300x60.png
-# vg•no (14 04 2021)
+# vgNO (14 04 2021)
 - gfx fishfingers
-# xpresstryk•dk
+# xpresstrykDK
 -d images.staticjw.com casino24.jpg
 # https://www•diabetes•no/mer/nyheter-om-diabetes/nyheter-2021/sporsmal-og-svar-om-koronavaksinen-og-diabetes/ (16 11 2021)
 - globalassets banner_
@@ -139,22 +139,22 @@ msFilterList
 # https://viivilla•no/hage/terrasse/slik-gjor-du-terrassen-festklar-til-17-mai-pa-1-2-3//(18/05/2023)
 -d gcp.passendo.com
 -d psscdn.com
-# samferdselinfra•no (18 05 2023)
+# samferdselinfraNO (18 05 2023)
 - wp-content uploads ad-html
 # https://spurt•no/zyrtec-mot-myggstikk/ (01 06 2023)
 - convertpro cp-popup.min.css
 # https://www•version2•dk/artikel/medie-yngre-er-til-nemid-aeldre-til-mitid/(02/11/2023)
 -d service.tekhus.dk *.jpg
-# vilgernelevel•dk (25 12 2023)
+# vilgernelevelDK (25 12 2023)
 -d skisverige.dk *banner_*.gif
-# skessuhorn•is (29 12 2023)
+# skessuhornIS (29 12 2023)
 -d app.pulsmedia.is
 # https://bygge-anlaegsavisen•dk/historisk-vejprojekt-mellem-sisimiut-og-kangerlussuaq-undervejs/(30/12/2023)
 -d s3.eu-west-1.amazonaws.com ads.
 # https://www•minmote•no/interioer/gjoer-det-selv/a/EQBava/slik-faar-du-den-perfekte-uteplassen-til-vaarsesongen
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8408727
 -d tize.no
-# sn•dk (19 07 2024)
+# snDK (19 07 2024)
 - annoncer scripts
 # https://inmagasinet•custompublish•com/blir-det-gull•4528974-87197•html
 - annonser-vert.gif
@@ -382,149 +382,149 @@ msFilterList
 # 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
 # 🇩🇰: Filserver- eller webstedsspecifikke indførsler med kilder
 # 🇬🇧: Fileserver or site-specific blocking rules with sources
-# bilasolur•is (03 05 2020)
+# bilasolurIS (03 05 2020)
 - lykill_banner
-# bt•no
+# btNO
 # https://newsbreak•dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
 -d images.sprinklecontent.com *.amazonaws.com%2Fimages%
 # https://github.com/AdguardTeam/AdguardFilters/issues/67358#issuecomment-724888304
 -d gfx.no refererPromo
-# buildingsupply•no, maskinregisteret•no, metalsupply•no, plastforum•no
+# buildingsupplyNO, maskinregisteretNO, metalsupplyNO, plastforumNO
 -d f.nordiskemedier.dk *.gif
-# building-supply•dk
+# building-supplyDK
 -d f.nordiskemedier.dk banner
-# metalsupply•no, licitationen•dk
-# viivilla•no (10 11 2020)
+# metalsupplyNO, licitationenDK
+# viivillaNO (10 11 2020)
 -d bcm.interactives.dk script
-# adressa•no (10 11 2020)
+# adressaNO (10 11 2020)
 -d static.polarismedia.no cxense.js
 # https://github.com/uBlockOrigin/uAssets/issues/13661/(11/06/2022)
 -d freewheel-mtgx-tv.akamaized.net
 # https://github.com/DandelionSprout/adfilt/issues/968
 # https://github.com/DandelionSprout/adfilt/issues/983
-# arto•dk
+# artoDK
 -d artodata.net ads
-# inderoyningen•no (20 08 2024)
+# inderoyningenNO (20 08 2024)
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
-# framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning•no
-# Exceptions: ballade•no
+# framtiaNO, sovestenNO, arendalstidendeNO, bil24NO, 730NO, frettatiminnIS, oppNO, melkoghonningNO
+# Exceptions: balladeNO
 # https://www•totensblad•no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
-# arendalstidende•no
+# arendalstidendeNO
 # https://www.langrenn.com/cppage.6250314-1743.html
-# bobilverden•no
-# norskenettsider.no, sva•no
+# bobilverdenNO
+# norskenettsiderNO, svaNO
 # https://www•diskusjon•no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
-# tv2•no
+# tv2NO
 # https://kulturplot•no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
 # https://www•dagbladet•no/mat/spaghetti--la-capri-italienerne-liker-sausen-men-n-ting-far-slakt---dette-er-ikke-pasta/67659821
-# portal•fo (09 05 2020)
-# jyllands-posten•dk
-# buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no, retailnews•dk
-# retailnews•dk (11 09 2020)
-# n247•no
-# healthtalk•no
-# appetitt•no
-# ekstrabladet•dk
-# nab•no (Only shown if cookies are accepted; 18 08 2020)
+# portalFO (09 05 2020)
+# jyllands-postenDK
+# buildingsupplyNO, maskinregisteretNO, metalsupplyNO, plastforumNO, retailnewsDK
+# retailnewsDK (11 09 2020)
+# n247NO
+# healthtalkNO
+# appetittNO
+# ekstrabladetDK
+# nabNO (Only shown if cookies are accepted; 18 08 2020)
 # Bet365 widget triggered for Norwegian audiences only
-# borsen•no (08 10 2020)
+# borsenNO (08 10 2020)
 # https://www•nettavisen•no/3424050834.html/(24/11/2020)
-# reavisa•no (06 12 2020)
-# ytresogn•no (16 12 2020)
-# nettavisen•no (25 12 2020)
-# ao•no (28 12 2020)
-# keldan•is (05 01 2021)
-# madridista•dk (21 04 2021)
+# reavisaNO (06 12 2020)
+# ytresognNO (16 12 2020)
+# nettavisenNO (25 12 2020)
+# aoNO (28 12 2020)
+# keldanIS (05 01 2021)
+# madridistaDK (21 04 2021)
 - banners casinotop
-# gnavergalleri•dk (along with ~60 affiliates sites)
+# gnavergalleriDK (along with ~60 affiliates sites)
 # https://github.com/DandelionSprout/adfilt/issues/233
-# sol•dk (25 04 2021)
-# bilgalleri•dk (25 04 2021)
+# solDK (25 04 2021)
+# bilgalleriDK (25 04 2021)
 # forum.ipmsnorge.org (24 05 2021)
-# tipsbladet•dk (15 06 2021)
-# sol•no (22 09 2021)
-# vesterbroliv.dk, vafo.dk, amagerliv•dk
+# tipsbladetDK (15 06 2021)
+# solNO (22 09 2021)
+# vesterbrolivDK, vafoDK, amagerlivDK
 # https://github.com/uBlockOrigin/uAssets/issues/13224
-# rett24•no (13 06 2022)
-# metalsupply.no, licitationen•dk (08 03 2023)
+# rett24NO (13 06 2022)
+# metalsupplyNO, licitationenDK (08 03 2023)
 # https://www•licitationen•dk/article/view/900259/efter_entreprenors_konkurs_river_106_ufaerdige_huse_ned_i_hojetaastrup/(08/03/2023)
-# maskinregisteret•no (08 03 2023)
-# eikernytt•no (18 05 2023)
+# maskinregisteretNO (08 03 2023)
+# eikernyttNO (18 05 2023)
 # Various now-dead Frettabladid subdomains
-# migogkbh•dk (22 06 2023)
+# migogkbhDK (22 06 2023)
 # digitalt.tv (08 09 2023)
-# h-avis•no (11 12 2023)
-# skessuhorn•is (29 12 2023)
-# sol•no
+# h-avisNO (11 12 2023)
+# skessuhornIS (29 12 2023)
+# solNO
 # www•qxl•no
 # www•vtb•no
-# vafo•dk
-# reelligestilling•dk
+# vafoDK
+# reelligestillingDK
 # www•rbnett•no
 # www•op•no
-# journalisten•dk
+# journalistenDK
 # www•altomfotball•no
-# dv•is
-# bt•no
+# dvIS
+# btNO
 # latterkula•no se-streamerne-som-vinner-store-gevinster-mens-de-streamer-live
 # www•latterkula•no artikler
 # www•mbl•is frettir
-# adressa•no
+# adressaNO
 # https://nyheder.tv2•dk/2021-02-04-soennerne-saa-frem-til-en-arv-fra-deres-far-efter-mange-aars-lidelser-indtil-han-giftede/(04/02/2021)
-# kk.no, sol•no
+# kkNO, solNO
 # (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/58527)
-# historienet.no, natgeo.no, komputer•no
-# qxl•no
-# gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi•no
-# demokraten.no, avisa-hordaland.no, blv.no, gat.no, lp.no, osogfusa.no, raumnes.no, setesdolen.no, sunnhordland.no, vaksdalposten.no, vtb•no
-# ba•no
+# historienetNO, natgeoNO, komputerNO
+# qxlNO
+# gamerNO, veier24NO, atNO, portenNO, insidetelecomNO, elektronikkbransjenNO, tu.no, digi•no
+# demokratenNO, avisa-hordalandNO, blvNO, gatNO, lpNO, osogfusaNO, raumnesNO, setesdolenNO, sunnhordlandNO, vaksdalpostenNO, vtbNO
+# baNO
 # https://github.com/DandelionSprout/adfilt/pull/53
 -d services.api.no bazaar
-# aftenbladet•no
-# avisalofoten•no
+# aftenbladetNO
+# avisalofotenNO
 # blv•no nyheter kan-bruke-23-millioner-pa-the-whale-undersokelsene
 # https://www•aftenposten•no/sport/sjakk/i/4qKxMg/carlsen-overbeviste-verdensmestertakter
 # https://www•aftenposten•no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
-# aftenposten•no (Mobile useragent)
+# aftenpostenNO (Mobile useragent)
 # https://www•brannmannen•no/brann/store-utfordringer-ved-togulykken-pa-asta/
 -d 85.17.76.181
-# krs247•no
-# lsk•no
+# krs247NO
+# lskNO
 # https://www•budstikka•no/
-# e24.no, aftenbladet.no, sysla•no
+# e24NO, aftenbladetNO, syslaNO
 # https://www•austurfrett•is/frettir/lagt-smithlutfall-a-austurlandi/(15/04/2020)
 # https://fiskur•fo/gitte-henning-1-landar-i-maloy/(09/05/2020)
 -d fo banner2x1.png
 # https://www•dagsavisen•no/nyheter/verden/1.1731911/(18/06/2020)
 # https://www•nordlys•no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
 # advokatbladet.no; https://gardsdrift•no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668/(16/08/2020)
-# kimbino.no, kimbino•dk (13 09 2020)
+# kimbinoNO, kimbinoDK (13 09 2020)
 # fasteignir.frettabladid•is (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/111644)
 -d via.placeholder.com
-# lokal-avisa.no, ringsakern•no (19 09 2020)
-# gjoviksblad•no (19 09 2020)
+# lokal-avisaNO, ringsakernNO (19 09 2020)
+# gjoviksbladNO (19 09 2020)
 # midtjyllandsavisDK, herningfolkebladDK, ikast-brandenytDK (30 09 2020)
-# godstart.dk, sol•dk (30 09 2020)
+# godstartDK, solDK (30 09 2020)
 -d ni.dk *-bottom.html
-# fyens.dk, stiften.dk, jv.dk, dagbladet-holstebro-struer.dk, hsfo•dk (30 09 2020)
+# fyensDK, stiftenDK, jvDK, dagbladet-holstebro-struerDK, hsfoDK (30 09 2020)
 # https://www•nutiminn•is/menn-is/spilagaldur-ruglar-i-hausnum-thinum-varud-gaeti-fengid-thig-til-ad-trua-a-galdra-myndband/
-# dagsavisen•no (30 05 2021)
-# aftenposten.no, hockeymagasinet.dk, l-a.no, aftenbladet•no (30 10 2020)
-# bt.no, byas.no, aftenbladet•no (30 10 2020)
-# costume.no, costume•dk (09 11 2020)
+# dagsavisenNO (30 05 2021)
+# aftenpostenNO, hockeymagasinetDK, l-aNO, aftenbladetNO (30 10 2020)
+# btNO, byasNO, aftenbladetNO (30 10 2020)
+# costumeNO, costumeDK (09 11 2020)
 # boligplussNO (09 11 2020), womenDK
 # ytresognNO (16 12 2020)
 - _980banner_
 # ambulanseforumNO (26 12 2020)
-# fyens.dk, faa.dk, stiften.dk, jv.dk, amtsavisen.dk, vafo.dk, viborg-folkeblad.dk, hsfo.dk, frdb.dk, folkebladetlemvig.dk, dbrs.dk, dagbladet-holstebro-stuer.dk, helsingordagblad•dk (02 01 2021)
-# forum.doktoronline•no (06 01 2021), forum.klikk.no, forum.kvinneguiden•no
+# fyensDK, faaDK, stiftenDK, jvDK, amtsavisenDK, vafoDK, viborg-folkebladDK, hsfoDK, frdbDK, folkebladetlemvigDK, dbrsDK, dagbladet-holstebro-stuerDK, helsingordagbladDK (02 01 2021)
+# forum•doktoronline•no (06 01 2021), forum•klikk•no, forum.kvinneguiden•no
 # nettavisenNO (20 01 2021)
 # https://www•helsenett•no/spor-oss/har-du-smabarn/50657-svstadig-tilbakevendende-forkjolelsehostefeber.html/(10/02/2021)
-# https://www•tronderdebatt•no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453/(20/03/2021),/ba•no
-# https://viralefilmer•no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25 03 2021), eavisa•no
-# https://www•terrengsykkelforumet•no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021),/terrengsykkel•no
+# https://www•tronderdebatt•no/vet-regjeringen-at-det-bor-folk-langs-grensen-nord-i-trondelag/o/5-122-18453/(20/03/2021),/baNO
+# https://viralefilmer•no/norske-henry-78-kjopte-superbil-med-700-hestekrefter-til-43-millioner/ (25 03 2021), eavisaNO
+# https://www•terrengsykkelforumet•no/ubbthreads.php?ubb=showflat&Number=2453543/(31/03/2021),/terrengsykkelNO
 # nettavisenNO (04 04 2021)
 # gnavergalleriDK (along with ~60 affiliates sites; 21 04 2021)
 # nidarosNO
@@ -532,9 +532,9 @@ msFilterList
 # elbil24NO, viNO (21 06 2021)
 # farmatidNO (16 11 2021)
 # https://radioh•no/norsk-opphenting-mot-nederland-sikret-vm-kvartfinale-storm-i-kastene/ (14 12 2021)
-# nordlys.no, an•no (19 06 2022)
-# nidaros•no (22 02 2023)
-# jyllands-posten•dk (22 03 2023)
+# nordlysNO, anNO (19 06 2022)
+# nidarosNO (22 02 2023)
+# jyllands-postenDK (22 03 2023)
 # forum.kvinneguiden•no (Mobile user agent; 05 04 2023)
 # Various now-dead Frettabladid subdomains from 2020
 # https://www•aftenposten•no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter/(26/12 2023)
@@ -660,8 +660,8 @@ msFilterList
 +d oddstips.norsktippingpartner.no
 -d cloudfront.net Liveoddsen.aspx
 - cloudfront.net oddsen
-# nidaros•no (02 12 2021)
-# h-avis•no (11 12 2023)
+# nidarosNO (02 12 2021)
+# h-avisNO (11 12 2023)
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7865350
 # https://www•nettavisen•no/sportspill/her-er-tallene-som-vil-fa-liverpool-fansen-i-godt-humor/s/5-95-1529066
@@ -673,7 +673,7 @@ msFilterList
 # 🇳🇴: Falske innlastinger som sløser bort tid
 # 🇩🇰: Falske indlastinger, der søler bort tid
 # 🇬🇧: Fake loading screens that waste time
-# adressa•no (02 12 2020)
+# adressaNO (02 12 2020)
 -d collector.schibsted.io
 # "Generic Hide"
 +d bondebladet.screen9.tv
@@ -696,16 +696,16 @@ msFilterList
 -d widget.tippebannere.no
 # • Not to be removed during upstream syncs •
 # https://www•avvir•no/samegiella-ja-mearkagiella-vuosttasgiellan/
-# jyllands-posten•dk (09 07 2020)
+# jyllands-postenDK (09 07 2020)
 # specificTXT
 # 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
-# Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg•no eller vg•no sport
+# Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
 # 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 # 🇮🇸: Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
 # 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
-# Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg•no or vg•no sport
+# Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no sport
 - begrensede-tilbudet
 - bli-avbrutt-bor-du-oppdater
 - dnb11111
