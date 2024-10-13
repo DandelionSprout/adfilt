@@ -1,14 +1,14 @@
 [Adblock Plus 3.13]
 ! Title: 🕳 Empty Padding Remover
-! Version: 01October2024v1-Beta
+! Version: 13October2024v1-Beta
 ! Expires: 4 days
 ! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? Or perhaps you're tired ot very large shadows on video sites when moving the mouse? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 
 ! ——— Generic ———
 ##.skille:not(html, body)
-! change•org, indiegogo•com, thejc•com, icelandreview•com, bir•no, medier24•no, knr•gl, nutiminn•is
-! (https://github•com/DandelionSprout/adfilt/issues/923)
+! changeORG, indiegogoCOM, thejcCOM, icelandreviewCOM, birNO, medier24NO, knrGL, nutiminnIS
+! (https://github.com/DandelionSprout/adfilt/issues/923)
 *,~barter.vg##p:has-text(/^\xA0$/):not(:has-text(/\S/)):not(:has(img))
 ! https://zh•cn•nikkei•com/politicsaeconomy/stockforex/39110-2020-01-21-09-55-57•html
 ! (Exception: https://www•pixiv•net/bookmark•php)
@@ -19,21 +19,23 @@
 *,~fandom.com##p:has-text(/^ $/):not(:has-text(/\S/)):not(:has(img, input, iframe))
 !#endif
 ! As per https://developer•mozilla•org/en-US/docs/Web/CSS/:-moz-only-whitespace
-! (Exception: https://github•com/AdguardTeam/AdguardFilters/issues/119108; https://github.com/DandelionSprout/adfilt/issues/1052)
+! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/119108; https://github.com/DandelionSprout/adfilt/issues/1052)
 ~fandom.com,~sahibinden.com##p:empty:not([class],[id])
 !#if !env_chromium
 ##p:-moz-only-whitespace
 !#endif
-! lyricsmania•com,songtextemania•com
+! lyricsmaniaCOM, songtextemaniaCOM
 ##.spacer-20:not(html, body)
-! alrai•com
+! alraiCOM
 ##.space20:not(html, body)
-! talkmore•no
-! (Exceptions: Various US local newspaper sites, https://github•com/DandelionSprout/adfilt/issues/63/#issuecomment-1086956813)
+! talkmoreNO
+! (Exceptions: Various US local newspaper sites, https://github.com/DandelionSprout/adfilt/issues/63/#issuecomment-1086956813)
 !!!*##.spacer:not(html, body):not(:has-text(/\S/))
 !!!trakt.tv#@#.spacer
 !!!mousechief.com#@#.spacer
-! icelandreview•com
+! Suffixing ":empty" to it seems to work well…? (https://www•webnots•com/how-to-enable-smb-server-in-windows-pc/; 13/10/2024)
+##div[class=spacer]:empty
+! icelandreviewCOM
 ##.mk-padding-divider:not(html, body)
 ! https://www•sat24•com/foreloop•aspx?type=0&continent=europa
 ###horizontalspace
@@ -47,7 +49,7 @@
 ~gog.com##.footer-spacer:not(html, body)
 ! https://thedroidguy•com/htc-u11-troubleshooting (25/10/2020)
 ##.elementor-spacer:not(html, body)
-! allers•no
+! allersNO
 ~schengenvisainfo.com##.vc_empty_space:not(html, body)
 ! https://byggebolig•no/luft-luft-varmepumpe/erfaringer-med-mitsubishi-kirigamine-6-6/msg445542 (12/11/2020)
 ##.body-spacer:not(html, body)
