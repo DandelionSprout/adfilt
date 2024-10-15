@@ -1,6 +1,6 @@
 [Adblock Plus 3.10]
 ! Title: 🤺 Anti-'Manifest V3' List
-! Version: 15October2024v1-Alpha
+! Version: 15October2024v2-Alpha
 ! Expires: 4 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -98,5 +98,4 @@ github.com##react-app[initial-path*="/FiltersRegistry/"][initial-path$="/filters
 
 ! ——— To prevent Google's statistics from still claiming people use Chrome on desktop ———
 ! I can't remember why "sourceid" had to be whitelisted in Legitimate URL Shortener to begin with.
-||google.*sourceid=chrome&$removeparam=sourceid,domain=www.google.*|ipv6.google.com
-||google.*sourceid=chrome|$removeparam=sourceid,domain=www.google.*|ipv6.google.com
+$removeparam=/^sourceid=chrome$/,domain=www.google.*|ipv6.google.com
