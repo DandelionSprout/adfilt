@@ -1,6 +1,6 @@
 [Adblock Plus 3.19]
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! Version: 08September2024v1-Beta
+! Version: 15October2024v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -101,16 +101,16 @@ amazon.*##span.av-badge-text:has(.av-imdb-logo)
 amazon.*##a[href="#customer-review-section"] + span
 !!!google.*##:xpath(//*[text()[contains(., 'IMDb')]]/parent::*/parent::div/parent::div//*[contains(@class, 'slp') and contains(@class, 'f')])
 !!!google.*##div[data-hveid]:has(> div > div > a[href*="imdb.com"]) div:has(> div[class] > span)
-www.google.*##.g .r:has(a[href*=".imdb.com"]) + .s > div > div:first-of-type
-www.google.*##div[data-async-context^="query:"] > .g > div:has(a[href*=".imdb.com"]) g-review-stars:upward(1)
-www.google.*##div[data-async-context^="query:"] > .g:has(a[href*=".imdb.com/"]) div:has(> g-review-stars)
-www.google.*##.g:has(a[href*="imdb.com"]) g-review-stars:upward(1)
-www.google.*##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
-www.google.*#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
-www.google.*##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
+www.google.*,ipv6.google.com##.g .r:has(a[href*=".imdb.com"]) + .s > div > div:first-of-type
+www.google.*,ipv6.google.com##div[data-async-context^="query:"] > .g > div:has(a[href*=".imdb.com"]) g-review-stars:upward(1)
+www.google.*,ipv6.google.com##div[data-async-context^="query:"] > .g:has(a[href*=".imdb.com/"]) div:has(> g-review-stars)
+www.google.*,ipv6.google.com##.g:has(a[href*="imdb.com"]) g-review-stars:upward(1)
+www.google.*,ipv6.google.com##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
+www.google.*,ipv6.google.com#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
+www.google.*,ipv6.google.com##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/148512)
 !#if !env_mobile
-www.google.*##.g div[jscontroller]:has(a[href*=imdb]) div + div + div[class*=" "]:has(span[role=img])
+www.google.*,ipv6.google.com##.g div[jscontroller]:has(a[href*=imdb]) div + div + div[class*=" "]:has(span[role=img])
 !#endif
 viaplay.*##.Imdb-link-slSbv
 viaplay.*##.ImdbExtended-container-_sA0e
