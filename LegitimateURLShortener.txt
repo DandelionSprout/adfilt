@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 13October2024v1
+! Version: 15October2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2103,17 +2103,20 @@ $removeparam=ogbl
 ||google.*/webhp$removeparam=channel
 !#if !adguard_app_android
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
-||www.google.$removeparam=aqs
+$removeparam=aqs,domain=www.google.*|ipv6.google.com
 !#endif
 ! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
-||www.google.$removeparam=btnG
-||www.google.$removeparam=iflsig
+$removeparam=btnG,domain=www.google.*|ipv6.google.com
+$removeparam=iflsig,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1093666
-||www.google.$removeparam=uact
+$removeparam=uact,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1127765
 ://www.google.*/search^$removeparam=kgs
 ://www.google.*/search^$removeparam=shndl
 ://www.google.*/search^$removeparam=entrypoint
+://ipv6.google.com*/search^$removeparam=kgs
+://ipv6.google.com*/search^$removeparam=shndl
+://ipv6.google.com*/search^$removeparam=entrypoint
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1299693
 ||google.*/search$removeparam=sqi
 ! https://www.google.com/search?gs_ssp=eJzj4tTP1TcwSssoSVZgNGB0YPASS0otKUktUkgqLc7MSy0uBjKKUhNLAeDcDI4&q=better+business+bureau&oq=better&sourceid=chrome&ie=UTF-8
@@ -2122,6 +2125,7 @@ $removeparam=ogbl
 ! https://github.com/DandelionSprout/adfilt/issues/879
 ! https://github.com/DandelionSprout/adfilt/issues/893
 ||www.google.*/search?$doc,removeparam=client
+||ipv6.google.com*/search?$doc,removeparam=client
 !#endif
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1412160
 ||google.$removeparam=prds
@@ -2135,6 +2139,7 @@ $removeparam=ogbl
 ||googleadservices.com^$removeparam=ohost
 ! https://github.com/DandelionSprout/adfilt/issues/834#issuecomment-1510431981
 ||www.google.*/search?$doc,removeparam=sclient
+||ipv6.google.com*/search?$doc,removeparam=sclient
 ! Should not be removed: dpr (Determines image search results' box sizes)
 ! https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S-1476216186%3A1641712437682727&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp (09/01/2022)
 ||accounts.google.com^$removeparam=dsh,doc
@@ -2148,18 +2153,19 @@ $removeparam=_x_tr_pto
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6196774
 ||support.google.com^$doc,removeparam=sjid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6525587
-||www.google.$doc,removeparam=gs_lp
+$doc,removeparam=gs_lp,domain=www.google.*|ipv6.google.com
 ||www.google.*/search$removeparam=oq,doc
+||ipv6.google.com*/search$removeparam=oq,doc
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6714455
 ||google.$doc,removeparam=sca_esv
 ! https://www.google.com/search?q=winget+vsdc&newwindow=1&udm= (15/03/2024)
-||www.google.$removeparam=/^udm=$/
+$removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 !#if !env_mobile
 ! https://www-nrk-no.translate.goog/norge/regjeringen-vil-endre-russetiden-_-her-er-planen-1.16812907?_x_tr_sl=no&_x_tr_tl=en&_x_tr_hl=no&_x_tr_pto=wapp (20/03/2024)
 ||translate.goog^$removeparam=_x_tr_pto
 !#endif
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10267561
-||www.google.$doc,removeparam=sca_upv
+$doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 
 !!! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
