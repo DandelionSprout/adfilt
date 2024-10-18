@@ -9,12 +9,12 @@ Additionally, downtime has increased in the autumn of 2022, in part due to non-e
 ### DNS IP addresses
 
 The main connection addresses are:
-* DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query` + `https://dandelionsprout2.asuscomm.com:2501/dns-query`
-* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com:853` + `tls://dandelionsprout2.asuscomm.com:853` (<i>Nebulo</i> and <i>AdGuard for Windows</i> are known to work. <i>AdGuard for Android</i> 4.x support can be forced by clicking the "Save" button multiple times.)
+* DNS-over-HTTPS: `https://dandelionsprout.asuscomm.com:2501/dns-query` (Works with almost all devices. Windows 11's OS "Settings" has a bug where it refuses to accept custom ports for DNS-over-HTTPS, due to it trying to ping `_2501._https.dandelionsprout.asuscomm.com`, which is not an address that DNS servers can usually handle; third-party Windows programs to handle DoH will still work.)
+* DNS-over-TLS: `tls://dandelionsprout.asuscomm.com`(<i>Nebulo</i> and <i>AdGuard for Windows</i> are known to work. <i>AdGuard for Android</i> 4.x support can be forced by clicking the "Save" button multiple times.)
 * DNS-over-QUIC: `quic://dandelionsprout.asuscomm.com:41396`
 * DNSCrypt IPv4 (Currently not enabled): `sdns://AQEAAAAAAAAAEzg0LjIwMi4xNTUuMjE3OjU0NDMgOKEL1WhWlPWX9yILXMmWEzM6KWDYVv7vFEJQ8UxkUmwsMi5kbnNjcnlwdC1jZXJ0LmRhbmRlbGlvbnNwcm91dC5hc3VzY29tbS5jb20` (The stamp depends on the [current IPv4 address](https://www.ntppool.org/a/DandelionSprout). If the stamp seems to be dead, go to https://dnscrypt.info/stamps/ and choose the following settings: *current IPv4 address*:5443 - 38A10BD5685694F597F7220B5CC99613333A2960D856FEEF144250F14C64526C - 2.dnscrypt-cert.dandelionsprout.asuscomm.com)
 
-Although I do also offer standard IPv4 and IPv6 addresses (both regular and `tcp://`), they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
+Although I do also offer standard IPv4 and IPv6 addresses (both regular and on paper `tcp://`), they change fairly frequently due to ASUS routers bizarrely insisting on getting a new IPv4 address each time most of its settings are changed in any way; the newest ones are usually available at https://www.ntppool.org/a/DandelionSprout.
 
 The encrypted addresses may also go down during Windows restarts, or if ASUS' lookup servers for Asuscomm are acting wonky.
 
