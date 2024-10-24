@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 15October2024v1
+! Version: 24October2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2166,6 +2166,10 @@ $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 !#endif
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10267561
 $doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
+! Removing a Google search parameter, based on extensive research to determine that search terms with Google will always use UTF-8 no matter what and will under no known circumstances actually treat text as Shift_JIS even when using "&ie=Shift_JIS"
+! https://support.google.com/adsense/answer/9055049 imply that "Shift_JIS" was supposed to be accepted by Google, but while https://www.google.co.jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC works correctly (マーメイドラグーンのラニー, the Japanese name of a book), https://www.google.co.jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC&ie=Shift_JIS clearly doesn't, no matter which combinations of online converters or halfwidth/fullwidth I tested with.
+://www.google.$doc,removeparam=ie,domain=www.google.*|ipv6.google.com
+://ipv6.google.com^$doc,removeparam=ie,domain=www.google.*|ipv6.google.com
 
 !!! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
