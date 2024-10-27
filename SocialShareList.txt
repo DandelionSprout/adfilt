@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 15September2024v1-Beta
+! Version: 27October2024v1-Beta
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -269,19 +269,19 @@
 ##ul[class^=share-action]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##ul[class^=sociale-ikoner-del]
 ##ytm-share-target-renderer
-*/images/share_icons/
-*/images/social-share/
-*/share-newsletter/
-/^.*(\.|//)shar(e|ing)\.[a-z0-9-]{2,60}\..*$/$image,domain=~discord.com|~reddit.com
+/images/share_icons/*
+/images/social-share/*
+/share-newsletter/*
+/^.*(\.|//)shar(e|ing)\.[a-z0-9-]{2,60}\..*$/$image,match-case,domain=~discord.com|~reddit.com
 /addthis_widget.js^
 /btn_share_fb.
 /btn_share_ln.
 /btn_share_tw.
 /mixx_share.gif$image
 /modules/responsive_share_buttons^
-/pinitbtn.$image
-/share-icons_$image
-/share/*-icon.png$image
+/^.*/pinitbtn\..*/$image,match-case
+/^.*/share-icons_.*$/$image,match-case
+/^.*/share/.*-icon\.png.*$/$image,match-case
 /sharing/facebook.$image
 /sharing/reddit.$image
 /sharing/stumbleupon.$image
