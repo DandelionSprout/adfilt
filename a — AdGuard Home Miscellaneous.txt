@@ -1,6 +1,6 @@
 [Adblock Plus 3.6]
 ! Title: 🏘 Semi-public stuff for Dandelion Sprout's Official DNS Server
-! Version: 27October2024v1
+! Version: 27October2024v2
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! Description: Spun off from a.txt when I began placing public scrutiny on myself and my DNS server, as I didn't intend for some of the entries in it to be blocked by DNS server users that weren't myself, and I didn't except even hardcore tech experts to know that "$document" meant that the entries didn't apply to the server.
 
@@ -110,6 +110,8 @@ zone "www.nrk.no" { type master; notify no; file "null.zone.file"; };
 ! https://github.com/AdguardTeam/AdGuardHome/discussions/2901#discussioncomment-11033278
 |local|$dnsrewrite=127.0.0.1,dnstype=~AAAA|~CNAME
 |local|$dnsrewrite=::1,dnstype=AAAA
+|localdomain|$dnsrewrite=127.0.0.1,dnstype=~AAAA|~CNAME
+|localdomain|$dnsrewrite=::1,dnstype=AAAA
 ! https://locall.host/localhost-localdomain/
 |localhost|$dnsrewrite=127.0.0.1,dnstype=~AAAA|~CNAME
 |localhost|$dnsrewrite=::1,dnstype=AAAA
