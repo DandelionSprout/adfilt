@@ -1,4 +1,4 @@
-! Last updated: 24October2024v3-Extension
+! Last updated: 31October2024v1-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -101,6 +101,19 @@ bold.dk##+js(nofab)
 !#endif
 ! The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
 ||piano.io/xbuilder/experience/execute^$xhr,domain=www.digi.no|www.tu.no
+!#if !ext_ublock
+! Borrowed from "uBlock Filters" (31/10/2024)
+*$image,redirect-rule=1x1.gif,domain=maskinbladet.dk|fritidsmarkedet.dk
+@@||stokerpiller.dk^$ghide
+fritidsmarkedet.dk,maskinbladet.dk##+js(nostif, Check)
+fritidsmarkedet.dk,maskinbladet.dk##.skybanner
+fritidsmarkedet.dk,maskinbladet.dk##megaboard-inner
+mmm.dk##+js(set, adblockerAlert, noopFunc)
+rabo.no,pressemedie.dk##+js(noeval-if, /chp_?ad/)
+stokerpiller.dk##.adsbygoogle:style(max-height:1px!important)
+tobys.dk##+js(aopr, checkAds)
+tobys.dk#@#.abMessage
+!#endif
 
 ! 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 playpilot.com##.takeover.modals
