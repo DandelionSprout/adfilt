@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 10October2024v3-Deprecated
+# Last modified: 31October2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -574,6 +574,7 @@ msFilterList
 # Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt,/which/has/not been the case.
 # aİD (Phone user agent)
 # https://github.com/AdguardTeam/AdguardFilters/issues/189667
+# https://www•dagsavisen•no/sport/2024/10/31/kfum-oslo-var-uhyre-naer-et-finaleran/
 # 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 # 🇩🇰: ——— Distraherende baggrundsbilleder ———
 # 🇮🇸: ——— Truflanda baksýnsmyndir ———
@@ -1281,7 +1282,7 @@ msFilterList
 :  1.14.61.188
 -d smarthouseforum.ru
 -d trafikkskoleapp.no
-# Last updated: 15July2024v2-Extension
+# Last updated: 31October2024v2-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -1291,24 +1292,27 @@ msFilterList
 -d dagligvarehandelen.no veil.png
 # 10 02 2024
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8603702
-# dagbladet.no,elbil24.no
+# dagbladetNO, elbil24NO
 # digi.no, tu.no, medier24.no, porten.no
-# https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
-# https://www.vg.no/nyheter/i/y3Mka2//(08/04/2020)
-# https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
+# https://www•klikk•no/side3/vimenn/viggo-bloffet-hele-norge-6857944
+# https://www•vg•no/nyheter/i/y3Mka2//(08/04/2020)
+# https://www•vg•no/nyheter/innenriks/i/3JbRzv/ (09 04 2020)
+# https://www•vestnesavisa•no/2024/nyheiter/hald-pa-hatten-i-dag-kan-det-blese-godt/ (24 10 2024), h-a•no, lokal-avisa•no, ringsakern•no, stangeavisa•no
 # 🇳🇴 🇩🇰: ——— Anti-anti-reklameblokkering ———
 # 🇮🇸: ——— And-and-auglýsingshindrun ———
 # 🇬🇧: ——— Anti-anti-adblocking ———
 -d elderlyscissors.com
 # Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 -d googletagmanager.com gtm.js
-# aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
+# aftenpostenNO, abcnyheterNO, recordereDK, gastrofunDK, fyensDK, tilbudsukenNO, viborg-folkebladDK, gaffaDK, jvDK
 # https://github.com/uBlockOrigin/uAssets/issues/8648
 # https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
-# https://www.findroommate.dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum/(17/12/2021)
+# https://www•findroommate•dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum/(17/12/2021)
 # https://github.com/uBlockOrigin/uAssets/issues/13495
 # The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
 -d piano.io execute
+# Borrowed from "uBlock Filters — Ads" (31 10 2024)
++d stokerpiller.dk
 # 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 # 🇬🇧: ——— An unusual entry, but a needed entry: Aims to prevents NRK's login system on Google Translate-d pages to their regular site, from being redirected from a translated page to the non-translated frontpage. ———
 -d innlogging.nrk.no

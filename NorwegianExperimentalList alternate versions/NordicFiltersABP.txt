@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 101020243
+! Version: 311020241
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2055,6 +2055,8 @@ spania.no##.tdc-row:not(:has(+ .tdc-row)):not(:has(p[class*=descr]:last-of-type)
 ! aİD (Phone user agent)
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189667
+! https://www•dagsavisen•no/sport/2024/10/31/kfum-oslo-var-uhyre-naer-et-finaleran/
+dagsavisen.no##:is(p,h2):has(> br:only-of-type:empty)
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ! 🇩🇰: ——— Distraherende baggrundsbilleder ———
@@ -3333,7 +3335,7 @@ triplx.dk##.aff-inner-col
 
 
 
-! Last updated: 15July2024v2-Extension
+! Last updated: 31October2024v2-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -3341,7 +3343,7 @@ triplx.dk##.aff-inner-col
 ! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
 ! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
 ##.Article-header-body::before
-##.paywall-fade:not(html, body)
+##.paywall-fade:not(html,body)
 ##.polarisSpid.widget::before
 aftenbladet.no,fvn.no##.overlay-wrap::before
 aftenposten.no##.widget-salesposter::before
@@ -3358,7 +3360,6 @@ vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:not(.undefined):not([c
 borsen.dk##.indent-wrapper > .overlay
 dknyt.dk,kommunen.dk##.fade-out
 vartoslo.no,minerva.no##.teaserContent::before
-h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content::before
 markedsforing.dk##.gradient-y-trans-to-white-95
 berlingske.dk##.paywall-wrapper::before
 intrafish.no##.preview-gradient
@@ -3375,17 +3376,18 @@ ba.no###aid-overlay
 vg.no##.paywallTextFading
 kommunal-rapport.no##.paywall-fade-out::after
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-8603702
-
-! dagbladet.no,elbil24.no
+! dagbladetNO, elbil24NO
 ##.CTA-body-faded:not(html, body)
 ! digi.no, tu.no, medier24.no, porten.no
 ##.faded-article-content::after
-! https://www.klikk.no/side3/vimenn/viggo-bloffet-hele-norge-6857944
+! https://www•klikk•no/side3/vimenn/viggo-bloffet-hele-norge-6857944
 ##.paywall-gradient:not(html, body)
-! https://www.vg.no/nyheter/i/y3Mka2/ (08/04/2020)
+! https://www•vg•no/nyheter/i/y3Mka2/ (08/04/2020)
 vg.no##div[data-test-tag=timestamp] + div::before
-! https://www.vg.no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
+! https://www•vg•no/nyheter/innenriks/i/3JbRzv/ (09/04/2020)
 vg.no##div[data-test-tag=timestamp] + p + div::before
+! https://www•vestnesavisa•no/2024/nyheiter/hald-pa-hatten-i-dag-kan-det-blese-godt/ (24/10/2024), h-a•no, lokal-avisa•no, ringsakern•no, stangeavisa•no
+
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
@@ -3396,16 +3398,23 @@ tv2.no#$#abort-current-inline-script adblockDetector
 gamereactor.no,gamereactor.dk#$#abort-current-inline-script AdsReloadConfig
 ! Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 ||googletagmanager.com/gtm.js^$domain=dk|bornholm.nu
-! aftenposten.no, abcnyheter.no, recordere.dk, gastrofun.dk, fyens.dk, tilbudsuken.no, viborg-folkeblad.dk, gaffa.dk, jv.dk
+! aftenpostenNO, abcnyheterNO, recordereDK, gastrofunDK, fyensDK, tilbudsukenNO, viborg-folkebladDK, gaffaDK, jvDK
 ##div[style^="bottom: 0px;"][style*="width: 10"][style*="z-index: 2147"]
 ! https://github.com/uBlockOrigin/uAssets/issues/8648
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
 
-! https://www.findroommate.dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum (17/12/2021)
+! https://www•findroommate•dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum (17/12/2021)
 findroommate.dk###frm-ablo-message
 ! https://github.com/uBlockOrigin/uAssets/issues/13495
 ! The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
 ||piano.io/xbuilder/experience/execute^$xmlhttprequest,domain=www.digi.no|www.tu.no
+! Borrowed from "uBlock Filters — Ads" (31/10/2024)
+*$image,redirect-rule=1x1.gif,domain=maskinbladet.dk|fritidsmarkedet.dk
+@@||stokerpiller.dk^$generichide
+fritidsmarkedet.dk,maskinbladet.dk##.skybanner
+fritidsmarkedet.dk,maskinbladet.dk##megaboard-inner
+tobys.dk#$#abort-on-property-read checkAds
+tobys.dk#@#.abMessage
 
 ! 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 playpilot.com##.takeover.modals
