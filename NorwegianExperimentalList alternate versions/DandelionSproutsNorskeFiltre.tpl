@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 31October2024v1-Deprecated
+# Last modified: 31October2024v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -691,7 +691,7 @@ msFilterList
 # 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 # Starting with 10May2024v4, only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
 -d freewheel-mtgx-tv.akamaized.net *.mp4
--d freewheel-mtgx-tv.akamaized.net
+!!!||freewheel-mtgx-tv.akamaized.net
 -d googletagservices.com gpt.js
 -d v.fwmrm.net g
 -d widget.tippebannere.no
