@@ -680,6 +680,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^! {0,}$", 
+           r"", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\n'
 
@@ -1479,6 +1485,18 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^/([a-zA-Z0-9].*$)", 
            r"|\1", 
+           line
+        )
+
+        line = re.sub(
+           r"^! {0,}$", 
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^! !SECTION.*$", 
+           r"", 
            line
         )
 
