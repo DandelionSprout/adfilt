@@ -662,6 +662,24 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^@.*(gatewaypundit|wltreport).*$",
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^[|:/._a-z0-9-].*akamaiedge.*$",
+           r"", 
+           line
+        )
+
+        line = re.sub(
+           r"^([|:/._a-z0-9-].*(akamai|azure[we]|\.cdn77\.org|amazonaws\.).*[^|])$",
+           r"\1$dnstype=~CNAME", 
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\n'
 
@@ -760,7 +778,7 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"^![a-z #].*$", 
+           r"^!([a-z #]|\[).*$", 
            r"", 
            line
         )
@@ -809,7 +827,7 @@ def prepare_ip(lines) -> str:
 
         line = re.sub(
            r"# Version: (.*)-.*$", 
-           r"! Version: \1-PreAlpha", 
+           r"! Version: \1-Alpha", 
            line
         )
 
@@ -906,6 +924,12 @@ def prepare_ip(lines) -> str:
         line = re.sub(
            r"^[a-zA-Z0-9].*[#$|a-z].*$", 
            r"", 
+           line
+        )
+
+        line = re.sub(
+           r"\.\.", 
+           r".", 
            line
         )
 
@@ -1130,12 +1154,6 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^!#.*$", 
-           "", 
-           line
-        )
-
-        line = re.sub(
-           r"^\|[a-z0-9].*$", 
            "", 
            line
         )
@@ -1460,7 +1478,7 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^/([a-zA-Z0-9].*$)", 
-           r"//\1", 
+           r"|\1", 
            line
         )
 
