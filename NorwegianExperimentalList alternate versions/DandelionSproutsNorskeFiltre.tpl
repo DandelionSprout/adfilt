@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 12November2024v1-Deprecated
+# Last modified: 13November2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -540,6 +540,7 @@ msFilterList
 # https://www•aftenposten•no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter/(26/12 2023)
 # e24NO (Mid-December 2023)
 # https://heimildin.is/greinar/?label=1/(09/10/2024)
+# euroinvestorDK (13 11 2024)
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
