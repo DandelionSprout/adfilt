@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 13November2024v1-Deprecated
+# Last modified: 25November2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -324,6 +324,7 @@ msFilterList
 -d storfjordnytt.no *_muri.jpg
 -d stream.fo *-300x111.jpg
 -d teknologiskmatforum.no ViewImage.aspx?*width=343
+-d tvsporten.dk 100x60_logo.png
 -d thaiguiden.no tg-980.html
 -d thainytt.no *-160.jpg
 -d thainytt.no 160_*
@@ -541,6 +542,7 @@ msFilterList
 # e24NO (Mid-December 2023)
 # https://heimildin.is/greinar/?label=1/(09/10/2024)
 # euroinvestorDK (13 11 2024)
+# https://www•avvir•no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
@@ -696,8 +698,6 @@ msFilterList
 -d googletagservices.com gpt.js
 -d v.fwmrm.net g
 -d widget.tippebannere.no
-# • Not to be removed during upstream syncs •
-# https://www•avvir•no/samegiella-ja-mearkagiella-vuosttasgiellan/
 # jyllands-postenDK (09 07 2020)
 # specificTXT
 # 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
