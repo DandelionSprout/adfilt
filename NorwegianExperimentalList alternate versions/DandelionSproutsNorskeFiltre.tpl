@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 25November2024v1-Deprecated
+# Last modified: 29November2024v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -543,6 +543,15 @@ msFilterList
 # https://heimildin.is/greinar/?label=1/(09/10/2024)
 # euroinvestorDK (13 11 2024)
 # https://www•avvir•no/samegiella-ja-mearkagiella-vuosttasgiellan/
+# Borrowed from "Frellwit's Swedish Filter" (29 11 2024)
+-d spania.no
+-d plausible.webfokus.no
+-d bcm.interactives.dk script
+-d bytelab.dk
+-d cncpt.dk
+-d gtm.findroommate.dk
+-d nichehuset.dk
+-d step.dk
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
@@ -552,10 +561,9 @@ msFilterList
 # https://www•aftenposten•no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
 # Should not have ":not" + ":empty" added to it due to costume•no
 # — — — — — — — — —
-# 🇳🇴: Hovedsaklig for AdGuard
-# 🇳🇴🏞: Huvudsakleg for AdGuard
-# 🇮🇸: Aðallega fyrir AdGuard
-# 🇬🇧: Mostly for AdGuard
+# 🇳🇴: IP-adresse
+# 🇳🇴🏞: IP-adressar
+# 🇬🇧: IP addresses
 :  3.248.18.175
 :  35.227.231.163
 :  45.58.146.154

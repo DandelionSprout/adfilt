@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)
-! Version: 251120241
+! Version: 291120242
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1649,7 +1649,6 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||gamereactor.*/exclusive.json^
 ||datamaskin.biz/ad/
 _1170x400.$domain=eyjafrettir.is,image,~third-party
-_1170x400.$domain=eyjafrettir.is,image,~third-party
 /1170x400_$domain=eyjafrettir.is,image,~third-party
 ! — — — — — — —
 ! 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
@@ -1982,6 +1981,15 @@ aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austa
 ##.topscroll-placeholder:not(body,html,:empty)
 ! https://www•avvir•no/samegiella-ja-mearkagiella-vuosttasgiellan/
 ~tipsbladet.no##.td-a-rec:not(html,body,:empty)
+! Borrowed from "Frellwit's Swedish Filter" (29/11/2024)
+||spania.no^$third-party
+||plausible.webfokus.no^$third-party
+||bcm.interactives.dk/script/
+||bytelab.dk^$third-party
+||cncpt.dk^$third-party
+||gtm.findroommate.dk^
+||nichehuset.dk^$third-party
+||step.dk^$third-party
 ! — — — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1999,10 +2007,9 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! Should not have ":not" + ":empty" added to it due to costume•no
 ##.bonnier-ad:not(html,body)
 ! — — — — — — — — —
-! 🇳🇴: Hovedsaklig for AdGuard
-! 🇳🇴🏞: Huvudsakleg for AdGuard
-! 🇮🇸: Aðallega fyrir AdGuard
-! 🇬🇧: Mostly for AdGuard
+! 🇳🇴: IP-adresse
+! 🇳🇴🏞: IP-adressar
+! 🇬🇧: IP addresses
 ://3.248.18.175^
 
 ://35.227.231.163^
@@ -3457,7 +3464,7 @@ triplx.dk##.aff-inner-col
 
 ! Generic entries that seem like they'd apply to the internet as a whole (Nordic sites included) that aren't in EasyList or uBlock Filters, but which are in AdGuard Base Filter.
 ! An equivalent file also exists for AdGuard softwares.
-! Version: 210520241-Extension
+! Version: 291120241-Extension
 ###ad-fullbanner2-billboard-outer
 ###ad-topper
 ###ad_300X250
@@ -3483,7 +3490,6 @@ triplx.dk##.aff-inner-col
 ###scorecard-ad
 ###soldakayan
 ###taw > .med + div > #tvcap > .mnr-c:not(.qs-ic) > .commercial-unit-mobile-top
-###topBanners
 ###topstuff > #tads
 ###total_banner
 ###videopageadblock
@@ -3598,7 +3604,7 @@ triplx.dk##.aff-inner-col
 [Adblock Plus 3.13]
 ! Title: 🇸🇪 Swedish List for All-Nordic filterlist sets
 ! Expires: 6 days (update frequency)
-! Version: 251120243
+! Version: 291120241
 ! Swedish section's homepage: https://github.com/DandelionSprout/Swedish-List-for-Adblock-Plus
 ! 🇸🇪 Beskrivning: Den här listan fjärnar reklamar och sporing på svenskspråkiga websidor. Den är mycket närt knuten till «Frellwit's Swedish Filters», men har blivit modifiserad för att fjärna uppföringer som stridar emot reglementet för inkludering i Adblock Plus (så som anti-anti-adblocking, cookie-notifikationer, nyhetsbrev, med mer), och öka kompatibiliteten med ABP sin syntax, eftersom Frellwits lista inte tilbjuder offisiell brukerstöd för ABP-brukare. Planen är att synkronisera med listan honoms omkring en gång i månaden, och att vi i ABP-teamet lägger till båda variga och mildertidiga fixer i mällantiden.
 ! 🇬🇧 Description: This list removes advertising and tracking on Swedish-language websites. It is very closely connected to "Frellwit's Swedish Filters", but has been modified to remove entries that are against the rules for inclusion in Adblock Plus (such as anti-anti-adblocking, cookie notifications, newsletters, etc.), and increase compatibility with ABP's syntax, since Frellwit's list does not offer official user support for ABP users. The plan is to synchronise with his list roughly once a month, and that the ABP team add both permanent and temporary fixes in the meantime.
@@ -5659,7 +5665,6 @@ zeromagazine.nu##div[id^=ads]
 ||172.104.145.13^
 ||ab.fastighetsvarlden.se^$script
 ||accesslnk.com^
-||addrevenue.io^$third-party
 ||addsleeper.com^$third-party
 ||adeprimo.se^$third-party
 ||adfenix.com^$third-party
@@ -6248,6 +6253,7 @@ veterinarmagazinet.se##.banner-spacer
 @@||doubleclick.net/tag/js/gpt.js$domain=feber.se
 feber.se##.maxetise
 nytid.no,tipsbladet.no#@#div.td-a-rec img
+||addrevenue.io/t?*t=Impression$third-party
 [Adblock Plus 3.13]
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
