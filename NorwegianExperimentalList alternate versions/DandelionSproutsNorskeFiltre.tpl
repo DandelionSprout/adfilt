@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 29November2024v2-Deprecated
+# Last modified: 02December2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -708,6 +708,7 @@ msFilterList
 -d widget.tippebannere.no
 # jyllands-postenDK (09 07 2020)
 # specificTXT
+# https://github.com/uBlockOrigin/uAssets/issues/26263/(02/12/2024)
 # 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)

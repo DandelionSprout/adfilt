@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for «uBlock Origin Legacy»)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for «uBlock Origin Legacy»)
-! Last modified: 29November2024v2-Beta
+! Last modified: 02December2024v1-Beta
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -882,7 +882,7 @@ menn.is##.vc_column:has(.mobile-ad):not(:has(a))
 polarmedia.dk##p:has(a[href*=casino])
 mytastenor.com,mytastednk.com##.modal-container.open:style(padding-top: unset !important)
 dk-kogebogen.dk###banners_right
-flashscore.dk##.boxOverContent--a
+flashscore.*##.boxOverContent--a
 kode24.no##.top-profile.row
 borsen.dk##[href*="://borsen.dk/sponsoreret"]
 bt.no##p ~ div[class^=hyperion-css-]:has(> div[id*=-ad- i])
@@ -2416,6 +2416,11 @@ thelocal.no,thelocal.dk##.row > div[class^="row-"]:has(> a[href="#"] > .panel-ad
 thelocal.no,thelocal.dk#?#div > .section:has(> div[class*=-label]:has-text(Sponsored))
 radio-danmark.dk,radio-norge.org###team_ad
 gaamess.dk##div[class$="Ad"]
+! https://github.com/uBlockOrigin/uAssets/issues/26263 (02/12/2024)
+flashscore.*###detail > .detailLeaderboard
+flashscore.*##.adsenvelope
+flashscore.*##.boxOverContent__banner
+flashscore.*##.prematchOddsBonus__bonus
 
 !#if !ext_ublock
 ! 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
