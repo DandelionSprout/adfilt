@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for «uBlock Origin Legacy»)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for «uBlock Origin Legacy»)
-! Last modified: 02December2024v1-Beta
+! Last modified: 03December2024v1-Beta
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -420,6 +420,10 @@ abcnyheter.no##.container-newsfeed + section .c-teaser__image:style(max-height: 
 gaming.dk##div[style^="width: 370px; "]
 vgtv.no##.page-container:style(margin-top: 0 !important)
 minervanett.no##.row:has(> .adnuntius-ad)
+ukenr.no,ugenr.dk##body[class*=addemam] > #navbar:style(padding-bottom:0!important)
+ukenr.no,ugenr.dk##body[class*=addemam] > h1#title:style(padding-bottom:0!important)
+ukenr.no,ugenr.dk##body[class*=addemam] > #navbar > #print:style(padding-bottom:0!important)
+ukenr.no,ugenr.dk##.bannerad:not(empty)
 180.*##td[class^=frame-shadow-]
 bilbasen.dk##.nmp-ads-layout__top
 vg.no,bt.no##div[id^=adPlacement]
@@ -1698,6 +1702,8 @@ contentMarketing$xhr,domain=sol.no
 ||datamaskin.biz/ad/
 _1170x400.$domain=eyjafrettir.is,image,1p
 /1170x400_$domain=eyjafrettir.is,image,1p
+||ukenr.no/bobs/iframe.php^$subdocument
+||ugenr.dk/bobs/iframe.php^$subdocument
 ! — — — — — — —
 ! 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2039,6 +2045,8 @@ _980banner_
 ||gtm.findroommate.dk^
 ||nichehuset.dk^$3p
 ||step.dk^$3p
+! https://ugenr•dk/kalender (03/12/2024)
+###addemam-wrapper:not(:empty)
 ! — — — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2360,6 +2368,7 @@ csp.screen9.com#@#.adsbox
 @@||www.tv2.no/s/js/ads.js$script,1p
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 @@||sumo.cdn.tv2.no/ads^
+ukenr.no,ugenr.dk#@#.bannerad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121422
 @@.v.fwmrm.net/ad/g^*:MTG_Play_
 

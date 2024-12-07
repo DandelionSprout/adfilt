@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 02December2024v1-Deprecated
+# Last modified: 03December2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -378,6 +378,8 @@ msFilterList
 -d ytresogn.no image007.jpg
 -d ytresogn.no Ytre_718_360_2.jpg
 -d datamaskin.biz ad
+-d ukenr.no iframe.php
+-d ugenr.dk iframe.php
 # — — — — — — —
 # 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -552,6 +554,7 @@ msFilterList
 -d gtm.findroommate.dk
 -d nichehuset.dk
 -d step.dk
+# https://ugenr•dk/kalender/(03/12/2024)
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances

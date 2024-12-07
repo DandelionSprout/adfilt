@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 021220241
+! Version: 031220241
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -401,6 +401,7 @@ babyklar.dk##.text_box
 gamer.no##.site__sticky__ads + div[class*=" "]
 gaming.dk##div[style^="width: 370px; "]
 minervanett.no##.row:has(> .adnuntius-ad)
+ukenr.no,ugenr.dk##.bannerad:not(empty)
 180.no,180.dk##td[class^=frame-shadow-]
 bilbasen.dk##.nmp-ads-layout__top
 vg.no,bt.no##div[id^=adPlacement]
@@ -1658,6 +1659,8 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||datamaskin.biz/ad/
 _1170x400.$domain=eyjafrettir.is,image,~third-party
 /1170x400_$domain=eyjafrettir.is,image,~third-party
+||ukenr.no/bobs/iframe.php^$subdocument
+||ugenr.dk/bobs/iframe.php^$subdocument
 ! — — — — — — —
 ! 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -1996,6 +1999,8 @@ aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austa
 ||gtm.findroommate.dk^
 ||nichehuset.dk^$third-party
 ||step.dk^$third-party
+! https://ugenr•dk/kalender (03/12/2024)
+###addemam-wrapper:not(:empty)
 ! — — — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2286,6 +2291,7 @@ csp.screen9.com#@#.adsbox
 @@||www.tv2.no/s/js/ads.js$script,~third-party
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 @@||sumo.cdn.tv2.no/ads^
+ukenr.no,ugenr.dk#@#.bannerad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121422
 @@.v.fwmrm.net/ad/g^*:MTG_Play_
 
