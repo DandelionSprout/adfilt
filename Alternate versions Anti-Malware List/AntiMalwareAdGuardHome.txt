@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard Home, AdGuard for Android/Windows/macOS' DNS filtering, and Pi-Hole FTL ≥5.22)
-! Version: 08December2024v2
+! Version: 15December2024v1
 ! Expires: 1 day
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -21,9 +21,11 @@
 !!!||pw^$denyallow=libgen.pw|petridish.pw|palaugov.pw|dpc.pw|buttercup.pw|rezka.pw|darkcrystal.pw|xor.pw|fullhdfilmizlesene.pw|gopass.pw|vost.pw|core.pw|bittor.pw|plutonium.pw|nitter.pw|kge.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan. Its extreme common-ness in malware redirections means that the entry will be kept forever.
 ||*.top^$dnstype=~CNAME,denyallow=caitlin.top|callmebymygender.top|corriente.top|gdtot.top|nicenature.top|reminder.top|magocoro.top|castlevania.top|suiten.top|shucks.top|1stream.top|ambr.top|changlam10.top|changlam11.top|pdcdn1.top|pressplay.top|chillx.top|strims.top|thedesk.top|audioforyou.top|awavenue.top|reyhub.top|iboxs.top|adrules.top
-! Loosely inspired by https://github.com/DandelionSprout/adfilt/issues/1067
-@@||masto*.top^top
-@@/^.*(tech|project|linux).*\.top(/[a-z0-9_-]?.*)?$/top
+! (Loosely inspired by https://github.com/DandelionSprout/adfilt/issues/1067)
+@@||masto*.top^
+@@/^.*(tech|project|linux).*\.top(/[a-z0-9_-]?.*)?$/
+! (An E-mail tip)
+@@://blog.*.top^
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||*.loan^$dnstype=~CNAME
 !!!||agency^$denyallow=battlefield.agency|baam.agency|robotzebra.agency|uphotel.agency|ws.agency (Can't remember the last time I saw it used in a redirection train.)
@@ -20833,7 +20835,6 @@
 
 ! https://www•google•no/search?q=mlp+g5&newwindow=1&tbm=isch&oq=mlp+g5&sclient=img
 ||ingeniovirtual.com^
-! Spambot posts on Tumblr (19/09/2022)
 ! https://scambiofigu•forumcommunity•net/?t=57482915
 ||scambiofigu.net^
 ! Only links to another site's (APKPure) APKs, yet tries to promote its own browser extension on the alleged download pages, which comes across as suspicious
@@ -21810,7 +21811,6 @@
 
 158.222.7.83
 
-! Spam on W.I.T.C.H. and Winx text search results
 ! A scam SMS I got
 ||95-214-26-78.plesk.page^
 ||account-limitato.org^
@@ -21876,16 +21876,7 @@
 ! Overly dedicated E-mail spammers
 ||wirexapp.africa.com^
 ||tachyoniums.eu.com^
-! Tumblr spambots
-||shua999.com^
-||ybd001.com^
-||deltacorriher.best^
-104.21.82.132
 
-172.67.158.57
-
-2606:4700:3030::6815:5284
-2606:4700:3037::ac43:9e39
 ! Google results for «SodaStream site:no cranberry»
 
 
@@ -22005,9 +21996,17 @@
 ||agendajacob.com^
 ! Visibly fake item descriptions and prices
 ||amaskiphirescotland.co.uk^
+! https://walyou•com/gameloft-dungeon-hunter-5-dragon-mania-legends-apple-tv-3029/
+||empatiya.net^
+||vastila.com^
+
 ! Tumblr spammers
-||tgpdeal.com^
+104.21.82.132
+172.67.158.57
+198.12.86.90
 ||2024ballondor.shop^
+2606:4700:3030::6815:5284
+2606:4700:3037::ac43:9e39
 ||adhitagency.shop^
 ||advanceddigitalbusiness.com^
 ||ajkalshop.com^
@@ -22054,6 +22053,7 @@
 ||cdjdeal.com^
 ||cdkdeal.com^
 ||cdmdeal.com^
+||cdn32316413.blazingcdn.net^
 ||cdodeal.com^
 ||cdpdeal.com^
 ||cdqdeal.com^
@@ -22088,11 +22088,14 @@
 ||ctxdeal.com^
 ||ctydeal.com^
 ||ctzdeal.com^
+||d1pplo45p828lj.cloudfront.net^
+||d373n2hi69hqg3.cloudfront.net^
 ||dcndeal.com^
 ||dcpdeal.com^
 ||dcrdeal.com^
 ||dctdeal.com^
 ||dczdeal.com^
+||deltacorriher.best^
 ||deshnews24bd.com^
 ||dg24m.com^
 ||dgfdeal.com^
@@ -22165,6 +22168,8 @@
 ||gzcodes.com^
 ||info24eonline.com^
 ||inspireabithy.com^
+||kabin.asia^
+||kalan.asia^
 ||kgadeal.com^
 ||kgcdeal.com^
 ||kgddeal.com^
@@ -22439,6 +22444,7 @@
 ||sb24e.com^
 ||sbdeal.com^
 ||shoppernetis.com^
+||shua999.com^
 ||smartiteam.shop^
 ||smartnews24bd.com^
 ||smartqtm.com^
@@ -22471,6 +22477,7 @@
 ||tgmeshop.com^
 ||tgmoffer.com^
 ||tgmselling.com^
+||tgpdeal.com^
 ||tgqdeal.com^
 ||tgvdeal.com^
 ||tgwdeal.com^
@@ -22540,16 +22547,10 @@
 ||vtudeal.com^
 ||vtwdeal.com^
 ||vtydeal.com^
-198.12.86.90
+||ybd001.com^
 
-||kalan.asia^
-||d1pplo45p828lj.cloudfront.net^
-||kabin.asia^
-! https://walyou•com/gameloft-dungeon-hunter-5-dragon-mania-legends-apple-tv-3029/
-||empatiya.net^
-||vastila.com^
-! Search results on Tumblr (31/10/2024)
-||cdn32316413.blazingcdn.net^
+
+
 
 ! ——— Horrendously bad copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
