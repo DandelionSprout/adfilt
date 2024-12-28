@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 07December2024v1-Deprecated
+# Last modified: 28December2024v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -380,6 +380,7 @@ msFilterList
 -d datamaskin.biz ad
 -d ukenr.no iframe.php
 -d ugenr.dk iframe.php
+-d cdplanet.no *_app_preview.png
 # — — — — — — —
 # 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
