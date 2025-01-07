@@ -7036,6 +7036,18 @@ def prepare_domains(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^.*\$(ipaddress|network).*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-z0-9].*\.$",
+           r"",
+           line
+        )
+
         if is_supported_domains(line) and not line == '':
             text += line + '\n'
 
