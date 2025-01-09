@@ -32,657 +32,663 @@ def prepare_agh(lines) -> str:
     previous_line = None
 
     for line in lines:
-            
+
         if line == previous_line:
             continue
 
         line = re.sub(
            r"([$,])(1p|3p|all|doc$|document|first-party|frame|image|media|network|object|popunder|popup|script|subdocument|third-party|~object-subrequest|~third-party)",
-           r"", 
+           r"",
            line
         )
 
         line = re.sub(
-           r",important", 
-           "$important", 
+           r",important",
+           "$important",
            line
         )
 
         line = re.sub(
-           r",domain=~?in-addr\.arpa", 
-           "", 
+           r",domain=~?in-addr\.arpa",
+           "",
            line
         )
 
         line = re.sub(
-           r"^.*\^[*$,][ac-hj-z?].*$", 
-           "", 
+           r"^.*\^[*$,][ac-hj-z?].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^([a-z])", 
-           r"||\1", 
+           r"^([a-z])",
+           r"||\1",
            line
         )
 
         line = re.sub(
-           r"^[:@][a-z0-9?!].*$", 
-           "", 
+           r"^[:@][a-z0-9?!].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^@?@?\|.*[/_#,].*$", 
-           r"", 
+           r"^@?@?\|.*[/_#,].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\^,?badfilter", 
-           r"^$badfilter", 
+           r"\^,?badfilter",
+           r"^$badfilter",
            line
         )
 
         line = re.sub(
-           r"^.*\^\*.*$", 
-           r"", 
+           r"^.*\^\*.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\*\^[a-z0-9?].*$", 
-           r"", 
+           r"^.*\*\^[a-z0-9?].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\^&.*$", 
-           r"", 
+           r"^.*\^&.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\|.*/.*$", 
-           r"", 
+           r"^.*\|.*/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\*[&?@].*$", 
-           r"", 
+           r"^.*\*[&?@].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^(!| |\$|@@)$", 
-           r"", 
+           r"^(!| |\$|@@)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^([&+=?^_%,~#*]|@@/|\\.|;[a-z0-9]).*$", 
-           r"", 
+           r"^([&+=?^_%,~#*]|@@/|\\.|;[a-z0-9]).*$",
+           r"",
            line
         )
 
         line = re.sub(
            r"^! (AG_|Checksum:|Ref:|http|\||\[|#|!).*$",
-           r"", 
+           r"",
            line
         )
 
         line = re.sub(
-           r"^\|\|9anime\.\*(\^|\|)$", 
-           r"", 
+           r"^\|\|9anime\.\*(\^|\|)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"/\^https\?:\\/\\/([0-9]{1,3})\\\.([0-9]{1,3})\\\.([0-9]{1,3})\\.\(\\d\)\{1,3\}\.\*\/", 
-           r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^", 
+           r"/\^https\?:\\/\\/([0-9]{1,3})\\\.([0-9]{1,3})\\\.([0-9]{1,3})\\.\(\\d\)\{1,3\}\.\*\/",
+           r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^",
            line
         )
 
         line = re.sub(
-           r"\|\|([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.$", 
-           r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^", 
+           r"\|\|([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.$",
+           r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^",
            line
         )
 
         line = re.sub(
-           r"^(\|\||(:/)?/)?([0-9]{1,3})\.([0-9]{1,3})\.$", 
-           r"", 
+           r"^(\|\||(:/)?/)?([0-9]{1,3})\.([0-9]{1,3})\.$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^://.*/.*$", 
-           r"", 
+           r"^://.*/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[a-z0-9]\\?/[a-z0-9\(].*$", 
-           r"", 
+           r"^/.*[a-z0-9]\\?/[a-z0-9\(].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[a-z]\\/.*$", 
-           r"", 
+           r"^/.*[a-z]\\/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[a-z]\/.*$", 
-           r"", 
+           r"^/.*[a-z]\/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/[a-z0-9.*_/-]{1,70}/$", 
-           r"", 
+           r"^/[a-z0-9.*_/-]{1,70}/$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[a-z0-9@|].*\?.*$", 
-           r"", 
+           r"^[a-z0-9@|].*\?.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\(update frequency\)", 
-           r"", 
+           r"^.*\(update frequency\)",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! 20(1|2).*$", 
-           r"", 
+           r"^! 20(1|2).*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\*(\^|\|)$", 
-           r"*", 
+           r"\*(\^|\|)$",
+           r"*",
            line
         )
 
         line = re.sub(
-           r"^\|\|\*\.", 
-           r".", 
+           r"^\|\|\*\.",
+           r".",
            line
         )
 
         line = re.sub(
-           r"\.\*$", 
-           r".", 
+           r"\.\*$",
+           r".",
            line
         )
 
         line = re.sub(
-           r"^[0-9]{1,5}$", 
-           r"", 
+           r"^[0-9]{1,5}$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[a-zA-Z0-9.-].*[/?_+=&]$", 
-           r"", 
+           r"^[a-zA-Z0-9.-].*[/?_+=&]$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[@.].*[a-z0-9*]/.*$", 
-           r"", 
+           r"^[@.].*[a-z0-9*]/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*[$,]jsinject$", 
-           r"", 
+           r"^.*[$,]jsinject$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.* - .*$", 
-           r"", 
+           r"^.* - .*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^![a-z0-9].*#.*$", 
-           r"", 
+           r"^![a-z0-9].*#.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^!\*(\*.*|$)", 
-           r"", 
+           r"^!\*(\*.*|$)",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! ! \+.*$", 
-           r"", 
+           r"^! ! \+.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^\|.*:[0-9].*$", 
-           r"", 
+           r"^\|.*:[0-9].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[a-zA-Z0-9.-].*[a-z0-9.-][/?_+=&][a-zA-Z0-9.$*-].*$", 
-           r"", 
+           r"^[a-zA-Z0-9.-].*[a-z0-9.-][/?_+=&][a-zA-Z0-9.$*-].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[_=/;~@%#+,!].*$", 
-           r"", 
+           r"^/.*[_=/;~@%#+,!].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[@|:/.-].*[%&?_=].*$", 
-           r"", 
+           r"^[@|:/.-].*[%&?_=].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[|:/.-].*:.*$", 
-           r"", 
+           r"^[|:/.-].*:.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^(/|:?\|?\||\.)[a-zA-Z0-9-]{1,100}[|^]$", 
-           r"", 
+           r"^(/|:?\|?\||\.)[a-zA-Z0-9-]{1,100}[|^]$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[.:/|a-zA-Z0-9-].*[*.](png|jpe?g|gif|js|swf|gz|exe|php)($|\||\^)", 
-           r"", 
+           r"^[.:/|a-zA-Z0-9-].*[*.](png|jpe?g|gif|js|swf|gz|exe|php)($|\||\^)",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^\..*=.*$", 
-           r"", 
+           r"^\..*=.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[a-z0-9./|-].*\^=.*$", 
-           r"", 
+           r"^[a-z0-9./|-].*\^=.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\^,~", 
-           r"^$~", 
+           r"\^,~",
+           r"^$~",
            line
         )
 
         line = re.sub(
-           r"^.*\.,badfilter$", 
-           r"", 
+           r"^.*\.,badfilter$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"(.) {1,}$", 
-           r"\1", 
+           r"(.) {1,}$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^! \*\*\* easylistgermany:easylistgermany/easylistgermany_allowlist_popup\.txt \*\*\*$", 
-           r"! Title: ABP Filters", 
+           r"^! \*\*\* easylistgermany:easylistgermany/easylistgermany_allowlist_popup\.txt \*\*\*$",
+           r"! Title: ABP Filters",
            line
         )
 
         line = re.sub(
-           r"^!-------------{1,}!$", 
-           r"", 
+           r"^!-------------{1,}!$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[a-z0-9/-]{1,5}$", 
-           r"", 
+           r"^[a-z0-9/-]{1,5}$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^\.[a-zA-Z0-9]{3,}\|$", 
-           r"", 
+           r"^\.[a-zA-Z0-9]{3,}\|$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! E[nN][dD].*$", 
-           r"", 
+           r"^! E[nN][dD].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! Expires: [0-9] .*$", 
-           r"", 
+           r"^! Expires: [0-9] .*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! (Good|Bad): .*$", 
-           r"", 
+           r"^! (Good|Bad): .*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.* end ⬆️$", 
-           r"", 
+           r"^.* end ⬆️$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! This section contains the list of .*$", 
-           r"", 
+           r"^! This section contains the list of .*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! Note, .*$", 
-           r"", 
+           r"^! Note, .*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*github\.com/NanoMeow.*$", 
-           r"", 
+           r"^.*github\.com/NanoMeow.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r" -{4,}(!?)$", 
-           r" ---\1", 
+           r" -{4,}(!?)$",
+           r" ---\1",
            line
         )
 
         line = re.sub(
-           r"! ?-{3,}!?$", 
-           r"", 
+           r"! ?-{3,}!?$",
+           r"",
            line
         )
 
         line = re.sub(
-           r" ={4,}$", 
-           r" ===", 
+           r" ={4,}$",
+           r" ===",
            line
         )
 
         line = re.sub(
-           r"^!-{4,}([ A-ZÉ])", 
-           r"!---\1", 
+           r"^!-{4,}([ A-ZÉ])",
+           r"!---\1",
            line
         )
 
         line = re.sub(
-           r"([a-z(])-{4,}!$", 
-           r"\1---!", 
+           r"([a-z(])-{4,}!$",
+           r"\1---!",
            line
         )
 
         line = re.sub(
-           r"^! Last modified: %timestamp%$", 
-           r"", 
+           r"^! Last modified: %timestamp%$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\*\*\*! Title: ", 
-           r"***\n! Title: ", 
+           r"\*\*\*! Title: ",
+           r"***\n! Title: ",
            line
         )
 
         line = re.sub(
-           r"^! \*\*\* .*hide.*$", 
-           r"", 
+           r"^! \*\*\* .*hide.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! Smart ?JSON.*$", 
-           r"", 
+           r"^! Smart ?JSON.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r" {2,}", 
-           r" ", 
+           r" {2,}",
+           r" ",
            line
         )
 
         line = re.sub(
-           r"^! \*\*\* easylistspanish:easylistspanish(_adult/adult_thirdparty|/easylistspanish_allowlist_|_adult/adult_allowlist).*$", 
-           r"", 
+           r"^! \*\*\* easylistspanish:easylistspanish(_adult/adult_thirdparty|/easylistspanish_allowlist_|_adult/adult_allowlist).*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! \*\*\* easylist:easylist_adult/adult_specific_block_popup\.txt \*\*\*", 
-           r"", 
+           r"^! \*\*\* easylist:easylist_adult/adult_specific_block_popup\.txt \*\*\*",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! \*\*\* easylist:easylist_adult/adult_allowlist.*$", 
-           r"", 
+           r"^! \*\*\* easylist:easylist_adult/adult_allowlist.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! \*\*\* easylistgermany:easylistgermany/(easylistgermany_allowlist|easylistgermany_specific_block_popup\.).*$", 
-           r"", 
+           r"^! \*\*\* easylistgermany:easylistgermany/(easylistgermany_allowlist|easylistgermany_specific_block_popup\.).*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"! \*\*\* antiadblockfilters.*(czech|dutch|finnish|hebrew|indonesian|latvian|romanian|slovak).*$", 
-           r"", 
+           r"! \*\*\* antiadblockfilters.*(czech|dutch|finnish|hebrew|indonesian|latvian|romanian|slovak).*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^\|\|51\.89\.187\.1(3[7-9]|4[0-3])(\^|\|)$", 
-           r"", 
+           r"^\|\|51\.89\.187\.1(3[7-9]|4[0-3])(\^|\|)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/[a-zA-Z]{1,8}$", 
-           r"", 
+           r"^/[a-zA-Z]{1,8}$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^!.* Adblock Plus($| .*)", 
-           r"", 
+           r"^!.* Adblock Plus($| .*)",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\.html?(\^|\|)$", 
-           r"", 
+           r"^.*\.html?(\^|\|)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^!.* property.*$", 
-           r"", 
+           r"^!.* property.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^!.*([Éé]lément|CSS|General hid|JS).*$", 
-           r"", 
+           r"^!.*([Éé]lément|CSS|General hid|JS).*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*#\$\?#.*$", 
-           r"", 
+           r"^.*#\$\?#.*$",
+           r"",
            line
         )
 
         # $badfilter-ed entries, as Sublime Text kept complaining about "Ran out of stack space" when I tried to semi-automate it with RegEx.
         line = re.sub(
-           r"^(/adblockpopup\.|/ads\.css|/propads\.)(\$badfilter)?$", 
-           r"", 
+           r"^(/adblockpopup\.|/ads\.css|/propads\.)(\$badfilter)?$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^\|.*[a-zA-Z0-9]\|[|a-zA-Z0-9].*$", 
-           r"", 
+           r"^\|.*[a-zA-Z0-9]\|[|a-zA-Z0-9].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*Reek's Anti-Adblock Killer.*$", 
-           r"", 
+           r"^.*Reek's Anti-Adblock Killer.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^(:/)?/[b-z]([a-z]{1,2})?\.$", 
-           r"", 
+           r"^(:/)?/[b-z]([a-z]{1,2})?\.$",
+           r"",
            line
         )
 
-        # We are in the year 2023 (or later).
+        # We are in the year 2025 (or later).
         line = re.sub(
-           r"http://creativecommons\.org/licenses/", 
-           r"https://creativecommons.org/licenses/", 
-           line
-        )
-
-        line = re.sub(
-           r"^/([a-z0-9]{1,8}\.)$", 
-           r"://\1", 
+           r"http://creativecommons\.org/licenses/",
+           r"https://creativecommons.org/licenses/",
            line
         )
 
         line = re.sub(
-           r"([a-zA-Z0-9.,?!'\":; ])(->|=>)([a-zA-Z0-9.,?!'\":; ]|$)", 
-           r"\1→\3", 
+           r"^/([a-z0-9]{1,8}\.)$",
+           r"://\1",
            line
         )
 
         line = re.sub(
-           r"^.*\$\[.*$", 
-           r"", 
+           r"([a-zA-Z0-9.,?!'\":; ])(->|=>)([a-zA-Z0-9.,?!'\":; ]|$)",
+           r"\1→\3",
            line
         )
 
         line = re.sub(
-           r"^[a-zA-Z0-9:/|].*\$\$.*$", 
-           r"", 
+           r"^.*\$\[.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[0-9].*[: ].*$", 
-           r"", 
+           r"^[a-zA-Z0-9:/|].*\$\$.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^([0-9.]{7,15})(\^|\|)$", 
-           r"\1", 
+           r"^[0-9].*[: ].*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^([0-9.]{7,15})(\^|\|)$",
+           r"\1",
            line
         )
 
         line = re.sub(
            r"^([.:/|-].*\.(com|org|net|uk|eu|at|it|io|fi|de|nl|agency|es|pl|is|br|gr|ru|su|pro|xyz|win|ch))$",
-           r"\1^", 
+           r"\1^",
            line
         )
 
         line = re.sub(
-           r"^[.:/|].*\.(wasm|comm)(\^|\|)$", 
-           r"", 
+           r"^[.:/|].*\.(wasm|comm)(\^|\|)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\.\^$", 
-           r"^", 
+           r"\.\^$",
+           r"^",
            line
         )
 
         line = re.sub(
-           r"^(\.|:?/?/|\|\|?)[a-z0-9-]{1,}(\^|\|)$", 
-           r"", 
+           r"^(\.|:?/?/|\|\|?)[a-z0-9-]{1,}(\^|\|)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^![!#].*$", 
-           "", 
+           r"^![!#].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(@@|\.|(:/)?/|\|\|?|-)[a-z0-9]\*\.[a-z]{2,}(\^|\|)?$", 
-           "", 
+           r"^(@@|\.|(:/)?/|\|\|?|-)[a-z0-9]\*\.[a-z]{2,}(\^|\|)?$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^/([a-zA-Z0-9].*$)", 
-           r"|\1", 
+           r"^/([a-zA-Z0-9].*$)",
+           r"|\1",
            line
         )
 
         line = re.sub(
-           r"^://([a-zA-Z0-9].*$)", 
-           r"|\1", 
+           r"^://([a-zA-Z0-9].*$)",
+           r"|\1",
            line
         )
 
         line = re.sub(
-           r"^\|\|((\d{1,3}\.){3}\d{1,3})\^$", 
-           r"\1", 
+           r"^\|\|((\d{1,3}\.){3}\d{1,3})\^$",
+           r"\1",
            line
         )
 
         line = re.sub(
            r"^@.*(gatewaypundit|wltreport).*$",
-           r"", 
+           r"",
            line
         )
 
         line = re.sub(
            r"^[|:/._a-z0-9-].*akamaiedge.*$",
-           r"", 
+           r"",
            line
         )
 
         line = re.sub(
            r"^([|:/._a-z0-9-].*(akamai|azure[we]|\.cdn77\.org|amazonaws\.).*[^|])$",
-           r"\1$dnstype=~CNAME", 
+           r"\1$dnstype=~CNAME",
            line
         )
 
         line = re.sub(
-           r"^! {0,}$", 
-           r"", 
+           r"^! {0,}$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^((\d{1,3}\.){3}[12]?\d)$",
+           r"|\1|",
            line
         )
 
@@ -707,7 +713,7 @@ def prepare_ip(lines) -> str:
     previous_line = None
 
     for line in lines:
-            
+
         if line == previous_line:
             continue
 
@@ -719,223 +725,223 @@ def prepare_ip(lines) -> str:
 
         line = re.sub(
            r"([$,])(1p|3p|all|doc|document|first-party|frame|image|media|network|object|popunder|popup|script|subdocument|third-party|~object-subrequest|~third-party)",
-           "", 
+           "",
            line
         )
 
         line = re.sub(
-           r",important", 
-           "$important", 
+           r",important",
+           "$important",
            line
         )
 
         line = re.sub(
-           r"^.*\^[*$,].*$", 
-           "", 
+           r"^.*\^[*$,].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^.*\.js$", 
-           "", 
+           r"^.*\.js$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^([&+-.=?^_%:*/@]|\\.).*$", 
-           "", 
+           r"^([&+-.=?^_%:*/@]|\\.).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^([a-z])", 
-           r"||\1", 
+           r"^([a-z])",
+           r"||\1",
            line
         )
 
         line = re.sub(
-           r"^\|[a-z0-9].*$", 
-           "", 
+           r"^\|[a-z0-9].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^;[a-z0-9].*$", 
-           "", 
+           r"^;[a-z0-9].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^@[a-z0-9].*$", 
-           r"", 
+           r"^@[a-z0-9].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"@?@?\|\|.*[a-zа-яみ].*$", 
-           r"", 
+           r"@?@?\|\|.*[a-zа-яみ].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"! (Version: .*[a-z].*)", 
-           r"# \1", 
+           r"! (Version: .*[a-z].*)",
+           r"# \1",
            line
         )
 
         line = re.sub(
-           r"^!([a-z #]|\[).*$", 
-           r"", 
+           r"^!([a-z #]|\[).*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^!-.*$", 
-           r"", 
+           r"^!-.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\|\|", 
-           r"", 
+           r"\|\|",
+           r"",
            line
         )
 
         line = re.sub(
-           r"(\^|\|)$", 
-           r"", 
+           r"(\^|\|)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^(([0-9]{1,3}\.){3})$", 
-           r"\1.0/24", 
+           r"^(([0-9]{1,3}\.){3})$",
+           r"\1.0/24",
            line
         )
 
         line = re.sub(
-           r"^([0-9]{1,3}\.){2}$", 
-           r"", 
+           r"^([0-9]{1,3}\.){2}$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^@@.*[a-z].*$", 
-           r"", 
+           r"^@@.*[a-z].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\[Adblock Plus 3\.[0-9]{1,3}\]", 
-           "! Title: IP Entries from Adblock Lists\n! Contains transformated entries from: EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, EasyList Spanish \n! Expires: 14 days\n! Licence: In accordance with the Dandelicence, the borrowed entries are considered to have been changed and reduced enough from their original lists, that they're counted as transformative work, meaning that creditation and seperate paragraphs are not necessary unless one of the lists' makers were to ask for such.\n! Description: This was made as a proof-of-concept to see if the IP-based entries of major adblock lists, could be used to create an IP adblocker list for IP blockers, despite how IP lists are normally only meant to block malware, E-mail spam, or port scanners.", 
+           r"\[Adblock Plus 3\.[0-9]{1,3}\]",
+           "! Title: IP Entries from Adblock Lists\n! Contains transformated entries from: EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, EasyList Spanish \n! Expires: 14 days\n! Licence: In accordance with the Dandelicence, the borrowed entries are considered to have been changed and reduced enough from their original lists, that they're counted as transformative work, meaning that creditation and seperate paragraphs are not necessary unless one of the lists' makers were to ask for such.\n! Description: This was made as a proof-of-concept to see if the IP-based entries of major adblock lists, could be used to create an IP adblocker list for IP blockers, despite how IP lists are normally only meant to block malware, E-mail spam, or port scanners.",
            line
         )
 
         line = re.sub(
-           r"# Version: (.*)-.*$", 
-           r"! Version: \1-Alpha", 
+           r"# Version: (.*)-.*$",
+           r"! Version: \1-Alpha",
            line
         )
 
         line = re.sub(
-           r"^!$", 
-           r"", 
+           r"^!$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[a-zA-Z0-9_=.,*?|^@&~+;-]$", 
-           r"", 
+           r"^/.*[a-zA-Z0-9_=.,*?|^@&~+;-]$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[\]]$", 
-           r"", 
+           r"^/.*[\]]$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^://.*/.*$", 
-           r"", 
+           r"^://.*/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*104\\\.154\\\.\..*$", 
-           r"", 
+           r"^.*104\\\.154\\\.\..*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/\^[h.].*$", 
-           r"", 
+           r"^/\^[h.].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/\\.*$", 
-           r"", 
+           r"^/\\.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/\(https\?:\\/\\/\)([0-9][0-9]?[0-9]?)\\.([0-9][0-9]?[0-9]?)\\.\..*/", 
-           r"", 
+           r"^/\(https\?:\\/\\/\)([0-9][0-9]?[0-9]?)\\.([0-9][0-9]?[0-9]?)\\.\..*/",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^![a-zA-Z!*].*$", 
-           r"", 
+           r"^![a-zA-Z!*].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[A-Za-z].*$", 
-           r"", 
+           r"^[A-Za-z].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^ $", 
-           r"", 
+           r"^ $",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^#[a-z0-9.#].*$", 
-           "", 
+           r"^#[a-z0-9.#].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^.*dmcdn\..*$", 
-           r"", 
+           r"^.*dmcdn\..*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[a-z.#%$[].*$", 
-           r"", 
+           r"^[a-z.#%$[].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"(.) {1,}$", 
-           r"\1", 
+           r"(.) {1,}$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^[a-zA-Z0-9].*[#$|a-z].*$", 
-           r"", 
+           r"^[a-zA-Z0-9].*[#$|a-z].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\.\.", 
-           r".", 
+           r"\.\.",
+           r".",
            line
         )
 
@@ -998,505 +1004,505 @@ def prepare_agh(lines) -> str:
     previous_line = None
 
     for line in lines:
-            
+
         if line == previous_line:
             continue
 
         line = re.sub(
-           r"([$,])third-party", 
-           "", 
+           r"([$,])third-party",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])~third-party", 
-           "", 
+           r"([$,])~third-party",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])3p", 
-           "", 
+           r"([$,])3p",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])first-party", 
-           "", 
+           r"([$,])first-party",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])1p", 
-           "", 
+           r"([$,])1p",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])image", 
-           "", 
+           r"([$,])image",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])media", 
-           "", 
+           r"([$,])media",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])script", 
-           "", 
+           r"([$,])script",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])popup", 
-           "", 
+           r"([$,])popup",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])popunder", 
-           "", 
+           r"([$,])popunder",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])document", 
-           "", 
+           r"([$,])document",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])doc", 
-           "", 
+           r"([$,])doc",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])subdocument", 
-           "", 
+           r"([$,])subdocument",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])object", 
-           "", 
+           r"([$,])object",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])~object-subrequest", 
-           "", 
+           r"([$,])~object-subrequest",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])frame", 
-           "", 
+           r"([$,])frame",
+           "",
            line
         )
 
         line = re.sub(
-           r"([$,])all", 
-           "", 
+           r"([$,])all",
+           "",
            line
         )
 
         line = re.sub(
-           r",important", 
-           "$important", 
+           r",important",
+           "$important",
            line
         )
 
         line = re.sub(
-           r",domain=~?in-addr\.arpa", 
-           "", 
+           r",domain=~?in-addr\.arpa",
+           "",
            line
         )
 
         line = re.sub(
-           r"/\^https\?:\\/\\/([0-9]{1,3})\\\.([0-9]{1,3})\\\.([0-9]{1,3})\\.\(\\d\)\{1,3\}\.\*\/", 
-           "\1.\2.\3.0/24", 
+           r"/\^https\?:\\/\\/([0-9]{1,3})\\\.([0-9]{1,3})\\\.([0-9]{1,3})\\.\(\\d\)\{1,3\}\.\*\/",
+           "\1.\2.\3.0/24",
            line
         )
 
         line = re.sub(
-           r"^.*\^[*$,][ac-hj-z?].*$", 
-           "", 
+           r"^.*\^[*$,][ac-hj-z?].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^.*\.js$", 
-           "", 
+           r"^.*\.js$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(\.[a-z0-9.]{4,60}\.)$", 
-           r"||*\1", 
+           r"^(\.[a-z0-9.]{4,60}\.)$",
+           r"||*\1",
            line
         )
 
         line = re.sub(
-           r"^[&+=?^_%].*$", 
-           "", 
+           r"^[&+=?^_%].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^([a-z])", 
-           r"||\1", 
+           r"^([a-z])",
+           r"||\1",
            line
         )
 
         line = re.sub(
-           r"^[0-9].*$", 
-           "", 
+           r"^[0-9].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^!#.*$", 
-           "", 
+           r"^!#.*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^;[a-z0-9].*$", 
-           "", 
+           r"^;[a-z0-9].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^Amasty_.*$", 
-           "", 
+           r"^Amasty_.*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^\*.*$", 
-           "", 
+           r"^\*.*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^\\.*$", 
-           "", 
+           r"^\\.*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^:[a-z0-9?!].*$", 
-           "", 
+           r"^:[a-z0-9?!].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^@[a-z0-9].*$", 
-           "", 
+           r"^@[a-z0-9].*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"@?@?\|\|.*/.*$", 
-           r"", 
+           r"@?@?\|\|.*/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\^,badfilter", 
-           r"^badfilter", 
+           r"\^,badfilter",
+           r"^badfilter",
            line
         )
 
         line = re.sub(
-           r"\^badfilter", 
-           r"^$badfilter", 
+           r"\^badfilter",
+           r"^$badfilter",
            line
         )
 
         line = re.sub(
-           r"^.*\^\*.*$", 
-           r"", 
+           r"^.*\^\*.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\*\^[a-z0-9?].*$", 
-           r"", 
+           r"^.*\*\^[a-z0-9?].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\^&.*$", 
-           r"", 
+           r"^.*\^&.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\|.*/.*$", 
-           r"", 
+           r"^.*\|.*/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\*[&?@].*$", 
-           r"", 
+           r"^.*\*[&?@].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^!$", 
-           r"", 
+           r"^!$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^@@/.*$", 
-           r"", 
+           r"^@@/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[,=^?~].*$", 
-           r"", 
+           r"^[,=^?~].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! \|.*$", 
-           r"", 
+           r"^! \|.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\.php(\||\?)$", 
-           r"", 
+           r"\.php(\||\?)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^\|\|goo\.gl(\^|\|)$", 
-           r"", 
+           r"^\|\|goo\.gl(\^|\|)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^\|\|9anime\.\*(\^|\|)$", 
-           r"", 
+           r"^\|\|9anime\.\*(\^|\|)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^\|\|play-asia\.com(\^|\|)$", 
-           r"", 
+           r"^\|\|play-asia\.com(\^|\|)$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$", 
-           r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^", 
+           r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$",
+           r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^",
            line
         )
 
         line = re.sub(
-           r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$", 
-           r"://\1.\2.\n@@://\1.\2.*in-addr.arpa^", 
+           r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$",
+           r"://\1.\2.\n@@://\1.\2.*in-addr.arpa^",
            line
         )
 
         line = re.sub(
            r"^! http.*$",
-           r"", 
+           r"",
            line
         )
 
         line = re.sub(
-           r"^://.*/.*$", 
-           r"", 
+           r"^://.*/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*104\\\.154\\\.\..*$", 
-           r"", 
+           r"^.*104\\\.154\\\.\..*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[a-z0-9]\\?/[a-z0-9\(].*$", 
-           r"", 
+           r"^/.*[a-z0-9]\\?/[a-z0-9\(].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\|\|.*_.*$", 
-           r"", 
+           r"\|\|.*_.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[a-z]\\/.*$", 
-           r"", 
+           r"^/.*[a-z]\\/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[a-z]\/.*$", 
-           r"", 
+           r"^/.*[a-z]\/.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/[a-z0-9.*_/-]{1,70}/$", 
-           r"", 
+           r"^/[a-z0-9.*_/-]{1,70}/$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[a-z0-9@|].*\?.*$", 
-           r"", 
+           r"^[a-z0-9@|].*\?.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! Checksum:.*$", 
-           r"", 
+           r"^! Checksum:.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*\(update frequency\)", 
-           r"", 
+           r"^.*\(update frequency\)",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! 20(1|2).*$", 
-           r"", 
+           r"^! 20(1|2).*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! Ref:.*$", 
-           r"", 
+           r"^! Ref:.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! #", 
-           r"", 
+           r"^! #",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\*(\^|\|)$", 
-           r"*", 
+           r"\*(\^|\|)$",
+           r"*",
            line
         )
 
         line = re.sub(
-           r"^\|\|\*\.", 
-           r".", 
+           r"^\|\|\*\.",
+           r".",
            line
         )
 
         line = re.sub(
-           r"\.\*$", 
-           r".", 
+           r"\.\*$",
+           r".",
            line
         )
 
         line = re.sub(
-           r"^[0-9]{1,5}$", 
-           r"", 
+           r"^[0-9]{1,5}$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[a-z0-9.-].*[/?_+=&]$", 
-           r"", 
+           r"^[a-z0-9.-].*[/?_+=&]$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^[a-z0-9.-].*[a-z0-9.-][/?_+=&][a-z0-9.$-].*$", 
-           r"", 
+           r"^[a-z0-9.-].*[a-z0-9.-][/?_+=&][a-z0-9.$-].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^/.*[_?=/;~@%#+,].*$", 
-           r"", 
+           r"^/.*[_?=/;~@%#+,].*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"\^,~", 
-           r"^$~", 
+           r"\^,~",
+           r"^$~",
            line
         )
 
         line = re.sub(
-           r"^.*\.,badfilter$", 
-           r"", 
+           r"^.*\.,badfilter$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^.*dmcdn\..*$", 
-           r"", 
+           r"^.*dmcdn\..*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"([a-zA-Z0-9.,;'?!#_-]) $", 
-           r"\1", 
+           r"([a-zA-Z0-9.,;'?!#_-]) $",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^(! This section contains )", 
-           r"! Title: AdGuard Popups filter - Push notifications, specific\n\1", 
+           r"^(! This section contains )",
+           r"! Title: AdGuard Popups filter - Push notifications, specific\n\1",
            line
         )
 
         line = re.sub(
-           r"^.*/,stylesheet$", 
-           r"", 
+           r"^.*/,stylesheet$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^%.*$", 
-           r"", 
+           r"^%.*$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"http://creativecommons\.org/licenses/", 
-           r"https://creativecommons.org/licenses/", 
+           r"http://creativecommons\.org/licenses/",
+           r"https://creativecommons.org/licenses/",
            line
         )
 
         line = re.sub(
-           r"^/([a-zA-Z0-9].*$)", 
-           r"|\1", 
+           r"^/([a-zA-Z0-9].*$)",
+           r"|\1",
            line
         )
 
         line = re.sub(
-           r"^! {0,}$", 
-           r"", 
+           r"^! {0,}$",
+           r"",
            line
         )
 
         line = re.sub(
-           r"^! !SECTION.*$", 
-           r"", 
+           r"^! !SECTION.*$",
+           r"",
            line
         )
 
