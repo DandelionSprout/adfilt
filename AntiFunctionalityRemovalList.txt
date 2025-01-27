@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🧗 Anti-'Functionality removal' List
-! Version: 27January2025v1-Beta
+! Version: 27January2025v2-Beta
 ! Expires: 9 days
 ! Description: This list aims to combat some sites' attempts to make it impossible to copy text, right-click on pages, open the F12 menu, create fake loading times, or who otherwise obstruct people from features that they should be perfectly in their rights to have access to.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -45,6 +45,9 @@ niskevesti.rs##:not(input):not(textarea)::selection:style(background-color: #B4D
 niskevesti.rs##style:not([class],[id]):remove()
 ||niskevesti.rs^$inline-script
 !#endif
+! https://jarloworks•com/hq-previews/ (NSFW)
+jarloworks.com##+js(acis, show_alert)
+jarloworks.com##*:style(user-select:auto!important;-moz-user-select:auto!important;-wekbit-user-select:auto!important)
 
 ! Prevents sites from disabling DevTools keyboard shortcuts 📛
 dropgalaxy.*##+js(acs, document.onkeydown)
