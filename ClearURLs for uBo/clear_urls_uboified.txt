@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 01/10/2024
+! Last updated: 29/01/2025
 ! Script last updated: 25/6/2024
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -102,7 +102,10 @@
 ||google.*^$removeparam=rlz
 ||google.*^$removeparam=i-would-rather-use-firefox
 ||google.*^$removeparam=pcampaignid
-||google.*^$removeparam=sca_esv
+||google.*^$removeparam=/^sca_(esv|upv)=/
+||google.*^$removeparam=iflsig
+||google.*^$removeparam=fbs
+||google.*^$removeparam=ictx
 ||google.*/search?$removeparam=sclient
 $removeparam=/^utm(_[a-z_]*)?=/
 $removeparam=/^ga_[a-z_]+=/
@@ -690,6 +693,8 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=cid
 ||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=impsrc
 ||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=pos
+||office-partner.de^$removeparam=sPartner
+||office-partner.de^$removeparam=campaign
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
