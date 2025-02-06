@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 29/01/2025
+! Last updated: 06/02/2025
 ! Script last updated: 25/6/2024
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -44,6 +44,9 @@
 ||amazon.*^$removeparam=content-id
 ||amazon.*^$removeparam=dib
 ||amazon.*^$removeparam=dib_tag
+||amazon.*^$removeparam=social_share
+||amazon.*^$removeparam=starsLeft
+||amazon.*^$removeparam=skipTwisterOG
 ||msn.com^$removeparam=cvid
 ||msn.com^$removeparam=ocid
 ||amazon.*/s?$removeparam=/^p[fd]_rd_[a-z]*=/
@@ -119,6 +122,7 @@ $removeparam=gs_l
 $removeparam=mkt_tok
 $removeparam=/^hmb_(campaign|medium|source)=/
 $removeparam=gclid
+$removeparam=srsltid
 $removeparam=/^otm_[a-z_]*=/
 $removeparam=cmpid
 $removeparam=os_ehash
@@ -157,6 +161,7 @@ $removeparam=feature,domain=youtube.com|youtu.be
 $removeparam=gclid,domain=youtube.com|youtu.be
 $removeparam=kw,domain=youtube.com|youtu.be
 $removeparam=si,domain=youtube.com|youtu.be
+$removeparam=pp,domain=youtube.com|youtu.be
 ||facebook.com^$removeparam=/^hc_[a-z_%\[\]0-9]*=/
 ||facebook.com^$removeparam=/^[a-z]*ref[a-z]*=/
 ||facebook.com^$removeparam=__tn__
@@ -203,6 +208,7 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||reddit.com^$removeparam=%24original_url
 ||reddit.com^$removeparam=/^\x24original_url=/
 ||reddit.com^$removeparam=_branch_match_id
+||reddit.com^$removeparam=share_id
 ||netflix.com^$removeparam=trackId
 ||netflix.com^$removeparam=tctx
 ||netflix.com^$removeparam=/^jb[a-z]*?=/
@@ -303,6 +309,7 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||moosejaw.com^$removeparam=spUserID
 ||moosejaw.com^$removeparam=spJobID
 ||moosejaw.com^$removeparam=spReportId
+||80000hours.org^$removeparam=int_campaign
 ||spotify.com^$removeparam=si
 ||yandex.*^$removeparam=lr
 ||yandex.*^$removeparam=redircnt
@@ -471,11 +478,29 @@ $removeparam=si,domain=youtube.com|youtu.be
 ||tiktok.com^$removeparam=u_code
 ||tiktok.com^$removeparam=preview_pb
 ||tiktok.com^$removeparam=_d
+||tiktok.com^$removeparam=_t
+||tiktok.com^$removeparam=_r
 ||tiktok.com^$removeparam=timestamp
 ||tiktok.com^$removeparam=user_id
 ||tiktok.com^$removeparam=share_app_name
 ||tiktok.com^$removeparam=share_iid
 ||tiktok.com^$removeparam=source
+||xiaohongshu.com^$removeparam=xhsshare
+||xiaohongshu.com^$removeparam=author_share
+||xiaohongshu.com^$removeparam=type
+||xiaohongshu.com^$removeparam=xsec_source
+||xiaohongshu.com^$removeparam=share_from_user_hidden
+||xiaohongshu.com^$removeparam=app_version
+||xiaohongshu.com^$removeparam=ignoreEngage
+||xiaohongshu.com^$removeparam=app_platform
+||xiaohongshu.com^$removeparam=apptime
+||xiaohongshu.com^$removeparam=appuid
+||xiaohongshu.com^$removeparam=shareRedId
+||xiaohongshu.com^$removeparam=share_id
+||xiaohongshu.com^$removeparam=exSource
+||xiaohongshu.com^$removeparam=verifyUuid
+||xiaohongshu.com^$removeparam=verifyType
+||xiaohongshu.com^$removeparam=verifyBiz
 ||autoplus.fr^$removeparam=idprob
 ||autoplus.fr^$removeparam=hash
 ||autoplus.fr^$removeparam=sending_id
