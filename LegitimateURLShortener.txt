@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 7February2025v1
+! Version: 7February2025v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -4822,6 +4822,17 @@ ref=content.cside.dev$doc,removeparam=ref
 ! https://github.com/AdguardTeam/AdguardFilters/commit/c5b780b82a10279aa8ebad187a2b1500278415ad
 ! credit: rule copied from Yuki2718
 ?from=glia^$removeparam=from
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12073661
+$doc,removeparam=priceTId,domain=tmall.com|taobao.com
+$doc,removeparam=utparam,domain=tmall.com|taobao.com
+$doc,removeparam=ns,domain=tmall.com|taobao.com
+$doc,removeparam=xxc,domain=tmall.com|taobao.com
+$doc,removeparam=fpChannel,domain=tmall.com|taobao.com
+$doc,removeparam=fpChannelSig,domain=tmall.com|taobao.com
+$doc,removeparam=u_channel,domain=tmall.com|taobao.com
+$doc,removeparam=umpChannel,domain=tmall.com|taobao.com
+$doc,removeparam=maskChannel,domain=tmall.com|taobao.com
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
