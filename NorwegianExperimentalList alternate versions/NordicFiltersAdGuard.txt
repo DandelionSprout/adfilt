@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 17January2025v1
+! Last modified: 06February2025v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -498,6 +498,7 @@ spillespill.no###bannerAdmeenRectangleTopContainer
 e24.no,e24-no.translate.goog##a[href*="/go.click?"]
 treningsforum.no##.ad.netboard
 liverpool.no##.spklw-post-attr[data-content-source]
+dagens.dk,dagens.no##div:has(> .annonce)
 spurt.no##.typology-ad
 ekstrabladet.dk,ekstrabladet-dk.translate.goog##.advertorials
 gastrofun.dk##div[id^=block-steprectangle]
@@ -1263,6 +1264,7 @@ bydrammen.no##.elementor-widget-ucaddon_portfolio_carousel
 eavisa.com##.td_block_wrap:has(.td-fix-index > p[style="text-align: center;"])
 eavisa.com##.vc_inner:has(.tdm-btn-md-used)
 eavisa.com##.td_block_text_with_title:has(+.vc_inner .tdm-btn-md-used))
+flashscore.*##div.banner
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1749,6 +1751,8 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||artodata.net/site/ads/$subdocument
 ! inderoyningenNO (20/08/2024)
 no##section.noHeader:has(amedia-include[param-url*=innocode])
+! flashscoreDK (06/02/2024)
+||content.livesportmedia.eu/api/v*/banners^$third-party
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources
@@ -2031,7 +2035,7 @@ _980banner_
 ##div[id^=art-challengeAd-]:not(body,:empty)
 ! jyllands-postenDK (22/03/2023)
 ##.banner-container-monster-topscroll:not(html,body,:empty)
-! forum.kvinneguiden•no (Mobile user agent; 05/04/2023)
+! forum•kvinneguiden•no (Mobile user agent; 05/04/2023)
 ###mobiltoppbanner:not(html,body,:empty)
 ! Various now-dead Frettabladid subdomains from 2020
 ##.tag-page-ad-container:not(html,body,:empty)
@@ -2059,6 +2063,10 @@ _980banner_
 ||step.dk^$third-party
 ! https://ugenr•dk/kalender (03/12/2024)
 ###addemam-wrapper:not(:empty)
+! dagensDK/NO articles
+##div.inArticleBanner
+! flashscoreDK (06/02/2025)
+##div#box-over-content-revive
 ! — — — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances

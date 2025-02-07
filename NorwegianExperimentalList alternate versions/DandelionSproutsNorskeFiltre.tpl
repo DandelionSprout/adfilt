@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 17January2025v1-Deprecated
+# Last modified: 06February2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -409,6 +409,8 @@ msFilterList
 # artoDK
 -d artodata.net ads
 # inderoyningenNO (20 08 2024)
+# flashscoreDK (06 02 2024)
+-d content.livesportmedia.eu banners
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
@@ -539,7 +541,7 @@ msFilterList
 # nordlysNO, anNO (19 06 2022)
 # nidarosNO (22 02 2023)
 # jyllands-postenDK (22 03 2023)
-# forum.kvinneguiden•no (Mobile user agent; 05 04 2023)
+# forum•kvinneguiden•no (Mobile user agent; 05 04 2023)
 # Various now-dead Frettabladid subdomains from 2020
 # https://www•aftenposten•no/sport/fotball/i/QoP7KA/spansk-fotballstreik-fortsetter/(26/12 2023)
 # e24NO (Mid-December 2023)
@@ -556,6 +558,8 @@ msFilterList
 -d nichehuset.dk
 -d step.dk
 # https://ugenr•dk/kalender/(03/12/2024)
+# dagensDK NO articles
+# flashscoreDK (06 02 2025)
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
