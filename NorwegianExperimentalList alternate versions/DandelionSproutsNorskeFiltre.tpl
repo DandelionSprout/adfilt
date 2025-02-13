@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 06February2025v1-Deprecated
+# Last modified: 13February2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -68,7 +68,6 @@ msFilterList
 -d vevlysingar.fo
 -d videotool.fbg.dk
 -d svindel.info
--d annoncer.nichehuset.dk
 -d pliing.com
 -d admob.no
 -d admob.dk
@@ -240,7 +239,6 @@ msFilterList
 -d frilansinfo.no *-annonse.jpg
 -d gamer.no ?module=Tumedia\DFProxy\Modules
 -d gaysir.no rek
--d gulindex.no spring.js
 -d healthtalkweb.s3.amazonaws.com *_560x210.
 -d hnytt.no Fluffy.jpg
 -d i0.wp.com 180x500.png
@@ -328,7 +326,6 @@ msFilterList
 -d thaiguiden.no tg-980.html
 -d thainytt.no *-160.jpg
 -d thainytt.no 160_*
--d track.adform.net Banners
 -d track.adform.net
 -d travservice.dk wp-content
 -d trolli.is banner
@@ -560,6 +557,9 @@ msFilterList
 # https://ugenr•dk/kalender/(03/12/2024)
 # dagensDK NO articles
 # flashscoreDK (06 02 2025)
+# politikenDK (08 02 2025)
+:  aj2*.online
+:  aj2*.bid
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
@@ -578,6 +578,8 @@ msFilterList
 :  82.196.13.38
 :  82.221.81.9
 :  178.79.136.45
+# politikenDK (08 02 2025)
+-d 65.21.200.49
 # 🇳🇴 🇩🇰: ——— Sporingsfiler ———
 # 🇳🇴🏞: ——— Sporingsfilar ———
 # ❄: ——— Guorrafiilaid ———
@@ -614,7 +616,6 @@ msFilterList
 +d isdownorblocked.com
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 -d prod-adops-proxy.dnitv.net
-# Caused primarily by the site's tech incompetence, and merely secondarily by «uBlock Filters»
 # ★★★ Caused by «EasyPrivacy» ★★★
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
@@ -801,7 +802,6 @@ msFilterList
 -d hunterstovlerbutikk.com
 -d josefseibeloutletnorge.com
 -d joyaskobutikk.com
--d kybunskodanmark.com
 -d louboutinnorge.com
 -d montec-danmark.com
 -d montecnorge.com
@@ -818,7 +818,6 @@ msFilterList
 -d vejadanmarkudsalg.com
 -d xeroshoes-danmark.com
 -d xeroshoesdanmark.com
-- -norgesalg.com
 # E-mail tips
 -d s.free.fr
 -d trmff.wpengine.com
