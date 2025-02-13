@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 13February2025v2-Deprecated
+# Last modified: 13February2025v3-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -35,7 +35,6 @@ msFilterList
 - auglysing
 - auglysingar
 - vefauglysingar
--d ad.no.doubleclick.net
 -d ad.shareholders.dk
 -d adext.inkclub.com
 -d adnordics.com
@@ -326,7 +325,6 @@ msFilterList
 -d thaiguiden.no tg-980.html
 -d thainytt.no *-160.jpg
 -d thainytt.no 160_*
--d track.adform.net
 -d travservice.dk wp-content
 -d trolli.is banner
 -d trolli.is benecta.png
@@ -564,7 +562,6 @@ msFilterList
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
 +d vgtv.no
--d adnxs.com
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
 # https://www•aftenposten•no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
 # Should not have ":not" + ":empty" added to it due to costume•no
@@ -615,7 +612,6 @@ msFilterList
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
 +d isdownorblocked.com
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
--d prod-adops-proxy.dnitv.net
 # ★★★ Caused by «EasyPrivacy» ★★★
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
