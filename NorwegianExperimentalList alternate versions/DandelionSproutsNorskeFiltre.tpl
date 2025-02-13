@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 13February2025v4-Deprecated
+# Last modified: 13February2025v5-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -546,7 +546,6 @@ msFilterList
 # Borrowed from "Frellwit's Swedish Filter" (29 11 2024)
 -d spania.no
 -d plausible.webfokus.no
--d bcm.interactives.dk script
 -d bytelab.dk
 -d cncpt.dk
 -d gtm.findroommate.dk
@@ -632,7 +631,6 @@ msFilterList
 # https://github.com/ryanbr/fanboy-adblock/issues/1339
 # https://github.com/ryanbr/fanboy-adblock/issues/1468
 # https://github.com/easylist/easylist/issues/12067#issuecomment-1132797711
-# https://github.com/easylist/easylist/issues/15519
 # https://github.com/easylist/easylist/issues/20085
 # ★★★ Caused by «Fanboy's Enhanced Blocking List» ★★★
 # https://github.com/DandelionSprout/adfilt/discussions/779#discussioncomment-5962141
