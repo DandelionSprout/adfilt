@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 13February2025v3-Deprecated
+# Last modified: 13February2025v4-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -744,7 +744,6 @@ msFilterList
 -d replicapatekphilippe.com
 -d replicarolexyachtmaster.com
 -d secureriches.com
--d trackvoluum.com
 -d tromselementbygg.no
 -d ultimate-tech-products.myshopify.com
 -d vipps-sikkerhet.
