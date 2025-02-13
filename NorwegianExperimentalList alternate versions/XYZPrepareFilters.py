@@ -929,7 +929,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(.*)\$all$",
+           r"^(.*)\$all(,(~inline-font|domain=~).*)?$",
            r"\1\n\1$popup",
            line
         )
@@ -3204,7 +3204,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(.*)\$all ?$",
+           r"^(.*)\$all(,(~inline-font|domain=~).*)?$",
            r"\1\n\1$popup",
            line
         )
