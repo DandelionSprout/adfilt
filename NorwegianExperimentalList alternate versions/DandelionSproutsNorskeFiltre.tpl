@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 13February2025v1-Deprecated
+# Last modified: 13February2025v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -964,7 +964,6 @@ msFilterList
 -d eccoskonorge.com
 -d clarksskonorge.com
 -d off-whitedanmark.com
--d underarmourdanmarkdk.com
 -d eccodanmarkwebbutik.com
 -d clarks-dk.com
 -d salomonoutletnorge.com
