@@ -270,6 +270,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -361,6 +367,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            ":matches-css\(",
            ":-abp-properties(",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
            line
         )
 
@@ -541,6 +553,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"! (Version|Last[ -]?[Mm]odified): (.*)December(.*)v(\d\d?)",
            r"! Version: \g<2>12\3\4",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
            line
         )
 
@@ -821,6 +839,12 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
+           line
+        )
+
+        line = re.sub(
            r"([$,])frame",
            r"\1subdocument",
            line
@@ -905,7 +929,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"(.*)\$all",
+           r"^(.*)\$all$",
            r"\1\n\1$popup",
            line
         )
@@ -972,6 +996,12 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^.*ipaddress=.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^([a-zA-Z0-9]|\*){1,5}$",
            r"",
            line
         )
@@ -1781,6 +1811,12 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"^.*ipaddress=.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
            r"",
            line
         )
@@ -3097,13 +3133,13 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"([a-z*][=|])discoveryplus\.\*",
-           r"\1discoveryplus.no|discoveryplus.dk",
+           r"\1discoveryplus.com",
            line
         )
 
         line = re.sub(
            r"([a-z*][=|])auth.discoveryplus\.\*",
-           r"\1auth.discoveryplus.no|auth.discoveryplus.dk",
+           r"\1auth.discoveryplus.com",
            line
         )
 
@@ -3168,13 +3204,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^.*ipaddress=.*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"(.*)\$all",
+           r"^(.*)\$all ?$",
            r"\1\n\1$popup",
            line
         )
@@ -3320,6 +3350,18 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"(^|,)flashscore.\*(#|,)",
            r"\1flashscore.dk\2",
+           line
+        )
+
+        line = re.sub(
+           r"^.*ipaddress=.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
            line
         )
 
@@ -5168,7 +5210,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"(.*)\$all",
+           r"(.*[a-z][a-z])\$all",
            r"\1\n\1$popup",
            line
         )
@@ -5319,6 +5361,12 @@ def prepare_abp(lines) -> str:
         line = re.sub(
            r"\$popup,~inline-font,.*",
            r"$popup",
+           line
+        )
+
+        line = re.sub(
+           r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
+           r"",
            line
         )
 
