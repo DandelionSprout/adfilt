@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 13February2025v5
+! Last modified: 17February2025v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1258,6 +1258,10 @@ flashscore.*##div.banner
 politiken.dk##.space-y-gutter > div:not([id])
 politiken.dk##section[class*=MegaboardAd i]
 denoffentlige.dk##.generic-widget:has([data-ad-unit-id])
+nordsoeposten.dk##.jeg_sticky_sidebar
+nordsoeposten.dk##.langbanner
+lastbilmagasinet.dk##.rotating-mowgli
+sonderborgnyt.dk###sidebar > section:has(> .add)
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1460,6 +1464,8 @@ _visittkortannonse_$image
 /annonser-vert.gif^
 ! https://www•motorhobby•no/no/events/arr-etter-type/item/6-stjordal-motorshow-trondheim-mai-2025-stjordal-motorshow-i-abrahallen (13/09/2024)
 .no/images/banners/$image
+! nordsoepostenDK (17/02/2025)
+.dk/wp-content/uploads/ap-plugin-upload^$image
 ! — — — — —
 ! 🇳🇴: Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
@@ -1724,7 +1730,7 @@ _1170x400.$domain=eyjafrettir.is,image,1p
 ! building-supplyDK
 ||f.nordiskemedier.dk/banner^
 ! metalsupplyNO, licitationenDK
-/://f\.nordiskemedier\.dk/2[a-z0-9]{12,}\.(jpg|png|jpeg)/$3p
+/^.*://f\.nordiskemedier\.dk/2[a-z0-9]{12,}\.(jpe?g|png)((\?|&).*)?$/$3p
 ! viivillaNO (10/11/2020)
 ||bcm.interactives.dk/script/
 ! adressaNO (10/11/2020)
