@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 13February2025v5-Deprecated
+# Last modified: 17February2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -157,6 +157,7 @@ msFilterList
 # https://inmagasinet•custompublish•com/blir-det-gull•4528974-87197•html
 - annonser-vert.gif
 # https://www•motorhobby•no/no/events/arr-etter-type/item/6-stjordal-motorshow-trondheim-mai-2025-stjordal-motorshow-i-abrahallen/(13/09 2024)
+# nordsoepostenDK (17 02 2025)
 # — — — — —
 # 🇳🇴: Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
@@ -376,6 +377,7 @@ msFilterList
 -d ukenr.no iframe.php
 -d ugenr.dk iframe.php
 -d cdplanet.no *_app_preview.png
+-d infohelgeland.no banner
 # — — — — — — —
 # 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -557,6 +559,7 @@ msFilterList
 # politikenDK (08 02 2025)
 :  aj2*.online
 :  aj2*.bid
+# gatNO, drivaNO (18 02 2025)
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
