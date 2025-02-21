@@ -1,6 +1,6 @@
 [Adblock Plus 3.18]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 21February2025v1-Personal
+! Version: 21February2025v2-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suﬀixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-oﬀ pre-alpha list concepts of mine.
 !#if !env_mv3
@@ -666,10 +666,9 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#:is(
 
 ! 🇯🇵 Anti-weeb
 ! Before adding Steam/eShop entries, see if https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Sensitive%20lists/AntiWeebBoobGamesList.txt suits better
-pixiv.net#?#section:has-text(Daily ranking)
-pixiv.net#?#section:has-text(Popular tags)
-pixiv.net#?#section:has-text(Ongoing contests)
-pixiv.net#?#section:has-text(Contest results)
+!#if !env_mobile
+pixiv.net##.flex.flex-col + .flex.flex-col:has(a[href="/contest/"])
+!#endif
 www.tumblr.com##div[data-timeline*="/timeline/"] div[style^=width] > div[tabindex]:has-text(/^.*c\o\mf\ort\s?character.*$/i):not(:has-text(/fa\ir|w\inx|w\.i\.t|n\ights/i))
 tumblr.com##div[data-timeline*=notes_info] div[data-cell-id]:has-text(/^.*c\o\mf\ort\s?character.*$/i):not(:has-text(/fa\ir|w\inx|w\.i\.t|n\ights/i)):watch-attr(class):watch-attr(style)
 www.tumblr.com##div[data-timeline*="/blog/"] header + div + div > div:has-text(/^.*c\o\mf\ort\s?character.*$/i):not(:has-text(/fa\ir|w\inx|w\.i\.t|n\ights/i))
