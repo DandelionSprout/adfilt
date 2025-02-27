@@ -1,10 +1,10 @@
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2021.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2022.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2023.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2024.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt', 'https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/general_extensions.txt', 'https://filters.adtidy.org/extension/ublock/filters/16.txt', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/english.txt', 'https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/french.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://easylist-downloads.adblockplus.org/advblock.txt', 'https://easylist-downloads.adblockplus.org/Liste_AR.txt', 'https://easylist-downloads.adblockplus.org/easylistspanish.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/TopDescription.notlist', 'https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2021.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2022.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2023.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2024.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2025.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt', 'https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt', 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/general_extensions.txt', 'https://filters.adtidy.org/extension/ublock/filters/16.txt', 'https://easylist-downloads.adblockplus.org/easylistgermany.txt', 'https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/english.txt', 'https://raw.githubusercontent.com/abp-filters/abp-filters-anti-cv/master/french.txt', 'https://easylist-downloads.adblockplus.org/antiadblockfilters.txt', 'https://easylist-downloads.adblockplus.org/advblock.txt', 'https://easylist-downloads.adblockplus.org/Liste_AR.txt', 'https://easylist-downloads.adblockplus.org/easylistspanish.txt']
 
-UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$ghide', ',ghide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain', '[Adblock Plus 2.0]', 'CV-', '$csp']
-UNSUPPORTED_IP = ['##', '@#', '#?#', '#%#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '!+']
+UNSUPPORTED_AGH = ['##', '@#', '#?#', '#%#', '!+', 'domain=', 'generichide', '$ghide', ',ghide', '$csp', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '$domain', ',domain', '[Adblock Plus 2.0]', 'CV-', '$csp', '$:']
+UNSUPPORTED_IP = ['##', '@#', '#?#', '#%#', 'domain=', 'generichide', '$csp', 'badfilter', 'xmlhttprequest', '$xhr', '$stylesheet', '$elemhide', '$inline-script', '$other', '$~object', 'redirect=', '#$#', '!+', '$:']
 
 OUTPUT = 'xyzzyx.txt'
 OUTPUT_AGH = 'AdGuardHomeCompilationList.txt'
@@ -689,6 +689,60 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^((\d{1,3}\.){3}[12]?\d)$",
            r"|\1|",
+           line
+        )
+
+        line = re.sub(
+           r"^(!.*([, ]|\()[a-z0-9-]{2,}) ?\. ?com(([,: ]|\)).*)?$",
+           r"\1COM\3",
+           line
+        )
+
+        line = re.sub(
+           r"^(!.*([, ]|\()[a-z0-9-]{2,}) ?\. ?com(([,: ]|\)).*)?$",
+           r"\1COM\3",
+           line
+        )
+
+        line = re.sub(
+           r"^(!.*([, ]|\()[a-z0-9-]{2,}) ?\. ?com(([,: ]|\)).*)?$",
+           r"\1COM\3",
+           line
+        )
+
+        line = re.sub(
+           r"^(!.*([, ]|\()[a-z0-9-]{2,}) ?\. ?net(([,: ]|\)).*)?$",
+           r"\1NET\3",
+           line
+        )
+
+        line = re.sub(
+           r"^(!.*([, ]|\()[a-z0-9-]{2,}) ?\. ?org(([,: ]|\)).*)?$",
+           r"\1ORG\3",
+           line
+        )
+
+        line = re.sub(
+           r"^(!.*([, ]|\()[a-z0-9-]{2,}) ?\. ?org(([,: ]|\)).*)?$",
+           r"\1ORG\3",
+           line
+        )
+
+        line = re.sub(
+           r"^(!.*([, ]|\()[a-z0-9-]{2,}) ?\. ?org(([,: ]|\)).*)?$",
+           r"\1ORG\3",
+           line
+        )
+
+        line = re.sub(
+           r"^.*\$:.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*hid[ie].*Adblock Plus.*$",
+           r"",
            line
         )
 
@@ -1502,6 +1556,18 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^! !SECTION.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*\$:.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*hid[ie].*Adblock Plus.*$",
            r"",
            line
         )
