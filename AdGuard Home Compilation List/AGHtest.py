@@ -999,6 +999,12 @@ def prepare_ip(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^~.*$",
+           r"",
+           line
+        )
+
         if is_supported_ip(line) and not line == '':
             text += line + '\n'
 
