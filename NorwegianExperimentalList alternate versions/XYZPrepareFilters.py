@@ -5370,6 +5370,30 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(.*\^)\$all$",
+           r"\1\n\1$popup",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*.{5,})\$all$",
+           r"\1\n\1$popup",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*.{5,})\$all,~inline-font,domain=~.*$",
+           r"\1\n\1$popup",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*.{5})\$all,(domain=~[a-z]{2,17})$",
+           r"\1$\2\n\1$popup,\2",
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\n'
 
@@ -6284,6 +6308,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^!\+.*$",
+           r"",
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\n'
 
@@ -6522,6 +6552,12 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"^!#[ie].*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^!\+.*$",
            r"",
            line
         )
