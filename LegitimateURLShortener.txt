@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 11February2025v1
+! Version: 03March2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2272,7 +2272,8 @@ $removeparam=aff_trace_key
 ||aliexpress.$removeparam=cv
 ! https://www•alibaba•com/toprankedsellers/index•html?spm=a2700•8293689•0•0•2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
 ! For more information, see - https://open•taobao•com/doc•htm?docId=959&docType=1 (in Chinese)
-$removeparam=spm
+! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12359848)
+$removeparam=spm,domain=~twitcasting.tv
 $removeparam=tracelog
 $removeparam=cardId,doc,domain=alibaba.com
 ! http://m•aliexpress•com/item/32475192128•html?aff_click_id=()
@@ -4835,18 +4836,6 @@ $doc,removeparam=u_channel,domain=tmall.com|taobao.com
 $doc,removeparam=umpChannel,domain=tmall.com|taobao.com
 $doc,removeparam=maskChannel,domain=tmall.com|taobao.com
 
-!#if !env_mobile
-! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
-! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
-$removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
-$removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk
-! https://i-viaplay-com•akamaized•net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d•jpg?width=400&height=600 (02/03/2021)
-$removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
-$removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
-! https://www•ikea•com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5•jpg?f=xl
-||ikea.com/*/images/products^$removeparam=f
-!#endif
-
 ! https://www•smartasaker•no/no/sportstromper-mot-gnagsar?dema_id=6299778080439
 ||smartasaker.$removeparam=dema_id
 
@@ -4878,6 +4867,24 @@ ref=dtf.ru$doc,removeparam=ref
 
 ! https://benchmarks•ul•com/3dmark?redirected=true (21/01/2025)
 ||ul.com^$removeparam=redirected
+
+! https://www•pond5•com/stock-footage/item/116362981-video-distortion-horizontal-bar-vhs-old-tv-effect?dd_referrer=https%3A%2F%2Fwww.google.com%2F
+||pond5.com^$removeparam=dd_referrer
+
+! https://www•roblox•com/users/1/profile?friendshipSourceType=PlayerSearch
+||roblox.$removeparam=friendshipSourceType
+
+!#if !env_mobile
+! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
+! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
+$removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
+$removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk
+! https://i-viaplay-com•akamaized•net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d•jpg?width=400&height=600 (02/03/2021)
+$removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
+$removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
+! https://www•ikea•com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5•jpg?f=xl
+||ikea.com/*/images/products^$removeparam=f
+!#endif
 
 ! 🤖 + ——— + Scriptlets + ——— + 🤖 !
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1352038
