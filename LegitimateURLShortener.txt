@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 03March2025v3
+! Version: 08March2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2396,7 +2396,6 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ||wenku.baidu.com^$removeparam=aggId
 ! https://github.com/DandelionSprout/adfilt/issues/831
 ||baidu.com^$removeparam=fenlei
-!!! ||baidu.com^$removeparam=ie - https://github.com/DandelionSprout/adfilt/issues/831#issuecomment-1614339807
 ||baidu.com^$doc,removeparam=/^rsv_.*$/
 ||baidu.com^$doc,removeparam=rn
 ||baidu.com^$removeparam=bsst
@@ -2417,6 +2416,10 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ||baidu.com^$doc,removeparam=/^from.*$/
 ! causes issues: https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10554103
 ||baidu.com^$doc,removeparam=tpl_from,domain=~graph.baidu.com
+! (https://github.com/DandelionSprout/adfilt/issues/831#issuecomment-1614339807)
+!!!||baidu.com^$removeparam=ie
+! (https://github.com/AdguardTeam/AdguardFilters/issues/200279)
+!!!||m.baidu.com^$removeparam=from
 
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
