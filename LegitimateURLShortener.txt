@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 08March2025v2
+! Version: 09March2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -4883,6 +4883,10 @@ ref=dtf.ru$doc,removeparam=ref
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12371760
 ! note: *needs to be specific to the /status path or will cause problems*
 .com/*/status/$doc,removeparam=t,domain=twitter.com|x.com
+
+! https://www•qwant•com/?hti=0&s=0&q=john+madden&t=web (When using Qwant's Firefox extension as the default search engine; 09/03/2025)
+||qwant.com^$removeparam=hti
+||qwant.com^$removeparam=s
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
