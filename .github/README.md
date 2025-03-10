@@ -23,9 +23,6 @@ This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists f
 This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed lots of energy and effort into, for the enjoyment of all of us.
 
 * [Official repo mirror](https://gitlab.com/DandelionSprout/adfilt)
-* [Official donation links](https://sproutsluckycorner.wordpress.com/2017/11/14/my-work-and-contact-resume/#donations)
-* [Category title translation project](https://crwd.in/dandelion-sprout-nordic-filter)
-* [Paid bounty missions for superskilled filter writers](https://github.com/DandelionSprout/adfilt/search?q=bounty&type=code)
 
 However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits. Various modified versions of it are included in uBlock Origin, AdGuard, AdNauseam, AdBlock, Adblock Plus, AdGuard Home, pfBlockerNG, Brave Browser, and Vivaldi's privacy settings.
 
