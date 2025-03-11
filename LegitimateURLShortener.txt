@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 09March2025v1
+! Version: 11March2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2110,7 +2110,6 @@ $removeparam=ogbl
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
 $removeparam=aqs,domain=www.google.*|ipv6.google.com
 !#endif
-! ||www.google•$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 $removeparam=btnG,domain=www.google.*|ipv6.google.com
 $removeparam=iflsig,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1093666
@@ -2145,7 +2144,6 @@ $removeparam=uact,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/issues/834#issuecomment-1510431981
 ||www.google.*/search?$doc,removeparam=sclient
 ||ipv6.google.com*/search?$doc,removeparam=sclient
-! Should not be removed: dpr (Determines image search results' box sizes)
 ! https://accounts•google•com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts•google•com%2FManageAccount%3Fnc%3D1&dsh=S-1476216186%3A1641712437682727&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp (09/01/2022)
 ||accounts.google.com^$removeparam=dsh,doc
 ! https://support•google•com/contributionpolicy/answer/7400114?ref_topic=7422769
@@ -2172,7 +2170,7 @@ $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10267561
 $doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ! Removing a Google search parameter, based on extensive research to determine that search terms with Google will always use UTF-8 no matter what and will under no known circumstances actually treat text as Shift_JIS even when using "&ie=Shift_JIS"
-! https://support•google•com/adsense/answer/9055049 imply that "Shift_JIS" was supposed to be accepted by Google, but while https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC works correctly (マーメイドラグーンのラニー, the Japanese name of a book), https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC&ie=Shift_JIS clearly doesn't, no matter which combinations of online converters or halfwidth/fullwidth I tested with•
+! https://support•google•com/adsense/answer/9055049 imply that "Shift_JIS" was supposed to be accepted by Google, but while https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC works correctly (マーメイドラグーンのラニー, the Japanese name of a book), https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC&ie=Shift_JIS clearly doesn't, no matter which combinations of online converters or halfwidth/fullwidth I tested with.
 ://www.google.$doc,removeparam=ie,domain=www.google.*|ipv6.google.com
 ://ipv6.google.com^$doc,removeparam=ie,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-11391406
@@ -2180,8 +2178,13 @@ $doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.$doc,removeparam=ictx
 ||www.google.$doc,removeparam=dpr
 ||www.google.$doc,removeparam=tfu
+! https://www.google.com/finance/?output=search&source=lnms (11/03/2025)
+||www.google.com/finance/?$removeparam=output
+||www.google.com/finance/?$removeparam=source
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
 @@://www.google.com/maps?entry=$removeparam=utm_campaign
+! Should not be removed: dpr (Determines image search results' box sizes)
+! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 
 !!! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
