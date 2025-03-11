@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Last modified: 02March2025v3
+! Last modified: 11March2025v2
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -126,7 +126,7 @@ vredens-gnag.no##.ab-appnexus-ads-wrapper
 spillespill.no##.banner-leaderboard
 tvkampen.com,tvsporten.dk###clickable-bg
 tvsporten.dk##a[href^="/_c/"][rel=nofollow]
-tvsporten.dk##.odds
+tvkampen.com,tvsporten.dk##.odds
 aftenposten.no##.container > div[class=block]
 xstra.no##.td-fix-index
 tek.no#?#main > section > section:has-text(/^an{2}onse$/)
@@ -200,7 +200,6 @@ gamer.no##div[data-unit$=banner]
 sysla.no##.ad-nexus-ad
 bilasolur.is##*:has(>div[class*=advertisement-spot])
 filmweb.no##[class^=ad_adWrapper]
-tvkampen.com##.odds
 elbil24.no#?#.preview:has(.kicker:has-text(/^.*an{2}onse.*$/i))
 tvkampen.com,tvsporten.dk###event_banner
 pulze.dk###topads
@@ -515,7 +514,7 @@ bilgalleri.dk##.container-featured + .container:last-of-type
 180.*##.cc-top-ad-outer
 jyllands-posten.dk,jyllands--posten-dk.translate.goog##div[id^=MediumRectangle]
 verktoy24.no,inputmag.dk##.stream-item
-vielskerserier.dk,udeoghjemme.dk##div.hidden.justify-center
+udeoghjemme.dk,vielskerserier.dk##div.hidden.justify-center
 gunnarandreassen.com#?#a:has-text(/^.*[kc]as\ino.*$/i)
 parcferme.no##.code-block > p
 boligdebatten.dk###selvsalg-reklame
@@ -1266,6 +1265,11 @@ sonderborgnyt.dk###sidebar > section:has(> .add)
 dagbladet.no###svelte-app-articlestickytopbar:has(div[class*=addwrapper i])
 tara.no##div[type=inserted_code]
 senest.dk##.d-none-mobile.generic-widget
+itavisen.no##:is(h3,figure):has(> a[data-lasso-id])
+itavisen.no##p:has-text(/^Annonse$/i):has(+ h3 > a[data-lasso-id])
+itavisen.no##.clearfix > .code-block:has([data-ad-unit-id])
+itavisen.no##p:has(> em > a[data-lasso-id])
+vg.no##section[class*=articles_zulis]
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -2070,6 +2074,10 @@ _980banner_
 ://aj2*.bid^$xmlhttprequest
 ! gatNO, drivaNO (18/02/2025)
 ##div.gridnetboard
+! https://www•tv2•no/livesport/vintersport/oversikt (09/03/2025)
+tv2.no##.aside > .ad-container
+! TV2dk's feeds on phones (11/03/2025)
+##div.tc_adwrap
 ! — — — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances

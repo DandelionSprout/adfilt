@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 02March2025v3-Deprecated
+# Last modified: 11March2025v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -560,6 +560,8 @@ msFilterList
 :  aj2*.online
 :  aj2*.bid
 # gatNO, drivaNO (18 02 2025)
+# https://www•tv2•no/livesport/vintersport/oversikt/(09/03/2025)
+# TV2dk's feeds on phones (11 03 2025)
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
