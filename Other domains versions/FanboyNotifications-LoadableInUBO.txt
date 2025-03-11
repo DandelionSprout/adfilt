@@ -1,7 +1,7 @@
-! Checksum: FQ/0JcjKUdPHdWgN4POfAA
-! Version: 202501041931
+! Checksum: P26W67ICGQyG3mOaqeD+TQ
+! Version: 202503111151
 ! Title: Fanboy's Notifications Blocking List - Loadable in uBO+AdGuard
-! Last modified: 04 Jan 2025 19:31 UTC
+! Last modified: 11 Mar 2025 11:51 UTC
 ! Expires: 1 days (update frequency)
 ! License: https://creativecommons.org/licenses/by/3.0/
 ! Please report any unblocked content or problems by email or in our forums
@@ -65,6 +65,7 @@
 /push_notification/*
 /push_notifications.js
 /push_subscription.js
+/pushengine.js
 /pushes/firebase.js
 /pushes/notification.js
 /PushexSDK.js
@@ -82,7 +83,6 @@
 /pushwoosh-web-notifications.js
 /pushwoosh-web-pushes-http-sdk.js
 /pushy-ver.js
-/scripts/onesignal.js
 /site-notification-desk.min.js
 /smio-push-notification/js/frontend_webpush.js
 /subscribe-push-notifications.js
@@ -271,6 +271,7 @@
 ##.push-notification-prompt
 ##.push-notifications-primer
 ##.push-overlay
+##.push-sdk-prompt-shell
 ##.push-subscription-alert
 ##.push-subscription-button
 ##.push-subscription-prompt
@@ -395,6 +396,7 @@
 ! ||staq-cdn.com/grow/$third-party
 ||api-push.com^$third-party
 ||azureedge.net/js/cookie_notificacao.min.js
+||bildirimat.com^$third-party
 ||bildirnet.com^$third-party
 ||braze.com^$third-party
 ||cappushino.com^$third-party
@@ -413,6 +415,7 @@
 ||irpush.com^$third-party
 ||jubi.ai/buttonbot/$script,third-party
 ||krakenoptimize.com^$third-party
+||larapush.com^$third-party
 ||linker.hr^$third-party
 ||luravius.com^$third-party
 ||medallia.com^*/onsite/embed.js
@@ -596,7 +599,7 @@
 ||bdstatic.com/linksubmit/push.js
 ||dailymail.co.uk/api/web-push-notification/
 ||gadgetsnow.com/sw.cms
-||gstatic.com/firebasejs/$domain=joins.com|novayagazeta.eu|packaginginsights.com
+||gstatic.com/firebasejs/$domain=joins.com|kompas.com|novayagazeta.eu|packaginginsights.com
 ||hindustantimes.com/messaging-sw.js
 ||hindustantimes.com/sw.js
 ||hindustantimes.com^*/ht-notification-
@@ -611,7 +614,7 @@
 ||ndtv.com/sw.js
 ||newsukraine.rbc.ua/sworker.js
 ||nookazon.com/firebase-messaging-sw.js
-||phys.org/push-sw.js
+||pcguide.com/sp-push-worker-fb.js
 ||push.cnnindonesia.com^
 ||push.ictsd.org^
 ||renaultsport.com/spip.php?page=sw.js
@@ -638,6 +641,7 @@
 ||futura-sciences.com/clientscript/push.js
 ||horoscope.fr/notifications/
 ||informazione.it/wr/promo-miainfo.js
+||kompas.com/firebase-messaging-sw.js
 ||metrobilbao.eus/firebase-messaging-sw.js
 ||push.idowa.de^
 ||push.neko-san.fr^
@@ -662,6 +666,7 @@ redbull.com###bottom-notifications
 thehindu.com,thehindubusinessline.com###gsi_overlay
 masrawy.com,yallakora.com###izooto-optin
 kizi.com###kizi-popover-dialog
+antaranews.com###notif-container
 vk.com###page_bottom_banners_root
 iol.pt###popover
 livenation.co.nz###push-notifications-popup
@@ -683,17 +688,19 @@ improvethenews.org##.__floater
 nzherald.co.nz##.action-bar
 fanblogs.jp##.aff-notice
 informationweek.com##.announcement
+bing.com##.b_bnp_bopc
 startpage.com##.banner-top
 tmz.com##.browser-notifications-prompt
-romaniajournal.ro##.bs-push-noti
 cnet.com##.c-globalNotification
 techwalla.com##.component-push-notification
 manutd.com##.custom-popup
 advfn.com##.cw-prompt-alert
 gmanetwork.com##.ent-subscribe-prompt-wrapper
+swisscows.com##.home-link-instruction
 msn.com##.homepage-banner
 yummly.com##.house-promo-root
 ft.com##.instant-alert-cta
+forum.adrenaline.com.br##.js-enablePushContainer
 recyclingproductnews.com##.modal-notifications
 correiobraziliense.com.br##.noticia_notificacao
 eldestapeweb.com,laarena.com.ar##.notificacion-modal
@@ -701,7 +708,7 @@ mdjonline.com##.notification-button
 business-standard.com##.notification-col
 aljazeera.com##.notification-pre-permission
 winnipegfreepress.com##.notifications-banner
-wnep.com##.page__notifications
+wowhead.com##.notifications-dialog
 post-gazette.com##.pg-notifybox
 pnas.org##.pop-notification
 investing.com##.preloaded_lightbox
@@ -776,12 +783,14 @@ trakt.tv###android-beta-wrapper
 google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.cn,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.com.np,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pr,google.com.py,google.com.qa,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.iq,google.is,google.it,google.je,google.jo,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.nl,google.no,google.nr,google.nu,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tg,google.tk,google.tl,google.tm,google.tn,google.to,google.tt,google.vg,google.vu,google.ws###app > div.visible > div[role="dialog"][jsaction^="focusout:promotion.dismiss;"]
 backnumber.info###app-bnr
 m.calciomercato.com###app-download
+rugbypass.com###app-install
 kriptomat.io###app-popup
 sports.yahoo.com###app-promo
 linkedin.com###app-upsell-container
 m.economictimes.com###appDwnldBanner
 m.aiscore.com###appLink
 goo-net.com###app_info_area
+filmora.wondershare.jp###appboxWrapper
 brandeli.com###appbuner
 bing.com###b_pole
 dtac.co.th###banner_dtacapp
@@ -801,6 +810,7 @@ kogan.com###footer-native-banner
 clubd.co.jp###footerBanner
 bmwc.marv.jp###footer_badge-fixed
 m.economictimes.com###footer_banner
+imgur.com###getAppButton
 mercari.com###getTheAppFooter
 patreon.com###half-sheet-app-banner
 ventusky.com###header > .ii[href]
@@ -808,6 +818,7 @@ aliexpress.com,aliexpress.us###header-float-banner
 kurashiru.com###header_app
 web.quizknock.com###header_iosapp_link
 wral.com###house-promo-impression
+animesugetv.to###installPwaPopup
 trakt.tv###ios-official-wrapper
 ivoox.com###jq-box-app
 mamanoko.jp###js-actamDownloadModal
@@ -833,9 +844,10 @@ mail.google.com###sdppromo
 kraken.com###smart-app-banner
 cbsnews.com,yelp.com###smart-banner
 m.jpost.com,tandem.net###smartBanner
-deviantart.com,dw.com,eurosport.com,nzherald.co.nz,photobucket.com,spiegel.de,tvnz.co.nz###smartbanner
+deviantart.com,dw.com,eurosport.com,kompas.com,nzherald.co.nz,photobucket.com,spiegel.de,tvnz.co.nz###smartbanner
 mail.google.com###speedbump
-google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.cn,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.com.np,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pr,google.com.py,google.com.qa,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.iq,google.is,google.it,google.je,google.jo,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.nl,google.no,google.nr,google.nu,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tg,google.tk,google.tl,google.tm,google.tn,google.to,google.tt,google.vg,google.vu,google.ws###stUuGf
+msn.com##views-promo-card
+! google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.cn,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.com.np,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pr,google.com.py,google.com.qa,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.iq,google.is,google.it,google.je,google.jo,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.nl,google.no,google.nr,google.nu,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tg,google.tk,google.tl,google.tm,google.tn,google.to,google.tt,google.vg,google.vu,google.ws###stUuGf
 vietnamairlines.com###store-notify
 analyticsinsight.net,newsgram.com###sw-wrapper
 mlbtraderumors.com###text-17
@@ -898,6 +910,7 @@ news.yahoo.com,tracker.gg##.app-promo
 atlasobscura.com##.app-store-heading
 banggood.com##.app-top-bar
 banggood.com##.app-top-height
+filmora.wondershare.jp##.appBoxUpLayer
 makemytrip.com##.appDnldCnt
 bleacherreport.com##.appInstallButton
 kijiji.ca##.appMarketingWrapper-909710043
@@ -922,7 +935,6 @@ msn.com##.articlePage_continueReadingButtonPrimary-DS-EntryPoint1-1
 nltimes.nl##.ath-phone
 atptour.com##.atp_apps
 bnnbloomberg.ca##.b-alert-bar
-bing.com##.b_bnp_bopc
 castbox.fm##.banner
 gibiru.com##.banner-button
 animeanime.global##.banner-click-app
@@ -936,14 +948,14 @@ ivoox.com##.bg-lightest.wrapper
 meetup.com##.bg-midnightDark.align-center.flex
 kickstarter.com##.bg-navy-200
 evasoes.pt##.bloco_nl
-investing.com##.bottom-0.fixed
+investing.com,waifulabs.com##.bottom-0.fixed
 foundit.com.ph##.bottom-\[10\%\].fixed
 banggood.com##.bottom-app-contain
 map.baidu.com##.bottom-banner-float
 myhome.nifty.com##.bottom-follow-modal
 commaful.com##.bottom-section-signup
 ixigo.com##.bottom-sheet
-m.facebook.com##.bottom.fixed-container[data-actual-height="66"]
+m.facebook.com,www.facebook.com##.bottom.fixed-container.m:has-text(Get the best experience)
 cityam.com##.breaking-news_liveblog
 smocca.jp##.c-box-app_banner
 warbyparker.com##.c-gCMvLL-dXDTjd-animation-open
@@ -983,8 +995,10 @@ cryptonews.net##.download_the_app
 zomato.com##.drRXJW
 al-sharq.com##.dwn-app
 noelleeming.co.nz##.dy_bottom_notification
+olightstore.com##.e1ngphod0
 actionnetwork.com##.e7h0b9a0
 probuilds.net##.experiment-height-expanded
+m.glassesusa.com##.fHyEeP.aHyEeP
 marokko.nl##.floatbar
 cookpad.com##.footer-1azakc
 myanimelist.net##.footer-app
@@ -1026,6 +1040,7 @@ ecaytrade.com##.install-button
 news18.com##.install_app_float
 news18.com##.instlsapp_fxd
 terabox.com##.introduce-sticky-btn
+lensdirect.com##.ios-app-install
 ticketmaster.com##.jBEXsA
 ticketmaster.com##.jDQUfz
 dietplus.jp##.js-app-bg
@@ -1035,6 +1050,7 @@ filmarks.com##.js-induce-banner
 duckduckgo.com##.js-open-in-app
 adspecials.us,ajanlatok.hu,akcniletak.cz,catalogosofertas.cl,catalogosofertas.com.ar,catalogosofertas.com.br,catalogosofertas.com.co,catalogosofertas.com.ec,catalogosofertas.com.mx,catalogosofertas.com.pe,catalogueoffers.co.uk,catalogueoffers.com.au,flugblattangebote.at,flyerdeals.ca,folderz.nl,folhetospromocionais.com,folletosofertas.es,gazetki.pl,kundeavisogtilbud.no,ofertelecatalog.ro,offertevolantini.it,promocatalogues.fr,promotiez.be,promotions.ae,prospektangebote.de,reklambladerbjudanden.se,tilbudsaviseronline.dk##.js-page-promotion-container
 my.mintmobile.com##.justify-content-end.rounded-1.g-0.p-3
+news.bitcoin.com##.kBQmzn.sc-gMKojc
 baby-calendar.jp##.l-anime-bana.js-bcweb-only
 soundcloud.com##.l-front-mobile-teaser
 sauna-ikitai.com##.l-headerApp
@@ -1193,6 +1209,7 @@ genius.com##div[class*="AndroidBannermobile_"]
 thescore.com##div[class*="GetTheAppModal_"]
 giphy.com##div[class*="OpenInAppContainer-"]
 thescore.com##div[class^="GetTheApp__fullScreenContainerScrolldown--"]
+corcoran.com##div[class^="PWAInstallBanner"]
 m.aliexpress.ru##div[class^="PseudoSmartBanner_"]
 sp.live.nicovideo.jp##div[class^="___overlay_"][data-overlay-role="cover"]
 kraken.com##div[class^="fc-94f32b27"]
@@ -1213,6 +1230,8 @@ reddit.com##xpromo-top-button
 ! :has
 gemini.google.com##.cdk-overlay-container:has(.get-app-mobile-dialog)
 m.iyf.tv##.container:has(> div.download-title)
+news.bitcoin.com##.cwDafx:has-text(Continue in the Bitcoin.com App)
+7news.com.au##.e1s06mna1:has-text(Know the news)
 mail.proton.me##[aria-label="Notification"]:has-text(app)
 abc.net.au#?#[data-component="RelatedCard"]:-abp-contains(Stream your favourite shows)
 linkedin.com#?#div#public_post_contextual-sign-in:-abp-contains(Sign in to view more content)
@@ -1237,6 +1256,7 @@ mobi24.net#@#a[href^="https://www.mobi24.net/"]
 ! fanboy_notifications_allowlist.txt
 @@||bostonherald.com^*/webpush.js$script,~third-party
 @@||braze.com/api/$domain=dairyqueen.com|deezer.com
+@@||creator.klarna.com/plugins/onesignal-cordova-plugin/www/onesignal.js$~third-party
 @@||inevent.com/js/wizard/pushNotification.js$script,~third-party
 @@||ledevoir.com/js/web-push.js$script,~third-party
 @@||oakley.com^*/notifications.js$~third-party
@@ -1360,12 +1380,17 @@ player.fm##html:style(overflow: auto !important; position: initial !important;)
 player.fm##body:style(overflow: auto !important; position: initial !important;)
 ! wunderground.com
 wunderground.com##+js(rc, enable-sda, body, stay)
+! tubitv app nag
+tubitv.com##+js(set-local-storage-item, windows_prompt_shown_v3, 1)
+! makerworld
+makerworld.com##.MuiModal-root.MuiDialog-root:has-text(Open in Bambu Handy)
+makerworld.com##body:style(overflow: auto !important; position: initial !important;)
 ! m.economictimes.com
 m.economictimes.com###prominentOverlay
 m.economictimes.com##html:style(overflow: auto !important; position: initial !important;)
 m.economictimes.com##body:style(overflow: auto !important; position: initial !important;)
 ! m.yelp.com
-m.yelp.com,m.yelp.co.uk,m.yelp.ca,m.yelp.com.au,m.yelp.co.nz,m.yelp.dk,m.yelp.de,m.yelp.fi,m.yelp.cz,m.yelp.fr,m.yelp.es,m.yelp.pt,m.yelp.it,m.yelp.no,m.yelp.se,m.yelp.ie,m.yelp.com.tr,m.yelp.com.br,m.yelp.nl,m.yelp.com.mx,m.yelp.co.jp,m.yelp.com.tw,m.yelp.be##div[class^="overlay__09f24"]
+m.yelp.com,m.yelp.co.uk,m.yelp.ca,m.yelp.com.au,m.yelp.co.nz,m.yelp.dk,m.yelp.de,m.yelp.fi,m.yelp.cz,m.yelp.fr,m.yelp.es,m.yelp.pt,m.yelp.it,m.yelp.no,m.yelp.se,m.yelp.ie,m.yelp.com.tr,m.yelp.com.br,m.yelp.nl,m.yelp.com.mx,m.yelp.co.jp,m.yelp.com.tw,m.yelp.be##div[class^="overlay-color-"]
 m.yelp.com,m.yelp.co.uk,m.yelp.ca,m.yelp.com.au,m.yelp.co.nz,m.yelp.dk,m.yelp.de,m.yelp.fi,m.yelp.cz,m.yelp.fr,m.yelp.es,m.yelp.pt,m.yelp.it,m.yelp.no,m.yelp.se,m.yelp.ie,m.yelp.com.tr,m.yelp.com.br,m.yelp.nl,m.yelp.com.mx,m.yelp.co.jp,m.yelp.com.tw,m.yelp.be##html:style(overflow: auto !important; position: initial !important;)
 m.yelp.com,m.yelp.co.uk,m.yelp.ca,m.yelp.com.au,m.yelp.co.nz,m.yelp.dk,m.yelp.de,m.yelp.fi,m.yelp.cz,m.yelp.fr,m.yelp.es,m.yelp.pt,m.yelp.it,m.yelp.no,m.yelp.se,m.yelp.ie,m.yelp.com.tr,m.yelp.com.br,m.yelp.nl,m.yelp.com.mx,m.yelp.co.jp,m.yelp.com.tw,m.yelp.be##body:style(overflow: auto !important; position: initial !important;)
 m.yelp.com,m.yelp.co.uk,m.yelp.ca,m.yelp.com.au,m.yelp.co.nz,m.yelp.dk,m.yelp.de,m.yelp.fi,m.yelp.cz,m.yelp.fr,m.yelp.es,m.yelp.pt,m.yelp.it,m.yelp.no,m.yelp.se,m.yelp.ie,m.yelp.com.tr,m.yelp.com.br,m.yelp.nl,m.yelp.com.mx,m.yelp.co.jp,m.yelp.com.tw,m.yelp.be##[aria-label*="Download the Yelp app"]
@@ -1374,6 +1399,8 @@ m.yelp.com,m.yelp.co.uk,m.yelp.ca,m.yelp.com.au,m.yelp.co.nz,m.yelp.dk,m.yelp.de
 thedesignlove.com##.cp-overlay
 thedesignlove.com##html:style(overflow: auto !important; position: initial !important;)
 thedesignlove.com##body:style(overflow: auto !important; position: initial !important;)
+! sigmalive.com
+sigmalive.com##+js(set-local-storage-item, push-notifications, no)
 ! linkedin.com
 linkedin.com##.promo-bottom-sheet
 linkedin.com##.promo
@@ -1484,6 +1511,8 @@ zillow.com###pfs-upsell:remove()
 zillow.com##.exposed-filters:style(top:0 !important)
 zillow.com##+js(aeld, /^(mouseout|mouseleave)$/)
 zillow.com##+js(ra, oncontextmenu|ondragstart|onselectstart|onkeydown|oncopy|oncut|onclick)
+! news.bitcoin.com (Fix top)
+news.bitcoin.com##.hsnyER.sc-fEpuOf:style(top:0 !important)
 ! benzinga.com
 benzinga.com##.shadow-xl:has-text(Would you like to be notified)
 ! food.ndtv.com
