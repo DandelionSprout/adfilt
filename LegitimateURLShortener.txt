@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 11March2025v1
+! Version: 14March2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1709,6 +1709,9 @@ $removeparam=tmt_ufp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196848#issuecomment-2603988954
 $removeparam=24sata_ref
 
+! https://www•obs•no/sko/innleggssaler/2143596?v=Obs-7314244102028&matchtype=&device=m&adset_id=129607977775 (14/03/2025)
+$removeparam=adset_id
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -2005,7 +2008,7 @@ $removeparam=_sacat,domain=~ebay.*
 $removeparam=crlp,domain=ebay.*
 $removeparam=MT_ID,domain=ebay.*
 $removeparam=geo_id,domain=ebay.*
-$removeparam=device,domain=ebay.*
+$removeparam=device,domain=ebay.*|obs.no
 $removeparam=cmpgn,domain=ebay.*
 ! https://www•ebay•com/itm/265272975304?LH_BIN=1
 ||ebay.*/itm/$removeparam=LH_BIN
@@ -4890,6 +4893,9 @@ ref=dtf.ru$doc,removeparam=ref
 ! https://www•qwant•com/?hti=0&s=0&q=john+madden&t=web (When using Qwant's Firefox extension as the default search engine; 09/03/2025)
 ||qwant.com^$removeparam=hti
 ||qwant.com^$removeparam=s
+
+! https://www•obs•no/sko/innleggssaler/2143596?v=Obs-7314244102028&matchtype=&device=m&adset_id=129607977775 (14/03/2025)
+||obs.no^$removeparam=matchtype
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
