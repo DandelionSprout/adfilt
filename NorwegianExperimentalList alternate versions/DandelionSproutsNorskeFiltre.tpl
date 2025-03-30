@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 25March2025v1-Deprecated
+# Last modified: 29March2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -373,6 +373,12 @@ msFilterList
 -d ugenr.dk iframe.php
 -d cdplanet.no *_app_preview.png
 -d infohelgeland.no banner
+-d fotballen.eu *468*.gif
+-d fotballen.eu bet
+-d fotballen.eu chips.jpg
+-d fotballen.eu folkeriket.jpg
+-d fotballen.eu jack.jpg
+-d fotballen.eu vaiplay
 # — — — — — — —
 # 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -403,6 +409,12 @@ msFilterList
 # inderoyningenNO (20 08 2024)
 # flashscoreDK (06 02 2024)
 -d content.livesportmedia.eu banners
+# fotballenEU (29 03 2025)
+-d eu annonse
+-d kindredplc.com ad.
+-d media.comeon.com tracking.
+-d media.folkeautomaten.com tracking.
+-d media.getlucky.com tracking.
 # — — — — —
 # 🇳🇴: Generelle oppføringer med kilder
 # 🇬🇧: Generic entries that have sources
