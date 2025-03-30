@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21March2025v1
+! Version: 30March2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1711,6 +1711,10 @@ $removeparam=24sata_ref
 
 ! https://www•obs•no/sko/innleggssaler/2143596?v=Obs-7314244102028&matchtype=&device=m&adset_id=129607977775 (14/03/2025)
 $removeparam=adset_id
+
+! https://go•getlifevac•eu/offer/pre/3/?lpid=2205&source_id=DL&sub_id=&req_id=&oid=912&device_type=&country_name=&l=1&c=8&uid=2205&oid2=912&affid2=30747&geo=no (Ad found in Windows 11's Weather app; 30/03/2025)
+$removeparam=affid2
+$removeparam=oid2
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
@@ -4896,6 +4900,16 @@ ref=dtf.ru$doc,removeparam=ref
 
 ! https://www•obs•no/sko/innleggssaler/2143596?v=Obs-7314244102028&matchtype=&device=m&adset_id=129607977775 (14/03/2025)
 ||obs.no^$removeparam=matchtype
+
+! https://go•getlifevac•eu/offer/pre/3/?lpid=2205&source_id=DL&sub_id=&req_id=&oid=912&device_type=&country_name=&l=1&c=8&uid=2205&oid2=912&affid2=30747&geo=no (Ad found in Windows 11's Weather app; 30/03/2025)
+/offer/pre/*$removeparam=lpid
+/offer/pre/*$removeparam=source_id
+/offer/pre/*$removeparam=sub_id
+/offer/pre/*$removeparam=req_id
+/offer/pre/*$removeparam=oid
+/offer/pre/*$removeparam=device_type
+/offer/pre/*$removeparam=country_name
+/offer/pre/*$removeparam=uid
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
