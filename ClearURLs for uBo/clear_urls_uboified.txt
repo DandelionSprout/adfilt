@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 2025-03-14
+! Last updated: 2025-04-04
 ! Script last updated: 2025-2-11
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -213,6 +213,9 @@ $removeparam=pp,domain=youtube.com|youtu.be
 ||techcrunch.com^$removeparam=ncid
 ||techcrunch.com^$removeparam=sr
 ||techcrunch.com^$removeparam=sr_share
+||techcrunch.com^$removeparam=guccounter
+||techcrunch.com^$removeparam=guce_referrer
+||techcrunch.com^$removeparam=guce_referrer_sig
 ||bing.*^$removeparam=form
 ||bing.*^$removeparam=sk
 ||bing.*^$removeparam=sp
@@ -718,6 +721,9 @@ $removeparam=pp,domain=youtube.com|youtu.be
 ||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=pos
 ||office-partner.de^$removeparam=sPartner
 ||office-partner.de^$removeparam=campaign
+||thetimes.co.uk^$removeparam=shareToken
+||metro.co.uk^$removeparam=ito
+||forbes.com^$removeparam=sh
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/gp\/.*?(redirector.html|cart\/ajax-update.html|video\/api\/)/$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?amazon(\.[a-z]{2,}){1,}\/(hz\/reviews-render\/ajax\/|message-us\?|s\?)/$removeparam
 @@||mail.google.com/mail/u/$removeparam
@@ -792,6 +798,7 @@ $removeparam=pp,domain=youtube.com|youtu.be
 @@||api.bilibili.com^$removeparam
 @@||space.bilibili.com^$removeparam
 @@||marketscreener.com/search/?$removeparam
+@@||edith.xiaohongshu.com/api/sns/web/v1/user/hover_card$removeparam
 
 ! This is an allowlist added by the Adfilt maintainers
 @@||tix.axs.com^$removeparam=utm_campaign
