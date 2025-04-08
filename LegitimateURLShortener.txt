@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 05April2025v1
+! Version: 08April2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1721,6 +1721,9 @@ $removeparam=oid2
 $removeparam=tw_source
 $removeparam=tw_adid
 
+! https://www•instacart•com/products/201659-superpretzel-soft-pretzel-bites-12-oz?retailerSlug=meijer
+$removeparam=retailerSlug
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1984,7 +1987,7 @@ $removeparam=sk,domain=aliexpress.*|bing.com
 /search?$doc,removeparam=gs_lcrp,domain=bing.com|google.com
 ||bing.com/search?$removeparam=FPIG
 
-!!! ——— eBay ———
+!!! ——— 🛍️ eBay ———
 ! https://www•ebay•com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=(...)&_trksid=p2481888•c100675•m4236&_trkparms=(...) (31/10/2020)
 $removeparam=_trkparms
 !!! $removeparam=_trksid - https://github.com/uBlockOrigin/uAssets/issues/25247
@@ -2201,7 +2204,7 @@ $doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ! Should not be removed: dpr (Determines image search results' box sizes)
 ! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 
-!!! ———TikTok———
+!!! ——— TikTok ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
 ||tiktok.com^$removeparam=_r
 $removeparam=share_ab_group
@@ -2234,7 +2237,7 @@ $removeparam=/^web_id\d+/,domain=tiktok.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4978150
 ||tiktok.com^$removeparam=embed_source
 
-!!! ———Spotify———
+!!! ——— 🔊 Spotify ———
 ! https://open•spotify•com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
 ! do not add YouTube: https://github.com/uBlockOrigin/uAssets/issues/20586#issuecomment-1932122079
 $removeparam=si,doc,domain=open.spotify.com|soundcloud.com|zappos.com
@@ -2306,7 +2309,7 @@ $removeparam=aff_click_id
 ! https://www•alibaba•com/toprankedsellers/index•html?spm=a2700•8293689•0•0•2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
 ||alibaba.com^$removeparam=categoryIds
 
-!!!! ——— Baidu ———
+!!!! ——— 👣 Baidu ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
 ||baidu.com^$removeparam=/^rsv.*$/
 ||baidu.com^$removeparam=euri
@@ -2438,7 +2441,7 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/200279)
 !!!||m.baidu.com^$removeparam=from
 
-!!!! ——— Bilibili ———
+!!!! ——— 📺 Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
 ||bilibili.com^$removeparam=/^current.*$/
 ||bilibili.com^$removeparam=/^from.*$/
@@ -2504,7 +2507,7 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ! https://github.com/DandelionSprout/adfilt/pull/940
 ||bilibili.com^$removeparam=spmid
 
-!!!! ——— iQIYI ———
+!!!! ——— 🟩 iQIYI ———
 ! https://github.com/DandelionSprout/adfilt/pull/390
 ! https://www•iqiyi•com/v_126y0fmbvmw•html?vfrm=pcw_home&vfrmblk=D&vfrmrst=712211_focus_A_image1 (30/11/2021)
 ||iqiyi.com^$removeparam=vfrm
@@ -4868,9 +4871,6 @@ $doc,removeparam=maskChannel,domain=tmall.com|taobao.com
 !+ NOT_OPTIMIZED
 ||hotels.com^$removeparam=latLong
 
-! https://www•everyplay•live/pages/GSDTz9Nea?_gl=1*1gpvlcv*_up*MQ••*_ga*MTkwOTc5MDgwNS4xNzI3NjYxMzY3*_ga_M39TLB0M4G*MTcyNzY2MTM2Ny4xLjAuMTcyNzY2MTM2Ny4wLjAuMA••
-||everyplay.live^$removeparam=_gl
-
 ! https://www•datacenterdynamics•com/en/news/uk-gov-sanctions-russian-chip-companies-baikal-electronics-mikron-and-mcst-blocking-arm-licensing/?ref=dtf•ru
 ! https://msrc•microsoft•com/update-guide/en-US/advisory/CVE-2020-0601?ref=dtf•ru
 ref=dtf.ru$doc,removeparam=ref
@@ -4918,6 +4918,9 @@ ref=dtf.ru$doc,removeparam=ref
 /offer/pre/*$removeparam=device_type
 /offer/pre/*$removeparam=country_name
 /offer/pre/*$removeparam=uid
+
+! https://www•instacart•com/store/checkout_v4?sid=9••••&improvedParams=true
+||instacart.com^$removeparam=improvedParams
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
