@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 05April2025v1-Deprecated
+# Last modified: 08April2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -511,8 +511,6 @@ msFilterList
 # https://www•nordlys•no/egon-i-tromso-evakuert-tok-fyr-i-en-ovn/s/5-34-1326807/(10/07/2020)
 # advokatbladet.no; https://gardsdrift•no/maskiner-potet-fagdag/folksomt-under-potato-scandinavia/185668/(16/08/2020)
 # kimbinoNO, kimbinoDK (13 09 2020)
-# fasteignir.frettabladid•is (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/111644)
--d via.placeholder.com
 # lokal-avisaNO, ringsakernNO (19 09 2020)
 # gjoviksbladNO (19 09 2020)
 # midtjyllandsavisDK, herningfolkebladDK, ikast-brandenytDK (30 09 2020)
