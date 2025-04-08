@@ -1,16 +1,17 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 08April2025v1
+! Version: 08April2025v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Homepage for the repository: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
 ! Special thanks to https://github.com/git-101-collab for providing a 3-digit amount of new entries to this list, and to https://github.com/iam-py-test for volunteering to speed up the addition of user-submitted entries.
-! Compatible with rule 2 of https://xkcd.com/2235/.
+! Compatible with rule 2 of https://xkcd.com/2235/
 ! Important notes:
 ! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view parameters on the strict-block page or tools to bypass it.
 ! - this list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
 ! - this list can not remove parameters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
+! - despite several attempts to, this list can not remove trailing $'s.
 ! - As of 15/03/2024, this list does not work properly in Brave Browser, due to Brave missing several critical features this list uses. Please use this list only with uBlock Origin or AdGuard.
 
 ! 🗺️ ——— General remove rules ——— 🗺️ !
@@ -453,7 +454,7 @@ $doc,removeparam=/^amp=$/,domain=~eurasiantimes.com|~cybersecuritynews.com
 ! https://www•tokopedia•com/legoclassic/my-little-pony-a-new-generation-crystal-princess-petals-figure-set?src=topads&xClientId=amp-IWyM3dL4bS8QlacnZO4hyg&cid=amp-IWyM3dL4bS8QlacnZO4hyg&amp=true
 $doc,removeparam=/^amp=true$/
 ! https://www•newsweek•com/housing-market-falls-sales-new-homes-down-1727968?amp=1
-! can not be made global, see https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5635117
+! Can not be made general, see https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5635117
 $doc,removeparam=/^amp=1$/,domain=newsweek.com
 
 ! https://inews•co•uk/opinion/matt-hancock-health-bill-huge-row-no10-boris-johnson-1067703?_gl=1*1l47swq*_ga*OUp3WnF6dklkRHNVaHBfaDJmUnFHSkR5VFBtMzV5enpSWk1XUENzWlNENGg2VmdQZHZoRVFfV3BmNXV2ZjREYQ
@@ -515,7 +516,7 @@ $removeparam=affname
 $removeparam=MID,domain=~media-cdn.costco.*|~community.arubanetworks.com
 
 ! https://www•greatrun•org/train-and-prepare/training-plans/?eid=(...)
-! should not be made global, i.e. https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8462696
+! Should not be made general, i.e. https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8462696
 $removeparam=eid,doc,denyallow=embed.tapkal.fi|myanimelist.net,domain=greatrun.org|mcafee.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
@@ -1769,7 +1770,7 @@ $doc,removeparam=adid,domain=indeed.com|mcafee.com|nikkei.co.jp|tmz.com
 
 !! ——— Rules for heavily covered sites ———
 !!! ——— Amazon ———
-! filters known to be problematic
+! Filters known to be problematic
 !!! (Bad ideas to remove: rh {https://github.com/DandelionSprout/adfilt/issues/767#issuecomment-1416171034})
 !!! ||amazon.$removeparam=ie - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2611566
 !!! ||amazon.$removeparam=rnid - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4123725
@@ -2239,7 +2240,7 @@ $removeparam=/^web_id\d+/,domain=tiktok.com
 
 !!! ——— 🔊 Spotify ———
 ! https://open•spotify•com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
-! do not add YouTube: https://github.com/uBlockOrigin/uAssets/issues/20586#issuecomment-1932122079
+! Do not add YouTube: https://github.com/uBlockOrigin/uAssets/issues/20586#issuecomment-1932122079
 $removeparam=si,doc,domain=open.spotify.com|soundcloud.com|zappos.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1740689
 ||open.spotify.com^$removeparam=/^.*advertising_partner_name=.*$/i
@@ -2434,7 +2435,7 @@ wenku.baidu.com##+js(set,history.replaceState,noopFunc)
 ||baidu.com^$doc,removeparam=cf
 ||baidu.com^$doc,removeparam=miniId
 ||baidu.com^$doc,removeparam=/^from.*$/
-! causes issues: https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10554103
+! (Causes issues: https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10554103)
 ||baidu.com^$doc,removeparam=tpl_from,domain=~graph.baidu.com
 ! (https://github.com/DandelionSprout/adfilt/issues/831#issuecomment-1614339807)
 !!!||baidu.com^$removeparam=ie
@@ -3328,10 +3329,10 @@ $removeparam=marketing_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1666311
 ! https://github.com/DandelionSprout/adfilt/pull/390
 ! https://v•youku•com/v_show/id_XNTE5MDA0MzA2NA==.html?s=decc0e2f935f461f84b1 (30/11/2021)
-$removeparam=s,domain=greenhouse.io|mothership.sg|spreadprivacy.com|youku.com|nextdoor.com
+$removeparam=s,domain=greenhouse.io|mothership.sg|spreadprivacy.com|youku.com|nextdoor.com|qwant.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2580104
-! breaks some websites, ie twitter redirect links: https://gitlab.com/ClearURLs/rules/-/merge_requests/21, https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9599956
+! Breaks some websites, ie twitter redirect links: https://gitlab.com/ClearURLs/rules/-/merge_requests/21, https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9599956
 $doc,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
 
 ! https://market•yandex•ru/promo/hasbro_special?clid=602&cpa-perf=1#c
@@ -3573,7 +3574,7 @@ $removeparam=session_id,domain=reddit.app.link
 $removeparam=loid,domain=reddit.app.link
 $removeparam=loid_created,domain=reddit.app.link
 $removeparam=reddaid,domain=reddit.app.link
-! can't remove from YouTube: https://github.com/DandelionSprout/adfilt/issues/931
+! (Can't remove from YouTube: https://github.com/DandelionSprout/adfilt/issues/931)
 $doc,removeparam=feature,domain=reddit.app.link
 $removeparam=mweb_subreddit_ids,domain=reddit.app.link
 $removeparam=mweb_loid,domain=reddit.app.link
@@ -4540,7 +4541,7 @@ $doc,removeparam=af_reengagement_window
 ! CloudFlared: https://tria•ge/231214-3fs9kahbcj/behavioral1
 ||cmp.inmobi.com/tcfv2/cmp2.js$removeparam=referer
 
-! from Yuki: https://www•plus•fifa•com/en/player/2942bbcc-f9c0-4264-8118-331977fdd9bf?gl=jp&catalogId=0f18f301-1e44-4d7a-ab00-8a4505e3ad60&entryPoint=Slider
+! From Yuki: https://www•plus•fifa•com/en/player/2942bbcc-f9c0-4264-8118-331977fdd9bf?gl=jp&catalogId=0f18f301-1e44-4d7a-ab00-8a4505e3ad60&entryPoint=Slider
 ||fifa.com^$doc,removeparam=entryPoint
 
 ! https://affiliate•insider•com/?amazonTrackingID=biauto-47904-20&h=fbdafd7ddd7ff36960d85ce9f6e961d74ac393e2ea64d4b24f6203625ecf1629&platform=browser&postID=52668b89ecad04f92183007b&postSlug=sadistic-amazon-treated-book-sellers-the-way-a-cheetah-would-pursue-a-sickly-gazelle-2013-10&site=bi&u=https%3A%2F%2Fwww•amazon•com%2FThe-Everything-Store-Bezos-Amazon-ebook%2Fdp%2FB00BWQW73E (from https://www•businessinsider•com/sadistic-amazon-treated-book-sellers-the-way-a-cheetah-would-pursue-a-sickly-gazelle-2013-10)
@@ -4723,7 +4724,7 @@ ref=blog.isosceles.com$doc,removeparam=ref
 ||bbc.com^$removeparam=src_origin
 
 ! https://github.com/AdguardTeam/AdguardFilters/commit/bcb304aff7f2026d08e5fd6e2e6e82ebddf16904 (full credit to Yuki2718)
-! used on many other websites: https://www•google•com/search?q=inurl%3AjmtyClId
+! Used on many other websites: https://www•google•com/search?q=inurl%3AjmtyClId
 $doc,removeparam=jmtyClId
 
 ! https://www•asos•com/men/ctas/hp-edit-1/cat/?cid=50606&ctaref=hp|mw|prime|hero|1|edit|thegentlemen (Note that cid can not be removed, as it'd make pages never load)
@@ -4788,10 +4789,10 @@ $doc,removeparam=ucid,domain=unicredit.it|steampowered.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9776475
 $doc,removeparam=entrypoint,domain=bing.com
 
-! various subdomains, i.e. https://tg24.sky•it/?zoneid=editorial-global-nav_news-skytg24_null
+! Various subdomains, i.e. https://tg24.sky•it/?zoneid=editorial-global-nav_news-skytg24_null
 ||sky.it^$doc,removeparam=zoneid
 
-! added when autoplaying the next video, ie https://www•lastampa•it/cronaca/2024/06/14/video/yacht_si_incendia_allisola_elba_salvati_stefania_craxi_e_il_marito_marco_bassetti-14392423/?cnt=1
+! Added when autoplaying the next video, ie https://www•lastampa•it/cronaca/2024/06/14/video/yacht_si_incendia_allisola_elba_salvati_stefania_craxi_e_il_marito_marco_bassetti-14392423/?cnt=1
 ! https://video•repubblica•it/tecnologia/techtest/redmi-pad-pro-il-tablet-entry-level-con-prestazioni-da-top/471006/471957?cnt=1
 $doc,removeparam=cnt,domain=lastampa.it|ilsecoloxix.it|huffingtonpost.*|themeditelegraph.com|ilgusto.it|italian.tech
 
@@ -4845,7 +4846,7 @@ $doc,removeparam=ebisOther5
 ref=content.cside.dev$doc,removeparam=ref
 
 ! https://github.com/AdguardTeam/AdguardFilters/commit/c5b780b82a10279aa8ebad187a2b1500278415ad
-! credit: rule copied from Yuki2718
+! Credit: rule copied from Yuki2718
 ?from=glia^$removeparam=from
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12073661
@@ -4899,12 +4900,11 @@ ref=dtf.ru$doc,removeparam=ref
 ||detail.chiebukuro.yahoo.co.jp^$doc,removeparam=fr
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12371760
-! note: *needs to be specific to the /status path or will cause problems*
+! Note: needs to be specific to the "/status" path or will cause problems
 .com/*/status/$doc,removeparam=t,domain=twitter.com|x.com
 
 ! https://www•qwant•com/?hti=0&s=0&q=john+madden&t=web (When using Qwant's Firefox extension as the default search engine; 09/03/2025)
 ||qwant.com^$removeparam=hti
-||qwant.com^$removeparam=s
 
 ! https://www•obs•no/sko/innleggssaler/2143596?v=Obs-7314244102028&matchtype=&device=m&adset_id=129607977775 (14/03/2025)
 ||obs.no^$removeparam=matchtype
