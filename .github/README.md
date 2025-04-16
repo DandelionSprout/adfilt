@@ -24,7 +24,7 @@ This is a hobby project of mine, in which I work just as much on these lists and
 
 * [Official repo mirror](https://gitlab.com/DandelionSprout/adfilt)
 
-However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits. Various modified versions of it are included in uBlock Origin, AdGuard, AdNauseam, AdBlock, Adblock Plus, AdGuard Home, pfBlockerNG, Brave Browser, and Vivaldi's privacy settings.
+However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 7-digits. Various modified versions of it are included in uBlock Origin, AdGuard, AdNauseam, AdBlock, Adblock Plus, AdGuard Home, pfBlockerNG, Brave Browser, and Vivaldi's privacy settings.
 
 ## Contact details:
 
