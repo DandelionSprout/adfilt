@@ -10,7 +10,7 @@ And just in case anyone thinks I'm not serious about it, **I no longer offer sup
 
 ———————————————————————————
 
-Note for UXP browser users: Due to the Pale Moon community being protective of consistent abusive hate speech and grave insults, I will no longer use Pale Moon, Basilisk or Borealis to test any entries or for anything else. PC browser entries that can't be reproduced in Chrome, Firefox, Vivaldi or Tor Browser, will be delegated to [uAssets](https://github.com/uBlockOrigin/uAssets/blob/master/filters/legacy.txt) instead.
+Note for UXP browser users: Due to the Pale Moon community being protective of consistent abusive hate speech and grave insults, I will no longer use Pale Moon, Basilisk or Borealis to test any entries or for anything else. PC browser entries that can't be reproduced in Firefox, Vivaldi or Tor Browser, will be delegated to [uAssets](https://github.com/uBlockOrigin/uAssets/blob/master/filters/legacy.txt) instead.
 
 ———————————————————————————
 
@@ -18,7 +18,7 @@ Note for UXP browser users: Due to the Pale Moon community being protective of c
 
 ———————————————————————————
 
-This is the place where I, Imre Kristoffer Eilertsen, host my web filter lists for countless different topics, for use in adblock tools and the like. GitHub was in mid-2017 by far the easiest way for laymen like me to store pure text files, which is a necessity to create subscribable lists.
+This is the place where I, Imre Eilertsen, host my web filter lists for countless different topics, for use in adblock tools and the like. GitHub was in mid-2017 by far the easiest way for laymen like me to store pure text files, which is a necessity to create subscribable lists.
 
 This is a hobby project of mine, in which I work just as much on these lists and this repo as I feel like. But don't be fooled by the appearance, as these are nevertheless some lists that I've placed lots of energy and effort into, for the enjoyment of all of us.
 
@@ -26,9 +26,15 @@ This is a hobby project of mine, in which I work just as much on these lists and
 
 However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 6-digits. Various modified versions of it are included in uBlock Origin, AdGuard, AdNauseam, AdBlock, Adblock Plus, AdGuard Home, pfBlockerNG, Brave Browser, and Vivaldi's privacy settings.
 
-If you have any problems, suggestions, or the desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things for the time being. Don't be shy to ask/tell me.
+## Contact details:
+
+If you have any problems, suggestions, or the desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things. Don't be shy to ask/tell me, but make sure to add screenshots and the lists that were used when testing. Reports on GitLab are allowed, but I have not yet tested how quickly I'd be able to notice them.
+
+I advice against sending reports on E-mail. From 16 April 2025, E-mail reports will only be processed if a person is not actively using GitHub or GitLab in general once every 2 weeks or more often, and/or if the person is an official representant of a Nordic or German company with 20 or more employees. Clearcut failure to adhere to this will have the E-mails marked as spam.
 
 Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om adblock-listene på bokmål, nynorsk, dansk eller svensk, dersom dette er ønskelig for deg/dere. Man er ikke nødt til å bruke engelsk hele tiden.
+
+Jag anser mig själv att vara kompetent-ish på svenska, og klarer så vel at skrive på noget-til-højt forståeligt dansk.
 
 ![alt text](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/Spr%C3%A5kflagg%204.webp)
 
@@ -55,12 +61,12 @@ Jeg forsikrer dere også om at det såklart er fullt mulig å kontakte meg om ad
 
 ## Projects known to use my lists:
 
-• [AdGuard](https://adguard.com/welcome.html) - Includes Dandelion Sprout's Nordic Filters, Dandelion Sprout's Annoyances List, and Legitimate URL Shortener.<br>
-• [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome) - Includes Dandelion Sprout's Nordic Filters and Game Console Adblock List.<br>
-• [uBlock Origin](https://github.com/gorhill/uBlock), [Adblock Plus](https://adblockplus.org/), AdNauseam, Brave Browser, AdBlock, pfBlockerNG, and Vivaldi - Includes various versions of Dandelion Sprout's Nordic Filters.<br>
+• [AdGuard](https://adguard.com/welcome.html) - Includes Dandelion Sprout's Nordic Filters, Dandelion Sprout's Serbo-Croatian Filter, Dandelion Sprout's Annoyances List, and Legitimate URL Shortener.<br>
+• [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome) - Includes Dandelion Sprout's Nordic Filters, Dandelion Sprout's Anti-Malware List, and Game Console Adblock List.<br>
+• [uBlock Origin](https://github.com/gorhill/uBlock) and AdNauseam - Includes Dandelion Sprout's Nordic Filters and Dandelion Sprout's Serbo-Croatian Filter.<br>
+• [Adblock Plus](https://adblockplus.org/), Brave Browser, AdBlock, pfBlockerNG, and Vivaldi - Includes various versions of Dandelion Sprout's Nordic Filters.<br>
 • [OISD.nl](https://oisd.nl/) - Incorporates Dandelion Sprout's Nordic Filters and Dandelion Sprout's Anti-Malware List.<br>
 • [1Hosts](https://github.com/badmojr/1Hosts), [T145's Black Mirror](https://github.com/T145/black-mirror) - Incorporates Dandelion Sprout's Anti-Malware List.<br>
-• Energized Regional Protection - Incorporates Dandelion Sprout's Nordic Filters.<br>
 • [Developer Dan](https://blocklist-tools.developerdan.com/blocklists), Bajins, [jgdye](https://git.ovalwonder.com/jgdye/samwiseetc/src/branch/master/pihole), [Molinero](https://hmirror.molinero.dev/) - Stores third-party mirrors of at least one of my lists.
 
 Occasionally, [this link](https://www.google.no/search?q=%22if-a-large-hosts-file-contains-this-entry-then-it%22&filter=0) can be used to find additional projects. However, it is somewhat inaccurate, because most such projects remove non-live domains.
@@ -68,7 +74,6 @@ Occasionally, [this link](https://www.google.no/search?q=%22if-a-large-hosts-fil
 ## Special thanks to:
 
 • [lassekongo83](https://github.com/lassekongo83) for being a pretty solid expert on uBO's syntax, for helping heaps of people (Me included) with writing specific filters, and for having made several lists that I would look through to learn more about how to write filters. <br>
-• [THEtomaso](https://github.com/THEtomaso) for waterproofing parts of the Nordic list, and for several contributions to the same list. <br>
 • The contributor communities that surround uBlock Origin in general (including [okiehsch](https://github.com/okiehsch) and [gwarser](https://github.com/gwarser) among others), for generally being helpful, reasonably debating, and for providing various solutions and advices. <br>
 • [krystian3w](https://github.com/krystian3w) for teaching me that using `:style` entries completely breaks a list *and* its entries in ABP. <br>
 • [okiehsch](https://github.com/okiehsch) (individually) for taking the time to oversee the copying of entries (Mostly from *[Browse Websites Without Logging In](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt)*) to *uBlock Filters - Annoyances*.<br>
