@@ -43,7 +43,7 @@ Jag anser mig själv att vara kompetent-ish på svenska, og klarer så vel at sk
 • [Checker for redundant filter entries and for ABP syntaxes](https://abpvn.com/ruleChecker/redundantRuleChecker.html), made by Famlam. It does however not account for uBO-syntax-specific entries, nor for ABP syntaxes newer than 2017. <br>
 • [Recentmost tool I've used to test IP server availability](https://github.com/funilrys/PyFunceble), made by [Funilrys](https://github.com/funilrys). <br>
 • To easily create GitCDN links to the lists, in case anyone has list connection problems: [GitHub GitCDN Button](https://greasyfork.org/scripts/373361-github-gitcdn-button) by [mikhoul](https://greasyfork.org/users/3930-mikhoul) <br>
-• To find very similar domains for Hosts files, or to find all domains hosted by specific IP addresses (both IPv4 and IPv6): [SecurityTrails](https://securitytrails.com/) <br>
+• To find very similar domains for Hosts files, or to find all domains hosted by specific IP addresses (both IPv4 and IPv6): [BGP Hurricane Electric](https://bgp.he.net) for initial lookups, then [SecurityTrails](https://securitytrails.com/) for deeper lookups but has big glitches with IP lists nowadays.<br>
 • To look for invalidly written entries according to uBO's syntax: Use uBlock Origin, set logger to *All*, and resync the lists. <br>
 • To correctly sort IP addresses (which Sublime Text cannot do): [Browserling IP Sort](https://www.browserling.com/tools/ip-sort)<br>
 • To correctly sort IP addresses, and also compress them into CIDRs: [Tehnoblog IP Address Aggregator](https://tehnoblog.org/ip-tools/ip-address-aggregator/)<br>
