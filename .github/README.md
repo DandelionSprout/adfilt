@@ -28,7 +28,7 @@ However, if you were led here by extension teams or extension customer services,
 
 ## Contact details:
 
-If you have any problems, suggestions, or the desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things. Don't be shy to ask/tell me, but make sure to add screenshots and the lists that were used when testing. Reports on GitLab are allowed, but I have not yet tested how quickly I'd be able to notice them.
+If you have any problems, suggestions, or the desire to help, I allow both _Issues_ and _Pull requests_ reports about any such things. Don't be shy to ask/tell me, but make sure to add screenshots and the lists that were used when testing. Reports will ''usually'' be initially looked into within 72 hours, but major delays can happen if I have health problems at the time. Reports on GitLab are allowed, but I have not yet tested how quickly I'd be able to notice them.
 
 I advice against sending reports on E-mail. From 16 April 2025, E-mail reports will only be processed if a person is not actively using GitHub or GitLab in general once every 2 weeks or more often, and/or if the person is an official representant of a Nordic or German company with 20 or more employees. Clearcut failure to adhere to this will have the E-mails marked as spam.
 
