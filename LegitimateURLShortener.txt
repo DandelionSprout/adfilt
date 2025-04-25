@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 21April2025v2
+! Version: 25April2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2206,7 +2206,8 @@ $doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.com/finance/?$removeparam=output
 ||www.google.com/finance/?$removeparam=source
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
-@@://www.google.com/maps?entry=$removeparam=utm_campaign
+@@://www.google.*/maps^$removeparam=utm_campaign
+@@://ipv6.google.com/maps^$removeparam=utm_campaign
 ! Should not be removed: dpr (Determines image search results' box sizes)
 ! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 
