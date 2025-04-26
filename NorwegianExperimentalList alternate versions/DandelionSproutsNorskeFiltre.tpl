@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 11April2025v1-Deprecated
+# Last modified: 26April2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -159,6 +159,9 @@ msFilterList
 - annonser-vert.gif
 # https://www•motorhobby•no/no/events/arr-etter-type/item/6-stjordal-motorshow-trondheim-mai-2025-stjordal-motorshow-i-abrahallen/(13/09 2024)
 # nordsoepostenDK (17 02 2025)
+# https://byggeri-arkitektur•dk/600-boliger-skal-renoveres-i-Gellerupparken-og-bliver-til-750/(20/04/2025)
+-d cloudfront.net ad
+-d cloudfront.net banner
 # — — — — —
 # 🇳🇴: Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
@@ -568,6 +571,7 @@ msFilterList
 # gatNO, drivaNO (18 02 2025)
 # https://www•tv2•no/livesport/vintersport/oversikt/(09/03/2025)
 # TV2dk's feeds on phones (11 03 2025)
+# abcnyheterNO
 # — — — — — — —
 # 🇳🇴: Oppføringer med spesielle omstendigheter
 # 🇬🇧: Entries with special circumstances
@@ -723,6 +727,9 @@ msFilterList
 # jyllands-postenDK (09 07 2020)
 # specificTXT
 # https://github.com/uBlockOrigin/uAssets/issues/26263/(02/12/2024)
+# Syncing from 166942 onwards (14 04 2025)
+-d imasdk.googleapis.com ima3.js
+-d stads.dot-e.dk
 # 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)

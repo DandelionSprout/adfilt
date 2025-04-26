@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)
-! Version: 110420251
+! Version: 260420251
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -652,6 +652,7 @@ vilgerneleve.dk##div[class^=container-] > section:has(:is(center,ins))
 flashscore.dk##div[class^=box_over_content]
 nattogdag.no##.dfp_mod
 godt.no##[class^=advert]
+tv2.no##.tv2-ad
 123mc.dk##.dfp_front_special_ad
 marsteinen.no###horizontal-outer-widgets-1
 nordlysid.fo###ease_adgroup_3
@@ -1211,7 +1212,7 @@ bydrammen.no##.by-slider
 bydrammen.no##.elementor-widget-ucaddon_portfolio_carousel
 eavisa.com##.td_block_wrap:has(.td-fix-index > p[style="text-align: center;"])
 eavisa.com##.vc_inner:has(.tdm-btn-md-used)
-eavisa.com##.td_block_text_with_title:has(+.vc_inner .tdm-btn-md-used))
+eavisa.com##.td_block_text_with_title:has(+.vc_inner .tdm-btn-md-used)
 flashscore.dk##div.banner
 politiken.dk##.space-y-gutter > div:not([id])
 politiken.dk##section[class*=MegaboardAd i]
@@ -1240,6 +1241,8 @@ fotballen.eu##td[class^=auto]:has(>ins.adsbygoogle)
 fotballen.eu##tr tr tr:not(:first-of-type) + tr:last-of-type:has(a[href^="//record."])
 fotballen.eu##tr:has(>td>a[href*=casino])
 smartepenger.no##section.nopaddingall#g-utility
+hamarkino.no,ullensakerkino.no##main > div[data-debuglabel=_app]:first-of-type
+timeanddate.no##.layout-grid__sky--sticky
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1442,6 +1445,9 @@ _visittkortannonse_$image
 .no/images/banners/$image
 ! nordsoepostenDK (17/02/2025)
 .dk/wp-content/uploads/ap-plugin-upload^$image
+! https://byggeri-arkitektur•dk/600-boliger-skal-renoveres-i-Gellerupparken-og-bliver-til-750 (20/04/2025)
+||cloudfront.net/mediaxpress/ad^$image
+||cloudfront.net/mediaxpress/banner^$image
 ! — — — — —
 ! 🇳🇴: Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
@@ -2040,6 +2046,8 @@ aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austa
 tv2.no##.aside > .ad-container
 ! TV2dk's feeds on phones (11/03/2025)
 ##div.tc_adwrap
+! abcnyheterNO
+##div.c-lw-adContainer:not(:empty)
 ! — — — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -2373,6 +2381,20 @@ gaamess.dk##div[class$="Ad"]
 ! https://github.com/uBlockOrigin/uAssets/issues/26263 (02/12/2024)
 flashscore.dk###detail > .detailLeaderboard
 flashscore.dk##.prematchOddsBonus__bonus
+! Syncing from 166942 onwards (14/04/2025)
+nettavisen.no##amedia-smartembed:has(div.overlay_container [data-skin=commercial])
+nettavisen.no##.teaser_body[href]:has(div.overlay_container [data-skin=commercial])
+aftenposten.no##.advertory-aftenposten-topboard-wrapper__front
+aftenposten.no##.advertory-aftenposten-topboard-wrapper
+nettavisen.no##amedia-include[param-editionid=kommersiellartikkel]
+dagens.no##.column > div[data-type="generic-widget"]:has(> div.group > div.code-element > a[href^="https://www.partner-ads.com/"])
+bold.dk###mofo
+bold.dk##.Article__right_column_banner
+bold.dk##div[class^="col"]:has(> div[class][style] > div[placement])
+feltet.dk##body > div[style="width: 100%;height: 80vh;background-color: #ccc; overflow: hidden;"]
+||stads.dot-e.dk^$domain=senest.dk
+senest.dk##.generic-widget > .group[class*=d-none-]:has(> .code-element:only-child > div[data-ad-unit-id])
+jyllands-posten.dk##body section[id^=monster_]
 
 ! 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 triplx.dk##.aff-inner-col
@@ -6370,7 +6392,7 @@ nytid.no,tipsbladet.no#@#div.td-a-rec img
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Sun, 06 Apr 2025 11:03:26 +0000
+! Last modified: Sun, 13 Apr 2025 19:59:39 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -7275,9 +7297,7 @@ rumba.fi##.bg-white.w-full.py-2.px-4:has(.poppartners)
 ruuhkavuodet.fi##.widget_block:has(#nm-300x600-300x300)
 sammysatv.com##a[href*=banner]
 satakunnanviikko.fi##.panoraama_etus
-seiska.fi##article[data-section="kaupallinen yhteistyö"]
-seiska.fi###article-body .article div[class]:has(> .ad-container)
-seiska.fi#?##article-body .article div[class^="sc-"]:has-text(/Juttu jatkuu ilmoituksen jälkeen|ilmoitus päättyy/i)
+seiska.fi##div.box-border.after\:content-\[\'\'\].before\:bg-placeholder-gray.before\:content-\[\'\'\].text-placeholder-gray
 seura.fi##.grid__item_lg-1.grid__item_1:has(.dfp-advertisement)
 seura.fi##.wp-block-column:has(> [id|="dfp__native-card"])
 seura.fi##li:has(> [id|="dfp__native-card"])
@@ -7750,11 +7770,13 @@ iltalehti.fi##div[class=iframe-container]
 iltalehti.fi#?#.card .recommendation:has-text(Kaupallinen yhteistyö)
 iltalehti.fi##.card:has(#il-rantapallo-right-column-box)
 iltalehti.fi##.card:has(.alennuskoodi-column-embed)
+iltalehti.fi##.card:has(.autotalli-box-embed)
 iltalehti.fi##.card:has(.etua-widget-container)
 iltalehti.fi##.card:has(.etuovi-react-embed)
 iltalehti.fi#?#.category-double-article-container:has(.half-article:nth-child(1):has-text(Kaupallinen yhteistyö) + .half-article:nth-child(2):has-text(Kaupallinen yhteistyö))
 iltalehti.fi##.embed-placeholder:has(> div > .eo-embed-announcements-container.card)
 iltalehti.fi#?#.related-articles-list > .link-container:has-text(/^Kaupallinen yhteistyö/)
+iltalehti.fi##.side-column-content .card:has(.autotalli-sponsored-content-text)
 iltalehti.fi##.side-column-content .card:has(.nettiauto-sponsored-content-text)
 iltalehti.fi##a.articles__list-item[href^="/telkku/"]:has(p.articles__sponsored-banner)
 iltalehti.fi#?#a.small-article:has-text(Kaupallinen yhteistyö)
