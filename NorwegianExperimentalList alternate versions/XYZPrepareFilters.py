@@ -276,6 +276,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\*\$all,ipaddress=(.*[0-9])$",
+           r"!+ PLATFORM(windows, mac, android)\n\1*$network",
+           line
+        )
+
         text += line + '\n'
 
     return text

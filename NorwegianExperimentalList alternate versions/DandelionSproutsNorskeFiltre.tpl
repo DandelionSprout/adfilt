@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 26April2025v1-Deprecated
+# Last modified: 02May2025v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1271,6 +1271,11 @@ msFilterList
 -d pjs.outlet.com
 -d popeurope.com
 -d um-bs.com
+:  old.sermitsiaq.ag
+:  robot.ekstrabladet.dk
+-d modificationdesignate.com
+-d xss.my.id
+-d 85.159.213.158
 # 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
