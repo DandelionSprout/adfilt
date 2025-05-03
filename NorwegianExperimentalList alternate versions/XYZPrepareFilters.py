@@ -42,8 +42,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^\*,ipaddress=(.*)$",
-           r"!+ PLATFORM(windows, mac, android)\n\1$network",
+           r"^\*\$(all,)?ipaddress=(.*)$",
+           r"!+ PLATFORM(windows, mac, android)\n\2$network",
            line
         )
 
@@ -265,20 +265,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"^(://(\d{1,3}\.\d{1,3}\.\d{1,3}\.)(\$.*)?)$",
-           r"!+ PLATFORM(windows, mac, android)\n\2*$network",
-           line
-        )
-
-        line = re.sub(
            r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
            r"",
-           line
-        )
-
-        line = re.sub(
-           r"^\*\$all,ipaddress=(.*[0-9])$",
-           r"!+ PLATFORM(windows, mac, android)\n\1*$network",
            line
         )
 
