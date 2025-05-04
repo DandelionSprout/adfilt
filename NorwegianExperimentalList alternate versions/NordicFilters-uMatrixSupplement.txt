@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
-! Last modified: 02May2025v2-Alpha
+! Last modified: 04May2025v3-Alpha
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -95,17 +95,11 @@ third-party step.dk * block
 ! 🇳🇴🏞: IP-adressar
 ! 🇬🇧: IP addresses
 ://3.248.18.175^
-*,ipaddress=3.248.18.175
 ://35.227.231.163^
-*,ipaddress=35.227.231.163
 ://45.58.146.154^
-*,ipaddress=45.58.146.154
 ://82.196.13.38^
-*,ipaddress=82.196.13.38
 ://82.221.81.9^
-*,ipaddress=82.221.81.9
 ://178.79.136.45^
-*,ipaddress=178.79.136.45
 ! Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt, which has not been the case.
 ! Posten's new parcel tracker, fixes the form for giving them delivery information (doorbell name/number)
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
@@ -174,9 +168,7 @@ senest.dk stads.dot-e.dk * block
 ! 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
 ://52.216.146.90^
-*,ipaddress=52.216.146.90
 ://92.42.104.146^
-*,ipaddress=92.42.104.146
 en-svindelside-som-ikke-er-itunes-eller-apple.* itunesconnect-*.no * allow
 en-falsk-banksvindel.* bankid-sperret. all allow
 en-falsk-svindelside.* skaatteenok.com all allow
@@ -230,8 +222,6 @@ en-falsk-svindelbutik.* vejadanmarkudsalg.com all,~inline-font allow
 en-falsk-svindelbutik.* xeroshoes-danmark.com all,~inline-font allow
 en-falsk-svindelbutik.* xeroshoesdanmark.com all,~inline-font allow
 ! E-mail tips
-*,ipaddress=212.27.60.108
-*,ipaddress=94.156.65.204
 ! Overly dedicated E-mail spambots
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
@@ -311,55 +301,34 @@ no no-oppdatert. all allow
 ://162.241.194.206^
 ! IP addresses of servers notorious for hosting many of the sites above
 ://51.195.133.131^
-*,ipaddress=51.195.133.131
 ://66.206.3.34^
-*,ipaddress=66.206.3.34
 ://82.118.242.69^
-*,ipaddress=82.118.242.69
 ://136.243.73.30^
-*,ipaddress=136.243.73.30
 ://138.201.126.227^
-*,ipaddress=138.201.126.227
 ://156.236.126.173^
-*,ipaddress=156.236.126.173
 ://196.196.230.76^
-*,ipaddress=196.196.230.76
 ://167.71.49.177^
-*,ipaddress=167.71.49.177
 ://134.209.82.119^
-*,ipaddress=134.209.82.119
 ://154.213.16.136^
-*,ipaddress=154.213.16.136
 ://158.247.212.220^
-*,ipaddress=158.247.212.220
 ://165.227.168.212^
-*,ipaddress=165.227.168.212
 ://132.148.220.142^
-*,ipaddress=132.148.220.142
 ://104.160.10.$domain=~in-addr.arpa
 ://165.231.154.$domain=~in-addr.arpa
 ://167.99.196.225^
-*,ipaddress=167.99.196.225
-*$ipaddress=38.180.96.244
-*,ipaddress=193.143.1.45
-*,ipaddress=193.143.1.214
-*,ipaddress=193.143.1.217
 ||xss.my.id^$third-party
-*$ipaddress=85.159.213.158
+! On a lot of parked domains
+third-party astarsbuilding.com * block
 ! 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 ://5.39.217.206^
-*,ipaddress=5.39.217.206
 ://5.39.221.180^
-*,ipaddress=5.39.221.180
 ://193.148.70.153^
-*,ipaddress=193.148.70.153
 ! 🇳🇴: Falske nettapoteker
 ! 🇬🇧: Fake online pharmacies
 ! 🇬🇧: Old domains stolen by casino sites
 ! 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 ! 🇬🇧: Copied over from URLHaus and verified
 ://1.14.61.188^
-*,ipaddress=1.14.61.188
 ! 🇬🇧: Intended for Adblock Plus
 ! Last updated: 05April2025v1-Extension
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
