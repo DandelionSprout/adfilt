@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 29April2025v1-Compilation
+! Version: 07May2025v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -197,6 +197,8 @@ foodora.*##.user-wrapper + .order-components:style(top: 64px !important)
 ##.textad:not(html,body,:empty)
 #@#.textAd
 ##.textAd:not(html,body,:empty)
+! uBO's logger on https://www•leboncoin•fr/deposer-une-annonce (07/05/2025); it doesn't seem to trigger AAB, but it's very obvious what that type of script tries to do.
+@@/adblock-detection/prebid.js|
 
 ! Suggestion algorithms considered by tens of millions of humans to be dangerous to the human species.
 ! In light of several dozen end-users wanting the suggestions back, I've had to give in to the pressure and instead only block ones tagged as "New" and "Suggested for you".
@@ -268,7 +270,7 @@ en.wikipedia.org,www.wikipedia.org#?#:is(p,a):has-text(/[ꯀ-꯹ꫠ-꫶]/):style
 ||w3.com^$csp=upgrade-insecure-requests
 ||idpf.org^$csp=upgrade-insecure-requests
 ||ogp.me^$csp=upgrade-insecure-requests
-||www.facebook.com/2008/^$csp=upgrade-insecure-requests
+||www.facebook.com/2008/$csp=upgrade-insecure-requests
 ||schema.org^$csp=upgrade-insecure-requests
 
 ! In the meantime while I'm trying to submit PRs to https://hg.mozilla.org/mozilla-central to get them to change a whole, whole lot of legacy Mozilla URLs in their Firefox source code to HTTPS
@@ -286,4 +288,4 @@ google.*#@##google-hats-survey
 independent.co.uk,indy100.com##.notification-prompt
 
 ! Pretty frequent "Make us your default search engine" prompts
-qwant.com##div[class^="_"][class*=" "]:last-of-type:has(>div>:is([href*="://chromewebstore."],[href*="://addons.mozilla.org/"]))
+qwant.com##div[class^=_][class*=" "]:last-of-type:has(>div>:is([href*="://chromewebstore."],[href*="://addons.mozilla.org/"]))
