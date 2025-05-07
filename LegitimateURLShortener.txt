@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 05May2025v1
+! Version: 07May2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1511,7 +1511,7 @@ $removeparam=vxii_pdid
 $removeparam=bsw_user_id
 $removeparam=bsw_custom_parameter
 $removeparam=partnerUserId
-$removeparam=taboola_hm
+$doc,removeparam=taboola_hm
 $removeparam=anx_uId
 $removeparam=d_uuid
 $removeparam=_utma
@@ -2206,9 +2206,18 @@ $doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.$doc,removeparam=ictx
 ||www.google.$doc,removeparam=dpr
 ||www.google.$doc,removeparam=tfu
-! https://www.google.com/finance/?output=search&source=lnms (11/03/2025)
+||ipv6.google.com^$doc,removeparam=fbs
+||ipv6.google.com^$doc,removeparam=ictx
+||ipv6.google.com^$doc,removeparam=dpr
+||ipv6.google.com^$doc,removeparam=tfu
+! https://www•google•com/finance/?output=search&source=lnms (11/03/2025)
 ||www.google.com/finance/?$removeparam=output
 ||www.google.com/finance/?$removeparam=source
+! https://www.google.com/search?q=john%20madden&hl=no&udm=2&no_sw_cr=1&zx=1746611130163 (07/05/2025)
+||www.google.$doc,removeparam=no_sw_cr
+||www.google.$doc,removeparam=zx
+||ipv6.google.com^$doc,removeparam=no_sw_cr
+||ipv6.google.com^$doc,removeparam=zx
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
 @@://www.google.*/maps^$removeparam=utm_campaign
 @@://ipv6.google.com/maps^$removeparam=utm_campaign
