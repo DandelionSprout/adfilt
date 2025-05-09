@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 07May2025v1-Compilation
+! Version: 09May2025v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -289,3 +289,9 @@ independent.co.uk,indy100.com##.notification-prompt
 
 ! Pretty frequent "Make us your default search engine" prompts
 qwant.com##div[class^=_][class*=" "]:last-of-type:has(>div>:is([href*="://chromewebstore."],[href*="://addons.mozilla.org/"]))
+
+! Because many people think such test sites are industry standard tools, which they're (unfortunately?) not.
+!#if ext_ublock
+/fakepage.html^$domain=superadblocktest.com|tracksong.github.io,important
+/ads.js^$domain=tracksong.github.io,important
+!#endif
