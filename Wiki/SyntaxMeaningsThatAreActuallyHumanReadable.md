@@ -100,7 +100,8 @@
 * * `##+js(ra, class, .element)`: Removes the specified element class name from all elements on the page, without removing the elements themselves.
 * `:xpath`: An entry written with the very advanced Xpath syntax.
 * `##^.element`: Remove page elements _before_ they've even been loaded, based on their values in `View source` instead of their F12 ones. **Only** works in Firefox and Tor Browser.
-* `##^script:has-text` (prev. `##script:contains`): Intends to prevent inline scripts from starting up. Do not use the F12 filetree to create these filters, you must use `View source` instead. Also only works in Firefox and Tor Browser.
+* `##^script:has-text` (prev. `##script:contains`): Intends to prevent inline scripts from starting up. Do not use the F12 filetree to create these filters, you must use `View source` instead; relying on the F12 filetree has a substantial chance of breaking sites even if they match filetree elements. Also only works in Firefox and Tor Browser.
+* * An example of such breakage is at `https://bold•dk/fodbold/stillinger/conference-league/nyheder/stolt-djurgarden-boss-en-fuldstaendig-vanvittig-oplevelse` on 9 May 2025, where not only did `bold.dk##^.mobile-ad-wrapper` not work, but using it and `bold.dk##.mobile-ad-wrapper` at the same time caused both entries to not work.
 * `:upward` (prev. `:nth-ancestor`): Looks for elements that are a certain amount of indentations (i.e. filetree floors) above the criteria in the F12 filetree. Equivalent to `:xpath(../..)`, but with normal numbers. Now also has the ability to look for specific element names at *any* indentation amount.
 * `:min-text-length`: Appears to select elements whose underlying source content has at least that amount of characters. Is completely disassociated from the actual on-page visible text by an order of several magnitudes.
 * `:watch-attr`: Claims to be able to reconsider a blocking if something new happens to the element (e.g. to its element types).
