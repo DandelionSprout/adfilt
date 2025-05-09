@@ -1,29 +1,29 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 04May2025v3-Deprecated
+# Last modified: 07May2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
-# 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
-# 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, Sydslesvig, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#dansk
-# 🇳🇴🏞: Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
+# 🇳🇴：Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
+# 🇩🇰：Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, Sydslesvig, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#dansk
+# 🇳🇴🏞：Denne lista dekkar nettstader for Noreg, Danmark, Island, Færøyane, Grønland, Schleswig-Holsteins danske minoritet, og samefolkesetnadene. For meire informasjon, detaljar, hjelpemiddel, og anna listar eg har laga, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk-nynorsk
 # Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, Schleswig-Holstein's Danish minority, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 # Pretty important note: Documentation for TPL lists is atrociously bad, and often contradict themselves and omit important details. It wasn't until March 2020 that I discovered that TPL lists refuse to block first-party files, making more than half of this list useless, although it may have a slight effect on some newssites. If you just need a browser to play Flash games on, please switch to Waterfox Classic. If you have to use IE at work, you should either install AdGuard for Windows, or quit the job on the spot in protest against ancient technology.
 # If you wish to remove cookie banners from Nordic websites, check out https://filters.adtidy.org/windows/filters/18.txt
 # Starting 13 May 2024, reports about non-blocked banners on digi.no and tu.no must instead be sent to https://reports.adguard.com/new_issue.html/and/or/https://github.com/uBlockOrigin/uAssets/issues./No/exceptions/under/any circumstances. They're simply far, far better at them than me. They must either fix it on their own, or have written all needed entries on their own in advance before they forward such reports to me. If they ever say otherwise, show them this line of text.
 # Starting 10 April 2025, comments under so-called "commits" on GitHub will not be read under any circumstances. Other comment methods on GitHub will still be read.
-# 🇳🇴: Fjerning av reklamebokser og tomme overskuddsbokser
-# 🇩🇰: Fjernelse af annonceboxer og tomme overskudsrammer
-# 🇬🇧: Ads and leftovers removal entries   Hiding-type rules
+# 🇳🇴：Fjerning av reklamebokser og tomme overskuddsbokser
+# 🇩🇰：Fjernelse af annonceboxer og tomme overskudsrammer
+# 🇬🇧：Ads and leftovers removal entries   Hiding-type rules
 # — — — — — — — — —
-# 🇳🇴: Oppføringer for minst 3 nettsteder
-# 🇬🇧: Entries for at least 3 websites
+# 🇳🇴：Oppføringer for minst 3 nettsteder
+# 🇬🇧：Entries for at least 3 websites
 - images banners
 -d widgets.sprinklecontent.com
 # — — — — — — —
-# 🇳🇴: Brede eller heldomenebaserte blokkeringsoppføringer
-# 🇬🇧: Broad or whole-domain blocking rules
+# 🇳🇴：Brede eller heldomenebaserte blokkeringsoppføringer
+# 🇬🇧：Broad or whole-domain blocking rules
 -d dk ad
 -d dk ads
 -d is ad
@@ -163,10 +163,10 @@ msFilterList
 -d cloudfront.net ad
 -d cloudfront.net banner
 # — — — — —
-# 🇳🇴: Domenefokuserte blokkeringsoppføringer
-# 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
-# 🇳🇴: Domænefokuserede blokeringsindførsler
-# 🇩🇰: Domain-speficic blocking-entries
+# 🇳🇴：Domenefokuserte blokkeringsoppføringer
+# 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
+# 🇳🇴：Domænefokuserede blokeringsindførsler
+# 🇩🇰：Domain-speficic blocking-entries
 - gifs *emty.gif
 - -banner_
 - -bazaar-
@@ -384,10 +384,10 @@ msFilterList
 -d fotballen.eu jack.jpg
 -d fotballen.eu vaiplay
 # — — — — — — —
-# 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
-# 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
-# 🇩🇰: Filserver- eller webstedsspecifikke indførsler med kilder
-# 🇬🇧: Fileserver or site-specific blocking rules with sources
+# 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
+# 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
+# 🇩🇰：Filserver- eller webstedsspecifikke indførsler med kilder
+# 🇬🇧：Fileserver or site-specific blocking rules with sources
 # bilasolurIS (03 05 2020)
 - lykill_banner
 # btNO
@@ -420,8 +420,8 @@ msFilterList
 -d media.folkeautomaten.com tracking.
 -d media.getlucky.com tracking.
 # — — — — —
-# 🇳🇴: Generelle oppføringer med kilder
-# 🇬🇧: Generic entries that have sources
+# 🇳🇴：Generelle oppføringer med kilder
+# 🇬🇧：Generic entries that have sources
 # framtiaNO, sovestenNO, arendalstidendeNO, bil24NO, 730NO, frettatiminnIS, oppNO, melkoghonningNO
 # Exceptions: balladeNO
 # https://www•totensblad•no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
@@ -488,7 +488,7 @@ msFilterList
 # adressaNO
 # https://nyheder.tv2•dk/2021-02-04-soennerne-saa-frem-til-en-arv-fra-deres-far-efter-mange-aars-lidelser-indtil-han-giftede/(04/02/2021)
 # kkNO, solNO
-# (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/58527)
+# (Exception：https://github.com/AdguardTeam/AdguardFilters/issues/58527)
 # historienetNO, natgeoNO, komputerNO
 # qxlNO
 # gamerNO, veier24NO, atNO, portenNO, insidetelecomNO, elektronikkbransjenNO, tu.no, digi•no
@@ -573,16 +573,16 @@ msFilterList
 # TV2dk's feeds on phones (11 03 2025)
 # abcnyheterNO
 # — — — — — — —
-# 🇳🇴: Oppføringer med spesielle omstendigheter
-# 🇬🇧: Entries with special circumstances
+# 🇳🇴：Oppføringer med spesielle omstendigheter
+# 🇬🇧：Entries with special circumstances
 +d vgtv.no
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
 # https://www•aftenposten•no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
 # Should not have ":not" + ":empty" added to it due to costume•no
 # — — — — — — — — —
-# 🇳🇴: IP-adresse
-# 🇳🇴🏞: IP-adressar
-# 🇬🇧: IP addresses
+# 🇳🇴：IP-adresse
+# 🇳🇴🏞：IP-adressar
+# 🇬🇧：IP addresses
 :  3.248.18.175
 :  35.227.231.163
 :  45.58.146.154
@@ -591,34 +591,34 @@ msFilterList
 :  178.79.136.45
 # politikenDK (08 02 2025)
 -d 65.21.200.49
-# 🇳🇴 🇩🇰: ——— Sporingsfiler ———
-# 🇳🇴🏞: ——— Sporingsfilar ———
-# ❄: ——— Guorrafiilaid ———
-# 🇬🇧: ——— Tracker files ———
+# 🇳🇴 🇩🇰：——— Sporingsfiler ———
+# 🇳🇴🏞：——— Sporingsfilar ———
+# ❄：——— Guorrafiilaid ———
+# 🇬🇧：——— Tracker files ———
 # https://github.com/DandelionSprout/adfilt/pull/699
 -d s.api.no *.gif
 # https://github.com/uBlockOrigin/uAssets/issues/18880
-# 🇳🇴: ——— Tomme skillebokser ———
-# 🇩🇰: ——— Tomme adskillerbokser ———
-# 🇳🇴🏞: ——— Tomme skiljeboksar ———
-# 🇮🇸: ——— Tóma skilirammar ———
-# 🇬🇧: ——— Empty divider spaces ———
+# 🇳🇴：——— Tomme skillebokser ———
+# 🇩🇰：——— Tomme adskillerbokser ———
+# 🇳🇴🏞：——— Tomme skiljeboksar ———
+# 🇮🇸：——— Tóma skilirammar ———
+# 🇬🇧：——— Empty divider spaces ———
 # Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt,/which/has/not been the case.
 # aİD (Phone user agent)
 # https://github.com/AdguardTeam/AdguardFilters/issues/189667
 # https://www•dagsavisen•no/sport/2024/10/31/kfum-oslo-var-uhyre-naer-et-finaleran/
-# 🇳🇴: ——— Distraherende bakgrunnsbilder ———
-# 🇩🇰: ——— Distraherende baggrundsbilleder ———
-# 🇮🇸: ——— Truflanda baksýnsmyndir ———
-# 🇬🇧: ——— Distracting background images ———
+# 🇳🇴：——— Distraherende bakgrunnsbilder ———
+# 🇩🇰：——— Distraherende baggrundsbilleder ———
+# 🇮🇸：——— Truflanda baksýnsmyndir ———
+# 🇬🇧：——— Distracting background images ———
 -d images.media.xxlsports.com bg.jpg
 -d platekompaniet.no background.png
 -d pepcall.no bakgrunn-forside.jpg
 -d tv2.no tv2-background.svg
-# 🇳🇴: ——— Fiksing av knekte sider ———
-# 🇩🇰: ——— Fiksing af knækte websider ———
-# 🇮🇸: ——— Óbrot ———
-# 🇬🇧: ——— Unbreakage ———
+# 🇳🇴：——— Fiksing av knekte sider ———
+# 🇩🇰：——— Fiksing af knækte websider ———
+# 🇮🇸：——— Óbrot ———
+# 🇬🇧：——— Unbreakage ———
 # Posten's new parcel tracker, fixes the form for giving them delivery information (doorbell name number)
 # Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
 # folkebladet.no; Makes job position lists show up correctly
@@ -629,8 +629,8 @@ msFilterList
 # ★★★ Caused by «EasyPrivacy» ★★★
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
-# 🇳🇴: Får Discovery+ sin påloggingsside til å vises riktig
-# 🇬🇧: Makes Discovery+'s login page show up properly
+# 🇳🇴：Får Discovery+ sin påloggingsside til å vises riktig
+# 🇬🇧：Makes Discovery+'s login page show up properly
 # https://github.com/easylist/easylist/issues/18542/(These/entries/are here to stay, regardless of the report's outcome.)
 +d medlemskap.*.no
 -d medlemskap.fagforbundet.no
@@ -674,13 +674,13 @@ msFilterList
 +d notice.sp-prod.net
 +d sp-prod.net
 !
-# 🇳🇴: Anti-'CPU-massakrering'
-# 🇮🇸: And-örgjörvislatrun
-# 🇬🇧: Anti-'CPU slaughtering'
-# 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
-# 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
-# 🇳🇴🏞: ——— Norsk Tipping, inkl. tvilsamt motiverte lottoreklamar (Ein håndfull ikkje-påtrengande tippereklamar er i orden for meg) ———
-# 🇬🇧: ——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
+# 🇳🇴：Anti-'CPU-massakrering'
+# 🇮🇸：And-örgjörvislatrun
+# 🇬🇧：Anti-'CPU slaughtering'
+# 🇳🇴：——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
+# 🇩🇰：——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
+# 🇳🇴🏞：——— Norsk Tipping, inkl. tvilsamt motiverte lottoreklamar (Ein håndfull ikkje-påtrengande tippereklamar er i orden for meg) ———
+# 🇬🇧：——— Norsk Tipping, incl. poorly motivated lotto ads (A few non-pushy football pool ads are fine in my book) ———
 -d widget.tippebannere.no
 -d tipster.no embed
 # https://www•nettavisen•no/
@@ -695,14 +695,14 @@ msFilterList
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7794535
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7865350
 # https://www•nettavisen•no/sportspill/her-er-tallene-som-vil-fa-liverpool-fansen-i-godt-humor/s/5-95-1529066
-# 🇳🇴: Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
-# 🇮🇸: Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
-# 🇬🇧: Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
+# 🇳🇴：Oppføringer for ytre-høyre-nettsteder. Støtte for disse nettstedene er begrenset, og de fleste nye oppføringer som blir foreslått for dem vil bli ordrett godkjent.
+# 🇮🇸：Skráningar fyrir ytrihægri-vefsiður. Stuðningur við þessar síður er takmarkaður, og flestar nýjar skráningar sem mælt er með fyrir þær verða innifalin orðrétt.
+# 🇬🇧：Entries for far-right websites. Support for these sites is limited, and most new entries that are suggested for them will be accepted verbatim.
 # https://github.com/uBlockOrigin/uAssets/issues/16138
 # https://github.com/ryanbr/fanboy-adblock/issues/1405
-# 🇳🇴: Falske innlastinger som sløser bort tid
-# 🇩🇰: Falske indlastinger, der søler bort tid
-# 🇬🇧: Fake loading screens that waste time
+# 🇳🇴：Falske innlastinger som sløser bort tid
+# 🇩🇰：Falske indlastinger, der søler bort tid
+# 🇬🇧：Fake loading screens that waste time
 # adressaNO (02 12 2020)
 -d collector.schibsted.io
 # "Generic Hide"
@@ -711,13 +711,13 @@ msFilterList
 +d eurosport.dk
 # Fixed in better ways in AdGuard Base and uBlock Filters, but is needed for ABP
 +d inputmag.dk
-# 🇳🇴: Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
-# 🇬🇧: Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
+# 🇳🇴：Hvitelisteoppføringer for å unngå å trigge anti-reklameblokkeringstiltak (Slike hvitelistinger er fullt tillatt av Adblock Plus som det er meg bekjent)
+# 🇬🇧：Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
 +d sixscissors.com
 # https://github.com/AdguardTeam/AdguardFilters/issues/121422
-# 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
-# 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
-# 🇬🇧: Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
+# 🇳🇴：Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
+# 🇩🇰：Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
+# 🇬🇧：Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 # Starting with 10May2024v4, only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
 -d freewheel-mtgx-tv.akamaized.net *.mp4
 !!!||freewheel-mtgx-tv.akamaized.net
@@ -730,13 +730,13 @@ msFilterList
 # Syncing from 166942 onwards (14 04 2025)
 -d imasdk.googleapis.com ima3.js
 -d stads.dot-e.dk
-# 🇬🇧: Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
+# 🇬🇧：Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # ——————————————————————————————————————————————————————————————————————————————————————————
-# 🇳🇴: Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
+# 🇳🇴：Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
-# 🇩🇰: Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
-# 🇮🇸: Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
-# 🇬🇧: Scam sites and virus sites (Do not visit them if you value your computers and wallets)
+# 🇩🇰：Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
+# 🇮🇸：Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
+# 🇬🇧：Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 # Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no sport
 - begrensede-tilbudet
 - bli-avbrutt-bor-du-oppdater
@@ -775,10 +775,10 @@ msFilterList
 -d logg-inn.online
 -d nyhetsnett.no
 - ?finn.no login
-# 🇬🇧: Copied over from «Dandelion Sprout's Anti-Malware List»
+# 🇬🇧：Copied over from «Dandelion Sprout's Anti-Malware List»
 -d fredfiber.no
 -d gogle.net
-# 🇬🇧: Scam domains as reported in https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-988127908
+# 🇬🇧：Scam domains as reported in https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-988127908
 # https://www•tek•no/i/lVeQAe/
 # https://www•nkom•no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
 -d eccolabgroup.com
@@ -841,13 +841,10 @@ msFilterList
 -d printablemagic.com
 -d rumendia.com
 :  94.156.65.204
-# Overly dedicated E-mail spambots
--d wirexapp.africa.com
--d tachyoniums.eu.com
 # https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-9075749
-# 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
-# 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
-# 🇬🇧: As mentioned in various news articles about fraud sites
+# 🇳🇴：Som nevnt i diverse nyhetsartikler om svindelsider
+# 🇩🇰：Som nævnt i diverse nyhedsartikler om fupwebsider
+# 🇬🇧：As mentioned in various news articles about fraud sites
 # https://www•tv2•no/nyheter/10493336/
 -d rnbinance.com
 -d brightertrade.com
@@ -1279,7 +1276,17 @@ msFilterList
 # On a lot of parked domains
 -d astarsbuilding.com
 :  185.53.177.52
-# 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
+# 🇳🇴：E-post-spammere (Falsk DHP, osv.)
+# 🇬🇧：E-mail spammers (Fake DHP, etc.)
+-d wirexapp.africa.com
+-d tachyoniums.eu.com
+-d storage.googleapis.com absales
+-d healtheweb.co.uk
+-d appearspacex.de
+-d 195-242-152-122.static.hvvc.us
+-d 195.242.152.122
+-d mygoodmerch.com
+# 🇬🇧：Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
 -d nodrakts.com
@@ -1288,8 +1295,8 @@ msFilterList
 :  5.39.217.206
 :  5.39.221.180
 :  193.148.70.153
-# 🇳🇴: Falske nettapoteker
-# 🇬🇧: Fake online pharmacies
+# 🇳🇴：Falske nettapoteker
+# 🇬🇧：Fake online pharmacies
 - -med.footeo.com
 -d *medisin*.over-blog.com
 -d godtdsamaritansk.com
@@ -1299,25 +1306,25 @@ msFilterList
 -d sikkertapotek.com
 -d sobrilleverandoridanmark.wordpress.com
 -d xanax*.over-blog.com
-# 🇬🇧: Old domains stolen by casino sites
+# 🇬🇧：Old domains stolen by casino sites
 -d kohlershop.dk
 -d fredensborg-orredfiskeri.dk
 -d informationer.nu
 -d cphspaogwellness.dk
 -d webavisen.gl
-# 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
+# 🇬🇧：Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 -d desidert.no
 -d brigitteheilmann.dk
 -d storustovu.dk
 -d campingnews.dk
-# 🇬🇧: Copied over from URLHaus and verified
+# 🇬🇧：Copied over from URLHaus and verified
 -d hagebakken.no
 -d mdb.nu
 -d idj.no
 :  1.14.61.188
 -d smarthouseforum.ru
 -d trafikkskoleapp.no
-# 🇬🇧: Intended for Adblock Plus
+# 🇬🇧：Intended for Adblock Plus
 +d prosent.no
 # Last updated: 05April2025v1-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
