@@ -75,7 +75,7 @@
 #### Hiding
 * `:style`: Changes the CSS values of an element, in much the same way as what userstyle extensions like Stylish would've done.
 * `#$#` + `{ }`: Same as above.
-* `!#if`: Specifies that a section of entries only apply to specific platforms or extensions. Closed out by `!#endif`. Possible options are listed [here](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#if-condition).
+* `!#if`: Specifies that a section of entries only apply to specific platforms or extensions. Closed out by `!#endif`. Possible options are listed [here](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#if-condition), with some additional options listed [here](https://kb-adg.pages.dev/general/ad-filtering/create-own-filters/#conditions-directive).
 * `:matches-css`: Looks for page elements whose existing native (i.e. non-inherited) CSS values match those of the criteria.
 * `:matches-css-before` / `:matches-css-after`: Same as above, but looks for CSS values in its pseudo-elements instead.
 * `:remove()`: Removes the element entirely from the F12 tree. The parentheses are required. Can glitch out spectacularly on a select few sites, most notably Tumblr.
