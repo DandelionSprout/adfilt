@@ -1006,6 +1006,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^://(\|\|.*)$",
+           r"\1",
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\n'
 
@@ -5019,6 +5025,12 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
            r"",
+           line
+        )
+
+        line = re.sub(
+           r"^://(\|\|.*)$",
+           r"\1",
            line
         )
 
