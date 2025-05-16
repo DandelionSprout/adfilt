@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 13May2025v1-Deprecated
+# Last modified: 16May2025v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -383,6 +383,7 @@ msFilterList
 -d fotballen.eu folkeriket.jpg
 -d fotballen.eu jack.jpg
 -d fotballen.eu vaiplay
+-d sportsidioten.no *-oslo-sportslager-pc.
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -419,6 +420,9 @@ msFilterList
 -d media.comeon.com tracking.
 -d media.folkeautomaten.com tracking.
 -d media.getlucky.com tracking.
+# politikenDK (08 02 2025)
+:  aj2*.online
+:  aj2*.bid
 # — — — — —
 # 🇳🇴：Generelle oppføringer med kilder
 # 🇬🇧：Generic entries that have sources
@@ -565,13 +569,15 @@ msFilterList
 # https://ugenr•dk/kalender/(03/12/2024)
 # dagensDK NO articles
 # flashscoreDK (06 02 2025)
-# politikenDK (08 02 2025)
-:  aj2*.online
-:  aj2*.bid
 # gatNO, drivaNO (18 02 2025)
 # https://www•tv2•no/livesport/vintersport/oversikt/(09/03/2025)
 # TV2dk's feeds on phones (11 03 2025)
 # abcnyheterNO
+# gulesiderNO, degulesiderDK, krakDK
+# arendalstidendeNO, sorlandsavisenNO, eirikurjonssonIS
+# building-supplyDK, licitationenDK, jernindustriDK
+# veier24NO
+# migogaarhusDK, migogaalborgDK, migogkbhDK
 # — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances

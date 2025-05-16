@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 13May2025v1
+! Last modified: 16May2025v2
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -565,7 +565,7 @@ tv2.no,www-tv2-no.translate.goog##div[id^=module-]:has(div[data-adslot^=fullscre
 margit-henriksen.dk,thura.dk#?#.blog-post:has-text(/^.*cas\ino.*$/i)
 bo-bedre.no,bobedre.dk##.mb-50.text-center
 abcnyheter.no###commercial
-digi.no##.items-center.mx-auto
+digi.no##.items-center.mx-auto.flex-col
 kendte.dk##*:has(>#taboola-above-article-thumbnails)
 gamer.no##[class^=ad-placeholder]
 tek.no##*:has(>#topboard)
@@ -1299,6 +1299,13 @@ seoghoer.dk##div[class=px-20]:has(+ section):has(div[data-type=ad])
 seoghoer.dk##.justify-center.py-10:has(div[data-type=ad])
 klikk.no##.affiliateAd
 juleweb.dk##p + div[data-elementor-type=section]
+kondis.no##.fullbanner
+kondis.no##.maincontainer
+kondis.no##.bannerlocation
+sportsidioten.no##.code-block:has(#snack_mpu,div[id^=snack_dex])
+sportsidioten.no##.scap
+sportsidioten.no##.sticky-half-page:has(> .scap:only-of-type)
+sportsidioten.no###snack_dex5
 ! — — — — — — — — —
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1316,9 +1323,7 @@ hushagehobby.no,tidssonen.no,glr.no,peters1.dk,erotikmix.dk##.widget_custom_html
 markedsforing.dk,trondheimkino.no,kimenkino.no,bergenkino.no,steinkjerkino.no##.adform:not(html,body,:empty)
 vg.no,e24.no,gamer.no,tek.no,digi.no##+js(aopw, __AB__)
 teknologia.no,gunnarandreassen.com,norskemagasinet.com,nyheder24.dk,pappaportalen.no##a[href*=kasino]
-arendalstidende.no,sorlandsavisen.no,eirikurjonsson.is##.g-single:not(html,body,:empty)
 fiskur.fo,portal.fo,roysni.fo,dagur.fo,orkan.fo###footer-adds
-veier24.no,tu.no,digi.no##.top-poster-wrap:not(html,body,:empty)
 abcnyheter.no,medier24.no,tv2.no##a[href*="adform.net"]:not(html,body,:empty)
 isolor.no,storfjordnytt.no,thetravelinspector.no,boosted.dk,digitalt.tv##.code-block
 altomdinhelse.no,aftenposten.no,dinordbok.no##.ad-container:not(html,body,:empty)
@@ -1326,10 +1331,8 @@ nhi.no,langrenn.com,vg.no##.advert:not(html,body,:empty)
 iform.dk,boligpluss.no,magasinetliv.dk,tara.no##.horseshoe
 iphoneluppen.dk,anettelyskjaer.dk,dreampapers.dk,nemsvar.nu#?#h2:has(+ p:has-text(/^.*cas\ino.*$/i))
 /images/banners$image,domain=austurfrett.is|samler.no|norsk-rally.com|fcbarcelona.dk
-building-supply.dk,licitationen.dk,jernindustri.dk##.grid-article-sponsored
 gamer.no,tek.no,digi.no##.products-carousel
 byggfakta.no,byggfaktabolig.no,vvsaktuelt.no###bannerContainer:not(.HeaderBanner1)
-gulesider.no,degulesider.dk,krak.dk##.e-banner
 byggeplads.dk,magasinetgulv.dk,officeplusdesign.dk##.region-header
 byggeplads.dk,magasinetgulv.dk,officeplusdesign.dk##.region-sidebar-second > div:first-of-type
 midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##main > .container:not([class*=" "])
@@ -1337,7 +1340,6 @@ midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##.container-spacer
 midtjyllandsavis.dk,herningfolkeblad.dk,ikast-brandenyt.dk##.container-outer-wrapper > .col-2:last-of-type
 mytastenor.com,mytastednk.com,tv3sport.dk,www-tv3sport-dk.translate.goog##.panorama:not(:empty)
 isabellas.dk,femina.dk,billedbladet.dk##div[data-type=ad]
-migogaarhus.dk,migogaalborg.dk,migogkbh.dk##.yb-top-spot
 startsidendin.no,iphoneluppen.dk,norskemagasinet.com##a[href*=gambling]
 jyllands-posten.dk,jyllands--posten-dk.translate.goog,finans.dk,lokalavisen.dk##div[class*=banner-container]
 itavisen.no,ba.no,gamereactor.*##.sponsored
@@ -1745,6 +1747,7 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||fotballen.eu/20*/html/images/jack.jpg^
 ||fotballen.eu/20*/vaiplay$image
 ||fotballen.eu/20*casino.$image
+||sportsidioten.no/wp-content/uploads/*-oslo-sportslager-pc.$image
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -1786,6 +1789,9 @@ no##section.noHeader:has(amedia-include[param-url*=innocode])
 ||media.comeon.com/tracking.
 ||media.folkeautomaten.com/tracking.
 ||media.getlucky.com/tracking.
+! politikenDK (08/02/2025)
+://aj2*.online^$xmlhttprequest
+://aj2*.bid^$xmlhttprequest
 ! — — — — —
 ! 🇳🇴：Generelle oppføringer med kilder
 ! 🇬🇧：Generic entries that have sources
@@ -2096,9 +2102,6 @@ _980banner_
 ##div.inArticleBanner
 ! flashscoreDK (06/02/2025)
 ##div#box-over-content-revive
-! politikenDK (08/02/2025)
-://aj2*.online^$xmlhttprequest
-://aj2*.bid^$xmlhttprequest
 ! gatNO, drivaNO (18/02/2025)
 ##div.gridnetboard
 ! https://www•tv2•no/livesport/vintersport/oversikt (09/03/2025)
@@ -2107,6 +2110,16 @@ tv2.no##.aside > .ad-container
 ##div.tc_adwrap
 ! abcnyheterNO
 ##div.c-lw-adContainer:not(:empty)
+! gulesiderNO, degulesiderDK, krakDK
+##.e-banner:not(html,body,:empty)
+! arendalstidendeNO, sorlandsavisenNO, eirikurjonssonIS
+##.g-single:not(html,body,:empty)
+! building-supplyDK, licitationenDK, jernindustriDK
+##.grid-article-sponsored:not(html,body,:empty)
+! veier24NO
+##.top-poster-wrap:not(html,body,:empty)
+! migogaarhusDK, migogaalborgDK, migogkbhDK
+##.yb-top-spot:not(html,body,:empty)
 ! — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
