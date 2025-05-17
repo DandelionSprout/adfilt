@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
 ! Title: 🧗 Anti-'Functionality removal' List
-! Version: 16April2025v1-Beta
+! Version: 17May2025v1-Beta
 ! Expires: 9 days
 ! Description: This list aims to combat some sites' attempts to make it impossible to copy text, right-click on pages, open the F12 menu, create fake loading times, or who otherwise obstruct people from features that they should be perfectly in their rights to have access to.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -79,3 +79,7 @@ nettavisen.no###topover
 ##app-loading-screen
 ! 🇫🇴 EldingFO checkout
 ##.loading-mask:not(html,body)
+
+! Prevents Google from changing normal links in image searches to their tracking links whenever they're clicked on.
+! I was only able to get this to work with the 2 links below the main image in the rightside drawer, and not on the main image itself. Trust me, I tried.
+www.google.*,ipv6.google.com##a[data-ved][jsaction*="focus:trigger"]:remove-attr(jsaction)
