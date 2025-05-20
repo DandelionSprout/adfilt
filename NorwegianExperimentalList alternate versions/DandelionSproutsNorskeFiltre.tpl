@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 16May2025v2-Deprecated
+# Last modified: 20May2025v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -162,6 +162,14 @@ msFilterList
 # https://byggeri-arkitektur•dk/600-boliger-skal-renoveres-i-Gellerupparken-og-bliver-til-750/(20/04/2025)
 -d cloudfront.net ad
 -d cloudfront.net banner
+# Borrowed from "Frellwit's Swedish Filter" (29 11 2024)
+-d spania.no
+-d plausible.webfokus.no
+-d bytelab.dk
+-d cncpt.dk
+-d gtm.findroommate.dk
+-d nichehuset.dk
+-d step.dk
 # — — — — —
 # 🇳🇴：Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -558,14 +566,6 @@ msFilterList
 # https://heimildin.is/greinar/?label=1/(09/10/2024)
 # euroinvestorDK (13 11 2024)
 # https://www•avvir•no/samegiella-ja-mearkagiella-vuosttasgiellan/
-# Borrowed from "Frellwit's Swedish Filter" (29 11 2024)
--d spania.no
--d plausible.webfokus.no
--d bytelab.dk
--d cncpt.dk
--d gtm.findroommate.dk
--d nichehuset.dk
--d step.dk
 # https://ugenr•dk/kalender/(03/12/2024)
 # dagensDK NO articles
 # flashscoreDK (06 02 2025)
@@ -578,6 +578,7 @@ msFilterList
 # building-supplyDK, licitationenDK, jernindustriDK
 # veier24NO
 # migogaarhusDK, migogaalborgDK, migogkbhDK
+# frolendingenNO, ytringenNO (20 05 2025)
 # — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances

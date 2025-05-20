@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)
-! Version: 160520252
+! Version: 200520252
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -535,6 +535,7 @@ voguescandinavia.com##div[class^=AdssetsAd_]
 tv2.no##.adunit-wrapper--padded
 klikk.no##.gpt-sticky
 godstart.dk###ad_PageBottom
+videnskab.dk##.advertisements
 tv2.no,www-tv2-no.translate.goog##div[id^=module-]:has(div[data-adslot^=fullscreen-])
 margit-henriksen.dk,thura.dk#?#.blog-post:has-text(/^.*cas\ino.*$/i)
 bo-bedre.no,bobedre.dk##.mb-50.text-center
@@ -1456,6 +1457,14 @@ _visittkortannonse_$image
 ! https://byggeri-arkitektur•dk/600-boliger-skal-renoveres-i-Gellerupparken-og-bliver-til-750 (20/04/2025)
 ||cloudfront.net/mediaxpress/ad^$image
 ||cloudfront.net/mediaxpress/banner^$image
+! Borrowed from "Frellwit's Swedish Filter" (29/11/2024)
+||spania.no^$third-party
+||plausible.webfokus.no^$third-party
+||bytelab.dk^$third-party
+||cncpt.dk^$third-party
+||gtm.findroommate.dk^
+||nichehuset.dk^$third-party
+||step.dk^$third-party
 ! — — — — —
 ! 🇳🇴：Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -1786,7 +1795,7 @@ tv2.no,www-tv2-no.translate.goog##.spklw-post-attr[data-pc]
 ! ekstrabladetDK
 ##a[href^="https://click-dk.plista.com/csc?"]:not(body,:empty)
 ! nabNO (Only shown if cookies are accepted; 18/08/2020)
-##.nf-o-annonse:not(html,body,:empty)
+~sagat.no,~bygdebladet.no##.nf-o-annonse:not(html,body,:empty)
 ##.nf-c-adblock-title:not(html,body,:empty)
 ! Bet365 widget triggered for Norwegian audiences only
 goal.com##*:has(>*>.js-betting-widget.is-country-no)
@@ -2033,14 +2042,6 @@ aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austa
 ##.topscroll-placeholder:not(body,html,:empty)
 ! https://www•avvir•no/samegiella-ja-mearkagiella-vuosttasgiellan/
 ~tipsbladet.no##.td-a-rec:not(html,body,:empty)
-! Borrowed from "Frellwit's Swedish Filter" (29/11/2024)
-||spania.no^$third-party
-||plausible.webfokus.no^$third-party
-||bytelab.dk^$third-party
-||cncpt.dk^$third-party
-||gtm.findroommate.dk^
-||nichehuset.dk^$third-party
-||step.dk^$third-party
 ! https://ugenr•dk/kalender (03/12/2024)
 ###addemam-wrapper:not(:empty)
 ! dagensDK/NO articles
@@ -2065,6 +2066,8 @@ tv2.no##.aside > .ad-container
 ##.top-poster-wrap:not(html,body,:empty)
 ! migogaarhusDK, migogaalborgDK, migogkbhDK
 ##.yb-top-spot:not(html,body,:empty)
+! frolendingenNO, ytringenNO (20/05/2025)
+##.nf-o-moduleblock-module:has(> .nf-o-annonse)
 ! — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -6495,7 +6498,7 @@ dn.se##.bad--insider-tall
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Fri, 16 May 2025 15:55:28 +0000
+! Last modified: Sat, 17 May 2025 15:48:57 +0000
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -6661,6 +6664,7 @@ alypaa.com##.section-inner:has(> .banner-slot)
 alypaa.com##.section-inner:has(> div[style] > .sanoma-ad-banner)
 alypaa.com,pelikone.fi##.text-link[href*="&utm_medium=banner&utm_campaign="]
 alypaa.com,pelikone.fi##.text-link[href^="https://clk.tradedoubler.com/"]
+ampparit.com##.gtm-bottom-ticker
 ampparit.com##.mobile-leaderboard-container
 ampparit.com##.resize-container
 ampparit.com,keskustelu.suomi24.fi,kirkkojakaupunki.fi,kuntalehti.fi,luukku.com,mtvuutiset.fi,seiska.fi,styleroom.fi,viinilehti.fi##.ad-container
