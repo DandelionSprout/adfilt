@@ -3365,6 +3365,14 @@ def prepare_abp(lines) -> str:
            line
         )
 
+
+        line = re.sub(
+           "href=\"http",
+           "href$=\"ttp",
+           line
+        )
+
+
         if is_supported_abp(line):
             text += line + '\n'
 
