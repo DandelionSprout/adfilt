@@ -2573,11 +2573,11 @@ def prepare_abp(lines) -> str:
            line
         )
 
-        #line = re.sub(
-        #   r"[$,]important",
-        #   "",
-        #   line
-        #)
+        line = re.sub(
+           r"[$,]important",
+           "",
+           line
+        )
 
         line = re.sub(
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider",
@@ -3348,7 +3348,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(.*,)?flashscore.\*((#|,).\*)$",
+           r"^(.*,)?flashscore\.\*((#|,).*)$",
            r"\1flashscore.dk\2",
            line
         )
@@ -3578,13 +3578,13 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"(.*\..*[a-z0-9]$)",
+           r"^(.*\..*[a-z0-9]$)",
            r"\1\" },",
            line
         )
 
         line = re.sub(
-           r"(.*\..*[a-z0-9])\\\"",
+           r"^(.*\..*[a-z0-9])\\\"",
            r"\1\\",
            line
         )
