@@ -3631,6 +3631,12 @@ def prepare_ls(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r'^(.*[a-z]) \},$',
+           r'\1" },',
+           line
+        )
+
         if is_supported_ls(line):
             text += line + '\n'
 
