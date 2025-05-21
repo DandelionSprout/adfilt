@@ -1,6 +1,6 @@
 [Adblock Plus 3.13]
-! Title: 🏔️ Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)
-! Title 🇬🇧: Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)
+! Title: 🏔️ Dandelion Sprouts helnordiske filtre (Møter ABPs inkluderingsregler — Firefox ≥121, Chrom* ≥105)
+! Title 🇬🇧: Dandelion Sprout's All-Nordic filters (With ABP inclusion compliance — Firefox ≥121, Chrom* ≥105)
 ! Version: 200520252
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -1310,7 +1310,7 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 /annonse_$image
 /auglysing/*
 /auglysingar/*
-.no/api/unit-image?$xmlhttprequest,~third-party
+.no/api/unit-image?$xmlhttprequest
 /vefauglysingar/*
 ||ad.*.no^$domain=~ad.dep.no|~ad.hem.no|~ad.amediakreativ.no|~ba.no
 ||ad1.*.dk^
@@ -1376,7 +1376,7 @@ _toppbanner_$image,domain=~dahl.no|~onninen.no
 ! byggenyttNO
 /_annonser^$image
 ! frendeNO
-||api.frende.no/webshop/log$xmlhttprequest,domain=www.frende.no
+||api.frende.no/webshop/log$xmlhttprequest
 ! https://malviknytt•no/2020/07/31/skyting-pa-hjemmebande/ (16/08/2020)
 /Nettbanner-$image
 ! sexpigerDK
@@ -1503,13 +1503,13 @@ _visittkortannonse_$image
 _300x250px-*.gif^$domain=ilaks.no
 _300x500pix$domain=rykindribe.dk,image
 _930x180pix$domain=rykindribe.dk,image
-contentMarketing$xmlhttprequest,domain=sol.no|sol-no.translate.goog
+contentMarketing$xmlhttprequest
 |blob:https://www.veier24.no/$image
 ||1819.is/infosmall/$image
 ||730.no/banner/*/sonymusic/$subdocument
 ||aa-cdn.mytaste.org/js/ad.js$script
-||acdn.adnxs.com/ast/ast.js$script,domain=vg.no
-||acdn.adnxs.com/ast/ast.js$script,rewrite=abp-resource:blank-js,domain=vgtv.no
+||acdn.adnxs.com/ast/ast.js$script,,domain=vg.no
+||acdn.adnxs.com/ast/ast.js$script,rewrite=abp-resource:blank-js,,domain=vgtv.no
 ||aftenposten.no/seksjon/dist/ads-$script
 ||akamai.net^$script,domain=eniro.no|eniro.dk
 ||akamaihd.net^$media,domain=discoveryplus.com
@@ -1628,7 +1628,7 @@ contentMarketing$xmlhttprequest,domain=sol.no|sol-no.translate.goog
 ||spaniaidag.no/wp-content/uploads/*/Ceru-Design-Web-*.jpg^
 ||spaniaidag.no/wp-content/uploads/*/Kolstad-Gif-SI.gif^
 ||spanienidag.es/sites/default/files/patrocinadores^
-/^.*://w{3}\.(tu|d\ig\i)\.n\o/(\d|[a-zA-Z_-]){130,}$/$xmlhttprequest,domain=no
+/^.*://w{3}\.(tu|d\ig\i)\.n\o/(\d|[a-zA-Z_-]){130,}$/$xmlhttprequest
 ||ssl.p.jwpcdn.com^*/freewheel.js$script,domain=eurosport.no|eurosport.dk
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
 ||ssl.p.jwpcdn.com^*/sharing.js$script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk
@@ -1674,7 +1674,7 @@ contentMarketing$xmlhttprequest,domain=sol.no|sol-no.translate.goog
 ||www-presse-fotos-dk.filesusr.com^
 ||xklub.dk/bannercache^
 ||xklub.dk/xsite/img/banner^
-||xn--bredbnd-ixa.dk/wp-content/*/velkommen_banner$image
+||xn--bredbnd-ixa.dk/wp-content/*/velkommen_banner$image,
 ||youtube.com/embed/*&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1$subdocument
 ||yrkesbil.no/gifs/1pix.gif^
 ||ytresogn.no/ete/index.html^
@@ -2071,7 +2071,7 @@ tv2.no##.aside > .ad-container
 ! — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
-@@||vgtv.no^$generichide
+@@||vgtv.no^$ghide
 ||samimag.no/wp-content/uploads/2019/11/Screenshot-2020-03-21-at-12.40.32.png^
 
 ! https://www•aftenposten•no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid (03/09/2022)
@@ -2110,8 +2110,8 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! https://github.com/DandelionSprout/adfilt/pull/699
 ||s.api.no/mittari/c/article/*/sectionId/*.gif^
 ! https://github.com/uBlockOrigin/uAssets/issues/18880
-||no/app/aas^$xmlhttprequest,ping,~third-party
-://aas.*.no/a/|$xmlhttprequest,ping,~third-party
+||no/app/aas^$xmlhttprequest
+://aas.*.no/a/|$xmlhttprequest
 
 ! 🇳🇴：——— Tomme skillebokser ———
 ! 🇩🇰：——— Tomme adskillerbokser ———
@@ -2159,9 +2159,9 @@ dagsavisen.no##:is(p,h2):has(> br:only-of-type:empty)
 ! 🇮🇸：——— Óbrot ———
 ! 🇬🇧：——— Unbreakage ———
 ! Posten's new parcel tracker, fixes the form for giving them delivery information (doorbell name/number)
-@@||glow.posten.no/api/tracking/*$xmlhttprequest,~third-party
+@@||glow.posten.no/api/tracking/*$xmlhttprequest
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
-@@||seher.no/reise$generichide
+@@||seher.no/reise$ghide
 ! folkebladet.no; Makes job position lists show up correctly
 @@||stillingledig.*.no^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
@@ -2169,7 +2169,7 @@ dagsavisen.no##:is(p,h2):has(> br:only-of-type:empty)
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 ! ★★★ Caused by «EasyPrivacy» ★★★
 ! Attempting to fix a problem with voting online on Idol Norway
-@@||tv2.no/*/config/analytics.json$xmlhttprequest,~third-party
+@@||tv2.no/*/config/analytics.json$xmlhttprequest
 ! Attempts to resolve how some frontpage articles are hard to open
 @@||schibsted.com/autoTracker$domain=vg.no
 ! 🇳🇴：Får Discovery+ sin påloggingsside til å vises riktig
@@ -2247,10 +2247,10 @@ ekstrabladet.dk#@#body>div[id][style]
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
 @@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
 ! https://new.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
-@@||cmp.ekstrabladet.dk/get_site_data$xmlhttprequest,~third-party
+@@||cmp.ekstrabladet.dk/get_site_data$xmlhttprequest
 @@||dialogue.sp-prod.net/messagingWithoutDetection.js$script,domain=ekstrabladet.dk
 @@||notice.sp-prod.net^$subdocument,domain=ekstrabladet.dk
-@@||sp-prod.net^$xmlhttprequest,domain=ekstrabladet.dk
+@@||sp-prod.net^$xmlhttprequest
 @@||ad.amediakreativ.no/widgets/stillingskarusell^
 
 
@@ -2333,9 +2333,9 @@ nettavisen.no,www-nettavisen-no.translate.goog###topover
 ||collector.schibsted.io^$third-party
 
 ! "Generic Hide"
-@@||bondebladet.screen9.tv^$generichide
-@@||eurosport.no^$generichide
-@@||eurosport.dk^$generichide
+@@||bondebladet.screen9.tv^$ghide
+@@||eurosport.no^$ghide
+@@||eurosport.dk^$ghide
 ! Fixed in better ways in AdGuard Base and uBlock Filters, but is needed for ABP
 @@||inputmag.dk^$generichide
 
@@ -2375,7 +2375,7 @@ trendsales.dk##.top__banner
 xn--bredbnd-ixa.dk##div[class^="speedtest-bg"] > a > img
 ||freewheel-mtgx-tv.akamaized.net/*.mp4$media,rewrite=abp-resource:blank-mp3,domain=bold.dk
 !!!||freewheel-mtgx-tv.akamaized.net^$media,domain=tv3sport.dk
-||v.fwmrm.net/ad/g/$domain=ekstrabladet.dk|ekstrabladet-dk.translate.goog
+||v.fwmrm.net/ad/g/$domain=ekstrabladet.dk|ekstrabladet-dk.translate.goog,
 ||vgc.no/cdn/js/libs/homad-config.json$xmlhttprequest,rewrite=abp-resource:blank-json
 ||widget.tippebannere.no^$third-party
 inky.no#@#iframe[width="200"][height="240"]
@@ -3368,7 +3368,7 @@ triplx.dk##.aff-inner-col
 
 ! On a lot of parked domains
 ||astarsbuilding.com^$third-party
-|http://*/munin/a/$xmlhttprequest,~third-party
+|http://*/munin/a/$xmlhttprequest
 ://185.53.177.52^
 ://185.53.177.52^$popup
 
@@ -3439,7 +3439,7 @@ triplx.dk##.aff-inner-col
 
 ! 🇬🇧：Intended for Adblock Plus
 @@||prosent.no^$generichide
-@@||tv2.no^$generichide
+@@||tv2.no^$ghide
 
 
 
@@ -5313,7 +5313,7 @@ zeromagazine.nu##div[id^=ads]
 /annonslinje_
 /annonssamarbete$xmlhttprequest
 /annons$image,domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se|filmtopp.se|webbkameror.se|omkonst.com
-/annons$xmlhttprequest,domain=driva-eget.se|brukshunden.se
+/annons$xmlhttprequest
 /annons-banner
 /annons.aspx?
 /annons/banner
@@ -5325,7 +5325,7 @@ zeromagazine.nu##div[id^=ads]
 /api/exposure$domain=svenskverkstad.se
 /api/partners$domain=familjehemsbanken.se
 /api/sponsors$domain=aikhockey.se|almtuna.com|bikkarlskoga.se|bjorkloven.com|brynas.se|difhockey.se|frolundahockey.com|farjestadbk.se|hockeyallsvenskan.se|hv71.se|ikoskarshamn.se|kalmarhockey.com|leksandsif.se|luleahockey.se|malmoredhawks.com|modohockey.se|moraik.se|nybrovikings.com|orebrohockey.se|roglebk.se|shl.se|skellefteaaik.se|sodertaljesk.se|taif.nu|timraik.se|vaxjolakers.se|vik.se|ostersundik.com
-/api/s/track$xmlhttprequest,domain=eniro.se
+/api/s/track$xmlhttprequest
 /api/tracker?$image
 /appinsights/*/track
 /app.php/adsview$xmlhttprequest
@@ -5349,7 +5349,7 @@ zeromagazine.nu##div[id^=ads]
 /banners/*casino$image
 /banner$domain=assistanskoll.se|hrnytt.se|lokalguiden.se|nyaboendet.se|ljudoljus.net|poloniainfo.se|alltombostad.se|thepattayanewsse.com
 /banner/ads/*
-/banner?cg$xmlhttprequest,domain=blocket.se
+/banner?cg$xmlhttprequest
 /beat-be$domain=blocket.se
 /betald-exponering$image
 /bilder-for-annonser$image
@@ -5396,7 +5396,7 @@ zeromagazine.nu##div[id^=ads]
 /com_adagency$domain=fastbikes.se
 /content_images/*casino$image,domain=ng.se
 /conversions/tracking.js$third-party
-/count?$xmlhttprequest,domain=feber.se|tjock.se
+/count?$xmlhttprequest
 /cpg_ads.$script
 /cs1pc.js$domain=kiaindex.se
 /ctr-prd.cbs-measurements.
@@ -5541,10 +5541,10 @@ zeromagazine.nu##div[id^=ads]
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
 /mrbet_banner
-/natives?$xmlhttprequest,domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
+/natives?$xmlhttprequest
 /native$domain=sydnarkenytt.se
-/native$xmlhttprequest,domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
-/native$xmlhttprequest,domain=automotorsport.se
+/native$xmlhttprequest
+/native$xmlhttprequest
 /native-ads$domain=atl.nu|landlantbruk.se|land.se
 /native-article-campaigns$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 /native-video-campaigns$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
@@ -5558,7 +5558,7 @@ zeromagazine.nu##div[id^=ads]
 /omniture/s_code.js
 /one-signal$domain=swebbtv.se
 /opus-analytics
-/pageView$xmlhttprequest,domain=altinget.se
+/pageView$xmlhttprequest
 /pagead$domain=vilaser.se|horoskoptid.se|eniro.se
 /pageviews$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
 /partners?$domain=hockeynews.se
@@ -5731,7 +5731,7 @@ zeromagazine.nu##div[id^=ads]
 /sponsored_articles$domain=fastighetssverige.se
 /sponsorloggor$domain=swehockey.se
 /sponsors$domain=sdhl.se|storvretaibk.se|obosdamallsvenskan.se|elitettan.se
-/sponsrade$xmlhttprequest,domain=hockeysverige.se
+/sponsrade$xmlhttprequest
 /spotlight-ad_$image
 /ss_foundation/combined_li_tracking
 /static.marklar.se/*-tracker
@@ -5767,7 +5767,7 @@ zeromagazine.nu##div[id^=ads]
 /toppbanner.js$domain=sydnarkenytt.se
 /toppbanner_snippet_js
 /torgen/banner.stat
-/trace$xmlhttprequest,domain=netflixguiden.se|radio.se
+/trace$xmlhttprequest
 /trackers/SessionCam-tag
 /tracker.php?do$image
 /tracker/socket$domain=swebbtv.se
@@ -5775,7 +5775,7 @@ zeromagazine.nu##div[id^=ads]
 /tracking/cts.js
 /tracking/fpc.js
 /tracking_scripts$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
-/track$ping,xmlhttprequest,domain=epochtimes.se|dagen.se
+/track$ping,xmlhttprequest
 /track-view$domain=aftonbladet.se|godare.se
 /track.js$domain=destination.se|sistaminuten.se
 /track/view?webInteractiveId$image
@@ -5879,9 +5879,9 @@ zeromagazine.nu##div[id^=ads]
 ?action=advanced-ads-tracking-track
 ?action=get_banners$domain=djungeltrumman.se
 ?bannerid$domain=existenz.se
-?t=$xmlhttprequest,empty,domain=kyrkanstidning.se
+?t=$xmlhttprequest
 ?url=*impse.tradedoubler.com$image
-@@*$generichide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se|akaviaaspekt.se|annonsborsen.se
+@@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se|akaviaaspekt.se|annonsborsen.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/adx.js$~third-party,domain=atl.nu|landlantbruk.se|land.se
 @@/aff/images/*$image,domain=alltforforaldrar.se
@@ -5896,7 +5896,7 @@ zeromagazine.nu##div[id^=ads]
 @@||createsend1.com/css/
 @@||fast.fonts.net/jsapi/core/mt.js$domain=tidskriftenprovins.se
 @@||feed.meltwater.com^$subdocument
-@@||fwmrm.net/ad/g/$xmlhttprequest,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se|embed.viaplay.com
+@@||fwmrm.net/ad/g/$xmlhttprequest
 @@||img.upsales.com^
 @@||js.createsend1.com/js/jquery
 @@||js.driftt.com^$domain=sanity.io

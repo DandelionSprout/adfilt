@@ -2561,33 +2561,33 @@ def prepare_abp(lines) -> str:
 
         # remove $document modifier from the rule
         line = re.sub(
-           r"\$doc.*$",
-           "",
+           r"^(.*)\$doc.*$",
+           r"\1",
            line
         )
 
         # remove $important modifier from the rule
         line = re.sub(
-           r"\$important,",
-           "$",
+           r"^(.*)\$important,(.*)",
+           r"\1$\2",
            line
         )
 
         line = re.sub(
-           r"([$,])important",
-           "",
+           r"^(.*[$,])important(.*)$",
+           r"\1\2",
            line
         )
 
         line = re.sub(
            "Dandelion Sprouts nordiske filtre for ryddigere nettsider",
-           "Dandelion Sprouts helnordiske filtre for ryddigere nettsider (for Adblock Plus - Møter ABP sine inkluderingsregler — Firefox ≥v121,x og Chromium ≥105,x)",
+           "Dandelion Sprouts helnordiske filtre (Møter ABPs inkluderingsregler — Firefox ≥121, Chrom* ≥105)",
            line
         )
 
         line = re.sub(
            "Dandelion Sprout's Nordic filters for tidier websites",
-           "Dandelion Sprout's All-Nordic filters for tidier websites (for Adblock Plus with ABP inclusion compliance — Firefox ≥v121.x, Chromium ≥105.x)",
+           "Dandelion Sprout's All-Nordic filters (With ABP inclusion compliance — Firefox ≥121, Chrom* ≥105)",
            line
         )
 
@@ -2598,26 +2598,26 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"! Redirect:.*$",
+           r"^! Redirect:.*$",
            "",
            line
         )
 
         line = re.sub(
-           r"([$,])xhr",
+           r"^(.*[$,])xhr(.*)$",
            r"\1xmlhttprequest",
            line
         )
 
         line = re.sub(
-           r"([$,~])3p",
-           r"\1third-party",
+           r"^(.*[$,~])3p(.*)$",
+           r"\1third-party\2",
            line
         )
 
         line = re.sub(
-           r"([$,])1p",
-           r"\1~third-party",
+           r"^(.*[$,~])1p(.*)$",
+           r"\1~third-party\2",
            line
         )
 
@@ -2634,103 +2634,97 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"(^|,)viaplay.\*(#|,)",
+           r"^(.*,)?viaplay.\*(#|,)",
            r"\1viaplay.no,viaplay.dk,viaplay.is\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)google.\*(#|,)",
+           r"^(.*,)?google.\*(#|,)",
            r"\1google.no,google.dk,google.is\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)ticketmaster.\*(#|,)",
+           r"^(.*,)?ticketmaster.\*(#|,)",
            r"\1ticketmaster.no,ticketmaster.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)qxl.\*(#|,)",
+           r"^(.*,)?qxl.\*(#|,)",
            r"\1qxl.no,qxl.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)expedia.\*(#|,)",
+           r"^(.*,)?expedia.\*(#|,)",
            r"\1expedia.no,expedia.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)gamereactor.\*(#|,)",
+           r"^(.*,)?gamereactor.\*(#|,)",
            r"\1gamereactor.no,gamereactor.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)viafree.\*(#|,)",
-           r"\1viafree.no,viafree.dk\2",
-           line
-        )
-
-        line = re.sub(
-           r"(^|,)momondo.\*(#|,)",
+           r"^(.*,)?momondo.\*(#|,)",
            r"\1momondo.no,monondo.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)eurosport.\*(#|,)",
+           r"^(.*,)?eurosport.\*(#|,)",
            r"\1eurosport.no,eurosport.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)prisjakt.\*(#|,)",
+           r"^(.*,)?prisjakt.\*(#|,)",
            r"\1prisjakt.no\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)180.\*(#|,)",
+           r"^(.*,)?180.\*(#|,)",
            r"\g<1>180.no,180.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)kimbino.\*(#|,)",
+           r"^(.*,)?kimbino.\*(#|,)",
            r"\1kimbino.no,kimbino.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)costume.\*(#|,)",
+           r"^(.*,)?costume.\*(#|,)",
            r"\1costume.no,costume.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)manuall.\*(#|,)",
+           r"^(.*,)?manuall.\*(#|,)",
            r"\1manuall.no,manuall.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)intrafish.\*(#|,)",
+           r"^(.*,)?intrafish.\*(#|,)",
            r"\1intrafish.no\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)blaklader.\*(#|,)",
+           r"^(.*,)?blaklader.\*(#|,)",
            r"\1blaklader.no,blaklader.dk\2",
            line
         )
 
         line = re.sub(
-           r"(^|,)ehandel\.\*(#|,)",
+           r"^(.*,)?ehandel\.\*(#|,)",
            r"\1ehandel.com,ehandel.dk,ehandel.se,ehandel.fi\2",
            line
         )
@@ -2748,79 +2742,79 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)January(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)January(.*)v(\d\d?.*)$",
            r"! Version: \g<2>01\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)February(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)February(.*)v(\d\d?)",
            r"! Version: \g<2>02\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)March(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)March(.*)v(\d\d?)",
            r"! Version: \g<2>03\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)April(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)April(.*)v(\d\d?)",
            r"! Version: \g<2>04\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)May(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)May(.*)v(\d\d?.*)$",
            r"! Version: \g<2>05\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)June(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)June(.*)v(\d\d?)",
            r"! Version: \g<2>06\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)July(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)July(.*)v(\d\d?)",
            r"! Version: \g<2>07\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)August(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)August(.*)v(\d\d?)",
            r"! Version: \g<2>08\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)September(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)September(.*)v(\d\d?)",
            r"! Version: \g<2>09\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)October(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)October(.*)v(\d\d?)",
            r"! Version: \g<2>10\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)November(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)November(.*)v(\d\d?)",
            r"! Version: \g<2>11\3\4",
            line
         )
 
         line = re.sub(
-           r"! (Version|Last[ -]?[Mm]odified): (.*)December(.*)v(\d\d?)",
+           r"^! (Version|Last[ -]?[Mm]odified): (.*)December(.*)v(\d\d?)",
            r"! Version: \g<2>12\3\4",
            line
         )
 
         line = re.sub(
-           r"^(! Title: 🏔️ Dandelion Sprout.*)",
+           r"^(! Title: 🏔️ Dandelion Sprout.*)$",
            r"[Adblock Plus 3.13]\n\1",
            line
         )
@@ -2850,126 +2844,6 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(1\)",
-           r"\1##\2\3*:has(> \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(2\)",
-           r"\1##\2\3*:has(> * > \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(3\)",
-           r"\1##\2\3*:has(> * > * > \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(4\)",
-           r"\1##\2\3*:has(> * > * >  * > \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(5\)",
-           r"\1##\2\3*:has(> * > * > * > * > \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(6\)",
-           r"\1##\2\3*:has(> * > * > * > * > * > \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(7\)",
-           r"\1##\2\3*:has(> * > * > * > * > * > * > \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(8\)",
-           r"\1##\2\3*:has(> * > * > * > * > * > * > * > \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(9\)",
-           r"\1##\2\3*:has(> * > * > * > * > * > * > * > * > \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*)( |\|)(.*):(upward|nth-ancestor)\(10\)",
-           r"\1##\2\3*:has(> * > * > * > * > * > * > * > * > * > \4)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(1\)",
-           r"\1##*:has(> \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(2\)",
-           r"\1##*:has(> * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(3\)",
-           r"\1##*:has(> * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(4\)",
-           r"\1##*:has(> * > * >  * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(5\)",
-           r"\1##*:has(> * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(6\)",
-           r"\1##*:has(> * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(7\)",
-           r"\1##*:has(> * > * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(8\)",
-           r"\1##*:has(> * > * > * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(9\)",
-           r"\1##*:has(> * > * > * > * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#[?]?#(.*):(upward|nth-ancestor)\(10\)",
-           r"\1##*:has(> * > * > * > * > * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
            r"^.*mm\.dk##\.fadeout.*$",
            r"",
            line
@@ -2982,8 +2856,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"([.?]),script",
-           r"\1$script",
+           r"^(.*[.?]),script(.*)$",
+           r"\1$script\2",
            line
         )
 
@@ -3006,8 +2880,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r":remove()",
-           r"",
+           ":remove()",
+           "",
            line
         )
 
@@ -3066,14 +2940,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r":before",
-           r"::before",
+           ":before",
+           "::before",
            line
         )
 
         line = re.sub(
-           r":after",
-           r"::after",
+           ":after",
+           "::after",
            line
         )
 
@@ -3108,8 +2982,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"\$empty,",
-           r"$",
+           "\$empty,",
+           "$",
            line
         )
 
@@ -3126,14 +3000,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"\$mp4",
-           r"$media,rewrite=abp-resource:blank-mp3",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*][=|])viafree\.\*",
-           r"\1viafree.no|viafree.dk",
+           "$mp4",
+           "$media,rewrite=abp-resource:blank-mp3",
            line
         )
 
@@ -3186,8 +3054,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"\$ghide",
-           r"$generichide",
+           "$ghide",
+           "$generichide",
            line
         )
 
@@ -3198,8 +3066,8 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r",mp4",
-           r"",
+           ",mp4",
+           "",
            line
         )
 
@@ -3246,14 +3114,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"! Homepage: https://github\.com/finnish-easylist-addition/finnish-easylist-addition",
-           r"! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition",
+           "! Homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition",
+           "! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition",
            line
         )
 
         line = re.sub(
-           r"! Homepage: https://github\.com/DandelionSprout/Swedish-List-for-Adblock-Plus",
-           r"! Swedish section's homepage: https://github.com/DandelionSprout/Swedish-List-for-Adblock-Plus",
+           "! Homepage: https://github.com/DandelionSprout/Swedish-List-for-Adblock-Plus",
+           "! Swedish section's homepage: https://github.com/DandelionSprout/Swedish-List-for-Adblock-Plus",
            line
         )
 
@@ -3330,7 +3198,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(no)?#\??#optimus-element(.*:[a-eg-kmo-z])",
+           r"^(no)?#\??#optimus-element(.*:[a-eg-kmo-z].*)$",
            r"aasanetidende.no,aasavis.no,akersposten.no,amta.no,an.no,ao.no,auraavis.no,austagderblad.no,avisa-hordaland.no,avisagaula.no,avisenagder.no,ba.no,blv.no,budstikka.no,bygdebladet.no,bygdeposten.no,dalane-tidende.no,dt.no,eikerbladet.no,enebakkavis.no,f-b.no,fanaposten.no,firda.no,firdaposten.no,fremover.no,gbnett.no,gjengangeren.no,glomdalen.no,h-a.no,h-avis.no,ha-halden.no,hadeland.no,hardanger-folkeblad.no,helg.no,ialta.no,ifinnmark.no,ifinnmarkdebatten.no,iharstad.no,ilevanger.no,inderoyningen.no,indre.no,isandnessjoen.no,jarlsbergavis.no,jbl.no,kirkenesby.no,krs.no,kv.no,kvinnheringen.no,laagendalsposten.no,lierposten.no,lofot-tidende.no,lofotposten.no,lyngdalsavis.no,merakerposten.no,minenergi.no,mitthammerfest.no,mittjessheim.no,mittlillestrom.no,mittloerenskog.no,moss-avis.no,nab.no,namdalsavisa.no,nettavisen.no,nidaros.no,noblad.no,nord24.no,nordhordland.no,nordlys.no,nordnorskdebatt.no,nt24.no,oa.no,oblad.no,op.no,ostlendingen.no,oyene.no,r-a.no,rablad.no,ranablad.no,rb.no,retten.no,rha.no,ringblad.no,ringsaker-blad.no,sa.no,sageneavis.no,sandeavis.no,sandnesposten.no,sb.no,senja247.no,smaalenene.no,snasningen.no,sognavis.no,solabladet.no,solungavisa.no,steinkjer-avisa.no,strandbuen.no,sva.no,svelviksposten.no,sydvesten.no,t-a.no,ta.no,tb.no,telen.no,tk.no,totenidag.no,tromsoby.no,tronderdebatt.no,tvedestrandsposten.no,varingen.no,vestbyavis.no,vestviken24.no,vp.no#?#optimus-element\2",
            line
         )
@@ -3342,14 +3210,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(! If you wish to remove.*)",
+           r"^(! If you wish to remove.*)$",
            r"!•\n\1\n!•\n! If you see “/v3/full/“ in the list's URL or a “! DiffUrl:“ row above, while you're using Firefox, ABP 3.x, or a non-ABP extension, then you have been scammed and must change the list subscription to https://easylist-downloads.adblockplus.org/dandelion_sprouts_nordic_filters+easylist.txt immediately. However, if you use ABP 4.x in Chrome, there is no reason to worry.\n!•",
            line
         )
 
         line = re.sub(
-           r"\$popup,~inline-font",
-           r"$popup",
+           "\$popup,~inline-font",
+           "$popup",
            line
         )
 
