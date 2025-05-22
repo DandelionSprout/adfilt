@@ -87,7 +87,7 @@
 * `$important`: Makes a resource-blocking entry take precedence over another whitelisting entry.
 * `$redirect`: Redirects resources to a neutered version that has been embedded in those extensions. Possible options are listed [on this page](https://github.com/gorhill/uBlock/wiki/Resources-Library#available-empty-redirect-resources) (AdGuard has a [slightly bigger selection](https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/about-redirects.md#-available-redirect-resources)).
 * `$empty`: Results in a fake empty page or resource being loaded, instead of blocking the resource itself.
-* `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `?tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, that a lack of `/^` will make it search *anywhere* in that string, and a lack of support for backslashing. Whitelistings must match the exact parameter that was blocked.
+* `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `?tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, that a lack of `/^` will make it search *anywhere* in that string, and a lack of support for backslashing. Whitelistings must match the exact parameter that was blocked. Doesn't seem to work for desktop programs with "AdGuard for Windows".
 * `$match-case`: Makes the criteria case-sensitive. uBO only supports it in RegEx entries.
 
 ## uBlock Origin and Adblock Plus only
