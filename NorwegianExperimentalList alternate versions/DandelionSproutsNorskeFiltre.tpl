@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 20May2025v2-Deprecated
+# Last modified: 28May2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -71,6 +71,8 @@ msFilterList
 -d pliing.com
 -d admob.no
 -d admob.dk
+-d adpepper.dk
+-d banner10.zetasystem.dk
 -d print2web.sn.dk
 -d lib.idg.no
 # AdressaNO
@@ -392,6 +394,7 @@ msFilterList
 -d fotballen.eu jack.jpg
 -d fotballen.eu vaiplay
 -d sportsidioten.no *-oslo-sportslager-pc.
+-d counter4all.dk *-300x250.
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -680,6 +683,8 @@ msFilterList
 # https://new.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 +d notice.sp-prod.net
 +d sp-prod.net
+# ★★★ Caused by «Peter Lowe's Ad and tracking server list» ★★★
+# ★★★ Caused by «Dan Pollock's hosts file» ★★★
 !
 # 🇳🇴：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
