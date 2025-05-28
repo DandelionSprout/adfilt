@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 28May2025v1
+! Version: 28May2025v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -362,7 +362,7 @@ $removeparam=tduid,domain=~tradedoubler.com
 $doc,removeparam=irclickid,domain=~axs.com
 $removeparam=irclicid
 $removeparam=intcmp
-$removeparam=sourceid,domain=~google.*
+$removeparam=sourceid,domain=~google.*|~youtube.com
 $doc,removeparam=/^sharedid=.*$/i
 $removeparam=affiliates_ad_id
 $removeparam=campaign_id,domain=~kochava.com|~unisportstore.*
@@ -490,7 +490,7 @@ $removeparam=track_adgroupid
 $removeparam=track_keyword
 
 ! https://www•coolblue•nl/nokia?cmt=c_b%2Ccp_386708701%2Caid_1235851292258762%2Ct_kwd-77240886961109%3Aloc-129%2Cn_s%2Cd_c%2Clp_2488
-$removeparam=cmt
+$doc,removeparam=cmt
 
 ! https://www•ellos•no/?extcmp=05_NO_Aff_Imp
 $removeparam=extcmp
@@ -2272,6 +2272,8 @@ $doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.$doc,removeparam=zx
 ||ipv6.google.com^$doc,removeparam=no_sw_cr
 ||ipv6.google.com^$doc,removeparam=zx
+! https://myaccount•google•com/signinoptions/passkeys?source=marketing (27/05/2025)
+||myaccount.google.com^$removeparam=source
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
 @@://www.google.*/maps^$removeparam=utm_campaign
 @@://ipv6.google.com/maps^$removeparam=utm_campaign
