@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 28May2025v1
+! Last modified: 30May2025v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1325,6 +1325,8 @@ kunmedierne.dk##.dvrt
 kunmedierne.dk##a.dvrt-link ~ .posts-slider
 politiken.dk###js-ad-grid
 politiken.dk##.js-ad-elem
+kjavis.dk##div[id^=td_uid_1_]
+kjavis.dk##aside[class^="widget_text "]:has(.averticement)
 ! — — — — — — — — —
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1779,6 +1781,31 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||fotballen.eu/20*casino.$image
 ||sportsidioten.no/wp-content/uploads/*-oslo-sportslager-pc.$image
 ||counter4all.dk/wp-content/uploads/*-300x250.$image
+||kjavis.dk/wp-content/uploads/20*/900x180_$image
+||kjavis.dk/wp-content/uploads/20*-Banner-$image
+||kjavis.dk/wp-content/uploads/20*/Ann-$image
+||kjavis.dk/wp-content/uploads/20*/jme3.png^$image
+||kjavis.dk/wp-content/uploads/20*_300x250px_$image
+||kjavis.dk/wp-content/uploads/20*/Vaffelhuset-1.png$image
+||kjavis.dk/wp-content/uploads/20*/Ryobi-Slag-JPEG.$image
+||kjavis.dk/wp-content/uploads/20*/berghodt.jpg^$image
+||kjavis.dk/wp-content/uploads/20*_ann_$image
+||kjavis.dk/wp-content/uploads/20*/annonce-$image
+||kjavis.dk/wp-content/uploads/20*/Marslev-cykler-1.png$image
+||kjavis.dk/wp-content/uploads/20*/Kirkeladen.png^$image
+||kjavis.dk/wp-content/uploads/20*/Aeldresagen-1-$image
+||kjavis.dk/wp-content/uploads/20*/Cykelgaarden-1.png$image
+||kjavis.dk/wp-content/uploads/20*/930X120_$image
+||kjavis.dk/wp-content/uploads/20*/vvs-eks.png^$image
+||kjavis.dk/wp-content/uploads/2025/04/Byg.png|$image
+||kjavis.dk/wp-content/uploads/2025/01/breg.png|$image
+||kjavis.dk/wp-content/uploads/20*/930x180_$image
+||kjavis.dk/wp-content/uploads/20*/Benedikte-1.png|$image
+||kjavis.dk/wp-content/uploads/20*/Munkebo-kro.png|$image
+||kjavis.dk/wp-content/uploads/20*/20-3.jpg|$image
+||kjavis.dk/wp-content/uploads/20*/Topann-$image
+||kjavis.dk/wp-content/uploads/20*/ellinge4.png|$image
+||www.hvidovreavis.dk/media/*/hvidover-*-1080x1080.$image
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -1823,6 +1850,10 @@ no##section.noHeader:has(amedia-include[param-url*=innocode])
 ! politikenDK (08/02/2025)
 ://aj2*.online^$xmlhttprequest
 ://aj2*.bid^$xmlhttprequest
+! skagensavisDK (30/05/2025)
+/wp-content/uploads/i123_ads^$image
+! hvidovreavisDK (30/05/2025)
+.dk/media/*-topbanner-$image
 ! — — — — —
 ! 🇳🇴：Generelle oppføringer med kilder
 ! 🇬🇧：Generic entries that have sources
@@ -2146,6 +2177,8 @@ tv2.no##.aside > .ad-container
 ! frolendingenNO, ytringenNO (20/05/2025)
 ##.nf-o-moduleblock-module:has(> .nf-o-annonse)
 ##div.nf-js-scrollable-item:not(:has(*))
+! flaDE (30/05/2025)
+##.component__pubble-banner:not(html,body,:empty)
 ! — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2173,25 +2206,32 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! 🇳🇴：IP-adresse
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://3.248.18.175^
 !+ PLATFORM(windows, mac, android, cli)
 3.248.18.175$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://35.227.231.163^
 !+ PLATFORM(windows, mac, android, cli)
 35.227.231.163$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://45.58.146.154^
 !+ PLATFORM(windows, mac, android, cli)
 45.58.146.154$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://82.196.13.38^
 !+ PLATFORM(windows, mac, android, cli)
 82.196.13.38$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://82.221.81.9^
 !+ PLATFORM(windows, mac, android, cli)
 82.221.81.9$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://178.79.136.45^
 !+ PLATFORM(windows, mac, android, cli)
 178.79.136.45$network
 ! politikenDK (08/02/2025)
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ||65.21.200.49^$all
 !+ PLATFORM(windows, mac, android, cli)
 65.21.200.49$network
@@ -2565,9 +2605,11 @@ triplx.dk##.aff-inner-col
 /finn.no/finno.htm$document,domain=~facebook.com
 .gratis-reisebilletter.$document
 ||102.112.2o7.net^$document
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://52.216.146.90^
 !+ PLATFORM(windows, mac, android, cli)
 52.216.146.90$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://92.42.104.146^
 !+ PLATFORM(windows, mac, android, cli)
 92.42.104.146$network
@@ -2683,6 +2725,7 @@ triplx.dk##.aff-inner-col
 ! E-mail tips
 ||s.free.fr^$all
 ||trmff.wpengine.com^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://212.27.60.108^$all
 !+ PLATFORM(windows, mac, android, cli)
 212.27.60.108$network
@@ -2693,6 +2736,7 @@ triplx.dk##.aff-inner-col
 ||premosupplements.com^$all
 ||printablemagic.com^$all
 ||rumendia.com^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://94.156.65.204^$all
 !+ PLATFORM(windows, mac, android, cli)
 94.156.65.204$network
@@ -2920,53 +2964,69 @@ triplx.dk##.aff-inner-col
 ||my-altinn*$all,domain=~no
 ||no-oppdatere.$all
 ||no-oppdatert.$all,domain=~no
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://179.43.189.62^$all
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7694946
 ||easypark-$document,popup
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://74.119.239.234^
 !+ PLATFORM(windows, mac, android, cli)
 74.119.239.234$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://162.241.194.206^
 !+ PLATFORM(windows, mac, android, cli)
 162.241.194.206$network
 ! IP addresses of servers notorious for hosting many of the sites above
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://51.195.133.131^
 !+ PLATFORM(windows, mac, android, cli)
 51.195.133.131$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://66.206.3.34^
 !+ PLATFORM(windows, mac, android, cli)
 66.206.3.34$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://82.118.242.69^
 !+ PLATFORM(windows, mac, android, cli)
 82.118.242.69$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://136.243.73.30^
 !+ PLATFORM(windows, mac, android, cli)
 136.243.73.30$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://138.201.126.227^
 !+ PLATFORM(windows, mac, android, cli)
 138.201.126.227$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://156.236.126.173^
 !+ PLATFORM(windows, mac, android, cli)
 156.236.126.173$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://196.196.230.76^
 !+ PLATFORM(windows, mac, android, cli)
 196.196.230.76$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://167.71.49.177^
 !+ PLATFORM(windows, mac, android, cli)
 167.71.49.177$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://134.209.82.119^
 !+ PLATFORM(windows, mac, android, cli)
 134.209.82.119$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://154.213.16.136^
 !+ PLATFORM(windows, mac, android, cli)
 154.213.16.136$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://158.247.212.220^
 !+ PLATFORM(windows, mac, android, cli)
 158.247.212.220$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://165.227.168.212^
 !+ PLATFORM(windows, mac, android, cli)
 165.227.168.212$network
 !+ NOT_OPTIMIZED
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://132.148.220.142^
 !+ PLATFORM(windows, mac, android, cli)
 132.148.220.142$network
@@ -2975,6 +3035,7 @@ triplx.dk##.aff-inner-col
 104.160.10.*$network
 !+ PLATFORM(windows, mac, android, cli)
 165.231.154.*$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://167.99.196.225^
 !+ PLATFORM(windows, mac, android, cli)
 167.99.196.225$network
@@ -2995,6 +3056,7 @@ triplx.dk##.aff-inner-col
 ||yttersiden.no^$document
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7873648
 ||monetrizer*.$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://38.180.96.244^$all
 !+ PLATFORM(windows, mac, android, cli)
 38.180.96.244$network
@@ -3156,12 +3218,15 @@ triplx.dk##.aff-inner-col
 ||verification-no.com^$all
 ||wf-securelogin.com^$all
 ||wisehelpcentre.com^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://193.143.1.45^$all
 !+ PLATFORM(windows, mac, android, cli)
 193.143.1.45$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://193.143.1.214^$all
 !+ PLATFORM(windows, mac, android, cli)
 193.143.1.214$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://193.143.1.217^$all
 !+ PLATFORM(windows, mac, android, cli)
 193.143.1.217$network
@@ -3198,12 +3263,14 @@ triplx.dk##.aff-inner-col
 ://robot.ekstrabladet.dk^$document,domain=~subdomain_stolen_away_from_ekstra_bladets_owners.*
 ||modificationdesignate.com^$all
 ||xss.my.id^$third-party
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ||85.159.213.158^$all
 !+ PLATFORM(windows, mac, android, cli)
 85.159.213.158$network
 ! On a lot of parked domains
 ||astarsbuilding.com^$third-party
 |http://*/munin/a/$xmlhttprequest,~third-party
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://185.53.177.52^$all
 !+ PLATFORM(windows, mac, android, cli)
 185.53.177.52$network
@@ -3215,6 +3282,7 @@ triplx.dk##.aff-inner-col
 ||healtheweb.co.uk^$all
 ||appearspacex.de^$document,popup
 ||195-242-152-122.static.hvvc.us^$document,popup
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ||195.242.152.122^$all
 !+ PLATFORM(windows, mac, android, cli)
 195.242.152.122$network
@@ -3226,12 +3294,15 @@ triplx.dk##.aff-inner-col
 ||nodrakts.com^$document
 ||dkfodboldstore.com^$document
 ||vmfodboldtoj.com^$document
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://5.39.217.206^
 !+ PLATFORM(windows, mac, android, cli)
 5.39.217.206$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://5.39.221.180^
 !+ PLATFORM(windows, mac, android, cli)
 5.39.221.180$network
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://193.148.70.153^
 !+ PLATFORM(windows, mac, android, cli)
 193.148.70.153$network
@@ -3267,6 +3338,7 @@ triplx.dk##.aff-inner-col
 ||hagebakken.no^
 ||mdb.nu^
 ||idj.no^
+!+ NOT_PLATFORM(windows, mac, android, cli)
 ://1.14.61.188^
 !+ PLATFORM(windows, mac, android, cli)
 1.14.61.188$network
