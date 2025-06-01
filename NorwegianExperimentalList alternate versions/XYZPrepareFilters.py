@@ -276,6 +276,12 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^((\|\||://)?[12]?\d?\d?\.[12]?\d?\d?\.[12]?\d?\d?\.[12]?\d?\d?\^(\$(doc(ument)?.*?|all.*?))?)$",
+           r"!+ NOT_PLATFORM(windows, mac, android, cli)\n\1",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4751,8 +4757,7 @@ UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
 UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com', 'gamecopyworld', ':  ', 'duckdns.org', '$dnstype']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^', 'gamecopyworld', '://', '$dnstype']
 UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '[Adblock Plus 3.', '*', '/^', 'duckdns.org']
-UNSUPPORTED_AGH = ['$redirect=', ',redirect=',
-    '##', '.*#' , '#?#', 'gamecopyworld', 'version.bind', 'hostname.bind', '|id.server|', '$app']
+UNSUPPORTED_AGH = ['$redirect=']
 
 OUTPUT = 'Anti-Malware List\\xyzzyx.txt'
 OUTPUT_AG = 'Anti-Malware List\\AntiMalwareAdGuard.txt'
@@ -5045,6 +5050,12 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"^://(\|\|.*)$",
            r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^((\|\||://)?[12]?\d?\d?\.[12]?\d?\d?\.[12]?\d?\d?\.[12]?\d?\d?\^(\$(doc(ument)?.*?|all.*?))?)$",
+           r"!+ NOT_PLATFORM(windows, mac, android, cli)\n\1",
            line
         )
 
@@ -6621,20 +6632,8 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^(\|\|)([a-z]{1,}\^)\$doc,domain=~(.*)$",
-           r"\1\2\n@@||\3",
-           line
-        )
-
-        line = re.sub(
            r"^\|\|([a-z]{2,17})\^",
            r"||*.\1^",
-           line
-        )
-
-        line = re.sub(
-           r"^.*google\.(tk|ml).*$",
-           r"",
            line
         )
 
@@ -6652,12 +6651,6 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            "\$doc,",
-           "",
-           line
-        )
-
-        line = re.sub(
-           ",important",
            "",
            line
         )
@@ -6681,44 +6674,20 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^! Redirect:.*$",
-           "",
-           line
-        )
-
-        line = re.sub(
-           r"~ Warning.*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"\^\$$",
-           "^",
-           line
-        )
-
-        line = re.sub(
            "\$image",
            "",
            line
         )
 
         line = re.sub(
-           "domain=",
-           "",
+           r"^(.*)[$,]domain=~[a-z0-9._*-]{1,}$",
+           "\1",
            line
         )
 
         line = re.sub(
-           r"\$1.*$",
-           "",
-           line
-        )
-
-        line = re.sub(
-           r"^\|\|\.",
-           r"||*.",
+           r"^(.*)\$1.*$",
+           r"\1",
            line
         )
 
@@ -6735,38 +6704,14 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"(.*\.168\.192\.)$",
-           r"||\1in-addr.arpa^",
+           r"^(.*)\$doc$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"\$doc$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"^.*\$all,.*\..*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"\$all,(.*)?$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"/(live|fun|popup)([,|]|$).*$",
-           r"/",
-           line
-        )
-
-        line = re.sub(
-           r"\$all$",
-           r"",
+           r"^(.*)\$all$",
+           r"\1",
            line
         )
 
@@ -6783,31 +6728,7 @@ def prepare_agh(lines) -> str:
         #)
 
         line = re.sub(
-           r"^.* bounty .*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"^\$.*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
            r"^@?@?\|\|.*/.*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           "\^popup",
-           "^",
-           line
-        )
-
-        line = re.sub(
-           r"^!if .*$",
            r"",
            line
         )
@@ -6837,18 +6758,6 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"/match-case,",
-           r"$match-case,",
-           line
-        )
-
-        line = re.sub(
-           r"^@?@?\|\|[a-z0-9.-]{1,}\|[a-z0-9.-].*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
            r"^.*\.png\^.*$",
            r"",
            line
@@ -6862,40 +6771,14 @@ def prepare_agh(lines) -> str:
         #)
 
         line = re.sub(
-           "\^dnstype=",
-           "^$dnstype=",
-           line
-        )
-
-        line = re.sub(
            r"^.*\$popup$",
            r"",
-           line
-        )
-
-        # Test 20th of December 2022; see https://github.com/AdguardTeam/HostlistCompiler/issues/42
-        line = re.sub(
-           r"^\|\|([a-z]{2,})\^$",
-           r"||*.\1^",
            line
         )
 
         line = re.sub(
            r"^.*\*&\*=\*&\*.*$",
            r"",
-           line
-        )
-
-        # Needed due to https://github.com/AdguardTeam/HostlistCompiler/issues/42#issuecomment-1360494184, despite a lack of testing
-        line = re.sub(
-           r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.\*\$network$",
-           r"/^\1\\.\2\\.\3\\.[0-9]{1,3}$/",
-           line
-        )
-
-        line = re.sub(
-           r"/\$network$",
-           r"/",
            line
         )
 
@@ -6906,25 +6789,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"@@\|\|[a-zA-Z0-9.-]{0,}\|[a-zA-Z0-9.-].*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"^\|\|amazonaws\.com(\^)?($|\$[ac-z].*$)",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"^.*\^,.*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"^\|\|.*\^[a-z].*$",
+           r"^\|\|amazonaws\.com(\^)?$",
            r"",
            line
         )
@@ -6936,44 +6801,8 @@ def prepare_agh(lines) -> str:
         #)
 
         line = re.sub(
-           r"(@@\|\|[a-z0-9.-]{1,})$",
-           r"\1^",
-           line
-        )
-
-        line = re.sub(
-           "\^\^",
-           "^",
-           line
-        )
-
-        line = re.sub(
-           r"^.*/script,subdocument,image$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"^\?.*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
            r"^[:/|].*=$",
            r"",
-           line
-        )
-
-        line = re.sub(
-           r"^.*\^\$[a-z-]{1,}[.|].*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"\.denyallow=",
-           r".$denyallow=",
            line
         )
 
@@ -6984,26 +6813,8 @@ def prepare_agh(lines) -> str:
         #)
 
         line = re.sub(
-           r"^! Placeholder line for alternate list versions",
+           r"^! Placeholder line for alternate list versions$",
            r"/^172\\.255\\.6\\.(\\d\\d?|2.*|1[0-689].*|17[0-689])$/",
-           line
-        )
-
-        line = re.sub(
-           r"^(\||:|/|[a-zA-Z0-9]|\*)[a-zA-Z0-9./-]{1,}, .*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"^@@\|\|[a-z0-9-]{0,}(\^|\*)?$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           "\^~",
-           "^$denyallow=",
            line
         )
 
@@ -7020,14 +6831,128 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^.*[,$]ipaddress.*$",
+           r"^.*[,$]ipaddress=\d.*$",
            r"",
            line
         )
 
         line = re.sub(
-           r"^[a-zA-Z0-9*,:;^$=?!+&%#@/_-]{1,5}$",
+           r"^(.*)\$doc(ument)?,popup$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^.*\$frame,third-party$",
            r"",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\$all,~inline-font$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^.*\.mp3\^.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*denyallow=.*),domain=.*$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\$doc(ument)?,denyallow=(.*)$",
+           r"\1$denyallow=\3",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\$doc(ument)?$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^.*\$doc,domain=.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*\^\$domain=[a-z].*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*?[a-z*]?#.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\$doc(ument)?,script,subdocument,image$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[:|/].*([a-z0-9]|\])/([a-z0-9]|\[).*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^\*?\$(all,)?ipaddress=(/.*)$",
+           r"\2",
+           line
+        )
+
+        line = re.sub(
+           r"^.*\$csp=.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*),all,~inline-font$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^.*\$third-party$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*,domain.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^[^!].*\?url\=.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)popup$",
+           r"\1",
            line
         )
 
