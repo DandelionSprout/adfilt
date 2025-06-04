@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 28May2025v1-Deprecated
+# Last modified: 02June2025v4-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -395,6 +395,31 @@ msFilterList
 -d fotballen.eu vaiplay
 -d sportsidioten.no *-oslo-sportslager-pc.
 -d counter4all.dk *-300x250.
+-d kjavis.dk 900x180_
+-d kjavis.dk 20*-Banner-
+-d kjavis.dk Ann-
+-d kjavis.dk jme3.png
+-d kjavis.dk 20*_300x250px_
+-d kjavis.dk Vaffelhuset-1.png
+-d kjavis.dk Ryobi-Slag-JPEG.
+-d kjavis.dk berghodt.jpg
+-d kjavis.dk 20*_ann_
+-d kjavis.dk annonce-
+-d kjavis.dk Marslev-cykler-1.png
+-d kjavis.dk Kirkeladen.png
+-d kjavis.dk Aeldresagen-1-
+-d kjavis.dk Cykelgaarden-1.png
+-d kjavis.dk 930X120_
+-d kjavis.dk vvs-eks.png
+-d kjavis.dk Byg.png
+-d kjavis.dk breg.png
+-d kjavis.dk 930x180_
+-d kjavis.dk Benedikte-1.png
+-d kjavis.dk Munkebo-kro.png
+-d kjavis.dk 20-3.jpg
+-d kjavis.dk Topann-
+-d kjavis.dk ellinge4.png
+-d www.hvidovreavis.dk hvidover-*-1080x1080.
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -434,6 +459,9 @@ msFilterList
 # politikenDK (08 02 2025)
 :  aj2*.online
 :  aj2*.bid
+# skagensavisDK (30 05 2025)
+- wp-content uploads i123_ads
+# hvidovreavisDK (30 05 2025)
 # — — — — —
 # 🇳🇴：Generelle oppføringer med kilder
 # 🇬🇧：Generic entries that have sources
@@ -582,6 +610,7 @@ msFilterList
 # veier24NO
 # migogaarhusDK, migogaalborgDK, migogkbhDK
 # frolendingenNO, ytringenNO (20 05 2025)
+# flaDE (30 05 2025)
 # — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
@@ -589,8 +618,9 @@ msFilterList
 -d samimag.no Screenshot-2020-03-21-at-12.40.32.png
 # https://www•aftenposten•no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
 # Should not have ":not" + ":empty" added to it due to costume•no
+# https://github.com/uBlockOrigin/uAssets/issues/28638
 # — — — — — — — — —
-# 🇳🇴：IP-adresse
+# 🇳🇴 🇩🇰：IP-adresser
 # 🇳🇴🏞：IP-adressar
 # 🇬🇧：IP addresses
 :  3.248.18.175
@@ -685,8 +715,10 @@ msFilterList
 +d sp-prod.net
 # ★★★ Caused by «Peter Lowe's Ad and tracking server list» ★★★
 # ★★★ Caused by «Dan Pollock's hosts file» ★★★
+# ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
++d cookiebot.com
 !
-# 🇳🇴：Anti-'CPU-massakrering'
+# 🇳🇴 🇩🇰：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
 # 🇬🇧：Anti-'CPU slaughtering'
 # 🇳🇴：——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———

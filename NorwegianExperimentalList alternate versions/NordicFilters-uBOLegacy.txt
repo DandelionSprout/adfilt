@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for «uBlock Origin Legacy»)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for «uBlock Origin Legacy»)
-! Last modified: 28May2025v1-Beta
+! Last modified: 02June2025v4-Beta
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1326,6 +1326,12 @@ kunmedierne.dk##.dvrt
 kunmedierne.dk##a.dvrt-link ~ .posts-slider
 politiken.dk###js-ad-grid
 politiken.dk##.js-ad-elem
+kjavis.dk##div[id^=td_uid_1_]
+kjavis.dk##aside[class^="widget_text "]:has(.averticement)
+norskebank.no###yui-main
+norskebank.no###header:style(height:unset!important)
+bankimistnorge.com##.container-right
+bankernorge.com##aside#sidebar
 ! — — — — — — — — —
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1780,6 +1786,31 @@ _1170x400.$domain=eyjafrettir.is,image,1p
 ||fotballen.eu/20*casino.$image
 ||sportsidioten.no/wp-content/uploads/*-oslo-sportslager-pc.$image
 ||counter4all.dk/wp-content/uploads/*-300x250.$image
+||kjavis.dk/wp-content/uploads/20*/900x180_$image
+||kjavis.dk/wp-content/uploads/20*-Banner-$image
+||kjavis.dk/wp-content/uploads/20*/Ann-$image
+||kjavis.dk/wp-content/uploads/20*/jme3.png^$image
+||kjavis.dk/wp-content/uploads/20*_300x250px_$image
+||kjavis.dk/wp-content/uploads/20*/Vaffelhuset-1.png$image
+||kjavis.dk/wp-content/uploads/20*/Ryobi-Slag-JPEG.$image
+||kjavis.dk/wp-content/uploads/20*/berghodt.jpg^$image
+||kjavis.dk/wp-content/uploads/20*_ann_$image
+||kjavis.dk/wp-content/uploads/20*/annonce-$image
+||kjavis.dk/wp-content/uploads/20*/Marslev-cykler-1.png$image
+||kjavis.dk/wp-content/uploads/20*/Kirkeladen.png^$image
+||kjavis.dk/wp-content/uploads/20*/Aeldresagen-1-$image
+||kjavis.dk/wp-content/uploads/20*/Cykelgaarden-1.png$image
+||kjavis.dk/wp-content/uploads/20*/930X120_$image
+||kjavis.dk/wp-content/uploads/20*/vvs-eks.png^$image
+||kjavis.dk/wp-content/uploads/2025/04/Byg.png|$image
+||kjavis.dk/wp-content/uploads/2025/01/breg.png|$image
+||kjavis.dk/wp-content/uploads/20*/930x180_$image
+||kjavis.dk/wp-content/uploads/20*/Benedikte-1.png|$image
+||kjavis.dk/wp-content/uploads/20*/Munkebo-kro.png|$image
+||kjavis.dk/wp-content/uploads/20*/20-3.jpg|$image
+||kjavis.dk/wp-content/uploads/20*/Topann-$image
+||kjavis.dk/wp-content/uploads/20*/ellinge4.png|$image
+||www.hvidovreavis.dk/media/*/hvidover-*-1080x1080.$image
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -1824,6 +1855,10 @@ no##section.noHeader:has(amedia-include[param-url*=innocode])
 ! politikenDK (08/02/2025)
 ://aj2*.online^$xmlhttprequest
 ://aj2*.bid^$xmlhttprequest
+! skagensavisDK (30/05/2025)
+/wp-content/uploads/i123_ads^$image
+! hvidovreavisDK (30/05/2025)
+.dk/media/*-topbanner-$image
 ! — — — — —
 ! 🇳🇴：Generelle oppføringer med kilder
 ! 🇬🇧：Generic entries that have sources
@@ -2147,6 +2182,8 @@ tv2.no##.aside > .ad-container
 ! frolendingenNO, ytringenNO (20/05/2025)
 ##.nf-o-moduleblock-module:has(> .nf-o-annonse)
 ##div.nf-js-scrollable-item:not(:has(*))
+! flaDE (30/05/2025)
+##.component__pubble-banner:not(html):not(body):not(:empty)
 ! — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2170,8 +2207,12 @@ rbkweb.no##font > table:first-of-type
 baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! Should not have ":not" + ":empty" added to it due to costume•no
 ##.bonnier-ad:not(html):not(body)
+! https://github.com/uBlockOrigin/uAssets/issues/28638
+!#if env_firefox
+berlingske.dk##+js(no-fetch-if, googlesyndication)
+!#endif
 ! — — — — — — — — —
-! 🇳🇴：IP-adresse
+! 🇳🇴/🇩🇰：IP-adresser
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
 ://3.248.18.175^
@@ -2362,11 +2403,14 @@ ekstrabladet.dk#@#body>div[id][style]
 @@://haslundalsted.dk^$1p
 @@://mettelindberg.dk^$1p
 @@://nhn.dk^$1p
+! ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
+@@||cookiebot.com^$domain=berlingske.dk
+bytt.no#@##cookiescript_injected
 
 !
 
 
-! 🇳🇴：Anti-'CPU-massakrering'
+! 🇳🇴/🇩🇰：Anti-'CPU-massakrering'
 ! 🇮🇸：And-örgjörvislatrun
 ! 🇬🇧：Anti-'CPU slaughtering'
 spleis.no##+js(set, __INITIAL_STATE__.features.should-show-snow, false)
@@ -2772,7 +2816,7 @@ triplx.dk##.aff-inner-col
 -sparebank1.*.net^$doc,domain=~en-svindelside-som-ikke-er-sparebank1.*
 ! https://www•datahjelperne•no/er-det-deg-facebook-video-spam/
 ||cinefique.com^$doc
-/^(https?://)?[a-z]{10,12}\.easy\.co($|/.*$)/$doc
+/^(https?://)?[a-z]{10,12}\.easy\.co(/.*)?$/$doc
 ! https://www•datahjelperne•no/posten-sms-svindel/
 ||niupaiba.com^$doc
 ! https://www•adressa•no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece

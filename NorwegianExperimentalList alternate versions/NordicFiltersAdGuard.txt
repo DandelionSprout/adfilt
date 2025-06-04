@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 30May2025v1
+! Last modified: 02June2025v4
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1327,6 +1327,10 @@ politiken.dk###js-ad-grid
 politiken.dk##.js-ad-elem
 kjavis.dk##div[id^=td_uid_1_]
 kjavis.dk##aside[class^="widget_text "]:has(.averticement)
+norskebank.no###yui-main
+norskebank.no#$##header { height:unset!important }
+bankimistnorge.com##.container-right
+bankernorge.com##aside#sidebar
 ! — — — — — — — — —
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -2202,8 +2206,12 @@ rbkweb.no##font > table:first-of-type
 baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! Should not have ":not" + ":empty" added to it due to costume•no
 ##.bonnier-ad:not(html,body)
+! https://github.com/uBlockOrigin/uAssets/issues/28638
+!#if env_firefox
+berlingske.dk##+js(no-fetch-if, googlesyndication)
+!#endif
 ! — — — — — — — — —
-! 🇳🇴：IP-adresse
+! 🇳🇴/🇩🇰：IP-adresser
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -2408,11 +2416,14 @@ ekstrabladet.dk#@#body>div[id][style]
 @@://haslundalsted.dk^$~third-party
 @@://mettelindberg.dk^$~third-party
 @@://nhn.dk^$~third-party
+! ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
+@@||cookiebot.com^$domain=berlingske.dk
+bytt.no#@##cookiescript_injected
 
 
 
 
-! 🇳🇴：Anti-'CPU-massakrering'
+! 🇳🇴/🇩🇰：Anti-'CPU-massakrering'
 ! 🇮🇸：And-örgjörvislatrun
 ! 🇬🇧：Anti-'CPU slaughtering'
 spleis.no##+js(set, __INITIAL_STATE__.features.should-show-snow, false)
@@ -2826,7 +2837,7 @@ triplx.dk##.aff-inner-col
 -sparebank1.*.net^$document,domain=~en-svindelside-som-ikke-er-sparebank1.*
 ! https://www•datahjelperne•no/er-det-deg-facebook-video-spam/
 ||cinefique.com^$document
-/^(https?://)?[a-z]{10,12}\.easy\.co($|/.*$)/$document
+/^(https?://)?[a-z]{10,12}\.easy\.co(/.*)?$/$document
 ! https://www•datahjelperne•no/posten-sms-svindel/
 ||niupaiba.com^$document
 ! https://www•adressa•no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece

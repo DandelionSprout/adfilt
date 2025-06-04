@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre (Møter ABPs inkluderingsregler — Firefox ≥121, Chrom* ≥105)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters (With ABP inclusion compliance — Firefox ≥121, Chrom* ≥105)
-! Version: 300520251
+! Version: 020620254
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1277,6 +1277,9 @@ politiken.dk###js-ad-grid
 politiken.dk##.js-ad-elem
 kjavis.dk##div[id^=td_uid_1_]
 kjavis.dk##aside[class^="widget_text "]:has(.averticement)
+norskebank.no###yui-main
+bankimistnorge.com##.container-right
+bankernorge.com##aside#sidebar
 ! — — — — — — — — —
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -2137,8 +2140,9 @@ rbkweb.no##font > table:first-of-type
 baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! Should not have ":not" + ":empty" added to it due to costume•no
 ##.bonnier-ad:not(html,body)
+! https://github.com/uBlockOrigin/uAssets/issues/28638
 ! — — — — — — — — —
-! 🇳🇴：IP-adresse
+! 🇳🇴/🇩🇰：IP-adresser
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
 ://3.248.18.175^
@@ -2313,10 +2317,13 @@ ekstrabladet.dk#@#body>div[id][style]
 @@://haslundalsted.dk^$~third-party
 @@://mettelindberg.dk^$~third-party
 @@://nhn.dk^$~third-party
+! ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
+@@||cookiebot.com^$domain=berlingske.dk
+bytt.no#@##cookiescript_injected
 
 
 
-! 🇳🇴：Anti-'CPU-massakrering'
+! 🇳🇴/🇩🇰：Anti-'CPU-massakrering'
 ! 🇮🇸：And-örgjörvislatrun
 ! 🇬🇧：Anti-'CPU slaughtering'
 
@@ -2776,7 +2783,7 @@ triplx.dk##.aff-inner-col
 -sparebank1.*.net^
 ! https://www•datahjelperne•no/er-det-deg-facebook-video-spam/
 ||cinefique.com^
-/^(https?://)?[a-z]{10,12}\.easy\.co($|/.*$)/
+/^(https?://)?[a-z]{10,12}\.easy\.co(/.*)?$/
 ! https://www•datahjelperne•no/posten-sms-svindel/
 ||niupaiba.com^
 ! https://www•adressa•no/pluss/nyheter/2021/03/30/Ser-du-hvilken-profil-som-er-ekte-23739076.ece
