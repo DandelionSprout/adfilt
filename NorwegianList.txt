@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 04June2025v2
+! Last modified: 05June2025v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2259,9 +2259,6 @@ icelandreview.com##.mk-padding-divider
 kvf.fo##.panels-flexible-row-grein-rnd-13
 oyggjatidindi.com##.bottom_space
 talkmore.no##.spacer
-tnt-tv.no,tnt-tv.dk##.desktop_element.promo
-tnt-tv.no,tnt-tv.dk##.logos
-tnt-tv.no,tnt-tv.dk##.tabs_placeholder
 yrkesbil.no#?#td:has-text(/^\xA0$/):not(:has-text(/^.*\s.*$/)):not(:has(img))
 yrkesbil.no#?#tr:has-text(/^\xA0$/):not(:has-text(/^.*\s.*$/)):not(:has(img))
 foodora.no##.top-skinny-banner-container
@@ -2302,19 +2299,13 @@ dagsavisen.no##:is(p,h2):has(> br:only-of-type:empty)
 @@||glow.posten.no/api/tracking/*$xhr,1p
 ! Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
 @@||seher.no/reise$ghide
-! folkebladet.no; Makes job position lists show up correctly
-@@||stillingledig.*.no^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
 @@.isdownorblocked.com^$doc
-! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 ! ★★★ Caused by «EasyPrivacy» ★★★
 ! Attempting to fix a problem with voting online on Idol Norway
 @@||tv2.no/*/config/analytics.json$xhr,1p
 ! Attempts to resolve how some frontpage articles are hard to open
 @@||schibsted.com/autoTracker$domain=vg.no
-! 🇳🇴：Får Discovery+ sin påloggingsside til å vises riktig
-! 🇬🇧：Makes Discovery+'s login page show up properly
-@@||mparticle.com^*/login$domain=discoveryplus.com
 ! https://github.com/easylist/easylist/issues/18542 (These entries are here to stay, regardless of the report's outcome.)
 @@||medlemskap.*.no^
 @@||bestill.help.no^$1p
@@ -2322,7 +2313,7 @@ dagsavisen.no##:is(p,h2):has(> br:only-of-type:empty)
 ||medlemskap.fagforbundet.no^$badfilter
 ! Bank login problems
 @@/pm-blikunde/1x1.png^$domain=sparebank1.no
-! ★★★ Caused by «Fanboy's Social Blocking List», if I recall correctly ★★★
+! ★★★ Caused by «EasyList – Social Widgets», if I recall correctly ★★★
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
 @@||api.instagram.com^$domain=samiteahter.org
@@ -2330,13 +2321,11 @@ krom.is#@#.share-container
 ! https://github.com/easylist/easylist/issues/7805 (05/05/2021)
 @@||cookieinformation.com^$domain=gulesider.no|degulesider.dk|krak.dk|altibox.no
 ! ★★★ Caused by «Fanboy's Annoyances List» and «EasyList Cookie List» ★★★
-dagbladet.no,elbil24.no#@#.subscription-box
 ! https://github.com/ryanbr/fanboy-adblock/issues/1243
 ||ktg-content.cdn.prismic.io/api/*/documents/*(my.newsletter_popup.uid
 ! https://github.com/ryanbr/fanboy-adblock/issues/1339
 @@/obj/global/feature/tagCommander/$script,domain=billetlugen.dk|eventim.no
 ! https://github.com/ryanbr/fanboy-adblock/issues/1468
-lampegiganten.dk,lampegiganten.no#@#.newsletter-popup
 lampegiganten.dk,lampegiganten.no#@##newsletter-overlay
 @@/newsletter/newsletter_popup.gif^$domain=lampegiganten.dk|lampegiganten.no
 !#if !ext_ublock
@@ -2350,10 +2339,7 @@ tikkio.com#@#.mfp-ready
 ! https://github.com/DandelionSprout/adfilt/discussions/779#discussioncomment-5962141
 @@||vg.no^$generichide,badfilter
 ! ★★★ Caused by «EasyList» ★★★
-@@_prebid_$domain=seher.no
-@@/images/ads-db/right-tower/vipps-sponsor-$domain=canariajournalen.no
 eyjar.net#@#.side_ads
-@@/adnetwork/*$domain=fla.de
 @@://billink*.blob.core.windows.net/*/annonser^
 @@||finn.no/user/ads.html^$popup
 check-in.dk#@#.home-ads
@@ -2369,7 +2355,7 @@ babyklar.dk#@#.ad-cell
 babyklar.dk#@#.ads300-250
 ! Makes 1p info banners show up correctly
 @@_980x100.$domain=ruijan-kaiku.no
-! https://github.com/uBlockOrigin/uAssets/issues/11546 (Not yet forwarded to EasyList)
+! https://github.com/uBlockOrigin/uAssets/issues/11546
 findbolig.nu#@#.advertLink
 ! https://github.com/uBlockOrigin/uAssets/issues/13907
 @@://imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=tv2.dk
@@ -2378,14 +2364,11 @@ sosialurin.fo#@#.ads-banner
 ! ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 ! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 telenor.no##.global-overlay-background
-! ★★★ Caused by «Schacks Adblock Plus liste» ★★★
-! https://github.com/ryanbr/fanboy-adblock/issues/1410
-ekstrabladet.dk#@#body>div[id][style]
 ! ★★★ Unknown cause ★★★
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
 @@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
-! https://new.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
+! https://new•reddit•com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 @@||cmp.ekstrabladet.dk/get_site_data$xhr,1p
 @@||dialogue.sp-prod.net/messagingWithoutDetection.js$script,domain=ekstrabladet.dk
 @@||notice.sp-prod.net^$frame,domain=ekstrabladet.dk
@@ -2400,9 +2383,6 @@ ekstrabladet.dk#@#body>div[id][style]
 @@://haslundalsted.dk^$1p
 @@://mettelindberg.dk^$1p
 @@://nhn.dk^$1p
-! ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
-@@||cookiebot.com^$domain=berlingske.dk
-bytt.no#@##cookiescript_injected
 
 !
 !#include NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt
