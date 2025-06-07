@@ -3536,14 +3536,8 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"(Description: .*)$",
-           r"\1\n!#if !env_mv3",
-           line
-        )
-
-        line = re.sub(
-           r"(if-a-large-hosts-file.*)",
-           r"\1\n!#endif",
+           r"^.* if-a-.*$",
+           r"",
            line
         )
 
@@ -6956,6 +6950,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(.*[a-z])\^([a-z].*)$",
+           r"\1^$\2",
+           line
+        )
+
         if is_supported_agh(line):
             text += line + '\n'
 
@@ -7678,6 +7678,7 @@ SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alte
 
 OUTPUT = 'Anti-Malware List/xyzzyxips.txt'
 OUTPUT_DOMAINS = 'Anti-Malware List/Dandelion Sprout\'s and other adblocker lists\' IPs.ipset'
+OUTPUT_P2P = 'Anti-Malware List/Dandelion Sprout\'s and other adblocker lists\' IPs for P2P.p2p'
 
 # function that downloads the filter list
 def download_filters() -> str:
@@ -7687,7 +7688,7 @@ def download_filters() -> str:
         text += r.text
     return text
 
-# function that prepares the filter list for AdGuard Home
+# function that prepares the filter list for the standard IP version
 def prepare_domains(lines) -> str:
     text = ''
 
@@ -7783,8 +7784,144 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^# ?([a-zABCGI-SU-Z0-9]|\(|F[a-np-z0-9]|T[a-hj-z0-9]).*$",
+           r"^# ?([a-zABCGI-SU-Z0-9#🇬🇧🇳🇴]|\(|F[a-np-z0-9]|T[a-hj-z0-9]).*$",
            r"",
+           line
+        )
+
+        if not line == '':
+            text += line + '\n'
+
+    return text
+
+# function that prepares the filter list for P2P
+def prepare_p2p(lines) -> str:
+    text = ''
+
+    previous_line = None
+
+    for line in lines:
+            
+        if line == previous_line:
+            continue
+
+        line = re.sub(
+           r"^[a-zA-Z!_*/İ=%&-].*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^\d.*[a-zA-Z!_*-].*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^# [—¤|].*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^# [a-zA-Z0-9 ,.'\"()/→≥İ-]{1,}$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^# (Translated title|Source|Note|Platform notes):.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^# Title: 📔.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^# (Version|Last[ -]?[Mm]odified): [a-zA-Z0-9]{1,}$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^# For m.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*Nordic Filters.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*nordiske filtre.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^# Title: .*$",
+           r"# Title: Dandelion Sprout's and other adblocker lists' IPs (P2P)",
+           line
+        )
+
+        line = re.sub(
+           r"^# Description: .*$",
+           r"# Description: This IP set combines IP and CIDR addresses from plentiful of major adblocker lists. It contains heavily altered content from Dandelion Sprout's Anti-Malware List, Dandelion Sprout's Nordic Filters, EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, and EasyList Spanish.\n# For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english",
+           line
+        )
+
+        line = re.sub(
+           r"^# (These|Google|Gigabyte|Copied).*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^:.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^# ?([a-zABCGI-SU-Z0-9#🇬🇧🇳🇴]|\(|F[a-np-z0-9]|T[a-hj-z0-9]).*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^(\d.*)$",
+           r"F:\1-\1",
+           line
+        )
+
+        line = re.sub(
+           ".0/24-",
+           ".0-",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\.0/24$",
+           r"\1.255",
+           line
+        )
+
+        line = re.sub(
+           r"^.*\.\d{1,3}:\d.*$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"^\[(.*)\]$",
+           r"F-IPv6:[\1]-[\1]",
            line
         )
 
@@ -7800,12 +7937,16 @@ if __name__ == "__main__":
     print('Total number of rules: ' + str(len(lines)))
 
     domains_filter = prepare_domains(lines)
+    p2p_filter = prepare_p2p(lines)
 
     with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
         text_file.write(text)
 
     with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
         text_file.write(domains_filter)
+
+    with open(OUTPUT_P2P, "w", encoding="utf-8", newline='\n') as text_file:
+        text_file.write(p2p_filter)
 
     print('The combined IP list has been generated.')
 
