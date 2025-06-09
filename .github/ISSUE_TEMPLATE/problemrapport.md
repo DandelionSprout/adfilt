@@ -1,6 +1,6 @@
 ---
 name: (Norsk / noget dansk) Problemrapport
-about: For å melde inn ødelagte nettsteder, lister, og/eller funksjoner
+about: For å/at melde inn ødelagte nettsteder, lister, og/eller funksjoner
 title: ''
 labels: Problem report
 assignees: ''
