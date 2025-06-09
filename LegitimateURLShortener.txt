@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 02June2025v1
+! Version: 09June2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1646,7 +1646,7 @@ $removeparam=BVBRANDID
 $removeparam=iu_parts
 $removeparam=adnxs_uid
 $removeparam=CookieSyncId
-$removeparam=variationId
+!!!$removeparam=variationId (Not the best of ideas to remove from URLs, for instance for ottoDE)
 $removeparam=ayl_id
 $removeparam=prev_scp
 $removeparam=beeswax_id
@@ -5034,6 +5034,10 @@ ref=dtf.ru$doc,removeparam=ref
 
 ! https://str-03•filestore•app/(...) (24/05/2025)
 ||filestore.app^$doc,removeparam=/^client_ip=$/
+
+! https://l•clips4sale•com/clip/••••••••?a=3&o=7 (09/06/2025)
+||l.clips4sale.com^$removeparam=a
+||l.clips4sale.com^$removeparam=o
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
