@@ -4151,6 +4151,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(# ——— Dummy entry.*)$",
+           r"! Fikser en absurd feil hvor T-We sin Android-app kan mislykkes i å starte opp, grunnet en stor glitch mange enheter (inkl. Windows) har med IPv6-domener hvis IP-svar starter med «64:ff9b::».\n||tvs.telenor.net^$dnstype=AAAA\n\n\1",
+           line
+        )
+
         text += line + '\n'
 
     return text
