@@ -24,7 +24,7 @@ The server attempts to block ads, malware, fake webshops, push notifications, an
 
 On the other hand, it goes easy on trackers, and blocks things I really don't like, such as rightwing tabloids (Daily Mail, Breitbart, 4chan), near-entire top-level domains (.tk, .top), scat, websites specifically dedicated to unfairly popular media (Azur Lane, Friendship is Magic), Scientology, a fair few US Evangelist hate preachers, and Twitch's "Prime Loot Reminder" plugin.
 
-Current list set as of 2nd of October 2022:
+Current list set as of 12 June 2025:
 
 #### Lists against ads, against app notifications, and against a few trackers
 * Dandelion Sprout's AdGuard Home Compilation List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList.txt
@@ -61,8 +61,8 @@ Current list set as of 2nd of October 2022:
 
 #### Lists against other things
 * 🚪 Browse websites without logging in (for AdGuard Home) — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Other%20domains%20versions/BrowseWebsitesWithoutLoggingInAGH.txt
-* 🏘 Semi-public stuff for Dandelion Sprout's Official DNS Server — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/a%20%E2%80%94%20AdGuard%20Home%20Miscellaneous.txt
-* RiiConnect24/Wiimmfi List for Users of AdGuard Home and Pi-Hole — https://raw.githubusercontent.com/RiiConnect24/DNS-Server/master/dns_zones-hosts.txt
+* 🏘 Semi-public stuff for Dandelion Sprout's Official DNS Server — https://raw.githubusercontent.com/DandelionSprout/adfilt2/master/a%20%E2%80%94%20AdGuard%20Home%20Miscellaneous.txt
+<!--* RiiConnect24/Wiimmfi List for Users of AdGuard Home and Pi-Hole — https://raw.githubusercontent.com/RiiConnect24/DNS-Server/master/dns_zones-hosts.txt-->
 
 #### Allowlists
 * 🌭 Falukorv List — https://raw.githubusercontent.com/DandelionSprout/adfilt/master/FalukorvList.txt
