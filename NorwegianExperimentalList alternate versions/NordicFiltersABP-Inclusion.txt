@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre (Møter ABPs inkluderingsregler — Firefox ≥121, Chrom* ≥105)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters (With ABP inclusion compliance — Firefox ≥121, Chrom* ≥105)
-! Version: 100620251
+! Version: 120620254
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -596,6 +596,8 @@ jubii.dk##.mobiletakeover-background
 norskemagasinet.com##a[href*=freespin]
 fodbold-transfers.dk##.post-content > p:has(a[href*=casino])
 livescore.dk##div[style^="padding:5px; "]
+maritimedanmark.dk##.banner-hidden:has(>div[class*=banner-wrapper])
+maritimedanmark.dk##.banner-hidden:has([class*=ad-wrapper])
 bilnorge.no###artikkel300x250right
 viaplay.no,viaplay.dk,viaplay.is##.interaction-block
 gamer.no##.feed--commercial
@@ -1146,6 +1148,9 @@ kommunikationsforum.dk##.banner-top
 itavisen.no##.td-c-loop-ad
 baatplassen.no##.ipsWidget:has(> .adsbygoogle)
 installator.dk##.addon--ad
+kanalfrederikshavn.dk##div.top-banner-first
+kanalfrederikshavn.dk##.contentcontainer-column:has(.banner-bm-rec)
+kanalfrederikshavn.dk##.frame:first-of-type:not([class*=news]):has(.tx-dce-container)
 test.no##.ad-position-top
 tvkampen.com,tvsporten.dk##a.p-icon.partner
 norges.online##.modal-backdrop
@@ -2133,6 +2138,8 @@ tv2.no##.aside > .ad-container
 ##.nf-o-moduleblock-module:has(> .nf-o-annonse)
 ! flaDE (30/05/2025)
 ##.component__pubble-banner:not(html,body,:empty)
+! https://www•kanalfrederikshavn•dk/vis/nyhed/oslo-faergernes-skaebne-i-frederikshavn-afgoeres-foerst-efter-sommerferien
+##.tx-dce-container:not(html,body,:empty)
 ! — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2926,8 +2933,8 @@ triplx.dk##.aff-inner-col
 ||hoka-sko.com^$popup
 ||hoka-one-one.cc^
 ||hoka-one-one.cc^$popup
-||hokaoneone*
-||hokaoneone*$popup
+/^(https?://)?hokaoneone[a-z0-9].*$/
+/^(https?://)?hokaoneone[a-z0-9].*$/$popup
 *norgeskosalg.
 *norgeskosalg.$popup
 *norge-salg.com^
