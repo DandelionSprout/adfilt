@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Last modified: 12June2025v4
+! Last modified: 15June2025v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1721,9 +1721,7 @@ contentMarketing$xhr,domain=sol.no|sol-no.translate.goog
 ||spanienidag.es/sites/default/files/patrocinadores^
 /^.*://w{3}\.(tu|d\ig\i)\.n\o/(\d|[a-zA-Z_-]){130,}$/$xhr,domain=no
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.*
-||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.*|gamereactor.*|vg.no
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=eurosport.*|gamereactor.*
-||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.*|gamereactor.*|vg.no
 ||static.finncdn.no/*/FINNExternalDistribution.js^$domain=aftenbladet.no|aftenposten.no
 ||static.vg.no/css/admark_top.gif^
 ||stream.fo/wp-content/uploads/*-300x111.jpg^
@@ -1822,6 +1820,8 @@ _1170x400.$domain=eyjafrettir.is,image,1p
 ||kjavis.dk/wp-content/uploads/20*/Topann-$image
 ||kjavis.dk/wp-content/uploads/20*/ellinge4.png|$image
 ||www.hvidovreavis.dk/media/*/hvidover-*-1080x1080.$image
+||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.*|gamereactor.*|vg.no
+||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.*|gamereactor.*|vg.no
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2395,6 +2395,8 @@ telenor.no##.global-overlay-background
 @@://haslundalsted.dk^$1p
 @@://mettelindberg.dk^$1p
 @@://nhn.dk^$1p
+! ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
+@@||glassoginterior.no/css/modules/consent.css^
 
 !
 
@@ -3216,6 +3218,9 @@ $all,ipaddress=185.53.177.52
 ||195.242.152.122^$all
 $all,ipaddress=195.242.152.122
 ||mygoodmerch.com^$all
+! https://www•tv2•no/nyheter/forbruker/sjokksvar-pa-epost-harreisende/17805239/
+! https://www•tv2•no/nyheter/forbruker/tenkte-shit-na-har-jeg-blitt-lurt/17474448/
+||takstskolen.no^$doc,domain=~suspekt_sertifiseringssystem_*
 
 ! 🇬🇧：Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 ||nofotballshop.com^$doc

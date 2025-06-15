@@ -1,6 +1,6 @@
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Privoxy)
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for Privoxy)
-# Last modified: 02June2025v4-Deprecated
+# Last modified: 15June2025v1-Deprecated
 # Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # 🇳🇴：Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -464,11 +464,7 @@
 {+block}
 .ssl.p.jwpcdn.com*/freewheel.js$script,domain=eurosport.*
 {+block}
-.ssl.p.jwpcdn.com*/jwpsrv.js$script,domain=eurosport.*|gamereactor.*|vg.no
-{+block}
 .ssl.p.jwpcdn.com*/sharing.js$script,domain=eurosport.*|gamereactor.*
-{+block}
-.ssl.p.jwpcdn.com*/vast.js$script,domain=eurosport.*|gamereactor.*|vg.no
 {+block}
 .static.finncdn.no/*/FINNExternalDistribution.js$domain=aftenbladet.no|aftenposten.no
 {+block}
@@ -660,6 +656,10 @@
 .kjavis.dk/wp-content/uploads/20*/ellinge4.png|
 {+block}
 .www.hvidovreavis.dk/media/*/hvidover-*-1080x1080.
+{+block}
+.ssl.p.jwpcdn.com*/jwpsrv.js$script,domain=eurosport.*|gamereactor.*|vg.no
+{+block}
+.ssl.p.jwpcdn.com*/vast.js$script,domain=eurosport.*|gamereactor.*|vg.no
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -871,6 +871,7 @@
 # migogaarhusDK, migogaalborgDK, migogkbhDK
 # frolendingenNO, ytringenNO (20/05/2025)
 # flaDE (30/05/2025)
+{+block{https://www•kanalfrederikshavn•dk/vis/nyhed/oslo-faergernes-skaebne-i-frederikshavn-afgoeres-foerst-efter-sommerferien}}
 # — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
@@ -930,13 +931,9 @@
 {-block}
 .glow.posten.no/api/tracking/*
 # Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
-# folkebladet.no; Makes job position lists show up correctly
-{-block}
-.stillingledig.*.no
 {+block{https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537}}
 {-block}
 .isdownorblocked.com
-{+block{https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261}}
 # ★★★ Caused by «EasyPrivacy» ★★★
 # Attempting to fix a problem with voting online on Idol Norway
 {-block}
@@ -944,10 +941,6 @@
 # Attempts to resolve how some frontpage articles are hard to open
 {-block}
 .schibsted.com/autoTracker$domain=vg.no
-# 🇳🇴：Får Discovery+ sin påloggingsside til å vises riktig
-# 🇬🇧：Makes Discovery+'s login page show up properly
-{-block}
-.mparticle.com*/login$domain=discoveryplus.com
 {+block{https://github.com/easylist/easylist/issues/18542 (These entries are here to stay, regardless of the report's outcome.)}}
 {-block}
 .medlemskap.*.no
@@ -959,7 +952,7 @@
 # Bank login problems
 {-block}
 ./pm-blikunde/1x1.png$domain=sparebank1.no
-# ★★★ Caused by «Fanboy's Social Blocking List», if I recall correctly ★★★
+# ★★★ Caused by «EasyList – Social Widgets», if I recall correctly ★★★
 {-block}
 ./images/*youtube.jpg$domain=realityportalen.dk
 {-block}
@@ -983,12 +976,6 @@
 # ★★★ Caused by «Fanboy's Enhanced Blocking List» ★★★
 {+block{https://github.com/DandelionSprout/adfilt/discussions/779#discussioncomment-5962141}}
 # ★★★ Caused by «EasyList» ★★★
-{-block}
-._prebid_$domain=seher.no
-{-block}
-./images/ads-db/right-tower/vipps-sponsor-$domain=canariajournalen.no
-{-block}
-./adnetwork/*$domain=fla.de
 @@://billink*.blob.core.windows.net/*/annonser
 {-block}
 .finn.no/user/ads.html$popup
@@ -1007,25 +994,18 @@
 # Makes 1p info banners show up correctly
 {-block}
 ._980x100.$domain=ruijan-kaiku.no
-{+block{https://github.com/uBlockOrigin/uAssets/issues/11546 (Not yet forwarded to EasyList)}}
+{+block{https://github.com/uBlockOrigin/uAssets/issues/11546}}
 {+block{https://github.com/uBlockOrigin/uAssets/issues/13907}}
 {+block{http://sosialurin•fo/news-detail/steypafinala-vilhelm-og-rogvi-a-ruv1-fra-klokkan-1630}}
 # ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
-# ★★★ Caused by «AdGuard Annoyances Filter» and «AdGuard Tracking Protection Filter» ★★★
-# (Currently empty.)
-# ★★★ Caused by «AdGuard Popups Filter» ★★★
-{-block}
-./https:\/\/www.gamer.no\/[0-9a-f]{32,40}$/
-# ★★★ Caused by «Schacks Adblock Plus liste» ★★★
-{+block{https://github.com/ryanbr/fanboy-adblock/issues/1410}}
 # ★★★ Unknown cause ★★★
 {+block{https://github.com/DandelionSprout/adfilt/issues/67}}
 {-block}
 .fe.adstate.net/assets/common/img/web_ad$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
 {-block}
 .fe.adstate.net/stream_file.php?type=ad_preview_image$domain=aasavis.no|amta.no|an.no|ao.no|auraavis.no|austagderblad.no|avisenagder.no|ba.no|bygdebladet.no|bygdeposten.no|dalane-tidende.no|dt.no|eikerbladet.no|enebakkavis.no|f-b.no|finnmarkdagblad.no|finnmarken.no|firda.no|firdaposten.no|fremover.no|gbnett.no|gjengangeren.no|glomdalen.no|h-avis.no|ha-halden.no|hadeland.no|hardanger-folkeblad.no|helg.no|iharstad.no|indre.no|jarlsbergavis.no|jbl.no|kv.no|kvinnheringen.no|laagendalsposten.no|lierposten.no|lofotposten.no|lyngdalsavis.no|moss-avis.no|nidaros.no|noblad.no|nordhordland.no|nordlys.no|oa.no|oblad.no|op.no|ostlendingen.no|oyene.no|r-a.no|rablad.no|ranablad.no|rb.no|retten.no|rha.no|ringblad.no|ringsaker-blad.no|sa.no|sandeavis.no|sandnesposten.no|sb.no|smaalenene.no|sognavis.no|solabladet.no|solungavisa.no|strandbuen.no|svelviksposten.no|ta.no|tb.no|telen.no|tk.no|tvedestrandsposten.no|varingen.no|vestbyavis.no
-{+block{https://new.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/}}
+{+block{https://new•reddit•com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/}}
 {-block}
 .cmp.ekstrabladet.dk/get_site_data
 {-block}
@@ -1045,7 +1025,7 @@
 @@://nhn.dk$1p
 # ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
 {-block}
-.cookiebot.com$domain=berlingske.dk
+.glassoginterior.no/css/modules/consent.css
 # 🇳🇴/🇩🇰：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
 # 🇬🇧：Anti-'CPU slaughtering'
@@ -1637,6 +1617,9 @@
 .195-242-152-122.static.hvvc.us
 .195.242.152.122
 .mygoodmerch.com
+{+block{https://www•tv2•no/nyheter/forbruker/sjokksvar-pa-epost-harreisende/17805239/}}
+{+block{https://www•tv2•no/nyheter/forbruker/tenkte-shit-na-har-jeg-blitt-lurt/17474448/}}
+.takstskolen.no
 # 🇬🇧：Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 .nofotballshop.com
 .nofotballstore.com

@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 02June2025v4-Deprecated
+# Last modified: 15June2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -325,9 +325,7 @@ msFilterList
 -d spaniaidag.no Kolstad-Gif-SI.gif
 -d spanienidag.es patrocinadores
 -d ssl.p.jwpcdn.com freewheel.js
--d ssl.p.jwpcdn.com jwpsrv.js
 -d ssl.p.jwpcdn.com sharing.js
--d ssl.p.jwpcdn.com vast.js
 -d static.finncdn.no FINNExternalDistribution.js
 -d stream.fo *-300x111.jpg
 -d teknologiskmatforum.no ViewImage.aspx?*width=343
@@ -420,6 +418,8 @@ msFilterList
 -d kjavis.dk Topann-
 -d kjavis.dk ellinge4.png
 -d www.hvidovreavis.dk hvidover-*-1080x1080.
+-d ssl.p.jwpcdn.com jwpsrv.js
+-d ssl.p.jwpcdn.com vast.js
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -611,6 +611,7 @@ msFilterList
 # migogaarhusDK, migogaalborgDK, migogkbhDK
 # frolendingenNO, ytringenNO (20 05 2025)
 # flaDE (30 05 2025)
+# https://www•kanalfrederikshavn•dk/vis/nyhed/oslo-faergernes-skaebne-i-frederikshavn-afgoeres-foerst-efter-sommerferien
 # — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
@@ -661,21 +662,16 @@ msFilterList
 # 🇬🇧：——— Unbreakage ———
 # Posten's new parcel tracker, fixes the form for giving them delivery information (doorbell name number)
 # Makes articles that would be counted as ads anywhere else on SeHer, show up on that page.
-# folkebladet.no; Makes job position lists show up correctly
-+d stillingledig.*.no
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-683430537
 +d isdownorblocked.com
-# https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-689373261
 # ★★★ Caused by «EasyPrivacy» ★★★
 # Attempting to fix a problem with voting online on Idol Norway
 # Attempts to resolve how some frontpage articles are hard to open
-# 🇳🇴：Får Discovery+ sin påloggingsside til å vises riktig
-# 🇬🇧：Makes Discovery+'s login page show up properly
 # https://github.com/easylist/easylist/issues/18542/(These/entries/are here to stay, regardless of the report's outcome.)
 +d medlemskap.*.no
 -d medlemskap.fagforbundet.no
 # Bank login problems
-# ★★★ Caused by «Fanboy's Social Blocking List», if I recall correctly ★★★
+# ★★★ Caused by «EasyList – Social Widgets», if I recall correctly ★★★
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
 # https://github.com/easylist/easylist/issues/7805/(05/05/2021)
@@ -691,32 +687,25 @@ msFilterList
 # https://github.com/DandelionSprout/adfilt/discussions/779#discussioncomment-5962141
 +d vg.no
 # ★★★ Caused by «EasyList» ★★★
-+d _prebid_
 @@://billink*.blob.core.windows.net/*/annonser
 # https://raw.githubusercontent.com/hkarn/scandinavianlist/master/scandinavianlist/scandinavianlist_whitelist.txt
 # Forum feeds in the upper right of articles
 # Makes 1p info banners show up correctly
 +d _980x100.
-# https://github.com/uBlockOrigin/uAssets/issues/11546/(Not/yet/forwarded to EasyList)
+# https://github.com/uBlockOrigin/uAssets/issues/11546
 # https://github.com/uBlockOrigin/uAssets/issues/13907
 @@://imasdk.googleapis.com/js/sdkloader/ima3.js
 # http://sosialurin•fo/news-detail/steypafinala-vilhelm-og-rogvi-a-ruv1-fra-klokkan-1630
 # ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
-# ★★★ Caused by «AdGuard Annoyances Filter» and «AdGuard Tracking Protection Filter» ★★★
-# (Currently empty.)
-# ★★★ Caused by «AdGuard Popups Filter» ★★★
-# ★★★ Caused by «Schacks Adblock Plus liste» ★★★
-# https://github.com/ryanbr/fanboy-adblock/issues/1410
 # ★★★ Unknown cause ★★★
 # https://github.com/DandelionSprout/adfilt/issues/67
-# https://new.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
+# https://new•reddit•com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
 +d notice.sp-prod.net
 +d sp-prod.net
 # ★★★ Caused by «Peter Lowe's Ad and tracking server list» ★★★
 # ★★★ Caused by «Dan Pollock's hosts file» ★★★
 # ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
-+d cookiebot.com
 !
 # 🇳🇴 🇩🇰：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
@@ -1056,7 +1045,7 @@ msFilterList
 -d hokaskooutlet.co.no
 -d hoka-sko.com
 -d hoka-one-one.cc
--d hokaoneone*
+- (https?:  )?hokaoneone[a-z0-9].*
 # https://www•adressa•no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull
 # https://www•adressa•no/nyheter/trondheim/i/69d3lL/spisesteder-rammet-det-er-forferdelig-jeg-fikk-panikk
 -d sitey.me
@@ -1330,6 +1319,9 @@ msFilterList
 -d 195-242-152-122.static.hvvc.us
 -d 195.242.152.122
 -d mygoodmerch.com
+# https://www•tv2•no/nyheter/forbruker/sjokksvar-pa-epost-harreisende/17805239/
+# https://www•tv2•no/nyheter/forbruker/tenkte-shit-na-har-jeg-blitt-lurt/17474448/
+-d takstskolen.no
 # 🇬🇧：Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
