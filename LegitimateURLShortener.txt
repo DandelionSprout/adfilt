@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 14June2025v1
+! Version: 16June2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1786,6 +1786,9 @@ $removeparam=uls_trackid
 
 ! https://www•superkul•no/taste-them-all-dr-pepper-bokser-usa-import-seks-smake-pakketilbud-bundle-234239?gad_campaignid=15598895886
 $removeparam=gad_campaignid
+
+! https://www•vitusapotek•no/mage-og-tarm/halsbrann/pepcidduo-tyggetab-%7C-vitusapotek/p/006859?source=googleps&keyword=&device=m (16/06/2025)
+$removeparam=/^source=googleps$/
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
@@ -5040,6 +5043,10 @@ ref=dtf.ru$doc,removeparam=ref
 ! https://l•clips4sale•com/clip/••••••••?a=3&o=7 (09/06/2025)
 ||l.clips4sale.com^$removeparam=a
 ||l.clips4sale.com^$removeparam=o
+
+! https://www•vitusapotek•no/mage-og-tarm/halsbrann/pepcidduo-tyggetab-%7C-vitusapotek/p/006859?source=googleps&keyword=&device=m (16/06/2025)
+||vitusapotek.no^$removeparam=keyword
+||vitusapotek.no^$removeparam=device
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
