@@ -1,6 +1,6 @@
 # Title: 📔 Dandelion Sprouts nordiske filtre (for AdGuard Home, AdGuard for Android/Windows/macOS sine DNS-filtreringer, AdGuard Private DNS, og Pi-Hole FTL ≥5.22)
 # Translated title: Dandelion Sprout's Nordic Filters (for AdGuard Home, AdGuard for Android/Windows/macOS' DNS filtering, AdGuard Private DNS, and Pi-Hole FTL ≥5.22)
-# Version: 14June2025v1
+# Version: 14June2025v3
 # 🇳🇴：Beskrivelse: Dette er en mindre versjon av «Dandelion Sprouts nordiske filtre", designet for brukere av programvarer som ikke støtter adblocker-syntaker. Den tar primært for seg svindler, skadevare, og reklamer på norske, danske, islandske, og færøyske nettsteder.
 # 🇩🇰：Beskrivelse: Dette er en slankere version af »Dandelion Sprouts nordiske filtre« beregnet til brugere af softwareværktøjer, der ikke understøtter adblocker-syntakser. Den er primært rettet mod svindel, malware og reklamer på danske, norske, islandske og færøske hjemmesider.
 # Description: This is a slimmer version of "Dandelion Sprout's Nordic Filters", intended for users of software tools that doesn't support adblocker syntaxes. It chiefly targets scams, malware and adverts, on Norwegian, Danish, Icelandic and Faroese websites.
@@ -850,11 +850,18 @@ butikksoslo.com^
 @@||mettelindberg.dk^
 @@||nhn.dk^
 
-
 ! Fikser en absurd feil hvor T-We sin Android-app kan mislykkes i å starte opp, grunnet en stor glitch mange enheter (inkl. Windows) har med IPv6-domener hvis IP-svar starter med «64:ff9b::».
 ||tvs.telenor.net^$dnstype=AAAA
 ! Lignende glitch i Klarna-appens kortbildeopplasting
 ||s3.eu-west-1.amazonaws.com^$dnstype=AAAA
+! Glitch i BankID
+|toba.bankidapis.no|$dnstype=AAAA
+|stoeapp.no|$dnstype=AAAA
+! Mulig glitch i Hjelp 113-appen
+|ws.snla-it.no|$dnstype=AAAA
+! Glitch i Eika Mobilbank
+|app.eika.no|$dnstype=AAAA
+|www.eika.no|$dnstype=AAAA
 
 # ——— Dummy entry used to give myself credit, for when this list is used in large compilation hosts-type files (Although they are fully allowed by my licence to use this list, it'd be nice for me and end-users to see where it's being used, as a few of them do not credit their sources) ———
 ||if-a-large-hosts-file-contains-this-entry-then-it.uses-dandelion-sprouts-nordic-domains-as-a-source-list.data^
