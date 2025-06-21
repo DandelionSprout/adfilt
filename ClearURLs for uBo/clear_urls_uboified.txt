@@ -1,7 +1,7 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 2025-06-04
+! Last updated: 2025-06-20
 ! Script last updated: 2025-2-11
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
@@ -109,6 +109,7 @@
 ||google.*^$removeparam=iflsig
 ||google.*^$removeparam=fbs
 ||google.*^$removeparam=ictx
+||google.*^$removeparam=cshid
 $removeparam=/^utm(_[a-z_]*)?=/
 $removeparam=/^ga_[a-z_]+=/
 $removeparam=yclid
@@ -216,7 +217,6 @@ $removeparam=pp,domain=youtube.com|youtu.be
 ||techcrunch.com^$removeparam=guccounter
 ||techcrunch.com^$removeparam=guce_referrer
 ||techcrunch.com^$removeparam=guce_referrer_sig
-||bing.*^$removeparam=form
 ||bing.*^$removeparam=sk
 ||bing.*^$removeparam=sp
 ||bing.*^$removeparam=sc
@@ -782,6 +782,8 @@ $removeparam=pp,domain=youtube.com|youtu.be
 @@||cu.bankid.com^$removeparam
 @@||login.aliexpress.us^$removeparam
 @@||ieeexplore.ieee.org^$removeparam
+@@||sendgb.com/upload/?*utm_source=$removeparam
+@@||firebaseappdistribution.googleapis.com/app-binary-downloads/projects/?*utm_source=$removeparam
 @@||amazon-adsystem.*/v3/oor?$removeparam
 @@||youtube.com/signin?$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?facebook\.com\/.*?(plugins|ajax)\//$removeparam
