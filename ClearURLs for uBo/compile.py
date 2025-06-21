@@ -21,11 +21,12 @@
 
 # this code has been modified by https://github.com/iam-py-test and others, as to improve compatibility and fix issues
 
-import json
-import sys
-import hashlib
-from datetime import date
-from typing import IO
+# Syncing is temporarily stopped as of 21 June 2025, since the update bot would re-open PRs after all commits elsewhere in the repo, with those PRs insisting on breaking Mercadolibre in particular (and to a lesser extent Shopee) by changing it to a non-working syntax.
+#import json
+#import sys
+#import hashlib
+#from datetime import date
+#from typing import IO
 
 import requests  # type: ignore
 
@@ -34,7 +35,7 @@ HEAD = """\
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
 ! Last updated: {date}
-! Script last updated: 2025-2-11
+! Script last updated: 2025-6-21
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Warning: This list may break websites, and contains many problematic rules. Worse, it may even prevent other filterlists from working. There is not much the Adfilt maintainers can do, as this list is just the ClearURLs rules converted into a uBo/AdGuard filterlist. Use with caution.
