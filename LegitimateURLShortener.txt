@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 22June2025v1
+! Version: 22June2025v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2286,8 +2286,8 @@ $doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ! https://translate•google•com/?hl=no&tab=TT&sl=ja&tl=en&op=translate (14/06/2025)
 ||translate.google.com^$removeparam=/^tab=TT$/
 ! https://ipv6•google•com/search?q=site:www•microsoft•com/en-us/download/details•aspx?id%3D+%222023%22+-%222016%22&start=40&sstk=Ac65TH4a4yF4347UmfsIR4y2O_LK3QFE1vtUHoXn7e6O_iXGJsIShl1hhKS988jizw8M9G1nhsSyO-cYt8BlkvfRzPEvrAerLeRR1hgFlGlaMpps07rumhuAW1hD-oRsO543
-||www.google.com^$removeparam=sstk
-||ipv6.google.com^$removeparam=sstk
+||www.google.$doc,removeparam=sstk
+||ipv6.google.com^$doc,removeparam=sstk
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
 @@://www.google.*/maps^$removeparam=utm_campaign
 @@://ipv6.google.com/maps^$removeparam=utm_campaign
