@@ -23,6 +23,7 @@
 * `:has-text(text)`: Finds page elements that contains such text within it.
 * `:has(.element)`: Finds page elements that contains such an element within it.
 * `:has(>` : Tells `:has` to only find elements whose criteria match their <b>immediate</b> subelement(s).
+* * Example: `nrk.no##.johnmadden:has(> .aeiou)`
 * `:not(:has-text(Text))` / `:not(:has(.element))`: Looks for elements whose text/subelements *doesn't* meet the selection.
 * `:nth-of-type(n)` / `:nth-last-of-type(n)`: Finds page elements that are at a specific numerical position in a set. Note that `:nth-last-of-type(n)`'s numbering goes in reverse order. To select multiple numbers, one has to use `n` calculations (e.g. `(n+2)`), since ranges (e.g. `(3-6)`) are not supported.
 * `:only-of-type` / `:first-of-type` / `:last-of-type`: Less versatile versions of the above, for which numbers can't be chosen.
@@ -36,10 +37,12 @@
 
 ##### Advanced examples:
 * The first two `##` of an element entry, are not used for elements written after e.g. `>`, `+` or `:has`. In those cases, the `##` in `##element` gets removed, `##.class` becomes `.class`, and `###id` becomes `#id`.
+* * An example is that `nrk.no##.johnmadden.aeiou` is correct, but `nrk.no##.johnmadden##.aeiou` won't work.
 * `##element.class`: Hide something both based on its element (##element1) and `class` value (.class). Note the placement/absence of fullstops.
 * While they're based on the same `class` values, `##.element1` will match any `class` (sub-)value, whereas `##div[class="element1"]` and their modifiers are based on the *entire* `class` string in the F12 filetree.
 * `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or (domain-)specific, where they have one or more domains in front of them, separated by commas. uBO/AdGuard support wildcard asterisks (`*`) in such domains, and only for the immediate pre-TLD part; while ABP/AdBlock do not.
-* `##div:is(.element1,.element2)`: Compression of `##div.element1` and `##div.element2`. It is extremely rare that this would be needed in lists for uBlock Origin or Adblock Plus (who would be able to use `##div.element1,div.element2` in all circumstances), but it could help work around problems in AdGuard with `##element1,element2:has(-text)` that are explained in its section below.
+* `##div:is(.element1,.element2)`: Compression of `##div.element1` and `##div.element2`.
+* * (Some older lists may still use `##div.element1,div.element2` for this, but this would be a really, really bad idea when used in AdGuard).
 
 #### File blocking (a.k.a. blocking rules, a.k.a. non-#-rules)
 * \[no prefix\]: Blocks resources that have this text string *anywhere* in its URL.
@@ -64,7 +67,18 @@
 #### Universal
 * `! ` / `# `: Marks the start of a comment that shall not be interpreted as an entry.
 * `/\/\/\/`, `/regextext/`, and similar: Text detections in <b>RegEx</b> format. Supported in most (if not all) blocking rules, as well as in `:has-text`. Note that *all* blocking rules that start and end with `/` are treated as RegEx; the intended workaround is to add a `*` after, which makes `*` supposedly serve as a plaintext indicator, instead of as a wildcard.
-* * <i>Insider tip for very advanced users: If you see a RegEx that ends with `.*/`, change it to `.*$/`. Likewise, if it starts with `/.*`, change it to `/^.*`. Depending on the entry, this can reduce CPU usage quite a lot.</i>
+* * Most industry standards for RegEx are followed, so the most important ones are:
+* * `.*` = wildcarding of any length. Example: `/John.*Madden/`
+* * `()` = Section to apply divider or optional-marking to.
+*  `|` = Divider. Example of both: `/(John|Madden)/`
+* * `[]` = A set of characters to match 1 of. Example: `/Jo[a-zA-Z0-9!?.:,;-]nMadden`.
+* * If a hyphen `-` is needed to be matched, it must be at the end of the box, before the right square bracket `]`.
+* * Starting the box with a caron (`[^`) will tell the RegEx to match anything **except** the other characters in the box. Example: `/Joh[^n]Madden/`
+* * `?` = The character or section before it is optional to match. Example: `/John?Madden/`
+* * `\.` = Backslashing is needed for some characters in order for the characters to be treated as normal characters (and not as RegEx shortcut codes), most commonly `.`, but also `'`, `"`, `(`, `)`, and some others. Example: `/\"John Madden\.\"/`
+* * Ending `/i` = Makes the RegEx case-insensitive. Example: `/JohnMadden/i`
+* * `\d` = Same as `[0-9]`.
+* * <i>Insider tip for very advanced users: If you see a RegEx that ends with `.*/`, change it to `.*$/`. Likewise, if it starts with `/.*`, change it to `/^.*`, making it for example `/^.*John Madden.*$/`. Depending on the entry, this can reduce CPU usage quite a lot. Not 100% guaranteed to work in `:has-text`, with for instance Tumblr being a site where it doesn't always work.</i>
 * `[Adblock Plus n.n]`: Mandatory for Adblock Plus and forks of them, as they use the tag to determine if they should load the filterlist. This has *no* effect on uBO and AdGuard or their forks. Number is the intended minimum ABP version. `2.0` and `1.1` are most common; `3.10` and higher is on the rise and can be used to block support for old or low-quality forks. It also enables the GitHub syntax highlighter for that file.
 * * `[uBlock Origin]`, `[AdGuard]`: These activate the syntax highlighter if the file is hosted on GitHub, should be placed on the first line of the list.
 * `! Title:` Specifies the intended name of the list. Required to make the name <b>automatically show up</b> in the settings of most adblockers, instead of the URL or of manual text input.
@@ -91,9 +105,6 @@
 * `$removeparam` (prev. `$queryprune`): Removes URL parameters, e.g. `?tracker=sitecampaignpage`. Supports RegEx, but with many differences (One example, is that wildcarding is done with `/^textstart-/` instead of `/textstart-.*/`), since its RegEx blocks based on the parameter *and* its value, that a lack of `/^` will make it search *anywhere* in that string, and a lack of support for backslashing. Whitelistings must match the exact parameter that was blocked. Doesn't seem to work for desktop programs with "AdGuard for Windows".
 * `$match-case`: Makes the criteria case-sensitive. uBO only supports it in RegEx entries.
 
-## uBlock Origin and Adblock Plus only
-* `##element1,element2:has(-text)`: Combines and subjects two elements to the same `:has`/`:has-text` criteria. Very bad idea to use in AdGuard, where all instances of `element1` would be blocked. This can be worked around by changing it to `##:is(element1,element2):has(-text)`
-
 ## uBlock Origin only:
 #### Hiding
 * `!#include`: Embeds another filterlist that is hosted on the same domain. Despite AdGuard's claim that they also support it, their support only applies to lists that are natively included in AdGuard. Tonnes of restrictions apply, such as refusing to embed lists from another domain / repository / parent-folder.
@@ -109,22 +120,23 @@
 * `/^regextext\.(...)$/##.element`: Allows specifying domains through RegEx for very extensive wildcard possibilities. For example, `/^nitter\..*$/##.element` would match `nitter.*.*`. For practical reasons, the use of sentence-start `^` and sentence-end `$` are highly advised, especially so for `$`. Can be comma-combined with regular domains, for example `/^nitter\..*$/,google.com##.element`.
 #### Blocking
 * `127.0.0.1` / `0.0.0.0` / `::1` / `0` / `::`: Used by "*hosts*" system files to signify that network requests to such a domain shall be redirected to a local-only IP address, thus preventing it from loading. uBO treats it the same as `||`. It only supports whole domains; using `/` or any other non-alphanumeric-or-period characters is not accepted.
-* `$3p`: Same as `$third-party`.
-* `$strict3p`: Same as `$third-party`, but also considers other subdomains to be 3rd-party, i.e. if `www.example.org` loads an asset from `subdomain.example.org`, the latter is now considered 3rd-party.
-* `$1p` / `$first-party`: Same as `$~third-party`.
 * `$strict1p`: Same as `$first-party` but considers other subdomains to not be 1st-party, i.e. if `www.example.org` loads an asset from `subdomain.example.org`, the latter is now considered 3rd-party.
-* `$xhr`: Same as `$xmlhttprequest`.
-* `$doc`: Same as `$document`. May cause problems in some versions of AdGuard.
+* `$strict3p`: Same as `$third-party`, but also considers other subdomains to be 3rd-party, i.e. if `www.example.org` loads an asset from `subdomain.example.org`, the latter is now considered 3rd-party.
 * `$all`: De facto combines all other `$` values. Officially combines the use of no `$` values at all + `$popup` + `$document` + `$inline-script` + `$inline-font`.
 * `$redirect-rule`: Similar to `$redirect`, but is only applied if it's already blocked by *another* entry or dynamic rule(set).
-* `$mp4`: Equivalent to `$redirect=noopmp4-1s,media`.
-* `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname`, and `$cname` for blocking, also exist, but are poorly documented. Not needed for entries that already have `$doc`. Only applies to Firefox and Tor Browser.
-* `$from`: Same as `$domain`.
+* `@@` + `$cname`: Prevents another site from being strict-blocked if the domain shows up in its CNAME response. `$~cname` and `$cname` for blocking also exist, but are poorly documented. Not needed for entries that already have `$doc`. Only applies to Firefox and Tor Browser.
 * `$denyallow` + `,domain=`: Allows choosing which third-party domain requests to allowlist, instead of which ones to block, while visiting specified domains.
 * `$to`: Superset of `$denyallow`. Supports TLD-wildcard (`google.*`) hostnames and negated hostnames (`~example.com`).
 * `$ipaddress`: Partially similar to AdGuard's `$network`, but is unable to block webpages outright. Only works in Firefox and Tor Browser.
+* * Example for IPv4: `$ipaddress=245.123.45.67`. IPv6 works spotty at best.
+* `$mp4`: Equivalent to `$redirect=noopmp4-1s,media`.
+* `$1p` / `$first-party`: Same as `$~third-party`.
+* `$3p`: Same as `$third-party`.
+* `$xhr`: Same as `$xmlhttprequest`.
+* `$doc`: Same as `$document`. May cause problems in some older versions of AdGuard.
+* `$from`: Same as `$domain`.
 
-## Adblock Plus and AdGuard only:
+## AdGuard and uBlock Origin only:
 * `$webrtc`: Prevents WebRTC (Real-Time Communication) connections which is usually used by messengers and games. The uBO equivalent is `##+js(nowebrtc)`, but conversion is not done automatically. It is deprecated in AdGuard, which has transitioned over to uBO's `##+js(nowebrtc)`.
 
 ## Adblock Plus only:
@@ -158,10 +170,12 @@
 * `@@` + `$urlblock`: Turns off file-request blocking entirely while on that domain.
 * `$removeheader`: Removes lines found in the F12 Dev Tools → Network → Ctrl+F to let it record the whole page's loading → All → Name → "Response Headers" or "Request Headers".
 
-## AdGuard for [Windows/Mac/Android] only:
+## AdGuard for [Windows/Mac/Android/CLI] only:
 
 * `$app`: Ensures the entry is only applied to a specific phone app(s) or PC executable(s).
+* * Example: `||example.com^$app=com.google.android`
 * `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Individual ports can be specified with `:`. IPv6 addresses must be surrounded by square brackets. Can very easily break legitimate sites as collateral damage, and should be used very sparingly. Despite what AdGuard's syntax guide indicates, it does in fact support wildcarding both with and without RegEx.
+* * Example for IPv4: `245.123.45.67$network`
 * `@@` + `$jsinject`: Prevents `#%#` entries from working on that site.
 * `@@` + `$extension`: Prevents AdGuard userscripts from working on that site.
 * `@@` + `$content`: Prevents `$$script` entries from working on that site.
@@ -176,11 +190,12 @@
 # Other particularly important usage notes
 
 * To make the text detection for `:has-text` case-insensitive, wrap the paranthesised text into `(/Example text/i)`.
-* The `"` in `[href="text"]` is optional, but *only* if the criteria text is only a single word, and has no numbers, slashes, or certain other characters.
+* The `"` in `[href="text"]` is optional, but *only* if the criteria text is only a single word, does not start with a number, and has no slashes certain other characters.
 * `:style` and `{ }` do not allow the use of URL values.
 * It is claimed in [this comment](https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-481978609) that Safari does not properly accept the use of `$third-party`.
 * In Opera, the F12 filetree is not actually opened with F12, but instead with Ctrl+Shift+I (Capital İ).
 * No entries can use both `||` and `##` at the same time.
 * Major note to advanced CSS experts: Some advanced terms have been replaced in this guide, because they'd be less than obvious to laymen who'd need this guide.
+* [Why I use "John Madden aeiou"](https://www.youtube.com/watch?v=Hv6RbEOlqRo) as my placeholder text for almost every project. Works far better than Lorem Ipsum.
 
 ¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, and Adblock Plus versions 3.13-3.20. It does **not** include AdGuard Home, Brave Browser, Adblock Plus ≥4.0, Slimjet, uBlock non-Origin, Tracking Protection List, Blokada, or Pi-hole, whose syntax supports are considerably inferior to the above list.
