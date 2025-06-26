@@ -70,7 +70,7 @@
 * * Most industry standards for RegEx are followed, so the most important ones are:
 * * `.*` = wildcarding of any length. Example: `/John.*Madden/`
 * * `()` = Section to apply divider or optional-marking to.
-*  `|` = Divider. Example of both: `/(John|Madden)/`
+* * `|` = Divider. Example of both: `/(John|Madden)/`
 * * `[]` = A set of characters to match 1 of. Example: `/Jo[a-zA-Z0-9!?.:,;-]nMadden`.
 * * If a hyphen `-` is needed to be matched, it must be at the end of the box, before the right square bracket `]`.
 * * Starting the box with a caron (`[^`) will tell the RegEx to match anything **except** the other characters in the box. Example: `/Joh[^n]Madden/`
