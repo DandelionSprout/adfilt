@@ -8,6 +8,7 @@
 
 #### Element removal (a.k.a. cosmetic rules, a.k.a. hiding rules, a.k.a. ##-rules)
 * `##.`: Hides page elements, based on one or more `class` values in the F12 "Elements" filetree (separated with full-stops).
+* * No syntaxes in this section ("Element removal") support using URLs (i.e. ones with `/`) in the domain. So something like `www.nrk.no/nyheter/##.johnmadden` would not work.
 * `##`: Hides page elements based on the element type, e.g. `a`, `li`, `button`, `iframe`, etc., that are usually highlighted in purple in the F12 DOM (Document Object Model) "Elements" index.
 * `###`: Hides page elements based on the `id` value.
 * `#@#.`/`#@#`/`#@##`: Whitelists page elements to make them load.
