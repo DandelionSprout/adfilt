@@ -1019,13 +1019,13 @@ if __name__ == "__main__":
     agh_filter = prepare_agh(lines)
     ip_filter = prepare_ip(lines)
 
-    with open(OUTPUT, "w") as text_file:
+    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_AGH, "w") as text_file:
+    with open(OUTPUT_AGH, "w", encoding="utf-8", newline='\n') as text_file:
         text_file.write(agh_filter)
 
-    with open(OUTPUT_IP, "w") as text_file:
+    with open(OUTPUT_IP, "w", encoding="utf-8", newline='\n') as text_file:
         text_file.write(ip_filter)
 
     print('The list versions have been generated.')
@@ -1591,10 +1591,10 @@ if __name__ == "__main__":
 
     agh_filter = prepare_agh(lines)
 
-    with open(OUTPUT, "w") as text_file:
+    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_AGH, "w") as text_file:
+    with open(OUTPUT_AGH, "w", encoding="utf-8", newline='\n') as text_file:
         text_file.write(agh_filter)
 
     print('The notifications list version has been generated.')
