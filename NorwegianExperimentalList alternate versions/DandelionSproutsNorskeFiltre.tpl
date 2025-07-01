@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 15June2025v1-Deprecated
+# Last modified: 01July2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -612,6 +612,7 @@ msFilterList
 # frolendingenNO, ytringenNO (20 05 2025)
 # flaDE (30 05 2025)
 # https://www•kanalfrederikshavn•dk/vis/nyhed/oslo-faergernes-skaebne-i-frederikshavn-afgoeres-foerst-efter-sommerferien
+# seoghoerDK (01 07 2025)
 # — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
