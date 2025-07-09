@@ -1,6 +1,6 @@
 [Adblock Plus 3.18]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 29June2025v1-Personal
+! Version: 09July2025v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suﬀixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-oﬀ pre-alpha list concepts of mine.
 !#if !env_mv3
@@ -14,18 +14,18 @@
 !#include VeryThoroughWebsiteCleaner.txt
 !#include TwitchEvenMorePureViewingExperience.txt
 !#include Sensitive%20lists/Dandelion%20Sprout's%20Anti-Religion%20List.txt
-!#include AntiNonNewsList.txt
 !#include AntiBadCapitalismList.txt
 !#include AntiGachaAndKnockoffGamesList.txt
+!#if !adguard_app_windows
+!#include AntiNonNewsList.txt
+!#endif
 !#if !env_mobile
 !#include WebsiteStretcher4K.txt
 !#endif
 ! /\/\ Standalone lists: /\/\
 !#include Imperial%20Units%20Remover.txt
 !#include Sensitive%20lists/AntiWeebBoobGamesList.txt
-!#include Anti-'Google%20Hangouts'%20List.txt
 !#include Sensitive%20lists/Anti-'StockVectorArtOnCopypasteBackgrounds'.txt
-!#include Sandbox/deviantART%20Sanity%20Test%20List.txt
 !#include AntiFakeTransparentImagesList.txt
 !#include AntiCorruptSportsList.txt
 !#include Conversions%20of%20AdGuard%20Services%20lists/bilibili.txt
@@ -39,6 +39,9 @@
 !#include Conversions%20of%20AdGuard%20Services%20lists/tiktok.txt
 !#include Conversions%20of%20AdGuard%20Services%20lists/qq.txt
 !#include Sensitive%20lists/AntiGlorificationOfBabiesList.txt
+!#if !adguard_app_windows
+!#include Sandbox/deviantART%20Sanity%20Test%20List.txt
+!#endif
 !#if !env_mobile
 !#include Anti-'Christmas%20carols'%20List.txt
 !#endif
@@ -99,7 +102,6 @@ deviantart.com##div[class^=_]:nth-of-type(2):last-of-type a[href*="/team/journal
 kemono.*#?#.post-card:has(a:has-text(/\sChapter\s[1-9]/i))
 kemono.*#?#.post-card:has(a:has-text(/\sCh\.\s[1-9]/))
 soundcloud.com#?#:is(.badgeList__item,.g-scrollable-inner li,.systemPlaylistTrackList__item,.playableTile,.sound):has-text(/^.*Tourn(a\ment|ey).*$/i)
-||fileplanet.com^$all
 finn.no##.ads__unit:has(a[href*="/job/"]):has-text(/Selger\s|\ssalg\?|salgskar{2}\iere|But\ik{2}selger|salgs|inkas{2}o|salgskonsulent|[sS]elgere|BPA|UPH\EADS|salgsas{2}\istent|R[eE][mM][aA]\s1000|Storcash|Berge\sBe\man{2}\ing|Fretex|B\itastad|E\m\irates\sA\irl\ine/)
 foodora.no#?#.vendor-tile-wrapper:has-text(Pizz):not(:has-text(Egon))
 microsoft.com#?##primaryR1:style(padding-left: 2% !important; padding-right: 0% !important)
@@ -108,6 +110,8 @@ vinmonopolet.no##.product-item:has-text(/\sØl\s|Chardon{2}a\y|Lager|Muscat|R\is
 finn.no###buyer-experience-collections-podlet-app
 order.stjernegrillen.no##.uk-animation-scale-up:has-text(/Bacon|Pepperoni|Skinke|Sjampingjong|champignon|Jalapeño|Reker|Tabasco/i)
 deviantart.com##div[style^="width:"][style*="display:"]:has(img[alt*="Adopts " i])
+!#if !adguard_app_windows
+||fileplanet.com^$all
 www.tumblr.com##:is(div[data-timeline*="/timeline/"] div[style^=width] > div[tabindex],div[data-timeline*="/blog/"] header + div + div > div):has-text(/^.*tourna\ment.*$/i):has-text(/^.*pol{2}.*$/i)
 www.tumblr.com##:is(div[data-timeline*="/timeline/"] div[style^=width] > div[tabindex],div[data-timeline*="/blog/"] header + div + div > div):has-text(/#.*incor{2}ect[a-z0-9 ]{0,20}quote.*note/i)
 www.tumblr.com##:is(div[data-timeline*="/timeline/"] div[style^=width] > div[tabindex],div[data-timeline*="/blog/"] header + div + div > div):has-text(/^.*bab\y\s?factor\y.*$/i)
@@ -349,6 +353,7 @@ www.tumblr.com#?#div:is([data-timeline*="/timeline/hub"],[data-timeline*="/timel
 ! I am absolutely embarrassed by how short memory spans people online have. It's "Han shot first" on metamphetamine.
 ! That being said, I think the world understood "Okay, okay, we get it, you are able to do brutal counterattacks, okay." as early as December. 5 months later, it seems like Fist of the North Star's ruined cities are considered the intended goal.
 tumblr.com#?#:is(.post,div[data-cell-id][style]:not([data-cell-id*=timelineObject i]),div[tabindex]:is([style^=m],[data-id]:not([class*=" "]),:not([style],[class]))):has-text(/^.*(g[aа]za|palest\in|isr[аa]el|(\s|#)ha\mas|z\i\on).*note.*$/i):not(:has-text(/emozion/i)):watch-attr(class):watch-attr(style)
+!#endif
 player.pop.co.uk##.swiper-slide:has(object[alt*=Roblox i],object[alt*=CoComelon i],object[alt*=Blippi i],object[alt*="Swipe " i])
 bing.*##.scroll_cont
 deviantart.com##a[href*="?topic="]:is([href*=powerpuff],[href*=equestria i],[href*=danny-phantom],[href*=cookie-run])
@@ -482,7 +487,6 @@ reports.adblockplus.org##.slick-viewport:style(min-height: 2100px !important)
 !#if env_mobile
 pixiv.net##.works-item:has(img[alt=feeties i])
 pixiv.net##.works-item:has(img[alt^="blocked," i])
-
 pixiv.net##.works-item:has(img[alt*=oot i][alt*=worship i])
 pixiv.net##.works-item:has(img[alt~=tickling i])
 pixiv.net##.works-item:has(img[alt*=kaa i]:is([alt*=hypno i],[alt*=snake i],[alt*=jungle i]))
@@ -535,9 +539,11 @@ rule34.xxx##.thumb:has(img[alt*=zfive]:not([alt*=fairy]))
 
 ! Websites I just really don't like, without it being deserving of going on public lists
 !!!||deviantart.com^$document
+!#if !adguard_app_windows
 ||latexstories.net^$document
 ||palemoon.org^
 ||108.61.245.105^
+!#endif
 !#if adguard
 108.61.245.105$network
 !#endif
@@ -547,8 +553,6 @@ rule34.xxx##.thumb:has(img[alt*=zfive]:not([alt*=fairy]))
 
 ! Caused by "AdGuard Annoyances Filter - Anti-Adblock".
 @@||translate.googleusercontent.com^$generichide,badfilter
-! Caused by «uBlock Filters — Unbreak», which unhid around 20 empty boxes. (I should see if they've fixed it sometime since.)
-!!!@@||wikihow.com^$generichide,badfilter
 
 ! 🇨🇳 TikTok and Douyin (Partially switching over to a conversion of AdGuard's TikTok service blocker fairly soon; but these whitelistings are admittedly needed just in case)
 @@||tiktok.com^$1p
@@ -568,12 +572,16 @@ rule34.xxx##.thumb:has(img[alt*=zfive]:not([alt*=fairy]))
 /sa_en/*$doc,third-party
 tvkampen.com##.match-list > div:has(a:is([href*=saud],[href*=aramco],[href*=jedda]))
 ||lifeinsaudiarabia.$doc,script,xmlhttprequest
+!#if !adguard_app_windows
 ! https://www•theguardian•com/media/2023/aug/15/vice-blocked-news-stories-that-could-offend-saudi-arabia-insiders-say
 ||vice.com^$all
+!#endif
 
 ! Me and PR-China don't get particularly well along
 ||cn^
+!#if !adguard_app_windows
 ||alidns.com^
+!#endif
 
 ! I have a very long set of traumas from 2020-22, that have led to me not wanting to remember anything of that era ever again (except for Karsten Warholm's Olympic gold. That one was great.)
 rule34.xxx,gelbooru.com,booru.org,sankakucomplex.com,tbib.org,xbooru.com,rule34hentai.net,tentaclerape.net##.thumb:has(img[title*=face_mask])
@@ -627,13 +635,16 @@ soundcloud.com#?#:is(.badgeList__item,.g-scrollable-inner li,.systemPlaylistTrac
 soundcloud.com#?#:is(.badgeList__item,.g-scrollable-inner li,.systemPlaylistTrackList__item,.playableTile,.sound):has-text( halation)
 ! ——— Those kinds of "gamers" that are aggressively weebing ———
 steamdb.info#?#.tooltipped:has-text(PCGW)
+!#if !adguard_app_windows
 ||pcgamingwiki.com^$all
+!#endif
 ||discord.com/channels/165183350913499136^$all
 google.*#?#:is(.g,div[data-attrid^="images "]):has-text(/^.*cga\m\ingw\ik\i.*$/i)
 
 ! 🇺🇸 Trading Card Game Remover for Steam
 store.steampowered.com##a[data-ds-tagids*="1666"]:not([href*=Ticket_to_Ride], [href*=Durak], [href*=UNO], [href*=Tabletop])
 
+!#if !android_app_windows
 ! Completely fake invented reasons a whole lot of people make up about them
 tumblr.com##div[data-timeline*=notes_info] div[data-cell-id]:has-text(/^.*d\isne\y.*bo\yc\ot{2}.*note.*$/i):watch-attr(class):watch-attr(style)
 tumblr.com##div:is([aria-label=Replay i],[aria-label=Like i],[aria-label=Reblog i]):has-text(/^.*d\isne\y.*bo\yc\ot{2}.*note.*$/i)
@@ -644,6 +655,7 @@ tumblr.com##div:is([aria-label=Replay i],[aria-label=Like i],[aria-label=Reblog 
 www.tumblr.com##div[data-timeline*="/blog/"] header + div + div > div:has-text(/^.*bo\yc\ot{2}.*d\isne\y.*$/i)
 www.tumblr.com#?#div:is([data-timeline*="/timeline/hub"],[data-timeline*="/timeline/dashboard"]) div[data-cell-id]:has(article p:has-text(/^.*bo\yc\ot{2}.*d\isne\y.*$/i)):watch-attr(class):watch-attr(style)
 tumblr.com,~www.tumblr.com##.with_commentary:has-text(/Bo\yc\ot{2}/i):has-text(/sne\y|m\ouse|Tinker\s?bell|fairy|fairies/i)
+!#endif
 
 !#if !adguard
 ! 🇺🇸 Bad SiİvaGunner stuﬀ
@@ -652,11 +664,13 @@ www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:
 www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text( - Undertale)
 www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text(Nickelodeon All-Star Brawl)
 www.youtube.com#?##dismissable,[lockup],#dismissible > .ytd-grid-video-renderer:has-text( - Five Nights )
+!#endif
 
 ! Fake episode tracking site that is just one big ad for Disney+
 ||simkl.com^$doc,domain=~fake-movie-tracker-that-is-just-a-disney-plus-undercover-ad.*
 google.*##.g:has(a[href*="simkl.com"])
 
+!#if !android_app_windows
 ! 🇳🇴 Guess I can extend my adblocking to IPTV too or something. I wasn't entirely awake-type there when I began writing this.
 twe.no#?#div[style^="width: "]:not([role],[data-id],[data-test-id]):has(div[data-test-id*=underlabel__assetTitle]:has-text(/^.*(mer{2}\y|jul|chr\ist|kr\istus|x\mas|Pre\m\ier\sLeague|Ugl[еe]huset|snø|(^|\s)al\iens|nøt{2}|n\is{2}e|t\inka|hol\ida\y|housew\ives|palvelus|g[u]d|anda[kg]t|galtung|jes{1}us|shofar|U\E\FA\sCha\mp\ion|Manchester\s(Un\ited|C\ity)|Arsenal|Burnle\y|V\i\sbare\sbjørn|powerpuf{2}|event\yrt\id|Mr\.?\sBean|Fulha\m|Brentford|U\F\O|trädgård|t\ivol\i|Kardash\ian|J\ingle|heks|w\itch|b\ibel|k\irke|Donald\sDuck|Kal{2}e\sAnka|Anders\sAnd|All\sthat\sre\ma\ins|hø[y\jg]t\id|Sva\mpebob|Trond\sAl\i|Aston\sV\il{2}a|Greet\ings|\sHalls|Bert\il|We\ihnacht|joulu|ankka|claus|fra\salle\sos|gr\i\m\m\sog\s|kvelden\sfør|Love\sActuall\y|Holl\y|Gr\inch|evangel\i|aang|\skorra|sal\me|alf\sprøysen|sanc?ta|Rad\io\s?3[,.]?16|ny(tt)?år|abu\sdhab\i|OL\s.*(Be\i\j\i|2022)|uudenvuod|Sunderland|Rally:?\sDakar|Ha\ile\y\'?s\sl\ist|P\i\mple\sPopper|Tho\mas\s(och|og|and|&)\s|In\s?\Touch\s?\M\in\ist|West\sHa\m\s|\sp7\s|o(d|đ){2}asat|N\ytt\spå\sN\ytt|Kev\in\sCan\sWa\it|f\jert|pro\mp|saud|jedda|dan\iel\stiger|ros[eе]nb\org|rb{1}k|l\ille[ѕs]trøm|lsk|NHL|Stanley Cup|Ramasjang sover|Minimaanah|Barnmorsk|Questions pour un |Xf\in\ity|Red\sSox|\sAstros\s|Super\sBowl|Cup\sSer\ies|UFC[: ]|Co{1}ps\s\(R\)|Lerk{1}endal|IndyCar|Midt?[vw]est).*$/i))
 twe.no#?#div[style^="width: "]:not([role],[data-id],[data-test-id]):has(div[style^="opacity: "]:has-text(ÆSJ))
@@ -698,6 +712,7 @@ adressa.no,nrk.no,dr.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*=-lando
 adressa.no,nrk.no,dr.dk,vg.no,dagbladet.no,theguardian.com,bbc.*##a[href*=ian-horner i]
 theguardian.com,bbc.*##a[href*=-f1s- i]
 theguardian.com,bbc.*##a[href*="/f1s-" i]
+!#endif
 
 ! I'm getting very bad flashbacks to the 2010-14 blatant rigging era
 adressa.no,nidaros.no,nrk.no,tv2.no,dr.dk,tv2.dk,ekstrabladet.dk,vg.no,dagbladet.no,se,theguardian.com,bbc.*,sermitsiaq.ag##a[href*=eurovision i]
@@ -812,6 +827,7 @@ www.google.*##span[jsslot] div[data-tbnid]:has(a[href*="alibaba.com"])
 ! So that I don't mistake links to it for links to r/thomastheplankengine
 ||reddit.com/r/thomasthetankengine^$doc,domain=~bruk-thomastheplankengine-i-stedet.*
 
+!#if !adguard_app_windows
 ! To browse more easily through AdGuard Filters' and EasyList's issue trackers
 github.com#?#div[class^=IssueRow-module__row-]:has-text(N: AdGuard for iOS)
 github.com#?#div[class^=IssueRow-module__row-]:has-text(N: AdGuard for Safari)
@@ -854,6 +870,7 @@ github.com#?#div[class^=IssueRow-module__row-]:has(a[href*="/easylist/"]:has-tex
 github.com#?#div[class^=IssueRow-module__row-]:has(a[href*="/easylist/"]:has-text(/^.*track.*$/i))
 github.com#?#div[class^=IssueRow-module__row-]:has(a[href*="/easylist/"]:has-text(d3ward))
 github.com#?#div[class^=IssueRow-module__row-]:has(a[href*="/easylist/"]:has-text(/chrom[ei]/i))
+!#endif
 
 ! Disney+ was a mistake
 disneyplus.com##div[class$=-asset]:has([alt*=loki i])
@@ -912,18 +929,21 @@ www.disneyplus.com##div:has(> a:is([aria-label*=loki i],[aria-label*=avengers i]
 
 ! 🇨🇳 Script blocking for PRC sites
 */log/$domain=bilibili.com
-||cm.bilibili.com^$all
 /bili-collect.js$all
 ||bilibili.com^*/data/collector^$all
-||boss.hdslb.com^$all
 ||bilibili.com/x/click-interface^$all
 ||bilibili.com/*/is_forbid^$all
 ||bilibili.com/*/log-reporter.js$all
 */laputa-header/$all
 ||hdslb.com/*/pcdn-$all
 ||hdslb.com/*/nc-loader-$all
+!#if !adguard_app_windows
+||cm.bilibili.com^$all
+||boss.hdslb.com^$all
+!#endif
 
 ! Conspiracy cults that spread blatant shameful lies that have been disproved for ≥10 years (about e.g. DAB, WebP, windmills, VAR, Epic Games Store, etc.)
+!#if !adguard_app_windows
 ||publicaccess.se^
 ||public-service.net^
 ||kringkastingslaget.com^
@@ -932,6 +952,7 @@ www.disneyplus.com##div:has(> a:is([aria-label*=loki i],[aria-label*=avengers i]
 ||motvind.org^$all
 ||wind-watch.org^$all
 ||diskutopia.no^
+!#endif
 ||arstechnica.com^
 ||reddit.com/r/fuckepic^$doc
 adressa.no,nrk.no,tv2.no,vg.no,dagbladet.no,nettavisen.no,www-nrk-no.translate.goog,www-tv2-no.translate.goog##a[href*=supporterklubb i]
@@ -939,6 +960,7 @@ adressa.no,nrk.no,tv2.no,vg.no,dagbladet.no,nettavisen.no,www-nrk-no.translate.g
 adressa.no,nrk.no,tv2.no,vg.no,dagbladet.no,nettavisen.no,www-nrk-no.translate.goog,www-tv2-no.translate.goog##a[href*=klanen i]:is([href*=sport i],[href*=styret i],[href*=klubb i],[href*=fotball i],[href*=support i])
 adressa.no,nrk.no,tv2.no,vg.no,dagbladet.no,nettavisen.no,www-nrk-no.translate.goog,www-tv2-no.translate.goog##a[href*=fotball i][href*=support i]
 
+!#if !adguard_app_windows
 ! Workaround while testing for Chrome freezes (Specifically to see if "Google Hit Hider by Domain" can remain turned oﬀ)
 www.google.*##:is(.g,div[data-attrid^="images "]):has(a[href*="100percentfedup.com"])
 www.google.*##:is(.g,div[data-attrid^="images "]):has(a[href*="10news.one"])
@@ -2002,6 +2024,7 @@ www.tumblr.com#?#div[data-cell-id^=post-]:has(span p:has-text(/^.*w\itchblr.*$/i
 www.tumblr.com#?#div[data-cell-id^=post-]:has(span p:has-text(/^.*w\izardblr.*$/i)):watch-attr(class):watch-attr(style)
 www.tumblr.com#?#div[data-cell-id^=post-]:has(span p:has-text(/^lgc.*$/)):watch-attr(class):watch-attr(style)
 www.tumblr.com#?#div[data-cell-id^=post-]:has(span p:has-text(ARAB WORLD NEWS:)):watch-attr(class):watch-attr(style)
+!#endif
 
 ! How.
 ! Absolute.
@@ -2010,17 +2033,16 @@ www.tumblr.com#?#div[data-cell-id^=post-]:has(span p:has-text(ARAB WORLD NEWS:))
 ! Are.
 ! Human.
 ! Influencers.
-||43.159.24.58^$all
 *$all,ipaddress=43.159.24.58
-! (Only needed until https://github.com/AdguardTeam/HostlistsRegistry/pull/587 gets merged: )
+!#if !adguard_app_windows
+||43.159.24.58^$all
 43.159.24.58
 ||idvo1ty.qiniudns.com^$all
-||xiaohongshu.net^$all
-||xiaohongshu.com.my^$all
 
 ! Installed by PUP nightmares
 ||360totalsecurity.com^$all
 ||360safe.com^$all
+!#endif
 
 ! I've had it with Elkjøp screwing over their own previous reputations and instead selling 95% of their products through 3rd-party web sellers who haven't been bothered to even test their own damn products before selling them to people (I'm looking at you, Cadorabo).
 www.google.*,ipv6.google.com##:is(.g,.ivg-i,.isv-r):has(a[href*="://www.elkjop.no/"],a[href*="://www.elon.no/"],a[href*="://www.onninen.no/"])
