@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 07July2025v2-Deprecated
+# Last modified: 09July2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1349,6 +1349,57 @@ msFilterList
 -d informationer.nu
 -d cphspaogwellness.dk
 -d webavisen.gl
+# 🇬🇧：Various postal credential fraud syndicates
+-d norgeposten.today
+-d norwayposten.today
+-d pakkeposten.today
+-d post-dk.cfd
+-d post-nord-levering.
+-d post-nord-receiving.
+-d posten-track.today
+-d posten-tracker.today
+-d posten-tracks.
+-d postendk.lol
+-d postendsk.lat
+-d postennorge.today
+-d postennorway.today
+-d postenpakke.today
+-d postenserve.today
+-d postenserves.today
+-d postenspor.today
+-d postentrack.today
+-d postentracks.today
+-d postnord-24.site
+-d postnord-all.
+-d postnord-confirmation.
+-d postnord-delay.
+-d postnord-eco.buzz
+-d postnord-eco.cfd
+-d postnord-eco.sbs
+-d postnord-eco.xyz
+-d postnord-order-
+-d postnord-paket.
+-d postnord-pay.
+-d postnord-post.
+-d postnord-se-delivery.
+-d postnord-step.
+-d postnord-step1.
+-d postnord-tracks.
+-d postnord-update.help
+-d postnorde-swe.
+-d postnordexpress.
+-d postnordexpressdelivery-
+-d postnordse.asia
+-d postnordspara.
+-d postnorg-dk*
+-d sporposten.today
+-d 43.100.125.58
+-d 43.159.140.215
+-d 43.162.119.45
+-d 47.76.132.29
+-d 109.230.237.116
+-d 147.93.63.211
+-d 154.223.16.232
 # 🇬🇧：Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 -d desidert.no
 -d brigitteheilmann.dk
