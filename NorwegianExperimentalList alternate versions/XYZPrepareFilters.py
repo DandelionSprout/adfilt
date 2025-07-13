@@ -36,7 +36,7 @@ def prepare_ag(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"(itle:.*Dandelion Sprout.*)",
+           r"^.*(itle:.*Dandelion Sprout.*)",
            r"\1 (for AdGuard)",
            line
         )
@@ -48,8 +48,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"\$all\$network$",
-           r"$network",
+           r"^(.*)\$all\$network$",
+           r"\1$network",
            line
         )
 
@@ -66,19 +66,19 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"([$,])xhr",
-           r"\1xmlhttprequest",
+           r"^(.*[$,])xhr(.*)$",
+           r"\1xmlhttprequest\2",
            line
         )
 
         line = re.sub(
-           r"([$,~])3p",
+           r"^(.*[$,~])3p",
            r"\1third-party",
            line
         )
 
         line = re.sub(
-           r"([$,])1p",
+           r"^(.*[$,])1p",
            r"\1~third-party",
            line
         )
@@ -92,12 +92,6 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"^!.*PFBLOCKERNG.*$",
            r"",
-           line
-        )
-
-        line = re.sub(
-           r"has\(:scope >",
-           r"has(>",
            line
         )
 
@@ -126,26 +120,14 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"##\^script:has-text\((.*)\)",
-           r"$$script[\1]",
+           r"^(.*)\$~doc$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"##\^script\[(.*)\]",
-           r"$$script[\1]",
-           line
-        )
-
-        line = re.sub(
-           r"\$~doc$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r"\$doc(,|$)",
-           r"$document\1",
+           r"^(.*)\$doc(,|$)",
+           r"\1$document\2",
            line
         )
 
@@ -168,26 +150,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"(#\??#)body(:| )",
+           r"^(.*#\??#)body(:| )",
            r"\1html[lang] > body\2",
-           line
-        )
-
-        line = re.sub(
-           r",~inline-font,~inline-script$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r",~inline-script,~inline-font$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r",~inline-font$",
-           r"",
            line
         )
 
@@ -217,13 +181,13 @@ def prepare_ag(lines) -> str:
 
         # Trying to make https://github.com/AdguardTeam/FiltersRegistry/blob/master/filters/ThirdParty/filter_249_NorwegianList/diff.txt shorter
         line = re.sub(
-           r"([$,])frame(,|$)",
+           r"^(.*[$,])frame(,|$)",
            r"\1subdocument\2",
            line
         )
 
         line = re.sub(
-           r"([a-z*])#\??#(.*):style\((.*)\)$",
+           r"^(.*[a-z*])#\??#(.*):style\((.*)\)$",
            r"\1#$#\2 { \3 }",
            line
         )
@@ -235,8 +199,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"\.\.\*\$",
-           r".*$",
+           r"^(.*)\.\.\*\$",
+           r"\1.*$",
            line
         )
 
@@ -247,8 +211,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r",~inline-font$",
-           r"",
+           r"^(.*),~inline-font$",
+           r"\1",
            line
         )
 
@@ -259,8 +223,8 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"\$1p$",
-           r"$~third-party",
+           r"^(.*)\$1p$",
+           r"\1$~third-party",
            line
         )
 
@@ -279,6 +243,12 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"^((\|\||://)?[12]?\d?\d?\.[12]?\d?\d?\.[12]?\d?\d?\.[12]?\d?\d?\^(\$(doc(ument)?.*?|all.*?))?)$",
            r"!+ NOT_PLATFORM(windows, mac, android, cli)\n\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)##\^script\[(.*)\]",
+           r"\1$$script[\2]",
            line
         )
 
@@ -304,8 +274,8 @@ def prepare_abp(lines) -> str:
 
         # remove $document modifier from the rule
         line = re.sub(
-           r"\$doc.*$",
-           "",
+           r"^(.*)\$doc.*$",
+           r"\1",
            line
         )
 
@@ -3818,43 +3788,43 @@ def prepare_pihole(lines) -> str:
 
         line = re.sub(
            r"^([a-z0-9].*)\.(.*)\.\*",
-           r"(.*\.)?\1\\.\2\\..*$",
+           r"^(.*\.)?\1\\.\2\\..*$",
            line
         )
 
         line = re.sub(
            r"^([a-z0-9].*)\.\*$",
-           r"(.*\.)?\1\\..*$",
+           r"^(.*\.)?\1\\..*$",
            line
         )
 
         line = re.sub(
            r"^(.*)\.(.*)-\*",
-           r"(.*\.)?\1\\.\2-*$",
+           r"^(.*\.)?\1\\.\2-*$",
            line
         )
 
         line = re.sub(
            r"^([a-z0-9].*)\.\*\.(.*)$",
-           r"(.*\.)?\1\\..*\\.\2$",
+           r"^(.*\.)?\1\\..*\\.\2$",
            line
         )
 
         line = re.sub(
            r"^\*\.(.*)\.\*",
-           r"(.*\.)?*\\.\1\\..*$",
+           r"^(.*\.)?*\\.\1\\..*$",
            line
         )
 
         line = re.sub(
            r"^([a-z0-9].*)\*\.(.*)$",
-           r"(.*\.)?\1.*\\.\2$",
+           r"^(.*\.)?\1.*\\.\2$",
            line
         )
 
         line = re.sub(
            r"(\(\.\*\\\.\)\?){2}",
-           r"(.*\.)?",
+           r"^(.*\.)?",
            line
         )
 
@@ -3872,13 +3842,13 @@ def prepare_pihole(lines) -> str:
 
         line = re.sub(
            r"^([a-z0-9-]{1,})\*([a-z0-9-]{1,})\.([a-z]{2,17})$",
-           r"(.*\\.)?\1.*\2\\.\3$",
+           r"^(.*\\.)?\1.*\2\\.\3$",
            line
         )
 
         line = re.sub(
            r"^\*(-[a-z0-9]{1,})\.\*\.([a-z]{2,17})$",
-           r"(.*\\.)?\1\\..*\\.\2$",
+           r"^(.*\\.)?\1\\..*\\.\2$",
            line
         )
 
@@ -3951,6 +3921,30 @@ def prepare_pihole(lines) -> str:
         line = re.sub(
            r"(if-a-large-hosts-file.*)",
            r"\1\n!#endif",
+           line
+        )
+
+        line = re.sub(
+           r"^\.\*",
+           r"^.*",
+           line
+        )
+
+        line = re.sub(
+           r"^(\^.*[a-z])$",
+           r"\1$",
+           line
+        )
+
+        line = re.sub(
+           r"\.\*$",
+           r".*$",
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z].*\.\*\$)$",
+           r"^\1",
            line
         )
 
@@ -4795,25 +4789,13 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"\[Adblock Plus 3\..*$",
+           r"^\[Adblock Plus 3\..*$",
            r"",
            line
         )
 
         line = re.sub(
            r"^! Redirect:.*$",
-           "",
-           line
-        )
-
-        line = re.sub(
-           r"=~ Warning.*$",
-           "",
-           line
-        )
-
-        line = re.sub(
-           r"\|~ Warning.*$",
            "",
            line
         )
@@ -4849,73 +4831,37 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(1\)",
+           r"^([a-z*])#\??#(.*):(upward|nth-ancestor)\(1\)",
            r"\1##*:has(> \2)",
            line
         )
 
         line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(2\)",
+           r"^([a-z*])#\??#(.*):(upward|nth-ancestor)\(2\)",
            r"\1##*:has(> * > \2)",
            line
         )
 
         line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(3\)",
+           r"^([a-z*])#\??#(.*):(upward|nth-ancestor)\(3\)",
            r"\1##*:has(> * > * > \2)",
            line
         )
 
         line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(4\)",
+           r"^([a-z*])#\??#(.*):(upward|nth-ancestor)\(4\)",
            r"\1##*:has(> * > * >  * > \2)",
            line
         )
 
         line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(5\)",
-           r"\1##*:has(> * > * > * > * > \2)",
+           r"^(.*)\$doc(,.*)?$",
+           r"\1$document\2",
            line
         )
 
         line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(6\)",
-           r"\1##*:has(> * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(7\)",
-           r"\1##*:has(> * > * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(8\)",
-           r"\1##*:has(> * > * > * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(9\)",
-           r"\1##*:has(> * > * > * > * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"([a-z*])#\??#(.*):(upward|nth-ancestor)\(10\)",
-           r"\1##*:has(> * > * > * > * > * > * > * > * > * > \2)",
-           line
-        )
-
-        line = re.sub(
-           r"\$doc(,|$)",
-           r"$document\1",
-           line
-        )
-
-        line = re.sub(
-           r"(#\??#)body(:| )",
+           r"^(.*#\??#)body(:| )",
            r"\1html[lang] > body\2",
            line
         )
@@ -4929,36 +4875,6 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"^\|\|.*\.(ga|ml|gq|cf|pw|loan|agency|gdn|bid|top|ooo|monster)\^.*$",
            r"",
-           line
-        )
-
-        line = re.sub(
-           r",~inline-font,~inline-script$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r",~inline-script,~inline-font$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           r",~inline-font$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           ",~inline-font,~inline-script,~domain=",
-           ",~domain=",
-           line
-        )
-
-        line = re.sub(
-           ",~inline-font,~domain=",
-           ",~domain=",
            line
         )
 
@@ -4987,12 +4903,6 @@ def prepare_ag(lines) -> str:
         )
 
         line = re.sub(
-           r",~inline-script$",
-           r"",
-           line
-        )
-
-        line = re.sub(
            r"^.*\$dnstype.*$",
            r"",
            line
@@ -5000,14 +4910,8 @@ def prepare_ag(lines) -> str:
 
         # Need to make https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/ThirdParty/filter_250_DandelionSproutAnnoyances/diff.txt shorter, so I can more easily find actual syntax errors.
         line = re.sub(
-           r"\$doc$",
-           r"$document",
-           line
-        )
-
-        line = re.sub(
-           r",~inline-font$",
-           r"",
+           r"^(.*)\$doc$",
+           r"\1$document",
            line
         )
 
@@ -7014,7 +6918,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-F%D1%96%D0%9C%20List.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt2/main/Anti-F%D1%96%D0%9C%20List.txt']
 
 UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
 
@@ -7072,7 +6976,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^!(.*:)",
+           r"^!(.*:.*)$",
            r"#\1",
            line
         )

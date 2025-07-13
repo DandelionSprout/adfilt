@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 09July2025v1-Deprecated
+# Last modified: 13July2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -707,6 +707,9 @@ msFilterList
 # ★★★ Caused by «Peter Lowe's Ad and tracking server list» ★★★
 # ★★★ Caused by «Dan Pollock's hosts file» ★★★
 # ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
+# ★★★ 🇳🇴：Forårsaket av «AdGuards spionvarefilter» ★★★
+# ★★★ 🇬🇧：Caused by «AdGuard Tracking Protection Filter» ★★★
+# https://github.com/AdguardTeam/AdguardFilters/issues/209205
 !
 # 🇳🇴 🇩🇰：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
