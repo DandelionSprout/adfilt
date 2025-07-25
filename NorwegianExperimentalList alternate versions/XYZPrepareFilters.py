@@ -1508,6 +1508,9 @@ def prepare_tpl(lines) -> str:
 
 # ————— Privoxy version —————
 
+# 25 July 2025: Found some documentation at last on https://www•privoxy•org/gitweb/?p=privoxy•git;a=blob_plain;f=default•action•master;hb=HEAD
+# Also 25 July 2025: The Privoxy section of the script can't handle "^.*(...)$" for some unholy reason, requiring the more CPU-taxing open-ended RegExing.
+
 def is_supported_privoxy(line) -> bool:
     for token in UNSUPPORTED_PRIVOXY:
         if token in line:
@@ -1542,6 +1545,12 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            r"\$domain=~in-addr\.arpa$",
            r"",
+           line
+        )
+
+        line = re.sub(
+           r"^.*domain=.*$",
+           "",
            line
         )
 
@@ -1600,25 +1609,7 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|",
-           r".",
-           line
-        )
-
-        line = re.sub(
-           r"^\|",
-           r".",
-           line
-        )
-
-        line = re.sub(
-           r"^/",
-           r"./",
-           line
-        )
-
-        line = re.sub(
-           r"[$,]3p$",
+           r"[$,][13]p$",
            r"",
            line
         )
@@ -1680,6 +1671,12 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            r"^#\+.*$",
            r"",
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|?(.*)$",
+           r"\1",
            line
         )
 
@@ -1800,6 +1797,72 @@ def prepare_privoxy(lines) -> str:
         line = re.sub(
            r"^[a-zA-Z0-9*,:;^$=?!+&%#@_-]{1,5}$",
            r"",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\$xmlhttprequest$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^://(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^([a-z0-9-]{1,}\.[a-z]{2,20})(/.*)?$",
+           r".\1\2",
+           line
+        )
+
+        line = re.sub(
+           r"^(\.?([a-z0-9*-]{1,}\.){1,}[a-z]{2,20})$",
+           r"\1/",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\|$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^\^\.\*\$(.*)$",
+           r".\1",
+           line
+        )
+
+        line = re.sub(
+           r"^((no|dk|is|fo).*)$",
+           r".\1",
+           line
+        )
+
+        line = re.sub(
+           r"^.*badfilter$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r"\$(first|~?third)-party$",
+           r"",
+           line
+        )
+
+        line = re.sub(
+           r".*\$(script|popup|object|image).*",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r".*@@://.*",
+           "",
            line
         )
 
