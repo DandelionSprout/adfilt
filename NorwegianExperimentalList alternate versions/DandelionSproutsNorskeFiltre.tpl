@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 20July2025v1-Deprecated
+# Last modified: 26July2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1310,9 +1310,8 @@ msFilterList
 -d modificationdesignate.com
 -d xss.my.id
 -d 85.159.213.158
-# On a lot of parked domains
--d astarsbuilding.com
-:  185.53.177.52
+-d nestnose.com
+-d inquisitivebed.info
 # 🇳🇴：E-post-spammere (Falsk DHP, osv.)
 # 🇬🇧：E-mail spammers (Fake DHP, etc.)
 -d wirexapp.africa.com
