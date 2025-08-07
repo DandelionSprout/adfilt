@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 26July2025v1-Deprecated
+# Last modified: 07August2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -16,12 +16,12 @@ msFilterList
 # 🇳🇴：Fjerning av reklamebokser og tomme overskuddsbokser
 # 🇩🇰：Fjernelse af annonceboxer og tomme overskudsrammer
 # 🇬🇧：Ads and leftovers removal entries   Hiding-type rules
-# — — — — — — — — —
+# — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer for minst 3 nettsteder
 # 🇬🇧：Entries for at least 3 websites
 - images banners
 -d widgets.sprinklecontent.com
-# — — — — — — —
+# — — — — — — — — — — — —
 # 🇳🇴：Brede eller heldomenebaserte blokkeringsoppføringer
 # 🇬🇧：Broad or whole-domain blocking rules
 -d dk ad
@@ -420,6 +420,8 @@ msFilterList
 -d www.hvidovreavis.dk hvidover-*-1080x1080.
 -d ssl.p.jwpcdn.com jwpsrv.js
 -d ssl.p.jwpcdn.com vast.js
+-d nummeruke.no *-banner.
+-d klokkeonline.no hac
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -613,6 +615,7 @@ msFilterList
 # flaDE (30 05 2025)
 # https://www•kanalfrederikshavn•dk/vis/nyhed/oslo-faergernes-skaebne-i-frederikshavn-afgoeres-foerst-efter-sommerferien
 # seoghoerDK (01 07 2025)
+# spill•abcnyheter•no (27 07 2025)
 # — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
@@ -671,6 +674,7 @@ msFilterList
 # https://github.com/easylist/easylist/issues/18542/(These/entries/are here to stay, regardless of the report's outcome.)
 +d medlemskap.*.no
 -d medlemskap.fagforbundet.no
+# Similar cases. I cannot in good conscience let Norwegian and Danish users be affected by entry patterns like these, even less so after AdGuard Tracking Protection Filter was removed from uBO's opt-ins.
 # Bank login problems
 # ★★★ Caused by «EasyList – Social Widgets», if I recall correctly ★★★
 +d api.instagram.com
@@ -752,6 +756,7 @@ msFilterList
 # 🇬🇧：Allowlist entries to avoid triggering anti-adblock measures (Such allowlistings are fully allowed by Adblock Plus from what I'm aware of)
 +d sixscissors.com
 # https://github.com/AdguardTeam/AdguardFilters/issues/121422
+# gamerNO (27 07 2025)
 # 🇳🇴：Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰：Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧：Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.

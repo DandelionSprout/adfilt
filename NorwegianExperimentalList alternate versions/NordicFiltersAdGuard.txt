@@ -1,6 +1,6 @@
 itle: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 26July2025v1
+! Last modified: 07August2025v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1149,7 +1149,7 @@ norges.online###modaladv
 borsen.dk,borsen-dk.translate.goog##div[class*=col]:has(> .native-teaser)
 samferdselinfra.no##.banner-item
 skagafm.dk##.frontbanner
-twe.no##div[class$="=="][style*=margin-bottom]:has([aria-label=YouTube],[aria-label^="TV 2 Play"],[aria-label^="Movie Netflix -"])
+twe.no##div[class$="=="][style*=margin-bottom]:has([aria-label=YouTube],[aria-label^="TV 2 Play"],[aria-label^="Movie Netflix -"],[aria-label^="YouTube,"][aria-label$=YouTube])
 lokalavisen.dk##.custom-annoncer-wrapper
 itavisen.no##article[class*=annonse]
 keldan.is##.x-box-inner > .x-panel-noborder:not(.x-grid-panel)
@@ -1286,6 +1286,8 @@ sonderborgnyt.dk###sidebar > section:has(> .add)
 dagbladet.no###svelte-app-articlestickytopbar:has(div[class*=addwrapper i])
 tara.no##div[type=inserted_code]
 senest.dk##.d-none-mobile.generic-widget
+tvkampen.com##.lock-scroll-x
+tvkampen.com##a.rt-channel-link:has(> :is([class*=lilibet],[class*=-N1Bet i],[class*=lets_lucky]))
 itavisen.no##:is(h3,figure):has(> a[data-lasso-id])
 itavisen.no##p:has-text(/^Annonse$/i):has(+ h3 > a[data-lasso-id])
 itavisen.no##.clearfix > .code-block:has([data-ad-unit-id])
@@ -1346,7 +1348,9 @@ scm.dk##.banner-hidden
 seoghoer.dk##div[data-type=ad]
 tiendeo.*##.text-center.justify-center.items-center
 nyhetsstrømmen.no##.aunit
-! — — — — — — — — —
+nummeruke.no##header ~ a[href*="://go.adt242.com/"]
+klokkeonline.no###pnl-ne0n
+! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
 1881.no,bygg.no,connery.dk,friflyt.no,golferen.no,jeger.no,kino.no,kristeligt-dagblad.dk,kystogfjord.no,landevei.no,mmm.dk,norsk-klatring.no,reavisa.no,skagensavis.dk,smakmagasinet.no,smartmeny.no,spilcomputer.dk,terrengsykkel.no,ut.no,utemagasinet.no,vglive.no##.ad:not(html,body,:empty)
@@ -1387,7 +1391,7 @@ itavisen.no,ba.no,gamereactor.*##.sponsored
 latterkula.no,gunnarandreassen.com##a[href*=spill]
 !+ NOT_OPTIMIZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
-! — — — — — — —
+! — — — — — — — — — — — — 
 ! 🇳🇴：Brede eller heldomenebaserte blokkeringsoppføringer
 ! 🇬🇧：Broad or whole-domain blocking rules
 ||dk/ad/
@@ -1805,7 +1809,7 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||kjavis.dk/wp-content/uploads/20*_300x250px_$image
 ||kjavis.dk/wp-content/uploads/20*/Vaffelhuset-1.png$image
 ||kjavis.dk/wp-content/uploads/20*/Ryobi-Slag-JPEG.$image
-||kjavis.dk/wp-content/uploads/20*/berghodt.jpg^$image
+||kjavis.dk/wp-content/uploads/20*/berghodt.jpg^
 ||kjavis.dk/wp-content/uploads/20*_ann_$image
 ||kjavis.dk/wp-content/uploads/20*/annonce-$image
 ||kjavis.dk/wp-content/uploads/20*/Marslev-cykler-1.png$image
@@ -1813,18 +1817,20 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||kjavis.dk/wp-content/uploads/20*/Aeldresagen-1-$image
 ||kjavis.dk/wp-content/uploads/20*/Cykelgaarden-1.png$image
 ||kjavis.dk/wp-content/uploads/20*/930X120_$image
-||kjavis.dk/wp-content/uploads/20*/vvs-eks.png^$image
-||kjavis.dk/wp-content/uploads/2025/04/Byg.png|$image
-||kjavis.dk/wp-content/uploads/2025/01/breg.png|$image
+||kjavis.dk/wp-content/uploads/20*/vvs-eks.png^
+||kjavis.dk/wp-content/uploads/2025/04/Byg.png|
+||kjavis.dk/wp-content/uploads/2025/01/breg.png|
 ||kjavis.dk/wp-content/uploads/20*/930x180_$image
-||kjavis.dk/wp-content/uploads/20*/Benedikte-1.png|$image
-||kjavis.dk/wp-content/uploads/20*/Munkebo-kro.png|$image
+||kjavis.dk/wp-content/uploads/20*/Benedikte-1.png|
+||kjavis.dk/wp-content/uploads/20*/Munkebo-kro.png|
 ||kjavis.dk/wp-content/uploads/20*/20-3.jpg|$image
 ||kjavis.dk/wp-content/uploads/20*/Topann-$image
 ||kjavis.dk/wp-content/uploads/20*/ellinge4.png|$image
 ||www.hvidovreavis.dk/media/*/hvidover-*-1080x1080.$image
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=eurosport.*|gamereactor.*|vg.no
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=eurosport.*|gamereactor.*|vg.no
+||nummeruke.no/*-banner.$image
+||klokkeonline.no/img/hac^
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2202,6 +2208,8 @@ tv2.no##.aside > .ad-container
 ##.tx-dce-container:not(html,body,:empty)
 ! seoghoerDK (01/07/2025)
 ##section[data-aller-id^=strossleabb]
+! spill•abcnyheter•no (27/07/2025)
+##.ad-topbanner-container:not(html,body,:empty)
 ! — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2340,8 +2348,11 @@ dagsavisen.no##:is(p,h2):has(> br:only-of-type:empty)
 ! https://github.com/easylist/easylist/issues/18542 (These entries are here to stay, regardless of the report's outcome.)
 @@||medlemskap.*.no^
 @@||bestill.help.no^$~third-party
-@@||ask.antalis.no^$~third-party
+@@||ask.antalis.$~third-party
 ||medlemskap.fagforbundet.no^$badfilter
+! Similar cases. I cannot in good conscience let Norwegian and Danish users be affected by entry patterns like these, even less so after AdGuard Tracking Protection Filter was removed from uBO's opt-ins.
+@@||app.*kino.no^$~third-party
+@@||images.medlem.$~third-party
 ! Bank login problems
 @@/pm-blikunde/1x1.png^$domain=sparebank1.no
 ! ★★★ Caused by «EasyList – Social Widgets», if I recall correctly ★★★
@@ -2522,6 +2533,8 @@ nettavisen.no,www-nettavisen-no.translate.goog###topover
 ukenr.no,ugenr.dk#@#.bannerad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121422
 @@.v.fwmrm.net/ad/g^*:MTG_Play_
+! gamerNO (27/07/2025)
+@@/vendor/_a/gpt.js?
 
 ! 🇳🇴：Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰：Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.

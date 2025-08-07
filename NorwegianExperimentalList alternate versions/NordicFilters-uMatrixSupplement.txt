@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
-! Last modified: 26July2025v1-Alpha
+! Last modified: 07August2025v1-Alpha
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! 🇳🇴：Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -109,8 +109,11 @@ bt.no finn.no frame block
 ! Attempting to fix a problem with voting online on Idol Norway
 ! Attempts to resolve how some frontpage articles are hard to open
 @@||bestill.help.no^$1p
-@@||ask.antalis.no^$1p
+@@||ask.antalis.$1p
 * medlemskap.fagforbundet.no badfilter block
+! Similar cases. I cannot in good conscience let Norwegian and Danish users be affected by entry patterns like these, even less so after AdGuard Tracking Protection Filter was removed from uBO's opt-ins.
+@@||app.*kino.no^$1p
+@@||images.medlem.$1p
 ! Bank login problems
 ! ★★★ Caused by «EasyList – Social Widgets», if I recall correctly ★★★
 samiteahter.org api.instagram.com * allow
