@@ -905,8 +905,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(.*)\$all(,(~inline-font|domain=~).*)?$",
+           r"^(.*)\$all(,(~inline-font|domain=~[a-z0-9_.*-]{1,}.\*).*)?$",
            r"\1\n\1$popup",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\$all,(domain=~(no|dk|is|fo|com|net|org))\|~.*$",
+           r"\1$\2\n\1$popup,\2",
            line
         )
 
@@ -3243,8 +3249,14 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(.*)\$all(,(~inline-font|domain=~).*)?$",
+           r"^(.*)\$all(,(~inline-font|domain=~[a-z0-9_.*-]{1,}.\*).*)?$",
            r"\1\n\1$popup",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\$all,(domain=~(no|dk|is|fo|com|net|org))\|~.*$",
+           r"\1$\2\n\1$popup,\2",
            line
         )
 
