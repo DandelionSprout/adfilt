@@ -3510,19 +3510,13 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"^# Platform notes:.*$",
-           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including pfBlockerNG, Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.\n# If you use a tool that edits the system's own hosts file, such as Hosts File Editor, Gas Mask, or Magisk Manager, make sure to also use the IPv6 version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersHostsIPv6.txt",
+           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including pfBlockerNG, Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.\n# If you use a tool that edits Windows' internal hosts file, such as Hosts File Editor, using https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersHostsIPv6.txt instead will work for both IPv4 and IPv6, and will thus reduce its filesize.\n# If you use a tool that edits Mac/Android/Linux/etc.'s internal hosts files, such as Gas Mask or Magisk Manager, make sure to use both this version and the IPv6 version just in case.",
            line
         )
 
         line = re.sub(
-           r"(# (Version|Last[ -]?[Mm]odified):.*)",
-           r"\1\n# Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt, unless otherwise proven.\n# Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt, unless otherwise proven.",
-           line
-        )
-
-        line = re.sub(
-           r"^(127\.0\.0\.1) (.*)$",
-           r"\1 \2 www.\2",
+           r"^(127\.0\.0\.1) ([a-z0-9-]{1,}\.[a-z]{2,})$",
+           r"\1 \2\n\1 www.\2",
            line
         )
 
@@ -4613,8 +4607,8 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r"^(::) (.*)$",
-           r"\1 \2 www.\2",
+           r"^(::) ([a-z0-9-]{1,}\.[a-z]{2,})$",
+           r"\1 \2\n\1 www.\2",
            line
         )
 

@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 07August2025v1-Deprecated
+# Last modified: 10August2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1330,6 +1330,24 @@ msFilterList
 # https://www•tv2•no/nyheter/forbruker/sjokksvar-pa-epost-harreisende/17805239/
 # https://www•tv2•no/nyheter/forbruker/tenkte-shit-na-har-jeg-blitt-lurt/17474448/
 -d takstskolen.no
+# https://www•tv2•no/nyheter/innenriks/slar-svindelalarm-trykker-pa-de-riktige-knappene/17975382/
+-d minid-portalen.
+-d idportal.vercel.app
+-d kredinor-portal.
+-d minskat-no.com
+-d myskatteetaten.
+-d nav-innlogging-portal.
+-d noskatteetaten.
+-d nyskatteetaten.
+-d skatteetateneu.
+-d skatteetatenof.
+-d skatteetatentax.
+-d updatesysteme.com
+-d wpenginepowered.com refusjon*
+-d wpenginepowered.com Skatteetaten
+- com sikkerskatt refusjon
+- com skatt refusjon
+- sikkerskatt refusjon
 # 🇬🇧：Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
