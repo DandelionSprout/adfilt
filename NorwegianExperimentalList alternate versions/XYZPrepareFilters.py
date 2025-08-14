@@ -3533,7 +3533,7 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r" www\.[1-2]?\d\d?\.[1-2]?\d\d?\.[1-2]?\d\d?\.[1-2]?\d\d?",
+           r" www\.[12]?\d\d?\.[12]?\d\d?\.[12]?\d\d?\.[12]?\d\d?",
            r"",
            line
         )
@@ -3723,7 +3723,7 @@ def prepare_dnsmasq(lines) -> str:
         )
 
         line = re.sub(
-           r"server=/([1-2]?\d?\d)\.([1-2]?\d?\d)\.([1-2]?\d?\d)\.([1-2]?\d?\d)$",
+           r"server=/([12]?\d?\d)\.([12]?\d?\d)\.([12]?\d?\d)\.([12]?\d?\d)$",
            r"server=/\4.\3.\2.\1.in-addr.arpa/127.0.0.1",
            line
         )
@@ -4053,7 +4053,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|(([1-2]?\d?\d\.?){4})\^",
+           r"^\|\|(([12]?\d?\d\.?){4})\^",
            r"\1",
            line
         )
@@ -4215,7 +4215,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^www\.[a-z]{1,}\.[a-z]{2,}$",
+           r"^\|\|www\.[a-z]{1,}\.[a-z]{2,}$",
            r"",
            line
         )
@@ -4305,7 +4305,7 @@ def prepare_shadowsocks(lines) -> str:
         )
 
         line = re.sub(
-           r"^(([1-2]?\d?\d\.?){4})$",
+           r"^(([12]?\d?\d\.?){4})$",
            r"IP-CIDR,\1/32,REJECT,no-resolve",
            line
         )
@@ -4577,7 +4577,8 @@ def prepare_minerblock(lines) -> str:
            line
         )
 
-        text += line + '\n'
+        if not line == '':
+            text += line + '\n'
 
     return text
 
@@ -4614,8 +4615,8 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r"^# Platform notes:.*$",
-           "# Platform notes: This list version is meant to be used simultaneously of the regular «Hosts» version when using computer/Android system hosts file editors like Hosts File Editor, Gas Mask, Magisk Manager, etc. It is not needed for tools that strip away the entries' IP address, such as Blokada and pfBlockerNG.",
+           r"^!#if !env_mv3$",
+           "!#if !env_mv3\n# Platform notes: This list version is meant to be used simultaneously of the regular «Hosts» version when using computer/Android system hosts file editors like Hosts File Editor, Gas Mask, Magisk Manager, etc. It is not needed for tools that strip away the entries' IP address, such as Blokada and pfBlockerNG.\n# # If you're using AdGuard Home or Pi-Hole, the «AdGuard Home» list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt should be used instead.\n# # If you're using uBlock Origin, the ||-type «uBlock Origin» list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianList.txt is STRONGLY RECOMMENDED to be used instead.\n# 🇳🇴(🇩🇰)：For mere informasjon og detaljer om denne listen og om andre lister jeg har la(g|v)et, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk # 🇬🇧：For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english",
            line
         )
 
@@ -4626,7 +4627,7 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r" www\.[1-2]?\d\d?\.[1-2]?\d\d?\.[1-2]?\d\d?\.[1-2]?\d\d?",
+           r" www\.[12]?\d\d?\.[12]?\d\d?\.[12]?\d\d?\.[12]?\d\d?",
            r"",
            line
         )
@@ -6666,7 +6667,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|(([1-2]?\d?\d\.?){4})\^.*$",
+           r"^\|\|(([12]?\d?\d\.?){4})\^.*$",
            r"\1",
            line
         )
@@ -6936,7 +6937,13 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        if is_supported_agh(line):
+        line = re.sub(
+           r"^\|\|www\..*$",
+           "",
+           line
+        )
+
+        if is_supported_agh(line) and not line == '':
             text += line + '\n'
 
     return text
