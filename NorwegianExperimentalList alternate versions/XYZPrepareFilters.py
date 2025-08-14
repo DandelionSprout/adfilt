@@ -3527,12 +3527,6 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"^(127\.0\.0\.1) ([a-z0-9-]{1,}\.[a-z]{2,})$",
-           r"\1 \2\n\1 www.\2",
-           line
-        )
-
-        line = re.sub(
            r"([a-z]) www\.www\..*$",
            r"\1",
            line
@@ -4210,7 +4204,7 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^(# For more information.*)$",
-           r"\1\n# If you wish to remove cookie banners from Nordic websites, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt",
+           r"\1\n# If you wish to remove notification banners from Nordic websites, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt",
            line
         )
 
@@ -4220,7 +4214,14 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        text += line + '\n'
+        line = re.sub(
+           r"^www\.[a-z]{1,}\.[a-z]{2,}$",
+           r"",
+           line
+        )
+
+        if not line == '':
+            text += line + '\n'
 
     return text
 
@@ -4541,12 +4542,6 @@ def prepare_minerblock(lines) -> str:
         )
 
         line = re.sub(
-           r"(.*For more information and .*)",
-           r"\1\n# PSA: I am currently considering adding entries for filepaths from the uBO version, in addition to the existing entries taken from the raw-domains version. However, to do so, it'd take me an hour of heavy work to modify the conversion script, so first I'd want to know if anyone are actually using this list version in their daily lives, to help motivate me to do this. If you do use it actively, go to https://github.com/DandelionSprout/adfilt/issues/new/choose, choose whatever option, and explain to me that you're using the minerBlock list version and how.",
-           line
-        )
-
-        line = re.sub(
            r"^\*://\*\.\*\.",
            r"*://*.",
            line
@@ -4573,6 +4568,12 @@ def prepare_minerblock(lines) -> str:
         line = re.sub(
            r"(if-a-large-hosts-file.*)",
            r"\1\n!#endif",
+           line
+        )
+
+        line = re.sub(
+           r"^\*://\*\.www\..*$",
+           r"",
            line
         )
 
@@ -4619,12 +4620,6 @@ def prepare_hostsipv6(lines) -> str:
         )
 
         line = re.sub(
-           r"^(::) ([a-z0-9-]{1,}\.[a-z]{2,})$",
-           r"\1 \2\n\1 www.\2",
-           line
-        )
-
-        line = re.sub(
            r"([a-z]) www\.www\..*$",
            r"\1",
            line
@@ -4663,6 +4658,12 @@ def prepare_hostsipv6(lines) -> str:
         line = re.sub(
            r"(if-a-large-hosts-file.*)",
            r"\1\n!#endif",
+           line
+        )
+
+        line = re.sub(
+           r"^.*/.*$",
+           r"",
            line
         )
 
