@@ -36,7 +36,7 @@ def prepare_ag(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^.*(itle:.*Dandelion Sprout.*)",
+           r"^(! Title.*Dandelion Sprout.*)$",
            r"\1 (for AdGuard)",
            line
         )
@@ -86,24 +86,6 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            "redirect=noopmp4-1s",
            "mp4",
-           line
-        )
-
-        line = re.sub(
-           r"^!.*PFBLOCKERNG.*$",
-           r"",
-           line
-        )
-
-        line = re.sub(
-           ":-abp-has\(",
-           ":has(",
-           line
-        )
-
-        line = re.sub(
-           ":-abp-contains\(",
-           ":has-text(",
            line
         )
 
