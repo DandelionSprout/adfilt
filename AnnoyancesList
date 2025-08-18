@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 06August2025v1-Compilation
+! Version: 18August2025v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -319,3 +319,11 @@ www.google.*,ipv6.google.com###m-x-content div[class]:first-of-type:not([class*=
 ://discord.com/api/v*/premium-marketing^
 discord.com##div[data-list-item-id*=skill-trees] + div[class*=" unreadImportant"]
 discord.com##div[data-list-item-id*=skill-trees] ~ div path[d^="M12 23a11 11 0 "]
+
+! DeviantArt, because of course that site would mess things up.
+! Transparent floaty on bottom
+www.deviantart.com##.surface-primary[class^=theme-] > div[class^=_][class*=" _"]:last-of-type
+! Frequently empty box in the rightside bar
+www.deviantart.com##div[class]:not([class*=_]):has(> div[style] > iframe[title*=DealerAdIframe i])
+! One of the native user promo boxes in the rightside bar has apparently begun to show unambiguous porn. That part is normal enough, but not when I'm not even logged in.
+www.deviantart.com##div[role=complementary] > div:not([class*=_]):has(a[href*="/subscriptions?tier="])
