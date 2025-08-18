@@ -4215,7 +4215,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|\|www\.[a-z]{1,}\.[a-z]{2,}$",
+           r"^\|\|www\.[a-z0-9-]{1,}\.[a-z]{2,}\^$",
            r"",
            line
         )
