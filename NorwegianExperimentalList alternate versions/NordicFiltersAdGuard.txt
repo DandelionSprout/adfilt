@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Last modified: 18August2025v1
+! Last modified: 19August2025v3
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1351,6 +1351,9 @@ tiendeo.*##.text-center.justify-center.items-center
 nyhetsstrømmen.no##.aunit
 nummeruke.no##header ~ a[href*="://go.adt242.com/"]
 klokkeonline.no###pnl-ne0n
+bilmagasinet.dk##.hidden[style^="margin-top:"]:has(aside.bp-ads)
+bilmagasinet.dk##.bp-ads
+www.tv2.no##.channels-ad
 ! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -3334,7 +3337,20 @@ triplx.dk##.aff-inner-col
 /sikkerskatt/refusjon/*$document,domain=~no|~bankid_svindlere.*
 ! https://www.tv2.no/nyheter/innenriks/raser-mot-nettside-laget-for-a-lure-folk/17976442/
 ||flytteregister.no^$document,domain=~suspekte_fakturakrav.*
-
+! Sø(k|g)eresultater på Qwant
+||biltemadk.com^$all,domain=falsk_version_af_biltema.*
+||biltemasverige.com^$all,domain=falsk_version_af_biltema.*
+||elkjopnorway.com^$all,domain=falsk_versjon_av_nettbutikken.*
+||stihl-dk.com^$all,domain=falsk_version_af_stihl.*
+||stihl-no.com^$all,domain=falsk_versjon_av_stihl.*
+||stihl-se.com^$all,domain=falsk_version_af_stihl.*
+||zooplus-no.com^$all,domain=falsk_versjon_av_zooplus.*
+||zooplus-se.com^$all,domain=falsk_version_af_zooplus.*
+||zooplusdanmark.com^$all,domain=falsk_version_af_zooplus.*
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||212.224.107.120^$all
+!+ PLATFORM(windows, mac, android, cli)
+212.224.107.120$network
 ! 🇬🇧：Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 ||nofotballshop.com^$document
 ||nofotballstore.com^$document

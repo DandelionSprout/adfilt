@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 18August2025v1-Deprecated
+# Last modified: 19August2025v3-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1350,6 +1350,17 @@ msFilterList
 - sikkerskatt refusjon
 # https://www.tv2.no/nyheter/innenriks/raser-mot-nettside-laget-for-a-lure-folk/17976442/
 -d flytteregister.no
+# Sø(k|g)eresultater på Qwant
+-d biltemadk.com
+-d biltemasverige.com
+-d elkjopnorway.com
+-d stihl-dk.com
+-d stihl-no.com
+-d stihl-se.com
+-d zooplus-no.com
+-d zooplus-se.com
+-d zooplusdanmark.com
+-d 212.224.107.120
 # 🇬🇧：Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 -d nofotballshop.com
 -d nofotballstore.com
