@@ -1,0 +1,17 @@
+[Adblock Plus 3.12]
+! Title: Anti-"Pinterest in search results" List
+! Version: 21August2025v1-Beta
+! Update: 4 days
+! Description: One would think a repost service would require their users to provide anything that even resembles a sources, but 95% of its users seemingly can't be bothered about it.
+! Note: Logically enough, the image search result sections are the initial focus.
+! Homepage: https://github.com/DandelionSprout/adfilt
+www.google.*,ipv6.google.com#?#:is(.g,div[data-attrid^="images "]):has(a[target=_blank]:is([href*=".pinterest.com/"],[href*="//www.pinterest."]))
+qwant.com##div[style^="width:"]:has(> a div:has-text(/^.*[/.]pinterest\.[a-z]{2,4}$/))
+bing.com##ul[id^=mmComponent_images] > li:has(a[m*=".pinterest.com/"],a[m*="//www.pinterest."])
+duckduckgo.com##li[style^="padding-left:"]:has(> figure a:is([href*="//www.pinterest."],[href*=".pinterest.com/"]))
+search.brave.com##.image-result:has(span.image-metadata-source:has-text(/^.*(www\.)?[./]?pinterest\.[a-z]{1,4}$/))
+startpage.com##.image-container:has(.image-quick-details > span:has-text(/^.*(www\.)?[./]?pinterest\.[a-z]{2,4}$/))
+images.search.yahoo.com##li:has(> a.round-img:is([href*=".pinterest.com%2f"],[href*="%2fwww.pinterest."]))
+
+! Makes the remaining image results taller somehow
+ecosia.org##article[data-test-id=images-result]:has(a[href*="//i.pinimg.com/"])
