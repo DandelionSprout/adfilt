@@ -1,12 +1,12 @@
 [Adblock Plus 3.12]
 ! Title: Anti-"Pinterest in search results" List
-! Version: 21August2025v4-Beta
+! Version: 21August2025v5-Beta
 ! Update: 4 days
 ! Description: One would think a repost service would require their users to provide anything that even resemble sources, but 95% of its users seemingly can't be bothered about it.
 ! Note: Logically enough, the image search result sections are the initial focus.
 ! Note 2: If you want to also block Pinterest itself, https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Conversions%20of%20AdGuard%20Services%20lists/pinterest.txt can be used, which is an unofficial conversion of AdGuard DNS/Home's Pinterest service block option.
 ! Homepage: https://github.com/DandelionSprout/adfilt
-www.google.*,ipv6.google.com#?#:is(.g,div[data-attrid^="images "]):has(a[target=_blank]:is([href*=".pinterest.com/"],[href*="//www.pinterest."]))
+www.google.*,ipv6.google.com#?#:is(.g,div[data-attrid^="images "],.isv-r):has(a[target=_blank]:is([href*=".pinterest.com/"],[href*="//www.pinterest."]))
 qwant.com##div[style^="width:"]:has(> a div:has-text(/^.*[/.]pinterest\.[a-z]{2,4}$/))
 bing.com##ul[id^=mmComponent_images] > li:has(a[m*=".pinterest.com/"],a[m*="//www.pinterest."])
 duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##li[style^="padding-left:"]:has(> figure a:is([href*="//www.pinterest."],[href*=".pinterest.com/"]))
@@ -16,3 +16,4 @@ images.search.yahoo.com##li:has(> a.round-img:is([href*=".pinterest.com%2f"],[hr
 
 ! Makes the remaining image results taller somehow
 ecosia.org##article[data-test-id=images-result]:has(a[href*="//i.pinimg.com/"])
+
