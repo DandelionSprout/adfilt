@@ -1,6 +1,6 @@
 [Adblock Plus 3.18]
 ! Title: 🏡 a.txt (Imres filtre)
-! Version: 21August2025v1-Personal
+! Version: 22August2025v1-Personal
 ! Expires: 12 hours
 ! Description: This list, and any other lists whose version is suﬀixed with "-Personal", are _NOT_ intended for public use, except for 1) those who wish to authentically reproduce my list setup in issue reports, and 2) enthusiasts who want to try out pre-spin-oﬀ pre-alpha list concepts of mine.
 !#if !env_mv3
@@ -610,6 +610,8 @@ pixiv.net##.works-item:has(img[alt*="２０２０"])
 ! Before adding Steam/eShop entries, see if https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Sensitive%20lists/AntiWeebBoobGamesList.txt suits better
 !#if !env_mobile
 pixiv.net##.flex.flex-col + .flex.flex-col:has(a[href="/contest/"])
+! Weeb anime desktop backgrounds on the homepage for Premium users on Pixiv
+pixiv.net##div[class=""]:has(a[href^="/premium/campaign/"])
 !#endif
 www.tumblr.com##div[data-timeline*="/timeline/"] div[style^=width] > div[tabindex]:has-text(/^.*c\o\mf\ort\s?character.*$/i):not(:has-text(/fa\ir|w\inx|w\.i\.t|n\ights/i))
 tumblr.com##div[data-timeline*=notes_info] div[data-cell-id]:has-text(/^.*c\o\mf\ort\s?character.*$/i):not(:has-text(/fa\ir|w\inx|w\.i\.t|n\ights/i)):watch-attr(class):watch-attr(style)
@@ -642,6 +644,8 @@ steamdb.info#?#.tooltipped:has-text(PCGW)
 !#endif
 ||discord.com/channels/165183350913499136^$all
 google.*#?#:is(.g,div[data-attrid^="images "]):has-text(/^.*cga\m\ingw\ik\i.*$/i)
+! People at least deserve a notification from this list about it before clicking onwards to it
+||reddit.com/r/gaming^$doc
 
 ! 🇺🇸 Trading Card Game Remover for Steam
 store.steampowered.com##a[data-ds-tagids*="1666"]:not([href*=Ticket_to_Ride], [href*=Durak], [href*=UNO], [href*=Tabletop])
