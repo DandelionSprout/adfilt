@@ -1,5 +1,5 @@
 ! Title: 🥒 Anti-'Non-news' List
-! Version: 15May2024v1-Alpha-Compilation
+! Version: 22August2025v1-Alpha-Compilation
 ! Expires: 5 days
 ! Description: For those who prefer for newssites to cover actual news, and not odd distractions or conspiracy theories.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -16,13 +16,13 @@
 ! ————— Entries that are currently specific to this compilation —————
 
 ! Extraordinary amounts of bot-generated estate sale articles
-op.se,ltz.se#?#.teaser:has-text(/Nya? ägare/i)
-op.se,ltz.se#?#.teaser:has-text(/fastighet/i)
-op.se,ltz.se#?#.teaser:has-text(/för tomt/i)
-op.se,ltz.se#?#.teaser:has-text(/kvadratmeter/i)
+op.se,ltz.se#?#.teaser:has-text(/^.*Nya? ägare.*$/i)
+op.se,ltz.se#?#.teaser:has-text(/^.*fastighet.*$/i)
+op.se,ltz.se#?#.teaser:has-text(/^.*för tomt.*$/i)
+op.se,ltz.se#?#.teaser:has-text(/^.*kvadratmeter.*$/i)
 
 ! Football/skiing fantasy games
-tv2.no#?#.article,.lp-a,.col-sm-12,article.column:has-text(/-fantasy/i)
+tv2.no#?#:is(.article,.lp-a,.col-sm-12,article.column):has-text(/^.*-fantasy.*$/i)
 
 ! Incel-hosted podcasts that also promote society pressure about getting babies
 adressa.no##a[href*=Singelkrisa]
@@ -35,6 +35,25 @@ vg.no##.comics
 ekstrabladet.dk##.oo-left.eb-row-item
 at.no##.row:has(a[href*="at.no/tegneserie/"])
 ||sykepleien.no/sites/default/files/styles/cartoon_image^$image
+
+! One would think a Japanese service would be less keen on having PRChinese illegimate propaganda on their service(s).
+rakuten.tv###cgtn-documentary
+rakuten.tv###cgtn
+rakuten.tv##div[data-testid=garden] > div[data-testid=lists]:has(div[data-testid^=free-cgtn])
+rakuten.tv##a[id*=jinping]
+rakuten.tv##a[id*=xinjiang]
+rakuten.tv###card-china-through-the-lenses--0
+rakuten.tv###card-china-aspirations--0
+rakuten.tv###card-classic-quotes-by-xi-jinping--0
+rakuten.tv###card-refined-in-china-xinjiang--0
+rakuten.tv###card-hong-kong-forging-an-unbreakable-bond--0
+rakuten.tv###card-the-call-of-the-silk-road--0
+rakuten.tv###card-earth-summit-mission--0
+rakuten.tv###card-human-carbon-footprint--0
+rakuten.tv###card-wildlife-haven-china--0
+rakuten.tv###card-zero-hour-climate-change-in-china--0
+rakuten.tv###card-desert-jewel-dunhuang--0
+rakuten.tv###card-land-of-diversity--0
 !#endif
 !#endif
 !#endif
