@@ -1,8 +1,9 @@
 [Adblock Plus 3.6]
-! Title: 🧥 Anti-"Weeb boob games on Steam" List
-! Version: 22October2024v1-Beta
+! Title: 🧥 Anti-"Weeb boob games on major gaming storefronts" List
+! Version: 22August2025v1-Beta
 ! Expires: 15 days
 ! Description: In contrast to the more curated webstores Epic Store and GOG.com, Steam has for some years now been stuffed full of very-low-effort "games" (Mostly visual novels) whose entire 10€ production budget was spent on catgirls in bikinis looking at you meekly. If you are not interested in catgirls in bikinis looking at you meekly, but want to focus more on videogames, then this list is for you.
+! Note: This list actually approves of the Summer 2025 Steam removals of flagranty stupid weeb games, since it has forced them to finally get at least the faintest possible semblance of quality control.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! Tag ID codes, as used below: 12095 = Sexual Content; 6650 = Nudity; 3799 = Visual Novel; 4085 = Anime; 4434 = JRPG; 4150 = World War II?; 9130 = Hentai
 !#if !env_mv3
@@ -29,10 +30,11 @@ store.steampowered.com##a[data-ds-appid][href*=Idol i]:not([href*=Golden i],[hre
 store.steampowered.com##a[data-ds-appid]:is([href*=cafe i],[href*=café i]):not([href*=catgir i],[href*=maid i],[href*=kemono i])
 store.steampowered.com##a[data-ds-appid]:is([href*=sakura i]):not([href*=naruto i],[href*=warframe i],[href*=kitaria i],[href*=tensei i],[href*=sakurai i],[href*=simulator i])
 
-! Experimental section as a result of cleanup of other lists
-osu.ppy.sh##.beatmapsets__item:has-text(/sakura[a-h\j-z0-9★☆:]/i)
-epicgames.com#?#li[class^=css-]:has-text(/sakura/i):not(:has-text(/naruto/i))
+! Other sites
+osu.ppy.sh##.beatmapsets__item:has-text(/^.*sakura[a-h\j-z0-9★☆:].*$/i)
+epicgames.com#?#li[class^=css-]:has-text(/^.*sakura.*$/i):not(:has-text(/^.*naruto.*$/i))
 apps.apple.com##a.we-lockup--in-app-shelf:has(img:is([alt*=Sakura i]:not([alt*=Naruto i],[alt*=Smash i])),[alt*=galgun i],[alt*=kagura])
+nintendo.com##li.searchresult_row:has(a[href*="/Hentai-"],a[href*=-Hentai-],a[href*="/Kawaii-"],a[href*="/Sugoi-"],a[href*="/Anime-Girl" i])
 
 ! Weebs seem determined to ruin yet another webstore too now
 store.epicgames.com##div[data-testid=section-wrapper-content] div[data-testid=section-wrapper-content] li:has(a:is([aria-label*="Fell in love with " i],[aria-label*=Scalescar i],[aria-label*="Eternal Rebirth" i],[aria-label*=Ememe],[aria-label*="Fantasy Baby" i],[aria-label*=" My Love With " i],[aria-label*="Their Secrets,"],[aria-label*=Superscout i],[aria-label*=KurtzPel i],[aria-label*=" Anime " i],[aria-label*=Maid],[aria-label*=Idol],[aria-label*=HSHS],[aria-label*="Goddess "],[aria-label*=unabletoexit i],[aria-label*=Zenless i],[aria-label*="Be the Master of" i],[aria-label*=Ximen][aria-label*="League of Angel" i],[aria-label*="Cross Tails" i],[aria-label*=Zhuan i],[aria-label*="Alpha League"],[aria-label*="Love n War" i],[aria-label*="Project Element"],[aria-label*="Demon King,"],[aria-label*=Seduction]))
