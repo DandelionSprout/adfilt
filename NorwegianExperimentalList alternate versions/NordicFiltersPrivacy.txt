@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Last modified: 19August2025v3
+! Last modified: 31August2025v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1354,6 +1354,9 @@ klokkeonline.no###pnl-ne0n
 bilmagasinet.dk##.hidden[style^="margin-top:"]:has(aside.bp-ads)
 bilmagasinet.dk##.bp-ads
 www.tv2.no##.channels-ad
+sportsbibelen.net##div[id^=ad-]
+sporten.com##.td-header-sp-recs
+sportsidioten.no##.sticky-half-page
 ! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1559,6 +1562,8 @@ _visittkortannonse_$image
 ! https://byggeri-arkitektur•dk/600-boliger-skal-renoveres-i-Gellerupparken-og-bliver-til-750 (20/04/2025)
 ||cloudfront.net/mediaxpress/ad^$image
 ||cloudfront.net/mediaxpress/banner^$image
+! tvkampenCOM (Firefox Android; 31/08/2025)
+||import.roninmedia.io^$subdocument
 ! Borrowed from "Frellwit's Swedish Filter" (29/11/2024)
 ||spania.no^$3p
 ||plausible.webfokus.no^$3p
@@ -2214,7 +2219,9 @@ tv2.no##.aside > .ad-container
 ##section[data-aller-id^=strossleabb]
 ! spill•abcnyheter•no (27/07/2025)
 ##.ad-topbanner-container:not(html,body,:empty)
-! — — — — — — —
+! https://sporten•com/etter-storsmellen-mot-bodo-glimt-matte-sturm-graz-minne-seg-selv-pa-at-de-faktisk-er-regjerende-mestere/ (22/08/2025)
+##.td-header-rec-wrap:not(html,body,:empty)
+! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
 !#if false
@@ -2241,7 +2248,7 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 !#if env_firefox
 berlingske.dk##+js(no-fetch-if, googlesyndication)
 !#endif
-! — — — — — — — — —
+! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴/🇩🇰：IP-adresser
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
@@ -3365,6 +3372,17 @@ $all,ipaddress=193.148.70.153
 ||109.230.237.116^$all
 ||147.93.63.211^$all
 ||154.223.16.232^$all
+||196.251.85.197^$all
+||dkdk.shop^$all
+||noapp.sbs^$all
+||nono.qpon^$all
+||postnorddk.vip^$all
+||tnord.click^$all
+||tnord.qpon^$all
+||tnord.sbs^$all
+||tnordh.shop^$all
+||noapp.sbs^$all
+$all,ipaddress=196.251.85.197
 $all,ipaddress=43.100.125.58
 $all,ipaddress=43.159.140.215
 $all,ipaddress=43.162.119.45
@@ -3372,6 +3390,7 @@ $all,ipaddress=47.76.132.29
 $all,ipaddress=109.230.237.116
 $all,ipaddress=147.93.63.211
 $all,ipaddress=154.223.16.232
+$all,ipaddress=196.251.85.197
 
 ! 🇬🇧：Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 ||desidert.no^

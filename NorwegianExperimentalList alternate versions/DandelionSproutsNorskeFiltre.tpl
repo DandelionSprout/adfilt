@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 19August2025v3-Deprecated
+# Last modified: 31August2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -164,6 +164,8 @@ msFilterList
 # https://byggeri-arkitektur•dk/600-boliger-skal-renoveres-i-Gellerupparken-og-bliver-til-750/(20/04/2025)
 -d cloudfront.net ad
 -d cloudfront.net banner
+# tvkampenCOM (Firefox Android; 31 08 2025)
+-d import.roninmedia.io
 # Borrowed from "Frellwit's Swedish Filter" (29 11 2024)
 -d spania.no
 -d plausible.webfokus.no
@@ -616,7 +618,8 @@ msFilterList
 # https://www•kanalfrederikshavn•dk/vis/nyhed/oslo-faergernes-skaebne-i-frederikshavn-afgoeres-foerst-efter-sommerferien
 # seoghoerDK (01 07 2025)
 # spill•abcnyheter•no (27 07 2025)
-# — — — — — — —
+# https://sporten•com/etter-storsmellen-mot-bodo-glimt-matte-sturm-graz-minne-seg-selv-pa-at-de-faktisk-er-regjerende-mestere/ (22 08 2025)
+# — — — — — — — — — — — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
 +d vgtv.no
@@ -624,7 +627,7 @@ msFilterList
 # https://www•aftenposten•no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid/(03/09/2022)
 # Should not have ":not" + ":empty" added to it due to costume•no
 # https://github.com/uBlockOrigin/uAssets/issues/28638
-# — — — — — — — — —
+# — — — — — — — — — — — — — — — — — — — — — — — — — — —
 # 🇳🇴 🇩🇰：IP-adresser
 # 🇳🇴🏞：IP-adressar
 # 🇬🇧：IP addresses
@@ -1438,6 +1441,16 @@ msFilterList
 -d 109.230.237.116
 -d 147.93.63.211
 -d 154.223.16.232
+-d 196.251.85.197
+-d dkdk.shop
+-d noapp.sbs
+-d nono.qpon
+-d postnorddk.vip
+-d tnord.click
+-d tnord.qpon
+-d tnord.sbs
+-d tnordh.shop
+-d noapp.sbs
 # 🇬🇧：Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 -d desidert.no
 -d brigitteheilmann.dk

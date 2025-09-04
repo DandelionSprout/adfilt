@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre (Møter ABPs inkluderingsregler — Firefox ≥121, Chrom* ≥105)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters (With ABP inclusion compliance — Firefox ≥121, Chrom* ≥105)
-! Version: 190820253
+! Version: 310820251
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1302,6 +1302,9 @@ klokkeonline.no###pnl-ne0n
 bilmagasinet.dk##.hidden[style^="margin-top:"]:has(aside.bp-ads)
 bilmagasinet.dk##.bp-ads
 www.tv2.no##.channels-ad
+sportsbibelen.net##div[id^=ad-]
+sporten.com##.td-header-sp-recs
+sportsidioten.no##.sticky-half-page
 ! — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1505,6 +1508,8 @@ _visittkortannonse_$image
 ! https://byggeri-arkitektur•dk/600-boliger-skal-renoveres-i-Gellerupparken-og-bliver-til-750 (20/04/2025)
 ||cloudfront.net/mediaxpress/ad^$image
 ||cloudfront.net/mediaxpress/banner^$image
+! tvkampenCOM (Firefox Android; 31/08/2025)
+||import.roninmedia.io^$subdocument
 ! Borrowed from "Frellwit's Swedish Filter" (29/11/2024)
 ||spania.no^$third-party
 ||plausible.webfokus.no^$third-party
@@ -2156,7 +2161,9 @@ tv2.no##.aside > .ad-container
 ##section[data-aller-id^=strossleabb]
 ! spill•abcnyheter•no (27/07/2025)
 ##.ad-topbanner-container:not(html,body,:empty)
-! — — — — — — —
+! https://sporten•com/etter-storsmellen-mot-bodo-glimt-matte-sturm-graz-minne-seg-selv-pa-at-de-faktisk-er-regjerende-mestere/ (22/08/2025)
+##.td-header-rec-wrap:not(html,body,:empty)
+! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
 @@||vgtv.no^$generichide
@@ -2171,7 +2178,7 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! Should not have ":not" + ":empty" added to it due to costume•no
 ##.bonnier-ad:not(html,body)
 ! https://github.com/uBlockOrigin/uAssets/issues/28638
-! — — — — — — — — —
+! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴/🇩🇰：IP-adresser
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
@@ -3664,6 +3671,28 @@ triplx.dk##.aff-inner-col
 ||147.93.63.211^$popup
 ||154.223.16.232^
 ||154.223.16.232^$popup
+||196.251.85.197^
+||196.251.85.197^$popup
+||dkdk.shop^
+||dkdk.shop^$popup
+||noapp.sbs^
+||noapp.sbs^$popup
+||nono.qpon^
+||nono.qpon^$popup
+||postnorddk.vip^
+||postnorddk.vip^$popup
+||tnord.click^
+||tnord.click^$popup
+||tnord.qpon^
+||tnord.qpon^$popup
+||tnord.sbs^
+||tnord.sbs^$popup
+||tnordh.shop^
+||tnordh.shop^$popup
+||noapp.sbs^
+||noapp.sbs^$popup
+
+
 
 
 
@@ -6664,7 +6693,7 @@ dn.se##.bad--insider-tall
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Fri, 08 Aug 2025 23:39:32 +0300
+! Last modified: Tue, 02 Sep 2025 17:45:08 +0300
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -7141,6 +7170,7 @@ inssinosingot.fi##div[class="row align-center"]:has([class$=lazy-load-active])
 inssinosingot.fi,koeajolle.com##.block-mainos
 irc-galleria.net##div[id^=open_]
 irc-galleria.net,tilannehuone.fi##div[id^=Nostemedia_Desktop]
+is.fi##.teaser-ad__background
 is.fi##[data-testid|="laneitem"] > article:has(a[href^="https://media.sanoma.fi/"])
 is.fi##[data-testid|="laneitem"]:has(a[href^="/mainos/"])
 is.fi##[href^="https://www.is.fi/tilaus/is-extra/"][href$="myyntitikkeri"]
@@ -7428,6 +7458,11 @@ nettitrendi.fi##.node__content .block[class$="kampanja"]
 nettitrendi.fi##.topbar
 nettitrendi.fi##div[id^="block-credigo"]
 nettitrendi.fi#?#.block-block-content:has-text(Jatkuu mainoksen alla)
+newsner.fi###ad-article-bottom
+newsner.fi##.article-sidebar-wide
+newsner.fi##[id^="ad-insider-article_dynamic"]
+newsner.fi##[id^="ad-panorama_dynamic"]
+newsner.fi##[id^="ad-widescreen-article_dynamic_"]
 nopeustesti.com###offer
 nopeustesti.com###tulos-etu
 nyan.ax##.mobileads
@@ -7465,6 +7500,7 @@ pienimatkaopas.com###adiniframe_oikealaita_container
 pienimatkaopas.com###bookingnostokuvasarjassa
 pienimatkaopas.com###mainos .ilmoitus
 pienimatkaopas.com###pm_mp_kotisivu
+pienimatkaopas.com##.osa:has(> #mp_mainos_osia_osa_ylempana)
 pienimatkaopas.com##[id^=pm_mp_tekstissa]
 pienimatkaopas.com#?##mainos .otsikko:has-text(Lue myös) + div ~ *
 piipaa.info##[data-id="adsense"]
@@ -7576,6 +7612,8 @@ stadissa.fi##.banner > a[href="/clickad.php?id=1529"]
 stadissa.fi##.banner > a[href="/clickad.php?id=1532"]
 stadissa.fi##.banner > a[href="/clickad.php?id=1540"]
 stadissa.fi##.banner > a[href="/clickad.php?id=1543"]
+stadissa.fi##.banner > a[href="/clickad.php?id=1554"]
+stadissa.fi##.banner > a[href="/clickad.php?id=1557"]
 stadissa.fi##[class|="juhlaviikot"]
 styleroom.fi##.bg-box:has([id|=placement-ad-grid])
 suomen118.fi###layout-banner-right
