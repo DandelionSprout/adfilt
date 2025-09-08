@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 31August2025v1-Deprecated
+# Last modified: 08September2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -717,6 +717,9 @@ msFilterList
 # ★★★ 🇳🇴：Forårsaket av «AdGuards spionvarefilter» ★★★
 # ★★★ 🇬🇧：Caused by «AdGuard Tracking Protection Filter» ★★★
 # https://github.com/AdguardTeam/AdguardFilters/issues/209205
+# ★★★ 🇳🇴：Forårsaket av   Caused by «Frellwit's Swedish Filter» ★★★
+# https://github.com/DandelionSprout/adfilt/issues/1174
++d cl.k5a.io
 !
 # 🇳🇴 🇩🇰：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
@@ -760,6 +763,7 @@ msFilterList
 +d sixscissors.com
 # https://github.com/AdguardTeam/AdguardFilters/issues/121422
 # gamerNO (27 07 2025)
+# aftenbladetNO
 # 🇳🇴：Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰：Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧：Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
@@ -1315,7 +1319,6 @@ msFilterList
 -d um-bs.com
 :  old.sermitsiaq.ag
 :  robot.ekstrabladet.dk
--d modificationdesignate.com
 -d xss.my.id
 -d 85.159.213.158
 -d nestnose.com
