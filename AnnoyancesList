@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 04September2025v1-Compilation
+! Version: 11September2025v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -244,6 +244,10 @@ positivr.fr##.viously-sticked #unstick-button
 youtube.com##ytd-miniplayer[has-playlist-data] #movie_player video:remove()
 youtube.com##ytd-miniplayer[has-playlist-data][active]
 youtube.com##ytd-miniplayer[has-playlist-data][closed] ~ * .ytp-miniplayer-button
+! https://github.com/DandelionSprout/adfilt/issues/1175
+youtube.com##:not(:matches-path(/watch)):not(:matches-path(/embed)) #movie_player video:remove()
+youtube.com##:not(:matches-path(/watch)):not(:matches-path(/embed)) ytd-miniplayer:remove()
+youtube.com##.ytp-miniplayer-button
 
 !#if !env_mobile
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124667 (Probably can't be in Falukorv List because that list adds whitelistings, not remove them.)
