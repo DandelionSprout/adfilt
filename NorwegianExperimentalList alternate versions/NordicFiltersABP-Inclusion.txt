@@ -6696,7 +6696,7 @@ dn.se##.bad--insider-tall
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Thu, 04 Sep 2025 16:41:30 +0300
+! Last modified: Tue, 16 Sep 2025 19:56:33 +0300
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -6865,8 +6865,7 @@ alypaa.com##[class^=banner-slot-preroll]
 alypaa.com,pelikone.fi##.text-link[href*="&utm_medium=banner&utm_campaign="]
 alypaa.com,pelikone.fi##.text-link[href^="https://clk.tradedoubler.com/"]
 ampparit.com##.gtm-bottom-ticker
-ampparit.com##.gtm-navi-ticker:has([href^="https://www.iltalehti.fi/plus"])
-ampparit.com##.gtm-navi-ticker:has(a[href^="https://www.iltalehti.fi/pelit/"])
+ampparit.com##.gtm-navi-ticker:has(> a[href$="tikkeri"])
 ampparit.com##.mobile-leaderboard-container
 ampparit.com##.resize-container
 ampparit.com,keskustelu.suomi24.fi,kirkkojakaupunki.fi,kuntalehti.fi,luukku.com,mtvuutiset.fi,seiska.fi,styleroom.fi,viinilehti.fi##.ad-container
@@ -7679,7 +7678,9 @@ tekniikkatalous.fi#?#.article-body > div[class]:has(> span:has-text(KAUPALLINEN 
 tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:has-text(Kaupallinen yhteistyö)
 tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:has-text(Kaupallinen yhteistyö)
 tekniikkatalous.fi,tivi.fi##[width]:has(.lazyload-wrapper)
-telsu.fi##.ch:has(em>a)
+telsu.fi##.ch:has(em > a)
+telsu.fi##.dp
+telsu.fi##.pb
 telsu.fi#?#.ch:has-text(/SP(O|0)NSOROITU/)
 telsu.fi#?#.ch:has-text(/SPON|SPONS|SPONSO|SPONSOR|SPONSORO|SPONSOROI|SPONSOROIT|SPONSOROITU/)
 tennis.fi##.ad-blocks
@@ -7983,6 +7984,7 @@ _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutis
 ||riistalehti.fi^*/Haix-Nature-Camo-$image,domain=riistalehti.fi
 ||riistalehti.fi^*_Banner_Retki_Nature_Camo_$image,domain=riistalehti.fi
 ||script.ilcdn.fi/etua-lainalaskuri/etua-lainalaskuri.min.js$script,domain=iltalehti.fi
+||scripts.claspo.io^$script,domain=huuto.net
 ||seksitreffit.fi/*popunder.js$script,domain=seksitreffit.fi
 ||seksitreffit.fi/banners/$domain=seksitreffit.fi
 ||sf.nm-ovp.nelonenmedia.fi/player/games/ruutu-player-loader.js$script,domain=10kysymysta.fi|alypaa.com
@@ -8075,6 +8077,9 @@ arvopaperi.fi,kauppalehti.fi,mikrobitti.fi,talouselama.fi,tekniikkatalous.fi,tiv
 ! Adblock check
 murha.info#@#.adsbygoogle
 @@||adserve.adcoin.com/display/ad_block/$xmlhttprequest,domain=verkkouutiset.fi
+@@||adform.net^$xmlhttprequest,domain=telsu.fi
+||adform.net$xmlhttprequest,rewrite=abp-resource:blank-js,domain=telsu.fi
+
 
 ! Redirect resources
 ||freewheel-jitt.sanoma.fi^$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi
@@ -8182,6 +8187,3 @@ srk.fi#@##CookielawBanner
 @@/eu_cookie_compliance.min.js$script,domain=www.tek.fi
 
 ! -----UNBREAK END-----
-
-
-! Will be removed after PR's accepted (whitelistings for issues caused by other lists or additions to the main Easylist)

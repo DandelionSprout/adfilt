@@ -2248,7 +2248,7 @@ def prepare_umatrix(lines) -> str:
 
         line = re.sub(
            r"^(! (Version|Last[ -]?[Mm]odified):.*)$",
-           r"\1-Alpha",
+           r"\1-Deprecated",
            line
         )
 
@@ -4190,11 +4190,11 @@ def prepare_agh(lines) -> str:
            line
         )
 
-        line = re.sub(
-           r"^(# ——— Dummy entry.*)$",
-           r"! Fikser en absurd feil hvor T-We sin Android-app kan mislykkes i å starte opp, grunnet en stor glitch mange enheter (inkl. Windows) har med IPv6-domener hvis IP-svar starter med «64:ff9b::».\n||tvs.telenor.net^$dnstype=AAAA\n! Lignende glitch i Klarna-appens kortbildeopplasting\n||s3.eu-west-1.amazonaws.com^$dnstype=AAAA\n! Glitch i BankID\n|toba.bankidapis.no|$dnstype=AAAA\n|stoeapp.no|$dnstype=AAAA\n! Mulig glitch i Hjelp 113-appen\n|ws.snla-it.no|$dnstype=AAAA\n! Glitch i Eika Mobilbank\n|app.eika.no|$dnstype=AAAA\n|www.eika.no|$dnstype=AAAA\n! Glitch i AtB\n||nexus-websocket-a.intercom.io^$dnstype=AAAA\n||events.mapbox.com^$dnstype=AAAA\n||api.mapbox.com^$dnstype=AAAA\n||atb-prod.api.mittatb.no^$dnstype=AAAA\n||vdemedo2-android.mobile-messenger.intercom.com^$dnstype=AAAA\n! Glitch i Coopay\n|api.*.amplitude.com|$dnstype=AAAA\n\n\1",
-           line
-        )
+        # line = re.sub(
+        #   r"^(# ——— Dummy entry.*)$",
+        #   r"! Fikser en absurd feil hvor T-We sin Android-app kan mislykkes i å starte opp, grunnet en stor glitch mange enheter (inkl. Windows) har med IPv6-domener hvis IP-svar starter med «64:ff9b::».\n! Lignende glitch i Klarna-appens kortbildeopplasting\n||s3.eu-west-1.amazonaws.com^$dnstype=AAAA\n! Glitch i BankID\n|toba.bankidapis.no|$dnstype=AAAA\n|stoeapp.no|$dnstype=AAAA\n! Mulig glitch i Hjelp 113-appen\n|ws.snla-it.no|$dnstype=AAAA\n! Glitch i Eika Mobilbank\n|app.eika.no|$dnstype=AAAA\n|www.eika.no|$dnstype=AAAA\n! Glitch i AtB\n||nexus-websocket-a.intercom.io^$dnstype=AAAA\n||events.mapbox.com^$dnstype=AAAA\n||api.mapbox.com^$dnstype=AAAA\n||atb-prod.api.mittatb.no^$dnstype=AAAA\n||vdemedo2-android.mobile-messenger.intercom.com^$dnstype=AAAA\n! Glitch i Coopay\n|api.*.amplitude.com|$dnstype=AAAA\n\n\1",
+        #   line
+        #)
 
         line = re.sub(
            r"^\|\|www\.[a-z0-9-]{1,}\.[a-z]{2,}\^$",
