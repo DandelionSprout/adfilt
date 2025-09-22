@@ -6039,6 +6039,12 @@ def prepare_hosts(lines) -> str:
     for line in lines:
 
         line = re.sub(
+           r"^(\|.*\.)(\$.*)?$",
+           r"\1com^\2",
+           line
+        )
+
+        line = re.sub(
            r"^!!? ",
            r"# ",
            line
@@ -6099,32 +6105,8 @@ def prepare_hosts(lines) -> str:
         )
 
         line = re.sub(
-           r"127\.0\.0\.1 gjtech\.net$",
-           "127.0.0.1 gjtech.net adblock.gjtech.net ww1.gjtech.net ww7.gjtech.net ww12.gjtech.net",
-           line
-        )
-
-        line = re.sub(
-           r"127\.0\.0\.1 tncrun\.net$",
-           "127.0.0.1 tncrun.net www.tncrun.net amanda.tncrun.net sarah.tncrun.net pamela.tncrun.net jessica.tncrun.net ics.tncrun.net katie.tncrun.net pbu.tncrun.net emily.tncrun.net",
-           line
-        )
-
-        line = re.sub(
            r"127\.0\.0\.1 ublock\.org$",
-           "127.0.0.1 ublock.org www.ublock.org demo.ublock.org",
-           line
-        )
-
-        line = re.sub(
-           r"127\.0\.0\.1 ttnrd\.com$",
-           "127.0.0.1 ttnrd.com www.ttnrd.com amanda.ttnrd.com katie.ttnrd.com briana.ttnrd.com sarah.ttnrd.com pamela.ttnrd.com",
-           line
-        )
-
-        line = re.sub(
-           r"127\.0\.0\.1 \[(.*)\]",
-           r"",
+           "127.0.0.1 ublock.org\n127.0.0.1 www.ublock.org\n127.0.0.1 demo.ublock.org",
            line
         )
 
@@ -6308,6 +6290,12 @@ def prepare_hosts(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(127\.0\.0\.1 \[.*)$",
+           r"",
+           line
+        )
+
         if is_supported_hosts(line):
          text += line + '\n'
 
@@ -6327,6 +6315,12 @@ def prepare_domains(lines) -> str:
 
     # remove or modifiy entries with unsupported modifiers
     for line in lines:
+
+        line = re.sub(
+           r"^(\|.*\.)(\$.*)?$",
+           r"\1com^\2",
+           line
+        )
 
         line = re.sub(
            r"^!!? ",
@@ -6578,6 +6572,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^(.*)\$domain=for-txt-dnstype-conversions\.mint$",
            r"\1$dnstype=TXT",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)[$,]domain=~[a-z0-9]{1,}_[a-z0-9_]{1,}\.\*$",
+           r"\1",
            line
         )
 
@@ -6921,6 +6921,12 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^\|\|www\..*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^.*/\?$",
            "",
            line
         )
