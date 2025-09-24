@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 11September2025v3-Compilation
+! Version: 24September2025v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -349,3 +349,13 @@ teknikproffset.*##.seg-promotion-wrapper
 ! Very red warning colouring when being about to incorrectly upload Anti-Malware List generated files to the Nordic Filters folder, or the other way around
 github.com##.clearfix:has(h1:has-text(/^Uploading files .* versions Anti-Malware List$/)):has(div.js-filename:has-text(/^NordicFilters.*$/)):style(background-color:red!important)
 github.com##.clearfix:has(h1:has-text(/^Uploading files .*NorwegianExperimentalList .*$/)):has(div.js-filename:has-text(/^AntiMalware.*$/)):style(background-color:red!important)
+
+! You all know those constant popups that   a   l o t   of websites show whenever the mouse cursor goes outside the page window area? I think I've found a fix for it, and I have solid confidence in that fix thus far. (24/09/2025)
+!#if !env_mobile
+!#if !adguard_ext_android
+!#if !adguard_ext_ios
+!+ NOT_OPTIMIZED
+*##+js(acs, addEventListener, mouseleave)
+!#endif
+!#endif
+!#endif
