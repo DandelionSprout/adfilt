@@ -29,6 +29,7 @@
 #from typing import IO
 
 import requests  # type: ignore
+from typing import IO
 
 HEAD = """\
 ! Title: ClearURLs for uBo (unofficial)
