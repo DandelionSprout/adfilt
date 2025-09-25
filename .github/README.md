@@ -82,5 +82,3 @@ Occasionally, [this link](https://www.google.no/search?q=%22if-a-large-hosts-fil
 • [iam-py-test](https://github.com/iam-py-test) for being the day-to-day maintainer of Legitimate URL Shortener as of November 2021, and for contributing to several more of my lists.
 
 If you've contributed to or helped me and you aren't on the above list, don't feel bad about it. I still give my regular thanks to you.
-
-[initialize actions commit line]
