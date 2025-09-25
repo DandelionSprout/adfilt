@@ -1,8 +1,8 @@
 ! Title: ClearURLs for uBo (unofficial)
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Description: Want to use ClearURLs' tracking protection without installing another extension? This list is a (unofficial) version of the ClearURLs rules, designed for use in uBlock Origin and AdGuard. This ONLY includes the URL parameter removal functionality from ClearURLs, and not the other functions.
-! Last updated: 2025-06-20
-! Script last updated: 2025-2-11
+! Last updated: 2025-09-25
+! Script last updated: 2025-6-21
 ! Expires: 1 day
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Warning: This list may break websites, and contains many problematic rules. Worse, it may even prevent other filterlists from working. There is not much the Adfilt maintainers can do, as this list is just the ClearURLs rules converted into a uBo/AdGuard filterlist. Use with caution.
@@ -111,6 +111,7 @@
 ||google.*^$removeparam=ictx
 ||google.*^$removeparam=cshid
 $removeparam=/^utm(_[a-z_]*)?=/
+$removeparam=/^mtm(_[a-z_]*)?=/
 $removeparam=/^ga_[a-z_]+=/
 $removeparam=yclid
 $removeparam=_openstat
@@ -559,6 +560,10 @@ $removeparam=pp,domain=youtube.com|youtu.be
 ||flipkart.com^$removeparam=/^sattr\[\]=/
 ||flipkart.com^$removeparam=/^p\[\]=/
 ||flipkart.com^$removeparam=st
+||flipkart.com^$removeparam=qH
+||flipkart.com^$removeparam=hpid
+||flipkart.com^$removeparam=ctx
+||flipkart.com^$removeparam=nnc
 ||idealo.de^$removeparam=sid
 ||idealo.de^$removeparam=src
 ||idealo.de^$removeparam=siteId
@@ -673,19 +678,20 @@ $removeparam=pp,domain=youtube.com|youtu.be
 ||nova.cz^$removeparam=dop_source_zone_name
 ||nova.cz^$removeparam=dop_req_id
 ||nova.cz^$removeparam=dop_id
-||mercadolibre.com^$removeparam=DEAL_ID
-||mercadolibre.com^$removeparam=L
-||mercadolibre.com^$removeparam=S
-||mercadolibre.com^$removeparam=T
-||mercadolibre.com^$removeparam=V
-||mercadolibre.com^$removeparam=pdp_filters
-||mercadolibre.com^$removeparam=position
-||mercadolibre.com^$removeparam=search_layout
-||mercadolibre.com^$removeparam=tracking_id
-||mercadolibre.com^$removeparam=type
-||mercadolibre.com^$removeparam=/^c_[_a-zA-Z]+=/
-||mercadolibre.com^$removeparam=/^me\.[_a-zA-Z]+=/
-||mercadolibre.com^$removeparam=/^reco_[_a-zA-Z]+=/
+||mercadoli[bv]re.com^$removeparam=DEAL_ID
+||mercadoli[bv]re.com^$removeparam=L
+||mercadoli[bv]re.com^$removeparam=S
+||mercadoli[bv]re.com^$removeparam=T
+||mercadoli[bv]re.com^$removeparam=V
+||mercadoli[bv]re.com^$removeparam=pdp_filters
+||mercadoli[bv]re.com^$removeparam=position
+||mercadoli[bv]re.com^$removeparam=search_layout
+||mercadoli[bv]re.com^$removeparam=tracking_id
+||mercadoli[bv]re.com^$removeparam=type
+||mercadoli[bv]re.com^$removeparam=/^c_[_a-zA-Z]+=/
+||mercadoli[bv]re.com^$removeparam=/^me\.[_a-zA-Z]+=/
+||mercadoli[bv]re.com^$removeparam=/^reco_[_a-zA-Z]+=/
+||mercadoli[bv]re.com^$removeparam=ad_click_id
 ||quizlet.com^$removeparam=funnelUUID
 ||bbc.com^$removeparam=xtor
 ||bbc.com^$removeparam=/^at_[a-z_]+=/
@@ -701,9 +707,9 @@ $removeparam=pp,domain=youtube.com|youtu.be
 ||goodreads.com^$removeparam=ac
 ||sohu.com^$removeparam=pvid
 ||sohu.com^$removeparam=scm
-||shopee.(com|co.th)^$removeparam=publish_id
-||shopee.(com|co.th)^$removeparam=sp_atk
-||shopee.(com|co.th)^$removeparam=xptdk
+||shopee.(com|co.th|tw)^$removeparam=publish_id
+||shopee.(com|co.th|tw)^$removeparam=sp_atk
+||shopee.(com|co.th|tw)^$removeparam=xptdk
 ||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=clickTrackInfo
 ||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=abid
 ||lazada.(com|co.th|co.id|com.my|com.ph|sg|vn)^$removeparam=pvid
@@ -784,6 +790,7 @@ $removeparam=pp,domain=youtube.com|youtu.be
 @@||ieeexplore.ieee.org^$removeparam
 @@||sendgb.com/upload/?*utm_source=$removeparam
 @@||firebaseappdistribution.googleapis.com/app-binary-downloads/projects/?*utm_source=$removeparam
+@@||irs.gov^$removeparam
 @@||amazon-adsystem.*/v3/oor?$removeparam
 @@||youtube.com/signin?$removeparam
 @@/^https?:\/\/([a-z0-9-]+\.)*?facebook\.com\/.*?(plugins|ajax)\//$removeparam
