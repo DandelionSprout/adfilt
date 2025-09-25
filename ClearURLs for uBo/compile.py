@@ -29,6 +29,7 @@
 #from typing import IO
 
 import requests  # type: ignore
+import sys
 from typing import IO
 
 HEAD = """\
