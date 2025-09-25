@@ -145,6 +145,8 @@ def normalize_url_pattern(url_pattern: str) -> str:
     url_pattern = url_pattern.replace("nikkei.co(?:m|.jp)", "nikkei.com", 1)
     #airbnb.(com|ae|ca|co.in|co.nz|co.uk|co.za|com.au|com.mt|com.sg|de|gy|ie)
     url_pattern = url_pattern.replace(".(com|ae|ca|co.in|co.nz|co.uk|co.za|com.au|com.mt|com.sg|de|gy|ie)", ".*", 1)
+    # https://github.com/DandelionSprout/adfilt/pull/1176 (I give this 1 chance.) 
+    url_pattern = url_pattern.replace("\|\|mercadoli\[bv\]re\.com\^", "/^http.*[./]mercadoli[bv]re\.com(/.*)?$/", 1)
     
     if "(" in url_pattern and ")" in url_pattern:
     	# something went wrong
