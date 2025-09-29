@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 24September2025v1
+! Version: 29September2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2012,7 +2012,8 @@ $removeparam=/^asc_.*$/,doc,domain=amazon.*|aboutamazon.com|amzn.to
 ||bing.com/?$removeparam=/^form=.*$/i
 ! https://www•bing•com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.$removeparam=sp
-$removeparam=sc,doc,domain=bing.com|qvc.com|startpage.com
+! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-14533757)
+$removeparam=sc,doc,domain=bing.com|qvc.com
 $removeparam=sk,domain=aliexpress.*|bing.com
 ||bing.$removeparam=qs
 ! https://www•bing•com/search?PC=U531&q=hello&FORM=ANNTA1 (05/03/2021)
