@@ -4202,6 +4202,12 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^\|\|(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.0/24\^$",
+           r"/^\1\\.\2\\.\3\\.(1?\\d{1,2}|2[0-4]\\d|25[0-5])$/",
+           line
+        )
+
         if not line == '':
             text += line + '\n'
 
