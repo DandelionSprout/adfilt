@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 08September2025v1-Deprecated
+# Last modified: 30September2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1376,6 +1376,13 @@ msFilterList
 :  5.39.217.206
 :  5.39.221.180
 :  193.148.70.153
+# https://www•dr•dk/nyheder/seneste/sundhed-dk-advarer-mod-sms-er-og-falsk-hjemmeside/(30/09/2025)
+-d dk-sundhed.com
+-d sundhed-info.com
+-d sundhedinfo.com
+-d info-sundhed.com
+-d infopostdk.com
+-d 158.94.209.89
 # 🇳🇴：Falske nettapoteker
 # 🇬🇧：Fake online pharmacies
 - -med.footeo.com
