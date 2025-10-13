@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 05October2025v1
+! Version: 13October2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -5123,6 +5123,18 @@ $removeparam=/^ref=underfl0w\.com$/
 ! https://github.com/AdguardTeam/AdguardFilters/commit/6bf3cccabe4516ca895d61f0cd6401a59e2c4683
 $doc,removeparam=loclid
 
+! https://story•snapchat•com/p/a9868981-ac8a-4c7c-bdd3-bbd94c7cd46a/3298970858393600?timestamp=0&share_id=7TRPgdxQm4I&locale=nb-NO (03/10/2025)
+||snapchat.com^$removeparam=share_id
+||snapchat.com^$removeparam=/^timestamp=0$/
+
+! https://art•ngfiles•com/images/7074000/7074061_2473390_feitphikz_untitled-7074061•a6e40df658d48d6035c8a73e0144432c•webp?f1759264692
+||ngfiles.com^$removeparam=/^f\d{4,}=$/
+
+! https://github.com/DandelionSprout/adfilt/issues/1182
+||carrefoursa.com^$removeparam=v
+! https://www•carrefoursa•com/carrefour-domates-salcasi-830-g-teneke-p-30261401?has-promotion (14/10/2025)
+$removeparam=/^has-promotion=$/
+
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
@@ -5134,10 +5146,6 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ! https://www•ikea•com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5•jpg?f=xl
 ||ikea.com/*/images/products^$removeparam=f
 !#endif
-
-! https://story•snapchat•com/p/a9868981-ac8a-4c7c-bdd3-bbd94c7cd46a/3298970858393600?timestamp=0&share_id=7TRPgdxQm4I&locale=nb-NO (03/10/2025)
-||snapchat.com^$removeparam=share_id
-||snapchat.com^$removeparam=/^timestamp=0$/
 
 ! 🤖 + ——— + Scriptlets + ——— + 🤖 !
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1352038
