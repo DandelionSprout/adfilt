@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 141020251
+! Version: 171020251
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -442,7 +442,6 @@ lindaben.is##.h-banner
 dagens.dk##*:has(>*>a[href*=".bedrageri.com/"])
 golferen.no###smallboard
 m.feltet.dk##.banner_mobile
-audlindin.is,utvarpsaga.is##.g-dyn
 e24.no,e24-no.translate.goog##.row-with-bottom-border:has(.ad-wrap)
 bramat.no##.scs-banner
 vartoslo.no##.vo-annonse
@@ -1313,6 +1312,18 @@ www.tv2.no##.channels-ad
 sportsbibelen.net##div[id^=ad-]
 sporten.com##.td-header-sp-recs
 sportsidioten.no##.sticky-half-page
+heimildin.is##.m-line:has(div[class^=ad])
+heimildin.is##div.order-xl-3:has(div[class^=ad])
+mbl.is##div:not([id]):has(> aside.augl)
+vb.is##.au-block:has(> div[data-zone])
+austurfrett.is##.uk-width-auto\@m
+austurfrett.is##div[class*=" uk-width-1"]:has(> div > div.mod-banners)
+vb.is##.col-md-4:has(> .article-h3.article-wrapper div[data-zone])
+vb.is##.row:not(:has(a,h2,[class*=title]))
+ff7.is##.A-bordi:not(:has(a[href*=veiting]))
+akureyri.net###banner
+handkastid.net##.brz-wp-shortcode
+handkastid.net##div[id^=handk-]
 ! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1350,6 +1361,7 @@ isabellas.dk,femina.dk,billedbladet.dk##div[data-type=ad]
 startsidendin.no,iphoneluppen.dk,norskemagasinet.com##a[href*=gambling]
 jyllands-posten.dk,jyllands--posten-dk.translate.goog,finans.dk,lokalavisen.dk##div[class*=banner-container]
 itavisen.no,ba.no,gamereactor.no,gamereactor.dk##.sponsored
+audlindin.is,bb.is,utvarpsaga.is##.g-dyn
 ||widgets.sprinklecontent.com^$domain=startsiden.no|musikknyheter.no|klikk.no
 latterkula.no,gunnarandreassen.com##a[href*=spill]
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
@@ -1527,6 +1539,21 @@ _visittkortannonse_$image
 ||gtm.findroommate.dk^
 ||nichehuset.dk^$third-party
 ||step.dk^$third-party
+! https://bb•is/2025/10/vikuvidtalid-embla-dogg-bachmann/ (17/10/2025)
+/wp-content/uploads/*-vefbordar3$image
+! bb•IS (17/10/2025)
+/wp-content/uploads/*_vefbordi_$image
+! https://www•akureyri•net/is/frettir (17/10/2025)
+/static/strevda^$image
+! https://www•austurfrett•is/frettir/finna-vaxandi-ahuga-a-lodhum-vidh-mjoeyrarhoefn (17/10/2025)
+/images/*_auglysingar^
+! vf•is (17/10/2025)
+-vefbordar-*x$image
+/starfsauglysing-$image
+! https://handkastid•net/2025/10/16/erlendar-frettir-islendingar-i-eldlinunni-2/ (17/10/2025)
+/wp-content/uploads/*_augl_10$image
+! ff7IS (17/10/2025)
+.is/wp-content/uploads/*1018x360$image
 ! — — — — —
 ! 🇳🇴：Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -1795,6 +1822,12 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||ssl.p.jwpcdn.com^*/vast.js$script,domain=eurosport.no|eurosport.dk|gamereactor.no|gamereactor.dk|vg.no
 ||nummeruke.no/*-banner.$image
 ||klokkeonline.no/img/hac^
+||handkastid.net/wp-content/uploads/*310*400$image
+||handkastid.net/wp-content/uploads/*830*135$image
+||vf.is/media/*310x400-$image
+||vf.is/media/*1300x360-$image
+||vf.is/media/*1170x360$image
+||vf.is/banners^
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2175,6 +2208,16 @@ tv2.no##.aside > .ad-container
 ##.td-header-rec-wrap:not(html,body,:empty)
 ! 180 (14/10/2025)
 ##.idle-timeout-blend:not(html,body,:empty)
+! https://keldan•is/Frettir (17/10/2025)
+##.KCL_ad-rotator:not(html,body,:empty)
+! portalFO (17/10/2025)
+fo##.vev
+! https://heimildin•is/frettir/ (17/10/2025)
+##.fpblock--ad:not(html,body,:empty)
+! https://kjarninn•is/frettir/ (17/10/2025)
+###sidebar-floating-ad
+! https://www•akureyri•net/is/frettir (17/10/2025)
+##.strevda__item:not(html,body,:empty)
 ! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances

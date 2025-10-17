@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 14October2025v1-Deprecated
+# Last modified: 17October2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -174,6 +174,20 @@ msFilterList
 -d gtm.findroommate.dk
 -d nichehuset.dk
 -d step.dk
+# https://bb•is/2025/10/vikuvidtalid-embla-dogg-bachmann/ (17 10 2025)
+- wp-content uploads *-vefbordar3
+# bb•IS (17 10 2025)
+- wp-content uploads *_vefbordi_
+# https://www•akureyri•net/is/frettir/(17/10/2025)
+- static strevda
+# https://www•austurfrett•is/frettir/finna-vaxandi-ahuga-a-lodhum-vidh-mjoeyrarhoefn/(17/10/2025)
+- images *_auglysingar
+# vf•is (17 10 2025)
+- -vefbordar-*x
+- starfsauglysing-
+# https://handkastid•net/2025/10/16/erlendar-frettir-islendingar-i-eldlinunni-2//(17/10 2025)
+- wp-content uploads *_augl_10
+# ff7IS (17 10 2025)
 # — — — — —
 # 🇳🇴：Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -424,6 +438,12 @@ msFilterList
 -d ssl.p.jwpcdn.com vast.js
 -d nummeruke.no *-banner.
 -d klokkeonline.no hac
+-d handkastid.net *310*400
+-d handkastid.net *830*135
+-d vf.is *310x400-
+-d vf.is *1300x360-
+-d vf.is *1170x360
+-d vf.is banners
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -620,6 +640,11 @@ msFilterList
 # spill•abcnyheter•no (27 07 2025)
 # https://sporten•com/etter-storsmellen-mot-bodo-glimt-matte-sturm-graz-minne-seg-selv-pa-at-de-faktisk-er-regjerende-mestere/ (22 08 2025)
 # 180 (14 10 2025)
+# https://keldan•is/Frettir/(17/10/2025)
+# portalFO (17 10 2025)
+# https://heimildin•is/frettir/ (17 10 2025)
+# https://kjarninn•is/frettir/ (17 10 2025)
+# https://www•akureyri•net/is/frettir/(17/10/2025)
 # — — — — — — — — — — — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
