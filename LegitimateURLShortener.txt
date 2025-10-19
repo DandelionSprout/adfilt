@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19October2025v2
+! Version: 20October2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2308,11 +2308,20 @@ $doc,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ! https://ipv6•google•com/search?q=site:www•microsoft•com/en-us/download/details•aspx?id%3D+%222023%22+-%222016%22&start=40&sstk=Ac65TH4a4yF4347UmfsIR4y2O_LK3QFE1vtUHoXn7e6O_iXGJsIShl1hhKS988jizw8M9G1nhsSyO-cYt8BlkvfRzPEvrAerLeRR1hgFlGlaMpps07rumhuAW1hD-oRsO543
 ||www.google.$doc,removeparam=sstk
 ||ipv6.google.com^$doc,removeparam=sstk
+! https://github.com/DandelionSprout/adfilt/issues/1186
+://www.google.$removeparam=/^num=\d{2,}$/
+://ipv6.google.com^$removeparam=/^num=\d{2,}$/
+! https://ipv6•google•com/search?q=google+num+parameter&udm=50&aep=1&ntc=1&mstk=AUtExfDNKZ4O2F89gAZKzXmh9QsvQ8Uas7iNnAQVGCvhHelkx9UgLZaM-OaLts9JB5UL668KC-JM799Ifmq_LM7aBefU14vmSbPTK4wl8xCwkalJcdGzLPqri1twQm5b5khbnGNx5TdoHW7xgWRMDRGNGRftcUibhIr5EVQ&csuir=1
+://www.google.$removeparam=aep
+://ipv6.google.com^$removeparam=aep
+://www.google.$removeparam=ntc
+://ipv6.google.com^$removeparam=ntc
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
 @@://www.google.*/maps^$removeparam=utm_campaign
 @@://ipv6.google.com/maps^$removeparam=utm_campaign
 ! Should not be removed: dpr (Determines image search results' box sizes)
-! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
+!!! stick (Breaks boxart feeds on the top of movie-related searches)
+!!! prmd (Changes the displayed results from page ≥2 for no apparent reason.)
 
 !!! ——— TikTok ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
