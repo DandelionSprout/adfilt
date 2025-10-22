@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 22October2025v1-Compilation
+! Version: 22October2025v2-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -28,12 +28,21 @@
 ! • Unnecessary login prompts.
 ! • URL parameters believed to be unnecessary or trackers.
 ! What this broad compilation does not block：Newsletters, cookie banners, social media links to company pages
+
+
+
 !#if ext_ublock
 !#include Dandelion%20Sprout's%20Anti-Malware%20List.txt
 !#endif
+
+
+
 !#if adguard
 !#include Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuard.txt
 !#endif
+
+
+
 !#include SocialShareList.txt
 !#include I%20Don't%20Want%20to%20Download%20Your%20Browser.txt
 !#include BrowseWebsitesWithoutLoggingIn.txt
@@ -49,34 +58,60 @@
 !#include AntiFunctionalityRemovalList.txt
 !#include EmptyPaddingRemover.txt
 !!! !#include Android%20Scum%20Class%20%E2%80%94%20Fake%20notification%20counters.txt
+
+
+
 !+ NOT_OPTIMIZED
 !#include Anti-IMDB%20List.txt
 !+ NOT_OPTIMIZED
 !#include AntiAwfulCommentsList.txt
+
+
+
 !#if !env_legacy
 !#if !env_safari
 !#if !adguard_app_ios
 !#include LegitimateURLShortener.txt
 !#endif
+!#endif
+!#endif
+
+
+
+!#if !env_safari
+!#if !adguard_app_ios
 !#if !env_mobile
 !#if !adguard_app_mac
+!#if !adguard_app_cli
+!#if !adguard_ext_android_cb
 !#include JapaneseTextSoftener.txt
 !#endif
 !#endif
 !#endif
 !#endif
-!#if !env_mobile
-!#include Anti-'Custom%20cursors'%20List.txt
 !#endif
+!#endif
+
+
+
 !#if adguard_app_mac
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 !+ NOT_OPTIMIZED
 !#include Dandelion%20Sprout's%20Website%20Stretcher.txt
 !#endif
+
+
+
 ! AdGuard was known as of early 2025 to not be able to handle "env_mobile" correctly, necessitating a number of semi-clone syntaxing to handle their products.
+!#if !adguard
 !#if env_mobile
 !#include stayingonbrowser/Staying%20On%20The%20Phone%20Browser
+!#include Anti-'Custom%20cursors'%20List.txt
 !#endif
+!#endif
+
+
+
 !#if adguard
 !#if !adguard_app_windows
 !#if !adguard_app_mac
@@ -84,12 +119,15 @@
 !#if !adguard_ext_edge
 !#if !adguard_ext_opera
 !#include stayingonbrowser/Staying%20On%20The%20Phone%20Browser
+!#include Anti-'Custom%20cursors'%20List.txt
 !#endif
 !#endif
 !#endif
 !#endif
 !#endif
 !#endif
+
+
 
 ! ————— 'Helpful list for maintainers of and contributors to Adfilt' (Will get its own subfile once I've got spare energy to extend the anti-'Wrong upload place' section further) —————
 
@@ -350,15 +388,21 @@ teknikproffset.*##.seg-promotion-wrapper
 github.com##.clearfix:has(h1:has-text(/^Uploading files .* versions Anti-Malware List$/)):has(div.js-filename:has-text(/^NordicFilters.*$/)):style(background-color:red!important)
 github.com##.clearfix:has(h1:has-text(/^Uploading files .*NorwegianExperimentalList .*$/)):has(div.js-filename:has-text(/^AntiMalware.*$/)):style(background-color:red!important)
 
+
+
 ! You all know those constant popups that   a   l o t   of websites show whenever the mouse cursor goes outside the page window area? I think I've found a fix for it, and I have solid confidence in that fix thus far. (24/09/2025)
 !#if !env_mobile
 !#if !adguard_app_android
 !#if !adguard_app_ios
+!#if !adguard_ext_android_cb
 !+ NOT_OPTIMIZED
-~google.*,~eeconomy.gr##+js(acs, addEventListener, mouseleave)
+*,~google.*,~eeconomy.gr##+js(acs, addEventListener, mouseleave)
 !#endif
 !#endif
 !#endif
+!#endif
+
+
 
 ! Discord ads for Perplexity Aİ; intended to be a temporary entry until https://github.com/AdguardTeam/AdguardFilters/issues/214541 has been handled
 &client_ad_session_id=
