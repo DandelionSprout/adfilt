@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 17October2025v1-Deprecated
+# Last modified: 22October2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -486,6 +486,8 @@ msFilterList
 # skagensavisDK (30 05 2025)
 - wp-content uploads i123_ads
 # hvidovreavisDK (30 05 2025)
+# https://play•tv2•no/direkte-tv/hits-q7bsv1v6?play=true/(Tested/with/TV2/Play's/no-ads Total pack; 21 10 2025)
+://sponsorship.public.tv2.no/spons/play/v2?params=
 # — — — — —
 # 🇳🇴：Generelle oppføringer med kilder
 # 🇬🇧：Generic entries that have sources
@@ -645,6 +647,7 @@ msFilterList
 # https://heimildin•is/frettir/ (17 10 2025)
 # https://kjarninn•is/frettir/ (17 10 2025)
 # https://www•akureyri•net/is/frettir/(17/10/2025)
+# (https://github.com/AdguardTeam/AdguardFilters/issues/215945)
 # — — — — — — — — — — — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances

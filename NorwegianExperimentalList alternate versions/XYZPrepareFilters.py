@@ -4945,7 +4945,7 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            r"^\$[a-z0-9-]{1,}$",
-           r"",
+           "",
            line
         )
 
@@ -4963,7 +4963,7 @@ def prepare_ag(lines) -> str:
 
         line = re.sub(
            r"^.*\$dnstype.*$",
-           r"",
+           "",
            line
         )
 
@@ -5019,6 +5019,36 @@ def prepare_ag(lines) -> str:
         line = re.sub(
            r"^((\|\||://)?[12]?\d?\d?\.[12]?\d?\d?\.[12]?\d?\d?\.[12]?\d?\d?\^(\$(doc(ument)?.*?|all.*?))?)$",
            r"!+ NOT_PLATFORM(windows, mac, android, cli)\n\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*),~inline-font$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|35\.(.*)$",
+           r"//35.\1",
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|104\.(.*)$",
+           r"//104.\1",
+           line
+        )
+
+        line = re.sub(
+           r"^\|\|216\.(.*)$",
+           r"//216.\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(facebook\.com#)\?(#.*)$",
+           r"\1\2",
            line
         )
 

@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre (Møter ABPs inkluderingsregler — Firefox ≥121, Chrom* ≥105)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters (With ABP inclusion compliance — Firefox ≥121, Chrom* ≥105)
-! Version: 171020251
+! Version: 221020251
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1306,7 +1306,6 @@ sporten.com##.td-header-sp-recs
 sportsidioten.no##.sticky-half-page
 heimildin.is##.m-line:has(div[class^=ad])
 heimildin.is##div.order-xl-3:has(div[class^=ad])
-mbl.is##div:not([id]):has(> aside.augl)
 vb.is##.au-block:has(> div[data-zone])
 austurfrett.is##.uk-width-auto\@m
 austurfrett.is##div[class*=" uk-width-1"]:has(> div > div.mod-banners)
@@ -1865,6 +1864,8 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 /wp-content/uploads/i123_ads^$image
 ! hvidovreavisDK (30/05/2025)
 .dk/media/*-topbanner-$image
+! https://play•tv2•no/direkte-tv/hits-q7bsv1v6?play=true (Tested with TV2 Play's no-ads Total pack; 21/10/2025)
+://sponsorship.public.tv2.no/spons/play/v2?params=
 ! — — — — —
 ! 🇳🇴：Generelle oppføringer med kilder
 ! 🇬🇧：Generic entries that have sources
@@ -2206,6 +2207,8 @@ fo##.vev
 ###sidebar-floating-ad
 ! https://www•akureyri•net/is/frettir (17/10/2025)
 ##.strevda__item:not(html,body,:empty)
+! (https://github.com/AdguardTeam/AdguardFilters/issues/215945)
+!!!mbl.is##div:not([id]):has(> aside.augl)
 ! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -6753,7 +6756,7 @@ dn.se##.bad--insider-tall
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Wed, 15 Oct 2025 17:12:10 +0300
+! Last modified: Wed, 22 Oct 2025 00:06:54 +0300
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -6962,6 +6965,8 @@ asunnot.oikotie.fi##[analytics-impression="insurance_link_impression"]
 asunnot.oikotie.fi##[analytics-impression="product_broadband_impression"]
 asunnot.oikotie.fi##ad-unit
 asunnot.oikotie.fi##energy-promotion-building
+atleetti.fi##.ad-spot-wrapper
+atleetti.fi##.other-categories > .w-full:has([href^="https://atleetti.fi/mainos"])
 audiovideo.fi##.head.the-wrap
 audiovideo.fi##[id|=bunyad-widget-ads]
 auto1.fi##.pb[lazied]
@@ -6998,6 +7003,7 @@ como.fi,tilt.fi,rumba.fi##body:not(.post-type-archive-advertoriaali) .bg-white.p
 dailyfinland.fi##.wrepper.mx-auto > .row[style="margin-bottom:20px"]
 dawn.fi##.adsbygoogle + script + p > br
 deitti.net##.ad-article
+demokraatti.fi##article + div div:has(> div.img > img[src*="Nettikansi"])
 demokraatti.fi##div[class]:has(> .ad)
 digi-kuva.fi##[data-banner-horseshoe]
 download.fi##.ni_holder
@@ -7789,6 +7795,7 @@ tivi.fi#?#div#skyscraper-height-div > aside > div > section > div:has-text(KAUPA
 tivi.fi#?#div#skyscraper-height-div > div > aside > div > section > div:has-text(KAUPALLINEN YHTEISTYÖ)
 tivi.fi#?#div#skyscraper-height-div > section > div > a > div:has-text(Kaupallinen yhteistyö)
 toimitilat.kauppalehti.fi##.inner.sp-article
+toimitilat.kauppalehti.fi##.justify-content-center:has(> #almad-leaderboard-1)
 toimitilat.kauppalehti.fi##.list-article:has(.sp-tag)
 toimitilat.kauppalehti.fi##.sponsored-article.list-article
 toimitilat.oikotie.fi##[analytics-impression="energy-promotion_listing-page_impression"]
