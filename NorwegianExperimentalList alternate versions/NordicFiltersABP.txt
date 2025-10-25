@@ -1,7 +1,7 @@
 [Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 221020251
+! Version: 251020251
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -535,6 +535,11 @@ jyllands-posten.dk,jyllands--posten-dk.translate.goog###MegaBoard_Top
 tipsbladet.dk##main > section.l-padding-top-lg
 dn.no##[id^=googlead-]:not(#googlead-toppbanner)
 forum.kvinneguiden.no##div[class*=" ehm-affiliate-"]
+mindrift.no##.bannerlocation-tag
+randerssiderne.dk##div[class]:not([class*=" "]):has(> .lg\:block > .slick-initialized.slick-slider img[src*="ads.netavis.dk"])
+studieportalen.dk###base-form > div[style^="width:"]
+bilauppbod.is###auctionitems__ > .row > .col:has(.topp-banner-ad)
+bilauppbod.is##.main_container.container-fluid:not(:has(a)):has(.topp-banner-ad)
 voguescandinavia.com##div[class^=AdssetsAd_]
 tv2.no##.adunit-wrapper--padded
 klikk.no##.gpt-sticky
@@ -1380,7 +1385,8 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 /auglysingar/*
 .no/api/unit-image?$xmlhttprequest,~third-party
 /vefauglysingar/*
-||ad.*.no^$domain=~ad.dep.no|~ad.hem.no|~ad.amediakreativ.no|~ba.no
+||ad.*.no^$domain=~ad.dep.no|~ad.hem.no|~ad.amediakreativ.no|~ba.no|~ad.mallingeiendommer.no
+||ad.*.dk^
 ||ad1.*.dk^
 ||ad1.*.no^
 ||ads.*.dk^$domain=~ads.mst.dk
@@ -1553,6 +1559,8 @@ _visittkortannonse_$image
 /wp-content/uploads/*_augl_10$image
 ! ff7IS (17/10/2025)
 .is/wp-content/uploads/*1018x360$image
+! btDK (25/10/2025)
+||s3-bm-adtech.$third-party
 ! — — — — —
 ! 🇳🇴：Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -3621,6 +3629,52 @@ triplx.dk##.aff-inner-col
 ||infopostdk.com^$popup
 ||158.94.209.89^
 ||158.94.209.89^$popup
+
+! Inspired by https://nyheder•tv2•dk/samfund/2025-10-23-sundheddk-faar-hundreder-af-henvendelser-om-falske-smser
+||borger-sundhed.com^
+||borger-sundhed.com^$popup
+||dlssneykonto.com^
+||dlssneykonto.com^$popup
+||infos-sundhed.com^
+||infos-sundhed.com^$popup
+||infosundhed.com^
+||infosundhed.com^$popup
+||infosundheds.com^
+||infosundheds.com^$popup
+||sikkerklientopdatering.com^
+||sikkerklientopdatering.com^$popup
+||skat-skts-dk.com^
+||skat-skts-dk.com^$popup
+||sporpakke-dk.com^
+||sporpakke-dk.com^$popup
+||sundhed-infos.com^
+||sundhed-infos.com^$popup
+||sundhed-skort.com^
+||sundhed-skort.com^$popup
+||sundhed-web.com^
+||sundhed-web.com^$popup
+||dk-fornysundhed.com^
+||dk-fornysundhed.com^$popup
+||dk-sundhed.com^
+||dk-sundhed.com^$popup
+||dksundhed.com^
+||dksundhed.com^$popup
+||sundhed-infodk.com^
+||sundhed-infodk.com^$popup
+||158.94.209.86^
+||158.94.209.86^$popup
+||158.94.209.87^
+||158.94.209.87^$popup
+||158.94.209.88^
+||158.94.209.88^$popup
+||158.94.209.90^
+||158.94.209.90^$popup
+||223.29.226.200^
+||223.29.226.200^$popup
+
+
+
+
 
 
 ! 🇳🇴：Falske nettapoteker

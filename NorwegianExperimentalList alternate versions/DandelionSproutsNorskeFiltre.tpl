@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 22October2025v1-Deprecated
+# Last modified: 25October2025v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -188,6 +188,8 @@ msFilterList
 # https://handkastid•net/2025/10/16/erlendar-frettir-islendingar-i-eldlinunni-2//(17/10 2025)
 - wp-content uploads *_augl_10
 # ff7IS (17 10 2025)
+# btDK (25 10 2025)
+-d s3-bm-adtech.
 # — — — — —
 # 🇳🇴：Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -1412,6 +1414,27 @@ msFilterList
 -d info-sundhed.com
 -d infopostdk.com
 -d 158.94.209.89
+# Inspired by https://nyheder•tv2•dk/samfund/2025-10-23-sundheddk-faar-hundreder-af-henvendelser-om-falske-smser
+-d borger-sundhed.com
+-d dlssneykonto.com
+-d infos-sundhed.com
+-d infosundhed.com
+-d infosundheds.com
+-d sikkerklientopdatering.com
+-d skat-skts-dk.com
+-d sporpakke-dk.com
+-d sundhed-infos.com
+-d sundhed-skort.com
+-d sundhed-web.com
+-d dk-fornysundhed.com
+-d dk-sundhed.com
+-d dksundhed.com
+-d sundhed-infodk.com
+-d 158.94.209.86
+-d 158.94.209.87
+-d 158.94.209.88
+-d 158.94.209.90
+-d 223.29.226.200
 # 🇳🇴：Falske nettapoteker
 # 🇬🇧：Fake online pharmacies
 - -med.footeo.com
