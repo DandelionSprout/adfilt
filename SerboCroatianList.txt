@@ -2,7 +2,7 @@
 ! Title: 🏀 Dandelion Sprout's Serbo-Croatian filters
 ! Title 🇭🇷 🇧🇦: Srpskohrvatski filtri Dandelion Sprouta
 ! Title 🇷🇸: Српскохрватски филтери Dandelion Sprout-а
-! Version: 26October2025v2-Beta
+! Version: 28October2025v1-Beta
 ! Expires: 3 days
 
 ! Description: For the first time in known history, this is a filterlist for websites in Serbian, Montenegrin, Croatian, and Bosnian. This means that all significant language groups in Europe now have filterlists for them.
@@ -108,7 +108,6 @@ gloria.hr,jutarnji.hr##div[class^=position_item_]
 monitor.hr##.flash--news:has(> div[id^=ad-])
 monitor.hr##.flash--news:has(> script)
 net.hr###below_content_third_party
-net.hr##div[data-upscore-zone=product-gallery]
 njuskalo.hr##.BannerAlignment
 poslovni.hr,poslovni.co.rs,poslovni-dnevnik.me,poslovni.mk##.single__widget:has(> .lwdgt)
 poslovni.hr,poslovni.co.rs,poslovni-dnevnik.me,poslovni.mk##section[class=section]:has(.lwdgt)
@@ -132,7 +131,7 @@ pink.rs##.zadruga-top
 republika.rs##.BannerAd
 sd.rs##div[class*=adocean]
 sd.rs##div[data-label=Reklama]
-n1info.ba,nova.rs,sportklub.rs##.banner-promotion
+n1info.*,nova.rs,sportklub.rs##.banner-promotion
 snnovine.hu##div[title^="TERRA reklama" i]
 snnovine.hu##div[title^="reklama2."]
 telegram.hr##.relative.center:has(> .banner-slot)
@@ -308,8 +307,6 @@ uns.org.rs##.banner468x60
 ||avalaads.com^$third-party
 ||linker.hr^
 ||native.tportal.hr^$third-party
-||lupon.media^$third-party
-||a.mabipa.com^$third-party
 ||farmer.ba/files/banners^$image
 ||nap.ba/storage/userfiles/images/Slike$image
 ||navidiku.rs/banerslike^$image
@@ -334,15 +331,15 @@ uns.org.rs##.banner468x60
 ||widgets.jutarnji.hr^
 ||media.tangosix.rs/*/banner.$image
 ||infovranjske.rs/ads^$image
-||widget.admiral.hr^$third-party
-||traffic.styria.hr^$third-party
+||widget.admiral.hr^
+||traffic.styria.hr^
 ||sk.rs/slike/baneri^
-||redakcija.alo.rs^$image,third-party
+||redakcija.alo.rs^
 ||info-ks.net/assets/img/banners^
 |https://html-load.com^$script,third-party,domain=slobodnadalmacija.hr|tportal.hr
 ||arhivanalitika.hr/*/uploads/*/ICAM_*x$image
 ||arhivanalitika.hr/*/uploads/*/Bon.hr-*x$image
-||klik-slider.morgancode.com^$subdocument
+||klik-slider.morgancode.com^
 ||cxpublic.com^$third-party
 ||5portal.hr/portal/source/0*.gif^
 ||5portal.hr/portal/source/0*_Banner-$image
@@ -439,54 +436,113 @@ sodalive.ba##section[data-settings]:first-of-type
 @@||vidverto.io/*/invocation.
 ! ——————————
 ! Borrowed from https://github.com/AdguardTeam/AdguardFilters/blob/master/BaseFilter/sections/foreign.txt (which is licenced as GPL-3.0) with minor modifications
-aviatica.rs##.fusion-imageframe > a[href][target="_blank"] > img
-blic.rs,bosnainfo.ba,bloombergadria.com##.banner
+24sata.hr##.dfp_banner
+24sata.hr##.js_topProducts
 blic.rs##.banner-top
+blic.rs##.banner__placeholder
+blic.rs##body .banner
+bloombergadria.com##.banner
 bosnainfo.ba###Billboard_UnderArticle
+bosnainfo.ba##.banner
+dalmatinskiportal.hr##.ad-click-banner
 danas.hr##.Slot_placeholder
-danas.hr#?#.intextAdIgnore:has(> div[class^=css-]:only-child > .Slot_content:only-child)
-danas.hr#?#div[class^="css-"]:has(> .Slot_content:only-child)
-danas.hr#?#div[class^="css-"]:has(> span.Slot_title:first-child + .Slot_content:last-child)
-eprevodilac.com##.oglasi_sredina
+danas.hr##div[class^=article__ads]
+danas.hr##.cls_frame:has(> div[class^=css] > div.Wallpaper_container)
+danas.hr##.intextAdIgnore:has(> div[class^=css-]:only-child > .Slot_content:only-child)
+danas.hr##.Sidebar_aside > div[class^=css-] > div[class^=css-]:has(.SlidingWrapper_wrapper)
+danas.hr##div[class^=css-]:has(> .Slot_content:only-child)
+danas.hr##div[class^=css-]:has(> div[id^=slot_content_d-billboard])
+danas.hr##div[class^=css-]:has(> span.Slot_title:first-child + .Slot_content:last-child)
+danas.hr##main > div > div.intextAdIgnore:has(> div > h1 > span:has-text(Više s weba))
+dnevno.hr##.mj-pf-widget
+dnevno.hr##.wpipa-container
+domaceserije.net##[id^=MyAdsId]
+filmoviplex.com###desno
+filmoviplex.com###levo
+filmoviplex.com###vivadice
+filmoviplex.com###wrapper > div[style="overflow:hidden;"]
+filmoviplex.com##a[target=_blank] > img[style="max-width: 100%;"]
+glasistre.hr##.row:has(> div[class^=col-] > style + div > div > div.ponuda)
 gledajcrtace.xyz###header-wrap-reklama
 gledajcrtace.xyz###sidebar > #HTML8
 gledajcrtace.xyz###sidebar-two > #HTML4
 gledajcrtace.xyz###sidebar-two > #HTML5
+hercegovina.info##.banner-placeholder
+hercegovina.info##.banner-placeholder-side
+hercegovina.info##.banner-space
+index.hr##.categories > div.cube-holder:has(> div[data-css-class="google-box center-aligner"])
+informer.rs##.bnr
+informer.rs##.related-news
+informer.rs##.sticky-lead-bnr
+jockantv.com###Dialog1
+jockantv.com###Toast1
 jutarnji.hr##.container--break[class*=break_]
 jutarnji.hr##.feroterm.products
 jutarnji.hr##.lidl.products
+jutarnji.hr##.position_item_right_01_top
+jutarnji.hr##.position_item_textend_top
 jutarnji.hr##.promo_heading_fix img
-mob.hr###billboard_ad_container
-mob.hr##.noa-banner > a
-mob.hr##.side_banner
+kupujemprodajem.com###__next div[class^=Banner]:has(a[href^="https://novi.kupujemprodajem.com/bClick.php"])
 mondo.me##.js-gpt-ad
-n1info.com,n1info.hr,nova.rs##.banner-promotion
+n1info.hr###billboard_banner
+n1info.hr##.ad-loading-placeholder
+n1info.hr##div[data-selector=ad-script-placeholder]
+net.hr###head_aside
+net.hr###kaufland
+net.hr###might_be_interested_and_ad + div[class^=css-]
+net.hr###sliding_wrapper
+net.hr##.category__ads-listing
+net.hr##.groupWrapper > div[class^=css-] > div[class^=css-][style^="display:flex;"]:not([data-upscore-zone])
+net.hr##.se-ad
+net.hr##.VoyoSlider_container
+net.hr##div[class*=__ads-]
+net.hr##div[style="display: flex; flex-direction: column; align-items: center; justify-content: center; align-self: stretch; padding: 0px; margin: 0rem -0.9375rem;"]
+net.hr##div[style="padding:0;margin:0;position:relative;width:100%;height:100%"]
+net.hr###jos_iz_rubrike_wrapper + div[class^=css-]:has(> div[class^=css-] a[id^=placeholder_container_])
+net.hr###might_be_interested_and_ad > div#desktopScaleDown:has(> div[class^=css-] a[id^=placeholder_container_])
+net.hr##.cls_frame:has(> div > iframe[title*=banner])
+net.hr##.cls_frame:has(> div[class^=css-] > div.Wallpaper_container)
+net.hr##.cls_frame:has(> div[class^=css-] > iframe[title=admiral-widget])
+net.hr##.sectionTitle_wrapper ~ div[class^=css-]:has(> div[class^=css-] a[id^=placeholder_container_])
+net.hr##article > div[class^=css-]:has(> span.SlotContainer_title:has-text(Tekst se nastavlja ispod oglasa))
+nin.rs##.bnr
+noizz.rs###bannerStickyBottom
+noizz.rs##.placeholder
 nova.rs##.uc-in-feed-banner
 novilist.hr##.addBlock
 novilist.hr##.more-news
-prva.rs##div[id^=midasWidget]
+olx.ba#%#//scriptlet('set-constant', 'googletag.destroySlots', 'noopFunc')
+politika.rs##.article-sidebar-banner
+politika.rs##.banner-item
+politika.rs##.story-details-banners-row
 radiosarajevo.ba##div[style^="min-height: 250px; width: 100%"]
+rezultati.com##.detailLeaderboard
+sd.rs##.sd-banners-zone-responsive-footer
 slobodnadalmacija.hr##.container--break
 slobodnadalmacija.hr##.item__ad-center
-sveopoznatima.com#?##secondary > aside:has(> div.widget-header > h3:has-text(/^.*(Marketing|Sponzor\isano).*$/))
+sportal.blic.rs##div.container:has(> div#Billboard_Desktop)
+sportal.blic.rs##div.mx-auto:has(> div.wrapperAd)
+sportklub.rs##.banner-placeholder
+story.hr##.pg-story-page div.c-wallpaper-ad-wrapper:style(display: none!important)
+story.hr##.pg-story-page div.wallpaper-help-wrapper:style(top: 60px !important)
+sveopoznatima.com###secondary > aside:has(> div.widget-header > h3:has-text(/^.*(Marketing|Sponzorisano).*$/))
 telegraf.tv,telegraf.rs##.banner-placeholder-text
-tvarenasport.com##a[class^=baner_]
-vijesti.me##.ads
+telegram.hr##.banner-separator
+telegram.hr##.banner-separator + div.full
+telegram.hr##.single-top-banner
+telegram.hr##div[id^=intext_midas]
+telegram.hr##.relative.center:has(> div.banner-slot)
+tportal.hr##.kaufland-w
+tportal.hr##.gpElementAdvertising:style(display: none !important)
+vecernji.hr##div[data-client=vecernji_hr_spotlight]
+vecernji.hr#?#.js_bannerWrapper.gallery__banner:remove()
+zadarskiportal.com##.bn-content
+zadarskiportal.com##body .lebox-ready
 zagreb.info##.td-is-sticky div[align=center] > a > img
 zagreb.info##.td-ss-main-sidebar div[align=center] > a > img
-domaceserije.net##[id^=MyAdsId]
-||aviatica.rs/static/uploads/*/*/*-banner-*x*.gif^
-||aviatica.rs/static/uploads/*/*/aviatica-1atravel-*.gif^
-||banner.mob.hr^
+||adriamediacontent.com/js/pubjelly/main/pubjelly.js
 ||bug.hr/ads/
 ||contentexchange.me^$domain=nova.rs
-||filmotopia.org/sw.js
-||kupujemprodajem.com/bShow.php^
-||mob.hr/blog/wp-content/uploads/noviupload/NOA-E1-BANNER
-||mob.hr/h18.jpg^
-||mob.hr^*-300x250.
-||pcchip.hr/wp-content/uploads*BANNER
-||subs.vingd.com^$third-party
-||sultanovic.net/?*%$script
-||zotabox.com^$domain=animesrbija.com
-||widget.halooglasi.com/nekretnine.html$subdocument,third-party
+||ocdn.eu/mis/wrapper/nin.rs/*/ads.js
+||sultanovic.info/?*%$script
+||widget.marktjagd.de^
