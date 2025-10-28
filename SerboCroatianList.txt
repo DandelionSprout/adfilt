@@ -2,11 +2,11 @@
 ! Title: 🏀 Dandelion Sprout's Serbo-Croatian filters
 ! Title 🇭🇷 🇧🇦: Srpskohrvatski filtri Dandelion Sprouta
 ! Title 🇷🇸: Српскохрватски филтери Dandelion Sprout-а
-! Version: 28October2025v1-Beta
+! Version: 28October2025v2
 ! Expires: 3 days
 
 ! Description: For the first time in known history, this is a filterlist for websites in Serbian, Montenegrin, Croatian, and Bosnian. This means that all significant language groups in Europe now have filterlists for them.
-! Description 🇭🇷: Prvi put u povijesti dostupna je lista filtara za web-lokacije na srpskom, hrvatskom, bosanskom i crnogorskom. Sad sve veće skupine jezika u Europi imaju svoje liste.
+! Description 🇭🇷: Prvi put u povijesti dostupna je lista filtara za web-lokacĳe na srpskom, hrvatskom, bosanskom i crnogorskom. Sad sve veće skupine jezika u Europi imaju svoje liste.
 ! Description 🇷🇸: Први пут у историји је доступна листа филтера за сајтове на српском, хрватском, босанском и црногорском. Сада све веће групе језика у Европи имају своје листе.
 
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -212,9 +212,9 @@ ul-info.com##article.type-post:has(a[href*=meridian])
 ul-info.com##.category-promo
 ul-info.com#?#.elementor-column-gap-default:has-text(/^SERV\IS/)
 gminfo.rs,onlyclubbing.com##.banner-img
-n1info.rs,n1info.hr,n1info.ba##.billboard-banner
-n1info.rs,n1info.hr,n1info.ba##.banner-inner
-n1info.rs,n1info.hr,n1info.ba##.billboard-banner-top
+n1info.*##.billboard-banner
+n1info.*##.banner-inner
+n1info.*##.billboard-banner-top
 animesrbija.com##.horizontal-banners
 vesti.rs##.banner-box
 vesti.rs##.right-side > div[style^=text-align] > a
@@ -303,6 +303,36 @@ uns.org.rs##.brandingBannerRight
 uns.org.rs##.brandingBannerLeft
 uns.org.rs##.banner468x60
 015.xn--90a3ac###media_image-2:has(> img[src*="/oglas-"])
+24sata.hr##.dfp_banner
+24sata.hr##.js_topProducts
+bloombergadria.com##.banner
+bosnainfo.ba##.banner
+dalmatinskiportal.hr##.ad-click-banner
+dalmatinskiportal.hr##.banner
+net.hr##.se-ad
+filmoviplex.com###desno
+filmoviplex.com###levo
+hercegovina.info##.banner-placeholder
+hercegovina.info##.banner-placeholder-side
+hercegovina.info##.banner-space
+index.hr##.categories > div.cube-holder:has(> div[data-css-class="google-box center-aligner"])
+informer.rs##.bnr
+informer.rs##.sticky-lead-bnr
+n1info.*###billboard_banner
+n1info.hr##div[data-selector=ad-script-placeholder]
+nin.rs##.bnr
+noizz.rs###bannerStickyBottom
+noizz.rs##.placeholder
+nova.rs##.uc-in-feed-banner
+novilist.hr##.addBlock
+politika.rs##.banner-item
+radiosarajevo.ba##div[style^="min-height: 250px; width: 100%"]
+rezultati.com##.banner
+sportal.blic.rs##div.mx-auto:has(> div.wrapperAd)
+sveopoznatima.com###secondary > aside:has(> div.widget-header > h3:has-text(/^.*(Marketing|Sponzorisano).*$/))
+telegraf.tv,telegraf.rs##.banner-placeholder-text
+zadarskiportal.com##.bn-content
+zadarskiportal.com##body .lebox-ready
 ||glasistre.hr/SliderBanner^
 ||avalaads.com^$third-party
 ||linker.hr^
@@ -361,9 +391,12 @@ uns.org.rs##.banner468x60
 ||prigorski.hr/wp-content/uploads/202*1010x140$image
 ||eph-adsjutarnji.cdn.sysbee.net^
 ||swcs.24sata.rocks^
+||lupon.media^
+||a.mabipa.com^
 &code=banner468x60|$domain=uns.org.rs,image
 &code=banner360x1080|$domain=uns.org.rs,image
 ||015.xn--90a3ac/*/oglas-$image
+||dalmatinskiportal.hr/*/baneri/
 ! ——————————
 ! Generic entries with sources
 ! 24sataHR, vecernjiHR (19. 10. 2020.)
@@ -429,6 +462,12 @@ sodalive.ba##section[data-settings]:first-of-type
 ##.gddanas:not(html,body,:empty)
 ! gol•dnevnik•hr (26. 10. 2025)
 ##.article-block__banner:not(html,body,:empty)
+! Based on a similar entry in "uBlock Filters - Ads", for novostiRS and radiosarajevoBA (28. 10. 2025)
+/^https:\/\/[a-z0-9]{4,10}\.tech\/c\/(?:[-a-z0-9]+\.){1,3}js$/$script,3p,domain=rs|ba
+! rezultatiCOM (28. 10. 2025)
+##div#box-over-content-revive
+! Borrowed from "AdGuard Base Filter" for sportklub•n1info•rs (28. 10. 2025)
+||btloader.com^
 ! ——————————
 ! Whitelistings to fix sites
 @@||ads.api.24ur.si/adserver/adblock.$subdocument
@@ -436,29 +475,12 @@ sodalive.ba##section[data-settings]:first-of-type
 @@||vidverto.io/*/invocation.
 ! ——————————
 ! Borrowed from https://github.com/AdguardTeam/AdguardFilters/blob/master/BaseFilter/sections/foreign.txt (which is licenced as GPL-3.0) with minor modifications
-24sata.hr##.dfp_banner
-24sata.hr##.js_topProducts
 blic.rs##.banner-top
 blic.rs##.banner__placeholder
-blic.rs##body .banner
-bloombergadria.com##.banner
 bosnainfo.ba###Billboard_UnderArticle
-bosnainfo.ba##.banner
-dalmatinskiportal.hr##.ad-click-banner
-danas.hr##.Slot_placeholder
-danas.hr##div[class^=article__ads]
-danas.hr##.cls_frame:has(> div[class^=css] > div.Wallpaper_container)
-danas.hr##.intextAdIgnore:has(> div[class^=css-]:only-child > .Slot_content:only-child)
-danas.hr##.Sidebar_aside > div[class^=css-] > div[class^=css-]:has(.SlidingWrapper_wrapper)
-danas.hr##div[class^=css-]:has(> .Slot_content:only-child)
-danas.hr##div[class^=css-]:has(> div[id^=slot_content_d-billboard])
-danas.hr##div[class^=css-]:has(> span.Slot_title:first-child + .Slot_content:last-child)
-danas.hr##main > div > div.intextAdIgnore:has(> div > h1 > span:has-text(Više s weba))
 dnevno.hr##.mj-pf-widget
 dnevno.hr##.wpipa-container
 domaceserije.net##[id^=MyAdsId]
-filmoviplex.com###desno
-filmoviplex.com###levo
 filmoviplex.com###vivadice
 filmoviplex.com###wrapper > div[style="overflow:hidden;"]
 filmoviplex.com##a[target=_blank] > img[style="max-width: 100%;"]
@@ -467,13 +489,7 @@ gledajcrtace.xyz###header-wrap-reklama
 gledajcrtace.xyz###sidebar > #HTML8
 gledajcrtace.xyz###sidebar-two > #HTML4
 gledajcrtace.xyz###sidebar-two > #HTML5
-hercegovina.info##.banner-placeholder
-hercegovina.info##.banner-placeholder-side
-hercegovina.info##.banner-space
-index.hr##.categories > div.cube-holder:has(> div[data-css-class="google-box center-aligner"])
-informer.rs##.bnr
 informer.rs##.related-news
-informer.rs##.sticky-lead-bnr
 jockantv.com###Dialog1
 jockantv.com###Toast1
 jutarnji.hr##.container--break[class*=break_]
@@ -484,16 +500,13 @@ jutarnji.hr##.position_item_textend_top
 jutarnji.hr##.promo_heading_fix img
 kupujemprodajem.com###__next div[class^=Banner]:has(a[href^="https://novi.kupujemprodajem.com/bClick.php"])
 mondo.me##.js-gpt-ad
-n1info.hr###billboard_banner
 n1info.hr##.ad-loading-placeholder
-n1info.hr##div[data-selector=ad-script-placeholder]
 net.hr###head_aside
 net.hr###kaufland
 net.hr###might_be_interested_and_ad + div[class^=css-]
 net.hr###sliding_wrapper
 net.hr##.category__ads-listing
 net.hr##.groupWrapper > div[class^=css-] > div[class^=css-][style^="display:flex;"]:not([data-upscore-zone])
-net.hr##.se-ad
 net.hr##.VoyoSlider_container
 net.hr##div[class*=__ads-]
 net.hr##div[style="display: flex; flex-direction: column; align-items: center; justify-content: center; align-self: stretch; padding: 0px; margin: 0rem -0.9375rem;"]
@@ -505,39 +518,25 @@ net.hr##.cls_frame:has(> div[class^=css-] > div.Wallpaper_container)
 net.hr##.cls_frame:has(> div[class^=css-] > iframe[title=admiral-widget])
 net.hr##.sectionTitle_wrapper ~ div[class^=css-]:has(> div[class^=css-] a[id^=placeholder_container_])
 net.hr##article > div[class^=css-]:has(> span.SlotContainer_title:has-text(Tekst se nastavlja ispod oglasa))
-nin.rs##.bnr
-noizz.rs###bannerStickyBottom
-noizz.rs##.placeholder
-nova.rs##.uc-in-feed-banner
-novilist.hr##.addBlock
 novilist.hr##.more-news
 olx.ba#%#//scriptlet('set-constant', 'googletag.destroySlots', 'noopFunc')
 politika.rs##.article-sidebar-banner
-politika.rs##.banner-item
 politika.rs##.story-details-banners-row
-radiosarajevo.ba##div[style^="min-height: 250px; width: 100%"]
 rezultati.com##.detailLeaderboard
 sd.rs##.sd-banners-zone-responsive-footer
 slobodnadalmacija.hr##.container--break
 slobodnadalmacija.hr##.item__ad-center
 sportal.blic.rs##div.container:has(> div#Billboard_Desktop)
-sportal.blic.rs##div.mx-auto:has(> div.wrapperAd)
-sportklub.rs##.banner-placeholder
 story.hr##.pg-story-page div.c-wallpaper-ad-wrapper:style(display: none!important)
 story.hr##.pg-story-page div.wallpaper-help-wrapper:style(top: 60px !important)
-sveopoznatima.com###secondary > aside:has(> div.widget-header > h3:has-text(/^.*(Marketing|Sponzorisano).*$/))
-telegraf.tv,telegraf.rs##.banner-placeholder-text
 telegram.hr##.banner-separator
 telegram.hr##.banner-separator + div.full
 telegram.hr##.single-top-banner
 telegram.hr##div[id^=intext_midas]
-telegram.hr##.relative.center:has(> div.banner-slot)
 tportal.hr##.kaufland-w
 tportal.hr##.gpElementAdvertising:style(display: none !important)
 vecernji.hr##div[data-client=vecernji_hr_spotlight]
 vecernji.hr#?#.js_bannerWrapper.gallery__banner:remove()
-zadarskiportal.com##.bn-content
-zadarskiportal.com##body .lebox-ready
 zagreb.info##.td-is-sticky div[align=center] > a > img
 zagreb.info##.td-ss-main-sidebar div[align=center] > a > img
 ||adriamediacontent.com/js/pubjelly/main/pubjelly.js
