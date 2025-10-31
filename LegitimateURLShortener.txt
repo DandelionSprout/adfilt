@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 26October2025v1
+! Version: 30October2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -11,7 +11,6 @@
 ! - This list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view parameters on the strict-block page or tools to bypass it.
 ! - This list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
 ! - This list can not remove parameters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
-! - Despite several attempts, this list can not remove trailing ?'s.
 ! - As of 15/03/2024, this list did not work properly in Brave Browser, due to Brave missing several critical features this list uses. Please use this list only with uBlock Origin or AdGuard. User statements have however ticked in in mid-2025 that the breakage is smaller or gone.
 
 ! 🗺️ ——— General remove rules ——— 🗺️ !
@@ -1805,6 +1804,9 @@ $removeparam=/^ref=winstall$/
 ! https://media•discordapp•net/attachments/1216338582243905546/1428095127590666331/9c95cdb4-f4a8-f011-bbd2-7ced8d93a186•png?ex=68f140bb&is=68efef3b&hm=9823d3f5245ed3e57643b13299cbad886826744b3d46123f30cdf558e3cc9311&=&format=webp&quality=lossless (16/10/2025)
 !+ NOT_OPTIMIZED
 $doc,image,removeparam=/^=$/,domain=discord.com|discordapp.net|amazon.*|adressa.no|polarismedia.no
+
+! It sure took a while to figure out how to remove trailing ?'s, but this at least seems to succeed at it. (30/10/2025)
+/^http.*[^?]\?$/$doc,removeparam=/^=$/
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
