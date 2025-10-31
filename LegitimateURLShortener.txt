@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 30October2025v1
+! Version: 30October2025v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -434,7 +434,7 @@ $removeparam=hsCtaTracking
 $removeparam=tblci
 $removeparam=tcid,domain=~rug.nl
 $doc,removeparam=/^dv_adwords_.*$/
-$removeparam=wdorigin
+$removeparam=/^wdorigin=.*$/i
 $doc,removeparam=/^aff_id\d?=.*$/i,domain=~affiliate.salestring.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-773756
@@ -1807,6 +1807,9 @@ $doc,image,removeparam=/^=$/,domain=discord.com|discordapp.net|amazon.*|adressa.
 
 ! It sure took a while to figure out how to remove trailing ?'s, but this at least seems to succeed at it. (30/10/2025)
 /^http.*[^?]\?$/$doc,removeparam=/^=$/
+
+! https://github.com/DandelionSprout/adfilt/issues/1191
+$removeparam=notification_referrer_id
 
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
@@ -5159,6 +5162,13 @@ $removeparam=/^has-promotion=$/
 
 ! https://github.com/DandelionSprout/adfilt/issues/1187
 ||hepsiburada.com^$removeparam=ftid
+
+! https://m365•cloud•microsoft/?auth=1&origindomain=Office&client-request-id=•••••••••••• (30/10/2025)
+||cloud.microsoft^$removeparam=origindomain
+
+! https://github.com/DandelionSprout/adfilt/issues/1192
+!+ NOT_OPTIMIZED
+||youtube.com^$removeparam=sub_confirmation
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
