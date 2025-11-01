@@ -1,5 +1,5 @@
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 01November2025v1
+! Version: 01November2025v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -5174,6 +5174,10 @@ $removeparam=/^has-promotion=$/
 ! https://github.com/DandelionSprout/adfilt/issues/1192
 !+ NOT_OPTIMIZED
 ||youtube.com^$removeparam=sub_confirmation
+
+! https://github.com/AdguardTeam/AdguardFilters/commit/786921d55ee49a25424b79126860ce92685dae3a
+$doc,removeparam=adsterra_clid
+$doc,removeparam=adsterra_placement_id
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
