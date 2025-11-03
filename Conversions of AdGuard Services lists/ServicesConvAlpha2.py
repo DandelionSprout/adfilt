@@ -54,6 +54,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -126,6 +132,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -204,6 +216,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -276,6 +294,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -354,6 +378,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -426,6 +456,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -504,6 +540,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -576,6 +618,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -654,6 +702,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -726,6 +780,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -804,6 +864,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -876,6 +942,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -954,6 +1026,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -1026,6 +1104,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -1104,6 +1188,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -1176,6 +1266,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -1254,6 +1350,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -1326,6 +1428,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -1404,6 +1512,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -1476,6 +1590,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -1554,6 +1674,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -1626,6 +1752,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -1704,6 +1836,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -1776,6 +1914,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -1854,6 +1998,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -1926,6 +2076,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -2004,6 +2160,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2076,6 +2238,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -2154,6 +2322,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2226,6 +2400,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -2304,6 +2484,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2376,6 +2562,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -2454,6 +2646,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2526,6 +2724,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -2604,6 +2808,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2676,6 +2886,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -2754,6 +2970,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2826,6 +3048,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -2904,6 +3132,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -2976,6 +3210,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -3054,6 +3294,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -3126,6 +3372,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -3204,6 +3456,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -3276,6 +3534,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -3354,6 +3618,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -3429,6 +3699,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -3501,6 +3777,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -3627,6 +3909,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -3699,6 +3987,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -3777,6 +4071,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -3849,6 +4149,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -3927,6 +4233,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -3999,6 +4311,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -4077,6 +4395,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4149,6 +4473,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -4227,6 +4557,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4299,6 +4635,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -4377,6 +4719,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4449,6 +4797,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -4527,6 +4881,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4599,6 +4959,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -4677,6 +5043,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4749,6 +5121,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -4827,6 +5205,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -4899,6 +5283,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -4977,6 +5367,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -5049,6 +5445,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -5127,6 +5529,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -5199,6 +5607,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -5277,6 +5691,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -5349,6 +5769,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
@@ -5427,6 +5853,12 @@ def prepare_conversion(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
         text += line + '\n'
 
     return text
@@ -5499,6 +5931,12 @@ def prepare_conversion(lines) -> str:
         line = re.sub(
            r"\^$",
            r"^$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
            line
         )
 
