@@ -1,7 +1,7 @@
 msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 25October2025v1-Deprecated
+# Last modified: 03November2025v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -650,6 +650,7 @@ msFilterList
 # https://kjarninn•is/frettir/ (17 10 2025)
 # https://www•akureyri•net/is/frettir/(17/10/2025)
 # (https://github.com/AdguardTeam/AdguardFilters/issues/215945)
+# effektivtlandbrug•landbrug•net (Mobil(e), 03 11 2025)
 # — — — — — — — — — — — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances

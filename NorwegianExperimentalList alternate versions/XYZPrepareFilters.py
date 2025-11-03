@@ -234,6 +234,14 @@ def prepare_ag(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^(! Starting 10 April 2025.*)$",
+           r"\1\n\n! Note, 3 November 2025: If you view this file through filters.adtity.org and there's a lot of broken text in the file view, feel free to give an upvote to https://github.com/AdguardTeam/FiltersRegistry/issues/1142 if you wish to.",
+           line
+        )
+
+
+
         text += line + '\n'
 
     return text

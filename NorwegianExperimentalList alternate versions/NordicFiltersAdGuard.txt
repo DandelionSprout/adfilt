@@ -1,6 +1,6 @@
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Last modified: 25October2025v1
+! Last modified: 03November2025v2
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -14,6 +14,8 @@
 ! Starting 13 May 2024, reports about non-blocked banners on digi.no and tu.no must instead be sent to https://reports.adguard.com/new_issue.html and/or https://github.com/uBlockOrigin/uAssets/issues. No exceptions under any circumstances. They're simply far, far better at them than me. They must either fix it on their own, or have written all needed entries on their own in advance before they forward such reports to me. If they ever say otherwise, show them this line of text.
 
 ! Starting 10 April 2025, comments under so-called "commits" on GitHub will not be read under any circumstances. Other comment methods on GitHub will still be read.
+
+! Note, 3 November 2025: If you view this file through filters.adtity.org and there's a lot of broken text in the file view, feel free to give an upvote to https://github.com/AdguardTeam/FiltersRegistry/issues/1142 if you wish to.
 
 ! 🇳🇴：Fjerning av reklamebokser og tomme overskuddsbokser
 ! 🇩🇰：Fjernelse af annonceboxer og tomme overskudsrammer
@@ -2277,6 +2279,9 @@ fo##.vev
 ##.strevda__item:not(html,body,:empty)
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/215945)
 !!!mbl.is##div:not([id]):has(> aside.augl)
+! effektivtlandbrug•landbrug•net (Mobil(e), 03/11/2025)
+##.banner--topscroll:not(html,body,:empty)
+##.lm-banner:not(html,body,:empty)
 ! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2288,6 +2293,7 @@ fo##.vev
 !#if !env_mobile
 bt.dk##.article-container > .row > .sidebar
 bt.dk#$#.article-container > .row > .col-12.col-xl-8 { width: 98.1% !important; max-width: none !important; flex: none !important }
+politiken.dk##.bg-paper-200
 ! https://www•aftenposten•no/sport/i/kR20OL/uno-x-soeker-om-worldtour-lisens-en-droem-som-har-modnet-over-tid (03/09/2022)
 ##article > div[class^=" hyperion-css-"]:not(html,body,:empty)
 ###related-articles + div[class^=" hyperion-css-"]:not(html,body,:empty)
