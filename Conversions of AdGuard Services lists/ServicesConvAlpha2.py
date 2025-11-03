@@ -1,4 +1,4 @@
-import requests
+﻿import requests
 import re
 
 SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/4chan.yml']
@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The 4chan AdGuard Services conversion has been generated.')
@@ -141,7 +141,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The 500px AdGuard Services conversion has been generated.')
@@ -216,7 +216,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The 9gag AdGuard Services conversion has been generated.')
@@ -291,7 +291,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The AliExpress AdGuard Services conversion has been generated.')
@@ -366,7 +366,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Amazon AdGuard Services conversion has been generated.')
@@ -441,7 +441,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Amazon streaming AdGuard Services conversion has been generated.')
@@ -516,7 +516,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Amino AdGuard Services conversion has been generated.')
@@ -591,7 +591,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Apple streaming AdGuard Services conversion has been generated.')
@@ -666,7 +666,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Bigo live AdGuard Services conversion has been generated.')
@@ -741,7 +741,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Bilibili AdGuard Services conversion has been generated.')
@@ -816,7 +816,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Blaze AdGuard Services conversion has been generated.')
@@ -891,7 +891,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Bluesky AdGuard Services conversion has been generated.')
@@ -966,7 +966,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Canaisglobo AdGuard Services conversion has been generated.')
@@ -1041,7 +1041,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Claro AdGuard Services conversion has been generated.')
@@ -1116,7 +1116,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Cloudflare AdGuard Services conversion has been generated.')
@@ -1191,7 +1191,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Clubhouse AdGuard Services conversion has been generated.')
@@ -1266,7 +1266,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Coolapk AdGuard Services conversion has been generated.')
@@ -1341,7 +1341,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Crunchyroll AdGuard Services conversion has been generated.')
@@ -1416,7 +1416,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Douban AdGuard Services conversion has been generated.')
@@ -1491,7 +1491,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The eBay AdGuard Services conversion has been generated.')
@@ -1566,7 +1566,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The ESPN AdGuard Services conversion has been generated.')
@@ -1641,7 +1641,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Facebook AdGuard Services conversion has been generated.')
@@ -1716,7 +1716,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The FIFA AdGuard Services conversion has been generated.')
@@ -1791,7 +1791,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Flickr AdGuard Services conversion has been generated.')
@@ -1866,7 +1866,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Globoplay AdGuard Services conversion has been generated.')
@@ -1941,7 +1941,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The iCloud Private Relay AdGuard Services conversion has been generated.')
@@ -2016,7 +2016,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The iHeartRadio AdGuard Services conversion has been generated.')
@@ -2091,7 +2091,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Imgur AdGuard Services conversion has been generated.')
@@ -2166,7 +2166,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Instagram AdGuard Services conversion has been generated.')
@@ -2241,7 +2241,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Iqiyi AdGuard Services conversion has been generated.')
@@ -2316,7 +2316,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The KakaoTalk AdGuard Services conversion has been generated.')
@@ -2391,7 +2391,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Kik AdGuard Services conversion has been generated.')
@@ -2466,7 +2466,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Lazada AdGuard Services conversion has been generated.')
@@ -2541,7 +2541,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Line AdGuard Services conversion has been generated.')
@@ -2616,7 +2616,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The LinkedIn AdGuard Services conversion has been generated.')
@@ -2691,7 +2691,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Looke AdGuard Services conversion has been generated.')
@@ -2766,7 +2766,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The MailRU AdGuard Services conversion has been generated.')
@@ -2841,7 +2841,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Mastodon AdGuard Services conversion has been generated.')
@@ -2916,7 +2916,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The mercado libre AdGuard Services conversion has been generated.')
@@ -2991,7 +2991,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Nebula AdGuard Services conversion has been generated.')
@@ -3066,7 +3066,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Odnoklassniki AdGuard Services conversion has been generated.')
@@ -3141,7 +3141,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Olvid AdGuard Services conversion has been generated.')
@@ -3216,7 +3216,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The OnlyFans AdGuard Services conversion has been generated.')
@@ -3291,7 +3291,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Pinterest AdGuard Services conversion has been generated.')
@@ -3366,7 +3366,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Plenty of fish AdGuard Services conversion has been generated.')
@@ -3441,7 +3441,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Plex AdGuard Services conversion has been generated.')
@@ -3516,7 +3516,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The PrivacyBrasil AdGuard Services conversion has been generated.')
@@ -3639,7 +3639,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The QQ AdGuard Services conversion has been generated.')
@@ -3714,7 +3714,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Rakuten Viki AdGuard Services conversion has been generated.')
@@ -3789,7 +3789,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Reddit AdGuard Services conversion has been generated.')
@@ -3864,7 +3864,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Shein AdGuard Services conversion has been generated.')
@@ -3939,7 +3939,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Shopee AdGuard Services conversion has been generated.')
@@ -4014,7 +4014,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Signal AdGuard Services conversion has been generated.')
@@ -4089,7 +4089,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Skype AdGuard Services conversion has been generated.')
@@ -4164,7 +4164,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Snapchat AdGuard Services conversion has been generated.')
@@ -4239,7 +4239,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Spotify AdGuard Services conversion has been generated.')
@@ -4314,7 +4314,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Telegram AdGuard Services conversion has been generated.')
@@ -4389,7 +4389,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Temu AdGuard Services conversion has been generated.')
@@ -4464,7 +4464,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Tidal AdGuard Services conversion has been generated.')
@@ -4539,7 +4539,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The TikTok AdGuard Services conversion has been generated.')
@@ -4614,7 +4614,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Tinder AdGuard Services conversion has been generated.')
@@ -4689,7 +4689,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Tumblr AdGuard Services conversion has been generated.')
@@ -4764,7 +4764,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Twitch AdGuard Services conversion has been generated.')
@@ -4839,7 +4839,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Twitter AdGuard Services conversion has been generated.')
@@ -4914,7 +4914,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Viber AdGuard Services conversion has been generated.')
@@ -4989,7 +4989,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The VK AdGuard Services conversion has been generated.')
@@ -5064,7 +5064,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Voot AdGuard Services conversion has been generated.')
@@ -5139,7 +5139,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The WeChat AdGuard Services conversion has been generated.')
@@ -5214,7 +5214,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Weibo AdGuard Services conversion has been generated.')
@@ -5289,7 +5289,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The WhatsApp AdGuard Services conversion has been generated.')
@@ -5364,7 +5364,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Wizz AdGuard Services conversion has been generated.')
@@ -5439,7 +5439,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Xiaohongshu AdGuard Services conversion has been generated.')
@@ -5514,7 +5514,7 @@ if __name__ == "__main__":
 
     conversion_filter = prepare_conversion(lines)
 
-    with open(OUTPUT_CONV, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(conversion_filter)
 
         print('The Zhihu AdGuard Services conversion has been generated.')
