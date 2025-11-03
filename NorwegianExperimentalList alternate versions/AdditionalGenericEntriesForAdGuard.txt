@@ -1,5 +1,6 @@
 ! Generic entries that seem like they'd apply to the internet as a whole (Nordic sites included) that aren't in EasyList or AdGuard Base Filter, but which are in either uBlock Filters Ads, uBlock Filters Unbreak, or uBlock Filters Badware Risks.
-! Version: 03November2025v1-Extension
+! Since this file is included in Adblock Plus' default list for all-Nordic sites, uBO shorthands such as "$xhr" are not good ideas.
+! Version: 03November2025v2-Extension
 ###adbtm[onclick="badr();"]
 ###adyes:not(:empty)
 ###anuncio:not(:empty)
@@ -19,7 +20,6 @@
 ###player div[style$="cursor: pointer; position: absolute; width: 100%; height: 100%; padding: 1rem; z-index: 2147483647;"]
 ###playerOverlay[style="position:absolute; z-index:3"]
 ###plban:not(:empty)
-###sidearm-adblock-modal:not(:empty)
 ###st-ami + div[id][class*=" "]
 ###stop_ad:not(:empty)
 ###stop_ad2:not(:empty)
@@ -29,7 +29,6 @@
 ###vidcloud-player > #overlay-container
 ###video-id_fluid_html_on_pause:not(:empty)
 ###video_player ~ div[id] div[style^="position:fixed;inset:0px;z-index:"]
-###zdn-adblock-overlay:not(:empty)
 ##.aan_fake:not(html,body,:empty)
 ##.aan_fake__video-units:not(html,body,:empty)
 ##.adde_modal-overlay:not(html,body,:empty)
@@ -46,8 +45,6 @@
 ##.bb ~ main#container .containerAds
 ##.bloc-pub:not(html,body,:empty)
 ##.bloc-pub2:not(html,body,:empty)
-##.blocker-notice:not(html,body,:empty)
-##.blocker-overlay:not(html,body,:empty)
 ##.bottom-hor-block:not(html,body,:empty)
 ##.brs-block:not(html,body,:empty)
 ##.buttonautocl:not(html,body,:empty)
@@ -67,7 +64,6 @@
 ##.inplayer-ad:not(html,body,:empty)
 ##.inplayer_banners:not(html,body,:empty)
 ##.jwplayer ~ div[style="position:absolute;top:0;left:0;width: 100%;height: 100%;z-index:2147483647"]
-##.mdp-deblocker-wrapper:not(html,body,:empty)
 ##.ninja-recommend-block:not(html,body,:empty)
 ##.overlay-advertising-new:not(html,body,:empty)
 ##.player-bns-block:not(html,body,:empty)
@@ -141,7 +137,7 @@
 /teo4.$script
 /utx?tid=$xmlhttprequest,third-party
 /vast/?zid=$xmlhttprequest,third-party
-/watchnew?shu=$frame,third-party
+/watchnew?shu=$subdocument,third-party
 /wcm/?sh=$script,third-party
 /zone?pub
 
