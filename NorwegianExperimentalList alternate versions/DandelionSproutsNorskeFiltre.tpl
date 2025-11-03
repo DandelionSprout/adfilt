@@ -1,4 +1,4 @@
-msFilterList
+﻿msFilterList
 # Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
 # Last modified: 03November2025v2-Deprecated

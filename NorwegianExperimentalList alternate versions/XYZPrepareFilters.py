@@ -2527,31 +2527,31 @@ if __name__ == "__main__":
     xul_filter = prepare_xul(lines)
     ffanubo_filter = prepare_ffanubo(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_AG, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_AG, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(ag_filter)
 
-    with open(OUTPUT_ABP, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_ABP, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(abp_filter)
 
-    with open(OUTPUT_TPL, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_TPL, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(tpl_filter)
 
-    with open(OUTPUT_PRIVOXY, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_PRIVOXY, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(privoxy_filter)
 
-    with open(OUTPUT_PRIVACY, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_PRIVACY, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(privacy_filter)
 
-    with open(OUTPUT_UMATRIX, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_UMATRIX, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(umatrix_filter)
 
-    with open(OUTPUT_XUL, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_XUL, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(xul_filter)
 
-    with open(OUTPUT_FFANUBO, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_FFANUBO, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(ffanubo_filter)
 
     print('The adblocker-based list versions have been generated.')
@@ -3427,10 +3427,10 @@ if __name__ == "__main__":
 
     abp_filter = prepare_abp(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_ABP, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_ABP, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(abp_filter)
 
     print('The Eyeo list version has been generated.')
@@ -4766,43 +4766,43 @@ if __name__ == "__main__":
     hostsipv6_filter = prepare_hostsipv6(lines)
     domainsallowlist_filter = prepare_domainsallowlist(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_HOSTS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_HOSTS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(hosts_filter)
 
-    with open(OUTPUT_LS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_LS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(ls_filter)
 
-    with open(OUTPUT_DNSMASQ, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DNSMASQ, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(dnsmasq_filter)
 
-    with open(OUTPUT_HOSTSDENY, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_HOSTSDENY, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(hostsdeny_filter)
 
-    with open(OUTPUT_PIHOLE, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_PIHOLE, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(pihole_filter)
 
-    with open(OUTPUT_AGH, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_AGH, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(agh_filter)
 
-    with open(OUTPUT_SHADOWSOCKS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_SHADOWSOCKS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(shadowsocks_filter)
 
-    with open(OUTPUT_RPZ, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_RPZ, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(rpz_filter)
 
-    with open(OUTPUT_UNBOUND, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_UNBOUND, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(unbound_filter)
 
-    with open(OUTPUT_MINERBLOCK, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_MINERBLOCK, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(minerblock_filter)
 
-    with open(OUTPUT_HOSTSIPV6, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_HOSTSIPV6, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(hostsipv6_filter)
 
-    with open(OUTPUT_DOMAINSALLOWLIST, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINSALLOWLIST, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domainsallowlist_filter)
 
     print('The domains-based list versions have been generated.')
@@ -6994,28 +6994,28 @@ if __name__ == "__main__":
     domains_filter = prepare_domains(lines)
     agh_filter = prepare_agh(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_AG, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_AG, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(ag_filter)
 
-    with open(OUTPUT_ABP, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_ABP, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(abp_filter)
 
-    with open(OUTPUT_TPL, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_TPL, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(tpl_filter)
 
-    with open(OUTPUT_PRIVOXY, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_PRIVOXY, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(privoxy_filter)
 
-    with open(OUTPUT_HOSTS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_HOSTS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(hosts_filter)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
-    with open(OUTPUT_AGH, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_AGH, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(agh_filter)
 
     print('The script has finished its work')
@@ -7115,10 +7115,10 @@ if __name__ == "__main__":
 
     domains_filter = prepare_domains(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
     print('The list versions have been generated.')
@@ -7202,10 +7202,10 @@ if __name__ == "__main__":
 
     domains_filter = prepare_domains(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
     print('The list versions have been generated.')
@@ -7414,13 +7414,13 @@ if __name__ == "__main__":
     domains_filter = prepare_domains(lines)
     agh_filter = prepare_agh(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
-    with open(OUTPUT_AGH, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_AGH, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(agh_filter)
 
     print('The list versions have been generated.')
@@ -7504,10 +7504,10 @@ if __name__ == "__main__":
 
     domains_filter = prepare_domains(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
     print('The list versions have been generated.')
@@ -7591,10 +7591,10 @@ if __name__ == "__main__":
 
     domains_filter = prepare_domains(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
     print('The list versions have been generated.')
@@ -7678,10 +7678,10 @@ if __name__ == "__main__":
 
     domains_filter = prepare_domains(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
     print('The list versions have been generated.')
@@ -7958,13 +7958,13 @@ if __name__ == "__main__":
     domains_filter = prepare_domains(lines)
     p2p_filter = prepare_p2p(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
-    with open(OUTPUT_P2P, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_P2P, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(p2p_filter)
 
     print('The combined IP list has been generated.')
@@ -8097,10 +8097,10 @@ if __name__ == "__main__":
 
     domains_filter = prepare_domains(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
     print('The Nitter list version has been generated.')
@@ -8179,10 +8179,10 @@ if __name__ == "__main__":
 
     domains_filter = prepare_domains(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
     print('The Nitter list version has been generated.')
@@ -8273,10 +8273,10 @@ if __name__ == "__main__":
 
     domains_filter = prepare_domains(lines)
 
-    with open(OUTPUT, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(text)
 
-    with open(OUTPUT_DOMAINS, "w", encoding="utf-8", newline='\n') as text_file:
+    with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
 
     print('The Fanboy Notifications uBO version has been generated.')
