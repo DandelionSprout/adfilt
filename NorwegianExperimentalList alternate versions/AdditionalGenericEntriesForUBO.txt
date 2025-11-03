@@ -1,6 +1,7 @@
 ! Generic entries that seem like they'd apply to the internet as a whole (Nordic sites included) that aren't in EasyList or uBlock Filters, but which are in AdGuard Base Filter.
+! Since this file is also included in Adblock Plus' default list for all-Nordic sites (and not just in the main/uBO version of Nordic Filters), uBO shorthands such as "$xmlhttprequest", "$third-party", etc., are not good ideas.
 ! An equivalent file also exists for AdGuard softwares.
-! Version: 03November2025v1-Extension
+! Version: 03November2025v2-Extension
 ###adbtm[onclick="badr();"]
 ###adyes:not(:empty)
 ###anuncio:not(:empty)
@@ -93,44 +94,44 @@
 ##div[style^="position:fixed;inset:0px;z-index:2147483647;background:black;opacity:0.01"]
 ##div[style^="z-index: 999999; background-image: url(\"data:image/gif;base64,"][style$="position: absolute;"]
 ##html#html[sti][vic][lang] > body#allbody
-/1clkn/*$script,3p
-/?r=dir&zoneid=$all
-/?referral=sythe$all
-/?track=*&key=$all
-/a/na/js/*$3p
+/1clkn/*$script,third-party
+/?r=dir&zoneid=
+/?referral=sythe
+/?track=*&key=
+/a/na/js/*$third-party
 :not(:empty/adc-ads-lib|$script
-/advertisement/video/static/advantage.xml^$~xhr
-/ajax/banner/list?page=$~xhr
+/advertisement/video/static/advantage.xml^$~xmlhttprequest
+/ajax/banner/list?page=$~xmlhttprequest
 /all-for-adsense/*
-/api/model/feed?siteId=$~xhr,3p
-/api/spots/*&kw=$~xhr
-/api/spots/*^fill=$~xhr
-/api/users/*^fill=$~xhr
+/api/model/feed?siteId=$~xmlhttprequest,third-party
+/api/spots/*&kw=$~xmlhttprequest
+/api/spots/*^fill=$~xmlhttprequest
+/api/users/*^fill=$~xmlhttprequest
 /backend_loader$script
-/clc?aid=$all
+/clc?aid=
 /click?pid=*&offer_id=
 /config?key=6922a2c8-d1e9-43be-b201-749543d28fe1
 /config?key=d35e161b-abb4-4949-b523-003165d250bb
-/cuid/?f=https%$~xhr,3p
-/embed-1/ajax/e-1/banners|$~xhr
-/embed-1/e-1/banners|$~xhr
-/gb/zone?zid=$~xhr,3p
+/cuid/?f=https%$~xmlhttprequest,third-party
+/embed-1/ajax/e-1/banners|$~xmlhttprequest
+/embed-1/e-1/banners|$~xmlhttprequest
+/gb/zone?zid=$~xmlhttprequest,third-party
 /get/*?zoneid=$script
-/in/p/?spot_id=$frame,3p
+/in/p/?spot_id=$frame,third-party
 /js/ppndr.
-/jsrepo?rnd=$script,3p
-/lhzbsrfkjf/js/*$3p
+/jsrepo?rnd=$script,third-party
+/lhzbsrfkjf/js/*$third-party
 /lv/esnk/*$script
 /promo/next/adb/*
 /promo/next/mural/*
 /propeller-ads
-/sytheb$all
+/sytheb
 /teo4.$script
-/utx?tid=$~xhr,3p
-/v2/for-page?body=%$~xhr
-/vast/?zid=$~xhr,3p
-/watchnew?shu=$frame,3p
-/wcm/?sh=$script,3p
+/utx?tid=$~xmlhttprequest,third-party
+/v2/for-page?body=%$~xmlhttprequest
+/vast/?zid=$~xmlhttprequest,third-party
+/watchnew?shu=$frame,third-party
+/wcm/?sh=$script,third-party
 /zone?pub
 /1betsson.png
 /1unibet.png
