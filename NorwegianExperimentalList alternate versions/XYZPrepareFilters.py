@@ -5460,7 +5460,13 @@ def prepare_tpl(lines) -> str:
 
         line = re.sub(
            r"^.*dnstype.*$",
-           r"",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^.*[$,]csp.*$",
+           "",
            line
         )
 
@@ -5918,8 +5924,14 @@ def prepare_privoxy(lines) -> str:
         )
 
         line = re.sub(
+           r"^.*[$,]csp.*$",
+           "",
+           line
+        )
+
+        line = re.sub(
            r"^.*dnstype.*$",
-           r"",
+           "",
            line
         )
 
@@ -6085,6 +6097,12 @@ def prepare_hosts(lines) -> str:
         line = re.sub(
            r"^(\|.*\.)(\$.*)?$",
            r"\1com^\2",
+           line
+        )
+
+        line = re.sub(
+           r"^.*[$,]csp.*$",
+           "",
            line
         )
 
@@ -6363,6 +6381,12 @@ def prepare_domains(lines) -> str:
         line = re.sub(
            r"^(\|.*\.)(\$.*)?$",
            r"\1com^\2",
+           line
+        )
+
+        line = re.sub(
+           r"^.*[$,]csp.*$",
+           "",
            line
         )
 
@@ -7779,13 +7803,13 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^# Title: .*$",
+           r"^.*Title:.*$",
            r"# Title: Dandelion Sprout's and other adblocker lists' IPs",
            line
         )
 
         line = re.sub(
-           r"^# Description: .*$",
+           r"^\s?# Description: .*$",
            r"# Description: This IP set combines IP and CIDR addresses from plentiful of major adblocker lists. It contains heavily altered content from Dandelion Sprout's Anti-Malware List, Dandelion Sprout's Nordic Filters, EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, and EasyList Spanish.\n# For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english",
            line
         )
@@ -7849,13 +7873,19 @@ def prepare_p2p(lines) -> str:
         )
 
         line = re.sub(
+           r"^.*Title:.* version\)$",
+           r"# Title: Dandelion Sprout's and other adblocker lists' IPs (P2P)",
+           line
+        )
+
+        line = re.sub(
            r"^# (Translated title|Source|Note|Platform notes):.*$",
            r"",
            line
         )
 
         line = re.sub(
-           r"^# Title: 📔.*$",
+           r"^.*Title: 📔.*$",
            r"",
            line
         )
@@ -7885,13 +7915,7 @@ def prepare_p2p(lines) -> str:
         )
 
         line = re.sub(
-           r"^# Title: .*$",
-           r"# Title: Dandelion Sprout's and other adblocker lists' IPs (P2P)",
-           line
-        )
-
-        line = re.sub(
-           r"^# Description: .*$",
+           r"^\s?# Description: .*$",
            r"# Description: This IP set combines IP and CIDR addresses from plentiful of major adblocker lists. It contains heavily altered content from Dandelion Sprout's Anti-Malware List, Dandelion Sprout's Nordic Filters, EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, and EasyList Spanish.\n# For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english",
            line
         )
