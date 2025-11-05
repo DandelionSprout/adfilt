@@ -1,0 +1,134 @@
+name: (Norsk / noget dansk) Problemrapport
+description: For å/at melde inn ødelagte nettsteder, lister, og/eller funksjoner
+labels: Problem report
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Beskriv problemet under denne linjen så detaljert og utdypende som mulig (inkludert nett/-websidelenker hvis det er noen)
+      description: Dette inkluderer nettstedet det skjedde på (hvis det er relevant) og en eksempel-nettside-URL fra det nettstedet.
+      placeholder: Skriv problemet her.
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened-screenshots
+    attributes:
+      label: Legg til skjermklipp/skærmbillede under (Påkrevd, bortsett fra for Anti-Malware List. Å/At påstå at problemet er åpenbart, teller ikke.)
+      placeholder: Lim inn skjermklipp her.
+    validations:
+      required: false
+  - type: textarea
+    id: log-photo
+    attributes:
+      label: Legg til et skjermklipp/skærmbillede av utvidelsens loggføring
+      description: • uBlock Origin: Anbefales å justere utvalget til Blokkert+Tillatt+Endret for å redusere antallet (stort sett irrelevante) hvitfargede loggoppføringer.<br><br>• AdGuard Nettleserutvidelse: Anbefales å åpne / at åbne "≡ Åpne filtreringslogg" → bruk Ctrl+klikk for å velge Tillatt+Blokkert+Endret.<br><br>• AdGuards programmer og apper sine logger er mye mindre detaljert fordi de ikke kan liste opp de nøyaktige ##-oppføringene som er brukt:<br>•• AdGuard for Windows v8.x: Windows-oppgavelinje → Ikonene i den lille boksen ned til høyre → høyreklikk på AdGuard-ikonet → Verktøy → Åpne filtreringslogg.<br><br>•• AdGuard for Android v4.12.x: Den nederste linjen → Ikonet som ser ut som en pai med et stykke skjært av (Statistikk) → Nylig aktivitet.<br><br>• Adblock Plus v3.x: Trykk F12 (Tastaturtasten) → Adblock Plus (Fanen til høyre for "Security") → Last inn siden én gang med "Show blocked" og ta et skjermklipp → Last inn siden en andre gang men med "Show allowlisted" og ta et nytt skjermklipp.
+      placeholder: Skriv problemet her.
+    validations:
+      required: false
+  - type: dropdown
+    id: adblockers
+    attributes:
+      label: Hvilke reklameblokkerer brukte du da du testet dette?
+      multiple: true
+      options:
+        - uBlock Origin
+        - AdGuard (Betalte skrivebordsversjoner - Kun standardfiltering)
+        - AdGuard (Betalte skrivebordsversjoner - Standardfiltering + DNS-filtrering)
+        - AdGuard (Gratis nettleserversjoner som ikke er Manifest V3 eller Safari)
+        - Adblock Plus (Firefox eller Manifest V2)
+        - AdBlock (Firefox eller Manifest V2)
+        - AdGuard Home
+        - Blokada
+        - AdNauseam
+        - Zen Privacy
+        - Brave sin innebygde reklameblokkerer (også kjent som Brave Shield(s))
+        - Firefox sin innebygde sporingsbeskytter
+        - Vivaldi sin innebygde reklameblokkerer
+        - Opera sin innebygde reklameblokkerer
+        - MS Edge sin innebygde sporingsbeskytter
+        - DNS-reklameblokkeringsserver(e), inkludert AdGuard Public og Quad9
+        - AdGuard (Betalt Android-versjon - Kun standardfiltrering) (Støtte kan være begrenset fordi Android-appen bruker """Optimized"""-lister; se https://github.com/AdguardTeam/FiltersRegistry/issues/1147)
+        - AdGuard (Betalt Android-versjon - Standardfiltering + DNS-filtrering) (Støtte for standardfiltrering kan være begrenset fordi Android-appen bruker """Optimized"""-lister; se https://github.com/AdguardTeam/FiltersRegistry/issues/1147)
+        - Pi-hole (Støtte kan være begrenset)
+        - dnsmasq (Støtte kan være begrenset)
+        - pfBlockerNG (Støtte kan være begrenset)
+        - NextDNS (Støtte kan være begrenset)
+        - AdGuard Private DNS (Støtte kan være begrenset)
+        - Adblocker Ultimate (Ikke anbefalt, siden det er en ripoff av AdGuard sine nettleserversjoner)
+        - <i>(Andre)</i>
+    validations:
+      required: true
+  - type: textarea
+    id: adblockers-version
+    attributes:
+      label: Reklameblokkererversjon(er)
+      placeholder: Skriv inn versjonnummeret/-numrene, for eksempel «v1.61.0», og navnene til «Andre»-reklameblokkerere her. "Manifest V3"-reklameblokkerere er ikke tillatt her.
+    validations:
+      required: false
+  - type: textarea
+    id: which-filterlists-did-you-use-screenshot
+    attributes:
+      label: Hvilke lister brukte du? Å mislykkes i å nevne dette med minst 10 tegn eller 1 bil(le)de, vil midlertidig lukke rapporten frem til det har blitt nevnt.
+      placeholder: Lim inn et bilde, en tekstliste, eller (hvis intet annet er mulig) uBO sin «Problemløsingsinformasjon»-tekstboks her. Dette inkluderer også DNS-servere designet for reklameblokkering.
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Hvilke(n) (nett|web)leser(e) brukte du da du testet det?
+      multiple: true
+      options:
+        - Google Chrome (Manifest V2)
+        - Firefox (inkludert LibreFox)
+        - Vivaldi
+        - Brave Browser
+        - Tor Browser (inkludert Firefox ESR 115, Waterfox, og SeaMonkey)
+        - Chromium for Linux (Manifest V2)
+        - Microsoft Edge (Manifest V2)
+        - Ungoogled Chromium (Manifest V2)
+        - Midori Electron (Ikke WebKit)
+        - Opera (Enhver variant)
+        - Kiwi Browser
+        - Waterfox Classic
+        - Samsung Internet Browser for Android
+        - Internet Explorer 11 (Støtte kan være begrenset)
+        - Det handler om en mobilapp, TV-app, eller spillkonsoll
+        - <i>(Andre)</i>
+    validations:
+      required: true
+  - type: textarea
+    id: browsers-version
+    attributes:
+      label: Nettleserversjon(er) / Webleser-version(er)
+      placeholder: Skriv versjonnum(mer|re), «Andre»-nettlesere, appnavn, eller osv. her. For eksempel «92.0.1234.123», «x64», «Canary», «Nightly», «no.finn.android», osv. *Veldig* gamle nettleserversjoner kan kanskje bli(ve) nektet; for Firefox og Chrome var minstegrensen v75.0 per november 2025.
+    validations:
+      required: false
+  - type: dropdown
+    id: oses
+    attributes:
+      label: Hvilke(t) OS(-er) brukte du da du testet det?
+      multiple: true
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS
+        - Linux
+        - Windows 8.1
+        - Windows 7
+        - Android
+        - Apple TV
+        - iOS (Støtte kan være begrenset)
+        - FreeBSD (Støtte kan være begrenset)
+        - OpenBSD (Støtte kan være begrenset)
+        - Smart-TV (Skriv TV-modellen nedenfor)
+        - Spillkonsoll (Skriv konsolltypen nedenfor)
+        - <i>(Andre)</i>
+    validations:
+      required: true
+  - type: textarea
+    id: oses-version
+    attributes:
+      label: OS-versjon(er)
+      placeholder: Skriv versjonnummeret/-numrene og «Andre»-OS-ene her, for eksempel «25H2», «10.14», «7.1.1», «Tizen OS», «ARM64», «Fedora 39», «PlayStation 5», osv.
+    validations:
+      required: false
