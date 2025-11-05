@@ -6,3 +6,6 @@ Apps that are pretty bad ideas to add to lists of apps to cover in AdGuard for W
 * adGuardSetup•exe (Self-explanatory)
 * AdGuardHome•exe (Self-explanatory)
 * tor•exe (Very quickly floods AdGuard's log beyond any hope of rescue)
+
+#### 05/11/2025
+* python3•12•exe (Causes conflicts with PyFunceble scans)
