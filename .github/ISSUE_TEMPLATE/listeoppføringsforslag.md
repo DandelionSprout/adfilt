@@ -19,6 +19,7 @@ assignees: ''
 <!-- For info om støttede utvidelser, besøk https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Supported%20adblockers%20and%20tools.md -->
 - [ ] uBlock Origin
 - [ ] AdGuard (Betalt skrivebordsversjon)
+- [ ] AdGuard (Betalt Android-versjon)
 - [ ] AdGuard (Nettleserutvidelse)
 - [ ] AdBlock
 - [ ] Adblock Plus
