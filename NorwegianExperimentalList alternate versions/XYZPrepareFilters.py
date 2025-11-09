@@ -6765,7 +6765,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^(&|\?).*$",
+           r"^(&|\?|=).*$",
            r"",
            line
         )
@@ -6824,12 +6824,6 @@ def prepare_agh(lines) -> str:
         #   r"^\n@@||\1",
         #   line
         #)
-
-        line = re.sub(
-           r"^[:/|].*=$",
-           r"",
-           line
-        )
 
         #line = re.sub(
         #   r"(denyallow=.*),",
@@ -7013,6 +7007,42 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^/.*(\)|\}|[a-zA-Z0-9])\\?/(\[|[a-zA-Z0-9]).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^[^!/@].*\?.*",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^[^!/@].*[a-zA-Z0-9]/[a-zA-Z0-9-].*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\$domain=~(.*)$",
+           r"\1$denyallow=\2",
+           line
+        )
+
+        line = re.sub(
+           r"^/[^^].*([^/][$?][a-z0-9=~]{0,}$)",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^/[^^][^/]{1,}(\[|\])[^/]{1,}$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^[^!].*\?[a-z0-9-]{1,}=.*$",
            "",
            line
         )
