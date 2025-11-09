@@ -1,7 +1,7 @@
 ﻿import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/AntiAdblockEntries.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '$$', '$app', '$csp=upgrade-insecure-requests', '$removeparam', 'badfilter', '!#include']
@@ -2562,7 +2562,7 @@ if __name__ == "__main__":
     import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AdditionalGenericEntriesForAdGuard.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/AdditionalGenericEntriesForUBO.txt', 'https://raw.githubusercontent.com/DandelionSprout/Swedish-List-for-Adblock-Plus/main/Swedish%20List%20for%20All-Nordic.txt', 'https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/gh-pages/Finland_adb.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianList.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/NordicFilters-NotBrave.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/AdditionalGenericEntriesForAdGuard.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/AdditionalGenericEntriesForUBO.txt', 'https://raw.githubusercontent.com/DandelionSprout/Swedish-List-for-Adblock-Plus/main/Swedish%20List%20for%20All-Nordic.txt', 'https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/gh-pages/Finland_adb.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important', '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , 'dk,no##', '!#if', '!#endif', '!+ ', '##^', '!#i', '$app', ':not(:-abp-', ':not(:has','$csp=upgrade-insecure-requests', '$removeparam', 'badfilter']
@@ -3442,7 +3442,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt']
 
 UNSUPPORTED_HOSTS = ['*', '# ———']
 UNSUPPORTED_LS = ['*', '# ———', '# Translated title', '# Version', 'Don\'t be worried', 'General-info', '# Platform notes:']
@@ -3512,7 +3512,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"^# Platform notes:.*$",
-           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including pfBlockerNG, Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.\n# If you use a tool that edits Windows' internal hosts file, such as Hosts File Editor, using https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersHostsIPv6.txt instead will work for both IPv4 and IPv6, and will thus reduce its filesize.\n# If you use a tool that edits Mac/Android/Linux/etc.'s internal hosts files, such as Gas Mask or Magisk Manager, make sure to use both this version and the IPv6 version just in case.",
+           "# Platform notes: This list version is intended for tools that deal with so-called «hosts» system files, including pfBlockerNG, Gas Mask, Diversion, Hosts File Editor, and many others; as well as those who edit their OS' «hosts» system file.\n# If you use a tool that edits Windows' internal hosts file, such as Hosts File Editor, using https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersHostsIPv6.txt instead will work for both IPv4 and IPv6, and will thus reduce its filesize.\n# If you use a tool that edits Mac/Android/Linux/etc.'s internal hosts files, such as Gas Mask or Magisk Manager, make sure to use both this version and the IPv6 version just in case.",
            line
         )
 
@@ -3829,13 +3829,13 @@ def prepare_pihole(lines) -> str:
 
         line = re.sub(
            r"^# Platform notes:.*$",
-           "# Platform notes: This list version is intended for those who make use of the Regex functionality in Pi-Hole. Users of the list should also add the whitelist at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDomainsAllowlist.txt as a whitelist.",
+           "# Platform notes: This list version is intended for those who make use of the Regex functionality in Pi-Hole. Users of the list should also add the whitelist at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDomainsAllowlist.txt as a whitelist.",
            line
         )
 
         line = re.sub(
            r"(# (Version|Last[ -]?[Mm]odified): .*)",
-           r"\1-Deprecated\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt, unless otherwise proven.",
+           r"\1-Deprecated\n# Users of Pi-Hole FTL 5.22 and later are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt, unless otherwise proven.",
            line
         )
 
@@ -4194,7 +4194,7 @@ def prepare_agh(lines) -> str:
 
         line = re.sub(
            r"^(# For more information.*)$",
-           r"\1\n# If you wish to remove notification banners from Nordic websites, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt",
+           r"\1\n# If you wish to remove notification banners from Nordic websites, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt",
            line
         )
 
@@ -4612,7 +4612,7 @@ def prepare_hostsipv6(lines) -> str:
 
         line = re.sub(
            r"^# Platform notes: .*$",
-           "# Platform notes: This list version is meant to be used simultaneously of the regular «Hosts» version when using computer/Android system hosts file editors like Hosts File Editor, Gas Mask, Magisk Manager, etc. It is not needed for tools that strip away the entries' IP address, such as Blokada and pfBlockerNG.\n# # If you're using AdGuard Home or Pi-Hole, the «AdGuard Home» list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt should be used instead.\n# # If you're using uBlock Origin, the ||-type «uBlock Origin» list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianList.txt is STRONGLY RECOMMENDED to be used instead.\n# 🇳🇴(🇩🇰)：For mere informasjon og detaljer om denne listen og om andre lister jeg har la(g|v)et, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk\n# 🇬🇧：For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english",
+           "# Platform notes: This list version is meant to be used simultaneously of the regular «Hosts» version when using computer/Android system hosts file editors like Hosts File Editor, Gas Mask, Magisk Manager, etc. It is not needed for tools that strip away the entries' IP address, such as Blokada and pfBlockerNG.\n# # If you're using AdGuard Home or Pi-Hole, the «AdGuard Home» list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt should be used instead.\n# # If you're using uBlock Origin, the ||-type «uBlock Origin» list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianList.txt is STRONGLY RECOMMENDED to be used instead.\n# 🇳🇴(🇩🇰)：For mere informasjon og detaljer om denne listen og om andre lister jeg har la(g|v)et, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk\n# 🇬🇧：For more information and details about this list and other lists of mine, go to https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english",
            line
         )
 
@@ -4811,7 +4811,7 @@ if __name__ == "__main__":
 #•X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X••X•
 #\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/\•/
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout\'s%20Anti-Malware%20List.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Dandelion%20Sprout\'s%20Anti-Malware%20List.txt']
 
 UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com', 'gamecopyworld', '$app', '$dnstype']
@@ -5351,7 +5351,7 @@ def prepare_abp(lines) -> str:
 
         line = re.sub(
            r"^(! Homepage: .*)$",
-           r"\1\n! As of June 2023, Pi-Hole FTL ≥5.22 users should rather use https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, which is a ||-type list version designed specifically for DNS tools.",
+           r"\1\n! As of June 2023, Pi-Hole FTL ≥5.22 users should rather use https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, which is a ||-type list version designed specifically for DNS tools.",
            line
         )
 
@@ -6318,7 +6318,7 @@ def prepare_hosts(lines) -> str:
 
         line = re.sub(
            r"^(.*Description: .*)$",
-           r"\1\n# Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.\n# Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt, unless otherwise proven.\n!#if !env_mv3",
+           r"\1\n# Users of Pi-Hole FTL 5.22 and later can consider switching to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, due to an unconfirmed belief of mine that it allows better wildcarding than the Hosts and raw-domains versions.\n# Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt, unless otherwise proven.\n# Users of AdGuard Home are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.\n!#if !env_mv3",
            line
         )
 
@@ -6566,7 +6566,7 @@ def prepare_domains(lines) -> str:
 
         line = re.sub(
            r"(# Description.*$)",
-           r"\1\n# Note: The very limited syntax available to raw domains lists, considering it's, well, raw, means that outright anti-MV3 measures (which'd as of February 2024 only affect Minus, a project whose name is unworthy of the uBO label; AdGuard browser extensions has no relevant support for raw domains either way) cannot be done. However, at some 20,000 entries, Team Chromium's shameful leaders aren't liking this list anyway.\n# Note 2: Users of Pi-Hole FTL 5.22 and later, and of AdGuard Home, are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.\n# Note 3: Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt, unless otherwise proven.",
+           r"\1\n# Note: The very limited syntax available to raw domains lists, considering it's, well, raw, means that outright anti-MV3 measures (which'd as of February 2024 only affect Minus, a project whose name is unworthy of the uBO label; AdGuard browser extensions has no relevant support for raw domains either way) cannot be done. However, at some 20,000 entries, Team Chromium's shameful leaders aren't liking this list anyway.\n# Note 2: Users of Pi-Hole FTL 5.22 and later can consider switching to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, due to an unconfirmed belief of mine that it allows better wildcarding than the Hosts and raw-domains versions.\n# Note 3: Users of uBlock Origin are STRONGLY RECOMMENDED to switch to the uBO list version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt, unless otherwise proven.\n# Note 4: Users of AdGuard Home are STRONGLY RECOMMENDED to switch to the || version at https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt, unless otherwise proven.",
            line
         )
 
@@ -6765,7 +6765,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^&.*$",
+           r"^(&|\?).*$",
            r"",
            line
         )
@@ -6999,6 +6999,24 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^://(([0-9]{1,3}\.){3}[0-9]{1,3})\^$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^.*=$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^/.*(\)|\}|[a-zA-Z0-9])\\?/(\[|[a-zA-Z0-9]).*$",
+           "",
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\n'
 
@@ -7150,7 +7168,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/WikiaPureBrowsingExperience.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/WikiaPureBrowsingExperience.txt']
 
 UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
 
@@ -7237,7 +7255,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/BrowseWebsitesWithoutLoggingIn.txt']
 
 UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
 
@@ -7452,7 +7470,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiAmazonListForTwitch.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/AntiAmazonListForTwitch.txt']
 
 UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
 
@@ -7539,7 +7557,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiStevenUniverseList.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/AntiStevenUniverseList.txt']
 
 UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
 
@@ -7626,7 +7644,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiHivemindCartoonTrashingList.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/AntiHivemindCartoonTrashingList.txt']
 
 UNSUPPORTED_DOMAINS = ['/', '##', '#.', '#@', '#?', '!#', '[', '!']
 
@@ -7717,7 +7735,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationListIPs.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt', 'https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationListIPs.txt']
 
 OUTPUT = 'Anti-Malware List/xyzzyxips.txt'
 OUTPUT_DOMAINS = 'Anti-Malware List/Dandelion Sprout\'s and other adblocker lists\' IPs.ipset'
@@ -8000,7 +8018,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/Twitter%20De-Politificator.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Sensitive%20lists/Twitter%20De-Politificator.txt']
 
 OUTPUT = 'Domeneversjoner/xyzzyxnitter.txt'
 OUTPUT_DOMAINS = 'Domeneversjoner/Nitter De-Politificator.txt'
@@ -8136,7 +8154,7 @@ if __name__ == "__main__":
 import requests
 import re
 
-SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiKpopSpammersTwitter.txt']
+SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/AntiKpopSpammersTwitter.txt']
 
 OUTPUT = 'Domeneversjoner/xyzzyxkpop.txt'
 OUTPUT_DOMAINS = 'Domeneversjoner/AntiKpopNitter.txt'
