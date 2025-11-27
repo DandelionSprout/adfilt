@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 27November2025v2-Compilation
+! Version: 27November2025v3-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -460,10 +460,14 @@ github.com##.clearfix:has(h1:has-text(/^Uploading files .*NorwegianExperimentalL
 !#if !adguard_ext_android_cb
 !+ NOT_OPTIMIZED
 !!!*,~google.*,~gr##+js(acs, addEventListener, mouseleave) (https://github.com/DandelionSprout/adfilt/issues/1183)
-!+ NOT_OPTIMIZED
-!!!*##+js(aeld, mouseleave) (https://github.com/DandelionSprout/adfilt/issues/1208)
 !#endif
 !#endif
+!#endif
+!#endif
+! (https://github.com/DandelionSprout/adfilt/issues/1208 + https://github.com/AdguardTeam/Scriptlets/issues/539)
+!#if !env_mobile
+!#if !adguard
+*##+js(aeld, mouseleave)
 !#endif
 !#endif
 
