@@ -1,6 +1,6 @@
 ﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 01December2025v1
+! Last modified: 07December2025v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -2288,6 +2288,8 @@ fo##.vev
 ##.lm-banner:not(html,body,:empty)
 ! https://nordlysid•fo/tidindi (29/11/2025)
 ##.adgroup--component--take-over:not(html,body,:empty)
+! boligaDK (07/12/2025)
+##app-admanager-banner:not(html,body,:empty)
 ! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2320,21 +2322,26 @@ berlingske.dk##+js(no-fetch-if, googlesyndication)
 ! 🇳🇴/🇩🇰：IP-adresser
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
-://3.248.18.175^
-$all,ipaddress=3.248.18.175
-://35.227.231.163^
-$all,ipaddress=35.227.231.163
-://45.58.146.154^
-$all,ipaddress=45.58.146.154
-://82.196.13.38^
-$all,ipaddress=82.196.13.38
-://82.221.81.9^
-$all,ipaddress=82.221.81.9
-://178.79.136.45^
+!#if env_firefox
 $all,ipaddress=178.79.136.45
+$all,ipaddress=3.248.18.175
+$all,ipaddress=35.227.231.163
+$all,ipaddress=45.58.146.154
+$all,ipaddress=82.196.13.38
+$all,ipaddress=82.221.81.9
+! politikenDK (08/02/2025)
+$all,ipaddress=65.21.200.49
+!#endif
+!#if !env_firefox
+://178.79.136.45^
+://3.248.18.175^
+://35.227.231.163^
+://45.58.146.154^
+://82.196.13.38^
+://82.221.81.9^
 ! politikenDK (08/02/2025)
 ||65.21.200.49^$all
-$all,ipaddress=65.21.200.49
+!#endif
 
 ! 🇳🇴/🇩🇰：——— Sporingsfiler ———
 ! 🇳🇴🏞：——— Sporingsfilar ———
@@ -3059,30 +3066,34 @@ $all,ipaddress=74.119.239.234
 ://162.241.194.206^
 $all,ipaddress=162.241.194.206
 ! IP addresses of servers notorious for hosting many of the sites above
-://51.195.133.131^
+!#if env_firefox
 $all,ipaddress=51.195.133.131
-://66.206.3.34^
 $all,ipaddress=66.206.3.34
-://82.118.242.69^
 $all,ipaddress=82.118.242.69
-://136.243.73.30^
-$all,ipaddress=136.243.73.30
-://138.201.126.227^
-$all,ipaddress=138.201.126.227
-://156.236.126.173^
-$all,ipaddress=156.236.126.173
-://196.196.230.76^
-$all,ipaddress=196.196.230.76
-://167.71.49.177^
-$all,ipaddress=167.71.49.177
-://134.209.82.119^
 $all,ipaddress=134.209.82.119
-://154.213.16.136^
+$all,ipaddress=136.243.73.30
+$all,ipaddress=138.201.126.227
 $all,ipaddress=154.213.16.136
-://158.247.212.220^
+$all,ipaddress=156.236.126.173
 $all,ipaddress=158.247.212.220
-://165.227.168.212^
 $all,ipaddress=165.227.168.212
+$all,ipaddress=167.71.49.177
+$all,ipaddress=196.196.230.76
+!#endif
+!#if !env_firefox
+://51.195.133.131^
+://66.206.3.34^
+://82.118.242.69^
+://134.209.82.119^
+://136.243.73.30^
+://138.201.126.227^
+://154.213.16.136^
+://156.236.126.173^
+://158.247.212.220^
+://165.227.168.212^
+://167.71.49.177^
+://196.196.230.76^
+!#endif
 !+ NOT_OPTIMIZED
 ://132.148.220.142^
 $all,ipaddress=132.148.220.142
@@ -3364,12 +3375,16 @@ $all,ipaddress=212.224.107.120
 ||nodrakts.com^$doc
 ||dkfodboldstore.com^$doc
 ||vmfodboldtoj.com^$doc
+!#if !env_firefox
 ://5.39.217.206^
-$all,ipaddress=5.39.217.206
 ://5.39.221.180^
-$all,ipaddress=5.39.221.180
 ://193.148.70.153^
+!#endif
+!#if env_firefox
+$all,ipaddress=5.39.217.206
+$all,ipaddress=5.39.221.180
 $all,ipaddress=193.148.70.153
+!#endif
 ! https://www•dr•dk/nyheder/seneste/sundhed-dk-advarer-mod-sms-er-og-falsk-hjemmeside (30/09/2025)
 ||dk-sundhed.com^$all
 ||sundhed-info.com^$all
@@ -3394,16 +3409,20 @@ $all,ipaddress=158.94.209.89
 ||dk-sundhed.com^$all,domain=~svindelfup.*
 ||dksundhed.com^$all,domain=~svindelfup.*
 ||sundhed-infodk.com^$all,domain=~svindelfup.*
+!#if !env_firefox
 ||158.94.209.86^$all,domain=~svindelfup.*
 ||158.94.209.87^$all,domain=~svindelfup.*
 ||158.94.209.88^$all,domain=~svindelfup.*
 ||158.94.209.90^$all,domain=~svindelfup.*
 ||223.29.226.200^$all,domain=~svindelfup.*
+!#endif
+!#if env_firefox
 $all,ipaddress=158.94.209.86
 $all,ipaddress=158.94.209.87
 $all,ipaddress=158.94.209.88
 $all,ipaddress=158.94.209.90
 $all,ipaddress=223.29.226.200
+!#endif
 
 ! 🇳🇴：Falske nettapoteker
 ! 🇬🇧：Fake online pharmacies
@@ -3488,6 +3507,7 @@ $all,ipaddress=223.29.226.200
 ||tnord.sbs^$all
 ||tnordh.shop^$all
 ||noapp.sbs^$all
+!#if env_firefox
 $all,ipaddress=196.251.85.197
 $all,ipaddress=43.100.125.58
 $all,ipaddress=43.159.140.215
@@ -3497,6 +3517,7 @@ $all,ipaddress=109.230.237.116
 $all,ipaddress=147.93.63.211
 $all,ipaddress=154.223.16.232
 $all,ipaddress=196.251.85.197
+!#endif
 
 ! 🇬🇧：Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 ||desidert.no^
