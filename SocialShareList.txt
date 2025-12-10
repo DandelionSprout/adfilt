@@ -1,6 +1,6 @@
 ﻿[Adblock Plus 3.13]
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! Version: 13September2025v1-Beta
+! Version: 10December2025v1-Beta
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -501,11 +501,13 @@ winstall.app##button[class*=singleApp_shareApp_]
 ~bsky.social##.share-bluesky:not(html,body,article)
 ~beloud.com##.share-beloud:not(html,body,article)
 ! https://linktr•ee/chord_ep (27/07/2025)
-linktr.ee##a[data-testid^=ShareModal-ShareLink]
+##a[data-testid^=ShareModal-ShareLink]
+! https://codeshack•io/online-ruler/ (10/12/2025)
+##a.x-share
 
-!!!~mewe.com,~www.nrk.no##[class*=share-button i]:not(body, html) (Can't be generic due to www.nrk.no, meweCOM, stylecasterCOM)
-!!!~tidssonen.no,~mmoculture.com##div[class*=share-container] (Entry needs to be rewritten at some point)
-!!!~feedly.com,~chaturbate.com##.follow (Too many exceptions needed)
+!!!~mewe•com,~www•nrk•no##[class*=share-button i]:not(body, html) (Can't be generic due to www.nrk.no, meweCOM, stylecasterCOM)
+!!!~tidssonen•no,~mmoculture•com##div[class*=share-container] (Entry needs to be rewritten at some point)
+!!!~feedly•com,~chaturbate•com##.follow (Too many exceptions needed)
 
 ! Fairly broad entries, likely to be made non-generic after the next false positive is found
 ##[class*=socialshare i]:not(html,body,article,[class*=body i],[id*=body i])
@@ -552,4 +554,4 @@ rawstory.com##.share-fb
 
 ! All embed feeds I've seen of it, have been broken since July 2023 anyway
 ||syndication.twitter.com/srv/timeline-profile^$third-party
-*##iframe[src*="//syndication.twitter.com/"]:has(div[data-testid=empty_state_header_text])
+##iframe[src*="//syndication.twitter.com/"]:has(div[data-testid=empty_state_header_text])
