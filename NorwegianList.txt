@@ -1,6 +1,6 @@
 ﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 12December2025v1
+! Last modified: 12December2025v2
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1378,6 +1378,13 @@ pixel.tv##._banner_container
 seoghoer.dk##.bg-grey-200 .bg-grey-200:has(div[data-type=ad])
 seoghoer.dk##div[data-layout=single]:has(div[data-placeholder^=readpeak])
 seoghoer.dk##div[data-layout=single]:has(div[data-type=ad]):not(:has(article))
+seniornews.dk##.seniornews-after-header-ad
+seniornews.dk##div[class^=bottom-billboard]
+billedbladet.dk##.mb-40:has(> div[data-type=ad])
+billedbladet.dk##.mb-20:has(> div[data-type=ad])
+billedbladet.dk##.mb-20:has(> * > div[data-type=ad])
+billedbladet.dk##section[data-aller-type] + div:not([class]):has(> * > div[data-type=ad])
+ni.dk##div[style]:not([id],[class]):has(div[id*=gpt])
 ! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1892,6 +1899,8 @@ _1170x400.$domain=eyjafrettir.is,image,1p
 ||vf.is/banners^
 ||pixel.tv/wp-content/uploads/202*-300x300-$image
 ||bold.dk/_nuxtv3/n*banner$script,css
+||tv-kalundborg.b-cdn.net//system_files/banner^
+||dagens.dk/wp-content/themes/mgdk-master/pricerunner-widget.php^
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2296,6 +2305,8 @@ fo##.vev
 ##.adgroup--component--take-over:not(html,body,:empty)
 ! boligaDK (07/12/2025)
 ##app-admanager-banner:not(html,body,:empty)
+! https://www•billedbladet•dk/kendte/jesper-steinmetz-har-smidt-millioner-i-danmark-men-han-skal-ikke-selv-bo-i-lejligheden (12/12/2025)
+###adnm-stickies:not(:empty)
 ! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
