@@ -1,7 +1,7 @@
-﻿[Adblock Plus 3.13]
+﻿﻿[Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 271120251
+! Version: 121220252
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -130,7 +130,6 @@ xstra.no##.td-fix-index
 tek.no#?#main > section > section:has-text(/^an{2}onse$/)
 madensverden.dk##.maden-after-content
 indkast.dk##.site_ad_container
-torg.fo##.add
 f7.no##.td-loader-gif
 nakenprat.com#$#abort-on-property-read document.dispatchEvent
 gaffa.no##.ad-continues-txt
@@ -390,6 +389,7 @@ alvdalmiv.no,tynsetingen.no##.widget-1.columns-5
 eyjar.net##div[style^="width:100%;max-width:390px;"]
 nordjyske.dk##.ad-unit--body-wide
 rorfag.no##.anonse
+tvkampen.com,tvsporten.dk##a.rt-channel-link[href*="/go?link="]
 kanalfrederikshavn.dk###c888
 onlinenytt.com##.textwidget > p
 viralefilmer.no##.td_mod_wrap
@@ -1190,6 +1190,9 @@ ipmsnorge.org#?#.col-md-3 .block:has-text(ponsor)
 travelmarket.no##.pages-container__element:has([class*=banner])
 vg.no,www-vg-no.translate.goog##.finn-blink-loaded
 fotbolti.net##div[id^=banner]
+bold.dk##.wrapper-banner
+bold.dk##.integration-wrapper
+bold.dk##.mobile-ad-wrapper
 budstikka.no##.bazaar
 xn--bodposten-n8a.no,ranaposten.no##.widget_links
 itavisen.no##.fifth-article-ad
@@ -1328,6 +1331,16 @@ akureyri.net###banner
 handkastid.net##.brz-wp-shortcode
 handkastid.net##div[id^=handk-]
 pixel.tv##._banner_container
+seoghoer.dk##.bg-grey-200 .bg-grey-200:has(div[data-type=ad])
+seoghoer.dk##div[data-layout=single]:has(div[data-placeholder^=readpeak])
+seoghoer.dk##div[data-layout=single]:has(div[data-type=ad]):not(:has(article))
+seniornews.dk##.seniornews-after-header-ad
+seniornews.dk##div[class^=bottom-billboard]
+billedbladet.dk##.mb-40:has(> div[data-type=ad])
+billedbladet.dk##.mb-20:has(> div[data-type=ad])
+billedbladet.dk##.mb-20:has(> * > div[data-type=ad])
+billedbladet.dk##section[data-aller-type] + div:not([class]):has(> * > div[data-type=ad])
+ni.dk##div[style]:not([id],[class]):has(div[id*=gpt])
 ! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1561,6 +1574,10 @@ _visittkortannonse_$image
 .is/wp-content/uploads/*1018x360$image
 ! btDK (25/10/2025)
 ||s3-bm-adtech.$third-party
+! seoghoerDK (01/12/2025)
+/aller-ads$domain=~seiska.fi
+! boldDK (12/12/2025)
+||be.contimo.app^$third-party
 ! — — — — —
 ! 🇳🇴：Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -1836,6 +1853,9 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||vf.is/media/*1170x360$image
 ||vf.is/banners^
 ||pixel.tv/wp-content/uploads/202*-300x300-$image
+||bold.dk/_nuxtv3/n*banner$script,css
+||tv-kalundborg.b-cdn.net//system_files/banner^
+||dagens.dk/wp-content/themes/mgdk-master/pricerunner-widget.php^
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2233,6 +2253,12 @@ fo##.vev
 ! effektivtlandbrug•landbrug•net (Mobil(e), 03/11/2025)
 ##.banner--topscroll:not(html,body,:empty)
 ##.lm-banner:not(html,body,:empty)
+! https://nordlysid•fo/tidindi (29/11/2025)
+##.adgroup--component--take-over:not(html,body,:empty)
+! boligaDK (07/12/2025)
+##app-admanager-banner:not(html,body,:empty)
+! https://www•billedbladet•dk/kendte/jesper-steinmetz-har-smidt-millioner-i-danmark-men-han-skal-ikke-selv-bo-i-lejligheden (12/12/2025)
+###adnm-stickies:not(:empty)
 ! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2253,22 +2279,23 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! 🇳🇴/🇩🇰：IP-adresser
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
-://3.248.18.175^
 
-://35.227.231.163^
 
-://45.58.146.154^
 
-://82.196.13.38^
 
-://82.221.81.9^
+
+
+! politikenDK (08/02/2025)
 
 ://178.79.136.45^
-
+://3.248.18.175^
+://35.227.231.163^
+://45.58.146.154^
+://82.196.13.38^
+://82.221.81.9^
 ! politikenDK (08/02/2025)
 ||65.21.200.49^
 ||65.21.200.49^$popup
-
 
 ! 🇳🇴/🇩🇰：——— Sporingsfiler ———
 ! 🇳🇴🏞：——— Sporingsfilar ———
@@ -3125,30 +3152,30 @@ triplx.dk##.aff-inner-col
 ://162.241.194.206^
 
 ! IP addresses of servers notorious for hosting many of the sites above
+
+
+
+
+
+
+
+
+
+
+
+
 ://51.195.133.131^
-
 ://66.206.3.34^
-
 ://82.118.242.69^
-
-://136.243.73.30^
-
-://138.201.126.227^
-
-://156.236.126.173^
-
-://196.196.230.76^
-
-://167.71.49.177^
-
 ://134.209.82.119^
-
+://136.243.73.30^
+://138.201.126.227^
 ://154.213.16.136^
-
+://156.236.126.173^
 ://158.247.212.220^
-
 ://165.227.168.212^
-
+://167.71.49.177^
+://196.196.230.76^
 ://132.148.220.142^
 
 ://104.160.10.$domain=~in-addr.arpa
@@ -3616,10 +3643,10 @@ triplx.dk##.aff-inner-col
 ||dkfodboldstore.com^
 ||vmfodboldtoj.com^
 ://5.39.217.206^
-
 ://5.39.221.180^
-
 ://193.148.70.153^
+
+
 
 ! https://www•dr•dk/nyheder/seneste/sundhed-dk-advarer-mod-sms-er-og-falsk-hjemmeside (30/09/2025)
 ||dk-sundhed.com^
@@ -3865,7 +3892,7 @@ triplx.dk##.aff-inner-col
 
 
 
-! Last updated: 05April2025v1-Extension
+! Last updated: 22December2025v1-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———

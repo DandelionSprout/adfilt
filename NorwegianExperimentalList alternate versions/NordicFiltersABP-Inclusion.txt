@@ -1,7 +1,6 @@
-﻿[Adblock Plus 3.13]
-! Title: 🏔️ Dandelion Sprouts helnordiske filtre (Møter ABPs inkluderingsregler — Firefox ≥121, Chrom* ≥105)
+﻿﻿! Title: 🏔️ Dandelion Sprouts helnordiske filtre (Møter ABPs inkluderingsregler — Firefox ≥121, Chrom* ≥105)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters (With ABP inclusion compliance — Firefox ≥121, Chrom* ≥105)
-! Version: 271120251
+! Version: 121220252
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -131,7 +130,6 @@ xstra.no##.td-fix-index
 tek.no#?#main > section > section:has-text(/^an{2}onse$/)
 madensverden.dk##.maden-after-content
 indkast.dk##.site_ad_container
-torg.fo##.add
 f7.no##.td-loader-gif
 gaffa.no##.ad-continues-txt
 spill.no##.footer_widget.widget-3
@@ -388,6 +386,7 @@ alvdalmiv.no,tynsetingen.no##.widget-1.columns-5
 eyjar.net##div[style^="width:100%;max-width:390px;"]
 nordjyske.dk##.ad-unit--body-wide
 rorfag.no##.anonse
+tvkampen.com,tvsporten.dk##a.rt-channel-link[href*="/go?link="]
 kanalfrederikshavn.dk###c888
 onlinenytt.com##.textwidget > p
 viralefilmer.no##.td_mod_wrap
@@ -1180,6 +1179,9 @@ ipmsnorge.org#?#.col-md-3 .block:has-text(ponsor)
 travelmarket.no##.pages-container__element:has([class*=banner])
 vg.no,www-vg-no.translate.goog##.finn-blink-loaded
 fotbolti.net##div[id^=banner]
+bold.dk##.wrapper-banner
+bold.dk##.integration-wrapper
+bold.dk##.mobile-ad-wrapper
 budstikka.no##.bazaar
 xn--bodposten-n8a.no,ranaposten.no##.widget_links
 itavisen.no##.fifth-article-ad
@@ -1317,6 +1319,15 @@ akureyri.net###banner
 handkastid.net##.brz-wp-shortcode
 handkastid.net##div[id^=handk-]
 pixel.tv##._banner_container
+seoghoer.dk##.bg-grey-200 .bg-grey-200:has(div[data-type=ad])
+seoghoer.dk##div[data-layout=single]:has(div[data-placeholder^=readpeak])
+seniornews.dk##.seniornews-after-header-ad
+seniornews.dk##div[class^=bottom-billboard]
+billedbladet.dk##.mb-40:has(> div[data-type=ad])
+billedbladet.dk##.mb-20:has(> div[data-type=ad])
+billedbladet.dk##.mb-20:has(> * > div[data-type=ad])
+billedbladet.dk##section[data-aller-type] + div:not([class]):has(> * > div[data-type=ad])
+ni.dk##div[style]:not([id],[class]):has(div[id*=gpt])
 ! — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1549,6 +1560,10 @@ _visittkortannonse_$image
 .is/wp-content/uploads/*1018x360$image
 ! btDK (25/10/2025)
 ||s3-bm-adtech.$third-party
+! seoghoerDK (01/12/2025)
+/aller-ads$domain=~seiska.fi
+! boldDK (12/12/2025)
+||be.contimo.app^$third-party
 ! — — — — —
 ! 🇳🇴：Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -1824,6 +1839,9 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||vf.is/media/*1170x360$image
 ||vf.is/banners^
 ||pixel.tv/wp-content/uploads/202*-300x300-$image
+||bold.dk/_nuxtv3/n*banner$script,css
+||tv-kalundborg.b-cdn.net//system_files/banner^
+||dagens.dk/wp-content/themes/mgdk-master/pricerunner-widget.php^
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2220,6 +2238,12 @@ fo##.vev
 ! effektivtlandbrug•landbrug•net (Mobil(e), 03/11/2025)
 ##.banner--topscroll:not(html,body,:empty)
 ##.lm-banner:not(html,body,:empty)
+! https://nordlysid•fo/tidindi (29/11/2025)
+##.adgroup--component--take-over:not(html,body,:empty)
+! boligaDK (07/12/2025)
+##app-admanager-banner:not(html,body,:empty)
+! https://www•billedbladet•dk/kendte/jesper-steinmetz-har-smidt-millioner-i-danmark-men-han-skal-ikke-selv-bo-i-lejligheden (12/12/2025)
+###adnm-stickies:not(:empty)
 ! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2240,22 +2264,23 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 ! 🇳🇴/🇩🇰：IP-adresser
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
-://3.248.18.175^
 
-://35.227.231.163^
 
-://45.58.146.154^
 
-://82.196.13.38^
 
-://82.221.81.9^
+
+
+! politikenDK (08/02/2025)
 
 ://178.79.136.45^
-
+://3.248.18.175^
+://35.227.231.163^
+://45.58.146.154^
+://82.196.13.38^
+://82.221.81.9^
 ! politikenDK (08/02/2025)
 ||65.21.200.49^
 ||65.21.200.49^$popup
-
 
 ! 🇳🇴/🇩🇰：——— Sporingsfiler ———
 ! 🇳🇴🏞：——— Sporingsfilar ———
@@ -3109,30 +3134,30 @@ triplx.dk##.aff-inner-col
 ://162.241.194.206^
 
 ! IP addresses of servers notorious for hosting many of the sites above
+
+
+
+
+
+
+
+
+
+
+
+
 ://51.195.133.131^
-
 ://66.206.3.34^
-
 ://82.118.242.69^
-
-://136.243.73.30^
-
-://138.201.126.227^
-
-://156.236.126.173^
-
-://196.196.230.76^
-
-://167.71.49.177^
-
 ://134.209.82.119^
-
+://136.243.73.30^
+://138.201.126.227^
 ://154.213.16.136^
-
+://156.236.126.173^
 ://158.247.212.220^
-
 ://165.227.168.212^
-
+://167.71.49.177^
+://196.196.230.76^
 ://132.148.220.142^
 
 ://104.160.10.$domain=~in-addr.arpa
@@ -3600,10 +3625,10 @@ triplx.dk##.aff-inner-col
 ||dkfodboldstore.com^
 ||vmfodboldtoj.com^
 ://5.39.217.206^
-
 ://5.39.221.180^
-
 ://193.148.70.153^
+
+
 
 ! https://www•dr•dk/nyheder/seneste/sundhed-dk-advarer-mod-sms-er-og-falsk-hjemmeside (30/09/2025)
 ||dk-sundhed.com^
@@ -6939,7 +6964,7 @@ dn.se##.bad--insider-tall
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Sat, 15 Nov 2025 21:15:44 +0200
+! Last modified: %timestamp%
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -7123,7 +7148,8 @@ animelehti.fi##.listing-container:has(a[href^="https://www.animelehti.fi/adverto
 animelehti.fi,como.fi,episodi.fi,inferno.fi,leffatykki.com,meteli.net,pelaaja.fi,rumba.fi,soundi.fi,tilt.fi,voice.fi##div[class][style]:has([data-desktop-ad-unit-id])
 animelehti.fi,como.fi,episodi.fi,inferno.fi,leffatykki.com,meteli.net,pelaaja.fi,rumba.fi,soundi.fi,tilt.fi,voice.fi##div[class][style]:has([data-mobile-ad-unit-id])
 animelehti.fi,episodi.fi,inferno.fi##.px-4.py-2.bg-white.w-full:has(.poppartners)
-animelehti.fi,episodi.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi###tilt-ad-top-stay-awayanna.fi##.grid__item_1:has(> [id^=dfp__native-card])
+animelehti.fi,episodi.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi###tilt-ad-top-stay-away
+anna.fi##.grid__item_1:has(> [id^=dfp__native-card])
 anna.fi##li:has([id^=dfp__native-card])
 anna.fi,kaksplus.fi##.widget_nativearticles
 anna.fi,kotiliesi.fi###huomiotekstilinkki[href^="https://tilaus."]
@@ -7407,16 +7433,11 @@ hymy.fi##.grid--dfp-slots
 hymy.fi##.sidebar-block a[href^="https://seura.fi/mainos/"]
 hymy.fi##.sidebar-block a[href^="https://tekniikanmaailma.fi/mainoslehti/"]
 hyvaterveys.fi##.pane-sbase-cts-native-native-front
-iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi###paraati-ad-grid
-iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.-ad1.-ad.sidebar__column-item
-iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.ad-container
-iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.m-managedListing__column.-level-1:has(.-commercial)
-iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.right-now-widget__item--commercial
-iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi#?#.m-contentListItemThumb.-level-1:has-text(Mainos)
-ilkkapohjalainen.fi##div[data-lazy-ad-unit-id]
-ilkkapohjalainen.fi,jarviseutu-lehti.fi#?#.voice-no-read:has-text(Mainos päättyy)
-ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,komiat.fi,suupohjansanomat.fi,viiskunta.fi##._3GUme._1hdYd:has(a[href^="https://pointti.fi"])
-ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,komiat.fi,suupohjansanomat.fi,viiskunta.fi#?#article > div[class]:has-text(Mainos (sisältö jatkuu alla))
+iijokiseutu.fi,ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,kaleva.fi,koillissanomat.fi,komiat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi,suupohjansanomat.fi,viiskunta.fi###paraati-ad-grid
+iijokiseutu.fi,ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,kaleva.fi,koillissanomat.fi,komiat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi,suupohjansanomat.fi,viiskunta.fi##.m-contentListItemThumb.-ctx-frontpage-now:has(.-commercial)
+iijokiseutu.fi,ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,kaleva.fi,koillissanomat.fi,komiat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi,suupohjansanomat.fi,viiskunta.fi##.m-managedListing__column.-ctx-index > .m-contentListItem.-ctx-index:has(.-commercial)
+iijokiseutu.fi,ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,kaleva.fi,koillissanomat.fi,komiat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi,suupohjansanomat.fi,viiskunta.fi##.sidebar__column-container:has(.-ad)
+iijokiseutu.fi,ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,kaleva.fi,koillissanomat.fi,komiat.fi,lapinkansa.fi,pohjoisenpolut.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi,suupohjansanomat.fi,viiskunta.fi##[data-placement-id]:has([data-ad-unit-id])
 ilmastointilaitteet.com##.boxi
 iltapulu.fi##.newsbox:has(> [id^=div-gpt-ad])
 iltapulu.fi##div[class=footer-ylempi]
@@ -7915,6 +7936,7 @@ suomimobiili.fi##.natiivilinkit
 suomimobiili.fi##.posts-list > .list-item:has([href$="ttps://suomimobiili.fi/kategoria/sponsoroitu/"])
 suomimobiili.fi#?#.posts-listing-list-alt-b:has-text(Artikkeleita kumppaneilta)
 superlehti.fi##.ad-banner-lift
+superpesis.fi##.grid-breakable:has([class*="AdServerPlaceholder"])
 supla.fi##[data-element-type="CardDefault"] div[class^=CardBg]:has(> a[href^="https://kampanjat.mainos.sanoma.fi/"])
 svl.fi##.mainos_banner1
 svl.fi##.widget > a[href^="https://www.nettikirjakauppa.com/"]
@@ -8174,6 +8196,9 @@ _300x300_*.mp4$media,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutis
 ||celtra.com^$third-party
 ||cloudfront.net/images/backgroundimages/backgroundimage^$third-party
 ||cloudfront.net/poppartners/$script
+||datocms-assets.com/*banneri$image,domain=superpesis.fi
+||datocms-assets.com/*980x400$image,domain=superpesis.fi
+||datocms-assets.com/*600x600$image,domain=superpesis.fi
 ||deals.innocode.no/api/public/v1/widgets$domain=aland.com|alandstidningen.ax|enontekionsanomat.fi|inarilainen.fi|kainuunsanomat.fi|kittilalehti.fi|kotilappi.fi|kuhmolainen.fi|levinyt.fi|luoteis-lappi.fi|saariselansanomat.fi|sompio.fi|sotkamolehti.fi|ylakainuu.fi
 ||dropbox.com/*usbanner.gif$image,domain=urbaanisanakirja.com
 ||elmotv.com/wp-content/uploads/*/stake-banneri-$image,domain=elmotv.com

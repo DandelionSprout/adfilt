@@ -1,7 +1,6 @@
-﻿msFilterList
-# Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
+﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 27November2025v1-Deprecated
+# Last modified: 12December2025v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -190,6 +189,10 @@
 # ff7IS (17 10 2025)
 # btDK (25 10 2025)
 -d s3-bm-adtech.
+# seoghoerDK (01 12 2025)
+- aller-ads
+# boldDK (12 12 2025)
+-d be.contimo.app
 # — — — — —
 # 🇳🇴：Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -447,6 +450,9 @@
 -d vf.is *1170x360
 -d vf.is banners
 -d pixel.tv 202*-300x300-
+-d bold.dk n*banner
+-d tv-kalundborg.b-cdn.net banner
+-d dagens.dk pricerunner-widget.php
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -652,6 +658,9 @@
 # https://www•akureyri•net/is/frettir/(17/10/2025)
 # (https://github.com/AdguardTeam/AdguardFilters/issues/215945)
 # effektivtlandbrug•landbrug•net (Mobil(e), 03 11 2025)
+# https://nordlysid•fo/tidindi/(29/11/2025)
+# boligaDK (07 12 2025)
+# https://www•billedbladet•dk/kendte/jesper-steinmetz-har-smidt-millioner-i-danmark-men-han-skal-ikke-selv-bo-i-lejligheden/(12/12/2025)
 # — — — — — — — — — — — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
@@ -664,12 +673,13 @@
 # 🇳🇴 🇩🇰：IP-adresser
 # 🇳🇴🏞：IP-adressar
 # 🇬🇧：IP addresses
+# politikenDK (08 02 2025)
+:  178.79.136.45
 :  3.248.18.175
 :  35.227.231.163
 :  45.58.146.154
 :  82.196.13.38
 :  82.221.81.9
-:  178.79.136.45
 # politikenDK (08 02 2025)
 -d 65.21.200.49
 # 🇳🇴 🇩🇰：——— Sporingsfiler ———
@@ -1132,15 +1142,15 @@
 :  51.195.133.131
 :  66.206.3.34
 :  82.118.242.69
+:  134.209.82.119
 :  136.243.73.30
 :  138.201.126.227
-:  156.236.126.173
-:  196.196.230.76
-:  167.71.49.177
-:  134.209.82.119
 :  154.213.16.136
+:  156.236.126.173
 :  158.247.212.220
 :  165.227.168.212
+:  167.71.49.177
+:  196.196.230.76
 :  132.148.220.142
 :  104.160.10.
 :  165.231.154.
@@ -1530,7 +1540,7 @@
 # 🇬🇧：Intended for Adblock Plus
 +d prosent.no
 +d tv2.no
-# Last updated: 05April2025v1-Extension
+# Last updated: 22December2025v1-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———

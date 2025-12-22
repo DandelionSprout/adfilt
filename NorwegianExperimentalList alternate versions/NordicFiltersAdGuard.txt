@@ -1,6 +1,6 @@
-﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
+﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Last modified: 27November2025v1
+! Last modified: 12December2025v2
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -139,7 +139,6 @@ xstra.no##.td-fix-index
 tek.no#?#main > section > section:has-text(/^an{2}onse$/)
 madensverden.dk##.maden-after-content
 indkast.dk##.site_ad_container
-torg.fo##.add
 f7.no##.td-loader-gif
 nakenprat.com##+js(aopr, document.dispatchEvent)
 gaffa.no##.ad-continues-txt
@@ -408,6 +407,7 @@ eyjar.net##div[style^="width:100%;max-width:390px;"]
 nordjyske.dk##.ad-unit--body-wide
 aftenbladet.no#$#.article-content { padding:0 }
 rorfag.no##.anonse
+tvkampen.com,tvsporten.dk##a.rt-channel-link[href*="/go?link="]
 kanalfrederikshavn.dk###c888
 onlinenytt.com##.textwidget > p
 viralefilmer.no##.td_mod_wrap
@@ -1233,6 +1233,9 @@ ipmsnorge.org#?#.col-md-3 .block:has-text(ponsor)
 travelmarket.no##.pages-container__element:has([class*=banner])
 vg.no,www-vg-no.translate.goog##.finn-blink-loaded
 fotbolti.net##div[id^=banner]
+bold.dk##.wrapper-banner
+bold.dk##.integration-wrapper
+bold.dk##.mobile-ad-wrapper
 budstikka.no##.bazaar
 xn--bodposten-n8a.no,ranaposten.no##.widget_links
 itavisen.no##.fifth-article-ad
@@ -1374,6 +1377,16 @@ akureyri.net###banner
 handkastid.net##.brz-wp-shortcode
 handkastid.net##div[id^=handk-]
 pixel.tv##._banner_container
+seoghoer.dk##.bg-grey-200 .bg-grey-200:has(div[data-type=ad])
+seoghoer.dk##div[data-layout=single]:has(div[data-placeholder^=readpeak])
+seoghoer.dk##div[data-layout=single]:has(div[data-type=ad]):not(:has(article))
+seniornews.dk##.seniornews-after-header-ad
+seniornews.dk##div[class^=bottom-billboard]
+billedbladet.dk##.mb-40:has(> div[data-type=ad])
+billedbladet.dk##.mb-20:has(> div[data-type=ad])
+billedbladet.dk##.mb-20:has(> * > div[data-type=ad])
+billedbladet.dk##section[data-aller-type] + div:not([class]):has(> * > div[data-type=ad])
+ni.dk##div[style]:not([id],[class]):has(div[id*=gpt])
 ! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1608,6 +1621,10 @@ _visittkortannonse_$image
 .is/wp-content/uploads/*1018x360$image
 ! btDK (25/10/2025)
 ||s3-bm-adtech.$third-party
+! seoghoerDK (01/12/2025)
+/aller-ads$domain=~seiska.fi
+! boldDK (12/12/2025)
+||be.contimo.app^$third-party
 ! — — — — —
 ! 🇳🇴：Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -1883,6 +1900,9 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||vf.is/media/*1170x360$image
 ||vf.is/banners^
 ||pixel.tv/wp-content/uploads/202*-300x300-$image
+||bold.dk/_nuxtv3/n*banner$script,css
+||tv-kalundborg.b-cdn.net//system_files/banner^
+||dagens.dk/wp-content/themes/mgdk-master/pricerunner-widget.php^
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2283,6 +2303,12 @@ fo##.vev
 ! effektivtlandbrug•landbrug•net (Mobil(e), 03/11/2025)
 ##.banner--topscroll:not(html,body,:empty)
 ##.lm-banner:not(html,body,:empty)
+! https://nordlysid•fo/tidindi (29/11/2025)
+##.adgroup--component--take-over:not(html,body,:empty)
+! boligaDK (07/12/2025)
+##app-admanager-banner:not(html,body,:empty)
+! https://www•billedbladet•dk/kendte/jesper-steinmetz-har-smidt-millioner-i-danmark-men-han-skal-ikke-selv-bo-i-lejligheden (12/12/2025)
+###adnm-stickies:not(:empty)
 ! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2315,35 +2341,40 @@ berlingske.dk##+js(no-fetch-if, googlesyndication)
 ! 🇳🇴/🇩🇰：IP-adresser
 ! 🇳🇴🏞：IP-adressar
 ! 🇬🇧：IP addresses
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://3.248.18.175^
-!+ PLATFORM(windows, mac, android, cli)
-3.248.18.175$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://35.227.231.163^
-!+ PLATFORM(windows, mac, android, cli)
-35.227.231.163$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://45.58.146.154^
-!+ PLATFORM(windows, mac, android, cli)
-45.58.146.154$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://82.196.13.38^
-!+ PLATFORM(windows, mac, android, cli)
-82.196.13.38$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://82.221.81.9^
-!+ PLATFORM(windows, mac, android, cli)
-82.221.81.9$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://178.79.136.45^
+!#if env_firefox
 !+ PLATFORM(windows, mac, android, cli)
 178.79.136.45$network
+!+ PLATFORM(windows, mac, android, cli)
+3.248.18.175$network
+!+ PLATFORM(windows, mac, android, cli)
+35.227.231.163$network
+!+ PLATFORM(windows, mac, android, cli)
+45.58.146.154$network
+!+ PLATFORM(windows, mac, android, cli)
+82.196.13.38$network
+!+ PLATFORM(windows, mac, android, cli)
+82.221.81.9$network
+! politikenDK (08/02/2025)
+!+ PLATFORM(windows, mac, android, cli)
+65.21.200.49$network
+!#endif
+!#if !env_firefox
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://178.79.136.45^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://3.248.18.175^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://35.227.231.163^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://45.58.146.154^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://82.196.13.38^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://82.221.81.9^
 ! politikenDK (08/02/2025)
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||65.21.200.49^$all
-!+ PLATFORM(windows, mac, android, cli)
-65.21.200.49$network
+!#endif
 
 ! 🇳🇴/🇩🇰：——— Sporingsfiler ———
 ! 🇳🇴🏞：——— Sporingsfilar ———
@@ -3081,54 +3112,58 @@ triplx.dk##.aff-inner-col
 !+ PLATFORM(windows, mac, android, cli)
 162.241.194.206$network
 ! IP addresses of servers notorious for hosting many of the sites above
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://51.195.133.131^
+!#if env_firefox
 !+ PLATFORM(windows, mac, android, cli)
 51.195.133.131$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://66.206.3.34^
 !+ PLATFORM(windows, mac, android, cli)
 66.206.3.34$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://82.118.242.69^
 !+ PLATFORM(windows, mac, android, cli)
 82.118.242.69$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://136.243.73.30^
-!+ PLATFORM(windows, mac, android, cli)
-136.243.73.30$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://138.201.126.227^
-!+ PLATFORM(windows, mac, android, cli)
-138.201.126.227$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://156.236.126.173^
-!+ PLATFORM(windows, mac, android, cli)
-156.236.126.173$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://196.196.230.76^
-!+ PLATFORM(windows, mac, android, cli)
-196.196.230.76$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://167.71.49.177^
-!+ PLATFORM(windows, mac, android, cli)
-167.71.49.177$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://134.209.82.119^
 !+ PLATFORM(windows, mac, android, cli)
 134.209.82.119$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://154.213.16.136^
+!+ PLATFORM(windows, mac, android, cli)
+136.243.73.30$network
+!+ PLATFORM(windows, mac, android, cli)
+138.201.126.227$network
 !+ PLATFORM(windows, mac, android, cli)
 154.213.16.136$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://158.247.212.220^
+!+ PLATFORM(windows, mac, android, cli)
+156.236.126.173$network
 !+ PLATFORM(windows, mac, android, cli)
 158.247.212.220$network
-!+ NOT_PLATFORM(windows, mac, android, cli)
-://165.227.168.212^
 !+ PLATFORM(windows, mac, android, cli)
 165.227.168.212$network
+!+ PLATFORM(windows, mac, android, cli)
+167.71.49.177$network
+!+ PLATFORM(windows, mac, android, cli)
+196.196.230.76$network
+!#endif
+!#if !env_firefox
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://51.195.133.131^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://66.206.3.34^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://82.118.242.69^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://134.209.82.119^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://136.243.73.30^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://138.201.126.227^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://154.213.16.136^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://156.236.126.173^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://158.247.212.220^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://165.227.168.212^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://167.71.49.177^
+!+ NOT_PLATFORM(windows, mac, android, cli)
+://196.196.230.76^
+!#endif
 !+ NOT_OPTIMIZED
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ://132.148.220.142^
@@ -3431,18 +3466,22 @@ triplx.dk##.aff-inner-col
 ||nodrakts.com^$document
 ||dkfodboldstore.com^$document
 ||vmfodboldtoj.com^$document
+!#if !env_firefox
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ://5.39.217.206^
-!+ PLATFORM(windows, mac, android, cli)
-5.39.217.206$network
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ://5.39.221.180^
-!+ PLATFORM(windows, mac, android, cli)
-5.39.221.180$network
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ://193.148.70.153^
+!#endif
+!#if env_firefox
+!+ PLATFORM(windows, mac, android, cli)
+5.39.217.206$network
+!+ PLATFORM(windows, mac, android, cli)
+5.39.221.180$network
 !+ PLATFORM(windows, mac, android, cli)
 193.148.70.153$network
+!#endif
 ! https://www•dr•dk/nyheder/seneste/sundhed-dk-advarer-mod-sms-er-og-falsk-hjemmeside (30/09/2025)
 ||dk-sundhed.com^$all
 ||sundhed-info.com^$all
@@ -3469,6 +3508,7 @@ triplx.dk##.aff-inner-col
 ||dk-sundhed.com^$all,domain=~svindelfup.*
 ||dksundhed.com^$all,domain=~svindelfup.*
 ||sundhed-infodk.com^$all,domain=~svindelfup.*
+!#if !env_firefox
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||158.94.209.86^$all,domain=~svindelfup.*
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -3479,6 +3519,8 @@ triplx.dk##.aff-inner-col
 ||158.94.209.90^$all,domain=~svindelfup.*
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||223.29.226.200^$all,domain=~svindelfup.*
+!#endif
+!#if env_firefox
 !+ PLATFORM(windows, mac, android, cli)
 158.94.209.86$network
 !+ PLATFORM(windows, mac, android, cli)
@@ -3489,6 +3531,7 @@ triplx.dk##.aff-inner-col
 158.94.209.90$network
 !+ PLATFORM(windows, mac, android, cli)
 223.29.226.200$network
+!#endif
 
 ! 🇳🇴：Falske nettapoteker
 ! 🇬🇧：Fake online pharmacies
@@ -3581,6 +3624,7 @@ triplx.dk##.aff-inner-col
 ||tnord.sbs^$all
 ||tnordh.shop^$all
 ||noapp.sbs^$all
+!#if env_firefox
 !+ PLATFORM(windows, mac, android, cli)
 196.251.85.197$network
 !+ PLATFORM(windows, mac, android, cli)
@@ -3599,6 +3643,7 @@ triplx.dk##.aff-inner-col
 154.223.16.232$network
 !+ PLATFORM(windows, mac, android, cli)
 196.251.85.197$network
+!#endif
 
 ! 🇬🇧：Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 ||desidert.no^
@@ -3647,7 +3692,7 @@ triplx.dk##.aff-inner-col
 !#if adguard
 !#include AdditionalGenericEntriesForAdGuard.txt
 !#endif
-! Last updated: 05April2025v1-Extension
+! Last updated: 22December2025v1-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -3740,7 +3785,7 @@ gamereactor.*$$script[onError="adblockEnabled()"]
 ! https://github.com/uBlockOrigin/uAssets/issues/8648
 connery.dk##+js(set, adblockerAlert, noopFunc)
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
-no,~bankid.com,~3dsecure.no##+js(remove-attr, class, .dfp-loaded)
+no,~bankid.*,~3dsecure.no,~postnord.*##+js(remove-attr, class, .dfp-loaded)
 ! https://www•findroommate•dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum (17/12/2021)
 findroommate.dk###frm-ablo-message
 !#if !adguard
