@@ -4,17 +4,19 @@
 
 ———————————————————————————
 
-**IMPORTANT NOTE:** My lists do not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and its various syntax limitations. Issue reports for Manifest v3-based extension versions will **not** be accepted, and if you do submit one, you would be asked to use an alternate web browser instead.
+**IMPORTANT NOTE:** My lists do not, can not, and will never ever support Manifest v3, due to the lack of list hotfixes and its various syntax limitations. Issue reports for Manifest v3-based extension versions will **not** be accepted, and if you do submit one, you would be asked to use an alternate web browser instead. On Windows, runnning `winget search mv2` and/or `winget search gecko` in PowerShell shows a more-or-less up-to-date list of supported alternate browsers.
 
-And just in case anyone thinks I'm not serious about it, **I no longer offer support to Safari ≥13 users** (except when using AdGuard's paid version) since Safari has decided to do the exact same things that Chromium is planning to do.
+And just in case anyone thinks I'm not serious about it, **I no longer offer support to Safari ≥13 users** (except when using AdGuard's paid version) since Safari decided to do the exact same things that Chromium ended up doing.
 
 ———————————————————————————
 
-Note for UXP browser users: Due to the Pale Moon community being protective of consistent abusive hate speech and grave insults, I will no longer use Pale Moon, Basilisk or Borealis to test any entries or for anything else. PC browser entries that can't be reproduced in Firefox, Vivaldi or Tor Browser, will be delegated to [uAssets](https://github.com/uBlockOrigin/uAssets/blob/master/filters/legacy.txt) instead.
+Note for UXP browser users: Due to the Pale Moon community being protective of consistent abusive hate speech and grave insults, I will no longer use Pale Moon, Basilisk or Borealis to test any entries or for anything else. UXP browser entries that can't be reproduced in Firefox, Vivaldi or Tor Browser, will be delegated to [uAssets](https://github.com/uBlockOrigin/uAssets/blob/master/filters/legacy.txt) instead.
 
 ———————————————————————————
 
 **To subscribe to lists from this repo**, go to [FilterLists.com](https://filterlists.com/), click on the **Maintainers** button in the upper right, and choose **Imre Kristoffer Eilertsen** in the Maintainers dropdown menu. It is generally not recommended to subscribe to lists directly from this repo, as the mostly unsorted lists [can be unsuitable for your software(s)](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Pok%C3%A9monNoGOZone.txt), [block things you may not have intended to block at all](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/Twitter%20De-Politificator.txt), or [otherwise cause confusion in general](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/EkstraBladetEroticContentRemover.txt) if they aren't vetted properly before use on hardware.
+
+Note 29/12/2025: The list submission process there became such a nightmare of interdependencies between 10-ish metadata files per list, that my newest lists are no longer submitted there (and certainly not by me). Alternate approaches are being considered.
 
 ———————————————————————————
 
@@ -24,7 +26,7 @@ This is a hobby project of mine, in which I work just as much on these lists and
 
 * [Official repo mirror on GitLab](https://gitlab.com/DandelionSprout/adfilt)
 
-However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 7-digits. Various modified versions of it are included in uBlock Origin, AdGuard, AdNauseam, AdBlock, Adblock Plus, AdGuard Home, pfBlockerNG, Brave Browser, and Vivaldi's privacy settings.
+However, if you were led here by extension teams or extension customer services, it was most likely due to **[Dandelion Sprout's Nordic Filters](https://github.com/DandelionSprout/adfilt/blob/master/NorwegianList.txt)**, my signature list for all up-to-date adblockers, whose userbase is very loosely estimated to measure in the low 7-digits. Various modified versions of it are included in uBlock Origin, AdGuard, AdNauseam, AdBlock, Adblock Plus, AdGuard Home, pfBlockerNG, Brave Browser, Zen Desktop, and Vivaldi's privacy settings.
 
 ## Contact details:
 
@@ -68,8 +70,6 @@ Jag anser mig själv att vara kompetent-ish på svenska, og klarer så vel at sk
 • [OISD.nl](https://oisd.nl/) - Incorporates Dandelion Sprout's Nordic Filters and Dandelion Sprout's Anti-Malware List.<br>
 • [1Hosts](https://github.com/badmojr/1Hosts), [T145's Black Mirror](https://github.com/T145/black-mirror) - Incorporates Dandelion Sprout's Anti-Malware List.<br>
 • [Developer Dan](https://blocklist-tools.developerdan.com/blocklists), Bajins, [jgdye](https://git.ovalwonder.com/jgdye/samwiseetc/src/branch/master/pihole), [Molinero](https://hmirror.molinero.dev/) - Stores third-party mirrors of at least one of my lists.
-
-Occasionally, [this link](https://www.google.no/search?q=%22if-a-large-hosts-file-contains-this-entry-then-it%22&filter=0) can be used to find additional projects. However, it is somewhat inaccurate, because most such projects remove non-live domains.
 
 ## Special thanks to:
 
