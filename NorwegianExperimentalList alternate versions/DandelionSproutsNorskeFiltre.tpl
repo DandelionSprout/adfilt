@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 12December2025v2-Deprecated
+# Last modified: 13January2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -47,7 +47,6 @@
 -d boligkanalen-maestro-new.azurewebsites.net
 -d cluster.chart.dk
 -d delivered-by-madington.com
--d dotbanner.dk
 -d easy-ad.no
 -d easy-ads.dk
 -d heartbeat.airserve.net
@@ -261,7 +260,6 @@
 -d dust2.dk banners
 -d erotikmix.dk mixads300.html
 -d escort46.dk bg_images
--d export.prisguide.no
 -d export.prisguiden.no
 -d eyjar.net ads
 -d fcbarcelona.dk footerbg.jpg
@@ -453,6 +451,7 @@
 -d bold.dk n*banner
 -d tv-kalundborg.b-cdn.net banner
 -d dagens.dk pricerunner-widget.php
+-d kabaler.dk demens.jpg
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -661,6 +660,7 @@
 # https://nordlysid•fo/tidindi/(29/11/2025)
 # boligaDK (07 12 2025)
 # https://www•billedbladet•dk/kendte/jesper-steinmetz-har-smidt-millioner-i-danmark-men-han-skal-ikke-selv-bo-i-lejligheden/(12/12/2025)
+# hvakosterstrommenNO (02 01 2026)
 # — — — — — — — — — — — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
@@ -843,15 +843,11 @@
 :  92.42.104.146
 -d djurs.com-*.
 -d itunesconnect-*.no
--d jimmychoostore.top
 -d look-like-star.myshopify.com
 -d marked.no
--d mrcal365.com
 -d pensjonistferie.no
--d postuksus.com
 -d replicapatekphilippe.com
 -d replicarolexyachtmaster.com
--d secureriches.com
 -d tromselementbygg.no
 -d ultimate-tech-products.myshopify.com
 -d vipps-sikkerhet.
@@ -861,9 +857,6 @@
 -d havfruen4220.dk
 -d bankid-sperret.
 -d srilanka.no
--d innboks.info
--d skaatteenok.com
--d pearlandcarpetcleaner.com
 -d logg-inn.online
 -d nyhetsnett.no
 - ?finn.no login
@@ -879,48 +872,15 @@
 # Fake Gymshark webshops
 -d altrasgshoes.com
 -d altrask.com
--d brunateskonorge.com
--d g-ymsharknorge.com
--d gantdanmark.com
 -d gantnorge.com
--d gymshark-danmarkudsalg.com
 -d gymshark-no.com
--d gymsharkbutikdanmark.com
--d gymsharkbutikkoslo.com
--d gymsharkdanmark.com
--d gymsharkidanmark.com
--d gymsharkiesale.com
 -d xn--gymsharkklrnorge-3ob.com
--d gymsharkldanmark.com
--d gymsharklnorge.com
--d gymsharkno.com
--d gymsharknorge.com
--d gymsharkoutletsnorge.com
--d gymsharksalg.com
--d gymsharktightsnorge.com
--d gymsharnorge.com
 -d hilfigerdenmark.com
--d hilfigernorge.com
--d hugobossbutikk.com
--d hunterstovlerbutikk.com
--d josefseibeloutletnorge.com
--d joyaskobutikk.com
 -d louboutinnorge.com
 -d montec-danmark.com
--d montecnorge.com
--d montecsalg.com
--d nauticadanmark.com
--d nauticanorge.com
--d salgvejanorge.com
--d sanukdk.com
--d sanuksandaler.com
 -d umbrodk.com
 -d umbrono.com
 -d underarmourdk.com
--d underarmourdks.com
--d vejadanmarkudsalg.com
--d xeroshoes-danmark.com
--d xeroshoesdanmark.com
 # E-mail tips
 -d s.free.fr
 -d trmff.wpengine.com
@@ -938,7 +898,6 @@
 # 🇩🇰：Som nævnt i diverse nyhedsartikler om fupwebsider
 # 🇬🇧：As mentioned in various news articles about fraud sites
 # https://www•tv2•no/nyheter/10493336/
--d rnbinance.com
 -d brightertrade.com
 # https://www•nrk•no/norge/1.14511067
 # https://www•datahjelperne•no/verifiser-get-konto-falsk-mail/
@@ -949,14 +908,12 @@
 # https://www•datahjelperne•no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 - css *sparebank1.no
 # https://www.facebook.com/viralspiralen/posts/2494251397311027
--d addmoviesnow.com
 # https://www•mm•dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
 -d faarup.com-*.
 -d com-dk.com
 # https://www•mm•dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
 -d legoland.com-*.
 # https://www•mm•dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
--d hcliips.com
 # https://www•nrk•no/troms/1.14788086
 -d geometra-bologna.it
 # https://www•nrk•no/nyheter/1.14793929
@@ -977,7 +934,6 @@
 -d newzeninfotech.com
 # https://www•datahjelperne•no/skatteberegning-mail-svindel/
 -d probenefit.net
--d ssbeveragedistribution.com
 # https://www•datahjelperne•no/olav-thon-facebook-svindel/
 -d euronews*.buzz
 -d softwaredaily*.monster
@@ -989,10 +945,8 @@
 # https://www•adressa•no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
 -d smallrise.com
 # https://www•datahjelperne•no/coop-du-har-fatt-nye-kuponger-mail-svindel/
--d offerleads.club
 - cop-no index.htm
 # https://www•datahjelperne•no/elkjop-kontaktforsok-mail-svindel/
--d bamboobotanica.com
 - survey heldige
 # https://www•datahjelperne•no/sparebank-1-din-tilganger-er-blokkert-svindel/
 -d cionialessio.it
@@ -1016,35 +970,23 @@
 # Googling Aksel Hennie (Results for prior week) in late July 2021
 -d com vg.no
 # Various Google results for 'jesper buch bitcoin'
--d fartuelt.dk
--d fancywoman.dk
--d privatedagplejere.dk
--d mxdesign.dk
--d bitcoinevolutionaustraliareview.com
 -d irb.dk
--d ditsunde.dk
 -d economywatch.com
 -d superbinvest.com
--d marvelouskaunas.club
 -d aktienboard.com
 -d minklubshop.dk dk
 # https://www•nrk•no/vestfoldogtelemark/1.15750360
 -d dundeehills.group
 # https://www•adressa•no/pluss/nyheter/2021/12/04/Posten-advarer-Vi-sender-ikke-slike-tekstmeldinger-24894483.ece
 -d ozarkvillage.net
--d channawars.com
 # https://www•vi•no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
--d melding.link
 # https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1114669106
 -d cx nordea
 -d cx sparebank
 -d cx sbanken
 # https://www•kode24•no/artikkel/75980495
--d campbell-living.com
 # https://www•telia•no/kundeservice/mobil/malware-flubot-android/
--d wxqgx123.com
 # https://dinside.dagbladet•no/mobil/ikke-la-deg-friste/76730599
--d k-yw.com
 # https://dinside.dagbladet•no/okonomi/tusenvis-forsokt-lurt/76921148
 -d a2ics.eu
 -d smsb.co
@@ -1052,82 +994,29 @@
 -d minklarna.
 # https://github.com/DandelionSprout/adfilt/issues/747
 - -norge.co.no
--d skechersskosalg-norge.com
--d dkgaborsneakers.com
 -d haglofstilbud.com
--d fjallraventilbud.com
--d hitecskonorge.com
 -d off-whitenorge.com
--d gaborskonorge.com
 -d oofosnorgeoutlet.com
--d camperskonorge.com
 -d eccoskonorge.com
 -d clarksskonorge.com
 -d off-whitedanmark.com
--d eccodanmarkwebbutik.com
 -d clarks-dk.com
--d salomonoutletnorge.com
--d speedcrossnettbutikk.com
 # https://github.com/DandelionSprout/adfilt/issues/748
--d salomomnorgeoutlet.com
--d jakkeshopdanmark.com
--d jakkeshopnorge.com
--d norge-adidas.com
--d tevanorgeshop.com
--d wolverineskonorge.com
--d hunternorge.co
--d hunternorgeno.com
--d norgeskotilbud.com
--d hokasnorgeno.com
 -d vanssnorge.com
--d asoloskonorge.com
 -d hokaonenorge.com
--d jordannorge.top
--d quiksilvernorge.com
 -d hokanorgeno.com
--d drmdanmark.com
--d tevadanmarkshop.com
 -d hunter-danmark.com
--d salomonbutikdanmark.com
--d jordantilbud.com
--d jordantilbuddanmark.com
--d quiksilverdanmark.com
--d salomon-danmark.net
--d salomonidanmark.com
 -d saucony-dk.com
--d palladiumskodk.com
--d keensandalertilbud.com
--d quiksilvertilbud.com
--d palladiumskobutikk.com
--d hunterstovlersalg.com
--d martenssalg.com
 -d hokaskooutlet.co.no
--d hoka-sko.com
--d hoka-one-one.cc
 - (https?:  )?hokaoneone[a-z0-9].*
 # https://www•adressa•no/nyheter/trondheim/i/Moq2wR/svindlere-kaarer-vinnere-i-konkurranser-gir-en-daarlig-foelelse-aa-forklare-at-dette-bare-er-tull
 # https://www•adressa•no/nyheter/trondheim/i/69d3lL/spisesteder-rammet-det-er-forferdelig-jeg-fikk-panikk
 -d sitey.me
 # https://www•tv2•no/nyheter/innenriks/olav-thon-misbrukes-i-svindelannonser-ble-feilaktig-meldt-dod/15818647/
--d 24-news.online
 # https://www•tv2•no/nyheter/innenriks/advarer-ikke-klikk-pa-lenken/16040614/
--d brugerverificering.com
 -d dhl-trackng.com
 -d dnb-oppdater.
 -d linkednordersalenavigate.com
--d mobilidentitet.com
--d mobiltrygheden.com
--d mobilunderskriv.com
--d no-aut.co
--d no-bekreft.com
--d no-confir.com
--d no-erne.com
--d no-erne.live
--d no-nye.live
--d no-renovere.com
--d no-sikkerhet.com
--d no-update.live
--d no-updater.live
 -d start-myaltinn.com
 -d no-forny*
 -d my-altinn*
@@ -1176,187 +1065,46 @@
 # https://sol•no/81812194////https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-10360231
 -d acc-inf.com
 -d acc-ntfix.com
--d accessmyretur.com
--d adgangsikret.com
 -d aib-loginsecure.com
--d aktivalia-ntflx.com
--d app-netfiix.com
--d be-lnfo.com
 -d be-sms.com
--d billing-invalid.com
--d billingservice02-myinfo.com
--d binance-bedring.com
--d borgerpost-mitdk.com
--d bov-userid-application.com
--d bov-userid.com
--d businessonline-webchat.com
--d byra-altinn.com
--d ca-srvpayment.com
--d chase-verify-activity.com
--d city-parking-ssl1.com
--d clientnetflixcenter.com
--d co-accountswitch.com
--d co-switchaccount.com
--d comm-bankverify.com
 -d connection-info.com
--d dhl-aus-id.com
--d digitalbrevpost.com
--d digitalemitdportal.com
 -d directdigital-services.com
--d disney-abonnements.com
--d disney-facturations.com
 -d disneyplus-tv.com
--d dplus-pixar.com
--d e-boksinfor.com
--d e-interactransfer.com
 -d earnifi-claiming.com
--d easywebauthentication-td.com
--d ebanking-userid.com
--d edksundportal.com
--d eportalsundhed.com
--d esundinfo-dk.com
--d fakturalosning.com
 -d flix-area.com
 -d flix-request.com
--d fornyeportalen.com
--d gateway-kraken.com
--d gmailsetupinfo.com
--d helpnet-device.com
--d indtoll.com
--d indtollswebt.com
--d intrumtunnistus.com
--d itmitsikkert-nu.com
--d itsme-support.com
--d kvkregister.com
 -d levering-myups.com
 -d lnfoskonto.com
--d mijnups-pakket.com
--d min-altinnboks.com
--d min-borgerepost.com
--d minaltinn-info.com
--d minaltinninfo.com
--d minbrugerpost.com
--d minsikreboks.com
--d minsundhed-tjek.com
--d missed-id.com
--d mit-digitalopna.com
--d mitborgere.com
--d mitborgereportal.com
--d mitdigitalborger-post.com
--d miteinfo-nu.com
 -d mitld-forholdsregler.com
--d mobilepay-finland.com
--d mobilpay-fi.com
--d my-netflixssl1.com
 -d my-subscriptions.net
--d my02-billinghelp.com
--d myaccount-billing-details.com
--d myaccountneftlixssl1.com
 -d myups-pakket.com
 -d myups.express
--d myupsdelivery-ssl1.com
--d nemlogindigitalbrevkasse.com
--d netfiix-abo.com
--d netfiix-app.com
--d netfiixtv.com
--d netflix-bhr.com
--d netflx-tv.com
 -d netfx-acc.com
--d netfx-pagos.com
 -d ney-acc.com
 -d nflix-management.com
 -d nflix-reactivacion.com
 -d ntfx-acc.com
--d onetime-bonus.com
--d online-connection-review.com
--d onlinehelpcenetre.com
--d optankning.com
--d parking-onlinepayment.com
--d parking-ticket2024.com
--d parkpay-reminder.com
--d parkpay-tickt.com
--d parkticket-pay.com
--d pay-ticket2024.com
 -d payement-renew.me
--d paynow-ticket.com
--d portalsikkerhet.com
--d pt-netfiix.com
--d rebill-netflix.com
--d recover-dk.com
--d regions-services.com
--d regions-verification.com
--d report-action.com
--d reschdl-myups1.com
--d reschedule-myups.com
--d restore0-2account-service.com
--d ri-myorder.com
--d saaq-click.com
--d safe-secured-transfer.com
 -d santandersecurept.com
--d secureaccountcredentials.com
--d sessionpaused-requestexpired.com
--d sikker-digitaipost.com
--d sikker-vlpps.com
--d sikkeradmin.com
--d sikkerbekreftelse.com
--d sikkerinngang.com
--d sikkerportal-altinn.com
--d sikkerportal-boks.com
--d sikkertilgang-altinn.com
--d sociale-assurance.com
 -d spotfy-regulation.com
--d ssl-app.com
--d sslh1-myparkingticket.com
--d sslnetflix.com
--d sundhed-einfoportal.com
--d sundhed-tjek.com
--d sundhedportaldk.com
--d tax-binance.com
--d techsantandersecure.com
 -d trackingfindups.com
 -d trackingpackage.express
--d tsbconnect-verification.com
--d tsbsecurity-online.com
--d tv-netfiix.com
 -d ups-packaging.delivery
--d ups-rescheduledelivery.com
--d ups-upsnow.com
--d ups1-reschdl.com
 -d upsbezahlung.com
--d upsreschedule-uy.com
 -d usaa-verify.com
--d user-amazon-id.com
--d usps-fast.club
--d vat-reschedule.com
--d verification-no.com
--d wf-securelogin.com
--d wisehelpcentre.com
 :  193.143.1.45
 :  193.143.1.214
 :  193.143.1.217
 :  193.143.1.
 -d adidasko.com
--d airmaxskobillige.com
--d assassinfitness.com
--d coralls.com
 -d daradis.com
--d drakternorge.com
--d drcarolyngroff.com
--d dunjakke-no.com
--d fotballsko-salg.com
 -d gsport.com
 -d hernoclothing.com
--d jakkesalgs.com
--d jakkesnorge.com
 -d linkshe.com
--d mbtnorge.com
--d moteshoes.com
--d mycraftypad.com
 -d norfotball.com
 -d norgefotball.com
 -d norgeshoes.com
 -d oflike.com
--d parajumperssalg.com
 -d pjs.outlet.com
 -d popeurope.com
 -d um-bs.com
@@ -1375,7 +1123,6 @@
 -d appearspacex.de
 -d 195-242-152-122.static.hvvc.us
 -d 195.242.152.122
--d mygoodmerch.com
 # https://www•tv2•no/nyheter/forbruker/sjokksvar-pa-epost-harreisende/17805239/
 # https://www•tv2•no/nyheter/forbruker/tenkte-shit-na-har-jeg-blitt-lurt/17474448/
 -d takstskolen.no
@@ -1410,12 +1157,9 @@
 -d zooplus-se.com
 -d zooplusdanmark.com
 -d 212.224.107.120
-# 🇬🇧：Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
+# 🇬🇧：Pirate-product-selling stores
 -d nofotballshop.com
--d nofotballstore.com
--d nodrakts.com
 -d dkfodboldstore.com
--d vmfodboldtoj.com
 :  5.39.217.206
 :  5.39.221.180
 :  193.148.70.153
@@ -1451,39 +1195,27 @@
 # 🇬🇧：Fake online pharmacies
 - -med.footeo.com
 -d *medisin*.over-blog.com
--d godtdsamaritansk.com
 -d helsehjelp.over-blog.com
--d jensapoteker.com
 -d marson.footeo.com
--d sikkertapotek.com
 -d sobrilleverandoridanmark.wordpress.com
 -d xanax*.over-blog.com
 # 🇬🇧：Old domains stolen by casino sites
--d kohlershop.dk
--d fredensborg-orredfiskeri.dk
 -d informationer.nu
 -d cphspaogwellness.dk
 -d webavisen.gl
 # 🇬🇧：Various postal credential fraud syndicates
 -d norgeposten.today
--d norwayposten.today
 -d pakkeposten.today
 -d post-dk.cfd
 -d post-nord-levering.
 -d post-nord-receiving.
--d posten-track.today
--d posten-tracker.today
 -d posten-tracks.
 -d postendk.lol
 -d postendsk.lat
 -d postennorge.today
--d postennorway.today
 -d postenpakke.today
--d postenserve.today
 -d postenserves.today
 -d postenspor.today
--d postentrack.today
--d postentracks.today
 -d postnord-24.site
 -d postnord-all.
 -d postnord-confirmation.
@@ -1527,15 +1259,12 @@
 -d noapp.sbs
 # 🇬🇧：Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 -d desidert.no
--d brigitteheilmann.dk
 -d storustovu.dk
--d campingnews.dk
 # 🇬🇧：Copied over from URLHaus and verified
 -d hagebakken.no
 -d mdb.nu
 -d idj.no
 :  1.14.61.188
--d smarthouseforum.ru
 -d trafikkskoleapp.no
 # 🇬🇧：Intended for Adblock Plus
 +d prosent.no

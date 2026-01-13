@@ -1,7 +1,7 @@
 ﻿﻿[Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts vestnordiske filtre for ryddigere nettsider (for AdBlock og Adblock Plus)
 ! Title 🇬🇧: Dandelion Sprout's West Nordic filters for tidier websites (for AdBlock and Adblock Plus)
-! Version: 121220252
+! Version: 130120261
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -371,6 +371,7 @@ tek.no##section[class*=canvas]
 vimedhund.dk,madogvenner.dk##.g-ads
 holdsport.dk##.article:has(a[href*=betting])
 vp.fo###top
+filmweb.no##a[class*=programControlsSponsor]
 fcbarcelona.dk###rightcolumn
 boligpluss.no##.article-footer + .wg-editorial
 portal.fo###top_vev
@@ -870,7 +871,11 @@ lydogbilde.no,lydogbillede.dk##*:has(>.adunit-lazy)
 menn.is##.vc_column:has(.mobile-ad):not(:has(a))
 polarmedia.dk##p:has(a[href*=casino])
 dk-kogebogen.dk###banners_right
-kode24.no##.top-profile.row
+kode24.no##.top-bar-ad
+kode24.no##div.sponsors
+kode24.no##div:has(>.banner-container:has(>.banner-listing:-abp-properties(content: "Annonse")))
+kode24.no##div:has(>.commercial)
+kode24.no##div:has(>#diamond-partners-list-tile)
 borsen.dk,borsen-dk.translate.goog##[href*="://borsen.dk/sponsoreret"]
 bt.no##p ~ div[class^=hyperion-css-]:has(> div[id*=-ad- i])
 pengenytt.no##.entry-content > h6:has(script[src$="/adsbygoogle.js"])
@@ -1341,6 +1346,12 @@ billedbladet.dk##.mb-20:has(> div[data-type=ad])
 billedbladet.dk##.mb-20:has(> * > div[data-type=ad])
 billedbladet.dk##section[data-aller-type] + div:not([class]):has(> * > div[data-type=ad])
 ni.dk##div[style]:not([id],[class]):has(div[id*=gpt])
+hvakosterstrommen.no##.bg-sponsor
+gladkokken.no##.recipe__ad:not([data-component])
+gladkokken.no##.-type-ad
+123kortspill.no###main > p:has-text(Lei av kabal?)
+kabaler.dk##aside > table[bgcolor^=FFF]
+sykepleien.no##.layout--onecol:has([class*=adnuntius])
 ! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1427,7 +1438,6 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 ||boligkanalen-maestro-new.azurewebsites.net^$image
 ||cluster.chart.dk^$third-party
 ||delivered-by-madington.com^$third-party
-||dotbanner.dk^$third-party
 ||easy-ad.no^$third-party
 ||easy-ads.dk^$third-party
 ||heartbeat.airserve.net^$third-party
@@ -1656,7 +1666,6 @@ contentMarketing$xmlhttprequest,domain=sol.no|sol-no.translate.goog
 ||dust2.dk/img/banners/*$image
 ||erotikmix.dk/mixads300.html^
 ||escort46.dk/bg_images^$image
-||export.prisguide.no^$domain=diskusjon.no
 ||export.prisguiden.no^$domain=diskusjon.no
 ||eyjar.net/skrar/ads
 ||fcbarcelona.dk/*/images/footerbg.jpg^$image
@@ -1853,9 +1862,10 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||vf.is/media/*1170x360$image
 ||vf.is/banners^
 ||pixel.tv/wp-content/uploads/202*-300x300-$image
-||bold.dk/_nuxtv3/n*banner$script,css
+||bold.dk/_nuxtv3/n*banner$script,stylesheet
 ||tv-kalundborg.b-cdn.net//system_files/banner^
 ||dagens.dk/wp-content/themes/mgdk-master/pricerunner-widget.php^
+||kabaler.dk/templates/blue3/images/demens.jpg^
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2259,6 +2269,8 @@ fo##.vev
 ##app-admanager-banner:not(html,body,:empty)
 ! https://www•billedbladet•dk/kendte/jesper-steinmetz-har-smidt-millioner-i-danmark-men-han-skal-ikke-selv-bo-i-lejligheden (12/12/2025)
 ###adnm-stickies:not(:empty)
+! hvakosterstrommenNO (02/01/2026)
+##.power-card--ad:not(html,body,:empty)
 ! — — — — — — — — — — — — — — — — — — — — — — — — — — —
 ! 🇳🇴：Oppføringer med spesielle omstendigheter
 ! 🇬🇧：Entries with special circumstances
@@ -2647,22 +2659,18 @@ triplx.dk##.aff-inner-col
 ||finn.no.
 ||flysas-no.
 ||itunesconnect-*.no^$domain=~en-svindelside-som-ikke-er-itunes-eller-apple.*
-||jimmychoostore.top^
 ||komplett.no.
 ||look-like-star.myshopify.com^
 ||marked.no^
-||mrcal365.com^
 ||nordea.no.
 ||nordnet.no.
 ||norwegian.com.
 ||pensjonistferie.no^
 ||posten.no.
 ||postnord.no.
-||postuksus.com^
 ||replicapatekphilippe.com^
 ||replicarolexyachtmaster.com^
 ||sbanken.no.
-||secureriches.com^
 ||shell.no.
 ||skatteetaten.no.
 ||sparebank1.no.
@@ -2680,12 +2688,6 @@ triplx.dk##.aff-inner-col
 ||bankid-sperret.
 ||bankid-sperret.$popup
 ||srilanka.no^
-||innboks.info^
-||innboks.info^$popup
-||skaatteenok.com^
-||skaatteenok.com^$popup
-||pearlandcarpetcleaner.com^
-||pearlandcarpetcleaner.com^$popup
 ||logg-inn.online^
 ||logg-inn.online^$popup
 ||nyhetsnett.no^
@@ -2709,90 +2711,24 @@ triplx.dk##.aff-inner-col
 ||altrasgshoes.com^$popup
 ||altrask.com^
 ||altrask.com^$popup
-||brunateskonorge.com^
-||brunateskonorge.com^$popup
-||g-ymsharknorge.com^
-||g-ymsharknorge.com^$popup
-||gantdanmark.com^
-||gantdanmark.com^$popup
 ||gantnorge.com^
 ||gantnorge.com^$popup
-||gymshark-danmarkudsalg.com^
-||gymshark-danmarkudsalg.com^$popup
 ||gymshark-no.com^
 ||gymshark-no.com^$popup
-||gymsharkbutikdanmark.com^
-||gymsharkbutikdanmark.com^$popup
-||gymsharkbutikkoslo.com^
-||gymsharkbutikkoslo.com^$popup
-||gymsharkdanmark.com^
-||gymsharkdanmark.com^$popup
-||gymsharkidanmark.com^
-||gymsharkidanmark.com^$popup
-||gymsharkiesale.com^
-||gymsharkiesale.com^$popup
 ||xn--gymsharkklrnorge-3ob.com^
 ||xn--gymsharkklrnorge-3ob.com^$popup
-||gymsharkldanmark.com^
-||gymsharkldanmark.com^$popup
-||gymsharklnorge.com^
-||gymsharklnorge.com^$popup
-||gymsharkno.com^
-||gymsharkno.com^$popup
-||gymsharknorge.com^
-||gymsharknorge.com^$popup
-||gymsharkoutletsnorge.com^
-||gymsharkoutletsnorge.com^$popup
-||gymsharksalg.com^
-||gymsharksalg.com^$popup
-||gymsharktightsnorge.com^
-||gymsharktightsnorge.com^$popup
-||gymsharnorge.com^
-||gymsharnorge.com^$popup
 ||hilfigerdenmark.com^
 ||hilfigerdenmark.com^$popup
-||hilfigernorge.com^
-||hilfigernorge.com^$popup
-||hugobossbutikk.com^
-||hugobossbutikk.com^$popup
-||hunterstovlerbutikk.com^
-||hunterstovlerbutikk.com^$popup
-||josefseibeloutletnorge.com^
-||josefseibeloutletnorge.com^$popup
-||joyaskobutikk.com^
-||joyaskobutikk.com^$popup
 ||louboutinnorge.com^
 ||louboutinnorge.com^$popup
 ||montec-danmark.com^
 ||montec-danmark.com^$popup
-||montecnorge.com^
-||montecnorge.com^$popup
-||montecsalg.com^
-||montecsalg.com^$popup
-||nauticadanmark.com^
-||nauticadanmark.com^$popup
-||nauticanorge.com^
-||nauticanorge.com^$popup
-||salgvejanorge.com^
-||salgvejanorge.com^$popup
-||sanukdk.com^
-||sanukdk.com^$popup
-||sanuksandaler.com^
-||sanuksandaler.com^$popup
 ||umbrodk.com^
 ||umbrodk.com^$popup
 ||umbrono.com^
 ||umbrono.com^$popup
 ||underarmourdk.com^
 ||underarmourdk.com^$popup
-||underarmourdks.com^
-||underarmourdks.com^$popup
-||vejadanmarkudsalg.com^
-||vejadanmarkudsalg.com^$popup
-||xeroshoes-danmark.com^
-||xeroshoes-danmark.com^$popup
-||xeroshoesdanmark.com^
-||xeroshoesdanmark.com^$popup
 *danmarks.com^
 *norgno.com^
 *norges.com^
@@ -2835,7 +2771,6 @@ triplx.dk##.aff-inner-col
 ! 🇩🇰：Som nævnt i diverse nyhedsartikler om fupwebsider
 ! 🇬🇧：As mentioned in various news articles about fraud sites
 ! https://www•tv2•no/nyheter/10493336/
-||rnbinance.com^
 ||brightertrade.com^
 ! https://www•nrk•no/norge/1.14511067
 ||kongeparken.com-*
@@ -2849,14 +2784,12 @@ triplx.dk##.aff-inner-col
 ! https://www•datahjelperne•no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
 /css/*sparebank1.no^
 ! https://www.facebook.com/viralspiralen/posts/2494251397311027
-||addmoviesnow.com^
 ! https://www•mm•dk/tjekdet/artikel/faarup-sommerland-advarer-mod-gratis-billetter-det-er-spam-og-fup
 ||faarup.com-*.
 ||com-dk.com^
 ! https://www•mm•dk/tjekdet/artikel/det-er-fup-heller-ikke-denne-gang-giver-legoland-5-gratis-billetter-vaek
 ||legoland.com-*.
 ! https://www•mm•dk/tjekdet/artikel/ogsaa-chili-klaus-maa-staa-model-til-falske-annoncer
-||hcliips.com^
 ! https://www•nrk•no/troms/1.14788086
 ||geometra-bologna.it^
 ! https://www•nrk•no/nyheter/1.14793929
@@ -2877,7 +2810,6 @@ triplx.dk##.aff-inner-col
 ||newzeninfotech.com^
 ! https://www•datahjelperne•no/skatteberegning-mail-svindel/
 ||probenefit.net^
-||ssbeveragedistribution.com^
 ! https://www•datahjelperne•no/olav-thon-facebook-svindel/
 ||norge.*.icu^
 ||euronews*.buzz^
@@ -2891,10 +2823,8 @@ triplx.dk##.aff-inner-col
 ! https://www•adressa•no/pluss/nyheter/2020/08/26/Kristofer-Hivju-V%C3%A6r-s%C3%A5-snill-og-slutt-22527944.ece
 ||smallrise.com^
 ! https://www•datahjelperne•no/coop-du-har-fatt-nye-kuponger-mail-svindel/
-||offerleads.club^
 /cop-no/index.htm
 ! https://www•datahjelperne•no/elkjop-kontaktforsok-mail-svindel/
-||bamboobotanica.com^
 /survey/heldige^
 ! https://www•datahjelperne•no/sparebank-1-din-tilganger-er-blokkert-svindel/
 ||cionialessio.it^
@@ -2921,17 +2851,9 @@ triplx.dk##.aff-inner-col
 ! Googling Aksel Hennie (Results for prior week) in late July 2021
 ||com/vg.no|
 ! Various Google results for 'jesper buch bitcoin'
-||fartuelt.dk^
-||fancywoman.dk^
-||privatedagplejere.dk^
-||mxdesign.dk^
-||bitcoinevolutionaustraliareview.com^
 ||irb.dk^
-||ditsunde.dk^
 ||economywatch.com^
 ||superbinvest.com^
-||marvelouskaunas.club^
-||marvelouskaunas.club^$popup
 ||aktienboard.com^
 ||minklubshop.dk/dk^
 ! https://www•nrk•no/vestfoldogtelemark/1.15750360
@@ -2940,23 +2862,14 @@ triplx.dk##.aff-inner-col
 ! https://www•adressa•no/pluss/nyheter/2021/12/04/Posten-advarer-Vi-sender-ikke-slike-tekstmeldinger-24894483.ece
 ||ozarkvillage.net^
 ||ozarkvillage.net^$popup
-||channawars.com^
-||channawars.com^$popup
 ! https://www•vi•no/forbruker/ikke-trykk-pa-lenka-fra-skatteetaten/75666026
-||melding.link^
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1114669106
 ||cx/nordea|
 ||cx/sparebank
 ||cx/sbanken|
 ! https://www•kode24•no/artikkel/75980495
-||campbell-living.com^
-||campbell-living.com^$popup
 ! https://www•telia•no/kundeservice/mobil/malware-flubot-android/
-||wxqgx123.com^
-||wxqgx123.com^$popup
 ! https://dinside.dagbladet•no/mobil/ikke-la-deg-friste/76730599
-||k-yw.com^
-||k-yw.com^$popup
 ! https://dinside.dagbladet•no/okonomi/tusenvis-forsokt-lurt/76921148
 ||a2ics.eu^
 ||a2ics.eu^$popup
@@ -2968,111 +2881,35 @@ triplx.dk##.aff-inner-col
 -norge.co.no^$popup
 *skodanmark.com^
 *skodanmark.com^$popup
-||skechersskosalg-norge.com^
-||skechersskosalg-norge.com^$popup
-||dkgaborsneakers.com^
-||dkgaborsneakers.com^$popup
 ||haglofstilbud.com^
 ||haglofstilbud.com^$popup
-||fjallraventilbud.com^
-||fjallraventilbud.com^$popup
-||hitecskonorge.com^
-||hitecskonorge.com^$popup
 ||off-whitenorge.com^
 ||off-whitenorge.com^$popup
-||gaborskonorge.com^
-||gaborskonorge.com^$popup
 ||oofosnorgeoutlet.com^
 ||oofosnorgeoutlet.com^$popup
-||camperskonorge.com^
-||camperskonorge.com^$popup
 ||eccoskonorge.com^
 ||eccoskonorge.com^$popup
 ||clarksskonorge.com^
 ||clarksskonorge.com^$popup
 ||off-whitedanmark.com^
 ||off-whitedanmark.com^$popup
-||eccodanmarkwebbutik.com^
-||eccodanmarkwebbutik.com^$popup
 ||clarks-dk.com^
 ||clarks-dk.com^$popup
-||salomonoutletnorge.com^
-||salomonoutletnorge.com^$popup
-||speedcrossnettbutikk.com^
-||speedcrossnettbutikk.com^$popup
 ! https://github.com/DandelionSprout/adfilt/issues/748
-||salomomnorgeoutlet.com^
-||salomomnorgeoutlet.com^$popup
-||jakkeshopdanmark.com^
-||jakkeshopdanmark.com^$popup
-||jakkeshopnorge.com^
-||jakkeshopnorge.com^$popup
-||norge-adidas.com^
-||norge-adidas.com^$popup
-||tevanorgeshop.com^
-||tevanorgeshop.com^$popup
-||wolverineskonorge.com^
-||wolverineskonorge.com^$popup
-||hunternorge.co^
-||hunternorge.co^$popup
-||hunternorgeno.com^
-||hunternorgeno.com^$popup
-||norgeskotilbud.com^
-||norgeskotilbud.com^$popup
-||hokasnorgeno.com^
-||hokasnorgeno.com^$popup
 ||vanssnorge.com^
 ||vanssnorge.com^$popup
-||asoloskonorge.com^
-||asoloskonorge.com^$popup
 ||hokaonenorge.com^
 ||hokaonenorge.com^$popup
-||jordannorge.top^
-||jordannorge.top^$popup
-||quiksilvernorge.com^
-||quiksilvernorge.com^$popup
 ||hokalopesko.
 ||hokalopesko.$popup
 ||hokanorgeno.com^
 ||hokanorgeno.com^$popup
-||drmdanmark.com^
-||drmdanmark.com^$popup
-||tevadanmarkshop.com^
-||tevadanmarkshop.com^$popup
 ||hunter-danmark.com^
 ||hunter-danmark.com^$popup
-||salomonbutikdanmark.com^
-||salomonbutikdanmark.com^$popup
-||jordantilbud.com^
-||jordantilbud.com^$popup
-||jordantilbuddanmark.com^
-||jordantilbuddanmark.com^$popup
-||quiksilverdanmark.com^
-||quiksilverdanmark.com^$popup
-||salomon-danmark.net^
-||salomon-danmark.net^$popup
-||salomonidanmark.com^
-||salomonidanmark.com^$popup
 ||saucony-dk.com^
 ||saucony-dk.com^$popup
-||palladiumskodk.com^
-||palladiumskodk.com^$popup
-||keensandalertilbud.com^
-||keensandalertilbud.com^$popup
-||quiksilvertilbud.com^
-||quiksilvertilbud.com^$popup
-||palladiumskobutikk.com^
-||palladiumskobutikk.com^$popup
-||hunterstovlersalg.com^
-||hunterstovlersalg.com^$popup
-||martenssalg.com^
-||martenssalg.com^$popup
 ||hokaskooutlet.co.no^
 ||hokaskooutlet.co.no^$popup
-||hoka-sko.com^
-||hoka-sko.com^$popup
-||hoka-one-one.cc^
-||hoka-one-one.cc^$popup
 /^(https?://)?hokaoneone[a-z0-9].*$/
 /^(https?://)?hokaoneone[a-z0-9].*$/$popup
 *norgeskosalg.
@@ -3099,43 +2936,13 @@ triplx.dk##.aff-inner-col
 ! https://www•adressa•no/nyheter/trondheim/i/69d3lL/spisesteder-rammet-det-er-forferdelig-jeg-fikk-panikk
 ||sitey.me^
 ! https://www•tv2•no/nyheter/innenriks/olav-thon-misbrukes-i-svindelannonser-ble-feilaktig-meldt-dod/15818647/
-||24-news.online^
-||24-news.online^$popup
 ! https://www•tv2•no/nyheter/innenriks/advarer-ikke-klikk-pa-lenken/16040614/
-||brugerverificering.com^
-||brugerverificering.com^$popup
 ||dhl-trackng.com^
 ||dhl-trackng.com^$popup
 ||dnb-oppdater.
 ||dnb-oppdater.$popup
 ||linkednordersalenavigate.com^
 ||linkednordersalenavigate.com^$popup
-||mobilidentitet.com^
-||mobilidentitet.com^$popup
-||mobiltrygheden.com^
-||mobiltrygheden.com^$popup
-||mobilunderskriv.com^
-||mobilunderskriv.com^$popup
-||no-aut.co^
-||no-aut.co^$popup
-||no-bekreft.com^
-||no-bekreft.com^$popup
-||no-confir.com^
-||no-confir.com^$popup
-||no-erne.com^
-||no-erne.com^$popup
-||no-erne.live^
-||no-erne.live^$popup
-||no-nye.live^
-||no-nye.live^$popup
-||no-renovere.com^
-||no-renovere.com^$popup
-||no-sikkerhet.com^
-||no-sikkerhet.com^$popup
-||no-update.live^
-||no-update.live^$popup
-||no-updater.live^
-||no-updater.live^$popup
 ||start-myaltinn.com^
 ||start-myaltinn.com^$popup
 ||no-forny*$all,domain=~no
@@ -3208,180 +3015,36 @@ triplx.dk##.aff-inner-col
 ||acc-inf.com^$popup
 ||acc-ntfix.com^
 ||acc-ntfix.com^$popup
-||accessmyretur.com^
-||accessmyretur.com^$popup
-||adgangsikret.com^
-||adgangsikret.com^$popup
 ||aib-loginsecure.com^
 ||aib-loginsecure.com^$popup
-||aktivalia-ntflx.com^
-||aktivalia-ntflx.com^$popup
-||app-netfiix.com^
-||app-netfiix.com^$popup
-||be-lnfo.com^
-||be-lnfo.com^$popup
 ||be-sms.com^
 ||be-sms.com^$popup
-||billing-invalid.com^
-||billing-invalid.com^$popup
-||billingservice02-myinfo.com^
-||billingservice02-myinfo.com^$popup
-||binance-bedring.com^
-||binance-bedring.com^$popup
-||borgerpost-mitdk.com^
-||borgerpost-mitdk.com^$popup
-||bov-userid-application.com^
-||bov-userid-application.com^$popup
-||bov-userid.com^
-||bov-userid.com^$popup
-||businessonline-webchat.com^
-||businessonline-webchat.com^$popup
-||byra-altinn.com^
-||byra-altinn.com^$popup
-||ca-srvpayment.com^
-||ca-srvpayment.com^$popup
-||chase-verify-activity.com^
-||chase-verify-activity.com^$popup
-||city-parking-ssl1.com^
-||city-parking-ssl1.com^$popup
-||clientnetflixcenter.com^
-||clientnetflixcenter.com^$popup
-||co-accountswitch.com^
-||co-accountswitch.com^$popup
-||co-switchaccount.com^
-||co-switchaccount.com^$popup
-||comm-bankverify.com^
-||comm-bankverify.com^$popup
 ||connection-info.com^
 ||connection-info.com^$popup
-||dhl-aus-id.com^
-||dhl-aus-id.com^$popup
-||digitalbrevpost.com^
-||digitalbrevpost.com^$popup
-||digitalemitdportal.com^
-||digitalemitdportal.com^$popup
 ||directdigital-services.com^
 ||directdigital-services.com^$popup
-||disney-abonnements.com^
-||disney-abonnements.com^$popup
-||disney-facturations.com^
-||disney-facturations.com^$popup
 ||disneyplus-tv.com^
 ||disneyplus-tv.com^$popup
-||dplus-pixar.com^
-||dplus-pixar.com^$popup
-||e-boksinfor.com^
-||e-boksinfor.com^$popup
-||e-interactransfer.com^
-||e-interactransfer.com^$popup
 ||earnifi-claiming.com^
 ||earnifi-claiming.com^$popup
-||easywebauthentication-td.com^
-||easywebauthentication-td.com^$popup
-||ebanking-userid.com^
-||ebanking-userid.com^$popup
-||edksundportal.com^
-||edksundportal.com^$popup
-||eportalsundhed.com^
-||eportalsundhed.com^$popup
-||esundinfo-dk.com^
-||esundinfo-dk.com^$popup
-||fakturalosning.com^
-||fakturalosning.com^$popup
 ||flix-area.com^
 ||flix-area.com^$popup
 ||flix-request.com^
 ||flix-request.com^$popup
-||fornyeportalen.com^
-||fornyeportalen.com^$popup
-||gateway-kraken.com^
-||gateway-kraken.com^$popup
-||gmailsetupinfo.com^
-||gmailsetupinfo.com^$popup
-||helpnet-device.com^
-||helpnet-device.com^$popup
-||indtoll.com^
-||indtoll.com^$popup
-||indtollswebt.com^
-||indtollswebt.com^$popup
-||intrumtunnistus.com^
-||intrumtunnistus.com^$popup
-||itmitsikkert-nu.com^
-||itmitsikkert-nu.com^$popup
-||itsme-support.com^
-||itsme-support.com^$popup
-||kvkregister.com^
-||kvkregister.com^$popup
 ||levering-myups.com^
 ||levering-myups.com^$popup
 ||lnfoskonto.com^
 ||lnfoskonto.com^$popup
-||mijnups-pakket.com^
-||mijnups-pakket.com^$popup
-||min-altinnboks.com^
-||min-altinnboks.com^$popup
-||min-borgerepost.com^
-||min-borgerepost.com^$popup
-||minaltinn-info.com^
-||minaltinn-info.com^$popup
-||minaltinninfo.com^
-||minaltinninfo.com^$popup
-||minbrugerpost.com^
-||minbrugerpost.com^$popup
-||minsikreboks.com^
-||minsikreboks.com^$popup
-||minsundhed-tjek.com^
-||minsundhed-tjek.com^$popup
-||missed-id.com^
-||missed-id.com^$popup
-||mit-digitalopna.com^
-||mit-digitalopna.com^$popup
-||mitborgere.com^
-||mitborgere.com^$popup
-||mitborgereportal.com^
-||mitborgereportal.com^$popup
-||mitdigitalborger-post.com^
-||mitdigitalborger-post.com^$popup
-||miteinfo-nu.com^
-||miteinfo-nu.com^$popup
 ||mitld-forholdsregler.com^
 ||mitld-forholdsregler.com^$popup
-||mobilepay-finland.com^
-||mobilepay-finland.com^$popup
-||mobilpay-fi.com^
-||mobilpay-fi.com^$popup
-||my-netflixssl1.com^
-||my-netflixssl1.com^$popup
 ||my-subscriptions.net^
 ||my-subscriptions.net^$popup
-||my02-billinghelp.com^
-||my02-billinghelp.com^$popup
-||myaccount-billing-details.com^
-||myaccount-billing-details.com^$popup
-||myaccountneftlixssl1.com^
-||myaccountneftlixssl1.com^$popup
 ||myups-pakket.com^
 ||myups-pakket.com^$popup
 ||myups.express^
 ||myups.express^$popup
-||myupsdelivery-ssl1.com^
-||myupsdelivery-ssl1.com^$popup
-||nemlogindigitalbrevkasse.com^
-||nemlogindigitalbrevkasse.com^$popup
-||netfiix-abo.com^
-||netfiix-abo.com^$popup
-||netfiix-app.com^
-||netfiix-app.com^$popup
-||netfiixtv.com^
-||netfiixtv.com^$popup
-||netflix-bhr.com^
-||netflix-bhr.com^$popup
-||netflx-tv.com^
-||netflx-tv.com^$popup
 ||netfx-acc.com^
 ||netfx-acc.com^$popup
-||netfx-pagos.com^
-||netfx-pagos.com^$popup
 ||ney-acc.com^
 ||ney-acc.com^$popup
 ||nflix-management.com^
@@ -3390,134 +3053,22 @@ triplx.dk##.aff-inner-col
 ||nflix-reactivacion.com^$popup
 ||ntfx-acc.com^
 ||ntfx-acc.com^$popup
-||onetime-bonus.com^
-||onetime-bonus.com^$popup
-||online-connection-review.com^
-||online-connection-review.com^$popup
-||onlinehelpcenetre.com^
-||onlinehelpcenetre.com^$popup
-||optankning.com^
-||optankning.com^$popup
-||parking-onlinepayment.com^
-||parking-onlinepayment.com^$popup
-||parking-ticket2024.com^
-||parking-ticket2024.com^$popup
-||parkpay-reminder.com^
-||parkpay-reminder.com^$popup
-||parkpay-tickt.com^
-||parkpay-tickt.com^$popup
-||parkticket-pay.com^
-||parkticket-pay.com^$popup
-||pay-ticket2024.com^
-||pay-ticket2024.com^$popup
 ||payement-renew.me^
 ||payement-renew.me^$popup
-||paynow-ticket.com^
-||paynow-ticket.com^$popup
-||portalsikkerhet.com^
-||portalsikkerhet.com^$popup
-||pt-netfiix.com^
-||pt-netfiix.com^$popup
-||rebill-netflix.com^
-||rebill-netflix.com^$popup
-||recover-dk.com^
-||recover-dk.com^$popup
-||regions-services.com^
-||regions-services.com^$popup
-||regions-verification.com^
-||regions-verification.com^$popup
-||report-action.com^
-||report-action.com^$popup
-||reschdl-myups1.com^
-||reschdl-myups1.com^$popup
-||reschedule-myups.com^
-||reschedule-myups.com^$popup
-||restore0-2account-service.com^
-||restore0-2account-service.com^$popup
-||ri-myorder.com^
-||ri-myorder.com^$popup
-||saaq-click.com^
-||saaq-click.com^$popup
-||safe-secured-transfer.com^
-||safe-secured-transfer.com^$popup
 ||santandersecurept.com^
 ||santandersecurept.com^$popup
-||secureaccountcredentials.com^
-||secureaccountcredentials.com^$popup
-||sessionpaused-requestexpired.com^
-||sessionpaused-requestexpired.com^$popup
-||sikker-digitaipost.com^
-||sikker-digitaipost.com^$popup
-||sikker-vlpps.com^
-||sikker-vlpps.com^$popup
-||sikkeradmin.com^
-||sikkeradmin.com^$popup
-||sikkerbekreftelse.com^
-||sikkerbekreftelse.com^$popup
-||sikkerinngang.com^
-||sikkerinngang.com^$popup
-||sikkerportal-altinn.com^
-||sikkerportal-altinn.com^$popup
-||sikkerportal-boks.com^
-||sikkerportal-boks.com^$popup
-||sikkertilgang-altinn.com^
-||sikkertilgang-altinn.com^$popup
-||sociale-assurance.com^
-||sociale-assurance.com^$popup
 ||spotfy-regulation.com^
 ||spotfy-regulation.com^$popup
-||ssl-app.com^
-||ssl-app.com^$popup
-||sslh1-myparkingticket.com^
-||sslh1-myparkingticket.com^$popup
-||sslnetflix.com^
-||sslnetflix.com^$popup
-||sundhed-einfoportal.com^
-||sundhed-einfoportal.com^$popup
-||sundhed-tjek.com^
-||sundhed-tjek.com^$popup
-||sundhedportaldk.com^
-||sundhedportaldk.com^$popup
-||tax-binance.com^
-||tax-binance.com^$popup
-||techsantandersecure.com^
-||techsantandersecure.com^$popup
 ||trackingfindups.com^
 ||trackingfindups.com^$popup
 ||trackingpackage.express^
 ||trackingpackage.express^$popup
-||tsbconnect-verification.com^
-||tsbconnect-verification.com^$popup
-||tsbsecurity-online.com^
-||tsbsecurity-online.com^$popup
-||tv-netfiix.com^
-||tv-netfiix.com^$popup
 ||ups-packaging.delivery^
 ||ups-packaging.delivery^$popup
-||ups-rescheduledelivery.com^
-||ups-rescheduledelivery.com^$popup
-||ups-upsnow.com^
-||ups-upsnow.com^$popup
-||ups1-reschdl.com^
-||ups1-reschdl.com^$popup
 ||upsbezahlung.com^
 ||upsbezahlung.com^$popup
-||upsreschedule-uy.com^
-||upsreschedule-uy.com^$popup
 ||usaa-verify.com^
 ||usaa-verify.com^$popup
-||user-amazon-id.com^
-||user-amazon-id.com^$popup
-||usps-fast.club^
-||usps-fast.club^$popup
-||vat-reschedule.com^
-||vat-reschedule.com^$popup
-||verification-no.com^
-||verification-no.com^$popup
-||wf-securelogin.com^
-||wf-securelogin.com^$popup
-||wisehelpcentre.com^
-||wisehelpcentre.com^$popup
 ://193.143.1.45^
 ://193.143.1.45^$popup
 
@@ -3529,27 +3080,14 @@ triplx.dk##.aff-inner-col
 
 ://193.143.1.
 ||adidasko.com^
-||airmaxskobillige.com^
-||assassinfitness.com^
-||coralls.com^
 ||daradis.com^
-||drakternorge.com^
-||drcarolyngroff.com^
-||dunjakke-no.com^
-||fotballsko-salg.com^
 ||gsport.com^
 ||hernoclothing.com^
-||jakkesalgs.com^
-||jakkesnorge.com^
 ||linkshe.com^
-||mbtnorge.com^
-||moteshoes.com^
-||mycraftypad.com^
 ||norfotball.com^
 ||norgefotball.com^
 ||norgeshoes.com^
 ||oflike.com^
-||parajumperssalg.com^
 ||pjs.outlet.com^
 ||popeurope.com^
 ||um-bs.com^
@@ -3578,8 +3116,6 @@ triplx.dk##.aff-inner-col
 ||195.242.152.122^
 ||195.242.152.122^$popup
 
-||mygoodmerch.com^
-||mygoodmerch.com^$popup
 ! https://www•tv2•no/nyheter/forbruker/sjokksvar-pa-epost-harreisende/17805239/
 ! https://www•tv2•no/nyheter/forbruker/tenkte-shit-na-har-jeg-blitt-lurt/17474448/
 ||takstskolen.no^
@@ -3636,12 +3172,9 @@ triplx.dk##.aff-inner-col
 ||212.224.107.120^
 ||212.224.107.120^$popup
 
-! 🇬🇧：Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
+! 🇬🇧：Pirate-product-selling stores
 ||nofotballshop.com^
-||nofotballstore.com^
-||nodrakts.com^
 ||dkfodboldstore.com^
-||vmfodboldtoj.com^
 ://5.39.217.206^
 ://5.39.221.180^
 ://193.148.70.153^
@@ -3713,17 +3246,12 @@ triplx.dk##.aff-inner-col
 ! 🇬🇧：Fake online pharmacies
 -med.footeo.com^
 ||*medisin*.over-blog.com^
-||godtdsamaritansk.com^
 ||helsehjelp.over-blog.com^
-||jensapoteker.com^
 ||marson.footeo.com^
-||sikkertapotek.com^
 ||sobrilleverandoridanmark.wordpress.com^
 ||xanax*.over-blog.com^
 
 ! 🇬🇧：Old domains stolen by casino sites
-||kohlershop.dk^
-||fredensborg-orredfiskeri.dk^
 ||informationer.nu^
 ||cphspaogwellness.dk^
 ||webavisen.gl^
@@ -3731,8 +3259,6 @@ triplx.dk##.aff-inner-col
 ! 🇬🇧：Various postal credential fraud syndicates
 ||norgeposten.today^
 ||norgeposten.today^$popup
-||norwayposten.today^
-||norwayposten.today^$popup
 ||pakkeposten.today^
 ||pakkeposten.today^$popup
 ||post-dk.cfd^
@@ -3743,10 +3269,6 @@ triplx.dk##.aff-inner-col
 ||post-nord-receiving.$popup
 ||posten-nno.
 ||posten-nno.$popup
-||posten-track.today^
-||posten-track.today^$popup
-||posten-tracker.today^
-||posten-tracker.today^$popup
 ||posten-tracks.
 ||posten-tracks.$popup
 ||postendk.lol^
@@ -3757,20 +3279,12 @@ triplx.dk##.aff-inner-col
 ||postenn-no.$popup
 ||postennorge.today^
 ||postennorge.today^$popup
-||postennorway.today^
-||postennorway.today^$popup
 ||postenpakke.today^
 ||postenpakke.today^$popup
-||postenserve.today^
-||postenserve.today^$popup
 ||postenserves.today^
 ||postenserves.today^$popup
 ||postenspor.today^
 ||postenspor.today^$popup
-||postentrack.today^
-||postentrack.today^$popup
-||postentracks.today^
-||postentracks.today^$popup
 ||postnord-24.site^
 ||postnord-24.site^$popup
 ||postnord-all.
@@ -3867,9 +3381,7 @@ triplx.dk##.aff-inner-col
 
 ! 🇬🇧：Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 ||desidert.no^
-||brigitteheilmann.dk^
 ||storustovu.dk^
-||campingnews.dk^
 
 ! 🇬🇧：Copied over from URLHaus and verified
 ||hagebakken.no^
@@ -3877,7 +3389,6 @@ triplx.dk##.aff-inner-col
 ||idj.no^
 ://1.14.61.188^
 
-||smarthouseforum.ru^
 ||trafikkskoleapp.no^
 
 ! 🇬🇧：Intended for Adblock Plus
