@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 16January2026v1-Deprecated
+# Last modified: 27January2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1192,6 +1192,26 @@
 -d 158.94.209.88
 -d 158.94.209.90
 -d 223.29.226.200
+# https://www•nrk•no/sorlandet/1•17739914/(27/01/2026)
+-d altinn-*.firebaseapp.com
+-d altinn-*.web.app
+-d altinn-beskytte.
+-d altinn-brukerservice*
+-d altinn-ids.
+-d altinn-melding-
+-d altinn-minside.
+-d altinnnorge.
+-d altinnskatteetaten.
+-d finn-no-n.
+-d finnobrukerlogg.
+-d helse-norge.com
+-d minside-altinn.
+:  147.45.198.199
+:  16.170.34.33
+:  43.160.248.24
+147.45.198.199
+16.170.34.33
+43.160.248.24
 # 🇳🇴：Falske nettapoteker
 # 🇬🇧：Fake online pharmacies
 - -med.footeo.com

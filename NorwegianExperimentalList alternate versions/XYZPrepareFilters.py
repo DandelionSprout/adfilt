@@ -36,7 +36,7 @@ def prepare_ag(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(! Title.*Dandelion Sprout.*)$",
+           r"^(.*! Title.*Dandelion Sprout.*)$",
            r"\1 (for AdGuard)",
            line
         )
@@ -529,7 +529,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"(! Title: 🏔️ Dandelion Sprout.*)",
+           r"^.*(! Title: 🏔️ Dandelion Sprout.*)$",
            r"[Adblock Plus 3.13]\n\1",
            line
         )
@@ -1023,7 +1023,7 @@ def prepare_tpl(lines) -> str:
         )
 
         line = re.sub(
-           r"(# Title: 🏔️ Dandelion Sprout.*)",
+           r"^.*(# Title: 🏔️ Dandelion Sprout.*)$",
            r"msFilterList\n\1",
            line
         )
@@ -2855,7 +2855,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           r"^(! Title: 🏔️ Dandelion Sprout.*)$",
+           r"^.*(! Title: 🏔️ Dandelion Sprout.*)$",
            r"[Adblock Plus 3.13]\n\1",
            line
         )
@@ -3608,7 +3608,7 @@ def prepare_ls(lines) -> str:
         )
 
         line = re.sub(
-           r"^# Title:.*$",
+           r"^.*# Title:.*$",
            "{ \"title\": \"👒 Dandelion Sprout's Nordic List for LS\",",
            line
         )
@@ -7168,7 +7168,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! (Title: .*)$",
+           r"^.*! (Title: .*)$",
            r"# \1 (Domains version)",
            line
         )
@@ -7267,7 +7267,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! (Title: .*)$",
+           r"^.*! (Title: .*)$",
            r"# \1 (Domains version)",
            line
         )
@@ -7355,7 +7355,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! (Title: .*)$",
+           r"^.*! (Title: .*)$",
            r"# \1 (Domains version)",
            line
         )
@@ -7436,7 +7436,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^! (Title: .*)$",
+           r"^.*! (Title: .*)$",
            r"# \1 (for AdGuard Home)",
            line
         )
@@ -7569,7 +7569,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! (Title: .*)$",
+           r"^.*! (Title: .*)$",
            r"# \1 (Domains version)",
            line
         )
@@ -7656,7 +7656,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! (Title: .*)$",
+           r"^.*! (Title: .*)$",
            r"# \1 (Domains version)",
            line
         )
@@ -7743,7 +7743,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! (Title: .*)$",
+           r"^.*! (Title: .*)$",
            r"# \1 (Domains version)",
            line
         )
@@ -7838,7 +7838,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^# Title: 📔.*$",
+           r"^.*# Title: 📔.*$",
            "",
            line
         )
@@ -8274,7 +8274,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! Title: 🪑 .*$",
+           r"^.*! Title: 🪑 .*$",
            r"! Title: 🌂 Anti-'K-pop on Twitter' List - Nitter Supplement",
            line
         )
@@ -8344,7 +8344,7 @@ def prepare_domains(lines) -> str:
         )
 
         line = re.sub(
-           r"^! Title: Fanboy's Notifications Blocking List$",
+           r"^.*! Title: Fanboy's Notifications Blocking List$",
            r"! Title: Fanboy's Notifications Blocking List - Loadable in uBO+AdGuard",
            line
         )
