@@ -1,0 +1,1 @@
+This folder contains extensions for other lists. You do not want to use the files in this folder as standalone lists (The sole exception as of 30 January 2026 being `AdGuardSafeBrowsing-ReverseEngineered.txt`).
