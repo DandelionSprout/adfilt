@@ -6112,6 +6112,12 @@ def prepare_hosts(lines) -> str:
     for line in lines:
 
         line = re.sub(
+           r"^.*domain=[a-z0-9].*$",
+           "",
+           line
+        )
+
+        line = re.sub(
            r"^(\|.*\.)(\$.*)?$",
            r"\1com^\2",
            line
@@ -6394,6 +6400,12 @@ def prepare_domains(lines) -> str:
 
     # remove or modifiy entries with unsupported modifiers
     for line in lines:
+
+        line = re.sub(
+           r"^.*domain=[a-z0-9].*$",
+           "",
+           line
+        )
 
         line = re.sub(
            r"^(\|.*\.)(\$.*)?$",
