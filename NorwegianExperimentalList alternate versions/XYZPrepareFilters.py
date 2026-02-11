@@ -4826,10 +4826,10 @@ SOURCES = ['https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/
 
 UNSUPPORTED_ABP = ['$important', ',important' '$redirect=', ',redirect=',
     ':style', '##+js', '.*#' , ':xpath', ':matches-css', 'dk,no##', 'version.bind', 'pizzaseo.com', 'gamecopyworld', '$app', '$dnstype']
-UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com', 'gamecopyworld', ':  ', 'duckdns.org', '$dnstype', "gyrovague.com"]
+UNSUPPORTED_TPL = ['##', '#@#', '#?#', r'\.no\.$', '/^', 'version.bind', 'pizzaseo.com', 'gamecopyworld', ':  ', 'duckdns.org', '$dnstype']
 UNSUPPORTED_PRIVOXY = ['##', '#@#', '#?#', '@@', '!#', '/^', 'gamecopyworld', '://', '$dnstype']
-UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '[Adblock Plus 3.', '*', '/^', 'duckdns.org', "gyrovague.com"]
-UNSUPPORTED_AGH = ['$redirect=', "gyrovague.com"]
+UNSUPPORTED_HOSTS = ['##', '#@#', '#?#', '@@', '[Adblock Plus 3.', '*', '/^', 'duckdns.org']
+UNSUPPORTED_AGH = ['$redirect=']
 
 OUTPUT = 'Anti-Malware List\\xyzzyx.txt'
 OUTPUT_AG = 'Anti-Malware List\\AntiMalwareAdGuard.txt'
@@ -8397,6 +8397,5 @@ if __name__ == "__main__":
 
     with open(OUTPUT_DOMAINS, "w", encoding="utf-8-sig", newline='\n') as text_file:
         text_file.write(domains_filter)
-
 
     print('The Fanboy Notifications uBO version has been generated.')
