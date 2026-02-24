@@ -1,5 +1,5 @@
 ﻿! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 24February2026v1
+! Version: 24February2026v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -4814,15 +4814,9 @@ $doc,removeparam=vsm_cid
 $doc,removeparam=vsm_pid
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8505558
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15903757
 ||carousell.$removeparam=t-id
-||carousell.$removeparam=t-referrer_browse_type
-||carousell.$removeparam=t-referrer_category_id
-||carousell.$removeparam=t-referrer_page_type
-||carousell.$removeparam=t-referrer_request_id
-||carousell.$removeparam=t-referrer_search_query
-||carousell.$removeparam=t-referrer_search_query_source
-||carousell.$removeparam=t-referrer_sort_by
-||carousell.$removeparam=t-referrer_source
+$doc,domain=carousell.*,removeparam=/^t-referrer_/
 ||carousell.$removeparam=t-source
 ||carousell.$removeparam=t-tap_index
 
