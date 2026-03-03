@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 21February2026v1-Compilation
+! Version: 03March2026v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -493,3 +493,9 @@ adressa.no##.strom .overlay:style(background:none!important;backdrop-filter:none
 
 ! Redirections to Bing/MSN from other Microsoft sites, especially those where simply the original links were dead so they made them redirect to Bing instead.
 ://www.bing.com/?shorturl=$doc
+
+! Remove Aİ-generated YouTube dubs (https://github.com/DandelionSprout/adfilt/issues/1180)
+youtube.com##+js(json-edit, ..adaptiveFormats.*[?.audioTrack.isAutoDubbed])
+youtube.com##+js(json-edit-xhr-response, ..adaptiveFormats.*[?.audioTrack.isAutoDubbed], propsToMatch, /youtubei)
+youtube.com##+js(json-edit-fetch-response, ..adaptiveFormats.*[?.audioTrack.isAutoDubbed], propsToMatch, /youtubei)
+youtube.com##+js(rpnt, script, (function serverContract(), window.ytInitialPlayerResponse=JSON.parse(JSON.stringify(window.ytInitialPlayerResponse));(function serverContract(), sedCount, 1)
