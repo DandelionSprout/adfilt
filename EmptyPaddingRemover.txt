@@ -1,6 +1,6 @@
 ﻿[Adblock Plus 3.13]
 ! Title: 🕳 Empty Padding Remover
-! Version: 13October2025v1-Beta
+! Version: 07March2026v1-Beta
 ! Expires: 4 days
 ! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? Or perhaps you're tired ot very large shadows on video sites when moving the mouse? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -59,7 +59,7 @@
 ##.et_pb_divider:not(html,body)
 ! https://companieshousecyprus•com/company/C189321/ (14/10/2024)
 ##div.dfd-spacer-module:empty
-! https://tvtropes•org/pmwiki/pmwiki.php/VideoGame/HelloKittyIslandAdventure
+! https://tvtropes•org/pmwiki/pmwiki.php/VideoGame/WarioWareGold
 ###top_container_spacing:empty
 
 ! ——— Site-specific ———
@@ -92,6 +92,7 @@ sims.fandom.com##table[data-mw-revid]:style(margin-left:0!important)
 rule34.xxx###status-notices > br:empty
 !#if !env_mobile
 pixiv.net##div[class*=" "]:empty:has(+ aside + aside)
+sims.fandom.com##table[data-mw-revid]:style(margin:2px!important)
 !#endif
 
 ! Disqualified entries due to breakage of regular content (Example given)
@@ -135,9 +136,13 @@ www.youtube.com,35.190.94.206,206.94.190.35.bc.googleusercontent.com##.ytp-time-
 ! T-We
 twe.no##div[style*=overlayFadeTo]:style(--overlayFadeTo: none !important)
 ! HBODiscovery Max
-play.max.com##div[class*=Gradient-Beam-]:empty
-play.max.com##div[class^=ProtectionLayer]
+play.max.com,hbomax.com##div[class*=Gradient-Beam-]:empty
+play.max.com,hbomax.com##div[class^=ProtectionLayer]
+hbomax.com##div[data-testid=protection_layer]
 ! https://www•nrk•no/sport/1.17139838 (23/11/2024)
 www.nrk.no##.nrkno-player-controls__bar::before
 ! play•tv2•no (27/08/2025)
 play.tv2.no##div[data-testid=player-controls]::before
+! Twitch on PC
+www.twitch.tv##div[data-a-target=player-controls]:style(background:unset!important)
+www.twitch.tv##.top-bar:style(background:unset!important)
