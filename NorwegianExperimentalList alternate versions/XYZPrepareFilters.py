@@ -7076,6 +7076,24 @@ def prepare_agh(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^ipaddress=.*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^.\$badfilter$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)\(/\[a-z0-9_-\]\?\.\*\)\?\$(.*)$",
+           r"\1$\2",
+           line
+        )
+
         if is_supported_agh(line) and not line == '':
             text += line + '\n'
 

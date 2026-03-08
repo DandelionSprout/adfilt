@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 11February2026v2-Deprecated
+# Last modified: 08March2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -496,6 +496,8 @@
 # hvidovreavisDK (30 05 2025)
 # https://play•tv2•no/direkte-tv/hits-q7bsv1v6?play=true/(Tested/with/TV2/Play's/no-ads Total pack; 21 10 2025)
 ://sponsorship.public.tv2.no/spons/play/v2?params=
+# https://www•smakelig•com/sjokoladens-magi-lag-din-egen-sjokolade-bade-klassisk-og-sunn-variant/ (16 02 2026)
+-d smakelig.com 202*.gif
 # — — — — —
 # 🇳🇴：Generelle oppføringer med kilder
 # 🇬🇧：Generic entries that have sources
@@ -758,6 +760,8 @@
 # ★★★ Caused by «Peter Lowe's Ad and tracking server list» ★★★
 # ★★★ Caused by «Dan Pollock's hosts file» ★★★
 # ★★★ Caused by «AdGuard Cookie Notices filter» ★★★
+# Made most thumbnails blurry (08 03 2026)
+@@:  consent.cookiebot.com
 # ★★★ 🇳🇴：Forårsaket av «AdGuards spionvarefilter» ★★★
 # ★★★ 🇬🇧：Caused by «AdGuard Tracking Protection Filter» ★★★
 # https://github.com/AdguardTeam/AdguardFilters/issues/209205
@@ -824,7 +828,6 @@
 -d imasdk.googleapis.com ima3.js
 -d stads.dot-e.dk
 # 🇬🇧：Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
-# ——————————————————————————————————————————————————————————————————————————————————————————
 # 🇳🇴：Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
 # 🇩🇰：Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
@@ -1165,7 +1168,6 @@
 :  5.39.221.180
 :  193.148.70.153
 # https://www•dr•dk/nyheder/seneste/sundhed-dk-advarer-mod-sms-er-og-falsk-hjemmeside/(30/09/2025)
--d dk-sundhed.com
 -d sundhed-info.com
 -d sundhedinfo.com
 -d info-sundhed.com
@@ -1277,7 +1279,6 @@
 -d tnord.qpon
 -d tnord.sbs
 -d tnordh.shop
--d noapp.sbs
 # 🇬🇧：Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 -d desidert.no
 -d storustovu.dk
@@ -1290,7 +1291,7 @@
 # 🇬🇧：Intended for Adblock Plus
 +d prosent.no
 +d tv2.no
-# Last updated: 22December2025v1-Extension
+# Last updated: 16February2026v1-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -1324,6 +1325,8 @@
 # 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 # 🇬🇧: ——— An unusual entry, but a needed entry: Aims to prevents NRK's login system on Google Translate-d pages to their regular site, from being redirected from a translated page to the non-translated frontpage. ———
 -d innlogging.nrk.no
+# 🇳🇴: Meningsløs tilsløring av strømprismåleren på forsiden, siden sløringen ikke fjernes for abonnenter uansett
+# 🇬🇧: Pointless blurring of the electricity price gauge on the frontpage, since the blurring isn't removed for subscribers anyway
 !¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤!
 # 🇳🇴 🇩🇰: ——— Ikke for Brave Browser ———
 # 🇬🇧: ——— Not for Brave Browser ———
