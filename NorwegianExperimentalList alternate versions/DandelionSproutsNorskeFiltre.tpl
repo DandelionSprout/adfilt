@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 08March2026v1-Deprecated
+# Last modified: 11March2026v2-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -750,6 +750,7 @@
 # https://github.com/uBlockOrigin/uAssets/issues/13907
 @@://imasdk.googleapis.com/js/sdkloader/ima3.js
 # http://sosialurin•fo/news-detail/steypafinala-vilhelm-og-rogvi-a-ruv1-fra-klokkan-1630
+# ekstrabladet•dk klip (...) (11 03 2026)
 # ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 # Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 # ★★★ Unknown cause ★★★

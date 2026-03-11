@@ -1,7 +1,7 @@
 ﻿[Adblock Plus 3.13]
 ! Title: 🏔️ Dandelion Sprouts helnordiske filtre (Møter ABPs inkluderingsregler — Firefox ≥121, Chrom* ≥105)
 ! Title 🇬🇧: Dandelion Sprout's All-Nordic filters (With ABP inclusion compliance — Firefox ≥121, Chrom* ≥105)
-! Version: 080320261
+! Version: 110320262
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1169,8 +1169,8 @@ tvkampen.com,tvsporten.dk##a.p-icon.partner
 norges.online##.modal-backdrop
 friflyt.no,terrengsykkel.no##.inlineAdBlock
 ehandel.com,ehandel.dk,ehandel.se,ehandel.fi##.annons
-jyllands-posten.dk##.m-auto > div.border-b:not([id])
-jyllands-posten.dk##.relative:has(> div > [obs-elem-type*=advertisement])
+!!!jyllands-posten.dk##.m-auto > div.border-b:not([id]) (Known to break articles for logged-in subscribers, but not for anyone else.)
+!!!jyllands-posten.dk##.relative:has(> div > [obs-elem-type*=advertisement]) (Known to break articles for logged-in subscribers, but not for anyone else.)
 retrospilling.no#?#.widget:has-text(Reklame)
 gulesider.no##.min-h-8
 dagens.dk##.col-sticky > div > p
@@ -2426,6 +2426,8 @@ findbolig.nu#@#.advertLink
 @@://imasdk.googleapis.com/js/sdkloader/ima3.js^$domain=tv2.dk
 ! http://sosialurin•fo/news-detail/steypafinala-vilhelm-og-rogvi-a-ruv1-fra-klokkan-1630
 sosialurin.fo#@#.ads-banner
+! ekstrabladet•dk/klip/(...) (11/03/2026)
+@@||imasdk.googleapis.com/js/core/bridge^$domain=ekstrabladet.dk
 ! ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
 ! Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 
@@ -6577,7 +6579,7 @@ dn.se##.bad--insider-tall
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Mon, 02 Mar 2026 19:29:59 +0200
+! Last modified: Sun, 08 Mar 2026 22:11:22 +0200
 ! Finnish section's homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -7182,6 +7184,7 @@ kokemakelainen.net###text-82
 konekuriiri.fi,koneporssi.com##.banners
 koneviesti.fi###traktorpool-ad
 koneviesti.fi#?#.layout__article-area__text-content > p:has-text(/^\xA0$/)
+koneviesti.fi,maaseuduntulevaisuus.fi###rscontent > [data-ad-container="true"]
 koneviesti.fi,maaseuduntulevaisuus.fi##.promo
 koneviesti.fi,maaseuduntulevaisuus.fi##[class^="AdItem_adItem"]
 koneviesti.fi,maaseuduntulevaisuus.fi#?#.row .col-small-12.col-medium-12.col-large-12:has-text(Mainos:)
