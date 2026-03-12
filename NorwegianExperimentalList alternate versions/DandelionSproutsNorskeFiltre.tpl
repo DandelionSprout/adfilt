@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 11March2026v2-Deprecated
+# Last modified: 12March2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -864,6 +864,51 @@
 -d srilanka.no
 -d logg-inn.online
 -d nyhetsnett.no
+-d comoutlook.com
+-d onlinemailmicrosotfvalidation.com
+-d skatteetate-n.
+-d skatteetatei.
+-d skatteetaten-altinn.
+-d skatteetaten-konferense.
+-d skatteetaten-mine-sider.
+-d skatteetaten-norge.
+-d skatteetaten-norway.
+-d skatteetaten-porten.
+-d skatteetaten-refusjon.
+-d skatteetaten-skatteetaten.
+-d skatteetaten-support.com
+-d skatteetaten-tax.
+-d skatteetaten.app
+-d skatteetaten.ceo
+-d skatteetaten.cfd
+-d skatteetaten.do
+-d skatteetaten.info.gf
+-d skatteetaten.online
+-d skatteetaten.pages.dev
+-d skatteetaten.rianicefe.com
+-d skatteetaten.sharefile.eu
+-d skatteetaten.site
+-d skatteetaten.support
+-d skatteetaten.support.do
+-d skatteetaten.sytes.net
+-d skatteetaten.top
+-d skatteetatenadministration.
+-d skatteetatenaltinninformasjon.
+-d skatteetatencomp.
+-d skatteetatenid.
+-d skatteetateninformasjon.
+-d skatteetateninnboks.
+-d skatteetatenkunden24.
+-d skatteetatenmelding.
+-d skatteetatenn0.
+-d skatteetatennorge.
+-d skatteetatennorway.
+-d skatteetatens.
+-d skatteetatensupport.
+-d skatteetatentax.
+-d skatteetatentracks.
+-d skatteetatn-person.
+-d skatteetatten.com
 - ?finn.no login
 # 🇬🇧：Copied over from «Dandelion Sprout's Anti-Malware List»
 -d fredfiber.no
