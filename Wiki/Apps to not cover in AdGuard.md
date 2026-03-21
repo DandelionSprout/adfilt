@@ -1,5 +1,6 @@
 Apps that are pretty bad ideas to add to lists of apps to cover in AdGuard for Windows/Android.
 
+## In their entirety
 #### 15/09/2025
 * winget•exe (Causes *"Failed when searching source; results will not be included: msstore"*)
 * AdGuard•exe (Self-explanatory)
@@ -9,3 +10,7 @@ Apps that are pretty bad ideas to add to lists of apps to cover in AdGuard for W
 
 #### 05/11/2025
 * python3•12•exe (Causes conflicts with PyFunceble scans)
+
+## HTTPS on Windows (Meaning that TCP/HTTP blocking still works)
+* Launcher•exe (Rockstar Games Launcher; login error)
+* Ubisoft Connect (Login error)
