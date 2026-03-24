@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 12March2026v1-Deprecated
+# Last modified: 24March2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1173,6 +1173,8 @@
 -d appearspacex.de
 -d 195-242-152-122.static.hvvc.us
 -d 195.242.152.122
+-d statautos.com
+- noo taxx
 # https://www•tv2•no/nyheter/forbruker/sjokksvar-pa-epost-harreisende/17805239/
 # https://www•tv2•no/nyheter/forbruker/tenkte-shit-na-har-jeg-blitt-lurt/17474448/
 -d takstskolen.no
