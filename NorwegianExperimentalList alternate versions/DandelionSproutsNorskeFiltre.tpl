@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 24March2026v1-Deprecated
+# Last modified: 27March2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1259,9 +1259,62 @@
 :  147.45.198.199
 :  16.170.34.33
 :  43.160.248.24
-147.45.198.199
-16.170.34.33
-43.160.248.24
+# https://www•tjekdet•dk/fup-og-spam/pas-paa-falske-beskeder-fra-dao-rammer-danmark
+-d as-dao.icu
+-d dao-as.cc
+-d dao-as.com
+-d dao-as.top
+-d dao-as.vip
+-d dao-as.xyz
+-d dao-ascu.top
+-d dao-asdk.cc
+-d dao-asdk.vip
+-d dao-ase.cc
+-d dao-ase.vip
+-d dao-asen.bond
+-d dao-asi.cc
+-d dao-asi.vip
+-d dao-asiiv.icu
+-d dao-asioiiv.icu
+-d dao-asl.vip
+-d dao-aso.cc
+-d dao-asoi.icu
+-d dao-asoiiv.icu
+-d dao-asr.cc
+-d dao-asr.vip
+-d dao-ass.cc
+-d dao-ass.vip
+-d dao-assion.icu
+-d dao-asuui.icu
+-d dao-asvisu.icu
+-d dao-post.icu
+-d daoao.icu
+-d daoas-en.bond
+-d daoasa.cyou
+-d daoasa.sbs
+-d daoiiox.icu
+-d daoios.icu
+-d daoipost.icu
+-d daonevt.com
+-d daoosi.icu
+-d daopakke.sbs
+-d daopst.icu
+-d daosa.cyou
+-d daosa.shop
+-d daosviz.com
+-d daoteams.com
+-d daovisx.com
+-d daoxo.bond
+-d dpd-sio.icu
+-d pakke.click
+-d postuin.bond
+-d daobo.bond
+-d daodo.bond
+-d daoicom.bond
+:  43.157.122.86
+:  43.157.46.83
+:  43.164.196.209
+:  88.255.216.16
 # 🇳🇴：Falske nettapoteker
 # 🇬🇧：Fake online pharmacies
 - -med.footeo.com
