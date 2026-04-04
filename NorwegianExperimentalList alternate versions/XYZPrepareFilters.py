@@ -5913,6 +5913,12 @@ def prepare_tpl(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^.*gyrovague.*$",
+           "",
+           line
+        )
+
         if is_supported_tpl(line):
             text += line + '\n'
 
@@ -6087,6 +6093,12 @@ def prepare_privoxy(lines) -> str:
 
         line = re.sub(
            r"^.*ipaddress=.*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^.*gyrovague.*$",
            "",
            line
         )
