@@ -14,3 +14,4 @@ Apps that are pretty bad ideas to add to lists of apps to cover in AdGuard for W
 ## HTTPS on Windows (Meaning that TCP/HTTP blocking still works)
 * Launcher•exe (Rockstar Games Launcher; login error)
 * Ubisoft Connect (Login error)
+* php.exe / "CLI" (Causes the GetComposer .exe to fail installing)
