@@ -1,6 +1,6 @@
 ﻿[Adblock Plus 3.18]
 ! Title: 🍁 Anti-"Aİ results in tech situations where Aİ was not asked for" List
-! Version: 17March2026v1-Alpha
+! Version: 23April2026v1-Alpha
 ! Expires: 2 days
 ! Homepage: https://github.com/DandelionSprout/adfilt/tree/master
 ! Description: 1) I'm way too old for the Aİ bubble, and I'm not even 30 yet. 2) Google's pushing of Aİ in regular search results in particular have a very bad reputation for often being wrong about things. This list will however not block Aİ prompt sites.
@@ -8,14 +8,19 @@
 ! Note 2: https://new•reddit•com/r/GoogleAIGoneWild/top/?t=month should be sufficient proof to give this sub-list hastily expedited implementation to Dandelion Sprout's Annoyances List.
 
 ! Google's regular search results
-www.google.*,ipv6.google.com###m-x-content div[class]:first-of-type:not([class*=" "]):has(> [data-rl])
+!!!www.google.*,ipv6.google.com###m-x-content div[class]:first-of-type:not([class*=" "]):has(> [data-rl])
 www.google.*,ipv6.google.com##style:first-of-type ~ div ~ button[jsaction*=mouseleave i]:last-of-type
 www.google.*,ipv6.google.com##div[data-st-cnt] div[role=list] > div[role=listitem]:has(a[href*="&udm=50&"])
 ! (12/12/2025)
 www.google.*,ipv6.google.com##div[data-host-wiz-contract-name] div[data-subtree] > div[jsuid]:first-of-type:has(~ [jsaction^=request])
 ! (17/03/2026)
-www.google.*,ipv6.google.com##div[data-subtree][data-hveid] > div[jsuid]:first-of-type
+!!!www.google.*,ipv6.google.com##div[data-subtree][data-hveid] > div[jsuid]:first-of-type
+! (23/04/2026)
+www.google.*,ipv6.google.com##div[dir][style="display: contents"] script[nonce] + div
 
 ! Microsoft Word Online
 word-edit.officeapps.live.com,word.cloud.microsoft###TellMeWrapper_container
 word-edit.officeapps.live.com,word.cloud.microsoft##.BeforePageContent
+
+! Qwant (Tested with AdGuard VPN set to France Marseille; 23/04/2026)
+qwant.com##div[data-testid=containerWeb] div[class=""]:first-of-type:has(a[data-click-label^=Llm i])
