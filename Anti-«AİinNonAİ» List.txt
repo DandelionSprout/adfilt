@@ -1,6 +1,6 @@
 ﻿[Adblock Plus 3.18]
 ! Title: 🍁 Anti-"Aİ results in tech situations where Aİ was not asked for" List
-! Version: 23April2026v1-Alpha
+! Version: 24April2026v1-Alpha
 ! Expires: 2 days
 ! Homepage: https://github.com/DandelionSprout/adfilt/tree/master
 ! Description: 1) I'm way too old for the Aİ bubble, and I'm not even 30 yet. 2) Google's pushing of Aİ in regular search results in particular have a very bad reputation for often being wrong about things. This list will however not block Aİ prompt sites.
@@ -17,6 +17,12 @@ www.google.*,ipv6.google.com##div[data-host-wiz-contract-name] div[data-subtree]
 !!!www.google.*,ipv6.google.com##div[data-subtree][data-hveid] > div[jsuid]:first-of-type
 ! (23/04/2026)
 www.google.*,ipv6.google.com##div[dir][style="display: contents"] script[nonce] + div
+! https://ipv6•google•com/search?q=Microsoft•NET•Native•Framework•2•2 (23/04/2026)
+www.google.*,ipv6.google.com##.ULSxyf:has(div[data-tma])
+! https://ipv6•google•com/search?q=dotnet+native+download (23/04/2026)
+www.google.*,ipv6.google.com##div[data-subtree^=ai] > div[data-wiz-uids] > div[class]:not([class=""]):first-of-type
+! Image search with a pasted image (24/04/2026)
+www.google.*,ipv6.google.com##div#m-x-content div[jscontroller] > div[class]:only-of-type > div[class]:first-of-type:has(+ div[class][jsname]:last-of-type)
 
 ! Microsoft Word Online
 word-edit.officeapps.live.com,word.cloud.microsoft###TellMeWrapper_container
