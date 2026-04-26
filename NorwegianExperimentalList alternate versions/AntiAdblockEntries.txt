@@ -1,4 +1,4 @@
-! Last updated: 05April2026v1-Extension
+! Last updated: 26April2026v1-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -67,6 +67,11 @@ vg.no##div[data-test-tag=timestamp] + div::before
 vg.no##div[data-test-tag=timestamp] + p + div::before
 ! https://www•vestnesavisa•no/2024/nyheiter/hald-pa-hatten-i-dag-kan-det-blese-godt/ (24/10/2024), h-a•no, lokal-avisa•no, ringsakern•no, stangeavisa•no
 no##.faded-content::before
+! https://github.com/DandelionSprout/adfilt/issues/1250
+||html-load.com^$domain=itavisen.no
+.com/feed/$domain=itavisen.no,css,image
+itavisen.no##div:has(>div>div[data-fuse])
+itavisen.no##div[style*="width:   "]
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
