@@ -1,4 +1,4 @@
-! Last updated: 26April2026v2-Extension
+! Last updated: 27April2026v1-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -116,7 +116,9 @@ tobys.dk#@#.abMessage
 !#endif
 ! https://github.com/DandelionSprout/adfilt/issues/1250
 ||html-load.com^$domain=itavisen.no
+!#if !env_firefox
 .com/feed/$domain=itavisen.no,css,image
+!#endif
 itavisen.no##div:has(>div>div[data-fuse])
 itavisen.no##div[style*="width:   "]
 
