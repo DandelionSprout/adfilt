@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Last modified: 04April2026v1
+! Last modified: 29April2026v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -940,6 +940,7 @@ alvdalmiv.no,tynsetingen.no##.article-panel-mixed + .front-page-widget
 vg.no,www-vg-no.translate.goog##.wid-betting
 kjarninn.is##.boxlist:has(.adspot-article-wrapper)
 vg.no,www-vg-no.translate.goog##.bundle li[class^=css-]:has(div[data-ad-subtype])
+itavisen.no##.code-block:has(div[class*=img_])
 hangar.no##.theiaStickySidebar >  .widget_text
 jyllands-posten.dk,jyllands--posten-dk.translate.goog##section[id^=monster_]
 tek.no#?#article > div:has-text(/^an{2}onse$/)
@@ -2664,74 +2665,83 @@ ukenr.no,ugenr.dk#@#.bannerad
 ! 🇳🇴：Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰：Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 ! 🇬🇧：Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
-! Starting with 10May2024v4, only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
+! Only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
+! foreignTXT
+aftenposten.no##.advertory-aftenposten-topboard-wrapper
+aftenposten.no##.advertory-aftenposten-topboard-wrapper__front
+berlingske.dk##div[data-ad-banner]
+bold.dk###mofo
+bold.dk##.Article__right_column_banner
+bold.dk##div[class^="col"]:has(> div[class][style] > div[placement])
+bt.dk##+js(prevent-fetch, gpt.js)
+bt.dk,berlingske.dk##+js(google-ima3)
 bt.no##.proaktiv-ad
-gamer.no##+js('set-constant', 'ads', 'emptyObj')
+dagens.no##.column > div[data-type="generic-widget"]:has(> div.group > div.code-element > a[href^="https://www.partner-ads.com/"])
+embed.viaplay.com##+js(prevent-fetch, v.fwmrm.net/ad/g/1)
+feltet.dk##body > div[style="width: 100%;height: 80vh;background-color: #ccc; overflow: hidden;"]
+finn.no##advt-component
+gamer.no##+js(set-constant, ads, emptyObj)
 gamer.no##.container > div[class]:has(> [data-size-mapping="toppbanner"])
 gamer.no##.fullscreen-ad
+gamer.no##[data-uname^="gamer_skyskraper_"]
 gamer.no##header ~ * > [class]:has(> [data-name="gamer_toppbanner"])
-gulindex.no###cintmodal
+inputmag.dk###zdn-adblock-overlay
+inputmag.dk##+js(acis, EventTarget.prototype.addEventListener, adsbygoogle.js)
 jobindex.dk##div[aria-label="Annonce"]
+jyllands-posten.dk##body section[id^="monster_"]
+jyllands-posten.dk,finans.dk##body div[class*=banner-container]
 klikk.no##.affiliate-content
 klikk.no##iframe[src^="//widget.tippebannere.no/"]
 kundeavisogtilbud.no##div[class^="ad_"]
-maskinbladet.dk##+js("prevent-setTimeout", "/doCheck\(.,.\)/")
-nettavisen.no,www-nettavisen-no.translate.goog###article-body > .rel-article
-nettavisen.no,www-nettavisen-no.translate.goog##.background-na-commercial
-nettavisen.no,www-nettavisen-no.translate.goog##a > .background-na-commercial ~ *
-nettavisen.no,www-nettavisen-no.translate.goog#?#amedia-frontpage > .optimus-complex-front:has(> header > h2:contains(/Reklame|REKLAME.*$/))
+mbl.is##body > main#allt:style(margin-top: 0 !important)
+nettavisen.no##.teaser_body[href]:has(div.overlay_container [data-skin="commercial"])
+nettavisen.no##amedia-include[param-editionid="kommersiellartikkel"]
+nettavisen.no##amedia-smartembed:has(div.overlay_container [data-skin="commercial"])
+
+proff.no##.MuiBox-root[style="text-align:center;min-height:320px;margin-top:16px"]
+senest.dk##+js(prevent-fetch, pagead2.googlesyndication.com)
+senest.dk##.generic-widget > .group[class*="d-none-"]:has(> .code-element:only-child > div[data-ad-unit-id])
+seoghoer.dk##div[class]:has(> div.text-\[\#323232\] + div[data-type=ad])
+seoghoer.dk##main > div.bg-grey-200:has(> div[class] > div[data-type=ad])
+soefart.dk##div[class*="mowgli"]
 sofabold.dk##.centerMgfx
 sofabold.dk##.top_b_display
 sofabold.dk##div[class^="sidebanner"]
 trendsales.dk##.top__banner
-vgtv.no##+js('json-prune', 'enabled', 'testhide')
+vg.no##aside.grouped > section:not([class]):has(> div[class^="_container"] > astro-island[component-export="GiftHelperPymFrame"])
+viivilla.no##gen-ad
 xn--bredbnd-ixa.dk##div[class^="speedtest-bg"] > a > img
-||freewheel-mtgx-tv.akamaized.net/*.mp4$media,redirect=noopmp4-1s,domain=bold.dk
-!!!||freewheel-mtgx-tv.akamaized.net^$media,domain=tv3sport.dk
-||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=vegetarbloggen.no,important
-||v.fwmrm.net/ad/g/$domain=ekstrabladet.dk|ekstrabladet-dk.translate.goog,important
-||vgc.no/cdn/js/libs/homad-config.json$xmlhttprequest,redirect=noopjson
+||cdn.allermedia.se/se-aller-ads/
+||img.sofabold.dk/images/banner
+||v.fwmrm.net/ad/g/$domain=ekstrabladet.dk,important
+||vg.no/vgc/cdn/vgno/assets/feature/_astro/GiftHelperPymFrame.
 ||widget.tippebannere.no^$third-party
-inky.no#@#iframe[width="200"][height="240"]
-
+||widgets.sprinklecontent.com^$domain=klikk.no
 @@||borsen.dk/themes/borsen.dk/js/dfp.js
 @@||bt.dk/build/prebid-ads-advertisement_adbanner.*.js
-@@||cdn.flowplayer.com/releases/native/stable/plugins/ads.min.js$domain=nettavisen.no
 @@||cdn.maskinbladet.dk/*assets/templates/*/img/adblocker/ads.png
 @@||googletagservices.com/tag/js/gpt.js$domain=vegetarbloggen.no
-
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=vegetarbloggen.no
+@@||soefart.dk^$generichide
+@@||static.finncdn.no/*/travel/*/_next/static/chunks/pages/ad.html-*.js$domain=finn.no
 
 
 
+!!!||freewheel-mtgx-tv.akamaized.net^$media,domain=tv3sport.dk
 ! jyllands-postenDK (09/07/2020)
 ###topBanners
 ! specificTXT
-euautodeler.co.no,euautodele.dk##.traffic_banner_wrapper
-thelocal.no,thelocal.dk##.footer-sticker-ad
-thelocal.no,thelocal.dk##.row > div[class^="row-"]:has(> a[href="#"] > .panel-ad)
-thelocal.no,thelocal.dk#?#div > .section:has(> div[class*=-label]:has-text(Sponsored))
-gaamess.dk##div[class$="Ad"]
+vejrogradar.dk##wo-ad
+euautodele.dk,euautodeler.co.no##.traffic_banner_wrapper
+nettradionorge.com,radio.co.dk###ad
+radio-danmark.dk,radio-norge.org###team_ad
+radio.dk##.mx-auto > .relative > .flex-wrap.justify-between:has(> .w-full div[id^="RAD_D_"])
+radio.dk##div[class*="md\:min-h-\[90px\] lg\:min-h-\[250px\]"]:has(div[id^="RAD_D_"])
+||openx.gamereactor.dk/adclick.php
+||travian.dk/?uc=$third-party
 ! https://github.com/uBlockOrigin/uAssets/issues/26263 (02/12/2024)
 flashscore.*###detail > .detailLeaderboard
 flashscore.*##.prematchOddsBonus__bonus
-! Syncing from 166942 onwards (14/04/2025)
-nettavisen.no##amedia-smartembed:has(div.overlay_container [data-skin=commercial])
-nettavisen.no##.teaser_body[href]:has(div.overlay_container [data-skin=commercial])
-aftenposten.no##.advertory-aftenposten-topboard-wrapper__front
-aftenposten.no##.advertory-aftenposten-topboard-wrapper
-nettavisen.no##amedia-include[param-editionid=kommersiellartikkel]
-embed.viaplay.com##+js(no-fetch-if, v.fwmrm.net/ad/g/1)
-dagens.no##.column > div[data-type="generic-widget"]:has(> div.group > div.code-element > a[href^="https://www.partner-ads.com/"])
-bold.dk###mofo
-bold.dk##.Article__right_column_banner
-bold.dk##div[class^="col"]:has(> div[class][style] > div[placement])
-feltet.dk##body > div[style="width: 100%;height: 80vh;background-color: #ccc; overflow: hidden;"]
-||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=feltet.dk
-||stads.dot-e.dk^$domain=senest.dk
-senest.dk##+js(no-fetch-if, pagead2.googlesyndication.com)
-senest.dk##.generic-widget > .group[class*=d-none-]:has(> .code-element:only-child > div[data-ad-unit-id])
-jyllands-posten.dk##body section[id^=monster_]
 
 !#if !ext_ublock
 ! 🇬🇧：Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
@@ -3193,9 +3203,7 @@ $all,ipaddress=195.242.152.122
 ||noskatteetaten.$all,domain=~no|~bankid_svindlere.*
 ||nyskatteetaten.$all,domain=~no|~bankid_svindlere.*
 ||skatteetateneu.$all,domain=~no|~bankid_svindlere.*
-||skatteetatenno.$all,domain=~no|~bankid_svindlere.*
 ||skatteetatenof.$all,domain=~no|~bankid_svindlere.*
-||skatteetatentax.$all,domain=~no|~bankid_svindlere.*
 ||skattrefusjono.$all,domain=~no|~bankid_svindlere.*
 ||updatesysteme.com^$all,domain=~bankid_svindlere.*
 ||wpenginepowered.com/refusjon*$doc,domain=~bankid_svindlere.*
@@ -3483,7 +3491,7 @@ $all,ipaddress=1.14.61.188
 !#if adguard
 !#include AdditionalGenericEntriesForAdGuard.txt
 !#endif
-! Last updated: 16February2026v1-Extension
+! Last updated: 29April2026v1-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -3599,6 +3607,14 @@ stokerpiller.dk##.adsbygoogle:style(max-height:1px!important)
 tobys.dk##+js(aopr, checkAds)
 tobys.dk#@#.abMessage
 !#endif
+! https://github.com/DandelionSprout/adfilt/issues/1250
+||html-load.com^$domain=itavisen.no
+!#if !env_firefox
+.com/feed/$domain=itavisen.no,css,image
+!#endif
+itavisen.no##div:has(>div>div[data-fuse])
+itavisen.no##div[style*="width:   "]
+||taboola.com^$domain=itavisen.no
 
 ! 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 playpilot.com##.takeover.modals
@@ -3610,6 +3626,18 @@ playpilot.com##body:style(overflow: auto !important)
 ! 🇳🇴: Meningsløs tilsløring av strømprismåleren på forsiden, siden sløringen ikke fjernes for abonnenter uansett
 ! 🇬🇧: Pointless blurring of the electricity price gauge on the frontpage, since the blurring isn't removed for subscribers anyway
 adressa.no##.strom .overlay:style(background:0!important;backdrop-filter:0!important;-webkit-backdrop-filter:0!important)
+
+! 🇬🇧: ——— Synced with AdGuard Base ———
+! foreignTXT
+fuelfinder.dk###adblock-message:style(display:none!important;opacity:0!important)
+fuelfinder.dk##.site-wrapper:style(display:block!important;opacity:1!important)
+vgtv.no##+js(json-prune, enabled, testhide)
+||freewheel-mtgx-tv.akamaized.net/*.mp4$media,redirect=noopmp4-1s,domain=bold.dk
+||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=vegetarbloggen.no,important
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=berlingske.dk|bt.dk|feltet.dk
+||vgc.no/cdn/js/libs/homad-config.json$xml,redirect=noopjson
+! specificTXT
+downdetector.dk,downdetector.no#%#//scriptlet('set-constant', 'pbjs.onEvent', 'noopFunc')
 
 !¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤!
 ! 🇳🇴/🇩🇰: ——— Ikke for Brave Browser ———

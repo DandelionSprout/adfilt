@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Privoxy)
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for Privoxy)
-# Last modified: 04April2026v1-Deprecated
+# Last modified: 29April2026v1-Deprecated
 # Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # 🇳🇴：Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -1090,7 +1090,14 @@ collector.schibsted.io/
 # 🇳🇴：Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰：Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧：Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
-# Starting with 10May2024v4, only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
+# Only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
+{+block{foreignTXT}}
+{+block}
+.cdn.allermedia.se/se-aller-ads/
+{+block}
+.img.sofabold.dk/images/banner
+{+block}
+.vg.no/vgc/cdn/vgno/assets/feature/_astro/GiftHelperPymFrame.
 widget.tippebannere.no
 {-block}
 .borsen.dk/themes/borsen.dk/js/dfp.js
@@ -1100,8 +1107,11 @@ widget.tippebannere.no
 .cdn.maskinbladet.dk/*assets/templates/*/img/adblocker/ads.png
 # jyllands-postenDK (09/07/2020)
 {+block{specificTXT}}
+{+block}
+.openx.gamereactor.dk/adclick.php
+{+block}
+.travian.dk/?uc=
 {+block{https://github.com/uBlockOrigin/uAssets/issues/26263 (02/12/2024)}}
-# Syncing from 166942 onwards (14/04/2025)
 # 🇬🇧：Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # 🇳🇴：Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no/sport
@@ -1485,7 +1495,7 @@ postnorg-dk*
 1.14.61.188
 .trafikkskoleapp.no/
 # 🇬🇧：Intended for Adblock Plus
-# Last updated: 16February2026v1-Extension
+# Last updated: 29April2026v1-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -1516,10 +1526,15 @@ postnorg-dk*
 {+block{https://github.com/uBlockOrigin/uAssets/issues/13495}}
 # The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
 # Borrowed from "uBlock Filters — Ads" (31/10/2024)
+{+block{https://github.com/DandelionSprout/adfilt/issues/1250}}
 {+block{🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———}}
 {+block{🇬🇧: ——— An unusual entry, but a needed entry: Aims to prevents NRK's login system on Google Translate-d pages from forcing readers who were logged in to their regular site, from being redirected from a translated page to the non-translated frontpage. ———}}
 # 🇳🇴: Meningsløs tilsløring av strømprismåleren på forsiden, siden sløringen ikke fjernes for abonnenter uansett
 {+block{🇬🇧: Pointless blurring of the electricity price gauge on the frontpage, since the blurring isn't removed for subscribers anyway}}
+{+block{🇬🇧: ——— Synced with AdGuard Base ———}}
+{+block{foreignTXT}}
+{+block{specificTXT}}
+downdetector.dk,downdetector.no#%#//scriptlet('set-constant', 'pbjs.onEvent', 'noopFunc')
 #¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤!
 # 🇳🇴/🇩🇰: ——— Ikke for Brave Browser ———
 {+block{🇬🇧: ——— Not for Brave Browser ———}}

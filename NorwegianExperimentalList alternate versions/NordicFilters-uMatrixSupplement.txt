@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
-! Last modified: 04April2026v1-Deprecated
+! Last modified: 29April2026v1-Deprecated
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! 🇳🇴：Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -170,11 +170,11 @@ itavisen.no sixscissors.com 3p allow
 ! 🇳🇴：Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰：Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 ! 🇬🇧：Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
-! Starting with 10May2024v4, only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
-!!!||freewheel-mtgx-tv.akamaized.net^$media,domain=tv3sport.dk
+! Only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
 ||widget.tippebannere.no^$third-party
-! Syncing from 166942 onwards (14/04/2025)
-senest.dk stads.dot-e.dk * block
+klikk.no widgets.sprinklecontent.com * block
+!!!||freewheel-mtgx-tv.akamaized.net^$media,domain=tv3sport.dk
+||travian.dk/?uc=$third-party
 ! 🇬🇧：Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 ! 🇳🇴：Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 ! Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no/sport
@@ -316,9 +316,7 @@ no|~bankid_svindlere.* norwegianautopaskonto. all allow
 no|~bankid_svindlere.* noskatteetaten. all allow
 no|~bankid_svindlere.* nyskatteetaten. all allow
 no|~bankid_svindlere.* skatteetateneu. all allow
-no|~bankid_svindlere.* skatteetatenno. all allow
 no|~bankid_svindlere.* skatteetatenof. all allow
-no|~bankid_svindlere.* skatteetatentax. all allow
 no|~bankid_svindlere.* skattrefusjono. all allow
 bankid_svindlere.* updatesysteme.com all allow
 ! Sø(k|g)eresultater på Qwant
@@ -364,12 +362,14 @@ svindelfup.* 223.29.226.200 all allow
 ! 🇬🇧：Copied over from URLHaus and verified
 ://1.14.61.188^
 ! 🇬🇧：Intended for Adblock Plus
-! Last updated: 16February2026v1-Extension
+! Last updated: 29April2026v1-Extension
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
 ! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
 ! Also fixed in "uBlock Filters - Privacy", but is added to this list as well, because it serves to remove AAAB notices on various pages (especially when "uBlock Filters" is turned on).
 ! The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
+itavisen.no html-load.com * block
+itavisen.no taboola.com * block
 www-nrk-no.translate.goog innlogging.nrk.no frame block
 ! 🇳🇴: Meningsløs tilsløring av strømprismåleren på forsiden, siden sløringen ikke fjernes for abonnenter uansett
 ! 🇬🇧: Pointless blurring of the electricity price gauge on the frontpage, since the blurring isn't removed for subscribers anyway

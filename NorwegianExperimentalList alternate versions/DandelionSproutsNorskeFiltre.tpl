@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 04April2026v1-Deprecated
+# Last modified: 29April2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -816,18 +816,20 @@
 # 🇳🇴：Oppføringer som også er tilstede i «AdGuards hovedfilter   AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 # 🇩🇰：Opføringer som også er tilstede i «AdGuard Basisfilter   AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
 # 🇬🇧：Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
-# Starting with 10May2024v4, only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
--d freewheel-mtgx-tv.akamaized.net *.mp4
-!!!||freewheel-mtgx-tv.akamaized.net
--d googletagservices.com gpt.js
+# Only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
+# foreignTXT
+-d cdn.allermedia.se se-aller-ads
+-d img.sofabold.dk banner
 -d v.fwmrm.net g
 -d widget.tippebannere.no
+-d widgets.sprinklecontent.com
++d soefart.dk
+!!!||freewheel-mtgx-tv.akamaized.net
 # jyllands-postenDK (09 07 2020)
 # specificTXT
+-d openx.gamereactor.dk adclick.php
+-d travian.dk ?uc=
 # https://github.com/uBlockOrigin/uAssets/issues/26263/(02/12/2024)
-# Syncing from 166942 onwards (14 04 2025)
--d imasdk.googleapis.com ima3.js
--d stads.dot-e.dk
 # 🇬🇧：Entries that are also present in «uBlock Filters», for those who use ABP and AdGuard
 # 🇳🇴：Svindelnettsteder og virusnettsteder (Ikke besøk dem hvis du har dine datamaskiner og lommebøker kjært)
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
@@ -1189,7 +1191,6 @@
 -d nyskatteetaten.
 -d skatteetateneu.
 -d skatteetatenof.
--d skatteetatentax.
 -d updatesysteme.com
 -d wpenginepowered.com refusjon*
 -d wpenginepowered.com Skatteetaten
@@ -1392,7 +1393,7 @@
 # 🇬🇧：Intended for Adblock Plus
 +d prosent.no
 +d tv2.no
-# Last updated: 16February2026v1-Extension
+# Last updated: 29April2026v1-Extension
 # 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 # Takk til THEtomaso (https://github.com/THEtomaso)/for/de/fleste/av/disse/oppføringene.
 # 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -1423,11 +1424,22 @@
 -d piano.io execute
 # Borrowed from "uBlock Filters — Ads" (31 10 2024)
 +d stokerpiller.dk
+# https://github.com/DandelionSprout/adfilt/issues/1250
+-d html-load.com
+- com feed
+-d taboola.com
 # 🇬🇧: ——— Not actually AAB, but would've caused fatal breakage in ABP ———
 # 🇬🇧: ——— An unusual entry, but a needed entry: Aims to prevents NRK's login system on Google Translate-d pages to their regular site, from being redirected from a translated page to the non-translated frontpage. ———
 -d innlogging.nrk.no
 # 🇳🇴: Meningsløs tilsløring av strømprismåleren på forsiden, siden sløringen ikke fjernes for abonnenter uansett
 # 🇬🇧: Pointless blurring of the electricity price gauge on the frontpage, since the blurring isn't removed for subscribers anyway
+# 🇬🇧: ——— Synced with AdGuard Base ———
+# foreignTXT
+-d freewheel-mtgx-tv.akamaized.net *.mp4
+-d googletagservices.com gpt.js
+-d imasdk.googleapis.com ima3.js
+# specificTXT
+- downdetector.dk,downdetector.no#%#  scriptlet('set-constant', 'pbjs.onEvent', 'noopFunc')
 !¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤=☆=¤!
 # 🇳🇴 🇩🇰: ——— Ikke for Brave Browser ———
 # 🇬🇧: ——— Not for Brave Browser ———
