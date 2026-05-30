@@ -21,20 +21,15 @@ This is the place where I experiment with syntaxes, new (and old) functions, and
 | [Dandelion Sprout's Nordic Filters (IPv6 «hosts» list version)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersHostsIPv6.txt) |  Modern OS «hosts» files, where it works even for IPv4 sites (Tested on Windows 11)
 | [Dandelion Sprout's Nordic Filters (IPv4 «hosts» list version)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicHosts.txt) | Older OS «hosts» files where :: doesn't block IPv4 sites.
 | [Dandelion Sprout's Nordic Filters (for Dnsmasq)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDnsmasq.conf) | Dnsmasq
-
-
-
-
-
 | [Dandelion Sprout's Serbo-Croatian List](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/SerboCroatianList.txt) | uBlock Origin, AdGuard, ABP Firefox | Blocks ads on Serbo-Croatian-language websites.
 | [African Languages List](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/AfricanLanguagesList.txt) | uBlock Origin, AdGuard, ABP Firefox | Blocks ads on Swahili-, Amharic-, Hausa-, Zulu-, Sotho-, Malagasy-, Yoruba-, Somali-, and Kinyarwanda-language websites. Also included in Dandelion Sprout's Annoyances List.
 
 ## Dandelion Sprout's Anti-Malware List versions
 Aims to block all sorts of malware, with special focus on mass malware distributors and on malware redirection trains.
-| List | Tools
-| ---- | -----
-| [Dandelion Sprout's Anti-Malware List](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Dandelion%20Sprout's%20Anti-Malware%20List.txt) | uBlock Origin, Brave Shield
-| [Dandelion Sprout's Anti-Malware List (for AdGuard)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuard.txt) | AdGuard, Zen Privacy
+| List | Tools | Notes
+| ---- | ----- | -----
+| [Dandelion Sprout's Anti-Malware List](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Dandelion%20Sprout's%20Anti-Malware%20List.txt) | uBlock Origin, Brave Shield | Also included in Dandelion Sprout's Annoyances List.
+| [Dandelion Sprout's Anti-Malware List (for AdGuard)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuard.txt) | AdGuard, Zen Privacy | Also included in Dandelion Sprout's Annoyances List.
 | [Dandelion Sprout's Anti-Malware List (for Adblock Plus)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareABP.txt) | ABP Firefox, Opera's/Vivaldi's built-in blockers
 | [Dandelion Sprout's Anti-Malware List (for AdGuard Home)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt) | AdGuard Home, AdGuard DNS Filtering, Pi-hole
 | [Dandelion Sprout's Anti-Malware List (for Privoxy)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwarePrivoxy.action) | Privoxy
@@ -73,6 +68,7 @@ Aims to block all sorts of malware, with special focus on mass malware distribut
 | [AntiThomasTheTankEngineList](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/AntiThomasTheTankEngineList.txt) | |
 | [Stop Autoplay on YouTube](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/StopAutoplayOnYouTube.txt) | |
 | [Anti-"Corrupt sports" List](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/AntiCorruptSportsList.txt) | | Blocks most content on major newssites related to UEFA Champions League, FIFA World Suck, Saudi events, and probably more.
+| [Anti-"Weeb boob games on major gaming storefronts" List](Sensitive%20lists/AntiWeebBoobGamesList.txt) | uBlock Origin, AdGuard, ABP Firefox | Removes extremely weeby games (e.g. Gal Gun, Neptunia) and ≤0-effort weeby games (e.g. ones with Sakura in their name) from game storefronts (Mostly Steam).
 
 ## Lists designed for (or against) singular sites
 | List | Tools | Does
