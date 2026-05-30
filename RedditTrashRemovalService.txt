@@ -1,6 +1,6 @@
 ﻿[Adblock Plus 3.13]
 ! Title: 🎛 Reddit Trash Removal Service
-! Version: 21May2026v1-Beta
+! Version: 30May2026v1-Beta
 ! Expires: 3 days
 ! Description: Reddit can have some good places and posts, but unfortunately 95% of it is also a large pile of echo chambers whose only equivalent is 8kun. So if you only browse Reddit for its humouristical and artistical subreddits, this list will massively help you focus on those things.
 ! Some categories in this list only supports New Reddit, because let's be honest: It's so much better to be able to actually see the posts' images from the timelines, instead of having to open every single thread to see if their images are noteworthy or not.
@@ -32,9 +32,9 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##a[id^
 
 ! Subreddits that have extremely messed-up criteria for what is considered to be banworthy
 ! Known to ban everyone who are not ultraconservative:
-||reddit.com/r/conservative$document,domain=~its-a-racist-subreddit.*
-||reddit.com/r/conspiracy^$document,domain=~its-a-racist-subreddit.*
-||reddit.com/r/Republican^$document,domain=~its-a-racist-subreddit.*
+||reddit.com/r/conservative$document,domain=~it_is_a_racist_subreddit.*
+||reddit.com/r/conspiracy^$document,domain=~it_is_a_racist_subreddit.*
+||reddit.com/r/Republican^$document,domain=~it_is_a_racist_subreddit.*
 ||reddit.com/r/JusticeServed^$document
 ! Known to ban all furries:
 ||reddit.com/r/antifurry_irl^$document
@@ -172,10 +172,10 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##div[s
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##div:not([class]) > div:only-of-type > div[class$=" "][data-redditstyle=false]
 
 ! Remove the right sidebar related posts on New New Reddit
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,~old.reddit.com##.right-sidebar:has(> pdp-right-rail)
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,~old.reddit.com,~old.reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##.right-sidebar:has(> pdp-right-rail)
 
 ! Complete and total failings at source critique
-reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,~old.reddit.com##article:has(> [author-id="t2_g2unu1x5s" i][permalink^="/r/oddlyspecific/" i])
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,~old.reddit.com,~old.reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##article:has(> [author-id="t2_g2unu1x5s" i][permalink^="/r/oddlyspecific/" i])
 
 ! Removes something absolutely no one asked for: random bits of text in comments being shown as generally useless search links. (10/11/2025; https://new•reddit•com/r/softwaregore/comments/1my6np3/is_visual_studio_code_trying_to_insult_me/ ; Apparently gone by 17/04/2026)
 !!!reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##search-telemetry-tracker a:remove-attr(href)
@@ -187,6 +187,11 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##searc
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##search-telemetry-tracker[data-faceplate-tracking-context*=post_id] a[rpl]:remove-attr(class)
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##search-telemetry-tracker[data-faceplate-tracking-context*=post_id] a[rpl] > span:has(path[d^="M18.736 17.464l"])
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##search-telemetry-tracker[data-faceplate-tracking-context*=post_id] a[rpl]:style(color:unset!important;text-decoration-color:unset!important;text-decoration-line:none!important)
+
+! Poor indentation on r/SubredditDrama posts on Firefox Android, where the rightmost ~5px were cut off on my Motorola Edge 30 Fusion (30/05/2026)
+!#if env_mobile
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##shreddit-post-text-body div[id$=post-rtjson-content] ul:style(padding-left:8px!important;padding-right:15px!important)
+!#endif
 
 ! ————— ↓ Removes content posted by karma hoarders and bribe-taking mods ↓ —————
 
