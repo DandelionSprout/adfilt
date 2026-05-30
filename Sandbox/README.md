@@ -12,7 +12,20 @@ This is the place where I experiment with syntaxes, new (and old) functions, and
 ## Region lists
 | List | Tools | Does
 | ---- | ----- | ----
-| [Dandelion Sprout's Nordic Filters](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianList.txt) | uBlock Origin | Blocks ads on Norwegian-, Danish-, Icelandic-, Faroese-, Kalaallisut-, and Sámi-language websites.
+| [Dandelion Sprout's Nordic Filters](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianList.txt) | uBlock Origin, Brave Browser | Blocks ads on Norwegian-, Danish-, Icelandic-, Faroese-, Kalaallisut-, and Sámi-language websites.
+| [Dandelion Sprout's Nordic Filters (without tracker whitelistings)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersPrivacy.txt) | uBlock Origin, Brave Browser | For the most hardcore users only; ignores a select few entries where tracker whitelistings are needed to unbreak sites.
+| [Dandelion Sprout's Nordic Filters (for AdGuard)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuard.txt) | AdGuard, Zen Privacy
+| [Dandelion Sprout's Nordic Filters (for Adblock Plus)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersABP.txt) | ABP Firefox, Opera's/Vivaldi's built-in blockers
+| [Dandelion Sprout's Nordic Filters (for AdGuard Home)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt) | AdGuard Home, AdGuard DNS Filtering, Pi-hole
+| [Dandelion Sprout's Nordic Filters (Domains list version)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/DandelionSproutsNorskeFiltreDomains.txt) |
+| [Dandelion Sprout's Nordic Filters (IPv6 «hosts» list version)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersHostsIPv6.txt) |  Modern OS «hosts» files, where it works even for IPv4 sites (Tested on Windows 11)
+| [Dandelion Sprout's Nordic Filters (IPv4 «hosts» list version)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicHosts.txt) | Older OS «hosts» files where :: doesn't block IPv4 sites.
+| [Dandelion Sprout's Nordic Filters (for Dnsmasq)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDnsmasq.conf) | Dnsmasq
+
+
+
+
+
 | [Dandelion Sprout's Serbo-Croatian List](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/SerboCroatianList.txt) | uBlock Origin, AdGuard, ABP Firefox | Blocks ads on Serbo-Croatian-language websites.
 | [African Languages List](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/AfricanLanguagesList.txt) | uBlock Origin, AdGuard, ABP Firefox | Blocks ads on Swahili-, Amharic-, Hausa-, Zulu-, Sotho-, Malagasy-, Yoruba-, Somali-, and Kinyarwanda-language websites. Also included in Dandelion Sprout's Annoyances List.
 
@@ -22,9 +35,12 @@ Aims to block all sorts of malware, with special focus on mass malware distribut
 | ---- | -----
 | [Dandelion Sprout's Anti-Malware List](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Dandelion%20Sprout's%20Anti-Malware%20List.txt) | uBlock Origin, Brave Shield
 | [Dandelion Sprout's Anti-Malware List (for AdGuard)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuard.txt) | AdGuard, Zen Privacy
-| [Dandelion Sprout's Anti-Malware List (for AdBlock Plus)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareABP.txt) | ABP Firefox, Opera's/Vivaldi's built-in blockers
+| [Dandelion Sprout's Anti-Malware List (for Adblock Plus)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareABP.txt) | ABP Firefox, Opera's/Vivaldi's built-in blockers
 | [Dandelion Sprout's Anti-Malware List (for AdGuard Home)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt) | AdGuard Home, AdGuard DNS Filtering, Pi-hole
+| [Dandelion Sprout's Anti-Malware List (for Privoxy)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwarePrivoxy.action) | Privoxy
 | [Dandelion Sprout's Anti-Malware List (Domains list version)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareDomains.txt) |
+| [Dandelion Sprout's Anti-Malware List («hosts» file version)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt) | OS system «hosts» file
+| [Dandelion Sprout's Anti-Malware List (Internet Explorer TPL)](https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareTPL.tpl) | Internet Explorer's built-in blocker
 
 ## Dandelion Sprout's Annoyances List components
 | List | Tools | Does
