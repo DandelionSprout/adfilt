@@ -1,20 +1,16 @@
 ﻿[Adblock Plus 3.6]
 ! Title: 🧥 Anti-"Weeb boob games on major gaming storefronts" List
-! Version: 22August2025v1-Beta
+! Version: 30May2026v1-Beta
 ! Expires: 15 days
 ! Description: In contrast to the more curated webstores Epic Store and GOG.com, Steam has for some years now been stuffed full of very-low-effort "games" (Mostly visual novels) whose entire 10€ production budget was spent on catgirls in bikinis looking at you meekly. If you are not interested in catgirls in bikinis looking at you meekly, but want to focus more on videogames, then this list is for you.
 ! Note: This list actually approves of the Summer 2025 Steam removals of flagranty stupid weeb games, since it has forced them to finally get at least the faintest possible semblance of quality control.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! Tag ID codes, as used below: 12095 = Sexual Content; 6650 = Nudity; 3799 = Visual Novel; 4085 = Anime; 4434 = JRPG; 4150 = World War II?; 9130 = Hentai
 !#if !env_mv3
-store.steampowered.com##a[data-ds-tagids*="12095"][data-ds-tagids*="6650"]
-store.steampowered.com##a[data-ds-tagids*="12095"][data-ds-tagids*="3799"]
-store.steampowered.com##a[data-ds-tagids*="6650"][data-ds-tagids*="3799"]
-store.steampowered.com##a[data-ds-tagids*="4085"][data-ds-tagids*="12095"]
-store.steampowered.com##a[data-ds-tagids*="4085"][data-ds-tagids*="6650"]
-store.steampowered.com##a[data-ds-tagids*="4434"][data-ds-tagids*="12095"]
-store.steampowered.com##a[data-ds-tagids*="4434"][data-ds-tagids*="6650"]
-store.steampowered.com##a[data-ds-tagids*="4085"][data-ds-tagids*="4150"]
+store.steampowered.com##a[data-ds-tagids*="6650"],[data-ds-tagids*="12095"]
+store.steampowered.com##a[data-ds-tagids*="3799"]:is([data-ds-tagids*="6650"],[data-ds-tagids*="12095"])
+store.steampowered.com##a[data-ds-tagids*="4085"]:is([data-ds-tagids*="4150"],[data-ds-tagids*="6650"],[data-ds-tagids*="12095"])
+store.steampowered.com##a[data-ds-tagids*="4434"]:is([data-ds-tagids*="6650"],[data-ds-tagids*="12095"])
 store.steampowered.com##a[data-ds-tagids*="9130"]
 store.steampowered.com##a[data-ds-appid*="665180,"]
 store.steampowered.com##a[data-ds-appid][href*="/Anime_" i]
@@ -29,6 +25,7 @@ store.steampowered.com##a[data-ds-appid][href*=Kagura i][href*=Senran i]
 store.steampowered.com##a[data-ds-appid][href*=Idol i]:not([href*=Golden i],[href*=Lost i],[href*=Buck i],[href*=Gods i])
 store.steampowered.com##a[data-ds-appid]:is([href*=cafe i],[href*=café i]):not([href*=catgir i],[href*=maid i],[href*=kemono i])
 store.steampowered.com##a[data-ds-appid]:is([href*=sakura i]):not([href*=naruto i],[href*=warframe i],[href*=kitaria i],[href*=tensei i],[href*=sakurai i],[href*=simulator i])
+store.steampowered.com##a[data-ds-appid][href*=hentai i]
 
 ! Other sites
 osu.ppy.sh##.beatmapsets__item:has-text(/^.*sakura[a-h\j-z0-9★☆:].*$/i)
