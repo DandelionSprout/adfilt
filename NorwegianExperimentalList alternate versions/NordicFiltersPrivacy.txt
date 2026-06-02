@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Last modified: 01May2026v1
+! Last modified: 02June2026v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -17,6 +17,10 @@
 
 ! 🇳🇴：Fjerning av reklamebokser og tomme overskuddsbokser
 ! 🇩🇰：Fjernelse af annonceboxer og tomme overskudsrammer
+! 🇮🇸：Fjarlægir auglýsingaramma og staðgengla
+! 🇫🇴：Strika lýsingarrammur og staðhaldarar
+! 🇬🇱：Piĳaĳuq saqqĳaaqtittĳjutinik puuksanik ammalu iniksanginnik
+! ❄️：Váldá eret reklámarámmaid ja sajádagaid
 ! 🇬🇧：Ads and leftovers removal entries / Hiding-type rules
 ###ad_superboard:not(html,body,:empty)
 ###ad_topp:not(html,body,:empty)
@@ -135,6 +139,7 @@ tvkampen.com,tvsporten.dk##.odds
 aftenposten.no##.container > div[class=block]
 xstra.no##.td-fix-index
 tek.no#?#main > section > section:has-text(/^an{2}onse$/)
+tek.no##main section:has(span[data-nosnippet=true]:has-text(/^annonse$/))
 madensverden.dk##.maden-after-content
 indkast.dk##.site_ad_container
 f7.no##.td-loader-gif
@@ -237,7 +242,7 @@ dfly.no##*:has(>.container-footer-ad)
 vg.no,www-vg-no.translate.goog##div[class^=Ad_root_]
 veitingageirinn.is#?#.mvp-widget-home:has-text(/^Velun{2}arar.*$/)
 flyprat.no###header_right_cell
-installator.dk##.banner-hidden
+installator.dk,scm.dk##.banner-hidden
 abcnyheter.no##div[class^=AdSlot__]
 mobilsiden.dk,telepristjek.dk###wrapper-top
 procycling.no##.container-ad
@@ -278,7 +283,6 @@ fiskerforum.dk##section:has(.elementor-row > div:only-of-type div[id*=ezoic])
 netnatur.dk##.widget:has(.g-single)
 europamester.dk##div:has(> div[id^=cncpt-])
 musikknyheter.no##.centered:not(#toTop)
-itavisen.no,tvguide.dk##div[id^=ad-]
 tu.no##.undefined.hidden
 recordere.dk##.td-header-header
 vilgerneleve.dk##div.sidebar-widget-container.widget_text:has(:is(center > a,ins,div[class*=affiliate]))
@@ -856,7 +860,6 @@ nakenprat.com#?##content:style(margin-left: 0 !important)
 hytteavisen.no##.prodlist > .row > .small-12
 tu.no##div[id^=row- i]
 pengenytt.no#?#.textwidget:has-text(Annonse)
-guloggratis.dk###topBanner
 lystfiskerguiden.dk#?#.elementor-widget-wrap > .elementor-section:has-text(REKLAMER)
 kanalfrederikshavn.dk###knapper
 ehandel.*##body[data-scrolling] .post-container-sponsored
@@ -1064,7 +1067,7 @@ bardufoss.no##.btDivider + section:not(.btDivider)
 yrkesbil.no###side > div:nth-of-type(1)
 noresk.com,eroguide.dk##.ipsSpacer_both
 vafo.dk,folketidende.dk##.top_banner_container
-magasinetreiselyst.no###topBanner
+magasinetreiselyst.no,guloggratis.dk###topBanner
 e24.no,e24-no.translate.goog##div[data-config*=fallbackAdPlacement]
 dagsavisen.no##.dagsavisenDesktopAd
 digi.no,tu.no##h3 ~ div[class=clear-both]
@@ -1286,7 +1289,7 @@ nyheder24.dk##.generic-widget:has(.annonce)
 nyheder24.dk##div[class*=inArticleBanner i]
 abcnyheter.no##.c-article__bottom-ad
 sykepleien.no##.content-extra__ads
-custompublish.com##.bannerlocation
+kondis.no,custompublish.com##.bannerlocation
 motorhobby.no##.hidden-phone.rt-block
 euroinvestor.dk##div[class^=dre-][class*="-empty "]:has(div[id^=banner i],div[id^=Leaderboard i])
 euroinvestor.dk##.banner-mb-20
@@ -1336,7 +1339,6 @@ klikk.no##.affiliateAd
 juleweb.dk##p + div[data-elementor-type=section]
 kondis.no##.fullbanner
 kondis.no##.maincontainer
-kondis.no##.bannerlocation
 mbl.is##.col-12:has(>.augl)
 mbl.is##.col-12:has(>div[class^=seen]:first-of-type>.augl)
 sportsidioten.no##.code-block:has(#snack_mpu,div[id^=snack_dex])
@@ -1346,13 +1348,12 @@ sportsidioten.no###snack_dex5
 avisen.nu##.td-ss-main-sidebar > .widget_custom_html
 avisendanmark.dk##div.block:has(> .adblock)
 dinavis.dk###topscroll-desktop
-dinavis.dk##div.md\:block
+dinavis.dk,jyllands-posten.dk##div.md\:block
 gaffa.no##a[href*=casino]
 gaffa.no##a[href*=kasino]
 gaffa.no##div.col-lg-4.col-md-6:has(> [id^=cncpt-]:empty)
 gaffa.no##div.col-xxxl-3:has(.link-list a:is([href*=casino],[href*=kasino]))
 gaffa.no##div[id^=cncpt-]
-jyllands-posten.dk##div.md\:block
 jyllands-posten.dk##div[class*=interscrollerAd]
 kristeligt-dagblad.dk##.article__ad
 kunmedierne.dk##.ad-before-content
@@ -1368,7 +1369,6 @@ norskebank.no###header:style(height:unset!important)
 bankimistnorge.com##.container-right
 bankernorge.com##aside#sidebar
 lav-det-selv.dk##.forum-sidebar .d-none
-scm.dk##.banner-hidden
 seoghoer.dk##div[data-type=ad]
 tiendeo.*##.text-center.justify-center.items-center
 nyhetsstrømmen.no##.aunit
@@ -1377,7 +1377,6 @@ klokkeonline.no###pnl-ne0n
 bilmagasinet.dk##.hidden[style^="margin-top:"]:has(aside.bp-ads)
 bilmagasinet.dk##.bp-ads
 www.tv2.no##.channels-ad
-sportsbibelen.net##div[id^=ad-]
 sporten.com##.td-header-sp-recs
 sportsidioten.no##.sticky-half-page
 heimildin.is##.m-line:has(div[class^=ad])
@@ -1409,6 +1408,16 @@ gladkokken.no##.-type-ad
 kabaler.dk##aside > table[bgcolor^=FFF]
 sykepleien.no##.layout--onecol:has([class*=adnuntius])
 moviezine.no##div:has(>div[id^=moviezine-norge_outside])
+prisjakt.no##div[class^="pjra:r"]
+tog24.no###hot_news_pro_posts_grid_section
+tog24.no##.featured-posts-wrapper > .overlay-post:has(a[href*=jbf])
+tog24.no##.theme-archive-layout > .post:has(a[href*=jbf])
+tog24.no##figure.wp-block-image:has(> a:only-of-type)
+travelnews.no##.a-wrap-2
+travelnews.no##.has-el-gap:has(div[data-widget_type="html.default"])
+travelnews.no##.has-el-gap:has(strong:has-text(/^Annonse$/))
+travelnews.no##.main-wrap > .a-wrap:first-of-type:style(padding-top:5px!important)
+travelnews.no##.smartmag-widget-codes:has(a:not([href*=travelnews]))
 ! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1448,6 +1457,7 @@ jyllands-posten.dk,jyllands--posten-dk.translate.goog,finans.dk,lokalavisen.dk##
 itavisen.no,ba.no,gamereactor.*##.sponsored
 audlindin.is,bb.is,utvarpsaga.is##.g-dyn
 ||widgets.sprinklecontent.com^$domain=startsiden.no|musikknyheter.no|klikk.no
+itavisen.no,sportsbibelen.net,tvguide.dk##div[id^=ad-]
 latterkula.no,gunnarandreassen.com##a[href*=spill]
 !+ NOT_OPTIMIZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
@@ -1646,6 +1656,10 @@ _visittkortannonse_$image
 /aller-ads$domain=~seiska.fi
 ! boldDK (12/12/2025)
 ||be.contimo.app^$3p
+! travelnewsNO (02/06/2026)
+*px_Toppbanner-$image
+! tog24NO (02/06/2026)
+/Annonsebanner-*.png^$domain=no
 ! — — — — —
 ! 🇳🇴：Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -1924,6 +1938,15 @@ _1170x400.$domain=eyjafrettir.is,image,1p
 ||tv-kalundborg.b-cdn.net//system_files/banner^
 ||dagens.dk/wp-content/themes/mgdk-master/pricerunner-widget.php^
 ||kabaler.dk/templates/blue3/images/demens.jpg^
+||tog24.no/wp-content/uploads/20*/cropped-JBF-*.png^$image
+||tog24.no/wp-content/uploads/20*/SJ-Nord-logo*.png^$image
+||travelnews.no/wp-content/uploads/20*/707x436-NO.png^
+||travelnews.no/wp-content/uploads/20*/7PeoplePeles.png^
+||travelnews.no/wp-content/uploads/20*/ChatGPT-Image-*.png^
+||travelnews.no/wp-content/uploads/20*1280x228.jpg^
+||travelnews.no/wp-content/uploads/20*400x400.gif^
+||travelnews.no/wp-content/uploads/20*_Banner_*.gif^
+||travelnews.no/wp-content/uploads/202*/hertz.png^
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -2556,6 +2579,8 @@ telenor.no##.global-overlay-background
 ! ★★★ 🇳🇴：Forårsaket av / Caused by «Frellwit's Swedish Filter» ★★★
 ! https://github.com/DandelionSprout/adfilt/issues/1174
 @@||cl.k5a.io^$domain=abcnyheter.no
+! (02/06/2026)
+@@/wp-content/uploads/*/Randi-Ness$domain=tog24.no
 
 !
 
@@ -2753,6 +2778,9 @@ triplx.dk##.aff-inner-col
 ! Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no/sport
 ! 🇩🇰：Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 ! 🇮🇸：Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
+! 🇫🇴：Svikasíður og virussíður (Vitja tær ikki, um tú virðismetir tínar teldur og pengapung)
+! 🇬🇱：Silairrĳainirmut ikiaqqiviujut (Pulaariaqattangillugit pimmariugiguvigit qaritaujatit amma kiinaujakkuvik)
+! ❄️：Beahttašansiiddut ja virussiiddut (Ale geahča daid jus atná árvvus dihtoriid ja logahagaid)
 ! 🇬🇧：Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 ! Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
 /begrensede-tilbudet/*$doc
@@ -3358,7 +3386,7 @@ $all,ipaddress=43.160.248.24
 ://43.157.46.83^$all
 ://43.164.196.209^$all
 ://88.255.216.16^$all
-/((https?|tcp)://)?204\.194\.54\.\d{1,3}([:/].*)?$/$all
+/^((https?|tcp|udp|i?quic|s?ftp)://)?204\.194\.54\.\d{1,3}([:/].*)?$/$all
 !#endif
 !#if env_firefox
 $all,ipaddress=43.157.122.86

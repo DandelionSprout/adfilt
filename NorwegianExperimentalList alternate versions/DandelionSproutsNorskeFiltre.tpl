@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 01May2026v1-Deprecated
+# Last modified: 02June2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -14,6 +14,10 @@
 # Starting 10 April 2025, comments under so-called "commits" on GitHub will not be read under any circumstances. Other comment methods on GitHub will still be read.
 # 🇳🇴：Fjerning av reklamebokser og tomme overskuddsbokser
 # 🇩🇰：Fjernelse af annonceboxer og tomme overskudsrammer
+# 🇮🇸：Fjarlægir auglýsingaramma og staðgengla
+# 🇫🇴：Strika lýsingarrammur og staðhaldarar
+# 🇬🇱：Piĳaĳuq saqqĳaaqtittĳjutinik puuksanik ammalu iniksanginnik
+# ❄️：Váldá eret reklámarámmaid ja sajádagaid
 # 🇬🇧：Ads and leftovers removal entries   Hiding-type rules
 # — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer for minst 3 nettsteder
@@ -192,6 +196,9 @@
 - aller-ads
 # boldDK (12 12 2025)
 -d be.contimo.app
+# travelnewsNO (02 06 2026)
+# tog24NO (02 06 2026)
+- Annonsebanner-*.png
 # — — — — —
 # 🇳🇴：Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -452,6 +459,15 @@
 -d tv-kalundborg.b-cdn.net banner
 -d dagens.dk pricerunner-widget.php
 -d kabaler.dk demens.jpg
+-d tog24.no cropped-JBF-*.png
+-d tog24.no SJ-Nord-logo*.png
+-d travelnews.no 707x436-NO.png
+-d travelnews.no 7PeoplePeles.png
+-d travelnews.no ChatGPT-Image-*.png
+-d travelnews.no 20*1280x228.jpg
+-d travelnews.no 20*400x400.gif
+-d travelnews.no 20*_Banner_*.gif
+-d travelnews.no hertz.png
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -769,6 +785,7 @@
 # ★★★ 🇳🇴：Forårsaket av   Caused by «Frellwit's Swedish Filter» ★★★
 # https://github.com/DandelionSprout/adfilt/issues/1174
 +d cl.k5a.io
+# (02 06 2026)
 !
 # 🇳🇴 🇩🇰：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
@@ -835,6 +852,9 @@
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no sport
 # 🇩🇰：Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 # 🇮🇸：Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
+# 🇫🇴：Svikasíður og virussíður (Vitja tær ikki, um tú virðismetir tínar teldur og pengapung)
+# 🇬🇱：Silairrĳainirmut ikiaqqiviujut (Pulaariaqattangillugit pimmariugiguvigit qaritaujatit amma kiinaujakkuvik)
+# ❄️：Beahttašansiiddut ja virussiiddut (Ale geahča daid jus atná árvvus dihtoriid ja logahagaid)
 # 🇬🇧：Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 # Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no sport
 - begrensede-tilbudet

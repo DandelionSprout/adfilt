@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for Privoxy)
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for Privoxy)
-# Last modified: 01May2026v1-Deprecated
+# Last modified: 02June2026v1-Deprecated
 # Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 # 🇳🇴：Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -12,6 +12,10 @@
 # Starting 10 April 2025, comments under so-called "commits" on GitHub will not be read under any circumstances. Other comment methods on GitHub will still be read.
 # 🇳🇴：Fjerning av reklamebokser og tomme overskuddsbokser
 # 🇩🇰：Fjernelse af annonceboxer og tomme overskudsrammer
+# 🇮🇸：Fjarlægir auglýsingaramma og staðgengla
+# 🇫🇴：Strika lýsingarrammur og staðhaldarar
+# 🇬🇱：Piĳaĳuq saqqĳaaqtittĳjutinik puuksanik ammalu iniksanginnik
+# ❄️：Váldá eret reklámarámmaid ja sajádagaid
 # 🇬🇧：Ads and leftovers removal entries / Hiding-type rules
 # — — — — — — — — — — — — — — — — — 
 # 🇳🇴：Oppføringer for minst 3 nettsteder
@@ -213,6 +217,9 @@ s3-bm-adtech.
 # seoghoerDK (01/12/2025)
 # boldDK (12/12/2025)
 be.contimo.app/
+# travelnewsNO (02/06/2026)
+.px_Toppbanner-
+# tog24NO (02/06/2026)
 # — — — — —
 # 🇳🇴：Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -671,6 +678,24 @@ www-presse-fotos-dk.filesusr.com/
 .dagens.dk/wp-content/themes/mgdk-master/pricerunner-widget.php
 {+block}
 .kabaler.dk/templates/blue3/images/demens.jpg
+{+block}
+.tog24.no/wp-content/uploads/20*/cropped-JBF-*.png
+{+block}
+.tog24.no/wp-content/uploads/20*/SJ-Nord-logo*.png
+{+block}
+.travelnews.no/wp-content/uploads/20*/707x436-NO.png
+{+block}
+.travelnews.no/wp-content/uploads/20*/7PeoplePeles.png
+{+block}
+.travelnews.no/wp-content/uploads/20*/ChatGPT-Image-*.png
+{+block}
+.travelnews.no/wp-content/uploads/20*1280x228.jpg
+{+block}
+.travelnews.no/wp-content/uploads/20*400x400.gif
+{+block}
+.travelnews.no/wp-content/uploads/20*_Banner_*.gif
+{+block}
+.travelnews.no/wp-content/uploads/202*/hertz.png
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -1037,6 +1062,7 @@ aas.*.no/a/
 .tv2.no/*/snowplow/*
 # ★★★ 🇳🇴：Forårsaket av / Caused by «Frellwit's Swedish Filter» ★★★
 {+block{https://github.com/DandelionSprout/adfilt/issues/1174}}
+# (02/06/2026)
 # 🇳🇴/🇩🇰：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
 # 🇬🇧：Anti-'CPU slaughtering'
@@ -1117,6 +1143,9 @@ widget.tippebannere.no
 # Rask leksjon: Mange svindelnettsteder bruker adresser som ligner på adressene til store nettsteder, men som inneholder tilfeldige ekstra smådetaljer som gjør dem til en helt annen adresse. "||vg.no." vil blokkere vg.no.iphone-svindel-eksempel.xyz, men ikke vg.no eller vg.no/sport
 # 🇩🇰：Fupsider og virussider (Besøg dem ikke, hvis du sætter pris på dine computere og tegnebøger)
 # 🇮🇸：Svindlsidur og vírussidur (Ekki heimsæk þeim ef þér líkar þinni tölvur og peningaveskur)
+# 🇫🇴：Svikasíður og virussíður (Vitja tær ikki, um tú virðismetir tínar teldur og pengapung)
+# 🇬🇱：Silairrĳainirmut ikiaqqiviujut (Pulaariaqattangillugit pimmariugiguvigit qaritaujatit amma kiinaujakkuvik)
+# ❄️：Beahttašansiiddut ja virussiiddut (Ale geahča daid jus atná árvvus dihtoriid ja logahagaid)
 # 🇬🇧：Scam sites and virus sites (Do not visit them if you value your computers and wallets)
 # Quick 101: Many scam sites use addresses that resemble those of major sites, but which contain random extra tidbits that make them a whole different address. "||vg.no." will block vg.no.iphone-scam-example.xyz, but not vg.no or vg.no/sport
 /begrensede-tilbudet/*
@@ -1425,7 +1454,7 @@ minside-altinn.
 43.157.46.83
 43.164.196.209
 88.255.216.16
-/((https?|tcp)://)?204\.194\.54\.\d{1,3}([:/].*)?$/
+/((https?|tcp|udp|i?quic|s?ftp)://)?204\.194\.54\.\d{1,3}([:/].*)?$/
 # 🇳🇴：Falske nettapoteker
 # 🇬🇧：Fake online pharmacies
 # 🇬🇧：Old domains stolen by casino sites
