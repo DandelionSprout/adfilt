@@ -1,5 +1,5 @@
 ﻿! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 13June2026v1
+! Version: 16June2026v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -5401,6 +5401,18 @@ ref=libreselfhosted.com$doc,removeparam=ref
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-17285759
 ! https://www.financialsamurai.com/a-fire-investor-with-no-paycheck-cannot-afford-to-be-too-wrong/?weekend-reading-link-100626%2F=
 weekend-reading-link-$doc,removeparam=/^weekend-reading-link-\d{6}/
+
+! https://photoshop•adobe•com/?promoid=DZTGZS8L&mv=other&lang=en (16/06/2026)
+||photoshop.adobe.com^$removeparam=promoid
+||photoshop.adobe.com^$removeparam=mv
+
+! https://apps.microsoft.com/collections/curated/essential-apps?hl=nb-NO&gl=NO&hasHeroImage=true (16/06/2026)
+||apps.microsoft.com^$removeparam=hasHeroImage
+
+! https://get•microsoft•com/installer/download/9NF8H0H7WMLT?hl=nb-no&gl=no&referrer=storeforweb&source=https%3A%2F%2Fwww•qwant•com%2F&ocid= (16/06/2026)
+://get.microsoft.com/installer/download^$removeparam=referrer
+://get.microsoft.com/installer/download^$removeparam=source
+://get.microsoft.com/installer/download^$removeparam=ocid
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
