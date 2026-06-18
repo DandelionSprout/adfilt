@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 02June2026v1-Deprecated
+# Last modified: 10June2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -680,6 +680,7 @@
 # https://www•billedbladet•dk/kendte/jesper-steinmetz-har-smidt-millioner-i-danmark-men-han-skal-ikke-selv-bo-i-lejligheden/(12/12/2025)
 # hvakosterstrommenNO (02 01 2026)
 # https://www•moviezine•no/nyheter/den-tapeligste-komedien-fra-2025-er-na-tilgjengelig-for-streaming/(15/01/2026)
+# https://www•abcnyheter•no/nyheter/life-of-brian-40-ar-kontroversiell-komiklassiker-vender-tilbake-til-kinolerretet/253634/(04/06/2026)
 # — — — — — — — — — — — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
@@ -786,6 +787,8 @@
 # https://github.com/DandelionSprout/adfilt/issues/1174
 +d cl.k5a.io
 # (02 06 2026)
+# ★★★ Forårsaket av   Caused by «uBlock Filters - Cookie Notices»
+# (10 06 2026)
 !
 # 🇳🇴 🇩🇰：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
