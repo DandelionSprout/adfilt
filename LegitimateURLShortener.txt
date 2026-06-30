@@ -12,7 +12,8 @@
 ! - This list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
 ! - This list can not remove parameters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
 ! - As of 15/03/2024, this list did not work properly in Brave Browser, due to Brave missing several critical features this list uses. Please use this list only with uBlock Origin or AdGuard. User statements have however ticked in mid-2025 that the breakage is smaller.
-! - As of 29/12/2025, there are no known ways to even _try_ to load this list on MV3. In that case, changing to an MV2 browser is the only fix. If you use Windows, running "winget search mv2; winget search gecko" in PowerShell will show a more-or-less up-to-date list of browsers that support this list.
+! - As of 30/06/2026, this list actively _prevents_ users from using it in MV3 extensions. And even if it wasn't prevented by principle, MV3 limitations would've prevented RegEx entries from working, most crucially the one for "utm_". In that case, changing to an MV2 web browser is currently the only fix (shy of anyone forking this list, I guess). If you use Windows, running "winget search mv2; winget search gecko" in PowerShell will show a more-or-less up-to-date list of browsers that support this list.
+!#if !ext_ubol
 
 ! 🗺️ ——— General remove rules ——— 🗺️ !
 ! From AdGuard CoreLibs (11/11/2020)
@@ -5540,4 +5541,5 @@ buffalonews.com##+js(set, lee_trkLinkSrc, noopFunc)
 
 !#if !ext_ublock
 !#include uBO%20list%20extensions/LegitimateURLShortener%20—%20AdGuardOnlyEntries.txt
+!#endif
 !#endif
