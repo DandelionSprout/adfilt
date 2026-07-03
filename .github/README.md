@@ -14,9 +14,7 @@ Note for UXP browser users: Due to the Pale Moon community being protective of c
 
 ———————————————————————————
 
-**To subscribe to lists from this repo**, go to [FilterLists.com](https://filterlists.com/), click on the **Maintainers** button in the upper right, and choose **Imre Kristoffer Eilertsen** in the Maintainers dropdown menu. It is generally not recommended to subscribe to lists directly from this repo, as the mostly unsorted lists [can be unsuitable for your software(s)](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Pok%C3%A9monNoGOZone.txt), [block things you may not have intended to block at all](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/Twitter%20De-Politificator.txt), or [otherwise cause confusion in general](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Sensitive%20lists/EkstraBladetEroticContentRemover.txt) if they aren't vetted properly before use on hardware.
-
-Note 29/12/2025: The list submission process there became such a nightmare of interdependencies between 10-ish metadata files per list, that my newest lists are no longer submitted there (and certainly not by me). Alternate approaches are being considered.
+**To subscribe to lists from this repo**, go to the [List of Lists](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/ListOfLists.md) → Copy a link → Paste the link into whichever page your extension/software uses to import custom lists.
 
 ———————————————————————————
 
