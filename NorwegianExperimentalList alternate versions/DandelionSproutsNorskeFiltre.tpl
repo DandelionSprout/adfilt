@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 10June2026v1-Deprecated
+# Last modified: 02July2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -838,12 +838,8 @@
 # 🇬🇧：Entries that are also present in AdGuard Base Filter, for those who use ABP and AdBlock, or who haven't felt a need to spend 8 seconds to subscribe to it in uBlock Origin.
 # Only entries from newer than #50000 in AdGuard Filters' issue section will be included in this section, to avoid very outdated entries.
 # foreignTXT
--d cdn.allermedia.se se-aller-ads
--d img.sofabold.dk banner
--d v.fwmrm.net g
--d widget.tippebannere.no
--d widgets.sprinklecontent.com
-+d soefart.dk
+-d googletagservices.com gpt.js
+-d imasdk.googleapis.com ima3.js
 !!!||freewheel-mtgx-tv.akamaized.net
 # jyllands-postenDK (09 07 2020)
 # specificTXT
