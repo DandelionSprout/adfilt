@@ -535,7 +535,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           "redirect=noopjs",
+           r"redirect=noopjs(on)?",
            "rewrite=abp-resource:blank-js",
            line
         )
@@ -2861,7 +2861,7 @@ def prepare_abp(lines) -> str:
         )
 
         line = re.sub(
-           "redirect=noopjs",
+           r"redirect=noopjs(on)?",
            "rewrite=abp-resource:blank-js",
            line
         )
