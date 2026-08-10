@@ -1,5 +1,5 @@
 ﻿! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 8August2026v1
+! Version: 10August2026v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2101,6 +2101,8 @@ $removeparam=sk,domain=aliexpress.*|bing.com
 ! https://www•bing•com/apps/wallpaper?pc=w011&brand=bing (30/07/2026)
 ||bing.com/apps^$removeparam=pc
 ||bing.com/apps^$removeparam=brand
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9776475
+$doc,removeparam=entrypoint,domain=bing.com
 
 !!! ——— 🛍️ eBay ———
 ! https://www•ebay•com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=(...)&_trksid=p2481888•c100675•m4236&_trkparms=(...) (31/10/2020)
@@ -4928,9 +4930,6 @@ ref=news.risky.biz$doc,removeparam=ref
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10293338
 $doc,removeparam=ucid,domain=unicredit.it|steampowered.com
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9776475
-$doc,removeparam=entrypoint,domain=bing.com
-
 ! Various subdomains, i.e. https://tg24.sky•it/?zoneid=editorial-global-nav_news-skytg24_null
 ||sky.it^$doc,removeparam=zoneid
 
@@ -5436,6 +5435,9 @@ ref=sqliteviewer.app$doc,removeparam=ref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-17899820
 ||sonarsource.com^$doc,removeparam=tidelift
+
+! https://www•msn•com/nb-no?bv=midlevel (10/08/2026)
+||msn.com^$removeparam=bv
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
