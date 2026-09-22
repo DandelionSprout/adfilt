@@ -34,6 +34,7 @@
 * `~`, as in `##.element ~ div`: Similar to `+`, but blocks *all* such `div` elements that are below it on the same floor in the filetree, and not just the one right below.
 * Spacing between elements, e.g. `##.element .element`: Similar to `>`, but can mean <b>*any*</b> number of floors between the elements, and not just those that are one floor apart.
 * `##element1,element2` (alt. `##element1, element2`): Combines two hiding entries into the same line of text.
+* `:empty`: Removes page elements that contain nothing whatsoever inside them. Should be tested locally before adding them to a list, since it's not guaranteed it'll work.
 
 ##### Advanced examples:
 * The first two `##` of an element entry, are not used for elements written after e.g. `>`, `+` or `:has`. In those cases, the `##` in `##element` gets removed, `##.class` becomes `.class`, and `###id` becomes `#id`.
@@ -135,6 +136,7 @@
 * `$xhr`: Same as `$xmlhttprequest`.
 * `$doc`: Same as `$document`. May cause problems in some older versions of AdGuard.
 * `$from`: Same as `$domain`.
+* `$ipaddress=(...)`: Attempts to block domains that has such lookup IP addresses. IPv6 addresses do **not** need square brackets around. The IP should be after `$ipaddress`, the same way as how `$domain` works, but in contrast to with AdGuard's `$network`.
 
 ## AdGuard and uBlock Origin only:
 * `$webrtc`: Prevents WebRTC (Real-Time Communication) connections which is usually used by messengers and games. The uBO equivalent is `##+js(nowebrtc)`, but conversion is not done automatically. It is deprecated in AdGuard, which has transitioned over to uBO's `##+js(nowebrtc)`.
@@ -174,7 +176,7 @@
 
 * `$app`: Ensures the entry is only applied to a specific phone app(s) or PC executable(s).
 * * Example: `||example.com^$app=com.google.android`
-* `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Individual ports can be specified with `:`. IPv6 addresses must be surrounded by square brackets. Can very easily break legitimate sites as collateral damage, and should be used very sparingly. Despite what AdGuard's syntax guide indicates, it does in fact support wildcarding both with and without RegEx.
+* `$network`: When applied to an IP address, it blocks all incoming requests from it, and not just when it's typed into a browser address bar. Individual ports can be specified with `:`. IPv6 addresses must be surrounded by square brackets. Can very easily break legitimate sites as collateral damage, and should be used very sparingly (unless the IP is known to only host malware). Despite what AdGuard's syntax guide indicates, it does in fact support wildcarding both with and without RegEx.
 * * Example for IPv4: `245.123.45.67$network`
 * `@@` + `$jsinject`: Prevents `#%#` entries from working on that site.
 * `@@` + `$extension`: Prevents AdGuard userscripts from working on that site.
@@ -198,4 +200,4 @@
 * Major note to advanced CSS experts: Some advanced terms have been replaced in this guide, because they'd be less than obvious to laymen who'd need this guide.
 * [Why I use "John Madden aeiou"](https://www.youtube.com/watch?v=Hv6RbEOlqRo) as my placeholder text for almost every project. Works far better than Lorem Ipsum.
 
-¹ = Includes uBlock Origin ≥1.20.0, AdGuard (except iOS), AdNauseum, and Adblock Plus versions 3.13-3.20. It does **not** include AdGuard Home, Brave Browser, Adblock Plus ≥4.0, Slimjet, uBlock non-Origin, Tracking Protection List, Blokada, or Pi-hole, whose syntax supports are considerably inferior to the above list.
+¹ = Includes uBlock Origin Standard ≥1.20.0, AdGuard (except MV3 and iOS), AdNauseam, and Adblock Plus versions 3.13-3.20. It does **not** include AdGuard Home, Brave Browser, Adblock Plus ≥4.0, Slimjet, uBlock non-Origin, uBlock Origin XUL Legacy, Tracking Protection List, Blokada, or Pi-hole, whose syntax supports are considerably inferior to the above list.
