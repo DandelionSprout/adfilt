@@ -33,7 +33,8 @@
 * `+`: Blocks the element that is <b>right below</b> the criteria in the filetree. Example: `##.element + div` blocks that particular `div`.
 * `~`, as in `##.element ~ div`: Similar to `+`, but blocks *all* such `div` elements that are below it on the same floor in the filetree, and not just the one right below.
 * Spacing between elements, e.g. `##.element .element`: Similar to `>`, but can mean <b>*any*</b> number of floors between the elements, and not just those that are one floor apart.
-* `##element1,element2` (alt. `##element1, element2`): Combines two hiding entries into the same line of text.
+* `##:is(element1,element2)`: Combines two hiding entries into the same line of text.
+* * `##element1,element2` (alt. `##element1, element2`): Same as above, but is strongly discouraged because AdGuard tools are traditionally known to spectacularly break when facing such entries.
 * `:empty`: Removes page elements that contain nothing whatsoever inside them. Should be tested locally before adding them to a list, since it's not guaranteed it'll work.
 
 ##### Advanced examples:
@@ -42,8 +43,6 @@
 * `##element.class`: Hide something both based on its element (##element1) and `class` value (.class). Note the placement/absence of fullstops.
 * While they're based on the same `class` values, `##.element1` will match any `class` (sub-)value, whereas `##div[class="element1"]` and their modifiers are based on the *entire* `class` string in the F12 filetree.
 * `##.` / `##` / `###` entries can either be *generic*, in which they have no domains in front of them; or (domain-)specific, where they have one or more domains in front of them, separated by commas. uBO/AdGuard support wildcard asterisks (`*`) in such domains, and only for the immediate pre-TLD part; while ABP/AdBlock do not.
-* `##div:is(.element1,.element2)`: Compression of `##div.element1` and `##div.element2`.
-* * (Some older lists may still use `##div.element1,div.element2` for this, but this would be a really, really bad idea when used in AdGuard).
 
 #### File blocking (a.k.a. blocking rules, a.k.a. non-#-rules)
 * \[no prefix\]: Blocks resources that have this text string *anywhere* in its URL.
