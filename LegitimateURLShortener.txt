@@ -1,5 +1,5 @@
 ﻿! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 29September2026v3
+! Version: 29September2026v4
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -346,6 +346,8 @@ $removeparam=istFeedId
 $removeparam=istItemId
 $removeparam=istBid
 $removeparam=cmpid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-18626569
+$doc,removeparam=CMPID
 
 ! https://www•theguardian•com/technology/2021/may/11/apple-accused-of-breaking-uk-competition-law-by-overcharging-for-apps?CMP=Share_AndroidApp_Other
 $removeparam=CMP
@@ -5567,6 +5569,10 @@ $doc,removeparam=fb_campaignid,domain=norton.com|liquid-iv.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-18626540
 ||liquid-iv.com^$doc,removeparam=fb_adsetid
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-18626569
+||parkcitymountain.com^$doc,removeparam=adname
+||parkcitymountain.com^$doc,removeparam=ad
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
