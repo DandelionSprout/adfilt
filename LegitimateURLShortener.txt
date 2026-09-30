@@ -1,5 +1,5 @@
 ﻿! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 29September2026v8
+! Version: 29September2026v9
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -3124,7 +3124,7 @@ $removeparam=acid,domain=lenovo.com
 $removeparam=aid,domain=adguard-dns.com|adguard-vpn.com|adguard.com|brownells.*|cafago.com|get.protonmail.com|get.protonvpn.com|tomtop.com|viator.com|wevpn.com
 $removeparam=camp,domain=amazon.*|calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com
 $removeparam=channelref,domain=asos.com
-$removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com|bestbuy.com
+$doc,removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|cox.com|hulu.com|bestbuy.com
 $removeparam=cp,domain=converse.com|nike.com|nextdoor.com|duckduckgo.com|duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion
 $removeparam=ecmp,domain=4wheelparts.com
 $removeparam=kc,domain=autoanything.com
@@ -5587,6 +5587,10 @@ $doc,removeparam=fb_campaignid,domain=norton.com|liquid-iv.com
 ||dbrand.com^$doc,removeparam=cvg_source
 ||dbrand.com^$doc,removeparam=cvg_adid
 ||dbrand.com^$doc,removeparam=cvg_cid
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-18658037
+||cox.com^$doc,removeparam=sc_id
+||cox.com^$doc,removeparam=leadref
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
