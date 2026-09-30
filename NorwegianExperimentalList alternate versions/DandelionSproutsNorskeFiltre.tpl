@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 25August2026v1-Deprecated
+# Last modified: 30September2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -739,6 +739,7 @@
 -d medlemskap.fagforbundet.no
 # Similar cases. I cannot in good conscience let Norwegian and Danish users be affected by entry patterns like these, even less so after AdGuard Tracking Protection Filter was removed from uBO's opt-ins.
 # Bank login problems
+# https://github.com/easylist/easylist/issues/25253
 # ★★★ Caused by «EasyList – Social Widgets», if I recall correctly ★★★
 +d api.instagram.com
 # https://github.com/ryanbr/fanboy-adblock/issues/1261
@@ -765,8 +766,6 @@
 @@://imasdk.googleapis.com/js/sdkloader/ima3.js
 # http://sosialurin•fo/news-detail/steypafinala-vilhelm-og-rogvi-a-ruv1-fra-klokkan-1630
 # ekstrabladet•dk klip (...) (11 03 2026)
-# ★★★ Caused by «I Don't Care About Cookies» (Its maintainer couldn't reproduce it) ★★★
-# Fullpage uncloseable overlay when browsing around on Telenor Norway's TV section
 # ★★★ Unknown cause ★★★
 # https://github.com/DandelionSprout/adfilt/issues/67
 # https://new•reddit•com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
@@ -785,8 +784,11 @@
 # https://github.com/DandelionSprout/adfilt/issues/1174
 +d cl.k5a.io
 # (02 06 2026)
+# (16 09 2026)
+# https://github.com/easylist/easylist/issues/25253
 # ★★★ Forårsaket av   Caused by «uBlock Filters - Cookie Notices»
 # (10 06 2026)
+# Late September 2026
 !
 # 🇳🇴 🇩🇰：Anti-'CPU-massakrering'
 # 🇮🇸：And-örgjörvislatrun
