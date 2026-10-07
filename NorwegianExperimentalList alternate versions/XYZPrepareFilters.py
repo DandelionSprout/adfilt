@@ -3425,6 +3425,12 @@ def prepare_abp(lines) -> str:
            line
         )
 
+        line = re.sub(
+           r"^.* \{.*$",
+           "",
+           line
+        )
+
         if is_supported_abp(line):
             text += line + '\n'
 

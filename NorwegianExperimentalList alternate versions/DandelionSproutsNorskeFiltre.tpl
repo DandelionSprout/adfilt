@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 30September2026v1-Deprecated
+# Last modified: 01October2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -107,8 +107,6 @@
 - -visittkortannonse-
 # ytresognNO (16 12 2020)
 - hnuannonse
-# heilsutorgIS (17 04 2021)
--d is strevda
 # fugleognaturDK (14 05 2021)
 - images bannere
 # https://norges•online/produkt/nestle-viking-melk-410-g
@@ -785,7 +783,6 @@
 +d cl.k5a.io
 # (02 06 2026)
 # (16 09 2026)
-# https://github.com/easylist/easylist/issues/25253
 # ★★★ Forårsaket av   Caused by «uBlock Filters - Cookie Notices»
 # (10 06 2026)
 # Late September 2026
