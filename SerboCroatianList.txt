@@ -2,7 +2,7 @@
 ! Title: 🏀 Dandelion Sprout's Serbo-Croatian filters
 ! Title 🇭🇷 🇧🇦: Srpskohrvatski filtri Dandelion Sprouta
 ! Title 🇷🇸: Српскохрватски филтери Dandelion Sprout-а
-! Version: 22September2026v1
+! Version: 09October2026v1
 ! Expires: 3 days
 
 ! Description: For the first time in known history, this is a filterlist for websites in Serbian, Montenegrin, Croatian, and Bosnian. This means that all significant language groups in Europe now have filterlists for them.
@@ -329,6 +329,7 @@ index.hr##[class^=adList__ads__ i]
 index.hr##div[style^="margin-top:"]:has(>[class*=googleAds i])
 baustela.hr,mirovina.hr,srednja.hr##.banner
 baustela.hr,mirovina.hr,srednja.hr##.ticker
+balkantelevizija.net##+js(prevent-fetch, adsbygoogle)
 ||glasistre.hr/SliderBanner^
 ||avalaads.com^$third-party
 ||linker.hr^
@@ -500,6 +501,8 @@ hr###plodine-widget
 @@||ads.api.24ur.si/adserver/adblock.$subdocument
 ! ekskluzivaBA
 @@||vidverto.io/*/invocation.
+! https://github.com/AdguardTeam/AdguardFilters/issues/243616
+@@||balkantelevizija.net^$generichide
 ! ——————————
 !#if !adguard
 ! Borrowed from https://github.com/AdguardTeam/AdguardFilters/blob/master/BaseFilter/sections/foreign.txt (which is licenced as GPL-3.0) with minor modifications.
