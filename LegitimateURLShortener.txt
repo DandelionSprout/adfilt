@@ -1,5 +1,5 @@
 ﻿! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 08October2026v1
+! Version: 10October2026v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2393,9 +2393,9 @@ $removeparam=share_app_id
 $removeparam=share_item_id
 $removeparam=share_link_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-783185
-||tiktok.com^$~xmlhttprequest,removeparam=referer_url
-||tiktok.com^$~xmlhttprequest,removeparam=referer_video_id
-||tiktok.com^$~xmlhttprequest,removeparam=refer
+||tiktok.com^$doc,removeparam=referer_url
+||tiktok.com^$doc,removeparam=referer_video_id
+||tiktok.com^$doc,removeparam=refer
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-974118
 ||tiktok.com^$removeparam=checksum
@@ -2403,9 +2403,17 @@ $removeparam=share_link_id
 ||tiktok.com^$removeparam=sec_uid
 ||tiktok.com^$removeparam=share_author_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1979025
-$removeparam=/^web_id\d+/,domain=tiktok.com
+$doc,removeparam=/^web_id\d+/,domain=tiktok.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4978150
 ||tiktok.com^$removeparam=embed_source
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-18824994
+||instagram.com^$doc,removeparam=psln
+||instagram.com^$doc,removeparam=rpxt
+||instagram.com^$doc,removeparam=srtk
+||instagram.com^$doc,removeparam=obrf
+||instagram.com^$doc,removeparam=cplk
+||instagram.com^$doc,removeparam=dlrf
+||instagram.com^$doc,removeparam=xtok
 
 !!! ——— 🔊 Spotify ———
 ! https://open•spotify•com/playlist/37i9dQZF1DWXRvPx3nttRN?si=asdf1234567890
