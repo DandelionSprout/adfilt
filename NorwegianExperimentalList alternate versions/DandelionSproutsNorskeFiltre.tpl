@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 01October2026v1-Deprecated
+# Last modified: 12October2026v3-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -193,6 +193,8 @@
 # travelnewsNO (02 06 2026)
 # tog24NO (02 06 2026)
 - Annonsebanner-*.png
+# nidarosNO (12 10 2026)
+-d smartembedhandlelokalt.getbagera.no
 # — — — — —
 # 🇳🇴：Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
