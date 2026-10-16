@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! Last modified: 12October2026v3
+! Last modified: 16October2026v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -1428,6 +1428,19 @@ travelnews.no##.has-el-gap:has(div[data-widget_type="html.default"])
 travelnews.no##.has-el-gap:has(strong:has-text(/^Annonse$/))
 travelnews.no#$#.main-wrap > .a-wrap:first-of-type { padding-top:5px!important }
 travelnews.no##.smartmag-widget-codes:has(a:not([href*=travelnews]))
+dagens.dk,nyheder24.dk##script.cmplazyload ~ div
+faa.dk,fyens.dk##.block:has(> div[id^=jourbox_])
+feedball.dk##.ad
+fodbold-transfers.dk##.banner
+fodbold-transfers.dk##a[href*=betting i]
+fodbold-transfers.dk##a[href*=casino i]
+fodbold-transfers.dk##a[href*=slot i]
+indkast.dk##.mt-ad
+presse-fotos.dk##.ad-element
+presse-fotos.dk##.ia-ad-block
+presse-fotos.dk##.sky-column
+sn.dk##div[class^="card "][class*="-banner "]
+tidende.dk##.background-banner
 ! — — — — — — — — — — — — — — — — — 
 ! 🇳🇴：Oppføringer for minst 3 nettsteder
 ! 🇬🇧：Entries for at least 3 websites
@@ -1666,6 +1679,10 @@ _visittkortannonse_$image
 /Annonsebanner-*.png^$domain=no
 ! nidarosNO (12/10/2026)
 ||smartembedhandlelokalt.getbagera.no^
+! snDK (16/10/2026)
+||zuuvicdn.com^
+! fodboldnytDK (16/10/2026)
+||2t.dk/*/banner$subdocument
 ! — — — — —
 ! 🇳🇴：Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -1954,6 +1971,10 @@ _1170x400.$domain=eyjafrettir.is,image,~third-party
 ||travelnews.no/wp-content/uploads/20*_Banner_*.gif^
 ||travelnews.no/wp-content/uploads/202*/hertz.png^
 ||tronderporten.no/wp-content/uploads/20*/1450mmx350mm$image
+||feedball.dk/wp-content/uploads/*dk_ad.svg^
+||feedball.dk/wp-content/uploads/3byggetilbuddk.svg^
+||tidende.dk/nonsec/banner^
+.azurewebsites.net/banner-system-$domain=sn.dk
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
