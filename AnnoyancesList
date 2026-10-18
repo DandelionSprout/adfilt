@@ -1,5 +1,5 @@
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! Version: 25September2026v1-Compilation
+! Version: 18October2026v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -527,3 +527,11 @@ dropbox.com,linkedin.com##+js(set-local-storage-item, mapslitepromosdismissed, 1
 
 ! Hopefully upgrading various sites to HTTPS when the sites don't do it themselves.
 $csp=upgrade-insecure-requests,domain=nongnu.org|download.nvidia.com
+
+! "Make us your default search engine" prompts
+!#if !env_firefox
+qwant.com##div[class*=" "]:has(+ footer):has(a[href^="https://chromewebstore."])
+!#endif
+
+! "The Bee Movie" spam results when searching with GitHub's main search bar
+github.com##div[class^=Result-module__Result__]:has(span.search-match:has-text(/^.*(Bee going down|the tension level out here is unbelievable|Ken, could you close the window please).*$/))
