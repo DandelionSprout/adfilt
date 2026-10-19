@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uMatrix-regler til å benytte sammen med domeneversjonen)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (uMatrix rules to use together with the raw domains version)
-! Last modified: 16October2026v1-Deprecated
+! Last modified: 19October2026v1-Deprecated
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! 🇳🇴：Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -273,7 +273,7 @@ no no-oppdatert. all allow
 ://104.160.10.$domain=~in-addr.arpa
 ://165.231.154.$domain=~in-addr.arpa
 ://167.99.196.225^
-||xss.my.id^$third-party
+third-party xss.my.id * block
 ! 🇳🇴：E-post-spammere (Falsk DHP, osv.)
 ! 🇬🇧：E-mail spammers (Fake DHP, etc.)
 no|~bankid_svindlere.* minid-portalen. all allow
@@ -288,15 +288,15 @@ no|~bankid_svindlere.* skatteetateneu. all allow
 no|~bankid_svindlere.* skatteetatenof. all allow
 no|~bankid_svindlere.* skattrefusjono. all allow
 ! Sø(k|g)eresultater på Qwant
-falsk_version_af_biltema.* biltemadk.com all block
-falsk_version_af_biltema.* biltemasverige.com all block
-falsk_versjon_av_nettbutikken.* elkjopnorway.com all block
-falsk_version_af_stihl.* stihl-dk.com all block
-falsk_versjon_av_stihl.* stihl-no.com all block
-falsk_version_af_stihl.* stihl-se.com all block
-falsk_versjon_av_zooplus.* zooplus-no.com all block
-falsk_version_af_zooplus.* zooplus-se.com all block
-falsk_version_af_zooplus.* zooplusdanmark.com all block
+falsk_version_af_biltema.* biltemadk.com all allow
+falsk_version_af_biltema.* biltemasverige.com all allow
+falsk_versjon_av_nettbutikken.* elkjopnorway.com all allow
+falsk_version_af_stihl.* stihl-dk.com all allow
+falsk_versjon_av_stihl.* stihl-no.com all allow
+falsk_version_af_stihl.* stihl-se.com all allow
+falsk_versjon_av_zooplus.* zooplus-no.com all allow
+falsk_version_af_zooplus.* zooplus-se.com all allow
+falsk_version_af_zooplus.* zooplusdanmark.com all allow
 ! 🇬🇧：Pirate-product-selling stores
 ://5.39.217.206^
 ://5.39.221.180^

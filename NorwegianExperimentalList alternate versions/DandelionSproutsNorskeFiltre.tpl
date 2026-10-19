@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 16October2026v1-Deprecated
+# Last modified: 19October2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -473,6 +473,15 @@
 -d feedball.dk 3byggetilbuddk.svg
 -d tidende.dk banner
 - azurewebsites.net banner-system-
+-d nordlysid.fo 202*.gif
+-d nordlysid.fo alt-innan-golv.webp
+-d nordlysid.fo Heystfagnadur-2026.
+-d nordlysid.fo 202*_kampanja_720x360px.
+-d sudurras.fo Screenshot_202*-1024x530.
+-d ilaks.no Annonser
+- assetcdn.net *.gif
+- assetcdn.net *_980x300.png
+- wp-content uploads *annons
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -519,6 +528,13 @@
 ://sponsorship.public.tv2.no/spons/play/v2?params=
 # https://www•smakelig•com/sjokoladens-magi-lag-din-egen-sjokolade-bade-klassisk-og-sunn-variant/ (16 02 2026)
 -d smakelig.com 202*.gif
+# dimmaFO (17 10 2026)
+-d your-objectstorage.com i9yJwnAaVuu9simINhBDNxEFjN2PJ7SMFlpJMNBK.jpg
+-d your-objectstorage.com Y3jZLyBeq4GORNjSqQP1Dto0FpaT4KfggNJ5rqT8.jpg
+-d your-objectstorage.com pvvfRuftz8x60OzRRnIV2FDVlITcseiwBlA1mmnF.
+-d your-objectstorage.com Uy3ySu5xhQBj8k2Ln0W5ZhjAd0VkmWT3lQFK455A.
+-d your-objectstorage.com 5B7ynrd1hY95ACf7FDCi1cBKsWbeXMQT4CsJreMt.
+-d your-objectstorage.com jJnfdghjyfdoCxDpxKGxugExXSGHVrhJSeqEfrtc.
 # — — — — —
 # 🇳🇴：Generelle oppføringer med kilder
 # 🇬🇧：Generic entries that have sources
@@ -686,6 +702,7 @@
 # hvakosterstrommenNO (02 01 2026)
 # https://www•moviezine•no/nyheter/den-tapeligste-komedien-fra-2025-er-na-tilgjengelig-for-streaming/(15/01/2026)
 # https://www•abcnyheter•no/nyheter/life-of-brian-40-ar-kontroversiell-komiklassiker-vender-tilbake-til-kinolerretet/253634/(04/06/2026)
+# nordlysidFO (17 10 2026)
 # — — — — — — — — — — — — — — — — — — — — — — — — — — —
 # 🇳🇴：Oppføringer med spesielle omstendigheter
 # 🇬🇧：Entries with special circumstances
