@@ -1,5 +1,5 @@
 ﻿! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! Version: 16October2026v2
+! Version: 23October2026v1
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -533,12 +533,17 @@ winstall.app##div.container:style(max-width:2400px!important)
 
 ! Category: PerplexityAI
 perplexity.ai##.max-w-threadContentWidth:style(max-width:2000px!important)
+perplexity.ai##.relative.h-full > .relative.grid:style(display:unset!important)
+perplexity.ai##div[class*="group/user-bubble"]:style(padding-top:32px)
+perplexity.ai##.bottom-safeAreaInsetBottom:style(padding-right:0!important;clip-path:unset!important)
 
 ! Category: CoPilot. Like... the actual CoPilot. Not the atrocious renaming of Microsoft Office. (18/09/2025)
 copilot.microsoft.com##.max-w-chat:style(max-width:1900px!important)
 
 ! Category: duckaiAI
 app.duckai.ai##.max-w-3xl.w-full:style(max-width:2000px!important)
+duck.ai##div[aria-live=polite] + div[class]:not([class*=" "]) > div[class*=" "]:style(margin:0!important;padding:0!important;max-width:3000px!important)
+duck.ai##form[data-chat-footer]:style(margin:0!important;max-width:unset!important)
 
 ! Category: Google Web Search
 ! The front search bar (17/03/2026)
@@ -549,3 +554,10 @@ www.google.*,ipv6.google.com##div[jsmodel*="       "]:style(max-width:2000px!imp
 www.meta.ai##div[class*=" "]:nth-of-type(2) > div[class*=" "]:first-of-type:has(+ div[aria-hidden=true]):style(max-width:1900px!important)
 ! Text fields
 www.meta.ai##div[class*=" "]:nth-of-type(2):has(> div > div[data-pagelet*=KadabraPrivateComposer]):style(max-width:1600px!important;align-self:center!important;min-width:1400px!important)
+
+! Proton Lumo
+lumo.proton.me##.lumo-chat-item:style(margin:0!important;--max-w-custom:unset!important;inline-size:unset!important)
+lumo.proton.me##.main-container-content:style(--lg-max-w-custom:unset!important)
+
+! consensusAPP
+consensus.app##.max-w-page:style(max-width:unset!important)
