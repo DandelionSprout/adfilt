@@ -1,5 +1,5 @@
 ﻿! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 19October2026v1
+! Version: 28October2026v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -2069,7 +2069,7 @@ $removeparam=sk,domain=aliexpress.*|bing.com
 ! https://www•bing•com/search?q=brew+milk+video+heathly+or+brainwash&shtp=GetUrl&shid=52ffd333-de86-43eb-8e42-3c4b8d86b6a3&shtk=RHJpbmsgT25lIEdsYXNzIG9mIE1pbGsgYSBEYXkuIEJldHRlciBCb25lcyBvciBCcmFpbndhc2hpbmc%2F&shdk=(...)&shhk=a8MjbVhOQyCok8qs42amxA6%2B8sUgPQh4DtB4PgJh0gI%3D&shth=OVP•XR1Cz2a0aI5ebTNFbFySUAIIEk
 ! (https://github.com/DandelionSprout/adfilt/issues/796)
 ! (Removing shareId breaks BingBot sharing, and it's tricky to narrow the entry to standard searches only; see https://github.com/DandelionSprout/adfilt/issues/826)
-||bing.com^$removeparam=/^sh[b-np-z0-9]/
+||bing.com^$doc,removeparam=/^sh[b-np-z0-9]/
 ! https://github.com/DandelionSprout/adfilt/pull/504
 ! https://www•bing•com/search?q=Test&cc=CN&setlang=zh-CN&nclid=2F21E165874042D66713EAE9392AD01E&ts=1644819994709&wsso=Moderate (14/02/2022)
 ||bing.$removeparam=nclid
