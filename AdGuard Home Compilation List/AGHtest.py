@@ -139,19 +139,19 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"/\^https\?:\\/\\/([0-9]{1,3})\\\.([0-9]{1,3})\\\.([0-9]{1,3})\\.\(\\d\)\{1,3\}\.\*\/",
+           r"/\^https\?:\\/\\/(\d{1,3})\\\.(\d{1,3})\\\.(\d{1,3})\\.\(\\d\)\{1,3\}\.\*\/",
            r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^",
            line
         )
 
         line = re.sub(
-           r"\|\|([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.$",
+           r"\|\|(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.$",
            r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^",
            line
         )
 
         line = re.sub(
-           r"^(\|\||(:/)?/)?([0-9]{1,3})\.([0-9]{1,3})\.$",
+           r"^(\|\||(:/)?/)?(\d{1,3})\.(\d{1,3})\.$",
            r"",
            line
         )
@@ -223,7 +223,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[0-9]{1,5}$",
+           r"^\d{1,5}$",
            r"",
            line
         )
@@ -271,7 +271,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^\|.*:[0-9].*$",
+           r"^\|.*:\d.*$",
            r"",
            line
         )
@@ -373,7 +373,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^! Expires: [0-9] .*$",
+           r"^! Expires: \d .*$",
            r"",
            line
         )
@@ -597,7 +597,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[0-9].*[: ].*$",
+           r"^\d.*[: ].*$",
            r"",
            line
         )
@@ -772,7 +772,7 @@ def prepare_ip(lines) -> str:
             continue
 
         line = re.sub(
-           r"^.*\)([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})\\.\..*$",
+           r"^.*\)(\d{1,3})\\.(\d{1,3})\\.(\d{1,3})\\.\..*$",
            r"\1.\2.\3.0/24",
            line
         )
@@ -868,13 +868,13 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"^(([0-9]{1,3}\.){3})$",
+           r"^((\d{1,3}\.){3})$",
            r"\1.0/24",
            line
         )
 
         line = re.sub(
-           r"^([0-9]{1,3}\.){2}$",
+           r"^(\d{1,3}\.){2}$",
            r"",
            line
         )
@@ -886,13 +886,13 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"\[Adblock Plus 3\.[0-9]{1,3}\]",
+           r"\[Adblock Plus 3\.\d{1,3}\]",
            "! Title: IP Entries from Adblock Lists\n! Contains transformated entries from: EasyList, uBlock Filters, uBlock Filters - Badware Risks, AdGuard Base Filter, AdGuard French Filter, EasyList Germany, ABP Anti-Circumvention Filters, RU AdList, Liste AR, EasyList Spanish \n! Expires: 14 days\n! Licence: In accordance with the Dandelicence, the borrowed entries are considered to have been changed and reduced enough from their original lists, that they're counted as transformative work, meaning that creditation and seperate paragraphs are not necessary unless one of the lists' makers were to ask for such.\n! Description: This was made as a proof-of-concept to see if the IP-based entries of major adblock lists, could be used to create an IP adblocker list for IP blockers, despite how IP lists are normally only meant to block malware, E-mail spam, or port scanners.",
            line
         )
 
         line = re.sub(
-           r"# Version: (.*)-.*$",
+           r"^# Version: (.*)-.*$",
            r"! Version: \1-Alpha",
            line
         )
@@ -940,7 +940,7 @@ def prepare_ip(lines) -> str:
         )
 
         line = re.sub(
-           r"^/\(https\?:\\/\\/\)([0-9][0-9]?[0-9]?)\\.([0-9][0-9]?[0-9]?)\\.\..*/",
+           r"^/\(https\?:\\/\\/\)(\d{1,3})\\.(\d{1,3})\\.\..*/",
            r"",
            line
         )
@@ -1183,7 +1183,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"/\^https\?:\\/\\/([0-9]{1,3})\\\.([0-9]{1,3})\\\.([0-9]{1,3})\\.\(\\d\)\{1,3\}\.\*\/",
+           r"/\^https\?:\\/\\/(\d{1,3})\\\.(\d{1,3})\\\.(\d{1,3})\\.\(\\d\)\{1,3\}\.\*\/",
            "\1.\2.\3.0/24",
            line
         )
@@ -1219,7 +1219,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[0-9].*$",
+           r"^\d.*$",
            "",
            line
         )
@@ -1363,13 +1363,13 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$",
+           r"\|\|(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.$",
            r"://\1.\2.\3.\n@@://\1.\2.\3.*in-addr.arpa^",
            line
         )
 
         line = re.sub(
-           r"\|\|([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.$",
+           r"\|\|(\d{1,3})\.(\d{1,3})\.$",
            r"://\1.\2.\n@@://\1.\2.*in-addr.arpa^",
            line
         )
@@ -1477,7 +1477,7 @@ def prepare_agh(lines) -> str:
         )
 
         line = re.sub(
-           r"^[0-9]{1,5}$",
+           r"^\d{1,5}$",
            r"",
            line
         )
@@ -1575,6 +1575,12 @@ def prepare_agh(lines) -> str:
         line = re.sub(
            r"^.*hid[ie].*Adblock Plus.*$",
            r"",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*[|.]moengage\.com\^)$",
+           r"\1$dnstype=~CNAME",
            line
         )
 
