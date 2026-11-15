@@ -1,5 +1,5 @@
 ﻿! Title: ➗ Actually Legitimate URL Shortener Tool
-! Version: 13November2026v1
+! Version: 15November2026v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -4169,10 +4169,9 @@ $removeparam=ifs,domain=pcgamesn.com|pockettactics.com|thedigitalfix.com|theload
 ||bandcamp.com^$removeparam=search_rank
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4097133
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-19461022
 ||bstn.com^$removeparam=indexName
 ||bstn.com^$removeparam=objectID
-$doc,removeparam=queryID,domain=bstn.com|suomalainen.com
+$doc,removeparam=queryID,domain=bstn.com
 
 ! https://app•slack•com/plans/[redacted]?entry_point=upgrade-button
 ||app.slack.com^$removeparam=entry_point
@@ -5705,6 +5704,9 @@ $doc,removeparam=lr_input,domain=investopedia.com|people.inc
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-19467841
 ||delta.com^$doc,removeparam=mkcpgn
+
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-19461022
+||suomalainen.com^$doc,removeparam=queryId
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
