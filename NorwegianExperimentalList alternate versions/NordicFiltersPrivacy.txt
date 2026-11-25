@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (uten sporerhvitelisting)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites (without tracker whitelistings)
-! Last modified: 19October2026v1
+! Last modified: 25November2026v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -450,6 +450,9 @@ bold.dk###dstop
 gulesider.no##.PartnerLinks
 dn.no##*:has(>*>div[data-placeholder=lantern_placeholder_ad])
 tek.no##div[class^=styles__]
+ekstrabladet.dk##.megaboard_container
+ekstrabladet.dk##.ebWallpaper
+bt.no##.k5a-advert-link
 bilnorge.no##td[colspan="7"][style]
 nyheder.tv2.dk,nyheder-tv2-dk.translate.goog##.o-article_sidebar > div.g-item
 samvirke.dk##.external-banner--continue
@@ -841,6 +844,7 @@ ekstrabladet.dk,ekstrabladet-dk.translate.goog##.scrb-posts > .flex-column
 norskenettsider.no##table
 aftenposten.no##div[class^=article-wrapper-] > div[class*=css-]:has([data-variants*=ssa-native-ad])
 jyllands-posten.dk,jyllands--posten-dk.translate.goog##div[class*=" jp-banner--"]
+opdateret.dk##.ad-sticky-reserve
 1001spill.no###footer
 filmweb.no##.topad.row
 direkte.vg.no##*:has(>div[id*=-feedAdvert])
@@ -1427,7 +1431,7 @@ travelnews.no##.has-el-gap:has(strong:has-text(/^Annonse$/))
 travelnews.no##.main-wrap > .a-wrap:first-of-type:style(padding-top:5px!important)
 travelnews.no##.smartmag-widget-codes:has(a:not([href*=travelnews]))
 dagens.dk,nyheder24.dk##script.cmplazyload ~ div
-faa.dk,fyens.dk##.block:has(> div[id^=jourbox_])
+faa.dk,fyens.dk##.block:has(> div[id^=jourbox_] > contimo-widget)
 feedball.dk##.ad
 fodbold-transfers.dk##.banner
 fodbold-transfers.dk##a[href*=betting i]
@@ -1688,6 +1692,8 @@ _visittkortannonse_$image
 ||zuuvicdn.com^
 ! fodboldnytDK (16/10/2026)
 ||2t.dk/*/banner$subdocument
+! btNO (25/11/2026)
+||kilkaya.com^$3p
 ! — — — — —
 ! 🇳🇴：Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -1754,6 +1760,7 @@ contentMarketing$xhr,domain=sol.no|sol-no.translate.goog
 ||bilbasen.dk/Vip/GetVipFinanceBanner^
 ||bobilverden.no/wp-content/uploads/*/Banner-1200x300px.jpg^
 ||bornholm.nu/nonsec/banner$image
+||tv2.no/adManifest^
 ||canariposten.no/wp-content/uploads/300x1500*$image
 ||cdn.rikstoto.no/expert/GameShop^$frame,3p,domain=~tipster.no
 ||check-in.dk/wp-content/uploads/*_930x180.gif^
@@ -1989,6 +1996,7 @@ _1170x400.$domain=eyjafrettir.is,image,1p
 .assetcdn.net/*.gif^$domain=ilaks.no
 .assetcdn.net/*_980x300.png^$domain=ilaks.no
 /wp-content/uploads/*annons$domain=ilaks.no
+||piopio.dk/sites/default/files/simpleads^
 ! — — — — — — —
 ! 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar

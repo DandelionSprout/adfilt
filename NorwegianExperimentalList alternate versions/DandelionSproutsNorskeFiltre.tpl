@@ -1,6 +1,6 @@
 ﻿﻿! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 # Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-# Last modified: 19October2026v1-Deprecated
+# Last modified: 25November2026v1-Deprecated
 : expires = 18 hours
 # Lisens   Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 # Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -199,6 +199,8 @@
 -d zuuvicdn.com
 # fodboldnytDK (16 10 2026)
 -d 2t.dk banner
+# btNO (25 11 2026)
+-d kilkaya.com
 # — — — — —
 # 🇳🇴：Domenefokuserte blokkeringsoppføringer
 # 🇳🇴🏞：Domenefokuserande bloknadsoppføringar
@@ -256,6 +258,7 @@
 -d bilbasen.dk GetVipFinanceBanner
 -d bobilverden.no Banner-1200x300px.jpg
 -d bornholm.nu banner
+-d tv2.no adManifest
 -d canariposten.no 300x1500*
 -d cdn.rikstoto.no GameShop
 -d check-in.dk *_930x180.gif
@@ -482,6 +485,7 @@
 - assetcdn.net *.gif
 - assetcdn.net *_980x300.png
 - wp-content uploads *annons
+-d piopio.dk simpleads
 # — — — — — — —
 # 🇳🇴：Filtjener- eller nettstedsspesifikke oppføringer med kilder
 # 🇳🇴🏞：Filtenar- eller nettstadsspesifikke oppføringar med kildar
