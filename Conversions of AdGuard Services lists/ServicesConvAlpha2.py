@@ -19,38 +19,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — 4chan",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -100,38 +100,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — 500px",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -181,38 +181,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — 9gag",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -262,38 +262,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — AliExpress",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -343,38 +343,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Amazon",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -424,38 +424,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Amazon streaming",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -505,38 +505,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Amino",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -586,38 +586,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Apple streaming",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -667,38 +667,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Bigo live",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -748,38 +748,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Bilibili",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -829,38 +829,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Blaze",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -910,38 +910,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Bluesky",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -991,38 +991,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Canaisglobo",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1072,38 +1072,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Claro",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1153,38 +1153,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Cloudflare",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1234,38 +1234,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Clubhouse",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1315,38 +1315,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Coolapk",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1396,38 +1396,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Crunchyroll",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1477,38 +1477,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Douban",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1558,38 +1558,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — eBay",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1639,38 +1639,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — ESPN",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1720,38 +1720,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Facebook",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1801,38 +1801,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — FIFA",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1882,38 +1882,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Flickr",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -1963,38 +1963,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Globoplay",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2044,38 +2044,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — iCloud Private Relay",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2125,38 +2125,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — iHeartRadio",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2206,38 +2206,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Imgur",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2287,38 +2287,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Instagram",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2368,38 +2368,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Iqiyi",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2449,38 +2449,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — KakaoTalk",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2530,38 +2530,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Kik",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2611,38 +2611,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Lazada",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2692,38 +2692,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — LINE (social app)",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2773,38 +2773,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — LinkedIn",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2854,38 +2854,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Looke",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -2935,38 +2935,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — MailRU",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3016,38 +3016,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Mastodon",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3097,38 +3097,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — mercado libre",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3178,38 +3178,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Nebula",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3259,38 +3259,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Odnoklassniki",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3340,38 +3340,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Olvid",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3421,38 +3421,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — OnlyFans",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3502,38 +3502,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Pinterest",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3583,38 +3583,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Plenty of Fish",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3664,38 +3664,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Plex",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3745,38 +3745,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — PrivacyBrasil",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3826,38 +3826,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — QQ",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -3955,38 +3955,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Rakuten Viki",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4036,38 +4036,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Reddit",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4117,38 +4117,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Shein",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4198,38 +4198,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Shopee",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4279,38 +4279,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Signal",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4360,38 +4360,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Skype",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4441,38 +4441,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Snapchat",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4522,38 +4522,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Spotify",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4603,38 +4603,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Telegram",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4684,38 +4684,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Temu",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4765,38 +4765,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Tidal",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4846,38 +4846,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — TikTok",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -4927,38 +4927,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Tinder",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5008,38 +5008,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Tumblr",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5089,38 +5089,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Twitch",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5170,38 +5170,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Twitter",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5251,38 +5251,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Viber",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5332,38 +5332,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — VK",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5413,38 +5413,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Voot",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5494,38 +5494,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — WeChat",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5575,38 +5575,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Weibo",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5656,38 +5656,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — WhatsApp",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5737,38 +5737,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Wizz",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5818,38 +5818,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Xiaohongshu",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5899,38 +5899,38 @@ def prepare_conversion(lines) -> str:
     for line in lines:
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"^(icon_|rules:|id:).*",
-           r"",
+           r"^(icon_|rules:|id:).*$",
+           "",
            line
         )
 
         line = re.sub(
-           r"  - '",
-           r"",
+           r"^ {0,}- '(.*)$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"'$",
-           r"",
+           r"^(.*)'$",
+           r"\1",
            line
         )
 
         line = re.sub(
-           r"^name: (.*)",
+           r"^name: (.*)$",
            r"! Title: Conversion of AdGuard Services Lists — Zhihu",
            line
         )
 
         line = re.sub(
-           r"\^$",
-           r"^$all",
+           r"^(.*\^)$",
+           r"\1$all",
            line
         )
 
@@ -5956,6 +5956,1626 @@ if __name__ == "__main__":
         text_file.write(conversion_filter)
 
         print('The Zhihu AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/chatgpt.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\chatgpt.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           r"! Title: Conversion of AdGuard Services Lists — ChatGPT",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The ChatGPT AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/gemini.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\gemini.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           r"! Title: Conversion of AdGuard Services Lists — Google Gemini",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Google Gemini AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/copilot.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\copilot.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           r"! Title: Conversion of AdGuard Services Lists — Microsoft Copilot",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Copilot AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/claude.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\claude.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           r"! Title: Conversion of AdGuard Services Lists — Claude",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Claude AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/grok.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\grok.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           r"! Title: Conversion of AdGuard Services Lists — Grok",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Grok AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/meta_ai.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\meta_ai.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           r"! Title: Conversion of AdGuard Services Lists — Meta Aİ",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Meta Aİ AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/samsung_tv_plus.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\samsung_tv_plus.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           r"! Title: Conversion of AdGuard Services Lists — Samsung TV Plus",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Samsung TV Plus AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/disneyplus.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\disneyplus.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — Disney+",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Disney+ AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/nvidia.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\nvidia.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — NVIDIA",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The NVIDIA AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/perplexity.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\perplexity.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — PerplexityAİ",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The PerplexityAİ AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/yy.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\yy.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — YY",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The YY AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/odysee.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\odysee.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — Odysee",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Odysee AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/paramountplus.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\paramountplus.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — Paramount+",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Paramount+ AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/questionai.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\questionai.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — QuestionAİ",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The QuestionAİ AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/max.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\max.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — MAX (Russia-based SoMe)",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Max AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/pluto_tv.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\pluto_tv.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — Pluto TV",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Pluto TV AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/deepseek.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\deepseek.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — DeepSeek",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The DeepSeek AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/dola.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\dola.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — Dola",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Dola AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/qwen.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\qwen.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — Qwen",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Qwen AdGuard Services conversion has been generated.')
+
+# ———————————————————————
+
+import requests
+import re
+
+SOURCES = ['https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/services/slack.yml']
+OUTPUT_CONV = 'Conversions of AdGuard Services lists\\slack.txt'
+
+# function that downloads the filter list
+def download_filters() -> str:
+    text = ''
+    for url in SOURCES:
+        r = requests.get(url)
+        text += r.text
+    return text
+
+# function that prepares the filter list for AdGuard
+def prepare_conversion(lines) -> str:
+    text = ''
+
+    for line in lines:
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^(icon_|rules:|id:).*$",
+           "",
+           line
+        )
+
+        line = re.sub(
+           r"^ {0,}- '(.*)$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*)'$",
+           r"\1",
+           line
+        )
+
+        line = re.sub(
+           r"^name: (.*)$",
+           "! Title: Conversion of AdGuard Services Lists — Slack",
+           line
+        )
+
+        line = re.sub(
+           r"^(.*\^)$",
+           r"\1$all",
+           line
+        )
+
+        line = re.sub(
+           r"^group:.*$",
+           "",
+           line
+        )
+
+        text += line + '\n'
+
+    return text
+
+if __name__ == "__main__":
+    print('Starting the script')
+    text = download_filters()
+    lines = text.splitlines(False)
+    print('Total number of rules: ' + str(len(lines)))
+
+    conversion_filter = prepare_conversion(lines)
+
+    with open(OUTPUT_CONV, "w", encoding="utf-8-sig", newline='\n') as text_file:
+        text_file.write(conversion_filter)
+
+        print('The Slack AdGuard Services conversion has been generated.')
 
 # ———————————————————————
 
